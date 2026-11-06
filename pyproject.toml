@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sakshi"
+version = "0.1.0"
+description = "Offline, witness-checked study aid for the Namma AI Hackathon (Problem 1)"
+requires-python = ">=3.10"
+dependencies = []  # the core is standard library only; the Pi adds executorch and torch (see scripts/pi_setup.sh)
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+sakshi = "sakshi.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

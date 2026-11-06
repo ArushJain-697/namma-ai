@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sakshi study aid</title>
+<style>
+  /* One file, no external fonts, scripts or images: this page must work with no internet at all. */
+  :root{--bg:#fbfaf7;--fg:#1d1d1b;--mut:#625e57;--ok:#1a7f4b;--bad:#b3261e;--hit:#ffe9a0;--card:#fff;--line:#e4e0d8;--accent:#2b5fd9;--accent-fg:#fff}
+  @media (prefers-color-scheme: dark){:root{--bg:#161614;--fg:#f1efe9;--mut:#a8a39a;--ok:#52c68a;--bad:#ff8a80;--hit:#5a4a10;--card:#21201d;--line:#3a3833;--accent:#8ab0ff;--accent-fg:#101010}}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  main{max-width:42rem;margin:0 auto;padding:16px}
+  h1{font-size:1.15rem;margin:.2rem 0 .1rem}
+  .sub{color:var(--mut);font-size:.9rem;margin:0 0 1rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:0 0 14px}
+  .label{color:var(--mut);font-size:.85rem;margin:0 0 6px}
+  .q{font-size:1.15rem;margin:0 0 12px}
+  button,input{font:inherit}
+  .opt{display:block;width:100%;text-align:left;margin:0 0 8px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--fg);cursor:pointer;min-height:48px}
+  .opt:active,.opt:focus-visible{border-color:var(--accent);outline:2px solid var(--accent)}
+  .opt[disabled]{opacity:.65;cursor:default}
+  .go{padding:12px 18px;border:0;border-radius:10px;background:var(--accent);color:var(--accent-fg);cursor:pointer;min-height:48px}
+  input[type=text]{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--fg);margin:0 0 10px;min-height:48px}
+  .ok{color:var(--ok);font-weight:600}.bad{color:var(--bad);font-weight:600}
+  .wit{border-left:4px solid var(--hit);padding:6px 10px;margin:8px 0;background:var(--bg)}
+  #passage{margin-top:6px}
+  .s{padding:1px 2px;border-radius:4px}
+  .s.hit{background:var(--hit);outline:2px solid var(--hit);box-decoration-break:clone}
+  .num{color:var(--mut);font-size:.75rem;vertical-align:super;margin-right:2px}
+  .hide{display:none}
+  footer{color:var(--mut);font-size:.8rem;text-align:center;margin:18px 0}
+</style>
+</head>
+<body>
+<main>
+  <h1>Sakshi study aid</h1>
+  <p class="sub" id="header">Loading…</p>
+  <div id="stage"></div>
+  <section class="card" id="passagecard" aria-label="The passage">
+    <p class="label">The passage. The sentence that holds an answer is highlighted after you answer.</p>
+    <div id="passage"></div>
+  </section>
+  <footer>Works offline. Nothing you type leaves this room, and only the sentence number of a missed question is counted.</footer>
+</main>
+<script>
+"use strict";
+const $ = (s) => document.querySelector(s);
+const LETTERS = "ABCDEFGHIJ";
+let DATA = null;
+let S = null; // session state
+
+function el(tag, attrs, ...kids) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (k === "class") e.className = v; else if (k === "text") e.textContent = v; else e.setAttribute(k, v);
+  }
+  for (const kid of kids) e.append(kid);
+  return e;
+}
+
+// Same rule as the Python marker: lowercase, drop punctuation and articles, 1,000 -> 1000. Marking never uses the model.
+function norm(s) {
+  const toks = String(s).match(/\d+(?:[.,]\d+)*|[\p{L}\p{N}]+(?:['’\-][\p{L}\p{N}]+)*/gu) || [];
+  return toks.map((t) => t.toLowerCase().replace(/,/g, "")).filter((t) => !["a", "an", "the"].includes(t)).join(" ");
+}
+function resolve(answer, options) {
+  const raw = String(answer).trim();
+  if (options && options.length) {
+    if (raw.length === 1) { const i = LETTERS.indexOf(raw.toUpperCase()); if (i >= 0 && i < options.length) return norm(options[i]); }
+    for (const o of options) if (norm(o) === norm(raw)) return norm(o);
+  }
+  return norm(raw);
+}
+
+function renderPassage() {
+  const box = $("#passage"); box.replaceChildren();
+  DATA.passage_sentences.forEach((t, i) => {
+    box.append(el("span", {class: "num", text: String(i + 1)}), el("span", {class: "s", id: "s" + i, text: t + " "}));
+  });
+}
+function highlight(i) {
+  document.querySelectorAll(".s.hit").forEach((n) => n.classList.remove("hit"));
+  const n = document.getElementById("s" + i);
+  if (n) { n.classList.add("hit"); n.scrollIntoView({behavior: "smooth", block: "center"}); }
+}
+function report(sentenceNo) { // anonymous count of misses per sentence, kept in memory on the Pi only
+  try { fetch("/miss", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({sentence: sentenceNo}), keepalive: true}).catch(() => {}); } catch (e) {}
+}
+
+function ask(q, label, onDone) {
+  const stage = $("#stage"); stage.replaceChildren();
+  const card = el("section", {class: "card", "aria-live": "polite"});
+  card.append(el("p", {class: "label", text: label}), el("p", {class: "q", id: "qtext", text: q.stem}));
+  const done = (given) => {
+    const correct = resolve(given, q.options) === norm(q.key);
+    const n = q.witness_idx + 1;
+    card.querySelectorAll("button,input").forEach((b) => b.setAttribute("disabled", "disabled"));
+    const fb = el("div", {id: "feedback"});
+    fb.append(el("p", {class: correct ? "ok" : "bad", id: "verdict",
+      text: correct ? `Correct. Here is where the passage says it (sentence ${n}):` : `Not quite. Read this sentence again (sentence ${n}):`}));
+    fb.append(el("div", {class: "wit", id: "witness", text: "“" + q.witness + "”"}));
+    if (!correct) fb.append(el("p", {id: "answer", text: "The answer is: " + q.key}));
+    const next = el("button", {class: "go", id: "next", type: "button", text: "Next"});
+    next.addEventListener("click", () => onDone(correct));
+    fb.append(next);
+    card.append(fb); highlight(q.witness_idx); setTimeout(() => next.focus(), 80);
+    if (!correct) report(n);
+  };
+  if (q.options && q.options.length) {
+    q.options.forEach((o, i) => {
+      const b = el("button", {class: "opt", type: "button", "data-opt": String(i), text: `${LETTERS[i]}) ${o}`});
+      b.addEventListener("click", () => done(o));
+      card.append(b);
+    });
+  } else {
+    const inp = el("input", {type: "text", id: "typed", autocomplete: "off", "aria-label": "Your answer"});
+    const go = el("button", {class: "go", id: "submit", type: "button", text: "Check"});
+    const submit = () => { if (inp.value.trim()) done(inp.value); };
+    go.addEventListener("click", submit); inp.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); submit(); } });
+    card.append(inp, go); setTimeout(() => inp.focus(), 0);
+  }
+  stage.append(card);
+}
+
+function roundOne() {
+  const items = DATA.items; S = {score: 0, missed: [], retries: [], revealed: new Set()};
+  let i = 0;
+  const step = () => {
+    if (i >= items.length) return reread();
+    const q = items[i++];
+    ask(q, `Question ${i} of ${items.length}`, (ok) => {
+      S.revealed.add(norm(q.key)); if (ok) S.score++; else S.missed.push(q); step();
+    });
+  };
+  step();
+}
+
+function reread() { // the Reread Loop: one new question from the same sentence, never a key already revealed
+  const todo = S.missed.filter((q) => q.reserve && !S.revealed.has(norm(q.reserve.key)));
+  S.skipped = S.missed.filter((q) => !todo.includes(q)); // no safe new question: just send the student back to the sentence
+  let i = 0;
+  const step = () => {
+    if (i >= todo.length) return finish();
+    const q = todo[i++], r = q.reserve;
+    $("#stage").replaceChildren(el("section", {class: "card"}, el("p", {text: `You missed sentence ${q.witness_idx + 1}. Read it once more, then try this one.`})));
+    highlight(q.witness_idx);
+    setTimeout(() => ask({stem: r.stem, key: r.key, options: r.options, witness: r.witness, witness_idx: r.witness_idx}, "Try again", (ok) => {
+      S.revealed.add(norm(r.key)); S.retries.push({sentence: r.witness_idx + 1, correct: ok}); step();
+    }), 900);
+  };
+  step();
+}
+
+function finish() {
+  const stage = $("#stage"); stage.replaceChildren();
+  const card = el("section", {class: "card", id: "end"});
+  let line = `You got ${S.score} of ${DATA.items.length}.`;
+  if (S.retries.length) line += ` On the second try you got ${S.retries.filter((r) => r.correct).length} of ${S.retries.length}.`;
+  card.append(el("p", {class: "q", id: "score", text: line}));
+  const sentences = [...new Set(S.missed.map((q) => q.witness_idx + 1))].sort((a, b) => a - b);
+  if (sentences.length) card.append(el("p", {id: "reread", text: "Worth rereading: " + sentences.map((n) => `sentence ${n}`).join(", ") + "."}));
+  if (S.skipped && S.skipped.length) {
+    const box = el("div", {id: "skipped"});
+    S.skipped.forEach((q) => box.append(el("p", {class: "label", text: `Sentence ${q.witness_idx + 1} is worth one more read:`}),
+      el("div", {class: "wit", text: "\u201c" + q.witness + "\u201d"})));
+    card.append(box);
+  }
+  document.querySelectorAll(".s.hit").forEach((n) => n.classList.remove("hit"));
+  if (DATA.summary) card.append(el("p", {class: "label", text: "In short"}), el("p", {id: "summary", text: DATA.summary}));
+  stage.append(card);
+}
+
+fetch("/quiz.json", {cache: "no-store"}).then((r) => r.json()).then((d) => {
+  DATA = d; $("#header").textContent = d.header; renderPassage();
+  if (!d.items.length) {
+    $("#stage").append(el("section", {class: "card"}, el("p", {text: "No questions passed the checks for this passage."})));
+    if (d.summary) $("#stage").append(el("section", {class: "card"}, el("p", {class: "label", text: "In short"}), el("p", {text: d.summary})));
+  } else roundOne();
+}).catch(() => { $("#header").textContent = "Could not load the quiz. Is the Pi's Wi-Fi still connected?"; });
+</script>
+</body>
+</html>
