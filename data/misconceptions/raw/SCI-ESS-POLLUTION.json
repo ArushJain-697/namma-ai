@@ -1,0 +1,173 @@
+{
+ "topic": {
+  "id": "SCI-ESS-POLLUTION",
+  "subject": "science",
+  "strand": "earth_space",
+  "grades": [
+   8
+  ],
+  "title": "Pollution of air and water",
+  "scope": "air pollutants, smog, acid rain, greenhouse effect and global warming, water pollution, potable water, Ganga action plan"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 708,
+  "candidatesTokenCount": 1271,
+  "totalTokenCount": 1979,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 708
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.7,
+ "response": {
+  "concepts": [
+   {
+    "key": "air_pollution",
+    "name": "Air Pollutants and Smog",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Air pollution only happens outdoors in big cities.",
+      "why": "Students associate pollution with visible smoke from factories and cars seen in urban environments.",
+      "fix": "Air pollution also occurs indoors due to cooking fuels, incense sticks, and poor ventilation.",
+      "probe": {
+       "question": "Can the air inside a house be polluted if no one is smoking?",
+       "wrong_answer": "No, because pollution only comes from cars and factories outside."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "smoke",
+       "factories",
+       "vehicles",
+       "indoor air quality",
+       "ventilation"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Smog is just a thick cloud of natural fog.",
+      "why": "The word 'smog' sounds like 'fog' and they look visually similar to the naked eye.",
+      "fix": "Smog is a mixture of smoke and fog, where smoke contains harmful pollutants like particulates.",
+      "probe": {
+       "question": "Is smog harmful to breathe in?",
+       "wrong_answer": "No, it is just natural fog that makes it hard to see."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "smog",
+       "fog",
+       "visibility",
+       "smoke",
+       "pollutants"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "water_pollution",
+    "name": "Water Pollution and Potability",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Clear, sparkling water is always safe to drink.",
+      "why": "Students equate visual clarity with purity, ignoring invisible pathogens or dissolved chemicals.",
+      "fix": "Water can look clear but still contain harmful bacteria, viruses, or toxic dissolved chemicals.",
+      "probe": {
+       "question": "If water from a river looks crystal clear, can we drink it directly?",
+       "wrong_answer": "Yes, because clear water is clean and free from pollution."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "potable water",
+       "clear water",
+       "purification",
+       "germs",
+       "dissolved substances"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Boiling water removes all types of pollution.",
+      "why": "Students learn that boiling kills germs and overgeneralize this to all pollutants like heavy metals.",
+      "fix": "Boiling kills microorganisms but does not remove dissolved chemical pollutants like lead or pesticides.",
+      "probe": {
+       "question": "Does boiling water remove chemical pesticides?",
+       "wrong_answer": "Yes, boiling cleans the water of all harmful things."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "boiling",
+       "purification",
+       "chemicals",
+       "microorganisms",
+       "safe water"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "global_warming",
+    "name": "Greenhouse Effect and Global Warming",
+    "prereqs": [
+     "air_pollution"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The greenhouse effect is inherently bad for the Earth.",
+      "why": "The term is almost always discussed in the context of global warming and environmental damage.",
+      "fix": "The natural greenhouse effect is essential to keep the Earth warm enough to support life.",
+      "probe": {
+       "question": "Would the Earth be better off without any greenhouse gases?",
+       "wrong_answer": "Yes, because then there would be no global warming."
+      },
+      "error_type": "other",
+      "trigger_cues": [
+       "greenhouse effect",
+       "global warming",
+       "trapping heat",
+       "temperature",
+       "atmosphere"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     },
+     {
+      "statement": "Global warming is caused by a hole in the ozone layer.",
+      "why": "Students often conflate two major environmental issues discussed in the same curriculum units.",
+      "fix": "Global warming is caused by the trapping of heat by greenhouse gases, while the ozone hole is a separate issue related to UV radiation.",
+      "probe": {
+       "question": "What is the main cause of the Earth getting warmer?",
+       "wrong_answer": "The hole in the ozone layer lets in too much heat."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "ozone layer",
+       "global warming",
+       "greenhouse gases",
+       "uv radiation",
+       "climate change"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "States of matter",
+   "Basic biology of microorganisms",
+   "The atmosphere and its composition"
+  ]
+ },
+ "problems": []
+}

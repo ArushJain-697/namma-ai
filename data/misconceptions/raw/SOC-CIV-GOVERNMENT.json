@@ -1,0 +1,170 @@
+{
+ "topic": {
+  "id": "SOC-CIV-GOVERNMENT",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   6
+  ],
+  "title": "What is government",
+  "scope": "levels of government, laws, democracy vs monarchy, universal adult franchise"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 689,
+  "candidatesTokenCount": 1187,
+  "totalTokenCount": 1876,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 689
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.9,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Need for Government",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "The government is just a group of powerful people who can do whatever they want.",
+      "why": "Students often equate authority with unchecked power based on their observations of local figures.",
+      "fix": "The government is an institution created by society to make decisions, provide services, and maintain order according to established rules.",
+      "probe": {
+       "question": "Why does the government make laws?",
+       "wrong_answer": "Because they are the bosses and want to control what we do."
+      },
+      "error_type": "confuses_institutions",
+      "trigger_cues": [
+       "decision making",
+       "public services",
+       "rules",
+       "authority"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Levels of Government",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The Central government controls everything, and local governments are just helpers.",
+      "why": "Students often view hierarchy as a top-down command structure rather than a division of responsibilities.",
+      "fix": "Different levels of government have specific, independent responsibilities defined by the constitution to manage local, state, and national affairs.",
+      "probe": {
+       "question": "Who is responsible for fixing a broken street light in your colony?",
+       "wrong_answer": "The Prime Minister, because he is the head of the whole country."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "local",
+       "state",
+       "national",
+       "division of power"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Laws and Government",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Laws are only meant to punish people who do bad things.",
+      "why": "Students associate 'rules' primarily with school discipline or parental restrictions.",
+      "fix": "Laws are guidelines that ensure fairness, protect rights, and help society function smoothly for everyone, not just for punishment.",
+      "probe": {
+       "question": "Why do we have traffic laws?",
+       "wrong_answer": "To catch people who drive too fast and put them in jail."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "rules",
+       "justice",
+       "fairness",
+       "legal system"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Democracy vs Monarchy",
+    "prereqs": [
+     "c1",
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "In a democracy, everyone can do whatever they want without any restrictions.",
+      "why": "Students confuse the freedom of speech and choice with an absence of all rules.",
+      "fix": "Democracy means people choose their leaders, but everyone must still follow the laws that protect the rights of all citizens.",
+      "probe": {
+       "question": "Can a person in a democracy ignore a law they don't like?",
+       "wrong_answer": "Yes, because in a democracy, the people are free to do what they want."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "voting",
+       "freedom",
+       "rights",
+       "representatives"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c5",
+    "name": "Universal Adult Franchise",
+    "prereqs": [
+     "c4"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Only educated or wealthy people should have the right to vote.",
+      "why": "Students often mirror adult prejudices or stereotypes about who is 'qualified' to make decisions.",
+      "fix": "Universal adult franchise means every citizen above a certain age has an equal right to vote, regardless of their wealth, education, or status.",
+      "probe": {
+       "question": "Should a poor person have the same voting power as a rich person?",
+       "wrong_answer": "No, because rich people are more educated and know better how to run the country."
+      },
+      "error_type": "stereotype",
+      "trigger_cues": [
+       "equality",
+       "voting rights",
+       "adult franchise",
+       "every citizen"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Community helpers",
+   "School rules",
+   "Family decision making"
+  ]
+ },
+ "problems": []
+}

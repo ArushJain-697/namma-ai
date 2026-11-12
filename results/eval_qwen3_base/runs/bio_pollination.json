@@ -1,0 +1,1182 @@
+{
+  "passage": "Flowers are the reproductive parts of a plant. The male part of a flower is the stamen, which produces pollen grains. The female part is the pistil, which contains the ovules in its lower part, the ovary. For seeds to form, pollen must reach the sticky top of the pistil, called the stigma. The transfer of pollen from the stamen to the stigma is called pollination. If the pollen lands on the stigma of the same flower, it is called self-pollination. If it is carried to a flower on another plant of the same kind, it is called cross-pollination. Plants cannot move, so they depend on carriers. Wind carries the light, dry pollen of maize and grasses over long distances. Insects such as bees and butterflies visit brightly coloured, sweet-smelling flowers to drink nectar. As they move from flower to flower, pollen sticks to their bodies and is carried along. After pollination, the pollen grain grows a tube down to the ovule, and the male cell joins the egg cell. This joining is called fertilisation. The fertilised egg develops into an embryo, the ovule becomes a seed, and the ovary grows into a fruit. Seeds are then scattered away from the parent plant, by wind, water and animals, so that the new plants do not compete with each other for light and water.",
+  "gate": {
+    "status": "OK",
+    "words": 223,
+    "reason": "OK: 223 words"
+  },
+  "summary": {
+    "text": "Flowers are the parts that make up a plant. The male part of a flower is the stamen, which makes pollen come out. If the pollen lands on the stigma of the same flower, it is called self-pollination.",
+    "word_count": 38,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "38 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 0,
+        "source": "Flowers are the reproductive parts of a plant.",
+        "text": "Flowers are the parts that make up a plant.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "Flowers are the parts that make up a plant.",
+            "temperature": 0.0,
+            "wall_s": 0.8544,
+            "failed": [],
+            "prompt_tokens": 82,
+            "new_tokens": 79,
+            "ttft_ms": 106,
+            "tokens_per_s": 104.28,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 1,
+        "source": "The male part of a flower is the stamen, which produces pollen grains.",
+        "text": "The male part of a flower is the stamen, which makes pollen come out.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "The male part of a flower is the stamen, which makes pollen come out.",
+            "temperature": 0.0,
+            "wall_s": 0.8626,
+            "failed": [],
+            "prompt_tokens": 89,
+            "new_tokens": 79,
+            "ttft_ms": 112,
+            "tokens_per_s": 104.0,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 5,
+        "source": "If the pollen lands on the stigma of the same flower, it is called self-pollination.",
+        "text": "If the pollen lands on the stigma of the same flower, it is called self-pollination.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "If the pollen lands on the stigma of the same flower, it is called self-pollination.",
+            "temperature": 0.0,
+            "wall_s": 0.8863,
+            "failed": [],
+            "prompt_tokens": 93,
+            "new_tokens": 79,
+            "ttft_ms": 117,
+            "tokens_per_s": 101.43,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "grains",
+      "options": [
+        "insects",
+        "distances",
+        "grains",
+        "seeds"
+      ],
+      "witness_idx": 1,
+      "witness": "The male part of a flower is the stamen, which produces pollen grains.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "9 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.30"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "67% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.0 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'pollen', not 'grains'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'pollen', not 'grains'"
+      ],
+      "attempts": [
+        {
+          "text": "What is produced by the stamen of a flower?",
+          "temperature": 0.0,
+          "wall_s": 0.7279,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 214,
+          "tokens_per_s": 89.67,
+          "verify": {
+            "text": "pollen",
+            "wall_s": 0.3467,
+            "prompt_tokens": 153,
+            "new_tokens": 15,
+            "ttft_ms": 199,
+            "tokens_per_s": 95.24
+          }
+        },
+        {
+          "text": "What is produced by the stamen? grains",
+          "temperature": 0.4,
+          "wall_s": 0.7366,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 213,
+          "tokens_per_s": 87.95,
+          "verify": null
+        },
+        {
+          "text": "What is produced by the male part of a flower?",
+          "temperature": 0.7,
+          "wall_s": 0.7268,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 208,
+          "tokens_per_s": 88.8,
+          "verify": {
+            "text": "pollen",
+            "wall_s": 0.3427,
+            "prompt_tokens": 153,
+            "new_tokens": 15,
+            "ttft_ms": 196,
+            "tokens_per_s": 95.89
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The male part of a flower is the stamen, which produces _____ grains.",
+        "key": "pollen",
+        "witness_idx": 1,
+        "witness": "The male part of a flower is the stamen, which produces pollen grains.",
+        "options": [
+          "plant",
+          "cell",
+          "egg",
+          "pollen"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "plant",
+      "options": [
+        "stigma",
+        "pollination",
+        "male",
+        "plant"
+      ],
+      "witness_idx": 0,
+      "witness": "Flowers are the reproductive parts of a plant.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.80"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.8 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is the reproductive part of a plant?",
+          "temperature": 0.0,
+          "wall_s": 0.7094,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 155,
+          "new_tokens": 47,
+          "ttft_ms": 201,
+          "tokens_per_s": 90.73,
+          "verify": null
+        },
+        {
+          "text": "What is the reproductive part of a plant?",
+          "temperature": 0.4,
+          "wall_s": 0.7134,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 155,
+          "new_tokens": 47,
+          "ttft_ms": 198,
+          "tokens_per_s": 89.32,
+          "verify": null
+        },
+        {
+          "text": "What is the reproductive part of a plant?",
+          "temperature": 0.7,
+          "wall_s": 0.7119,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 155,
+          "new_tokens": 47,
+          "ttft_ms": 200,
+          "tokens_per_s": 90.02,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Flowers are the _____ parts of a plant.",
+        "key": "reproductive",
+        "witness_idx": 0,
+        "witness": "Flowers are the reproductive parts of a plant.",
+        "options": [
+          "reproductive",
+          "ovary",
+          "male",
+          "pistil"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "stigma",
+      "options": [
+        "ovary",
+        "cell",
+        "pollination",
+        "stigma"
+      ],
+      "witness_idx": 5,
+      "witness": "If the pollen lands on the stigma of the same flower, it is called self-pollination.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "13 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.65"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 4.9 (limit 8.4)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is called when pollen lands on the stigma of the same flower?",
+          "temperature": 0.0,
+          "wall_s": 0.7216,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 209,
+          "tokens_per_s": 89.84,
+          "verify": null
+        },
+        {
+          "text": "What is called when the pollen lands on the stigma of the same flower?",
+          "temperature": 0.4,
+          "wall_s": 0.7376,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 213,
+          "tokens_per_s": 87.79,
+          "verify": null
+        },
+        {
+          "text": "What is called when the pollen lands on the stigma of the same flower?",
+          "temperature": 0.7,
+          "wall_s": 0.7339,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 206,
+          "tokens_per_s": 87.29,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: If the _____ lands on the stigma of the same flower, it is called self-pollination.",
+        "key": "pollen",
+        "witness_idx": 5,
+        "witness": "If the pollen lands on the stigma of the same flower, it is called self-pollination.",
+        "options": [
+          "pollination",
+          "pollen",
+          "stamen",
+          "pistil"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "carried",
+      "options": [
+        "scattered",
+        "plant",
+        "carried",
+        "male"
+      ],
+      "witness_idx": 10,
+      "witness": "As they move from flower to flower, pollen sticks to their bodies and is carried along.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.43"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.2 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is carried along from flower to flower?",
+          "temperature": 0.0,
+          "wall_s": 0.719,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 164,
+          "new_tokens": 47,
+          "ttft_ms": 206,
+          "tokens_per_s": 89.84,
+          "verify": null
+        },
+        {
+          "text": "What is carried along from flower to flower?",
+          "temperature": 0.4,
+          "wall_s": 0.723,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 164,
+          "new_tokens": 47,
+          "ttft_ms": 206,
+          "tokens_per_s": 89.15,
+          "verify": null
+        },
+        {
+          "text": "What is carried along?",
+          "temperature": 0.7,
+          "wall_s": 0.7188,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 164,
+          "new_tokens": 47,
+          "ttft_ms": 206,
+          "tokens_per_s": 89.84,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: As they move from flower to flower, _____ sticks to their bodies and is carried along.",
+        "key": "pollen",
+        "witness_idx": 10,
+        "witness": "As they move from flower to flower, pollen sticks to their bodies and is carried along.",
+        "options": [
+          "pistil",
+          "pollen",
+          "stamen",
+          "wind"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "ovary",
+      "options": [
+        "cell",
+        "stamen",
+        "ovary",
+        "plant"
+      ],
+      "witness_idx": 2,
+      "witness": "The female part is the pistil, which contains the ovules in its lower part, the ovary.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "9 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.67"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.0 (limit 9.1)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'pistil', not 'ovary'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'pistil', not 'ovary'"
+      ],
+      "attempts": [
+        {
+          "text": "What part contains the ovules in its lower part?",
+          "temperature": 0.0,
+          "wall_s": 0.7171,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 211,
+          "tokens_per_s": 90.91,
+          "verify": {
+            "text": "pistil",
+            "wall_s": 0.3557,
+            "prompt_tokens": 159,
+            "new_tokens": 15,
+            "ttft_ms": 201,
+            "tokens_per_s": 90.91
+          }
+        },
+        {
+          "text": "What part contains the ovules in its lower part?",
+          "temperature": 0.4,
+          "wall_s": 0.7367,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 213,
+          "tokens_per_s": 87.79,
+          "verify": {
+            "text": "pistil",
+            "wall_s": 0.3563,
+            "prompt_tokens": 159,
+            "new_tokens": 15,
+            "ttft_ms": 203,
+            "tokens_per_s": 91.5
+          }
+        },
+        {
+          "text": "What part of the plant contains the ovules and the ovary?",
+          "temperature": 0.7,
+          "wall_s": 0.732,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 213,
+          "tokens_per_s": 88.8,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The female part is the pistil, which contains the _____ in its lower part, the ovary.",
+        "key": "ovules",
+        "witness_idx": 2,
+        "witness": "The female part is the pistil, which contains the ovules in its lower part, the ovary.",
+        "options": [
+          "lands",
+          "carriers",
+          "ovules",
+          "distances"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "What is called the transfer of pollen from the stamen to the stigma?",
+      "key": "pollination",
+      "options": [
+        "pollination",
+        "wind",
+        "cell",
+        "plant"
+      ],
+      "witness_idx": 4,
+      "witness": "The transfer of pollen from the stamen to the stigma is called pollination.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "13 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.73"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.8 (limit 8.5)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is called the transfer of pollen from the stamen to the stigma?",
+          "temperature": 0.0,
+          "wall_s": 0.7127,
+          "failed": [],
+          "prompt_tokens": 163,
+          "new_tokens": 47,
+          "ttft_ms": 208,
+          "tokens_per_s": 91.27,
+          "verify": {
+            "text": "pollination",
+            "wall_s": 0.3577,
+            "prompt_tokens": 157,
+            "new_tokens": 15,
+            "ttft_ms": 204,
+            "tokens_per_s": 91.5
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The transfer of pollen from the stamen to the _____ is called pollination.",
+        "key": "stigma",
+        "witness_idx": 4,
+        "witness": "The transfer of pollen from the stamen to the stigma is called pollination.",
+        "options": [
+          "cell",
+          "water",
+          "wind",
+          "stigma"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: After pollination, the pollen grain grows a tube down to the ovule, and the male cell joins the _____ cell.",
+      "key": "egg",
+      "options": [
+        "water",
+        "reproductive",
+        "wind",
+        "egg"
+      ],
+      "witness_idx": 11,
+      "witness": "After pollination, the pollen grain grows a tube down to the ovule, and the male cell joins the egg cell.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: After pollination, the pollen grain grows a tube down to the ovule, and the _____ cell joins the egg cell.",
+        "key": "male",
+        "witness_idx": 11,
+        "witness": "After pollination, the pollen grain grows a tube down to the ovule, and the male cell joins the egg cell.",
+        "options": [
+          "plant",
+          "male",
+          "ovary",
+          "water"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "kind": "cloze",
+      "stem": "Fill in the blank: Wind carries the light, dry _____ of maize and grasses over long distances.",
+      "key": "pollen",
+      "options": [
+        "ovary",
+        "pistil",
+        "pollen",
+        "male"
+      ],
+      "witness_idx": 8,
+      "witness": "Wind carries the light, dry pollen of maize and grasses over long distances.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: _____ carries the light, dry pollen of maize and grasses over long distances.",
+        "key": "Wind",
+        "witness_idx": 8,
+        "witness": "Wind carries the light, dry pollen of maize and grasses over long distances.",
+        "options": [
+          "ovary",
+          "Wind",
+          "stamen",
+          "pistil"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 15.9538,
+    "summary_s": 2.6041,
+    "stems_s": 13.3477,
+    "model_wall_s": 14.1817,
+    "model_calls": 19,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 0,
+    "red": 5,
+    "fallback": 2
+  },
+  "version": 1,
+  "created": "2026-11-13T01:18:04",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

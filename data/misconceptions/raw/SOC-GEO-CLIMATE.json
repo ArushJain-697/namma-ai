@@ -1,0 +1,170 @@
+{
+ "topic": {
+  "id": "SOC-GEO-CLIMATE",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   9
+  ],
+  "title": "Climate of India and the monsoon",
+  "scope": "factors affecting climate, monsoon mechanism, seasons, rainfall distribution, retreating monsoon, rain shadow"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 696,
+  "candidatesTokenCount": 1307,
+  "totalTokenCount": 2003,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 696
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.4,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Basic climatic controls",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Climate and weather are the same thing.",
+      "why": "In everyday speech, people use the terms interchangeably to describe the current state of the atmosphere.",
+      "fix": "Weather refers to short-term atmospheric conditions, while climate is the average weather pattern over a long period, typically 30 years or more.",
+      "probe": {
+       "question": "If it is raining today in Delhi, does that mean the climate of Delhi is rainy?",
+       "wrong_answer": "Yes, because the climate is what is happening outside right now."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "weather",
+       "climate",
+       "atmospheric conditions",
+       "long-term average"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "The sun is the only factor that determines the climate of a place.",
+      "why": "Students often oversimplify complex systems to a single visible cause.",
+      "fix": "While the sun is the primary energy source, factors like altitude, distance from the sea, relief features, and pressure systems also significantly influence climate.",
+      "probe": {
+       "question": "Why is it cooler in Shimla than in Delhi during summer even though they are at similar latitudes?",
+       "wrong_answer": "Because the sun shines less on Shimla."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "latitude",
+       "altitude",
+       "distance from sea",
+       "relief"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Mechanism of the Monsoon",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The monsoon is just a heavy rain shower.",
+      "why": "The term is colloquially used to describe any heavy downpour, ignoring the seasonal wind reversal.",
+      "fix": "The monsoon is a seasonal reversal in the wind direction accompanied by significant changes in precipitation patterns.",
+      "probe": {
+       "question": "Is a heavy thunderstorm in winter considered a monsoon?",
+       "wrong_answer": "Yes, because it is raining very hard."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "seasonal reversal",
+       "wind direction",
+       "precipitation",
+       "monsoon"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Winds blow from the sea to the land because the land 'pulls' the air.",
+      "why": "Students often attribute agency to landmasses rather than understanding pressure gradients.",
+      "fix": "Winds blow from high-pressure areas to low-pressure areas; the land heats up faster than the sea, creating a low-pressure zone that draws in moisture-laden winds.",
+      "probe": {
+       "question": "Why do monsoon winds move toward the Indian subcontinent in summer?",
+       "wrong_answer": "The land acts like a magnet and pulls the air towards it."
+      },
+      "error_type": "other",
+      "trigger_cues": [
+       "pressure gradient",
+       "high pressure",
+       "low pressure",
+       "differential heating"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Distribution of Rainfall and Seasons",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "All parts of India receive equal rainfall during the monsoon.",
+      "why": "Students often generalize the experience of their own region to the entire country.",
+      "fix": "Rainfall distribution is highly uneven due to relief features like the Western Ghats and the Himalayas, which block moisture-laden winds.",
+      "probe": {
+       "question": "Does the Thar Desert receive the same amount of rain as the Western Ghats?",
+       "wrong_answer": "Yes, because the monsoon covers the whole of India equally."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "uneven distribution",
+       "orographic rainfall",
+       "rain shadow",
+       "western ghats"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     },
+     {
+      "statement": "The retreating monsoon means the winds stop blowing entirely.",
+      "why": "The word 'retreating' is interpreted as a complete cessation of movement rather than a change in direction.",
+      "fix": "The retreating monsoon refers to the withdrawal of winds from the northern plains toward the south, as the low-pressure trough shifts southward.",
+      "probe": {
+       "question": "What happens to the monsoon winds in October?",
+       "wrong_answer": "They stop moving and stay still over the ocean."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "withdrawal",
+       "low pressure trough",
+       "southward shift",
+       "retreating monsoon"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Rotation and Revolution of the Earth",
+   "Basic Map Reading",
+   "States and Union Territories of India"
+  ]
+ },
+ "problems": []
+}

@@ -1,0 +1,153 @@
+{
+ "topic": {
+  "id": "SOC-GEO-TRANSPORT",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   10
+  ],
+  "title": "Lifelines of the national economy",
+  "scope": "roads, railways, pipelines, waterways, airways, communication, trade"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 695,
+  "candidatesTokenCount": 1096,
+  "totalTokenCount": 1791,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 695
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 34.0,
+ "response": {
+  "concepts": [
+   {
+    "key": "transport_modes",
+    "name": "Modes of Transport and Infrastructure",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Road transport is always superior to rail transport because it is faster.",
+      "why": "Students confuse the speed of a personal vehicle with the efficiency of mass transit systems.",
+      "fix": "Railways are more efficient for bulk transport over long distances, while roads are better for door-to-door service and short distances.",
+      "probe": {
+       "question": "Which mode of transport is more suitable for carrying heavy coal from mines to distant factories?",
+       "wrong_answer": "Road transport, because trucks can drive faster than trains."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "roadways",
+       "railways",
+       "bulk transport",
+       "door-to-door service"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Pipelines are only used for transporting water to homes.",
+      "why": "Everyday experience with household plumbing limits their understanding of industrial infrastructure.",
+      "fix": "Pipelines are a critical mode of transport for solids (in slurry form), liquids, and gases like petroleum and natural gas.",
+      "probe": {
+       "question": "How is crude oil moved from oil fields to refineries located far away?",
+       "wrong_answer": "It is transported using large trucks or ships because pipelines are only for water."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "pipelines",
+       "crude oil",
+       "natural gas",
+       "slurry"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "communication_networks",
+    "name": "Communication and Digital Connectivity",
+    "prereqs": [
+     "transport_modes"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Mass communication is the same as personal communication.",
+      "why": "Students use smartphones for both purposes and fail to distinguish between one-to-one and one-to-many channels.",
+      "fix": "Mass communication reaches millions simultaneously (like TV or radio), whereas personal communication is between specific individuals.",
+      "probe": {
+       "question": "Is a newspaper an example of personal communication?",
+       "wrong_answer": "Yes, because it tells me information I need to know."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "mass communication",
+       "personal communication",
+       "radio",
+       "television",
+       "newspapers"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "trade_dynamics",
+    "name": "International Trade and Economic Balance",
+    "prereqs": [
+     "transport_modes",
+     "communication_networks"
+    ],
+    "misconceptions": [
+     {
+      "statement": "A country is wealthy only if it exports more than it imports.",
+      "why": "Students often equate trade balance with a simple 'profit' concept from household shopping.",
+      "fix": "Trade balance is a complex indicator; importing essential technology or raw materials can be beneficial for long-term economic growth.",
+      "probe": {
+       "question": "If a country imports high-tech machinery to build its own industries, is it losing money?",
+       "wrong_answer": "Yes, because imports always represent a loss of wealth for the country."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "balance of trade",
+       "exports",
+       "imports",
+       "favourable balance"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "International trade is only about exchanging luxury goods.",
+      "why": "Students focus on visible consumer goods in malls rather than the invisible trade of raw materials and intermediate goods.",
+      "fix": "International trade involves the exchange of essential raw materials, energy resources, and services that sustain a nation's economy.",
+      "probe": {
+       "question": "Why does India trade with other countries?",
+       "wrong_answer": "To get foreign clothes and gadgets that are not available here."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "international trade",
+       "foreign exchange",
+       "commodities",
+       "economic development"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Resources and Development",
+   "Manufacturing Industries",
+   "Agriculture"
+  ]
+ },
+ "problems": []
+}

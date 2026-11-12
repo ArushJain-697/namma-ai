@@ -1,0 +1,154 @@
+{
+ "topic": {
+  "id": "SOC-GEO-GLOBE",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   6
+  ],
+  "title": "Globe: latitudes and longitudes",
+  "scope": "Equator, heat zones, Prime Meridian, longitude and time, Indian Standard Time"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 695,
+  "candidatesTokenCount": 1128,
+  "totalTokenCount": 1823,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 695
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.8,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "The Globe and the Equator",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "The Equator is a physical line drawn on the Earth's surface.",
+      "why": "Students often confuse the lines on a map or globe with actual markings on the ground.",
+      "fix": "The Equator is an imaginary line used by geographers to divide the Earth into Northern and Southern Hemispheres.",
+      "probe": {
+       "question": "If you travel to the Equator, what color will the line be painted on the ground?",
+       "wrong_answer": "It will be a white or yellow line like a road marking."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "imaginary line",
+       "globe",
+       "equator",
+       "surface",
+       "map"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "The Earth is perfectly flat like a map.",
+      "why": "Students spend most of their time looking at flat paper maps in textbooks.",
+      "fix": "The Earth is a sphere, and a globe is a better model because it shows the true shape of the Earth.",
+      "probe": {
+       "question": "Why do we use a globe instead of just a map?",
+       "wrong_answer": "Because the globe is just a toy, but maps are the real shape of the world."
+      },
+      "error_type": "other",
+      "trigger_cues": [
+       "globe",
+       "sphere",
+       "model",
+       "flat map"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Heat Zones",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The Torrid Zone is hot because it is closer to the Sun.",
+      "why": "Students often assume that 'hotter' must mean 'physically closer' to the heat source.",
+      "fix": "The Torrid Zone is hot because it receives direct rays from the Sun due to its position relative to the Equator, not because it is closer in distance.",
+      "probe": {
+       "question": "Why is the Torrid Zone hotter than the Frigid Zone?",
+       "wrong_answer": "Because the Torrid Zone is physically nearer to the Sun in space."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "torrid zone",
+       "direct rays",
+       "sun",
+       "heat",
+       "equator"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Longitude and Time",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Time is the same everywhere on Earth at the same moment.",
+      "why": "Students generalize their local experience of time to the entire planet.",
+      "fix": "Because the Earth rotates from west to east, different longitudes experience sunrise and sunset at different times.",
+      "probe": {
+       "question": "If it is noon in London, is it also noon in Tokyo?",
+       "wrong_answer": "Yes, noon is the same time for everyone on Earth."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "rotation",
+       "sunrise",
+       "sunset",
+       "longitude",
+       "time difference"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "The Prime Meridian is the line where the day officially begins.",
+      "why": "Students confuse the Prime Meridian (0 degrees longitude) with the International Date Line.",
+      "fix": "The Prime Meridian is the reference line for time zones, but the International Date Line is where the calendar date changes.",
+      "probe": {
+       "question": "Where do we change the date when crossing the globe?",
+       "wrong_answer": "At the Prime Meridian in Greenwich."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "prime meridian",
+       "greenwich",
+       "time",
+       "longitude"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Basic directions (North, South, East, West)",
+   "Concept of rotation and revolution",
+   "Understanding of a sphere"
+  ]
+ },
+ "problems": []
+}

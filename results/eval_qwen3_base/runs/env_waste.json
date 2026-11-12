@@ -1,0 +1,1179 @@
+{
+  "passage": "Every day, every household throws away some waste. Vegetable peels, leftover food, paper, plastic bags, bottles and broken toys all end up in the dustbin. In many towns, the waste is collected by municipal workers and taken to low-lying open areas called landfills. As landfills fill up, they become huge, smelly mountains of garbage that attract flies and rats. Waste can be handled much better if it is separated at home. Kitchen waste such as peels and leftover food is called biodegradable waste, because tiny organisms in the soil can break it down. This waste can be turned into compost, a dark, rich manure, by burying it in a pit for a few weeks. Using earthworms makes the process faster, and this method is called vermicomposting. Plastic, glass and metal are non-biodegradable. They are not broken down by organisms and can remain in the soil for hundreds of years. Many of these materials can be recycled. Paper can be made into new paper, and glass and metal can be melted and reused. Plastic bags are a special problem. When they are thrown away, they block drains, and animals such as cows sometimes eat them and fall ill. Burning plastic releases harmful gases. The best way to deal with plastic is to reduce its use: carry a cloth bag to the market and refuse what you do not need.",
+  "gate": {
+    "status": "OK",
+    "words": 228,
+    "reason": "OK: 228 words"
+  },
+  "summary": {
+    "text": "Every day, every household throws away some waste. In many towns, the waste is collected by municipal workers and goes to low-lying open areas called landfills. Kitchen waste like peels and leftovers is called biodegradable waste because tiny plants in the soil can break it down.",
+    "word_count": 46,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "46 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 0,
+        "source": "Every day, every household throws away some waste.",
+        "text": "Every day, every household throws away some waste.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "Every day, every household throws away some waste.",
+            "temperature": 0.0,
+            "wall_s": 0.873,
+            "failed": [],
+            "prompt_tokens": 83,
+            "new_tokens": 79,
+            "ttft_ms": 108,
+            "tokens_per_s": 101.96,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 2,
+        "source": "In many towns, the waste is collected by municipal workers and taken to low-lying open areas called landfills.",
+        "text": "In many towns, the waste is collected by municipal workers and goes to low-lying open areas called landfills.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 11.1 (limit 11.8), 18 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "In many towns, the waste is collected by municipal workers and goes to low-lying open areas called landfills.",
+            "temperature": 0.0,
+            "wall_s": 0.9222,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 96,
+            "new_tokens": 79,
+            "ttft_ms": 133,
+            "tokens_per_s": 98.86,
+            "verify": null
+          },
+          {
+            "text": "In many towns, the waste is taken to low-lying open areas called landfills by municipal workers.",
+            "temperature": 0.4,
+            "wall_s": 0.9249,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 96,
+            "new_tokens": 79,
+            "ttft_ms": 123,
+            "tokens_per_s": 97.38,
+            "verify": null
+          },
+          {
+            "text": "In many towns, the waste is collected by municipal workers and goes to low-lying open areas called landfills.",
+            "temperature": 0.7,
+            "wall_s": 0.9272,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 96,
+            "new_tokens": 79,
+            "ttft_ms": 123,
+            "tokens_per_s": 97.01,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 5,
+        "source": "Kitchen waste such as peels and leftover food is called biodegradable waste, because tiny organisms in the soil can break it down.",
+        "text": "Kitchen waste like peels and leftovers is called biodegradable waste because tiny plants in the soil can break it down.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 9.9 (limit 11.2), 20 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "Kitchen waste like peels and leftovers is called biodegradable waste because tiny plants in the soil can break it down.",
+            "temperature": 0.0,
+            "wall_s": 0.9218,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 100,
+            "new_tokens": 79,
+            "ttft_ms": 134,
+            "tokens_per_s": 99.11,
+            "verify": null
+          },
+          {
+            "text": "Kitchen waste like peels and leftovers is called biodegradable waste because the soil can break it down.",
+            "temperature": 0.4,
+            "wall_s": 0.935,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 100,
+            "new_tokens": 79,
+            "ttft_ms": 126,
+            "tokens_per_s": 96.42,
+            "verify": null
+          },
+          {
+            "text": "Kitchen waste like peels and leftovers is called biodegradable waste because tiny plants in the soil can break it down.",
+            "temperature": 0.7,
+            "wall_s": 0.9357,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 100,
+            "new_tokens": 79,
+            "ttft_ms": 125,
+            "tokens_per_s": 96.3,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "What are the low-lying open areas called?",
+      "key": "landfills",
+      "options": [
+        "toys",
+        "flies",
+        "landfills",
+        "mountains"
+      ],
+      "witness_idx": 2,
+      "witness": "In many towns, the waste is collected by municipal workers and taken to low-lying open areas called landfills.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "7 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.44"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.7 (limit 11.8)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What are called landfills?",
+          "temperature": 0.0,
+          "wall_s": 0.7598,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 229,
+          "tokens_per_s": 86.79,
+          "verify": null
+        },
+        {
+          "text": "What are called landfills?",
+          "temperature": 0.4,
+          "wall_s": 0.7598,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 227,
+          "tokens_per_s": 86.47,
+          "verify": null
+        },
+        {
+          "text": "What are the low-lying open areas called?",
+          "temperature": 0.7,
+          "wall_s": 0.7593,
+          "failed": [],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 227,
+          "tokens_per_s": 86.47,
+          "verify": {
+            "text": "landfills",
+            "wall_s": 0.3722,
+            "prompt_tokens": 159,
+            "new_tokens": 15,
+            "ttft_ms": 212,
+            "tokens_per_s": 88.05
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: In many towns, the waste is collected by municipal workers and taken to _____ open areas called landfills.",
+        "key": "low-lying",
+        "witness_idx": 2,
+        "witness": "In many towns, the waste is collected by municipal workers and taken to low-lying open areas called landfills.",
+        "options": [
+          "low-lying",
+          "burning",
+          "peels",
+          "paper"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "soil",
+      "options": [
+        "household",
+        "soil",
+        "plastic",
+        "paper"
+      ],
+      "witness_idx": 5,
+      "witness": "Kitchen waste such as peels and leftover food is called biodegradable waste, because tiny organisms in the soil can break it down.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "7 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.44"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.24"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "75% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.7 (limit 11.2)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "The term for biodegradable waste is soil.",
+          "temperature": 0.0,
+          "wall_s": 0.7478,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 173,
+          "new_tokens": 47,
+          "ttft_ms": 230,
+          "tokens_per_s": 88.97,
+          "verify": null
+        },
+        {
+          "text": "The term for biodegradable waste is soil.",
+          "temperature": 0.4,
+          "wall_s": 0.755,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 173,
+          "new_tokens": 47,
+          "ttft_ms": 228,
+          "tokens_per_s": 87.29,
+          "verify": null
+        },
+        {
+          "text": "The answer is: soil.",
+          "temperature": 0.7,
+          "wall_s": 0.7537,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 173,
+          "new_tokens": 47,
+          "ttft_ms": 224,
+          "tokens_per_s": 86.96,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Kitchen waste such as peels and leftover food is called biodegradable waste, because tiny _____ in the soil can break it down.",
+        "key": "organisms",
+        "witness_idx": 5,
+        "witness": "Kitchen waste such as peels and leftover food is called biodegradable waste, because tiny organisms in the soil can break it down.",
+        "options": [
+          "bottles",
+          "organisms",
+          "mountains",
+          "toys"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "What can be melted and reused?",
+      "key": "metal",
+      "options": [
+        "household",
+        "metal",
+        "vegetable",
+        "leftover"
+      ],
+      "witness_idx": 11,
+      "witness": "Paper can be made into new paper, and glass and metal can be melted and reused.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "6 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.51"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.31"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.5 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What can be melted and reused?",
+          "temperature": 0.0,
+          "wall_s": 0.7337,
+          "failed": [],
+          "prompt_tokens": 164,
+          "new_tokens": 47,
+          "ttft_ms": 212,
+          "tokens_per_s": 88.29,
+          "verify": {
+            "text": "glass and metal",
+            "wall_s": 0.3523,
+            "prompt_tokens": 151,
+            "new_tokens": 15,
+            "ttft_ms": 202,
+            "tokens_per_s": 93.96
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Paper can be made into new paper, and _____ and metal can be melted and reused.",
+        "key": "glass",
+        "witness_idx": 11,
+        "witness": "Paper can be made into new paper, and glass and metal can be melted and reused.",
+        "options": [
+          "plastic",
+          "vegetable",
+          "broken",
+          "glass"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "bag",
+      "options": [
+        "leftover",
+        "waste",
+        "metal",
+        "bag"
+      ],
+      "witness_idx": 15,
+      "witness": "The best way to deal with plastic is to reduce its use: carry a cloth bag to the market and refuse what you do not need.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "20 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.83"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.37"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 6.4 (limit 8.6)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "To deal with plastic, the best way is to carry a cloth bag to the market and refuse what you do not need.",
+          "temperature": 0.0,
+          "wall_s": 0.754,
+          "failed": [
+            "stem_question_mark",
+            "stem_length",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 174,
+          "new_tokens": 47,
+          "ttft_ms": 231,
+          "tokens_per_s": 88.12,
+          "verify": null
+        },
+        {
+          "text": "To deal with plastic, the best way is to carry a cloth bag to the market and refuse what you do not need.",
+          "temperature": 0.4,
+          "wall_s": 0.76,
+          "failed": [
+            "stem_question_mark",
+            "stem_length",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 174,
+          "new_tokens": 47,
+          "ttft_ms": 228,
+          "tokens_per_s": 86.63,
+          "verify": null
+        },
+        {
+          "text": "To deal with plastic, one can carry a cloth bag to the market and refuse what you do not need.",
+          "temperature": 0.7,
+          "wall_s": 0.757,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 174,
+          "new_tokens": 47,
+          "ttft_ms": 229,
+          "tokens_per_s": 87.12,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The best way to deal with _____ is to reduce its use: carry a cloth bag to the market and refuse what you do not need.",
+        "key": "plastic",
+        "witness_idx": 15,
+        "witness": "The best way to deal with plastic is to reduce its use: carry a cloth bag to the market and refuse what you do not need.",
+        "options": [
+          "paper",
+          "plastic",
+          "broken",
+          "waste"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "broken",
+      "options": [
+        "municipal",
+        "broken",
+        "glass",
+        "huge"
+      ],
+      "witness_idx": 1,
+      "witness": "Vegetable peels, leftover food, paper, plastic bags, bottles and broken toys all end up in the dustbin.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "6 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.37"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.45"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 0.5 (limit 9.8)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'vegetable peels, paper, plastic bags, bottles, and broken toys.', not 'broken'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'vegetable peels, paper, plastic bags, bottles, and broken toys.', not 'broken'"
+      ],
+      "attempts": [
+        {
+          "text": "What ends up in the dustbin?",
+          "temperature": 0.0,
+          "wall_s": 0.7438,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 220,
+          "tokens_per_s": 87.95,
+          "verify": {
+            "text": "vegetable peels, paper, plastic bags, bottles, and broken toys.",
+            "wall_s": 0.3663,
+            "prompt_tokens": 158,
+            "new_tokens": 15,
+            "ttft_ms": 210,
+            "tokens_per_s": 89.74
+          }
+        },
+        {
+          "text": "What ends up in the dustbin?",
+          "temperature": 0.4,
+          "wall_s": 0.76,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 227,
+          "tokens_per_s": 86.3,
+          "verify": {
+            "text": "vegetable peels, paper, plastic bags, bottles, and broken toys.",
+            "wall_s": 0.3627,
+            "prompt_tokens": 158,
+            "new_tokens": 15,
+            "ttft_ms": 207,
+            "tokens_per_s": 90.32
+          }
+        },
+        {
+          "text": "What ends up in the dustbin?",
+          "temperature": 0.7,
+          "wall_s": 0.7582,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 226,
+          "tokens_per_s": 86.47,
+          "verify": {
+            "text": "vegetable peels, paper, plastic bags, bottles, and broken toys.",
+            "wall_s": 0.3632,
+            "prompt_tokens": 158,
+            "new_tokens": 15,
+            "ttft_ms": 207,
+            "tokens_per_s": 89.74
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Vegetable peels, leftover food, paper, plastic _____, bottles and broken toys all end up in the dustbin.",
+        "key": "bags",
+        "witness_idx": 1,
+        "witness": "Vegetable peels, leftover food, paper, plastic bags, bottles and broken toys all end up in the dustbin.",
+        "options": [
+          "bags",
+          "flies",
+          "mountains",
+          "landfills"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "throws",
+      "options": [
+        "bottles",
+        "throws",
+        "workers",
+        "bags"
+      ],
+      "witness_idx": 0,
+      "witness": "Every day, every household throws away some waste.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.79"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.24"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 9.7 (limit 9.7)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "Every household throws away some waste every day.",
+          "temperature": 0.0,
+          "wall_s": 0.7234,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 156,
+          "new_tokens": 47,
+          "ttft_ms": 209,
+          "tokens_per_s": 89.49,
+          "verify": null
+        },
+        {
+          "text": "Every household throws away some waste every day.",
+          "temperature": 0.4,
+          "wall_s": 0.7326,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 156,
+          "new_tokens": 47,
+          "ttft_ms": 206,
+          "tokens_per_s": 87.45,
+          "verify": null
+        },
+        {
+          "text": "Every household throws away some waste every day.",
+          "temperature": 0.7,
+          "wall_s": 0.7309,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 156,
+          "new_tokens": 47,
+          "ttft_ms": 203,
+          "tokens_per_s": 87.29,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Every day, every _____ throws away some waste.",
+        "key": "household",
+        "witness_idx": 0,
+        "witness": "Every day, every household throws away some waste.",
+        "options": [
+          "soil",
+          "household",
+          "plastic",
+          "paper"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: Burning _____ releases harmful gases.",
+      "key": "plastic",
+      "options": [
+        "metal",
+        "soil",
+        "leftover",
+        "plastic"
+      ],
+      "witness_idx": 14,
+      "witness": "Burning plastic releases harmful gases.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": null
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 20.2613,
+    "summary_s": 6.4416,
+    "stems_s": 13.8185,
+    "model_wall_s": 18.4288,
+    "model_calls": 23,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 0,
+    "red": 4,
+    "fallback": 1
+  },
+  "version": 1,
+  "created": "2026-11-13T01:25:08",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

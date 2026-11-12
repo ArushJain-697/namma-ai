@@ -1,0 +1,146 @@
+{
+ "topic": {
+  "id": "SOC-HIS-CRAFTS",
+  "subject": "social",
+  "strand": "history",
+  "grades": [
+   8
+  ],
+  "title": "Weavers, iron smelters and factory owners",
+  "scope": "Indian textiles, decline of weaving, Manchester imports, iron smelting, Tata steel"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 696,
+  "candidatesTokenCount": 1026,
+  "totalTokenCount": 1722,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 696
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.9,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Traditional Indian Textile Production",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Indian weavers were poor and unskilled laborers who only made basic clothes.",
+      "why": "Students often equate historical poverty with a lack of skill, ignoring the global prestige of Indian textiles.",
+      "fix": "Indian weavers were highly skilled artisans whose fine muslins and chintz were world-famous and in high demand globally.",
+      "probe": {
+       "question": "Why were Indian textiles in such high demand in Europe before the 18th century?",
+       "wrong_answer": "Because they were cheap and made by unskilled laborers who worked for very low wages."
+      },
+      "error_type": "presentism",
+      "trigger__cues": [
+       "muslin",
+       "chintz",
+       "handloom",
+       "artisans",
+       "global market"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Impact of Industrial Revolution and Manchester Imports",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Indian weavers lost their jobs only because they refused to use new machines.",
+      "why": "Students often blame the victim's lack of adaptation rather than systemic colonial economic policies.",
+      "fix": "Weavers lost their livelihoods because British colonial policies imposed heavy duties on Indian goods while flooding India with cheap, machine-made British textiles.",
+      "probe": {
+       "question": "What was the main reason for the decline of the Indian weaving industry?",
+       "wrong_answer": "The weavers were too stubborn to learn how to operate the new machines from England."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "manchester",
+       "machine-made",
+       "import duties",
+       "decline",
+       "competition"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Decline of Indian Iron Smelting",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Indian iron smelting died out because the iron produced was of very poor quality.",
+      "why": "Students assume that if a traditional craft disappeared, it must have been inferior to modern methods.",
+      "fix": "Indian wootz steel was of exceptional quality; the industry declined due to strict colonial forest laws that restricted access to wood and charcoal.",
+      "probe": {
+       "question": "Why did the traditional iron smelting furnaces in India stop working?",
+       "wrong_answer": "The iron they produced was weak and could not be used for building modern structures."
+      },
+      "error_type": "presentism",
+      "trigger_cues": [
+       "wootz",
+       "smelters",
+       "forest laws",
+       "charcoal",
+       "furnaces"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Rise of Modern Steel Industry (TISCO)",
+    "prereqs": [
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The British government actively encouraged and funded the setup of Tata Steel in India.",
+      "why": "Students often assume that colonial infrastructure projects were always supported by the British rulers.",
+      "fix": "The British were reluctant to support Indian-owned industries and preferred importing steel from Britain; TISCO was established despite colonial resistance.",
+      "probe": {
+       "question": "How did the British government react to the establishment of the Tata Iron and Steel Company?",
+       "wrong_answer": "They were very happy and provided all the money and support needed to build the factory."
+      },
+      "error_type": "confuses_institutions",
+      "trigger_cues": [
+       "tisco",
+       "jamsetji tata",
+       "jamshedpur",
+       "colonial resistance",
+       "steel production"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Colonialism in India",
+   "The Industrial Revolution",
+   "Basic Geography of India"
+  ]
+ },
+ "problems": []
+}

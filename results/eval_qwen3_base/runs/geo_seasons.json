@@ -1,0 +1,1297 @@
+{
+  "passage": "The Earth moves in two ways. It spins on its axis, an imaginary line through the North and South Poles, and one full spin takes about 24 hours. This movement is called rotation, and it causes day and night. At any moment, the half of the Earth facing the Sun has day, while the other half has night. The Earth also travels around the Sun in a path called its orbit. One full trip takes about 365 days and 6 hours, which is one year. This movement is called revolution. Every four years the extra hours add up to one whole day, so February then has 29 days, and that year is called a leap year. The Earth's axis is not upright. It is tilted at an angle of about 23.5 degrees, and it always points in the same direction in space. Because of this tilt, the Northern Hemisphere leans towards the Sun for part of the year and away from it for another part. When it leans towards the Sun, the Sun's rays fall on it more directly and the days are longer, so it is summer there. Many people believe that summer comes because the Earth moves closer to the Sun, but that is not the reason. In fact, the Earth is closest to the Sun in early January, when it is winter in India.",
+  "gate": {
+    "status": "OK",
+    "words": 227,
+    "reason": "OK: 227 words"
+  },
+  "summary": {
+    "text": "At any moment, the half of the Earth facing the Sun gets day, while the other half gets night. When the sun is shining on you, the sun's rays are more direct and the days are longer, so it is summer.",
+    "word_count": 41,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "41 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 3,
+        "source": "At any moment, the half of the Earth facing the Sun has day, while the other half has night.",
+        "text": "At any moment, the half of the Earth facing the Sun gets day, while the other half gets night.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 6.7 (limit 7.0), 19 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "At any moment, the half of the Earth facing the Sun gets day, while the other half gets night.",
+            "temperature": 0.0,
+            "wall_s": 0.9075,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 95,
+            "new_tokens": 79,
+            "ttft_ms": 125,
+            "tokens_per_s": 99.74,
+            "verify": null
+          },
+          {
+            "text": "At any time, the part of the Earth facing the Sun gets daylight, while the other part gets night.",
+            "temperature": 0.4,
+            "wall_s": 0.9045,
+            "failed": [
+              "summary_support",
+              "summary_readability"
+            ],
+            "prompt_tokens": 95,
+            "new_tokens": 79,
+            "ttft_ms": 121,
+            "tokens_per_s": 99.62,
+            "verify": null
+          },
+          {
+            "text": "At any moment, the Earth is facing the Sun in the day and opposite in the night.",
+            "temperature": 0.7,
+            "wall_s": 0.9581,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 95,
+            "new_tokens": 79,
+            "ttft_ms": 125,
+            "tokens_per_s": 93.64,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 11,
+        "source": "When it leans towards the Sun, the Sun's rays fall on it more directly and the days are longer, so it is summer there.",
+        "text": "When the sun is shining on you, the sun's rays are more direct and the days are longer, so it is summer.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 6.9 (limit 8.0), 22 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "When the sun is near the horizon, the sun's rays are more direct and the days are longer, so it is summer.",
+            "temperature": 0.0,
+            "wall_s": 0.9955,
+            "failed": [
+              "summary_support",
+              "summary_readability"
+            ],
+            "prompt_tokens": 101,
+            "new_tokens": 79,
+            "ttft_ms": 128,
+            "tokens_per_s": 90.07,
+            "verify": null
+          },
+          {
+            "text": "When the sun is shining on you, the sun's rays are more direct and the days are longer, so it is summer.",
+            "temperature": 0.4,
+            "wall_s": 1.0173,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 101,
+            "new_tokens": 79,
+            "ttft_ms": 135,
+            "tokens_per_s": 88.44,
+            "verify": null
+          },
+          {
+            "text": "When the sun is near, the sun's rays hit it more directly, and it gets warmer, so it is summer.",
+            "temperature": 0.7,
+            "wall_s": 1.0428,
+            "failed": [
+              "summary_support",
+              "summary_readability"
+            ],
+            "prompt_tokens": 101,
+            "new_tokens": 79,
+            "ttft_ms": 139,
+            "tokens_per_s": 86.38,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "Earth",
+      "options": [
+        "January",
+        "India",
+        "Earth",
+        "North"
+      ],
+      "witness_idx": 3,
+      "witness": "At any moment, the half of the Earth facing the Sun has day, while the other half has night.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "17 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.79"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "62% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 6.3 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "At any moment, the Earth faces the Sun and has day, while the other half has night.",
+          "temperature": 0.0,
+          "wall_s": 0.8668,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 238,
+          "tokens_per_s": 73.13,
+          "verify": null
+        },
+        {
+          "text": "At any moment, the Earth faces the Sun, and the other half faces the Moon.",
+          "temperature": 0.4,
+          "wall_s": 0.8945,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 252,
+          "tokens_per_s": 71.76,
+          "verify": null
+        },
+        {
+          "text": "At any moment, half of the Earth faces the Sun and the other half faces the Moon.",
+          "temperature": 0.7,
+          "wall_s": 0.997,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 267,
+          "tokens_per_s": 63.1,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: At any moment, the half of the Earth facing the _____ has day, while the other half has night.",
+        "key": "Sun",
+        "witness_idx": 3,
+        "witness": "At any moment, the half of the Earth facing the Sun has day, while the other half has night.",
+        "options": [
+          "trip",
+          "revolution",
+          "rotation",
+          "Sun"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "summer",
+      "options": [
+        "trip",
+        "extra",
+        "summer",
+        "path"
+      ],
+      "witness_idx": 11,
+      "witness": "When it leans towards the Sun, the Sun's rays fall on it more directly and the days are longer, so it is summer there.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "12 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.54"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "67% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.8 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "When the sun is more directly towards the land, what happens? summer",
+          "temperature": 0.0,
+          "wall_s": 0.9276,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 174,
+          "new_tokens": 47,
+          "ttft_ms": 321,
+          "tokens_per_s": 75.91,
+          "verify": null
+        },
+        {
+          "text": "When the sun is more directly reflected on the land, it becomes summer.",
+          "temperature": 0.4,
+          "wall_s": 0.8526,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 174,
+          "new_tokens": 47,
+          "ttft_ms": 266,
+          "tokens_per_s": 78.5,
+          "verify": null
+        },
+        {
+          "text": "When the sun leans towards you, what do you see? summer",
+          "temperature": 0.7,
+          "wall_s": 0.8478,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 174,
+          "new_tokens": 47,
+          "ttft_ms": 256,
+          "tokens_per_s": 77.83,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: When it leans towards the Sun, the _____ rays fall on it more directly and the days are longer, so it is summer there.",
+        "key": "Sun's",
+        "witness_idx": 11,
+        "witness": "When it leans towards the Sun, the Sun's rays fall on it more directly and the days are longer, so it is summer there.",
+        "options": [
+          "causes",
+          "Sun's",
+          "movement",
+          "tilted"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "leans",
+      "options": [
+        "spins",
+        "summer",
+        "travels",
+        "leans"
+      ],
+      "witness_idx": 10,
+      "witness": "Because of this tilt, the Northern Hemisphere leans towards the Sun for part of the year and away from it for another part.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "23 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "similarity to the witness 0.89"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 9.3 (limit 9.3)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_length: 23 words (max 20)",
+        "stem_not_echo: similarity to the witness 0.89"
+      ],
+      "attempts": [
+        {
+          "text": "The tilt causes the Northern Hemisphere to lean towards the Sun for part of the year and away from it for another part.",
+          "temperature": 0.0,
+          "wall_s": 0.8194,
+          "failed": [
+            "stem_question_mark",
+            "stem_length",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 171,
+          "new_tokens": 47,
+          "ttft_ms": 250,
+          "tokens_per_s": 80.84,
+          "verify": null
+        },
+        {
+          "text": "The Northern Hemisphere leans towards the Sun for part of the year and away from it for another part.",
+          "temperature": 0.4,
+          "wall_s": 0.8468,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 171,
+          "new_tokens": 47,
+          "ttft_ms": 259,
+          "tokens_per_s": 78.36,
+          "verify": null
+        },
+        {
+          "text": "The tilt causes the Northern Hemisphere to lean towards the Sun for part of the year and away from it for another part.",
+          "temperature": 0.7,
+          "wall_s": 0.8524,
+          "failed": [
+            "stem_question_mark",
+            "stem_length",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 171,
+          "new_tokens": 47,
+          "ttft_ms": 254,
+          "tokens_per_s": 76.92,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Because of this tilt, the Northern _____ leans towards the Sun for part of the year and away from it for another part.",
+        "key": "Hemisphere",
+        "witness_idx": 10,
+        "witness": "Because of this tilt, the Northern Hemisphere leans towards the Sun for part of the year and away from it for another part.",
+        "options": [
+          "rotation",
+          "revolution",
+          "Hemisphere",
+          "trip"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "How long does it take for the Ganga river to spin around the North and South Poles?",
+      "key": "24",
+      "options": [
+        "23.5",
+        "24",
+        "29",
+        "365"
+      ],
+      "witness_idx": 1,
+      "witness": "It spins on its axis, an imaginary line through the North and South Poles, and one full spin takes about 24 hours.",
+      "tier": "AMBER",
+      "fallback": false,
+      "detail": true,
+      "signals": [
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "17 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.39"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "67% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.6 (limit 9.6)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "How long does it take for the Ganga river to spin once?",
+          "temperature": 0.0,
+          "wall_s": 0.8005,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 176,
+          "new_tokens": 47,
+          "ttft_ms": 247,
+          "tokens_per_s": 83.18,
+          "verify": {
+            "text": "24 hours",
+            "wall_s": 0.4396,
+            "prompt_tokens": 168,
+            "new_tokens": 15,
+            "ttft_ms": 238,
+            "tokens_per_s": 69.65
+          }
+        },
+        {
+          "text": "How long does it take for the Ganga river to spin around the North and South Poles?",
+          "temperature": 0.4,
+          "wall_s": 0.8512,
+          "failed": [],
+          "prompt_tokens": 176,
+          "new_tokens": 47,
+          "ttft_ms": 267,
+          "tokens_per_s": 78.9,
+          "verify": {
+            "text": "24 hours",
+            "wall_s": 0.4396,
+            "prompt_tokens": 174,
+            "new_tokens": 15,
+            "ttft_ms": 245,
+            "tokens_per_s": 72.54
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: It spins on its axis, an imaginary line through the North and South _____, and one full spin takes about 24 hours.",
+        "key": "Poles",
+        "witness_idx": 1,
+        "witness": "It spins on its axis, an imaginary line through the North and South Poles, and one full spin takes about 24 hours.",
+        "options": [
+          "Poles",
+          "rays",
+          "tilted",
+          "causes"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "29",
+      "options": [
+        "23.5",
+        "24",
+        "29",
+        "365"
+      ],
+      "witness_idx": 7,
+      "witness": "Every four years the extra hours add up to one whole day, so February then has 29 days, and that year is called a leap year.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": true,
+      "signals": [
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "11 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.33"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.34"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "75% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 1.6 (limit 10.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is the name of the year that has 29 days?",
+          "temperature": 0.0,
+          "wall_s": 0.8851,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 179,
+          "new_tokens": 47,
+          "ttft_ms": 262,
+          "tokens_per_s": 73.95,
+          "verify": null
+        },
+        {
+          "text": "What is the name of the year that has 29 days?",
+          "temperature": 0.4,
+          "wall_s": 0.8483,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 179,
+          "new_tokens": 47,
+          "ttft_ms": 267,
+          "tokens_per_s": 79.31,
+          "verify": null
+        },
+        {
+          "text": "What is the name of the year called a leap year?",
+          "temperature": 0.7,
+          "wall_s": 0.8303,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 179,
+          "new_tokens": 47,
+          "ttft_ms": 259,
+          "tokens_per_s": 80.56,
+          "verify": {
+            "text": "leap year",
+            "wall_s": 0.4349,
+            "prompt_tokens": 169,
+            "new_tokens": 15,
+            "ttft_ms": 242,
+            "tokens_per_s": 72.54
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Every four years the extra hours add up to one whole day, so _____ then has 29 days, and that year is called a leap year.",
+        "key": "February",
+        "witness_idx": 7,
+        "witness": "Every four years the extra hours add up to one whole day, so February then has 29 days, and that year is called a leap year.",
+        "options": [
+          "movement",
+          "rotation",
+          "February",
+          "revolution"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "6",
+      "options": [
+        "6",
+        "23.5",
+        "24",
+        "29"
+      ],
+      "witness_idx": 5,
+      "witness": "One full trip takes about 365 days and 6 hours, which is one year.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": true,
+      "signals": [
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "16 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.59"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.32"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "75% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.4 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is the total time of a year?",
+          "temperature": 0.0,
+          "wall_s": 0.8204,
+          "failed": [
+            "stem_in_passage",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 247,
+          "tokens_per_s": 80.28,
+          "verify": {
+            "text": "one year",
+            "wall_s": 0.444,
+            "prompt_tokens": 155,
+            "new_tokens": 15,
+            "ttft_ms": 234,
+            "tokens_per_s": 66.67
+          }
+        },
+        {
+          "text": "What is the time duration of one full trip?",
+          "temperature": 0.4,
+          "wall_s": 0.8428,
+          "failed": [
+            "stem_in_passage",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 256,
+          "tokens_per_s": 78.5,
+          "verify": {
+            "text": "one year",
+            "wall_s": 0.3913,
+            "prompt_tokens": 156,
+            "new_tokens": 15,
+            "ttft_ms": 223,
+            "tokens_per_s": 83.33
+          }
+        },
+        {
+          "text": "What is the time period of a trip that takes about 365 days and 6 hours?",
+          "temperature": 0.7,
+          "wall_s": 0.8336,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 247,
+          "tokens_per_s": 78.5,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: One full trip takes about _____ days and 6 hours, which is one year.",
+        "key": "365",
+        "witness_idx": 5,
+        "witness": "One full trip takes about 365 days and 6 hours, which is one year.",
+        "options": [
+          "23.5",
+          "24",
+          "29",
+          "365"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: It is tilted at an angle of about _____ degrees, and it always points in the same direction in space.",
+      "key": "23.5",
+      "options": [
+        "6",
+        "23.5",
+        "24",
+        "29"
+      ],
+      "witness_idx": 9,
+      "witness": "It is tilted at an angle of about 23.5 degrees, and it always points in the same direction in space.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": true,
+      "signals": [
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: It is _____ at an angle of about 23.5 degrees, and it always points in the same direction in space.",
+        "key": "tilted",
+        "witness_idx": 9,
+        "witness": "It is tilted at an angle of about 23.5 degrees, and it always points in the same direction in space.",
+        "options": [
+          "spins",
+          "tilted",
+          "summer",
+          "axis"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "kind": "cloze",
+      "stem": "Fill in the blank: This _____ is called revolution.",
+      "key": "movement",
+      "options": [
+        "orbit",
+        "summer",
+        "leap",
+        "movement"
+      ],
+      "witness_idx": 6,
+      "witness": "This movement is called revolution.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": null
+    },
+    {
+      "id": 9,
+      "kind": "cloze",
+      "stem": "Fill in the blank: At any moment, the half of the _____ facing the Sun has day, while the other half has night.",
+      "key": "Earth",
+      "options": [
+        "January",
+        "India",
+        "Earth",
+        "North"
+      ],
+      "witness_idx": 3,
+      "witness": "At any moment, the half of the Earth facing the Sun has day, while the other half has night.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: At any moment, the half of the Earth facing the _____ has day, while the other half has night.",
+        "key": "Sun",
+        "witness_idx": 3,
+        "witness": "At any moment, the half of the Earth facing the Sun has day, while the other half has night.",
+        "options": [
+          "trip",
+          "revolution",
+          "rotation",
+          "Sun"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 22.6114,
+    "summary_s": 5.8272,
+    "stems_s": 16.7816,
+    "model_wall_s": 20.4428,
+    "model_calls": 23,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 1,
+    "red": 5,
+    "fallback": 3
+  },
+  "version": 1,
+  "created": "2026-11-13T01:22:10",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

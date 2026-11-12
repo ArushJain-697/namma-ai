@@ -1,0 +1,1274 @@
+{
+  "passage": "Some foods taste sour because they contain acids. Lemon juice contains citric acid, curd contains lactic acid, and vinegar contains acetic acid. Substances that taste bitter and feel soapy, such as baking soda, are called bases. Tasting is not a safe way to test a substance, so we use indicators. An indicator changes its colour when it is added to an acid or a base. Litmus is a natural indicator obtained from lichens. Blue litmus paper turns red in an acid, while red litmus paper turns blue in a base. Turmeric is another natural indicator found in every Indian kitchen. A turmeric stain on a white cloth turns red when soap, which is a base, is rubbed on it, and it turns yellow again when washed with plenty of water. China rose petals give a solution that turns dark pink in an acid and green in a base. When an acid is mixed with a base, they cancel each other's effect. This reaction is called neutralisation, and it produces a salt and water, along with heat. Neutralisation is useful in daily life. An ant bite injects formic acid into the skin, and the pain can be relieved by rubbing on a mild base such as moist baking soda. Farmers add quicklime or slaked lime to soil that is too acidic.",
+  "gate": {
+    "status": "OK",
+    "words": 220,
+    "reason": "OK: 220 words"
+  },
+  "summary": {
+    "text": "When an indicator changes color, it changes when it is added to an acid or a base. Blue litmus paper turns red when you put it in an acid, and red litmus paper turns blue when you put it in a base.",
+    "word_count": 42,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "42 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 4,
+        "source": "An indicator changes its colour when it is added to an acid or a base.",
+        "text": "When an indicator changes color, it changes when it is added to an acid or a base.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 8.4 (limit 7.6), 17 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "When an indicator changes color, it changes when it is added to an acid or a base.",
+            "temperature": 0.0,
+            "wall_s": 0.9032,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 89,
+            "new_tokens": 79,
+            "ttft_ms": 114,
+            "tokens_per_s": 98.98,
+            "verify": null
+          },
+          {
+            "text": "When an indicator changes color, it turns red when added to an acid and blue when added to a base.",
+            "temperature": 0.4,
+            "wall_s": 0.9117,
+            "failed": [
+              "summary_support",
+              "summary_readability"
+            ],
+            "prompt_tokens": 89,
+            "new_tokens": 79,
+            "ttft_ms": 114,
+            "tokens_per_s": 97.87,
+            "verify": null
+          },
+          {
+            "text": "When an indicator changes color, it turns red if it's added to an acid and blue if it's added to a base.",
+            "temperature": 0.7,
+            "wall_s": 0.8879,
+            "failed": [
+              "summary_support",
+              "summary_readability"
+            ],
+            "prompt_tokens": 89,
+            "new_tokens": 79,
+            "ttft_ms": 112,
+            "tokens_per_s": 100.52,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 6,
+        "source": "Blue litmus paper turns red in an acid, while red litmus paper turns blue in a base.",
+        "text": "Blue litmus paper turns red when you put it in an acid, and red litmus paper turns blue when you put it in a base.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 8.3 (limit 7.0), 25 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "Blue and red litmus paper turn colors depending on whether the solution is acid or base.",
+            "temperature": 0.0,
+            "wall_s": 0.9182,
+            "failed": [
+              "summary_support",
+              "summary_readability"
+            ],
+            "prompt_tokens": 94,
+            "new_tokens": 79,
+            "ttft_ms": 125,
+            "tokens_per_s": 98.36,
+            "verify": null
+          },
+          {
+            "text": "Blue litmus paper turns red when you put it in an acid, and red litmus paper turns blue when you put it in a base.",
+            "temperature": 0.4,
+            "wall_s": 0.9049,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 94,
+            "new_tokens": 79,
+            "ttft_ms": 121,
+            "tokens_per_s": 99.49,
+            "verify": null
+          },
+          {
+            "text": "Blue and red litmus paper turn colors, and red turns blue when you use base, while blue turns red when you use acid.",
+            "temperature": 0.7,
+            "wall_s": 0.9021,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 94,
+            "new_tokens": 79,
+            "ttft_ms": 114,
+            "tokens_per_s": 99.11,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "contain",
+      "options": [
+        "turmeric",
+        "lemon",
+        "contain",
+        "blue"
+      ],
+      "witness_idx": 0,
+      "witness": "Some foods taste sour because they contain acids.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "9 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.37"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 1.0 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What do foods contain that make them taste sour?",
+          "temperature": 0.0,
+          "wall_s": 0.7276,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 155,
+          "new_tokens": 47,
+          "ttft_ms": 201,
+          "tokens_per_s": 87.45,
+          "verify": null
+        },
+        {
+          "text": "What do foods contain that make them taste sour?",
+          "temperature": 0.4,
+          "wall_s": 0.7445,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 155,
+          "new_tokens": 47,
+          "ttft_ms": 201,
+          "tokens_per_s": 84.71,
+          "verify": null
+        },
+        {
+          "text": "What do acids contain in foods?",
+          "temperature": 0.7,
+          "wall_s": 0.7245,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 155,
+          "new_tokens": 47,
+          "ttft_ms": 201,
+          "tokens_per_s": 88.12,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Some foods _____ sour because they contain acids.",
+        "key": "taste",
+        "witness_idx": 0,
+        "witness": "Some foods taste sour because they contain acids.",
+        "options": [
+          "water",
+          "lemon",
+          "neutralisation",
+          "taste"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "litmus",
+      "options": [
+        "petals",
+        "other's",
+        "litmus",
+        "lichens"
+      ],
+      "witness_idx": 6,
+      "witness": "Blue litmus paper turns red in an acid, while red litmus paper turns blue in a base.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "6 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.26"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "67% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 0.5 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What does the litmus test show?",
+          "temperature": 0.0,
+          "wall_s": 0.7265,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 214,
+          "tokens_per_s": 89.84,
+          "verify": null
+        },
+        {
+          "text": "What happens to the litmus paper when it's in an acid?",
+          "temperature": 0.4,
+          "wall_s": 1.0814,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 213,
+          "tokens_per_s": 53.0,
+          "verify": null
+        },
+        {
+          "text": "What color does litmus turn in an acid?",
+          "temperature": 0.7,
+          "wall_s": 0.8567,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 254,
+          "tokens_per_s": 76.41,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Blue litmus paper turns _____ in an acid, while _____ litmus paper turns blue in a base.",
+        "key": "red",
+        "witness_idx": 6,
+        "witness": "Blue litmus paper turns red in an acid, while red litmus paper turns blue in a base.",
+        "options": [
+          "slaked",
+          "indicators",
+          "washed",
+          "red"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "indicator",
+      "options": [
+        "indicator",
+        "taste",
+        "soda",
+        "contain"
+      ],
+      "witness_idx": 4,
+      "witness": "An indicator changes its colour when it is added to an acid or a base.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "13 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.64"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 6.7 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What changes when an indicator is added to an acid or a base?",
+          "temperature": 0.0,
+          "wall_s": 0.7538,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 228,
+          "tokens_per_s": 87.62,
+          "verify": null
+        },
+        {
+          "text": "What changes when an indicator is added to an acid or a base?",
+          "temperature": 0.4,
+          "wall_s": 0.7233,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 207,
+          "tokens_per_s": 89.15,
+          "verify": null
+        },
+        {
+          "text": "What changes its colour when it is added to an acid or a base?",
+          "temperature": 0.7,
+          "wall_s": 0.7216,
+          "failed": [
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 205,
+          "tokens_per_s": 89.32,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: An indicator changes its _____ when it is added to an acid or a base.",
+        "key": "colour",
+        "witness_idx": 4,
+        "witness": "An indicator changes its colour when it is added to an acid or a base.",
+        "options": [
+          "soda",
+          "colour",
+          "natural",
+          "taste"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "soda",
+      "options": [
+        "turmeric",
+        "neutralisation",
+        "contain",
+        "soda"
+      ],
+      "witness_idx": 13,
+      "witness": "An ant bite injects formic acid into the skin, and the pain can be relieved by rubbing on a mild base such as moist baking soda.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "10 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.29"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "60% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 4.8 (limit 10.4)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "The base used to relieve the pain is called soda.",
+          "temperature": 0.0,
+          "wall_s": 0.7,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 176,
+          "new_tokens": 47,
+          "ttft_ms": 214,
+          "tokens_per_s": 94.65,
+          "verify": null
+        },
+        {
+          "text": "The base used for the pain relief is called soda.",
+          "temperature": 0.4,
+          "wall_s": 0.707,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 176,
+          "new_tokens": 47,
+          "ttft_ms": 214,
+          "tokens_per_s": 93.5,
+          "verify": null
+        },
+        {
+          "text": "The mild base used to relieve the ant bite pain is called soda.",
+          "temperature": 0.7,
+          "wall_s": 0.7133,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 176,
+          "new_tokens": 47,
+          "ttft_ms": 217,
+          "tokens_per_s": 92.74,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: An ant bite injects formic acid into the skin, and the pain can be relieved by rubbing on a mild base such as moist _____ soda.",
+        "key": "baking",
+        "witness_idx": 13,
+        "witness": "An ant bite injects formic acid into the skin, and the pain can be relieved by rubbing on a mild base such as moist baking soda.",
+        "options": [
+          "indicators",
+          "tasting",
+          "baking",
+          "contain"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "water",
+      "options": [
+        "water",
+        "paper",
+        "neutralisation",
+        "soda"
+      ],
+      "witness_idx": 8,
+      "witness": "A turmeric stain on a white cloth turns red when soap, which is a base, is rubbed on it, and it turns yellow again when washed with plenty of water.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "16 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.41"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "86% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.4 (limit 11.1)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'rubbing with soap', not 'water'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'rubbing with soap', not 'water'"
+      ],
+      "attempts": [
+        {
+          "text": "What is the process that turns a turmeric stain red when soap is rubbed on it?",
+          "temperature": 0.0,
+          "wall_s": 0.7025,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 181,
+          "new_tokens": 47,
+          "ttft_ms": 226,
+          "tokens_per_s": 96.64,
+          "verify": {
+            "text": "rubbing with soap",
+            "wall_s": 0.3873,
+            "prompt_tokens": 179,
+            "new_tokens": 15,
+            "ttft_ms": 223,
+            "tokens_per_s": 85.37
+          }
+        },
+        {
+          "text": "What is the process that turns a turmeric stain red when rubbed with soap?",
+          "temperature": 0.4,
+          "wall_s": 0.7139,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 181,
+          "new_tokens": 47,
+          "ttft_ms": 226,
+          "tokens_per_s": 94.46,
+          "verify": {
+            "text": "rubbing with soap",
+            "wall_s": 0.3881,
+            "prompt_tokens": 177,
+            "new_tokens": 15,
+            "ttft_ms": 223,
+            "tokens_per_s": 85.37
+          }
+        },
+        {
+          "text": "What does the turmeric stain turn into when soap is rubbed on it?",
+          "temperature": 0.7,
+          "wall_s": 1.0754,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 181,
+          "new_tokens": 47,
+          "ttft_ms": 227,
+          "tokens_per_s": 54.25,
+          "verify": {
+            "text": "red and yellow",
+            "wall_s": 0.4276,
+            "prompt_tokens": 176,
+            "new_tokens": 15,
+            "ttft_ms": 242,
+            "tokens_per_s": 75.68
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: A turmeric stain on a white cloth turns red when soap, which is a base, is _____ on it, and it turns yellow again when washed with plenty of water.",
+        "key": "rubbed",
+        "witness_idx": 8,
+        "witness": "A turmeric stain on a white cloth turns red when soap, which is a base, is rubbed on it, and it turns yellow again when washed with plenty of water.",
+        "options": [
+          "obtained",
+          "rubbed",
+          "contain",
+          "mixed"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "short",
+      "stem": "(withheld: no valid question was written)",
+      "key": "Indian",
+      "options": null,
+      "witness_idx": 7,
+      "witness": "Turmeric is another natural indicator found in every Indian kitchen.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": true,
+      "signals": [
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.33"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "0% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 8.2 (limit 15.4)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'India', not 'Indian'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        }
+      ],
+      "reasons": [
+        "stem_in_passage: 0% of content words are in the passage",
+        "stem_answers_to_key: asked to answer its own question, the model said 'India', not 'Indian'"
+      ],
+      "attempts": [
+        {
+          "text": "Which is a natural indicator found in every Indian kitchen?",
+          "temperature": 0.0,
+          "wall_s": 0.8003,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 158,
+          "new_tokens": 47,
+          "ttft_ms": 235,
+          "tokens_per_s": 81.42,
+          "verify": null
+        },
+        {
+          "text": "Which is the natural indicator found in every Indian kitchen?",
+          "temperature": 0.4,
+          "wall_s": 0.7608,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 158,
+          "new_tokens": 47,
+          "ttft_ms": 217,
+          "tokens_per_s": 84.71,
+          "verify": null
+        },
+        {
+          "text": "Which country is located in the tropical region?",
+          "temperature": 0.7,
+          "wall_s": 0.787,
+          "failed": [
+            "stem_in_passage",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 158,
+          "new_tokens": 47,
+          "ttft_ms": 222,
+          "tokens_per_s": 81.42,
+          "verify": {
+            "text": "India",
+            "wall_s": 0.3785,
+            "prompt_tokens": 147,
+            "new_tokens": 15,
+            "ttft_ms": 208,
+            "tokens_per_s": 82.84
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Turmeric is another natural _____ found in every Indian kitchen.",
+        "key": "indicator",
+        "witness_idx": 7,
+        "witness": "Turmeric is another natural indicator found in every Indian kitchen.",
+        "options": [
+          "paper",
+          "indicator",
+          "blue",
+          "contain"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: _____ is useful in daily life.",
+      "key": "Neutralisation",
+      "options": [
+        "Neutralisation",
+        "turmeric",
+        "soda",
+        "taste"
+      ],
+      "witness_idx": 12,
+      "witness": "Neutralisation is useful in daily life.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": null
+    },
+    {
+      "id": 8,
+      "kind": "cloze",
+      "stem": "Fill in the blank: When an acid is mixed with a base, they cancel each _____ effect.",
+      "key": "other's",
+      "options": [
+        "other's",
+        "bases",
+        "petals",
+        "lichens"
+      ],
+      "witness_idx": 10,
+      "witness": "When an acid is mixed with a base, they cancel each other's effect.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": true,
+      "signals": [
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: When an acid is mixed with a base, they _____ each other's effect.",
+        "key": "cancel",
+        "witness_idx": 10,
+        "witness": "When an acid is mixed with a base, they cancel each other's effect.",
+        "options": [
+          "cancel",
+          "paper",
+          "soda",
+          "taste"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "kind": "cloze",
+      "stem": "Fill in the blank: China rose petals give a solution that turns dark pink in an acid and _____ in a base.",
+      "key": "green",
+      "options": [
+        "green",
+        "paper",
+        "soda",
+        "taste"
+      ],
+      "witness_idx": 9,
+      "witness": "China rose petals give a solution that turns dark pink in an acid and green in a base.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": true,
+      "signals": [
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: China rose petals give a solution that turns dark _____ in an acid and green in a base.",
+        "key": "pink",
+        "witness_idx": 9,
+        "witness": "China rose petals give a solution that turns dark pink in an acid and green in a base.",
+        "options": [
+          "taste",
+          "turmeric",
+          "pink",
+          "contain"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 21.0453,
+    "summary_s": 5.4295,
+    "stems_s": 15.6132,
+    "model_wall_s": 19.4481,
+    "model_calls": 24,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 0,
+    "red": 6,
+    "fallback": 3
+  },
+  "version": 1,
+  "created": "2026-11-13T01:14:53",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

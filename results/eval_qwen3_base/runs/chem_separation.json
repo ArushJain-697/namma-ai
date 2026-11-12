@@ -1,0 +1,983 @@
+{
+  "passage": "Salt is not mined only from the ground. Along the coasts of Gujarat and Tamil Nadu, a lot of our common salt is obtained from sea water. Sea water is let into shallow pits called salt pans and left there. The heat of the sun slowly turns the water into vapour, a process called evaporation, and the salt is left behind as white crystals. This salt is then collected and purified. Evaporation is one of several methods used to separate the parts of a mixture. If a mixture contains a solid that does not dissolve in a liquid, such as sand in water, the sand can first be allowed to settle at the bottom. This is called sedimentation. The clear water above can then be poured off gently into another vessel without disturbing the sand, which is called decantation. To remove the last fine particles, the water can be passed through filter paper. This is filtration. In villages, husk is separated from grain by winnowing, in which the mixture is dropped from a height in the wind, and the light husk is blown away while the heavier grain falls straight down. Stones are picked out of rice and dal by hand, which is called handpicking. Sieving is used in flour mills and at construction sites to separate fine particles from larger ones.",
+  "gate": {
+    "status": "OK",
+    "words": 222,
+    "reason": "OK: 222 words"
+  },
+  "summary": {
+    "text": "Along the coasts of Gujarat and Tamil Nadu, we get a lot of common salt from sea water. Sea water goes into shallow pits called salt pans and stays there. The sun heats the water, turns it into vapor, and leaves salt as white crystals.",
+    "word_count": 45,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "45 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 1,
+        "source": "Along the coasts of Gujarat and Tamil Nadu, a lot of our common salt is obtained from sea water.",
+        "text": "Along the coasts of Gujarat and Tamil Nadu, we get a lot of common salt from sea water.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 7.8 (limit 9.2), 18 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "Along the coasts of Gujarat and Tamil Nadu, we get a lot of common salt from sea water.",
+            "temperature": 0.0,
+            "wall_s": 1.0483,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 95,
+            "new_tokens": 79,
+            "ttft_ms": 132,
+            "tokens_per_s": 85.25,
+            "verify": null
+          },
+          {
+            "text": "Along the coasts of Gujarat and Tamil Nadu, we get a lot of common salt from sea water.",
+            "temperature": 0.4,
+            "wall_s": 1.0793,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 95,
+            "new_tokens": 79,
+            "ttft_ms": 133,
+            "tokens_per_s": 82.45,
+            "verify": null
+          },
+          {
+            "text": "Along the coasts of Gujarat and Tamil Nadu, we get a lot of common salt from sea water.",
+            "temperature": 0.7,
+            "wall_s": 1.0259,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 95,
+            "new_tokens": 79,
+            "ttft_ms": 130,
+            "tokens_per_s": 87.15,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 2,
+        "source": "Sea water is let into shallow pits called salt pans and left there.",
+        "text": "Sea water goes into shallow pits called salt pans and stays there.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "Sea water goes into shallow pits called salt pans and stays there.",
+            "temperature": 0.0,
+            "wall_s": 1.0425,
+            "failed": [],
+            "prompt_tokens": 87,
+            "new_tokens": 79,
+            "ttft_ms": 120,
+            "tokens_per_s": 84.6,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 3,
+        "source": "The heat of the sun slowly turns the water into vapour, a process called evaporation, and the salt is left behind as white crystals.",
+        "text": "The sun heats the water, turns it into vapor, and leaves salt as white crystals.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "The sun heats the water, turns it into vapor, and leaves salt as white crystals.",
+            "temperature": 0.0,
+            "wall_s": 1.1224,
+            "failed": [],
+            "prompt_tokens": 102,
+            "new_tokens": 79,
+            "ttft_ms": 133,
+            "tokens_per_s": 78.87,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "From where is common salt obtained in the region of Gujarat and Tamil Nadu?",
+      "key": "sea",
+      "options": [
+        "evaporation",
+        "mixture",
+        "shallow",
+        "sea"
+      ],
+      "witness_idx": 1,
+      "witness": "Along the coasts of Gujarat and Tamil Nadu, a lot of our common salt is obtained from sea water.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "14 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.40"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "86% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 8.4 (limit 9.2)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "From where is common salt obtained in the region of Gujarat and Tamil Nadu?",
+          "temperature": 0.0,
+          "wall_s": 0.8247,
+          "failed": [],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 250,
+          "tokens_per_s": 80.14,
+          "verify": {
+            "text": "from sea water",
+            "wall_s": 0.401,
+            "prompt_tokens": 163,
+            "new_tokens": 15,
+            "ttft_ms": 223,
+            "tokens_per_s": 78.65
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Along the coasts of Gujarat and Tamil Nadu, a lot of our common _____ is obtained from sea water.",
+        "key": "salt",
+        "witness_idx": 1,
+        "witness": "Along the coasts of Gujarat and Tamil Nadu, a lot of our common salt is obtained from sea water.",
+        "options": [
+          "salt",
+          "separate",
+          "sand",
+          "husk"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "What is left behind as white crystals after evaporation?",
+      "key": "salt",
+      "options": [
+        "grain",
+        "salt",
+        "separate",
+        "sea"
+      ],
+      "witness_idx": 3,
+      "witness": "The heat of the sun slowly turns the water into vapour, a process called evaporation, and the salt is left behind as white crystals.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "9 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.39"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.34"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 8.9 (limit 11.5)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is left behind as white crystals after evaporation?",
+          "temperature": 0.0,
+          "wall_s": 0.7893,
+          "failed": [],
+          "prompt_tokens": 175,
+          "new_tokens": 47,
+          "ttft_ms": 240,
+          "tokens_per_s": 83.79,
+          "verify": {
+            "text": "salt",
+            "wall_s": 0.403,
+            "prompt_tokens": 166,
+            "new_tokens": 15,
+            "ttft_ms": 223,
+            "tokens_per_s": 78.21
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The heat of the sun slowly turns the water into vapour, a process called _____, and the salt is left behind as white crystals.",
+        "key": "evaporation",
+        "witness_idx": 3,
+        "witness": "The heat of the sun slowly turns the water into vapour, a process called evaporation, and the salt is left behind as white crystals.",
+        "options": [
+          "shallow",
+          "ground",
+          "evaporation",
+          "sand"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "sand",
+      "options": [
+        "grain",
+        "separate",
+        "husk",
+        "sand"
+      ],
+      "witness_idx": 8,
+      "witness": "The clear water above can then be poured off gently into another vessel without disturbing the sand, which is called decantation.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "4 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.31"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.51"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 9.6 (limit 12.8)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'water', not 'sand'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'water', not 'sand'"
+      ],
+      "attempts": [
+        {
+          "text": "What is called decantation?",
+          "temperature": 0.0,
+          "wall_s": 0.7771,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 171,
+          "new_tokens": 47,
+          "ttft_ms": 229,
+          "tokens_per_s": 84.1,
+          "verify": {
+            "text": "water",
+            "wall_s": 0.3912,
+            "prompt_tokens": 158,
+            "new_tokens": 15,
+            "ttft_ms": 222,
+            "tokens_per_s": 82.84
+          }
+        },
+        {
+          "text": "What is called decantation?",
+          "temperature": 0.4,
+          "wall_s": 0.8043,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 171,
+          "new_tokens": 47,
+          "ttft_ms": 225,
+          "tokens_per_s": 79.58,
+          "verify": {
+            "text": "water",
+            "wall_s": 0.3946,
+            "prompt_tokens": 158,
+            "new_tokens": 15,
+            "ttft_ms": 216,
+            "tokens_per_s": 78.65
+          }
+        },
+        {
+          "text": "What is called decantation?",
+          "temperature": 0.7,
+          "wall_s": 0.8022,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 171,
+          "new_tokens": 47,
+          "ttft_ms": 228,
+          "tokens_per_s": 80.14,
+          "verify": {
+            "text": "water",
+            "wall_s": 0.4441,
+            "prompt_tokens": 158,
+            "new_tokens": 15,
+            "ttft_ms": 267,
+            "tokens_per_s": 79.55
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The clear water above can then be poured off gently into another vessel without disturbing the sand, which is called _____.",
+        "key": "decantation",
+        "witness_idx": 8,
+        "witness": "The clear water above can then be poured off gently into another vessel without disturbing the sand, which is called decantation.",
+        "options": [
+          "evaporation",
+          "decantation",
+          "ground",
+          "husk"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "particles",
+      "options": [
+        "stones",
+        "mills",
+        "crystals",
+        "particles"
+      ],
+      "witness_idx": 9,
+      "witness": "To remove the last fine particles, the water can be passed through filter paper.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "14 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "similarity to the witness 1.00"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.31"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 7.6 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question",
+        "stem_not_echo: similarity to the witness 1.00"
+      ],
+      "attempts": [
+        {
+          "text": "To remove the last fine particles, the water can be passed through filter paper.",
+          "temperature": 0.0,
+          "wall_s": 0.8,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 223,
+          "tokens_per_s": 79.86,
+          "verify": null
+        },
+        {
+          "text": "To remove the last fine particles, the water can be passed through filter paper.",
+          "temperature": 0.4,
+          "wall_s": 0.8536,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 218,
+          "tokens_per_s": 72.44,
+          "verify": null
+        },
+        {
+          "text": "To remove the last fine particles, the water can be passed through filter paper.",
+          "temperature": 0.7,
+          "wall_s": 0.8534,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 238,
+          "tokens_per_s": 74.8,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: To remove the last fine particles, the water can be passed through filter _____.",
+        "key": "paper",
+        "witness_idx": 9,
+        "witness": "To remove the last fine particles, the water can be passed through filter paper.",
+        "options": [
+          "grain",
+          "evaporation",
+          "sand",
+          "paper"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "mixture",
+      "options": [
+        "mixture",
+        "grain",
+        "sea",
+        "husk"
+      ],
+      "witness_idx": 5,
+      "witness": "Evaporation is one of several methods used to separate the parts of a mixture.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "14 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "similarity to the witness 0.86"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.42"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.9 (limit 10.9)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question",
+        "stem_not_echo: similarity to the witness 0.86"
+      ],
+      "attempts": [
+        {
+          "text": "What is one of the methods used to separate the parts of a mixture?",
+          "temperature": 0.0,
+          "wall_s": 0.7289,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 213,
+          "tokens_per_s": 89.32,
+          "verify": null
+        },
+        {
+          "text": "What is one of the methods used to separate the parts of a mixture?",
+          "temperature": 0.4,
+          "wall_s": 0.7177,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 205,
+          "tokens_per_s": 89.84,
+          "verify": null
+        },
+        {
+          "text": "What is one of the methods used to separate the parts of a mixture?",
+          "temperature": 0.7,
+          "wall_s": 0.759,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 211,
+          "tokens_per_s": 84.1,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Evaporation is one of several methods used to _____ the parts of a mixture.",
+        "key": "separate",
+        "witness_idx": 5,
+        "witness": "Evaporation is one of several methods used to separate the parts of a mixture.",
+        "options": [
+          "husk",
+          "separate",
+          "shallow",
+          "salt"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "cloze",
+      "stem": "Fill in the blank: The clear water above can then be poured off gently into another vessel without disturbing the _____, which is called decantation.",
+      "key": "sand",
+      "options": [
+        "grain",
+        "separate",
+        "husk",
+        "sand"
+      ],
+      "witness_idx": 8,
+      "witness": "The clear water above can then be poured off gently into another vessel without disturbing the sand, which is called decantation.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: The clear water above can then be poured off gently into another vessel without disturbing the sand, which is called _____.",
+        "key": "decantation",
+        "witness_idx": 8,
+        "witness": "The clear water above can then be poured off gently into another vessel without disturbing the sand, which is called decantation.",
+        "options": [
+          "evaporation",
+          "decantation",
+          "ground",
+          "husk"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 16.0749,
+    "summary_s": 5.3196,
+    "stems_s": 10.7537,
+    "model_wall_s": 14.0286,
+    "model_calls": 16,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 0,
+    "red": 3,
+    "fallback": 1
+  },
+  "version": 1,
+  "created": "2026-11-13T01:15:37",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

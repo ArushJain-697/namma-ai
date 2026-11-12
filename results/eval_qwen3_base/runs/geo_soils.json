@@ -1,0 +1,1131 @@
+{
+  "passage": "Soil is a very important resource, because almost all our food grows in it. Soil is formed when rocks are slowly broken down by changes in temperature, running water, wind and living things, over thousands of years. India has many types of soil. Alluvial soil is the most widespread. It is deposited by rivers such as the Ganga, the Brahmaputra and the Indus, and it covers the northern plains. It is very fertile and is good for growing rice, wheat and sugarcane. Black soil, also called regur soil, is found in the Deccan plateau, in Maharashtra, Gujarat and Madhya Pradesh. It is formed from volcanic rocks and is excellent for growing cotton. Black soil holds moisture well and develops deep cracks in hot weather. Red and yellow soils develop on old crystalline rocks in the eastern and southern parts of the Deccan. They get their red colour from iron. Laterite soil forms in areas with high temperature and heavy rainfall, where the rain washes away many nutrients. With proper manure, it is used to grow tea, coffee and cashew. Arid soils, found in Rajasthan, are sandy and salty. Soil erosion, the removal of the top layer of soil by wind and water, is a serious problem. Planting trees, terrace farming on slopes and contour ploughing help to prevent it.",
+  "gate": {
+    "status": "OK",
+    "words": 219,
+    "reason": "OK: 219 words"
+  },
+  "summary": {
+    "text": "Soil is important because most of our food grows in it. Soil is made when rocks get broken down by things like temperature changes, running water, wind, and living things over a long time.",
+    "word_count": 34,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "34 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 0,
+        "source": "Soil is a very important resource, because almost all our food grows in it.",
+        "text": "Soil is important because most of our food grows in it.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "Soil is important because most of our food grows in it.",
+            "temperature": 0.0,
+            "wall_s": 1.0301,
+            "failed": [],
+            "prompt_tokens": 89,
+            "new_tokens": 79,
+            "ttft_ms": 143,
+            "tokens_per_s": 88.04,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 1,
+        "source": "Soil is formed when rocks are slowly broken down by changes in temperature, running water, wind and living things, over thousands of years.",
+        "text": "Soil is made when rocks get broken down by things like temperature changes, running water, wind, and living things over a long time.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 9.8 (limit 11.3), 23 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "Soil is made when rocks break down over time.",
+            "temperature": 0.0,
+            "wall_s": 1.0344,
+            "failed": [
+              "summary_support"
+            ],
+            "prompt_tokens": 100,
+            "new_tokens": 79,
+            "ttft_ms": 139,
+            "tokens_per_s": 87.25,
+            "verify": null
+          },
+          {
+            "text": "Soil is made when rocks break down over time.",
+            "temperature": 0.4,
+            "wall_s": 1.0379,
+            "failed": [
+              "summary_support"
+            ],
+            "prompt_tokens": 100,
+            "new_tokens": 79,
+            "ttft_ms": 139,
+            "tokens_per_s": 86.86,
+            "verify": null
+          },
+          {
+            "text": "Soil is made when rocks get broken down by things like temperature changes, running water, wind, and living things over a long time.",
+            "temperature": 0.7,
+            "wall_s": 1.0341,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 100,
+            "new_tokens": 79,
+            "ttft_ms": 140,
+            "tokens_per_s": 87.35,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "Deccan",
+      "options": [
+        "Indus",
+        "Gujarat",
+        "Deccan",
+        "Rajasthan"
+      ],
+      "witness_idx": 9,
+      "witness": "Red and yellow soils develop on old crystalline rocks in the eastern and southern parts of the Deccan.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "12 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.69"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.8 (limit 8.5)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "Where do the soils develop on old crystalline rocks in the Deccan?",
+          "temperature": 0.0,
+          "wall_s": 0.8689,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 274,
+          "tokens_per_s": 77.44,
+          "verify": null
+        },
+        {
+          "text": "Where do the soils develop on old crystalline rocks in the Deccan?",
+          "temperature": 0.4,
+          "wall_s": 0.842,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 246,
+          "tokens_per_s": 77.31,
+          "verify": null
+        },
+        {
+          "text": "Where do the soils develop on old crystalline rocks in the eastern and southern parts of the Deccan?",
+          "temperature": 0.7,
+          "wall_s": 0.8399,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 243,
+          "tokens_per_s": 77.18,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Red and yellow soils develop on old crystalline _____ in the eastern and southern parts of the Deccan.",
+        "key": "rocks",
+        "witness_idx": 9,
+        "witness": "Red and yellow soils develop on old crystalline rocks in the eastern and southern parts of the Deccan.",
+        "options": [
+          "washes",
+          "rocks",
+          "serious",
+          "rivers"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "wind",
+      "options": [
+        "wind",
+        "widespread",
+        "india",
+        "black"
+      ],
+      "witness_idx": 1,
+      "witness": "Soil is formed when rocks are slowly broken down by changes in temperature, running water, wind and living things, over thousands of years.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "23 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "similarity to the witness 0.96"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 11.3 (limit 11.3)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_length: 23 words (max 20)",
+        "stem_no_answer_leak: the answer appears in the question",
+        "stem_not_echo: similarity to the witness 0.96"
+      ],
+      "attempts": [
+        {
+          "text": "What is formed when rocks are slowly broken down by changes in temperature, running water, wind and living things over thousands of years?",
+          "temperature": 0.0,
+          "wall_s": 0.884,
+          "failed": [
+            "stem_length",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 173,
+          "new_tokens": 47,
+          "ttft_ms": 252,
+          "tokens_per_s": 72.9,
+          "verify": null
+        },
+        {
+          "text": "What is formed when rocks are slowly broken down by changes in temperature, running water, wind and living things over thousands of years?",
+          "temperature": 0.4,
+          "wall_s": 0.8542,
+          "failed": [
+            "stem_length",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 173,
+          "new_tokens": 47,
+          "ttft_ms": 265,
+          "tokens_per_s": 78.1,
+          "verify": null
+        },
+        {
+          "text": "What is formed when rocks are slowly broken down by changes in temperature, running water, wind and living things, over thousands of years?",
+          "temperature": 0.7,
+          "wall_s": 0.8796,
+          "failed": [
+            "stem_length",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 173,
+          "new_tokens": 47,
+          "ttft_ms": 255,
+          "tokens_per_s": 73.72,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Soil is formed when rocks are slowly broken down by changes in temperature, running _____, wind and living things, over thousands of years.",
+        "key": "water",
+        "witness_idx": 1,
+        "witness": "Soil is formed when rocks are slowly broken down by changes in temperature, running water, wind and living things, over thousands of years.",
+        "options": [
+          "widespread",
+          "resource",
+          "rice",
+          "water"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "water",
+      "options": [
+        "broken",
+        "water",
+        "resource",
+        "india"
+      ],
+      "witness_idx": 14,
+      "witness": "Soil erosion, the removal of the top layer of soil by wind and water, is a serious problem.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "9 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.34"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "80% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 6.3 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'soil erosion', not 'water'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'soil erosion', not 'water'"
+      ],
+      "attempts": [
+        {
+          "text": "What is a serious problem caused by soil erosion?",
+          "temperature": 0.0,
+          "wall_s": 0.9168,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 261,
+          "tokens_per_s": 70.23,
+          "verify": {
+            "text": "soil erosion",
+            "wall_s": 0.4263,
+            "prompt_tokens": 157,
+            "new_tokens": 15,
+            "ttft_ms": 239,
+            "tokens_per_s": 75.27
+          }
+        },
+        {
+          "text": "What is a serious problem caused by soil erosion?",
+          "temperature": 0.4,
+          "wall_s": 0.8531,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 258,
+          "tokens_per_s": 77.31,
+          "verify": {
+            "text": "soil erosion",
+            "wall_s": 0.4388,
+            "prompt_tokens": 157,
+            "new_tokens": 15,
+            "ttft_ms": 243,
+            "tokens_per_s": 71.79
+          }
+        },
+        {
+          "text": "What is a serious problem caused by soil erosion?",
+          "temperature": 0.7,
+          "wall_s": 0.9219,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 267,
+          "tokens_per_s": 70.34,
+          "verify": {
+            "text": "soil erosion",
+            "wall_s": 0.4251,
+            "prompt_tokens": 157,
+            "new_tokens": 15,
+            "ttft_ms": 243,
+            "tokens_per_s": 76.92
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Soil erosion, the removal of the top layer of soil by _____ and water, is a serious problem.",
+        "key": "wind",
+        "witness_idx": 14,
+        "witness": "Soil erosion, the removal of the top layer of soil by wind and water, is a serious problem.",
+        "options": [
+          "northern",
+          "wind",
+          "broken",
+          "temperature"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "Where are the arid soils found?",
+      "key": "Rajasthan",
+      "options": [
+        "Brahmaputra",
+        "Indus",
+        "Rajasthan",
+        "Madhya"
+      ],
+      "witness_idx": 13,
+      "witness": "Arid soils, found in Rajasthan, are sandy and salty.",
+      "tier": "AMBER",
+      "fallback": false,
+      "detail": true,
+      "signals": [
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "6 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.39"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 0.5 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "Where are the arid soils found?",
+          "temperature": 0.0,
+          "wall_s": 0.8568,
+          "failed": [],
+          "prompt_tokens": 159,
+          "new_tokens": 47,
+          "ttft_ms": 246,
+          "tokens_per_s": 75.41,
+          "verify": {
+            "text": "Rajasthan",
+            "wall_s": 0.4397,
+            "prompt_tokens": 147,
+            "new_tokens": 15,
+            "ttft_ms": 224,
+            "tokens_per_s": 65.42
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Arid soils, found in Rajasthan, are sandy and _____.",
+        "key": "salty",
+        "witness_idx": 13,
+        "witness": "Arid soils, found in Rajasthan, are sandy and salty.",
+        "options": [
+          "wind",
+          "salty",
+          "resource",
+          "india"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "What is the main factor that forms laterite soil?",
+      "key": "temperature",
+      "options": [
+        "broken",
+        "alluvial",
+        "widespread",
+        "temperature"
+      ],
+      "witness_idx": 11,
+      "witness": "Laterite soil forms in areas with high temperature and heavy rainfall, where the rain washes away many nutrients.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "9 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.16"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.42"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "60% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.7 (limit 11.1)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is the main factor that forms laterite soil?",
+          "temperature": 0.0,
+          "wall_s": 0.8927,
+          "failed": [],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 272,
+          "tokens_per_s": 74.19,
+          "verify": {
+            "text": "temperature and rainfall",
+            "wall_s": 0.4172,
+            "prompt_tokens": 159,
+            "new_tokens": 15,
+            "ttft_ms": 238,
+            "tokens_per_s": 78.21
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Laterite soil forms in areas with high temperature and heavy rainfall, where the rain washes away many _____.",
+        "key": "nutrients",
+        "witness_idx": 11,
+        "witness": "Laterite soil forms in areas with high temperature and heavy rainfall, where the rain washes away many nutrients.",
+        "options": [
+          "slopes",
+          "cracks",
+          "nutrients",
+          "thousands"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "Which river deposits the most water?",
+      "key": "Indus",
+      "options": [
+        "Deccan",
+        "Maharashtra",
+        "Madhya",
+        "Indus"
+      ],
+      "witness_idx": 4,
+      "witness": "It is deposited by rivers such as the Ganga, the Brahmaputra and the Indus, and it covers the northern plains.",
+      "tier": "AMBER",
+      "fallback": false,
+      "detail": true,
+      "signals": [
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "6 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.32"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.45"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 6.4 (limit 10.5)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "Which river deposits the most water?",
+          "temperature": 0.0,
+          "wall_s": 0.8921,
+          "failed": [],
+          "prompt_tokens": 174,
+          "new_tokens": 47,
+          "ttft_ms": 259,
+          "tokens_per_s": 72.67,
+          "verify": {
+            "text": "the Indus",
+            "wall_s": 0.4425,
+            "prompt_tokens": 160,
+            "new_tokens": 15,
+            "ttft_ms": 248,
+            "tokens_per_s": 72.16
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: It is deposited by rivers such as the Ganga, the _____ and the Indus, and it covers the northern plains.",
+        "key": "Brahmaputra",
+        "witness_idx": 4,
+        "witness": "It is deposited by rivers such as the Ganga, the Brahmaputra and the Indus, and it covers the northern plains.",
+        "options": [
+          "Brahmaputra",
+          "black",
+          "wind",
+          "temperature"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: They get their _____ colour from iron.",
+      "key": "red",
+      "options": [
+        "red",
+        "rocks",
+        "black",
+        "wind"
+      ],
+      "witness_idx": 10,
+      "witness": "They get their red colour from iron.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": null
+    },
+    {
+      "id": 8,
+      "kind": "cloze",
+      "stem": "Fill in the blank: It is formed from volcanic _____ and is excellent for growing cotton.",
+      "key": "rocks",
+      "options": [
+        "trees",
+        "nutrients",
+        "rocks",
+        "washes"
+      ],
+      "witness_idx": 7,
+      "witness": "It is formed from volcanic rocks and is excellent for growing cotton.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": null
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 17.2432,
+    "summary_s": 4.1375,
+    "stems_s": 13.104,
+    "model_wall_s": 14.6385,
+    "model_calls": 16,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 2,
+    "red": 3,
+    "fallback": 2
+  },
+  "version": 1,
+  "created": "2026-11-13T01:21:11",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

@@ -1,0 +1,134 @@
+{
+ "topic": {
+  "id": "SOC-HIS-HARAPPAN",
+  "subject": "social",
+  "strand": "history",
+  "grades": [
+   6
+  ],
+  "title": "The Harappan civilisation",
+  "scope": "planned cities, citadel, drains, Great Bath, Lothal dockyard, Dholavira, seals and script, end of the cities"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 704,
+  "candidatesTokenCount": 908,
+  "totalTokenCount": 1612,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 704
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 40.5,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Urban Planning and Infrastructure",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Harappan cities were built exactly like modern Indian cities with electricity and internet.",
+      "why": "Students project their current living environment onto the past due to a lack of historical perspective.",
+      "fix": "Harappan cities were advanced for their time with baked bricks and drainage, but they lacked modern technology like electricity.",
+      "probe": {
+       "question": "Did Harappan people use smartphones to communicate?",
+       "wrong_answer": "Yes, because they were very advanced and had big cities."
+      },
+      "error_type": "presentism",
+      "trigger_cues": [
+       "planned cities",
+       "drains",
+       "baked bricks",
+       "citadel"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "The Great Bath was a swimming pool for the public to play in.",
+      "why": "Students interpret ancient structures through the lens of modern recreational facilities.",
+      "fix": "The Great Bath was likely used for special religious rituals or ceremonial bathing, not for leisure.",
+      "probe": {
+       "question": "Why did the Harappans build the Great Bath?",
+       "wrong_answer": "To have fun and swim during the summer."
+      },
+      "error_type": "presentism",
+      "trigger_cues": [
+       "great bath",
+       "ritual",
+       "ceremonial",
+       "water tank"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Trade and Economic Activity",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Harappan seals were used as money or currency like our coins.",
+      "why": "Students assume that any small object found in a market context must be currency.",
+      "fix": "Seals were used to stamp clay tags on goods to show ownership or verify that a package remained unopened during transport.",
+      "probe": {
+       "question": "How did a trader pay for goods in Harappa?",
+       "wrong_answer": "They used the seals as coins to buy things."
+      },
+      "error_type": "confusing_institutions",
+      "trigger_cues": [
+       "seals",
+       "trade",
+       "lothal",
+       "dockyard",
+       "goods"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Decline of the Civilisation",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The Harappan civilisation ended suddenly because of one big war or earthquake.",
+      "why": "Textbooks often list multiple theories, and students prefer a single, dramatic narrative over complex, gradual processes.",
+      "fix": "The decline was likely a gradual process caused by a combination of factors like climate change, drying rivers, and deforestation.",
+      "probe": {
+       "question": "Why did the Harappan cities disappear?",
+       "wrong_answer": "A massive earthquake destroyed all the cities in one day."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "end of cities",
+       "decline",
+       "climate change",
+       "rivers drying"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Introduction to Archaeology",
+   "Basic Geography of the Indian Subcontinent"
+  ]
+ },
+ "problems": []
+}

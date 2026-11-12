@@ -1,0 +1,1149 @@
+{
+  "passage": "About 4,700 years ago, some of the earliest cities in the world grew up along the river Indus and its tributaries. These are called the Harappan cities, after Harappa, the first site of this civilisation to be discovered, in present-day Pakistan. Other important cities included Mohenjodaro, Lothal and Dholavira. Many of these cities were divided into two parts. The western part was smaller but higher and is called the citadel, while the eastern part was larger but lower. The houses were built of baked bricks of a standard size, and they were one or two storeys high, with rooms built around a courtyard. The cities had carefully planned drains, covered with stones, running along the streets. Each house's drain was connected to these street drains. Dholavira, on the island of Khadir in the Rann of Kutch in Gujarat, is remarkable for its water storage. Its people built large reservoirs cut into rock to collect rainwater, because the region was dry. Archaeologists also found a large signboard there, with letters of the Harappan script set in white stone. Lothal, in Gujarat, had a dockyard where boats could be loaded and unloaded, and a workshop for making beads from precious stones. The Harappan script has not yet been read, so much of what we know comes from the remains of buildings, pots, seals and tools.",
+  "gate": {
+    "status": "OK",
+    "words": 223,
+    "reason": "OK: 223 words"
+  },
+  "summary": {
+    "text": "About 4,700 years ago, some of the earliest cities in the world grew along the river Indus and its tributaries. The cities had good drains, covered with stones, running along the streets.",
+    "word_count": 32,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "32 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 0,
+        "source": "About 4,700 years ago, some of the earliest cities in the world grew up along the river Indus and its tributaries.",
+        "text": "About 4,700 years ago, some of the earliest cities in the world grew along the river Indus and its tributaries.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 11.1 (limit 11.1), 20 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "About 4,700 years ago, some of the earliest cities in the world grew along the river Indus and its tributaries.",
+            "temperature": 0.0,
+            "wall_s": 0.9071,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 104,
+            "new_tokens": 79,
+            "ttft_ms": 129,
+            "tokens_per_s": 100.26,
+            "verify": null
+          },
+          {
+            "text": "About 4,700 years ago, some of the earliest cities in the world grew along the Indus and its tributaries.",
+            "temperature": 0.4,
+            "wall_s": 0.9284,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 104,
+            "new_tokens": 79,
+            "ttft_ms": 127,
+            "tokens_per_s": 97.5,
+            "verify": null
+          },
+          {
+            "text": "About 4,700 years ago, some of the earliest cities in the world grew along the Indus and its tributaries.",
+            "temperature": 0.7,
+            "wall_s": 0.9248,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 104,
+            "new_tokens": 79,
+            "ttft_ms": 129,
+            "tokens_per_s": 98.11,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 6,
+        "source": "The cities had carefully planned drains, covered with stones, running along the streets.",
+        "text": "The cities had good drains, covered with stones, running along the streets.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "The cities had good drains, covered with stones, running along the streets.",
+            "temperature": 0.0,
+            "wall_s": 0.8691,
+            "failed": [],
+            "prompt_tokens": 89,
+            "new_tokens": 79,
+            "ttft_ms": 118,
+            "tokens_per_s": 104.0,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "Dholavira",
+      "options": [
+        "Harappa",
+        "Kutch",
+        "Dholavira",
+        "Harappan"
+      ],
+      "witness_idx": 2,
+      "witness": "Other important cities included Mohenjodaro, Lothal and Dholavira.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "10 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.44"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "50% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 7.2 (limit 20.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'Mohenjodaro', not 'Dholavira'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_in_passage: 50% of content words are in the passage",
+        "stem_answers_to_key: asked to answer its own question, the model said 'Mohenjodaro', not 'Dholavira'"
+      ],
+      "attempts": [
+        {
+          "text": "Which of the following cities is mentioned in the sentence? Dholavira",
+          "temperature": 0.0,
+          "wall_s": 0.7243,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 214,
+          "tokens_per_s": 90.2,
+          "verify": null
+        },
+        {
+          "text": "Which of the following cities is mentioned in the sentence? Dholavira",
+          "temperature": 0.4,
+          "wall_s": 0.7339,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 213,
+          "tokens_per_s": 88.46,
+          "verify": null
+        },
+        {
+          "text": "Which of the following is an important city in India?",
+          "temperature": 0.7,
+          "wall_s": 0.7263,
+          "failed": [
+            "stem_in_passage",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 213,
+          "tokens_per_s": 89.67,
+          "verify": {
+            "text": "Mohenjodaro",
+            "wall_s": 0.348,
+            "prompt_tokens": 155,
+            "new_tokens": 15,
+            "ttft_ms": 200,
+            "tokens_per_s": 95.24
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Other important cities included Mohenjodaro, _____ and Dholavira.",
+        "key": "Lothal",
+        "witness_idx": 2,
+        "witness": "Other important cities included Mohenjodaro, Lothal and Dholavira.",
+        "options": [
+          "script",
+          "earliest",
+          "Lothal",
+          "grew"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "Harappan",
+      "options": [
+        "Rann",
+        "Lothal",
+        "Mohenjodaro",
+        "Harappan"
+      ],
+      "witness_idx": 1,
+      "witness": "These are called the Harappan cities, after Harappa, the first site of this civilisation to be discovered, in present-day Pakistan.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "10 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.40"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "80% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 8.4 (limit 14.6)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "The answer is: Harappan.",
+          "temperature": 0.0,
+          "wall_s": 0.7299,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 177,
+          "new_tokens": 47,
+          "ttft_ms": 226,
+          "tokens_per_s": 91.45,
+          "verify": null
+        },
+        {
+          "text": "The name of the first Harappan city discovered is called?",
+          "temperature": 0.4,
+          "wall_s": 0.7319,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 177,
+          "new_tokens": 47,
+          "ttft_ms": 226,
+          "tokens_per_s": 91.09,
+          "verify": null
+        },
+        {
+          "text": "The name of the first Harappan city discovered is called?",
+          "temperature": 0.7,
+          "wall_s": 0.7358,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 177,
+          "new_tokens": 47,
+          "ttft_ms": 225,
+          "tokens_per_s": 90.02,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: These are called the Harappan cities, after Harappa, the first site of this civilisation to be discovered, in present-day _____.",
+        "key": "Pakistan",
+        "witness_idx": 1,
+        "witness": "These are called the Harappan cities, after Harappa, the first site of this civilisation to be discovered, in present-day Pakistan.",
+        "options": [
+          "Pakistan",
+          "script",
+          "western",
+          "grew"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "What is covered with stones in the cities?",
+      "key": "streets",
+      "options": [
+        "reservoirs",
+        "rooms",
+        "storeys",
+        "streets"
+      ],
+      "witness_idx": 6,
+      "witness": "The cities had carefully planned drains, covered with stones, running along the streets.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.55"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.2 (limit 10.4)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is covered with stones in the cities?",
+          "temperature": 0.0,
+          "wall_s": 0.7121,
+          "failed": [],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 208,
+          "tokens_per_s": 91.27,
+          "verify": {
+            "text": "streets",
+            "wall_s": 0.3452,
+            "prompt_tokens": 151,
+            "new_tokens": 15,
+            "ttft_ms": 198,
+            "tokens_per_s": 95.89
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The cities had carefully planned drains, covered with _____, running along the streets.",
+        "key": "stones",
+        "witness_idx": 6,
+        "witness": "The cities had carefully planned drains, covered with stones, running along the streets.",
+        "options": [
+          "archaeologists",
+          "bricks",
+          "reservoirs",
+          "stones"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "Where did some of the earliest cities grow up?",
+      "key": "Indus",
+      "options": [
+        "Dholavira",
+        "Mohenjodaro",
+        "Indus",
+        "Khadir"
+      ],
+      "witness_idx": 0,
+      "witness": "About 4,700 years ago, some of the earliest cities in the world grew up along the river Indus and its tributaries.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "9 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.47"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.52"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "67% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.3 (limit 11.1)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "Where did some of the earliest cities grow up along the Indus river?",
+          "temperature": 0.0,
+          "wall_s": 0.7325,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 178,
+          "new_tokens": 47,
+          "ttft_ms": 221,
+          "tokens_per_s": 90.2,
+          "verify": null
+        },
+        {
+          "text": "Where did the earliest cities grow up along the Indus river?",
+          "temperature": 0.4,
+          "wall_s": 0.7335,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 178,
+          "new_tokens": 47,
+          "ttft_ms": 224,
+          "tokens_per_s": 90.55,
+          "verify": null
+        },
+        {
+          "text": "Where did some of the earliest cities grow up?",
+          "temperature": 0.7,
+          "wall_s": 0.735,
+          "failed": [],
+          "prompt_tokens": 178,
+          "new_tokens": 47,
+          "ttft_ms": 226,
+          "tokens_per_s": 90.37,
+          "verify": {
+            "text": "the Indus Valley cities",
+            "wall_s": 0.3823,
+            "prompt_tokens": 167,
+            "new_tokens": 15,
+            "ttft_ms": 213,
+            "tokens_per_s": 83.33
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: About _____ years ago, some of the earliest cities in the world grew up along the river Indus and its tributaries.",
+        "key": "4,700",
+        "witness_idx": 0,
+        "witness": "About 4,700 years ago, some of the earliest cities in the world grew up along the river Indus and its tributaries.",
+        "options": null
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "Where is Dholavira located?",
+      "key": "Gujarat",
+      "options": [
+        "Indus",
+        "Pakistan",
+        "Harappa",
+        "Gujarat"
+      ],
+      "witness_idx": 8,
+      "witness": "Dholavira, on the island of Khadir in the Rann of Kutch in Gujarat, is remarkable for its water storage.",
+      "tier": "AMBER",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "4 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.24"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.35"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "50% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "grade 12.5 (limit 11.1)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_in_passage: 50% of content words are in the passage",
+        "stem_readability: grade 12.5 (limit 11.1)"
+      ],
+      "attempts": [
+        {
+          "text": "Where is Dholavira located?",
+          "temperature": 0.0,
+          "wall_s": 0.7248,
+          "failed": [
+            "stem_in_passage",
+            "stem_readability"
+          ],
+          "prompt_tokens": 174,
+          "new_tokens": 47,
+          "ttft_ms": 219,
+          "tokens_per_s": 91.09,
+          "verify": {
+            "text": "Gujarat",
+            "wall_s": 0.3677,
+            "prompt_tokens": 162,
+            "new_tokens": 15,
+            "ttft_ms": 210,
+            "tokens_per_s": 89.17
+          }
+        },
+        {
+          "text": "Where is Dholavira located?",
+          "temperature": 0.4,
+          "wall_s": 0.7412,
+          "failed": [
+            "stem_in_passage",
+            "stem_readability"
+          ],
+          "prompt_tokens": 174,
+          "new_tokens": 47,
+          "ttft_ms": 220,
+          "tokens_per_s": 88.46,
+          "verify": {
+            "text": "Gujarat",
+            "wall_s": 0.3622,
+            "prompt_tokens": 162,
+            "new_tokens": 15,
+            "ttft_ms": 206,
+            "tokens_per_s": 89.74
+          }
+        },
+        {
+          "text": "Where does Dholavira stand in relation to the Rann of Kutch?",
+          "temperature": 0.7,
+          "wall_s": 0.7386,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 174,
+          "new_tokens": 47,
+          "ttft_ms": 217,
+          "tokens_per_s": 88.29,
+          "verify": {
+            "text": "in the Rann of Kutch",
+            "wall_s": 0.3898,
+            "prompt_tokens": 171,
+            "new_tokens": 15,
+            "ttft_ms": 219,
+            "tokens_per_s": 82.35
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Dholavira, on the island of Khadir in the Rann of _____ in Gujarat, is remarkable for its water storage.",
+        "key": "Kutch",
+        "witness_idx": 8,
+        "witness": "Dholavira, on the island of Khadir in the Rann of Kutch in Gujarat, is remarkable for its water storage.",
+        "options": [
+          "river",
+          "Kutch",
+          "grew",
+          "script"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "What is the name of the drain?",
+      "key": "drains",
+      "options": [
+        "storeys",
+        "reservoirs",
+        "rooms",
+        "drains"
+      ],
+      "witness_idx": 7,
+      "witness": "Each house's drain was connected to these street drains.",
+      "tier": "AMBER",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "7 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.23"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.56"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "50% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade -1.1 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_in_passage: 50% of content words are in the passage"
+      ],
+      "attempts": [
+        {
+          "text": "What is the name of the street drains?",
+          "temperature": 0.0,
+          "wall_s": 0.7031,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 157,
+          "new_tokens": 47,
+          "ttft_ms": 201,
+          "tokens_per_s": 91.63,
+          "verify": null
+        },
+        {
+          "text": "What is connected to the street drains?",
+          "temperature": 0.4,
+          "wall_s": 0.7163,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 157,
+          "new_tokens": 47,
+          "ttft_ms": 205,
+          "tokens_per_s": 90.2,
+          "verify": null
+        },
+        {
+          "text": "What is the name of the drain?",
+          "temperature": 0.7,
+          "wall_s": 0.7141,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 157,
+          "new_tokens": 47,
+          "ttft_ms": 203,
+          "tokens_per_s": 90.02,
+          "verify": {
+            "text": "street drains",
+            "wall_s": 0.3527,
+            "prompt_tokens": 145,
+            "new_tokens": 15,
+            "ttft_ms": 196,
+            "tokens_per_s": 89.74
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Each house's drain was connected to these _____ drains.",
+        "key": "street",
+        "witness_idx": 7,
+        "witness": "Each house's drain was connected to these street drains.",
+        "options": [
+          "script",
+          "civilisation",
+          "grew",
+          "street"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: The houses were _____ of baked bricks of a standard size, and they were one or two storeys high, with rooms _____ around a courtyard.",
+      "key": "built",
+      "options": [
+        "present-day",
+        "grew",
+        "river",
+        "built"
+      ],
+      "witness_idx": 5,
+      "witness": "The houses were built of baked bricks of a standard size, and they were one or two storeys high, with rooms built around a courtyard.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": null
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 17.8235,
+    "summary_s": 3.6304,
+    "stems_s": 14.192,
+    "model_wall_s": 15.2627,
+    "model_calls": 20,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 2,
+    "red": 2,
+    "fallback": 1
+  },
+  "version": 1,
+  "created": "2026-11-13T01:19:32",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

@@ -1,0 +1,163 @@
+{
+ "topic": {
+  "id": "SCI-PHY-MAGNETS",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   6
+  ],
+  "title": "Fun with magnets",
+  "scope": "magnetic and non-magnetic materials, poles, attraction and repulsion, compass, storing magnets"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 698,
+  "candidatesTokenCount": 1109,
+  "totalTokenCount": 1807,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 698
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.6,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Magnetic and non-magnetic materials",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "All shiny metal objects are magnetic.",
+      "why": "Students often associate the metallic luster of objects like coins or aluminum foil with the properties of iron.",
+      "fix": "Only specific materials like iron, nickel, and cobalt are attracted to magnets; many other metals are not.",
+      "probe": {
+       "question": "Will a magnet attract a shiny aluminum spoon?",
+       "wrong_answer": "Yes, because it is made of metal."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "shiny",
+       "metal",
+       "iron",
+       "attraction",
+       "materials"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "Magnets attract all objects.",
+      "why": "Students often see magnets picking up various things in toys and assume the attraction is universal.",
+      "fix": "Magnets only attract materials that have magnetic properties; they do not affect plastic, wood, or glass.",
+      "probe": {
+       "question": "Will a magnet pick up a plastic pen?",
+       "wrong_answer": "Yes, magnets attract everything."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "attract",
+       "objects",
+       "materials",
+       "magnetic"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Poles of a magnet",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The middle of a magnet is the strongest part.",
+      "why": "Students confuse the physical center of the object with the location of the magnetic force.",
+      "fix": "The magnetic force is concentrated at the two ends, called poles, and is weakest in the middle.",
+      "probe": {
+       "question": "Where will the most iron filings stick to a bar magnet?",
+       "wrong_answer": "In the middle of the magnet."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "poles",
+       "ends",
+       "middle",
+       "strength",
+       "iron filings"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Attraction and repulsion",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Opposite poles repel each other.",
+      "why": "Students often confuse the terminology of 'opposite' with 'repulsion' due to linguistic similarity.",
+      "fix": "Like poles repel each other, while opposite poles attract each other.",
+      "probe": {
+       "question": "What happens when you bring a North pole near a South pole?",
+       "wrong_answer": "They push each other away."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "attraction",
+       "repulsion",
+       "north pole",
+       "south pole",
+       "like poles"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Compass and Earth's magnetism",
+    "prereqs": [
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The compass needle points North because it is attracted to the North Pole of the Earth.",
+      "why": "Students assume the 'North' pole of the magnet is attracted to the 'North' pole of the Earth.",
+      "fix": "The North pole of the compass needle is attracted to the Earth's magnetic South pole, which is located near the geographic North.",
+      "probe": {
+       "question": "Why does the compass needle point North?",
+       "wrong_answer": "Because the North pole of the magnet likes the North pole of the Earth."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "compass",
+       "direction",
+       "north pole",
+       "earth",
+       "magnetic field"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Properties of materials",
+   "Basic geometry and directions"
+  ]
+ },
+ "problems": []
+}

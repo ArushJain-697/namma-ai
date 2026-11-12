@@ -1,0 +1,176 @@
+{
+ "topic": {
+  "id": "SOC-GEO-INDIAPHYSICAL",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   6,
+   9
+  ],
+  "title": "Physical features of India",
+  "scope": "Himalayas, northern plains, peninsular plateau, Indian desert, coastal plains, islands"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 699,
+  "candidatesTokenCount": 1256,
+  "totalTokenCount": 1955,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 699
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.1,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Geological Time and Plate Tectonics",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "The Himalayas have always existed exactly where they are today.",
+      "why": "Students perceive the Earth's landscape as static and permanent because geological time scales are beyond human experience.",
+      "fix": "The Himalayas were formed by the collision of the Indo-Australian plate with the Eurasian plate, a process that is still ongoing.",
+      "probe": {
+       "question": "Were the Himalayas present when the dinosaurs lived?",
+       "wrong_answer": "Yes, they have been there since the beginning of the Earth."
+      },
+      "error_type": "presentism",
+      "trigger_cues": [
+       "tectonic plates",
+       "continental drift",
+       "collision",
+       "geological time",
+       "formation"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "The Himalayan Mountain System",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The Himalayas are just a single, continuous wall of high mountains.",
+      "why": "Textbooks often simplify the range into a single line on a map, ignoring the complex parallel ranges like Himadri, Himachal, and Shiwaliks.",
+      "fix": "The Himalayas consist of three parallel ranges with different altitudes and geological structures.",
+      "probe": {
+       "question": "Are all parts of the Himalayas equally high and snow-covered?",
+       "wrong_answer": "Yes, the entire mountain range is one uniform high wall of snow."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "himadri",
+       "himachal",
+       "shiwaliks",
+       "parallel ranges",
+       "altitude"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "The Northern Plains",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The Northern Plains were formed by the sea receding.",
+      "why": "Students often confuse the formation of the plains with the Tethys Sea that existed before the Himalayas rose.",
+      "fix": "The Northern Plains were formed by the deposition of sediments brought down by the Indus, Ganga, and Brahmaputra river systems.",
+      "probe": {
+       "question": "How did the flat land of the Northern Plains come into existence?",
+       "wrong_answer": "The ocean water dried up and left behind flat land."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "alluvial deposits",
+       "river system",
+       "sedimentation",
+       "fertile land",
+       "indus ganga brahmaputra"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "The Peninsular Plateau",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The Peninsular Plateau is a flat, featureless plain like the Northern Plains.",
+      "why": "The word 'plateau' is often misinterpreted as a synonym for 'flat land' without considering its elevated nature.",
+      "fix": "A plateau is an elevated tableland composed of old crystalline, igneous, and metamorphic rocks, distinct from the river-deposited plains.",
+      "probe": {
+       "question": "Is the Peninsular Plateau the same as the Northern Plains?",
+       "wrong_answer": "Yes, they are both flat areas of land."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "tableland",
+       "crystalline rocks",
+       "igneous",
+       "metamorphic",
+       "deccan plateau"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c5",
+    "name": "Coastal Plains and Islands",
+    "prereqs": [
+     "c3",
+     "c4"
+    ],
+    "misconceptions": [
+     {
+      "statement": "All islands in India are volcanic in origin.",
+      "why": "Students often generalize the volcanic nature of the Andaman and Nicobar islands to the Lakshadweep islands.",
+      "fix": "The Andaman and Nicobar islands are volcanic, but the Lakshadweep islands are formed entirely of coral deposits.",
+      "probe": {
+       "question": "How were the Lakshadweep islands formed?",
+       "wrong_answer": "They were formed by volcanic eruptions under the sea."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "coral",
+       "volcanic",
+       "atolls",
+       "andaman",
+       "lakshadweep"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Basic Map Reading",
+   "Introduction to Earth's Layers",
+   "Understanding of River Processes"
+  ]
+ },
+ "problems": []
+}

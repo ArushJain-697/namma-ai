@@ -1,0 +1,1055 @@
+{
+  "passage": "Ashoka was one of the most famous rulers of ancient India. He belonged to the Mauryan dynasty, which was founded by his grandfather, Chandragupta Maurya, with the help of a wise minister named Chanakya. Ashoka became king in about 268 BCE and ruled a vast empire with its capital at Pataliputra, near present-day Patna. About eight years after he became king, Ashoka fought a war to conquer Kalinga, in present-day Odisha. The war was terrible. Thousands of people were killed and many more were taken captive. Ashoka was so filled with sorrow at the suffering he saw that he decided never to fight a war of conquest again. He turned to the teachings of the Buddha and began to follow what he called dhamma. Ashoka's dhamma was not a new religion. It asked people to be kind to animals, to respect their elders and teachers, to treat servants and slaves well, and to respect the religions of others. To spread these ideas, Ashoka had his messages carved on rocks and on polished stone pillars across his empire. Most of these inscriptions were written in the Prakrit language using the Brahmi script. The lions on top of his pillar at Sarnath form the national emblem of India today, and the wheel on it appears on our national flag.",
+  "gate": {
+    "status": "OK",
+    "words": 217,
+    "reason": "OK: 217 words"
+  },
+  "summary": {
+    "text": "Ashoka became king around 268 BCE and ruled a big empire with his capital at Pataliputra, near where Patna is now. After eight years, Ashoka fought a war to conquer Kalinga, which is now in Odisha.",
+    "word_count": 36,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "36 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 2,
+        "source": "Ashoka became king in about 268 BCE and ruled a vast empire with its capital at Pataliputra, near present-day Patna.",
+        "text": "Ashoka became king around 268 BCE and ruled a big empire with his capital at Pataliputra, near where Patna is now.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 12.3 (limit 13.5), 21 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "Ashoka became king around 268 BCE and ruled a big empire with his capital at Pataliputra, near where Patna is now.",
+            "temperature": 0.0,
+            "wall_s": 0.9863,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 104,
+            "new_tokens": 79,
+            "ttft_ms": 134,
+            "tokens_per_s": 91.55,
+            "verify": null
+          },
+          {
+            "text": "Ashoka became king around 268 BCE and ruled a big empire with his capital at Pataliputra, now in Patna.",
+            "temperature": 0.4,
+            "wall_s": 0.975,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 104,
+            "new_tokens": 79,
+            "ttft_ms": 127,
+            "tokens_per_s": 92.09,
+            "verify": null
+          },
+          {
+            "text": "Ashoka became king around 268 BCE and ruled a big empire with its capital near today’s Patna.",
+            "temperature": 0.7,
+            "wall_s": 0.9876,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 104,
+            "new_tokens": 79,
+            "ttft_ms": 138,
+            "tokens_per_s": 91.87,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 3,
+        "source": "About eight years after he became king, Ashoka fought a war to conquer Kalinga, in present-day Odisha.",
+        "text": "After eight years, Ashoka fought a war to conquer Kalinga, which is now in Odisha.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "After eight years, Ashoka fought a war to conquer Kalinga, which is now in Odisha.",
+            "temperature": 0.0,
+            "wall_s": 0.9341,
+            "failed": [],
+            "prompt_tokens": 98,
+            "new_tokens": 79,
+            "ttft_ms": 127,
+            "tokens_per_s": 96.77,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "India",
+      "options": [
+        "Chandragupta",
+        "India",
+        "BCE",
+        "Pataliputra"
+      ],
+      "witness_idx": 0,
+      "witness": "Ashoka was one of the most famous rulers of ancient India.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "11 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.71"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 6.9 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "Which of the following is a famous ruler of ancient India?",
+          "temperature": 0.0,
+          "wall_s": 0.7236,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 159,
+          "new_tokens": 47,
+          "ttft_ms": 211,
+          "tokens_per_s": 89.84,
+          "verify": null
+        },
+        {
+          "text": "Which of the following is an example of a famous ruler of ancient India?",
+          "temperature": 0.4,
+          "wall_s": 0.725,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_readability"
+          ],
+          "prompt_tokens": 159,
+          "new_tokens": 47,
+          "ttft_ms": 205,
+          "tokens_per_s": 88.63,
+          "verify": null
+        },
+        {
+          "text": "Which of the following is an example of a ruler?",
+          "temperature": 0.7,
+          "wall_s": 0.7114,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 159,
+          "new_tokens": 47,
+          "ttft_ms": 201,
+          "tokens_per_s": 90.2,
+          "verify": {
+            "text": "Ashoka",
+            "wall_s": 0.3495,
+            "prompt_tokens": 150,
+            "new_tokens": 15,
+            "ttft_ms": 195,
+            "tokens_per_s": 90.91
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Ashoka was one of the most famous rulers of _____ India.",
+        "key": "ancient",
+        "witness_idx": 0,
+        "witness": "Ashoka was one of the most famous rulers of ancient India.",
+        "options": [
+          "empire",
+          "national",
+          "ancient",
+          "war"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "Patna",
+      "options": [
+        "Mauryan",
+        "Patna",
+        "Chanakya",
+        "Odisha"
+      ],
+      "witness_idx": 2,
+      "witness": "Ashoka became king in about 268 BCE and ruled a vast empire with its capital at Pataliputra, near present-day Patna.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "5 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.23"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "67% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.2 (limit 13.5)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'Pataliputra', not 'Patna'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'Pataliputra', not 'Patna'"
+      ],
+      "attempts": [
+        {
+          "text": "Where did Ashoka become king?",
+          "temperature": 0.0,
+          "wall_s": 0.7479,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 178,
+          "new_tokens": 47,
+          "ttft_ms": 221,
+          "tokens_per_s": 87.29,
+          "verify": {
+            "text": "Pataliputra",
+            "wall_s": 0.3826,
+            "prompt_tokens": 164,
+            "new_tokens": 15,
+            "ttft_ms": 219,
+            "tokens_per_s": 85.89
+          }
+        },
+        {
+          "text": "Where did Ashoka become king?",
+          "temperature": 0.4,
+          "wall_s": 0.7621,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 178,
+          "new_tokens": 47,
+          "ttft_ms": 225,
+          "tokens_per_s": 85.66,
+          "verify": {
+            "text": "Pataliputra",
+            "wall_s": 0.3989,
+            "prompt_tokens": 164,
+            "new_tokens": 15,
+            "ttft_ms": 218,
+            "tokens_per_s": 77.78
+          }
+        },
+        {
+          "text": "Where did Ashoka become king?",
+          "temperature": 0.7,
+          "wall_s": 0.7587,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 178,
+          "new_tokens": 47,
+          "ttft_ms": 230,
+          "tokens_per_s": 87.12,
+          "verify": {
+            "text": "Pataliputra",
+            "wall_s": 0.3726,
+            "prompt_tokens": 164,
+            "new_tokens": 15,
+            "ttft_ms": 209,
+            "tokens_per_s": 85.89
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Ashoka became king in about 268 BCE and ruled a vast empire with its capital at Pataliputra, near _____ Patna.",
+        "key": "present-day",
+        "witness_idx": 2,
+        "witness": "Ashoka became king in about 268 BCE and ruled a vast empire with its capital at Pataliputra, near present-day Patna.",
+        "options": [
+          "present-day",
+          "national",
+          "dynasty",
+          "respect"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "Where did Ashoka fight a war to conquer Kalinga?",
+      "key": "Odisha",
+      "options": [
+        "Odisha",
+        "BCE",
+        "Maurya",
+        "India"
+      ],
+      "witness_idx": 3,
+      "witness": "About eight years after he became king, Ashoka fought a war to conquer Kalinga, in present-day Odisha.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "9 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.56"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 6.3 (limit 11.2)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "Where did Ashoka fight a war to conquer Kalinga?",
+          "temperature": 0.0,
+          "wall_s": 0.8079,
+          "failed": [],
+          "prompt_tokens": 172,
+          "new_tokens": 47,
+          "ttft_ms": 231,
+          "tokens_per_s": 79.86,
+          "verify": {
+            "text": "Odisha",
+            "wall_s": 0.3957,
+            "prompt_tokens": 164,
+            "new_tokens": 15,
+            "ttft_ms": 227,
+            "tokens_per_s": 83.33
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: About eight years after he became king, Ashoka fought a war to conquer Kalinga, in _____ Odisha.",
+        "key": "present-day",
+        "witness_idx": 3,
+        "witness": "About eight years after he became king, Ashoka fought a war to conquer Kalinga, in present-day Odisha.",
+        "options": [
+          "ancient",
+          "national",
+          "present-day",
+          "grandfather"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "empire",
+      "options": [
+        "empire",
+        "respect",
+        "present-day",
+        "war"
+      ],
+      "witness_idx": 10,
+      "witness": "To spread these ideas, Ashoka had his messages carved on rocks and on polished stone pillars across his empire.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "19 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "similarity to the witness 1.00"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.35"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 10.5 (limit 10.5)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question",
+        "stem_not_echo: similarity to the witness 1.00"
+      ],
+      "attempts": [
+        {
+          "text": "To spread these ideas, Ashoka had his messages carved on rocks and on polished stone pillars across his empire.",
+          "temperature": 0.0,
+          "wall_s": 0.7415,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 215,
+          "tokens_per_s": 87.45,
+          "verify": null
+        },
+        {
+          "text": "To spread these ideas, Ashoka had his messages carved on rocks and on polished stone pillars across his empire.",
+          "temperature": 0.4,
+          "wall_s": 0.7768,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 223,
+          "tokens_per_s": 83.18,
+          "verify": null
+        },
+        {
+          "text": "To spread these ideas, Ashoka had his messages carved on rocks and on polished stone pillars across his empire.",
+          "temperature": 0.7,
+          "wall_s": 0.7392,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 216,
+          "tokens_per_s": 87.95,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: To spread these ideas, Ashoka had his messages carved on rocks and on polished stone _____ across his empire.",
+        "key": "pillars",
+        "witness_idx": 10,
+        "witness": "To spread these ideas, Ashoka had his messages carved on rocks and on polished stone pillars across his empire.",
+        "options": [
+          "pillars",
+          "elders",
+          "teachers",
+          "rulers"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "What is Ashoka's dhamma?",
+      "key": "religion",
+      "options": [
+        "became",
+        "dynasty",
+        "religion",
+        "war"
+      ],
+      "witness_idx": 8,
+      "witness": "Ashoka's dhamma was not a new religion.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "4 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.48"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.44"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 6.6 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is Ashoka's dhamma?",
+          "temperature": 0.0,
+          "wall_s": 0.7124,
+          "failed": [],
+          "prompt_tokens": 158,
+          "new_tokens": 47,
+          "ttft_ms": 200,
+          "tokens_per_s": 90.02,
+          "verify": {
+            "text": "Ashoka's dhamma is a religion.",
+            "wall_s": 0.3399,
+            "prompt_tokens": 147,
+            "new_tokens": 15,
+            "ttft_ms": 192,
+            "tokens_per_s": 95.24
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Ashoka's _____ was not a new religion.",
+        "key": "dhamma",
+        "witness_idx": 8,
+        "witness": "Ashoka's dhamma was not a new religion.",
+        "options": [
+          "dhamma",
+          "respect",
+          "present-day",
+          "war"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "What did Ashoka decide not to fight wars for?",
+      "key": "war",
+      "options": [
+        "ancient",
+        "present-day",
+        "dhamma",
+        "war"
+      ],
+      "witness_idx": 6,
+      "witness": "Ashoka was so filled with sorrow at the suffering he saw that he decided never to fight a war of conquest again.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "9 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.38"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.58"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "75% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.7 (limit 10.7)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What did Ashoka decide not to fight a war of conquest again?",
+          "temperature": 0.0,
+          "wall_s": 0.7299,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 215,
+          "tokens_per_s": 89.49,
+          "verify": null
+        },
+        {
+          "text": "What did Ashoka decide not to fight wars for?",
+          "temperature": 0.4,
+          "wall_s": 0.7269,
+          "failed": [],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 215,
+          "tokens_per_s": 89.84,
+          "verify": {
+            "text": "his own wars",
+            "wall_s": 0.365,
+            "prompt_tokens": 161,
+            "new_tokens": 15,
+            "ttft_ms": 208,
+            "tokens_per_s": 89.74
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Ashoka was so filled with sorrow at the suffering he saw that he decided never to fight a war of _____ again.",
+        "key": "conquest",
+        "witness_idx": 6,
+        "witness": "Ashoka was so filled with sorrow at the suffering he saw that he decided never to fight a war of conquest again.",
+        "options": [
+          "national",
+          "respect",
+          "religion",
+          "conquest"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 16.1624,
+    "summary_s": 3.8842,
+    "stems_s": 12.2775,
+    "model_wall_s": 13.5463,
+    "model_calls": 17,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 0,
+    "red": 3,
+    "fallback": 0
+  },
+  "version": 1,
+  "created": "2026-11-13T01:18:58",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

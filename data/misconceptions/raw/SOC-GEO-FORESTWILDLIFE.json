@@ -1,0 +1,155 @@
+{
+ "topic": {
+  "id": "SOC-GEO-FORESTWILDLIFE",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   10
+  ],
+  "title": "Forest and wildlife resources",
+  "scope": "biodiversity, endangered species, Project Tiger, reserved and protected forests, community conservation, Chipko"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 698,
+  "candidatesTokenCount": 1110,
+  "totalTokenCount": 1808,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 698
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.3,
+ "response": {
+  "concepts": [
+   {
+    "key": "biodiversity",
+    "name": "Biodiversity and Ecological Importance",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Biodiversity only refers to the number of large animals in a forest.",
+      "why": "Students often equate wildlife with charismatic megafauna like tigers or elephants seen in media.",
+      "fix": "Biodiversity includes all forms of life, including insects, microorganisms, and plants, which are essential for ecosystem balance.",
+      "probe": {
+       "question": "Which area has higher biodiversity: a forest with only tigers or a forest with many types of insects, fungi, and shrubs?",
+       "wrong_answer": "The forest with tigers because it has the most important animals."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "flora",
+       "fauna",
+       "ecosystem",
+       "interdependence",
+       "biological variety"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Extinction of a single species does not affect human life.",
+      "why": "Students view humans as separate from the natural food web.",
+      "fix": "Every species plays a role in the food chain; losing one can cause a collapse in ecosystem services like pollination or water purification.",
+      "probe": {
+       "question": "If a rare species of insect goes extinct, why should we care?",
+       "wrong_answer": "It does not matter because insects are not useful to humans."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "extinction",
+       "food chain",
+       "ecological balance",
+       "species loss"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "forest_classification",
+    "name": "Classification of Forests",
+    "prereqs": [
+     "biodiversity"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Reserved forests are owned by private companies.",
+      "why": "The term 'reserved' is often confused with 'private reservation' in common parlance.",
+      "fix": "Reserved forests are the most valuable forests owned and strictly managed by the government for conservation.",
+      "probe": {
+       "question": "Who has the most control over a Reserved forest?",
+       "wrong_answer": "Private companies or local landlords."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "reserved",
+       "protected",
+       "unclassed",
+       "government control",
+       "forest department"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "conservation_efforts",
+    "name": "Conservation Strategies and Movements",
+    "prereqs": [
+     "biodiversity",
+     "forest_classification"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Project Tiger was started only to increase the number of tigers for hunting.",
+      "why": "Students may misinterpret the goal of 'protecting' a species as 'farming' it for human use.",
+      "fix": "Project Tiger was launched to protect the tiger from extinction and maintain the ecological health of its habitat.",
+      "probe": {
+       "question": "What was the primary purpose of Project Tiger?",
+       "wrong_answer": "To breed more tigers so they could be hunted or used in zoos."
+      },
+      "error_type": "confuses_people_or_places",
+      "trigger_cues": [
+       "project tiger",
+       "endangered species",
+       "conservation",
+       "habitat protection"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "The Chipko movement was just about planting new trees.",
+      "why": "The name 'Chipko' (to hug) is often simplified in textbooks as a tree-planting drive rather than a protest against deforestation.",
+      "fix": "Chipko was a grassroots resistance movement where villagers hugged trees to prevent them from being cut down by contractors.",
+      "probe": {
+       "question": "How did the Chipko movement save forests?",
+       "wrong_answer": "By organizing large-scale tree planting events in the Himalayas."
+      },
+      "error_type": "other",
+      "trigger_cues": [
+       "chipko movement",
+       "himalayas",
+       "local communities",
+       "protest",
+       "deforestation"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Basic Ecology",
+   "Physical Geography of India",
+   "Environmental Studies"
+  ]
+ },
+ "problems": []
+}

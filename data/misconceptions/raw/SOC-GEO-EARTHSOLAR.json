@@ -1,0 +1,151 @@
+{
+ "topic": {
+  "id": "SOC-GEO-EARTHSOLAR",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   6
+  ],
+  "title": "The Earth in the solar system",
+  "scope": "planets, Earth as a unique planet, Moon, asteroids, meteoroids, satellites"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 695,
+  "candidatesTokenCount": 1067,
+  "totalTokenCount": 1762,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 695
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 12.5,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Celestial Bodies and Stars",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Stars are small, twinkling objects that are stuck to the sky.",
+      "why": "They appear tiny due to immense distance and seem fixed against the night sky backdrop.",
+      "fix": "Stars are massive, burning balls of gas like our Sun, located extremely far away from Earth.",
+      "probe": {
+       "question": "If we traveled in a rocket towards a star, would it get bigger?",
+       "wrong_answer": "No, stars are just tiny lights in the sky."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "twinkling",
+       "night sky",
+       "distant",
+       "glowing"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "The Solar System and Planets",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "All planets in the solar system have life like Earth.",
+      "why": "Students often project human-centric experiences onto other celestial bodies in science fiction.",
+      "fix": "Earth is the only known planet in our solar system with the right temperature, water, and air to support life.",
+      "probe": {
+       "question": "Could humans survive on Jupiter?",
+       "wrong_answer": "Yes, it is a planet like Earth, so it must have people."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "solar system",
+       "planets",
+       "life",
+       "conditions"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "The Sun revolves around the Earth.",
+      "why": "Our daily observation shows the Sun rising and setting, making it look like the Sun is moving.",
+      "fix": "The Earth rotates on its axis and revolves around the Sun, which is the center of the solar system.",
+      "probe": {
+       "question": "Why does the Sun move across the sky during the day?",
+       "wrong_answer": "Because the Sun travels around the Earth every day."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "sunrise",
+       "sunset",
+       "revolve",
+       "center"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "The Moon and Satellites",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The Moon produces its own light like a star.",
+      "why": "The Moon appears bright in the night sky, and children associate brightness with self-illumination.",
+      "fix": "The Moon does not have its own light; it reflects the light of the Sun.",
+      "probe": {
+       "question": "Where does the Moon get its light from?",
+       "wrong_answer": "It makes its own light because it glows at night."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "moonlight",
+       "bright",
+       "reflection",
+       "luminous"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     },
+     {
+      "statement": "The Moon changes its shape throughout the month.",
+      "why": "Visual observation of phases makes it appear as if the physical shape of the Moon is changing.",
+      "fix": "The Moon's physical shape stays the same; we only see different parts of its sunlit half as it orbits Earth.",
+      "probe": {
+       "question": "Why does the Moon look like a crescent sometimes?",
+       "wrong_answer": "Because the Moon actually shrinks and grows during the month."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "phases",
+       "crescent",
+       "full moon",
+       "shape"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Basic directions",
+   "Day and night cycle",
+   "Understanding of distance and scale"
+  ]
+ },
+ "problems": []
+}

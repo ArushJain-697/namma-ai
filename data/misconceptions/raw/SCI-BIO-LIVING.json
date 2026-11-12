@@ -1,0 +1,157 @@
+{
+ "topic": {
+  "id": "SCI-BIO-LIVING",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   6
+  ],
+  "title": "Living organisms and their surroundings",
+  "scope": "characteristics of living things, habitat, adaptation, biotic and abiotic components"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 696,
+  "candidatesTokenCount": 1052,
+  "totalTokenCount": 1748,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 696
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 32.8,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Characteristics of Living Things",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Anything that moves is a living thing.",
+      "why": "Students equate movement with life because animals and humans move to survive.",
+      "fix": "Living things show movement, but non-living things like clouds or cars can also move due to external forces.",
+      "probe": {
+       "question": "Is a car driving on the road a living thing?",
+       "wrong_answer": "Yes, because it moves from one place to another."
+      },
+      "error_type": "living_thing_reasoning",
+      "trigger_cues": [
+       "movement",
+       "locomotion",
+       "living vs non-living",
+       "growth",
+       "breathing"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Plants do not breathe because they do not have noses or lungs.",
+      "why": "Students rely on anthropomorphic definitions of biological processes.",
+      "fix": "Plants perform respiration through tiny pores in their leaves called stomata.",
+      "probe": {
+       "question": "Do plants need oxygen to survive?",
+       "wrong_answer": "No, plants only need carbon dioxide to make food."
+      },
+      "error_type": "living_thing_reasoning",
+      "trigger_cues": [
+       "breathing",
+       "respiration",
+       "stomata",
+       "gas exchange"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Biotic and Abiotic Components",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Soil is a living thing because plants grow in it.",
+      "why": "Students confuse the environment that supports life with the life itself.",
+      "fix": "Soil is an abiotic component that provides nutrients and support, but it does not grow, breathe, or reproduce.",
+      "probe": {
+       "question": "Is soil a living or non-living component?",
+       "wrong_answer": "It is living because it helps plants grow."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "biotic",
+       "abiotic",
+       "environment",
+       "soil",
+       "sunlight",
+       "water"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Habitat and Adaptation",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Animals can choose to change their body parts to suit a new environment.",
+      "why": "Students often view adaptation as a conscious or immediate effort by the organism.",
+      "fix": "Adaptations are inherited traits that develop over many generations, not changes an individual makes during its lifetime.",
+      "probe": {
+       "question": "Why does a camel have long legs?",
+       "wrong_answer": "Because it decided to grow long legs to keep its body away from the hot sand."
+      },
+      "error_type": "other",
+      "trigger_cues": [
+       "adaptation",
+       "habitat",
+       "camel",
+       "fish",
+       "desert",
+       "mountain"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     },
+     {
+      "statement": "A fish can live on land if it tries hard enough.",
+      "why": "Students underestimate the specificity of biological requirements for survival.",
+      "fix": "Fish have gills that only function in water; they cannot extract oxygen from air, so they cannot survive on land.",
+      "probe": {
+       "question": "What would happen if you took a fish out of water?",
+       "wrong_answer": "It would eventually learn to breathe air and walk."
+      },
+      "error_type": "living_thing_reasoning",
+      "trigger_cues": [
+       "gills",
+       "aquatic",
+       "terrestrial",
+       "survival",
+       "environment"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Food: Where does it come from?",
+   "Components of Food"
+  ]
+ },
+ "problems": []
+}

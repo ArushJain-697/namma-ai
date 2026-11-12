@@ -1,0 +1,161 @@
+{
+ "topic": {
+  "id": "SCI-PHY-SOUND9",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   9
+  ],
+  "title": "Sound waves",
+  "scope": "longitudinal waves, compressions and rarefactions, wavelength, frequency, speed of sound, echo, ultrasound"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 700,
+  "candidatesTokenCount": 1154,
+  "totalTokenCount": 1854,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 700
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.0,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Nature of Sound and Vibration",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Sound can travel through a vacuum.",
+      "why": "Students often conflate light and sound because both are perceived as waves.",
+      "fix": "Sound is a mechanical wave that requires a material medium like air, water, or solids to propagate.",
+      "probe": {
+       "question": "If a bell rings inside a glass jar from which all air has been removed, will you hear it?",
+       "wrong_answer": "Yes, because sound waves can travel through empty space."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "vacuum",
+       "medium",
+       "propagation",
+       "mechanical wave"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Sound is a physical object that moves from the source to the ear.",
+      "why": "Everyday language like 'the sound hit me' suggests sound is a projectile or a substance.",
+      "fix": "Sound is a disturbance or energy transfer that causes particles of the medium to vibrate in place.",
+      "probe": {
+       "question": "Does the air you breathe at the source of a sound actually travel to your ear?",
+       "wrong_answer": "Yes, the air molecules move all the way from the speaker to my ear."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "travel",
+       "movement",
+       "source",
+       "ear"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Longitudinal Waves: Compressions and Rarefactions",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Sound waves move up and down like water waves.",
+      "why": "Textbooks often use transverse wave diagrams to represent all waves, leading to visual confusion.",
+      "fix": "Sound waves are longitudinal, meaning particles oscillate back and forth in the same direction the wave travels.",
+      "probe": {
+       "question": "In which direction do air particles move when a sound wave passes through them?",
+       "wrong_answer": "They move up and down perpendicular to the direction of the sound."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "longitudinal",
+       "transverse",
+       "oscillate",
+       "wave diagram"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Frequency, Wavelength, and Pitch",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Loud sounds have a higher frequency than quiet sounds.",
+      "why": "Students confuse the intensity (loudness) with the pitch (frequency) of a sound.",
+      "fix": "Loudness depends on the amplitude of the wave, while pitch depends on the frequency.",
+      "probe": {
+       "question": "If you shout louder, what happens to the pitch of your voice?",
+       "wrong_answer": "The pitch gets higher because the sound is louder."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "pitch",
+       "loudness",
+       "amplitude",
+       "frequency"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Speed of Sound and Echoes",
+    "prereqs": [
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Sound travels at the same speed regardless of the material.",
+      "why": "Students often assume sound is a constant property of the 'sound' itself rather than the medium.",
+      "fix": "The speed of sound depends on the properties of the medium, such as density and elasticity, and is fastest in solids.",
+      "probe": {
+       "question": "Does sound travel faster through steel or through air?",
+       "wrong_answer": "It travels at the same speed in both because sound is constant."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "speed of sound",
+       "medium",
+       "steel",
+       "air",
+       "density"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Motion",
+   "Force and Laws of Motion",
+   "Properties of Matter"
+  ]
+ },
+ "problems": []
+}

@@ -1,0 +1,1217 @@
+{
+  "passage": "When we dig a well, we usually find water at some depth below the ground. This water is called groundwater. Many people imagine that groundwater flows in underground rivers or lies in large lakes beneath the surface, but this is mostly not true. Groundwater fills the tiny spaces between grains of sand and soil, and the cracks in rocks, much like water fills a sponge. When it rains, some of the water soaks into the ground. This process is called infiltration. The water moves down until it reaches a layer of rock that it cannot pass through. Above this layer, the spaces between the particles become completely filled with water. The upper level of this water-filled layer is called the water table. A layer of rock or soil that stores water and allows it to flow through is called an aquifer. The water table is not fixed. It rises after good rains and falls when more water is drawn out than is put back. In many parts of India, water is pumped out by tube wells for irrigation faster than rain can refill the ground, and the water table has dropped by many metres. Paving every surface with concrete also reduces infiltration. Rainwater harvesting, in which rainwater from rooftops is led into pits or old wells, helps to recharge groundwater.",
+  "gate": {
+    "status": "OK",
+    "words": 220,
+    "reason": "OK: 220 words"
+  },
+  "summary": {
+    "text": "When we dig a well, we usually find water at some depth below the ground. This water is called groundwater. When it rains, some of the water gets soaked into the ground.",
+    "word_count": 32,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "32 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 0,
+        "source": "When we dig a well, we usually find water at some depth below the ground.",
+        "text": "When we dig a well, we usually find water at some depth below the ground.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "When we dig a well, we usually find water at some depth below the ground.",
+            "temperature": 0.0,
+            "wall_s": 1.0608,
+            "failed": [],
+            "prompt_tokens": 90,
+            "new_tokens": 79,
+            "ttft_ms": 133,
+            "tokens_per_s": 84.14,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 1,
+        "source": "This water is called groundwater.",
+        "text": "This water is called groundwater.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "This water is called underground.",
+            "temperature": 0.0,
+            "wall_s": 0.9525,
+            "failed": [
+              "summary_support"
+            ],
+            "prompt_tokens": 79,
+            "new_tokens": 79,
+            "ttft_ms": 105,
+            "tokens_per_s": 92.2,
+            "verify": null
+          },
+          {
+            "text": "This water is called groundwater.",
+            "temperature": 0.4,
+            "wall_s": 1.0232,
+            "failed": [],
+            "prompt_tokens": 79,
+            "new_tokens": 79,
+            "ttft_ms": 111,
+            "tokens_per_s": 85.53,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 4,
+        "source": "When it rains, some of the water soaks into the ground.",
+        "text": "When it rains, some of the water gets soaked into the ground.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "When it rains, some of the water gets soaked into the ground.",
+            "temperature": 0.0,
+            "wall_s": 0.9947,
+            "failed": [],
+            "prompt_tokens": 87,
+            "new_tokens": 79,
+            "ttft_ms": 130,
+            "tokens_per_s": 90.28,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "ground",
+      "options": [
+        "table",
+        "ground",
+        "imagine",
+        "infiltration"
+      ],
+      "witness_idx": 0,
+      "witness": "When we dig a well, we usually find water at some depth below the ground.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "15 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "similarity to the witness 0.93"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.2 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question",
+        "stem_not_echo: similarity to the witness 0.93"
+      ],
+      "attempts": [
+        {
+          "text": "When we dig a well, we find water at some depth below the ground.",
+          "temperature": 0.0,
+          "wall_s": 0.7771,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 163,
+          "new_tokens": 47,
+          "ttft_ms": 237,
+          "tokens_per_s": 85.19,
+          "verify": null
+        },
+        {
+          "text": "When we dig a well, we usually find water at some depth below the ground.",
+          "temperature": 0.4,
+          "wall_s": 0.7584,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 163,
+          "new_tokens": 47,
+          "ttft_ms": 220,
+          "tokens_per_s": 85.66,
+          "verify": null
+        },
+        {
+          "text": "When we dig a well, we usually find water at what depth below the ground?",
+          "temperature": 0.7,
+          "wall_s": 0.7548,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 163,
+          "new_tokens": 47,
+          "ttft_ms": 216,
+          "tokens_per_s": 85.34,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: When we dig a well, we usually find water at some _____ below the ground.",
+        "key": "depth",
+        "witness_idx": 0,
+        "witness": "When we dig a well, we usually find water at some depth below the ground.",
+        "options": [
+          "depth",
+          "infiltration",
+          "table",
+          "layer"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "What is the name of the water referred to in the sentence?",
+      "key": "groundwater",
+      "options": [
+        "dig",
+        "soil",
+        "surface",
+        "groundwater"
+      ],
+      "witness_idx": 1,
+      "witness": "This water is called groundwater.",
+      "tier": "AMBER",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "12 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.37"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "25% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 4.8 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_in_passage: 25% of content words are in the passage"
+      ],
+      "attempts": [
+        {
+          "text": "What is called groundwater?",
+          "temperature": 0.0,
+          "wall_s": 0.7128,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 152,
+          "new_tokens": 47,
+          "ttft_ms": 202,
+          "tokens_per_s": 90.02,
+          "verify": null
+        },
+        {
+          "text": "What is the name of the water referred to in the sentence?",
+          "temperature": 0.4,
+          "wall_s": 0.7318,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 152,
+          "new_tokens": 47,
+          "ttft_ms": 200,
+          "tokens_per_s": 86.63,
+          "verify": {
+            "text": "groundwater",
+            "wall_s": 0.3548,
+            "prompt_tokens": 145,
+            "new_tokens": 15,
+            "ttft_ms": 195,
+            "tokens_per_s": 88.05
+          }
+        },
+        {
+          "text": "What is the name of the water?",
+          "temperature": 0.7,
+          "wall_s": 0.8106,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 152,
+          "new_tokens": 47,
+          "ttft_ms": 213,
+          "tokens_per_s": 77.18,
+          "verify": {
+            "text": "groundwater",
+            "wall_s": 0.3762,
+            "prompt_tokens": 140,
+            "new_tokens": 15,
+            "ttft_ms": 201,
+            "tokens_per_s": 80.0
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: This _____ is called groundwater.",
+        "key": "water",
+        "witness_idx": 1,
+        "witness": "This water is called groundwater.",
+        "options": [
+          "dig",
+          "water",
+          "table",
+          "layer"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "What is called the upper level of this water-filled layer?",
+      "key": "table",
+      "options": [
+        "table",
+        "infiltration",
+        "surface",
+        "groundwater"
+      ],
+      "witness_idx": 8,
+      "witness": "The upper level of this water-filled layer is called the water table.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "10 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.66"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.53"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 7.2 (limit 8.8)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is called the upper level of this water-filled layer?",
+          "temperature": 0.0,
+          "wall_s": 0.7716,
+          "failed": [],
+          "prompt_tokens": 160,
+          "new_tokens": 47,
+          "ttft_ms": 221,
+          "tokens_per_s": 83.64,
+          "verify": {
+            "text": "water table",
+            "wall_s": 0.3784,
+            "prompt_tokens": 152,
+            "new_tokens": 15,
+            "ttft_ms": 215,
+            "tokens_per_s": 86.42
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The upper level of this water-filled _____ is called the water table.",
+        "key": "layer",
+        "witness_idx": 8,
+        "witness": "The upper level of this water-filled layer is called the water table.",
+        "options": [
+          "groundwater",
+          "surface",
+          "layer",
+          "depth"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "flow",
+      "options": [
+        "groundwater",
+        "dig",
+        "flow",
+        "ground"
+      ],
+      "witness_idx": 9,
+      "witness": "A layer of rock or soil that stores water and allows it to flow through is called an aquifer.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "18 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.79"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.50"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.9 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is called a layer of rock or soil that stores water and allows it to flow through?",
+          "temperature": 0.0,
+          "wall_s": 0.7772,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 234,
+          "tokens_per_s": 84.71,
+          "verify": null
+        },
+        {
+          "text": "What is called an aquifer?",
+          "temperature": 0.4,
+          "wall_s": 0.778,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 232,
+          "tokens_per_s": 84.4,
+          "verify": {
+            "text": "water reservoirs",
+            "wall_s": 0.3604,
+            "prompt_tokens": 154,
+            "new_tokens": 15,
+            "ttft_ms": 205,
+            "tokens_per_s": 90.32
+          }
+        },
+        {
+          "text": "What is called a layer of rock or soil that stores water and allows it to flow through?",
+          "temperature": 0.7,
+          "wall_s": 0.755,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 219,
+          "tokens_per_s": 85.98,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: A layer of rock or _____ that stores water and allows it to flow through is called an aquifer.",
+        "key": "soil",
+        "witness_idx": 9,
+        "witness": "A layer of rock or soil that stores water and allows it to flow through is called an aquifer.",
+        "options": [
+          "dig",
+          "ground",
+          "soil",
+          "groundwater"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "rocks",
+      "options": [
+        "lakes",
+        "particles",
+        "rains",
+        "rocks"
+      ],
+      "witness_idx": 3,
+      "witness": "Groundwater fills the tiny spaces between grains of sand and soil, and the cracks in rocks, much like water fills a sponge.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "15 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.76"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.42"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.6 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What fills the spaces between grains of sand and soil, and the cracks in rocks?",
+          "temperature": 0.0,
+          "wall_s": 0.7363,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 172,
+          "new_tokens": 47,
+          "ttft_ms": 217,
+          "tokens_per_s": 88.63,
+          "verify": null
+        },
+        {
+          "text": "What fills the spaces between grains of sand and soil, and the cracks in rocks?",
+          "temperature": 0.4,
+          "wall_s": 0.7422,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 172,
+          "new_tokens": 47,
+          "ttft_ms": 217,
+          "tokens_per_s": 87.79,
+          "verify": null
+        },
+        {
+          "text": "What is filled by groundwater?",
+          "temperature": 0.7,
+          "wall_s": 0.8256,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 172,
+          "new_tokens": 47,
+          "ttft_ms": 217,
+          "tokens_per_s": 75.66,
+          "verify": {
+            "text": "sponge",
+            "wall_s": 0.4035,
+            "prompt_tokens": 158,
+            "new_tokens": 15,
+            "ttft_ms": 233,
+            "tokens_per_s": 82.84
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Groundwater fills the tiny spaces between grains of sand and _____, and the cracks in rocks, much like water fills a sponge.",
+        "key": "soil",
+        "witness_idx": 3,
+        "witness": "Groundwater fills the tiny spaces between grains of sand and soil, and the cracks in rocks, much like water fills a sponge.",
+        "options": [
+          "soil",
+          "surface",
+          "table",
+          "ground"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "spaces",
+      "options": [
+        "spaces",
+        "rivers",
+        "flows",
+        "rains"
+      ],
+      "witness_idx": 7,
+      "witness": "Above this layer, the spaces between the particles become completely filled with water.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.50"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.55"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 6.7 (limit 11.3)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'water', not 'spaces'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'water', not 'spaces'"
+      ],
+      "attempts": [
+        {
+          "text": "What is filled with water between the particles?",
+          "temperature": 0.0,
+          "wall_s": 0.7414,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 161,
+          "new_tokens": 47,
+          "ttft_ms": 218,
+          "tokens_per_s": 87.95,
+          "verify": {
+            "text": "water",
+            "wall_s": 0.3589,
+            "prompt_tokens": 150,
+            "new_tokens": 15,
+            "ttft_ms": 207,
+            "tokens_per_s": 92.72
+          }
+        },
+        {
+          "text": "What is the term for the spaces between the particles in a liquid?",
+          "temperature": 0.4,
+          "wall_s": 0.7521,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 161,
+          "new_tokens": 47,
+          "ttft_ms": 221,
+          "tokens_per_s": 86.79,
+          "verify": null
+        },
+        {
+          "text": "What is filled with water between the particles?",
+          "temperature": 0.7,
+          "wall_s": 0.7417,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 161,
+          "new_tokens": 47,
+          "ttft_ms": 213,
+          "tokens_per_s": 87.12,
+          "verify": {
+            "text": "water",
+            "wall_s": 0.3543,
+            "prompt_tokens": 150,
+            "new_tokens": 15,
+            "ttft_ms": 203,
+            "tokens_per_s": 93.33
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Above this _____, the spaces between the particles become completely filled with water.",
+        "key": "layer",
+        "witness_idx": 7,
+        "witness": "Above this layer, the spaces between the particles become completely filled with water.",
+        "options": [
+          "rainwater",
+          "table",
+          "surface",
+          "layer"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: It rises after good _____ and falls when more water is drawn out than is put back.",
+      "key": "rains",
+      "options": [
+        "cracks",
+        "grains",
+        "lies",
+        "rains"
+      ],
+      "witness_idx": 11,
+      "witness": "It rises after good rains and falls when more water is drawn out than is put back.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: It rises after good rains and falls when more water is _____ out than is put back.",
+        "key": "drawn",
+        "witness_idx": 11,
+        "witness": "It rises after good rains and falls when more water is drawn out than is put back.",
+        "options": [
+          "layer",
+          "infiltration",
+          "drawn",
+          "groundwater"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "kind": "cloze",
+      "stem": "Fill in the blank: Paving every surface with concrete also reduces _____.",
+      "key": "infiltration",
+      "options": [
+        "layer",
+        "infiltration",
+        "soil",
+        "table"
+      ],
+      "witness_idx": 13,
+      "witness": "Paving every surface with concrete also reduces infiltration.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: Paving every _____ with concrete also reduces infiltration.",
+        "key": "surface",
+        "witness_idx": 13,
+        "witness": "Paving every surface with concrete also reduces infiltration.",
+        "options": [
+          "soil",
+          "surface",
+          "ground",
+          "layer"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 18.8004,
+    "summary_s": 4.0321,
+    "stems_s": 14.7661,
+    "model_wall_s": 16.1978,
+    "model_calls": 20,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 1,
+    "red": 4,
+    "fallback": 2
+  },
+  "version": 1,
+  "created": "2026-11-13T01:21:51",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

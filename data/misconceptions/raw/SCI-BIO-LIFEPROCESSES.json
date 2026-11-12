@@ -1,0 +1,168 @@
+{
+ "topic": {
+  "id": "SCI-BIO-LIFEPROCESSES",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   10
+  ],
+  "title": "Life processes",
+  "scope": "nutrition, respiration, transportation and excretion in plants and animals, kidney and nephron"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 699,
+  "candidatesTokenCount": 1171,
+  "totalTokenCount": 1870,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 699
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.7,
+ "response": {
+  "concepts": [
+   {
+    "key": "nutrition",
+    "name": "Nutrition and Energy Acquisition",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Plants obtain their food directly from the soil through their roots.",
+      "why": "Students observe plants being watered and equate this with feeding, similar to how humans eat.",
+      "fix": "Plants synthesize their own organic food using sunlight, water, and carbon dioxide; soil only provides essential minerals.",
+      "probe": {
+       "question": "Where does a plant get the mass to grow into a large tree?",
+       "wrong_answer": "It absorbs the mass from the soil through its roots."
+      },
+      "error_type": "living_thing_reasoning",
+      "trigger_cues": [
+       "photosynthesis",
+       "soil nutrients",
+       "roots",
+       "autotrophic",
+       "mineral absorption"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Digestion is the process where food is converted into energy.",
+      "why": "Everyday language often conflates 'eating for energy' with the chemical process of cellular respiration.",
+      "fix": "Digestion breaks down complex food into simpler molecules; energy is only released later during cellular respiration.",
+      "probe": {
+       "question": "What is the primary purpose of the digestive system?",
+       "wrong_answer": "To burn food and release energy for the body."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "digestion",
+       "energy release",
+       "breakdown",
+       "stomach",
+       "glucose"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "respiration",
+    "name": "Cellular Respiration and Gas Exchange",
+    "prereqs": [
+     "nutrition"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Respiration is exactly the same as breathing.",
+      "why": "In common parlance, 'respiration' and 'breathing' are used interchangeably.",
+      "fix": "Breathing is the physical act of inhaling and exhaling, while respiration is the chemical process of oxidizing glucose to release energy.",
+      "probe": {
+       "question": "Does a plant respire?",
+       "wrong_answer": "No, because plants do not have lungs to breathe."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "breathing",
+       "gas exchange",
+       "cellular respiration",
+       "oxygen",
+       "carbon dioxide"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "transportation",
+    "name": "Circulation and Transport Systems",
+    "prereqs": [
+     "nutrition",
+     "respiration"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Blood flows in a continuous loop where oxygenated and deoxygenated blood mix freely.",
+      "why": "Students often visualize the heart as a simple pump without understanding the distinct chambers and septa.",
+      "fix": "The heart has separate chambers to prevent the mixing of oxygenated and deoxygenated blood, ensuring efficient oxygen delivery.",
+      "probe": {
+       "question": "What happens to blood inside the heart?",
+       "wrong_answer": "All blood mixes together in the heart before being pumped to the body."
+      },
+      "error_type": "part_whole",
+      "trigger_cues": [
+       "double circulation",
+       "heart chambers",
+       "oxygenated blood",
+       "deoxygenated blood",
+       "septum"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "excretion",
+    "name": "Excretion and Osmoregulation",
+    "prereqs": [
+     "nutrition",
+     "respiration",
+     "transportation"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The kidney's primary function is to filter out solid waste from the blood.",
+      "why": "Students associate 'excretion' with defecation (solid waste removal) and confuse the two systems.",
+      "fix": "The kidneys filter liquid waste (urea/nitrogenous waste) from the blood, while solid waste is removed by the digestive system.",
+      "probe": {
+       "question": "What is the main waste product removed by the kidneys?",
+       "wrong_answer": "Undigested food particles."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "kidney",
+       "nephron",
+       "urea",
+       "filtration",
+       "excretion",
+       "urine"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Cell structure and function",
+   "Chemical reactions and equations"
+  ]
+ },
+ "problems": []
+}

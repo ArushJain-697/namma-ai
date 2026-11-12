@@ -1,0 +1,138 @@
+{
+ "topic": {
+  "id": "SOC-CIV-STATEGOVT",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   7
+  ],
+  "title": "How the State government works",
+  "scope": "MLAs, constituencies, majority, Chief Minister, Governor, legislature vs executive"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 692,
+  "candidatesTokenCount": 965,
+  "totalTokenCount": 1657,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 692
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.5,
+ "response": {
+  "concepts": [
+   {
+    "key": "constituency",
+    "name": "Constituency and Representation",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "An MLA is a person who works for the whole state equally.",
+      "why": "Students often fail to grasp the geographical division of power and assume leaders have universal jurisdiction.",
+      "fix": "An MLA is elected to represent only the specific area or constituency from which they stood for election.",
+      "probe": {
+       "question": "If an MLA is elected from a specific area, can they ignore the problems of people living in another part of the state?",
+       "wrong_answer": "No, because their job is to look after every single person in the state equally."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "area",
+       "voters",
+       "represent",
+       "election",
+       "boundary"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "majority",
+    "name": "Majority and Government Formation",
+    "prereqs": [
+     "constituency"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The party with the most votes in the entire state automatically forms the government.",
+      "why": "Students confuse the total number of individual votes cast with the number of seats won in the legislature.",
+      "fix": "A party forms the government only if they win more than half of the total constituencies (seats) in the state.",
+      "probe": {
+       "question": "If Party A gets more total votes than Party B, but Party B wins more seats, who forms the government?",
+       "wrong_answer": "Party A, because they got more votes from the people."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "majority",
+       "seats",
+       "party",
+       "win",
+       "government"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "legislature_executive",
+    "name": "Legislature vs Executive",
+    "prereqs": [
+     "constituency",
+     "majority"
+    ],
+    "misconceptions": [
+     {
+      "statement": "All MLAs are part of the government.",
+      "why": "Students often equate the entire Legislative Assembly with 'the government' without distinguishing between the ruling party and the opposition.",
+      "fix": "Only the MLAs belonging to the ruling party (or coalition) who are appointed as ministers form the executive government; the others are part of the legislature but act as opposition.",
+      "probe": {
+       "question": "Are the MLAs who sit in the opposition also part of the government?",
+       "wrong_answer": "Yes, because they are all elected representatives in the assembly."
+      },
+      "error_type": "confuses_institutions",
+      "trigger_cues": [
+       "opposition",
+       "ministers",
+       "ruling party",
+       "legislative assembly",
+       "executive"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "The Chief Minister makes all the laws alone.",
+      "why": "Students often attribute state-level decision-making to a single powerful figure, ignoring the collective process of the assembly.",
+      "fix": "Laws are debated and passed by the entire Legislative Assembly, not just the Chief Minister.",
+      "probe": {
+       "question": "Who is responsible for passing a new law in the state?",
+       "wrong_answer": "The Chief Minister decides and passes the law."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "chief minister",
+       "laws",
+       "debate",
+       "assembly",
+       "decision"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Diversity and Discrimination",
+   "Role of Government in Health",
+   "Democracy and Equality"
+  ]
+ },
+ "problems": []
+}

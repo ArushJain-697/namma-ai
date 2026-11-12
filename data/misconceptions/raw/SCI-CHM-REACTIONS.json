@@ -1,0 +1,146 @@
+{
+ "topic": {
+  "id": "SCI-CHM-REACTIONS",
+  "subject": "science",
+  "strand": "chemistry",
+  "grades": [
+   10
+  ],
+  "title": "Chemical reactions and equations",
+  "scope": "writing and balancing equations, combination, decomposition, displacement, redox, corrosion, rancidity"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 702,
+  "candidatesTokenCount": 995,
+  "totalTokenCount": 1697,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 702
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.6,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Chemical Change vs Physical Change",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Any change that involves a change in shape or state is a chemical change.",
+      "why": "Students often confuse visible physical alterations with chemical transformations.",
+      "fix": "A chemical change involves the formation of a new substance with different chemical properties, whereas physical changes only alter the state or appearance.",
+      "probe": {
+       "question": "Is melting ice a chemical change?",
+       "wrong_answer": "Yes, because the state of the water has changed permanently."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "melting",
+       "freezing",
+       "state change",
+       "physical change",
+       "chemical change"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Writing and Balancing Equations",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "You can balance an equation by changing the subscripts in the chemical formulas.",
+      "why": "Students focus on making the numbers match on both sides without realizing that changing subscripts changes the identity of the substance.",
+      "fix": "To balance an equation, you must only change the coefficients in front of the formulas, as subscripts define the specific chemical compound.",
+      "probe": {
+       "question": "How do you balance H2 + O2 -> H2O?",
+       "wrong_answer": "Change H2O to H2O2."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "balancing",
+       "subscripts",
+       "coefficients",
+       "law of conservation of mass",
+       "atoms"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Types of Chemical Reactions",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "A displacement reaction is just a reaction where two things swap places.",
+      "why": "The term 'displacement' is interpreted colloquially as a simple exchange rather than a specific reactivity-based process.",
+      "fix": "A displacement reaction occurs only when a more reactive element replaces a less reactive element from its compound solution.",
+      "probe": {
+       "question": "Will silver displace copper from copper sulphate solution?",
+       "wrong_answer": "Yes, they just swap places."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "displacement",
+       "reactivity series",
+       "single displacement",
+       "double displacement",
+       "exchange"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Redox Reactions",
+    "prereqs": [
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Oxidation only happens when oxygen is added to a substance.",
+      "why": "The name 'oxidation' strongly implies the presence of oxygen, leading students to ignore electron transfer or hydrogen loss.",
+      "fix": "Oxidation is defined more broadly as the loss of electrons or the loss of hydrogen, not just the gain of oxygen.",
+      "probe": {
+       "question": "Is the removal of hydrogen from a molecule an oxidation reaction?",
+       "wrong_answer": "No, because no oxygen was added."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "oxidation",
+       "reduction",
+       "electron transfer",
+       "redox",
+       "loss of hydrogen"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Atoms and Molecules",
+   "Structure of Atom",
+   "Valency and Chemical Bonding"
+  ]
+ },
+ "problems": []
+}

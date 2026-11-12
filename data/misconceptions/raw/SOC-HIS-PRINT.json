@@ -1,0 +1,137 @@
+{
+ "topic": {
+  "id": "SOC-HIS-PRINT",
+  "subject": "social",
+  "strand": "history",
+  "grades": [
+   10
+  ],
+  "title": "Print culture and the modern world",
+  "scope": "printing in China, Gutenberg, print and reformation, print in India, debates, censorship"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 698,
+  "candidatesTokenCount": 962,
+  "totalTokenCount": 1660,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 698
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.3,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Origins and Evolution of Printing Technology",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Johannes Gutenberg invented the very first printing press in the world.",
+      "why": "Textbooks often highlight Gutenberg's press as the starting point of the modern era, ignoring earlier Asian developments.",
+      "fix": "Woodblock printing existed in China, Japan, and Korea centuries before Gutenberg developed his mechanical metal-type press in Europe.",
+      "probe": {
+       "question": "Where did the earliest form of printing technology originate?",
+       "wrong_answer": "It started in Germany with Gutenberg's invention."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "gutenberg",
+       "woodblock",
+       "china",
+       "metal type",
+       "mechanical press"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Print and Religious Reformation",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The Catholic Church was the primary force that encouraged the spread of printed books to educate the masses.",
+      "why": "Students often conflate the Church's role in preserving manuscripts with the later reaction to mass-produced books.",
+      "fix": "The Church initially viewed mass-printed books as a threat to its authority and established the Index of Prohibited Books to censor them.",
+      "probe": {
+       "question": "How did the Catholic Church react to the spread of printed religious texts?",
+       "wrong_answer": "They supported it because it helped spread Christianity to more people."
+      },
+      "error_type": "confuses_institutions",
+      "trigger_cues": [
+       "reformation",
+       "catholic church",
+       "prohibited books",
+       "martin luther",
+       "censorship"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Print Culture in Colonial India",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Printing in India was introduced solely by the British government to spread literacy among Indians.",
+      "why": "Students assume that all colonial infrastructure was designed for the benefit of the local population.",
+      "fix": "Printing was first brought to India by Portuguese missionaries for religious purposes, and later used by Indians for social reform and political debate.",
+      "probe": {
+       "question": "What was the primary motive for introducing printing in India?",
+       "wrong_answer": "The British government wanted to educate the Indian public."
+      },
+      "error_type": "presentism",
+      "trigger_cues": [
+       "missionaries",
+       "colonial india",
+       "social reform",
+       "vernacular press",
+       "literacy"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "All printed newspapers in colonial India were controlled by the British government.",
+      "why": "Students often view colonial rule as a monolithic power that controlled every aspect of public life.",
+      "probe": {
+       "question": "Could Indian nationalists use newspapers to criticize the British?",
+       "wrong_answer": "No, because the British owned and censored all printing presses in India."
+      },
+      "fix": "While the British imposed censorship like the Vernacular Press Act, many Indian-owned newspapers actively used print to challenge colonial policies.",
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "vernacular press act",
+       "nationalism",
+       "censorship",
+       "indian newspapers"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Medieval European History",
+   "Colonialism in India",
+   "Basic Geography of Asia and Europe"
+  ]
+ },
+ "problems": []
+}

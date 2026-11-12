@@ -1,0 +1,148 @@
+{
+ "topic": {
+  "id": "SOC-GEO-MAPS",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   6
+  ],
+  "title": "Maps",
+  "scope": "physical, political and thematic maps, scale, directions, symbols, sketch and plan"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 690,
+  "candidatesTokenCount": 989,
+  "totalTokenCount": 1679,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 690
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.7,
+ "response": {
+  "concepts": [
+   {
+    "key": "directions",
+    "name": "Cardinal and Intermediate Directions",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "North is always 'up' on every map.",
+      "why": "Students often associate the top of a page with the North direction due to standard wall map orientations.",
+      "fix": "North is a geographic direction indicated by the compass rose or north arrow, not necessarily the top of the paper.",
+      "probe": {
+       "question": "If a map has the North arrow pointing to the left side of the page, which direction is at the top of the page?",
+       "wrong_answer": "North"
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "north",
+       "south",
+       "east",
+       "west",
+       "compass rose",
+       "direction"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "symbols",
+    "name": "Conventional Symbols and Legends",
+    "prereqs": [
+     "directions"
+    ],
+    "misconceptions": [
+     {
+      "statement": "A symbol on a map is a literal picture of the object.",
+      "why": "Students confuse pictorial representations with abstract symbols used in cartography.",
+      "fix": "Symbols are standardized signs used to represent features like roads, temples, or bridges that are too small to be drawn to scale.",
+      "probe": {
+       "question": "Why is a small black dot used to represent a city on a map?",
+       "wrong_answer": "Because the city is actually a tiny black dot on the ground."
+      },
+      "error_type": "other",
+      "trigger_cues": [
+       "symbols",
+       "legend",
+       "key",
+       "conventional signs",
+       "representation"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "scale",
+    "name": "Map Scale and Distance",
+    "prereqs": [
+     "directions",
+     "symbols"
+    ],
+    "misconceptions": [
+     {
+      "statement": "A map with a larger area shown always has a larger scale.",
+      "why": "Students confuse the physical size of the map paper with the mathematical concept of scale ratio.",
+      "fix": "Scale is the ratio between map distance and ground distance; a map covering a larger area actually has a smaller scale.",
+      "probe": {
+       "question": "Which map has a larger scale: a map of your school or a map of India?",
+       "wrong_answer": "The map of India because it is bigger."
+      },
+      "error_type": "numerical_misreading",
+      "trigger_cues": [
+       "scale",
+       "ratio",
+       "distance",
+       "large scale",
+       "small scale"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "types",
+    "name": "Physical, Political, and Thematic Maps",
+    "prereqs": [
+     "symbols",
+     "scale"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Political maps show the actual physical boundaries like mountains and rivers.",
+      "why": "Students often assume that any line drawn on a map represents a physical feature.",
+      "fix": "Political maps show man-made boundaries like states and countries, while physical maps show natural features like mountains and plateaus.",
+      "probe": {
+       "question": "Can you see the border between India and Pakistan if you are standing on the ground?",
+       "wrong_answer": "Yes, it is a physical line like a river or a mountain range."
+      },
+      "error_type": "confuses_institutions",
+      "trigger_cues": [
+       "political map",
+       "physical map",
+       "thematic map",
+       "boundaries",
+       "features"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Globe and Latitudes/Longitudes",
+   "Basic Geometry"
+  ]
+ },
+ "problems": []
+}

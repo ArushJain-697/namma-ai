@@ -1,0 +1,136 @@
+{
+ "topic": {
+  "id": "SOC-GEO-AGRICULTURE",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   8,
+   10
+  ],
+  "title": "Agriculture",
+  "scope": "types of farming, cropping seasons, major crops, food security, technological and institutional reforms"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 700,
+  "candidatesTokenCount": 943,
+  "totalTokenCount": 1643,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 700
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.9,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Types of Farming",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "All farmers in India use modern machines like tractors and harvesters.",
+      "why": "Media portrayals of agriculture often focus on large, mechanized farms, ignoring the reality of small-scale subsistence farming.",
+      "fix": "Most Indian farmers work on small plots of land using traditional tools, manual labor, and animal power.",
+      "probe": {
+       "question": "How does a small farmer in a remote village typically harvest his wheat crop?",
+       "wrong_answer": "He uses a large combine harvester machine."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "subsistence farming",
+       "primitive tools",
+       "mechanization",
+       "small landholdings"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Subsistence farming is only done for personal consumption and never involves selling any produce.",
+      "why": "The term 'subsistence' is often interpreted literally as 'survival only' without considering that small surpluses are often sold for cash.",
+      "fix": "Subsistence farmers primarily grow food for their families, but they often sell small amounts of surplus produce to meet other household needs.",
+      "probe": {
+       "question": "What happens if a subsistence farmer produces more grain than his family needs to eat?",
+       "wrong_answer": "He throws away the extra grain because he is not a commercial farmer."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "subsistence",
+       "commercial farming",
+       "market surplus",
+       "family needs"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Cropping Seasons",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Kharif crops are grown in winter because they need a lot of rain.",
+      "why": "Students often confuse the timing of the monsoon with the winter season due to the cooling effect of rain.",
+      "fix": "Kharif crops are sown at the onset of the monsoon and harvested in autumn, making them summer and rainy season crops.",
+      "probe": {
+       "question": "During which months would you expect to see Kharif crops growing in the field?",
+       "wrong_answer": "December and January."
+      },
+      "error_type": "chronology_slip",
+      "trigger_cues": [
+       "kharif",
+       "rabi",
+       "monsoon",
+       "sowing",
+       "harvesting"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Technological and Institutional Reforms",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Government land reforms were only about giving free tractors to farmers.",
+      "why": "Students equate 'reform' with 'giving technology' rather than structural changes to land ownership.",
+      "fix": "Land reforms primarily involved laws to consolidate land holdings and abolish the zamindari system to ensure social justice.",
+      "probe": {
+       "question": "What was the main goal of the 'Land to the Tiller' reform?",
+       "wrong_answer": "To provide every farmer with a free tractor and irrigation pump."
+      },
+      "error_type": "confuses_institutions",
+      "trigger_cues": [
+       "land reforms",
+       "consolidation",
+       "zamindari",
+       "institutional change"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Physical features of India",
+   "Climate of India",
+   "Basic Economics"
+  ]
+ },
+ "problems": []
+}

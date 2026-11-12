@@ -1,0 +1,1164 @@
+{
+  "passage": "The Sun is the main source of energy for the Earth, and solar energy can be turned directly into electricity using solar panels. A solar panel is made of many solar cells, usually made of silicon. When sunlight falls on a solar cell, it produces a small electric current. A single cell gives only about half a volt, so many cells are joined together in a panel. India receives plenty of sunshine, with about 300 sunny days a year in most parts of the country. A rooftop solar system of 1 kilowatt needs about 10 square metres of roof space and can produce about 4 units of electricity on a sunny day, which is enough to run a few lights, fans and a television in a small home. Solar energy does not produce smoke or harmful gases, and the sunlight itself costs nothing. However, solar panels produce no electricity at night and less on cloudy days, so the extra electricity produced during the day is stored in batteries or sent to the main electricity grid. The cost of solar panels has fallen sharply over the last fifteen years. The village of Dharnai in Bihar became one of the first in India to run entirely on a solar micro-grid in 2014. The Bhadla Solar Park in Rajasthan, spread over about 56 square kilometres, is one of the largest solar parks in the world.",
+  "gate": {
+    "status": "OK",
+    "words": 232,
+    "reason": "OK: 232 words"
+  },
+  "summary": {
+    "text": "The sun is the main source of energy, and solar energy can be turned into electricity using solar panels. A solar panel has many solar cells, usually made of silicon.",
+    "word_count": 30,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "30 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 0,
+        "source": "The Sun is the main source of energy for the Earth, and solar energy can be turned directly into electricity using solar panels.",
+        "text": "The sun is the main source of energy, and solar energy can be turned into electricity using solar panels.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 12.3 (limit 13.4), 19 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "The sun is the main source of energy, and solar energy can be turned into electricity using solar panels.",
+            "temperature": 0.0,
+            "wall_s": 0.9172,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 98,
+            "new_tokens": 79,
+            "ttft_ms": 126,
+            "tokens_per_s": 98.61,
+            "verify": null
+          },
+          {
+            "text": "The sun is the main source of energy, and using solar panels, we can turn solar energy into electricity.",
+            "temperature": 0.4,
+            "wall_s": 0.9362,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 98,
+            "new_tokens": 79,
+            "ttft_ms": 128,
+            "tokens_per_s": 96.65,
+            "verify": null
+          },
+          {
+            "text": "The sun is the main source of energy, and solar energy can be turned into electricity using solar panels.",
+            "temperature": 0.7,
+            "wall_s": 0.9369,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 98,
+            "new_tokens": 79,
+            "ttft_ms": 129,
+            "tokens_per_s": 96.65,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 1,
+        "source": "A solar panel is made of many solar cells, usually made of silicon.",
+        "text": "A solar panel has many solar cells, usually made of silicon.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 9.1 (limit 8.5), 11 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "A solar panel has many solar cells, usually made of silicon.",
+            "temperature": 0.0,
+            "wall_s": 0.8783,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 88,
+            "new_tokens": 79,
+            "ttft_ms": 114,
+            "tokens_per_s": 102.09,
+            "verify": null
+          },
+          {
+            "text": "A solar panel has many solar cells, usually made of silicon.",
+            "temperature": 0.4,
+            "wall_s": 0.8949,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 88,
+            "new_tokens": 79,
+            "ttft_ms": 111,
+            "tokens_per_s": 99.62,
+            "verify": null
+          },
+          {
+            "text": "A solar panel uses many small panels called solar cells, mostly made of silicon.",
+            "temperature": 0.7,
+            "wall_s": 0.8973,
+            "failed": [
+              "summary_support",
+              "summary_readability"
+            ],
+            "prompt_tokens": 88,
+            "new_tokens": 79,
+            "ttft_ms": 112,
+            "tokens_per_s": 99.49,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "India",
+      "options": [
+        "India",
+        "Bhadla",
+        "Park",
+        "Sun"
+      ],
+      "witness_idx": 9,
+      "witness": "The village of Dharnai in Bihar became one of the first in India to run entirely on a solar micro-grid in 2014.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "24 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "similarity to the witness 0.85"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "91% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "grade 12.0 (limit 11.8)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_length: 24 words (max 20)",
+        "stem_no_answer_leak: the answer appears in the question",
+        "stem_not_echo: similarity to the witness 0.85",
+        "stem_readability: grade 12.0 (limit 11.8)"
+      ],
+      "attempts": [
+        {
+          "text": "In which country did the village of Dharnai become one of the first in India to run entirely on a solar micro-grid in 2014?",
+          "temperature": 0.0,
+          "wall_s": 0.7506,
+          "failed": [
+            "stem_length",
+            "stem_no_answer_leak",
+            "stem_not_echo",
+            "stem_readability"
+          ],
+          "prompt_tokens": 176,
+          "new_tokens": 47,
+          "ttft_ms": 229,
+          "tokens_per_s": 88.29,
+          "verify": null
+        },
+        {
+          "text": "In which country did the village of Dharnai become one of the first in India to run entirely on a solar micro-grid in 2014?",
+          "temperature": 0.4,
+          "wall_s": 0.7599,
+          "failed": [
+            "stem_length",
+            "stem_no_answer_leak",
+            "stem_not_echo",
+            "stem_readability"
+          ],
+          "prompt_tokens": 176,
+          "new_tokens": 47,
+          "ttft_ms": 231,
+          "tokens_per_s": 87.12,
+          "verify": null
+        },
+        {
+          "text": "In which country did the village of Dharnai become one of the first in India to run entirely on a solar micro-grid in 2014?",
+          "temperature": 0.7,
+          "wall_s": 0.7556,
+          "failed": [
+            "stem_length",
+            "stem_no_answer_leak",
+            "stem_not_echo",
+            "stem_readability"
+          ],
+          "prompt_tokens": 176,
+          "new_tokens": 47,
+          "ttft_ms": 229,
+          "tokens_per_s": 87.45,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The village of Dharnai in Bihar became one of the first in India to run entirely on a solar micro-grid in _____.",
+        "key": "2014",
+        "witness_idx": 9,
+        "witness": "The village of Dharnai in Bihar became one of the first in India to run entirely on a solar micro-grid in 2014.",
+        "options": [
+          "1",
+          "4",
+          "10",
+          "2014"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "What is used to turn solar energy into electricity?",
+      "key": "panels",
+      "options": [
+        "receives",
+        "panels",
+        "costs",
+        "units"
+      ],
+      "witness_idx": 0,
+      "witness": "The Sun is the main source of energy for the Earth, and solar energy can be turned directly into electricity using solar panels.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "9 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.47"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "80% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 11.5 (limit 13.4)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is used to turn solar energy into electricity?",
+          "temperature": 0.0,
+          "wall_s": 0.7451,
+          "failed": [],
+          "prompt_tokens": 171,
+          "new_tokens": 47,
+          "ttft_ms": 225,
+          "tokens_per_s": 88.63,
+          "verify": {
+            "text": "solar panels",
+            "wall_s": 0.3805,
+            "prompt_tokens": 161,
+            "new_tokens": 15,
+            "ttft_ms": 219,
+            "tokens_per_s": 86.96
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The Sun is the main source of energy for the Earth, and solar energy can be turned directly into _____ using solar panels.",
+        "key": "electricity",
+        "witness_idx": 0,
+        "witness": "The Sun is the main source of energy for the Earth, and solar energy can be turned directly into electricity using solar panels.",
+        "options": [
+          "silicon",
+          "sunny",
+          "electricity",
+          "sunlight"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "electricity",
+      "options": [
+        "energy",
+        "sunny",
+        "electricity",
+        "electric"
+      ],
+      "witness_idx": 7,
+      "witness": "However, solar panels produce no electricity at night and less on cloudy days, so the extra electricity produced during the day is stored in batteries or sent to the main electricity grid.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "15 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.47"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.50"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 8.4 (limit 17.9)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is stored in batteries or sent to the main electricity grid during the day?",
+          "temperature": 0.0,
+          "wall_s": 0.7459,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 181,
+          "new_tokens": 47,
+          "ttft_ms": 236,
+          "tokens_per_s": 90.37,
+          "verify": null
+        },
+        {
+          "text": "What is stored in batteries or sent to the main electricity grid?",
+          "temperature": 0.4,
+          "wall_s": 0.7563,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 181,
+          "new_tokens": 47,
+          "ttft_ms": 235,
+          "tokens_per_s": 88.29,
+          "verify": null
+        },
+        {
+          "text": "What is stored in batteries or sent to the main electricity grid?",
+          "temperature": 0.7,
+          "wall_s": 0.7545,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 181,
+          "new_tokens": 47,
+          "ttft_ms": 233,
+          "tokens_per_s": 88.29,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: However, solar panels _____ no electricity at night and less on cloudy days, so the extra electricity produced during the day is stored in batteries or sent to the main electricity grid.",
+        "key": "produce",
+        "witness_idx": 7,
+        "witness": "However, solar panels produce no electricity at night and less on cloudy days, so the extra electricity produced during the day is stored in batteries or sent to the main electricity grid.",
+        "options": [
+          "sunny",
+          "produce",
+          "directly",
+          "silicon"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "What is the main part of a solar panel?",
+      "key": "cells",
+      "options": [
+        "units",
+        "cells",
+        "receives",
+        "gases"
+      ],
+      "witness_idx": 1,
+      "witness": "A solar panel is made of many solar cells, usually made of silicon.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "9 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.25"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.49"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.3 (limit 8.5)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is made of many solar cells, usually made of silicon?",
+          "temperature": 0.0,
+          "wall_s": 0.7295,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 161,
+          "new_tokens": 47,
+          "ttft_ms": 213,
+          "tokens_per_s": 89.15,
+          "verify": null
+        },
+        {
+          "text": "What is made of many solar cells, usually made of silicon?",
+          "temperature": 0.4,
+          "wall_s": 0.7438,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 161,
+          "new_tokens": 47,
+          "ttft_ms": 216,
+          "tokens_per_s": 87.29,
+          "verify": null
+        },
+        {
+          "text": "What is the main part of a solar panel?",
+          "temperature": 0.7,
+          "wall_s": 0.7438,
+          "failed": [],
+          "prompt_tokens": 161,
+          "new_tokens": 47,
+          "ttft_ms": 214,
+          "tokens_per_s": 86.96,
+          "verify": {
+            "text": "solar cells",
+            "wall_s": 0.3581,
+            "prompt_tokens": 151,
+            "new_tokens": 15,
+            "ttft_ms": 206,
+            "tokens_per_s": 92.11
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: A solar _____ is made of many solar cells, usually made of silicon.",
+        "key": "panel",
+        "witness_idx": 1,
+        "witness": "A solar panel is made of many solar cells, usually made of silicon.",
+        "options": [
+          "electric",
+          "directly",
+          "panel",
+          "energy"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "costs",
+      "options": [
+        "costs",
+        "batteries",
+        "fans",
+        "panels"
+      ],
+      "witness_idx": 6,
+      "witness": "Solar energy does not produce smoke or harmful gases, and the sunlight itself costs nothing.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "4 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.45"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.38"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "grade 9.6 (limit 9.1)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question",
+        "stem_readability: grade 9.6 (limit 9.1)"
+      ],
+      "attempts": [
+        {
+          "text": "Solar energy does not produce smoke or harmful gases, and the sunlight itself costs nothing.",
+          "temperature": 0.0,
+          "wall_s": 0.7398,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 163,
+          "new_tokens": 47,
+          "ttft_ms": 220,
+          "tokens_per_s": 88.63,
+          "verify": null
+        },
+        {
+          "text": "Solar energy costs nothing.",
+          "temperature": 0.4,
+          "wall_s": 0.7495,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_readability"
+          ],
+          "prompt_tokens": 163,
+          "new_tokens": 47,
+          "ttft_ms": 217,
+          "tokens_per_s": 86.63,
+          "verify": null
+        },
+        {
+          "text": "Solar energy costs nothing.",
+          "temperature": 0.7,
+          "wall_s": 0.7474,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_readability"
+          ],
+          "prompt_tokens": 163,
+          "new_tokens": 47,
+          "ttft_ms": 216,
+          "tokens_per_s": 86.63,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Solar energy does not produce smoke or harmful gases, and the _____ itself costs nothing.",
+        "key": "sunlight",
+        "witness_idx": 6,
+        "witness": "Solar energy does not produce smoke or harmful gases, and the sunlight itself costs nothing.",
+        "options": [
+          "source",
+          "directly",
+          "sunlight",
+          "current"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "produces",
+      "options": [
+        "produces",
+        "metres",
+        "fans",
+        "gases"
+      ],
+      "witness_idx": 2,
+      "witness": "When sunlight falls on a solar cell, it produces a small electric current.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "13 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "similarity to the witness 1.00"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.48"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 7.6 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question",
+        "stem_not_echo: similarity to the witness 1.00"
+      ],
+      "attempts": [
+        {
+          "text": "When sunlight falls on a solar cell, it produces a small electric current.",
+          "temperature": 0.0,
+          "wall_s": 0.7305,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 161,
+          "new_tokens": 47,
+          "ttft_ms": 214,
+          "tokens_per_s": 89.15,
+          "verify": null
+        },
+        {
+          "text": "When sunlight falls on a solar cell, it produces a small electric current.",
+          "temperature": 0.4,
+          "wall_s": 0.7453,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 161,
+          "new_tokens": 47,
+          "ttft_ms": 215,
+          "tokens_per_s": 86.79,
+          "verify": null
+        },
+        {
+          "text": "When sunlight falls on a solar cell, it produces a small electric current.",
+          "temperature": 0.7,
+          "wall_s": 0.7467,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 161,
+          "new_tokens": 47,
+          "ttft_ms": 215,
+          "tokens_per_s": 86.63,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: When sunlight falls on a solar _____, it produces a small electric current.",
+        "key": "cell",
+        "witness_idx": 2,
+        "witness": "When sunlight falls on a solar cell, it produces a small electric current.",
+        "options": [
+          "sunny",
+          "cell",
+          "single",
+          "source"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: A rooftop solar system of 1 kilowatt needs about 10 square metres of roof space and can produce about 4 units of electricity on a _____ day, which is enough to run a few lights, fans and a television in a small home.",
+      "key": "sunny",
+      "options": [
+        "directly",
+        "electric",
+        "sunny",
+        "source"
+      ],
+      "witness_idx": 5,
+      "witness": "A rooftop solar system of 1 kilowatt needs about 10 square metres of roof space and can produce about 4 units of electricity on a sunny day, which is enough to run a few lights, fans and a television in a small home.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: A rooftop solar system of 1 kilowatt needs about 10 square metres of roof space and can produce about 4 units of _____ on a sunny day, which is enough to run a few lights, fans and a television in a small home.",
+        "key": "electricity",
+        "witness_idx": 5,
+        "witness": "A rooftop solar system of 1 kilowatt needs about 10 square metres of roof space and can produce about 4 units of electricity on a sunny day, which is enough to run a few lights, fans and a television in a small home.",
+        "options": [
+          "single",
+          "source",
+          "current",
+          "electricity"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 18.159,
+    "summary_s": 5.4622,
+    "stems_s": 12.6953,
+    "model_wall_s": 17.405,
+    "model_calls": 22,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 0,
+    "red": 4,
+    "fallback": 1
+  },
+  "version": 1,
+  "created": "2026-11-13T01:25:29",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

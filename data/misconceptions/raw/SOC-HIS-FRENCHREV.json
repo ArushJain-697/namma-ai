@@ -1,0 +1,192 @@
+{
+ "topic": {
+  "id": "SOC-HIS-FRENCHREV",
+  "subject": "social",
+  "strand": "history",
+  "grades": [
+   9
+  ],
+  "title": "The French Revolution",
+  "scope": "estates, storming of the Bastille, Declaration of Rights, Jacobins, Napoleon, ideas of liberty and equality"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 698,
+  "candidatesTokenCount": 1451,
+  "totalTokenCount": 2149,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 698
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 149.9,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Social Structure of the Three Estates",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "The Third Estate consisted only of poor peasants and landless laborers.",
+      "why": "Students often equate the entire Third Estate with the poorest section of society due to the focus on the struggle of the common man.",
+      "fix": "The Third Estate was diverse, including wealthy merchants, lawyers, and educated professionals alongside peasants and artisans.",
+      "probe": {
+       "question": "Who were the members of the Third Estate?",
+       "wrong_answer": "Only the poor farmers and workers who had no money."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "estates",
+       "clergy",
+       "nobility",
+       "third estate",
+       "tax burden"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "The French Revolution happened because the King was personally poor and had no money.",
+      "why": "Students confuse the state's financial crisis with the personal poverty of the monarch.",
+      "fix": "The French state was in debt due to long wars and the cost of maintaining the royal court, not because the King was personally destitute.",
+      "probe": {
+       "question": "Why did the French government face a financial crisis?",
+       "wrong_answer": "Because King Louis XVI was a poor man who could not afford to run his palace."
+      },
+      "error_type": "confuses_people_or_places",
+      "trigger_cues": [
+       "financial crisis",
+       "empty treasury",
+       "war debts",
+       "royal court"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "The Storming of the Bastille and Political Unrest",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The Bastille was a massive military fort that protected the King from the people.",
+      "why": "Students associate the term 'Bastille' with a grand military defensive structure rather than a symbol of royal despotism.",
+      "fix": "The Bastille was a hated prison that symbolized the King's absolute power, and its fall represented the start of the revolution.",
+      "probe": {
+       "question": "Why did the people attack the Bastille?",
+       "wrong_answer": "To capture the King's main military base and stop his army from attacking them."
+      },
+      "error_type": "confuses_institutions",
+      "trigger_cues": [
+       "bastille",
+       "prison",
+       "despotism",
+       "storming",
+       "royal power"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Declaration of Rights and Democratic Ideals",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The Declaration of Rights granted equal voting rights to all men and women in France immediately.",
+      "why": "Students project modern democratic standards onto the 18th century, assuming 'rights' meant universal suffrage.",
+      "fix": "The Declaration established rights for 'active citizens' (men over 25 who paid taxes), excluding women and poor men.",
+      "probe": {
+       "question": "Who was allowed to vote after the Declaration of Rights?",
+       "wrong_answer": "Every man and woman living in France."
+      },
+      "error_type": "presentism",
+      "trigger_cues": [
+       "rights of man",
+       "citizen",
+       "liberty",
+       "equality",
+       "suffrage"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Jacobins and the Reign of Terror",
+    "prereqs": [
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The Jacobins were the only political group that wanted a Republic.",
+      "why": "Textbooks focus heavily on the Jacobins, leading students to assume they were the sole representatives of republicanism.",
+      "fix": "There were other political clubs and factions, but the Jacobins became the most radical and dominant group during the Reign of Terror.",
+      "probe": {
+       "question": "Were the Jacobins the only group fighting for a Republic?",
+       "wrong_answer": "Yes, they were the only people who wanted to end the monarchy."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "jacobins",
+       "maximilian robespierre",
+       "reign of terror",
+       "radical",
+       "republic"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c5",
+    "name": "Napoleon and the Legacy of the Revolution",
+    "prereqs": [
+     "c4"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Napoleon was a democratic leader who was elected by the people to bring freedom.",
+      "why": "Students confuse Napoleon's modernization of laws with the establishment of a democratic government.",
+      "fix": "Napoleon was a military dictator who crowned himself Emperor, though he did introduce some revolutionary legal reforms.",
+      "probe": {
+       "question": "What kind of ruler was Napoleon?",
+       "wrong_answer": "He was a democratically elected president who brought liberty to France."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "napoleon bonaparte",
+       "emperor",
+       "modernization",
+       "code napoleon",
+       "dictator"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "The Rise of Nationalism in Europe",
+   "Basic concepts of Monarchy and Democracy"
+  ]
+ },
+ "problems": []
+}

@@ -1,0 +1,169 @@
+{
+ "topic": {
+  "id": "SCI-CHM-FIBRESPLASTICS",
+  "subject": "science",
+  "strand": "chemistry",
+  "grades": [
+   7,
+   8
+  ],
+  "title": "Fibres and plastics",
+  "scope": "natural and synthetic fibres, nylon, polyester, thermoplastics and thermosetting plastics, plastics and environment"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 706,
+  "candidatesTokenCount": 1139,
+  "totalTokenCount": 1845,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 706
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.6,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Natural vs Synthetic Fibres",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "All synthetic fibres are made from plastic.",
+      "why": "Students often conflate the term 'synthetic' with 'plastic' because both are human-made materials.",
+      "fix": "Synthetic fibres are polymers made from chemical processes using petroleum-based raw materials, but they are distinct from the category of solid plastics used for containers.",
+      "probe": {
+       "question": "Is rayon a plastic?",
+       "wrong_answer": "Yes, because it is a synthetic fibre."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "natural fibres",
+       "synthetic fibres",
+       "man-made",
+       "petrochemicals",
+       "rayon",
+       "nylon"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Natural fibres are always better and stronger than synthetic fibres.",
+      "why": "Everyday cultural emphasis on 'natural' being synonymous with 'good' or 'durable'.",
+      "fix": "Synthetic fibres like nylon are often much stronger, more elastic, and more durable than natural fibres like cotton.",
+      "probe": {
+       "question": "Which is stronger for making a climbing rope, cotton or nylon?",
+       "wrong_answer": "Cotton, because it is a natural fibre."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "strength",
+       "durability",
+       "cotton",
+       "wool",
+       "nylon",
+       "polyester"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Polymers and Monomers",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "A polymer is just a solid block of material.",
+      "why": "Students struggle to visualize molecular structures and assume materials are continuous substances.",
+      "fix": "A polymer is a long chain made of many repeating small units called monomers joined together.",
+      "probe": {
+       "question": "What is a polymer made of?",
+       "wrong_answer": "It is made of one large, solid piece of plastic."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "polymer",
+       "monomer",
+       "repeating units",
+       "chain",
+       "molecular structure"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Thermoplastics vs Thermosetting Plastics",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "All plastics melt when heated.",
+      "why": "General observation that most household plastic items deform under high heat.",
+      "fix": "Thermoplastics can be reshaped by heating, but thermosetting plastics cannot be softened or reshaped once they are set.",
+      "probe": {
+       "question": "Can you melt a plastic switch cover to reshape it?",
+       "wrong_answer": "Yes, all plastics melt if you make them hot enough."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "thermoplastic",
+       "thermosetting",
+       "heat",
+       "melting",
+       "molding",
+       "bakelite"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Plastics and the Environment",
+    "prereqs": [
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Plastic is bad for the environment because it is toxic to touch.",
+      "why": "Confusion between the environmental impact (persistence) and the chemical safety of the material.",
+      "fix": "Plastics are harmful to the environment primarily because they are non-biodegradable and persist for centuries, not because they are inherently poisonous to touch.",
+      "probe": {
+       "question": "Why should we avoid using plastic bags?",
+       "wrong_answer": "Because they are poisonous and will make us sick if we touch them."
+      },
+      "error_type": "other",
+      "trigger_cues": [
+       "biodegradable",
+       "non-biodegradable",
+       "pollution",
+       "environment",
+       "waste management"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "States of Matter",
+   "Atoms and Molecules",
+   "Physical and Chemical Changes"
+  ]
+ },
+ "problems": []
+}

@@ -1,0 +1,1154 @@
+{
+  "passage": "Digestion is the process of breaking down food into simple substances that the body can absorb. It begins in the mouth. Our teeth break food into small pieces, and saliva from the salivary glands begins to change starch into sugar. The tongue mixes the food with saliva and pushes it down into the food pipe, or oesophagus. The walls of the food pipe contract and relax in waves, moving the food down to the stomach. The stomach is a thick-walled bag. Its inner lining releases hydrochloric acid and digestive juices. The acid kills many bacteria that enter with the food, and the juices begin to break down proteins. From the stomach, the partly digested food passes into the small intestine, which is about 7.5 metres long and is tightly coiled. Here the food is completely digested with the help of bile from the liver and juice from the pancreas. The inner wall of the small intestine has thousands of finger-like outgrowths called villi. They greatly increase the surface area for absorption, and the digested food passes through them into the blood vessels. The blood then carries the food to every part of the body. Undigested food moves into the large intestine, which is shorter but wider, where water and some salts are absorbed. The remaining waste is removed from the body through the anus.",
+  "gate": {
+    "status": "OK",
+    "words": 224,
+    "reason": "OK: 224 words"
+  },
+  "summary": {
+    "text": "Digestion breaks food into simple substances the body can absorb. The acid kills the bacteria that come with food, and the juices break down proteins. From the stomach, food goes into the small intestine, which is about 7.5 metres long and is tightly coiled.",
+    "word_count": 44,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "44 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 0,
+        "source": "Digestion is the process of breaking down food into simple substances that the body can absorb.",
+        "text": "Digestion breaks food into simple substances the body can absorb.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "Digestion is when the body breaks down food into smaller parts that can be absorbed by the body.",
+            "temperature": 0.0,
+            "wall_s": 0.9021,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 91,
+            "new_tokens": 79,
+            "ttft_ms": 117,
+            "tokens_per_s": 99.49,
+            "verify": null
+          },
+          {
+            "text": "Digestion breaks food into simple substances the body can absorb.",
+            "temperature": 0.4,
+            "wall_s": 0.9482,
+            "failed": [],
+            "prompt_tokens": 91,
+            "new_tokens": 79,
+            "ttft_ms": 114,
+            "tokens_per_s": 93.53,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 7,
+        "source": "The acid kills many bacteria that enter with the food, and the juices begin to break down proteins.",
+        "text": "The acid kills the bacteria that come with food, and the juices break down proteins.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "The acid kills the bacteria that come with food, and the juices break down proteins.",
+            "temperature": 0.0,
+            "wall_s": 0.9777,
+            "failed": [],
+            "prompt_tokens": 93,
+            "new_tokens": 79,
+            "ttft_ms": 119,
+            "tokens_per_s": 90.91,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 8,
+        "source": "From the stomach, the partly digested food passes into the small intestine, which is about 7.5 metres long and is tightly coiled.",
+        "text": "From the stomach, food goes into the small intestine, which is about 7.5 metres long and is tightly coiled.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 9.2 (limit 11.8), 19 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "From the stomach, food goes into the small intestine, which is about 7.5 metres long and is tightly coiled.",
+            "temperature": 0.0,
+            "wall_s": 0.9256,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 103,
+            "new_tokens": 79,
+            "ttft_ms": 132,
+            "tokens_per_s": 98.36,
+            "verify": null
+          },
+          {
+            "text": "From the stomach, food goes into the small intestine, which is about 7.5 meters long and is tightly coiled.",
+            "temperature": 0.4,
+            "wall_s": 0.9311,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 103,
+            "new_tokens": 79,
+            "ttft_ms": 131,
+            "tokens_per_s": 97.5,
+            "verify": null
+          },
+          {
+            "text": "From the stomach, food goes to the small intestine. That tube is about 7.5 metres long and is tightly coiled.",
+            "temperature": 0.7,
+            "wall_s": 0.9534,
+            "failed": [
+              "summary_new_names"
+            ],
+            "prompt_tokens": 103,
+            "new_tokens": 79,
+            "ttft_ms": 125,
+            "tokens_per_s": 94.32,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "absorb",
+      "options": [
+        "absorb",
+        "blood",
+        "saliva",
+        "stomach"
+      ],
+      "witness_idx": 0,
+      "witness": "Digestion is the process of breaking down food into simple substances that the body can absorb.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "12 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.77"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 7.8 (limit 9.8)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'digestion', not 'absorb'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'digestion', not 'absorb'"
+      ],
+      "attempts": [
+        {
+          "text": "What is the process of breaking down food into simple substances that the body can absorb?",
+          "temperature": 0.0,
+          "wall_s": 0.791,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 164,
+          "new_tokens": 47,
+          "ttft_ms": 240,
+          "tokens_per_s": 83.64,
+          "verify": null
+        },
+        {
+          "text": "What is the process of breaking down food into simple substances that the body can absorb?",
+          "temperature": 0.4,
+          "wall_s": 0.7535,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 164,
+          "new_tokens": 47,
+          "ttft_ms": 222,
+          "tokens_per_s": 86.63,
+          "verify": null
+        },
+        {
+          "text": "What is the process of breaking down food into simple substances called?",
+          "temperature": 0.7,
+          "wall_s": 0.7842,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 164,
+          "new_tokens": 47,
+          "ttft_ms": 220,
+          "tokens_per_s": 81.56,
+          "verify": {
+            "text": "digestion",
+            "wall_s": 0.3759,
+            "prompt_tokens": 157,
+            "new_tokens": 15,
+            "ttft_ms": 218,
+            "tokens_per_s": 89.17
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Digestion is the process of _____ down food into simple substances that the body can absorb.",
+        "key": "breaking",
+        "witness_idx": 0,
+        "witness": "Digestion is the process of breaking down food into simple substances that the body can absorb.",
+        "options": [
+          "breaking",
+          "intestine",
+          "stomach",
+          "digested"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "What happens to the proteins in the juices?",
+      "key": "break",
+      "options": [
+        "break",
+        "inner",
+        "absorb",
+        "intestine"
+      ],
+      "witness_idx": 7,
+      "witness": "The acid kills many bacteria that enter with the food, and the juices begin to break down proteins.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.37"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "67% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.8 (limit 8.5)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What happens to the proteins in the juices?",
+          "temperature": 0.0,
+          "wall_s": 0.7277,
+          "failed": [],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 214,
+          "tokens_per_s": 89.49,
+          "verify": {
+            "text": "they break down",
+            "wall_s": 0.3443,
+            "prompt_tokens": 155,
+            "new_tokens": 15,
+            "ttft_ms": 196,
+            "tokens_per_s": 95.24
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The acid kills many bacteria that enter with the food, and the _____ begin to break down proteins.",
+        "key": "juices",
+        "witness_idx": 7,
+        "witness": "The acid kills many bacteria that enter with the food, and the juices begin to break down proteins.",
+        "options": [
+          "pushes",
+          "substances",
+          "waves",
+          "juices"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "short",
+      "stem": "(withheld: no valid question was written)",
+      "key": "7.5",
+      "options": null,
+      "witness_idx": 8,
+      "witness": "From the stomach, the partly digested food passes into the small intestine, which is about 7.5 metres long and is tightly coiled.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "10 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.54"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.37"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "80% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 6.0 (limit 11.8)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "The length of the small intestine is about 7.5 metres.",
+          "temperature": 0.0,
+          "wall_s": 0.719,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 179,
+          "new_tokens": 47,
+          "ttft_ms": 221,
+          "tokens_per_s": 92.56,
+          "verify": null
+        },
+        {
+          "text": "The length of the small intestine is about 7.5 meters.",
+          "temperature": 0.4,
+          "wall_s": 0.7263,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 179,
+          "new_tokens": 47,
+          "ttft_ms": 222,
+          "tokens_per_s": 91.27,
+          "verify": null
+        },
+        {
+          "text": "The small intestine is about 7.5 metres long and is tightly coiled.",
+          "temperature": 0.7,
+          "wall_s": 0.728,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 179,
+          "new_tokens": 47,
+          "ttft_ms": 224,
+          "tokens_per_s": 91.45,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: From the stomach, the partly digested food passes into the small _____, which is about 7.5 metres long and is tightly coiled.",
+        "key": "intestine",
+        "witness_idx": 8,
+        "witness": "From the stomach, the partly digested food passes into the small intestine, which is about 7.5 metres long and is tightly coiled.",
+        "options": [
+          "intestine",
+          "digestion",
+          "acid",
+          "saliva"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "What is the body of the food pipe moving in?",
+      "key": "stomach",
+      "options": [
+        "intestine",
+        "digestion",
+        "saliva",
+        "stomach"
+      ],
+      "witness_idx": 4,
+      "witness": "The walls of the food pipe contract and relax in waves, moving the food down to the stomach.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "10 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.44"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.48"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.5 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is the main part that moves food down the digestive tract?",
+          "temperature": 0.0,
+          "wall_s": 0.7147,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 209,
+          "tokens_per_s": 91.09,
+          "verify": {
+            "text": "digestive tract",
+            "wall_s": 0.3581,
+            "prompt_tokens": 159,
+            "new_tokens": 15,
+            "ttft_ms": 205,
+            "tokens_per_s": 91.5
+          }
+        },
+        {
+          "text": "What is the name of the food pipe?",
+          "temperature": 0.4,
+          "wall_s": 0.7194,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 208,
+          "tokens_per_s": 90.02,
+          "verify": {
+            "text": "food pipe",
+            "wall_s": 0.3461,
+            "prompt_tokens": 155,
+            "new_tokens": 15,
+            "ttft_ms": 199,
+            "tokens_per_s": 95.24
+          }
+        },
+        {
+          "text": "What is the body of the food pipe moving in?",
+          "temperature": 0.7,
+          "wall_s": 0.7232,
+          "failed": [],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 209,
+          "tokens_per_s": 89.49,
+          "verify": {
+            "text": "the stomach",
+            "wall_s": 0.3513,
+            "prompt_tokens": 157,
+            "new_tokens": 15,
+            "ttft_ms": 201,
+            "tokens_per_s": 93.33
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The walls of the food _____ contract and relax in waves, moving the food down to the stomach.",
+        "key": "pipe",
+        "witness_idx": 4,
+        "witness": "The walls of the food pipe contract and relax in waves, moving the food down to the stomach.",
+        "options": [
+          "pipe",
+          "blood",
+          "saliva",
+          "intestine"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "blood",
+      "options": [
+        "blood",
+        "pipe",
+        "saliva",
+        "intestine"
+      ],
+      "witness_idx": 11,
+      "witness": "They greatly increase the surface area for absorption, and the digested food passes through them into the blood vessels.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.41"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.45"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.8 (limit 10.5)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "The blood carries the digested food to where?",
+          "temperature": 0.0,
+          "wall_s": 0.7167,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 210,
+          "tokens_per_s": 90.91,
+          "verify": null
+        },
+        {
+          "text": "The blood carries the digested food to where?",
+          "temperature": 0.4,
+          "wall_s": 0.7235,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 207,
+          "tokens_per_s": 89.15,
+          "verify": null
+        },
+        {
+          "text": "The blood transports digested food to the body.",
+          "temperature": 0.7,
+          "wall_s": 0.7233,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 207,
+          "tokens_per_s": 89.15,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: They greatly increase the surface area for absorption, and the _____ food passes through them into the blood vessels.",
+        "key": "digested",
+        "witness_idx": 11,
+        "witness": "They greatly increase the surface area for absorption, and the digested food passes through them into the blood vessels.",
+        "options": [
+          "undigested",
+          "thick-walled",
+          "digested",
+          "coiled"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "pipe",
+      "options": [
+        "stomach",
+        "process",
+        "pipe",
+        "intestine"
+      ],
+      "witness_idx": 3,
+      "witness": "The tongue mixes the food with saliva and pushes it down into the food pipe, or oesophagus.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "5 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.35"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.67"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade -1.8 (limit 8.4)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is the food pipe?",
+          "temperature": 0.0,
+          "wall_s": 0.7168,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 207,
+          "tokens_per_s": 90.37,
+          "verify": null
+        },
+        {
+          "text": "What is the name of the food pipe?",
+          "temperature": 0.4,
+          "wall_s": 0.7237,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 208,
+          "tokens_per_s": 89.32,
+          "verify": null
+        },
+        {
+          "text": "What is the name of the part where food is pushed down into the oesophagus?",
+          "temperature": 0.7,
+          "wall_s": 0.7249,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 208,
+          "tokens_per_s": 89.15,
+          "verify": {
+            "text": "oesophagus",
+            "wall_s": 0.3735,
+            "prompt_tokens": 167,
+            "new_tokens": 15,
+            "ttft_ms": 206,
+            "tokens_per_s": 84.34
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The tongue mixes the food with _____ and pushes it down into the food pipe, or oesophagus.",
+        "key": "saliva",
+        "witness_idx": 3,
+        "witness": "The tongue mixes the food with saliva and pushes it down into the food pipe, or oesophagus.",
+        "options": [
+          "saliva",
+          "blood",
+          "absorb",
+          "intestine"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: Here the food is completely digested with the help of bile from the liver and _____ from the pancreas.",
+      "key": "juice",
+      "options": [
+        "saliva",
+        "absorb",
+        "juice",
+        "blood"
+      ],
+      "witness_idx": 9,
+      "witness": "Here the food is completely digested with the help of bile from the liver and juice from the pancreas.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: Here the food is completely _____ with the help of bile from the liver and juice from the pancreas.",
+        "key": "digested",
+        "witness_idx": 9,
+        "witness": "Here the food is completely digested with the help of bile from the liver and juice from the pancreas.",
+        "options": [
+          "digested",
+          "coiled",
+          "stomach",
+          "undigested"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 19.5185,
+    "summary_s": 5.6396,
+    "stems_s": 13.8774,
+    "model_wall_s": 17.354,
+    "model_calls": 22,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 0,
+    "red": 4,
+    "fallback": 1
+  },
+  "version": 1,
+  "created": "2026-11-13T01:16:30",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

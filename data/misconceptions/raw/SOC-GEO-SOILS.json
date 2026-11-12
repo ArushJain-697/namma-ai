@@ -1,0 +1,134 @@
+{
+ "topic": {
+  "id": "SOC-GEO-SOILS",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   10
+  ],
+  "title": "Soils of India",
+  "scope": "alluvial, black, red and yellow, laterite, arid and forest soils, soil erosion and conservation"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 699,
+  "candidatesTokenCount": 972,
+  "totalTokenCount": 1671,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 699
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.9,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Formation and Composition of Soil",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Soil is just dirt and contains no living or non-living components other than rock particles.",
+      "why": "Students often view soil as a static, inert material rather than a complex ecosystem.",
+      "fix": "Soil is a mixture of weathered rock particles, minerals, organic matter (humus), water, and air that supports life.",
+      "probe": {
+       "question": "If you sterilize soil by heating it, does it remain the same as natural soil?",
+       "wrong_answer": "Yes, because it is still made of the same ground-up rocks."
+      },
+      "error_type": "other",
+      "trigger_cues": [
+       "weathering",
+       "parent rock",
+       "humus",
+       "mineral particles"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Types of Indian Soils and their Distribution",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Black soil is black because it is burnt or contains coal.",
+      "why": "Students associate the color black with carbon or burning due to everyday experiences.",
+      "fix": "Black soil, also known as Regur, gets its dark color from its specific mineral composition, primarily titanium and iron compounds.",
+      "probe": {
+       "question": "Why is the Deccan trap region covered in black soil?",
+       "wrong_answer": "Because there were many ancient forest fires that turned the ground black."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "regur",
+       "deccan trap",
+       "lava flows",
+       "moisture retention"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Alluvial soil is found only in the Northern Plains of India.",
+      "why": "Textbooks often highlight the Indo-Gangetic plain as the primary example, leading to an overgeneralization.",
+      "fix": "While most extensive in the north, alluvial soil is also found in the eastern coastal plains, particularly in the deltas of major rivers like the Mahanadi and Godavari.",
+      "probe": {
+       "question": "Can we find alluvial soil in the coastal regions of Odisha?",
+       "wrong_answer": "No, alluvial soil is only located in the northern states near the Himalayas."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "northern plains",
+       "river deposits",
+       "deltaic regions",
+       "fertile"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Soil Erosion and Conservation",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Soil erosion is only caused by human activities like deforestation.",
+      "why": "Environmental education often focuses exclusively on human impact, ignoring natural geological processes.",
+      "fix": "Soil erosion is a natural process caused by wind, water, and ice, though human activities like overgrazing and construction significantly accelerate it.",
+      "probe": {
+       "question": "Does soil erosion occur in uninhabited, forested mountain ranges?",
+       "wrong_answer": "No, erosion only happens where humans cut down trees or build roads."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "gully erosion",
+       "sheet erosion",
+       "deforestation",
+       "overgrazing"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Physical features of India",
+   "Drainage systems of India",
+   "Basic rock cycle"
+  ]
+ },
+ "problems": []
+}

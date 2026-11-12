@@ -1,0 +1,162 @@
+{
+ "topic": {
+  "id": "SCI-ESS-SOIL",
+  "subject": "science",
+  "strand": "earth_space",
+  "grades": [
+   7
+  ],
+  "title": "Soil",
+  "scope": "soil profile and horizons, types of soil, percolation, water retention, soil and crops, soil erosion"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 701,
+  "candidatesTokenCount": 1188,
+  "totalTokenCount": 1889,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 701
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.4,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Composition and Formation of Soil",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Soil is just dirt or dead matter with no living components.",
+      "why": "Students often focus only on the mineral particles they see and ignore the microscopic life.",
+      "fix": "Soil is a complex mixture of weathered rock particles, minerals, organic matter (humus), air, water, and living organisms like bacteria and earthworms.",
+      "probe": {
+       "question": "Is soil a living or non-living thing?",
+       "wrong_answer": "It is non-living because it is just ground-up rock."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "weathering",
+       "humus",
+       "organic matter",
+       "soil components"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Soil is created instantly by mixing sand and water.",
+      "why": "Students confuse the physical act of mixing materials with the geological process of soil formation.",
+      "fix": "Soil formation is a very slow process taking thousands of years, involving the breakdown of rocks by wind, water, and climate.",
+      "probe": {
+       "question": "How long does it take for a layer of soil to form?",
+       "wrong_answer": "It happens quickly whenever rocks break down or get wet."
+      },
+      "error_type": "process_vs_product",
+      "trigger_cues": [
+       "weathering",
+       "rock breakdown",
+       "formation process",
+       "time scale"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Soil Profile and Horizons",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "All soil layers are the same throughout the ground.",
+      "why": "Students often see only the top layer and assume it is uniform all the way down to the bedrock.",
+      "fix": "Soil is arranged in distinct layers called horizons (A, B, C, and bedrock), which differ in color, texture, and composition.",
+      "probe": {
+       "question": "If you dig a deep hole, will the soil at the bottom be the same as the top?",
+       "wrong_answer": "Yes, soil is the same all the way down."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "soil profile",
+       "horizons",
+       "topsoil",
+       "bedrock"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Soil Types and Properties",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Sandy soil is the best soil for all plants because it is loose.",
+      "why": "Students associate 'loose' soil with 'easy' root growth, ignoring water retention needs.",
+      "fix": "Different plants need different soils; sandy soil drains too quickly for many crops, while loamy soil is often best because it balances water retention and aeration.",
+      "probe": {
+       "question": "Which soil is best for growing wheat?",
+       "wrong_answer": "Sandy soil, because it is loose and easy for roots to move through."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "sandy",
+       "clayey",
+       "loamy",
+       "water retention",
+       "percolation"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Percolation and Water Retention",
+    "prereqs": [
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Water disappears from soil because it is absorbed by the soil particles themselves.",
+      "why": "Students confuse the physical process of water moving through spaces (percolation) with the chemical absorption of water into the material.",
+      "fix": "Water percolates through the spaces between soil particles; the rate depends on the size of these spaces, not the absorption by the particles.",
+      "probe": {
+       "question": "Where does water go when it percolates through sandy soil?",
+       "wrong_answer": "The soil particles soak it up like a sponge."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "percolation rate",
+       "water absorption",
+       "pore space",
+       "drainage"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "States of Matter",
+   "Rocks and Minerals",
+   "Plant Life Cycles"
+  ]
+ },
+ "problems": []
+}

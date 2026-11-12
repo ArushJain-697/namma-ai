@@ -1,0 +1,166 @@
+{
+ "topic": {
+  "id": "SOC-HIS-EARLYHUMANS",
+  "subject": "social",
+  "strand": "history",
+  "grades": [
+   6
+  ],
+  "title": "Early humans",
+  "scope": "hunter-gatherers, stone tools, fire, beginning of farming and herding, early settlements like Mehrgarh, Bhimbetka"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 701,
+  "candidatesTokenCount": 1188,
+  "totalTokenCount": 1889,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 701
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.1,
+ "response": {
+  "concepts": [
+   {
+    "key": "hunter_gatherer_lifestyle",
+    "name": "Hunter-gatherer lifestyle and mobility",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Early humans lived in permanent houses like we do today.",
+      "why": "Students project their modern living conditions onto the past, a common cognitive bias known as presentism.",
+      "fix": "Early humans were nomadic and moved from place to place in search of food and water, living in temporary shelters or caves.",
+      "probe": {
+       "question": "Why did early humans move from one place to another?",
+       "wrong_answer": "They moved because they wanted to visit new neighborhoods or change their house location."
+      },
+      "error_type": "presentism",
+      "trigger_cues": [
+       "nomadic",
+       "moving",
+       "food resources",
+       "temporary shelters",
+       "migration"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Early humans hunted big animals every single day for every meal.",
+      "why": "Textbooks often focus on dramatic hunting scenes, leading students to overgeneralize the frequency of hunting.",
+      "fix": "Hunting was difficult and dangerous; early humans relied heavily on gathering wild plants, fruits, and small animals for their daily diet.",
+      "probe": {
+       "question": "What was the main source of food for early humans?",
+       "wrong_answer": "They ate meat from big animals they hunted every day."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "hunting",
+       "gathering",
+       "wild plants",
+       "diet",
+       "food sources"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "stone_tools_and_fire",
+    "name": "Development of stone tools and fire",
+    "prereqs": [
+     "hunter_gatherer_lifestyle"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Early humans discovered fire and immediately started cooking all their food.",
+      "why": "Students often assume technological progress is instantaneous rather than a gradual process of trial and error.",
+      "fix": "The use of fire for cooking was a gradual discovery that happened over a very long period of time after they first learned to control it.",
+      "probe": {
+       "question": "Did early humans start cooking food the moment they found fire?",
+       "wrong_answer": "Yes, they immediately used it to cook all their meals."
+      },
+      "error_type": "chronology_slip",
+      "trigger_cues": [
+       "fire",
+       "cooking",
+       "stone tools",
+       "technology",
+       "discovery"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "neolithic_revolution",
+    "name": "Beginning of farming and herding",
+    "prereqs": [
+     "hunter_gatherer_lifestyle",
+     "stone_tools_and_fire"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Farming was invented overnight by a single smart person.",
+      "why": "History is often taught through the lens of 'great inventors' rather than gradual societal shifts.",
+      "fix": "Farming developed slowly over thousands of years as humans observed plants growing and learned to care for animals.",
+      "probe": {
+       "question": "How did farming start?",
+       "wrong_answer": "One person invented farming and taught everyone else how to do it."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "farming",
+       "agriculture",
+       "herding",
+       "domestication",
+       "seeds"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "early_settlements",
+    "name": "Early settlements like Mehrgarh",
+    "prereqs": [
+     "neolithic_revolution"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Mehrgarh was a large, modern city with paved roads and shops.",
+      "why": "Students confuse the term 'settlement' with their modern understanding of urban cities.",
+      "fix": "Mehrgarh was a small farming village where people lived in mud-brick houses and relied on agriculture and animal rearing.",
+      "probe": {
+       "question": "What was life like in Mehrgarh?",
+       "wrong_answer": "It was a big city with many shops and busy roads."
+      },
+      "error_type": "confuses_institutions",
+      "trigger_cues": [
+       "mehrgarh",
+       "settlement",
+       "mud-brick houses",
+       "village",
+       "archaeology"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Basic Geography",
+   "Understanding of Time and Chronology",
+   "Basic Biology of Plants and Animals"
+  ]
+ },
+ "problems": []
+}

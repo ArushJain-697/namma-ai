@@ -1,0 +1,186 @@
+{
+ "topic": {
+  "id": "SCI-PHY-MAGNETIC10",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   10
+  ],
+  "title": "Magnetic effects of electric current",
+  "scope": "magnetic field lines, field around a wire and solenoid, force on a conductor, domestic circuits, short circuit, earthing"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 710,
+  "candidatesTokenCount": 1400,
+  "totalTokenCount": 2110,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 710
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.7,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Magnetic field and field lines",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Magnetic field lines are physical paths or tracks that objects move along.",
+      "why": "Students confuse the visual representation of field lines in diagrams with actual physical wires or paths.",
+      "fix": "Magnetic field lines are imaginary lines used to represent the strength and direction of the magnetic field in a region.",
+      "probe": {
+       "question": "If you place a small iron filing in a magnetic field, will it always move along a curved field line?",
+       "wrong_answer": "Yes, it will travel along the line like a train on a track."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "magnetic field lines",
+       "north pole",
+       "south pole",
+       "compass needle",
+       "field strength"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Magnetic field lines start at the North pole and end at the South pole.",
+      "why": "This is a common overgeneralization from the visual appearance of field lines outside the magnet.",
+      "fix": "Magnetic field lines are continuous closed loops that pass through the magnet from south to north, forming a complete circuit.",
+      "probe": {
+       "question": "Where do magnetic field lines go once they reach the South pole of a bar magnet?",
+       "wrong_answer": "They stop at the South pole because that is where they end."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "north pole",
+       "south pole",
+       "closed loops",
+       "continuous",
+       "magnet"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Magnetic field around current-carrying conductors",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "A wire carrying current creates a magnetic field only if it is coiled.",
+      "why": "Students often associate magnetism only with coils or solenoids because they are more visually distinct in experiments.",
+      "fix": "Any conductor carrying an electric current produces a magnetic field around it, even if it is a straight wire.",
+      "probe": {
+       "question": "Does a straight copper wire carrying a steady current produce a magnetic field?",
+       "wrong_answer": "No, you need to coil the wire to make it magnetic."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "straight wire",
+       "solenoid",
+       "current",
+       "magnetic effect",
+       "electromagnetism"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Force on a current-carrying conductor",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "A magnetic field exerts a force on a stationary charge.",
+      "why": "Students confuse the effect of electric fields (which act on stationary charges) with magnetic fields.",
+      "fix": "A magnetic field exerts a force only on a moving electric charge or a current-carrying conductor.",
+      "probe": {
+       "question": "Will a stationary electron placed in a strong magnetic field experience a force?",
+       "wrong_answer": "Yes, the magnetic field will push the electron."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "force",
+       "moving charge",
+       "fleming's left hand rule",
+       "magnetic field",
+       "current"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Domestic circuits and safety",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The earth wire carries current during normal operation of an appliance.",
+      "why": "Students assume that because the earth wire is connected to the appliance, it must be part of the active circuit.",
+      "fix": "The earth wire is a safety feature that carries no current under normal conditions; it only conducts current to the ground if there is a fault.",
+      "probe": {
+       "question": "What is the primary function of the earth wire in a toaster?",
+       "wrong_answer": "It completes the circuit so the toaster can heat up."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "earth wire",
+       "live wire",
+       "neutral wire",
+       "short circuit",
+       "safety",
+       "grounding"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "A short circuit happens because the current becomes too low.",
+      "why": "Students confuse the term 'short' with 'small' or 'low' based on everyday language usage.",
+      "fix": "A short circuit occurs when the live and neutral wires come into direct contact, causing a sudden, very large increase in current.",
+      "probe": {
+       "question": "What happens to the current during a short circuit?",
+       "wrong_answer": "The current drops to almost zero because the path is too short."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "short circuit",
+       "live wire",
+       "neutral wire",
+       "excessive current",
+       "fuse"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Electric current and circuits",
+   "Potential difference and resistance",
+   "Basic properties of magnets"
+  ]
+ },
+ "problems": []
+}

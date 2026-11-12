@@ -1,0 +1,173 @@
+{
+ "topic": {
+  "id": "SCI-BIO-ENVIRONMENT",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   10
+  ],
+  "title": "Our environment",
+  "scope": "ecosystem, food chains and webs, trophic levels, 10 percent law, biological magnification, ozone layer, waste management"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 707,
+  "candidatesTokenCount": 1248,
+  "totalTokenCount": 1955,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 707
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.1,
+ "response": {
+  "concepts": [
+   {
+    "key": "ecosystem",
+    "name": "Ecosystem Structure",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "An ecosystem consists only of living organisms like plants and animals.",
+      "why": "Students often focus on the biological components and ignore the physical environment.",
+      "fix": "An ecosystem includes both biotic (living) and abiotic (non-living) components like sunlight, water, and soil interacting together.",
+      "probe": {
+       "question": "Is a pond with water, rocks, and sunlight but no fish still an ecosystem?",
+       "wrong_answer": "No, because there are no living things in it."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "biotic",
+       "abiotic",
+       "interaction",
+       "environment",
+       "components"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "trophic_levels",
+    "name": "Food Chains and Trophic Levels",
+    "prereqs": [
+     "ecosystem"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Energy is created as it moves up the food chain.",
+      "why": "Students confuse the increase in complexity of organisms with an increase in energy content.",
+      "fix": "Energy is lost at each trophic level as heat during respiration and metabolic activities, so it decreases as you move up.",
+      "probe": {
+       "question": "Which trophic level has the most energy available?",
+       "wrong_answer": "The top carnivore because it is the biggest and strongest."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "food chain",
+       "trophic level",
+       "energy flow",
+       "producers",
+       "consumers"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "ten_percent_law",
+    "name": "Energy Transfer and the 10 Percent Law",
+    "prereqs": [
+     "trophic_levels"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The 90 percent of energy lost is destroyed or disappears.",
+      "why": "Students interpret 'loss' as total disappearance rather than transformation into a different form.",
+      "fix": "The energy is not destroyed; it is converted into heat energy and released into the environment during life processes.",
+      "probe": {
+       "question": "What happens to the 90% of energy not passed to the next level?",
+       "wrong_answer": "It is completely destroyed and no longer exists in the universe."
+      },
+      "error_type": "other",
+      "trigger_cues": [
+       "10 percent law",
+       "energy loss",
+       "heat",
+       "metabolic activities",
+       "transfer"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "bio_mag",
+    "name": "Biological Magnification",
+    "prereqs": [
+     "trophic_levels"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Chemicals like pesticides become more concentrated because organisms at the top eat more food.",
+      "why": "Students focus on the volume of food consumed rather than the inability of the body to excrete non-biodegradable substances.",
+      "fix": "Magnification happens because non-biodegradable chemicals accumulate in the tissues of organisms and are passed on to the next level, increasing in concentration.",
+      "probe": {
+       "question": "Why do eagles have higher levels of DDT than the fish they eat?",
+       "wrong_answer": "Because eagles eat a very large quantity of fish every day."
+      },
+      "error_type": "scale_or_quantity",
+      "trigger_cues": [
+       "biological magnification",
+       "pesticides",
+       "non-biodegradable",
+       "accumulation",
+       "concentration"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "ozone",
+    "name": "Ozone Layer Depletion",
+    "prereqs": [
+     "ecosystem"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The ozone hole is caused by global warming and the greenhouse effect.",
+      "why": "Students conflate two major environmental issues they hear about in the news.",
+      "fix": "The ozone layer is depleted primarily by CFCs, while global warming is caused by greenhouse gases like carbon dioxide.",
+      "probe": {
+       "question": "Does reducing carbon dioxide emissions directly fix the ozone hole?",
+       "wrong_answer": "Yes, because carbon dioxide is the main gas that destroys the ozone layer."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "ozone",
+       "cfcs",
+       "stratosphere",
+       "ultraviolet radiation",
+       "depletion"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Life Processes (Nutrition and Respiration)",
+   "Chemical Reactions and Equations"
+  ]
+ },
+ "problems": []
+}

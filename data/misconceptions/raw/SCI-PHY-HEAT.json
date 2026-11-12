@@ -1,0 +1,168 @@
+{
+ "topic": {
+  "id": "SCI-PHY-HEAT",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   7
+  ],
+  "title": "Heat and temperature",
+  "scope": "heat vs temperature, thermometers, conduction, convection, radiation, sea and land breeze, dark vs light clothes"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 702,
+  "candidatesTokenCount": 1290,
+  "totalTokenCount": 1992,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 702
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.4,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Heat vs Temperature",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Heat and temperature are the same thing.",
+      "why": "In everyday language, people use the words interchangeably when describing weather or cooking.",
+      "fix": "Temperature measures how hot or cold an object is, while heat is the total energy transferred between objects due to a temperature difference.",
+      "probe": {
+       "question": "If you add more hot water to a cup, does the heat increase or the temperature?",
+       "wrong_answer": "The heat increases because the water is hot."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "hotness",
+       "coldness",
+       "degree of hotness",
+       "thermometer reading"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Objects have heat inside them.",
+      "why": "Students often perceive heat as a substance or fluid that resides within an object rather than energy in transit.",
+      "fix": "Heat is energy that is moving from a warmer object to a cooler one; objects contain internal energy, not 'heat'.",
+      "probe": {
+       "question": "Where does the heat go when you take a hot spoon out of tea?",
+       "wrong_answer": "The heat stays inside the spoon for a while."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "heat content",
+       "hot object",
+       "energy transfer"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Mechanisms of Heat Transfer",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Cold moves from the ice to the hand.",
+      "why": "Language like 'the cold is coming in' suggests cold is an active agent that travels, similar to heat.",
+      "fix": "Cold is simply the absence of heat; heat always moves from the warmer object to the cooler one.",
+      "probe": {
+       "question": "Why does your hand feel cold when holding an ice cube?",
+       "wrong_answer": "Because the cold from the ice moves into my hand."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "conduction",
+       "heat flow",
+       "direction of heat"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     },
+     {
+      "statement": "Metals are naturally warm to the touch.",
+      "why": "Students touch a metal object and feel it is colder than wood, leading them to think metal has a 'cold' property.",
+      "fix": "Metal is a good conductor, so it draws heat away from your hand faster than wood, making it feel colder.",
+      "probe": {
+       "question": "Why does a metal spoon feel colder than a plastic spoon in the same room?",
+       "wrong_answer": "Because metal is a cold material and plastic is a warm material."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "conductors",
+       "insulators",
+       "touch",
+       "room temperature"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Convection and Radiation",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Heat only rises upwards.",
+      "why": "Students observe smoke or hot air rising and overgeneralize this to all heat transfer.",
+      "fix": "Heat can travel in any direction; convection currents occur in fluids because hot fluid becomes less dense and rises, but radiation travels in all directions.",
+      "probe": {
+       "question": "If you hold your hand to the side of a candle flame, why do you feel heat?",
+       "wrong_answer": "I shouldn't feel heat because heat only goes up."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "convection",
+       "radiation",
+       "rising air",
+       "sea breeze"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "Dark clothes absorb heat from the sun, but light clothes do not.",
+      "why": "Students confuse 'absorbing heat' with 'creating heat', thinking light clothes have a property that repels heat.",
+      "fix": "All objects absorb some radiation, but dark colors are better absorbers and emitters of heat than light colors.",
+      "probe": {
+       "question": "Do light-colored clothes absorb any heat from the sun?",
+       "wrong_answer": "No, they reflect all the heat and don't absorb any."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "dark clothes",
+       "light clothes",
+       "absorption",
+       "reflection"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "States of matter",
+   "Properties of materials",
+   "Basic measurement"
+  ]
+ },
+ "problems": []
+}

@@ -1,0 +1,157 @@
+{
+ "topic": {
+  "id": "SOC-GEO-MOTIONS",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   6
+  ],
+  "title": "Motions of the Earth",
+  "scope": "rotation, revolution, axis tilt, seasons, solstices and equinoxes, leap year"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 696,
+  "candidatesTokenCount": 1158,
+  "totalTokenCount": 1854,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 696
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.7,
+ "response": {
+  "concepts": [
+   {
+    "key": "rotation",
+    "name": "Rotation and Day-Night Cycle",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "The sun moves across the sky while the Earth stays still.",
+      "why": "This is based on the direct sensory experience of watching the sun rise and set every day.",
+      "fix": "The Earth spins on its axis from west to east, which makes the sun appear to move across the sky.",
+      "probe": {
+       "question": "Why does the sun rise in the east and set in the west?",
+       "wrong_answer": "Because the sun travels around the Earth every day."
+      },
+      "error_type": "presentism",
+      "trigger_cues": [
+       "sunrise",
+       "sunset",
+       "sun moves",
+       "day and night",
+       "earth spins"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "The Earth is tilted because it is leaning to one side like a falling object.",
+      "why": "Students often interpret diagrams of the tilted axis as a physical object that is unstable or falling.",
+      "fix": "The Earth's axis is an imaginary line that is tilted at an angle of 23.5 degrees relative to its orbital plane, and it stays in this fixed orientation.",
+      "probe": {
+       "question": "What would happen if the Earth stopped tilting?",
+       "wrong_answer": "It would fall over and crash into space."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "axis",
+       "tilted",
+       "imaginary line",
+       "23.5 degrees",
+       "orbital plane"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "revolution",
+    "name": "Revolution and Seasons",
+    "prereqs": [
+     "rotation"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Summer happens because the Earth gets closer to the sun during its orbit.",
+      "why": "Students often assume that proximity to a heat source is the only reason for temperature changes.",
+      "fix": "Seasons are caused by the tilt of the Earth's axis as it revolves around the sun, which changes how directly sunlight hits different parts of the Earth.",
+      "probe": {
+       "question": "Why is it hotter in summer than in winter?",
+       "wrong_answer": "Because the Earth is physically closer to the sun in the summer."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "orbit",
+       "revolution",
+       "seasons",
+       "closer to sun",
+       "heat"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     },
+     {
+      "statement": "The entire Earth experiences the same season at the same time.",
+      "why": "Students generalize their local experience of weather to the entire planet.",
+      "fix": "When the Northern Hemisphere is tilted towards the sun and experiences summer, the Southern Hemisphere is tilted away and experiences winter.",
+      "probe": {
+       "question": "If it is winter in India, what season is it in Australia?",
+       "wrong_answer": "It is also winter because the whole Earth is cold."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "northern hemisphere",
+       "southern hemisphere",
+       "tilted towards",
+       "tilted away",
+       "simultaneous seasons"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "solstices",
+    "name": "Solstices and Equinoxes",
+    "prereqs": [
+     "rotation",
+     "revolution"
+    ],
+    "misconceptions": [
+     {
+      "statement": "An equinox means the sun is directly above the equator for the whole day.",
+      "why": "Students misinterpret the term 'equal night' as a static state rather than a specific moment in the orbit.",
+      "fix": "An equinox is the specific time when the sun's rays fall vertically on the equator, resulting in equal day and night across the entire globe.",
+      "probe": {
+       "question": "What happens during an equinox?",
+       "wrong_answer": "The sun stays fixed over the equator all day long."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "equinox",
+       "equator",
+       "equal day",
+       "equal night",
+       "vertical rays"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Shape and size of the Earth",
+   "Basic understanding of the Solar System",
+   "Cardinal directions"
+  ]
+ },
+ "problems": []
+}

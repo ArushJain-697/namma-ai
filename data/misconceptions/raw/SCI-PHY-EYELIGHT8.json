@@ -1,0 +1,141 @@
+{
+ "topic": {
+  "id": "SCI-PHY-EYELIGHT8",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   8
+  ],
+  "title": "Light and the human eye",
+  "scope": "laws of reflection, regular and diffused reflection, multiple images, structure of eye, persistence of vision, care of eyes"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 706,
+  "candidatesTokenCount": 972,
+  "totalTokenCount": 1678,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 706
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.1,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Visibility and Light Sources",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Objects become visible because our eyes send out rays to touch them.",
+      "why": "Students often confuse the act of looking with an active process of 'reaching out' to objects.",
+      "fix": "We see objects because light from a source reflects off the object and enters our eyes.",
+      "probe": {
+       "question": "Why can't you see a book in a completely dark room?",
+       "wrong_answer": "Because my eyes haven't looked at it yet."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "seeing",
+       "vision",
+       "light source",
+       "darkness"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Laws of Reflection",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Light reflects off a mirror only when it hits at a specific angle.",
+      "why": "Students often generalize from experiences with balls bouncing off walls where only certain angles seem to 'work'.",
+      "fix": "Light reflects off a mirror at every angle; the angle of incidence is always equal to the angle of reflection.",
+      "probe": {
+       "question": "If you shine a laser at a mirror at a 30-degree angle, what happens?",
+       "wrong_answer": "The light just stops or gets absorbed because it's not the right angle."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "angle of incidence",
+       "angle of reflection",
+       "mirror",
+       "normal"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Regular vs Diffused Reflection",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Rough surfaces do not reflect light at all.",
+      "why": "Students confuse the lack of a clear image with the absence of reflection.",
+      "fix": "Rough surfaces reflect light in many directions, which is called diffused reflection, allowing us to see objects from all sides.",
+      "probe": {
+       "question": "Why can't you see your face in a wooden table?",
+       "wrong_answer": "Because the table doesn't reflect any light."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "rough surface",
+       "diffused reflection",
+       "smooth surface",
+       "image"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Structure and Function of the Eye",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The pupil is a black solid spot on the surface of the eye.",
+      "why": "The pupil looks like a black dot, and students lack the anatomical knowledge that it is an opening.",
+      "fix": "The pupil is actually a hole in the center of the iris that allows light to enter the eye.",
+      "probe": {
+       "question": "What is the black circle in the middle of your eye made of?",
+       "wrong_answer": "It is a piece of black skin or a solid dot."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "pupil",
+       "iris",
+       "light entry",
+       "eye structure"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Rectilinear propagation of light",
+   "Basic properties of materials"
+  ]
+ },
+ "problems": []
+}

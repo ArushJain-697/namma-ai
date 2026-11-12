@@ -1,0 +1,165 @@
+{
+ "topic": {
+  "id": "SCI-PHY-WORKENERGY",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   9
+  ],
+  "title": "Work and energy",
+  "scope": "work in physics, kinetic and potential energy, conservation of energy, power, commercial unit of energy"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 700,
+  "candidatesTokenCount": 1128,
+  "totalTokenCount": 1828,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 700
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 49.7,
+ "response": {
+  "concepts": [
+   {
+    "key": "work",
+    "name": "Work in Physics",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "If a person is tired after pushing a wall, they have done a lot of work.",
+      "why": "Students confuse the biological effort and fatigue with the scientific definition of work.",
+      "fix": "In physics, work is only done when a force causes an object to move in the direction of the force.",
+      "probe": {
+       "question": "A student pushes a heavy cupboard for 10 minutes but it does not move. How much work is done?",
+       "wrong_answer": "A large amount of work because the student is sweating and tired."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "force",
+       "displacement",
+       "effort",
+       "tired",
+       "pushing"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "Work is done whenever a force is applied to an object.",
+      "why": "Students often ignore the requirement of displacement in the formula W = Fs cos(theta).",
+      "fix": "Work is only done if the object actually changes its position due to the applied force.",
+      "probe": {
+       "question": "A man holds a heavy suitcase stationary in his hand. Is he doing work?",
+       "wrong_answer": "Yes, because he is applying an upward force to hold the suitcase."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "force",
+       "applied",
+       "stationary",
+       "movement"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "energy",
+    "name": "Kinetic and Potential Energy",
+    "prereqs": [
+     "work"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Objects at rest have no energy.",
+      "why": "Students equate energy only with motion, ignoring stored potential energy.",
+      "fix": "Energy can be stored in an object due to its position or configuration, which is called potential energy.",
+      "probe": {
+       "question": "Does a stone kept on the roof of a building have energy?",
+       "wrong_answer": "No, because it is not moving."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "rest",
+       "motion",
+       "stored",
+       "position",
+       "height"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "conservation",
+    "name": "Conservation of Energy",
+    "prereqs": [
+     "work",
+     "energy"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Energy is used up or lost when an object stops moving.",
+      "why": "Students observe objects slowing down and assume the energy simply disappears.",
+      "fix": "Energy is never lost; it is transformed into other forms like heat or sound due to friction.",
+      "probe": {
+       "question": "A ball rolling on the ground eventually stops. Where did its kinetic energy go?",
+       "wrong_answer": "It is used up and gone forever."
+      },
+      "error_type": "process_vs_product",
+      "trigger_cues": [
+       "stops",
+       "lost",
+       "friction",
+       "transformation",
+       "disappears"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "power",
+    "name": "Power and Commercial Energy",
+    "prereqs": [
+     "work",
+     "energy"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Power and energy are the same thing.",
+      "why": "In daily life, the terms are used interchangeably to describe how 'strong' or 'active' something is.",
+      "fix": "Energy is the capacity to do work, while power is the rate at which that work is done.",
+      "probe": {
+       "question": "If two motors do the same amount of work, do they have the same power?",
+       "wrong_answer": "Yes, because they did the same amount of work."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "rate",
+       "time",
+       "capacity",
+       "work done",
+       "speed of work"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Motion",
+   "Force and Laws of Motion"
+  ]
+ },
+ "problems": []
+}

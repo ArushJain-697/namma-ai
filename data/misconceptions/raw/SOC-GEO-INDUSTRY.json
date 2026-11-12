@@ -1,0 +1,145 @@
+{
+ "topic": {
+  "id": "SOC-GEO-INDUSTRY",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   8,
+   10
+  ],
+  "title": "Manufacturing industries",
+  "scope": "classification of industries, location factors, textile, iron and steel, IT industry, industrial pollution"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 702,
+  "candidatesTokenCount": 997,
+  "totalTokenCount": 1699,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 702
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 8.8,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Definition and Classification of Industries",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "All industries are large factories with tall chimneys.",
+      "why": "Students associate the word 'industry' only with heavy manufacturing seen in media or textbooks.",
+      "fix": "Industries include small-scale, cottage, and household units where goods are produced by hand or simple tools, not just large-scale factories.",
+      "probe": {
+       "question": "Is a local weaver making baskets at home considered an industry?",
+       "wrong_answer": "No, because there is no factory building or machinery involved."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "manufacturing",
+       "cottage industry",
+       "small scale",
+       "production"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Factors Influencing Industrial Location",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Industries are always located where raw materials are found.",
+      "why": "Students often assume a direct, single-factor relationship between the source of material and the factory site.",
+      "fix": "Location is determined by a combination of factors including transport, labor, power, market access, and government policy, not just raw materials.",
+      "probe": {
+       "question": "Why might a steel plant be located near a port instead of a coal mine?",
+       "wrong_answer": "It is a mistake because steel plants must be built directly on top of coal mines to save money."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "raw material",
+       "transport cost",
+       "market access",
+       "industrial location"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Iron, Steel, and Textile Manufacturing",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The textile industry only refers to the production of synthetic clothes.",
+      "why": "Modern urban students see more synthetic clothing and may overlook the traditional cotton and jute sectors.",
+      "fix": "The textile industry is a vast sector that includes cotton, jute, silk, and wool, with cotton being a major historical and economic pillar in India.",
+      "probe": {
+       "question": "Which sector is the largest employer in India's manufacturing?",
+       "wrong_answer": "The chemical industry, because it makes all the synthetic fabrics we wear today."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "textile",
+       "cotton",
+       "jute",
+       "spinning",
+       "weaving"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Industrial Pollution and Environmental Impact",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Industrial pollution only affects the air through smoke.",
+      "why": "Visible smoke from chimneys is the most common visual representation of pollution in textbooks.",
+      "fix": "Industries cause air, water, land, and noise pollution, with water pollution from toxic chemical discharge being equally critical.",
+      "probe": {
+       "question": "How does a textile mill impact the local river?",
+       "wrong_answer": "It doesn't impact the river because the pollution only goes up into the air as smoke."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "pollution",
+       "effluents",
+       "environmental degradation",
+       "sustainable development"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Resources and Development",
+   "Agriculture",
+   "Economics of Production"
+  ]
+ },
+ "problems": []
+}

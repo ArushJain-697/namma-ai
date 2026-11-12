@@ -1,0 +1,1233 @@
+{
+  "passage": "The word monsoon comes from the Arabic word mausim, which means season. India's climate is called a monsoon climate because the direction of the winds reverses with the seasons. In summer, the land heats up much faster than the sea. By May, an area of low pressure forms over the plains of north-western India. The air over the Indian Ocean is cooler, so the pressure there is higher. Winds blow from high pressure to low pressure, so moist winds from the ocean begin to move towards the land. These are the south-west monsoon winds. They pick up a great deal of moisture as they cross the warm ocean. The monsoon usually reaches the southern tip of Kerala by the first week of June and spreads over almost the whole country by mid-July. When the moist winds are forced to rise over the Western Ghats, they cool and drop heavy rain on the western slopes. The eastern side receives much less rain because it lies in the rain shadow. Mawsynram in Meghalaya receives one of the highest rainfalls in the world. By October, the land cools and the winds reverse, blowing from the land towards the sea. These are the retreating monsoon winds, which bring rain to the Coromandel coast of Tamil Nadu in October and November.",
+  "gate": {
+    "status": "OK",
+    "words": 216,
+    "reason": "OK: 216 words"
+  },
+  "summary": {
+    "text": "Winds blow from high pressure to low pressure, so the ocean's moist winds move from the ocean to the land. By October, the land cools and the winds reverse, blowing from the sea to the land.",
+    "word_count": 36,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "36 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 5,
+        "source": "Winds blow from high pressure to low pressure, so moist winds from the ocean begin to move towards the land.",
+        "text": "Winds blow from high pressure to low pressure, so the ocean's moist winds move from the ocean to the land.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 6.4 (limit 7.0), 20 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "Winds blow from high pressure to low pressure, so the ocean's moist winds move from the ocean to the land.",
+            "temperature": 0.0,
+            "wall_s": 0.8858,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 95,
+            "new_tokens": 79,
+            "ttft_ms": 120,
+            "tokens_per_s": 101.96,
+            "verify": null
+          },
+          {
+            "text": "Winds blow from high pressure to low pressure, so moist winds from the ocean begin to move towards the land.",
+            "temperature": 0.4,
+            "wall_s": 0.9144,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 95,
+            "new_tokens": 79,
+            "ttft_ms": 117,
+            "tokens_per_s": 97.87,
+            "verify": null
+          },
+          {
+            "text": "Winds blow from high pressure to low pressure, so moist winds from the ocean move towards the land.",
+            "temperature": 0.7,
+            "wall_s": 0.9015,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 95,
+            "new_tokens": 79,
+            "ttft_ms": 119,
+            "tokens_per_s": 99.87,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 12,
+        "source": "By October, the land cools and the winds reverse, blowing from the land towards the sea.",
+        "text": "By October, the land cools and the winds reverse, blowing from the sea to the land.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 5.4 (limit 7.0), 16 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "By October, the land cools and the winds reverse, blowing from the sea to the land.",
+            "temperature": 0.0,
+            "wall_s": 0.8819,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 93,
+            "new_tokens": 79,
+            "ttft_ms": 120,
+            "tokens_per_s": 102.36,
+            "verify": null
+          },
+          {
+            "text": "By October, the land cools and the winds reverse, blowing from the sea to the land.",
+            "temperature": 0.4,
+            "wall_s": 0.9013,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 93,
+            "new_tokens": 79,
+            "ttft_ms": 120,
+            "tokens_per_s": 99.87,
+            "verify": null
+          },
+          {
+            "text": "By October, the land cools and the winds reverse, blowing from the sea to the land.",
+            "temperature": 0.7,
+            "wall_s": 0.9017,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 93,
+            "new_tokens": 79,
+            "ttft_ms": 121,
+            "tokens_per_s": 100.0,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "Which month does the land cool and the winds reverse?",
+      "key": "October",
+      "options": [
+        "June",
+        "Ghats",
+        "Arabic",
+        "October"
+      ],
+      "witness_idx": 12,
+      "witness": "By October, the land cools and the winds reverse, blowing from the land towards the sea.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "10 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.55"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "80% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 1.3 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "Which season does the Ganga river begin?",
+          "temperature": 0.0,
+          "wall_s": 0.7208,
+          "failed": [
+            "stem_in_passage",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 211,
+          "tokens_per_s": 90.37,
+          "verify": {
+            "text": "autumn",
+            "wall_s": 0.3521,
+            "prompt_tokens": 155,
+            "new_tokens": 15,
+            "ttft_ms": 200,
+            "tokens_per_s": 92.11
+          }
+        },
+        {
+          "text": "Which season does the Ganga river begin?",
+          "temperature": 0.4,
+          "wall_s": 0.7448,
+          "failed": [
+            "stem_in_passage",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 218,
+          "tokens_per_s": 87.29,
+          "verify": {
+            "text": "autumn",
+            "wall_s": 0.3452,
+            "prompt_tokens": 155,
+            "new_tokens": 15,
+            "ttft_ms": 197,
+            "tokens_per_s": 95.24
+          }
+        },
+        {
+          "text": "Which month does the land cool and the winds reverse?",
+          "temperature": 0.7,
+          "wall_s": 0.7319,
+          "failed": [],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 211,
+          "tokens_per_s": 88.46,
+          "verify": {
+            "text": "October",
+            "wall_s": 0.3548,
+            "prompt_tokens": 157,
+            "new_tokens": 15,
+            "ttft_ms": 203,
+            "tokens_per_s": 92.72
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: By October, the land cools and the winds reverse, blowing from the land towards the _____.",
+        "key": "sea",
+        "witness_idx": 12,
+        "witness": "By October, the land cools and the winds reverse, blowing from the land towards the sea.",
+        "options": [
+          "climate",
+          "mausim",
+          "sea",
+          "monsoon"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "land",
+      "options": [
+        "season",
+        "direction",
+        "land",
+        "climate"
+      ],
+      "witness_idx": 5,
+      "witness": "Winds blow from high pressure to low pressure, so moist winds from the ocean begin to move towards the land.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.30"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.52"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "67% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.3 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'Himalayas', not 'land'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'Himalayas', not 'land'"
+      ],
+      "attempts": [
+        {
+          "text": "Which of the following is a moist wind?",
+          "temperature": 0.0,
+          "wall_s": 0.7183,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 212,
+          "tokens_per_s": 91.09,
+          "verify": {
+            "text": "Himalayas",
+            "wall_s": 0.351,
+            "prompt_tokens": 157,
+            "new_tokens": 15,
+            "ttft_ms": 201,
+            "tokens_per_s": 93.33
+          }
+        },
+        {
+          "text": "Which of the following is NOT a type of wind?",
+          "temperature": 0.4,
+          "wall_s": 0.7291,
+          "failed": [
+            "stem_in_passage",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 214,
+          "tokens_per_s": 89.32,
+          "verify": {
+            "text": "high pressure",
+            "wall_s": 0.3558,
+            "prompt_tokens": 159,
+            "new_tokens": 15,
+            "ttft_ms": 201,
+            "tokens_per_s": 90.91
+          }
+        },
+        {
+          "text": "Which of the following is NOT an example of a wind belt?",
+          "temperature": 0.7,
+          "wall_s": 0.7334,
+          "failed": [
+            "stem_in_passage",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 212,
+          "tokens_per_s": 88.46,
+          "verify": {
+            "text": "Himalayas",
+            "wall_s": 0.3671,
+            "prompt_tokens": 161,
+            "new_tokens": 15,
+            "ttft_ms": 207,
+            "tokens_per_s": 88.05
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Winds blow from high pressure to low pressure, so moist winds from the _____ begin to move towards the land.",
+        "key": "ocean",
+        "witness_idx": 5,
+        "witness": "Winds blow from high pressure to low pressure, so moist winds from the ocean begin to move towards the land.",
+        "options": [
+          "season",
+          "ocean",
+          "direction",
+          "cool"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "seasons",
+      "options": [
+        "plains",
+        "seasons",
+        "spreads",
+        "slopes"
+      ],
+      "witness_idx": 1,
+      "witness": "India's climate is called a monsoon climate because the direction of the winds reverses with the seasons.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "9 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.34"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.34"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "25% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.0 (limit 10.5)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'Himalayas', not 'seasons'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_in_passage: 25% of content words are in the passage",
+        "stem_answers_to_key: asked to answer its own question, the model said 'Himalayas', not 'seasons'"
+      ],
+      "attempts": [
+        {
+          "text": "The Ganga river begins at the glacier known as?",
+          "temperature": 0.0,
+          "wall_s": 0.7225,
+          "failed": [
+            "stem_in_passage",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 215,
+          "tokens_per_s": 90.73,
+          "verify": {
+            "text": "Himalayas",
+            "wall_s": 0.3535,
+            "prompt_tokens": 158,
+            "new_tokens": 15,
+            "ttft_ms": 202,
+            "tokens_per_s": 92.72
+          }
+        },
+        {
+          "text": "The direction of the winds reverses with the seasons.",
+          "temperature": 0.4,
+          "wall_s": 0.7457,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 220,
+          "tokens_per_s": 87.62,
+          "verify": null
+        },
+        {
+          "text": "The Ganga river begins at which glacier?",
+          "temperature": 0.7,
+          "wall_s": 0.7398,
+          "failed": [
+            "stem_in_passage",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 213,
+          "tokens_per_s": 87.45,
+          "verify": {
+            "text": "Gangotri",
+            "wall_s": 0.3571,
+            "prompt_tokens": 156,
+            "new_tokens": 15,
+            "ttft_ms": 201,
+            "tokens_per_s": 89.74
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: India's climate is called a _____ climate because the direction of the winds reverses with the seasons.",
+        "key": "monsoon",
+        "witness_idx": 1,
+        "witness": "India's climate is called a monsoon climate because the direction of the winds reverses with the seasons.",
+        "options": [
+          "sea",
+          "pressure",
+          "ocean",
+          "monsoon"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "India",
+      "options": [
+        "Kerala",
+        "June",
+        "India",
+        "October"
+      ],
+      "witness_idx": 3,
+      "witness": "By May, an area of low pressure forms over the plains of north-western India.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "6 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.38"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.51"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "33% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 4.5 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'Himalayas', not 'India'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_in_passage: 33% of content words are in the passage",
+        "stem_answers_to_key: asked to answer its own question, the model said 'Himalayas', not 'India'"
+      ],
+      "attempts": [
+        {
+          "text": "Where does the Ganga river begin?",
+          "temperature": 0.0,
+          "wall_s": 0.7298,
+          "failed": [
+            "stem_in_passage",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 164,
+          "new_tokens": 47,
+          "ttft_ms": 216,
+          "tokens_per_s": 89.67,
+          "verify": {
+            "text": "Himalayas",
+            "wall_s": 0.3485,
+            "prompt_tokens": 152,
+            "new_tokens": 15,
+            "ttft_ms": 198,
+            "tokens_per_s": 93.33
+          }
+        },
+        {
+          "text": "Where does the Ganga river begin?",
+          "temperature": 0.4,
+          "wall_s": 0.8601,
+          "failed": [
+            "stem_in_passage",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 164,
+          "new_tokens": 47,
+          "ttft_ms": 251,
+          "tokens_per_s": 75.66,
+          "verify": {
+            "text": "Himalayas",
+            "wall_s": 0.3643,
+            "prompt_tokens": 152,
+            "new_tokens": 15,
+            "ttft_ms": 207,
+            "tokens_per_s": 89.17
+          }
+        },
+        {
+          "text": "Where does the Ganga river begin?",
+          "temperature": 0.7,
+          "wall_s": 0.774,
+          "failed": [
+            "stem_in_passage",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 164,
+          "new_tokens": 47,
+          "ttft_ms": 220,
+          "tokens_per_s": 83.18,
+          "verify": {
+            "text": "Himalayas",
+            "wall_s": 0.3632,
+            "prompt_tokens": 152,
+            "new_tokens": 15,
+            "ttft_ms": 206,
+            "tokens_per_s": 89.17
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: By May, an area of low _____ forms over the plains of north-western India.",
+        "key": "pressure",
+        "witness_idx": 3,
+        "witness": "By May, an area of low pressure forms over the plains of north-western India.",
+        "options": [
+          "rain",
+          "blow",
+          "pressure",
+          "moist"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "Ocean",
+      "options": [
+        "Ocean",
+        "Kerala",
+        "Arabic",
+        "June"
+      ],
+      "witness_idx": 4,
+      "witness": "The air over the Indian Ocean is cooler, so the pressure there is higher.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.42"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.49"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.8 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is the pressure in the Indian Ocean?",
+          "temperature": 0.0,
+          "wall_s": 0.7797,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 233,
+          "tokens_per_s": 84.25,
+          "verify": null
+        },
+        {
+          "text": "What is the pressure in the Indian Ocean?",
+          "temperature": 0.4,
+          "wall_s": 0.7837,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 229,
+          "tokens_per_s": 83.03,
+          "verify": null
+        },
+        {
+          "text": "What is the pressure in the Indian Ocean?",
+          "temperature": 0.7,
+          "wall_s": 0.7815,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 228,
+          "tokens_per_s": 83.18,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The air over the Indian Ocean is cooler, so the _____ there is higher.",
+        "key": "pressure",
+        "witness_idx": 4,
+        "witness": "The air over the Indian Ocean is cooler, so the pressure there is higher.",
+        "options": [
+          "pressure",
+          "climate",
+          "season",
+          "sea"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "What is the result of the moist winds forcing to rise over the Western Ghats?",
+      "key": "rain",
+      "options": [
+        "blow",
+        "monsoon",
+        "ocean",
+        "rain"
+      ],
+      "witness_idx": 9,
+      "witness": "When the moist winds are forced to rise over the Western Ghats, they cool and drop heavy rain on the western slopes.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "15 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.57"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.48"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "86% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.2 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is the result of the moist winds forcing to rise over the Western Ghats?",
+          "temperature": 0.0,
+          "wall_s": 0.7841,
+          "failed": [],
+          "prompt_tokens": 171,
+          "new_tokens": 47,
+          "ttft_ms": 236,
+          "tokens_per_s": 83.94,
+          "verify": {
+            "text": "heavy rain",
+            "wall_s": 0.4314,
+            "prompt_tokens": 168,
+            "new_tokens": 15,
+            "ttft_ms": 244,
+            "tokens_per_s": 74.87
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: When the moist winds are forced to rise over the Western Ghats, they _____ and drop heavy rain on the western slopes.",
+        "key": "cool",
+        "witness_idx": 9,
+        "witness": "When the moist winds are forced to rise over the Western Ghats, they cool and drop heavy rain on the western slopes.",
+        "options": [
+          "sea",
+          "blow",
+          "monsoon",
+          "cool"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: These are the south-west _____ winds.",
+      "key": "monsoon",
+      "options": [
+        "monsoon",
+        "climate",
+        "rain",
+        "land"
+      ],
+      "witness_idx": 6,
+      "witness": "These are the south-west monsoon winds.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: These are the _____ monsoon winds.",
+        "key": "south-west",
+        "witness_idx": 6,
+        "witness": "These are the south-west monsoon winds.",
+        "options": [
+          "south-west",
+          "climate",
+          "rain",
+          "land"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 21.8244,
+    "summary_s": 5.3879,
+    "stems_s": 16.435,
+    "model_wall_s": 17.4658,
+    "model_calls": 22,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 0,
+    "red": 4,
+    "fallback": 1
+  },
+  "version": 1,
+  "created": "2026-11-13T01:20:49",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

@@ -1,0 +1,165 @@
+{
+ "topic": {
+  "id": "SOC-GEO-MINERALS",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   8,
+   10
+  ],
+  "title": "Minerals and energy resources",
+  "scope": "ferrous and non-ferrous minerals, mining, conventional and non-conventional energy, conservation of energy"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 706,
+  "candidatesTokenCount": 1157,
+  "totalTokenCount": 1863,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 706
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 9.1,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Nature and Formation of Minerals",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Minerals are just rocks that we find lying on the surface of the earth.",
+      "why": "Students often conflate the everyday term 'rock' with the geological definition of a mineral.",
+      "fix": "Minerals are naturally occurring chemical substances with a definite internal structure, while rocks are aggregates of one or more minerals.",
+      "probe": {
+       "question": "Is a piece of coal a mineral?",
+       "wrong_answer": "Yes, because it is a hard substance found in the ground."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "naturally occurring",
+       "chemical composition",
+       "geological process",
+       "ore",
+       "earth crust"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Minerals are renewable because the earth is constantly creating new ones.",
+      "why": "Students observe geological processes like weathering and assume they happen at a human-relevant timescale.",
+      "fix": "Minerals take millions of years to form, making them non-renewable resources on a human timescale.",
+      "probe": {
+       "question": "If we use up all the iron ore today, will we have more in a few hundred years?",
+       "wrong_answer": "Yes, the earth is always making more iron through natural processes."
+      },
+      "error_type": "presentism",
+      "trigger_cues": [
+       "geological time",
+       "non-renewable",
+       "exhaustible",
+       "formation process"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Classification: Ferrous vs Non-Ferrous",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "All metallic minerals are ferrous.",
+      "why": "Students often associate the word 'metal' exclusively with iron due to its dominance in daily life.",
+      "fix": "Ferrous minerals contain iron, while non-ferrous minerals like copper or gold do not contain iron.",
+      "probe": {
+       "question": "Is copper a ferrous mineral?",
+       "wrong_answer": "Yes, because it is a metal."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "iron content",
+       "metallic minerals",
+       "ferrous",
+       "non-ferrous",
+       "alloys"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Conventional vs Non-Conventional Energy",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Conventional energy sources are always better than non-conventional ones.",
+      "why": "Students equate 'conventional' with 'standard' or 'superior' and 'non-conventional' with 'experimental' or 'unreliable'.",
+      "fix": "Conventional sources like coal are currently widely used but are polluting and finite, whereas non-conventional sources like solar are sustainable.",
+      "probe": {
+       "question": "Why should we prefer coal over solar energy?",
+       "wrong_answer": "Because coal is a conventional source, meaning it is more reliable and better for the economy."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "fossil fuels",
+       "renewable",
+       "non-renewable",
+       "sustainable",
+       "thermal power"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Conservation and Sustainable Use",
+    "prereqs": [
+     "c1",
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Energy conservation means we should stop using all minerals and energy resources.",
+      "why": "Students interpret 'conservation' as 'preservation' or 'total abstinence' rather than 'wise use'.",
+      "fix": "Conservation means using resources efficiently and sustainably to ensure they last for future generations.",
+      "probe": {
+       "question": "What is the best way to conserve coal?",
+       "wrong_answer": "We should stop mining and using coal entirely starting today."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "sustainable development",
+       "resource planning",
+       "efficiency",
+       "future generations"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Basic Geography of India",
+   "Physical features of India",
+   "Introduction to Economics"
+  ]
+ },
+ "problems": []
+}

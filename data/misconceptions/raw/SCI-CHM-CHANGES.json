@@ -1,0 +1,199 @@
+{
+ "topic": {
+  "id": "SCI-CHM-CHANGES",
+  "subject": "science",
+  "strand": "chemistry",
+  "grades": [
+   6,
+   7
+  ],
+  "title": "Physical and chemical changes",
+  "scope": "reversible and irreversible changes, signs of chemical change, rusting, crystallisation, burning"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 704,
+  "candidatesTokenCount": 1498,
+  "totalTokenCount": 2202,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 704
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.5,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Reversible and Irreversible Changes",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "All changes that look different are irreversible.",
+      "why": "Students often confuse the visual appearance of an object with the permanence of the change.",
+      "fix": "A change is reversible if the original substance can be recovered through simple physical methods, regardless of how different it looks.",
+      "probe": {
+       "question": "If you fold a piece of paper into a boat, can you get the paper back?",
+       "wrong_answer": "No, because the paper has changed its shape and is now a boat."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "folding",
+       "tearing",
+       "shape change",
+       "state change",
+       "reversible"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "If a change happens quickly, it must be reversible.",
+      "why": "Students associate speed with the ease of undoing an action in daily life.",
+      "fix": "The speed of a change has no relation to whether it can be reversed; some fast changes like burning are permanent.",
+      "probe": {
+       "question": "Is lighting a matchstick a reversible change?",
+       "wrong_answer": "Yes, because it happens very quickly."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "speed",
+       "fast change",
+       "slow change",
+       "time taken"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Physical Changes",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "A physical change always involves a change in the state of matter.",
+      "why": "Textbooks often use melting ice as the primary example of a physical change.",
+      "fix": "Physical changes include any change in shape, size, or state where no new substance is formed.",
+      "probe": {
+       "question": "Is cutting a piece of wood into small sawdust a physical change?",
+       "wrong_answer": "No, because the wood did not melt or freeze."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "melting",
+       "freezing",
+       "state of matter",
+       "physical property"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Chemical Changes and Signs",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "If a new color appears, it is always a chemical change.",
+      "why": "Students are taught that color change is a sign of a chemical reaction, leading them to ignore physical mixing.",
+      "fix": "Color change is only a sign of a chemical change if it indicates the formation of a new substance, not just mixing two colored liquids.",
+      "probe": {
+       "question": "If I mix blue ink and yellow ink to get green ink, is it a chemical change?",
+       "wrong_answer": "Yes, because the color changed."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "color change",
+       "gas production",
+       "new substance",
+       "chemical reaction"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     },
+     {
+      "statement": "Burning is a physical change because the object just gets smaller.",
+      "why": "Students focus on the reduction in size rather than the production of ash and smoke.",
+      "fix": "Burning is a chemical change because it produces entirely new substances like ash and gases that cannot be turned back into the original material.",
+      "probe": {
+       "question": "Why is burning a piece of paper a chemical change?",
+       "wrong_answer": "It is not; it is just a physical change because the paper got smaller."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "burning",
+       "ash",
+       "smoke",
+       "reduction in size"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Rusting and Crystallisation",
+    "prereqs": [
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Rust is just dirt that collects on iron.",
+      "why": "Rust looks like brown dust or soil, and students observe it accumulating on surfaces.",
+      "fix": "Rust is a new substance formed by the chemical reaction between iron, oxygen, and water.",
+      "probe": {
+       "question": "Can you wash rust off iron like you wash off mud?",
+       "wrong_answer": "Yes, rust is just dirty particles stuck to the metal."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "iron",
+       "rusting",
+       "moisture",
+       "oxygen",
+       "brown coating"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Crystallisation is a chemical change because the crystals look different from the powder.",
+      "why": "The dramatic change in appearance from a powder to a crystal suggests a chemical transformation to students.",
+      "fix": "Crystallisation is a physical change because the substance remains the same chemically; only its physical form changes.",
+      "probe": {
+       "question": "Is obtaining salt crystals from a salt solution a chemical change?",
+       "wrong_answer": "Yes, because the salt looks like a crystal now instead of a powder."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "crystals",
+       "saturated solution",
+       "pure substance",
+       "physical form"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "States of matter",
+   "Properties of materials",
+   "Basic laboratory safety"
+  ]
+ },
+ "problems": []
+}

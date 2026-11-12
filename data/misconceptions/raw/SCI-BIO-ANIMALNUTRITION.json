@@ -1,0 +1,197 @@
+{
+ "topic": {
+  "id": "SCI-BIO-ANIMALNUTRITION",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   7
+  ],
+  "title": "Nutrition in animals",
+  "scope": "human digestive system, digestion in mouth, stomach and intestines, absorption, villi, digestion in ruminants, amoeba"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 705,
+  "candidatesTokenCount": 1495,
+  "totalTokenCount": 2200,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 705
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.6,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Purpose of Nutrition",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Food is only needed to satisfy hunger or provide taste.",
+      "why": "Students associate eating primarily with the sensory pleasure of taste and the physical sensation of hunger.",
+      "fix": "Food is essential for providing energy for body activities, growth, and repairing damaged parts.",
+      "probe": {
+       "question": "Why do we need to eat food every day?",
+       "wrong_answer": "Because we feel hungry and food tastes good."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "energy",
+       "growth",
+       "repair",
+       "nutrients",
+       "body activities"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Digestion is just the process of food moving through the body.",
+      "why": "Students often confuse the physical movement of food (peristalsis) with the chemical breakdown process.",
+      "fix": "Digestion is the chemical breakdown of complex food substances into simpler, absorbable forms.",
+      "probe": {
+       "question": "What happens to a piece of bread after you swallow it?",
+       "wrong_answer": "It just travels down into the stomach and then out of the body."
+      },
+      "error_type": "process_vs_product",
+      "trigger_cues": [
+       "breakdown",
+       "complex substances",
+       "simpler forms",
+       "digestive tract"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Human Digestive System",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The stomach is the main organ where all digestion happens.",
+      "why": "The stomach is the most commonly mentioned organ in everyday conversation about 'digestion'.",
+      "fix": "Digestion begins in the mouth and continues through the stomach and small intestine, where most digestion is completed.",
+      "probe": {
+       "question": "Where does the digestion of food take place in the human body?",
+       "wrong_answer": "Only in the stomach."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "stomach",
+       "small intestine",
+       "mouth",
+       "digestive juices"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "Food stays in the stomach for a long time and turns into energy there.",
+      "why": "Students often conflate the stomach's role with the entire process of nutrition.",
+      "fix": "The stomach acts as a mixer and partial digester; energy is released later in cells after absorption.",
+      "probe": {
+       "question": "Where does the food we eat turn into energy?",
+       "wrong_answer": "In the stomach."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "stomach",
+       "energy",
+       "absorption",
+       "cells"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Absorption and Villi",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The small intestine is just a tube that food passes through.",
+      "why": "Students cannot see the microscopic structure of the intestine and assume it is a simple pipe.",
+      "fix": "The inner wall of the small intestine has thousands of finger-like outgrowths called villi that absorb digested food.",
+      "probe": {
+       "question": "How does food get from the intestine into the blood?",
+       "wrong_answer": "It just soaks through the walls of the tube like water through a pipe."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "villi",
+       "absorption",
+       "blood vessels",
+       "surface area"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Specialized Digestion (Ruminants and Amoeba)",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Cows have multiple stomachs because they eat so much grass.",
+      "why": "Students misinterpret the biological adaptation of the rumen as simply having 'extra' stomachs for volume.",
+      "fix": "Cows have a specialized four-chambered stomach to help digest cellulose, which is hard to break down.",
+      "probe": {
+       "question": "Why do ruminants have a complex stomach structure?",
+       "wrong_answer": "To store large amounts of grass so they don't have to eat as often."
+      },
+      "error_type": "living_thing_reasoning",
+      "trigger_cues": [
+       "ruminants",
+       "rumen",
+       "cellulose",
+       "cud"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Amoeba uses its pseudopodia like hands to grab food.",
+      "why": "Students anthropomorphize the amoeba's movement, assuming it has 'limbs' for grasping.",
+      "fix": "Amoeba pushes out pseudopodia to surround and engulf food particles, forming a food vacuole.",
+      "probe": {
+       "question": "How does an amoeba take in food?",
+       "wrong_answer": "It uses its arms to reach out and grab the food."
+      },
+      "error_type": "living_thing_reasoning",
+      "trigger_cues": [
+       "pseudopodia",
+       "engulf",
+       "food vacuole",
+       "single-celled"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Characteristics of Living Things",
+   "Basic Cell Structure",
+   "Introduction to Biological Systems"
+  ]
+ },
+ "problems": []
+}

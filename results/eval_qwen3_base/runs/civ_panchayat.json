@@ -1,0 +1,1064 @@
+{
+  "passage": "In most villages of India, local matters are managed by an elected body called the Gram Panchayat. Every adult who lives in the village and whose name is on the voters' list is a member of the Gram Sabha, the meeting of all such people. The Gram Sabha elects the members of the Gram Panchayat, who are called ward members or panches, and the head of the panchayat, called the sarpanch or pradhan. They are elected for five years. The Gram Panchayat also has a secretary, who is appointed by the government and is not elected. The secretary calls the meetings of the Gram Sabha and keeps a record of what is discussed. The Gram Panchayat looks after the construction and repair of village roads, drains, schools and water sources, and it collects some local taxes. It also carries out government schemes for employment and housing. The Gram Sabha plays an important role in keeping the panchayat honest. At its meetings, villagers can question the sarpanch about how money was spent and can suggest new work. One third of the seats in panchayats are reserved for women, and many states have raised this to half. Above the village level, a group of Gram Panchayats forms the Panchayat Samiti at the block level, and the Zila Parishad works at the district level.",
+  "gate": {
+    "status": "OK",
+    "words": 221,
+    "reason": "OK: 221 words"
+  },
+  "summary": {
+    "text": "In most villages of India, local matters are managed by an elected body called the Gram Panchayat. The Gram Sabha chooses the people who are called ward members or panches, and the leader of the panchayat is called the sarpanch or pradhan.",
+    "word_count": 42,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "42 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 0,
+        "source": "In most villages of India, local matters are managed by an elected body called the Gram Panchayat.",
+        "text": "In most villages of India, local matters are managed by an elected body called the Gram Panchayat.",
+        "fallback": true,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "In most villages in India, people choose to manage their local things through an elected group called the Gram Panchayat.",
+            "temperature": 0.0,
+            "wall_s": 0.9891,
+            "failed": [
+              "summary_support",
+              "summary_readability"
+            ],
+            "prompt_tokens": 95,
+            "new_tokens": 79,
+            "ttft_ms": 138,
+            "tokens_per_s": 91.76,
+            "verify": null
+          },
+          {
+            "text": "In most villages in India, people choose their own leaders called the Gram Panchayats to manage local things.",
+            "temperature": 0.4,
+            "wall_s": 1.001,
+            "failed": [
+              "summary_support",
+              "summary_new_names",
+              "summary_readability"
+            ],
+            "prompt_tokens": 95,
+            "new_tokens": 79,
+            "ttft_ms": 132,
+            "tokens_per_s": 89.76,
+            "verify": null
+          },
+          {
+            "text": "In most villages in India, people choose their leaders called the Gram Panchayats to manage local matters.",
+            "temperature": 0.7,
+            "wall_s": 0.9978,
+            "failed": [
+              "summary_support",
+              "summary_new_names",
+              "summary_readability"
+            ],
+            "prompt_tokens": 95,
+            "new_tokens": 79,
+            "ttft_ms": 131,
+            "tokens_per_s": 90.07,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 2,
+        "source": "The Gram Sabha elects the members of the Gram Panchayat, who are called ward members or panches, and the head of the panchayat, called the sarpanch or pradhan.",
+        "text": "The Gram Sabha chooses the people who are called ward members or panches, and the leader of the panchayat is called the sarpanch or pradhan.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 11.2 (limit 11.8), 25 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "The Gram Sabha chooses the people who are called ward members or panches, and the leader of the panchayat is called the sarpanch or pradhan.",
+            "temperature": 0.0,
+            "wall_s": 1.0711,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 117,
+            "new_tokens": 79,
+            "ttft_ms": 163,
+            "tokens_per_s": 86.0,
+            "verify": null
+          },
+          {
+            "text": "The Gram Sabha chooses the members of the panchayats, who are called ward members or panches, and the head of the panchayat is called the sarpanch or pradhan.",
+            "temperature": 0.4,
+            "wall_s": 1.105,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 117,
+            "new_tokens": 79,
+            "ttft_ms": 172,
+            "tokens_per_s": 83.69,
+            "verify": null
+          },
+          {
+            "text": "The Gram Sabha chooses the members of the panchayat, and the head of the panchayat is called the sarpanch.",
+            "temperature": 0.7,
+            "wall_s": 1.0957,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 117,
+            "new_tokens": 79,
+            "ttft_ms": 165,
+            "tokens_per_s": 83.87,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "What is the elected body called in most villages of India?",
+      "key": "Panchayat",
+      "options": [
+        "Parishad",
+        "Zila",
+        "Samiti",
+        "Panchayat"
+      ],
+      "witness_idx": 0,
+      "witness": "In most villages of India, local matters are managed by an elected body called the Gram Panchayat.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "11 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.32"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 8.0 (limit 11.2)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is the elected body called in most villages of India?",
+          "temperature": 0.0,
+          "wall_s": 0.8676,
+          "failed": [],
+          "prompt_tokens": 171,
+          "new_tokens": 47,
+          "ttft_ms": 288,
+          "tokens_per_s": 79.45,
+          "verify": {
+            "text": "gram panchayat",
+            "wall_s": 0.4347,
+            "prompt_tokens": 160,
+            "new_tokens": 15,
+            "ttft_ms": 246,
+            "tokens_per_s": 74.47
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: In most villages of India, local matters are managed by an _____ body called the Gram Panchayat.",
+        "key": "elected",
+        "witness_idx": 0,
+        "witness": "In most villages of India, local matters are managed by an elected body called the Gram Panchayat.",
+        "options": [
+          "appointed",
+          "government",
+          "elected",
+          "discussed"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "Sabha",
+      "options": [
+        "Zila",
+        "Panchayat",
+        "Sabha",
+        "Parishad"
+      ],
+      "witness_idx": 1,
+      "witness": "Every adult who lives in the village and whose name is on the voters' list is a member of the Gram Sabha, the meeting of all such people.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "1 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.07"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.06"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 8.4 (limit 11.3)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "Sabha",
+          "temperature": 0.0,
+          "wall_s": 0.8392,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 177,
+          "new_tokens": 47,
+          "ttft_ms": 262,
+          "tokens_per_s": 79.86,
+          "verify": null
+        },
+        {
+          "text": "Sabha",
+          "temperature": 0.4,
+          "wall_s": 0.899,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 177,
+          "new_tokens": 47,
+          "ttft_ms": 311,
+          "tokens_per_s": 78.23,
+          "verify": null
+        },
+        {
+          "text": "Sabha",
+          "temperature": 0.7,
+          "wall_s": 0.8768,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 177,
+          "new_tokens": 47,
+          "ttft_ms": 275,
+          "tokens_per_s": 76.54,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Every adult who lives in the village and whose name is on the voters' list is a _____ of the Gram Sabha, the meeting of all such people.",
+        "key": "member",
+        "witness_idx": 1,
+        "witness": "Every adult who lives in the village and whose name is on the voters' list is a member of the Gram Sabha, the meeting of all such people.",
+        "options": [
+          "member",
+          "panchayat",
+          "government",
+          "pradhan"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "government",
+      "options": [
+        "adult",
+        "government",
+        "whose",
+        "sarpanch"
+      ],
+      "witness_idx": 7,
+      "witness": "It also carries out government schemes for employment and housing.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.36"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.31"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "0% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.8 (limit 9.6)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'employment and housing', not 'government'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_in_passage: 0% of content words are in the passage",
+        "stem_answers_to_key: asked to answer its own question, the model said 'employment and housing', not 'government'"
+      ],
+      "attempts": [
+        {
+          "text": "What is carried out by the Ganga river?",
+          "temperature": 0.0,
+          "wall_s": 0.824,
+          "failed": [
+            "stem_in_passage",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 157,
+          "new_tokens": 47,
+          "ttft_ms": 253,
+          "tokens_per_s": 80.7,
+          "verify": {
+            "text": "employment and housing",
+            "wall_s": 0.3874,
+            "prompt_tokens": 147,
+            "new_tokens": 15,
+            "ttft_ms": 220,
+            "tokens_per_s": 83.83
+          }
+        },
+        {
+          "text": "What is carried out by the sentence?",
+          "temperature": 0.4,
+          "wall_s": 0.9228,
+          "failed": [
+            "stem_in_passage",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 157,
+          "new_tokens": 47,
+          "ttft_ms": 233,
+          "tokens_per_s": 66.76,
+          "verify": {
+            "text": "employment and housing",
+            "wall_s": 0.3696,
+            "prompt_tokens": 145,
+            "new_tokens": 15,
+            "ttft_ms": 210,
+            "tokens_per_s": 88.05
+          }
+        },
+        {
+          "text": "What does the sentence \"It also carries out government schemes for employment and housing\" refer to?",
+          "temperature": 0.7,
+          "wall_s": 0.7579,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_readability"
+          ],
+          "prompt_tokens": 157,
+          "new_tokens": 47,
+          "ttft_ms": 219,
+          "tokens_per_s": 85.34,
+          "verify": null
+        }
+      ],
+      "reserve": null
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "sarpanch",
+      "options": [
+        "government",
+        "sarpanch",
+        "whose",
+        "local"
+      ],
+      "witness_idx": 9,
+      "witness": "At its meetings, villagers can question the sarpanch about how money was spent and can suggest new work.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "18 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "similarity to the witness 1.00"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.33"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 8.5 (limit 8.5)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question",
+        "stem_not_echo: similarity to the witness 1.00"
+      ],
+      "attempts": [
+        {
+          "text": "At its meetings, villagers can question the sarpanch about how money was spent and can suggest new work.",
+          "temperature": 0.0,
+          "wall_s": 0.7552,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 231,
+          "tokens_per_s": 87.79,
+          "verify": null
+        },
+        {
+          "text": "At its meetings, villagers can question the sarpanch about how money was spent and can suggest new work.",
+          "temperature": 0.4,
+          "wall_s": 0.7529,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 221,
+          "tokens_per_s": 86.63,
+          "verify": null
+        },
+        {
+          "text": "At the meetings, villagers can question the sarpanch about how money was spent and can suggest new work.",
+          "temperature": 0.7,
+          "wall_s": 0.7451,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 218,
+          "tokens_per_s": 87.29,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: At its _____, villagers can question the sarpanch about how money was spent and can suggest new work.",
+        "key": "meetings",
+        "witness_idx": 9,
+        "witness": "At its meetings, villagers can question the sarpanch about how money was spent and can suggest new work.",
+        "options": [
+          "roads",
+          "villages",
+          "sources",
+          "meetings"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "What is the main action of the sentence?",
+      "key": "elected",
+      "options": [
+        "discussed",
+        "reserved",
+        "elected",
+        "member"
+      ],
+      "witness_idx": 3,
+      "witness": "They are elected for five years.",
+      "tier": "AMBER",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.31"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.47"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "0% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.3 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_in_passage: 0% of content words are in the passage"
+      ],
+      "attempts": [
+        {
+          "text": "What is the main function of the sentence?",
+          "temperature": 0.0,
+          "wall_s": 0.7073,
+          "failed": [
+            "stem_in_passage",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 153,
+          "new_tokens": 47,
+          "ttft_ms": 201,
+          "tokens_per_s": 91.09,
+          "verify": {
+            "text": "to serve as a representative of the people.",
+            "wall_s": 0.3315,
+            "prompt_tokens": 142,
+            "new_tokens": 15,
+            "ttft_ms": 176,
+            "tokens_per_s": 90.32
+          }
+        },
+        {
+          "text": "What is the main action of the sentence?",
+          "temperature": 0.4,
+          "wall_s": 0.7209,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 153,
+          "new_tokens": 47,
+          "ttft_ms": 201,
+          "tokens_per_s": 88.63,
+          "verify": {
+            "text": "elected",
+            "wall_s": 0.3272,
+            "prompt_tokens": 142,
+            "new_tokens": 15,
+            "ttft_ms": 173,
+            "tokens_per_s": 90.91
+          }
+        },
+        {
+          "text": "What do they do for five years?",
+          "temperature": 0.7,
+          "wall_s": 0.7285,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 153,
+          "new_tokens": 47,
+          "ttft_ms": 202,
+          "tokens_per_s": 87.45,
+          "verify": {
+            "text": "they serve as members of the government",
+            "wall_s": 0.3277,
+            "prompt_tokens": 141,
+            "new_tokens": 15,
+            "ttft_ms": 175,
+            "tokens_per_s": 92.11
+          }
+        }
+      ],
+      "reserve": null
+    },
+    {
+      "id": 6,
+      "kind": "cloze",
+      "stem": "Fill in the blank: Every adult who lives in the village and whose name is on the voters' list is a member of the Gram _____, the meeting of all such people.",
+      "key": "Sabha",
+      "options": [
+        "Zila",
+        "Panchayat",
+        "Sabha",
+        "Parishad"
+      ],
+      "witness_idx": 1,
+      "witness": "Every adult who lives in the village and whose name is on the voters' list is a member of the Gram Sabha, the meeting of all such people.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: Every adult who lives in the village and whose name is on the voters' list is a _____ of the Gram Sabha, the meeting of all such people.",
+        "key": "member",
+        "witness_idx": 1,
+        "witness": "Every adult who lives in the village and whose name is on the voters' list is a member of the Gram Sabha, the meeting of all such people.",
+        "options": [
+          "member",
+          "panchayat",
+          "government",
+          "pradhan"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: It also carries out _____ schemes for employment and housing.",
+      "key": "government",
+      "options": [
+        "adult",
+        "government",
+        "whose",
+        "sarpanch"
+      ],
+      "witness_idx": 7,
+      "witness": "It also carries out government schemes for employment and housing.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": null
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 18.8483,
+    "summary_s": 6.2616,
+    "stems_s": 12.5847,
+    "model_wall_s": 16.6569,
+    "model_calls": 19,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 1,
+    "red": 3,
+    "fallback": 3
+  },
+  "version": 1,
+  "created": "2026-11-13T01:22:54",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

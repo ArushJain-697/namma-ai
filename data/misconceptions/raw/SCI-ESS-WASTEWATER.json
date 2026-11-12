@@ -1,0 +1,137 @@
+{
+ "topic": {
+  "id": "SCI-ESS-WASTEWATER",
+  "subject": "science",
+  "strand": "earth_space",
+  "grades": [
+   7
+  ],
+  "title": "Wastewater story",
+  "scope": "sewage, treatment plants, sanitation, better housekeeping, open defecation and disease"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 697,
+  "candidatesTokenCount": 901,
+  "totalTokenCount": 1598,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 697
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.9,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Sewage and Wastewater",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Water that looks clear is always safe to drink.",
+      "why": "Students equate visual clarity with purity based on everyday observation of tap water.",
+      "fix": "Water can contain invisible dissolved impurities and harmful germs even if it appears transparent.",
+      "probe": {
+       "question": "If you filter muddy water until it looks clear, is it safe to drink?",
+       "wrong_answer": "Yes, because it looks clean and has no particles."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "clear water",
+       "transparent",
+       "impurities",
+       "safe to drink",
+       "filtered"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Sanitation and Disease",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Diseases are caused by bad smells from open drains.",
+      "why": "The association between foul odors and unpleasant environments leads students to assume the smell itself is the vector of illness.",
+      "fix": "Diseases are spread by microorganisms like bacteria and viruses that breed in sewage, not by the smell itself.",
+      "probe": {
+       "question": "Why do people get sick near open drains?",
+       "wrong_answer": "Because the bad smell carries the disease into their bodies."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "bad smell",
+       "open drains",
+       "disease",
+       "foul odor",
+       "sickness"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Wastewater Treatment",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Wastewater treatment plants turn sewage into pure drinking water.",
+      "why": "Students often assume that 'treatment' implies a complete restoration to the original state of utility.",
+      "fix": "Treatment plants clean wastewater enough to be safely released into rivers or used for irrigation, but it is not necessarily potable.",
+      "probe": {
+       "question": "Can we drink the water coming out of a sewage treatment plant?",
+       "wrong_answer": "Yes, because the plant has removed all the dirt and germs."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "treatment plant",
+       "sewage",
+       "purification",
+       "drinking water",
+       "safe"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Chemicals are the only way to clean dirty water.",
+      "why": "Students focus on the use of chlorine or bleach in household cleaning and ignore biological processes.",
+      "fix": "Many treatment plants use bacteria and physical processes to break down organic waste before using chemicals.",
+      "probe": {
+       "question": "How do treatment plants remove organic waste from water?",
+       "wrong_answer": "They add strong chemicals to kill everything and dissolve the waste."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "chemicals",
+       "cleaning",
+       "bacteria",
+       "organic waste",
+       "treatment"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Water: A Precious Resource",
+   "Microorganisms: Friend and Foe"
+  ]
+ },
+ "problems": []
+}

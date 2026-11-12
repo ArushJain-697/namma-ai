@@ -1,0 +1,157 @@
+{
+ "topic": {
+  "id": "SCI-BIO-HEREDITY",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   10
+  ],
+  "title": "Heredity and evolution",
+  "scope": "variation, Mendel's experiments, dominant and recessive traits, sex determination, evolution and natural selection"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 704,
+  "candidatesTokenCount": 1186,
+  "totalTokenCount": 1890,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 704
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.8,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Inheritance and Variation",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Acquired traits like muscle building or learning a skill are passed down to offspring.",
+      "why": "Students confuse the biological meaning of inheritance with the cultural or social inheritance of skills and habits.",
+      "fix": "Only changes in the DNA of germ cells are inherited; changes in somatic cells do not affect the next generation.",
+      "probe": {
+       "question": "If a bodybuilder trains hard to develop large muscles, will their child be born with larger muscles than average?",
+       "wrong_answer": "Yes, because the parent's hard work and physical development are passed on to the baby."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "acquired traits",
+       "inheritance",
+       "germ cells",
+       "somatic cells",
+       "passing on"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "Dominant traits are always more common in a population than recessive traits.",
+      "why": "Students conflate the term 'dominant' with 'frequent' or 'better' due to common language usage.",
+      "fix": "Dominance refers to which trait is expressed in a heterozygote, not how frequently it appears in a population.",
+      "probe": {
+       "question": "If a trait is recessive, does that mean it will eventually disappear from the population?",
+       "wrong_answer": "Yes, because recessive traits are weak and will be replaced by dominant ones over time."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "dominant",
+       "recessive",
+       "frequency",
+       "population",
+       "traits"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Mendelian Laws and Sex Determination",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The father determines the sex of the child, so he is responsible for the gender of the baby.",
+      "why": "Students often interpret biological facts through a social lens, leading to blame-oriented reasoning.",
+      "fix": "Sex determination is a random process based on whether an X or Y chromosome-carrying sperm fertilizes the egg; it is not a matter of control.",
+      "probe": {
+       "question": "Can a father choose to have a girl by changing his diet or behavior?",
+       "wrong_answer": "Yes, because the father controls the sex of the child."
+      },
+      "error_type": "living_thing_reasoning",
+      "trigger_cues": [
+       "sex determination",
+       "x chromosome",
+       "y chromosome",
+       "fertilization",
+       "gender"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Evolution and Natural Selection",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Organisms evolve because they need to adapt to survive in a new environment.",
+      "why": "Students use teleological reasoning, assuming that evolution is a conscious effort by the organism to improve itself.",
+      "fix": "Evolution occurs through natural selection acting on existing variations; individuals do not choose to evolve.",
+      "probe": {
+       "question": "Why did giraffes develop long necks?",
+       "wrong_answer": "They needed to reach high leaves, so their necks grew longer over their lifetimes to help them survive."
+      },
+      "error_type": "living_thing_reasoning",
+      "trigger_cues": [
+       "natural selection",
+       "adaptation",
+       "survival of the fittest",
+       "evolution",
+       "environment"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Humans evolved directly from chimpanzees or monkeys.",
+      "why": "Students misinterpret the 'tree of life' as a linear progression rather than a branching history with common ancestors.",
+      "fix": "Humans and chimpanzees share a common ancestor that lived millions of years ago, but humans did not evolve from modern apes.",
+      "probe": {
+       "question": "Are chimpanzees our ancestors?",
+       "wrong_answer": "Yes, humans are just more evolved versions of chimpanzees."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "common ancestor",
+       "human evolution",
+       "branching",
+       "lineage",
+       "species"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Cell biology and reproduction",
+   "Basic genetics",
+   "Classification of living organisms"
+  ]
+ },
+ "problems": []
+}

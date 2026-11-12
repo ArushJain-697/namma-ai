@@ -1,0 +1,1229 @@
+{
+  "passage": "Microorganisms are living things so small that they can be seen only through a microscope. They include bacteria, fungi, protozoa and some algae. Although some cause diseases, many microorganisms are very useful to us. When a little curd is added to warm milk and left for a few hours, the milk sets into curd. This happens because a bacterium called Lactobacillus multiplies in the milk and converts it into curd. The same kind of bacteria helps in making cheese and pickles. Yeast, a fungus, is used in making bread, idli and dosa batter. As yeast respires, it releases carbon dioxide gas, and the bubbles of gas make the dough rise and the batter soft and spongy. Microorganisms are also used to make medicines. In 1929 Alexander Fleming noticed that a mould growing on one of his plates had stopped the growth of bacteria around it. From this mould the first antibiotic, penicillin, was made. Antibiotics kill or stop the growth of disease-causing bacteria, but they do not work against viruses, such as those that cause the common cold. In the soil, some bacteria and blue-green algae fix nitrogen from the air and make the soil more fertile. Other microorganisms break down dead plants and animals into simple substances, which keeps the environment clean.",
+  "gate": {
+    "status": "OK",
+    "words": 213,
+    "reason": "OK: 213 words"
+  },
+  "summary": {
+    "text": "In 1929, Alexander Fleming noticed that a mold was growing on one of his plates and stopped the growth of bacteria around it. Antibiotics kill or stop disease-causing bacteria, but they don't work against viruses like the ones that cause the common cold.",
+    "word_count": 43,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "43 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 9,
+        "source": "In 1929 Alexander Fleming noticed that a mould growing on one of his plates had stopped the growth of bacteria around it.",
+        "text": "In 1929, Alexander Fleming noticed that a mold was growing on one of his plates and stopped the growth of bacteria around it.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 12.4 (limit 12.3), 23 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "In 1929, Alexander Fleming noticed that a mold was growing on one of his plates and stopped the growth of bacteria around it.",
+            "temperature": 0.0,
+            "wall_s": 0.9031,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 100,
+            "new_tokens": 79,
+            "ttft_ms": 123,
+            "tokens_per_s": 100.0,
+            "verify": null
+          },
+          {
+            "text": "In 1929, Alexander Fleming noticed that a mold was growing on one of his plates and stopped the growth of bacteria around it.",
+            "temperature": 0.4,
+            "wall_s": 0.9163,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 100,
+            "new_tokens": 79,
+            "ttft_ms": 122,
+            "tokens_per_s": 98.24,
+            "verify": null
+          },
+          {
+            "text": "In 1929, Alexander Fleming noticed that a mould was growing on one of his plates and stopped the bacteria from growing around it.",
+            "temperature": 0.7,
+            "wall_s": 0.9133,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 100,
+            "new_tokens": 79,
+            "ttft_ms": 122,
+            "tokens_per_s": 98.73,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 11,
+        "source": "Antibiotics kill or stop the growth of disease-causing bacteria, but they do not work against viruses, such as those that cause the common cold.",
+        "text": "Antibiotics kill or stop disease-causing bacteria, but they don't work against viruses like the ones that cause the common cold.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 11.7 (limit 11.5), 20 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "Antibiotics kill or stop disease-causing bacteria, but they don't work against viruses like the ones that cause the common cold.",
+            "temperature": 0.0,
+            "wall_s": 0.9089,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 103,
+            "new_tokens": 79,
+            "ttft_ms": 130,
+            "tokens_per_s": 100.26,
+            "verify": null
+          },
+          {
+            "text": "Antibiotics kill or stop the growth of disease-causing bacteria, but they don't work against viruses like the ones in the common cold.",
+            "temperature": 0.4,
+            "wall_s": 0.9214,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 103,
+            "new_tokens": 79,
+            "ttft_ms": 125,
+            "tokens_per_s": 98.11,
+            "verify": null
+          },
+          {
+            "text": "Antibiotics kill or stop disease-causing bacteria, but they don’t work against viruses like the common cold.",
+            "temperature": 0.7,
+            "wall_s": 0.9257,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 103,
+            "new_tokens": 79,
+            "ttft_ms": 126,
+            "tokens_per_s": 97.62,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "growth",
+      "options": [
+        "antibiotic",
+        "growth",
+        "yeast",
+        "soil"
+      ],
+      "witness_idx": 9,
+      "witness": "In 1929 Alexander Fleming noticed that a mould growing on one of his plates had stopped the growth of bacteria around it.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "9 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.38"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 7.6 (limit 12.3)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'the bacteria stopped growing', not 'growth'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'the bacteria stopped growing', not 'growth'"
+      ],
+      "attempts": [
+        {
+          "text": "What happened to the bacteria around the growing mould?",
+          "temperature": 0.0,
+          "wall_s": 0.7298,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 173,
+          "new_tokens": 47,
+          "ttft_ms": 217,
+          "tokens_per_s": 89.84,
+          "verify": {
+            "text": "the bacteria stopped growing",
+            "wall_s": 0.3686,
+            "prompt_tokens": 163,
+            "new_tokens": 15,
+            "ttft_ms": 206,
+            "tokens_per_s": 86.42
+          }
+        },
+        {
+          "text": "What happened to the bacteria around the growing mould?",
+          "temperature": 0.4,
+          "wall_s": 0.7489,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 173,
+          "new_tokens": 47,
+          "ttft_ms": 230,
+          "tokens_per_s": 88.63,
+          "verify": {
+            "text": "the bacteria stopped growing",
+            "wall_s": 0.3682,
+            "prompt_tokens": 163,
+            "new_tokens": 15,
+            "ttft_ms": 208,
+            "tokens_per_s": 88.05
+          }
+        },
+        {
+          "text": "What happens when a bacteria grows on a plate?",
+          "temperature": 0.7,
+          "wall_s": 0.7359,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 173,
+          "new_tokens": 47,
+          "ttft_ms": 218,
+          "tokens_per_s": 88.97,
+          "verify": {
+            "text": "bacteria die on the plate",
+            "wall_s": 0.3675,
+            "prompt_tokens": 163,
+            "new_tokens": 15,
+            "ttft_ms": 206,
+            "tokens_per_s": 86.96
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: In 1929 Alexander Fleming noticed that a _____ growing on one of his plates had stopped the growth of bacteria around it.",
+        "key": "mould",
+        "witness_idx": 9,
+        "witness": "In 1929 Alexander Fleming noticed that a mould growing on one of his plates had stopped the growth of bacteria around it.",
+        "options": [
+          "soil",
+          "seen",
+          "antibiotic",
+          "mould"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "algae",
+      "options": [
+        "batter",
+        "antibiotic",
+        "algae",
+        "seen"
+      ],
+      "witness_idx": 12,
+      "witness": "In the soil, some bacteria and blue-green algae fix nitrogen from the air and make the soil more fertile.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.39"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade -0.7 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What do the algae fix from the air?",
+          "temperature": 0.0,
+          "wall_s": 0.7813,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 263,
+          "tokens_per_s": 88.97,
+          "verify": null
+        },
+        {
+          "text": "What do the algae fix from the air?",
+          "temperature": 0.4,
+          "wall_s": 0.7248,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 208,
+          "tokens_per_s": 89.15,
+          "verify": null
+        },
+        {
+          "text": "What makes the soil more fertile in the soil?",
+          "temperature": 0.7,
+          "wall_s": 0.7239,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 208,
+          "tokens_per_s": 89.15,
+          "verify": {
+            "text": "nitrogen from the air",
+            "wall_s": 0.3523,
+            "prompt_tokens": 158,
+            "new_tokens": 15,
+            "ttft_ms": 199,
+            "tokens_per_s": 92.11
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: In the soil, some bacteria and blue-green algae fix nitrogen from the air and make the soil more _____.",
+        "key": "fertile",
+        "witness_idx": 12,
+        "witness": "In the soil, some bacteria and blue-green algae fix nitrogen from the air and make the soil more fertile.",
+        "options": [
+          "curd",
+          "fertile",
+          "growth",
+          "antibiotic"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "What does the same kind of bacteria help in doing?",
+      "key": "making",
+      "options": [
+        "microorganisms",
+        "making",
+        "milk",
+        "yeast"
+      ],
+      "witness_idx": 5,
+      "witness": "The same kind of bacteria helps in making cheese and pickles.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "10 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.67"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.5 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is the function of the same kind of bacteria in making cheese and pickles?",
+          "temperature": 0.0,
+          "wall_s": 0.7051,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 159,
+          "new_tokens": 47,
+          "ttft_ms": 204,
+          "tokens_per_s": 92.0,
+          "verify": null
+        },
+        {
+          "text": "What is the function of the same kind of bacteria in making cheese and pickles?",
+          "temperature": 0.4,
+          "wall_s": 0.7205,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 159,
+          "new_tokens": 47,
+          "ttft_ms": 202,
+          "tokens_per_s": 88.8,
+          "verify": null
+        },
+        {
+          "text": "What does the same kind of bacteria help in doing?",
+          "temperature": 0.7,
+          "wall_s": 0.7244,
+          "failed": [],
+          "prompt_tokens": 159,
+          "new_tokens": 47,
+          "ttft_ms": 203,
+          "tokens_per_s": 88.29,
+          "verify": {
+            "text": "making food and food-making",
+            "wall_s": 0.3425,
+            "prompt_tokens": 150,
+            "new_tokens": 15,
+            "ttft_ms": 196,
+            "tokens_per_s": 95.89
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The same kind of bacteria helps in making cheese and _____.",
+        "key": "pickles",
+        "witness_idx": 5,
+        "witness": "The same kind of bacteria helps in making cheese and pickles.",
+        "options": [
+          "gas",
+          "releases",
+          "multiplies",
+          "pickles"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "curd",
+      "options": [
+        "batter",
+        "algae",
+        "curd",
+        "bacteria"
+      ],
+      "witness_idx": 3,
+      "witness": "When a little curd is added to warm milk and left for a few hours, the milk sets into curd.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "10 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.36"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.45"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "80% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.5 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is the result of adding curd to warm milk?",
+          "temperature": 0.0,
+          "wall_s": 0.727,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 171,
+          "new_tokens": 47,
+          "ttft_ms": 215,
+          "tokens_per_s": 89.84,
+          "verify": null
+        },
+        {
+          "text": "What is the result of adding curd to warm milk?",
+          "temperature": 0.4,
+          "wall_s": 0.7337,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 171,
+          "new_tokens": 47,
+          "ttft_ms": 215,
+          "tokens_per_s": 88.8,
+          "verify": null
+        },
+        {
+          "text": "What is the curd made of?",
+          "temperature": 0.7,
+          "wall_s": 0.7408,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 171,
+          "new_tokens": 47,
+          "ttft_ms": 215,
+          "tokens_per_s": 87.62,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: When a little curd is added to warm _____ and left for a few hours, the _____ sets into curd.",
+        "key": "milk",
+        "witness_idx": 3,
+        "witness": "When a little curd is added to warm milk and left for a few hours, the milk sets into curd.",
+        "options": [
+          "mould",
+          "growth",
+          "milk",
+          "batter"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "batter",
+      "options": [
+        "mould",
+        "batter",
+        "curd",
+        "bacteria"
+      ],
+      "witness_idx": 6,
+      "witness": "Yeast, a fungus, is used in making bread, idli and dosa batter.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "10 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.83"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.35"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 6.0 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is used in making bread, idli, and dosa batter?",
+          "temperature": 0.0,
+          "wall_s": 0.7247,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 165,
+          "new_tokens": 47,
+          "ttft_ms": 211,
+          "tokens_per_s": 89.49,
+          "verify": null
+        },
+        {
+          "text": "What is used in making bread, idli, and dosa batter?",
+          "temperature": 0.4,
+          "wall_s": 0.7307,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 165,
+          "new_tokens": 47,
+          "ttft_ms": 206,
+          "tokens_per_s": 87.79,
+          "verify": null
+        },
+        {
+          "text": "What is used in making bread, idli and dosa batter?",
+          "temperature": 0.7,
+          "wall_s": 0.7316,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 165,
+          "new_tokens": 47,
+          "ttft_ms": 209,
+          "tokens_per_s": 88.12,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Yeast, a fungus, is used in _____ bread, idli and dosa batter.",
+        "key": "making",
+        "witness_idx": 6,
+        "witness": "Yeast, a fungus, is used in making bread, idli and dosa batter.",
+        "options": [
+          "making",
+          "curd",
+          "bacteria",
+          "living"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "antibiotic",
+      "options": [
+        "bacteria",
+        "soil",
+        "growth",
+        "antibiotic"
+      ],
+      "witness_idx": 10,
+      "witness": "From this mould the first antibiotic, penicillin, was made.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "12 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.53"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.46"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "75% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.8 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is the name of the first antibiotic made from this mould?",
+          "temperature": 0.0,
+          "wall_s": 0.7161,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 160,
+          "new_tokens": 47,
+          "ttft_ms": 203,
+          "tokens_per_s": 89.67,
+          "verify": null
+        },
+        {
+          "text": "What is the name of the first antibiotic, penicillin?",
+          "temperature": 0.4,
+          "wall_s": 0.7238,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 160,
+          "new_tokens": 47,
+          "ttft_ms": 204,
+          "tokens_per_s": 88.63,
+          "verify": null
+        },
+        {
+          "text": "What is the first antibiotic made from?",
+          "temperature": 0.7,
+          "wall_s": 0.7188,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 160,
+          "new_tokens": 47,
+          "ttft_ms": 200,
+          "tokens_per_s": 88.8,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: From this _____ the first antibiotic, penicillin, was made.",
+        "key": "mould",
+        "witness_idx": 10,
+        "witness": "From this mould the first antibiotic, penicillin, was made.",
+        "options": [
+          "growth",
+          "mould",
+          "yeast",
+          "bacteria"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: Although some cause diseases, many _____ are very useful to us.",
+      "key": "microorganisms",
+      "options": [
+        "fungus",
+        "microorganisms",
+        "converts",
+        "multiplies"
+      ],
+      "witness_idx": 2,
+      "witness": "Although some cause diseases, many microorganisms are very useful to us.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": null
+    },
+    {
+      "id": 8,
+      "kind": "cloze",
+      "stem": "Fill in the blank: In 1929 Alexander Fleming noticed that a mould growing on one of his plates had stopped the _____ of bacteria around it.",
+      "key": "growth",
+      "options": [
+        "antibiotic",
+        "growth",
+        "yeast",
+        "soil"
+      ],
+      "witness_idx": 9,
+      "witness": "In 1929 Alexander Fleming noticed that a mould growing on one of his plates had stopped the growth of bacteria around it.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: In 1929 Alexander Fleming noticed that a _____ growing on one of his plates had stopped the growth of bacteria around it.",
+        "key": "mould",
+        "witness_idx": 9,
+        "witness": "In 1929 Alexander Fleming noticed that a mould growing on one of his plates had stopped the growth of bacteria around it.",
+        "options": [
+          "soil",
+          "seen",
+          "antibiotic",
+          "mould"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 20.4449,
+    "summary_s": 5.4907,
+    "stems_s": 14.9525,
+    "model_wall_s": 18.6305,
+    "model_calls": 24,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 0,
+    "red": 5,
+    "fallback": 2
+  },
+  "version": 1,
+  "created": "2026-11-13T01:17:43",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

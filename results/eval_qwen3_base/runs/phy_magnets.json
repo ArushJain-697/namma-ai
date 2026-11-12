@@ -1,0 +1,1070 @@
+{
+  "passage": "Magnets attract objects made of iron, nickel and cobalt. Materials that are attracted by a magnet are called magnetic materials, while materials such as wood, plastic, rubber and glass are non-magnetic. Every magnet has two poles, a north pole and a south pole. The attraction is strongest near the poles. If a bar magnet is hung freely from a thread, it always comes to rest pointing in the north-south direction. This property is used in a compass, which travellers and sailors have used for centuries to find directions. When two magnets are brought close, like poles repel each other and unlike poles attract each other. Breaking a magnet does not separate its poles: each broken piece becomes a new magnet with its own north and south pole. Magnets lose their magnetism if they are heated, hammered or dropped often. To keep them safe, bar magnets are stored in pairs with their unlike poles on the same side, separated by a piece of wood.",
+  "gate": {
+    "status": "OK",
+    "words": 163,
+    "reason": "OK: 163 words"
+  },
+  "summary": {
+    "text": "Every magnet has two poles, one north and one south. When two magnets with the same pole repel each other, and two magnets with opposite poles attract each other. To keep them safe, bar magnets are stored in pairs with their unlike poles on the same side, separated by a piece of wood.",
+    "word_count": 53,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "53 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 2,
+        "source": "Every magnet has two poles, a north pole and a south pole.",
+        "text": "Every magnet has two poles, one north and one south.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "Every magnet has two poles, one north and one south.",
+            "temperature": 0.0,
+            "wall_s": 0.8351,
+            "failed": [],
+            "prompt_tokens": 87,
+            "new_tokens": 79,
+            "ttft_ms": 110,
+            "tokens_per_s": 107.59,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 6,
+        "source": "When two magnets are brought close, like poles repel each other and unlike poles attract each other.",
+        "text": "When two magnets with the same pole repel each other, and two magnets with opposite poles attract each other.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 9.8 (limit 8.4), 19 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "When two magnets with the same pole repel each other, and two magnets with opposite poles attract each other.",
+            "temperature": 0.0,
+            "wall_s": 0.8459,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 93,
+            "new_tokens": 79,
+            "ttft_ms": 116,
+            "tokens_per_s": 106.85,
+            "verify": null
+          },
+          {
+            "text": "When two magnets with the same pole repel each other, and two magnets with opposite poles attract each other.",
+            "temperature": 0.4,
+            "wall_s": 0.8673,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 93,
+            "new_tokens": 79,
+            "ttft_ms": 118,
+            "tokens_per_s": 104.14,
+            "verify": null
+          },
+          {
+            "text": "When two magnets with the same pole repel each other, and two magnets with opposite poles attract each other.",
+            "temperature": 0.7,
+            "wall_s": 0.8613,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 93,
+            "new_tokens": 79,
+            "ttft_ms": 116,
+            "tokens_per_s": 104.7,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 9,
+        "source": "To keep them safe, bar magnets are stored in pairs with their unlike poles on the same side, separated by a piece of wood.",
+        "text": "To keep them safe, bar magnets are stored in pairs with their unlike poles on the same side, separated by a piece of wood.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 9.0 (limit 9.0), 24 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "To keep them safe, bar magnets are stored in pairs with their unlike poles on the same side, separated by a piece of wood.",
+            "temperature": 0.0,
+            "wall_s": 0.8835,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 100,
+            "new_tokens": 79,
+            "ttft_ms": 121,
+            "tokens_per_s": 102.5,
+            "verify": null
+          },
+          {
+            "text": "To keep them safe, bar magnets are stored in pairs with their unlike poles on one side, separated by a piece of wood.",
+            "temperature": 0.4,
+            "wall_s": 0.8783,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 100,
+            "new_tokens": 79,
+            "ttft_ms": 120,
+            "tokens_per_s": 102.9,
+            "verify": null
+          },
+          {
+            "text": "To keep them safe, bar magnets are stored in pairs with their unlike poles on one side, and separated by a piece of wood.",
+            "temperature": 0.7,
+            "wall_s": 0.8943,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 100,
+            "new_tokens": 79,
+            "ttft_ms": 121,
+            "tokens_per_s": 100.91,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "wood",
+      "options": [
+        "direction",
+        "magnetic",
+        "wood",
+        "attract"
+      ],
+      "witness_idx": 9,
+      "witness": "To keep them safe, bar magnets are stored in pairs with their unlike poles on the same side, separated by a piece of wood.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "19 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.84"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 7.3 (limit 9.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is stored in pairs with their unlike poles on the same side, separated by a piece of wood?",
+          "temperature": 0.0,
+          "wall_s": 0.7083,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 173,
+          "new_tokens": 47,
+          "ttft_ms": 216,
+          "tokens_per_s": 93.69,
+          "verify": null
+        },
+        {
+          "text": "What is stored in pairs with their unlike poles on the same side, separated by a piece of wood?",
+          "temperature": 0.4,
+          "wall_s": 0.7095,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 173,
+          "new_tokens": 47,
+          "ttft_ms": 216,
+          "tokens_per_s": 93.31,
+          "verify": null
+        },
+        {
+          "text": "What is used to keep them safe?",
+          "temperature": 0.7,
+          "wall_s": 0.7959,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 173,
+          "new_tokens": 47,
+          "ttft_ms": 234,
+          "tokens_per_s": 81.85,
+          "verify": {
+            "text": "bar magnets",
+            "wall_s": 0.4018,
+            "prompt_tokens": 161,
+            "new_tokens": 15,
+            "ttft_ms": 228,
+            "tokens_per_s": 80.46
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: To keep them safe, bar magnets are stored in pairs with their unlike poles on the same side, separated by a _____ of wood.",
+        "key": "piece",
+        "witness_idx": 9,
+        "witness": "To keep them safe, bar magnets are stored in pairs with their unlike poles on the same side, separated by a piece of wood.",
+        "options": [
+          "iron",
+          "magnetic",
+          "piece",
+          "direction"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "What do magnets have?",
+      "key": "pole",
+      "options": [
+        "direction",
+        "nickel",
+        "pole",
+        "attract"
+      ],
+      "witness_idx": 2,
+      "witness": "Every magnet has two poles, a north pole and a south pole.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "4 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.28"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 0.7 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What do magnets have?",
+          "temperature": 0.0,
+          "wall_s": 0.7778,
+          "failed": [],
+          "prompt_tokens": 160,
+          "new_tokens": 47,
+          "ttft_ms": 215,
+          "tokens_per_s": 81.85,
+          "verify": {
+            "text": "two poles",
+            "wall_s": 0.3509,
+            "prompt_tokens": 145,
+            "new_tokens": 15,
+            "ttft_ms": 205,
+            "tokens_per_s": 96.55
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Every magnet has two poles, a north pole and a _____ pole.",
+        "key": "south",
+        "witness_idx": 2,
+        "witness": "Every magnet has two poles, a north pole and a south pole.",
+        "options": [
+          "south",
+          "attract",
+          "unlike",
+          "direction"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "attract",
+      "options": [
+        "iron",
+        "attract",
+        "piece",
+        "wood"
+      ],
+      "witness_idx": 6,
+      "witness": "When two magnets are brought close, like poles repel each other and unlike poles attract each other.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "19 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "similarity to the witness 0.93"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.25"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "89% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "grade 9.2 (limit 8.4)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question",
+        "stem_not_echo: similarity to the witness 0.93",
+        "stem_readability: grade 9.2 (limit 8.4)"
+      ],
+      "attempts": [
+        {
+          "text": "When two magnets are brought close, like poles attract each other and unlike poles repel each other.",
+          "temperature": 0.0,
+          "wall_s": 0.749,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 218,
+          "tokens_per_s": 86.79,
+          "verify": null
+        },
+        {
+          "text": "When two magnets are brought close, like poles attract each other and unlike poles repel each other.",
+          "temperature": 0.4,
+          "wall_s": 0.7632,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 220,
+          "tokens_per_s": 84.71,
+          "verify": null
+        },
+        {
+          "text": "When two magnets are brought close, like poles repel each other and unlike poles attract each other, what happens?",
+          "temperature": 0.7,
+          "wall_s": 0.7666,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_not_echo",
+            "stem_readability"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 228,
+          "tokens_per_s": 85.66,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: When two magnets are brought close, like _____ repel each other and unlike _____ attract each other.",
+        "key": "poles",
+        "witness_idx": 6,
+        "witness": "When two magnets are brought close, like poles repel each other and unlike poles attract each other.",
+        "options": [
+          "poles",
+          "travellers",
+          "sailors",
+          "objects"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "direction",
+      "options": [
+        "attract",
+        "iron",
+        "south",
+        "direction"
+      ],
+      "witness_idx": 4,
+      "witness": "If a bar magnet is hung freely from a thread, it always comes to rest pointing in the north-south direction.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "11 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.33"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.45"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.9 (limit 8.7)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What direction does a bar magnet always point when hung freely?",
+          "temperature": 0.0,
+          "wall_s": 0.7199,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 215,
+          "tokens_per_s": 91.27,
+          "verify": null
+        },
+        {
+          "text": "What is the direction in which the bar magnet always points?",
+          "temperature": 0.4,
+          "wall_s": 0.7508,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 213,
+          "tokens_per_s": 85.5,
+          "verify": null
+        },
+        {
+          "text": "What is the direction in which a bar magnet always points?",
+          "temperature": 0.7,
+          "wall_s": 0.7732,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 217,
+          "tokens_per_s": 82.88,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: If a _____ magnet is hung freely from a thread, it always comes to rest pointing in the north-south direction.",
+        "key": "bar",
+        "witness_idx": 4,
+        "witness": "If a bar magnet is hung freely from a thread, it always comes to rest pointing in the north-south direction.",
+        "options": [
+          "bar",
+          "iron",
+          "south",
+          "wood"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "dropped",
+      "options": [
+        "south",
+        "dropped",
+        "poles",
+        "stored"
+      ],
+      "witness_idx": 8,
+      "witness": "Magnets lose their magnetism if they are heated, hammered or dropped often.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": true,
+      "signals": [
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.46"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.54"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "67% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.8 (limit 8.8)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What happens to magnets when they are dropped?",
+          "temperature": 0.0,
+          "wall_s": 0.7392,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 211,
+          "tokens_per_s": 87.29,
+          "verify": null
+        },
+        {
+          "text": "What happens to magnets when they are dropped?",
+          "temperature": 0.4,
+          "wall_s": 0.7527,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 204,
+          "tokens_per_s": 83.94,
+          "verify": null
+        },
+        {
+          "text": "What happens to magnets when they are dropped?",
+          "temperature": 0.7,
+          "wall_s": 0.74,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 207,
+          "tokens_per_s": 86.3,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Magnets lose their magnetism if they are heated, _____ or dropped often.",
+        "key": "hammered",
+        "witness_idx": 8,
+        "witness": "Magnets lose their magnetism if they are heated, hammered or dropped often.",
+        "options": [
+          "attract",
+          "south",
+          "hammered",
+          "stored"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "cloze",
+      "stem": "Fill in the blank: To keep them safe, bar magnets are stored in pairs with their unlike poles on the same side, separated by a piece of _____.",
+      "key": "wood",
+      "options": [
+        "direction",
+        "magnetic",
+        "wood",
+        "attract"
+      ],
+      "witness_idx": 9,
+      "witness": "To keep them safe, bar magnets are stored in pairs with their unlike poles on the same side, separated by a piece of wood.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: To keep them safe, bar magnets are stored in pairs with their unlike poles on the same side, separated by a _____ of wood.",
+        "key": "piece",
+        "witness_idx": 9,
+        "witness": "To keep them safe, bar magnets are stored in pairs with their unlike poles on the same side, separated by a piece of wood.",
+        "options": [
+          "iron",
+          "magnetic",
+          "piece",
+          "direction"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: When two magnets are brought close, like poles repel each other and unlike poles _____ each other.",
+      "key": "attract",
+      "options": [
+        "iron",
+        "attract",
+        "piece",
+        "wood"
+      ],
+      "witness_idx": 6,
+      "witness": "When two magnets are brought close, like poles repel each other and unlike poles attract each other.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: When two magnets are brought close, like _____ repel each other and unlike _____ attract each other.",
+        "key": "poles",
+        "witness_idx": 6,
+        "witness": "When two magnets are brought close, like poles repel each other and unlike poles attract each other.",
+        "options": [
+          "poles",
+          "travellers",
+          "sailors",
+          "objects"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 16.5753,
+    "summary_s": 6.0673,
+    "stems_s": 10.5065,
+    "model_wall_s": 15.8118,
+    "model_calls": 20,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 0,
+    "red": 4,
+    "fallback": 2
+  },
+  "version": 1,
+  "created": "2026-11-13T01:14:18",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

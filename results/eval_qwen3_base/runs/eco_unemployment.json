@@ -1,0 +1,1217 @@
+{
+  "passage": "Lakshmi's family owns a small plot of land in a village in Bihar. The plot needs only two people to do all the work of ploughing, sowing and harvesting. But five members of the family work on it, because there is no other work for them in the village. If three of them stopped working on the farm, the amount of grain produced would stay the same. These three people seem to be employed, but their work adds nothing to the output. Economists call this disguised unemployment. It is common in Indian agriculture, where many families share small pieces of land. There is another kind of unemployment in villages. Farming in many areas depends on the rain, and there is a lot of work at the time of sowing and harvesting. In the months between, there is little to do, and many workers sit idle. This is called seasonal unemployment. Lakshmi's cousin, who works on other people's farms during the harvest and then has no work for four months, faces seasonal unemployment. Unemployment wastes a country's human resource. People who could add to the national income instead become dependent on others. To create more work, the government runs schemes such as the Mahatma Gandhi National Rural Employment Guarantee Act, which promises 100 days of paid work in a year to rural households.",
+  "gate": {
+    "status": "OK",
+    "words": 222,
+    "reason": "OK: 222 words"
+  },
+  "summary": {
+    "text": "The plot needs only two people to do all the work of plowing, sowing, and harvesting. Lakshmi's cousin works on other people's farms during the harvest, but then has no job for four months.",
+    "word_count": 34,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "34 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 1,
+        "source": "The plot needs only two people to do all the work of ploughing, sowing and harvesting.",
+        "text": "The plot needs only two people to do all the work of plowing, sowing, and harvesting.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 6.9 (limit 7.0), 16 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "The plot needs only two people to do all the work of plowing, sowing, and harvesting.",
+            "temperature": 0.0,
+            "wall_s": 0.8937,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 94,
+            "new_tokens": 79,
+            "ttft_ms": 121,
+            "tokens_per_s": 101.04,
+            "verify": null
+          },
+          {
+            "text": "The plot needs only two people to do all the work of plowing, sowing, and harvesting.",
+            "temperature": 0.4,
+            "wall_s": 0.9095,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 94,
+            "new_tokens": 79,
+            "ttft_ms": 121,
+            "tokens_per_s": 98.98,
+            "verify": null
+          },
+          {
+            "text": "The plot needs only two people to do all the work of plowing, sowing, and harvesting.",
+            "temperature": 0.7,
+            "wall_s": 0.911,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 94,
+            "new_tokens": 79,
+            "ttft_ms": 119,
+            "tokens_per_s": 98.61,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 11,
+        "source": "Lakshmi's cousin, who works on other people's farms during the harvest and then has no work for four months, faces seasonal unemployment.",
+        "text": "Lakshmi's cousin works on other people's farms during the harvest, but then has no job for four months.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 7.2 (limit 11.2), 18 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "Lakshmi's cousin works on other people's farms during the harvest, but then has no job for four months.",
+            "temperature": 0.0,
+            "wall_s": 0.9268,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 102,
+            "new_tokens": 79,
+            "ttft_ms": 134,
+            "tokens_per_s": 98.48,
+            "verify": null
+          },
+          {
+            "text": "Lakshmi's cousin works on other people's farms during the harvest, but then has no job for four months.",
+            "temperature": 0.4,
+            "wall_s": 0.9356,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 102,
+            "new_tokens": 79,
+            "ttft_ms": 129,
+            "tokens_per_s": 96.77,
+            "verify": null
+          },
+          {
+            "text": "Lakshmi's cousin works on other people's farms, and then gets no work for four months, so she faces seasonal unemployment.",
+            "temperature": 0.7,
+            "wall_s": 0.9405,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 102,
+            "new_tokens": 79,
+            "ttft_ms": 128,
+            "tokens_per_s": 96.18,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "short",
+      "stem": "(withheld: no valid question was written)",
+      "key": "National",
+      "options": null,
+      "witness_idx": 14,
+      "witness": "To create more work, the government runs schemes such as the Mahatma Gandhi National Rural Employment Guarantee Act, which promises 100 days of paid work in a year to rural households.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "13 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.65"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 14.0 (limit 15.5)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "The government runs schemes such as the Mahatma Gandhi National Rural Employment Guarantee Act, which promises 100 days of paid work in a year to rural households.",
+          "temperature": 0.0,
+          "wall_s": 0.7452,
+          "failed": [
+            "stem_question_mark",
+            "stem_length",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 185,
+          "new_tokens": 47,
+          "ttft_ms": 239,
+          "tokens_per_s": 90.91,
+          "verify": null
+        },
+        {
+          "text": "The government runs schemes such as the Mahatma Gandhi National Rural Employment Guarantee Act, which promises 100 days of paid work in a year to rural households.",
+          "temperature": 0.4,
+          "wall_s": 0.7566,
+          "failed": [
+            "stem_question_mark",
+            "stem_length",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 185,
+          "new_tokens": 47,
+          "ttft_ms": 239,
+          "tokens_per_s": 88.97,
+          "verify": null
+        },
+        {
+          "text": "The government runs schemes called the Mahatma Gandhi National Rural Employment Guarantee Act.",
+          "temperature": 0.7,
+          "wall_s": 0.7645,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 185,
+          "new_tokens": 47,
+          "ttft_ms": 238,
+          "tokens_per_s": 87.45,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: To create more work, the government runs schemes such as the Mahatma Gandhi National Rural Employment Guarantee Act, which promises _____ days of paid work in a year to rural households.",
+        "key": "100",
+        "witness_idx": 14,
+        "witness": "To create more work, the government runs schemes such as the Mahatma Gandhi National Rural Employment Guarantee Act, which promises 100 days of paid work in a year to rural households.",
+        "options": null
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "What is the main issue facing Lakshmi's cousin?",
+      "key": "unemployment",
+      "options": [
+        "unemployment",
+        "family",
+        "plot",
+        "village"
+      ],
+      "witness_idx": 11,
+      "witness": "Lakshmi's cousin, who works on other people's farms during the harvest and then has no work for four months, faces seasonal unemployment.",
+      "tier": "AMBER",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.17"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "40% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.8 (limit 11.2)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_in_passage: 40% of content words are in the passage"
+      ],
+      "attempts": [
+        {
+          "text": "What is the main issue facing Lakshmi's cousin?",
+          "temperature": 0.0,
+          "wall_s": 0.7439,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 175,
+          "new_tokens": 47,
+          "ttft_ms": 228,
+          "tokens_per_s": 89.32,
+          "verify": {
+            "text": "unemployment",
+            "wall_s": 0.3871,
+            "prompt_tokens": 167,
+            "new_tokens": 15,
+            "ttft_ms": 217,
+            "tokens_per_s": 82.35
+          }
+        },
+        {
+          "text": "What is the main issue faced by Lakshmi's cousin?",
+          "temperature": 0.4,
+          "wall_s": 0.7545,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 175,
+          "new_tokens": 47,
+          "ttft_ms": 230,
+          "tokens_per_s": 87.95,
+          "verify": {
+            "text": "unemployment",
+            "wall_s": 0.3855,
+            "prompt_tokens": 168,
+            "new_tokens": 15,
+            "ttft_ms": 214,
+            "tokens_per_s": 81.87
+          }
+        },
+        {
+          "text": "What is the situation faced by Lakshmi's cousin?",
+          "temperature": 0.7,
+          "wall_s": 0.7571,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 175,
+          "new_tokens": 47,
+          "ttft_ms": 229,
+          "tokens_per_s": 87.29,
+          "verify": {
+            "text": "unemployment",
+            "wall_s": 0.3835,
+            "prompt_tokens": 167,
+            "new_tokens": 15,
+            "ttft_ms": 214,
+            "tokens_per_s": 82.84
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Lakshmi's cousin, who works on other people's farms during the harvest and then has no work for four months, faces _____ unemployment.",
+        "key": "seasonal",
+        "witness_idx": 11,
+        "witness": "Lakshmi's cousin, who works on other people's farms during the harvest and then has no work for four months, faces seasonal unemployment.",
+        "options": [
+          "land",
+          "plot",
+          "seasonal",
+          "share"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "village",
+      "options": [
+        "village",
+        "unemployment",
+        "seasonal",
+        "agriculture"
+      ],
+      "witness_idx": 2,
+      "witness": "But five members of the family work on it, because there is no other work for them in the village.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "9 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.52"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.26"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.0 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "The village has no other work for the family.",
+          "temperature": 0.0,
+          "wall_s": 0.7387,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 219,
+          "tokens_per_s": 88.63,
+          "verify": null
+        },
+        {
+          "text": "The family works in the village.",
+          "temperature": 0.4,
+          "wall_s": 0.7422,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 214,
+          "tokens_per_s": 87.29,
+          "verify": null
+        },
+        {
+          "text": "The village has no other work for the family.",
+          "temperature": 0.7,
+          "wall_s": 0.7432,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 215,
+          "tokens_per_s": 87.12,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: But five members of the _____ work on it, because there is no other work for them in the village.",
+        "key": "family",
+        "witness_idx": 2,
+        "witness": "But five members of the family work on it, because there is no other work for them in the village.",
+        "options": [
+          "grain",
+          "seasonal",
+          "family",
+          "plot"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "What is the main task of the plot?",
+      "key": "harvesting",
+      "options": [
+        "seasonal",
+        "months",
+        "land",
+        "harvesting"
+      ],
+      "witness_idx": 1,
+      "witness": "The plot needs only two people to do all the work of ploughing, sowing and harvesting.",
+      "tier": "AMBER",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.13"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.57"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "33% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade -0.7 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_in_passage: 33% of content words are in the passage"
+      ],
+      "attempts": [
+        {
+          "text": "What is the main task of the plot?",
+          "temperature": 0.0,
+          "wall_s": 0.7312,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 212,
+          "tokens_per_s": 88.8,
+          "verify": {
+            "text": "ploughing, sowing and harvesting",
+            "wall_s": 0.3527,
+            "prompt_tokens": 156,
+            "new_tokens": 15,
+            "ttft_ms": 202,
+            "tokens_per_s": 93.33
+          }
+        },
+        {
+          "text": "What is the main task of the plot?",
+          "temperature": 0.4,
+          "wall_s": 0.7489,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 219,
+          "tokens_per_s": 86.96,
+          "verify": {
+            "text": "ploughing, sowing and harvesting",
+            "wall_s": 0.3542,
+            "prompt_tokens": 156,
+            "new_tokens": 15,
+            "ttft_ms": 203,
+            "tokens_per_s": 92.72
+          }
+        },
+        {
+          "text": "What is the main activity that the plot needs to do?",
+          "temperature": 0.7,
+          "wall_s": 0.758,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 220,
+          "tokens_per_s": 85.66,
+          "verify": {
+            "text": "ploughing, sowing and harvesting",
+            "wall_s": 0.3651,
+            "prompt_tokens": 159,
+            "new_tokens": 15,
+            "ttft_ms": 209,
+            "tokens_per_s": 90.32
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The plot needs only two people to do all the work of ploughing, _____ and harvesting.",
+        "key": "sowing",
+        "witness_idx": 1,
+        "witness": "The plot needs only two people to do all the work of ploughing, sowing and harvesting.",
+        "options": [
+          "village",
+          "months",
+          "sowing",
+          "farm"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "farm",
+      "options": [
+        "farm",
+        "village",
+        "family",
+        "seasonal"
+      ],
+      "witness_idx": 3,
+      "witness": "If three of them stopped working on the farm, the amount of grain produced would stay the same.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "18 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "similarity to the witness 1.00"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.25"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 6.5 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question",
+        "stem_not_echo: similarity to the witness 1.00"
+      ],
+      "attempts": [
+        {
+          "text": "If three of them stopped working on the farm, the amount of grain produced would stay the same.",
+          "temperature": 0.0,
+          "wall_s": 0.744,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 218,
+          "tokens_per_s": 87.45,
+          "verify": null
+        },
+        {
+          "text": "If three of them stopped working on the farm, the amount of grain produced would stay the same.",
+          "temperature": 0.4,
+          "wall_s": 0.7534,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 222,
+          "tokens_per_s": 86.79,
+          "verify": null
+        },
+        {
+          "text": "If three of them stopped working on the farm, the amount of grain produced would stay the same.",
+          "temperature": 0.7,
+          "wall_s": 0.7459,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 212,
+          "tokens_per_s": 86.3,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: If three of them stopped working on the farm, the amount of grain _____ would stay the same.",
+        "key": "produced",
+        "witness_idx": 3,
+        "witness": "If three of them stopped working on the farm, the amount of grain produced would stay the same.",
+        "options": [
+          "unemployment",
+          "produced",
+          "family",
+          "harvesting"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "What is common in Indian agriculture?",
+      "key": "land",
+      "options": [
+        "land",
+        "grain",
+        "plot",
+        "village"
+      ],
+      "witness_idx": 6,
+      "witness": "It is common in Indian agriculture, where many families share small pieces of land.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "6 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.55"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.48"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 8.4 (limit 9.3)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is common in Indian agriculture?",
+          "temperature": 0.0,
+          "wall_s": 0.7251,
+          "failed": [],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 209,
+          "tokens_per_s": 89.32,
+          "verify": {
+            "text": "small pieces of land",
+            "wall_s": 0.3479,
+            "prompt_tokens": 149,
+            "new_tokens": 15,
+            "ttft_ms": 199,
+            "tokens_per_s": 93.96
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: It is common in Indian agriculture, where many _____ share small pieces of land.",
+        "key": "families",
+        "witness_idx": 6,
+        "witness": "It is common in Indian agriculture, where many families share small pieces of land.",
+        "options": [
+          "members",
+          "lakshmi's",
+          "faces",
+          "families"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: Lakshmi's family owns a small plot of land in a village in _____.",
+      "key": "Bihar",
+      "options": [
+        "Rural",
+        "Employment",
+        "Bihar",
+        "Gandhi"
+      ],
+      "witness_idx": 0,
+      "witness": "Lakshmi's family owns a small plot of land in a village in Bihar.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": true,
+      "signals": [
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: Lakshmi's family owns a small plot of land in a _____ in Bihar.",
+        "key": "village",
+        "witness_idx": 0,
+        "witness": "Lakshmi's family owns a small plot of land in a village in Bihar.",
+        "options": [
+          "agriculture",
+          "rain",
+          "village",
+          "seasonal"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "kind": "cloze",
+      "stem": "Fill in the blank: In the _____ between, there is little to do, and many workers sit idle.",
+      "key": "months",
+      "options": [
+        "months",
+        "pieces",
+        "faces",
+        "depends"
+      ],
+      "witness_idx": 9,
+      "witness": "In the months between, there is little to do, and many workers sit idle.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": null
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 20.061,
+    "summary_s": 5.5186,
+    "stems_s": 14.5406,
+    "model_wall_s": 17.4695,
+    "model_calls": 22,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 2,
+    "red": 3,
+    "fallback": 2
+  },
+  "version": 1,
+  "created": "2026-11-13T01:24:05",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

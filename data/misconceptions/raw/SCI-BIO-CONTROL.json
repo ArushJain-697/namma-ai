@@ -1,0 +1,144 @@
+{
+ "topic": {
+  "id": "SCI-BIO-CONTROL",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   10
+  ],
+  "title": "Control and coordination",
+  "scope": "neurons, reflex arc, brain, plant hormones and tropisms, animal hormones, feedback"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 701,
+  "candidatesTokenCount": 1014,
+  "totalTokenCount": 1715,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 701
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 33.5,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Neurons and Nerve Impulses",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Nerve impulses are electrical currents like those in a copper wire.",
+      "why": "Students confuse the biological signal with physical electricity due to the use of terms like 'impulse' and 'current'.",
+      "fix": "Nerve impulses are electrochemical signals involving the movement of ions across cell membranes, not the flow of electrons.",
+      "probe": {
+       "question": "Does a nerve impulse travel through a neuron at the same speed as electricity through a metal wire?",
+       "wrong_answer": "Yes, it travels almost instantly like electricity."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "nerve impulse",
+       "electrical signal",
+       "neuron",
+       "axon",
+       "transmission"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Reflex Arc and Nervous Coordination",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The brain is involved in every action we perform.",
+      "why": "Students assume the brain is the 'boss' of the body and must consciously approve every movement.",
+      "fix": "Reflex actions are involuntary responses processed by the spinal cord to ensure a faster reaction time without brain involvement.",
+      "probe": {
+       "question": "Why do we pull our hand away quickly when touching a hot object?",
+       "wrong_answer": "Because the brain thinks quickly and sends a command to the hand."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "reflex arc",
+       "spinal cord",
+       "involuntary",
+       "stimulus",
+       "response"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Plant Tropisms",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Plants move towards light because they 'want' to grow towards it.",
+      "why": "Students anthropomorphize plants, attributing human-like desires or intentions to biological growth processes.",
+      "fix": "Tropisms are directional growth movements caused by the unequal distribution of auxins in response to environmental stimuli.",
+      "probe": {
+       "question": "Why does a potted plant kept in a dark room bend towards the window?",
+       "wrong_answer": "The plant wants to reach the sunlight to get food."
+      },
+      "error_type": "living_thing_reasoning",
+      "trigger_cues": [
+       "phototropism",
+       "auxin",
+       "directional growth",
+       "stimulus",
+       "plant movement"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Animal Hormones and Feedback",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Hormones are only needed when the body is sick or stressed.",
+      "why": "Students associate 'hormones' with medication or extreme physiological changes like puberty, ignoring homeostatic functions.",
+      "fix": "Hormones are chemical messengers constantly secreted by glands to regulate normal body functions like growth, metabolism, and blood sugar levels.",
+      "probe": {
+       "question": "Do healthy people have hormones in their blood all the time?",
+       "wrong_answer": "No, hormones are only released when the body needs to fight a disease or grow."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "endocrine glands",
+       "chemical messenger",
+       "feedback mechanism",
+       "secretion",
+       "homeostasis"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Life Processes (Nutrition, Respiration, Circulation)",
+   "Cell Structure and Function"
+  ]
+ },
+ "problems": []
+}

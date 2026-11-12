@@ -51,7 +51,7 @@ sentence that proves it), then the run card. `python -m sakshi study RUN` replay
 | Device | Model file | Total time | Reading (prefill) | Writing (decode) | Peak memory | Notes |
 |---|---|---|---|---|---|---|
 | **Raspberry Pi 5, 8 GB** | 469 MB | TO MEASURE | TO MEASURE | TO MEASURE | TO MEASURE | the judged device |
-| Arduino UNO Q (Cortex-A53, 4 GB) | 469 MB (portable, 1k) | BOARD_TOTAL | ~10.5 tok/s | ~0.4 tok/s | ~1.7 GB | no custom kernels on this chip, so writing is very slow |
+| Arduino UNO Q (Cortex-A53, 4 GB) | 470 MB (portable, 1k) | 3347 s (56 min) | 9.8 tok/s | 0.37 tok/s | 1.7 GB | network OFF; 21 calls; no custom kernels on this chip, so writing is very slow; same questions word for word as on the Mac |
 | Apple M4 Mac (development) | 469 MB | 19.7 s | 854 tok/s | 96 tok/s | 2.5 GB | 31 model calls, 4669 tokens in, 1355 out |
 
 Peak memory is the whole Python process (it includes torch), so it overstates the model alone.

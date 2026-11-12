@@ -1,0 +1,1271 @@
+{
+  "passage": "When you push a heavy box across the floor, it does not slide forever. It slows down and stops because of friction. Friction is a force that acts between two surfaces that touch each other, and it always acts against the direction of motion. Even surfaces that look smooth have tiny bumps and hollows. When two surfaces press together, these bumps lock into each other, and this interlocking resists sliding. A rough surface such as a brick floor has larger bumps, so it produces more friction than a polished marble floor. The harder the two surfaces are pressed together, the greater the friction. That is why a box full of books is harder to push than an empty one. Friction is not always a nuisance. Without it we could not walk, because our shoes would slip on the ground, and a car could not stop when the driver presses the brakes. Friction also produces heat. If you rub your palms together quickly, they become warm. Sometimes we want to reduce friction. Oil and grease are put between the moving parts of machines, and ball bearings are fitted in the wheels of cycles, because rolling causes much less friction than sliding. On the other hand, the treads on tyres and the grooves on the soles of sports shoes are designed to increase friction and give a better grip.",
+  "gate": {
+    "status": "OK",
+    "words": 227,
+    "reason": "OK: 227 words"
+  },
+  "summary": {
+    "text": "A rough surface like a brick floor has more bumps, so it makes more friction than a smooth marble floor. The harder the two surfaces are pressed together, the more friction they have.",
+    "word_count": 33,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "33 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 5,
+        "source": "A rough surface such as a brick floor has larger bumps, so it produces more friction than a polished marble floor.",
+        "text": "A rough surface like a brick floor has more bumps, so it makes more friction than a smooth marble floor.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 6.4 (limit 8.9), 20 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "A rough surface like a brick floor has more bumps, so it makes more friction than a smooth marble floor.",
+            "temperature": 0.0,
+            "wall_s": 0.9133,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 96,
+            "new_tokens": 79,
+            "ttft_ms": 111,
+            "tokens_per_s": 97.26,
+            "verify": null
+          },
+          {
+            "text": "A rough surface like a brick floor has more bumps, so it makes more friction than a polished marble floor.",
+            "temperature": 0.4,
+            "wall_s": 0.9481,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 96,
+            "new_tokens": 79,
+            "ttft_ms": 113,
+            "tokens_per_s": 93.53,
+            "verify": null
+          },
+          {
+            "text": "A rough surface like a brick floor has more bumps, so it makes more friction than a polished marble floor.",
+            "temperature": 0.7,
+            "wall_s": 0.8906,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 96,
+            "new_tokens": 79,
+            "ttft_ms": 108,
+            "tokens_per_s": 99.87,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 6,
+        "source": "The harder the two surfaces are pressed together, the greater the friction.",
+        "text": "The harder the two surfaces are pressed together, the more friction they have.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "The harder the two surfaces are pressed together, the more friction they have.",
+            "temperature": 0.0,
+            "wall_s": 1.9248,
+            "failed": [],
+            "prompt_tokens": 87,
+            "new_tokens": 79,
+            "ttft_ms": 149,
+            "tokens_per_s": 74.64,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "floor",
+      "options": [
+        "floor",
+        "force",
+        "forever",
+        "push"
+      ],
+      "witness_idx": 5,
+      "witness": "A rough surface such as a brick floor has larger bumps, so it produces more friction than a polished marble floor.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "12 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.65"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "86% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 7.8 (limit 8.9)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What type of surface produces more friction than a polished marble floor?",
+          "temperature": 0.0,
+          "wall_s": 0.6855,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 197,
+          "tokens_per_s": 94.26,
+          "verify": null
+        },
+        {
+          "text": "What is the friction on a rough surface compared to a polished surface?",
+          "temperature": 0.4,
+          "wall_s": 0.6951,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 193,
+          "tokens_per_s": 91.82,
+          "verify": {
+            "text": "more",
+            "wall_s": 0.3442,
+            "prompt_tokens": 163,
+            "new_tokens": 15,
+            "ttft_ms": 191,
+            "tokens_per_s": 91.5
+          }
+        },
+        {
+          "text": "What is the term for a rough surface that produces more friction?",
+          "temperature": 0.7,
+          "wall_s": 0.6938,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 193,
+          "tokens_per_s": 91.82,
+          "verify": {
+            "text": "friction",
+            "wall_s": 0.3438,
+            "prompt_tokens": 162,
+            "new_tokens": 15,
+            "ttft_ms": 191,
+            "tokens_per_s": 92.11
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: A rough surface such as a brick floor has larger bumps, so it _____ more friction than a polished marble floor.",
+        "key": "produces",
+        "witness_idx": 5,
+        "witness": "A rough surface such as a brick floor has larger bumps, so it produces more friction than a polished marble floor.",
+        "options": [
+          "produces",
+          "brakes",
+          "books",
+          "shoes"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "surfaces",
+      "options": [
+        "resists",
+        "surfaces",
+        "shoes",
+        "produces"
+      ],
+      "witness_idx": 2,
+      "witness": "Friction is a force that acts between two surfaces that touch each other, and it always acts against the direction of motion.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "13 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.65"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 4.9 (limit 10.2)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is the force that acts between two surfaces that touch each other?",
+          "temperature": 0.0,
+          "wall_s": 0.6852,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 171,
+          "new_tokens": 47,
+          "ttft_ms": 194,
+          "tokens_per_s": 93.69,
+          "verify": null
+        },
+        {
+          "text": "What is the force that acts between two surfaces that touch each other?",
+          "temperature": 0.4,
+          "wall_s": 0.6978,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 171,
+          "new_tokens": 47,
+          "ttft_ms": 195,
+          "tokens_per_s": 91.63,
+          "verify": null
+        },
+        {
+          "text": "What is a force that acts between two surfaces that touch each other?",
+          "temperature": 0.7,
+          "wall_s": 0.6976,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 171,
+          "new_tokens": 47,
+          "ttft_ms": 193,
+          "tokens_per_s": 91.27,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Friction is a force that acts between two surfaces that touch each other, and it always acts against the direction of _____.",
+        "key": "motion",
+        "witness_idx": 2,
+        "witness": "Friction is a force that acts between two surfaces that touch each other, and it always acts against the direction of motion.",
+        "options": [
+          "smooth",
+          "motion",
+          "slide",
+          "floor"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "sliding",
+      "options": [
+        "surfaces",
+        "sliding",
+        "box",
+        "push"
+      ],
+      "witness_idx": 13,
+      "witness": "Oil and grease are put between the moving parts of machines, and ball bearings are fitted in the wheels of cycles, because rolling causes much less friction than sliding.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "12 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.45"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.8 (limit 12.4)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "Because rolling causes less friction than sliding.",
+          "temperature": 0.0,
+          "wall_s": 0.6981,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 178,
+          "new_tokens": 47,
+          "ttft_ms": 203,
+          "tokens_per_s": 93.12,
+          "verify": null
+        },
+        {
+          "text": "Because rolling causes less friction than sliding.",
+          "temperature": 0.4,
+          "wall_s": 0.751,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 178,
+          "new_tokens": 47,
+          "ttft_ms": 203,
+          "tokens_per_s": 84.1,
+          "verify": null
+        },
+        {
+          "text": "Because rolling causes much less friction than sliding, what do we do?",
+          "temperature": 0.7,
+          "wall_s": 0.7228,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 178,
+          "new_tokens": 47,
+          "ttft_ms": 204,
+          "tokens_per_s": 88.63,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Oil and grease are put between the moving parts of machines, and ball bearings are fitted in the wheels of cycles, because rolling _____ much less friction than sliding.",
+        "key": "causes",
+        "witness_idx": 13,
+        "witness": "Oil and grease are put between the moving parts of machines, and ball bearings are fitted in the wheels of cycles, because rolling causes much less friction than sliding.",
+        "options": [
+          "produces",
+          "causes",
+          "books",
+          "surfaces"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "shoes",
+      "options": [
+        "bumps",
+        "palms",
+        "shoes",
+        "surfaces"
+      ],
+      "witness_idx": 14,
+      "witness": "On the other hand, the treads on tyres and the grooves on the soles of sports shoes are designed to increase friction and give a better grip.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "11 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.57"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.9 (limit 10.7)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'treads and grooves', not 'shoes'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'treads and grooves', not 'shoes'"
+      ],
+      "attempts": [
+        {
+          "text": "What is designed to increase friction and give a better grip?",
+          "temperature": 0.0,
+          "wall_s": 0.692,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 178,
+          "new_tokens": 47,
+          "ttft_ms": 206,
+          "tokens_per_s": 94.85,
+          "verify": {
+            "text": "treads and grooves",
+            "wall_s": 0.3585,
+            "prompt_tokens": 170,
+            "new_tokens": 15,
+            "ttft_ms": 193,
+            "tokens_per_s": 84.85
+          }
+        },
+        {
+          "text": "What is designed to increase friction and give a better grip?",
+          "temperature": 0.4,
+          "wall_s": 0.6977,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 178,
+          "new_tokens": 47,
+          "ttft_ms": 204,
+          "tokens_per_s": 93.31,
+          "verify": {
+            "text": "treads and grooves",
+            "wall_s": 0.3695,
+            "prompt_tokens": 170,
+            "new_tokens": 15,
+            "ttft_ms": 202,
+            "tokens_per_s": 84.34
+          }
+        },
+        {
+          "text": "What are designed to increase friction and give a better grip?",
+          "temperature": 0.7,
+          "wall_s": 0.7056,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 178,
+          "new_tokens": 47,
+          "ttft_ms": 206,
+          "tokens_per_s": 92.18,
+          "verify": {
+            "text": "treads on tyres and the grooves on the soles of sports shoes",
+            "wall_s": 0.3614,
+            "prompt_tokens": 170,
+            "new_tokens": 15,
+            "ttft_ms": 196,
+            "tokens_per_s": 84.85
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: On the other hand, the treads on tyres and the grooves on the soles of sports shoes are designed to increase friction and give a better _____.",
+        "key": "grip",
+        "witness_idx": 14,
+        "witness": "On the other hand, the treads on tyres and the grooves on the soles of sports shoes are designed to increase friction and give a better grip.",
+        "options": [
+          "harder",
+          "grip",
+          "forever",
+          "slide"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "bumps",
+      "options": [
+        "books",
+        "bumps",
+        "bearings",
+        "palms"
+      ],
+      "witness_idx": 3,
+      "witness": "Even surfaces that look smooth have tiny bumps and hollows.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "7 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.54"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.3 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What are the bumps and hollows called?",
+          "temperature": 0.0,
+          "wall_s": 0.7309,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 158,
+          "new_tokens": 47,
+          "ttft_ms": 245,
+          "tokens_per_s": 94.65,
+          "verify": null
+        },
+        {
+          "text": "What are the bumps in the surfaces?",
+          "temperature": 0.4,
+          "wall_s": 0.6691,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 158,
+          "new_tokens": 47,
+          "ttft_ms": 184,
+          "tokens_per_s": 94.85,
+          "verify": null
+        },
+        {
+          "text": "What are the bumps and hollows called?",
+          "temperature": 0.7,
+          "wall_s": 0.6708,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 158,
+          "new_tokens": 47,
+          "ttft_ms": 184,
+          "tokens_per_s": 94.65,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Even _____ that look smooth have tiny bumps and hollows.",
+        "key": "surfaces",
+        "witness_idx": 3,
+        "witness": "Even surfaces that look smooth have tiny bumps and hollows.",
+        "options": [
+          "surfaces",
+          "resists",
+          "machines",
+          "palms"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "push",
+      "options": [
+        "forever",
+        "push",
+        "motion",
+        "force"
+      ],
+      "witness_idx": 7,
+      "witness": "That is why a box full of books is harder to push than an empty one.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "5 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.46"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 0.5 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is the reason that a box full of books is harder to push than an empty one?",
+          "temperature": 0.0,
+          "wall_s": 0.6668,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 163,
+          "new_tokens": 47,
+          "ttft_ms": 189,
+          "tokens_per_s": 96.44,
+          "verify": null
+        },
+        {
+          "text": "What is the reason that a box full of books is harder to push than an empty one?",
+          "temperature": 0.4,
+          "wall_s": 0.6771,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 163,
+          "new_tokens": 47,
+          "ttft_ms": 191,
+          "tokens_per_s": 94.85,
+          "verify": null
+        },
+        {
+          "text": "What is harder to push?",
+          "temperature": 0.7,
+          "wall_s": 0.6738,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 163,
+          "new_tokens": 47,
+          "ttft_ms": 188,
+          "tokens_per_s": 94.85,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: That is why a box full of books is _____ to push than an empty one.",
+        "key": "harder",
+        "witness_idx": 7,
+        "witness": "That is why a box full of books is harder to push than an empty one.",
+        "options": [
+          "forever",
+          "harder",
+          "direction",
+          "force"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: Friction is not always a _____.",
+      "key": "nuisance",
+      "options": [
+        "forever",
+        "touch",
+        "slide",
+        "nuisance"
+      ],
+      "witness_idx": 8,
+      "witness": "Friction is not always a nuisance.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": true,
+      "signals": [
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: _____ is not always a nuisance.",
+        "key": "Friction",
+        "witness_idx": 8,
+        "witness": "Friction is not always a nuisance.",
+        "options": [
+          "Friction",
+          "box",
+          "force",
+          "floor"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "kind": "cloze",
+      "stem": "Fill in the blank: Sometimes we want to _____ friction.",
+      "key": "reduce",
+      "options": [
+        "reduce",
+        "slide",
+        "force",
+        "floor"
+      ],
+      "witness_idx": 12,
+      "witness": "Sometimes we want to reduce friction.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": true,
+      "signals": [
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: Sometimes we want to reduce _____.",
+        "key": "friction",
+        "witness_idx": 12,
+        "witness": "Sometimes we want to reduce friction.",
+        "options": [
+          "friction",
+          "floor",
+          "forever",
+          "box"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "kind": "cloze",
+      "stem": "Fill in the blank: It slows down and stops because of _____.",
+      "key": "friction",
+      "options": [
+        "floor",
+        "friction",
+        "forever",
+        "slide"
+      ],
+      "witness_idx": 1,
+      "witness": "It slows down and stops because of friction.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: It slows down and _____ because of friction.",
+        "key": "stops",
+        "witness_idx": 1,
+        "witness": "It slows down and stops because of friction.",
+        "options": [
+          "press",
+          "even",
+          "look",
+          "stops"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 18.9806,
+    "summary_s": 4.6787,
+    "stems_s": 14.2994,
+    "model_wall_s": 17.1875,
+    "model_calls": 22,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 0,
+    "red": 6,
+    "fallback": 3
+  },
+  "version": 1,
+  "created": "2026-11-13T01:13:03",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

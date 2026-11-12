@@ -1,0 +1,157 @@
+{
+ "topic": {
+  "id": "SOC-GEO-VEGETATION",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   9
+  ],
+  "title": "Natural vegetation and wildlife",
+  "scope": "tropical evergreen and deciduous forests, thorn forests, mangroves, montane forests, wildlife reserves"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 694,
+  "candidatesTokenCount": 1064,
+  "totalTokenCount": 1758,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 694
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.7,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Factors influencing vegetation",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Plants grow everywhere on Earth as long as there is soil.",
+      "why": "Students often ignore the critical role of climate and rainfall in determining plant life.",
+      "fix": "Vegetation growth is primarily limited by temperature, humidity, and the amount of annual rainfall in a region.",
+      "probe": {
+       "question": "Why are there no dense forests in the Thar Desert?",
+       "wrong_answer": "Because there is no soil in the desert."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "rainfall",
+       "temperature",
+       "soil",
+       "climate",
+       "sunlight"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "All forests are naturally evergreen throughout the year.",
+      "why": "Common depictions of forests in media and cartoons often show lush green trees regardless of the season.",
+      "fix": "Many trees shed their leaves during specific seasons to conserve water or survive harsh conditions.",
+      "probe": {
+       "question": "Do all trees in India keep their leaves all year round?",
+       "wrong_answer": "Yes, because that is what defines a forest."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "evergreen",
+       "deciduous",
+       "shed leaves",
+       "seasons",
+       "canopy"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Forest types and distribution",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Tropical deciduous forests are the same as tropical evergreen forests.",
+      "why": "Students often conflate the term 'tropical' and assume all forests in warm regions are identical.",
+      "fix": "Evergreen forests stay green all year due to high rainfall, while deciduous forests shed leaves to survive dry periods.",
+      "probe": {
+       "question": "What is the main difference between evergreen and deciduous forests?",
+       "wrong_answer": "There is no difference; they are both just tropical forests."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "tropical",
+       "evergreen",
+       "deciduous",
+       "monsoon",
+       "shed leaves"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Mangrove forests are found only in deep mountain valleys.",
+      "why": "Students confuse the term 'mangrove' with general forest types and lack knowledge of coastal geography.",
+      "fix": "Mangroves are specialized plants that grow in coastal areas, specifically in deltas and tidal regions.",
+      "probe": {
+       "question": "Where would you typically find mangrove forests?",
+       "wrong_answer": "In the high Himalayan mountains."
+      },
+      "error_type": "confuses_people_or_places",
+      "trigger_cues": [
+       "mangrove",
+       "delta",
+       "coastal",
+       "tidal",
+       "sundarbans"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Wildlife conservation and ecosystems",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Wildlife reserves are just zoos where animals are kept in cages.",
+      "why": "Students often conflate the concept of a protected natural habitat with a zoo due to limited exposure to wilderness.",
+      "fix": "Wildlife reserves are protected natural areas where animals live in their wild, undisturbed habitats.",
+      "probe": {
+       "question": "What is the purpose of a wildlife sanctuary?",
+       "wrong_answer": "To keep animals in cages so people can visit and see them safely."
+      },
+      "error_type": "confuses_institutions",
+      "trigger_cues": [
+       "wildlife",
+       "reserve",
+       "sanctuary",
+       "national park",
+       "habitat",
+       "protected"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Climate of India",
+   "Physical features of India"
+  ]
+ },
+ "problems": []
+}

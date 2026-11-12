@@ -1,0 +1,175 @@
+{
+ "topic": {
+  "id": "SCI-BIO-HOWREPRO",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   10
+  ],
+  "title": "How do organisms reproduce",
+  "scope": "importance of variation, fission, fragmentation, regeneration, budding, vegetative propagation, sexual reproduction in flowering plants"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 705,
+  "candidatesTokenCount": 1292,
+  "totalTokenCount": 1997,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 705
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 34.7,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Importance of Variation",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Variations are always beneficial for the individual organism.",
+      "why": "Students often confuse biological variation with the colloquial idea of 'improvement' or 'progress'.",
+      "fix": "Variations are random changes that may or may not help an organism survive depending on the specific environment.",
+      "probe": {
+       "question": "If a bacterium develops a variation that makes it grow slower, is this variation useful?",
+       "wrong_answer": "Yes, because all variations help organisms adapt better."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "survival",
+       "adaptation",
+       "species",
+       "environment",
+       "population"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Variation is only needed when the environment changes drastically.",
+      "why": "Students often view evolution as a response to catastrophe rather than a constant process.",
+      "fix": "Variation is essential for the survival of a species even in stable environments, as it provides a buffer against unpredictable changes.",
+      "probe": {
+       "question": "Why do organisms need to reproduce sexually if their environment is stable?",
+       "wrong_answer": "They don't need to, because variation is only useful if the environment changes."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "stability",
+       "niche",
+       "population",
+       "reproduction"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Asexual Reproduction Mechanisms",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Regeneration is the same as reproduction.",
+      "why": "Students observe lizards regrowing tails and assume this is how they make new offspring.",
+      "fix": "Regeneration is the ability to regrow lost parts, but it is only considered reproduction if the organism can grow a whole new body from a fragment.",
+      "probe": {
+       "question": "If a lizard loses its tail and it grows back, has the lizard reproduced?",
+       "wrong_answer": "Yes, because it regenerated a body part."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "regeneration",
+       "planaria",
+       "hydra",
+       "fragmentation",
+       "body parts"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "Asexual reproduction produces offspring that are slightly different from the parent.",
+      "why": "Students struggle to grasp the concept of 'clones' and assume all reproduction involves some mixing of traits.",
+      "fix": "Asexual reproduction involves only one parent and produces offspring that are genetically identical to the parent.",
+      "probe": {
+       "question": "Are the offspring of an amoeba identical to the parent?",
+       "wrong_answer": "No, they are slightly different because of natural variation."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "clones",
+       "identical",
+       "fission",
+       "budding",
+       "offspring"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Sexual Reproduction in Flowering Plants",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Pollination is the same as fertilization.",
+      "why": "The terms are often used interchangeably in casual conversation and textbooks.",
+      "fix": "Pollination is the transfer of pollen to the stigma, while fertilization is the fusion of male and female gametes inside the ovary.",
+      "probe": {
+       "question": "What happens immediately after a bee lands on a flower and transfers pollen?",
+       "wrong_answer": "Fertilization is complete."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "stigma",
+       "pollen grain",
+       "ovule",
+       "fusion",
+       "gametes"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Seeds are just the fruits of the plant.",
+      "why": "Students see seeds inside fruits and assume the fruit is the seed or that they are the same structure.",
+      "fix": "The fruit is the ripened ovary that protects the seed, while the seed contains the embryo that develops into a new plant.",
+      "probe": {
+       "question": "What is the function of the fruit in a plant?",
+       "wrong_answer": "The fruit is the seed that grows into a new plant."
+      },
+      "error_type": "part_whole",
+      "trigger_cues": [
+       "ovary",
+       "fruit",
+       "seed",
+       "embryo",
+       "ripening"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Cell structure and function",
+   "Basic plant anatomy",
+   "Life processes"
+  ]
+ },
+ "problems": []
+}

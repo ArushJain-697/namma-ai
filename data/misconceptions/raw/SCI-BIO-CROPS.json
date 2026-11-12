@@ -1,0 +1,146 @@
+{
+ "topic": {
+  "id": "SCI-BIO-CROPS",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   8
+  ],
+  "title": "Crop production and management",
+  "scope": "kharif and rabi crops, soil preparation, sowing, manure and fertilisers, irrigation, weeding, harvesting, storage"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 705,
+  "candidatesTokenCount": 1009,
+  "totalTokenCount": 1714,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 705
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.8,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Crop Types and Seasons",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "All crops are grown throughout the year regardless of the season.",
+      "why": "Students observe vegetables in the market year-round and assume they are grown locally at all times.",
+      "fix": "Crops have specific requirements for temperature, humidity, and rainfall, leading to distinct Kharif and Rabi seasons.",
+      "probe": {
+       "question": "Can we grow wheat in the middle of the rainy season in India?",
+       "wrong_answer": "Yes, because crops can grow whenever we plant them."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "kharif",
+       "rabi",
+       "monsoon",
+       "winter",
+       "sowing season"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Soil Preparation and Sowing",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Ploughing is done only to remove weeds.",
+      "why": "Students see farmers removing weeds during field preparation and assume that is the sole purpose.",
+      "fix": "Ploughing also loosens the soil, allowing roots to penetrate deeper and improving aeration for soil microbes.",
+      "probe": {
+       "question": "Why do farmers loosen the soil before sowing seeds?",
+       "wrong_answer": "To get rid of the weeds so they don't steal the space."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "ploughing",
+       "tilling",
+       "loosening soil",
+       "aeration",
+       "sowing"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Nutrient Management",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Fertilisers are better than manure because they are man-made and more powerful.",
+      "why": "The word 'fertiliser' sounds more scientific and 'manure' is associated with waste, leading to a bias toward industrial products.",
+      "fix": "Manure improves soil texture and water-holding capacity, whereas fertilisers provide specific nutrients but can harm soil health if overused.",
+      "probe": {
+       "question": "Which is better for long-term soil health: chemical fertilisers or organic manure?",
+       "wrong_answer": "Fertilisers, because they are made in factories to be stronger and faster."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "manure",
+       "fertilisers",
+       "nutrients",
+       "soil fertility",
+       "humus"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Irrigation and Crop Protection",
+    "prereqs": [
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Plants need water only when they look wilted.",
+      "why": "Students equate plant health with visible turgidity, ignoring the need for constant moisture for nutrient uptake.",
+      "fix": "Irrigation must be provided at regular intervals based on the crop's growth stage and soil type, not just when visible wilting occurs.",
+      "probe": {
+       "question": "Should a farmer wait for the leaves to droop before watering the field?",
+       "wrong_answer": "Yes, that is the best way to know the plant is thirsty."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "irrigation",
+       "water supply",
+       "wilting",
+       "frequency",
+       "moisture"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Photosynthesis and Plant Nutrition",
+   "Basic Soil Science",
+   "States of Matter"
+  ]
+ },
+ "problems": []
+}

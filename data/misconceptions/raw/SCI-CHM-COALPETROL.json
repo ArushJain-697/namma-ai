@@ -1,0 +1,137 @@
+{
+ "topic": {
+  "id": "SCI-CHM-COALPETROL",
+  "subject": "science",
+  "strand": "chemistry",
+  "grades": [
+   8
+  ],
+  "title": "Coal and petroleum",
+  "scope": "fossil fuels formation, coal products, petroleum refining, natural gas, conserving fuels"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 696,
+  "candidatesTokenCount": 922,
+  "totalTokenCount": 1618,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 696
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.0,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Nature of Exhaustible Resources",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Natural resources like coal and petroleum will never run out because the Earth is huge.",
+      "why": "Students often equate the vastness of the planet with an infinite supply of materials.",
+      "fix": "These resources are finite because they take millions of years to form and are being consumed much faster than they can be replenished.",
+      "probe": {
+       "question": "If we keep using petrol for cars every day, will it ever finish?",
+       "wrong_answer": "No, the Earth has a huge underground supply that will last forever."
+      },
+      "error_type": "scale_or_quantity",
+      "trigger_cues": [
+       "natural resources",
+       "exhaustible",
+       "inexhaustible",
+       "finite",
+       "supply"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Formation of Fossil Fuels",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Fossil fuels are formed from the remains of dinosaurs.",
+      "why": "Popular media and cartoons often associate fossils exclusively with dinosaurs.",
+      "fix": "Coal is formed primarily from the remains of ancient land plants, while petroleum is formed from tiny marine organisms.",
+      "probe": {
+       "question": "What kind of living things turned into coal millions of years ago?",
+       "wrong_answer": "Dinosaurs that died and got buried under the ground."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "fossil fuels",
+       "dead organisms",
+       "millions of years",
+       "buried",
+       "high pressure"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Fossil fuels are created by the Earth heating up rocks.",
+      "why": "Students confuse the geological heat and pressure with the process of cooking or burning.",
+      "fix": "Fossil fuels are formed by the slow chemical transformation of organic matter under immense pressure and heat over millions of years.",
+      "probe": {
+       "question": "How does coal form underground?",
+       "wrong_answer": "The Earth's heat melts rocks and turns them into coal."
+      },
+      "error_type": "process_vs_product",
+      "trigger_cues": [
+       "formation",
+       "heat",
+       "pressure",
+       "chemical change",
+       "organic matter"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Petroleum Refining and Products",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Petroleum is a single substance that is used directly in cars.",
+      "why": "Students see 'petrol' and 'petroleum' used interchangeably in daily life.",
+      "fix": "Petroleum is a dark, oily liquid mixture that must be refined into separate components like petrol, diesel, and kerosene.",
+      "probe": {
+       "question": "What is crude oil?",
+       "wrong_answer": "It is just another name for the petrol we put in our bikes."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "petroleum",
+       "refining",
+       "crude oil",
+       "fractional distillation",
+       "constituents"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "States of matter",
+   "Chemical changes",
+   "Basic ecology and environment"
+  ]
+ },
+ "problems": []
+}

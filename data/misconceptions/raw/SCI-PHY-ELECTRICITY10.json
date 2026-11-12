@@ -1,0 +1,178 @@
+{
+ "topic": {
+  "id": "SCI-PHY-ELECTRICITY10",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   10
+  ],
+  "title": "Electricity",
+  "scope": "charge, current, potential difference, Ohm's law, resistance and resistivity, series and parallel, heating effect, power"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 706,
+  "candidatesTokenCount": 1381,
+  "totalTokenCount": 2087,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 706
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.4,
+ "response": {
+  "concepts": [
+   {
+    "key": "electric_charge",
+    "name": "Electric Charge and Current",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Current is consumed by the bulb as it flows through the circuit.",
+      "why": "Students often confuse the flow of electricity with the consumption of fuel like petrol or food.",
+      "fix": "Current is a flow of charge that is conserved; the same amount of current enters and leaves a device.",
+      "probe": {
+       "question": "In a series circuit with two bulbs, is the current at point A (before the bulbs) greater than at point B (after the bulbs)?",
+       "wrong_answer": "Yes, because the bulbs use up some of the current."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "flow of charge",
+       "rate of flow",
+       "electric current",
+       "ampere"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Batteries are sources of constant current regardless of the circuit.",
+      "why": "Students generalize from the idea that a battery 'contains' electricity and pushes it out.",
+      "fix": "A battery provides a constant potential difference; the current depends on the resistance of the circuit.",
+      "probe": {
+       "question": "If you connect a wire directly across a battery, does the current remain the same as when a bulb is connected?",
+       "wrong_answer": "Yes, the battery always pushes the same amount of current."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "battery",
+       "source of current",
+       "cell",
+       "electric circuit"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "potential_difference",
+    "name": "Potential Difference and Ohm's Law",
+    "prereqs": [
+     "electric_charge"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Voltage is a property of a single point in a circuit.",
+      "why": "Textbooks often label points as '12V' or '5V' without emphasizing that this is relative to ground.",
+      "fix": "Potential difference is the work done to move charge between two distinct points.",
+      "probe": {
+       "question": "Can a point in a circuit have a voltage without being connected to anything else?",
+       "wrong_answer": "Yes, every point has its own fixed voltage."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "potential difference",
+       "voltage",
+       "work done",
+       "volt"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Resistance is a property of the current, not the conductor.",
+      "why": "Students misinterpret Ohm's Law (V=IR) as R=V/I, thinking resistance changes when current changes.",
+      "fix": "Resistance is an inherent property of the material and its dimensions, independent of the current flowing through it.",
+      "probe": {
+       "question": "If you double the voltage across a resistor, what happens to its resistance?",
+       "wrong_answer": "The resistance doubles because the current increases."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "ohm's law",
+       "resistance",
+       "v=ir",
+       "ohmic conductor"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "circuits",
+    "name": "Series and Parallel Circuits",
+    "prereqs": [
+     "potential_difference"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Adding more resistors in parallel increases the total resistance of the circuit.",
+      "why": "Students intuitively apply the additive logic of series circuits to parallel ones.",
+      "fix": "Adding resistors in parallel provides more paths for current, which decreases the total resistance.",
+      "probe": {
+       "question": "If you add a second resistor in parallel to an existing one, what happens to the total resistance?",
+       "wrong_answer": "It increases because there is more resistance in the circuit."
+      },
+      "error_type": "part_whole",
+      "trigger_cues": [
+       "parallel connection",
+       "equivalent resistance",
+       "total resistance",
+       "branch"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "heating_power",
+    "name": "Heating Effect and Electric Power",
+    "prereqs": [
+     "circuits"
+    ],
+    "misconceptions": [
+     {
+      "statement": "A device with a higher power rating always draws more current regardless of the voltage.",
+      "why": "Students often ignore the relationship between power, voltage, and current, focusing only on the 'power' label.",
+      "fix": "Power depends on both voltage and current (P=VI); a device's power rating is specific to its rated voltage.",
+      "probe": {
+       "question": "If two bulbs have different power ratings, does the one with higher power always have more current flowing through it?",
+       "wrong_answer": "Yes, higher power always means more current."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "electric power",
+       "watt",
+       "heating effect",
+       "joule's law"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Basic Algebra",
+   "Energy and Work",
+   "Properties of Matter"
+  ]
+ },
+ "problems": []
+}

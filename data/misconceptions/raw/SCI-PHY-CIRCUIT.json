@@ -1,0 +1,138 @@
+{
+ "topic": {
+  "id": "SCI-PHY-CIRCUIT",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   6,
+   7
+  ],
+  "title": "Electric circuits",
+  "scope": "cell, bulb, switch, closed and open circuits, conductors and insulators, series connection of cells"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 705,
+  "candidatesTokenCount": 935,
+  "totalTokenCount": 1640,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 705
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.1,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "The Electric Cell",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "A battery is a source of electricity that gets used up and disappears.",
+      "why": "Students observe that batteries stop working after some time and assume the physical substance inside is consumed or lost.",
+      "fix": "A cell converts stored chemical energy into electrical energy; it does not disappear but runs out of chemical potential.",
+      "probe": {
+       "question": "Where does the electricity go when a battery dies?",
+       "wrong_answer": "It is all used up and has vanished into the air."
+      },
+      "error_type": "process_vs_product",
+      "trigger_cues": [
+       "chemical energy",
+       "terminals",
+       "positive",
+       "negative",
+       "cell"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Closed and Open Circuits",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Electricity flows from the battery to the bulb, but not back to the battery.",
+      "why": "Students often view the battery as a 'source' that pushes energy out, similar to how a tap pushes water out.",
+      "fix": "Electricity requires a continuous, unbroken path (a closed loop) from one terminal of the cell, through the bulb, and back to the other terminal.",
+      "probe": {
+       "question": "Why do we need two wires connected to the bulb?",
+       "wrong_answer": "One wire is enough to carry the electricity to the bulb to make it glow."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "closed circuit",
+       "path",
+       "continuous",
+       "switch",
+       "terminal"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "The switch consumes electricity to turn the light on.",
+      "why": "Students confuse the function of a switch as a 'power' device rather than a simple mechanism to break or complete a path.",
+      "fix": "A switch does not consume electricity; it simply acts as a bridge that connects or disconnects the path for current to flow.",
+      "probe": {
+       "question": "What happens to the electricity when you turn the switch off?",
+       "wrong_answer": "The switch absorbs the electricity so it doesn't reach the bulb."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "switch",
+       "on",
+       "off",
+       "circuit",
+       "path"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Conductors and Insulators",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Only metals can conduct electricity.",
+      "why": "Textbooks often use metal wires as the primary example, leading students to overgeneralize.",
+      "fix": "While most metals are good conductors, other materials like graphite or salty water can also conduct electricity.",
+      "probe": {
+       "question": "Can a pencil lead (graphite) conduct electricity in a circuit?",
+       "wrong_answer": "No, because it is not a metal."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "conductor",
+       "insulator",
+       "material",
+       "metal",
+       "plastic",
+       "rubber"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Basic properties of matter",
+   "Energy concepts"
+  ]
+ },
+ "problems": []
+}

@@ -1,0 +1,165 @@
+{
+ "topic": {
+  "id": "SOC-CIV-PARLIAMENT",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   8
+  ],
+  "title": "Parliament and the making of laws",
+  "scope": "Lok Sabha and Rajya Sabha, elections, how a bill becomes law, role of the opposition, unpopular laws"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 700,
+  "candidatesTokenCount": 1177,
+  "totalTokenCount": 1877,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 700
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.2,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Role of Elections and Representation",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "The Prime Minister is directly elected by the people of India.",
+      "why": "Students often conflate the national election process with the direct election of local representatives or school leaders.",
+      "fix": "People elect Members of Parliament (MPs) to the Lok Sabha, and the party with the majority selects the Prime Minister.",
+      "probe": {
+       "question": "Who do you vote for in a General Election to choose the Prime Minister?",
+       "wrong_answer": "I vote for the person I want to be the Prime Minister."
+      },
+      "error_type": "confuses_people_or_places",
+      "trigger_cues": [
+       "general election",
+       "prime minister",
+       "voters",
+       "constituency",
+       "representative"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "An MP's only job is to attend Parliament sessions.",
+      "why": "Textbooks focus heavily on the legislative process, ignoring the constituency-level work of representatives.",
+      "fix": "MPs also represent the concerns of their constituency and work on local development issues.",
+      "probe": {
+       "question": "What does your local MP do when Parliament is not in session?",
+       "wrong_answer": "They do nothing because they only work when Parliament is meeting."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "member of parliament",
+       "lok sabha",
+       "constituency",
+       "representative"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Structure and Functions of Parliament",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The Rajya Sabha is more powerful than the Lok Sabha because it is the 'Upper House'.",
+      "why": "The term 'Upper' is often misinterpreted as 'superior' or 'higher authority' in a hierarchy.",
+      "fix": "The Lok Sabha is more powerful in financial and executive matters, while the Rajya Sabha represents the interests of states.",
+      "probe": {
+       "question": "If the Lok Sabha and Rajya Sabha disagree on a money bill, whose decision is final?",
+       "wrong_answer": "The Rajya Sabha's decision is final because it is the Upper House."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "upper house",
+       "lower house",
+       "lok sabha",
+       "rajya sabha",
+       "power"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "The Legislative Process",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "A bill becomes a law as soon as the Prime Minister signs it.",
+      "why": "Students often view the government as a single person or entity rather than a complex institutional process.",
+      "fix": "A bill must be passed by both houses of Parliament and receive the President's assent to become law.",
+      "probe": {
+       "question": "What is the final step for a bill to become an official law?",
+       "wrong_answer": "The Prime Minister signs it and it becomes a law."
+      },
+      "error_type": "confuses_institutions",
+      "trigger_cues": [
+       "bill",
+       "law",
+       "parliament",
+       "president",
+       "assent"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Opposition and Unpopular Laws",
+    "prereqs": [
+     "c2",
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The opposition party's main role is to stop the government from doing any work.",
+      "why": "Media portrayals of parliamentary disruptions lead students to believe that opposition is purely obstructionist.",
+      "fix": "The opposition holds the government accountable by questioning policies and highlighting public grievances.",
+      "probe": {
+       "question": "Why do we have an opposition party in Parliament?",
+       "wrong_answer": "To block the government from passing any laws so they can't work."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "opposition",
+       "accountability",
+       "debate",
+       "government",
+       "scrutiny"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Understanding Diversity",
+   "The Indian Constitution",
+   "Role of the Government"
+  ]
+ },
+ "problems": []
+}

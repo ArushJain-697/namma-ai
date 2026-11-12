@@ -1,0 +1,168 @@
+{
+ "topic": {
+  "id": "SOC-HIS-COUNTRYSIDE",
+  "subject": "social",
+  "strand": "history",
+  "grades": [
+   8
+  ],
+  "title": "Ruling the countryside",
+  "scope": "Permanent Settlement, zamindars, mahalwari and ryotwari, indigo cultivation, Champaran, Blue Rebellion"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 697,
+  "candidatesTokenCount": 1268,
+  "totalTokenCount": 1965,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 697
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.9,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Revenue Collection Systems",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "The British introduced the Zamindari system to help poor farmers pay less tax.",
+      "why": "Students often project modern welfare state ideas onto colonial history.",
+      "fix": "The British implemented these systems primarily to ensure a fixed and regular flow of revenue into their own treasury.",
+      "probe": {
+       "question": "Why did the British create the Permanent Settlement?",
+       "wrong_answer": "To provide financial relief and support to the struggling peasants."
+      },
+      "error_type": "presentism",
+      "trigger_cues": [
+       "permanent settlement",
+       "zamindars",
+       "revenue collection",
+       "fixed income"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "All farmers in India were treated the same way under British revenue laws.",
+      "why": "Textbooks often group these systems together, leading students to ignore regional variations.",
+      "fix": "Different regions had different systems like Mahalwari in the north and Ryotwari in the south, each with unique rules for land ownership.",
+      "probe": {
+       "question": "Was the revenue system the same in Bengal and Madras?",
+       "wrong_answer": "Yes, the British applied the same tax rules across all of India."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "mahalwari",
+       "ryotwari",
+       "land revenue",
+       "regional differences"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Commercial Crops and Indigo Cultivation",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Farmers grew indigo because it was a profitable food crop for their families.",
+      "why": "Students assume that 'farming' always means growing food for survival.",
+      "fix": "Indigo was a commercial cash crop used for dyeing cloth, and farmers were often forced to grow it instead of food crops.",
+      "probe": {
+       "question": "Why did the British force farmers to grow indigo?",
+       "wrong_answer": "Because it was a nutritious crop that helped farmers feed their families."
+      },
+      "error_type": "other",
+      "trigger_cues": [
+       "indigo",
+       "cash crops",
+       "dyeing",
+       "commercialisation"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "The Ryoti system meant that farmers owned the land and chose what to grow freely.",
+      "why": "The term 'Ryot' implies a farmer, and students assume farmers always have autonomy.",
+      "fix": "Under the Ryoti system, planters forced farmers to sign contracts that left them with no choice and trapped them in debt.",
+      "probe": {
+       "question": "How much freedom did a ryot have in the indigo system?",
+       "wrong_answer": "They had full freedom to decide how much indigo to plant."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "ryoti system",
+       "planters",
+       "contracts",
+       "debt trap"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Peasant Resistance and The Blue Rebellion",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The Blue Rebellion was a war fought by the Indian army against the British.",
+      "why": "Students often associate the word 'rebellion' only with military battles or the 1857 mutiny.",
+      "fix": "It was a mass uprising by indigo cultivators who refused to grow the crop and attacked the factories.",
+      "probe": {
+       "question": "Who led the Blue Rebellion?",
+       "wrong_answer": "The Indian army generals."
+      },
+      "error_type": "confuses_people_or_places",
+      "trigger_cues": [
+       "blue rebellion",
+       "uprising",
+       "indigo cultivators",
+       "refusal"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "The Champaran Satyagraha was the first time farmers ever complained about indigo.",
+      "why": "Students often conflate different historical events involving Gandhi with the entire history of peasant struggle.",
+      "fix": "The Blue Rebellion occurred decades before Gandhi's intervention in Champaran; the struggle against indigo had a long history.",
+      "probe": {
+       "question": "When did the struggle against indigo cultivation begin?",
+       "wrong_answer": "When Mahatma Gandhi started the Champaran Satyagraha."
+      },
+      "error_type": "chronology_slip",
+      "trigger_cues": [
+       "champaran",
+       "gandhi",
+       "satyagraha",
+       "historical timeline"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "The Company Establishes Power",
+   "Tribals, Dikus and the Vision of a Golden Age"
+  ]
+ },
+ "problems": []
+}

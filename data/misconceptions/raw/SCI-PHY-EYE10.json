@@ -1,0 +1,144 @@
+{
+ "topic": {
+  "id": "SCI-PHY-EYE10",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   10
+  ],
+  "title": "The human eye and the colourful world",
+  "scope": "accommodation, myopia and hypermetropia, prism dispersion, rainbow, atmospheric refraction, scattering, blue sky"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 709,
+  "candidatesTokenCount": 951,
+  "totalTokenCount": 1660,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 709
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.1,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Refraction and Dispersion",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "A glass prism adds color to white light.",
+      "why": "Students confuse the prism as a source of color rather than a tool for separation.",
+      "fix": "White light is a mixture of seven colors, and the prism only separates them because each color travels at a different speed.",
+      "probe": {
+       "question": "If we pass white light through a prism, where do the colors come from?",
+       "wrong_answer": "The prism creates the colors from the white light."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "prism",
+       "white light",
+       "spectrum",
+       "dispersion",
+       "seven colors"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Human Eye Accommodation",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The eye lens changes its distance from the retina to focus on objects.",
+      "why": "Students often apply the camera model of focusing to the human eye.",
+      "fix": "The eye lens changes its focal length by changing its curvature using ciliary muscles, not by moving back and forth.",
+      "probe": {
+       "question": "How does the eye focus on a near object compared to a distant one?",
+       "wrong_answer": "The lens moves forward or backward to adjust the distance to the retina."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "accommodation",
+       "ciliary muscles",
+       "focal length",
+       "curvature",
+       "retina"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Defects of Vision",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Myopia means a person cannot see anything at all.",
+      "why": "Students interpret the medical term as total blindness rather than a specific range limitation.",
+      "fix": "Myopia is a condition where a person can see nearby objects clearly but distant objects appear blurry.",
+      "probe": {
+       "question": "What does a person with myopia experience?",
+       "wrong_answer": "They are completely unable to see anything."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "myopia",
+       "near-sightedness",
+       "blurred vision",
+       "far point"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Atmospheric Refraction and Scattering",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The sky is blue because it reflects the blue color of the ocean.",
+      "why": "This is a common cultural myth that persists despite scientific explanations.",
+      "fix": "The sky appears blue because air molecules scatter shorter wavelengths of sunlight (blue light) more strongly than longer wavelengths.",
+      "probe": {
+       "question": "Why does the sky look blue during the day?",
+       "wrong_answer": "Because the atmosphere reflects the blue color from the oceans."
+      },
+      "error_type": "other",
+      "trigger_cues": [
+       "scattering",
+       "tyndall effect",
+       "blue sky",
+       "wavelength",
+       "sunlight"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Light: Reflection and Refraction",
+   "Human Anatomy Basics"
+  ]
+ },
+ "problems": []
+}

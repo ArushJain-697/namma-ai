@@ -1,0 +1,152 @@
+{
+ "topic": {
+  "id": "SCI-BIO-CELL",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   8,
+   9
+  ],
+  "title": "The cell",
+  "scope": "cell as basic unit, cell membrane, nucleus, cytoplasm, plant vs animal cells, organelles, unicellular vs multicellular"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 709,
+  "candidatesTokenCount": 1182,
+  "totalTokenCount": 1891,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 709
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.9,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Cell as the basic unit of life",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Cells are only found in living things that are small enough to be seen under a microscope.",
+      "why": "Students associate the term 'cell' with the microscopic scale and struggle to grasp that large organisms are composed of billions of them.",
+      "fix": "All living organisms, regardless of their size, are made up of cells. Large organisms are simply multicellular, meaning they contain many cells working together.",
+      "probe": {
+       "question": "Is a large banyan tree made of cells like a tiny amoeba?",
+       "wrong_answer": "No, only tiny things like amoeba are made of cells; large things are made of solid matter."
+      },
+      "error_type": "scale_or_quantity",
+      "trigger_cues": [
+       "microscopic",
+       "basic unit",
+       "building block",
+       "living organism"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Cells are like little bricks that just stack together to give an organism its shape.",
+      "why": "The common textbook analogy of cells as 'building blocks' leads students to view them as static, inert structural components rather than dynamic, living units.",
+      "fix": "Cells are living units that perform life processes like respiration and digestion; they are not just structural bricks.",
+      "probe": {
+       "question": "Do cells inside your body do anything besides holding your shape?",
+       "wrong_answer": "No, they are just like bricks in a wall that keep the body together."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "building block",
+       "structure",
+       "shape",
+       "brick"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Cell structure and organelles",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The nucleus is the 'brain' of the cell that thinks and makes decisions.",
+      "why": "Anthropomorphic language used in textbooks to explain the nucleus's control function leads students to attribute human-like cognitive abilities to organelles.",
+      "fix": "The nucleus acts as a control center by storing genetic information that regulates cell activities, but it does not 'think' or make conscious decisions.",
+      "probe": {
+       "question": "How does the nucleus know when to tell the cell to divide?",
+       "wrong_answer": "It thinks about it and decides when the cell needs to grow."
+      },
+      "error_type": "other",
+      "trigger_cues": [
+       "nucleus",
+       "control center",
+       "brain of cell",
+       "genetic material"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     },
+     {
+      "statement": "All cells have the same organelles regardless of the organism.",
+      "why": "Students often generalize the 'typical' animal cell diagram to all living things, ignoring the diversity of cell types.",
+      "fix": "Different cells have different organelles; for example, plant cells have chloroplasts and cell walls, which animal cells lack.",
+      "probe": {
+       "question": "Do all cells in your body have chloroplasts?",
+       "wrong_answer": "Yes, all cells have the same parts like chloroplasts and mitochondria."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "organelles",
+       "animal cell",
+       "plant cell",
+       "typical cell"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Plant vs Animal cells",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Plant cells do not have a cell membrane because they have a cell wall.",
+      "why": "Students often think that the presence of a rigid wall replaces the need for a membrane, confusing the two structures.",
+      "fix": "Plant cells have both a cell wall for protection and a cell membrane to regulate the movement of substances in and out of the cell.",
+      "probe": {
+       "question": "Does a plant cell have a cell membrane?",
+       "wrong_answer": "No, it only has a cell wall to protect it."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "cell wall",
+       "cell membrane",
+       "protection",
+       "rigid"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Characteristics of living organisms",
+   "Introduction to microscopy",
+   "Basic chemical composition of matter"
+  ]
+ },
+ "problems": []
+}

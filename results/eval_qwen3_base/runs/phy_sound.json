@@ -1,0 +1,1161 @@
+{
+  "passage": "Sound is produced when an object vibrates. A vibration is a rapid to-and-fro motion. When you pluck the string of a sitar, the string vibrates and you hear a sound. When the vibration stops, the sound also stops. In human beings, sound is produced by the voice box, called the larynx, at the upper end of the windpipe. Two vocal cords are stretched across it, and air from the lungs makes them vibrate. Sound needs a medium to travel. It can travel through solids, liquids and gases, but it cannot travel through a vacuum. This is why astronauts on the Moon, where there is no air, talk to each other by radio. Sound travels faster in solids than in air. If you put your ear to one end of a long table and a friend taps the other end gently, you hear the tap clearly through the wood. The number of vibrations in one second is called the frequency, and it is measured in hertz. A high frequency gives a high-pitched sound, like a whistle, while a low frequency gives a low-pitched sound, like a drum. The human ear can hear sounds with frequencies from about 20 hertz to 20,000 hertz. Sounds below this range are called infrasonic, and sounds above it are called ultrasonic. Bats and dolphins can hear ultrasonic sounds.",
+  "gate": {
+    "status": "OK",
+    "words": 222,
+    "reason": "OK: 222 words"
+  },
+  "summary": {
+    "text": "Sound is made when an object vibrates. Sound travels faster in solids than in air. The human ear can hear sounds with frequencies from 20 to 20,000 hertz.",
+    "word_count": 28,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": false,
+        "detail": "28 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 0,
+        "source": "Sound is produced when an object vibrates.",
+        "text": "Sound is made when an object vibrates.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "Sound is made when an object vibrates.",
+            "temperature": 0.0,
+            "wall_s": 0.8099,
+            "failed": [],
+            "prompt_tokens": 82,
+            "new_tokens": 79,
+            "ttft_ms": 97,
+            "tokens_per_s": 109.55,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 9,
+        "source": "Sound travels faster in solids than in air.",
+        "text": "Sound travels faster in solids than in air.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "Sound travels faster in solids than in air.",
+            "temperature": 0.0,
+            "wall_s": 0.9216,
+            "failed": [],
+            "prompt_tokens": 82,
+            "new_tokens": 79,
+            "ttft_ms": 98,
+            "tokens_per_s": 94.78,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 13,
+        "source": "The human ear can hear sounds with frequencies from about 20 hertz to 20,000 hertz.",
+        "text": "The human ear can hear sounds with frequencies from 20 to 20,000 hertz.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "The human ear can hear sounds with frequencies from 20 Hz to 20,000 Hz.",
+            "temperature": 0.0,
+            "wall_s": 0.8557,
+            "failed": [
+              "summary_new_names"
+            ],
+            "prompt_tokens": 99,
+            "new_tokens": 79,
+            "ttft_ms": 116,
+            "tokens_per_s": 105.55,
+            "verify": null
+          },
+          {
+            "text": "The human ear can hear sounds with frequencies from 20 Hz to 20,000 Hz.",
+            "temperature": 0.4,
+            "wall_s": 0.867,
+            "failed": [
+              "summary_new_names"
+            ],
+            "prompt_tokens": 99,
+            "new_tokens": 79,
+            "ttft_ms": 115,
+            "tokens_per_s": 103.72,
+            "verify": null
+          },
+          {
+            "text": "The human ear can hear sounds with frequencies from 20 to 20,000 hertz.",
+            "temperature": 0.7,
+            "wall_s": 0.8932,
+            "failed": [],
+            "prompt_tokens": 99,
+            "new_tokens": 79,
+            "ttft_ms": 115,
+            "tokens_per_s": 100.39,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "What is the range of frequencies that the human ear can hear?",
+      "key": "hertz",
+      "options": [
+        "hertz",
+        "motion",
+        "to-and-fro",
+        "vibration"
+      ],
+      "witness_idx": 13,
+      "witness": "The human ear can hear sounds with frequencies from about 20 hertz to 20,000 hertz.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "12 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.31"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.8 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is the range of frequencies that the human ear can hear?",
+          "temperature": 0.0,
+          "wall_s": 0.7363,
+          "failed": [],
+          "prompt_tokens": 173,
+          "new_tokens": 47,
+          "ttft_ms": 213,
+          "tokens_per_s": 88.46,
+          "verify": {
+            "text": "20 to 20,000 hertz",
+            "wall_s": 0.5602,
+            "prompt_tokens": 165,
+            "new_tokens": 15,
+            "ttft_ms": 387,
+            "tokens_per_s": 80.92
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The human ear can hear sounds with frequencies from about 20 hertz to _____ hertz.",
+        "key": "20,000",
+        "witness_idx": 13,
+        "witness": "The human ear can hear sounds with frequencies from about 20 hertz to 20,000 hertz.",
+        "options": null
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "vibrates",
+      "options": [
+        "astronauts",
+        "gases",
+        "vibrates",
+        "taps"
+      ],
+      "witness_idx": 0,
+      "witness": "Sound is produced when an object vibrates.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "7 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "similarity to the witness 0.87"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.39"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 7.4 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question",
+        "stem_not_echo: similarity to the witness 0.87"
+      ],
+      "attempts": [
+        {
+          "text": "What is produced when an object vibrates?",
+          "temperature": 0.0,
+          "wall_s": 0.7632,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 156,
+          "new_tokens": 47,
+          "ttft_ms": 243,
+          "tokens_per_s": 88.63,
+          "verify": null
+        },
+        {
+          "text": "What is produced when an object vibrates?",
+          "temperature": 0.4,
+          "wall_s": 1.0206,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 156,
+          "new_tokens": 47,
+          "ttft_ms": 261,
+          "tokens_per_s": 60.61,
+          "verify": null
+        },
+        {
+          "text": "What is produced when an object vibrates?",
+          "temperature": 0.7,
+          "wall_s": 0.7028,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 156,
+          "new_tokens": 47,
+          "ttft_ms": 201,
+          "tokens_per_s": 91.63,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Sound is _____ when an object vibrates.",
+        "key": "produced",
+        "witness_idx": 0,
+        "witness": "Sound is produced when an object vibrates.",
+        "options": [
+          "hertz",
+          "produced",
+          "high-pitched",
+          "stretched"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "What does sound travel faster in?",
+      "key": "solids",
+      "options": [
+        "vibrates",
+        "beings",
+        "solids",
+        "astronauts"
+      ],
+      "witness_idx": 9,
+      "witness": "Sound travels faster in solids than in air.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "6 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.58"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.38"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.5 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is the property of solids that allows sound to travel faster than in air?",
+          "temperature": 0.0,
+          "wall_s": 0.7733,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 155,
+          "new_tokens": 47,
+          "ttft_ms": 250,
+          "tokens_per_s": 87.95,
+          "verify": null
+        },
+        {
+          "text": "What is the property of solids that allows sound to travel faster than in air?",
+          "temperature": 0.4,
+          "wall_s": 0.7065,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 155,
+          "new_tokens": 47,
+          "ttft_ms": 202,
+          "tokens_per_s": 91.27,
+          "verify": null
+        },
+        {
+          "text": "What does sound travel faster in?",
+          "temperature": 0.7,
+          "wall_s": 0.7758,
+          "failed": [],
+          "prompt_tokens": 155,
+          "new_tokens": 47,
+          "ttft_ms": 196,
+          "tokens_per_s": 79.45,
+          "verify": {
+            "text": "solids",
+            "wall_s": 0.3988,
+            "prompt_tokens": 142,
+            "new_tokens": 15,
+            "ttft_ms": 222,
+            "tokens_per_s": 79.55
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Sound _____ faster in solids than in air.",
+        "key": "travels",
+        "witness_idx": 9,
+        "witness": "Sound travels faster in solids than in air.",
+        "options": [
+          "travels",
+          "beings",
+          "gases",
+          "liquids"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "What are the types of sound waves?",
+      "key": "ultrasonic",
+      "options": [
+        "travel",
+        "hertz",
+        "ultrasonic",
+        "rapid"
+      ],
+      "witness_idx": 14,
+      "witness": "Sounds below this range are called infrasonic, and sounds above it are called ultrasonic.",
+      "tier": "AMBER",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "7 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.21"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.57"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "33% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.3 (limit 10.1)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_in_passage: 33% of content words are in the passage"
+      ],
+      "attempts": [
+        {
+          "text": "What are the types of sound waves?",
+          "temperature": 0.0,
+          "wall_s": 0.8293,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 165,
+          "new_tokens": 47,
+          "ttft_ms": 244,
+          "tokens_per_s": 78.63,
+          "verify": {
+            "text": "infrasonic and ultrasonic",
+            "wall_s": 0.5631,
+            "prompt_tokens": 152,
+            "new_tokens": 15,
+            "ttft_ms": 405,
+            "tokens_per_s": 89.17
+          }
+        },
+        {
+          "text": "What are the types of sound waves?",
+          "temperature": 0.4,
+          "wall_s": 0.9198,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 165,
+          "new_tokens": 47,
+          "ttft_ms": 233,
+          "tokens_per_s": 67.06,
+          "verify": {
+            "text": "infrasonic and ultrasonic",
+            "wall_s": 0.4871,
+            "prompt_tokens": 152,
+            "new_tokens": 15,
+            "ttft_ms": 294,
+            "tokens_per_s": 72.54
+          }
+        },
+        {
+          "text": "What kind of sound is below a certain range?",
+          "temperature": 0.7,
+          "wall_s": 0.8175,
+          "failed": [
+            "stem_in_passage",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 165,
+          "new_tokens": 47,
+          "ttft_ms": 268,
+          "tokens_per_s": 83.79,
+          "verify": {
+            "text": "infrasonic",
+            "wall_s": 0.3345,
+            "prompt_tokens": 154,
+            "new_tokens": 15,
+            "ttft_ms": 193,
+            "tokens_per_s": 100.0
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Sounds below this range are called _____, and sounds above it are called ultrasonic.",
+        "key": "infrasonic",
+        "witness_idx": 14,
+        "witness": "Sounds below this range are called infrasonic, and sounds above it are called ultrasonic.",
+        "options": [
+          "human",
+          "infrasonic",
+          "travel",
+          "frequency"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "travel",
+      "options": [
+        "travel",
+        "object",
+        "human",
+        "frequency"
+      ],
+      "witness_idx": 6,
+      "witness": "Sound needs a medium to travel.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "9 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.55"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.57"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.3 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is the medium that sound needs to travel?",
+          "temperature": 0.0,
+          "wall_s": 0.7081,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 153,
+          "new_tokens": 47,
+          "ttft_ms": 199,
+          "tokens_per_s": 90.55,
+          "verify": null
+        },
+        {
+          "text": "What is the medium used for sound?",
+          "temperature": 0.4,
+          "wall_s": 0.6788,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 153,
+          "new_tokens": 47,
+          "ttft_ms": 195,
+          "tokens_per_s": 95.04,
+          "verify": {
+            "text": "medium",
+            "wall_s": 0.3176,
+            "prompt_tokens": 141,
+            "new_tokens": 15,
+            "ttft_ms": 170,
+            "tokens_per_s": 95.24
+          }
+        },
+        {
+          "text": "What is needed for sound to travel?",
+          "temperature": 0.7,
+          "wall_s": 0.6916,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 153,
+          "new_tokens": 47,
+          "ttft_ms": 196,
+          "tokens_per_s": 92.93,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Sound needs a _____ to travel.",
+        "key": "medium",
+        "witness_idx": 6,
+        "witness": "Sound needs a medium to travel.",
+        "options": [
+          "human",
+          "ear",
+          "medium",
+          "hertz"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "frequency",
+      "options": [
+        "rapid",
+        "frequency",
+        "hertz",
+        "travel"
+      ],
+      "witness_idx": 12,
+      "witness": "A high frequency gives a high-pitched sound, like a whistle, while a low frequency gives a low-pitched sound, like a drum.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "12 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.18"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.49"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "80% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 4.8 (limit 11.1)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is the characteristic of sound based on its frequency?",
+          "temperature": 0.0,
+          "wall_s": 0.6934,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 175,
+          "new_tokens": 47,
+          "ttft_ms": 215,
+          "tokens_per_s": 96.23,
+          "verify": null
+        },
+        {
+          "text": "What is the name of the sound produced by a high frequency?",
+          "temperature": 0.4,
+          "wall_s": 0.7022,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 175,
+          "new_tokens": 47,
+          "ttft_ms": 215,
+          "tokens_per_s": 94.65,
+          "verify": null
+        },
+        {
+          "text": "What gives a high-pitched sound like a whistle and a low-pitched sound like a drum?",
+          "temperature": 0.7,
+          "wall_s": 0.7012,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 175,
+          "new_tokens": 47,
+          "ttft_ms": 213,
+          "tokens_per_s": 94.26,
+          "verify": {
+            "text": "sound",
+            "wall_s": 0.3759,
+            "prompt_tokens": 175,
+            "new_tokens": 15,
+            "ttft_ms": 215,
+            "tokens_per_s": 87.5
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: A high frequency gives a high-pitched sound, like a whistle, while a low frequency gives a low-pitched sound, like a _____.",
+        "key": "drum",
+        "witness_idx": 12,
+        "witness": "A high frequency gives a high-pitched sound, like a whistle, while a low frequency gives a low-pitched sound, like a drum.",
+        "options": [
+          "ultrasonic",
+          "rapid",
+          "human",
+          "drum"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: In human beings, sound is _____ by the voice box, called the larynx, at the upper end of the windpipe.",
+      "key": "produced",
+      "options": [
+        "travel",
+        "vibration",
+        "high-pitched",
+        "produced"
+      ],
+      "witness_idx": 4,
+      "witness": "In human beings, sound is produced by the voice box, called the larynx, at the upper end of the windpipe.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: In _____ beings, sound is produced by the voice box, called the larynx, at the upper end of the windpipe.",
+        "key": "human",
+        "witness_idx": 4,
+        "witness": "In human beings, sound is produced by the voice box, called the larynx, at the upper end of the windpipe.",
+        "options": [
+          "ultrasonic",
+          "rapid",
+          "human",
+          "vibration"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 19.6193,
+    "summary_s": 4.3484,
+    "stems_s": 15.2696,
+    "model_wall_s": 16.5678,
+    "model_calls": 21,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 1,
+    "red": 3,
+    "fallback": 1
+  },
+  "version": 1,
+  "created": "2026-11-13T01:13:40",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

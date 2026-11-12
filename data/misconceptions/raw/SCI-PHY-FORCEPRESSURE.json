@@ -1,0 +1,159 @@
+{
+ "topic": {
+  "id": "SCI-PHY-FORCEPRESSURE",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   8
+  ],
+  "title": "Force and pressure",
+  "scope": "force as push or pull, contact and non-contact forces, effects of force, pressure and area, liquid and atmospheric pressure"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 706,
+  "candidatesTokenCount": 1132,
+  "totalTokenCount": 1838,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 706
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.1,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Nature of Force",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "An object in motion must have a force constantly acting on it.",
+      "why": "Students confuse the state of motion with the cause of motion based on everyday experiences like pushing a cart.",
+      "fix": "A force is only needed to change the state of motion of an object, not to maintain a constant speed.",
+      "probe": {
+       "question": "If you stop pushing a moving toy car, why does it stop?",
+       "wrong_answer": "Because the force pushing it is gone, so it cannot move anymore."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "push",
+       "pull",
+       "state of motion",
+       "change in speed"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Forces only exist when there is visible movement.",
+      "why": "Students equate force with visible physical work or displacement.",
+      "fix": "Forces can act on objects without causing motion, such as when you push a heavy wall that does not move.",
+      "probe": {
+       "question": "Is there a force acting on a book resting on a table?",
+       "wrong_answer": "No, because the book is not moving."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "force",
+       "motion",
+       "rest",
+       "interaction"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Contact and Non-contact Forces",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Gravity is a force that only acts on objects falling downwards.",
+      "why": "Students associate gravity only with the act of falling rather than a constant pull towards the Earth's center.",
+      "fix": "Gravity is a non-contact force that acts on all objects at all times, pulling them towards the center of the Earth.",
+      "probe": {
+       "question": "Does gravity act on a ball while it is moving upwards?",
+       "wrong_answer": "No, gravity only pulls it down once it starts falling."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "gravity",
+       "non-contact force",
+       "attraction",
+       "earth"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Pressure and Area",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Pressure is the same as force.",
+      "why": "In everyday language, the terms are often used interchangeably to describe how hard something is pushed.",
+      "fix": "Pressure is defined as the force acting on a specific unit of surface area; it depends on both the force and the area.",
+      "probe": {
+       "question": "Why is it easier to cut vegetables with a sharp knife than a blunt one?",
+       "wrong_answer": "Because you apply more force with the sharp knife."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "pressure",
+       "area",
+       "force",
+       "surface"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Liquid and Atmospheric Pressure",
+    "prereqs": [
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Atmospheric pressure only pushes downwards.",
+      "why": "Students visualize air as a heavy blanket resting on top of things.",
+      "fix": "Atmospheric pressure acts in all directions because air molecules move randomly and collide with surfaces from all sides.",
+      "probe": {
+       "question": "Does the air exert pressure on the underside of a table?",
+       "wrong_answer": "No, air pressure only pushes down on the top surface."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "atmospheric pressure",
+       "all directions",
+       "air column",
+       "weight of air"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Measurement and Motion",
+   "Properties of Matter"
+  ]
+ },
+ "problems": []
+}

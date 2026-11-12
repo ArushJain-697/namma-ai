@@ -1,0 +1,146 @@
+{
+ "topic": {
+  "id": "SCI-PHY-ENERGYSOURCES",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   8,
+   10
+  ],
+  "title": "Sources of energy",
+  "scope": "fossil fuels, renewable and non-renewable, solar, wind, hydro, biogas, nuclear energy, environmental impact"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 712,
+  "candidatesTokenCount": 1009,
+  "totalTokenCount": 1721,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 712
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.9,
+ "response": {
+  "concepts": [
+   {
+    "key": "energy_definition",
+    "name": "Concept of Energy and Conservation",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Energy is a physical substance that gets used up when we do work.",
+      "why": "Everyday language like 'running out of energy' or 'using up fuel' suggests energy is a consumable material.",
+      "fix": "Energy is a property of a system that can be transferred or transformed, but it is never consumed or destroyed according to the law of conservation of energy.",
+      "probe": {
+       "question": "When a car runs out of petrol, where does the energy go?",
+       "wrong_answer": "The energy is all used up and disappears."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "energy consumption",
+       "using energy",
+       "energy conservation",
+       "law of conservation"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "fossil_fuels",
+    "name": "Formation and Nature of Fossil Fuels",
+    "prereqs": [
+     "energy_definition"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Fossil fuels are made from the remains of dinosaurs.",
+      "why": "Popular media and cartoons often associate fossils exclusively with dinosaurs.",
+      "fix": "Fossil fuels are primarily formed from the remains of ancient marine plants and microorganisms buried under layers of sediment over millions of years.",
+      "probe": {
+       "question": "What is the primary organic matter that turned into coal and petroleum?",
+       "wrong_answer": "The bones and bodies of dinosaurs."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "fossil fuels",
+       "coal",
+       "petroleum",
+       "ancient remains",
+       "sedimentary layers"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "renewable_nonrenewable",
+    "name": "Renewable vs. Non-renewable Sources",
+    "prereqs": [
+     "fossil_fuels"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Renewable energy sources are infinite and will never run out regardless of how much we use.",
+      "why": "The term 'renewable' is often interpreted as 'limitless' in common parlance.",
+      "fix": "Renewable sources are replenished by natural processes on a human timescale, but their availability at a specific location or time can still be limited.",
+      "probe": {
+       "question": "Can we build unlimited solar panels everywhere without any environmental impact?",
+       "wrong_answer": "Yes, because solar energy is renewable and infinite."
+      },
+      "error_type": "scale_or_quantity",
+      "trigger_cues": [
+       "renewable",
+       "non-renewable",
+       "sustainable",
+       "replenishment",
+       "natural resources"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "environmental_impact",
+    "name": "Environmental Impact and Efficiency",
+    "prereqs": [
+     "renewable_nonrenewable"
+    ],
+    "misconceptions": [
+     {
+      "statement": "All renewable energy sources are completely clean and have zero environmental impact.",
+      "why": "Marketing campaigns often highlight the 'green' nature of renewables while ignoring the manufacturing and disposal costs.",
+      "fix": "While they produce less pollution during operation, the manufacturing, transport, and decommissioning of solar panels or wind turbines still have environmental footprints.",
+      "probe": {
+       "question": "Do wind farms have any negative impact on the environment?",
+       "wrong_answer": "No, they are perfectly clean and have no impact."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "environmental impact",
+       "green energy",
+       "pollution",
+       "carbon footprint",
+       "clean energy"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Work and Energy",
+   "Chemical Reactions",
+   "Physical States of Matter"
+  ]
+ },
+ "problems": []
+}

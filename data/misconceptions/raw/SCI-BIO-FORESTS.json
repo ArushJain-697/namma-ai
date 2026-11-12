@@ -1,0 +1,175 @@
+{
+ "topic": {
+  "id": "SCI-BIO-FORESTS",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   7
+  ],
+  "title": "Forests: our lifeline",
+  "scope": "forest layers, food chains in forests, decomposers, interdependence, forest products, forests and rainfall"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 702,
+  "candidatesTokenCount": 1231,
+  "totalTokenCount": 1933,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 702
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.4,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Forest Structure and Layers",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "The forest floor is just a pile of dead leaves and dirt.",
+      "why": "Students observe the surface level of the ground without considering the biological activity occurring beneath the soil.",
+      "fix": "The forest floor is a dynamic habitat teeming with microorganisms, insects, and fungi that break down organic matter into nutrients.",
+      "probe": {
+       "question": "What is the primary role of the forest floor in a forest ecosystem?",
+       "wrong_answer": "It is just a place where dead leaves collect and eventually turn into plain soil."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "forest floor",
+       "understory",
+       "canopy",
+       "dead leaves",
+       "soil"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Forest Products and Resources",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Forests only provide wood for furniture and paper.",
+      "why": "Everyday experience with school supplies and home furniture limits their perception of forest utility.",
+      "fix": "Forests provide a vast array of products including medicines, spices, oils, gums, honey, and fodder for animals.",
+      "probe": {
+       "question": "Besides wood, what else do we get from forests?",
+       "wrong_answer": "Nothing else, forests are mainly for timber and paper production."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "forest products",
+       "timber",
+       "medicinal plants",
+       "raw materials"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Food Chains and Interdependence",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Animals in a forest only eat one specific type of food.",
+      "why": "Textbook diagrams often show simple linear chains, leading students to ignore the complexity of food webs.",
+      "fix": "Most animals are part of multiple food chains and eat a variety of foods to survive, creating a complex food web.",
+      "probe": {
+       "question": "If a specific type of grass disappears, what happens to a deer in the forest?",
+       "wrong_answer": "The deer will starve because it only eats that specific grass."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "food chain",
+       "herbivores",
+       "carnivores",
+       "interdependence",
+       "food web"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Decomposers and Nutrient Cycling",
+    "prereqs": [
+     "c1",
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Decomposers are harmful because they cause decay and rot.",
+      "why": "The word 'rot' is associated with spoilage and waste in a domestic context.",
+      "fix": "Decomposers are essential because they recycle nutrients back into the soil, allowing new plants to grow.",
+      "probe": {
+       "question": "Why are fungi and bacteria important in a forest?",
+       "wrong_answer": "They are bad because they rot dead animals and plants, making the forest dirty."
+      },
+      "error_type": "living_thing_reasoning",
+      "trigger_cues": [
+       "decomposers",
+       "microorganisms",
+       "decay",
+       "nutrients",
+       "humus"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c5",
+    "name": "Forests and Rainfall",
+    "prereqs": [
+     "c1",
+     "c4"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Trees produce rain by sweating water out of their leaves.",
+      "why": "Students confuse the process of transpiration with the direct creation of rainfall.",
+      "fix": "Trees contribute to the water cycle by releasing water vapor through transpiration, which helps in cloud formation and influences local rainfall patterns.",
+      "probe": {
+       "question": "How do forests influence the amount of rainfall in an area?",
+       "wrong_answer": "The trees act like giant sprinklers and sweat water directly into the sky to make it rain."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "transpiration",
+       "water cycle",
+       "cloud formation",
+       "rainfall",
+       "humidity"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Nutrition in Plants",
+   "Water: A Precious Resource",
+   "Soil"
+  ]
+ },
+ "problems": []
+}

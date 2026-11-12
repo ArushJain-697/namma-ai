@@ -1,0 +1,183 @@
+{
+ "topic": {
+  "id": "SCI-ESS-WEATHER",
+  "subject": "science",
+  "strand": "earth_space",
+  "grades": [
+   7
+  ],
+  "title": "Weather, climate and adaptations",
+  "scope": "weather vs climate, elements of weather, polar and tropical rainforest adaptations, winds, storms and cyclones"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 704,
+  "candidatesTokenCount": 1338,
+  "totalTokenCount": 2042,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 704
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.6,
+ "response": {
+  "concepts": [
+   {
+    "key": "weather_elements",
+    "name": "Elements of Weather",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Weather is just about whether it is raining or sunny.",
+      "why": "Students focus on the most visible aspects of weather that affect their daily play.",
+      "fix": "Weather includes temperature, humidity, rainfall, and wind speed, which all change daily.",
+      "probe": {
+       "question": "If it is a dry, cloudy day with no rain, is there any weather?",
+       "wrong_answer": "No, because it is not raining."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "temperature",
+       "humidity",
+       "rainfall",
+       "daily changes",
+       "meteorology"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "The sun is the only thing that causes weather changes.",
+      "why": "Textbooks emphasize the sun as the source of heat, leading students to ignore other factors like air pressure or geography.",
+      "fix": "While the sun drives weather, local factors like wind patterns, cloud cover, and air pressure also play critical roles.",
+      "probe": {
+       "question": "Why does the weather change even when the sun is shining brightly?",
+       "wrong_answer": "It shouldn't change because the sun is the only cause of weather."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "sun",
+       "heat",
+       "energy",
+       "weather patterns"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "weather_vs_climate",
+    "prereqs": [
+     "weather_elements"
+    ],
+    "name": "Difference between Weather and Climate",
+    "misconceptions": [
+     {
+      "statement": "Climate is just weather that lasts for a very long time.",
+      "why": "Students confuse the duration of the phenomenon with the statistical nature of climate.",
+      "fix": "Climate is the average weather pattern of a place over many years, not just a long-lasting weather event.",
+      "probe": {
+       "question": "If a place has a heatwave for two months, is that its climate?",
+       "wrong_answer": "Yes, because it lasted for a long time."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "average",
+       "long-term",
+       "patterns",
+       "statistics",
+       "decades"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "adaptations",
+    "prereqs": [
+     "weather_vs_climate"
+    ],
+    "name": "Adaptations in Polar and Tropical Regions",
+    "misconceptions": [
+     {
+      "statement": "Animals choose to adapt to their environment when it gets too cold or hot.",
+      "why": "Students often anthropomorphize animals, thinking they have conscious control over their physical traits.",
+      "fix": "Adaptations are inherited physical or behavioral traits that have evolved over many generations to help survival.",
+      "probe": {
+       "question": "Why do polar bears have thick fur?",
+       "wrong_answer": "Because they decided to grow it to stay warm in the cold."
+      },
+      "error_type": "living_thing_reasoning",
+      "trigger_cues": [
+       "evolution",
+       "inherited",
+       "survival",
+       "habitat",
+       "traits"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "All animals in the rainforest are adapted to live in the same way.",
+      "why": "Students overgeneralize the 'rainforest' as a single uniform environment.",
+      "fix": "Different animals occupy different niches in the rainforest, such as the canopy or the forest floor, requiring unique adaptations.",
+      "probe": {
+       "question": "Do monkeys and frogs in the rainforest use the same adaptations to survive?",
+       "wrong_answer": "Yes, they both live in the rainforest so they have the same features."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "niche",
+       "canopy",
+       "competition",
+       "diversity",
+       "rainforest"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "cyclones",
+    "prereqs": [
+     "weather_elements"
+    ],
+    "name": "Winds, Storms, and Cyclones",
+    "misconceptions": [
+     {
+      "statement": "Wind is air that is pushed by clouds.",
+      "why": "Students observe clouds moving and assume they are the active agents pushing the air.",
+      "fix": "Wind is the movement of air caused by differences in air pressure and temperature, not by clouds.",
+      "probe": {
+       "question": "What makes the wind blow?",
+       "wrong_answer": "The clouds move across the sky and push the air in front of them."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "air pressure",
+       "high pressure",
+       "low pressure",
+       "movement",
+       "velocity"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "States of matter",
+   "Heat and temperature",
+   "Basic geography of Earth"
+  ]
+ },
+ "problems": []
+}

@@ -1,0 +1,171 @@
+{
+ "topic": {
+  "id": "SCI-PHY-NATURALPHEN",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   8
+  ],
+  "title": "Lightning and earthquakes",
+  "scope": "static charges, charging by rubbing, lightning and safety, earthquakes, plates, seismograph"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 698,
+  "candidatesTokenCount": 1375,
+  "totalTokenCount": 2073,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 698
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.6,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Static Electricity and Charging by Rubbing",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Only insulators can be charged by rubbing.",
+      "why": "Students often see experiments with plastic scales and balloons, leading them to think conductors cannot hold a charge.",
+      "fix": "Conductors can also be charged by rubbing, but the charge flows away quickly if they are held by hand; they must be insulated to retain the charge.",
+      "probe": {
+       "question": "If you rub a metal rod with a silk cloth, does it acquire a charge?",
+       "wrong_answer": "No, because metal is a conductor and only insulators can be charged."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "rubbing",
+       "insulators",
+       "conductors",
+       "static charge",
+       "plastic scale"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Rubbing creates new electric charges.",
+      "why": "The word 'charging' implies the creation of something new rather than the transfer of existing particles.",
+      "fix": "Rubbing does not create charge; it only transfers existing electrons from one object to another, leaving one positive and one negative.",
+      "probe": {
+       "question": "Where do the charges on a balloon come from after you rub it on your hair?",
+       "wrong_answer": "The rubbing process creates new charges on the surface of the balloon."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "creation of charge",
+       "rubbing",
+       "transfer of electrons",
+       "static electricity"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Lightning and Electrical Discharge",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Lightning is caused by the friction between clouds and the air.",
+      "why": "Students often oversimplify the 'rubbing' concept learned in static electricity to explain all electrical phenomena.",
+      "fix": "Lightning is caused by the accumulation of massive amounts of charge due to the movement of air currents and water droplets within the cloud, leading to a discharge between clouds or to the ground.",
+      "probe": {
+       "question": "How does a lightning bolt form in the sky?",
+       "wrong_answer": "The clouds rub against the air and create static electricity like a balloon on hair."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "lightning",
+       "clouds",
+       "air currents",
+       "discharge",
+       "static electricity"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Lightning always strikes the tallest object in an area.",
+      "why": "Common safety advice emphasizes avoiding tall trees, leading students to believe the tallest object is a magnet for lightning.",
+      "fix": "Lightning follows the path of least resistance to the ground; while tall objects are more likely to be hit, it is not a rule that it must be the tallest.",
+      "probe": {
+       "question": "If there is a small pole and a tall tree in an open field, will lightning definitely hit the tree?",
+       "wrong_answer": "Yes, lightning always strikes the tallest object in the vicinity."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "lightning strike",
+       "tallest object",
+       "safety",
+       "path of least resistance"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Tectonic Plates and Earthquakes",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Earthquakes are caused by the earth opening up and swallowing things.",
+      "why": "Movies and cartoons often depict the ground splitting into deep chasms during an earthquake.",
+      "fix": "Earthquakes are vibrations or shaking of the earth's crust caused by the sudden movement or collision of tectonic plates deep underground.",
+      "probe": {
+       "question": "What happens to the ground during a major earthquake?",
+       "wrong_answer": "The ground splits open and creates a big hole that swallows buildings."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "earthquake",
+       "tectonic plates",
+       "crust",
+       "shaking",
+       "ground movement"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "Tectonic plates are floating on a liquid ocean of magma.",
+      "why": "Textbooks often use the analogy of 'floating' to describe plates, which students interpret as being on a liquid surface like a boat.",
+      "fix": "Tectonic plates move over the semi-molten, plastic-like layer of the mantle, not a liquid ocean; the movement is extremely slow and driven by heat currents.",
+      "probe": {
+       "question": "How do tectonic plates move?",
+       "wrong_answer": "They float on top of a liquid layer of magma like ships on the ocean."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "tectonic plates",
+       "mantle",
+       "magma",
+       "floating",
+       "crust"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Structure of the Earth",
+   "Basic Properties of Matter",
+   "Atoms and Molecules"
+  ]
+ },
+ "problems": []
+}

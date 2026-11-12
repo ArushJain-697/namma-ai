@@ -1,0 +1,156 @@
+{
+ "topic": {
+  "id": "SOC-GEO-DOMAINS",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   6
+  ],
+  "title": "Major domains of the Earth",
+  "scope": "lithosphere, hydrosphere, atmosphere, biosphere, continents and oceans"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 691,
+  "candidatesTokenCount": 1108,
+  "totalTokenCount": 1799,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 691
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.0,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "The Four Domains of Earth",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "The lithosphere is just the soil we walk on.",
+      "why": "Students equate the solid ground they see with the entire concept of the lithosphere.",
+      "fix": "The lithosphere includes the entire solid crust and the upper mantle, extending deep beneath the surface.",
+      "probe": {
+       "question": "Does the lithosphere exist under the deep ocean floor?",
+       "wrong_answer": "No, because the lithosphere is only the soil where plants grow."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "solid portion",
+       "crust",
+       "rocks",
+       "soil",
+       "landmass"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "The atmosphere is just the air we breathe.",
+      "why": "Students define the atmosphere based on their immediate need for oxygen.",
+      "fix": "The atmosphere is a thick blanket of various gases, including nitrogen and carbon dioxide, that surrounds the Earth entirely.",
+      "probe": {
+       "question": "Is there atmosphere at the top of Mount Everest?",
+       "wrong_answer": "No, because there is no air to breathe up there."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "gases",
+       "oxygen",
+       "nitrogen",
+       "blanket of air",
+       "atmosphere"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Continents and Oceans",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Continents are floating on top of the ocean water.",
+      "why": "Visual representations in maps often show landmasses surrounded by blue water, leading to a 'floating' mental model.",
+      "fix": "Continents are large landmasses that are part of the Earth's crust, which extends continuously under the oceans.",
+      "probe": {
+       "question": "What is underneath the ocean water?",
+       "wrong_answer": "There is nothing, just water all the way down to the center of the Earth."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "continents",
+       "oceans",
+       "landmass",
+       "water bodies",
+       "map"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "All oceans are separate, disconnected bodies of water.",
+      "why": "Maps show oceans with distinct names and boundaries, making them appear as isolated entities.",
+      "fix": "All the world's oceans are interconnected and form one single continuous global ocean.",
+      "probe": {
+       "question": "Can a ship travel from the Indian Ocean to the Pacific Ocean without crossing land?",
+       "wrong_answer": "No, they are separate oceans and do not touch each other."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "pacific",
+       "atlantic",
+       "indian",
+       "interconnected",
+       "global ocean"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "The Biosphere and Interdependence",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The biosphere is a separate layer located between the atmosphere and lithosphere.",
+      "why": "Textbooks often depict the biosphere as a distinct 'zone' in diagrams, leading students to think it is a physical layer like the others.",
+      "fix": "The biosphere is not a separate layer but the narrow zone where life exists, overlapping all three other domains.",
+      "probe": {
+       "question": "Where is the biosphere located?",
+       "wrong_answer": "It is the layer of life found exactly between the air and the ground."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "biosphere",
+       "narrow zone",
+       "life",
+       "interaction",
+       "overlap"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Globes and Maps",
+   "Solar System and Earth's Shape"
+  ]
+ },
+ "problems": []
+}

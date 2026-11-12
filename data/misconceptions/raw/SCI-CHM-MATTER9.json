@@ -1,0 +1,178 @@
+{
+ "topic": {
+  "id": "SCI-CHM-MATTER9",
+  "subject": "science",
+  "strand": "chemistry",
+  "grades": [
+   9
+  ],
+  "title": "Matter in our surroundings",
+  "scope": "particle nature of matter, states, change of state, latent heat, evaporation and cooling, effect of pressure"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 703,
+  "candidatesTokenCount": 1320,
+  "totalTokenCount": 2023,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 703
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.7,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Particulate Nature of Matter",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Matter is continuous and does not consist of discrete particles.",
+      "why": "Our senses perceive objects like water or wood as smooth, unbroken wholes rather than collections of tiny particles.",
+      "fix": "All matter is composed of extremely small, invisible particles that have space between them.",
+      "probe": {
+       "question": "If you dissolve salt in water, where does the salt go?",
+       "wrong_answer": "The salt disappears or melts into the water to become part of a continuous liquid."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "continuous",
+       "smooth",
+       "solid",
+       "liquid",
+       "dissolving"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Particles of matter have the same properties as the bulk material (e.g., a copper atom is orange and hard).",
+      "why": "Students often attribute macroscopic properties like color, hardness, or temperature directly to the individual atoms.",
+      "fix": "Macroscopic properties like color or hardness emerge from the collective behavior of many particles, not from individual atoms.",
+      "probe": {
+       "question": "What color is a single atom of gold?",
+       "wrong_answer": "It is yellow and shiny like a gold ring."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "properties of matter",
+       "atoms",
+       "macroscopic",
+       "characteristics"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "States of Matter and Kinetic Theory",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Particles in a solid are completely stationary.",
+      "why": "The term 'solid' implies lack of movement in everyday life, and diagrams often show static arrangements.",
+      "fix": "Particles in solids are constantly vibrating about their fixed positions.",
+      "probe": {
+       "question": "Do the particles in a piece of iron move at all?",
+       "wrong_answer": "No, they are stuck in place and do not move until the iron melts."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "solid",
+       "vibration",
+       "fixed position",
+       "motion"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "There is air or some other substance between the particles of a gas.",
+      "why": "Students struggle to accept the existence of a vacuum or 'nothingness' between particles.",
+      "fix": "The space between particles in a gas is a vacuum; there is nothing else inside that space.",
+      "probe": {
+       "question": "What is in the space between oxygen molecules in a container?",
+       "wrong_answer": "There is air or some invisible fluid filling the gaps."
+      },
+      "error_type": "other",
+      "trigger_cues": [
+       "intermolecular space",
+       "vacuum",
+       "gas particles",
+       "empty space"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Change of State and Latent Heat",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Temperature increases while a substance is melting or boiling.",
+      "why": "Students equate adding heat energy directly with an increase in thermometer readings.",
+      "fix": "Heat supplied during a phase change is used to overcome intermolecular forces, so the temperature remains constant.",
+      "probe": {
+       "question": "If you keep heating boiling water, what happens to its temperature?",
+       "wrong_answer": "The temperature keeps rising until all the water turns into steam."
+      },
+      "error_type": "process_vs_product",
+      "trigger_cues": [
+       "latent heat",
+       "melting point",
+       "boiling point",
+       "phase change"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Evaporation and Cooling",
+    "prereqs": [
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Evaporation is the same as boiling.",
+      "why": "Both involve liquid turning into gas, and students often ignore the differences in mechanism and temperature.",
+      "fix": "Evaporation is a surface phenomenon occurring at any temperature, while boiling is a bulk phenomenon at a specific temperature.",
+      "probe": {
+       "question": "Why does a puddle dry up even on a cold day?",
+       "wrong_answer": "Because the water reaches its boiling point due to the sun."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "evaporation",
+       "boiling",
+       "surface phenomenon",
+       "bulk phenomenon"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Basic measurement",
+   "States of matter (introductory level)"
+  ]
+ },
+ "problems": []
+}

@@ -1,0 +1,145 @@
+{
+ "topic": {
+  "id": "SCI-CHM-ATOMS",
+  "subject": "science",
+  "strand": "chemistry",
+  "grades": [
+   9
+  ],
+  "title": "Atoms and molecules",
+  "scope": "laws of chemical combination, atoms, molecules, atomic mass, ions, chemical formulae, mole idea"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 700,
+  "candidatesTokenCount": 1032,
+  "totalTokenCount": 1732,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 700
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.6,
+ "response": {
+  "concepts": [
+   {
+    "key": "laws_chem_comb",
+    "name": "Laws of Chemical Combination",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Matter is destroyed or created during a chemical reaction.",
+      "why": "Students often observe substances disappearing (like burning wood) or appearing (like rust) in everyday life.",
+      "fix": "Matter is conserved; the total mass of reactants equals the total mass of products in a closed system.",
+      "probe": {
+       "question": "If 10g of wood burns to ash, why does the ash weigh less than 10g?",
+       "wrong_answer": "Because the wood was destroyed and turned into energy or disappeared."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "conservation of mass",
+       "law of constant proportions",
+       "chemical reaction",
+       "reactants",
+       "products"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "atoms_molecules",
+    "name": "Atoms and Molecules",
+    "prereqs": [
+     "laws_chem_comb"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Atoms are tiny solid spheres that look like miniature marbles.",
+      "why": "Textbooks often use the 'billiard ball' model as a simplified visual aid.",
+      "fix": "Atoms are mostly empty space with a dense nucleus and electrons moving in regions of probability.",
+      "probe": {
+       "question": "What is inside an atom of gold?",
+       "wrong_answer": "It is a solid gold ball with nothing inside it."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "dalton's atomic theory",
+       "indivisible",
+       "building blocks",
+       "spherical"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "ions_formulae",
+    "name": "Ions and Chemical Formulae",
+    "prereqs": [
+     "atoms_molecules"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The subscript in a chemical formula indicates the charge of the ion.",
+      "why": "Students confuse the position of numbers in chemical notation, such as in MgCl2.",
+      "fix": "The subscript indicates the number of atoms of that element, while charges are written as superscripts.",
+      "probe": {
+       "question": "In the formula H2O, what does the 2 represent?",
+       "wrong_answer": "It means the hydrogen has a charge of +2."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "valency",
+       "chemical formula",
+       "subscript",
+       "polyatomic ions",
+       "cross-over method"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "mole_concept",
+    "name": "The Mole Concept",
+    "prereqs": [
+     "atoms_molecules",
+     "ions_formulae"
+    ],
+    "misconceptions": [
+     {
+      "statement": "A mole is a unit of mass rather than a unit of quantity.",
+      "why": "Students frequently confuse the 'molar mass' (grams per mole) with the 'mole' itself.",
+      "fix": "A mole is a specific number of particles (6.022 x 10^23), similar to how a 'dozen' represents 12 items.",
+      "probe": {
+       "question": "Which contains more particles: one mole of hydrogen gas or one mole of water?",
+       "wrong_answer": "One mole of water, because water is heavier than hydrogen."
+      },
+      "error_type": "scale_or_quantity",
+      "trigger_cues": [
+       "avogadro number",
+       "molar mass",
+       "gram atomic mass",
+       "quantity of matter"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "States of Matter",
+   "Physical and Chemical Changes",
+   "Basic Algebra"
+  ]
+ },
+ "problems": []
+}

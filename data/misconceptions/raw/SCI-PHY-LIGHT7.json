@@ -1,0 +1,179 @@
+{
+ "topic": {
+  "id": "SCI-PHY-LIGHT7",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   7
+  ],
+  "title": "Light: mirrors and lenses",
+  "scope": "plane mirror image, concave and convex mirrors and lenses, real and virtual images, dispersion of white light"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 703,
+  "candidatesTokenCount": 1354,
+  "totalTokenCount": 2057,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 703
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.5,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Rectilinear propagation of light and reflection",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Light travels only from the source to the object, not to the eye.",
+      "why": "Students often focus on the light source as the active agent and ignore the role of the eye in receiving reflected light.",
+      "fix": "We see objects because light reflects off them and enters our eyes.",
+      "probe": {
+       "question": "Why can you see a book in a dark room if you turn on a torch?",
+       "wrong_answer": "The torch light hits the book and stays there so the book becomes visible."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "light source",
+       "straight line",
+       "reflection",
+       "seeing objects"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "A mirror adds something to the object to create an image.",
+      "why": "Students perceive the image as a physical entity existing behind the mirror rather than a reflection of light.",
+      "fix": "The image is just light rays reflecting off the mirror surface to our eyes, creating the appearance of an object behind it.",
+      "probe": {
+       "question": "Where does the image go when you move away from the mirror?",
+       "wrong_answer": "It stays behind the mirror waiting for me to come back."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "plane mirror",
+       "image behind mirror",
+       "reflection",
+       "virtual image"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Image formation by spherical mirrors",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Concave mirrors always make objects look smaller.",
+      "why": "Students often generalize their experience with the back of a spoon (convex) to all curved surfaces.",
+      "fix": "Concave mirrors can make objects look larger or smaller depending on how close the object is to the mirror.",
+      "probe": {
+       "question": "What happens to your face if you look into a concave makeup mirror from very close?",
+       "wrong_answer": "It looks smaller than my actual face."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "concave mirror",
+       "curved surface",
+       "magnification",
+       "inverted image"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Lenses and refraction",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "A lens works by blocking some light to create an image.",
+      "why": "Students confuse the bending of light (refraction) with the blocking of light (shadows).",
+      "fix": "Lenses change the direction of light rays by bending them as they pass through the glass.",
+      "probe": {
+       "question": "How does a magnifying glass make things look bigger?",
+       "wrong_answer": "It blocks the extra light around the edges so only the middle part is seen."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "convex lens",
+       "refraction",
+       "bending light",
+       "magnifying glass"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Real vs Virtual images and Dispersion",
+    "prereqs": [
+     "c2",
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "A real image is one that is physically present on the screen.",
+      "why": "Students interpret 'real' as a solid object rather than a collection of light rays focused at a point.",
+      "fix": "A real image is formed where light rays actually meet on a screen, but it is still just light, not a physical object.",
+      "probe": {
+       "question": "If you touch the screen where a real image is projected, what will you feel?",
+       "wrong_answer": "I will feel the object that is being projected."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "real image",
+       "screen",
+       "virtual image",
+       "focused light"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "A prism adds colors to white light.",
+      "why": "Students see the colors coming out of the prism and assume the prism is the source of the color.",
+      "fix": "White light is actually a mixture of many colors, and the prism just separates them.",
+      "probe": {
+       "question": "Where do the rainbow colors come from when white light passes through a prism?",
+       "wrong_answer": "The glass of the prism contains those colors and paints the light."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "dispersion",
+       "spectrum",
+       "white light",
+       "prism",
+       "rainbow"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Properties of materials",
+   "Basic geometry of lines and angles"
+  ]
+ },
+ "problems": []
+}

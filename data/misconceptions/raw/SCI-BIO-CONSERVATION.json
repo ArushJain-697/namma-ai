@@ -1,0 +1,171 @@
+{
+ "topic": {
+  "id": "SCI-BIO-CONSERVATION",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   8
+  ],
+  "title": "Conservation of plants and animals",
+  "scope": "deforestation, biosphere reserves, endemic species, wildlife sanctuaries, national parks, endangered species, red data book"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 703,
+  "candidatesTokenCount": 1348,
+  "totalTokenCount": 2051,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 703
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 5.1,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Deforestation and its immediate effects",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Cutting down trees only affects the animals living directly on those trees.",
+      "why": "Students often focus on the immediate, visible loss of habitat for birds or monkeys while ignoring complex ecological interdependencies.",
+      "fix": "Deforestation disrupts the entire food web, alters local climate, and reduces oxygen production, affecting all living organisms in the ecosystem.",
+      "probe": {
+       "question": "If we cut down a forest, will the animals living in the nearby grassland be affected?",
+       "wrong_answer": "No, because their habitat is still intact."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "deforestation",
+       "habitat loss",
+       "food chain",
+       "ecosystem",
+       "trees"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Forests are primarily cut down to get wood for furniture and paper.",
+      "why": "Textbooks often highlight timber and paper as products, leading students to overlook agricultural expansion and urbanization as primary drivers.",
+      "fix": "While timber is a factor, the largest cause of deforestation globally is clearing land for agriculture, cattle ranching, and human settlement expansion.",
+      "probe": {
+       "question": "What is the main reason for the large-scale clearing of forests in India?",
+       "wrong_answer": "To collect wood for making paper and furniture."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "deforestation",
+       "timber",
+       "human activities",
+       "land use"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Endemic and Endangered Species",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "An endemic species is just another name for an endangered species.",
+      "why": "Students confuse the two terms because both are often discussed in the context of conservation status.",
+      "fix": "Endemic species are those found exclusively in a specific geographical region, whereas endangered species are those at risk of extinction regardless of their range.",
+      "probe": {
+       "question": "If a plant is found only in the Pachmarhi Biosphere Reserve, is it automatically an endangered species?",
+       "wrong_answer": "Yes, because it is endemic."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "endemic",
+       "endangered",
+       "extinction",
+       "geographical range"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "Species go extinct because they are too weak to survive in nature.",
+      "why": "Students often apply human-centric or social-Darwinist logic to biological survival, ignoring environmental changes.",
+      "fix": "Extinction is usually caused by environmental changes, habitat destruction, or human interference that makes the environment unsuitable for the species' survival.",
+      "probe": {
+       "question": "Why did the dinosaurs go extinct?",
+       "wrong_answer": "They were not strong enough to survive against other animals."
+      },
+      "error_type": "living_thing_reasoning",
+      "trigger_cues": [
+       "extinction",
+       "survival",
+       "nature",
+       "species"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Protected Areas (Sanctuaries, National Parks, Biosphere Reserves)",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "National parks and wildlife sanctuaries are the same thing with different names.",
+      "why": "The terms are used interchangeably in casual conversation, masking the legal and functional differences in human activity allowed within them.",
+      "fix": "National parks have stricter regulations and are often larger, focusing on ecosystem conservation, while sanctuaries allow more human activities like grazing or wood collection under strict control.",
+      "probe": {
+       "question": "Can you graze cattle in a National Park?",
+       "wrong_answer": "Yes, it is allowed just like in a wildlife sanctuary."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "national park",
+       "wildlife sanctuary",
+       "biosphere reserve",
+       "regulations"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Biosphere reserves are just zoos where animals are kept in cages for safety.",
+      "why": "Students associate 'protection' with 'confinement' based on their experience with zoos.",
+      "fix": "Biosphere reserves are large, protected areas of land intended to conserve biodiversity and maintain the natural lifestyle of tribal people living there, not to cage animals.",
+      "probe": {
+       "question": "What is the primary purpose of a biosphere reserve?",
+       "wrong_answer": "To keep wild animals in cages so they don't get hurt."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "biosphere reserve",
+       "protection",
+       "conservation",
+       "wildlife"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Photosynthesis and Plant Growth",
+   "Basic Ecology and Food Chains",
+   "Human Impact on Environment"
+  ]
+ },
+ "problems": []
+}

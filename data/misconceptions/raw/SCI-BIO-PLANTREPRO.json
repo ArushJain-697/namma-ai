@@ -1,0 +1,170 @@
+{
+ "topic": {
+  "id": "SCI-BIO-PLANTREPRO",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   7
+  ],
+  "title": "Reproduction in plants",
+  "scope": "vegetative propagation, budding, spores, pollination, fertilisation, fruits and seeds, seed dispersal"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 699,
+  "candidatesTokenCount": 1259,
+  "totalTokenCount": 1958,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 699
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.4,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Asexual Reproduction",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Plants only reproduce using seeds.",
+      "why": "Students primarily observe seed-based growth in their daily lives and gardens.",
+      "fix": "Many plants can grow new individuals from vegetative parts like stems, roots, and leaves without seeds.",
+      "probe": {
+       "question": "Can a potato grow into a new plant without a seed?",
+       "wrong_answer": "No, all plants must start from a seed."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "vegetative propagation",
+       "potato eyes",
+       "stem cutting",
+       "asexual"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Budding is a type of growth, not reproduction.",
+      "why": "The term 'bud' is often associated with flower buds or leaf buds in common language.",
+      "fix": "In organisms like yeast, a bud is a new individual that eventually detaches to live independently.",
+      "probe": {
+       "question": "Is the bud on a yeast cell a baby yeast or just a part of the parent?",
+       "wrong_answer": "It is just a part of the parent plant growing bigger."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "yeast",
+       "budding",
+       "new individual",
+       "parent cell"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Sexual Reproduction and Pollination",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Pollination is the same thing as fertilisation.",
+      "why": "Both terms are often introduced together and involve the movement of pollen.",
+      "fix": "Pollination is the transfer of pollen to the stigma, while fertilisation is the fusion of male and female gametes.",
+      "probe": {
+       "question": "If pollen lands on a stigma, has the plant been fertilised?",
+       "wrong_answer": "Yes, pollination and fertilisation happen at the same time."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "pollen grain",
+       "stigma",
+       "fusion",
+       "male gamete",
+       "female gamete"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "Insects eat pollen because they are hungry for the plant's food.",
+      "why": "Students observe insects visiting flowers and assume it is for feeding on the plant tissue.",
+      "fix": "Insects visit flowers primarily to collect nectar, and pollen transfer is an accidental byproduct of this visit.",
+      "probe": {
+       "question": "Why do bees visit flowers?",
+       "wrong_answer": "They visit to eat the pollen and destroy it."
+      },
+      "error_type": "living_thing_reasoning",
+      "trigger_cues": [
+       "insects",
+       "nectar",
+       "pollinators",
+       "flower visit"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Fruits, Seeds, and Dispersal",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Seeds are inside fruits only to protect them from being eaten.",
+      "why": "Students often view 'protection' as the primary purpose of any container or covering.",
+      "fix": "Fruits serve to protect the developing seeds and also aid in their dispersal to new locations.",
+      "probe": {
+       "question": "Why do plants produce fleshy fruits around their seeds?",
+       "wrong_answer": "To keep the seeds safe from animals so they don't get eaten."
+      },
+      "error_type": "living_thing_reasoning",
+      "trigger_cues": [
+       "fleshy fruit",
+       "seed dispersal",
+       "protection",
+       "animals"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Seeds can only grow if they fall directly under the parent plant.",
+      "why": "Students observe seedlings growing under trees and assume that is the intended location.",
+      "fix": "Seeds are dispersed by wind, water, and animals to prevent overcrowding and competition for resources.",
+      "probe": {
+       "question": "Why do seeds have wings or hooks?",
+       "wrong_answer": "They are just decorations; they are meant to fall right under the parent."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "dispersal",
+       "wing-like seeds",
+       "hairy seeds",
+       "competition"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Parts of a plant",
+   "Living and non-living things",
+   "Basic needs of plants"
+  ]
+ },
+ "problems": []
+}

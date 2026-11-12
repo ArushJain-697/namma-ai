@@ -1,0 +1,1234 @@
+{
+  "passage": "Combustion is a chemical process in which a substance reacts with oxygen to give off heat. A substance that can burn is called a combustible substance or a fuel. For combustion to happen, three things are needed together: a fuel, air to supply oxygen, and enough heat to raise the fuel to its ignition temperature. The ignition temperature is the lowest temperature at which a substance catches fire. Kerosene has a low ignition temperature, so it catches fire easily, while wood must be heated much more. Removing any one of these three things puts a fire out, and this is the idea behind every fire extinguisher. Water is the most common extinguisher. It cools the burning material below its ignition temperature, and the steam it produces also helps to keep air away. But water should never be used on fires involving electrical equipment, because water conducts electricity and can give a shock. Water is also not suitable for oil and petrol fires, because the oil floats on water and keeps burning. For such fires, carbon dioxide is the best extinguisher. Being heavier than air, it forms a blanket around the fire, cutting off the supply of oxygen, and it does not harm electrical equipment. Covering a small fire with a blanket or sand works in the same way.",
+  "gate": {
+    "status": "OK",
+    "words": 218,
+    "reason": "OK: 218 words"
+  },
+  "summary": {
+    "text": "The lowest temperature at which a substance catches fire is called the ignition temperature. Kerosene catches fire easily, while wood needs more heat to ignite. Water doesn't work with oil and petrol—because oil floats on water and keeps burning.",
+    "word_count": 40,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "40 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 3,
+        "source": "The ignition temperature is the lowest temperature at which a substance catches fire.",
+        "text": "The lowest temperature at which a substance catches fire is called the ignition temperature.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 11.8 (limit 11.3), 14 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "The lowest temperature at which a substance catches fire is called the ignition temperature.",
+            "temperature": 0.0,
+            "wall_s": 0.8556,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 87,
+            "new_tokens": 79,
+            "ttft_ms": 111,
+            "tokens_per_s": 104.84,
+            "verify": null
+          },
+          {
+            "text": "The lowest temperature at which a substance catches fire is called the ignition temperature.",
+            "temperature": 0.4,
+            "wall_s": 0.8716,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 87,
+            "new_tokens": 79,
+            "ttft_ms": 106,
+            "tokens_per_s": 101.96,
+            "verify": null
+          },
+          {
+            "text": "The lowest temperature at which a substance catches fire is called the ignition temperature.",
+            "temperature": 0.7,
+            "wall_s": 0.8657,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 87,
+            "new_tokens": 79,
+            "ttft_ms": 107,
+            "tokens_per_s": 102.9,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 4,
+        "source": "Kerosene has a low ignition temperature, so it catches fire easily, while wood must be heated much more.",
+        "text": "Kerosene catches fire easily, while wood needs more heat to ignite.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "Kerosene catches fire easily, while wood needs more heat to ignite.",
+            "temperature": 0.0,
+            "wall_s": 0.8726,
+            "failed": [],
+            "prompt_tokens": 96,
+            "new_tokens": 79,
+            "ttft_ms": 115,
+            "tokens_per_s": 103.17,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 9,
+        "source": "Water is also not suitable for oil and petrol fires, because the oil floats on water and keeps burning.",
+        "text": "Water doesn't work with oil and petrol—because oil floats on water and keeps burning.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "Water doesn't work with oil and petrol—because oil floats on water and keeps burning.",
+            "temperature": 0.0,
+            "wall_s": 0.8738,
+            "failed": [],
+            "prompt_tokens": 94,
+            "new_tokens": 79,
+            "ttft_ms": 117,
+            "tokens_per_s": 103.17,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "burning",
+      "options": [
+        "heat",
+        "burning",
+        "cutting",
+        "involving"
+      ],
+      "witness_idx": 9,
+      "witness": "Water is also not suitable for oil and petrol fires, because the oil floats on water and keeps burning.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "18 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.43"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 7.8 (limit 9.2)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "The oil floats on water and keeps burning, so water is not suitable for oil and petrol fires.",
+          "temperature": 0.0,
+          "wall_s": 0.7183,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 209,
+          "tokens_per_s": 90.55,
+          "verify": null
+        },
+        {
+          "text": "The oil floats on water and keeps burning.",
+          "temperature": 0.4,
+          "wall_s": 0.7249,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 208,
+          "tokens_per_s": 88.97,
+          "verify": null
+        },
+        {
+          "text": "The oil floats on water, so it keeps burning.",
+          "temperature": 0.7,
+          "wall_s": 0.7256,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 208,
+          "tokens_per_s": 88.97,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: _____ is also not suitable for oil and petrol fires, because the oil floats on _____ and keeps burning.",
+        "key": "water",
+        "witness_idx": 9,
+        "witness": "Water is also not suitable for oil and petrol fires, because the oil floats on water and keeps burning.",
+        "options": [
+          "temperature",
+          "ignition",
+          "water",
+          "oxygen"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "catches",
+      "options": [
+        "cools",
+        "produces",
+        "catches",
+        "conducts"
+      ],
+      "witness_idx": 3,
+      "witness": "The ignition temperature is the lowest temperature at which a substance catches fire.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "11 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.84"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 6.9 (limit 11.3)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is the lowest temperature at which a substance catches fire?",
+          "temperature": 0.0,
+          "wall_s": 0.7005,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 160,
+          "new_tokens": 47,
+          "ttft_ms": 199,
+          "tokens_per_s": 91.82,
+          "verify": null
+        },
+        {
+          "text": "What does a substance catch fire at?",
+          "temperature": 0.4,
+          "wall_s": 0.7533,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 160,
+          "new_tokens": 47,
+          "ttft_ms": 243,
+          "tokens_per_s": 90.2,
+          "verify": {
+            "text": "temperature",
+            "wall_s": 0.336,
+            "prompt_tokens": 148,
+            "new_tokens": 15,
+            "ttft_ms": 189,
+            "tokens_per_s": 95.89
+          }
+        },
+        {
+          "text": "What do you call a substance that catches fire?",
+          "temperature": 0.7,
+          "wall_s": 0.7095,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 160,
+          "new_tokens": 47,
+          "ttft_ms": 199,
+          "tokens_per_s": 90.2,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The ignition temperature is the lowest temperature at which a _____ catches fire.",
+        "key": "substance",
+        "witness_idx": 3,
+        "witness": "The ignition temperature is the lowest temperature at which a substance catches fire.",
+        "options": [
+          "oxygen",
+          "combustion",
+          "supply",
+          "substance"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "What is needed to catch fire with kerosene?",
+      "key": "heated",
+      "options": [
+        "fuel",
+        "supply",
+        "heated",
+        "extinguisher"
+      ],
+      "witness_idx": 4,
+      "witness": "Kerosene has a low ignition temperature, so it catches fire easily, while wood must be heated much more.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.11"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.8 (limit 11.1)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is the main reason that kerosene catches fire easily?",
+          "temperature": 0.0,
+          "wall_s": 0.7093,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 209,
+          "tokens_per_s": 92.0,
+          "verify": {
+            "text": "kerosene has a low ignition temperature",
+            "wall_s": 0.3619,
+            "prompt_tokens": 162,
+            "new_tokens": 15,
+            "ttft_ms": 205,
+            "tokens_per_s": 89.74
+          }
+        },
+        {
+          "text": "What is needed to catch fire with kerosene?",
+          "temperature": 0.4,
+          "wall_s": 0.724,
+          "failed": [],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 210,
+          "tokens_per_s": 89.67,
+          "verify": {
+            "text": "heat",
+            "wall_s": 0.3659,
+            "prompt_tokens": 160,
+            "new_tokens": 15,
+            "ttft_ms": 203,
+            "tokens_per_s": 86.42
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Kerosene has a low ignition temperature, so it _____ fire easily, while wood must be heated much more.",
+        "key": "catches",
+        "witness_idx": 4,
+        "witness": "Kerosene has a low ignition temperature, so it catches fire easily, while wood must be heated much more.",
+        "options": [
+          "water",
+          "floats",
+          "catches",
+          "cools"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "equipment",
+      "options": [
+        "extinguisher",
+        "burn",
+        "substance",
+        "equipment"
+      ],
+      "witness_idx": 11,
+      "witness": "Being heavier than air, it forms a blanket around the fire, cutting off the supply of oxygen, and it does not harm electrical equipment.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "9 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.24"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.34"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "67% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.3 (limit 11.5)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'it cuts off the supply of oxygen', not 'equipment'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'it cuts off the supply of oxygen', not 'equipment'"
+      ],
+      "attempts": [
+        {
+          "text": "What does the sentence describe?",
+          "temperature": 0.0,
+          "wall_s": 0.7241,
+          "failed": [
+            "stem_in_passage",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 174,
+          "new_tokens": 47,
+          "ttft_ms": 221,
+          "tokens_per_s": 91.63,
+          "verify": {
+            "text": "the Ganga river begins in the Himalayas",
+            "wall_s": 0.3591,
+            "prompt_tokens": 160,
+            "new_tokens": 15,
+            "ttft_ms": 200,
+            "tokens_per_s": 88.05
+          }
+        },
+        {
+          "text": "What is the effect of being heavier than air?",
+          "temperature": 0.4,
+          "wall_s": 0.7319,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 174,
+          "new_tokens": 47,
+          "ttft_ms": 217,
+          "tokens_per_s": 89.49,
+          "verify": {
+            "text": "it cuts off the supply of oxygen",
+            "wall_s": 0.3788,
+            "prompt_tokens": 164,
+            "new_tokens": 15,
+            "ttft_ms": 210,
+            "tokens_per_s": 83.33
+          }
+        },
+        {
+          "text": "What does the sentence refer to?",
+          "temperature": 0.7,
+          "wall_s": 0.7414,
+          "failed": [
+            "stem_in_passage",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 174,
+          "new_tokens": 47,
+          "ttft_ms": 225,
+          "tokens_per_s": 89.15,
+          "verify": {
+            "text": "the fire",
+            "wall_s": 0.3609,
+            "prompt_tokens": 161,
+            "new_tokens": 15,
+            "ttft_ms": 204,
+            "tokens_per_s": 89.74
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Being heavier than air, it forms a blanket around the fire, cutting off the supply of oxygen, and it does not harm _____ equipment.",
+        "key": "electrical",
+        "witness_idx": 11,
+        "witness": "Being heavier than air, it forms a blanket around the fire, cutting off the supply of oxygen, and it does not harm electrical equipment.",
+        "options": [
+          "electrical",
+          "temperature",
+          "burn",
+          "ignition"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "extinguisher",
+      "options": [
+        "oxygen",
+        "fuel",
+        "ignition",
+        "extinguisher"
+      ],
+      "witness_idx": 5,
+      "witness": "Removing any one of these three things puts a fire out, and this is the idea behind every fire extinguisher.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.59"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.53"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 9.7 (limit 9.9)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is the idea behind every fire extinguisher?",
+          "temperature": 0.0,
+          "wall_s": 0.7163,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 213,
+          "tokens_per_s": 91.45,
+          "verify": null
+        },
+        {
+          "text": "What is the idea behind every fire extinguisher?",
+          "temperature": 0.4,
+          "wall_s": 0.7242,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 210,
+          "tokens_per_s": 89.49,
+          "verify": null
+        },
+        {
+          "text": "What is the idea behind every fire extinguisher?",
+          "temperature": 0.7,
+          "wall_s": 0.7264,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 210,
+          "tokens_per_s": 89.32,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Removing any one of these three things puts a _____ out, and this is the idea behind every _____ extinguisher.",
+        "key": "fire",
+        "witness_idx": 5,
+        "witness": "Removing any one of these three things puts a fire out, and this is the idea behind every fire extinguisher.",
+        "options": [
+          "ignition",
+          "water",
+          "burn",
+          "fire"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "water",
+      "options": [
+        "substance",
+        "water",
+        "heat",
+        "temperature"
+      ],
+      "witness_idx": 8,
+      "witness": "But water should never be used on fires involving electrical equipment, because water conducts electricity and can give a shock.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "7 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.30"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.39"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.3 (limit 14.6)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What should water not be used on?",
+          "temperature": 0.0,
+          "wall_s": 0.7086,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 207,
+          "tokens_per_s": 91.82,
+          "verify": null
+        },
+        {
+          "text": "What should water never be used on?",
+          "temperature": 0.4,
+          "wall_s": 0.7201,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 207,
+          "tokens_per_s": 89.67,
+          "verify": null
+        },
+        {
+          "text": "What is the correct term for water that should never be used on fires involving electrical equipment?",
+          "temperature": 0.7,
+          "wall_s": 0.7339,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 206,
+          "tokens_per_s": 87.29,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: But water should never be used on fires involving electrical _____, because water conducts electricity and can give a shock.",
+        "key": "equipment",
+        "witness_idx": 8,
+        "witness": "But water should never be used on fires involving electrical equipment, because water conducts electricity and can give a shock.",
+        "options": [
+          "temperature",
+          "equipment",
+          "burn",
+          "heat"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: Covering a small fire with a _____ or sand works in the same way.",
+      "key": "blanket",
+      "options": [
+        "heat",
+        "blanket",
+        "oxygen",
+        "water"
+      ],
+      "witness_idx": 12,
+      "witness": "Covering a small fire with a blanket or sand works in the same way.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: Covering a small fire with a blanket or _____ works in the same way.",
+        "key": "sand",
+        "witness_idx": 12,
+        "witness": "Covering a small fire with a blanket or sand works in the same way.",
+        "options": [
+          "oxygen",
+          "fuel",
+          "sand",
+          "burn"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "kind": "cloze",
+      "stem": "Fill in the blank: For combustion to happen, three things are needed together: a fuel, air to supply oxygen, and enough heat to raise the fuel to its ignition _____.",
+      "key": "temperature",
+      "options": [
+        "fire",
+        "temperature",
+        "burn",
+        "equipment"
+      ],
+      "witness_idx": 2,
+      "witness": "For combustion to happen, three things are needed together: a fuel, air to supply oxygen, and enough heat to raise the fuel to its ignition temperature.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: For combustion to happen, three things are needed together: a fuel, air to supply oxygen, and enough heat to raise the fuel to its _____ temperature.",
+        "key": "ignition",
+        "witness_idx": 2,
+        "witness": "For combustion to happen, three things are needed together: a fuel, air to supply oxygen, and enough heat to raise the fuel to its ignition temperature.",
+        "options": [
+          "extinguisher",
+          "ignition",
+          "oil",
+          "fire"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 18.8084,
+    "summary_s": 4.3403,
+    "stems_s": 14.4661,
+    "model_wall_s": 16.6316,
+    "model_calls": 22,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 0,
+    "red": 5,
+    "fallback": 2
+  },
+  "version": 1,
+  "created": "2026-11-13T01:16:11",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

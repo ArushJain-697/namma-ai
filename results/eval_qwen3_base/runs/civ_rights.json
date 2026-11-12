@@ -1,0 +1,1248 @@
+{
+  "passage": "The Constitution of India gives every citizen certain basic rights, called Fundamental Rights. They protect people against the misuse of power by the government and by other people. The Right to Equality says that all persons are equal before the law, and that no one can be discriminated against on the basis of religion, caste, sex or place of birth. Everyone has equal access to public places such as parks, wells and hotels. The Right to Freedom includes freedom of speech and expression, the freedom to form associations, the freedom to move to and live in any part of the country, and the freedom to practise any profession. The Right against Exploitation forbids human trafficking, forced labour and the employment of children below 14 years in factories and mines. The Right to Freedom of Religion allows everyone to follow the religion of their choice. Cultural and Educational Rights allow religious and linguistic minorities to set up their own schools to preserve their culture. The Right to Constitutional Remedies allows a citizen to go directly to the courts if any of these rights is violated. Dr B. R. Ambedkar, who led the drafting of the Constitution, called this right the heart and soul of the Constitution, because without it all the other rights would have no value.",
+  "gate": {
+    "status": "OK",
+    "words": 216,
+    "reason": "OK: 216 words"
+  },
+  "summary": {
+    "text": "The Constitution of India gives every citizen basic rights called Fundamental Rights. The right to freedom includes the right to speak, form associations, live anywhere, and work in any profession. The right to freedom of religion lets everyone choose their religion.",
+    "word_count": 41,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "41 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 0,
+        "source": "The Constitution of India gives every citizen certain basic rights, called Fundamental Rights.",
+        "text": "The Constitution of India gives every citizen basic rights called Fundamental Rights.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "The Constitution of India gives every citizen basic rights called Fundamental Rights.",
+            "temperature": 0.0,
+            "wall_s": 0.8698,
+            "failed": [],
+            "prompt_tokens": 88,
+            "new_tokens": 79,
+            "ttft_ms": 111,
+            "tokens_per_s": 102.77,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 4,
+        "source": "The Right to Freedom includes freedom of speech and expression, the freedom to form associations, the freedom to move to and live in any part of the country, and the freedom to practise any profession.",
+        "text": "The right to freedom includes the right to speak, form associations, live anywhere, and work in any profession.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 10.4 (limit 15.9), 18 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "The right to freedom includes the right to speak, form associations, live anywhere, and work in any profession.",
+            "temperature": 0.0,
+            "wall_s": 0.9509,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 112,
+            "new_tokens": 79,
+            "ttft_ms": 139,
+            "tokens_per_s": 96.06,
+            "verify": null
+          },
+          {
+            "text": "The right to freedom includes the right to speak freely, the right to join other people, the right to move anywhere in the country, and the right to do any job.",
+            "temperature": 0.4,
+            "wall_s": 0.9644,
+            "failed": [
+              "summary_support",
+              "summary_readability"
+            ],
+            "prompt_tokens": 112,
+            "new_tokens": 79,
+            "ttft_ms": 136,
+            "tokens_per_s": 94.32,
+            "verify": null
+          },
+          {
+            "text": "The Right to Freedom includes freedom of speech and expression, freedom to form associations, freedom to move around the country, and freedom to do any profession.",
+            "temperature": 0.7,
+            "wall_s": 0.9752,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 112,
+            "new_tokens": 79,
+            "ttft_ms": 138,
+            "tokens_per_s": 93.19,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 6,
+        "source": "The Right to Freedom of Religion allows everyone to follow the religion of their choice.",
+        "text": "The right to freedom of religion lets everyone choose their religion.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "The right to freedom of religion lets everyone choose their religion.",
+            "temperature": 0.0,
+            "wall_s": 0.8726,
+            "failed": [],
+            "prompt_tokens": 89,
+            "new_tokens": 79,
+            "ttft_ms": 117,
+            "tokens_per_s": 103.45,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "Religion",
+      "options": [
+        "Constitutional",
+        "Equality",
+        "Fundamental",
+        "Religion"
+      ],
+      "witness_idx": 6,
+      "witness": "The Right to Freedom of Religion allows everyone to follow the religion of their choice.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "10 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.46"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 6.0 (limit 9.1)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is allowed by the Right to Freedom of Religion?",
+          "temperature": 0.0,
+          "wall_s": 0.7293,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 213,
+          "tokens_per_s": 89.15,
+          "verify": null
+        },
+        {
+          "text": "What is allowed by the right to freedom of religion?",
+          "temperature": 0.4,
+          "wall_s": 0.7364,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 211,
+          "tokens_per_s": 87.62,
+          "verify": null
+        },
+        {
+          "text": "What is the right to freedom of religion?",
+          "temperature": 0.7,
+          "wall_s": 0.7365,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 210,
+          "tokens_per_s": 87.62,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The Right to _____ of Religion allows everyone to follow the religion of their choice.",
+        "key": "Freedom",
+        "witness_idx": 6,
+        "witness": "The Right to Freedom of Religion allows everyone to follow the religion of their choice.",
+        "options": [
+          "Freedom",
+          "government",
+          "caste",
+          "basic"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "Freedom",
+      "options": [
+        "Freedom",
+        "Constitution",
+        "Religion",
+        "Equality"
+      ],
+      "witness_idx": 4,
+      "witness": "The Right to Freedom includes freedom of speech and expression, the freedom to form associations, the freedom to move to and live in any part of the country, and the freedom to practise any profession.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "9 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.27"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 12.8 (limit 15.9)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What includes freedom of speech, expression, association, and profession?",
+          "temperature": 0.0,
+          "wall_s": 0.7382,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 185,
+          "new_tokens": 47,
+          "ttft_ms": 234,
+          "tokens_per_s": 91.27,
+          "verify": null
+        },
+        {
+          "text": "What includes freedom of speech, expression, association, movement, and profession?",
+          "temperature": 0.4,
+          "wall_s": 0.7449,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 185,
+          "new_tokens": 47,
+          "ttft_ms": 232,
+          "tokens_per_s": 89.84,
+          "verify": null
+        },
+        {
+          "text": "What does the Right to Freedom include?",
+          "temperature": 0.7,
+          "wall_s": 0.7461,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 185,
+          "new_tokens": 47,
+          "ttft_ms": 234,
+          "tokens_per_s": 90.02,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The _____ to Freedom includes freedom of speech and expression, the freedom to form associations, the freedom to move to and live in any part of the country, and the freedom to practise any profession.",
+        "key": "Right",
+        "witness_idx": 4,
+        "witness": "The Right to Freedom includes freedom of speech and expression, the freedom to form associations, the freedom to move to and live in any part of the country, and the freedom to practise any profession.",
+        "options": [
+          "follow",
+          "Right",
+          "every",
+          "certain"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "Constitution",
+      "options": [
+        "Educational",
+        "Constitution",
+        "Remedies",
+        "Religion"
+      ],
+      "witness_idx": 0,
+      "witness": "The Constitution of India gives every citizen certain basic rights, called Fundamental Rights.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "13 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.31"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "83% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 10.4 (limit 14.9)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is given to every citizen in India by the Constitution of India?",
+          "temperature": 0.0,
+          "wall_s": 0.7265,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 161,
+          "new_tokens": 47,
+          "ttft_ms": 212,
+          "tokens_per_s": 89.49,
+          "verify": null
+        },
+        {
+          "text": "What is the name of the Constitution of India?",
+          "temperature": 0.4,
+          "wall_s": 0.7322,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 161,
+          "new_tokens": 47,
+          "ttft_ms": 211,
+          "tokens_per_s": 88.46,
+          "verify": null
+        },
+        {
+          "text": "What does the Constitution of India give every citizen?",
+          "temperature": 0.7,
+          "wall_s": 0.7301,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 161,
+          "new_tokens": 47,
+          "ttft_ms": 211,
+          "tokens_per_s": 88.63,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The Constitution of India gives every citizen certain basic rights, called _____ Rights.",
+        "key": "Fundamental",
+        "witness_idx": 0,
+        "witness": "The Constitution of India gives every citizen certain basic rights, called Fundamental Rights.",
+        "options": [
+          "Fundamental",
+          "government",
+          "everyone",
+          "equal"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "short",
+      "stem": "What is the minimum age for employment in factories and mines?",
+      "key": "14",
+      "options": null,
+      "witness_idx": 5,
+      "witness": "The Right against Exploitation forbids human trafficking, forced labour and the employment of children below 14 years in factories and mines.",
+      "tier": "AMBER",
+      "fallback": false,
+      "detail": true,
+      "signals": [
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "11 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.43"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "60% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 8.0 (limit 14.5)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is the minimum age for employment in factories and mines?",
+          "temperature": 0.0,
+          "wall_s": 0.7323,
+          "failed": [],
+          "prompt_tokens": 176,
+          "new_tokens": 47,
+          "ttft_ms": 222,
+          "tokens_per_s": 90.2,
+          "verify": {
+            "text": "14 years",
+            "wall_s": 0.3786,
+            "prompt_tokens": 166,
+            "new_tokens": 15,
+            "ttft_ms": 212,
+            "tokens_per_s": 84.34
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The Right against _____ forbids human trafficking, forced labour and the employment of children below 14 years in factories and mines.",
+        "key": "Exploitation",
+        "witness_idx": 5,
+        "witness": "The Right against Exploitation forbids human trafficking, forced labour and the employment of children below 14 years in factories and mines.",
+        "options": [
+          "Exploitation",
+          "equal",
+          "misuse",
+          "basic"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "citizen",
+      "options": [
+        "law",
+        "freedom",
+        "government",
+        "citizen"
+      ],
+      "witness_idx": 8,
+      "witness": "The Right to Constitutional Remedies allows a citizen to go directly to the courts if any of these rights is violated.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "9 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.41"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.37"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 10.2 (limit 12.3)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'citizens can go directly to the courts if any of these rights is violated.', not 'citizen'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'citizens can go directly to the courts if any of these rights is violated.', not 'citizen'"
+      ],
+      "attempts": [
+        {
+          "text": "What is the name of the right that allows a citizen to go directly to the courts if any of these rights is violated?",
+          "temperature": 0.0,
+          "wall_s": 0.7401,
+          "failed": [
+            "stem_length",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 222,
+          "tokens_per_s": 88.97,
+          "verify": null
+        },
+        {
+          "text": "What is allowed by the Right to Constitutional Remedies?",
+          "temperature": 0.4,
+          "wall_s": 0.7443,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 216,
+          "tokens_per_s": 87.12,
+          "verify": {
+            "text": "citizens can go directly to the courts if any of these rights is violated.",
+            "wall_s": 0.3676,
+            "prompt_tokens": 160,
+            "new_tokens": 15,
+            "ttft_ms": 208,
+            "tokens_per_s": 88.05
+          }
+        },
+        {
+          "text": "What is the right to constitutional remedies called?",
+          "temperature": 0.7,
+          "wall_s": 0.7566,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 224,
+          "tokens_per_s": 86.63,
+          "verify": {
+            "text": "constitutional remedies",
+            "wall_s": 0.3638,
+            "prompt_tokens": 158,
+            "new_tokens": 15,
+            "ttft_ms": 208,
+            "tokens_per_s": 90.32
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The Right to Constitutional _____ allows a citizen to go directly to the courts if any of these rights is violated.",
+        "key": "Remedies",
+        "witness_idx": 8,
+        "witness": "The Right to Constitutional Remedies allows a citizen to go directly to the courts if any of these rights is violated.",
+        "options": [
+          "mines",
+          "basis",
+          "religious",
+          "Remedies"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "Educational",
+      "options": [
+        "Educational",
+        "Fundamental",
+        "Constitution",
+        "Exploitation"
+      ],
+      "witness_idx": 7,
+      "witness": "Cultural and Educational Rights allow religious and linguistic minorities to set up their own schools to preserve their culture.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": true,
+      "signals": [
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "5 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.35"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.36"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 10.0 (limit 13.6)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What do educational rights allow?",
+          "temperature": 0.0,
+          "wall_s": 0.7548,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 216,
+          "tokens_per_s": 85.5,
+          "verify": null
+        },
+        {
+          "text": "What do educational rights allow?",
+          "temperature": 0.4,
+          "wall_s": 0.7458,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 218,
+          "tokens_per_s": 87.12,
+          "verify": null
+        },
+        {
+          "text": "What is allowed in education for minorities?",
+          "temperature": 0.7,
+          "wall_s": 0.7384,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 211,
+          "tokens_per_s": 87.45,
+          "verify": {
+            "text": "education",
+            "wall_s": 0.3512,
+            "prompt_tokens": 154,
+            "new_tokens": 15,
+            "ttft_ms": 202,
+            "tokens_per_s": 93.96
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Cultural and Educational _____ allow religious and linguistic minorities to set up their own schools to preserve their culture.",
+        "key": "Rights",
+        "witness_idx": 7,
+        "witness": "Cultural and Educational Rights allow religious and linguistic minorities to set up their own schools to preserve their culture.",
+        "options": [
+          "every",
+          "says",
+          "Rights",
+          "gives"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: Everyone has _____ access to public places such as parks, wells and hotels.",
+      "key": "equal",
+      "options": [
+        "law",
+        "equal",
+        "misuse",
+        "citizen"
+      ],
+      "witness_idx": 3,
+      "witness": "Everyone has equal access to public places such as parks, wells and hotels.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: _____ has equal access to public places such as parks, wells and hotels.",
+        "key": "Everyone",
+        "witness_idx": 3,
+        "witness": "Everyone has equal access to public places such as parks, wells and hotels.",
+        "options": [
+          "religion",
+          "Everyone",
+          "basic",
+          "freedom"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "kind": "cloze",
+      "stem": "Fill in the blank: The Right to Freedom of _____ allows everyone to follow the _____ of their choice.",
+      "key": "Religion",
+      "options": [
+        "Constitutional",
+        "Equality",
+        "Fundamental",
+        "Religion"
+      ],
+      "witness_idx": 6,
+      "witness": "The Right to Freedom of Religion allows everyone to follow the religion of their choice.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: The Right to _____ of Religion allows everyone to follow the religion of their choice.",
+        "key": "Freedom",
+        "witness_idx": 6,
+        "witness": "The Right to Freedom of Religion allows everyone to follow the religion of their choice.",
+        "options": [
+          "Freedom",
+          "government",
+          "caste",
+          "basic"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "kind": "cloze",
+      "stem": "Fill in the blank: The Right to _____ includes _____ of speech and expression, the _____ to form associations, the _____ to move to and live in any part of the country, and the _____ to practise any profession.",
+      "key": "Freedom",
+      "options": [
+        "Freedom",
+        "Constitution",
+        "Religion",
+        "Equality"
+      ],
+      "witness_idx": 4,
+      "witness": "The Right to Freedom includes freedom of speech and expression, the freedom to form associations, the freedom to move to and live in any part of the country, and the freedom to practise any profession.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: The _____ to Freedom includes freedom of speech and expression, the freedom to form associations, the freedom to move to and live in any part of the country, and the freedom to practise any profession.",
+        "key": "Right",
+        "witness_idx": 4,
+        "witness": "The Right to Freedom includes freedom of speech and expression, the freedom to form associations, the freedom to move to and live in any part of the country, and the freedom to practise any profession.",
+        "options": [
+          "follow",
+          "Right",
+          "every",
+          "certain"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 17.9414,
+    "summary_s": 4.6344,
+    "stems_s": 13.3043,
+    "model_wall_s": 16.4654,
+    "model_calls": 21,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 1,
+    "red": 5,
+    "fallback": 3
+  },
+  "version": 1,
+  "created": "2026-11-13T01:23:28",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

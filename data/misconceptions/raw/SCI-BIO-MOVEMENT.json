@@ -1,0 +1,173 @@
+{
+ "topic": {
+  "id": "SCI-BIO-MOVEMENT",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   6
+  ],
+  "title": "Body movements",
+  "scope": "skeleton, joints, muscles, cartilage, movement in animals such as earthworm, snail, fish, birds"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 701,
+  "candidatesTokenCount": 1280,
+  "totalTokenCount": 1981,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 701
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 35.2,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Role of muscles in movement",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Muscles can push bones to move them.",
+      "why": "Students often equate muscular effort with pushing an object away from themselves.",
+      "fix": "Muscles can only pull by contracting; they cannot push. Movement occurs because pairs of muscles work together, where one pulls while the other relaxes.",
+      "probe": {
+       "question": "How does your arm move when you straighten your elbow?",
+       "wrong_answer": "The muscle on the front of the arm pushes the bone to make it straight."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "contraction",
+       "relaxation",
+       "pulling",
+       "muscle pairs",
+       "bone movement"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Muscles are only present in the arms and legs.",
+      "why": "Students focus on visible movement and ignore internal organs or the torso.",
+      "fix": "Muscles are attached to bones throughout the body, including the chest, back, and neck, to support posture and movement.",
+      "probe": {
+       "question": "Do we have muscles in our neck and back?",
+       "wrong_answer": "No, muscles are only found where we can see them bulge, like in our arms."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "muscular system",
+       "body parts",
+       "movement",
+       "muscle attachment"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Structure and function of joints",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "All joints in the body allow for movement.",
+      "why": "The word 'joint' is colloquially associated with flexible hinges or connections.",
+      "fix": "Some joints, like those in the skull, are fixed and do not allow any movement between the bones.",
+      "probe": {
+       "question": "Can you move the bones of your skull?",
+       "wrong_answer": "Yes, because all bones are connected by joints, and joints are meant for moving."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "fixed joints",
+       "ball and socket",
+       "hinge joint",
+       "skull",
+       "movement"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "Bones are solid, hard structures that cannot bend at all.",
+      "why": "Students perceive bones as rigid, rock-like objects based on skeletal models.",
+      "fix": "Cartilage is a flexible, bone-like tissue found at joints that allows for smooth movement and slight bending.",
+      "probe": {
+       "question": "How can our ears bend if they are made of bone?",
+       "wrong_answer": "The ear is not made of bone, it is made of skin because bones are too hard to bend."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "cartilage",
+       "flexibility",
+       "ear lobe",
+       "joint surface"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Locomotion in diverse animals",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Earthworms move by using legs that are too small to see.",
+      "why": "Students assume all animals must have legs to move, based on their experience with vertebrates.",
+      "fix": "Earthworms move by extending and contracting their body segments using tiny bristles called setae to grip the ground.",
+      "probe": {
+       "question": "How does an earthworm crawl without legs?",
+       "wrong_answer": "It has very tiny legs hidden under its skin that help it walk."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "earthworm",
+       "bristles",
+       "setae",
+       "body segments",
+       "crawling"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     },
+     {
+      "statement": "Fish swim by moving their fins like oars.",
+      "why": "Students compare fish movement to human rowing or swimming techniques.",
+      "fix": "Fish swim primarily by creating waves with their body and tail, while fins are mainly used for balance and steering.",
+      "probe": {
+       "question": "What part of the fish's body provides the main force for swimming?",
+       "wrong_answer": "The fins, because they act like paddles to push the water back."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "streamlined body",
+       "fins",
+       "tail",
+       "swimming",
+       "balance"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Living and non-living things",
+   "Basic parts of the human body"
+  ]
+ },
+ "problems": []
+}

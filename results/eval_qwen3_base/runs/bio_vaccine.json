@@ -1,0 +1,1220 @@
+{
+  "passage": "In the eighteenth century, smallpox was one of the most feared diseases in the world. It killed millions of people and left many survivors with deep scars. An English doctor named Edward Jenner noticed something interesting in the countryside. Milkmaids who had caught cowpox, a mild disease from cows, did not seem to get smallpox. In 1796 Jenner tested this idea. He took material from a cowpox sore on the hand of a milkmaid and put it into a small cut on the arm of a boy named James Phipps. The boy became slightly ill and then recovered. Some weeks later, Jenner exposed him to smallpox, and the boy did not fall sick. Jenner called this method vaccination, from vacca, the Latin word for cow. Today we know how it works. A vaccine contains dead or weakened germs, or parts of them. When it enters the body, the body produces antibodies to fight these germs, and it remembers how to make them. If the real germs attack later, the body can destroy them quickly, before they cause disease. Vaccines have since been made against many diseases, including polio, measles and tetanus. After a worldwide vaccination campaign, smallpox was declared eradicated in 1980. India was declared free of polio in 2014, after years of pulse polio drives in which every child under five was given drops.",
+  "gate": {
+    "status": "OK",
+    "words": 225,
+    "reason": "OK: 225 words"
+  },
+  "summary": {
+    "text": "In the eighteenth century, smallpox was one of the most feared diseases in the world. Milkmaids who caught cowpox didn't get smallpox. Some weeks later, Jenner exposed him to smallpox, and the boy did not fall sick.",
+    "word_count": 37,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "37 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 0,
+        "source": "In the eighteenth century, smallpox was one of the most feared diseases in the world.",
+        "text": "In the eighteenth century, smallpox was one of the most feared diseases in the world.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "In the eighteenth century, smallpox was one of the most feared diseases in the world.",
+            "temperature": 0.0,
+            "wall_s": 1.2568,
+            "failed": [],
+            "prompt_tokens": 93,
+            "new_tokens": 79,
+            "ttft_ms": 279,
+            "tokens_per_s": 79.84,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 3,
+        "source": "Milkmaids who had caught cowpox, a mild disease from cows, did not seem to get smallpox.",
+        "text": "Milkmaids who caught cowpox didn't get smallpox.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "Milkmaids who caught cowpox didn't get smallpox.",
+            "temperature": 0.0,
+            "wall_s": 1.2715,
+            "failed": [],
+            "prompt_tokens": 97,
+            "new_tokens": 79,
+            "ttft_ms": 217,
+            "tokens_per_s": 74.0,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 7,
+        "source": "Some weeks later, Jenner exposed him to smallpox, and the boy did not fall sick.",
+        "text": "Some weeks later, Jenner exposed him to smallpox, and the boy did not fall sick.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "Some weeks later, a boy got sick from smallpox, and he didn't get sick.",
+            "temperature": 0.0,
+            "wall_s": 0.9769,
+            "failed": [
+              "summary_support"
+            ],
+            "prompt_tokens": 93,
+            "new_tokens": 79,
+            "ttft_ms": 134,
+            "tokens_per_s": 92.64,
+            "verify": null
+          },
+          {
+            "text": "Some weeks later, a boy got sick from smallpox, and he didn't get sick.",
+            "temperature": 0.4,
+            "wall_s": 1.313,
+            "failed": [
+              "summary_support"
+            ],
+            "prompt_tokens": 93,
+            "new_tokens": 79,
+            "ttft_ms": 131,
+            "tokens_per_s": 65.99,
+            "verify": null
+          },
+          {
+            "text": "Some weeks later, Jenner exposed him to smallpox, and the boy did not fall sick.",
+            "temperature": 0.7,
+            "wall_s": 1.74,
+            "failed": [],
+            "prompt_tokens": 93,
+            "new_tokens": 79,
+            "ttft_ms": 219,
+            "tokens_per_s": 51.32,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "Jenner",
+      "options": [
+        "Jenner",
+        "James",
+        "Latin",
+        "English"
+      ],
+      "witness_idx": 7,
+      "witness": "Some weeks later, Jenner exposed him to smallpox, and the boy did not fall sick.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "1 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.14"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "grade 8.4 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question",
+        "stem_readability: grade 8.4 (limit 8.0)"
+      ],
+      "attempts": [
+        {
+          "text": "Jenner",
+          "temperature": 0.0,
+          "wall_s": 1.3017,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_readability"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 247,
+          "tokens_per_s": 43.64,
+          "verify": null
+        },
+        {
+          "text": "Jenner",
+          "temperature": 0.4,
+          "wall_s": 1.0815,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_readability"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 382,
+          "tokens_per_s": 65.9,
+          "verify": null
+        },
+        {
+          "text": "Jenner",
+          "temperature": 0.7,
+          "wall_s": 0.827,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_readability"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 258,
+          "tokens_per_s": 80.84,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Some weeks later, Jenner exposed him to smallpox, and the _____ did not fall sick.",
+        "key": "boy",
+        "witness_idx": 7,
+        "witness": "Some weeks later, Jenner exposed him to smallpox, and the boy did not fall sick.",
+        "options": [
+          "boy",
+          "cowpox",
+          "eighteenth",
+          "disease"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "diseases",
+      "options": [
+        "diseases",
+        "survivors",
+        "scars",
+        "milkmaids"
+      ],
+      "witness_idx": 0,
+      "witness": "In the eighteenth century, smallpox was one of the most feared diseases in the world.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "15 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.62"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 6.8 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What was one of the most feared diseases in the world in the eighteenth century?",
+          "temperature": 0.0,
+          "wall_s": 0.8608,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 288,
+          "tokens_per_s": 80.42,
+          "verify": null
+        },
+        {
+          "text": "What were the feared diseases in the eighteenth century?",
+          "temperature": 0.4,
+          "wall_s": 0.7457,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 219,
+          "tokens_per_s": 87.45,
+          "verify": null
+        },
+        {
+          "text": "What were the most feared diseases in the world in the eighteenth century?",
+          "temperature": 0.7,
+          "wall_s": 0.7287,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 212,
+          "tokens_per_s": 89.15,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: In the eighteenth century, smallpox was one of the most _____ diseases in the world.",
+        "key": "feared",
+        "witness_idx": 0,
+        "witness": "In the eighteenth century, smallpox was one of the most feared diseases in the world.",
+        "options": [
+          "weakened",
+          "named",
+          "feared",
+          "declared"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "cows",
+      "options": [
+        "millions",
+        "cows",
+        "scars",
+        "enters"
+      ],
+      "witness_idx": 3,
+      "witness": "Milkmaids who had caught cowpox, a mild disease from cows, did not seem to get smallpox.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "9 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.50"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.3 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What disease from cows did the milkmaids not get?",
+          "temperature": 0.0,
+          "wall_s": 0.7135,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 209,
+          "tokens_per_s": 91.27,
+          "verify": null
+        },
+        {
+          "text": "What disease from cows was not getting smallpox?",
+          "temperature": 0.4,
+          "wall_s": 0.8881,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 234,
+          "tokens_per_s": 70.44,
+          "verify": null
+        },
+        {
+          "text": "What is the disease that milkmaids who caught cowpox were not exposed to?",
+          "temperature": 0.7,
+          "wall_s": 1.0288,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 375,
+          "tokens_per_s": 70.34,
+          "verify": {
+            "text": "cowpox",
+            "wall_s": 0.3877,
+            "prompt_tokens": 167,
+            "new_tokens": 15,
+            "ttft_ms": 219,
+            "tokens_per_s": 82.84
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Milkmaids who had caught cowpox, a mild _____ from cows, did not seem to get smallpox.",
+        "key": "disease",
+        "witness_idx": 3,
+        "witness": "Milkmaids who had caught cowpox, a mild disease from cows, did not seem to get smallpox.",
+        "options": [
+          "vaccination",
+          "disease",
+          "doctor",
+          "boy"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "short",
+      "stem": "When was smallpox declared eradicated?",
+      "key": "1980",
+      "options": null,
+      "witness_idx": 14,
+      "witness": "After a worldwide vaccination campaign, smallpox was declared eradicated in 1980.",
+      "tier": "AMBER",
+      "fallback": false,
+      "detail": true,
+      "signals": [
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "5 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.57"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 14.7 (limit 16.6)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "When was smallpox declared eradicated?",
+          "temperature": 0.0,
+          "wall_s": 0.7279,
+          "failed": [],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 215,
+          "tokens_per_s": 89.84,
+          "verify": {
+            "text": "1980",
+            "wall_s": 0.3469,
+            "prompt_tokens": 155,
+            "new_tokens": 15,
+            "ttft_ms": 198,
+            "tokens_per_s": 94.59
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: After a worldwide vaccination campaign, smallpox was _____ eradicated in 1980.",
+        "key": "declared",
+        "witness_idx": 14,
+        "witness": "After a worldwide vaccination campaign, smallpox was declared eradicated in 1980.",
+        "options": [
+          "recovered",
+          "exposed",
+          "declared",
+          "weakened"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "Phipps",
+      "options": [
+        "Latin",
+        "Edward",
+        "English",
+        "Phipps"
+      ],
+      "witness_idx": 5,
+      "witness": "He took material from a cowpox sore on the hand of a milkmaid and put it into a small cut on the arm of a boy named James Phipps.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": true,
+      "signals": [
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "6 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.15"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.39"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 4.5 (limit 10.4)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "James Phipps was named after whom?",
+          "temperature": 0.0,
+          "wall_s": 0.7736,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 183,
+          "new_tokens": 47,
+          "ttft_ms": 228,
+          "tokens_per_s": 84.4,
+          "verify": null
+        },
+        {
+          "text": "James Phipps was named after whom?",
+          "temperature": 0.4,
+          "wall_s": 0.9845,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 183,
+          "new_tokens": 47,
+          "ttft_ms": 399,
+          "tokens_per_s": 78.63,
+          "verify": null
+        },
+        {
+          "text": "James Phipps was a boy named ...",
+          "temperature": 0.7,
+          "wall_s": 0.9244,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 183,
+          "new_tokens": 47,
+          "ttft_ms": 242,
+          "tokens_per_s": 67.55,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: He took material from a cowpox sore on the hand of a milkmaid and put it into a small cut on the arm of a boy named _____ Phipps.",
+        "key": "James",
+        "witness_idx": 5,
+        "witness": "He took material from a cowpox sore on the hand of a milkmaid and put it into a small cut on the arm of a boy named James Phipps.",
+        "options": [
+          "James",
+          "scars",
+          "millions",
+          "diseases"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "What is the result of the attack?",
+      "key": "disease",
+      "options": [
+        "disease",
+        "smallpox",
+        "cowpox",
+        "boy"
+      ],
+      "witness_idx": 12,
+      "witness": "If the real germs attack later, the body can destroy them quickly, before they cause disease.",
+      "tier": "AMBER",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "7 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.25"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.17"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "50% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.3 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_in_passage: 50% of content words are in the passage"
+      ],
+      "attempts": [
+        {
+          "text": "What is the result of the attack?",
+          "temperature": 0.0,
+          "wall_s": 0.9722,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 381,
+          "tokens_per_s": 77.97,
+          "verify": {
+            "text": "the result is disease",
+            "wall_s": 0.3667,
+            "prompt_tokens": 154,
+            "new_tokens": 15,
+            "ttft_ms": 211,
+            "tokens_per_s": 90.32
+          }
+        },
+        {
+          "text": "What is the result of the attack?",
+          "temperature": 0.4,
+          "wall_s": 0.7667,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 224,
+          "tokens_per_s": 84.87,
+          "verify": {
+            "text": "the result is disease",
+            "wall_s": 0.3695,
+            "prompt_tokens": 154,
+            "new_tokens": 15,
+            "ttft_ms": 205,
+            "tokens_per_s": 85.37
+          }
+        },
+        {
+          "text": "What does the sentence suggest about disease?",
+          "temperature": 0.7,
+          "wall_s": 0.7697,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 230,
+          "tokens_per_s": 85.34,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: If the real _____ attack later, the body can destroy them quickly, before they cause disease.",
+        "key": "germs",
+        "witness_idx": 12,
+        "witness": "If the real germs attack later, the body can destroy them quickly, before they cause disease.",
+        "options": [
+          "millions",
+          "germs",
+          "cows",
+          "scars"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: Vaccines have since been made against many diseases, including _____, measles and tetanus.",
+      "key": "polio",
+      "options": [
+        "polio",
+        "disease",
+        "century",
+        "eighteenth"
+      ],
+      "witness_idx": 13,
+      "witness": "Vaccines have since been made against many diseases, including polio, measles and tetanus.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: Vaccines have since been made against many _____, including polio, measles and tetanus.",
+        "key": "diseases",
+        "witness_idx": 13,
+        "witness": "Vaccines have since been made against many diseases, including polio, measles and tetanus.",
+        "options": [
+          "enters",
+          "contains",
+          "diseases",
+          "milkmaids"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "kind": "cloze",
+      "stem": "Fill in the blank: When it enters the body, the body produces antibodies to fight these _____, and it remembers how to make them.",
+      "key": "germs",
+      "options": [
+        "milkmaids",
+        "measles",
+        "contains",
+        "germs"
+      ],
+      "witness_idx": 11,
+      "witness": "When it enters the body, the body produces antibodies to fight these germs, and it remembers how to make them.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": null
+    },
+    {
+      "id": 9,
+      "kind": "cloze",
+      "stem": "Fill in the blank: The _____ became slightly ill and then recovered.",
+      "key": "boy",
+      "options": [
+        "vaccination",
+        "vaccine",
+        "boy",
+        "disease"
+      ],
+      "witness_idx": 6,
+      "witness": "The boy became slightly ill and then recovered.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": null
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 22.1406,
+    "summary_s": 6.5598,
+    "stems_s": 15.5784,
+    "model_wall_s": 20.653,
+    "model_calls": 21,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 2,
+    "red": 4,
+    "fallback": 3
+  },
+  "version": 1,
+  "created": "2026-11-13T01:18:36",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

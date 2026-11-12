@@ -1,0 +1,146 @@
+{
+ "topic": {
+  "id": "SCI-CHM-ACIDSBASES",
+  "subject": "science",
+  "strand": "chemistry",
+  "grades": [
+   7,
+   10
+  ],
+  "title": "Acids, bases and salts",
+  "scope": "natural indicators, litmus, neutralisation, pH scale, everyday acids and bases, salts"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 709,
+  "candidatesTokenCount": 1037,
+  "totalTokenCount": 1746,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 709
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.9,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Everyday Acids and Bases",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "All acids are dangerous and corrosive substances that burn everything they touch.",
+      "why": "Students associate the word 'acid' with strong laboratory chemicals shown in movies or warnings.",
+      "fix": "Many acids are weak and found in common food items like lemons and curd, which are safe to consume.",
+      "probe": {
+       "question": "Is it safe to eat a lemon?",
+       "wrong_answer": "No, because lemons contain acid and acids are harmful."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "sour taste",
+       "citrus fruits",
+       "corrosive",
+       "edible acids"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Indicators and Litmus",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Litmus paper is a universal indicator that tells you exactly how acidic or basic a substance is.",
+      "why": "Students often confuse the simple color change of litmus with the precise measurement provided by a pH scale.",
+      "fix": "Litmus only indicates whether a substance is acidic or basic by changing color, but it does not measure the strength or pH level.",
+      "probe": {
+       "question": "Can you use litmus paper to tell if a solution is a strong acid or a weak acid?",
+       "wrong_answer": "Yes, by looking at how dark the red color is on the litmus paper."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "litmus",
+       "red to blue",
+       "blue to red",
+       "indicator"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Neutralisation Reactions",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "In a neutralisation reaction, the acid and base disappear completely.",
+      "why": "The term 'neutralise' is interpreted as 'destroy' or 'cancel out' in everyday language.",
+      "fix": "The acid and base react to form new substances, specifically a salt and water, which still exist in the container.",
+      "probe": {
+       "question": "After mixing equal amounts of hydrochloric acid and sodium hydroxide, what is left in the beaker?",
+       "wrong_answer": "Nothing, because they have neutralised each other and disappeared."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "neutralisation",
+       "salt and water",
+       "reaction",
+       "cancel out"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "pH Scale and Strength",
+    "prereqs": [
+     "c1",
+     "c2",
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "A pH of 0 means the substance has no acidity.",
+      "why": "Students often confuse the number 0 with 'nothing' or 'zero amount' rather than a point on a logarithmic scale.",
+      "fix": "A pH of 0 indicates a very strong acid; the lower the pH value below 7, the stronger the acid.",
+      "probe": {
+       "question": "Which is more acidic: a solution with pH 1 or a solution with pH 5?",
+       "wrong_answer": "pH 5 is more acidic because 5 is a larger number than 1."
+      },
+      "error_type": "scale_or_quantity",
+      "trigger_cues": [
+       "ph scale",
+       "logarithmic",
+       "hydrogen ion concentration",
+       "acidic strength"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "States of matter",
+   "Atoms and molecules",
+   "Chemical changes"
+  ]
+ },
+ "problems": []
+}

@@ -1,0 +1,1157 @@
+{
+  "passage": "Elements can be broadly divided into metals and non-metals. Metals such as iron, copper, aluminium and gold are usually hard and shiny. They are malleable, which means they can be beaten into thin sheets, and ductile, which means they can be drawn into wires. Aluminium foil used to wrap food and copper wires used in electrical fittings are made possible by these properties. Metals are good conductors of heat and electricity, which is why cooking vessels are made of metal and electric wires are made of copper. Metals also make a ringing sound when struck, so school bells are made of metal. Non-metals such as sulphur, carbon, oxygen and phosphorus behave very differently. Solid non-metals are generally soft and dull, and they break into pieces when hammered. They are poor conductors of heat and electricity. There are a few exceptions. Mercury is a metal that is liquid at room temperature. Graphite, a form of carbon, is a non-metal that conducts electricity, and it is used in the electrodes of cells. Diamond, another form of carbon, is the hardest natural substance known. Metals and non-metals also react differently with oxygen. Metals form oxides that are basic in nature, while non-metals form oxides that are acidic in nature. Sodium is so reactive that it is stored in kerosene.",
+  "gate": {
+    "status": "OK",
+    "words": 216,
+    "reason": "OK: 216 words"
+  },
+  "summary": {
+    "text": "Elements can be divided into metals and non-metals. Metals and non-metals react differently with oxygen. Metals form oxides that are basic, and non-metals form oxides that are acidic.",
+    "word_count": 28,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": false,
+        "detail": "28 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 0,
+        "source": "Elements can be broadly divided into metals and non-metals.",
+        "text": "Elements can be divided into metals and non-metals.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "Elements can be divided into metals and non-metals.",
+            "temperature": 0.0,
+            "wall_s": 0.8471,
+            "failed": [],
+            "prompt_tokens": 86,
+            "new_tokens": 79,
+            "ttft_ms": 111,
+            "tokens_per_s": 105.98,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 13,
+        "source": "Metals and non-metals also react differently with oxygen.",
+        "text": "Metals and non-metals react differently with oxygen.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "Metals and non-metals react differently with oxygen.",
+            "temperature": 0.0,
+            "wall_s": 0.858,
+            "failed": [],
+            "prompt_tokens": 85,
+            "new_tokens": 79,
+            "ttft_ms": 110,
+            "tokens_per_s": 104.42,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 14,
+        "source": "Metals form oxides that are basic in nature, while non-metals form oxides that are acidic in nature.",
+        "text": "Metals form oxides that are basic, and non-metals form oxides that are acidic.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "Metals form basic oxides, and non-metals form acidic oxides.",
+            "temperature": 0.0,
+            "wall_s": 0.894,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 97,
+            "new_tokens": 79,
+            "ttft_ms": 134,
+            "tokens_per_s": 102.77,
+            "verify": null
+          },
+          {
+            "text": "Metals form basic oxides, while non-metals form acidic oxides.",
+            "temperature": 0.4,
+            "wall_s": 0.887,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 97,
+            "new_tokens": 79,
+            "ttft_ms": 122,
+            "tokens_per_s": 102.09,
+            "verify": null
+          },
+          {
+            "text": "Metals form oxides that are basic, and non-metals form oxides that are acidic.",
+            "temperature": 0.7,
+            "wall_s": 0.8918,
+            "failed": [],
+            "prompt_tokens": 97,
+            "new_tokens": 79,
+            "ttft_ms": 124,
+            "tokens_per_s": 101.69,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "What are the categories of elements?",
+      "key": "non-metals",
+      "options": [
+        "fittings",
+        "non-metals",
+        "bells",
+        "wires"
+      ],
+      "witness_idx": 0,
+      "witness": "Elements can be broadly divided into metals and non-metals.",
+      "tier": "AMBER",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "6 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.17"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "50% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 8.4 (limit 11.5)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_in_passage: 50% of content words are in the passage"
+      ],
+      "attempts": [
+        {
+          "text": "What is divided into? non-metals",
+          "temperature": 0.0,
+          "wall_s": 0.747,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 219,
+          "tokens_per_s": 87.29,
+          "verify": null
+        },
+        {
+          "text": "What is divided into? non-metals",
+          "temperature": 0.4,
+          "wall_s": 0.7672,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 213,
+          "tokens_per_s": 83.03,
+          "verify": null
+        },
+        {
+          "text": "What are the categories of elements?",
+          "temperature": 0.7,
+          "wall_s": 0.754,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 225,
+          "tokens_per_s": 87.12,
+          "verify": {
+            "text": "metals and non-metals",
+            "wall_s": 0.3422,
+            "prompt_tokens": 146,
+            "new_tokens": 15,
+            "ttft_ms": 194,
+            "tokens_per_s": 94.59
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Elements can be broadly _____ into metals and non-metals.",
+        "key": "divided",
+        "witness_idx": 0,
+        "witness": "Elements can be broadly divided into metals and non-metals.",
+        "options": [
+          "hammered",
+          "divided",
+          "wires",
+          "aluminium"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "What do metals and non-metals react with?",
+      "key": "oxygen",
+      "options": [
+        "oxygen",
+        "nature",
+        "carbon",
+        "heat"
+      ],
+      "witness_idx": 13,
+      "witness": "Metals and non-metals also react differently with oxygen.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "7 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.65"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.31"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 4.0 (limit 12.6)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is the name of the reaction between metals and oxygen?",
+          "temperature": 0.0,
+          "wall_s": 0.7052,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 158,
+          "new_tokens": 47,
+          "ttft_ms": 203,
+          "tokens_per_s": 91.63,
+          "verify": null
+        },
+        {
+          "text": "What is the name of the reaction that happens between metals and oxygen?",
+          "temperature": 0.4,
+          "wall_s": 0.7138,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 158,
+          "new_tokens": 47,
+          "ttft_ms": 203,
+          "tokens_per_s": 90.2,
+          "verify": null
+        },
+        {
+          "text": "What do metals and non-metals react with?",
+          "temperature": 0.7,
+          "wall_s": 0.7129,
+          "failed": [],
+          "prompt_tokens": 158,
+          "new_tokens": 47,
+          "ttft_ms": 202,
+          "tokens_per_s": 90.2,
+          "verify": {
+            "text": "oxygen",
+            "wall_s": 0.3445,
+            "prompt_tokens": 149,
+            "new_tokens": 15,
+            "ttft_ms": 201,
+            "tokens_per_s": 97.9
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Metals and non-metals also react _____ with oxygen.",
+        "key": "differently",
+        "witness_idx": 13,
+        "witness": "Metals and non-metals also react differently with oxygen.",
+        "options": [
+          "differently",
+          "electricity",
+          "nature",
+          "iron"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "Which metal is used in cooking vessels?",
+      "key": "copper",
+      "options": [
+        "iron",
+        "oxygen",
+        "differently",
+        "copper"
+      ],
+      "witness_idx": 4,
+      "witness": "Metals are good conductors of heat and electricity, which is why cooking vessels are made of metal and electric wires are made of copper.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "7 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.28"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.47"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.7 (limit 12.5)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "Which metal is used in cooking vessels?",
+          "temperature": 0.0,
+          "wall_s": 0.7177,
+          "failed": [],
+          "prompt_tokens": 173,
+          "new_tokens": 47,
+          "ttft_ms": 218,
+          "tokens_per_s": 92.18,
+          "verify": {
+            "text": "copper",
+            "wall_s": 0.3613,
+            "prompt_tokens": 161,
+            "new_tokens": 15,
+            "ttft_ms": 206,
+            "tokens_per_s": 90.32
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Metals are good conductors of heat and electricity, which is why cooking vessels are made of metal and electric _____ are made of copper.",
+        "key": "wires",
+        "witness_idx": 4,
+        "witness": "Metals are good conductors of heat and electricity, which is why cooking vessels are made of metal and electric wires are made of copper.",
+        "options": [
+          "phosphorus",
+          "elements",
+          "sheets",
+          "wires"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "aluminium",
+      "options": [
+        "oxygen",
+        "aluminium",
+        "malleable",
+        "differently"
+      ],
+      "witness_idx": 1,
+      "witness": "Metals such as iron, copper, aluminium and gold are usually hard and shiny.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "6 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.10"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.61"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "67% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 4.5 (limit 9.4)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'metals', not 'aluminium'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'metals', not 'aluminium'"
+      ],
+      "attempts": [
+        {
+          "text": "What is used for making metal?",
+          "temperature": 0.0,
+          "wall_s": 0.7084,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 208,
+          "tokens_per_s": 92.0,
+          "verify": {
+            "text": "metals",
+            "wall_s": 0.3381,
+            "prompt_tokens": 149,
+            "new_tokens": 15,
+            "ttft_ms": 193,
+            "tokens_per_s": 97.22
+          }
+        },
+        {
+          "text": "What is used to make food?",
+          "temperature": 0.4,
+          "wall_s": 0.7157,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 207,
+          "tokens_per_s": 90.55,
+          "verify": {
+            "text": "food",
+            "wall_s": 0.3417,
+            "prompt_tokens": 149,
+            "new_tokens": 15,
+            "ttft_ms": 193,
+            "tokens_per_s": 94.59
+          }
+        },
+        {
+          "text": "What is one metal that is usually hard and shiny?",
+          "temperature": 0.7,
+          "wall_s": 0.7529,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 217,
+          "tokens_per_s": 85.98,
+          "verify": {
+            "text": "aluminum",
+            "wall_s": 0.3572,
+            "prompt_tokens": 153,
+            "new_tokens": 15,
+            "ttft_ms": 205,
+            "tokens_per_s": 92.11
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Metals such as iron, _____, aluminium and gold are usually hard and shiny.",
+        "key": "copper",
+        "witness_idx": 1,
+        "witness": "Metals such as iron, copper, aluminium and gold are usually hard and shiny.",
+        "options": [
+          "electricity",
+          "copper",
+          "differently",
+          "carbon"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "wires",
+      "options": [
+        "conductors",
+        "non-metals",
+        "vessels",
+        "wires"
+      ],
+      "witness_idx": 2,
+      "witness": "They are malleable, which means they can be beaten into thin sheets, and ductile, which means they can be drawn into wires.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "21 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.53"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.30"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "62% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "grade 10.0 (limit 9.1)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_length: 21 words (max 20)",
+        "stem_no_answer_leak: the answer appears in the question",
+        "stem_readability: grade 10.0 (limit 9.1)"
+      ],
+      "attempts": [
+        {
+          "text": "Which of the following is a description of a material that can be beaten into thin sheets and drawn into wires?",
+          "temperature": 0.0,
+          "wall_s": 0.7361,
+          "failed": [
+            "stem_length",
+            "stem_no_answer_leak",
+            "stem_readability"
+          ],
+          "prompt_tokens": 175,
+          "new_tokens": 47,
+          "ttft_ms": 222,
+          "tokens_per_s": 89.49,
+          "verify": null
+        },
+        {
+          "text": "Which of the following is a description of a material that can be beaten into thin sheets and drawn into wires?",
+          "temperature": 0.4,
+          "wall_s": 0.7338,
+          "failed": [
+            "stem_length",
+            "stem_no_answer_leak",
+            "stem_readability"
+          ],
+          "prompt_tokens": 175,
+          "new_tokens": 47,
+          "ttft_ms": 221,
+          "tokens_per_s": 89.84,
+          "verify": null
+        },
+        {
+          "text": "Which of the following is a description of a material that can be beaten into thin sheets or drawn into wires?",
+          "temperature": 0.7,
+          "wall_s": 0.7274,
+          "failed": [
+            "stem_length",
+            "stem_no_answer_leak",
+            "stem_readability"
+          ],
+          "prompt_tokens": 175,
+          "new_tokens": 47,
+          "ttft_ms": 216,
+          "tokens_per_s": 90.2,
+          "verify": null
+        }
+      ],
+      "reserve": null
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "differently",
+      "options": [
+        "iron",
+        "broadly",
+        "differently",
+        "gold"
+      ],
+      "witness_idx": 6,
+      "witness": "Non-metals such as sulphur, carbon, oxygen and phosphorus behave very differently.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "6 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.45"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.57"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "75% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 12.3 (limit 14.4)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What do non-metals behave differently towards?",
+          "temperature": 0.0,
+          "wall_s": 0.7107,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 165,
+          "new_tokens": 47,
+          "ttft_ms": 207,
+          "tokens_per_s": 91.45,
+          "verify": null
+        },
+        {
+          "text": "What do non-metals behave differently with?",
+          "temperature": 0.4,
+          "wall_s": 0.7202,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 165,
+          "new_tokens": 47,
+          "ttft_ms": 207,
+          "tokens_per_s": 89.67,
+          "verify": null
+        },
+        {
+          "text": "What do non-metals such as sulphur, carbon, oxygen, and phosphorus behave differently like?",
+          "temperature": 0.7,
+          "wall_s": 0.7215,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 165,
+          "new_tokens": 47,
+          "ttft_ms": 209,
+          "tokens_per_s": 89.84,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Non-metals such as sulphur, carbon, _____ and phosphorus behave very differently.",
+        "key": "oxygen",
+        "witness_idx": 6,
+        "witness": "Non-metals such as sulphur, carbon, oxygen and phosphorus behave very differently.",
+        "options": [
+          "heat",
+          "electricity",
+          "oxygen",
+          "copper"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: They are poor conductors of heat and _____.",
+      "key": "electricity",
+      "options": [
+        "iron",
+        "differently",
+        "broadly",
+        "electricity"
+      ],
+      "witness_idx": 8,
+      "witness": "They are poor conductors of heat and electricity.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: They are poor conductors of _____ and electricity.",
+        "key": "heat",
+        "witness_idx": 8,
+        "witness": "They are poor conductors of heat and electricity.",
+        "options": [
+          "nature",
+          "heat",
+          "iron",
+          "carbon"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 18.1219,
+    "summary_s": 4.379,
+    "stems_s": 13.7416,
+    "model_wall_s": 16.0224,
+    "model_calls": 21,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 1,
+    "red": 3,
+    "fallback": 1
+  },
+  "version": 1,
+  "created": "2026-11-13T01:15:53",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

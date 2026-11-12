@@ -1,0 +1,137 @@
+{
+ "topic": {
+  "id": "SOC-GEO-WATERRES",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   10
+  ],
+  "title": "Water resources",
+  "scope": "water scarcity, multipurpose river projects and dams, debates over dams, rainwater harvesting, traditional systems"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 696,
+  "candidatesTokenCount": 999,
+  "totalTokenCount": 1695,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 696
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.7,
+ "response": {
+  "concepts": [
+   {
+    "key": "water_scarcity",
+    "name": "Causes and nature of water scarcity",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Water scarcity is only caused by low rainfall.",
+      "why": "Students often equate scarcity solely with drought, ignoring human-induced factors like pollution and over-extraction.",
+      "fix": "Water scarcity can occur even in areas with high rainfall due to over-exploitation, excessive use, and unequal access to water among different social groups.",
+      "probe": {
+       "question": "Can a region with high annual rainfall still face water scarcity? Why?",
+       "wrong_answer": "No, because if it rains a lot, there will always be enough water for everyone."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "drought",
+       "rainfall",
+       "scarcity",
+       "over-exploitation",
+       "water stress"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "Water is a renewable resource, so it can never run out.",
+      "why": "Students confuse the hydrological cycle with the availability of usable freshwater for human consumption.",
+      "fix": "While water is renewable, the rate of consumption often exceeds the rate of natural replenishment, leading to a depletion of usable freshwater.",
+      "probe": {
+       "question": "If water is a renewable resource, why are we worried about water scarcity?",
+       "wrong_answer": "Because it is renewable, it will naturally replenish itself, so we don't need to worry about it running out."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "renewable resource",
+       "hydrological cycle",
+       "freshwater",
+       "replenishment"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "multipurpose_projects",
+    "name": "Multipurpose River Projects and Dams",
+    "prereqs": [
+     "water_scarcity"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Dams are always beneficial for the environment and local communities.",
+      "why": "Textbooks often highlight the economic benefits (electricity, irrigation) while downplaying the social and ecological costs.",
+      "fix": "Dams can cause large-scale displacement of local communities, loss of biodiversity, and disruption of natural river flow and sediment transport.",
+      "probe": {
+       "question": "What are the main disadvantages of building large dams?",
+       "wrong_answer": "Dams don't have disadvantages; they only provide electricity and help farmers with irrigation."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "multipurpose projects",
+       "dams",
+       "irrigation",
+       "electricity generation",
+       "flood control"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "traditional_harvesting",
+    "name": "Traditional Rainwater Harvesting Systems",
+    "prereqs": [
+     "water_scarcity",
+     "multipurpose_projects"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Traditional rainwater harvesting is outdated and useless in modern times.",
+      "why": "Students perceive modern technology as superior and assume ancient methods are inefficient.",
+      "fix": "Traditional methods are often more sustainable and ecologically sound, as they are adapted to local climatic conditions and community needs.",
+      "probe": {
+       "question": "Why should we study traditional water harvesting methods in the 21st century?",
+       "wrong_answer": "We shouldn't, because they are primitive and cannot solve the water problems of modern cities."
+      },
+      "error_type": "presentism",
+      "trigger_cues": [
+       "rainwater harvesting",
+       "traditional systems",
+       "sustainability",
+       "modern technology",
+       "local adaptation"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Physical Geography of India",
+   "Climate and Monsoon",
+   "Basic Ecology"
+  ]
+ },
+ "problems": []
+}

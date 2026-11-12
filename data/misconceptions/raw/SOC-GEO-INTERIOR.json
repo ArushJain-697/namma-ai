@@ -1,0 +1,165 @@
+{
+ "topic": {
+  "id": "SOC-GEO-INTERIOR",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   7
+  ],
+  "title": "Inside our Earth and changing landforms",
+  "scope": "crust, mantle, core, rocks and rock cycle, earthquakes, volcanoes, work of rivers, wind, glaciers, sea waves"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 705,
+  "candidatesTokenCount": 1203,
+  "totalTokenCount": 1908,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 705
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.3,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Structure of the Earth",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "The Earth's core is a giant hollow space filled with fire or air.",
+      "why": "Students often map the Earth's structure to a simple fruit or a ball, assuming there must be an empty center.",
+      "fix": "The Earth is solid or semi-solid throughout; the core is a dense, hot sphere made of metals like iron and nickel.",
+      "probe": {
+       "question": "What would you find if you could dig a hole all the way to the center of the Earth?",
+       "wrong_answer": "I would reach a big empty cave filled with hot air."
+      },
+      "error_type": "other",
+      "trigger_cues": [
+       "crust",
+       "mantle",
+       "core",
+       "layers of earth",
+       "inner core"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "The Earth's crust is a single, solid, unbroken shell.",
+      "why": "The ground appears stable and continuous in everyday experience, hiding the fact that it is made of moving plates.",
+      "fix": "The crust is broken into several large and small pieces called tectonic plates that float on the mantle.",
+      "probe": {
+       "question": "Is the outer layer of the Earth one single piece?",
+       "wrong_answer": "Yes, it is like the smooth skin of an apple."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "lithosphere",
+       "crust",
+       "tectonic plates",
+       "surface"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Rocks and the Rock Cycle",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Rocks are permanent and never change their form.",
+      "why": "In human timescales, rocks appear static and unchanging, leading students to ignore geological time.",
+      "fix": "Rocks are constantly changing through processes like melting, cooling, weathering, and pressure over millions of years.",
+      "probe": {
+       "question": "Can a sedimentary rock ever become an igneous rock?",
+       "wrong_answer": "No, once a rock is formed, it stays that type forever."
+      },
+      "error_type": "presentism",
+      "trigger_cues": [
+       "igneous",
+       "sedimentary",
+       "metamorphic",
+       "rock cycle",
+       "magma"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Earthquakes and Volcanoes",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Earthquakes are caused by underground explosions or the Earth 'shaking' due to gas pressure.",
+      "why": "Students often confuse the mechanism of earthquakes with the explosive nature of volcanoes.",
+      "fix": "Earthquakes are caused by the sudden release of energy when tectonic plates grind against each other or break.",
+      "probe": {
+       "question": "Why does the ground shake during an earthquake?",
+       "wrong_answer": "Because gas trapped deep inside the Earth explodes and pushes the ground up."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "seismic waves",
+       "focus",
+       "epicenter",
+       "tectonic movement",
+       "vibrations"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Geomorphic Agents (Rivers, Wind, Glaciers)",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Landforms like valleys and canyons were created exactly as they look today in a very short time.",
+      "why": "Students struggle to conceptualize the slow, gradual process of erosion over millions of years.",
+      "fix": "These landforms are shaped by the slow, continuous work of water, wind, and ice over vast geological periods.",
+      "probe": {
+       "question": "How long did it take for the river to carve this deep canyon?",
+       "wrong_answer": "It probably happened very quickly during a big flood in the past."
+      },
+      "error_type": "chronology_slip",
+      "trigger_cues": [
+       "erosion",
+       "deposition",
+       "weathering",
+       "river work",
+       "glacier",
+       "landforms"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "States of matter",
+   "Basic properties of heat",
+   "Introduction to maps"
+  ]
+ },
+ "problems": []
+}

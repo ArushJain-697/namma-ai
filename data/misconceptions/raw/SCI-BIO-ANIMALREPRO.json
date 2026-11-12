@@ -1,0 +1,174 @@
+{
+ "topic": {
+  "id": "SCI-BIO-ANIMALREPRO",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   8
+  ],
+  "title": "Reproduction in animals",
+  "scope": "sexual and asexual reproduction, fertilisation, internal and external, development of embryo, metamorphosis, budding in hydra"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 703,
+  "candidatesTokenCount": 1322,
+  "totalTokenCount": 2025,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 703
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.7,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Asexual Reproduction",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Asexual reproduction is only for plants and not animals.",
+      "why": "Students often associate reproduction with mating and animals, ignoring simple organisms like Hydra.",
+      "fix": "Some animals, such as Hydra, reproduce asexually by budding where a new individual develops as an outgrowth from the parent.",
+      "probe": {
+       "question": "Can an animal produce offspring without a mate?",
+       "wrong_answer": "No, all animals need a male and a female to reproduce."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "budding",
+       "hydra",
+       "single parent",
+       "asexual",
+       "offspring"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "The bud in Hydra is just a tumor or a growth that will eventually fall off and die.",
+      "why": "Students project their knowledge of human diseases or injuries onto biological growth processes.",
+      "fix": "The bud is a healthy, developing offspring that detaches from the parent once it is mature enough to live independently.",
+      "probe": {
+       "question": "What happens to the small bump on a Hydra's body?",
+       "wrong_answer": "It is a sickness or injury that will drop off and disappear."
+      },
+      "error_type": "living_thing_reasoning",
+      "trigger_cues": [
+       "bud",
+       "hydra",
+       "outgrowth",
+       "parent",
+       "new individual"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Sexual Reproduction and Fertilisation",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Fertilisation is the same thing as mating or copulation.",
+      "why": "Everyday language often uses these terms interchangeably to describe the entire reproductive act.",
+      "fix": "Mating is the physical act of bringing gametes together, while fertilisation is the specific biological event where the sperm nucleus fuses with the egg nucleus.",
+      "probe": {
+       "question": "If a male and female animal mate but no fertilisation occurs, will a baby be born?",
+       "wrong_answer": "Yes, because they have mated."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "fusion",
+       "sperm",
+       "egg",
+       "zygote",
+       "nuclei"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "External fertilisation is less effective because the eggs are just left to die.",
+      "why": "Students equate 'external' with 'unprotected' and assume it lacks biological purpose.",
+      "fix": "External fertilisation is a successful strategy for many aquatic animals, where large numbers of eggs are released to ensure some survive despite environmental risks.",
+      "probe": {
+       "question": "Why do frogs lay hundreds of eggs in water?",
+       "wrong_answer": "Because they don't care if the eggs survive or get eaten."
+      },
+      "error_type": "living_thing_reasoning",
+      "trigger_cues": [
+       "external",
+       "water",
+       "frog",
+       "fish",
+       "spawn"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Embryo Development and Metamorphosis",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "A tadpole is a different animal from a frog.",
+      "why": "The dramatic physical difference between the larva and the adult makes it hard for students to see them as the same organism.",
+      "fix": "Metamorphosis is the process where a larva undergoes drastic physical changes to become an adult of the same species.",
+      "probe": {
+       "question": "Is a tadpole a type of fish or a frog?",
+       "wrong_answer": "It is a fish that eventually dies and turns into a frog."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "metamorphosis",
+       "tadpole",
+       "frog",
+       "larva",
+       "transformation"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     },
+     {
+      "statement": "The embryo grows by simply getting bigger, like a balloon inflating.",
+      "why": "Students lack the concept of cell division and differentiation, viewing growth as simple expansion.",
+      "fix": "The embryo grows through repeated cell division and the cells gradually differentiate to form different tissues and organs.",
+      "probe": {
+       "question": "How does a single-celled zygote become a complex animal?",
+       "wrong_answer": "It just stretches and expands until it is big enough to be born."
+      },
+      "error_type": "process_vs_product",
+      "trigger_cues": [
+       "zygote",
+       "cell division",
+       "embryo",
+       "development",
+       "organs"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Cell structure and function",
+   "Basic life processes"
+  ]
+ },
+ "problems": []
+}

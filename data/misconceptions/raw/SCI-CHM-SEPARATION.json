@@ -1,0 +1,185 @@
+{
+ "topic": {
+  "id": "SCI-CHM-SEPARATION",
+  "subject": "science",
+  "strand": "chemistry",
+  "grades": [
+   6
+  ],
+  "title": "Separation of substances",
+  "scope": "handpicking, winnowing, sieving, sedimentation, decantation, filtration, evaporation, saturated solutions"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 702,
+  "candidatesTokenCount": 1319,
+  "totalTokenCount": 2021,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 702
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.6,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Mixtures and Pure Substances",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "A mixture always looks like a combination of different visible parts.",
+      "why": "Students associate 'mixture' with kitchen examples like cereal or mixed nuts where components are distinct.",
+      "fix": "A mixture can look uniform, like salt dissolved in water, where the components are mixed at a level invisible to the eye.",
+      "probe": {
+       "question": "Is a glass of clear salt water a mixture?",
+       "wrong_answer": "No, because it looks like a single pure substance."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "mixture",
+       "components",
+       "pure substance",
+       "visible",
+       "uniform"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Mechanical Separation Methods",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Sieving separates substances based on their weight.",
+      "why": "Students confuse the action of sieving with winnowing, as both involve moving materials.",
+      "fix": "Sieving separates components based on the difference in the size of their particles, not their weight.",
+      "probe": {
+       "question": "Why does sand pass through a sieve but pebbles stay behind?",
+       "wrong_answer": "Because the pebbles are heavier than the sand."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "sieving",
+       "size",
+       "particles",
+       "holes",
+       "mesh"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Winnowing works because the wind pushes the heavier grains away.",
+      "why": "Students observe the movement of the lighter husk and incorrectly attribute the force to the heavier grain.",
+      "fix": "The wind blows away the lighter husk, while the heavier grains fall straight down due to gravity.",
+      "probe": {
+       "question": "In winnowing, why do the grains stay near the farmer?",
+       "wrong_answer": "The wind is not strong enough to push the heavy grains."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "winnowing",
+       "wind",
+       "husk",
+       "grains",
+       "heavier",
+       "lighter"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Sedimentation and Filtration",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Filtration removes all dissolved substances from water.",
+      "why": "Students equate 'clear' water with 'pure' water, assuming the filter catches everything.",
+      "fix": "Filtration only removes insoluble solid particles; dissolved substances like salt pass through the filter paper.",
+      "probe": {
+       "question": "If you filter salty water, will the salt remain in the filter paper?",
+       "wrong_answer": "Yes, the filter paper catches all the impurities including salt."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "filtration",
+       "filter paper",
+       "insoluble",
+       "dissolved",
+       "residue"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Evaporation and Saturation",
+    "prereqs": [
+     "c1",
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "When water evaporates, the salt also disappears into the air.",
+      "why": "Students do not see the salt left behind and assume it vanished along with the water.",
+      "fix": "Evaporation turns water into vapor, but the solid salt remains behind in the container.",
+      "probe": {
+       "question": "What happens to the salt when you boil away all the water from a salt solution?",
+       "wrong_answer": "The salt evaporates with the water."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "evaporation",
+       "vapor",
+       "salt",
+       "disappear",
+       "solution"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "A saturated solution can hold more solute if you stir it longer.",
+      "why": "Students believe that the physical act of stirring creates more space for the solute.",
+      "fix": "A saturated solution has reached its limit at a specific temperature; stirring will not dissolve any more solute.",
+      "probe": {
+       "question": "If sugar stops dissolving in a glass of water, what should you do to dissolve more?",
+       "wrong_answer": "Stir it for a very long time."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "saturated",
+       "solute",
+       "dissolve",
+       "limit",
+       "stirring"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "States of Matter",
+   "Properties of Materials"
+  ]
+ },
+ "problems": []
+}

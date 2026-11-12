@@ -1,0 +1,157 @@
+{
+ "topic": {
+  "id": "SCI-PHY-SPEED",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   7
+  ],
+  "title": "Motion and time",
+  "scope": "speed, uniform and non-uniform motion, measuring time, distance-time graphs, simple pendulum"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 700,
+  "candidatesTokenCount": 1180,
+  "totalTokenCount": 1880,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 700
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.2,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Measuring Time",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Time is an absolute concept that exists independently of any periodic event.",
+      "why": "Students experience time as a continuous flow in daily life without needing to observe a clock.",
+      "fix": "Time is measured by counting the repetitions of a periodic event, such as the swing of a pendulum or the rotation of the Earth.",
+      "probe": {
+       "question": "If all clocks and watches in the world stopped, would time still exist?",
+       "wrong_answer": "Yes, time would keep passing exactly the same way."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "periodic motion",
+       "pendulum",
+       "clock",
+       "time interval",
+       "seconds"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "A pendulum takes longer to complete a swing if it is pulled further away.",
+      "why": "Students confuse the distance traveled (amplitude) with the time period of the oscillation.",
+      "fix": "For small oscillations, the time period of a simple pendulum depends only on its length, not on the amplitude.",
+      "probe": {
+       "question": "If you pull a pendulum bob further to the side before releasing it, what happens to the time it takes to complete one oscillation?",
+       "wrong_answer": "It will take more time because it has to cover a longer distance."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "pendulum",
+       "oscillation",
+       "time period",
+       "amplitude",
+       "bob"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Speed and Motion",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "An object that moves faster always covers more distance in the same amount of time.",
+      "why": "Students often fail to distinguish between the concept of speed as a rate and distance as a total quantity.",
+      "fix": "Speed is defined as the distance covered per unit time; if an object is faster, it covers more distance in a specific time interval.",
+      "probe": {
+       "question": "If two cars travel for the same amount of time, how do we know which one is faster?",
+       "wrong_answer": "The one that traveled the longest distance is the fastest."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "speed",
+       "distance",
+       "time",
+       "fast",
+       "slow",
+       "rate of motion"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Uniform motion means the object is moving in a straight line.",
+      "why": "The word 'uniform' is often associated with straightness or lack of change in direction in everyday language.",
+      "fix": "Uniform motion means an object moves along a straight line with a constant speed, meaning it covers equal distances in equal intervals of time.",
+      "probe": {
+       "question": "If a car moves in a circle at a constant speed of 40 km/h, is it in uniform motion?",
+       "wrong_answer": "Yes, because its speed is constant."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "uniform motion",
+       "constant speed",
+       "straight line",
+       "equal intervals"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Distance-Time Graphs",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The shape of a distance-time graph is a picture of the path the object took.",
+      "why": "Students tend to interpret graphs as literal maps or sketches of the physical trajectory of the object.",
+      "fix": "A distance-time graph represents the relationship between distance and time, not the physical path or shape of the road.",
+      "probe": {
+       "question": "If a car travels on a curved road, what will its distance-time graph look like?",
+       "wrong_answer": "The graph will be curved like the road."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "graph",
+       "distance-time",
+       "x-axis",
+       "y-axis",
+       "slope",
+       "straight line"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Basic Arithmetic",
+   "Measurement of Length",
+   "Units and Conversions"
+  ]
+ },
+ "problems": []
+}

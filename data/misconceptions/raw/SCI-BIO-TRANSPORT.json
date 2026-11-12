@@ -1,0 +1,185 @@
+{
+ "topic": {
+  "id": "SCI-BIO-TRANSPORT",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   7,
+   10
+  ],
+  "title": "Transportation in animals and plants",
+  "scope": "blood, heart, arteries and veins, heartbeat and pulse, excretion, xylem, phloem, transpiration"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 712,
+  "candidatesTokenCount": 1340,
+  "totalTokenCount": 2052,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 712
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.1,
+ "response": {
+  "concepts": [
+   {
+    "key": "blood_transport",
+    "name": "Circulatory system and blood components",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Blood is blue inside the body and turns red only when exposed to air.",
+      "why": "Students misinterpret the blue appearance of veins under the skin as the actual color of blood.",
+      "fix": "Blood is always red; the blue appearance of veins is due to the way light scatters through the skin and tissue.",
+      "probe": {
+       "question": "Why do veins look blue on your wrist?",
+       "wrong_answer": "Because they are carrying deoxygenated blood which is blue."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "veins",
+       "deoxygenated blood",
+       "skin",
+       "color",
+       "oxygen"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "The heart's main job is to create blood.",
+      "why": "Students often confuse the heart with a factory or production center rather than a pump.",
+      "fix": "The heart is a muscular pump that circulates existing blood throughout the body to transport nutrients and oxygen.",
+      "probe": {
+       "question": "What is the primary function of the heart?",
+       "wrong_answer": "To produce fresh blood for the body."
+      },
+      "error_type": "process_vs_product",
+      "trigger_cues": [
+       "heart",
+       "pump",
+       "blood",
+       "circulation",
+       "body"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "heart_pulse",
+    "name": "Heartbeat and pulse",
+    "prereqs": [
+     "blood_transport"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The pulse is the sound of the heart beating.",
+      "why": "Students conflate the rhythmic thumping they feel at the wrist with the sound heard through a stethoscope.",
+      "fix": "The pulse is the rhythmic expansion and contraction of an artery caused by the heart pumping blood, while the heartbeat is the sound of valves closing.",
+      "probe": {
+       "question": "What are you feeling when you check your pulse?",
+       "wrong_answer": "I am feeling the heart beating inside my chest."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "pulse",
+       "heartbeat",
+       "artery",
+       "rhythm",
+       "wrist"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "excretion",
+    "name": "Excretion in humans",
+    "prereqs": [
+     "blood_transport"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Excretion is the same as defecation.",
+      "why": "In everyday language, 'waste' is often synonymous with solid fecal matter.",
+      "fix": "Excretion is the removal of metabolic waste products like urea from the blood, whereas defecation is the removal of undigested food.",
+      "probe": {
+       "question": "Is the removal of feces considered excretion?",
+       "wrong_answer": "Yes, because it is the body getting rid of waste."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "excretion",
+       "waste",
+       "kidneys",
+       "defecation",
+       "urea"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "plant_transport",
+    "name": "Xylem, phloem, and transpiration",
+    "prereqs": [
+     "blood_transport"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Plants 'drink' water through their roots like a straw.",
+      "why": "Students overgeneralize the mechanism of drinking through a straw to plant water uptake.",
+      "fix": "Water moves up the xylem primarily due to the suction force created by transpiration at the leaves, not by active sucking.",
+      "probe": {
+       "question": "How does water reach the top of a tall tree?",
+       "wrong_answer": "The roots suck the water up like a straw."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "xylem",
+       "roots",
+       "transpiration",
+       "water uptake",
+       "suction"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Transpiration is a harmful process that causes plants to lose water unnecessarily.",
+      "why": "Students focus on the 'loss' of water and ignore the functional benefit of cooling and nutrient transport.",
+      "fix": "Transpiration is essential as it creates the suction force needed to pull water and minerals from the soil to the leaves.",
+      "probe": {
+       "question": "Why do plants transpire?",
+       "wrong_answer": "It is a mistake because they lose precious water."
+      },
+      "error_type": "living_thing_reasoning",
+      "trigger_cues": [
+       "transpiration",
+       "water loss",
+       "leaves",
+       "stomata",
+       "cooling"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Nutrition in plants",
+   "Nutrition in animals",
+   "Respiration in organisms"
+  ]
+ },
+ "problems": []
+}

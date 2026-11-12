@@ -1,0 +1,1345 @@
+{
+  "passage": "Poor households in villages often find it hard to get loans from banks. Banks ask for collateral, such as land or a building, that can be sold if the loan is not repaid, and many poor people have nothing to offer. They are forced to borrow from moneylenders, who may charge interest as high as five per cent a month. Self Help Groups, or SHGs, were formed to solve this problem. A typical SHG has 15 to 20 members, usually women from the same village. Each member saves a small amount every month, perhaps fifty or a hundred rupees. Over time, the savings become a useful fund. Members can take small loans from the group to meet their needs, and the group decides the purpose, the amount and the repayment schedule. The interest charged is far lower than that of a moneylender. After a year or two of regular saving and repayment, the group becomes eligible for a loan from a bank. The bank lends to the group as a whole, without collateral, because the members are responsible for repaying together. With such loans, women have started small businesses such as tailoring, poultry and making pickles. SHGs also give women a chance to meet regularly and discuss issues such as health, education and domestic violence. The Grameen Bank of Bangladesh, started by Muhammad Yunus, is a well-known example of this idea.",
+  "gate": {
+    "status": "OK",
+    "words": 231,
+    "reason": "OK: 231 words"
+  },
+  "summary": {
+    "text": "Yes, members can get small loans from the group to meet their needs, and the group decides on the purpose, amount, and repayment schedule. After a year or two, the group can get a loan from a bank.",
+    "word_count": 38,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "38 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 7,
+        "source": "Members can take small loans from the group to meet their needs, and the group decides the purpose, the amount and the repayment schedule.",
+        "text": "Yes, members can get small loans from the group to meet their needs, and the group decides on the purpose, amount, and repayment schedule.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 10.0 (limit 10.0), 24 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "Yes, they can get small loans from the group to help meet their needs, and the group decides what they want, how much, and when to repay.",
+            "temperature": 0.0,
+            "wall_s": 0.9198,
+            "failed": [
+              "summary_support",
+              "summary_readability"
+            ],
+            "prompt_tokens": 100,
+            "new_tokens": 79,
+            "ttft_ms": 130,
+            "tokens_per_s": 98.86,
+            "verify": null
+          },
+          {
+            "text": "Yes, members can get small loans from the group to meet their needs, and the group decides on the purpose, amount, and repayment schedule.",
+            "temperature": 0.4,
+            "wall_s": 0.9316,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 100,
+            "new_tokens": 79,
+            "ttft_ms": 125,
+            "tokens_per_s": 96.77,
+            "verify": null
+          },
+          {
+            "text": "Yes, they can get small loans from the group to help meet their needs, and the group decides on what they need, how much, and when to repay.",
+            "temperature": 0.7,
+            "wall_s": 0.9311,
+            "failed": [
+              "summary_support",
+              "summary_readability"
+            ],
+            "prompt_tokens": 100,
+            "new_tokens": 79,
+            "ttft_ms": 124,
+            "tokens_per_s": 96.77,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 9,
+        "source": "After a year or two of regular saving and repayment, the group becomes eligible for a loan from a bank.",
+        "text": "After a year or two, the group can get a loan from a bank.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "After a year or two of saving and repaying money, the group can get a loan from a bank.",
+            "temperature": 0.0,
+            "wall_s": 0.8954,
+            "failed": [
+              "summary_support",
+              "summary_readability"
+            ],
+            "prompt_tokens": 95,
+            "new_tokens": 79,
+            "ttft_ms": 121,
+            "tokens_per_s": 100.78,
+            "verify": null
+          },
+          {
+            "text": "After a year or two of saving and repaying money, the group gets a loan from a bank.",
+            "temperature": 0.4,
+            "wall_s": 0.9296,
+            "failed": [
+              "summary_support",
+              "summary_readability"
+            ],
+            "prompt_tokens": 95,
+            "new_tokens": 79,
+            "ttft_ms": 123,
+            "tokens_per_s": 96.77,
+            "verify": null
+          },
+          {
+            "text": "After a year or two, the group can get a loan from a bank.",
+            "temperature": 0.7,
+            "wall_s": 0.9251,
+            "failed": [],
+            "prompt_tokens": 95,
+            "new_tokens": 79,
+            "ttft_ms": 123,
+            "tokens_per_s": 97.38,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "Which institution provides loans to groups?",
+      "key": "bank",
+      "options": [
+        "bank",
+        "month",
+        "interest",
+        "poor"
+      ],
+      "witness_idx": 9,
+      "witness": "After a year or two of regular saving and repayment, the group becomes eligible for a loan from a bank.",
+      "tier": "AMBER",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "6 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.22"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "50% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 8.4 (limit 10.5)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_in_passage: 50% of content words are in the passage"
+      ],
+      "attempts": [
+        {
+          "text": "Which institution provides loans to groups?",
+          "temperature": 0.0,
+          "wall_s": 0.7511,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 227,
+          "tokens_per_s": 87.79,
+          "verify": {
+            "text": "bank",
+            "wall_s": 0.3631,
+            "prompt_tokens": 155,
+            "new_tokens": 15,
+            "ttft_ms": 210,
+            "tokens_per_s": 92.11
+          }
+        },
+        {
+          "text": "Which of the following is a bank?",
+          "temperature": 0.4,
+          "wall_s": 0.7582,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 225,
+          "tokens_per_s": 86.3,
+          "verify": null
+        },
+        {
+          "text": "Which organization provides the loans?",
+          "temperature": 0.7,
+          "wall_s": 0.7547,
+          "failed": [
+            "stem_in_passage",
+            "stem_readability"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 219,
+          "tokens_per_s": 85.98,
+          "verify": {
+            "text": "bank",
+            "wall_s": 0.3535,
+            "prompt_tokens": 154,
+            "new_tokens": 15,
+            "ttft_ms": 202,
+            "tokens_per_s": 92.72
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: After a year or two of regular saving and repayment, the _____ becomes eligible for a loan from a bank.",
+        "key": "group",
+        "witness_idx": 9,
+        "witness": "After a year or two of regular saving and repayment, the group becomes eligible for a loan from a bank.",
+        "options": [
+          "month",
+          "repaid",
+          "women",
+          "group"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "repayment",
+      "options": [
+        "women",
+        "month",
+        "repaid",
+        "repayment"
+      ],
+      "witness_idx": 7,
+      "witness": "Members can take small loans from the group to meet their needs, and the group decides the purpose, the amount and the repayment schedule.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "11 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.66"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.16"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 9.1 (limit 10.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "The group decides the purpose, the amount, and the repayment schedule.",
+          "temperature": 0.0,
+          "wall_s": 0.7467,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 173,
+          "new_tokens": 47,
+          "ttft_ms": 229,
+          "tokens_per_s": 88.97,
+          "verify": null
+        },
+        {
+          "text": "The group decides the purpose, the amount, and the repayment schedule.",
+          "temperature": 0.4,
+          "wall_s": 0.7553,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 173,
+          "new_tokens": 47,
+          "ttft_ms": 226,
+          "tokens_per_s": 86.96,
+          "verify": null
+        },
+        {
+          "text": "The repayment schedule is decided by the group.",
+          "temperature": 0.7,
+          "wall_s": 0.755,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 173,
+          "new_tokens": 47,
+          "ttft_ms": 224,
+          "tokens_per_s": 86.63,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Members can take small loans from the _____ to meet their needs, and the _____ decides the purpose, the amount and the repayment schedule.",
+        "key": "group",
+        "witness_idx": 7,
+        "witness": "Members can take small loans from the group to meet their needs, and the group decides the purpose, the amount and the repayment schedule.",
+        "options": [
+          "collateral",
+          "group",
+          "repaid",
+          "month"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "SHGs",
+      "options": [
+        "Bank",
+        "SHGs",
+        "Grameen",
+        "Yunus"
+      ],
+      "witness_idx": 3,
+      "witness": "Self Help Groups, or SHGs, were formed to solve this problem.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.79"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.27"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.3 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'Self Help Groups', not 'SHGs'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'Self Help Groups', not 'SHGs'"
+      ],
+      "attempts": [
+        {
+          "text": "What groups were formed to solve this problem?",
+          "temperature": 0.0,
+          "wall_s": 0.7309,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 214,
+          "tokens_per_s": 88.97,
+          "verify": {
+            "text": "Self Help Groups",
+            "wall_s": 0.3504,
+            "prompt_tokens": 150,
+            "new_tokens": 15,
+            "ttft_ms": 200,
+            "tokens_per_s": 93.96
+          }
+        },
+        {
+          "text": "What groups were formed to solve this problem?",
+          "temperature": 0.4,
+          "wall_s": 0.7478,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 218,
+          "tokens_per_s": 86.96,
+          "verify": {
+            "text": "Self Help Groups",
+            "wall_s": 0.3502,
+            "prompt_tokens": 150,
+            "new_tokens": 15,
+            "ttft_ms": 200,
+            "tokens_per_s": 93.33
+          }
+        },
+        {
+          "text": "What are SHGs called?",
+          "temperature": 0.7,
+          "wall_s": 0.7493,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 216,
+          "tokens_per_s": 86.47,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Self Help _____, or SHGs, were formed to solve this problem.",
+        "key": "Groups",
+        "witness_idx": 3,
+        "witness": "Self Help Groups, or SHGs, were formed to solve this problem.",
+        "options": [
+          "moneylenders",
+          "households",
+          "Groups",
+          "villages"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "poor",
+      "options": [
+        "group",
+        "poor",
+        "borrow",
+        "charge"
+      ],
+      "witness_idx": 1,
+      "witness": "Banks ask for collateral, such as land or a building, that can be sold if the loan is not repaid, and many poor people have nothing to offer.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "7 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.33"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.27"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 4.0 (limit 10.9)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "The poor people offer nothing to banks.",
+          "temperature": 0.0,
+          "wall_s": 0.7397,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 179,
+          "new_tokens": 47,
+          "ttft_ms": 229,
+          "tokens_per_s": 90.2,
+          "verify": null
+        },
+        {
+          "text": "The poor people offer nothing to banks in return for collateral.",
+          "temperature": 0.4,
+          "wall_s": 0.7573,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 179,
+          "new_tokens": 47,
+          "ttft_ms": 232,
+          "tokens_per_s": 87.62,
+          "verify": null
+        },
+        {
+          "text": "The poor people offer nothing to banks in exchange for collateral.",
+          "temperature": 0.7,
+          "wall_s": 0.7604,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 179,
+          "new_tokens": 47,
+          "ttft_ms": 234,
+          "tokens_per_s": 87.45,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Banks ask for _____, such as land or a building, that can be sold if the loan is not repaid, and many poor people have nothing to offer.",
+        "key": "collateral",
+        "witness_idx": 1,
+        "witness": "Banks ask for collateral, such as land or a building, that can be sold if the loan is not repaid, and many poor people have nothing to offer.",
+        "options": [
+          "interest",
+          "group",
+          "per",
+          "collateral"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "women",
+      "options": [
+        "interest",
+        "sold",
+        "women",
+        "group"
+      ],
+      "witness_idx": 11,
+      "witness": "With such loans, women have started small businesses such as tailoring, poultry and making pickles.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "15 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "similarity to the witness 0.99"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.27"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 9.9 (limit 9.9)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question",
+        "stem_not_echo: similarity to the witness 0.99"
+      ],
+      "attempts": [
+        {
+          "text": "With such loans, women have started small businesses such as tailoring, poultry, and making pickles.",
+          "temperature": 0.0,
+          "wall_s": 0.7408,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 217,
+          "tokens_per_s": 87.95,
+          "verify": null
+        },
+        {
+          "text": "With such loans, women have started small businesses such as tailoring, poultry, and making pickles.",
+          "temperature": 0.4,
+          "wall_s": 0.7524,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 220,
+          "tokens_per_s": 86.47,
+          "verify": null
+        },
+        {
+          "text": "With such loans, women have started small businesses such as tailoring, poultry, and making pickles.",
+          "temperature": 0.7,
+          "wall_s": 0.749,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 217,
+          "tokens_per_s": 86.63,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: With such loans, women have started small businesses such as tailoring, poultry and making _____.",
+        "key": "pickles",
+        "witness_idx": 11,
+        "witness": "With such loans, women have started small businesses such as tailoring, poultry and making pickles.",
+        "options": [
+          "pickles",
+          "rupees",
+          "moneylenders",
+          "banks"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "month",
+      "options": [
+        "land",
+        "month",
+        "collateral",
+        "group"
+      ],
+      "witness_idx": 2,
+      "witness": "They are forced to borrow from moneylenders, who may charge interest as high as five per cent a month.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "14 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.47"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.40"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "60% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 6.7 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'the person', not 'month'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'the person', not 'month'"
+      ],
+      "attempts": [
+        {
+          "text": "What is the name of the person who is forced to borrow from moneylenders?",
+          "temperature": 0.0,
+          "wall_s": 0.7411,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 220,
+          "tokens_per_s": 88.29,
+          "verify": {
+            "text": "the person",
+            "wall_s": 0.3887,
+            "prompt_tokens": 166,
+            "new_tokens": 15,
+            "ttft_ms": 219,
+            "tokens_per_s": 82.84
+          }
+        },
+        {
+          "text": "What is the rate of interest charged by moneylenders?",
+          "temperature": 0.4,
+          "wall_s": 0.7558,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 222,
+          "tokens_per_s": 86.3,
+          "verify": {
+            "text": "five per cent",
+            "wall_s": 0.3744,
+            "prompt_tokens": 161,
+            "new_tokens": 15,
+            "ttft_ms": 211,
+            "tokens_per_s": 85.89
+          }
+        },
+        {
+          "text": "What is the monthly interest rate charged by moneylenders?",
+          "temperature": 0.7,
+          "wall_s": 0.7591,
+          "failed": [
+            "stem_readability",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 226,
+          "tokens_per_s": 86.3,
+          "verify": {
+            "text": "five per cent",
+            "wall_s": 0.3716,
+            "prompt_tokens": 161,
+            "new_tokens": 15,
+            "ttft_ms": 210,
+            "tokens_per_s": 86.96
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: They are forced to borrow from moneylenders, who may charge _____ as high as five per cent a month.",
+        "key": "interest",
+        "witness_idx": 2,
+        "witness": "They are forced to borrow from moneylenders, who may charge interest as high as five per cent a month.",
+        "options": [
+          "repayment",
+          "land",
+          "interest",
+          "group"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: The interest charged is far lower than that of a _____.",
+      "key": "moneylender",
+      "options": [
+        "sold",
+        "group",
+        "moneylender",
+        "women"
+      ],
+      "witness_idx": 8,
+      "witness": "The interest charged is far lower than that of a moneylender.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: The _____ charged is far lower than that of a moneylender.",
+        "key": "interest",
+        "witness_idx": 8,
+        "witness": "The interest charged is far lower than that of a moneylender.",
+        "options": [
+          "poor",
+          "interest",
+          "collateral",
+          "month"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "kind": "cloze",
+      "stem": "Fill in the blank: The bank lends to the group as a whole, without collateral, because the _____ are responsible for repaying together.",
+      "key": "members",
+      "options": [
+        "moneylenders",
+        "businesses",
+        "members",
+        "households"
+      ],
+      "witness_idx": 10,
+      "witness": "The bank lends to the group as a whole, without collateral, because the members are responsible for repaying together.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: The bank lends to the group as a whole, without _____, because the members are responsible for repaying together.",
+        "key": "collateral",
+        "witness_idx": 10,
+        "witness": "The bank lends to the group as a whole, without collateral, because the members are responsible for repaying together.",
+        "options": [
+          "repayment",
+          "sold",
+          "repaid",
+          "collateral"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "kind": "cloze",
+      "stem": "Fill in the blank: After a year or two of regular saving and repayment, the group becomes eligible for a loan from a _____.",
+      "key": "bank",
+      "options": [
+        "bank",
+        "month",
+        "interest",
+        "poor"
+      ],
+      "witness_idx": 9,
+      "witness": "After a year or two of regular saving and repayment, the group becomes eligible for a loan from a bank.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: After a year or two of regular saving and repayment, the _____ becomes eligible for a loan from a bank.",
+        "key": "group",
+        "witness_idx": 9,
+        "witness": "After a year or two of regular saving and repayment, the group becomes eligible for a loan from a bank.",
+        "options": [
+          "month",
+          "repaid",
+          "women",
+          "group"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 21.6075,
+    "summary_s": 5.5342,
+    "stems_s": 16.0701,
+    "model_wall_s": 19.0372,
+    "model_calls": 24,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 1,
+    "red": 5,
+    "fallback": 3
+  },
+  "version": 1,
+  "created": "2026-11-13T01:24:47",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

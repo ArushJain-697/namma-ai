@@ -1,0 +1,161 @@
+{
+ "topic": {
+  "id": "SCI-CHM-ATOMSTRUCT",
+  "subject": "science",
+  "strand": "chemistry",
+  "grades": [
+   9
+  ],
+  "title": "Structure of the atom",
+  "scope": "electrons, protons, neutrons, Thomson and Rutherford models, Bohr model, valency, atomic number, isotopes"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 703,
+  "candidatesTokenCount": 1173,
+  "totalTokenCount": 1876,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 703
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.0,
+ "response": {
+  "concepts": [
+   {
+    "key": "subatomic_particles",
+    "name": "Subatomic Particles (Protons, Neutrons, Electrons)",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Atoms are solid spheres like tiny marbles with no internal parts.",
+      "why": "Students often struggle to visualize entities that are too small to be seen and rely on macroscopic analogies.",
+      "fix": "Atoms are mostly empty space containing a dense nucleus surrounded by moving electrons.",
+      "probe": {
+       "question": "What is inside a single atom of gold?",
+       "wrong_answer": "It is a solid piece of gold matter all the way through."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "atom",
+       "matter",
+       "indivisible",
+       "solid",
+       "sphere"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Electrons are just tiny dots of matter that stay fixed in place.",
+      "why": "Textbook diagrams often show static positions for electrons, ignoring their constant motion.",
+      "fix": "Electrons are particles that move rapidly in specific regions around the nucleus.",
+      "probe": {
+       "question": "Do electrons ever stop moving inside an atom?",
+       "wrong_answer": "Yes, they stop moving once they find a stable spot."
+      },
+      "error_type": "process_vs_product",
+      "trigger_cues": [
+       "electron",
+       "particle",
+       "position",
+       "nucleus"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "atomic_models",
+    "name": "Evolution of Atomic Models (Thomson, Rutherford, Bohr)",
+    "prereqs": [
+     "subatomic_particles"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Rutherford's model proves that electrons orbit the nucleus exactly like planets orbit the sun.",
+      "why": "The 'planetary model' analogy is frequently used in classrooms to simplify Bohr's theory.",
+      "fix": "While electrons move around the nucleus, they do not follow simple, fixed circular paths like planets.",
+      "probe": {
+       "question": "Why don't electrons fall into the nucleus if they are orbiting?",
+       "wrong_answer": "They are held in orbit by gravity just like planets."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "orbit",
+       "planetary model",
+       "solar system",
+       "path"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "atomic_structure_properties",
+    "name": "Atomic Number, Mass Number, and Isotopes",
+    "prereqs": [
+     "subatomic_particles"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Isotopes of an element have different chemical properties because they have different masses.",
+      "why": "Students confuse physical properties (mass) with chemical properties (reactivity).",
+      "fix": "Isotopes have the same number of electrons, so they behave identically in chemical reactions.",
+      "probe": {
+       "question": "Will Carbon-12 and Carbon-14 react differently with oxygen?",
+       "wrong_answer": "Yes, because Carbon-14 is heavier, it will react slower."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "isotope",
+       "mass number",
+       "chemical properties",
+       "reactivity"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "valency",
+    "name": "Valency and Electronic Configuration",
+    "prereqs": [
+     "subatomic_particles",
+     "atomic_models"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Valency is simply the number of electrons in the outermost shell.",
+      "why": "Students often fail to distinguish between valence electrons and the combining capacity (valency).",
+      "fix": "Valency is the number of electrons an atom needs to gain, lose, or share to complete its octet.",
+      "probe": {
+       "question": "What is the valency of Chlorine (atomic number 17)?",
+       "wrong_answer": "7, because it has 7 electrons in its outer shell."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "valency",
+       "valence shell",
+       "octet",
+       "outermost electrons"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "States of Matter",
+   "Atoms and Molecules (Introduction)"
+  ]
+ },
+ "problems": []
+}

@@ -1,0 +1,164 @@
+{
+ "topic": {
+  "id": "SCI-BIO-MICROBES",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   8
+  ],
+  "title": "Microorganisms: friend and foe",
+  "scope": "bacteria, fungi, protozoa, viruses, useful microbes, diseases, vaccines, antibiotics, food preservation, nitrogen cycle"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 707,
+  "candidatesTokenCount": 1167,
+  "totalTokenCount": 1874,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 707
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.2,
+ "response": {
+  "concepts": [
+   {
+    "key": "microbe_diversity",
+    "name": "Diversity and Scale of Microorganisms",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "All microorganisms are harmful and cause diseases.",
+      "why": "Students often associate the word 'germs' exclusively with illness due to health warnings at home.",
+      "fix": "Many microorganisms are harmless or beneficial, such as those used in making curd or bread.",
+      "probe": {
+       "question": "Are all microorganisms dangerous to humans?",
+       "wrong_answer": "Yes, because they are all germs that make us sick."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "germs",
+       "harmful",
+       "disease",
+       "microbes",
+       "invisible"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "Microorganisms are just very small animals.",
+      "why": "Students lack the biological framework to distinguish between bacteria, fungi, and protozoa, defaulting to the 'animal' category for any living thing.",
+      "fix": "Microorganisms belong to diverse groups including bacteria, fungi, algae, and protozoa, which are distinct from animals.",
+      "probe": {
+       "question": "Is a bacterium a type of tiny animal?",
+       "wrong_answer": "Yes, it is a microscopic animal that moves and eats."
+      },
+      "error_type": "living_thing_reasoning",
+      "trigger_cues": [
+       "bacteria",
+       "protozoa",
+       "microscopic",
+       "living organism"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "microbe_utility",
+    "name": "Useful Microorganisms and Food Processing",
+    "prereqs": [
+     "microbe_diversity"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Curd is formed by the milk itself turning into a solid.",
+      "why": "The process of fermentation is invisible, so students attribute the change to the milk's inherent properties rather than the action of bacteria.",
+      "fix": "Lactobacillus bacteria multiply in milk and convert it into curd through chemical changes.",
+      "probe": {
+       "question": "Why does milk turn into curd when a little curd is added?",
+       "wrong_answer": "The milk just thickens on its own because it gets old."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "lactobacillus",
+       "fermentation",
+       "curd",
+       "milk",
+       "multiplication"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "disease_transmission",
+    "name": "Pathogens and Disease Transmission",
+    "prereqs": [
+     "microbe_diversity"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Diseases are caused by bad air or 'miasma' rather than microbes.",
+      "why": "Historical beliefs about 'bad air' persist in cultural narratives and everyday language.",
+      "fix": "Diseases are caused by specific pathogens like bacteria, viruses, or protozoa entering the body.",
+      "probe": {
+       "question": "How does a person get malaria?",
+       "wrong_answer": "They get it from breathing in the bad air near a swamp."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "pathogens",
+       "malaria",
+       "mosquito",
+       "transmission",
+       "infection"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "immune_response",
+    "name": "Vaccines and Antibiotics",
+    "prereqs": [
+     "disease_transmission"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Antibiotics can cure viral infections like the common cold.",
+      "why": "Patients often demand antibiotics for any illness, and doctors sometimes prescribe them unnecessarily, reinforcing the idea that they are a 'cure-all'.",
+      "fix": "Antibiotics only kill bacteria; they have no effect on viruses which cause colds and flu.",
+      "probe": {
+       "question": "Should you take an antibiotic for a viral cold?",
+       "wrong_answer": "Yes, antibiotics kill all germs that make you feel sick."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "antibiotics",
+       "virus",
+       "bacteria",
+       "cure",
+       "medicine"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Cell: The Unit of Life",
+   "Nutrition in Plants",
+   "Nutrition in Animals"
+  ]
+ },
+ "problems": []
+}

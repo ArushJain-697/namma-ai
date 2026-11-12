@@ -1,0 +1,139 @@
+{
+ "topic": {
+  "id": "SCI-CHM-WATER",
+  "subject": "science",
+  "strand": "chemistry",
+  "grades": [
+   6,
+   7
+  ],
+  "title": "Water: a precious resource",
+  "scope": "water cycle, groundwater, depletion, rainwater harvesting, water scarcity, sewage and treatment"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 705,
+  "candidatesTokenCount": 920,
+  "totalTokenCount": 1625,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 705
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.1,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Water Cycle and States of Matter",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Clouds are made of water vapor or steam.",
+      "why": "Students confuse the invisible gas state with the visible white appearance of clouds.",
+      "fix": "Clouds are made of tiny liquid water droplets or ice crystals that have condensed from water vapor.",
+      "probe": {
+       "question": "What is inside a cloud?",
+       "wrong_answer": "It is filled with hot steam or gas."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "water cycle",
+       "evaporation",
+       "condensation",
+       "clouds",
+       "water vapor"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Water disappears when it evaporates.",
+      "why": "Students rely on visible evidence; if they cannot see the water, they assume it has ceased to exist.",
+      "fix": "Evaporation turns liquid water into invisible water vapor, which remains in the air.",
+      "probe": {
+       "question": "Where does the water in a puddle go after a sunny day?",
+       "wrong_answer": "It just disappears and is gone forever."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "evaporation",
+       "puddle",
+       "disappear",
+       "sunlight",
+       "water vapor"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Groundwater and Aquifers",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Groundwater exists as large underground rivers or lakes.",
+      "why": "Illustrations in textbooks often show underground caverns with water, leading to a literal interpretation.",
+      "fix": "Groundwater is stored in the small spaces between soil particles and rocks underground.",
+      "probe": {
+       "question": "How is water stored under the ground?",
+       "wrong_answer": "It flows in big underground rivers like a pipe system."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "groundwater",
+       "aquifer",
+       "water table",
+       "underground",
+       "soil"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Water Scarcity and Conservation",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Since 70% of the Earth is water, we will never run out of it.",
+      "why": "Students confuse the total quantity of water on Earth with the availability of fresh, usable water.",
+      "fix": "Most of Earth's water is salty or frozen; only a tiny fraction is available for human use.",
+      "probe": {
+       "question": "Why do people say water is a precious resource if the Earth is mostly water?",
+       "wrong_answer": "They are wrong because there is so much water in the oceans that we can never run out."
+      },
+      "error_type": "scale_or_quantity",
+      "trigger_cues": [
+       "water scarcity",
+       "precious resource",
+       "fresh water",
+       "oceans",
+       "conservation"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "States of Matter",
+   "Properties of Soil",
+   "Basic Geography of Earth"
+  ]
+ },
+ "problems": []
+}

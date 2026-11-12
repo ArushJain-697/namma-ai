@@ -1,0 +1,160 @@
+{
+ "topic": {
+  "id": "SOC-CIV-MARKETS",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   7
+  ],
+  "title": "Markets around us",
+  "scope": "weekly markets, shops, malls, chain of markets, wholesale and retail, market and equality"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 694,
+  "candidatesTokenCount": 1227,
+  "totalTokenCount": 1921,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 694
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.7,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Types of Markets",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Weekly markets are only for poor people.",
+      "why": "Students observe the lower prices and lack of permanent infrastructure in weekly markets and associate these with poverty.",
+      "fix": "Weekly markets offer goods at lower prices because they have fewer overhead costs, making them accessible and useful for people of all income levels.",
+      "probe": {
+       "question": "Why would a wealthy person choose to buy vegetables from a weekly market instead of a mall?",
+       "wrong_answer": "They wouldn't, because weekly markets are meant only for those who cannot afford expensive shops."
+      },
+      "error_type": "stereotype",
+      "trigger_cues": [
+       "weekly market",
+       "low cost",
+       "bargaining",
+       "small traders"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Malls are always better than local shops because they sell better quality products.",
+      "why": "The clean, air-conditioned environment of malls creates a perception of superior quality compared to local shops.",
+      "fix": "Malls and local shops often source goods from the same wholesale markets; the difference lies in the shopping experience and the services provided, not necessarily the quality of the product.",
+      "probe": {
+       "question": "If a shirt is sold in both a local shop and a mall, which one is of better quality?",
+       "wrong_answer": "The one from the mall is definitely better quality because malls only keep high-end goods."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "malls",
+       "branded goods",
+       "shopping complex",
+       "showrooms"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Wholesale and Retail",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "A wholesaler is just a shopkeeper who sells in bulk.",
+      "why": "Students often conflate the act of selling many items with the specific economic role of a wholesaler in the supply chain.",
+      "fix": "A wholesaler acts as a middleman who buys goods in large quantities directly from producers and sells them to retailers, not directly to final consumers.",
+      "probe": {
+       "question": "Can you go to a wholesaler to buy a single packet of biscuits for your lunch?",
+       "wrong_answer": "Yes, they are just big shops that sell everything in bulk to anyone who walks in."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "wholesale",
+       "bulk",
+       "traders",
+       "supply chain"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Chain of Markets",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The price of a product is determined only by the cost of making it.",
+      "why": "Students focus on the production cost and ignore the added costs of transportation, storage, and profit margins of various intermediaries.",
+      "fix": "The final price includes production costs plus the profits and expenses of wholesalers, transporters, and retailers who handle the product along the chain.",
+      "probe": {
+       "question": "Why does a pen cost more in a shop than it does at the factory?",
+       "wrong_answer": "Because the shopkeeper is cheating the customer by charging extra money for no reason."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "chain of markets",
+       "profit",
+       "transportation",
+       "middlemen"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Market and Equality",
+    "prereqs": [
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Everyone has an equal opportunity to earn money in the market.",
+      "why": "Students often believe in a meritocratic view of markets where hard work alone guarantees success, ignoring structural inequalities.",
+      "fix": "Access to capital, social networks, and resources varies greatly, meaning that small traders often struggle to compete with large businesses despite their hard work.",
+      "probe": {
+       "question": "If a small trader works as hard as a big business owner, will they both make the same profit?",
+       "wrong_answer": "Yes, because the market is fair and rewards everyone equally for their effort."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "equality",
+       "inequality",
+       "capital",
+       "small traders",
+       "big business"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Money and Banking",
+   "Types of Occupations"
+  ]
+ },
+ "problems": []
+}

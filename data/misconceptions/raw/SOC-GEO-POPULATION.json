@@ -1,0 +1,170 @@
+{
+ "topic": {
+  "id": "SOC-GEO-POPULATION",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   9
+  ],
+  "title": "Population",
+  "scope": "population size and distribution, density, growth, birth and death rates, migration, census"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 691,
+  "candidatesTokenCount": 1274,
+  "totalTokenCount": 1965,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 691
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.0,
+ "response": {
+  "concepts": [
+   {
+    "key": "population_size_distribution",
+    "name": "Population Size and Distribution",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Countries with larger land areas always have higher population sizes.",
+      "why": "Students often equate physical size with capacity, ignoring the impact of climate and resources.",
+      "fix": "Population size depends on factors like climate, water availability, and economic development, not just land area.",
+      "probe": {
+       "question": "Which country has a higher population: Russia or Bangladesh?",
+       "wrong_answer": "Russia, because it is much larger in size."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "land area",
+       "population size",
+       "geographical distribution",
+       "inhabitable"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Population is evenly spread across the entire country.",
+      "why": "Maps in textbooks often show country boundaries as uniform blocks, leading to a simplified mental model.",
+      "fix": "Population is unevenly distributed due to varying physical and socio-economic conditions across different regions.",
+      "probe": {
+       "question": "Is the population density of the Thar Desert similar to the Indo-Gangetic plain?",
+       "wrong_answer": "Yes, because they are both part of the same country."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "distribution",
+       "uneven",
+       "density",
+       "physical factors"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "density_growth",
+    "name": "Population Density and Growth",
+    "prereqs": [
+     "population_size_distribution"
+    ],
+    "misconceptions": [
+     {
+      "statement": "High population growth means the country is becoming more developed.",
+      "why": "Students often confuse 'growth' in a positive economic sense with 'population growth'.",
+      "fix": "Rapid population growth can strain resources and infrastructure, often hindering development rather than indicating it.",
+      "probe": {
+       "question": "Does a high annual growth rate of population indicate a country is becoming richer?",
+       "wrong_answer": "Yes, because more people means more workers and more production."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "growth rate",
+       "annual increase",
+       "development",
+       "resources"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Population density is just the total number of people in a country.",
+      "why": "Students often ignore the 'per unit area' aspect of the definition.",
+      "fix": "Density is a ratio calculated by dividing the total population by the total land area.",
+      "probe": {
+       "question": "If two countries have the same population size, do they have the same density?",
+       "wrong_answer": "Yes, because the number of people is the same."
+      },
+      "error_type": "numerical_misreading",
+      "trigger_cues": [
+       "density",
+       "per square kilometer",
+       "ratio",
+       "land area"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "vital_rates_migration",
+    "name": "Birth Rates, Death Rates, and Migration",
+    "prereqs": [
+     "density_growth"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Migration only happens when people move to another country.",
+      "why": "Media often focuses on international immigration, ignoring internal movement within a country.",
+      "fix": "Migration includes both internal movement (within a country) and international movement (between countries).",
+      "probe": {
+       "question": "Does a person moving from a village in Bihar to a city in Maharashtra count as migration?",
+       "wrong_answer": "No, because they are still in the same country."
+      },
+      "error_type": "confuses_people_or_places",
+      "trigger_cues": [
+       "migration",
+       "internal",
+       "international",
+       "push factors",
+       "pull factors"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "A high birth rate is the only reason a country's population increases.",
+      "why": "Students often overlook the role of death rates and migration in net population change.",
+      "fix": "Population change is the result of the balance between birth rates, death rates, and net migration.",
+      "probe": {
+       "question": "If a country has a high birth rate but also a very high death rate, will the population grow rapidly?",
+       "wrong_answer": "Yes, because the birth rate is high."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "birth rate",
+       "death rate",
+       "net change",
+       "population growth"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Basic Map Reading",
+   "Introduction to Resources",
+   "Basic Arithmetic Ratios and Percentages"
+  ]
+ },
+ "problems": []
+}

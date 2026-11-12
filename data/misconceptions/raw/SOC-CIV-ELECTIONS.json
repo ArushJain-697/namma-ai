@@ -1,0 +1,143 @@
+{
+ "topic": {
+  "id": "SOC-CIV-ELECTIONS",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   9
+  ],
+  "title": "Electoral politics",
+  "scope": "why elections, constituencies, reserved constituencies, voters' list, Election Commission, campaigns, model code"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 694,
+  "candidatesTokenCount": 960,
+  "totalTokenCount": 1654,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 694
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.9,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Purpose of Elections",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Elections are only held to choose the most popular or famous person.",
+      "why": "Students often equate political leadership with celebrity status due to media coverage of rallies.",
+      "fix": "Elections are a mechanism for citizens to choose representatives who will make laws and policies on their behalf.",
+      "probe": {
+       "question": "Why do we hold elections in India?",
+       "wrong_answer": "To see which leader is the most famous and loved by the people."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "representative democracy",
+       "choice",
+       "political competition",
+       "popular vote"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Constituencies and Reservation",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Reserved constituencies mean that only people from that caste can vote there.",
+      "why": "Students confuse the eligibility of the candidate with the eligibility of the voter.",
+      "fix": "In reserved constituencies, only candidates from specific groups can contest, but all registered voters in that area can cast their vote.",
+      "probe": {
+       "question": "Who can vote in a constituency reserved for Scheduled Castes?",
+       "wrong_answer": "Only people belonging to the Scheduled Castes living in that area."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "reserved constituencies",
+       "sc",
+       "st",
+       "electoral roll",
+       "voter eligibility"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Election Commission (EC)",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The Election Commission works under the control of the ruling government.",
+      "why": "Students assume that because the government pays for the election, it must control the agency conducting it.",
+      "fix": "The Election Commission is an independent body that functions without the interference of the government or the ruling party.",
+      "probe": {
+       "question": "Who controls the Election Commission during an election?",
+       "wrong_answer": "The ruling party because they are in power."
+      },
+      "error_type": "confuses_institutions",
+      "trigger_cues": [
+       "independent body",
+       "chief election commissioner",
+       "model code of conduct",
+       "neutrality"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Campaigns and Model Code",
+    "prereqs": [
+     "c1",
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The Model Code of Conduct is a law that bans all political activity during elections.",
+      "why": "Students interpret 'code' as a strict legal prohibition rather than a set of guidelines for fair conduct.",
+      "fix": "The Model Code of Conduct is a set of guidelines to ensure fair play, not a total ban on political campaigning.",
+      "probe": {
+       "question": "What happens when the Model Code of Conduct is in force?",
+       "wrong_answer": "All political parties must stop campaigning and stay at home."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "model code of conduct",
+       "campaigning",
+       "fair play",
+       "election guidelines"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Democracy and Constitution",
+   "Fundamental Rights"
+  ]
+ },
+ "problems": []
+}

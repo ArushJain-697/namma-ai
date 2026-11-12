@@ -1,0 +1,155 @@
+{
+ "topic": {
+  "id": "SCI-CHM-AIR",
+  "subject": "science",
+  "strand": "chemistry",
+  "grades": [
+   6
+  ],
+  "title": "Air around us",
+  "scope": "composition of air, oxygen, nitrogen, carbon dioxide, water vapour, air takes up space, air for living things"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 704,
+  "candidatesTokenCount": 1048,
+  "totalTokenCount": 1752,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 704
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.4,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Air occupies space and has mass",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Air is weightless and does not take up space.",
+      "why": "Air is invisible and cannot be felt or seen in everyday empty containers.",
+      "fix": "Air has mass and fills all available space; we can prove this by weighing a deflated versus an inflated balloon.",
+      "probe": {
+       "question": "If you have an empty glass bottle, what is inside it?",
+       "wrong_answer": "Nothing, it is completely empty."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "empty bottle",
+       "inflated balloon",
+       "space",
+       "weight",
+       "invisible"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Composition of air",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Air is made up of only oxygen because that is what we breathe.",
+      "why": "Students often associate air exclusively with the gas necessary for human survival.",
+      "fix": "Air is a mixture of many gases, primarily nitrogen and oxygen, with small amounts of carbon dioxide and water vapour.",
+      "probe": {
+       "question": "What gases make up the air around us?",
+       "wrong_answer": "Only oxygen."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "mixture",
+       "oxygen",
+       "nitrogen",
+       "carbon dioxide",
+       "composition"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "Smoke is a gas that is part of the air.",
+      "why": "Smoke is visible in the air and is often discussed alongside air pollution.",
+      "fix": "Smoke consists of tiny solid particles and liquid droplets suspended in air, not a gas itself.",
+      "probe": {
+       "question": "Is smoke a gas like oxygen or nitrogen?",
+       "wrong_answer": "Yes, it is a type of gas found in polluted air."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "smoke",
+       "pollution",
+       "particles",
+       "gas",
+       "chimney"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Role of air in life processes",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Plants only take in carbon dioxide and never use oxygen.",
+      "why": "Textbooks emphasize photosynthesis (CO2 intake) much more than plant respiration.",
+      "fix": "Plants use oxygen for respiration just like animals, but they take in more carbon dioxide for photosynthesis during the day.",
+      "probe": {
+       "question": "Do plants need oxygen to survive?",
+       "wrong_answer": "No, they only need carbon dioxide."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "photosynthesis",
+       "respiration",
+       "plants",
+       "oxygen",
+       "carbon dioxide"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     },
+     {
+      "statement": "Aquatic animals do not need air because they live in water.",
+      "why": "Students confuse 'air' with 'atmospheric gas' and do not realize gases can dissolve in liquids.",
+      "fix": "Aquatic animals breathe the oxygen that is dissolved in the water.",
+      "probe": {
+       "question": "How do fish breathe underwater?",
+       "wrong_answer": "They don't need air; they drink the water to get energy."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "aquatic animals",
+       "dissolved oxygen",
+       "gills",
+       "underwater",
+       "breathing"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "States of matter",
+   "Water in our lives"
+  ]
+ },
+ "problems": []
+}

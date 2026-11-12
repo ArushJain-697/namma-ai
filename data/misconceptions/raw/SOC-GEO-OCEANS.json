@@ -1,0 +1,146 @@
+{
+ "topic": {
+  "id": "SOC-GEO-OCEANS",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   7
+  ],
+  "title": "Water and oceans",
+  "scope": "distribution of water, water cycle, waves, tides, ocean currents"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 689,
+  "candidatesTokenCount": 1005,
+  "totalTokenCount": 1694,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 689
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.9,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Distribution of Water",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Since the Earth is mostly water, we have an unlimited supply of fresh water.",
+      "why": "Students confuse the total volume of water on Earth with the tiny fraction that is actually drinkable.",
+      "fix": "Most of Earth's water is salty ocean water; only a very small percentage is fresh water found in glaciers, rivers, and groundwater.",
+      "probe": {
+       "question": "If 71% of Earth is water, why do we face water scarcity?",
+       "wrong_answer": "We don't really face scarcity; it's just that the water is in the wrong places."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "71 percent",
+       "oceans",
+       "fresh water",
+       "scarcity",
+       "glaciers"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "The Water Cycle",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Rainwater comes from holes in the clouds like water from a shower.",
+      "why": "This is a common anthropomorphic interpretation of visual diagrams showing clouds as containers.",
+      "fix": "Clouds are made of tiny water droplets; when they get too heavy, they fall as rain due to gravity.",
+      "probe": {
+       "question": "How does water get out of a cloud?",
+       "wrong_answer": "The cloud opens up or gets holes in it to let the water out."
+      },
+      "error_type": "other",
+      "trigger_cues": [
+       "evaporation",
+       "condensation",
+       "clouds",
+       "precipitation",
+       "water vapour"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Waves and Tides",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Tides are caused by underwater earthquakes or strong winds.",
+      "why": "Students often confuse the causes of tides with the causes of tsunamis or surface waves.",
+      "fix": "Tides are the rhythmic rise and fall of ocean water caused by the gravitational pull of the moon and the sun.",
+      "probe": {
+       "question": "What causes the high tide at the beach?",
+       "wrong_answer": "A strong wind pushed the water up onto the shore."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "rhythmic",
+       "gravitational pull",
+       "moon",
+       "high tide",
+       "low tide"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Ocean Currents",
+    "prereqs": [
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Ocean currents are just giant rivers of water flowing in a straight line.",
+      "why": "Students visualize currents based on river maps rather than complex circular gyres influenced by Earth's rotation.",
+      "fix": "Ocean currents are continuous streams of water moving in definite directions, influenced by wind, temperature, and the Earth's rotation.",
+      "probe": {
+       "question": "Do ocean currents move like water in a straight pipe?",
+       "wrong_answer": "Yes, they flow in a straight line from one continent to another."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "warm currents",
+       "cold currents",
+       "gyres",
+       "temperature difference",
+       "salinity"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "States of matter",
+   "Gravity and forces",
+   "Basic map reading"
+  ]
+ },
+ "problems": []
+}

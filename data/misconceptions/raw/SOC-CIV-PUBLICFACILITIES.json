@@ -1,0 +1,134 @@
+{
+ "topic": {
+  "id": "SOC-CIV-PUBLICFACILITIES",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   8
+  ],
+  "title": "Public facilities and law",
+  "scope": "water as a right, role of government, sanitation, public transport, minimum wages, workers' safety, Bhopal"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 699,
+  "candidatesTokenCount": 965,
+  "totalTokenCount": 1664,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 699
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.6,
+ "response": {
+  "concepts": [
+   {
+    "key": "public_goods",
+    "name": "Definition and Importance of Public Facilities",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Public facilities are only for people who cannot afford private services.",
+      "why": "Students often associate 'public' with 'charity' or 'low-quality' due to their personal experiences with government infrastructure.",
+      "fix": "Public facilities are essential services like water and transport that are provided to all citizens to ensure equality and basic human rights, regardless of income.",
+      "probe": {
+       "question": "Why should the government provide water to wealthy neighborhoods?",
+       "wrong_answer": "They shouldn't, because wealthy people can afford to buy their own water from private companies."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "public facilities",
+       "basic needs",
+       "right to water",
+       "essential services"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "The government is a business that should make a profit from public services.",
+      "why": "Students often conflate the government's role with that of private corporations they see in the market.",
+      "fix": "The primary goal of the government in providing public facilities is social welfare and development, not profit-making.",
+      "probe": {
+       "question": "Should the government increase bus fares to make more money?",
+       "wrong_answer": "Yes, so the government can earn more profit to run the country better."
+      },
+      "error_type": "confuses_institutions",
+      "trigger_cues": [
+       "government role",
+       "public welfare",
+       "service delivery",
+       "tax money"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "govt_role",
+    "name": "Role of Government and Law in Public Life",
+    "prereqs": [
+     "public_goods"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Laws are only meant to punish people who do bad things.",
+      "why": "Students often view law solely through the lens of police and courts, missing the protective and enabling aspects of legislation.",
+      "fix": "Laws also protect citizens by setting standards for safety, minimum wages, and ensuring companies do not exploit workers.",
+      "probe": {
+       "question": "Why do we need a law for minimum wages?",
+       "wrong_answer": "To punish employers who are mean to their workers."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "law",
+       "enforcement",
+       "protection",
+       "minimum wage",
+       "safety standards"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "industrial_safety",
+    "name": "Corporate Responsibility and Worker Safety",
+    "prereqs": [
+     "govt_role"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Accidents in factories are just bad luck and cannot be prevented by laws.",
+      "why": "Students often view industrial disasters as isolated, unpredictable events rather than systemic failures of regulation.",
+      "fix": "Industrial disasters like Bhopal are often the result of companies cutting costs on safety measures, which is why strict government oversight is necessary.",
+      "probe": {
+       "question": "Could the Bhopal gas tragedy have been avoided?",
+       "wrong_answer": "No, it was a terrible accident that just happened because of a machine failure."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "bhopal gas tragedy",
+       "industrial safety",
+       "negligence",
+       "safety protocols"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "The Indian Constitution",
+   "Understanding Government",
+   "Market Around Us"
+  ]
+ },
+ "problems": []
+}

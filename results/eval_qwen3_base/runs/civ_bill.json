@@ -1,0 +1,1301 @@
+{
+  "passage": "Laws for the whole country are made by Parliament, which has two Houses, the Lok Sabha and the Rajya Sabha. A proposal for a new law is called a bill. A bill can be introduced by a minister or by any other member of Parliament. Before it becomes a law, it goes through several stages. First the bill is read out and introduced in one House. It is then debated, and members may suggest changes. Often the bill is sent to a small committee of members, which studies it in detail and may hear the views of experts and the public. The House then discusses each part of the bill and votes on it. If a majority votes in favour, the bill is passed and is sent to the other House, where the same steps are followed. If the two Houses disagree, the President can call a joint sitting of both Houses to settle the matter. A money bill, which deals with taxes and government spending, can be introduced only in the Lok Sabha, and the Rajya Sabha can only suggest changes to it within 14 days. Once both Houses have passed a bill, it is sent to the President. When the President signs it and gives assent, the bill becomes an Act, which is a law. People can also influence laws, by writing to the press, holding meetings and petitioning their representatives.",
+  "gate": {
+    "status": "OK",
+    "words": 233,
+    "reason": "OK: 233 words"
+  },
+  "summary": {
+    "text": "A money bill, which deals with taxes and government spending, can be introduced only in the Lok Sabha, and the Rajya Sabha can only suggest changes to it within 14 days. Once both houses have passed a bill, it goes to the president.",
+    "word_count": 43,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "43 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 10,
+        "source": "A money bill, which deals with taxes and government spending, can be introduced only in the Lok Sabha, and the Rajya Sabha can only suggest changes to it within 14 days.",
+        "text": "A money bill, which deals with taxes and government spending, can be introduced only in the Lok Sabha, and the Rajya Sabha can only suggest changes to it within 14 days.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 14.8 (limit 14.8), 31 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "A money bill, which deals with taxes and government spending, can be introduced only in the Lok Sabha, and the Rajya Sabha can only suggest changes to it within 14 days.",
+            "temperature": 0.0,
+            "wall_s": 0.9507,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 111,
+            "new_tokens": 79,
+            "ttft_ms": 138,
+            "tokens_per_s": 96.06,
+            "verify": null
+          },
+          {
+            "text": "A money bill, which deals with taxes and government spending, can be introduced only in the Lok Sabha, and the Rajya Sabha can only suggest changes to it within 14 days.",
+            "temperature": 0.4,
+            "wall_s": 0.97,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 111,
+            "new_tokens": 79,
+            "ttft_ms": 140,
+            "tokens_per_s": 94.09,
+            "verify": null
+          },
+          {
+            "text": "A money bill that deals with taxes and government spending can be introduced only in the Lok Sabha, and the Rajya Sabha can only suggest changes to it within 14 days.",
+            "temperature": 0.7,
+            "wall_s": 0.9675,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 111,
+            "new_tokens": 79,
+            "ttft_ms": 139,
+            "tokens_per_s": 94.2,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 11,
+        "source": "Once both Houses have passed a bill, it is sent to the President.",
+        "text": "Once both houses have passed a bill, it goes to the president.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "Once both houses have passed a bill, it goes to the president.",
+            "temperature": 0.0,
+            "wall_s": 0.8748,
+            "failed": [],
+            "prompt_tokens": 88,
+            "new_tokens": 79,
+            "ttft_ms": 116,
+            "tokens_per_s": 102.9,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "President",
+      "options": [
+        "Rajya",
+        "President",
+        "House",
+        "Sabha"
+      ],
+      "witness_idx": 11,
+      "witness": "Once both Houses have passed a bill, it is sent to the President.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "11 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.66"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.7 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "Once both Houses have passed a bill, it is sent to the President.",
+          "temperature": 0.0,
+          "wall_s": 0.7302,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 161,
+          "new_tokens": 47,
+          "ttft_ms": 212,
+          "tokens_per_s": 88.97,
+          "verify": null
+        },
+        {
+          "text": "Once the bill is sent to the President, it is passed.",
+          "temperature": 0.4,
+          "wall_s": 0.7447,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 161,
+          "new_tokens": 47,
+          "ttft_ms": 211,
+          "tokens_per_s": 86.3,
+          "verify": null
+        },
+        {
+          "text": "Once both Houses have passed a bill, it is sent to the President.",
+          "temperature": 0.7,
+          "wall_s": 0.7392,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 161,
+          "new_tokens": 47,
+          "ttft_ms": 210,
+          "tokens_per_s": 86.96,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Once both _____ have passed a bill, it is sent to the President.",
+        "key": "Houses",
+        "witness_idx": 11,
+        "witness": "Once both Houses have passed a bill, it is sent to the President.",
+        "options": [
+          "taxes",
+          "Houses",
+          "goes",
+          "laws"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "Sabha",
+      "options": [
+        "Sabha",
+        "House",
+        "Houses",
+        "Act"
+      ],
+      "witness_idx": 10,
+      "witness": "A money bill, which deals with taxes and government spending, can be introduced only in the Lok Sabha, and the Rajya Sabha can only suggest changes to it within 14 days.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "12 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.54"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 7.8 (limit 14.8)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "The Rajya Sabha can only suggest changes to it within 14 days.",
+          "temperature": 0.0,
+          "wall_s": 0.7398,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 184,
+          "new_tokens": 47,
+          "ttft_ms": 234,
+          "tokens_per_s": 90.91,
+          "verify": null
+        },
+        {
+          "text": "The Rajya Sabha can only suggest changes to it within 14 days.",
+          "temperature": 0.4,
+          "wall_s": 0.7439,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 184,
+          "new_tokens": 47,
+          "ttft_ms": 229,
+          "tokens_per_s": 89.49,
+          "verify": null
+        },
+        {
+          "text": "The Rajya Sabha can only suggest changes to it within 14 days.",
+          "temperature": 0.7,
+          "wall_s": 0.7458,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 184,
+          "new_tokens": 47,
+          "ttft_ms": 231,
+          "tokens_per_s": 89.49,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: A money bill, which deals with taxes and government spending, can be introduced only in the Lok Sabha, and the _____ Sabha can only suggest changes to it within 14 days.",
+        "key": "Rajya",
+        "witness_idx": 10,
+        "witness": "A money bill, which deals with taxes and government spending, can be introduced only in the Lok Sabha, and the Rajya Sabha can only suggest changes to it within 14 days.",
+        "options": [
+          "minister",
+          "public",
+          "sent",
+          "Rajya"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "Which body of government can introduce a bill?",
+      "key": "Parliament",
+      "options": [
+        "Sabha",
+        "President",
+        "Rajya",
+        "Parliament"
+      ],
+      "witness_idx": 2,
+      "witness": "A bill can be introduced by a minister or by any other member of Parliament.",
+      "tier": "AMBER",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.34"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "50% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 6.7 (limit 9.9)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_in_passage: 50% of content words are in the passage"
+      ],
+      "attempts": [
+        {
+          "text": "Which body of government can introduce a bill?",
+          "temperature": 0.0,
+          "wall_s": 0.7257,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 209,
+          "tokens_per_s": 89.15,
+          "verify": {
+            "text": "Parliament",
+            "wall_s": 0.3497,
+            "prompt_tokens": 151,
+            "new_tokens": 15,
+            "ttft_ms": 200,
+            "tokens_per_s": 93.96
+          }
+        },
+        {
+          "text": "Which body of government can introduce a bill?",
+          "temperature": 0.4,
+          "wall_s": 0.74,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 214,
+          "tokens_per_s": 87.62,
+          "verify": {
+            "text": "Parliament",
+            "wall_s": 0.3472,
+            "prompt_tokens": 151,
+            "new_tokens": 15,
+            "ttft_ms": 199,
+            "tokens_per_s": 94.59
+          }
+        },
+        {
+          "text": "Which of the following is an example of a bill introduced in Parliament?",
+          "temperature": 0.7,
+          "wall_s": 0.7376,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 214,
+          "tokens_per_s": 87.95,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: A bill can be introduced by a minister or by any other _____ of Parliament.",
+        "key": "member",
+        "witness_idx": 2,
+        "witness": "A bill can be introduced by a minister or by any other member of Parliament.",
+        "options": [
+          "member",
+          "detail",
+          "proposal",
+          "sent"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "House",
+      "options": [
+        "Parliament",
+        "Lok",
+        "House",
+        "Sabha"
+      ],
+      "witness_idx": 4,
+      "witness": "First the bill is read out and introduced in one House.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "5 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.41"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.64"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "67% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.2 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "Which house introduces the bill?",
+          "temperature": 0.0,
+          "wall_s": 0.7213,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 158,
+          "new_tokens": 47,
+          "ttft_ms": 207,
+          "tokens_per_s": 89.49,
+          "verify": null
+        },
+        {
+          "text": "Which house does the bill start in?",
+          "temperature": 0.4,
+          "wall_s": 0.7292,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 158,
+          "new_tokens": 47,
+          "ttft_ms": 205,
+          "tokens_per_s": 87.95,
+          "verify": null
+        },
+        {
+          "text": "Which house does the bill originate from?",
+          "temperature": 0.7,
+          "wall_s": 0.7288,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 158,
+          "new_tokens": 47,
+          "ttft_ms": 207,
+          "tokens_per_s": 88.29,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: First the bill is read out and _____ in one House.",
+        "key": "introduced",
+        "witness_idx": 4,
+        "witness": "First the bill is read out and introduced in one House.",
+        "options": [
+          "member",
+          "proposal",
+          "introduced",
+          "laws"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "Houses",
+      "options": [
+        "Rajya",
+        "Parliament",
+        "Houses",
+        "Sabha"
+      ],
+      "witness_idx": 9,
+      "witness": "If the two Houses disagree, the President can call a joint sitting of both Houses to settle the matter.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "19 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "similarity to the witness 1.00"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.26"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 9.2 (limit 9.2)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question",
+        "stem_not_echo: similarity to the witness 1.00"
+      ],
+      "attempts": [
+        {
+          "text": "If the two Houses disagree, the President can call a joint sitting of both Houses to settle the matter.",
+          "temperature": 0.0,
+          "wall_s": 0.7369,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 215,
+          "tokens_per_s": 88.29,
+          "verify": null
+        },
+        {
+          "text": "If the two Houses disagree, the President can call a joint sitting of both Houses to settle the matter.",
+          "temperature": 0.4,
+          "wall_s": 0.7412,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 214,
+          "tokens_per_s": 87.29,
+          "verify": null
+        },
+        {
+          "text": "If the two Houses disagree, the President can call a joint sitting of both Houses to settle the matter.",
+          "temperature": 0.7,
+          "wall_s": 0.7434,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 215,
+          "tokens_per_s": 87.12,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: If the two Houses disagree, the _____ can call a joint sitting of both Houses to settle the matter.",
+        "key": "President",
+        "witness_idx": 9,
+        "witness": "If the two Houses disagree, the President can call a joint sitting of both Houses to settle the matter.",
+        "options": [
+          "country",
+          "committee",
+          "President",
+          "sent"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "law",
+      "options": [
+        "minister",
+        "public",
+        "law",
+        "member"
+      ],
+      "witness_idx": 1,
+      "witness": "A proposal for a new law is called a bill.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "5 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.59"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.44"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 0.5 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'a proposal', not 'law'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'a proposal', not 'law'"
+      ],
+      "attempts": [
+        {
+          "text": "What is called a bill?",
+          "temperature": 0.0,
+          "wall_s": 0.7227,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 157,
+          "new_tokens": 47,
+          "ttft_ms": 205,
+          "tokens_per_s": 88.97,
+          "verify": {
+            "text": "a proposal",
+            "wall_s": 0.332,
+            "prompt_tokens": 143,
+            "new_tokens": 15,
+            "ttft_ms": 178,
+            "tokens_per_s": 91.5
+          }
+        },
+        {
+          "text": "What is called a bill?",
+          "temperature": 0.4,
+          "wall_s": 0.7377,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 157,
+          "new_tokens": 47,
+          "ttft_ms": 209,
+          "tokens_per_s": 87.12,
+          "verify": {
+            "text": "a proposal",
+            "wall_s": 0.3301,
+            "prompt_tokens": 143,
+            "new_tokens": 15,
+            "ttft_ms": 177,
+            "tokens_per_s": 92.11
+          }
+        },
+        {
+          "text": "What is called a bill?",
+          "temperature": 0.7,
+          "wall_s": 0.7328,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 157,
+          "new_tokens": 47,
+          "ttft_ms": 208,
+          "tokens_per_s": 87.79,
+          "verify": {
+            "text": "a proposal",
+            "wall_s": 0.3278,
+            "prompt_tokens": 143,
+            "new_tokens": 15,
+            "ttft_ms": 175,
+            "tokens_per_s": 92.11
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: A proposal for a new law is called a _____.",
+        "key": "bill",
+        "witness_idx": 1,
+        "witness": "A proposal for a new law is called a bill.",
+        "options": [
+          "minister",
+          "bill",
+          "public",
+          "sent"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: Often the bill is sent to a small committee of _____, which studies it in detail and may hear the views of experts and the public.",
+      "key": "members",
+      "options": [
+        "signs",
+        "stages",
+        "goes",
+        "members"
+      ],
+      "witness_idx": 6,
+      "witness": "Often the bill is sent to a small committee of members, which studies it in detail and may hear the views of experts and the public.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: Often the bill is _____ to a small committee of members, which studies it in detail and may hear the views of experts and the public.",
+        "key": "sent",
+        "witness_idx": 6,
+        "witness": "Often the bill is sent to a small committee of members, which studies it in detail and may hear the views of experts and the public.",
+        "options": [
+          "majority",
+          "joint",
+          "suggest",
+          "sent"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "kind": "cloze",
+      "stem": "Fill in the blank: It is then debated, and members may _____ changes.",
+      "key": "suggest",
+      "options": [
+        "suggest",
+        "proposal",
+        "committee",
+        "minister"
+      ],
+      "witness_idx": 5,
+      "witness": "It is then debated, and members may suggest changes.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: It is then debated, and _____ may suggest changes.",
+        "key": "members",
+        "witness_idx": 5,
+        "witness": "It is then debated, and members may suggest changes.",
+        "options": [
+          "laws",
+          "members",
+          "experts",
+          "taxes"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "kind": "cloze",
+      "stem": "Fill in the blank: Once both Houses have passed a bill, it is sent to the _____.",
+      "key": "President",
+      "options": [
+        "Rajya",
+        "President",
+        "House",
+        "Sabha"
+      ],
+      "witness_idx": 11,
+      "witness": "Once both Houses have passed a bill, it is sent to the President.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: Once both _____ have passed a bill, it is sent to the President.",
+        "key": "Houses",
+        "witness_idx": 11,
+        "witness": "Once both Houses have passed a bill, it is sent to the President.",
+        "options": [
+          "taxes",
+          "Houses",
+          "goes",
+          "laws"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 18.7062,
+    "summary_s": 3.7642,
+    "stems_s": 14.9392,
+    "model_wall_s": 17.0039,
+    "model_calls": 22,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 1,
+    "red": 5,
+    "fallback": 3
+  },
+  "version": 1,
+  "created": "2026-11-13T01:23:46",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

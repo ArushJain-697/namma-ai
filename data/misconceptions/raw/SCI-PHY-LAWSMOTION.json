@@ -1,0 +1,162 @@
+{
+ "topic": {
+  "id": "SCI-PHY-LAWSMOTION",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   9
+  ],
+  "title": "Force and laws of motion",
+  "scope": "inertia, balanced and unbalanced forces, Newton's three laws, momentum, action-reaction pairs"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 702,
+  "candidatesTokenCount": 1290,
+  "totalTokenCount": 1992,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 702
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 33.8,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Balanced and Unbalanced Forces",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "An object in motion must have a force acting on it to keep moving.",
+      "why": "Everyday experience shows that objects like toys or bicycles stop moving if we stop pushing them.",
+      "fix": "An object will continue to move at a constant speed in a straight line unless an unbalanced force acts on it to change its state.",
+      "probe": {
+       "question": "A hockey puck slides across a frictionless ice rink. What force is needed to keep it moving at a constant speed?",
+       "wrong_answer": "A constant forward force is needed to overcome the motion."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "constant speed",
+       "frictionless",
+       "state of motion",
+       "net force"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "If an object is not moving, there are no forces acting on it.",
+      "why": "Students often confuse 'no motion' with 'no forces' because they equate force only with visible movement.",
+      "fix": "An object at rest can have multiple forces acting on it, but they are balanced, resulting in a net force of zero.",
+      "probe": {
+       "question": "A book is lying still on a table. Are there any forces acting on it?",
+       "wrong_answer": "No, because the book is not moving."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "at rest",
+       "stationary",
+       "balanced forces",
+       "net force zero"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Inertia and Mass",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Heavier objects have more inertia because they are harder to lift.",
+      "why": "Students conflate the everyday meaning of 'heavy' (weight) with the scientific definition of inertia (resistance to change in motion).",
+      "fix": "Inertia is the inherent property of an object to resist changes in its state of motion, which is directly proportional to its mass, not its weight.",
+      "probe": {
+       "question": "Which has more inertia: a 1kg ball on Earth or a 1kg ball in deep space?",
+       "wrong_answer": "The one on Earth because it is heavier."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "mass",
+       "resistance to change",
+       "state of motion",
+       "heaviness"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Newton's Second Law (F=ma)",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Force is the same thing as acceleration.",
+      "why": "Students often see that pushing harder (more force) makes something go faster (more acceleration) and fail to distinguish the cause from the effect.",
+      "fix": "Force is the cause of the change in motion, while acceleration is the resulting rate of change of velocity.",
+      "probe": {
+       "question": "If an object is moving at a constant velocity, how much force is acting on it?",
+       "wrong_answer": "It must have a constant force acting on it to keep the acceleration going."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "acceleration",
+       "rate of change",
+       "velocity",
+       "proportionality"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Newton's Third Law (Action-Reaction)",
+    "prereqs": [
+     "c1",
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Action-reaction forces cancel each other out so nothing can ever move.",
+      "why": "Students misapply the concept of balanced forces (which act on the same object) to action-reaction pairs (which act on different objects).",
+      "fix": "Action and reaction forces act on different objects, so they never cancel each other out; they cause different objects to accelerate.",
+      "probe": {
+       "question": "A horse pulls a cart. If the cart pulls back on the horse with an equal force, why does the cart move forward?",
+       "wrong_answer": "The cart shouldn't move because the forces are equal and opposite, so they cancel out."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "equal and opposite",
+       "interaction",
+       "different bodies",
+       "cancel out"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Measurement and Units",
+   "Motion in a Straight Line",
+   "Speed and Velocity"
+  ]
+ },
+ "problems": []
+}

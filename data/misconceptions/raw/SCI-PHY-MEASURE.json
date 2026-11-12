@@ -1,0 +1,136 @@
+{
+ "topic": {
+  "id": "SCI-PHY-MEASURE",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   6
+  ],
+  "title": "Motion and measurement of distances",
+  "scope": "standard units, SI units, measuring length correctly, types of motion (straight-line, circular, periodic)"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 705,
+  "candidatesTokenCount": 942,
+  "totalTokenCount": 1647,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 705
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.5,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Need for Standard Units",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Using body parts like handspans is a perfectly accurate way to measure length.",
+      "why": "Students rely on their own bodies as the most immediate and accessible measuring tools in daily life.",
+      "fix": "Body parts vary in size from person to person, so they cannot provide a consistent or standard measurement for everyone.",
+      "probe": {
+       "question": "If you and your friend measure the same table using handspans, will you get the same number?",
+       "wrong_answer": "Yes, because a handspan is a fixed unit of length."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "handspan",
+       "footstep",
+       "cubit",
+       "measurement",
+       "length"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Measuring Length Correctly",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "You must always start measuring from the very edge of the ruler.",
+      "why": "Students often confuse the physical edge of the scale with the zero mark.",
+      "fix": "Measurement should start from the zero mark, as the edge of the scale might be broken or worn out.",
+      "probe": {
+       "question": "If the zero mark on your scale is broken, how do you measure an object?",
+       "wrong_answer": "I cannot measure it because the scale is broken at the start."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "ruler",
+       "scale",
+       "zero mark",
+       "broken edge",
+       "starting point"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Types of Motion",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "An object moving in a circle is not changing its position.",
+      "why": "Students often equate 'motion' only with moving from one place to another in a straight line.",
+      "fix": "Motion is any change in position over time, regardless of whether the path is straight or curved.",
+      "probe": {
+       "question": "Is a stone tied to a string and whirled around in a circle in motion?",
+       "wrong_answer": "No, because it stays in the same area and doesn't go anywhere."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "circular motion",
+       "straight line",
+       "position",
+       "path",
+       "moving"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     },
+     {
+      "statement": "Periodic motion must always involve a back-and-forth movement.",
+      "why": "Students often overgeneralize the example of a pendulum to all periodic motions.",
+      "fix": "Periodic motion is any motion that repeats itself at regular intervals, such as the rotation of the Earth or a fan blade.",
+      "probe": {
+       "question": "Is the motion of the blades of a ceiling fan periodic?",
+       "wrong_answer": "No, because it does not move back and forth like a pendulum."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "periodic motion",
+       "pendulum",
+       "regular intervals",
+       "repeat",
+       "time"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Basic Arithmetic",
+   "Geometry Basics"
+  ]
+ },
+ "problems": []
+}

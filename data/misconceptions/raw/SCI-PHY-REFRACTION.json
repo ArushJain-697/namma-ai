@@ -1,0 +1,181 @@
+{
+ "topic": {
+  "id": "SCI-PHY-REFRACTION",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   10
+  ],
+  "title": "Light: reflection and refraction",
+  "scope": "spherical mirrors, mirror formula, refraction, refractive index, lenses, lens formula, power of a lens"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 706,
+  "candidatesTokenCount": 1357,
+  "totalTokenCount": 2063,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 706
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.2,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Rectilinear propagation and reflection",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Light reflects only off shiny, metallic surfaces like mirrors.",
+      "why": "Students associate reflection exclusively with mirrors because they are the most common examples used in daily life.",
+      "fix": "Reflection occurs at every boundary where light hits an object, including rough surfaces, which causes diffuse reflection.",
+      "probe": {
+       "question": "Can you see a wooden table in a dark room if you shine a torch on it?",
+       "wrong_answer": "No, because wood does not reflect light."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "reflection",
+       "smooth surface",
+       "mirror",
+       "incident ray",
+       "normal"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "The image in a mirror is located on the surface of the glass.",
+      "why": "Students confuse the physical location of the mirror with the perceived location of the virtual image behind it.",
+      "fix": "The image is formed behind the mirror at a distance equal to the object's distance from the mirror.",
+      "probe": {
+       "question": "If you move closer to a plane mirror, where does the image move?",
+       "wrong_answer": "The image stays on the surface of the mirror."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "virtual image",
+       "plane mirror",
+       "lateral inversion",
+       "image distance"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Spherical mirrors and ray diagrams",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "A concave mirror always produces a magnified image.",
+      "why": "Students often only see the 'magnifying mirror' application (like makeup mirrors) and ignore other cases.",
+      "fix": "Concave mirrors produce magnified, diminished, or same-sized images depending on the object's position relative to the focus.",
+      "probe": {
+       "question": "What happens to the image size if an object is placed very far from a concave mirror?",
+       "wrong_answer": "It will still be magnified."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "concave mirror",
+       "magnification",
+       "principal focus",
+       "center of curvature"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Refraction and refractive index",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Light bends because it hits an object and bounces off.",
+      "why": "Students conflate the mechanism of reflection with the mechanism of refraction.",
+      "fix": "Refraction is the change in the speed of light as it travels from one medium to another, causing it to change direction.",
+      "probe": {
+       "question": "Why does a pencil look bent in a glass of water?",
+       "wrong_answer": "Because the light bounces off the water surface and reflects the pencil at an angle."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "refraction",
+       "medium",
+       "speed of light",
+       "bending",
+       "normal"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "A higher refractive index means the material is physically harder or denser.",
+      "why": "Students confuse optical density with mass density or physical hardness.",
+      "fix": "Refractive index is a measure of how much light slows down in a medium, which is not always related to mass density.",
+      "probe": {
+       "question": "If material A has a higher refractive index than material B, is it always heavier?",
+       "wrong_answer": "Yes, it must be denser and heavier."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "refractive index",
+       "optical density",
+       "speed of light",
+       "medium"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Lenses and lens formula",
+    "prereqs": [
+     "c2",
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "A lens works by blocking half of the light to create an image.",
+      "why": "Students often think the 'missing' part of an image is due to the lens acting as a physical barrier.",
+      "fix": "A lens refracts light from all parts of the object to converge or diverge at a specific point to form an image.",
+      "probe": {
+       "question": "If you cover half of a convex lens with black paper, what happens to the image?",
+       "wrong_answer": "Half of the image disappears."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "convex lens",
+       "concave lens",
+       "focal length",
+       "image formation"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Rectilinear motion",
+   "Basic geometry",
+   "Properties of materials"
+  ]
+ },
+ "problems": []
+}

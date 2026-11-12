@@ -1,0 +1,164 @@
+{
+ "topic": {
+  "id": "SCI-PHY-SOUND8",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   8
+  ],
+  "title": "Sound",
+  "scope": "vibration, medium needed, human voice and ear, amplitude, frequency, loudness and pitch, audible range, noise pollution"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 702,
+  "candidatesTokenCount": 1172,
+  "totalTokenCount": 1874,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 702
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.1,
+ "response": {
+  "concepts": [
+   {
+    "key": "vibration_source",
+    "name": "Sound as a result of vibration",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Objects must be moving visibly to produce sound.",
+      "why": "Students associate sound with large, obvious movements like a drum skin or a swinging bell.",
+      "fix": "Sound is produced by rapid back-and-forth movements called vibrations, which are often too small or fast to see with the naked eye.",
+      "probe": {
+       "question": "Does a stationary tuning fork produce sound?",
+       "wrong_answer": "No, because it is not moving at all."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "vibration",
+       "back and forth",
+       "rapid movement",
+       "sound source"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "medium_propagation",
+    "name": "Sound propagation through a medium",
+    "prereqs": [
+     "vibration_source"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Sound can travel through a vacuum or empty space.",
+      "why": "Students often confuse sound with light, which does not require a medium to travel.",
+      "fix": "Sound is a mechanical wave that requires particles of a material medium like air, water, or solids to transfer energy.",
+      "probe": {
+       "question": "If an explosion happens in outer space, would you hear it?",
+       "wrong_answer": "Yes, because sound travels everywhere."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "vacuum",
+       "medium",
+       "air",
+       "particles",
+       "travel"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "characteristics",
+    "name": "Amplitude, frequency, loudness, and pitch",
+    "prereqs": [
+     "vibration_source"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Loudness and pitch are the same thing.",
+      "why": "In everyday language, people often use 'high' or 'low' to describe both volume and musical notes.",
+      "fix": "Loudness depends on the amplitude of vibration, while pitch depends on the frequency of vibration.",
+      "probe": {
+       "question": "If you hit a drum harder, does the pitch change?",
+       "wrong_answer": "Yes, it gets higher because it is louder."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "loudness",
+       "pitch",
+       "amplitude",
+       "frequency",
+       "volume"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "A high-pitched sound always travels faster than a low-pitched sound.",
+      "why": "Students overgeneralize the idea that 'stronger' or 'higher' things have more speed.",
+      "fix": "The speed of sound depends on the medium, not on the frequency or amplitude of the sound wave.",
+      "probe": {
+       "question": "Which travels faster, a high-pitched whistle or a low-pitched drum beat?",
+       "wrong_answer": "The whistle, because it has a higher pitch."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "speed of sound",
+       "pitch",
+       "frequency",
+       "travel"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "human_ear",
+    "name": "Mechanism of the human ear",
+    "prereqs": [
+     "medium_propagation",
+     "characteristics"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The ear canal is a hollow tube that carries sound directly to the brain.",
+      "why": "Students often view the ear as a simple pipe rather than a complex system of energy conversion.",
+      "fix": "The ear converts sound vibrations into mechanical vibrations in the eardrum, which are then converted into electrical signals by the inner ear for the brain.",
+      "probe": {
+       "question": "What happens to sound waves once they enter the ear canal?",
+       "wrong_answer": "They travel straight through the tube to the brain."
+      },
+      "error_type": "process_vs_product",
+      "trigger_cues": [
+       "eardrum",
+       "ear canal",
+       "vibrations",
+       "inner ear",
+       "signals"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "States of Matter",
+   "Force and Pressure",
+   "Basic Anatomy of Sense Organs"
+  ]
+ },
+ "problems": []
+}

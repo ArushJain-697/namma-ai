@@ -1,0 +1,142 @@
+{
+ "topic": {
+  "id": "SCI-PHY-MOTION9",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   9
+  ],
+  "title": "Motion",
+  "scope": "distance vs displacement, speed vs velocity, acceleration, uniform circular motion, graphs, equations of motion"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 698,
+  "candidatesTokenCount": 995,
+  "totalTokenCount": 1693,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 698
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 7.6,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Distance and Displacement",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Distance and displacement are always the same thing.",
+      "why": "In daily life, we use the terms interchangeably when describing travel between two points.",
+      "fix": "Distance is the total path length covered, while displacement is the shortest straight-line distance from the starting point to the finish.",
+      "probe": {
+       "question": "If a runner completes one full lap around a 400m circular track, what is their displacement?",
+       "wrong_answer": "400 meters"
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "path length",
+       "starting point",
+       "straight line",
+       "total travel"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Speed and Velocity",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "An object moving at a constant speed must have a constant velocity.",
+      "why": "Students often ignore the directional component of velocity, focusing only on the magnitude.",
+      "fix": "Velocity includes both speed and direction; if the direction changes, the velocity changes even if the speed remains constant.",
+      "probe": {
+       "question": "A car turns a corner at a steady 20 km/h. Does its velocity change?",
+       "wrong_answer": "No, because the speed is constant."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "magnitude",
+       "direction",
+       "constant speed",
+       "vector quantity"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Acceleration",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "If an object is moving, it must have acceleration.",
+      "why": "Students confuse the state of 'being in motion' with the state of 'changing motion'.",
+      "fix": "Acceleration only occurs when there is a change in velocity over time; an object moving at a steady speed in a straight line has zero acceleration.",
+      "probe": {
+       "question": "A train is moving at a constant 80 km/h in a straight line. What is its acceleration?",
+       "wrong_answer": "It is high because the train is moving fast."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "speeding up",
+       "rate of change",
+       "velocity change",
+       "constant motion"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Equations of Motion and Graphs",
+    "prereqs": [
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The slope of a distance-time graph represents the acceleration of the object.",
+      "why": "Students often conflate the visual steepness of a graph with the concept of 'getting faster'.",
+      "fix": "The slope of a distance-time graph represents speed; the slope of a velocity-time graph represents acceleration.",
+      "probe": {
+       "question": "On a distance-time graph, what does a straight line sloping upwards indicate?",
+       "wrong_answer": "The object is accelerating."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "slope",
+       "steepness",
+       "distance-time graph",
+       "velocity-time graph"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Basic Algebra",
+   "Measurement and Units",
+   "Number Line Concepts"
+  ]
+ },
+ "problems": []
+}

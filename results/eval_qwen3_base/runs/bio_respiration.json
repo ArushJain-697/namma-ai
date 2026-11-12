@@ -1,0 +1,1268 @@
+{
+  "passage": "Many people use the words breathing and respiration as if they mean the same thing, but they are different processes. Breathing is the movement of air into and out of the lungs. When we breathe in, the chest cavity expands and air rushes into the lungs. When we breathe out, the chest cavity becomes smaller and air is pushed out. Respiration is what happens inside the cells of the body. In respiration, glucose from our food is broken down to release energy, which the cells use for every activity, from moving a muscle to thinking. When oxygen is used, the glucose is broken down completely into carbon dioxide and water, and this is called aerobic respiration. When there is not enough oxygen, glucose is broken down only partly. This is anaerobic respiration. During hard exercise, our leg muscles may respire anaerobically and produce lactic acid, which causes cramps. Yeast also respires without oxygen and produces alcohol, which is why it is used in making bread and in brewing. Plants respire too, all the time, day and night, through tiny pores in their leaves and through their roots. It is a common mistake to think that plants respire only at night. During the day their respiration is simply hidden, because photosynthesis uses up more carbon dioxide than respiration releases.",
+  "gate": {
+    "status": "OK",
+    "words": 218,
+    "reason": "OK: 218 words"
+  },
+  "summary": {
+    "text": "In respiration, glucose from food is broken down into energy, which the cells use for all activities. When oxygen is used, glucose is broken down into carbon dioxide and water. This is called aerobic respiration.",
+    "word_count": 35,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "35 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 5,
+        "source": "In respiration, glucose from our food is broken down to release energy, which the cells use for every activity, from moving a muscle to thinking.",
+        "text": "In respiration, glucose from food is broken down into energy, which the cells use for all activities.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 10.5 (limit 13.5), 17 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "In respiration, glucose from food is broken down into energy, which the cells use for all activities.",
+            "temperature": 0.0,
+            "wall_s": 0.909,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 103,
+            "new_tokens": 79,
+            "ttft_ms": 126,
+            "tokens_per_s": 99.74,
+            "verify": null
+          },
+          {
+            "text": "In our body, glucose from food is broken down to give us energy, which helps us move our muscles and think.",
+            "temperature": 0.4,
+            "wall_s": 0.9189,
+            "failed": [
+              "summary_support",
+              "summary_readability"
+            ],
+            "prompt_tokens": 103,
+            "new_tokens": 79,
+            "ttft_ms": 125,
+            "tokens_per_s": 98.36,
+            "verify": null
+          },
+          {
+            "text": "In our body, glucose from food is broken down into energy, and this energy helps us move and think.",
+            "temperature": 0.7,
+            "wall_s": 0.9205,
+            "failed": [
+              "summary_support",
+              "summary_readability"
+            ],
+            "prompt_tokens": 103,
+            "new_tokens": 79,
+            "ttft_ms": 126,
+            "tokens_per_s": 98.24,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 6,
+        "source": "When oxygen is used, the glucose is broken down completely into carbon dioxide and water, and this is called aerobic respiration.",
+        "text": "When oxygen is used, glucose is broken down into carbon dioxide and water. This is called aerobic respiration.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "When oxygen is used, glucose is broken down into carbon dioxide and water, and this is called aerobic respiration.",
+            "temperature": 0.0,
+            "wall_s": 0.6701,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 98,
+            "new_tokens": 57,
+            "ttft_ms": 125,
+            "tokens_per_s": 102.94,
+            "verify": null
+          },
+          {
+            "text": "When oxygen is used, glucose is broken down into carbon dioxide and water, and this is called aerobic respiration.",
+            "temperature": 0.4,
+            "wall_s": 0.9016,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 98,
+            "new_tokens": 79,
+            "ttft_ms": 120,
+            "tokens_per_s": 99.87,
+            "verify": null
+          },
+          {
+            "text": "When oxygen is used, glucose is broken down into carbon dioxide and water. This is called aerobic respiration.",
+            "temperature": 0.7,
+            "wall_s": 0.9016,
+            "failed": [],
+            "prompt_tokens": 98,
+            "new_tokens": 79,
+            "ttft_ms": 120,
+            "tokens_per_s": 99.87,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "muscle",
+      "options": [
+        "produce",
+        "dioxide",
+        "muscle",
+        "respire"
+      ],
+      "witness_idx": 5,
+      "witness": "In respiration, glucose from our food is broken down to release energy, which the cells use for every activity, from moving a muscle to thinking.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "22 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "similarity to the witness 0.95"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 13.4 (limit 13.5)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_length: 22 words (max 20)",
+        "stem_no_answer_leak: the answer appears in the question",
+        "stem_not_echo: similarity to the witness 0.95"
+      ],
+      "attempts": [
+        {
+          "text": "In respiration, glucose is broken down to release energy, which the cells use for every activity, from moving a muscle to thinking.",
+          "temperature": 0.0,
+          "wall_s": 0.726,
+          "failed": [
+            "stem_question_mark",
+            "stem_length",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 176,
+          "new_tokens": 47,
+          "ttft_ms": 218,
+          "tokens_per_s": 90.55,
+          "verify": null
+        },
+        {
+          "text": "In respiration, glucose is broken down to release energy, which the cells use for every activity, from moving a muscle to thinking.",
+          "temperature": 0.4,
+          "wall_s": 0.7424,
+          "failed": [
+            "stem_question_mark",
+            "stem_length",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 176,
+          "new_tokens": 47,
+          "ttft_ms": 219,
+          "tokens_per_s": 87.95,
+          "verify": null
+        },
+        {
+          "text": "In respiration, glucose from our food is broken down to release energy, which the cells use for every activity, from moving a muscle to thinking.",
+          "temperature": 0.7,
+          "wall_s": 0.7325,
+          "failed": [
+            "stem_question_mark",
+            "stem_length",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 176,
+          "new_tokens": 47,
+          "ttft_ms": 219,
+          "tokens_per_s": 89.67,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: In respiration, glucose from our food is broken down to release energy, which the _____ use for every activity, from moving a muscle to thinking.",
+        "key": "cells",
+        "witness_idx": 5,
+        "witness": "In respiration, glucose from our food is broken down to release energy, which the cells use for every activity, from moving a muscle to thinking.",
+        "options": [
+          "rushes",
+          "cells",
+          "expands",
+          "plants"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "dioxide",
+      "options": [
+        "cavity",
+        "dioxide",
+        "movement",
+        "muscle"
+      ],
+      "witness_idx": 6,
+      "witness": "When oxygen is used, the glucose is broken down completely into carbon dioxide and water, and this is called aerobic respiration.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "10 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.51"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "75% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 9.6 (limit 14.5)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'it produces energy in the form of ATP', not 'dioxide'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'it produces energy in the form of ATP', not 'dioxide'"
+      ],
+      "attempts": [
+        {
+          "text": "What is the result of the process called aerobic respiration?",
+          "temperature": 0.0,
+          "wall_s": 0.7217,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 171,
+          "new_tokens": 47,
+          "ttft_ms": 212,
+          "tokens_per_s": 90.37,
+          "verify": {
+            "text": "it produces energy in the form of ATP",
+            "wall_s": 0.3657,
+            "prompt_tokens": 163,
+            "new_tokens": 15,
+            "ttft_ms": 206,
+            "tokens_per_s": 88.05
+          }
+        },
+        {
+          "text": "What is the result of the process called aerobic respiration?",
+          "temperature": 0.4,
+          "wall_s": 0.7283,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 171,
+          "new_tokens": 47,
+          "ttft_ms": 215,
+          "tokens_per_s": 89.67,
+          "verify": {
+            "text": "it produces energy in the form of ATP",
+            "wall_s": 0.365,
+            "prompt_tokens": 163,
+            "new_tokens": 15,
+            "ttft_ms": 205,
+            "tokens_per_s": 88.05
+          }
+        },
+        {
+          "text": "What is called when oxygen is used for respiration?",
+          "temperature": 0.7,
+          "wall_s": 0.731,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 171,
+          "new_tokens": 47,
+          "ttft_ms": 214,
+          "tokens_per_s": 89.15,
+          "verify": {
+            "text": "aerobic respiration",
+            "wall_s": 0.3666,
+            "prompt_tokens": 162,
+            "new_tokens": 15,
+            "ttft_ms": 206,
+            "tokens_per_s": 87.5
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: When oxygen is used, the glucose is broken down completely into _____ dioxide and water, and this is called aerobic respiration.",
+        "key": "carbon",
+        "witness_idx": 6,
+        "witness": "When oxygen is used, the glucose is broken down completely into carbon dioxide and water, and this is called aerobic respiration.",
+        "options": [
+          "smaller",
+          "carbon",
+          "chest",
+          "respire"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "breathing",
+      "options": [
+        "respire",
+        "brewing",
+        "breathing",
+        "lungs"
+      ],
+      "witness_idx": 0,
+      "witness": "Many people use the words breathing and respiration as if they mean the same thing, but they are different processes.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "6 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.31"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 0.5 (limit 9.9)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'breathe', not 'breathing'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'breathe', not 'breathing'"
+      ],
+      "attempts": [
+        {
+          "text": "What do people use to breathe?",
+          "temperature": 0.0,
+          "wall_s": 0.7173,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 211,
+          "tokens_per_s": 91.09,
+          "verify": {
+            "text": "breathe",
+            "wall_s": 0.3451,
+            "prompt_tokens": 156,
+            "new_tokens": 15,
+            "ttft_ms": 197,
+            "tokens_per_s": 94.59
+          }
+        },
+        {
+          "text": "What do people use to breathe?",
+          "temperature": 0.4,
+          "wall_s": 0.729,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 212,
+          "tokens_per_s": 89.15,
+          "verify": {
+            "text": "breathe",
+            "wall_s": 0.3487,
+            "prompt_tokens": 156,
+            "new_tokens": 15,
+            "ttft_ms": 199,
+            "tokens_per_s": 93.96
+          }
+        },
+        {
+          "text": "What do people use to breathe?",
+          "temperature": 0.7,
+          "wall_s": 0.736,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 214,
+          "tokens_per_s": 88.29,
+          "verify": {
+            "text": "breathe",
+            "wall_s": 0.3448,
+            "prompt_tokens": 156,
+            "new_tokens": 15,
+            "ttft_ms": 196,
+            "tokens_per_s": 94.59
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Many people use the words breathing and respiration as if they mean the same thing, but they are different _____.",
+        "key": "processes",
+        "witness_idx": 0,
+        "witness": "Many people use the words breathing and respiration as if they mean the same thing, but they are different processes.",
+        "options": [
+          "cells",
+          "processes",
+          "expands",
+          "lungs"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "cells",
+      "options": [
+        "lungs",
+        "cells",
+        "processes",
+        "cramps"
+      ],
+      "witness_idx": 4,
+      "witness": "Respiration is what happens inside the cells of the body.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.83"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.8 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What happens inside the cells of the body?",
+          "temperature": 0.0,
+          "wall_s": 0.7119,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 158,
+          "new_tokens": 47,
+          "ttft_ms": 207,
+          "tokens_per_s": 91.27,
+          "verify": null
+        },
+        {
+          "text": "What happens inside the cells of the body?",
+          "temperature": 0.4,
+          "wall_s": 0.7133,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 158,
+          "new_tokens": 47,
+          "ttft_ms": 201,
+          "tokens_per_s": 90.02,
+          "verify": null
+        },
+        {
+          "text": "What happens inside the cells of the body?",
+          "temperature": 0.7,
+          "wall_s": 0.7115,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 158,
+          "new_tokens": 47,
+          "ttft_ms": 200,
+          "tokens_per_s": 90.02,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Respiration is what happens _____ the cells of the body.",
+        "key": "inside",
+        "witness_idx": 4,
+        "witness": "Respiration is what happens inside the cells of the body.",
+        "options": [
+          "chest",
+          "muscle",
+          "inside",
+          "respire"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "lungs",
+      "options": [
+        "pores",
+        "photosynthesis",
+        "cramps",
+        "lungs"
+      ],
+      "witness_idx": 2,
+      "witness": "When we breathe in, the chest cavity expands and air rushes into the lungs.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "10 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.80"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.5 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "When we breathe in, the air rushes into the lungs.",
+          "temperature": 0.0,
+          "wall_s": 0.7106,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 205,
+          "tokens_per_s": 91.09,
+          "verify": null
+        },
+        {
+          "text": "When we breathe in, the air rushes into the lungs.",
+          "temperature": 0.4,
+          "wall_s": 0.7203,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 205,
+          "tokens_per_s": 89.49,
+          "verify": null
+        },
+        {
+          "text": "When we breathe, the air rushes into the lungs.",
+          "temperature": 0.7,
+          "wall_s": 0.7231,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 207,
+          "tokens_per_s": 89.15,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: When we breathe in, the chest _____ expands and air rushes into the lungs.",
+        "key": "cavity",
+        "witness_idx": 2,
+        "witness": "When we breathe in, the chest cavity expands and air rushes into the lungs.",
+        "options": [
+          "dioxide",
+          "muscle",
+          "glucose",
+          "cavity"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "What is a common mistake in thinking about plants?",
+      "key": "respire",
+      "options": [
+        "muscle",
+        "respire",
+        "oxygen",
+        "glucose"
+      ],
+      "witness_idx": 12,
+      "witness": "It is a common mistake to think that plants respire only at night.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "9 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.66"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.0 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is a common mistake that people make?",
+          "temperature": 0.0,
+          "wall_s": 0.7458,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 207,
+          "tokens_per_s": 85.34,
+          "verify": {
+            "text": "planting at night",
+            "wall_s": 0.344,
+            "prompt_tokens": 150,
+            "new_tokens": 15,
+            "ttft_ms": 196,
+            "tokens_per_s": 95.24
+          }
+        },
+        {
+          "text": "What is a common mistake in thinking about plants?",
+          "temperature": 0.4,
+          "wall_s": 0.7235,
+          "failed": [],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 208,
+          "tokens_per_s": 89.49,
+          "verify": {
+            "text": "plant respire",
+            "wall_s": 0.341,
+            "prompt_tokens": 151,
+            "new_tokens": 15,
+            "ttft_ms": 193,
+            "tokens_per_s": 94.59
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: It is a common mistake to think that _____ respire only at night.",
+        "key": "plants",
+        "witness_idx": 12,
+        "witness": "It is a common mistake to think that plants respire only at night.",
+        "options": [
+          "rushes",
+          "processes",
+          "plants",
+          "expands"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: When there is not enough oxygen, glucose is _____ down only partly.",
+      "key": "broken",
+      "options": [
+        "broken",
+        "respiration",
+        "breathe",
+        "respire"
+      ],
+      "witness_idx": 7,
+      "witness": "When there is not enough oxygen, glucose is broken down only partly.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: When there is not enough oxygen, _____ is broken down only partly.",
+        "key": "glucose",
+        "witness_idx": 7,
+        "witness": "When there is not enough oxygen, glucose is broken down only partly.",
+        "options": [
+          "glucose",
+          "respire",
+          "chest",
+          "carbon"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "kind": "cloze",
+      "stem": "Fill in the blank: During hard exercise, our leg muscles may respire anaerobically and _____ lactic acid, which causes cramps.",
+      "key": "produce",
+      "options": [
+        "produce",
+        "breathe",
+        "chest",
+        "respiration"
+      ],
+      "witness_idx": 9,
+      "witness": "During hard exercise, our leg muscles may respire anaerobically and produce lactic acid, which causes cramps.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: During hard exercise, our leg muscles may _____ anaerobically and produce lactic acid, which causes cramps.",
+        "key": "respire",
+        "witness_idx": 9,
+        "witness": "During hard exercise, our leg muscles may respire anaerobically and produce lactic acid, which causes cramps.",
+        "options": [
+          "oxygen",
+          "respire",
+          "broken",
+          "breathe"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 20.3812,
+    "summary_s": 5.2232,
+    "stems_s": 15.156,
+    "model_wall_s": 17.5459,
+    "model_calls": 23,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 0,
+    "red": 5,
+    "fallback": 2
+  },
+  "version": 1,
+  "created": "2026-11-13T01:16:49",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

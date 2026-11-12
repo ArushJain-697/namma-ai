@@ -1,0 +1,174 @@
+{
+ "topic": {
+  "id": "SCI-CHM-MATERIALS",
+  "subject": "science",
+  "strand": "chemistry",
+  "grades": [
+   6
+  ],
+  "title": "Sorting materials into groups",
+  "scope": "properties of materials, lustre, hardness, solubility, floating and sinking, transparency"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 697,
+  "candidatesTokenCount": 1160,
+  "totalTokenCount": 1857,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 697
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.8,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Physical Appearance and Lustre",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "All shiny materials are metals.",
+      "why": "Students often associate the property of lustre exclusively with metals based on classroom demonstrations.",
+      "fix": "Some non-metals like diamond or polished plastic can also appear shiny, and some metals lose their shine when they react with air.",
+      "probe": {
+       "question": "Is a polished piece of plastic a metal because it is shiny?",
+       "wrong_answer": "Yes, because all shiny things are metals."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "shiny",
+       "lustre",
+       "appearance",
+       "metals",
+       "non-metals"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Hardness and Texture",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Hard materials are always heavy and soft materials are always light.",
+      "why": "Students confuse the property of hardness (resistance to compression) with mass or density.",
+      "fix": "Hardness refers to how difficult it is to scratch or compress a material, which is independent of its weight or density.",
+      "probe": {
+       "question": "Is a large sponge harder than a small iron nail?",
+       "wrong_answer": "Yes, because the sponge is bigger and heavier."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "hard",
+       "soft",
+       "compress",
+       "scratch",
+       "texture"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Solubility in Water",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "If a substance disappears in water, it has vanished or been destroyed.",
+      "why": "Students rely on visible evidence; if they cannot see the particles, they assume the substance no longer exists.",
+      "fix": "The substance breaks down into tiny particles that spread evenly throughout the water, forming a solution.",
+      "probe": {
+       "question": "Where does the sugar go after you stir it into water?",
+       "wrong_answer": "It disappears and turns into water."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "dissolve",
+       "solubility",
+       "disappear",
+       "solution",
+       "mixture"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Floating and Sinking",
+    "prereqs": [
+     "c2",
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Heavy objects always sink and light objects always float.",
+      "why": "Everyday experiences with small objects often reinforce the idea that weight is the sole determinant of sinking.",
+      "fix": "Floating and sinking depend on the material's density relative to water, not just its total weight.",
+      "probe": {
+       "question": "Will a heavy wooden log sink in water?",
+       "wrong_answer": "Yes, because it is very heavy."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "float",
+       "sink",
+       "heavy",
+       "light",
+       "water surface"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c5",
+    "name": "Transparency",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Transparent materials are only those that are perfectly clear like glass.",
+      "why": "Students often fail to categorize materials based on the degree of light transmission, focusing only on 'perfect' examples.",
+      "fix": "Materials can be transparent (clear), translucent (partially clear), or opaque (blocking light), depending on how much light passes through.",
+      "probe": {
+       "question": "Is butter paper transparent?",
+       "wrong_answer": "No, because I cannot see through it clearly."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "transparent",
+       "translucent",
+       "opaque",
+       "light",
+       "see through"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Introduction to objects around us",
+   "Measurement of length"
+  ]
+ },
+ "problems": []
+}

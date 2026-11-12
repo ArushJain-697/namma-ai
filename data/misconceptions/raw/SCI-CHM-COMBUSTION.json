@@ -1,0 +1,163 @@
+{
+ "topic": {
+  "id": "SCI-CHM-COMBUSTION",
+  "subject": "science",
+  "strand": "chemistry",
+  "grades": [
+   8
+  ],
+  "title": "Combustion and flame",
+  "scope": "combustible substances, ignition temperature, fire extinguishers, types of combustion, zones of a flame, fuel efficiency"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 701,
+  "candidatesTokenCount": 1195,
+  "totalTokenCount": 1896,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 701
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.9,
+ "response": {
+  "concepts": [
+   {
+    "key": "combustion_basics",
+    "name": "Combustion and Combustible Substances",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Only solids can be combustible substances.",
+      "why": "Students often associate combustion with burning wood or paper, ignoring fuels they cannot easily see or touch.",
+      "fix": "Combustion is a chemical reaction with oxygen that can occur with solids, liquids, and gases like LPG or hydrogen.",
+      "probe": {
+       "question": "Is cooking gas (LPG) a combustible substance?",
+       "wrong_answer": "No, because it is a gas, not a solid material."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "combustible",
+       "non-combustible",
+       "fuel",
+       "burning",
+       "chemical process"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Combustion is the same thing as melting.",
+      "why": "Students often confuse the physical change of a candle wax melting with the chemical process of the wick burning.",
+      "fix": "Combustion is a chemical reaction that produces new substances like carbon dioxide and water, whereas melting is just a change of state.",
+      "probe": {
+       "question": "What happens to a candle when it burns?",
+       "wrong_answer": "The wax melts and disappears into the air."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "burning",
+       "melting",
+       "chemical change",
+       "physical change"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "ignition_temp",
+    "name": "Ignition Temperature and Fire Control",
+    "prereqs": [
+     "combustion_basics"
+    ],
+    "misconceptions": [
+     {
+      "statement": "A substance will catch fire as soon as it is near a flame.",
+      "why": "Students observe that fires start quickly and ignore the threshold temperature required for the reaction to begin.",
+      "fix": "A substance only starts burning when it reaches its specific ignition temperature, which varies for different materials.",
+      "probe": {
+       "question": "Why does a paper cup with water not burn when placed over a flame?",
+       "wrong_answer": "Because the paper is not a good fuel."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "ignition temperature",
+       "minimum temperature",
+       "catch fire",
+       "heat supply"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "flame_zones",
+    "name": "Structure of a Flame",
+    "prereqs": [
+     "combustion_basics"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The blue part of a flame is the coolest part.",
+      "why": "Students often associate blue with 'cold' (like ice) and red/orange with 'hot' (like the sun or fire).",
+      "fix": "The blue zone represents complete combustion and is actually the hottest part of the flame.",
+      "probe": {
+       "question": "If you want to heat a metal wire quickly, which part of the flame should you use?",
+       "wrong_answer": "The yellow part, because it looks brighter and hotter."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "flame zones",
+       "luminous",
+       "non-luminous",
+       "complete combustion",
+       "hottest part"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "fuel_efficiency",
+    "name": "Fuel Efficiency and Calorific Value",
+    "prereqs": [
+     "combustion_basics",
+     "ignition_temp"
+    ],
+    "misconceptions": [
+     {
+      "statement": "All fuels produce the same amount of heat when burned.",
+      "why": "Students tend to focus on the act of burning rather than the energy content per unit mass of the fuel.",
+      "fix": "Different fuels have different calorific values, meaning they release different amounts of heat energy for the same quantity.",
+      "probe": {
+       "question": "If you burn 1kg of wood and 1kg of LPG, will they produce the same heat?",
+       "wrong_answer": "Yes, because the weight of the fuel is the same."
+      },
+      "error_type": "scale_or_quantity",
+      "trigger_cues": [
+       "calorific value",
+       "fuel efficiency",
+       "heat energy",
+       "kilojoules per kg"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Physical and Chemical Changes",
+   "Air and Oxygen",
+   "Heat and Temperature"
+  ]
+ },
+ "problems": []
+}

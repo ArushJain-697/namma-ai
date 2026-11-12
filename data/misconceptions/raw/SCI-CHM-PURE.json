@@ -1,0 +1,145 @@
+{
+ "topic": {
+  "id": "SCI-CHM-PURE",
+  "subject": "science",
+  "strand": "chemistry",
+  "grades": [
+   9
+  ],
+  "title": "Is matter around us pure",
+  "scope": "mixtures vs compounds, solutions, suspensions, colloids, concentration, separation techniques, elements"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 700,
+  "candidatesTokenCount": 1028,
+  "totalTokenCount": 1728,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 700
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.4,
+ "response": {
+  "concepts": [
+   {
+    "key": "pure_substances",
+    "name": "Pure substances vs Mixtures",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Anything that is not contaminated or dirty is a pure substance.",
+      "why": "Students confuse the scientific definition of 'pure' with the common usage of the word in daily life (e.g., pure milk, pure gold).",
+      "fix": "In science, a pure substance consists of only one type of particle, whereas a mixture contains two or more substances mixed in any proportion.",
+      "probe": {
+       "question": "Is a glass of 'pure' milk from a dairy a pure substance?",
+       "wrong_answer": "Yes, because it is natural and has no added impurities."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "pure substance",
+       "mixture",
+       "chemical nature",
+       "composition",
+       "impurities"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "solutions_colloids",
+    "name": "Solutions, Suspensions, and Colloids",
+    "prereqs": [
+     "pure_substances"
+    ],
+    "misconceptions": [
+     {
+      "statement": "If a mixture looks clear and uniform, it must be a solution.",
+      "why": "Students rely on visual observation rather than the particle size or the Tyndall effect to classify mixtures.",
+      "fix": "Some mixtures, like colloids, appear uniform to the naked eye but contain particles large enough to scatter light.",
+      "probe": {
+       "question": "Does a clear-looking colloid like milk show the Tyndall effect?",
+       "wrong_answer": "No, because it looks uniform and clear like a solution."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "solution",
+       "colloid",
+       "tyndall effect",
+       "particle size",
+       "scattering of light"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "separation_techniques",
+    "name": "Physical Separation Techniques",
+    "prereqs": [
+     "solutions_colloids"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Evaporation can separate all components of a mixture.",
+      "why": "Students overgeneralize the success of separating salt from water to all types of mixtures.",
+      "fix": "Evaporation only works for separating a volatile solvent from a non-volatile solute; it cannot separate two liquids or solids effectively.",
+      "probe": {
+       "question": "Can you separate a mixture of acetone and water using evaporation?",
+       "wrong_answer": "Yes, just heat it and the water will evaporate leaving the acetone behind."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "evaporation",
+       "distillation",
+       "boiling point",
+       "separation",
+       "mixture components"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "elements_compounds",
+    "name": "Elements and Compounds",
+    "prereqs": [
+     "pure_substances"
+    ],
+    "misconceptions": [
+     {
+      "statement": "A compound is just a mixture of elements that are stuck together.",
+      "why": "Students fail to distinguish between physical mixing and chemical bonding, assuming the properties of the elements remain unchanged.",
+      "fix": "In a compound, elements are chemically combined in a fixed ratio, resulting in a new substance with entirely different properties than its constituent elements.",
+      "probe": {
+       "question": "Does iron in iron sulphide still show magnetic properties?",
+       "wrong_answer": "Yes, because iron is still present in the compound."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "element",
+       "compound",
+       "chemical reaction",
+       "fixed ratio",
+       "properties"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Atoms and Molecules",
+   "States of Matter"
+  ]
+ },
+ "problems": []
+}

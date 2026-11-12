@@ -1,0 +1,175 @@
+{
+ "topic": {
+  "id": "SCI-BIO-RESPIRATION",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   7,
+   10
+  ],
+  "title": "Respiration in organisms",
+  "scope": "breathing vs respiration, aerobic and anaerobic respiration, breathing rate, respiration in plants and other animals"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 709,
+  "candidatesTokenCount": 1274,
+  "totalTokenCount": 1983,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 709
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.6,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Breathing vs Respiration",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Breathing and respiration are the same process.",
+      "why": "In everyday language, people use the terms interchangeably to describe taking in air.",
+      "fix": "Breathing is a physical process of inhaling and exhaling air, while respiration is a chemical process inside cells that releases energy from food.",
+      "probe": {
+       "question": "Does respiration happen in the lungs or in the cells?",
+       "wrong_answer": "It happens in the lungs because that is where we breathe."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "inhale",
+       "exhale",
+       "gas exchange",
+       "cellular respiration",
+       "breathing mechanism"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Respiration is just the intake of oxygen.",
+      "why": "Textbooks often emphasize oxygen intake, leading students to ignore the release of energy and carbon dioxide.",
+      "fix": "Respiration involves the breakdown of glucose using oxygen to produce energy, carbon dioxide, and water.",
+      "probe": {
+       "question": "What is the main purpose of respiration?",
+       "wrong_answer": "To get oxygen into the body."
+      },
+      "error_type": "process_vs_product",
+      "trigger_cues": [
+       "oxygen intake",
+       "breathing",
+       "respiratory system",
+       "gaseous exchange"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Aerobic and Anaerobic Respiration",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Plants and animals only perform aerobic respiration.",
+      "why": "Students associate respiration exclusively with breathing air, which is an aerobic process.",
+      "fix": "Many organisms, including yeast and human muscle cells during intense exercise, can respire anaerobically without oxygen.",
+      "probe": {
+       "question": "Can a plant survive if it is kept in an airtight container without any oxygen?",
+       "wrong_answer": "No, because all living things need oxygen to respire."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "oxygen",
+       "glucose",
+       "yeast",
+       "muscle cramps",
+       "lactic acid"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     },
+     {
+      "statement": "Anaerobic respiration produces no energy.",
+      "why": "Students believe that since no oxygen is used, the process must be incomplete or useless.",
+      "fix": "Anaerobic respiration does release energy, though significantly less than aerobic respiration.",
+      "probe": {
+       "question": "Why do organisms perform anaerobic respiration if it is less efficient?",
+       "wrong_answer": "They don't; it is a mistake or a sign of illness."
+      },
+      "error_type": "living_thing_reasoning",
+      "trigger_cues": [
+       "energy release",
+       "breakdown of food",
+       "lack of oxygen",
+       "fermentation"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Respiration in Plants and Other Animals",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Plants only respire at night.",
+      "why": "Students confuse the gas exchange of photosynthesis (which requires light) with the constant process of respiration.",
+      "fix": "Plants respire 24 hours a day, just like animals, to release energy from stored food.",
+      "probe": {
+       "question": "Do plants take in oxygen during the day?",
+       "wrong_answer": "No, they only take in carbon dioxide for photosynthesis."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "stomata",
+       "photosynthesis",
+       "day and night",
+       "gas exchange in plants"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Fish breathe water.",
+      "why": "Students observe fish in water and assume the water itself is the gas being used.",
+      "fix": "Fish use their gills to extract dissolved oxygen from the water, not the water molecules themselves.",
+      "probe": {
+       "question": "What do fish do with the water that passes over their gills?",
+       "wrong_answer": "They break it down to get oxygen."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "gills",
+       "dissolved oxygen",
+       "aquatic animals",
+       "breathing in water"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Nutrition in plants",
+   "Nutrition in animals",
+   "Cell structure and function"
+  ]
+ },
+ "problems": [
+  "Respiration in Plants and Other Animals: dropped misconception 'Fish breathe water.' (length 3 words or no fix)"
+ ]
+}

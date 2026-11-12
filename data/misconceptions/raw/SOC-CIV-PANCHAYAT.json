@@ -1,0 +1,151 @@
+{
+ "topic": {
+  "id": "SOC-CIV-PANCHAYAT",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   6
+  ],
+  "title": "Panchayati Raj and local government",
+  "scope": "Gram Sabha, Gram Panchayat, sarpanch, Panchayat Samiti, Zila Parishad, urban local bodies, ward councillors"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 704,
+  "candidatesTokenCount": 1139,
+  "totalTokenCount": 1843,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 704
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.8,
+ "response": {
+  "concepts": [
+   {
+    "key": "gram_sabha",
+    "name": "Gram Sabha and Democratic Participation",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "The Gram Sabha is a small group of elected leaders who make all the decisions.",
+      "why": "Students often confuse the 'Sabha' (assembly) with the 'Panchayat' (executive committee) due to the similarity in names.",
+      "fix": "The Gram Sabha consists of all adults in the village who have the right to vote, not just a few elected members.",
+      "probe": {
+       "question": "Who attends the meeting of the Gram Sabha?",
+       "wrong_answer": "Only the Sarpanch and the five Panchs."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "all adults",
+       "voting age",
+       "village assembly",
+       "direct participation"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "The Gram Sabha only meets when there is a big problem or a disaster.",
+      "why": "Students associate 'meetings' with emergency situations rather than routine governance.",
+      "fix": "The Gram Sabha meets regularly to discuss development plans, budgets, and audit the work of the Gram Panchayat.",
+      "probe": {
+       "question": "How often does the Gram Sabha meet?",
+       "wrong_answer": "Only when the village faces a flood or a serious crisis."
+      },
+      "error_type": "other",
+      "trigger_cues": [
+       "regular meetings",
+       "development plans",
+       "budget approval",
+       "audit"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "gram_panchayat",
+    "name": "Gram Panchayat and Executive Function",
+    "prereqs": [
+     "gram_sabha"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The Sarpanch has the power to do whatever they want with the village money.",
+      "why": "Students often view the Sarpanch as a 'king' or 'boss' figure rather than an accountable representative.",
+      "fix": "The Sarpanch must get the approval of the Gram Sabha for the budget and development projects.",
+      "probe": {
+       "question": "Can the Sarpanch spend village funds without asking anyone?",
+       "wrong_answer": "Yes, because they are the head of the village."
+      },
+      "error_type": "confusing_institutions",
+      "trigger_cues": [
+       "sarpanch",
+       "elected head",
+       "accountability",
+       "gram sabha approval"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "local_government_levels",
+    "name": "Hierarchy of Local Governance",
+    "prereqs": [
+     "gram_panchayat"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The Zila Parishad makes rules for the Gram Panchayat to follow like a principal in a school.",
+      "why": "Students use their school hierarchy experience to understand government structures.",
+      "fix": "The Zila Parishad coordinates development at the district level and distributes funds, but it does not act as a direct boss to the village panchayat.",
+      "probe": {
+       "question": "Does the Zila Parishad control the daily work of the Gram Panchayat?",
+       "wrong_answer": "Yes, it is the highest authority and gives orders to the village panchayat."
+      },
+      "error_type": "confusing_institutions",
+      "trigger_cues": [
+       "zila parishad",
+       "district level",
+       "coordination",
+       "hierarchy"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Urban local bodies like Municipal Corporations are just bigger versions of the Gram Panchayat.",
+      "why": "Students overgeneralize the function of local government without considering the difference between rural and urban needs.",
+      "fix": "While both manage local needs, urban bodies deal with city-specific issues like sewage, street lighting, and waste management in densely populated areas.",
+      "probe": {
+       "question": "Is the work of a Municipal Corporation the same as a Gram Panchayat?",
+       "wrong_answer": "Yes, they both do the exact same things, just in different places."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "municipal corporation",
+       "urban",
+       "ward councillor",
+       "city services"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Diversity and Discrimination",
+   "What is Government?",
+   "Key Elements of a Democratic Government"
+  ]
+ },
+ "problems": []
+}

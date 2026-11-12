@@ -1,0 +1,1039 @@
+{
+  "passage": "A plant must move water from its roots to leaves that may be many metres above the ground, and it does this without a pump. The water travels through a tissue called xylem. Xylem is made up of long tubes formed from cells joined end to end. Surprisingly, the main cells of the xylem are dead when they do their job. As they mature, they lose their living contents, and the cross walls between them break down, leaving hollow, continuous pipes. Their thick walls, strengthened by a substance called lignin, keep the pipes from collapsing and also help the stem to stand upright. Water enters the roots from the soil and is pulled up through these tubes. The main force that pulls it is transpiration, the loss of water vapour through tiny pores called stomata on the leaves. As water evaporates from the leaves, it creates a pull that draws more water up the xylem, like drinking through a straw. A second tissue, the phloem, carries food made in the leaves to other parts of the plant, such as the roots and fruits. Unlike xylem, the main cells of phloem are living. Together, xylem and phloem form the vascular bundles that can be seen as veins in a leaf. A large tree may lose hundreds of litres of water on a hot day through transpiration.",
+  "gate": {
+    "status": "OK",
+    "words": 225,
+    "reason": "OK: 225 words"
+  },
+  "summary": {
+    "text": "A plant needs to move water from its roots to leaves that are far up high. It does this without a pump. As water moves up from the leaves, it creates a pull that draws more water up the xylem, like drinking through a straw.",
+    "word_count": 45,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "45 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 0,
+        "source": "A plant must move water from its roots to leaves that may be many metres above the ground, and it does this without a pump.",
+        "text": "A plant needs to move water from its roots to leaves that are far up high. It does this without a pump.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "A plant needs to move water from its roots to leaves that are far up high. It does this without a pump.",
+            "temperature": 0.0,
+            "wall_s": 0.9123,
+            "failed": [],
+            "prompt_tokens": 100,
+            "new_tokens": 79,
+            "ttft_ms": 125,
+            "tokens_per_s": 99.24,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 8,
+        "source": "As water evaporates from the leaves, it creates a pull that draws more water up the xylem, like drinking through a straw.",
+        "text": "As water moves up from the leaves, it creates a pull that draws more water up the xylem, like drinking through a straw.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 8.8 (limit 10.2), 23 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "As water moves up from the leaves, it creates a pull that draws more water up the xylem, like drinking through a straw.",
+            "temperature": 0.0,
+            "wall_s": 0.9742,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 101,
+            "new_tokens": 79,
+            "ttft_ms": 136,
+            "tokens_per_s": 93.08,
+            "verify": null
+          },
+          {
+            "text": "As water moves up from the leaves, it creates a pull that draws more water up through the xylem, like drinking through a straw.",
+            "temperature": 0.4,
+            "wall_s": 0.9603,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 101,
+            "new_tokens": 79,
+            "ttft_ms": 155,
+            "tokens_per_s": 96.89,
+            "verify": null
+          },
+          {
+            "text": "As water moves up through the plant, it creates a pull that helps water move up.",
+            "temperature": 0.7,
+            "wall_s": 0.9859,
+            "failed": [
+              "summary_support",
+              "summary_readability"
+            ],
+            "prompt_tokens": 101,
+            "new_tokens": 79,
+            "ttft_ms": 128,
+            "tokens_per_s": 90.91,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "What is the term for the tissue that transports water from the roots to the leaves?",
+      "key": "xylem",
+      "options": [
+        "phloem",
+        "job",
+        "dead",
+        "xylem"
+      ],
+      "witness_idx": 1,
+      "witness": "The water travels through a tissue called xylem.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "16 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.32"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "67% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 4.7 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is the name of the tissue that transports water?",
+          "temperature": 0.0,
+          "wall_s": 0.8856,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 159,
+          "new_tokens": 47,
+          "ttft_ms": 240,
+          "tokens_per_s": 71.32,
+          "verify": {
+            "text": "xylem",
+            "wall_s": 0.3607,
+            "prompt_tokens": 148,
+            "new_tokens": 15,
+            "ttft_ms": 200,
+            "tokens_per_s": 87.5
+          }
+        },
+        {
+          "text": "What is the name of the tissue that transports water?",
+          "temperature": 0.4,
+          "wall_s": 0.7716,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 159,
+          "new_tokens": 47,
+          "ttft_ms": 214,
+          "tokens_per_s": 82.59,
+          "verify": {
+            "text": "xylem",
+            "wall_s": 0.3613,
+            "prompt_tokens": 148,
+            "new_tokens": 15,
+            "ttft_ms": 204,
+            "tokens_per_s": 89.17
+          }
+        },
+        {
+          "text": "What is the term for the tissue that transports water from the roots to the leaves?",
+          "temperature": 0.7,
+          "wall_s": 0.7728,
+          "failed": [],
+          "prompt_tokens": 159,
+          "new_tokens": 47,
+          "ttft_ms": 218,
+          "tokens_per_s": 83.03,
+          "verify": {
+            "text": "xylem",
+            "wall_s": 0.3673,
+            "prompt_tokens": 154,
+            "new_tokens": 15,
+            "ttft_ms": 211,
+            "tokens_per_s": 89.74
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The water travels through a _____ called xylem.",
+        "key": "tissue",
+        "witness_idx": 1,
+        "witness": "The water travels through a tissue called xylem.",
+        "options": [
+          "phloem",
+          "dead",
+          "job",
+          "tissue"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "What is the main part that plants use to get water from the ground?",
+      "key": "roots",
+      "options": [
+        "travels",
+        "continuous",
+        "roots",
+        "contents"
+      ],
+      "witness_idx": 0,
+      "witness": "A plant must move water from its roots to leaves that may be many metres above the ground, and it does this without a pump.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "14 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.35"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.57"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "71% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.5 (limit 8.8)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is the main part of a plant that moves water from its roots to leaves?",
+          "temperature": 0.0,
+          "wall_s": 0.7871,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 173,
+          "new_tokens": 47,
+          "ttft_ms": 236,
+          "tokens_per_s": 83.48,
+          "verify": null
+        },
+        {
+          "text": "What is the main part that plants use to get water from the ground?",
+          "temperature": 0.4,
+          "wall_s": 0.7879,
+          "failed": [],
+          "prompt_tokens": 173,
+          "new_tokens": 47,
+          "ttft_ms": 232,
+          "tokens_per_s": 82.88,
+          "verify": {
+            "text": "roots",
+            "wall_s": 0.4011,
+            "prompt_tokens": 168,
+            "new_tokens": 15,
+            "ttft_ms": 223,
+            "tokens_per_s": 78.65
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: A _____ must move water from its roots to leaves that may be many metres above the ground, and it does this without a pump.",
+        "key": "plant",
+        "witness_idx": 0,
+        "witness": "A plant must move water from its roots to leaves that may be many metres above the ground, and it does this without a pump.",
+        "options": [
+          "tissue",
+          "xylem",
+          "mature",
+          "plant"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "transpiration",
+      "options": [
+        "pump",
+        "surprisingly",
+        "plant",
+        "transpiration"
+      ],
+      "witness_idx": 12,
+      "witness": "A large tree may lose hundreds of litres of water on a hot day through transpiration.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "3 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.34"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.40"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "grade 9.2 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question",
+        "stem_readability: grade 9.2 (limit 8.0)"
+      ],
+      "attempts": [
+        {
+          "text": "What is transpiration?",
+          "temperature": 0.0,
+          "wall_s": 0.7739,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_readability"
+          ],
+          "prompt_tokens": 165,
+          "new_tokens": 47,
+          "ttft_ms": 226,
+          "tokens_per_s": 84.1,
+          "verify": null
+        },
+        {
+          "text": "What is transpiration?",
+          "temperature": 0.4,
+          "wall_s": 0.7902,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_readability"
+          ],
+          "prompt_tokens": 165,
+          "new_tokens": 47,
+          "ttft_ms": 224,
+          "tokens_per_s": 81.42,
+          "verify": null
+        },
+        {
+          "text": "What is transpiration?",
+          "temperature": 0.7,
+          "wall_s": 0.8044,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_readability"
+          ],
+          "prompt_tokens": 165,
+          "new_tokens": 47,
+          "ttft_ms": 228,
+          "tokens_per_s": 79.86,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: A large tree may lose hundreds of litres of water on a _____ day through transpiration.",
+        "key": "hot",
+        "witness_idx": 12,
+        "witness": "A large tree may lose hundreds of litres of water on a hot day through transpiration.",
+        "options": [
+          "xylem",
+          "surprisingly",
+          "tissue",
+          "hot"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "What is the name of the tube that water enters from the soil?",
+      "key": "tubes",
+      "options": [
+        "continuous",
+        "contents",
+        "pipes",
+        "tubes"
+      ],
+      "witness_idx": 6,
+      "witness": "Water enters the roots from the soil and is pulled up through these tubes.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "13 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.39"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.67"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "80% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.1 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is the name of the tube that water enters from the soil?",
+          "temperature": 0.0,
+          "wall_s": 0.7937,
+          "failed": [],
+          "prompt_tokens": 161,
+          "new_tokens": 47,
+          "ttft_ms": 225,
+          "tokens_per_s": 80.99,
+          "verify": {
+            "text": "root tubes",
+            "wall_s": 0.4056,
+            "prompt_tokens": 155,
+            "new_tokens": 15,
+            "ttft_ms": 228,
+            "tokens_per_s": 79.1
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Water enters the _____ from the soil and is pulled up through these tubes.",
+        "key": "roots",
+        "witness_idx": 6,
+        "witness": "Water enters the roots from the soil and is pulled up through these tubes.",
+        "options": [
+          "pores",
+          "travels",
+          "pipes",
+          "roots"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "What remains after plants mature?",
+      "key": "pipes",
+      "options": [
+        "pipes",
+        "cells",
+        "travels",
+        "tubes"
+      ],
+      "witness_idx": 4,
+      "witness": "As they mature, they lose their living contents, and the cross walls between them break down, leaving hollow, continuous pipes.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "5 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.15"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.50"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "67% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.2 (limit 9.3)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What remains after they mature?",
+          "temperature": 0.0,
+          "wall_s": 0.8324,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 171,
+          "new_tokens": 47,
+          "ttft_ms": 245,
+          "tokens_per_s": 78.36,
+          "verify": {
+            "text": "pipes",
+            "wall_s": 0.4059,
+            "prompt_tokens": 157,
+            "new_tokens": 15,
+            "ttft_ms": 220,
+            "tokens_per_s": 75.68
+          }
+        },
+        {
+          "text": "What remains after plants mature?",
+          "temperature": 0.4,
+          "wall_s": 0.8407,
+          "failed": [],
+          "prompt_tokens": 171,
+          "new_tokens": 47,
+          "ttft_ms": 257,
+          "tokens_per_s": 78.9,
+          "verify": {
+            "text": "pipes",
+            "wall_s": 0.4187,
+            "prompt_tokens": 157,
+            "new_tokens": 15,
+            "ttft_ms": 222,
+            "tokens_per_s": 71.43
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: As they mature, they lose their living contents, and the cross _____ between them break down, leaving hollow, continuous pipes.",
+        "key": "walls",
+        "witness_idx": 4,
+        "witness": "As they mature, they lose their living contents, and the cross walls between them break down, leaving hollow, continuous pipes.",
+        "options": [
+          "cells",
+          "tubes",
+          "walls",
+          "evaporates"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "What are the main cells of phloem?",
+      "key": "living",
+      "options": [
+        "roots",
+        "tissue",
+        "drinking",
+        "living"
+      ],
+      "witness_idx": 10,
+      "witness": "Unlike xylem, the main cells of phloem are living.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "7 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.64"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.57"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade -1.1 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What are the main cells of phloem?",
+          "temperature": 0.0,
+          "wall_s": 0.8196,
+          "failed": [],
+          "prompt_tokens": 161,
+          "new_tokens": 47,
+          "ttft_ms": 257,
+          "tokens_per_s": 81.85,
+          "verify": {
+            "text": "living",
+            "wall_s": 0.3795,
+            "prompt_tokens": 151,
+            "new_tokens": 15,
+            "ttft_ms": 216,
+            "tokens_per_s": 85.89
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Unlike xylem, the main cells of _____ are living.",
+        "key": "phloem",
+        "witness_idx": 10,
+        "witness": "Unlike xylem, the main cells of phloem are living.",
+        "options": [
+          "dead",
+          "surprisingly",
+          "tissue",
+          "phloem"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 16.6066,
+    "summary_s": 3.834,
+    "stems_s": 12.7719,
+    "model_wall_s": 13.4926,
+    "model_calls": 16,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 5,
+    "amber": 0,
+    "red": 1,
+    "fallback": 0
+  },
+  "version": 1,
+  "created": "2026-11-13T01:18:20",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

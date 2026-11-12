@@ -1,0 +1,1213 @@
+{
+  "passage": "When light falls on a smooth, shiny surface such as a mirror, it bounces back. This is called reflection. The ray of light that falls on the mirror is called the incident ray, and the ray that bounces back is called the reflected ray. Imagine a line drawn at the point where the light hits the mirror, standing straight up from the surface at 90 degrees. This line is called the normal. The angle between the incident ray and the normal is the angle of incidence, and the angle between the reflected ray and the normal is the angle of reflection. The first law of reflection says that these two angles are always equal. So if a ray strikes a mirror at an angle of incidence of 30 degrees, it will be reflected at 30 degrees. The second law says that the incident ray, the normal and the reflected ray all lie in the same plane. A plane mirror forms an image that is upright and of the same size as the object. The image appears as far behind the mirror as the object is in front of it. If you stand 2 metres in front of a mirror, your image seems to be 2 metres behind it, that is, 4 metres away from you. The image is also laterally inverted, which means that your left hand appears as the right hand of the image. This is why the word AMBULANCE is written in reverse on the front of ambulances.",
+  "gate": {
+    "status": "OK",
+    "words": 250,
+    "reason": "OK: 250 words"
+  },
+  "summary": {
+    "text": "The angle between the incident ray and the normal is called the angle of incidence, and the angle between the reflected ray and the normal is called the angle of reflection. If a ray hits a mirror at 30 degrees, it will reflect at 30 degrees.",
+    "word_count": 46,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "46 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 5,
+        "source": "The angle between the incident ray and the normal is the angle of incidence, and the angle between the reflected ray and the normal is the angle of reflection.",
+        "text": "The angle between the incident ray and the normal is called the angle of incidence, and the angle between the reflected ray and the normal is called the angle of reflection.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 15.2 (limit 14.0), 31 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "The angle between the incident ray and the normal is called the angle of incidence, and the angle between the reflected ray and the normal is called the angle of reflection.",
+            "temperature": 0.0,
+            "wall_s": 0.8715,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 104,
+            "new_tokens": 79,
+            "ttft_ms": 123,
+            "tokens_per_s": 104.28,
+            "verify": null
+          },
+          {
+            "text": "The angle between the incident ray and the normal is called the angle of incidence, and the angle between the reflected ray and the normal is called the angle of reflection.",
+            "temperature": 0.4,
+            "wall_s": 0.8981,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 104,
+            "new_tokens": 79,
+            "ttft_ms": 124,
+            "tokens_per_s": 100.78,
+            "verify": null
+          },
+          {
+            "text": "The angle between the incident ray and the normal is called the angle of incidence, and the angle between the reflected ray and the normal is called the angle of reflection.",
+            "temperature": 0.7,
+            "wall_s": 0.8896,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 104,
+            "new_tokens": 79,
+            "ttft_ms": 124,
+            "tokens_per_s": 101.96,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 7,
+        "source": "So if a ray strikes a mirror at an angle of incidence of 30 degrees, it will be reflected at 30 degrees.",
+        "text": "If a ray hits a mirror at 30 degrees, it will reflect at 30 degrees.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "If a ray hits a mirror at 30 degrees, it will reflect at 30 degrees.",
+            "temperature": 0.0,
+            "wall_s": 0.8697,
+            "failed": [],
+            "prompt_tokens": 101,
+            "new_tokens": 79,
+            "ttft_ms": 125,
+            "tokens_per_s": 104.84,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "reflection",
+      "options": [
+        "surface",
+        "reflection",
+        "front",
+        "plane"
+      ],
+      "witness_idx": 5,
+      "witness": "The angle between the incident ray and the normal is the angle of incidence, and the angle between the reflected ray and the normal is the angle of reflection.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "11 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.45"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.9 (limit 14.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'one', not 'reflection'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'one', not 'reflection'"
+      ],
+      "attempts": [
+        {
+          "text": "What is the angle between the incident ray and the normal?",
+          "temperature": 0.0,
+          "wall_s": 0.6963,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 177,
+          "new_tokens": 47,
+          "ttft_ms": 220,
+          "tokens_per_s": 96.64,
+          "verify": {
+            "text": "one",
+            "wall_s": 0.3684,
+            "prompt_tokens": 169,
+            "new_tokens": 15,
+            "ttft_ms": 207,
+            "tokens_per_s": 86.96
+          }
+        },
+        {
+          "text": "What is the angle between the incident ray and the normal?",
+          "temperature": 0.4,
+          "wall_s": 0.7025,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 177,
+          "new_tokens": 47,
+          "ttft_ms": 219,
+          "tokens_per_s": 95.24,
+          "verify": {
+            "text": "one",
+            "wall_s": 0.3689,
+            "prompt_tokens": 169,
+            "new_tokens": 15,
+            "ttft_ms": 208,
+            "tokens_per_s": 87.5
+          }
+        },
+        {
+          "text": "What is the term for the angle between the incident ray and the normal?",
+          "temperature": 0.7,
+          "wall_s": 0.7032,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 177,
+          "new_tokens": 47,
+          "ttft_ms": 218,
+          "tokens_per_s": 94.85,
+          "verify": {
+            "text": "angle of incidence",
+            "wall_s": 0.3711,
+            "prompt_tokens": 172,
+            "new_tokens": 15,
+            "ttft_ms": 209,
+            "tokens_per_s": 86.96
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The _____ between the incident ray and the normal is the _____ of incidence, and the _____ between the reflected ray and the normal is the _____ of reflection.",
+        "key": "angle",
+        "witness_idx": 5,
+        "witness": "The angle between the incident ray and the normal is the angle of incidence, and the angle between the reflected ray and the normal is the angle of reflection.",
+        "options": [
+          "mirror",
+          "front",
+          "angle",
+          "smooth"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "What is the angle of incidence in the sentence?",
+      "key": "degrees",
+      "options": [
+        "hits",
+        "front",
+        "incident",
+        "degrees"
+      ],
+      "witness_idx": 7,
+      "witness": "So if a ray strikes a mirror at an angle of incidence of 30 degrees, it will be reflected at 30 degrees.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "9 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.41"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "67% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.0 (limit 10.7)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is the angle of incidence in the sentence?",
+          "temperature": 0.0,
+          "wall_s": 0.6948,
+          "failed": [],
+          "prompt_tokens": 174,
+          "new_tokens": 47,
+          "ttft_ms": 213,
+          "tokens_per_s": 95.63,
+          "verify": {
+            "text": "30 degrees",
+            "wall_s": 0.3567,
+            "prompt_tokens": 164,
+            "new_tokens": 15,
+            "ttft_ms": 204,
+            "tokens_per_s": 92.11
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: So if a ray strikes a mirror at an angle of incidence of _____ degrees, it will be reflected at _____ degrees.",
+        "key": "30",
+        "witness_idx": 7,
+        "witness": "So if a ray strikes a mirror at an angle of incidence of 30 degrees, it will be reflected at 30 degrees.",
+        "options": [
+          "2",
+          "4",
+          "30",
+          "90"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "reflected",
+      "options": [
+        "inverted",
+        "reflected",
+        "degrees",
+        "surface"
+      ],
+      "witness_idx": 2,
+      "witness": "The ray of light that falls on the mirror is called the incident ray, and the ray that bounces back is called the reflected ray.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "6 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.38"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.56"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 4.5 (limit 9.7)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'incident ray', not 'reflected'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'incident ray', not 'reflected'"
+      ],
+      "attempts": [
+        {
+          "text": "What is called the incident ray?",
+          "temperature": 0.0,
+          "wall_s": 0.6935,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 174,
+          "new_tokens": 47,
+          "ttft_ms": 215,
+          "tokens_per_s": 96.23,
+          "verify": {
+            "text": "incident ray",
+            "wall_s": 0.3626,
+            "prompt_tokens": 161,
+            "new_tokens": 15,
+            "ttft_ms": 203,
+            "tokens_per_s": 88.05
+          }
+        },
+        {
+          "text": "What is called the incident ray?",
+          "temperature": 0.4,
+          "wall_s": 0.7987,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 174,
+          "new_tokens": 47,
+          "ttft_ms": 228,
+          "tokens_per_s": 80.7,
+          "verify": {
+            "text": "incident ray",
+            "wall_s": 0.3745,
+            "prompt_tokens": 161,
+            "new_tokens": 15,
+            "ttft_ms": 214,
+            "tokens_per_s": 87.5
+          }
+        },
+        {
+          "text": "What is called the reflected ray?",
+          "temperature": 0.7,
+          "wall_s": 0.7507,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 174,
+          "new_tokens": 47,
+          "ttft_ms": 227,
+          "tokens_per_s": 87.95,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The ray of light that falls on the mirror is called the incident ray, and the ray that _____ back is called the reflected ray.",
+        "key": "bounces",
+        "witness_idx": 2,
+        "witness": "The ray of light that falls on the mirror is called the incident ray, and the ray that bounces back is called the reflected ray.",
+        "options": [
+          "reflection",
+          "bounces",
+          "hits",
+          "degrees"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "plane",
+      "options": [
+        "plane",
+        "front",
+        "incidence",
+        "reflection"
+      ],
+      "witness_idx": 8,
+      "witness": "The second law says that the incident ray, the normal and the reflected ray all lie in the same plane.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "15 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.55"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.50"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 6.0 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is the plane in which all incident rays, normal rays, and reflected rays lie?",
+          "temperature": 0.0,
+          "wall_s": 0.6937,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 208,
+          "tokens_per_s": 94.85,
+          "verify": null
+        },
+        {
+          "text": "What plane contains incident rays, normal rays, and reflected rays?",
+          "temperature": 0.4,
+          "wall_s": 0.7038,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 207,
+          "tokens_per_s": 92.74,
+          "verify": null
+        },
+        {
+          "text": "What is the plane?",
+          "temperature": 0.7,
+          "wall_s": 0.7018,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 208,
+          "tokens_per_s": 93.31,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The second law says that the incident ray, the normal and the _____ ray all lie in the same plane.",
+        "key": "reflected",
+        "witness_idx": 8,
+        "witness": "The second law says that the incident ray, the normal and the reflected ray all lie in the same plane.",
+        "options": [
+          "degrees",
+          "front",
+          "angle",
+          "reflected"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "image",
+      "options": [
+        "incident",
+        "image",
+        "incidence",
+        "mirror"
+      ],
+      "witness_idx": 12,
+      "witness": "The image is also laterally inverted, which means that your left hand appears as the right hand of the image.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "5 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.25"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.50"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 0.5 (limit 9.3)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What does the image mean?",
+          "temperature": 0.0,
+          "wall_s": 0.6945,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 210,
+          "tokens_per_s": 95.04,
+          "verify": null
+        },
+        {
+          "text": "What does the image appear as?",
+          "temperature": 0.4,
+          "wall_s": 0.7045,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 210,
+          "tokens_per_s": 93.12,
+          "verify": null
+        },
+        {
+          "text": "What does the image mean?",
+          "temperature": 0.7,
+          "wall_s": 0.7037,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 208,
+          "tokens_per_s": 92.93,
+          "verify": null
+        }
+      ],
+      "reserve": null
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "object",
+      "options": [
+        "object",
+        "front",
+        "incidence",
+        "incident"
+      ],
+      "witness_idx": 9,
+      "witness": "A plane mirror forms an image that is upright and of the same size as the object.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "9 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.23"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.51"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.7 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'upright', not 'object'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'upright', not 'object'"
+      ],
+      "attempts": [
+        {
+          "text": "What is the image formed by a plane mirror?",
+          "temperature": 0.0,
+          "wall_s": 0.688,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 164,
+          "new_tokens": 47,
+          "ttft_ms": 205,
+          "tokens_per_s": 95.24,
+          "verify": {
+            "text": "upright",
+            "wall_s": 0.3488,
+            "prompt_tokens": 154,
+            "new_tokens": 15,
+            "ttft_ms": 208,
+            "tokens_per_s": 100.0
+          }
+        },
+        {
+          "text": "What is formed by a plane mirror?",
+          "temperature": 0.4,
+          "wall_s": 0.697,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 164,
+          "new_tokens": 47,
+          "ttft_ms": 205,
+          "tokens_per_s": 93.5,
+          "verify": {
+            "text": "images",
+            "wall_s": 0.3323,
+            "prompt_tokens": 152,
+            "new_tokens": 15,
+            "ttft_ms": 192,
+            "tokens_per_s": 100.72
+          }
+        },
+        {
+          "text": "What is the result of a plane mirror forming an image?",
+          "temperature": 0.7,
+          "wall_s": 0.702,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 164,
+          "new_tokens": 47,
+          "ttft_ms": 205,
+          "tokens_per_s": 92.56,
+          "verify": {
+            "text": "upright and virtual",
+            "wall_s": 0.3369,
+            "prompt_tokens": 156,
+            "new_tokens": 15,
+            "ttft_ms": 196,
+            "tokens_per_s": 99.29
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: A plane mirror forms an _____ that is upright and of the same size as the object.",
+        "key": "image",
+        "witness_idx": 9,
+        "witness": "A plane mirror forms an image that is upright and of the same size as the object.",
+        "options": [
+          "incident",
+          "incidence",
+          "image",
+          "reflection"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: When light falls on a smooth, shiny surface such as a mirror, it _____ back.",
+      "key": "bounces",
+      "options": [
+        "degrees",
+        "ambulances",
+        "image",
+        "bounces"
+      ],
+      "witness_idx": 0,
+      "witness": "When light falls on a smooth, shiny surface such as a mirror, it bounces back.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: When light falls on a smooth, shiny surface such as a _____, it bounces back.",
+        "key": "mirror",
+        "witness_idx": 0,
+        "witness": "When light falls on a smooth, shiny surface such as a mirror, it bounces back.",
+        "options": [
+          "incidence",
+          "law",
+          "mirror",
+          "angle"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "kind": "cloze",
+      "stem": "Fill in the blank: The image appears as far behind the mirror as the object is in _____ of it.",
+      "key": "front",
+      "options": [
+        "reflection",
+        "plane",
+        "front",
+        "ray"
+      ],
+      "witness_idx": 10,
+      "witness": "The image appears as far behind the mirror as the object is in front of it.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: The image appears as far behind the mirror as the _____ is in front of it.",
+        "key": "object",
+        "witness_idx": 10,
+        "witness": "The image appears as far behind the mirror as the object is in front of it.",
+        "options": [
+          "ray",
+          "object",
+          "surface",
+          "law"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 18.0911,
+    "summary_s": 3.53,
+    "stems_s": 14.5592,
+    "model_wall_s": 14.8576,
+    "model_calls": 20,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 0,
+    "red": 5,
+    "fallback": 2
+  },
+  "version": 1,
+  "created": "2026-11-13T01:14:00",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

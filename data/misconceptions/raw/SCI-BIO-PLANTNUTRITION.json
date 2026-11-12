@@ -1,0 +1,175 @@
+{
+ "topic": {
+  "id": "SCI-BIO-PLANTNUTRITION",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   7
+  ],
+  "title": "Nutrition in plants",
+  "scope": "photosynthesis, chlorophyll, stomata, autotrophs and heterotrophs, parasitic, insectivorous and saprotrophic plants, nitrogen fixation"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 709,
+  "candidatesTokenCount": 1289,
+  "totalTokenCount": 1998,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 709
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.8,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Autotrophs and Heterotrophs",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Plants are not living things because they do not move or eat like animals.",
+      "why": "Students often define 'living' based on observable animal behaviors like locomotion and active ingestion.",
+      "fix": "Plants are living organisms that perform life processes like respiration and growth, but they make their own food instead of hunting or foraging.",
+      "probe": {
+       "question": "Is a mango tree a living thing? Why or why not?",
+       "wrong_answer": "No, because it stays in one place and does not eat food."
+      },
+      "error_type": "living_thing_reasoning",
+      "trigger_cues": [
+       "living organisms",
+       "nutrition",
+       "mode of nutrition",
+       "autotrophic",
+       "heterotrophic"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Plants get their food from the soil through their roots.",
+      "why": "Students observe water being poured into the soil and mistakenly equate this with 'feeding' the plant.",
+      "fix": "Roots absorb water and minerals from the soil, but the plant's actual food (glucose) is manufactured in the leaves using sunlight.",
+      "probe": {
+       "question": "Where does a plant get its food from?",
+       "wrong_answer": "It sucks food from the soil through its roots."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "roots",
+       "soil",
+       "minerals",
+       "absorption",
+       "plant food"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Photosynthesis",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Photosynthesis happens only during the night because plants 'rest' during the day.",
+      "why": "Students confuse the plant's gas exchange processes with the human sleep cycle.",
+      "fix": "Photosynthesis requires sunlight as an energy source, so it can only occur during the daytime.",
+      "probe": {
+       "question": "When does a plant produce its food?",
+       "wrong_answer": "At night, when the plant is resting and quiet."
+      },
+      "error_type": "other",
+      "trigger_cues": [
+       "sunlight",
+       "daytime",
+       "energy source",
+       "chlorophyll",
+       "synthesis"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Plants breathe in oxygen and breathe out carbon dioxide just like humans.",
+      "why": "Students overgeneralize the human respiratory system to all living organisms.",
+      "fix": "While plants do respire (using oxygen), during photosynthesis they take in carbon dioxide and release oxygen as a byproduct.",
+      "probe": {
+       "question": "What gas do plants release during the day while making food?",
+       "wrong_answer": "Carbon dioxide, because they are breathing."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "gas exchange",
+       "carbon dioxide",
+       "oxygen",
+       "stomata",
+       "respiration"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Specialized Modes of Nutrition",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Insectivorous plants eat insects because they cannot perform photosynthesis.",
+      "why": "Students assume that if a plant has a special way to get nutrients, it must be unable to make its own food.",
+      "fix": "Insectivorous plants like the pitcher plant perform photosynthesis, but they trap insects to supplement nitrogen in nutrient-poor soil.",
+      "probe": {
+       "question": "Why does a pitcher plant trap insects?",
+       "wrong_answer": "Because it cannot make its own food like other plants."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "insectivorous",
+       "pitcher plant",
+       "nitrogen",
+       "soil",
+       "nutrients"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "Parasitic plants like Cuscuta are just vines that help the host plant grow.",
+      "why": "Students often confuse climbing plants with parasitic plants due to their similar appearance.",
+      "fix": "Cuscuta is a parasite that lacks chlorophyll and steals ready-made food from the host plant, often harming it.",
+      "probe": {
+       "question": "Does the Cuscuta plant help the tree it grows on?",
+       "wrong_answer": "Yes, it is a climber that helps the tree by providing extra leaves."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "parasite",
+       "host",
+       "cuscuta",
+       "chlorophyll",
+       "nutrition"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Basic needs of living organisms",
+   "Parts of a plant"
+  ]
+ },
+ "problems": []
+}

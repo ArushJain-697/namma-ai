@@ -1,0 +1,176 @@
+{
+ "topic": {
+  "id": "SOC-GEO-ATMOSPHERE",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   7
+  ],
+  "title": "Air and the atmosphere",
+  "scope": "composition of atmosphere, layers, weather and climate, temperature, air pressure, winds, moisture"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 695,
+  "candidatesTokenCount": 1259,
+  "totalTokenCount": 1954,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 695
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.0,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Composition of the Atmosphere",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "The atmosphere is made up mostly of oxygen because we need it to breathe.",
+      "why": "Students often equate the importance of a gas for human survival with its abundance in the air.",
+      "fix": "Nitrogen is the most abundant gas in the atmosphere, making up about 78% of the air, while oxygen is only about 21%.",
+      "probe": {
+       "question": "Which gas is found in the largest quantity in our atmosphere?",
+       "wrong_answer": "Oxygen"
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "nitrogen",
+       "oxygen",
+       "composition",
+       "air",
+       "gases"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Layers of the Atmosphere",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The atmosphere is a solid shell that surrounds the Earth like a hard crust.",
+      "why": "Textbook diagrams often show layers as distinct, solid-looking bands, leading students to visualize them as physical barriers.",
+      "fix": "The atmosphere is a mixture of gases held by gravity that thins out gradually as you move away from the Earth's surface.",
+      "probe": {
+       "question": "What would happen if you tried to fly a plane through the boundary between the troposphere and stratosphere?",
+       "wrong_answer": "You would hit a solid wall or boundary."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "layers",
+       "troposphere",
+       "stratosphere",
+       "boundary",
+       "atmosphere"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Temperature and Air Pressure",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Air pressure is only felt when the wind is blowing hard.",
+      "why": "Students associate 'pressure' with the force of moving objects or wind, rather than the weight of the air column above them.",
+      "fix": "Air pressure is the weight exerted by the air column on the Earth's surface, and it exists even when the air is perfectly still.",
+      "probe": {
+       "question": "Is there air pressure acting on you right now while you are sitting in a quiet room?",
+       "wrong_answer": "No, because the air is not moving."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "air pressure",
+       "weight",
+       "force",
+       "atmosphere",
+       "barometer"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Weather and Climate",
+    "prereqs": [
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Climate is just the average of the weather over a single week.",
+      "why": "Students confuse the short-term variability of weather with the long-term patterns of climate.",
+      "fix": "Climate refers to the average weather conditions of a place over a very long period, usually 30 years or more.",
+      "probe": {
+       "question": "If it rains for five days in a desert, has the climate of the desert changed?",
+       "wrong_answer": "Yes, the climate has changed to a rainy climate."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "weather",
+       "climate",
+       "average",
+       "long-term",
+       "conditions"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c5",
+    "name": "Winds and Moisture",
+    "prereqs": [
+     "c3",
+     "c4"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Clouds are made of water vapor that we can see.",
+      "why": "Students often use the terms 'water vapor' and 'steam' or 'clouds' interchangeably, not realizing water vapor is an invisible gas.",
+      "fix": "Water vapor is an invisible gas; clouds are formed by tiny liquid water droplets or ice crystals that have condensed.",
+      "probe": {
+       "question": "Is the white steam coming out of a boiling kettle water vapor?",
+       "wrong_answer": "Yes, that is water vapor."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "water vapor",
+       "clouds",
+       "condensation",
+       "moisture",
+       "humidity"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "States of matter",
+   "Gravity",
+   "Basic geometry of the Earth"
+  ]
+ },
+ "problems": []
+}

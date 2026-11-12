@@ -1,0 +1,1143 @@
+{
+  "passage": "Long ago, before money was used, people exchanged goods directly for other goods. This is called the barter system. Imagine a shoemaker who wants to sell shoes and buy wheat. In a barter system, he must find a farmer who not only has wheat to sell but also wants to buy shoes at the same time. This is called the double coincidence of wants: what one person wishes to sell is exactly what the other wishes to buy. Finding such a person is often very difficult. Money solves this problem. The shoemaker can sell his shoes to anyone for money, and then use that money to buy wheat from any farmer. Because money acts as a go-between in exchanges, it is called a medium of exchange. Over history, many things have been used as money, including grains, cattle, shells, and coins of gold, silver and copper. Today, we use paper notes and coins issued by the Reserve Bank of India on behalf of the government. No one in India can refuse to accept the rupee in payment, because the law makes it the official currency. People also keep money in banks as deposits. Banks keep only a small part of these deposits as cash, about fifteen per cent, and use the rest to give loans to people who need them, charging interest.",
+  "gate": {
+    "status": "OK",
+    "words": 222,
+    "reason": "OK: 222 words"
+  },
+  "summary": {
+    "text": "Long ago, before money was used, people used to trade goods directly for other goods. The shoemaker can sell his shoes for money and use that money to buy wheat from any farmer. People keep money in banks as deposits.",
+    "word_count": 40,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "40 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 0,
+        "source": "Long ago, before money was used, people exchanged goods directly for other goods.",
+        "text": "Long ago, before money was used, people used to trade goods directly for other goods.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "Long ago, before money was used, people used to trade goods directly for other goods.",
+            "temperature": 0.0,
+            "wall_s": 0.8823,
+            "failed": [],
+            "prompt_tokens": 89,
+            "new_tokens": 79,
+            "ttft_ms": 116,
+            "tokens_per_s": 101.83,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 7,
+        "source": "The shoemaker can sell his shoes to anyone for money, and then use that money to buy wheat from any farmer.",
+        "text": "The shoemaker can sell his shoes for money and use that money to buy wheat from any farmer.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 7.2 (limit 8.3), 18 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "The shoemaker can sell his shoes for money and use that money to buy wheat from any farmer.",
+            "temperature": 0.0,
+            "wall_s": 0.9065,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 97,
+            "new_tokens": 79,
+            "ttft_ms": 129,
+            "tokens_per_s": 100.52,
+            "verify": null
+          },
+          {
+            "text": "The shoemaker can sell his shoes for money and use that money to buy wheat from any farmer.",
+            "temperature": 0.4,
+            "wall_s": 0.9185,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 97,
+            "new_tokens": 79,
+            "ttft_ms": 123,
+            "tokens_per_s": 98.11,
+            "verify": null
+          },
+          {
+            "text": "The shoemaker can sell his shoes for money and use that money to buy wheat from farmers.",
+            "temperature": 0.7,
+            "wall_s": 0.9251,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 97,
+            "new_tokens": 79,
+            "ttft_ms": 124,
+            "tokens_per_s": 97.38,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 12,
+        "source": "People also keep money in banks as deposits.",
+        "text": "People keep money in banks as deposits.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "People keep money in banks as deposits.",
+            "temperature": 0.0,
+            "wall_s": 0.8662,
+            "failed": [],
+            "prompt_tokens": 82,
+            "new_tokens": 79,
+            "ttft_ms": 106,
+            "tokens_per_s": 102.77,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "Which person is using money to buy wheat?",
+      "key": "farmer",
+      "options": [
+        "coincidence",
+        "farmer",
+        "imagine",
+        "difficult"
+      ],
+      "witness_idx": 7,
+      "witness": "The shoemaker can sell his shoes to anyone for money, and then use that money to buy wheat from any farmer.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.41"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "80% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.8 (limit 8.3)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "Which of the following is a farmer?",
+          "temperature": 0.0,
+          "wall_s": 0.7486,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 224,
+          "tokens_per_s": 87.79,
+          "verify": null
+        },
+        {
+          "text": "Which of the following is the best answer for the sentence: \"The shoemaker can sell his shoes to anyone for money, and then use that money to buy wheat from any farmer.\"?",
+          "temperature": 0.4,
+          "wall_s": 0.7566,
+          "failed": [
+            "stem_length",
+            "stem_no_answer_leak",
+            "stem_readability"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 224,
+          "tokens_per_s": 86.47,
+          "verify": null
+        },
+        {
+          "text": "Which person is using money to buy wheat?",
+          "temperature": 0.7,
+          "wall_s": 0.7575,
+          "failed": [],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 224,
+          "tokens_per_s": 86.3,
+          "verify": {
+            "text": "the farmer",
+            "wall_s": 0.3677,
+            "prompt_tokens": 159,
+            "new_tokens": 15,
+            "ttft_ms": 208,
+            "tokens_per_s": 88.05
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The shoemaker can sell his shoes to anyone for money, and then use that money to buy _____ from any farmer.",
+        "key": "wheat",
+        "witness_idx": 7,
+        "witness": "The shoemaker can sell his shoes to anyone for money, and then use that money to buy wheat from any farmer.",
+        "options": [
+          "coincidence",
+          "imagine",
+          "wheat",
+          "directly"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "deposits",
+      "options": [
+        "coins",
+        "wishes",
+        "deposits",
+        "shoes"
+      ],
+      "witness_idx": 12,
+      "witness": "People also keep money in banks as deposits.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "9 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.61"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.33"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "75% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.7 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is money kept in banks as? deposits",
+          "temperature": 0.0,
+          "wall_s": 0.7306,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 155,
+          "new_tokens": 47,
+          "ttft_ms": 212,
+          "tokens_per_s": 88.97,
+          "verify": null
+        },
+        {
+          "text": "What is kept in banks as deposits by people?",
+          "temperature": 0.4,
+          "wall_s": 0.7277,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 155,
+          "new_tokens": 47,
+          "ttft_ms": 203,
+          "tokens_per_s": 87.62,
+          "verify": null
+        },
+        {
+          "text": "What are people keeping in banks as deposits?",
+          "temperature": 0.7,
+          "wall_s": 0.7268,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 155,
+          "new_tokens": 47,
+          "ttft_ms": 203,
+          "tokens_per_s": 87.95,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: People also keep money in _____ as deposits.",
+        "key": "banks",
+        "witness_idx": 12,
+        "witness": "People also keep money in banks as deposits.",
+        "options": [
+          "banks",
+          "wishes",
+          "coins",
+          "shells"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "short",
+      "stem": "Which country issues paper notes and coins?",
+      "key": "India",
+      "options": null,
+      "witness_idx": 10,
+      "witness": "Today, we use paper notes and coins issued by the Reserve Bank of India on behalf of the government.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "7 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.38"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.36"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "60% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.7 (limit 9.2)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "Which country is the Reserve Bank of India based in?",
+          "temperature": 0.0,
+          "wall_s": 0.7323,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 213,
+          "tokens_per_s": 88.63,
+          "verify": null
+        },
+        {
+          "text": "Which country is India on behalf of?",
+          "temperature": 0.4,
+          "wall_s": 0.7474,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 215,
+          "tokens_per_s": 86.47,
+          "verify": null
+        },
+        {
+          "text": "Which country issues paper notes and coins?",
+          "temperature": 0.7,
+          "wall_s": 0.7457,
+          "failed": [],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 215,
+          "tokens_per_s": 86.79,
+          "verify": {
+            "text": "India",
+            "wall_s": 0.3526,
+            "prompt_tokens": 155,
+            "new_tokens": 15,
+            "ttft_ms": 203,
+            "tokens_per_s": 93.96
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Today, we use paper notes and coins issued by the Reserve _____ of India on behalf of the government.",
+        "key": "Bank",
+        "witness_idx": 10,
+        "witness": "Today, we use paper notes and coins issued by the Reserve Bank of India on behalf of the government.",
+        "options": [
+          "Bank",
+          "wheat",
+          "sell",
+          "barter"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "coins",
+      "options": [
+        "shoes",
+        "sell",
+        "loans",
+        "coins"
+      ],
+      "witness_idx": 9,
+      "witness": "Over history, many things have been used as money, including grains, cattle, shells, and coins of gold, silver and copper.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.37"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.43"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "75% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 6.7 (limit 10.5)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'grains, cattle, shells, and coins of gold, silver and copper', not 'coins'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'grains, cattle, shells, and coins of gold, silver and copper', not 'coins'"
+      ],
+      "attempts": [
+        {
+          "text": "What has been used as money throughout history?",
+          "temperature": 0.0,
+          "wall_s": 0.7476,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 173,
+          "new_tokens": 47,
+          "ttft_ms": 230,
+          "tokens_per_s": 88.97,
+          "verify": {
+            "text": "grains, cattle, shells, and coins of gold, silver and copper",
+            "wall_s": 0.3785,
+            "prompt_tokens": 162,
+            "new_tokens": 15,
+            "ttft_ms": 216,
+            "tokens_per_s": 86.42
+          }
+        },
+        {
+          "text": "What has been used as money throughout history?",
+          "temperature": 0.4,
+          "wall_s": 0.7597,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 173,
+          "new_tokens": 47,
+          "ttft_ms": 230,
+          "tokens_per_s": 86.96,
+          "verify": {
+            "text": "grains, cattle, shells, and coins of gold, silver and copper",
+            "wall_s": 0.3721,
+            "prompt_tokens": 162,
+            "new_tokens": 15,
+            "ttft_ms": 211,
+            "tokens_per_s": 86.96
+          }
+        },
+        {
+          "text": "What has been used as money historically?",
+          "temperature": 0.7,
+          "wall_s": 0.7567,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 173,
+          "new_tokens": 47,
+          "ttft_ms": 228,
+          "tokens_per_s": 86.96,
+          "verify": {
+            "text": "grains, cattle, shells, and coins of gold, silver and copper",
+            "wall_s": 0.3704,
+            "prompt_tokens": 161,
+            "new_tokens": 15,
+            "ttft_ms": 211,
+            "tokens_per_s": 88.61
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Over history, many things have been used as money, including grains, cattle, shells, and coins of gold, silver and _____.",
+        "key": "copper",
+        "witness_idx": 9,
+        "witness": "Over history, many things have been used as money, including grains, cattle, shells, and coins of gold, silver and copper.",
+        "options": [
+          "wheat",
+          "sell",
+          "farmer",
+          "copper"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "buy",
+      "options": [
+        "imagine",
+        "directly",
+        "buy",
+        "money"
+      ],
+      "witness_idx": 4,
+      "witness": "This is called the double coincidence of wants: what one person wishes to sell is exactly what the other wishes to buy.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "7 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.45"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.43"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 4.0 (limit 10.2)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'double coincidence of wants', not 'buy'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'double coincidence of wants', not 'buy'"
+      ],
+      "attempts": [
+        {
+          "text": "What is the double coincidence of wants?",
+          "temperature": 0.0,
+          "wall_s": 0.7454,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 225,
+          "tokens_per_s": 88.46,
+          "verify": {
+            "text": "double coincidence of wants",
+            "wall_s": 0.3629,
+            "prompt_tokens": 158,
+            "new_tokens": 15,
+            "ttft_ms": 207,
+            "tokens_per_s": 90.32
+          }
+        },
+        {
+          "text": "What is the double coincidence of wants?",
+          "temperature": 0.4,
+          "wall_s": 0.7579,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 224,
+          "tokens_per_s": 86.3,
+          "verify": {
+            "text": "double coincidence of wants",
+            "wall_s": 0.3677,
+            "prompt_tokens": 158,
+            "new_tokens": 15,
+            "ttft_ms": 210,
+            "tokens_per_s": 89.17
+          }
+        },
+        {
+          "text": "What is the double coincidence of wants?",
+          "temperature": 0.7,
+          "wall_s": 0.7571,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 225,
+          "tokens_per_s": 86.63,
+          "verify": {
+            "text": "double coincidence of wants",
+            "wall_s": 0.364,
+            "prompt_tokens": 158,
+            "new_tokens": 15,
+            "ttft_ms": 207,
+            "tokens_per_s": 89.17
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: This is called the double coincidence of wants: what one person wishes to _____ is exactly what the other wishes to buy.",
+        "key": "sell",
+        "witness_idx": 4,
+        "witness": "This is called the double coincidence of wants: what one person wishes to sell is exactly what the other wishes to buy.",
+        "options": [
+          "sell",
+          "barter",
+          "shoemaker",
+          "farmer"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "What is the main thing that a shoemaker wants to do?",
+      "key": "wheat",
+      "options": [
+        "farmer",
+        "directly",
+        "wheat",
+        "difficult"
+      ],
+      "witness_idx": 2,
+      "witness": "Imagine a shoemaker who wants to sell shoes and buy wheat.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "11 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.51"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.37"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "75% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.6 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is the main ingredient used in making shoes?",
+          "temperature": 0.0,
+          "wall_s": 0.7485,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 159,
+          "new_tokens": 47,
+          "ttft_ms": 212,
+          "tokens_per_s": 85.82,
+          "verify": {
+            "text": "wheat",
+            "wall_s": 0.36,
+            "prompt_tokens": 149,
+            "new_tokens": 15,
+            "ttft_ms": 207,
+            "tokens_per_s": 92.11
+          }
+        },
+        {
+          "text": "What is the main ingredient in the sentence?",
+          "temperature": 0.4,
+          "wall_s": 0.7397,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 159,
+          "new_tokens": 47,
+          "ttft_ms": 213,
+          "tokens_per_s": 87.45,
+          "verify": {
+            "text": "wheat",
+            "wall_s": 0.3483,
+            "prompt_tokens": 148,
+            "new_tokens": 15,
+            "ttft_ms": 198,
+            "tokens_per_s": 93.33
+          }
+        },
+        {
+          "text": "What is the main thing that a shoemaker wants to do?",
+          "temperature": 0.7,
+          "wall_s": 0.7385,
+          "failed": [],
+          "prompt_tokens": 159,
+          "new_tokens": 47,
+          "ttft_ms": 210,
+          "tokens_per_s": 87.12,
+          "verify": {
+            "text": "sells shoes and buys wheat",
+            "wall_s": 0.3474,
+            "prompt_tokens": 152,
+            "new_tokens": 15,
+            "ttft_ms": 199,
+            "tokens_per_s": 94.59
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Imagine a shoemaker who wants to sell shoes and _____ wheat.",
+        "key": "buy",
+        "witness_idx": 2,
+        "witness": "Imagine a shoemaker who wants to sell shoes and buy wheat.",
+        "options": [
+          "buy",
+          "barter",
+          "double",
+          "farmer"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 21.9297,
+    "summary_s": 4.4999,
+    "stems_s": 17.429,
+    "model_wall_s": 17.9229,
+    "model_calls": 23,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 0,
+    "red": 3,
+    "fallback": 0
+  },
+  "version": 1,
+  "created": "2026-11-13T01:24:25",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

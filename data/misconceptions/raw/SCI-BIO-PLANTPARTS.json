@@ -1,0 +1,188 @@
+{
+ "topic": {
+  "id": "SCI-BIO-PLANTPARTS",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   6
+  ],
+  "title": "Getting to know plants",
+  "scope": "herbs, shrubs, trees, stem, leaf, root, venation, flower parts, functions of each part"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 704,
+  "candidatesTokenCount": 1304,
+  "totalTokenCount": 2008,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 704
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.2,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Plant Classification (Herbs, Shrubs, Trees)",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "All plants with thin green stems are herbs.",
+      "why": "Students often use stem thickness as the only criteria, ignoring the height or branching pattern.",
+      "fix": "Herbs are small plants with delicate stems, while shrubs are medium-sized with branches starting near the base.",
+      "probe": {
+       "question": "Is a rose plant a herb?",
+       "wrong_answer": "Yes, because it has a thin stem."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "herb",
+       "shrub",
+       "tree",
+       "stem",
+       "size",
+       "branching"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "Trees are just very old shrubs.",
+      "why": "Students conflate the life cycle of a plant with its structural classification.",
+      "fix": "Trees are distinct because they have a thick, hard, woody trunk with branches high above the ground.",
+      "probe": {
+       "question": "Does a shrub eventually turn into a tree as it grows older?",
+       "wrong_answer": "Yes, if you let it grow for many years it becomes a tree."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "trunk",
+       "woody",
+       "hard stem",
+       "growth",
+       "age"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Root Systems and Functions",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Roots are only for holding the plant in the soil.",
+      "why": "The visible function of anchorage is obvious, while absorption is invisible and abstract.",
+      "fix": "Roots also absorb water and minerals from the soil, which are essential for the plant's survival.",
+      "probe": {
+       "question": "What happens if you cut off all the roots of a plant but keep it standing in soil?",
+       "wrong_answer": "It will stay healthy because it is still standing in the soil."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "roots",
+       "taproot",
+       "fibrous root",
+       "anchorage",
+       "absorption",
+       "soil"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "All plants have the same type of roots.",
+      "why": "Students rarely observe the underground parts of different plants, assuming uniformity.",
+      "fix": "Plants have different root systems, such as taproots with a main root and fibrous roots with many thin roots.",
+      "probe": {
+       "question": "Do grass and a mango tree have the same kind of roots?",
+       "wrong_answer": "Yes, all plants have the same type of roots under the ground."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "taproot",
+       "fibrous",
+       "main root",
+       "lateral roots"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Leaf Structure and Venation",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Veins in a leaf are for carrying food to the leaf.",
+      "why": "Students often confuse the function of plant veins with human blood vessels.",
+      "fix": "Veins provide support to the leaf and act as channels for water and dissolved minerals.",
+      "probe": {
+       "question": "What is the purpose of the lines on a leaf?",
+       "wrong_answer": "They carry food from the soil to the leaf."
+      },
+      "error_type": "other",
+      "trigger_cues": [
+       "veins",
+       "venation",
+       "reticulate",
+       "parallel",
+       "leaf blade"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Flower Parts and Functions",
+    "prereqs": [
+     "c1",
+     "c2",
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Flowers are only for decoration and smell.",
+      "why": "Students focus on the aesthetic and sensory appeal of flowers rather than their biological role.",
+      "fix": "Flowers are the reproductive parts of the plant that help in producing seeds.",
+      "probe": {
+       "question": "Why do plants have flowers?",
+       "wrong_answer": "To look beautiful and smell nice for us."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "petals",
+       "sepals",
+       "stamen",
+       "pistil",
+       "reproduction",
+       "seeds"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Plants around us",
+   "Parts of a plant",
+   "Basic needs of living things"
+  ]
+ },
+ "problems": []
+}

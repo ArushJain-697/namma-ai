@@ -1,0 +1,153 @@
+{
+ "topic": {
+  "id": "SCI-PHY-CHEMCURRENT",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   8
+  ],
+  "title": "Chemical effects of electric current",
+  "scope": "conduction in liquids, electrolysis basics, electroplating, tester with LED"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 696,
+  "candidatesTokenCount": 1066,
+  "totalTokenCount": 1762,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 696
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.8,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Conduction in liquids",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "All liquids conduct electricity equally well.",
+      "why": "Students often think of liquids as a single category like solids or gases without considering chemical composition.",
+      "fix": "Only liquids containing dissolved salts, acids, or bases (electrolytes) conduct electricity; pure water is a poor conductor.",
+      "probe": {
+       "question": "Will distilled water light up an LED in a tester?",
+       "wrong_answer": "Yes, because all water conducts electricity."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "distilled water",
+       "tap water",
+       "conductivity",
+       "solutions",
+       "ions"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "Electricity flows through liquids just like it flows through metal wires.",
+      "why": "Students visualize current as a flow of electrons in all materials, ignoring the role of ions in liquids.",
+      "fix": "In liquids, electricity is carried by the movement of charged particles called ions, not by free electrons as in metals.",
+      "probe": {
+       "question": "How does current move through a salt solution?",
+       "wrong_answer": "Electrons jump from one end of the wire to the other through the liquid."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "current flow",
+       "ions",
+       "charged particles",
+       "liquid conduction"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Electrolysis basics",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The chemical change in a liquid happens only at the battery, not at the electrodes.",
+      "why": "Students associate the power source as the sole cause of all changes in a circuit.",
+      "fix": "Chemical reactions occur specifically at the surfaces of the electrodes where the current enters and leaves the liquid.",
+      "probe": {
+       "question": "Where do bubbles form during the electrolysis of water?",
+       "wrong_answer": "Near the battery terminals."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "electrodes",
+       "bubbles",
+       "chemical change",
+       "anode",
+       "cathode"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Electroplating",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Electroplating is just painting a metal with a liquid metal.",
+      "why": "Students confuse the physical appearance of a shiny coating with the process of painting.",
+      "fix": "Electroplating is a chemical process where metal ions from a solution are deposited onto an object using electric current.",
+      "probe": {
+       "question": "How does copper get onto a spoon during electroplating?",
+       "wrong_answer": "The spoon is dipped in liquid copper paint and dried."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "coating",
+       "metal deposition",
+       "electroplating",
+       "shiny surface"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     },
+     {
+      "statement": "The metal being coated disappears into the solution and is gone forever.",
+      "why": "Students struggle with the conservation of matter in chemical reactions.",
+      "fix": "The metal ions in the solution are replenished by the anode, maintaining a balance in the electrolyte.",
+      "probe": {
+       "question": "What happens to the copper plate (anode) during copper plating?",
+       "wrong_answer": "It just sits there and does not change."
+      },
+      "error_type": "process_vs_product",
+      "trigger_cues": [
+       "anode",
+       "replenished",
+       "metal ions",
+       "conservation"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Electric current and circuits",
+   "Properties of matter",
+   "Atoms and molecules"
+  ]
+ },
+ "problems": []
+}

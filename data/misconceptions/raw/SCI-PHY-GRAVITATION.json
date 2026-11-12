@@ -1,0 +1,145 @@
+{
+ "topic": {
+  "id": "SCI-PHY-GRAVITATION",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   9
+  ],
+  "title": "Gravitation",
+  "scope": "universal law of gravitation, free fall, g, mass vs weight, thrust and pressure, buoyancy, Archimedes' principle"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 704,
+  "candidatesTokenCount": 1039,
+  "totalTokenCount": 1743,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 704
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.4,
+ "response": {
+  "concepts": [
+   {
+    "key": "mass_weight",
+    "name": "Mass vs Weight",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Mass and weight are the same thing.",
+      "why": "In everyday language, people use the terms interchangeably when buying groceries or checking body weight.",
+      "fix": "Mass is the amount of matter in an object and remains constant, while weight is the gravitational force acting on that mass and changes based on location.",
+      "probe": {
+       "question": "If an astronaut goes to the Moon, does their mass change?",
+       "wrong_answer": "Yes, because they weigh less on the Moon, their mass must have decreased."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "kilograms",
+       "newtons",
+       "weighing machine",
+       "amount of matter",
+       "gravitational pull"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "universal_gravitation",
+    "name": "Universal Law of Gravitation",
+    "prereqs": [
+     "mass_weight"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Only large objects like the Earth exert a gravitational force.",
+      "why": "Students only observe the effects of gravity when objects fall toward the Earth, never between everyday small objects.",
+      "fix": "Every object in the universe with mass exerts a gravitational pull on every other object, though it is only noticeable when at least one object is very massive.",
+      "probe": {
+       "question": "Do two pencils lying on a table exert a gravitational force on each other?",
+       "wrong_answer": "No, because they are too small and not planets."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "universal law",
+       "attraction",
+       "masses",
+       "distance",
+       "inverse square law"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "free_fall",
+    "name": "Free Fall and Acceleration",
+    "prereqs": [
+     "universal_gravitation"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Heavier objects fall faster than lighter objects.",
+      "why": "Observation of falling objects like a feather and a stone in air leads to the belief that weight determines speed of fall.",
+      "fix": "In the absence of air resistance, all objects fall with the same acceleration regardless of their mass.",
+      "probe": {
+       "question": "If you drop a heavy iron ball and a light plastic ball from the same height in a vacuum, which hits the ground first?",
+       "wrong_answer": "The iron ball, because it is heavier and gravity pulls it harder."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "acceleration due to gravity",
+       "vacuum",
+       "air resistance",
+       "falling",
+       "g"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "buoyancy",
+    "name": "Thrust, Pressure, and Buoyancy",
+    "prereqs": [
+     "free_fall"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Objects float in water only if they are light.",
+      "why": "Students confuse the density of an object with its total weight or mass.",
+      "fix": "An object floats if its density is less than the density of the fluid it is placed in, regardless of its total mass.",
+      "probe": {
+       "question": "Why does a massive steel ship float while a small steel nail sinks?",
+       "wrong_answer": "The ship is light enough to float, but the nail is too heavy for its size."
+      },
+      "error_type": "scale_or_quantity",
+      "trigger_cues": [
+       "buoyant force",
+       "density",
+       "displacement",
+       "archimedes principle",
+       "upthrust"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Motion",
+   "Force and Laws of Motion"
+  ]
+ },
+ "problems": []
+}

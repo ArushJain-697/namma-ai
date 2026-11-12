@@ -1,0 +1,140 @@
+{
+ "topic": {
+  "id": "SCI-CHM-METALS",
+  "subject": "science",
+  "strand": "chemistry",
+  "grades": [
+   8,
+   10
+  ],
+  "title": "Metals and non-metals",
+  "scope": "physical properties, reactions with oxygen, water, acids, displacement, reactivity, uses, corrosion"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 710,
+  "candidatesTokenCount": 900,
+  "totalTokenCount": 1610,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 710
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.0,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Physical Properties of Metals and Non-metals",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "All metals are always solid at room temperature.",
+      "why": "Students generalize from common metals like iron and copper seen in daily life.",
+      "fix": "Mercury is a metal that exists as a liquid at room temperature.",
+      "probe": {
+       "question": "Is mercury a metal?",
+       "wrong_answer": "No, because it is a liquid."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "malleability",
+       "ductility",
+       "sonorous",
+       "lustrous",
+       "mercury",
+       "solid state"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "Non-metals are always gases.",
+      "why": "Students often associate non-metals with oxygen or nitrogen in the air.",
+      "fix": "Non-metals can be solids (like carbon or sulfur) or liquids (like bromine) in addition to gases.",
+      "probe": {
+       "question": "Is sulfur a non-metal?",
+       "wrong_answer": "No, because it is a solid."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "non-metals",
+       "brittle",
+       "poor conductors",
+       "carbon",
+       "sulfur"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Chemical Reactions with Oxygen and Water",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Metal oxides are always acidic in nature.",
+      "why": "Students confuse metal oxides with non-metal oxides which form acids in water.",
+      "fix": "Metal oxides are generally basic, while non-metal oxides are generally acidic.",
+      "probe": {
+       "question": "What happens when magnesium oxide is dissolved in water and tested with litmus?",
+       "wrong_answer": "It turns blue litmus red because it is an oxide."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "metal oxides",
+       "basic nature",
+       "litmus test",
+       "rusting",
+       "non-metal oxides"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Reactivity Series and Displacement Reactions",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Any metal can displace another metal from its salt solution.",
+      "why": "Students assume that if a reaction happens between two metals, it will always happen regardless of which is the salt.",
+      "fix": "Only a more reactive metal can displace a less reactive metal from its salt solution.",
+      "probe": {
+       "question": "Will copper displace zinc from zinc sulfate solution?",
+       "wrong_answer": "Yes, because both are metals and they react."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "displacement reaction",
+       "reactivity series",
+       "salt solution",
+       "more reactive",
+       "less reactive"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "States of matter",
+   "Atoms and molecules",
+   "Acids, bases and salts"
+  ]
+ },
+ "problems": []
+}

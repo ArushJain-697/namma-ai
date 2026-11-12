@@ -1,0 +1,1295 @@
+{
+  "passage": "A simple electric circuit needs three things: a source of electricity such as a cell, a device that uses electricity such as a bulb, and connecting wires that make a complete path. Current flows only when the path is closed. A switch is used to open or close this path. When the switch is on, the circuit is closed and the bulb glows. When it is off, there is a gap in the path and the current stops. A cell has two terminals, a positive terminal and a negative terminal. In a circuit diagram, the longer line stands for the positive terminal. When two or more cells are joined, the positive terminal of one cell must be connected to the negative terminal of the next. This arrangement is called a battery. Bulbs can also be joined one after another in a single path. This is called a series connection. In a series circuit the same current passes through every bulb, and the current is not used up on the way: just as much current returns to the cell as leaves it. However, if one bulb in a series circuit fuses, the path is broken and all the other bulbs go off too. In our homes, lights and fans are not joined in series. They are joined in parallel, so that each one can be switched on or off without affecting the others.",
+  "gate": {
+    "status": "OK",
+    "words": 232,
+    "reason": "OK: 232 words"
+  },
+  "summary": {
+    "text": "A simple electric circuit needs a power source like a cell, a light that uses electricity, and connecting wires to make a complete path. In a series circuit the same current passes through every bulb, and the current is not used up on the way: just as much current returns to the cell as leaves it.",
+    "word_count": 56,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "56 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 0,
+        "source": "A simple electric circuit needs three things: a source of electricity such as a cell, a device that uses electricity such as a bulb, and connecting wires that make a complete path.",
+        "text": "A simple electric circuit needs a power source like a cell, a light that uses electricity, and connecting wires to make a complete path.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 12.5 (limit 15.3), 24 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "A simple electric circuit needs a power source like a cell, a light that uses electricity, and connecting wires to make a complete path.",
+            "temperature": 0.0,
+            "wall_s": 0.8923,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 109,
+            "new_tokens": 79,
+            "ttft_ms": 125,
+            "tokens_per_s": 101.83,
+            "verify": null
+          },
+          {
+            "text": "A simple electric circuit needs a source of electricity, a device that uses electricity, and connecting wires.",
+            "temperature": 0.4,
+            "wall_s": 0.8903,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 109,
+            "new_tokens": 79,
+            "ttft_ms": 122,
+            "tokens_per_s": 101.56,
+            "verify": null
+          },
+          {
+            "text": "A simple electric circuit needs a source of electricity, a device that uses electricity, and connecting wires.",
+            "temperature": 0.7,
+            "wall_s": 0.8885,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 109,
+            "new_tokens": 79,
+            "ttft_ms": 122,
+            "tokens_per_s": 101.83,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 11,
+        "source": "In a series circuit the same current passes through every bulb, and the current is not used up on the way: just as much current returns to the cell as leaves it.",
+        "text": "In a series circuit the same current passes through every bulb, and the current is not used up on the way: just as much current returns to the cell as leaves it.",
+        "fallback": true,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "In a series circuit, the same current goes through every bulb, and the current gets back to the battery just as much as it left.",
+            "temperature": 0.0,
+            "wall_s": 0.8678,
+            "failed": [
+              "summary_support",
+              "summary_negation",
+              "summary_readability"
+            ],
+            "prompt_tokens": 108,
+            "new_tokens": 79,
+            "ttft_ms": 120,
+            "tokens_per_s": 104.28,
+            "verify": null
+          },
+          {
+            "text": "In a series circuit, every bulb gets the same current, and the current is just where it started, going back to the battery.",
+            "temperature": 0.4,
+            "wall_s": 0.8879,
+            "failed": [
+              "summary_support",
+              "summary_negation",
+              "summary_readability"
+            ],
+            "prompt_tokens": 108,
+            "new_tokens": 79,
+            "ttft_ms": 121,
+            "tokens_per_s": 101.83,
+            "verify": null
+          },
+          {
+            "text": "In a series circuit, the same current goes through each bulb, and the current comes back to the cell just as much as it left.",
+            "temperature": 0.7,
+            "wall_s": 0.8864,
+            "failed": [
+              "summary_support",
+              "summary_negation",
+              "summary_readability"
+            ],
+            "prompt_tokens": 108,
+            "new_tokens": 79,
+            "ttft_ms": 118,
+            "tokens_per_s": 101.69,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "path",
+      "options": [
+        "gap",
+        "positive",
+        "path",
+        "negative"
+      ],
+      "witness_idx": 0,
+      "witness": "A simple electric circuit needs three things: a source of electricity such as a cell, a device that uses electricity such as a bulb, and connecting wires that make a complete path.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "11 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.26"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.9 (limit 15.3)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is the complete path that a simple electric circuit needs?",
+          "temperature": 0.0,
+          "wall_s": 0.6788,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 182,
+          "new_tokens": 47,
+          "ttft_ms": 209,
+          "tokens_per_s": 98.08,
+          "verify": null
+        },
+        {
+          "text": "What is the complete path that a simple electric circuit needs?",
+          "temperature": 0.4,
+          "wall_s": 0.6804,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 182,
+          "new_tokens": 47,
+          "ttft_ms": 205,
+          "tokens_per_s": 96.84,
+          "verify": null
+        },
+        {
+          "text": "What is the complete path that a simple electric circuit needs?",
+          "temperature": 0.7,
+          "wall_s": 0.6849,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 182,
+          "new_tokens": 47,
+          "ttft_ms": 207,
+          "tokens_per_s": 96.44,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: A simple electric circuit needs three things: a source of electricity such as a cell, a device that uses electricity such as a bulb, and _____ wires that make a complete path.",
+        "key": "connecting",
+        "witness_idx": 0,
+        "witness": "A simple electric circuit needs three things: a source of electricity such as a cell, a device that uses electricity such as a bulb, and connecting wires that make a complete path.",
+        "options": [
+          "connecting",
+          "switch",
+          "closed",
+          "current"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "cell",
+      "options": [
+        "positive",
+        "cell",
+        "device",
+        "negative"
+      ],
+      "witness_idx": 11,
+      "witness": "In a series circuit the same current passes through every bulb, and the current is not used up on the way: just as much current returns to the cell as leaves it.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "13 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.43"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 4.9 (limit 12.7)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "The current is returned to the cell as much as it leaves it.",
+          "temperature": 0.0,
+          "wall_s": 0.6778,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 181,
+          "new_tokens": 47,
+          "ttft_ms": 208,
+          "tokens_per_s": 97.87,
+          "verify": null
+        },
+        {
+          "text": "The current is returned to the cell as much as it leaves it.",
+          "temperature": 0.4,
+          "wall_s": 0.685,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 181,
+          "new_tokens": 47,
+          "ttft_ms": 206,
+          "tokens_per_s": 96.23,
+          "verify": null
+        },
+        {
+          "text": "The current is not used up on the way, just as much as it returns to the cell.",
+          "temperature": 0.7,
+          "wall_s": 0.6861,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 181,
+          "new_tokens": 47,
+          "ttft_ms": 208,
+          "tokens_per_s": 96.44,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: In a series circuit the same _____ passes through every bulb, and the _____ is not used up on the way: just as much _____ returns to the cell as leaves it.",
+        "key": "current",
+        "witness_idx": 11,
+        "witness": "In a series circuit the same current passes through every bulb, and the current is not used up on the way: just as much current returns to the cell as leaves it.",
+        "options": [
+          "electricity",
+          "device",
+          "current",
+          "positive"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "closed",
+      "options": [
+        "electricity",
+        "path",
+        "connecting",
+        "closed"
+      ],
+      "witness_idx": 3,
+      "witness": "When the switch is on, the circuit is closed and the bulb glows.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "13 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "similarity to the witness 1.00"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.1 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question",
+        "stem_not_echo: similarity to the witness 1.00"
+      ],
+      "attempts": [
+        {
+          "text": "When the switch is on, the circuit is closed and the bulb glows.",
+          "temperature": 0.0,
+          "wall_s": 0.6661,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 189,
+          "tokens_per_s": 96.64,
+          "verify": null
+        },
+        {
+          "text": "When the switch is on, the circuit is closed and the bulb glows.",
+          "temperature": 0.4,
+          "wall_s": 0.6815,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 194,
+          "tokens_per_s": 94.46,
+          "verify": null
+        },
+        {
+          "text": "When the switch is on, the circuit is closed and the bulb glows.",
+          "temperature": 0.7,
+          "wall_s": 0.6792,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 191,
+          "tokens_per_s": 94.26,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: When the switch is on, the _____ is closed and the bulb glows.",
+        "key": "circuit",
+        "witness_idx": 3,
+        "witness": "When the switch is on, the circuit is closed and the bulb glows.",
+        "options": [
+          "circuit",
+          "electricity",
+          "positive",
+          "cell"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "terminal",
+      "options": [
+        "terminal",
+        "switch",
+        "current",
+        "path"
+      ],
+      "witness_idx": 5,
+      "witness": "A cell has two terminals, a positive terminal and a negative terminal.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.41"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.3 (limit 10.7)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'positive and negative', not 'terminal'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'positive and negative', not 'terminal'"
+      ],
+      "attempts": [
+        {
+          "text": "What are the two terminals in a cell?",
+          "temperature": 0.0,
+          "wall_s": 0.6627,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 160,
+          "new_tokens": 47,
+          "ttft_ms": 185,
+          "tokens_per_s": 96.44,
+          "verify": {
+            "text": "positive and negative",
+            "wall_s": 0.3186,
+            "prompt_tokens": 149,
+            "new_tokens": 15,
+            "ttft_ms": 180,
+            "tokens_per_s": 101.45
+          }
+        },
+        {
+          "text": "What is a terminal in a cell?",
+          "temperature": 0.4,
+          "wall_s": 0.6741,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 160,
+          "new_tokens": 47,
+          "ttft_ms": 189,
+          "tokens_per_s": 95.04,
+          "verify": null
+        },
+        {
+          "text": "What are the terminals in a cell?",
+          "temperature": 0.7,
+          "wall_s": 0.6743,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 160,
+          "new_tokens": 47,
+          "ttft_ms": 186,
+          "tokens_per_s": 94.26,
+          "verify": {
+            "text": "positive and negative",
+            "wall_s": 0.3183,
+            "prompt_tokens": 148,
+            "new_tokens": 15,
+            "ttft_ms": 178,
+            "tokens_per_s": 100.72
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: A cell has two terminals, a positive terminal and a _____ terminal.",
+        "key": "negative",
+        "witness_idx": 5,
+        "witness": "A cell has two terminals, a positive terminal and a negative terminal.",
+        "options": [
+          "electric",
+          "source",
+          "switch",
+          "negative"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "series",
+      "options": [
+        "bulb",
+        "glows",
+        "series",
+        "others"
+      ],
+      "witness_idx": 13,
+      "witness": "In our homes, lights and fans are not joined in series.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "11 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "similarity to the witness 1.00"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.7 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question",
+        "stem_not_echo: similarity to the witness 1.00"
+      ],
+      "attempts": [
+        {
+          "text": "In our homes, lights and fans are not joined in series.",
+          "temperature": 0.0,
+          "wall_s": 0.6667,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 159,
+          "new_tokens": 47,
+          "ttft_ms": 189,
+          "tokens_per_s": 96.44,
+          "verify": null
+        },
+        {
+          "text": "In our homes, lights and fans are not joined in series.",
+          "temperature": 0.4,
+          "wall_s": 0.6763,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 159,
+          "new_tokens": 47,
+          "ttft_ms": 189,
+          "tokens_per_s": 94.65,
+          "verify": null
+        },
+        {
+          "text": "In our homes, the lights and fans are not joined in series.",
+          "temperature": 0.7,
+          "wall_s": 0.6778,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 159,
+          "new_tokens": 47,
+          "ttft_ms": 192,
+          "tokens_per_s": 94.65,
+          "verify": null
+        }
+      ],
+      "reserve": null
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "What happens when it is off?",
+      "key": "current",
+      "options": [
+        "cell",
+        "electric",
+        "current",
+        "circuit"
+      ],
+      "witness_idx": 4,
+      "witness": "When it is off, there is a gap in the path and the current stops.",
+      "tier": "AMBER",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "6 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.30"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "0% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 0.5 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_in_passage: 0% of content words are in the passage"
+      ],
+      "attempts": [
+        {
+          "text": "What happens when the current stops?",
+          "temperature": 0.0,
+          "wall_s": 0.672,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 163,
+          "new_tokens": 47,
+          "ttft_ms": 193,
+          "tokens_per_s": 96.23,
+          "verify": null
+        },
+        {
+          "text": "What happens when it is off?",
+          "temperature": 0.4,
+          "wall_s": 0.6805,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 163,
+          "new_tokens": 47,
+          "ttft_ms": 194,
+          "tokens_per_s": 94.65,
+          "verify": {
+            "text": "current stops",
+            "wall_s": 0.3225,
+            "prompt_tokens": 150,
+            "new_tokens": 15,
+            "ttft_ms": 182,
+            "tokens_per_s": 100.0
+          }
+        },
+        {
+          "text": "What happens when the current is off?",
+          "temperature": 0.7,
+          "wall_s": 0.6817,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 163,
+          "new_tokens": 47,
+          "ttft_ms": 195,
+          "tokens_per_s": 94.46,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: When it is off, there is a gap in the _____ and the current stops.",
+        "key": "path",
+        "witness_idx": 4,
+        "witness": "When it is off, there is a gap in the path and the current stops.",
+        "options": [
+          "positive",
+          "electric",
+          "path",
+          "bulb"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: They are joined in parallel, so that each one can be _____ on or off without affecting the others.",
+      "key": "switched",
+      "options": [
+        "bulb",
+        "circuit",
+        "switched",
+        "closed"
+      ],
+      "witness_idx": 14,
+      "witness": "They are joined in parallel, so that each one can be switched on or off without affecting the others.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": null
+    },
+    {
+      "id": 8,
+      "kind": "cloze",
+      "stem": "Fill in the blank: A simple electric circuit needs three things: a source of electricity such as a cell, a device that uses electricity such as a bulb, and connecting wires that make a complete _____.",
+      "key": "path",
+      "options": [
+        "gap",
+        "positive",
+        "path",
+        "negative"
+      ],
+      "witness_idx": 0,
+      "witness": "A simple electric circuit needs three things: a source of electricity such as a cell, a device that uses electricity such as a bulb, and connecting wires that make a complete path.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: A simple electric circuit needs three things: a source of electricity such as a cell, a device that uses electricity such as a bulb, and _____ wires that make a complete path.",
+        "key": "connecting",
+        "witness_idx": 0,
+        "witness": "A simple electric circuit needs three things: a source of electricity such as a cell, a device that uses electricity such as a bulb, and connecting wires that make a complete path.",
+        "options": [
+          "connecting",
+          "switch",
+          "closed",
+          "current"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "kind": "cloze",
+      "stem": "Fill in the blank: In a series circuit the same current passes through every bulb, and the current is not used up on the way: just as much current returns to the _____ as leaves it.",
+      "key": "cell",
+      "options": [
+        "positive",
+        "cell",
+        "device",
+        "negative"
+      ],
+      "witness_idx": 11,
+      "witness": "In a series circuit the same current passes through every bulb, and the current is not used up on the way: just as much current returns to the cell as leaves it.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: In a series circuit the same _____ passes through every bulb, and the _____ is not used up on the way: just as much _____ returns to the cell as leaves it.",
+        "key": "current",
+        "witness_idx": 11,
+        "witness": "In a series circuit the same current passes through every bulb, and the current is not used up on the way: just as much current returns to the cell as leaves it.",
+        "options": [
+          "electricity",
+          "device",
+          "current",
+          "positive"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 18.4711,
+    "summary_s": 5.3149,
+    "stems_s": 13.1543,
+    "model_wall_s": 17.4991,
+    "model_calls": 24,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 1,
+    "red": 5,
+    "fallback": 4
+  },
+  "version": 1,
+  "created": "2026-11-13T01:13:22",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

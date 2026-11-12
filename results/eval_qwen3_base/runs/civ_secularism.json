@@ -1,0 +1,1044 @@
+{
+  "passage": "India is a secular country. In the Indian Constitution, secularism means that the State does not favour any one religion, and that every person is free to follow, practise and spread the religion of their choice. The State does not have an official religion. However, Indian secularism is different from the idea of a complete wall between the State and religion that some other countries follow. In India, the State keeps what is called a principled distance from religion. This means that it usually stays away from religious matters, but it can step in when a religious practice goes against the rights guaranteed by the Constitution. For example, the Constitution abolished untouchability, even though some people defended it as part of their religious tradition. The State can also make exceptions out of respect for religious practices. The law requires people riding two-wheelers to wear helmets, but Sikhs who wear turbans are allowed not to wear a helmet. The aim of all this is to make sure that no religious group dominates another, that members of the same religion do not dominate each other, and that the State does not force any religion on people. In government schools, therefore, the celebration of a religious festival as an official school event is not allowed, but students are free to celebrate festivals at home.",
+  "gate": {
+    "status": "OK",
+    "words": 221,
+    "reason": "OK: 221 words"
+  },
+  "summary": {
+    "text": "The state doesn't have an official religion. The goal is to make sure that no religious group dominates another, and that members of the same religion don't dominate each other, and that the state doesn't force any religion on people.",
+    "word_count": 40,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "40 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 2,
+        "source": "The State does not have an official religion.",
+        "text": "The state doesn't have an official religion.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "The state doesn't have an official religion.",
+            "temperature": 0.0,
+            "wall_s": 0.859,
+            "failed": [],
+            "prompt_tokens": 82,
+            "new_tokens": 79,
+            "ttft_ms": 106,
+            "tokens_per_s": 103.59,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 9,
+        "source": "The aim of all this is to make sure that no religious group dominates another, that members of the same religion do not dominate each other, and that the State does not force any religion on people.",
+        "text": "The goal is to make sure that no religious group dominates another, and that members of the same religion don't dominate each other, and that the state doesn't force any religion on people.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 15.2 (limit 16.1), 33 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "The goal is to make sure that no religious group dominates another, and that members of the same religion don't dominate each other, and that the state doesn't force any religion on people.",
+            "temperature": 0.0,
+            "wall_s": 0.9554,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 113,
+            "new_tokens": 79,
+            "ttft_ms": 147,
+            "tokens_per_s": 96.53,
+            "verify": null
+          },
+          {
+            "text": "The goal is to make sure that no one group dominates another, and that the state doesn't force any religion on people.",
+            "temperature": 0.4,
+            "wall_s": 0.9645,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 113,
+            "new_tokens": 79,
+            "ttft_ms": 141,
+            "tokens_per_s": 94.78,
+            "verify": null
+          },
+          {
+            "text": "The goal is to make sure that no religious group dominates another, and that everyone in the same religion doesn't get to force another religion on them.",
+            "temperature": 0.7,
+            "wall_s": 0.9682,
+            "failed": [
+              "summary_support",
+              "summary_readability"
+            ],
+            "prompt_tokens": 113,
+            "new_tokens": 79,
+            "ttft_ms": 140,
+            "tokens_per_s": 94.32,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "State",
+      "options": [
+        "Sikhs",
+        "State",
+        "Indian",
+        "Constitution"
+      ],
+      "witness_idx": 9,
+      "witness": "The aim of all this is to make sure that no religious group dominates another, that members of the same religion do not dominate each other, and that the State does not force any religion on people.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.27"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "33% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 0.8 (limit 16.1)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'to promote religious harmony between different religions', not 'State'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_in_passage: 33% of content words are in the passage",
+        "stem_answers_to_key: asked to answer its own question, the model said 'to promote religious harmony between different religions', not 'State'"
+      ],
+      "attempts": [
+        {
+          "text": "What is the main aim of the sentence?",
+          "temperature": 0.0,
+          "wall_s": 0.7411,
+          "failed": [
+            "stem_in_passage",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 186,
+          "new_tokens": 47,
+          "ttft_ms": 237,
+          "tokens_per_s": 91.45,
+          "verify": {
+            "text": "to promote religious harmony between different religions",
+            "wall_s": 0.4076,
+            "prompt_tokens": 175,
+            "new_tokens": 15,
+            "ttft_ms": 230,
+            "tokens_per_s": 79.1
+          }
+        },
+        {
+          "text": "What is the main aim of the sentence?",
+          "temperature": 0.4,
+          "wall_s": 0.7503,
+          "failed": [
+            "stem_in_passage",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 186,
+          "new_tokens": 47,
+          "ttft_ms": 238,
+          "tokens_per_s": 89.84,
+          "verify": {
+            "text": "to promote religious harmony between different religions",
+            "wall_s": 0.3973,
+            "prompt_tokens": 175,
+            "new_tokens": 15,
+            "ttft_ms": 222,
+            "tokens_per_s": 80.46
+          }
+        },
+        {
+          "text": "What is the main aim of the given sentence?",
+          "temperature": 0.7,
+          "wall_s": 0.7498,
+          "failed": [
+            "stem_in_passage",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 186,
+          "new_tokens": 47,
+          "ttft_ms": 237,
+          "tokens_per_s": 89.84,
+          "verify": {
+            "text": "to promote religious harmony and prevent religious domination",
+            "wall_s": 0.3939,
+            "prompt_tokens": 176,
+            "new_tokens": 15,
+            "ttft_ms": 220,
+            "tokens_per_s": 80.92
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The aim of all this is to make sure that no _____ group dominates another, that members of the same religion do not dominate each other, and that the State does not force any religion on people.",
+        "key": "religious",
+        "witness_idx": 9,
+        "witness": "The aim of all this is to make sure that no religious group dominates another, that members of the same religion do not dominate each other, and that the State does not force any religion on people.",
+        "options": [
+          "students",
+          "two-wheelers",
+          "religious",
+          "schools"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "Constitution",
+      "options": [
+        "State",
+        "India",
+        "Sikhs",
+        "Constitution"
+      ],
+      "witness_idx": 5,
+      "witness": "This means that it usually stays away from religious matters, but it can step in when a religious practice goes against the rights guaranteed by the Constitution.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "11 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.25"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "75% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 8.0 (limit 13.3)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said '1. the Ganga river begins at the Gangotri glacier in the Himal', not 'Constitution'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said '1. the Ganga river begins at the Gangotri glacier in the Himal', not 'Constitution'"
+      ],
+      "attempts": [
+        {
+          "text": "Which of the following statements is correct regarding the Constitution?",
+          "temperature": 0.0,
+          "wall_s": 0.7409,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 175,
+          "new_tokens": 47,
+          "ttft_ms": 226,
+          "tokens_per_s": 89.49,
+          "verify": null
+        },
+        {
+          "text": "Which of the following is an example of a religious practice that can step in to protect rights guaranteed by the Constitution?",
+          "temperature": 0.4,
+          "wall_s": 0.7514,
+          "failed": [
+            "stem_length",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 175,
+          "new_tokens": 47,
+          "ttft_ms": 232,
+          "tokens_per_s": 88.63,
+          "verify": null
+        },
+        {
+          "text": "Which of the following is an example of freedom of religion?",
+          "temperature": 0.7,
+          "wall_s": 0.7453,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 175,
+          "new_tokens": 47,
+          "ttft_ms": 222,
+          "tokens_per_s": 87.95,
+          "verify": {
+            "text": "1. the Ganga river begins at the Gangotri glacier in the Himal",
+            "wall_s": 0.3858,
+            "prompt_tokens": 167,
+            "new_tokens": 15,
+            "ttft_ms": 216,
+            "tokens_per_s": 82.84
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: This means that it usually stays away from religious matters, but it can step in when a religious _____ goes against the rights guaranteed by the Constitution.",
+        "key": "practice",
+        "witness_idx": 5,
+        "witness": "This means that it usually stays away from religious matters, but it can step in when a religious practice goes against the rights guaranteed by the Constitution.",
+        "options": [
+          "religion",
+          "wear",
+          "india",
+          "practice"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "What is India called?",
+      "key": "country",
+      "options": [
+        "practice",
+        "practise",
+        "festival",
+        "country"
+      ],
+      "witness_idx": 0,
+      "witness": "India is a secular country.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "4 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.33"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.7 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is India called?",
+          "temperature": 0.0,
+          "wall_s": 0.7072,
+          "failed": [],
+          "prompt_tokens": 152,
+          "new_tokens": 47,
+          "ttft_ms": 199,
+          "tokens_per_s": 90.55,
+          "verify": {
+            "text": "secular country",
+            "wall_s": 0.3254,
+            "prompt_tokens": 137,
+            "new_tokens": 15,
+            "ttft_ms": 170,
+            "tokens_per_s": 90.32
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: _____ is a secular country.",
+        "key": "India",
+        "witness_idx": 0,
+        "witness": "India is a secular country.",
+        "options": [
+          "wear",
+          "practise",
+          "favour",
+          "India"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "Sikhs",
+      "options": [
+        "Sikhs",
+        "Indian",
+        "Constitution",
+        "State"
+      ],
+      "witness_idx": 8,
+      "witness": "The law requires people riding two-wheelers to wear helmets, but Sikhs who wear turbans are allowed not to wear a helmet.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": true,
+      "signals": [
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.49"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.40"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.8 (limit 10.6)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "The Sikhs are allowed to wear a helmet.",
+          "temperature": 0.0,
+          "wall_s": 0.7379,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 174,
+          "new_tokens": 47,
+          "ttft_ms": 225,
+          "tokens_per_s": 89.84,
+          "verify": null
+        },
+        {
+          "text": "The law requires people riding two-wheelers to wear helmets, but Sikhs who wear turbans are allowed not to wear a helmet.",
+          "temperature": 0.4,
+          "wall_s": 0.7429,
+          "failed": [
+            "stem_question_mark",
+            "stem_length",
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 174,
+          "new_tokens": 47,
+          "ttft_ms": 222,
+          "tokens_per_s": 88.46,
+          "verify": null
+        },
+        {
+          "text": "The Sikhs are allowed not to wear a helmet, despite the law requiring them to.",
+          "temperature": 0.7,
+          "wall_s": 0.7417,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 174,
+          "new_tokens": 47,
+          "ttft_ms": 221,
+          "tokens_per_s": 88.46,
+          "verify": null
+        }
+      ],
+      "reserve": null
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "official",
+      "options": [
+        "official",
+        "practice",
+        "secularism",
+        "favour"
+      ],
+      "witness_idx": 10,
+      "witness": "In government schools, therefore, the celebration of a religious festival as an official school event is not allowed, but students are free to celebrate festivals at home.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "12 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.52"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.29"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 11.7 (limit 15.9)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?"
+      ],
+      "attempts": [
+        {
+          "text": "The celebration of a religious festival is not allowed in government schools.",
+          "temperature": 0.0,
+          "wall_s": 0.739,
+          "failed": [
+            "stem_question_mark"
+          ],
+          "prompt_tokens": 177,
+          "new_tokens": 47,
+          "ttft_ms": 226,
+          "tokens_per_s": 89.67,
+          "verify": null
+        },
+        {
+          "text": "The celebration of a religious festival is not allowed in government schools.",
+          "temperature": 0.4,
+          "wall_s": 0.749,
+          "failed": [
+            "stem_question_mark"
+          ],
+          "prompt_tokens": 177,
+          "new_tokens": 47,
+          "ttft_ms": 228,
+          "tokens_per_s": 88.29,
+          "verify": null
+        },
+        {
+          "text": "The government schools do not allow celebrations of religious festivals as official events.",
+          "temperature": 0.7,
+          "wall_s": 0.7466,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 177,
+          "new_tokens": 47,
+          "ttft_ms": 227,
+          "tokens_per_s": 88.63,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: In government schools, therefore, the celebration of a _____ festival as an official school event is not allowed, but students are free to celebrate festivals at home.",
+        "key": "religious",
+        "witness_idx": 10,
+        "witness": "In government schools, therefore, the celebration of a religious festival as an official school event is not allowed, but students are free to celebrate festivals at home.",
+        "options": [
+          "helmets",
+          "religious",
+          "goes",
+          "dominates"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "cloze",
+      "stem": "Fill in the blank: The aim of all this is to make sure that no religious group dominates another, that members of the same religion do not dominate each other, and that the _____ does not force any religion on people.",
+      "key": "State",
+      "options": [
+        "Sikhs",
+        "State",
+        "Indian",
+        "Constitution"
+      ],
+      "witness_idx": 9,
+      "witness": "The aim of all this is to make sure that no religious group dominates another, that members of the same religion do not dominate each other, and that the State does not force any religion on people.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: The aim of all this is to make sure that no _____ group dominates another, that members of the same religion do not dominate each other, and that the State does not force any religion on people.",
+        "key": "religious",
+        "witness_idx": 9,
+        "witness": "The aim of all this is to make sure that no religious group dominates another, that members of the same religion do not dominate each other, and that the State does not force any religion on people.",
+        "options": [
+          "students",
+          "two-wheelers",
+          "religious",
+          "schools"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: This means that it usually stays away from religious matters, but it can step in when a religious practice goes against the rights guaranteed by the _____.",
+      "key": "Constitution",
+      "options": [
+        "State",
+        "India",
+        "Sikhs",
+        "Constitution"
+      ],
+      "witness_idx": 5,
+      "witness": "This means that it usually stays away from religious matters, but it can step in when a religious practice goes against the rights guaranteed by the Constitution.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: This means that it usually stays away from religious matters, but it can step in when a religious _____ goes against the rights guaranteed by the Constitution.",
+        "key": "practice",
+        "witness_idx": 5,
+        "witness": "This means that it usually stays away from religious matters, but it can step in when a religious practice goes against the rights guaranteed by the Constitution.",
+        "options": [
+          "religion",
+          "wear",
+          "india",
+          "practice"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 15.3134,
+    "summary_s": 3.7482,
+    "stems_s": 11.5633,
+    "model_wall_s": 13.3902,
+    "model_calls": 17,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 0,
+    "red": 4,
+    "fallback": 2
+  },
+  "version": 1,
+  "created": "2026-11-13T01:23:13",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

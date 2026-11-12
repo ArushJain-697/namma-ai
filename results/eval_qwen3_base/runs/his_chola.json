@@ -1,0 +1,1256 @@
+{
+  "passage": "The Cholas were a powerful dynasty that ruled from the Kaveri delta in present-day Tamil Nadu. Their power grew greatly under Rajaraja I, who became king in 985 CE, and his son Rajendra I. Rajaraja built a strong army and navy and extended Chola rule to Sri Lanka and the Maldives. Rajendra I went further. His armies marched to the Ganga in the north, and his navy attacked kingdoms in Southeast Asia. To celebrate his victory in the north, he built a new capital called Gangaikondacholapuram. The Cholas are especially remembered for their temples. The Brihadeeswara temple at Thanjavur, built by Rajaraja I and completed in about 1010 CE, is one of the largest temples in India. Its tower rises about 66 metres high. Chola temples were not only places of worship. They were centres of town life, with land, schools, music and dance attached to them, and they gave work to many craftspeople. Chola artists were also famous for their bronze statues, made by a method called lost-wax casting. In this method, a figure is first made of wax and covered with clay. When the clay is heated, the wax melts and flows out, and molten metal is poured into the hollow mould. The bronze figures of Nataraja, the dancing Shiva, are among the finest examples.",
+  "gate": {
+    "status": "OK",
+    "words": 217,
+    "reason": "OK: 217 words"
+  },
+  "summary": {
+    "text": "Under Rajaraja I, who became king in 985, their power grew. His son, Rajendra I, also became king. Rajaraja built a strong army and navy, and he extended Chola rule to Sri Lanka and the Maldives. The Cholas are especially remembered for their temples.",
+    "word_count": 44,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "44 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 1,
+        "source": "Their power grew greatly under Rajaraja I, who became king in 985 CE, and his son Rajendra I. Rajaraja built a strong army and navy and extended Chola rule to Sri Lanka and the Maldives.",
+        "text": "Under Rajaraja I, who became king in 985, their power grew. His son, Rajendra I, also became king. Rajaraja built a strong army and navy, and he extended Chola rule to Sri Lanka and the Maldives.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "Under Rajaraja I, who became king in 985, their power grew. His son, Rajendra I, also became king. Rajaraja built a strong army and navy, and he extended Chola rule to Sri Lanka and the Maldives.",
+            "temperature": 0.0,
+            "wall_s": 0.9586,
+            "failed": [],
+            "prompt_tokens": 122,
+            "new_tokens": 79,
+            "ttft_ms": 152,
+            "tokens_per_s": 96.77,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 5,
+        "source": "The Cholas are especially remembered for their temples.",
+        "text": "The Cholas are especially remembered for their temples.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "The Cholas are especially remembered for their temples.",
+            "temperature": 0.0,
+            "wall_s": 0.8491,
+            "failed": [],
+            "prompt_tokens": 83,
+            "new_tokens": 79,
+            "ttft_ms": 104,
+            "tokens_per_s": 104.7,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "Rajaraja",
+      "options": [
+        "Asia",
+        "Southeast",
+        "Rajaraja",
+        "Tamil"
+      ],
+      "witness_idx": 1,
+      "witness": "Their power grew greatly under Rajaraja I, who became king in 985 CE, and his son Rajendra I. Rajaraja built a strong army and navy and extended Chola rule to Sri Lanka and the Maldives.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "10 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.26"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.7 (limit 17.3)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'Rajendra I', not 'Rajaraja'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'Rajendra I', not 'Rajaraja'"
+      ],
+      "attempts": [
+        {
+          "text": "Who was the king of Chola rule in 985 CE?",
+          "temperature": 0.0,
+          "wall_s": 0.7262,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 197,
+          "new_tokens": 47,
+          "ttft_ms": 242,
+          "tokens_per_s": 95.24,
+          "verify": {
+            "text": "Rajendra I",
+            "wall_s": 0.4033,
+            "prompt_tokens": 190,
+            "new_tokens": 15,
+            "ttft_ms": 236,
+            "tokens_per_s": 83.83
+          }
+        },
+        {
+          "text": "Who became king in 985 CE?",
+          "temperature": 0.4,
+          "wall_s": 0.7392,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 197,
+          "new_tokens": 47,
+          "ttft_ms": 243,
+          "tokens_per_s": 92.93,
+          "verify": {
+            "text": "Rajendra I",
+            "wall_s": 0.4037,
+            "prompt_tokens": 185,
+            "new_tokens": 15,
+            "ttft_ms": 231,
+            "tokens_per_s": 81.4
+          }
+        },
+        {
+          "text": "Who became king after Rajaraja I?",
+          "temperature": 0.7,
+          "wall_s": 0.7306,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 197,
+          "new_tokens": 47,
+          "ttft_ms": 240,
+          "tokens_per_s": 93.88,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Their power grew greatly under Rajaraja I, who became king in 985 CE, and his son _____ I. Rajaraja built a strong army and navy and extended Chola rule to Sri Lanka and the Maldives.",
+        "key": "Rajendra",
+        "witness_idx": 1,
+        "witness": "Their power grew greatly under Rajaraja I, who became king in 985 CE, and his son Rajendra I. Rajaraja built a strong army and navy and extended Chola rule to Sri Lanka and the Maldives.",
+        "options": [
+          "powerful",
+          "Rajendra",
+          "figure",
+          "wax"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "temples",
+      "options": [
+        "statues",
+        "metres",
+        "temples",
+        "famous"
+      ],
+      "witness_idx": 5,
+      "witness": "The Cholas are especially remembered for their temples.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "6 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.72"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 6.4 (limit 11.1)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is remembered for their temples?",
+          "temperature": 0.0,
+          "wall_s": 0.6936,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 156,
+          "new_tokens": 47,
+          "ttft_ms": 196,
+          "tokens_per_s": 92.56,
+          "verify": null
+        },
+        {
+          "text": "What is remembered for their temples?",
+          "temperature": 0.4,
+          "wall_s": 0.7052,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 156,
+          "new_tokens": 47,
+          "ttft_ms": 195,
+          "tokens_per_s": 90.37,
+          "verify": null
+        },
+        {
+          "text": "What is remembered for their temples?",
+          "temperature": 0.7,
+          "wall_s": 0.7072,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 156,
+          "new_tokens": 47,
+          "ttft_ms": 197,
+          "tokens_per_s": 90.2,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The _____ are especially remembered for their temples.",
+        "key": "Cholas",
+        "witness_idx": 5,
+        "witness": "The Cholas are especially remembered for their temples.",
+        "options": [
+          "Cholas",
+          "famous",
+          "schools",
+          "rises"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "Which of the following is the correct answer?",
+      "key": "Nadu",
+      "options": [
+        "Nadu",
+        "Rajendra",
+        "Sri",
+        "Rajaraja"
+      ],
+      "witness_idx": 0,
+      "witness": "The Cholas were a powerful dynasty that ruled from the Kaveri delta in present-day Tamil Nadu.",
+      "tier": "AMBER",
+      "fallback": false,
+      "detail": true,
+      "signals": [
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.29"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "0% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.2 (limit 12.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_in_passage: 0% of content words are in the passage"
+      ],
+      "attempts": [
+        {
+          "text": "Which region does the Ganga river begin?",
+          "temperature": 0.0,
+          "wall_s": 0.7288,
+          "failed": [
+            "stem_in_passage",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 209,
+          "tokens_per_s": 88.46,
+          "verify": {
+            "text": "Himalayas",
+            "wall_s": 0.3804,
+            "prompt_tokens": 156,
+            "new_tokens": 15,
+            "ttft_ms": 214,
+            "tokens_per_s": 84.85
+          }
+        },
+        {
+          "text": "Which region does the Ganga river begin?",
+          "temperature": 0.4,
+          "wall_s": 0.7815,
+          "failed": [
+            "stem_in_passage",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 223,
+          "tokens_per_s": 82.44,
+          "verify": {
+            "text": "Himalayas",
+            "wall_s": 0.3639,
+            "prompt_tokens": 156,
+            "new_tokens": 15,
+            "ttft_ms": 207,
+            "tokens_per_s": 89.74
+          }
+        },
+        {
+          "text": "Which of the following is the correct answer?",
+          "temperature": 0.7,
+          "wall_s": 0.7527,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 221,
+          "tokens_per_s": 86.63,
+          "verify": {
+            "text": "Tamil Nadu",
+            "wall_s": 0.3551,
+            "prompt_tokens": 156,
+            "new_tokens": 15,
+            "ttft_ms": 204,
+            "tokens_per_s": 92.72
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The Cholas were a powerful dynasty that ruled from the Kaveri delta in present-day _____ Nadu.",
+        "key": "Tamil",
+        "witness_idx": 0,
+        "witness": "The Cholas were a powerful dynasty that ruled from the Kaveri delta in present-day Tamil Nadu.",
+        "options": [
+          "navy",
+          "army",
+          "wax",
+          "Tamil"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "What type of art was done by the Chola artists?",
+      "key": "bronze",
+      "options": [
+        "powerful",
+        "wax",
+        "north",
+        "bronze"
+      ],
+      "witness_idx": 10,
+      "witness": "Chola artists were also famous for their bronze statues, made by a method called lost-wax casting.",
+      "tier": "AMBER",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "10 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.18"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.43"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "40% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.5 (limit 9.1)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_in_passage: 40% of content words are in the passage"
+      ],
+      "attempts": [
+        {
+          "text": "What is the name of the method used by the Chola artists to make bronze statues?",
+          "temperature": 0.0,
+          "wall_s": 0.7322,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 213,
+          "tokens_per_s": 88.63,
+          "verify": null
+        },
+        {
+          "text": "What was the method used by the Chola artists to make their bronze statues?",
+          "temperature": 0.4,
+          "wall_s": 0.7352,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 207,
+          "tokens_per_s": 87.29,
+          "verify": null
+        },
+        {
+          "text": "What type of art was done by the Chola artists?",
+          "temperature": 0.7,
+          "wall_s": 0.7309,
+          "failed": [
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 167,
+          "new_tokens": 47,
+          "ttft_ms": 213,
+          "tokens_per_s": 88.8,
+          "verify": {
+            "text": "bronze",
+            "wall_s": 0.3664,
+            "prompt_tokens": 159,
+            "new_tokens": 15,
+            "ttft_ms": 206,
+            "tokens_per_s": 88.05
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Chola artists were also famous for their bronze statues, made by a method called lost-wax _____.",
+        "key": "casting",
+        "witness_idx": 10,
+        "witness": "Chola artists were also famous for their bronze statues, made by a method called lost-wax casting.",
+        "options": [
+          "navy",
+          "casting",
+          "dancing",
+          "king"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "Asia",
+      "options": [
+        "Sri",
+        "Rajendra",
+        "Kaveri",
+        "Asia"
+      ],
+      "witness_idx": 3,
+      "witness": "His armies marched to the Ganga in the north, and his navy attacked kingdoms in Southeast Asia.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": true,
+      "signals": [
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.44"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.40"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.3 (limit 9.1)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'the north', not 'Asia'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'the north', not 'Asia'"
+      ],
+      "attempts": [
+        {
+          "text": "Where did his armies march to and attack?",
+          "temperature": 0.0,
+          "wall_s": 0.7453,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 215,
+          "tokens_per_s": 86.79,
+          "verify": {
+            "text": "the north",
+            "wall_s": 0.3603,
+            "prompt_tokens": 155,
+            "new_tokens": 15,
+            "ttft_ms": 208,
+            "tokens_per_s": 92.72
+          }
+        },
+        {
+          "text": "Where did his armies march to and attack?",
+          "temperature": 0.4,
+          "wall_s": 0.7273,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 212,
+          "tokens_per_s": 89.32,
+          "verify": {
+            "text": "the north",
+            "wall_s": 0.3459,
+            "prompt_tokens": 155,
+            "new_tokens": 15,
+            "ttft_ms": 198,
+            "tokens_per_s": 95.24
+          }
+        },
+        {
+          "text": "Where did his armies march to and attack?",
+          "temperature": 0.7,
+          "wall_s": 0.7241,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 166,
+          "new_tokens": 47,
+          "ttft_ms": 209,
+          "tokens_per_s": 89.49,
+          "verify": {
+            "text": "the north",
+            "wall_s": 0.3437,
+            "prompt_tokens": 155,
+            "new_tokens": 15,
+            "ttft_ms": 197,
+            "tokens_per_s": 95.89
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: His armies marched to the Ganga in the north, and his navy attacked kingdoms in _____ Asia.",
+        "key": "Southeast",
+        "witness_idx": 3,
+        "witness": "His armies marched to the Ganga in the north, and his navy attacked kingdoms in Southeast Asia.",
+        "options": [
+          "clay",
+          "Southeast",
+          "bronze",
+          "built"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "Gangaikondacholapuram",
+      "options": [
+        "Rajaraja",
+        "Gangaikondacholapuram",
+        "Nadu",
+        "Cholas"
+      ],
+      "witness_idx": 4,
+      "witness": "To celebrate his victory in the north, he built a new capital called Gangaikondacholapuram.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": true,
+      "signals": [
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "13 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.61"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.30"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "83% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": false,
+          "detail": "grade 14.0 (limit 13.5)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question",
+        "stem_readability: grade 14.0 (limit 13.5)"
+      ],
+      "attempts": [
+        {
+          "text": "Where did he build a new capital called Gangaikondacholapuram to celebrate his victory?",
+          "temperature": 0.0,
+          "wall_s": 0.717,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_readability"
+          ],
+          "prompt_tokens": 176,
+          "new_tokens": 47,
+          "ttft_ms": 217,
+          "tokens_per_s": 92.18,
+          "verify": null
+        },
+        {
+          "text": "Where did he build a new capital called Gangaikondacholapuram to celebrate his victory?",
+          "temperature": 0.4,
+          "wall_s": 0.7246,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_readability"
+          ],
+          "prompt_tokens": 176,
+          "new_tokens": 47,
+          "ttft_ms": 215,
+          "tokens_per_s": 90.37,
+          "verify": null
+        },
+        {
+          "text": "Where was he able to build a new capital called Gangaikondacholapuram to celebrate his victory?",
+          "temperature": 0.7,
+          "wall_s": 0.7406,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_readability"
+          ],
+          "prompt_tokens": 176,
+          "new_tokens": 47,
+          "ttft_ms": 214,
+          "tokens_per_s": 87.45,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: To celebrate his victory in the north, he _____ a new capital called Gangaikondacholapuram.",
+        "key": "built",
+        "witness_idx": 4,
+        "witness": "To celebrate his victory in the north, he built a new capital called Gangaikondacholapuram.",
+        "options": [
+          "chola",
+          "built",
+          "bronze",
+          "figure"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: In this method, a figure is first made of wax and covered with _____.",
+      "key": "clay",
+      "options": [
+        "chola",
+        "dynasty",
+        "built",
+        "clay"
+      ],
+      "witness_idx": 11,
+      "witness": "In this method, a figure is first made of wax and covered with clay.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: In this method, a figure is first made of _____ and covered with clay.",
+        "key": "wax",
+        "witness_idx": 11,
+        "witness": "In this method, a figure is first made of wax and covered with clay.",
+        "options": [
+          "chola",
+          "dynasty",
+          "wax",
+          "built"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "kind": "cloze",
+      "stem": "Fill in the blank: Its tower rises about _____ metres high.",
+      "key": "66",
+      "options": null,
+      "witness_idx": 7,
+      "witness": "Its tower rises about 66 metres high.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": true,
+      "signals": [
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": null
+    },
+    {
+      "id": 9,
+      "kind": "cloze",
+      "stem": "Fill in the blank: The bronze figures of Nataraja, the dancing _____, are among the finest examples.",
+      "key": "Shiva",
+      "options": [
+        "Nadu",
+        "Shiva",
+        "Kaveri",
+        "Cholas"
+      ],
+      "witness_idx": 13,
+      "witness": "The bronze figures of Nataraja, the dancing Shiva, are among the finest examples.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": true,
+      "signals": [
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: The bronze figures of _____, the dancing Shiva, are among the finest examples.",
+        "key": "Nataraja",
+        "witness_idx": 13,
+        "witness": "The bronze figures of Nataraja, the dancing Shiva, are among the finest examples.",
+        "options": [
+          "Nataraja",
+          "chola",
+          "north",
+          "army"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 18.2879,
+    "summary_s": 1.8083,
+    "stems_s": 16.4774,
+    "model_wall_s": 14.9499,
+    "model_calls": 20,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 2,
+    "red": 4,
+    "fallback": 3
+  },
+  "version": 1,
+  "created": "2026-11-13T01:20:09",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

@@ -1,0 +1,161 @@
+{
+ "topic": {
+  "id": "SCI-PHY-FRICTION",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   8
+  ],
+  "title": "Friction",
+  "scope": "cause of friction, factors affecting it, static/sliding/rolling friction, increasing and reducing friction, fluid friction"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 701,
+  "candidatesTokenCount": 1197,
+  "totalTokenCount": 1898,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 701
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.8,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Nature and Cause of Friction",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Friction is caused only by the roughness of surfaces.",
+      "why": "Students often focus on visible bumps and ignore the molecular-level interactions between smooth surfaces.",
+      "fix": "Friction is caused by the interlocking of irregularities on surfaces, which exists even on surfaces that appear smooth to the naked eye.",
+      "probe": {
+       "question": "Why does a highly polished glass slide still have friction?",
+       "wrong_answer": "It doesn't have friction because it is perfectly smooth."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "roughness",
+       "irregularities",
+       "smooth surfaces",
+       "interlocking"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Friction is a force that only acts on moving objects.",
+      "why": "Students associate friction with the act of sliding or moving, failing to recognize static friction.",
+      "fix": "Friction acts on stationary objects as well, preventing them from starting to move when a small force is applied.",
+      "probe": {
+       "question": "Is there any friction acting on a heavy box sitting on the floor if I push it slightly but it doesn't move?",
+       "wrong_answer": "No, because the box is not moving."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "moving objects",
+       "static friction",
+       "stationary",
+       "opposing motion"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Factors Affecting Friction",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The area of contact between two surfaces affects the amount of friction.",
+      "why": "Everyday intuition suggests that a larger object 'grabs' more surface area, leading to more friction.",
+      "fix": "Friction depends on the nature of the surfaces and the normal force (weight), not the surface area of contact.",
+      "probe": {
+       "question": "If you place a brick on its side versus its flat face, which one experiences more friction?",
+       "wrong_answer": "The flat face, because it has more area touching the ground."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "area of contact",
+       "surface area",
+       "size of object",
+       "friction force"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Types of Friction: Static, Sliding, and Rolling",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Rolling friction is a type of friction that is stronger than sliding friction.",
+      "why": "Students confuse the ease of movement with the magnitude of the force, or assume that 'more parts touching' means more friction.",
+      "fix": "Rolling friction is significantly weaker than sliding friction, which is why wheels are used to move heavy loads.",
+      "probe": {
+       "question": "Why is it easier to pull a suitcase with wheels than to drag it on the floor?",
+       "wrong_answer": "Because the wheels have more friction to grip the ground."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "rolling",
+       "sliding",
+       "wheels",
+       "easier to move"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Fluid Friction (Drag)",
+    "prereqs": [
+     "c1",
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Friction only happens between solid surfaces.",
+      "why": "Students define friction based on solid-solid contact and do not perceive air or water as 'surfaces'.",
+      "fix": "Fluids like air and water also exert a frictional force on objects moving through them, known as drag.",
+      "probe": {
+       "question": "Does an airplane experience friction while flying through the air?",
+       "wrong_answer": "No, friction only happens when things touch the ground."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "fluid friction",
+       "drag",
+       "air resistance",
+       "water resistance"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Force and Pressure",
+   "Motion and Time"
+  ]
+ },
+ "problems": []
+}

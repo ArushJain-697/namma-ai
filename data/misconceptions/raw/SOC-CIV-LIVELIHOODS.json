@@ -1,0 +1,155 @@
+{
+ "topic": {
+  "id": "SOC-CIV-LIVELIHOODS",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   6
+  ],
+  "title": "Rural and urban livelihoods",
+  "scope": "farm and non-farm work, landless labourers, street vendors, permanent and casual work"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 695,
+  "candidatesTokenCount": 1067,
+  "totalTokenCount": 1762,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 695
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.6,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Types of Livelihoods",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "All people in rural areas are farmers.",
+      "why": "Students often associate rural settings exclusively with agriculture based on simplified textbook illustrations.",
+      "fix": "Rural areas also have people working as potters, weavers, blacksmiths, shopkeepers, and transport workers.",
+      "probe": {
+       "question": "Does a person living in a village always work in a field?",
+       "wrong_answer": "Yes, because villages are only for farming."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "village",
+       "rural",
+       "farming",
+       "agriculture",
+       "livelihood"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "City life is only about working in big offices or factories.",
+      "why": "Media and urban imagery often highlight skyscrapers and formal offices, ignoring the informal economy.",
+      "fix": "Cities have many street vendors, daily wage laborers, and small shop owners who are essential to the urban economy.",
+      "probe": {
+       "question": "Who works on the streets in a city?",
+       "wrong_answer": "Only people who are unemployed or beggars."
+      },
+      "error_type": "stereotype",
+      "trigger_cues": [
+       "city",
+       "urban",
+       "office",
+       "factory",
+       "street vendor"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Land and Labour Dynamics",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "If a person works on a farm, they must own the land.",
+      "why": "Students often conflate the act of working with the concept of ownership.",
+      "fix": "Many people are landless labourers who work on others' fields for daily wages.",
+      "probe": {
+       "question": "Who owns the crops harvested by a farm labourer?",
+       "wrong_answer": "The labourer who worked hard to grow them."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "landowner",
+       "labourer",
+       "farm",
+       "wages",
+       "harvest"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Formal vs Informal Employment",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "A permanent job is always better than being a street vendor.",
+      "why": "Students equate 'permanent' with 'wealthy' and 'street work' with 'poverty' without understanding the nuances of self-employment.",
+      "fix": "While permanent jobs offer security, street vendors are self-employed and can sometimes earn more, though they lack social security benefits.",
+      "probe": {
+       "question": "Is a street vendor always poorer than a person with a permanent job?",
+       "wrong_answer": "Yes, because they don't have a fixed salary."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "permanent",
+       "casual",
+       "salary",
+       "security",
+       "self-employed"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Casual workers choose to work only when they want to.",
+      "why": "Students misunderstand the term 'casual' as 'optional' rather than 'lacking job security'.",
+      "fix": "Casual workers are often forced to work whenever they find a job because they have no guarantee of daily employment.",
+      "probe": {
+       "question": "Why does a casual labourer not work every day?",
+       "wrong_answer": "Because they prefer to take holidays whenever they feel like it."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "casual",
+       "daily wage",
+       "job security",
+       "employment"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Diversity and Discrimination",
+   "Government and Democracy"
+  ]
+ },
+ "problems": []
+}

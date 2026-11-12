@@ -1,0 +1,164 @@
+{
+ "topic": {
+  "id": "SCI-CHM-CARBON",
+  "subject": "science",
+  "strand": "chemistry",
+  "grades": [
+   10
+  ],
+  "title": "Carbon and its compounds",
+  "scope": "covalent bonding, versatility of carbon, hydrocarbons, functional groups, ethanol, ethanoic acid, soaps and detergents"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 706,
+  "candidatesTokenCount": 1199,
+  "totalTokenCount": 1905,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 706
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.8,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Covalent Bonding",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Covalent bonds are formed by the transfer of electrons from one atom to another.",
+      "why": "Students often confuse covalent bonding with ionic bonding because they learn both simultaneously.",
+      "fix": "Covalent bonds are formed by the mutual sharing of electron pairs between atoms to achieve a stable electronic configuration.",
+      "probe": {
+       "question": "How does a chlorine atom achieve stability when forming a molecule of Cl2?",
+       "wrong_answer": "One chlorine atom gives an electron to the other chlorine atom."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "sharing",
+       "electron pair",
+       "covalent bond",
+       "stability",
+       "noble gas configuration"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "Atoms share electrons to become like the nearest noble gas by filling their shells completely.",
+      "why": "Textbooks emphasize 'full shells' which leads students to think atoms must have 8 electrons regardless of the shell level.",
+      "fix": "Atoms share electrons to attain the stable electronic configuration of the nearest noble gas, which for hydrogen means a duplet, not an octet.",
+      "probe": {
+       "question": "Does a hydrogen atom need 8 electrons in its valence shell to be stable?",
+       "wrong_answer": "Yes, all atoms need 8 electrons to complete their octet."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "octet rule",
+       "valence shell",
+       "stable configuration",
+       "hydrogen"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Versatility of Carbon",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Carbon is the only element that can form chains and rings.",
+      "why": "The curriculum focuses heavily on carbon's catenation, leading students to believe it is unique in this ability.",
+      "fix": "While carbon shows catenation to a high degree, other elements like silicon and sulfur can also form chains and rings.",
+      "probe": {
+       "question": "Can any other element besides carbon form long chains?",
+       "wrong_answer": "No, only carbon has the property of catenation."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "catenation",
+       "versatility",
+       "chains",
+       "rings",
+       "carbon compounds"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Hydrocarbons and Functional Groups",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "A functional group is just a label for a part of a molecule and does not change its chemical properties.",
+      "why": "Students often memorize functional groups as names rather than active chemical sites.",
+      "fix": "A functional group is a specific group of atoms that determines the characteristic chemical reactions of an organic compound.",
+      "probe": {
+       "question": "Will ethanol and ethane have similar chemical reactivity because they both contain carbon?",
+       "wrong_answer": "Yes, they are both hydrocarbons so they will react the same way."
+      },
+      "error_type": "process_vs_product",
+      "trigger_cues": [
+       "functional group",
+       "chemical properties",
+       "reactivity",
+       "hydroxyl",
+       "carboxyl"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Soaps and Detergents",
+    "prereqs": [
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Soap molecules dissolve dirt by chemically reacting with it to destroy it.",
+      "why": "Students view cleaning as a chemical destruction process rather than a physical removal process.",
+      "fix": "Soap molecules form micelles that trap oil and dirt, allowing them to be washed away by water through physical suspension.",
+      "probe": {
+       "question": "How does soap clean a greasy stain?",
+       "wrong_answer": "The soap chemically burns or breaks down the grease into smaller pieces."
+      },
+      "error_type": "process_vs_product",
+      "trigger_cues": [
+       "micelle",
+       "hydrophobic",
+       "hydrophilic",
+       "cleansing action",
+       "emulsion"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Atomic Structure",
+   "Chemical Bonding",
+   "Periodic Classification of Elements"
+  ]
+ },
+ "problems": []
+}

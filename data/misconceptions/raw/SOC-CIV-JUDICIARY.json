@@ -1,0 +1,184 @@
+{
+ "topic": {
+  "id": "SOC-CIV-JUDICIARY",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   8
+  ],
+  "title": "The judiciary",
+  "scope": "independence of judiciary, structure of courts, civil vs criminal law, appeals, access to justice, PIL"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 695,
+  "candidatesTokenCount": 1419,
+  "totalTokenCount": 2114,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 695
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.9,
+ "response": {
+  "concepts": [
+   {
+    "key": "structure_of_courts",
+    "name": "The Hierarchy and Structure of Courts",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "The Supreme Court can directly hear any case from any village in India.",
+      "why": "Students often view the judiciary as a single monolithic entity rather than a tiered system.",
+      "fix": "The judiciary follows a hierarchy where cases usually start in subordinate courts and move up through appeals.",
+      "probe": {
+       "question": "If a person has a land dispute in a small village, can they go straight to the Supreme Court?",
+       "wrong_answer": "Yes, because the Supreme Court is the highest court and handles all justice in the country."
+      },
+      "error_type": "confuses_institutions",
+      "trigger_cues": [
+       "hierarchy",
+       "subordinate courts",
+       "high court",
+       "supreme court",
+       "levels of judiciary"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "The Supreme Court is the boss of the High Courts and can fire their judges.",
+      "why": "Students apply the hierarchical structure of school or government administration to the judiciary.",
+      "fix": "While the Supreme Court is the highest court, it does not have administrative control to fire High Court judges; they have constitutional protection.",
+      "probe": {
+       "question": "Can the Supreme Court dismiss a High Court judge for a bad decision?",
+       "wrong_answer": "Yes, because the Supreme Court is the superior authority and controls the lower courts."
+      },
+      "error_type": "confuses_institutions",
+      "trigger_cues": [
+       "superior",
+       "subordinate",
+       "administrative control",
+       "judicial independence"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "civil_vs_criminal",
+    "name": "Distinction between Civil and Criminal Law",
+    "prereqs": [
+     "structure_of_courts"
+    ],
+    "misconceptions": [
+     {
+      "statement": "All court cases involve the police filing an FIR.",
+      "why": "Media and television crime dramas focus heavily on police investigations, leading students to assume all legal disputes involve police.",
+      "fix": "Civil cases involve private disputes like property or rent and do not require police intervention or an FIR.",
+      "probe": {
+       "question": "If a landlord and tenant are fighting over unpaid rent, what is the first step?",
+       "wrong_answer": "The landlord must go to the police station to file an FIR against the tenant."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "fir",
+       "police",
+       "civil law",
+       "criminal law",
+       "private disputes"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "The goal of every court case is to send someone to jail.",
+      "why": "Students equate 'justice' with 'punishment' due to the influence of crime-based entertainment.",
+      "fix": "In civil law, the goal is to provide relief or compensation to the aggrieved party, not necessarily to punish with imprisonment.",
+      "probe": {
+       "question": "What is the main outcome of a civil case regarding a property dispute?",
+       "wrong_answer": "The person who lost the property will be sent to prison."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "punishment",
+       "imprisonment",
+       "compensation",
+       "civil dispute",
+       "aggrieved party"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "independence_of_judiciary",
+    "name": "Independence of the Judiciary",
+    "prereqs": [
+     "structure_of_courts"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The government controls the judges because it pays their salaries.",
+      "why": "Students assume that whoever provides funding has the power to dictate actions and decisions.",
+      "fix": "The constitution provides safeguards to ensure judges can make decisions without fear or pressure from the government.",
+      "probe": {
+       "question": "Can the government force a judge to rule in its favor?",
+       "wrong_answer": "Yes, because the government pays the judges' salaries and can threaten to stop them."
+      },
+      "error_type": "confuses_institutions",
+      "trigger_cues": [
+       "independence",
+       "separation of powers",
+       "executive",
+       "legislature",
+       "impartiality"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "pil_and_access",
+    "name": "Access to Justice and PIL",
+    "prereqs": [
+     "structure_of_courts",
+     "civil_vs_criminal"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Only the person directly affected by a problem can go to court.",
+      "why": "Students assume legal standing is strictly limited to the victim, not realizing the scope of Public Interest Litigation.",
+      "fix": "Through PIL, any individual or organization can approach the court on behalf of those who cannot access it themselves.",
+      "probe": {
+       "question": "If a group of villagers is being denied clean water, can a social worker file a case for them?",
+       "wrong_answer": "No, only the villagers themselves can go to court because they are the ones affected."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "pil",
+       "public interest",
+       "access to justice",
+       "aggrieved party",
+       "fundamental rights"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "The Indian Constitution",
+   "Parliament and Law Making",
+   "Fundamental Rights"
+  ]
+ },
+ "problems": []
+}

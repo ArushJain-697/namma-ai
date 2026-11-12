@@ -1,0 +1,141 @@
+{
+ "topic": {
+  "id": "SCI-PHY-LIGHTSHADOW",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   6
+  ],
+  "title": "Light, shadows and reflections",
+  "scope": "luminous and non-luminous objects, transparent/translucent/opaque, how shadows form, light travels in straight lines, pinhole camera"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 711,
+  "candidatesTokenCount": 952,
+  "totalTokenCount": 1663,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 711
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.5,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Luminous and Non-luminous Objects",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "The moon is a luminous object because it shines at night.",
+      "why": "Students confuse the act of being visible with the act of producing light.",
+      "fix": "The moon is non-luminous; it only reflects the light coming from the sun.",
+      "probe": {
+       "question": "Which of these produces its own light: a candle, a mirror, or the moon?",
+       "wrong_answer": "The moon and the candle."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "luminous",
+       "source of light",
+       "shining",
+       "night sky"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Transparency and Light Transmission",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Transparent objects are invisible.",
+      "why": "Students associate 'transparent' with 'not there' because they can see through it clearly.",
+      "fix": "Transparent objects are physical materials that allow light to pass through them, but they are still visible due to reflections and edges.",
+      "probe": {
+       "question": "If a glass window is transparent, can you see the window itself?",
+       "wrong_answer": "No, because light goes right through it."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "transparent",
+       "clear glass",
+       "see through",
+       "light passes"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Rectilinear Propagation of Light",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Light can bend around corners to reach dark areas.",
+      "why": "Students observe light filling a room and assume it curves to reach all parts.",
+      "fix": "Light travels in a straight line and cannot turn corners unless it is reflected by a surface.",
+      "probe": {
+       "question": "If you shine a torch into a bent pipe, will the light come out the other end?",
+       "wrong_answer": "Yes, light will bend to follow the shape of the pipe."
+      },
+      "error_type": "intuitive_physics",
+      "trigger_cues": [
+       "straight line",
+       "path of light",
+       "torch",
+       "beam"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Shadow Formation",
+    "prereqs": [
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "A shadow is a dark image of the object itself.",
+      "why": "Students view the shadow as a 'copy' or 'ghost' of the object rather than an absence of light.",
+      "fix": "A shadow is simply an area where light is blocked by an opaque object; it does not contain details of the object.",
+      "probe": {
+       "question": "Does a shadow of a person show their eyes and nose?",
+       "wrong_answer": "Yes, if the shadow is clear enough."
+      },
+      "error_type": "process_vs_product",
+      "trigger_cues": [
+       "shadow",
+       "dark patch",
+       "blocked light",
+       "opaque object"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "States of matter",
+   "Basic properties of materials"
+  ]
+ },
+ "problems": []
+}

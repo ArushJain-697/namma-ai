@@ -1,0 +1,176 @@
+{
+ "topic": {
+  "id": "SOC-CIV-MEDIA",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   7
+  ],
+  "title": "Media and advertising",
+  "scope": "media and technology, money and media, balanced reporting, advertising, brands, democracy"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 692,
+  "candidatesTokenCount": 1258,
+  "totalTokenCount": 1950,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 692
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.6,
+ "response": {
+  "concepts": [
+   {
+    "key": "media_tech",
+    "name": "Media and Technology",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "The media is only what we see on television.",
+      "why": "Students equate 'media' with the most dominant screen in their household.",
+      "fix": "Media is a broad term that includes newspapers, radio, internet, and even posters, which all help communicate information to a large audience.",
+      "probe": {
+       "question": "Is a local newspaper considered media?",
+       "wrong_answer": "No, because it is not on TV."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "television",
+       "mass communication",
+       "newspapers",
+       "radio",
+       "internet"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Technology in media is just about having better cameras.",
+      "why": "Students focus on the visual output rather than the infrastructure of information distribution.",
+      "fix": "Media technology includes the complex systems like satellites, printing presses, and internet cables that allow information to reach millions of people instantly.",
+      "probe": {
+       "question": "Why does media need technology?",
+       "wrong_answer": "To make the actors look better on screen."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "technology",
+       "satellites",
+       "broadcasting",
+       "digital",
+       "infrastructure"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "advertising",
+    "name": "Advertising and Brands",
+    "prereqs": [
+     "media_tech"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Products advertised on TV are always better quality than non-advertised ones.",
+      "why": "Students confuse the high cost of advertising with the actual quality of the product.",
+      "fix": "Advertising is a marketing strategy to influence our choices; a product's quality is independent of how much money is spent on its promotion.",
+      "probe": {
+       "question": "Why should you buy a branded soap instead of a local one?",
+       "wrong_answer": "Because the branded soap is shown on TV, so it must be better."
+      },
+      "error_type": "stereotype",
+      "trigger_cues": [
+       "brands",
+       "marketing",
+       "consumer",
+       "advertisement",
+       "commercials"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "Advertisements are just meant to inform us about new products.",
+      "why": "Students fail to recognize the persuasive and psychological intent behind commercial messaging.",
+      "fix": "Advertisements are designed to create a desire for a product and influence our personal choices, often by linking products to specific lifestyles.",
+      "probe": {
+       "question": "What is the main purpose of a chocolate commercial?",
+       "wrong_answer": "To tell me that chocolate exists."
+      },
+      "error_type": "other",
+      "trigger_cues": [
+       "persuasion",
+       "consumerism",
+       "lifestyle",
+       "influence",
+       "commercial"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "democracy_media",
+    "name": "Media and Democracy",
+    "prereqs": [
+     "media_tech",
+     "advertising"
+    ],
+    "misconceptions": [
+     {
+      "statement": "News reports are always objective facts without any bias.",
+      "why": "Students often trust the authority of news anchors and assume reporting is a neutral process.",
+      "fix": "News reports are influenced by the media house's focus, the need for profit, and the interests of those who fund them, which can lead to 'agenda setting'.",
+      "probe": {
+       "question": "Do two different newspapers report the same event in the exact same way?",
+       "wrong_answer": "Yes, because news is just the truth."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "balanced reporting",
+       "bias",
+       "agenda",
+       "public opinion",
+       "democracy"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "The government controls all media in a democracy.",
+      "why": "Students confuse the role of government regulation with total ownership or censorship.",
+      "fix": "In a democracy, media should be independent, though the government can censor it in specific situations, it does not own or dictate all content.",
+      "probe": {
+       "question": "Who decides what the news channel shows?",
+       "wrong_answer": "The government tells them what to say."
+      },
+      "error_type": "confuses_institutions",
+      "trigger_cues": [
+       "censorship",
+       "independence",
+       "democracy",
+       "government",
+       "public interest"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Role of Government",
+   "Understanding Markets",
+   "Equality in Indian Democracy"
+  ]
+ },
+ "problems": []
+}

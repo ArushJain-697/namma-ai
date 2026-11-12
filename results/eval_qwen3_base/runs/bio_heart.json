@@ -1,0 +1,1145 @@
+{
+  "passage": "The heart is a muscular organ about the size of your fist. It lies in the chest, slightly towards the left, and it pumps blood to all parts of the body without stopping, all through our lives. The human heart has four chambers. The two upper chambers are called atria and the two lower chambers are called ventricles. The right side of the heart receives blood that has given its oxygen to the body and sends it to the lungs. In the lungs the blood picks up fresh oxygen and gets rid of carbon dioxide. This oxygen-rich blood returns to the left side of the heart, which pumps it to the rest of the body. The wall between the left and right sides keeps the two kinds of blood from mixing. Valves between the chambers allow blood to flow in only one direction. Blood leaves the heart through arteries, which have thick, elastic walls because the blood in them is under high pressure. Blood returns to the heart through veins, which have thinner walls and contain valves of their own. Each contraction of the heart is a heartbeat, and the push of blood in the arteries can be felt as the pulse at the wrist. A healthy adult at rest has a pulse rate of about 72 beats per minute, while for a small child it is higher. During exercise, the heart beats faster to supply more oxygen to the muscles.",
+  "gate": {
+    "status": "OK",
+    "words": 241,
+    "reason": "OK: 241 words"
+  },
+  "summary": {
+    "text": "The right side of the heart gets blood that has given its oxygen to the body and sends it to the lungs. This oxygen-rich blood goes back to the left side of the heart, which sends it to the rest of the body.",
+    "word_count": 43,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "43 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 4,
+        "source": "The right side of the heart receives blood that has given its oxygen to the body and sends it to the lungs.",
+        "text": "The right side of the heart gets blood that has given its oxygen to the body and sends it to the lungs.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 6.9 (limit 8.0), 22 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "The right side of the heart gets blood that has given its oxygen to the body and sends it to the lungs.",
+            "temperature": 0.0,
+            "wall_s": 0.8792,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 96,
+            "new_tokens": 79,
+            "ttft_ms": 117,
+            "tokens_per_s": 102.5,
+            "verify": null
+          },
+          {
+            "text": "The right side of the heart gets blood that has given its oxygen to the body and sends it to the lungs.",
+            "temperature": 0.4,
+            "wall_s": 0.9083,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 96,
+            "new_tokens": 79,
+            "ttft_ms": 116,
+            "tokens_per_s": 98.48,
+            "verify": null
+          },
+          {
+            "text": "The right side of the heart gets blood from the lungs that has given it oxygen.",
+            "temperature": 0.7,
+            "wall_s": 0.9,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 96,
+            "new_tokens": 79,
+            "ttft_ms": 115,
+            "tokens_per_s": 99.49,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 6,
+        "source": "This oxygen-rich blood returns to the left side of the heart, which pumps it to the rest of the body.",
+        "text": "This oxygen-rich blood goes back to the left side of the heart, which sends it to the rest of the body.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 6.6 (limit 7.0), 21 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "This oxygen-rich blood goes back to the left side of the heart, which sends it to the rest of the body.",
+            "temperature": 0.0,
+            "wall_s": 0.8786,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 96,
+            "new_tokens": 79,
+            "ttft_ms": 119,
+            "tokens_per_s": 102.77,
+            "verify": null
+          },
+          {
+            "text": "This oxygen-rich blood goes back to the left side of the heart, which sends it to the rest of the body.",
+            "temperature": 0.4,
+            "wall_s": 0.8934,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 96,
+            "new_tokens": 79,
+            "ttft_ms": 115,
+            "tokens_per_s": 100.26,
+            "verify": null
+          },
+          {
+            "text": "This oxygen-rich blood comes back from the left side of the heart, which sends it to the rest of the body.",
+            "temperature": 0.7,
+            "wall_s": 0.8629,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 96,
+            "new_tokens": 76,
+            "ttft_ms": 116,
+            "tokens_per_s": 100.4,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "Which organ sends oxygen to the body?",
+      "key": "lungs",
+      "options": [
+        "ventricles",
+        "lungs",
+        "beats",
+        "pumps"
+      ],
+      "witness_idx": 4,
+      "witness": "The right side of the heart receives blood that has given its oxygen to the body and sends it to the lungs.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "7 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.40"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.7 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "Which organ sends oxygen to the body?",
+          "temperature": 0.0,
+          "wall_s": 0.7296,
+          "failed": [],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 215,
+          "tokens_per_s": 89.49,
+          "verify": {
+            "text": "lungs",
+            "wall_s": 0.3529,
+            "prompt_tokens": 157,
+            "new_tokens": 15,
+            "ttft_ms": 201,
+            "tokens_per_s": 92.72
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The right side of the heart receives blood that has given its _____ to the body and sends it to the lungs.",
+        "key": "oxygen",
+        "witness_idx": 4,
+        "witness": "The right side of the heart receives blood that has given its oxygen to the body and sends it to the lungs.",
+        "options": [
+          "oxygen",
+          "fist",
+          "pulse",
+          "slightly"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "rest",
+      "options": [
+        "wall",
+        "slightly",
+        "pulse",
+        "rest"
+      ],
+      "witness_idx": 6,
+      "witness": "This oxygen-rich blood returns to the left side of the heart, which pumps it to the rest of the body.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "9 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.27"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.42"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 7.6 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "asked to answer its own question, the model said 'left side of the heart', not 'rest'"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_answers_to_key: asked to answer its own question, the model said 'left side of the heart', not 'rest'"
+      ],
+      "attempts": [
+        {
+          "text": "Which part of the body receives the oxygen-rich blood?",
+          "temperature": 0.0,
+          "wall_s": 0.7295,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 214,
+          "tokens_per_s": 89.32,
+          "verify": {
+            "text": "left side of the heart",
+            "wall_s": 0.3647,
+            "prompt_tokens": 160,
+            "new_tokens": 15,
+            "ttft_ms": 207,
+            "tokens_per_s": 89.17
+          }
+        },
+        {
+          "text": "Which part of the body receives the oxygen-rich blood?",
+          "temperature": 0.4,
+          "wall_s": 0.7435,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 215,
+          "tokens_per_s": 87.29,
+          "verify": {
+            "text": "left side of the heart",
+            "wall_s": 0.3612,
+            "prompt_tokens": 160,
+            "new_tokens": 15,
+            "ttft_ms": 204,
+            "tokens_per_s": 89.17
+          }
+        },
+        {
+          "text": "Which part of the heart pumps blood to the rest of the body?",
+          "temperature": 0.7,
+          "wall_s": 0.7375,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 216,
+          "tokens_per_s": 88.29,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: This oxygen-rich blood returns to the left side of the heart, which _____ it to the rest of the body.",
+        "key": "pumps",
+        "witness_idx": 6,
+        "witness": "This oxygen-rich blood returns to the left side of the heart, which pumps it to the rest of the body.",
+        "options": [
+          "ventricles",
+          "beats",
+          "arteries",
+          "pumps"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "valves",
+      "options": [
+        "valves",
+        "beats",
+        "ventricles",
+        "arteries"
+      ],
+      "witness_idx": 10,
+      "witness": "Blood returns to the heart through veins, which have thinner walls and contain valves of their own.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "7 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.43"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.42"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.3 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "Which structures contain valves?",
+          "temperature": 0.0,
+          "wall_s": 0.722,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_readability"
+          ],
+          "prompt_tokens": 165,
+          "new_tokens": 47,
+          "ttft_ms": 207,
+          "tokens_per_s": 89.49,
+          "verify": null
+        },
+        {
+          "text": "Which part of the heart contains valves?",
+          "temperature": 0.4,
+          "wall_s": 0.7252,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 165,
+          "new_tokens": 47,
+          "ttft_ms": 208,
+          "tokens_per_s": 89.15,
+          "verify": null
+        },
+        {
+          "text": "Which part of the body has valves?",
+          "temperature": 0.7,
+          "wall_s": 0.7336,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 165,
+          "new_tokens": 47,
+          "ttft_ms": 208,
+          "tokens_per_s": 87.79,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Blood returns to the heart through veins, which have thinner _____ and contain valves of their own.",
+        "key": "walls",
+        "witness_idx": 10,
+        "witness": "Blood returns to the heart through veins, which have thinner walls and contain valves of their own.",
+        "options": [
+          "walls",
+          "pumps",
+          "lies",
+          "lungs"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "pulse",
+      "options": [
+        "pulse",
+        "fist",
+        "rest",
+        "wall"
+      ],
+      "witness_idx": 11,
+      "witness": "Each contraction of the heart is a heartbeat, and the push of blood in the arteries can be felt as the pulse at the wrist.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "9 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.46"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.37"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade -0.3 (limit 8.3)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is felt as the pulse at the wrist?",
+          "temperature": 0.0,
+          "wall_s": 0.7257,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 173,
+          "new_tokens": 47,
+          "ttft_ms": 218,
+          "tokens_per_s": 90.73,
+          "verify": null
+        },
+        {
+          "text": "What is felt as the pulse at the wrist?",
+          "temperature": 0.4,
+          "wall_s": 0.7427,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 173,
+          "new_tokens": 47,
+          "ttft_ms": 219,
+          "tokens_per_s": 87.95,
+          "verify": null
+        },
+        {
+          "text": "What is felt as the pulse at the wrist?",
+          "temperature": 0.7,
+          "wall_s": 0.736,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 173,
+          "new_tokens": 47,
+          "ttft_ms": 220,
+          "tokens_per_s": 89.15,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Each contraction of the heart is a heartbeat, and the push of blood in the _____ can be felt as the pulse at the wrist.",
+        "key": "arteries",
+        "witness_idx": 11,
+        "witness": "Each contraction of the heart is a heartbeat, and the push of blood in the arteries can be felt as the pulse at the wrist.",
+        "options": [
+          "pumps",
+          "lungs",
+          "arteries",
+          "receives"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "What is taken up by the blood in the lungs?",
+      "key": "oxygen",
+      "options": [
+        "fist",
+        "wall",
+        "oxygen",
+        "heart"
+      ],
+      "witness_idx": 5,
+      "witness": "In the lungs the blood picks up fresh oxygen and gets rid of carbon dioxide.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "10 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.20"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.45"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "67% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 1.3 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What is taken in the lungs? oxygen",
+          "temperature": 0.0,
+          "wall_s": 0.7271,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 208,
+          "tokens_per_s": 88.8,
+          "verify": null
+        },
+        {
+          "text": "What is taken up by the blood in the lungs?",
+          "temperature": 0.4,
+          "wall_s": 1.1907,
+          "failed": [],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 605,
+          "tokens_per_s": 78.63,
+          "verify": {
+            "text": "oxygen and carbon dioxide",
+            "wall_s": 0.3614,
+            "prompt_tokens": 153,
+            "new_tokens": 15,
+            "ttft_ms": 202,
+            "tokens_per_s": 88.05
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: In the _____ the blood picks up fresh oxygen and gets rid of carbon dioxide.",
+        "key": "lungs",
+        "witness_idx": 5,
+        "witness": "In the lungs the blood picks up fresh oxygen and gets rid of carbon dioxide.",
+        "options": [
+          "ventricles",
+          "beats",
+          "arteries",
+          "lungs"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "walls",
+      "options": [
+        "beats",
+        "pumps",
+        "ventricles",
+        "walls"
+      ],
+      "witness_idx": 9,
+      "witness": "Blood leaves the heart through arteries, which have thick, elastic walls because the blood in them is under high pressure.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "15 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.39"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.33"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 7.6 (limit 8.7)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "The blood in the arteries is under high pressure because of the thick, elastic walls.",
+          "temperature": 0.0,
+          "wall_s": 0.7358,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 218,
+          "tokens_per_s": 88.8,
+          "verify": null
+        },
+        {
+          "text": "The walls of the arteries are elastic because the blood is under high pressure.",
+          "temperature": 0.4,
+          "wall_s": 0.7434,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 212,
+          "tokens_per_s": 86.63,
+          "verify": null
+        },
+        {
+          "text": "The walls of the arteries are elastic because the blood in them is under high pressure.",
+          "temperature": 0.7,
+          "wall_s": 0.7509,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 219,
+          "tokens_per_s": 86.63,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Blood leaves the heart through _____, which have thick, elastic walls because the blood in them is under high pressure.",
+        "key": "arteries",
+        "witness_idx": 9,
+        "witness": "Blood leaves the heart through arteries, which have thick, elastic walls because the blood in them is under high pressure.",
+        "options": [
+          "beats",
+          "receives",
+          "arteries",
+          "lungs"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: It lies in the chest, slightly towards the left, and it _____ blood to all parts of the body without stopping, all through our lives.",
+      "key": "pumps",
+      "options": [
+        "beats",
+        "pumps",
+        "valves",
+        "arteries"
+      ],
+      "witness_idx": 1,
+      "witness": "It lies in the chest, slightly towards the left, and it pumps blood to all parts of the body without stopping, all through our lives.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: It lies in the chest, slightly towards the left, and it pumps blood to all parts of the body without _____, all through our lives.",
+        "key": "stopping",
+        "witness_idx": 1,
+        "witness": "It lies in the chest, slightly towards the left, and it pumps blood to all parts of the body without stopping, all through our lives.",
+        "options": [
+          "stopping",
+          "wall",
+          "oxygen",
+          "mixing"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 18.2502,
+    "summary_s": 5.3238,
+    "stems_s": 12.9249,
+    "model_wall_s": 16.7956,
+    "model_calls": 21,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 0,
+    "red": 4,
+    "fallback": 1
+  },
+  "version": 1,
+  "created": "2026-11-13T01:17:25",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

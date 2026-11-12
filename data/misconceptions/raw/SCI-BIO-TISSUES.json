@@ -1,0 +1,144 @@
+{
+ "topic": {
+  "id": "SCI-BIO-TISSUES",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   9
+  ],
+  "title": "Tissues",
+  "scope": "meristematic and permanent tissues, xylem and phloem, epithelial, connective, muscular and nervous tissue"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 700,
+  "candidatesTokenCount": 1009,
+  "totalTokenCount": 1709,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 700
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.9,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Definition of Tissues",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "A tissue is just a collection of any cells found together in a body part.",
+      "why": "Students often confuse the biological definition of tissue with the everyday meaning of a 'group' or 'collection'.",
+      "fix": "A tissue is a group of cells that are similar in structure and work together to perform a specific function.",
+      "probe": {
+       "question": "Is a mixture of blood cells, fat cells, and bone cells found in a limb considered a single tissue?",
+       "wrong_answer": "Yes, because they are all located in the same part of the body."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "group of cells",
+       "structure",
+       "function",
+       "organization"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Meristematic vs Permanent Tissues",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "All plant cells are constantly dividing throughout the life of the plant.",
+      "why": "Students observe plants growing continuously and assume every part of the plant is actively producing new cells.",
+      "fix": "Only specific regions called meristems contain dividing cells; most other plant cells become permanent and stop dividing.",
+      "probe": {
+       "question": "Do the cells in the bark of an old tree trunk divide to make the tree grow?",
+       "wrong_answer": "Yes, because the tree is alive and still growing."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "growth",
+       "division",
+       "meristem",
+       "permanent tissue"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Plant Vascular Tissues (Xylem and Phloem)",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Xylem carries food and water to all parts of the plant.",
+      "why": "Students often conflate the two transport systems because both are described as 'pipes' or 'tubes' in plants.",
+      "fix": "Xylem is specialized only for the transport of water and minerals, while phloem is responsible for transporting food.",
+      "probe": {
+       "question": "If a plant's phloem is blocked, will the leaves still receive water?",
+       "wrong_answer": "No, because the plant's transport system is blocked."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "transport",
+       "water",
+       "food",
+       "vessels",
+       "xylem",
+       "phloem"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Animal Tissue Types and Functions",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Muscles are the only tissues responsible for movement in the body.",
+      "why": "Students associate movement exclusively with visible muscle contraction, ignoring cellular-level movement.",
+      "fix": "While muscles provide gross movement, other tissues like epithelial cells (cilia) or nervous tissue (signaling) are essential for coordinated movement.",
+      "probe": {
+       "question": "How does the lining of the respiratory tract move mucus out of the lungs?",
+       "wrong_answer": "By using small muscles attached to the lining."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "movement",
+       "muscular tissue",
+       "epithelial",
+       "cilia",
+       "contraction"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Cell: The Unit of Life",
+   "Basic Chemistry of Life"
+  ]
+ },
+ "problems": []
+}

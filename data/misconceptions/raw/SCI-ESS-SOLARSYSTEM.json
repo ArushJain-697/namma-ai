@@ -1,0 +1,171 @@
+{
+ "topic": {
+  "id": "SCI-ESS-SOLARSYSTEM",
+  "subject": "science",
+  "strand": "earth_space",
+  "grades": [
+   6,
+   8
+  ],
+  "title": "Stars and the solar system",
+  "scope": "Moon phases, stars and constellations, planets, satellites, why the Moon shines, Pole Star"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 709,
+  "candidatesTokenCount": 1291,
+  "totalTokenCount": 2000,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 709
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 8.5,
+ "response": {
+  "concepts": [
+   {
+    "key": "stars_and_constellations",
+    "name": "Stars and Constellations",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Stars are small objects that are stuck to the surface of the night sky.",
+      "why": "Students perceive the sky as a dome or ceiling based on their visual perspective from Earth.",
+      "fix": "Stars are massive, distant, self-luminous bodies located at varying distances from Earth in space.",
+      "probe": {
+       "question": "If you could travel to the moon, would the stars look closer?",
+       "wrong_answer": "No, because stars are fixed on the sky dome."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "twinkling",
+       "night sky",
+       "fixed patterns",
+       "distant objects"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "The Pole Star is the brightest star in the sky.",
+      "why": "Textbooks emphasize its unique position, leading students to conflate 'special location' with 'highest magnitude'.",
+      "fix": "The Pole Star is significant because it stays fixed in the north, but many other stars are much brighter.",
+      "probe": {
+       "question": "Is the Pole Star the most brilliant light you see at night?",
+       "wrong_answer": "Yes, it is the brightest star because it is the most important one."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "pole star",
+       "north direction",
+       "fixed position",
+       "brightness"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "moon_phases",
+    "name": "Moon Phases and Appearance",
+    "prereqs": [
+     "stars_and_constellations"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The Moon changes shape because a shadow of the Earth falls on it.",
+      "why": "Students confuse lunar phases with lunar eclipses, which are often taught together.",
+      "fix": "The phases occur because we see different portions of the Moon's sunlit side as it orbits Earth.",
+      "probe": {
+       "question": "Why does the Moon look like a crescent sometimes?",
+       "wrong_answer": "Because the Earth is blocking part of the sunlight from reaching the Moon."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "crescent",
+       "full moon",
+       "shadow",
+       "phases",
+       "sunlight"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "The Moon produces its own light like a star.",
+      "why": "The Moon appears bright in the night sky, and children associate brightness with self-illumination.",
+      "fix": "The Moon is a non-luminous body that reflects light coming from the Sun.",
+      "probe": {
+       "question": "Does the Moon have its own light source?",
+       "wrong_answer": "Yes, it glows because it is a celestial body in the sky."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "moonlight",
+       "shining",
+       "night sky",
+       "reflection"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "planets_and_solar_system",
+    "name": "Planets and the Solar System",
+    "prereqs": [
+     "moon_phases"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Planets twinkle just like stars.",
+      "why": "Students generalize the appearance of all night-sky objects as 'stars' that twinkle.",
+      "fix": "Planets do not twinkle because they are much closer to Earth and appear as disks rather than point sources.",
+      "probe": {
+       "question": "How can you tell a planet from a star in the night sky?",
+       "wrong_answer": "You can't, they both twinkle."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "planets",
+       "twinkling",
+       "stars",
+       "night sky"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "The Sun is a planet that stays in the center of the solar system.",
+      "why": "Students often categorize all celestial bodies as 'planets' due to lack of differentiation.",
+      "fix": "The Sun is a star, which is a massive ball of hot gases, not a planet.",
+      "probe": {
+       "question": "Is the Sun a planet?",
+       "wrong_answer": "Yes, it is the biggest planet in the middle of the solar system."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "sun",
+       "solar system",
+       "center",
+       "planets"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Light and Shadow",
+   "Basic Geometry of Circles and Spheres",
+   "Measurement of Distance"
+  ]
+ },
+ "problems": []
+}

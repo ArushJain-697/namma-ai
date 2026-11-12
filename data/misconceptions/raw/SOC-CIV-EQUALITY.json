@@ -1,0 +1,150 @@
+{
+ "topic": {
+  "id": "SOC-CIV-EQUALITY",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   7
+  ],
+  "title": "Equality in Indian democracy",
+  "scope": "equal right to vote, constitutional equality, mid-day meal, dignity, civil rights"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 694,
+  "candidatesTokenCount": 1131,
+  "totalTokenCount": 1825,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 694
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.0,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Universal Adult Franchise",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Only educated or wealthy people have the right to vote in India.",
+      "why": "Students often confuse historical voting restrictions from colonial times or other countries with the current Indian system.",
+      "fix": "Every citizen of India who is 18 years of age or older has the right to vote, regardless of their education, wealth, or social status.",
+      "probe": {
+       "question": "Can a poor, uneducated person vote in the same election as a rich businessman?",
+       "wrong_answer": "No, because they do not have the knowledge or status to make a good decision."
+      },
+      "error_type": "presentism",
+      "trigger_cues": [
+       "universal adult franchise",
+       "right to vote",
+       "elections",
+       "every citizen"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "Voting is a privilege granted by the government to good citizens.",
+      "why": "Students equate voting with a reward for behavior rather than a fundamental democratic right.",
+      "fix": "Voting is a constitutional right guaranteed to all adult citizens, not a reward or a privilege given by the government.",
+      "probe": {
+       "question": "Why do we have the right to vote?",
+       "wrong_answer": "Because the government allows us to participate if we follow the rules."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "right to vote",
+       "democratic",
+       "citizen",
+       "government"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Constitutional Equality",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Equality means everyone is treated exactly the same in every situation.",
+      "why": "Students interpret equality as 'sameness' rather than 'equal opportunity' or 'equal status'.",
+      "fix": "Equality means that everyone has equal status before the law and equal opportunities, but the government can make special provisions for those who have been historically disadvantaged.",
+      "probe": {
+       "question": "Is it unfair for the government to give extra help to people from marginalized communities?",
+       "wrong_answer": "Yes, because that means they are being treated differently than others, which is not equal."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "constitution",
+       "equality",
+       "law",
+       "equal status"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Dignity and Social Justice",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Dignity is something you earn through your job or social status.",
+      "why": "Students observe that society often treats people differently based on their profession, leading them to believe dignity is conditional.",
+      "fix": "Dignity is an inherent human right; every person deserves to be treated with respect regardless of their occupation or background.",
+      "probe": {
+       "question": "Does a person who cleans streets deserve the same respect as a doctor?",
+       "wrong_answer": "No, because a doctor has a more important job and has earned more respect."
+      },
+      "error_type": "stereotype",
+      "trigger_cues": [
+       "dignity",
+       "respect",
+       "social justice",
+       "human rights"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "If the law says everyone is equal, then discrimination no longer exists in India.",
+      "why": "Students often conflate the existence of a law with the total eradication of the social problem it addresses.",
+      "fix": "While the law prohibits discrimination, social attitudes and practices can still lead to inequality in daily life.",
+      "probe": {
+       "question": "Since the Constitution bans untouchability, does that mean no one faces discrimination in India anymore?",
+       "wrong_answer": "Yes, because the law is supreme and it has solved the problem."
+      },
+      "error_type": "confusing_institutions",
+      "trigger_cues": [
+       "law",
+       "discrimination",
+       "constitution",
+       "untouchability"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Diversity in India",
+   "Government and its levels"
+  ]
+ },
+ "problems": []
+}

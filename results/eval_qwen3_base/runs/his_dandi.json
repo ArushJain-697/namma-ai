@@ -1,0 +1,1272 @@
+{
+  "passage": "In 1930, salt became the centre of India's struggle for freedom. The British government had made a law that gave it complete control over the making and sale of salt, and it put a tax on salt. Salt is something that every person, rich or poor, needs in their food, so Mahatma Gandhi saw the salt tax as a clear example of unjust British rule. On 12 March 1930, Gandhi set out on foot from Sabarmati Ashram near Ahmedabad with 78 of his followers. They walked for 24 days, covering about 385 kilometres, and stopped at villages on the way, where Gandhi spoke to large crowds. On 6 April they reached Dandi, a small village on the coast of Gujarat. There Gandhi picked up a handful of salt from the seashore, breaking the salt law. This simple act was the beginning of the Civil Disobedience Movement. Across the country, people made salt from sea water, refused to buy foreign cloth and refused to pay taxes. Women took part in large numbers, picketing shops that sold liquor and foreign goods. Thousands of people, including Gandhi, were arrested, but the protests continued peacefully. The Salt March showed that ordinary people, by refusing to obey an unjust law without using violence, could challenge a powerful empire.",
+  "gate": {
+    "status": "OK",
+    "words": 213,
+    "reason": "OK: 213 words"
+  },
+  "summary": {
+    "text": "Yes, salt is something that every person needs in their food, so Gandhi saw the salt tax as a clear example of how the British government treated people. The Salt March showed that ordinary people, by refusing to obey an unjust law, could challenge a powerful empire.",
+    "word_count": 47,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "47 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 2,
+        "source": "Salt is something that every person, rich or poor, needs in their food, so Mahatma Gandhi saw the salt tax as a clear example of unjust British rule.",
+        "text": "Yes, salt is something that every person needs in their food, so Gandhi saw the salt tax as a clear example of how the British government treated people.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 12.6 (limit 12.6), 28 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "Yes, salt is something that every person needs in their food, so Gandhi saw the salt tax as a clear example of how the British government treated people.",
+            "temperature": 0.0,
+            "wall_s": 0.9306,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 107,
+            "new_tokens": 79,
+            "ttft_ms": 133,
+            "tokens_per_s": 97.99,
+            "verify": null
+          },
+          {
+            "text": "Yes, salt is something that everyone needs in their food, so Gandhi saw the salt tax as a clear example of how the British government ruled unjustly.",
+            "temperature": 0.4,
+            "wall_s": 0.9424,
+            "failed": [
+              "summary_support",
+              "summary_readability"
+            ],
+            "prompt_tokens": 107,
+            "new_tokens": 79,
+            "ttft_ms": 131,
+            "tokens_per_s": 96.3,
+            "verify": null
+          },
+          {
+            "text": "Yes, salt is something that every person needs in their food — and even Mahatma Gandhi saw the salt tax as a clear example of how the British government was unjust.",
+            "temperature": 0.7,
+            "wall_s": 0.9329,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 107,
+            "new_tokens": 79,
+            "ttft_ms": 129,
+            "tokens_per_s": 97.01,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 11,
+        "source": "The Salt March showed that ordinary people, by refusing to obey an unjust law without using violence, could challenge a powerful empire.",
+        "text": "The Salt March showed that ordinary people, by refusing to obey an unjust law, could challenge a powerful empire.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 11.7 (limit 13.4), 19 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "The Salt March showed that ordinary people, by not obeying an unjust law, could challenge a powerful empire.",
+            "temperature": 0.0,
+            "wall_s": 0.9011,
+            "failed": [
+              "summary_negation",
+              "summary_readability"
+            ],
+            "prompt_tokens": 98,
+            "new_tokens": 79,
+            "ttft_ms": 128,
+            "tokens_per_s": 100.91,
+            "verify": null
+          },
+          {
+            "text": "The Salt March showed that ordinary people, by refusing to obey an unjust law, could challenge a powerful empire.",
+            "temperature": 0.4,
+            "wall_s": 0.9042,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 98,
+            "new_tokens": 79,
+            "ttft_ms": 120,
+            "tokens_per_s": 99.62,
+            "verify": null
+          },
+          {
+            "text": "The Salt March showed that ordinary people, by not obeying an unjust law, could challenge a powerful empire.",
+            "temperature": 0.7,
+            "wall_s": 0.9172,
+            "failed": [
+              "summary_negation",
+              "summary_readability"
+            ],
+            "prompt_tokens": 98,
+            "new_tokens": 79,
+            "ttft_ms": 127,
+            "tokens_per_s": 98.73,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "British",
+      "options": [
+        "Dandi",
+        "India's",
+        "British",
+        "March"
+      ],
+      "witness_idx": 2,
+      "witness": "Salt is something that every person, rich or poor, needs in their food, so Mahatma Gandhi saw the salt tax as a clear example of unjust British rule.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "11 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.54"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.9 (limit 12.6)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "The answer is: British.",
+          "temperature": 0.0,
+          "wall_s": 0.7342,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 180,
+          "new_tokens": 47,
+          "ttft_ms": 229,
+          "tokens_per_s": 91.27,
+          "verify": null
+        },
+        {
+          "text": "The answer is: British.",
+          "temperature": 0.4,
+          "wall_s": 0.7317,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 180,
+          "new_tokens": 47,
+          "ttft_ms": 223,
+          "tokens_per_s": 90.55,
+          "verify": null
+        },
+        {
+          "text": "The salt tax was a clear example of unjust British rule.",
+          "temperature": 0.7,
+          "wall_s": 0.7329,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 180,
+          "new_tokens": 47,
+          "ttft_ms": 225,
+          "tokens_per_s": 90.73,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Salt is something that every person, rich or poor, needs in their food, so Mahatma _____ saw the salt tax as a clear example of unjust British rule.",
+        "key": "Gandhi",
+        "witness_idx": 2,
+        "witness": "Salt is something that every person, rich or poor, needs in their food, so Mahatma Gandhi saw the salt tax as a clear example of unjust British rule.",
+        "options": [
+          "became",
+          "Gandhi",
+          "government",
+          "freedom"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "March",
+      "options": [
+        "Ahmedabad",
+        "Gandhi",
+        "March",
+        "British"
+      ],
+      "witness_idx": 11,
+      "witness": "The Salt March showed that ordinary people, by refusing to obey an unjust law without using violence, could challenge a powerful empire.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "6 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.23"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade -1.4 (limit 13.4)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What did the Salt March show?",
+          "temperature": 0.0,
+          "wall_s": 0.7214,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 171,
+          "new_tokens": 47,
+          "ttft_ms": 212,
+          "tokens_per_s": 90.37,
+          "verify": null
+        },
+        {
+          "text": "What did the Salt March show?",
+          "temperature": 0.4,
+          "wall_s": 0.7284,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 171,
+          "new_tokens": 47,
+          "ttft_ms": 216,
+          "tokens_per_s": 89.84,
+          "verify": null
+        },
+        {
+          "text": "What term describes a movement of people against a powerful government?",
+          "temperature": 0.7,
+          "wall_s": 0.7321,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 171,
+          "new_tokens": 47,
+          "ttft_ms": 213,
+          "tokens_per_s": 88.8,
+          "verify": {
+            "text": "civil disobedience",
+            "wall_s": 0.3661,
+            "prompt_tokens": 163,
+            "new_tokens": 15,
+            "ttft_ms": 207,
+            "tokens_per_s": 88.05
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The Salt March showed that ordinary people, by refusing to obey an unjust _____ without using violence, could challenge a powerful empire.",
+        "key": "law",
+        "witness_idx": 11,
+        "witness": "The Salt March showed that ordinary people, by refusing to obey an unjust law without using violence, could challenge a powerful empire.",
+        "options": [
+          "centre",
+          "law",
+          "became",
+          "foreign"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "Gandhi",
+      "options": [
+        "Gandhi",
+        "March",
+        "Sabarmati",
+        "Ashram"
+      ],
+      "witness_idx": 6,
+      "witness": "There Gandhi picked up a handful of salt from the seashore, breaking the salt law.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "5 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.44"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "75% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 0.5 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "Gandhi broke the salt law.",
+          "temperature": 0.0,
+          "wall_s": 0.7177,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 165,
+          "new_tokens": 47,
+          "ttft_ms": 208,
+          "tokens_per_s": 90.37,
+          "verify": null
+        },
+        {
+          "text": "Gandhi broke the salt law",
+          "temperature": 0.4,
+          "wall_s": 0.7256,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 165,
+          "new_tokens": 47,
+          "ttft_ms": 209,
+          "tokens_per_s": 89.15,
+          "verify": null
+        },
+        {
+          "text": "Gandhi broke the salt law",
+          "temperature": 0.7,
+          "wall_s": 0.7366,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 165,
+          "new_tokens": 47,
+          "ttft_ms": 216,
+          "tokens_per_s": 88.46,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: There Gandhi picked up a handful of salt from the seashore, breaking the salt _____.",
+        "key": "law",
+        "witness_idx": 6,
+        "witness": "There Gandhi picked up a handful of salt from the seashore, breaking the salt law.",
+        "options": [
+          "law",
+          "struggle",
+          "freedom",
+          "tax"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "taxes",
+      "options": [
+        "taxes",
+        "thousands",
+        "kilometres",
+        "villages"
+      ],
+      "witness_idx": 8,
+      "witness": "Across the country, people made salt from sea water, refused to buy foreign cloth and refused to pay taxes.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "14 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.68"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "86% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 5.0 (limit 9.8)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "Where did the people make salt from sea water and refuse to pay taxes?",
+          "temperature": 0.0,
+          "wall_s": 0.7233,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 212,
+          "tokens_per_s": 90.02,
+          "verify": null
+        },
+        {
+          "text": "Where did the people make salt from sea water?",
+          "temperature": 0.4,
+          "wall_s": 0.726,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 210,
+          "tokens_per_s": 89.15,
+          "verify": {
+            "text": "the sea water",
+            "wall_s": 0.353,
+            "prompt_tokens": 158,
+            "new_tokens": 15,
+            "ttft_ms": 201,
+            "tokens_per_s": 92.72
+          }
+        },
+        {
+          "text": "Where did the people make salt from sea water?",
+          "temperature": 0.7,
+          "wall_s": 0.7256,
+          "failed": [
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 168,
+          "new_tokens": 47,
+          "ttft_ms": 210,
+          "tokens_per_s": 89.32,
+          "verify": {
+            "text": "the sea water",
+            "wall_s": 0.3525,
+            "prompt_tokens": 158,
+            "new_tokens": 15,
+            "ttft_ms": 200,
+            "tokens_per_s": 92.72
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Across the country, people made salt from sea water, _____ to buy foreign cloth and _____ to pay taxes.",
+        "key": "refused",
+        "witness_idx": 8,
+        "witness": "Across the country, people made salt from sea water, refused to buy foreign cloth and refused to pay taxes.",
+        "options": [
+          "villages",
+          "unjust",
+          "refused",
+          "became"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "India's",
+      "options": [
+        "Sabarmati",
+        "March",
+        "India's",
+        "April"
+      ],
+      "witness_idx": 0,
+      "witness": "In 1930, salt became the centre of India's struggle for freedom.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": true,
+      "signals": [
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "8 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.76"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 6.7 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "In 1930, what was the centre of India's struggle for freedom?",
+          "temperature": 0.0,
+          "wall_s": 0.7144,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_not_echo"
+          ],
+          "prompt_tokens": 165,
+          "new_tokens": 47,
+          "ttft_ms": 209,
+          "tokens_per_s": 91.09,
+          "verify": null
+        },
+        {
+          "text": "In 1930, what was India's struggle for freedom?",
+          "temperature": 0.4,
+          "wall_s": 0.7185,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 165,
+          "new_tokens": 47,
+          "ttft_ms": 206,
+          "tokens_per_s": 90.02,
+          "verify": null
+        },
+        {
+          "text": "In 1930, India's struggle for freedom was led by salt.",
+          "temperature": 0.7,
+          "wall_s": 0.721,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 165,
+          "new_tokens": 47,
+          "ttft_ms": 206,
+          "tokens_per_s": 89.32,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: In _____, salt became the centre of India's struggle for freedom.",
+        "key": "1930",
+        "witness_idx": 0,
+        "witness": "In 1930, salt became the centre of India's struggle for freedom.",
+        "options": [
+          "6",
+          "12",
+          "385",
+          "1930"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "Where did they reach on 6 April?",
+      "key": "Gujarat",
+      "options": [
+        "Ashram",
+        "Gujarat",
+        "Sabarmati",
+        "Gandhi"
+      ],
+      "witness_idx": 5,
+      "witness": "On 6 April they reached Dandi, a small village on the coast of Gujarat.",
+      "tier": "AMBER",
+      "fallback": false,
+      "detail": true,
+      "signals": [
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "7 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.39"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 0.6 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "Where did they reach on 6 April?",
+          "temperature": 0.0,
+          "wall_s": 0.7078,
+          "failed": [],
+          "prompt_tokens": 164,
+          "new_tokens": 47,
+          "ttft_ms": 205,
+          "tokens_per_s": 91.63,
+          "verify": {
+            "text": "Gujarat",
+            "wall_s": 0.343,
+            "prompt_tokens": 153,
+            "new_tokens": 15,
+            "ttft_ms": 196,
+            "tokens_per_s": 95.24
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: On 6 April they reached Dandi, a small _____ on the coast of Gujarat.",
+        "key": "village",
+        "witness_idx": 5,
+        "witness": "On 6 April they reached Dandi, a small village on the coast of Gujarat.",
+        "options": [
+          "village",
+          "centre",
+          "tax",
+          "law"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: This simple act was the beginning of the Civil Disobedience _____.",
+      "key": "Movement",
+      "options": [
+        "India's",
+        "British",
+        "Ahmedabad",
+        "Movement"
+      ],
+      "witness_idx": 7,
+      "witness": "This simple act was the beginning of the Civil Disobedience Movement.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": true,
+      "signals": [
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: This simple act was the beginning of the Civil _____ Movement.",
+        "key": "Disobedience",
+        "witness_idx": 7,
+        "witness": "This simple act was the beginning of the Civil Disobedience Movement.",
+        "options": [
+          "became",
+          "struggle",
+          "foreign",
+          "Disobedience"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "kind": "cloze",
+      "stem": "Fill in the blank: Women took part in large numbers, picketing shops that sold liquor and _____ goods.",
+      "key": "foreign",
+      "options": [
+        "struggle",
+        "became",
+        "centre",
+        "foreign"
+      ],
+      "witness_idx": 9,
+      "witness": "Women took part in large numbers, picketing shops that sold liquor and foreign goods.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": null
+    },
+    {
+      "id": 9,
+      "kind": "cloze",
+      "stem": "Fill in the blank: Salt is something that every person, rich or poor, needs in their food, so Mahatma Gandhi saw the salt tax as a clear example of unjust _____ rule.",
+      "key": "British",
+      "options": [
+        "Dandi",
+        "India's",
+        "British",
+        "March"
+      ],
+      "witness_idx": 2,
+      "witness": "Salt is something that every person, rich or poor, needs in their food, so Mahatma Gandhi saw the salt tax as a clear example of unjust British rule.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": {
+        "stem": "Fill in the blank: Salt is something that every person, rich or poor, needs in their food, so Mahatma _____ saw the salt tax as a clear example of unjust British rule.",
+        "key": "Gandhi",
+        "witness_idx": 2,
+        "witness": "Salt is something that every person, rich or poor, needs in their food, so Mahatma Gandhi saw the salt tax as a clear example of unjust British rule.",
+        "options": [
+          "became",
+          "Gandhi",
+          "government",
+          "freedom"
+        ]
+      }
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 18.554,
+    "summary_s": 5.5301,
+    "stems_s": 13.0216,
+    "model_wall_s": 17.1256,
+    "model_calls": 22,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 1,
+    "red": 5,
+    "fallback": 3
+  },
+  "version": 1,
+  "created": "2026-11-13T01:19:50",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

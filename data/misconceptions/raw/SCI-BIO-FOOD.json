@@ -1,0 +1,156 @@
+{
+ "topic": {
+  "id": "SCI-BIO-FOOD",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   6
+  ],
+  "title": "Components of food",
+  "scope": "carbohydrates, proteins, fats, vitamins, minerals, roughage, water, balanced diet, deficiency diseases, food tests"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 704,
+  "candidatesTokenCount": 1130,
+  "totalTokenCount": 1834,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 704
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.4,
+ "response": {
+  "concepts": [
+   {
+    "key": "nutrients",
+    "name": "Nutrients and their sources",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Any substance we eat that makes us feel full is a nutrient.",
+      "why": "Students often equate the feeling of satiety with nutritional value.",
+      "fix": "Nutrients are specific chemical components like carbohydrates or proteins that our body needs to function, not just anything that fills the stomach.",
+      "probe": {
+       "question": "If you eat a bowl of plain ice cubes, have you consumed nutrients?",
+       "wrong_answer": "Yes, because it makes my stomach feel full."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "food components",
+       "nutrients",
+       "energy",
+       "diet",
+       "ingredients"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "All food items contain all types of nutrients.",
+      "why": "Students often see food as a generic 'fuel' and assume every bite provides everything the body needs.",
+      "fix": "Different foods are rich in different nutrients; for example, pulses are rich in proteins while butter is rich in fats.",
+      "probe": {
+       "question": "Does a piece of sugar provide protein to the body?",
+       "wrong_answer": "Yes, all food provides all nutrients."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "carbohydrates",
+       "proteins",
+       "fats",
+       "vitamins",
+       "minerals"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "food_tests",
+    "name": "Testing for nutrients",
+    "prereqs": [
+     "nutrients"
+    ],
+    "misconceptions": [
+     {
+      "statement": "If a food test does not show a color change, the food has no nutritional value at all.",
+      "why": "Students struggle to distinguish between the absence of a specific nutrient and the absence of all nutrients.",
+      "fix": "A negative test only shows that a specific nutrient, like starch, is absent; the food might still contain other nutrients like proteins or fats.",
+      "probe": {
+       "question": "If iodine solution does not turn blue-black on a piece of apple, does the apple have any nutrients?",
+       "wrong_answer": "No, it has no nutrients because the test failed."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "iodine solution",
+       "blue-black",
+       "copper sulphate",
+       "caustic soda",
+       "violet color"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "balanced_diet",
+    "name": "Balanced diet and deficiency",
+    "prereqs": [
+     "nutrients",
+     "food_tests"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Eating a large quantity of one healthy food is the same as eating a balanced diet.",
+      "why": "Students often confuse 'quantity' with 'quality' or 'variety'.",
+      "fix": "A balanced diet requires the right proportion of all essential nutrients, not just a large amount of one type of food.",
+      "probe": {
+       "question": "Is a diet of only milk considered a balanced diet for an adult?",
+       "wrong_answer": "Yes, because milk is very healthy and nutritious."
+      },
+      "error_type": "scale_or_quantity",
+      "trigger_cues": [
+       "balanced diet",
+       "deficiency diseases",
+       "proportion",
+       "variety",
+       "essential"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     },
+     {
+      "statement": "Deficiency diseases are caused by germs or infections.",
+      "why": "Students are taught that most diseases are caused by germs, so they overgeneralize this to all health problems.",
+      "fix": "Deficiency diseases occur because of the lack of specific nutrients over a long period, not because of germs.",
+      "probe": {
+       "question": "Why does a person get scurvy?",
+       "wrong_answer": "Because they caught a germ from someone else."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "deficiency",
+       "disease",
+       "lack of nutrients",
+       "symptoms",
+       "long period"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Sources of food",
+   "Plant parts as food"
+  ]
+ },
+ "problems": []
+}

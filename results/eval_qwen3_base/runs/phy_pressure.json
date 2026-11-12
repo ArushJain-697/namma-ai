@@ -1,0 +1,1119 @@
+{
+  "passage": "Meena watched her grandfather cut vegetables in the kitchen. He sharpened his knife on a stone before he began. 'Why do you do that?' she asked. 'A sharp knife cuts easily,' he said. Meena later learnt the reason in her science class. Pressure is the force acting on a unit area of a surface. When the same force acts on a smaller area, the pressure is greater. The sharp edge of a knife has a very small area, so the force from Grandfather's hand produces a large pressure and the knife cuts through a tomato easily. A blunt knife has a wider edge, so the same force spreads over a larger area and the pressure is less. The same idea explains many things Meena had seen. Porters carrying heavy loads on their heads place a round piece of cloth under the load. The cloth increases the area of contact, so the pressure on the head is reduced and the load is easier to carry. School bags have broad straps for the same reason, while thin straps cut painfully into the shoulders. Nails and pins have pointed tips so that they enter wood with little effort. Liquids and gases also exert pressure. Water presses on the walls of its container, and the pressure increases with depth. That is why the walls of a dam are made much thicker at the bottom than at the top.",
+  "gate": {
+    "status": "OK",
+    "words": 234,
+    "reason": "OK: 234 words"
+  },
+  "summary": {
+    "text": "The knife cuts through a tomato with a lot of pressure from Grandfather's hand. A blunt knife has a wider edge, so the same force spreads over a larger area, and the pressure is less.",
+    "word_count": 35,
+    "checks": [
+      {
+        "name": "summary_length",
+        "severity": "HARD",
+        "passed": true,
+        "detail": "35 words (need 30-80)"
+      }
+    ],
+    "sentences": [
+      {
+        "src_idx": 7,
+        "source": "The sharp edge of a knife has a very small area, so the force from Grandfather's hand produces a large pressure and the knife cuts through a tomato easily.",
+        "text": "The knife cuts through a tomato with a lot of pressure from Grandfather's hand.",
+        "fallback": false,
+        "tier": "GREEN",
+        "reasons": [],
+        "attempts": [
+          {
+            "text": "The knife has a small edge, so the force from Grandfather's hand makes it cut through a tomato easily.",
+            "temperature": 0.0,
+            "wall_s": 0.948,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 106,
+            "new_tokens": 79,
+            "ttft_ms": 134,
+            "tokens_per_s": 95.94,
+            "verify": null
+          },
+          {
+            "text": "The knife has a small edge, so the force from Grandfather's hand makes it cut through a tomato easily.",
+            "temperature": 0.4,
+            "wall_s": 0.9342,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 106,
+            "new_tokens": 79,
+            "ttft_ms": 132,
+            "tokens_per_s": 97.26,
+            "verify": null
+          },
+          {
+            "text": "The knife cuts through a tomato with a lot of pressure from Grandfather's hand.",
+            "temperature": 0.7,
+            "wall_s": 0.9463,
+            "failed": [],
+            "prompt_tokens": 106,
+            "new_tokens": 79,
+            "ttft_ms": 132,
+            "tokens_per_s": 95.82,
+            "verify": null
+          }
+        ]
+      },
+      {
+        "src_idx": 8,
+        "source": "A blunt knife has a wider edge, so the same force spreads over a larger area and the pressure is less.",
+        "text": "A blunt knife has a wider edge, so the same force spreads over a larger area, and the pressure is less.",
+        "fallback": false,
+        "tier": "AMBER",
+        "reasons": [
+          "summary_readability: grade 7.2 (limit 7.2), 21 words/sentence"
+        ],
+        "attempts": [
+          {
+            "text": "A blunt knife has a wider edge, so the same force spreads over a larger area, and the pressure is less.",
+            "temperature": 0.0,
+            "wall_s": 0.9136,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 96,
+            "new_tokens": 79,
+            "ttft_ms": 119,
+            "tokens_per_s": 98.24,
+            "verify": null
+          },
+          {
+            "text": "A knife with a wider edge spreads pressure over a larger area, so the pressure is less.",
+            "temperature": 0.4,
+            "wall_s": 0.9175,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 96,
+            "new_tokens": 79,
+            "ttft_ms": 118,
+            "tokens_per_s": 97.62,
+            "verify": null
+          },
+          {
+            "text": "A knife with a wider blade spreads pressure over a larger area, so less pressure is felt.",
+            "temperature": 0.7,
+            "wall_s": 0.8974,
+            "failed": [
+              "summary_readability"
+            ],
+            "prompt_tokens": 96,
+            "new_tokens": 79,
+            "ttft_ms": 113,
+            "tokens_per_s": 99.62,
+            "verify": null
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "kind": "short",
+      "stem": "(withheld: no valid question was written)",
+      "key": "Grandfather's",
+      "options": null,
+      "witness_idx": 7,
+      "witness": "The sharp edge of a knife has a very small area, so the force from Grandfather's hand produces a large pressure and the knife cuts through a tomato easily.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "17 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.80"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 9.1 (limit 12.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "The force from Grandfather's hand produces a large pressure and the knife cuts through a tomato easily.",
+          "temperature": 0.0,
+          "wall_s": 0.7543,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 181,
+          "new_tokens": 47,
+          "ttft_ms": 231,
+          "tokens_per_s": 88.12,
+          "verify": null
+        },
+        {
+          "text": "The force from Grandfather's hand produces a large pressure and the knife cuts through a tomato easily.",
+          "temperature": 0.4,
+          "wall_s": 0.7649,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 181,
+          "new_tokens": 47,
+          "ttft_ms": 230,
+          "tokens_per_s": 85.98,
+          "verify": null
+        },
+        {
+          "text": "The force from Grandfather's hand produces a large pressure and the knife cuts through a tomato easily.",
+          "temperature": 0.7,
+          "wall_s": 0.7451,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 181,
+          "new_tokens": 47,
+          "ttft_ms": 235,
+          "tokens_per_s": 90.37,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The sharp edge of a knife has a very small area, so the force from Grandfather's hand produces a large pressure and the knife cuts through a tomato _____.",
+        "key": "easily",
+        "witness_idx": 7,
+        "witness": "The sharp edge of a knife has a very small area, so the force from Grandfather's hand produces a large pressure and the knife cuts through a tomato easily.",
+        "options": [
+          "easily",
+          "meena",
+          "said",
+          "began"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "load",
+      "options": [
+        "load",
+        "easily",
+        "sharp",
+        "force"
+      ],
+      "witness_idx": 11,
+      "witness": "The cloth increases the area of contact, so the pressure on the head is reduced and the load is easier to carry.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "does not end with ?"
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "6 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.40"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.5 (limit 9.6)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_question_mark: does not end with ?",
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "The load is easier to carry.",
+          "temperature": 0.0,
+          "wall_s": 0.7246,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 210,
+          "tokens_per_s": 89.49,
+          "verify": null
+        },
+        {
+          "text": "The answer is load.",
+          "temperature": 0.4,
+          "wall_s": 0.7528,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 214,
+          "tokens_per_s": 85.5,
+          "verify": null
+        },
+        {
+          "text": "The load is easier to carry.",
+          "temperature": 0.7,
+          "wall_s": 0.7511,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 170,
+          "new_tokens": 47,
+          "ttft_ms": 216,
+          "tokens_per_s": 85.98,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: The cloth increases the area of contact, so the pressure on the _____ is reduced and the load is easier to carry.",
+        "key": "head",
+        "witness_idx": 11,
+        "witness": "The cloth increases the area of contact, so the pressure on the head is reduced and the load is easier to carry.",
+        "options": [
+          "head",
+          "easily",
+          "edge",
+          "knife"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "kind": "short",
+      "stem": "(withheld: no valid question was written)",
+      "key": "Meena",
+      "options": null,
+      "witness_idx": 9,
+      "witness": "The same idea explains many things Meena had seen.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "type"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "4 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.38"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.7 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What does Meena explain?",
+          "temperature": 0.0,
+          "wall_s": 0.7119,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 158,
+          "new_tokens": 47,
+          "ttft_ms": 205,
+          "tokens_per_s": 90.73,
+          "verify": null
+        },
+        {
+          "text": "What does Meena explain?",
+          "temperature": 0.4,
+          "wall_s": 0.7131,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 158,
+          "new_tokens": 47,
+          "ttft_ms": 202,
+          "tokens_per_s": 90.02,
+          "verify": null
+        },
+        {
+          "text": "What idea does Meena explain?",
+          "temperature": 0.7,
+          "wall_s": 0.7365,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 158,
+          "new_tokens": 47,
+          "ttft_ms": 205,
+          "tokens_per_s": 86.63,
+          "verify": null
+        }
+      ],
+      "reserve": null
+    },
+    {
+      "id": 4,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "force",
+      "options": [
+        "force",
+        "stone",
+        "easily",
+        "sharp"
+      ],
+      "witness_idx": 8,
+      "witness": "A blunt knife has a wider edge, so the same force spreads over a larger area and the pressure is less.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "central",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "10 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.55"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "100% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 3.7 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What is the force that spreads over a larger area?",
+          "temperature": 0.0,
+          "wall_s": 0.7491,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 217,
+          "tokens_per_s": 86.63,
+          "verify": null
+        },
+        {
+          "text": "What is the force that spreads over a larger area?",
+          "temperature": 0.4,
+          "wall_s": 0.7464,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 218,
+          "tokens_per_s": 87.12,
+          "verify": null
+        },
+        {
+          "text": "What is the name of the force?",
+          "temperature": 0.7,
+          "wall_s": 0.731,
+          "failed": [
+            "stem_no_answer_leak",
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 169,
+          "new_tokens": 47,
+          "ttft_ms": 208,
+          "tokens_per_s": 88.12,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: A blunt knife has a wider _____, so the same force spreads over a larger area and the pressure is less.",
+        "key": "edge",
+        "witness_idx": 8,
+        "witness": "A blunt knife has a wider edge, so the same force spreads over a larger area and the pressure is less.",
+        "options": [
+          "kitchen",
+          "meena",
+          "began",
+          "edge"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "kind": "mcq",
+      "stem": "What happens with depth in water?",
+      "key": "increases",
+      "options": [
+        "porters",
+        "spreads",
+        "vegetables",
+        "increases"
+      ],
+      "witness_idx": 15,
+      "witness": "Water presses on the walls of its container, and the pressure increases with depth.",
+      "tier": "GREEN",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat",
+        "topic"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "6 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.36"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.00"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "67% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 2.5 (limit 8.0)"
+        },
+        {
+          "name": "stem_answers_to_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [
+        {
+          "text": "What happens with depth in water?",
+          "temperature": 0.0,
+          "wall_s": 0.7323,
+          "failed": [],
+          "prompt_tokens": 162,
+          "new_tokens": 47,
+          "ttft_ms": 208,
+          "tokens_per_s": 87.79,
+          "verify": {
+            "text": "pressure increases",
+            "wall_s": 0.3505,
+            "prompt_tokens": 149,
+            "new_tokens": 15,
+            "ttft_ms": 197,
+            "tokens_per_s": 91.5
+          }
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: Water presses on the _____ of its container, and the pressure increases with depth.",
+        "key": "walls",
+        "witness_idx": 15,
+        "witness": "Water presses on the walls of its container, and the pressure increases with depth.",
+        "options": [
+          "heads",
+          "porters",
+          "vegetables",
+          "walls"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "kind": "mcq",
+      "stem": "(withheld: no valid question was written)",
+      "key": "easily",
+      "options": [
+        "easily",
+        "pressure",
+        "grandfather",
+        "cloth"
+      ],
+      "witness_idx": 3,
+      "witness": "'A sharp knife cuts easily,' he said.",
+      "tier": "RED",
+      "fallback": false,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "stem_nonempty",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_question_mark",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "stem_length",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "10 words (max 20)"
+        },
+        {
+          "name": "stem_no_answer_leak",
+          "severity": "HARD",
+          "passed": false,
+          "detail": "the answer appears in the question"
+        },
+        {
+          "name": "stem_not_echo",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to the witness 0.57"
+        },
+        {
+          "name": "stem_not_duplicate",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "similarity to another stem 0.38"
+        },
+        {
+          "name": "stem_in_passage",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "67% of content words are in the passage"
+        },
+        {
+          "name": "stem_readability",
+          "severity": "WARN",
+          "passed": true,
+          "detail": "grade 4.8 (limit 8.0)"
+        },
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [
+        "stem_no_answer_leak: the answer appears in the question"
+      ],
+      "attempts": [
+        {
+          "text": "What does he say?",
+          "temperature": 0.0,
+          "wall_s": 0.7273,
+          "failed": [
+            "stem_in_passage",
+            "stem_answers_to_key"
+          ],
+          "prompt_tokens": 156,
+          "new_tokens": 47,
+          "ttft_ms": 200,
+          "tokens_per_s": 87.29,
+          "verify": {
+            "text": "he said that a sharp knife cuts easily.",
+            "wall_s": 0.3245,
+            "prompt_tokens": 141,
+            "new_tokens": 15,
+            "ttft_ms": 172,
+            "tokens_per_s": 92.11
+          }
+        },
+        {
+          "text": "What does the sentence \"A sharp knife cuts easily\" imply?",
+          "temperature": 0.4,
+          "wall_s": 0.7108,
+          "failed": [
+            "stem_no_answer_leak"
+          ],
+          "prompt_tokens": 156,
+          "new_tokens": 47,
+          "ttft_ms": 197,
+          "tokens_per_s": 89.49,
+          "verify": null
+        },
+        {
+          "text": "What does he say? easily",
+          "temperature": 0.7,
+          "wall_s": 0.7362,
+          "failed": [
+            "stem_question_mark",
+            "stem_no_answer_leak",
+            "stem_in_passage"
+          ],
+          "prompt_tokens": 156,
+          "new_tokens": 47,
+          "ttft_ms": 200,
+          "tokens_per_s": 85.98,
+          "verify": null
+        }
+      ],
+      "reserve": {
+        "stem": "Fill in the blank: 'A sharp _____ cuts easily,' he said.",
+        "key": "knife",
+        "witness_idx": 3,
+        "witness": "'A sharp knife cuts easily,' he said.",
+        "options": [
+          "kitchen",
+          "grandfather",
+          "edge",
+          "knife"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "kind": "cloze",
+      "stem": "Fill in the blank: He sharpened his _____ on a stone before he began.",
+      "key": "knife",
+      "options": [
+        "force",
+        "knife",
+        "easily",
+        "pressure"
+      ],
+      "witness_idx": 1,
+      "witness": "He sharpened his knife on a stone before he began.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": null
+    },
+    {
+      "id": 8,
+      "kind": "cloze",
+      "stem": "Fill in the blank: That is why the _____ of a dam are made much thicker at the bottom than at the top.",
+      "key": "walls",
+      "options": [
+        "increases",
+        "vegetables",
+        "walls",
+        "straps"
+      ],
+      "witness_idx": 16,
+      "witness": "That is why the walls of a dam are made much thicker at the bottom than at the top.",
+      "tier": "GREEN",
+      "fallback": true,
+      "detail": false,
+      "signals": [
+        "repeat"
+      ],
+      "checks": [
+        {
+          "name": "key_in_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key is not a whole-token span of its witness"
+        },
+        {
+          "name": "options_distinct",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "duplicate options"
+        },
+        {
+          "name": "options_one_key",
+          "severity": "HARD",
+          "passed": true,
+          "detail": "key must appear exactly once"
+        },
+        {
+          "name": "options_not_from_witness",
+          "severity": "HARD",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "reasons": [],
+      "attempts": [],
+      "reserve": null
+    }
+  ],
+  "backend": {
+    "name": "executorch:qwen3-0.6b-8da4w",
+    "model_path": "models/qwen3-0.6b-8da4w/model.pte",
+    "tokenizer_path": "models/qwen3-0.6b-8da4w-portable/tokenizer.json",
+    "model_bytes": 492279552,
+    "sha256": null,
+    "load_s": 1.831,
+    "chat_format": "qwen3",
+    "bos_in_prompt": false,
+    "num_bos": 0
+  },
+  "timings": {
+    "total_s": 18.0323,
+    "summary_s": 5.5586,
+    "stems_s": 12.4723,
+    "model_wall_s": 17.3444,
+    "model_calls": 22,
+    "load_s": 1.831
+  },
+  "counts": {
+    "green": 3,
+    "amber": 0,
+    "red": 5,
+    "fallback": 2
+  },
+  "version": 1,
+  "created": "2026-11-13T01:14:35",
+  "env": {
+    "peak_rss_mb": 2039.9,
+    "peak_rss_what": "this process (ru_maxrss)",
+    "network": {
+      "known": false,
+      "default_route": null,
+      "status": "unknown (no /proc/net/route)"
+    },
+    "throttle": null,
+    "temp_c": null,
+    "python": "3.12.13",
+    "machine": "arm64",
+    "system": "Darwin",
+    "device": "Apple M4",
+    "ram_gb": 16.0,
+    "cpus": 10
+  }
+}

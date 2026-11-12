@@ -1,0 +1,184 @@
+{
+ "topic": {
+  "id": "SCI-BIO-HEALTH",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   9
+  ],
+  "title": "Health and disease",
+  "scope": "health vs disease, acute and chronic, infectious agents, modes of spread, prevention, immunisation"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 700,
+  "candidatesTokenCount": 1312,
+  "totalTokenCount": 2012,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 700
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.3,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Health vs Disease",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Being healthy means simply not having any visible illness.",
+      "why": "Students often equate the absence of symptoms with a state of complete well-being.",
+      "fix": "Health is a state of physical, mental, and social well-being, not just the absence of disease.",
+      "probe": {
+       "question": "If a person has no fever or pain but is constantly stressed and socially isolated, are they healthy?",
+       "wrong_answer": "Yes, because they do not have a disease."
+      },
+      "error_type": "everyday_language",
+      "trigger_cues": [
+       "well-being",
+       "physical",
+       "mental",
+       "social",
+       "absence of disease"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "Health is purely a personal matter independent of the environment.",
+      "why": "Students focus on individual hygiene and diet, ignoring the role of community surroundings.",
+      "fix": "Personal health depends on the surrounding environment, including clean water, sanitation, and social harmony.",
+      "probe": {
+       "question": "Can you be perfectly healthy if you live in a neighborhood with open sewage and garbage?",
+       "wrong_answer": "Yes, as long as I eat healthy food and stay clean."
+      },
+      "error_type": "single_cause",
+      "trigger_cues": [
+       "environment",
+       "community",
+       "sanitation",
+       "personal hygiene",
+       "surroundings"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Acute vs Chronic Diseases",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "All chronic diseases are infectious and spread from person to person.",
+      "why": "Students often conflate the severity of a disease with its ability to spread.",
+      "fix": "Chronic diseases like diabetes or asthma are long-term conditions that are usually non-infectious.",
+      "probe": {
+       "question": "Can you catch diabetes from sitting next to a classmate who has it?",
+       "wrong_answer": "Yes, because it is a long-lasting disease."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "long-term",
+       "short-term",
+       "infectious",
+       "chronic",
+       "acute"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Infectious Agents and Spread",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "All microbes are harmful and cause diseases.",
+      "why": "Textbooks often introduce microbes in the context of illness, ignoring beneficial ones.",
+      "fix": "Many microbes are harmless or even beneficial to humans, such as those in our gut.",
+      "probe": {
+       "question": "Are all bacteria found in the human body dangerous?",
+       "wrong_answer": "Yes, all bacteria cause diseases."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "microbes",
+       "bacteria",
+       "viruses",
+       "pathogens",
+       "harmful"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     },
+     {
+      "statement": "Diseases are spread only through direct physical touch.",
+      "why": "Students rely on visible contact as the primary mechanism for transmission.",
+      "fix": "Diseases can spread through indirect means like contaminated water, food, air droplets, or vectors like mosquitoes.",
+      "probe": {
+       "question": "How can someone get malaria if they never touched a sick person?",
+       "wrong_answer": "They cannot get it because they didn't touch anyone."
+      },
+      "error_type": "visible_only",
+      "trigger_cues": [
+       "transmission",
+       "vectors",
+       "airborne",
+       "waterborne",
+       "direct contact"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Prevention and Immunisation",
+    "prereqs": [
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Vaccines give you the disease they are meant to prevent.",
+      "why": "Students misunderstand the concept of using weakened or dead pathogens to trigger an immune response.",
+      "fix": "Vaccines train the immune system to recognize and fight pathogens without causing the actual disease.",
+      "probe": {
+       "question": "Why do doctors give polio drops to healthy children?",
+       "wrong_answer": "To give them a small amount of polio so they get sick and recover."
+      },
+      "error_type": "process_vs_product",
+      "trigger_cues": [
+       "vaccine",
+       "immune system",
+       "antibodies",
+       "prevention",
+       "weakened pathogen"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Cell structure and function",
+   "Basic human organ systems",
+   "Nutrients and balanced diet"
+  ]
+ },
+ "problems": []
+}
