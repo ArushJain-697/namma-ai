@@ -42,8 +42,10 @@ FAIL=0; UNKNOWN=0
   else echo "curl missing -> UNKNOWN"; fi
 } 2>&1 | tee "$OUT/offline_evidence.txt"
 
-grep -q "NOT OFFLINE" "$OUT/offline_evidence.txt" && FAIL=1
-grep -q "UNKNOWN" "$OUT/offline_evidence.txt" && UNKNOWN=1
+# Match only this script's own markers ("-> ..."): `ip -br addr` prints the loopback state as "UNKNOWN", which
+# once turned a clean result into UNKNOWN on the Arduino UNO Q.
+grep -q -- "-> NOT OFFLINE" "$OUT/offline_evidence.txt" && FAIL=1
+grep -q -- "-> UNKNOWN" "$OUT/offline_evidence.txt" && UNKNOWN=1
 echo
 if [ "$FAIL" = 1 ]; then
   echo "RESULT: NOT OFFLINE (see above). Unplug Ethernet and any uplink, then run again."; exit 1

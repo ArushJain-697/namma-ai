@@ -24,7 +24,8 @@ from collections import defaultdict
 from ..text import blank_term, iter_tokens, tokens
 from .base import Backend, GenResult
 
-MODES = ("faithful", "bad_number", "invent", "negate", "hard_words", "empty", "echo", "leak", "nomark", "long")
+MODES = ("faithful", "bad_number", "invent", "negate", "hard_words", "empty", "echo", "leak", "nomark", "long",
+         "off_key")  # off_key: questions look fine but, answered back, give something other than the key
 
 
 class StubBackend(Backend):
@@ -135,7 +136,12 @@ class StubBackend(Backend):
             text = self._simplify_fault(s) if self._faulty((task, s)) else self._simplify_ok(s)
         elif task == "stem":
             s, a = payload.get("sentence", ""), payload.get("answer", "")
-            text = self._stem_fault(s, a) if self._faulty((task, s, a)) else self._stem_ok(s, a)
+            faulty = self.mode != "off_key" and self._faulty((task, s, a))
+            text = self._stem_fault(s, a) if faulty else self._stem_ok(s, a)
+        elif task == "answer":  # answering its own question back (generate.verify_stem)
+            a = payload.get("answer", "")
+            off = self.mode == "off_key" and self._faulty((task, payload.get("question", ""), a))
+            text = "something else" if off else a
         else:
             text = "stub output"
         wall = time.perf_counter() - t0

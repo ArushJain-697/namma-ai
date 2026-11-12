@@ -2,13 +2,20 @@
 
 This proves our wrapper's logic only. It says nothing about a real model; that needs the Pi.
 """
+import os
+import sys
 from types import SimpleNamespace
 
 import pytest
-from sakshi.backends.executorch_backend import ExecuTorchBackend
+from sakshi.backends.base import chat_prompt
+from sakshi.backends.executorch_backend import (ExecuTorchBackend, capture_stdout, clean_output,
+                                                detect_chat_format)
 
 
 class FakeRunner:
+    """Like the real runner: writes the generated text straight to file descriptor 1 (bytes, possibly split in the
+    middle of a character), and calls back with stats."""
+
     def __init__(self, tokens=("Hello", " ", "world", "<|eot_id|>"), stats=None):
         self.tokens, self.calls, self.resets = tokens, [], 0
         self.stats = stats or SimpleNamespace(inference_start_ms=1000, prompt_eval_end_ms=1100, first_token_ms=1150,
@@ -18,9 +25,10 @@ class FakeRunner:
         self.resets += 1
 
     def generate(self, prompt, config, token_cb, stats_cb):
-        self.calls.append((prompt, config))
+        self.calls.append((prompt, config, token_cb))
         for t in self.tokens:
-            token_cb(t)
+            os.write(1, t if isinstance(t, bytes) else t.encode())
+        os.write(1, b"\nPyTorchObserver {\"prefill_token_per_sec\": 1}\n")
         stats_cb(self.stats)
 
 
@@ -78,8 +86,63 @@ def test_missing_stats_fall_back_to_wall_time(files):
     r = FakeRunner(stats=SimpleNamespace())
     b, _ = backend(files, runner=r)
     res = b.generate("p")
-    assert res.text == "Hello world" and res.new_tokens == 4 and res.tokens_per_s is None
-    assert res.ttft_ms is not None and res.ttft_ms >= 0
+    assert res.text == "Hello world" and res.new_tokens == 0 and res.tokens_per_s is None and res.ttft_ms is None
+    assert res.wall_s >= 0
+
+
+def test_no_token_callback_is_passed_and_split_characters_survive(files):
+    # "café", with the two bytes of "é" arriving as separate tokens, then a dangling half character at the end.
+    # Through the real token callback this raised UnicodeDecodeError on the UNO Q and lost the whole answer.
+    r = FakeRunner(tokens=(b"caf", b"\xc3", b"\xa9", b" ok", b"\xe2"))
+    b, _ = backend(files, runner=r)
+    res = b.generate("p")
+    assert r.calls[0][2] is None
+    assert res.text.startswith("café ok")
+
+
+def test_capture_restores_stdout(capfd):
+    out = capture_stdout(lambda: os.write(1, b"inside"))
+    print("after", flush=True)
+    assert out == "inside" and "after" in capfd.readouterr().out
+
+
+def test_capture_restores_stdout_even_when_generation_fails(capfd):
+    def boom():
+        os.write(1, b"partial")
+        raise RuntimeError("Generation failed")
+    with pytest.raises(RuntimeError):
+        capture_stdout(boom)
+    print("still here", flush=True)
+    assert "still here" in capfd.readouterr().out
+
+
+def test_clean_output_drops_stats_line_thinking_and_stop_tokens():
+    raw = "<think>\nhmm\n</think>\n\nThe answer.<|im_end|>\nPyTorchObserver {\"a\": 1}\n"
+    assert clean_output(raw) == "The answer."
+
+
+def test_chat_formats():
+    q3 = chat_prompt("qwen3", "SYS", "USER")
+    assert q3.startswith("<|im_start|>system\nSYS<|im_end|>") and q3.endswith("<think>\n\n</think>\n\n")
+    ml = chat_prompt("chatml", "SYS", "USER")
+    assert ml.endswith("<|im_start|>assistant\n") and "<think>" not in ml
+    assert chat_prompt("llama3", "SYS", "USER").startswith("<|start_header_id|>system")
+    with pytest.raises(ValueError):
+        chat_prompt("gpt", "a", "b")
+
+
+def test_chat_format_is_detected_from_the_tokenizer(tmp_path, files):
+    q3, q25, llama = tmp_path / "q3.json", tmp_path / "q25.json", tmp_path / "tok.model"
+    q3.write_text('{"added_tokens": ["<|im_start|>", "<think>"]}')
+    q25.write_text('{"added_tokens": ["<|im_start|>"]}')
+    llama.write_bytes(b"\x00binary tiktoken")
+    assert [detect_chat_format(str(p)) for p in (q3, q25, llama)] == ["qwen3", "chatml", "llama3"]
+    b, _ = backend((files[0], str(q3)))
+    assert b.chat_format == "qwen3" and b.info()["chat_format"] == "qwen3"
+    forced, _ = backend((files[0], str(q3)), chat_format="chatml")
+    assert forced.chat_format == "chatml"
+    with pytest.raises(ValueError):
+        backend(files, chat_format="nope")
 
 
 def test_info_has_what_the_run_card_needs(files):

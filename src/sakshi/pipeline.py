@@ -87,7 +87,7 @@ def _seed(term: str, idx: int, passage: str) -> int:
 def _attempt_dicts(attempts: list[Attempt]) -> list[dict]:
     return [{"text": a.text, "temperature": a.temperature, "wall_s": round(a.wall_s, 4),
              "failed": [c.name for c in failures(a.checks)], "prompt_tokens": a.prompt_tokens, "new_tokens": a.new_tokens,
-             "ttft_ms": a.ttft_ms, "tokens_per_s": a.tokens_per_s} for a in attempts]
+             "ttft_ms": a.ttft_ms, "tokens_per_s": a.tokens_per_s, "verify": getattr(a, "verify", None)} for a in attempts]
 
 
 def _reserve(passage: str, a: Analysis, c: Candidate) -> dict | None:

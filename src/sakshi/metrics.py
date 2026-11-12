@@ -91,10 +91,62 @@ def file_sha256(path: str, chunk: int = 1 << 20) -> str | None:
         return None
 
 
+def device_name() -> str:
+    """Board name from the device tree (e.g. 'Raspberry Pi 5 Model B Rev 1.0'), else CPU model, else platform."""
+    for path in ("/proc/device-tree/model", "/sys/firmware/devicetree/base/model"):
+        try:
+            with open(path, "rb") as f:
+                name = f.read().replace(b"\0", b"").decode(errors="replace").strip()
+            if name:
+                return name
+        except OSError:
+            pass
+    if sys.platform == "darwin":
+        try:
+            return subprocess.run(["sysctl", "-n", "machdep.cpu.brand_string"], capture_output=True, text=True,
+                                  timeout=5).stdout.strip() or platform.platform()
+        except (OSError, subprocess.SubprocessError):
+            pass
+    return platform.platform()
+
+
+def ram_gb() -> float | None:
+    try:
+        with open("/proc/meminfo") as f:
+            for line in f:
+                if line.startswith("MemTotal:"):
+                    return round(int(line.split()[1]) / 1024 / 1024, 1)
+    except (OSError, ValueError):
+        pass
+    try:
+        return round(os.sysconf("SC_PAGE_SIZE") * os.sysconf("SC_PHYS_PAGES") / 1024 ** 3, 1)
+    except (ValueError, OSError, AttributeError):
+        return None
+
+
 def capture_env() -> dict:
     return {"peak_rss_mb": peak_rss_mb(), "peak_rss_what": "this process (ru_maxrss)", "network": network_status(),
             "throttle": throttle_status(), "temp_c": temp_c(), "python": platform.python_version(),
-            "machine": platform.machine(), "system": platform.system()}
+            "machine": platform.machine(), "system": platform.system(), "device": device_name(), "ram_gb": ram_gb(),
+            "cpus": os.cpu_count()}
+
+
+def token_stats(run) -> dict:
+    """Totals over every model call in the run: tokens in and out, and speed weighted by tokens."""
+    attempts = [a for it in run.items for a in (it.attempts or [])]
+    attempts += [a for s in (run.summary or {}).get("sentences", []) for a in (s.get("attempts") or [])]
+    attempts += [a["verify"] for a in list(attempts) if a.get("verify")]  # the answer-back checks are model calls too
+    calls = len(attempts)
+    out_tok = sum(a.get("new_tokens") or 0 for a in attempts)
+    in_tok = sum(a.get("prompt_tokens") or 0 for a in attempts)
+    decode_s = sum((a["new_tokens"] - 1) / a["tokens_per_s"] for a in attempts
+                   if a.get("tokens_per_s") and (a.get("new_tokens") or 0) > 1)
+    decode_tok = sum(a["new_tokens"] - 1 for a in attempts if a.get("tokens_per_s") and (a.get("new_tokens") or 0) > 1)
+    prefill_s = sum(a["ttft_ms"] / 1000 for a in attempts if a.get("ttft_ms"))
+    prefill_tok = sum(a.get("prompt_tokens") or 0 for a in attempts if a.get("ttft_ms"))
+    return {"calls": calls, "prompt_tokens": in_tok, "generated_tokens": out_tok,
+            "decode_tokens_per_s": round(decode_tok / decode_s, 2) if decode_s else None,
+            "prefill_tokens_per_s": round(prefill_tok / prefill_s, 1) if prefill_s else None}
 
 
 def run_card(run) -> str:
@@ -110,6 +162,19 @@ def run_card(run) -> str:
     time_s = (f"{t.get('total_s', 0):.1f} s total  (summary {t.get('summary_s', 0):.1f} s, questions {t.get('stems_s', 0):.1f} s, "
               f"model load {t.get('load_s', 0) or 0:.1f} s)   network: {net}")
     lines = [f"Model:        {model}", f"Model size:   {size_s}", f"Peak memory:  {peak_s}", f"Time:         {time_s}"]
+    ts = token_stats(run)
+    if ts["calls"] and ts["generated_tokens"]:
+        speed = []
+        if ts["prefill_tokens_per_s"]:
+            speed.append(f"reading {ts['prefill_tokens_per_s']} tok/s")
+        if ts["decode_tokens_per_s"]:
+            speed.append(f"writing {ts['decode_tokens_per_s']} tok/s")
+        lines.append(f"Tokens:       {ts['prompt_tokens']} in, {ts['generated_tokens']} out, {ts['calls']} model calls"
+                     + (f"   ({', '.join(speed)})" if speed else ""))
+    if e.get("device"):
+        ram = f", {e['ram_gb']} GB RAM" if e.get("ram_gb") else ""
+        cpus = f", {e['cpus']} cores" if e.get("cpus") else ""
+        lines.append(f"Device:       {e['device']} ({e.get('machine', '?')}{cpus}{ram})")
     th = e.get("throttle")
     if th is not None:
         lines.append(f"Throttling:   {'none' if th['clean'] else ', '.join(th['flags'])} ({th['raw']})"
@@ -120,6 +185,7 @@ def run_card(run) -> str:
 def metrics_dict(run) -> dict:
     """Everything the pitch may quote, in one place."""
     return {"backend": run.backend, "timings": run.timings, "counts": run.counts, "env": getattr(run, "env", {}),
+            "tokens": token_stats(run),
             "gate": run.gate, "summary_words": run.summary.get("word_count"), "version": run.version, "created": run.created}
 
 

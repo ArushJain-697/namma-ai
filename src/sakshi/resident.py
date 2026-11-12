@@ -128,6 +128,9 @@ class ResidentClient(Backend):
         self._sock.settimeout(timeout)
         self._sock.connect(path)
         self._f = self._sock.makefile("rwb")
+        served = self._call({"op": "info"})["info"]  # build prompts in the format of the model the process holds
+        self.chat_format = served.get("chat_format", "llama3")
+        self.bos_in_prompt = bool(served.get("bos_in_prompt", False))
 
     def _call(self, req: dict) -> dict:
         with self._lock:

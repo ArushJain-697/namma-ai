@@ -14,11 +14,11 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, field
 
-from .backends.base import Backend, llama3_chat
+from .backends.base import Backend, chat_for
 from .checks import (HARD, WARN, CheckResult, failures, reasons, stem_checks, summary_overall_checks,
                      summary_sentence_checks, tier)
 from .select import Analysis
-from .text import blank_term, tokens
+from .text import blank_term, stem, tokens
 
 TEMPERATURES = (0.0, 0.4, 0.7)
 SEEDS = (0, 1, 2)
@@ -37,9 +37,21 @@ WHOLE_SYSTEM = (
     "You summarise a passage for a school student in 2 or 3 simple sentences. Use short, common words. "
     "Keep every number and name exactly as written. Do not add any fact that is not in the passage."
 )
-_STEM_EXAMPLE = (
-    "Sentence: Plants make food using sunlight.\nAnswer: sunlight\nQuestion: What do plants use to make food?\n\n"
+# Worked examples, given as earlier finished chat turns (see backends.base.chat_prompt): two different topics, so
+# the model learns the pattern, not one question to copy.
+_STEM_EXAMPLES = (
+    ("Sentence: Plants make food using sunlight.\nAnswer: sunlight", "What do plants use to make food?"),
+    ("Sentence: The Ganga river begins at the Gangotri glacier in the Himalayas.\nAnswer: Gangotri",
+     "At which glacier does the Ganga river begin?"),
 )
+VERIFY_SYSTEM = ("Answer the question using only the given sentence. Reply with the answer only: "
+                 "one to four words copied from the sentence.")
+_VERIFY_EXAMPLES = (
+    ("Sentence: Plants make food using sunlight.\nQuestion: What do plants use to make food?", "sunlight"),
+    ("Sentence: The Ganga river begins at the Gangotri glacier in the Himalayas.\n"
+     "Question: In which mountains does the Ganga river begin?", "the Himalayas"),
+)
+VERIFY_MAX_WORDS = 6  # a longer reply is the model copying the sentence, which would "contain" any key
 _SPECIAL = re.compile(r"<\|[^|>]*\|>")
 _LABEL = re.compile(r"^(question|rewrite|rewritten|sentence|answer|summary)\s*:\s*", re.I)
 
@@ -55,7 +67,7 @@ def clean_line(text: str) -> str:
 
 
 def _chat(backend: Backend, system: str, user: str) -> str:
-    return llama3_chat(system, user, bos=getattr(backend, "bos_in_prompt", False))
+    return chat_for(backend, system, user)
 
 
 @dataclass
@@ -68,6 +80,7 @@ class Attempt:
     new_tokens: int = 0
     ttft_ms: float | None = None
     tokens_per_s: float | None = None
+    verify: dict | None = None  # the extra model call that answered this question back (stems only)
 
 
 def _score(a: Attempt) -> tuple[int, int]:
@@ -157,12 +170,56 @@ class StemResult:
         return reasons(self.checks)
 
 
+def answers_match(reply: str, key: str) -> bool:
+    """Does a short reply name the key? Every word stem of the key must appear in the reply."""
+    got = {stem(t) for t in tokens(reply)}
+    want = [stem(t) for t in tokens(key)]
+    return bool(want) and all(w in got for w in want)
+
+
+def verify_stem(backend: Backend, question: str, witness: str, answer: str) -> tuple[CheckResult, dict]:
+    """Ask the model to answer its own question from the witness sentence alone.
+
+    Catches the commonest small-model failure: a fluent question about the sentence that does not ask for the
+    code-picked answer (Qwen3-0.6B: "What is exposed underneath each flake?" with the key "layer"; the passage says
+    "fresh iron"). The reply is only compared with the key; it never becomes the key.
+    """
+    user = f"Sentence: {witness}\nQuestion: {question}"
+    res = backend.generate(chat_for(backend, VERIFY_SYSTEM, user, examples=_VERIFY_EXAMPLES), max_new_tokens=16,
+                           temperature=0.0, task="answer", payload={"sentence": witness, "question": question, "answer": answer})
+    reply = clean_line(res.text)
+    n = len(tokens(reply))
+    ok = 0 < n <= VERIFY_MAX_WORDS and answers_match(reply, answer)
+    detail = "" if ok else f"asked to answer its own question, the model said {reply!r}, not {answer!r}"
+    stats = {"text": reply, "wall_s": round(res.wall_s, 4), "prompt_tokens": res.prompt_tokens, "new_tokens": res.new_tokens,
+             "ttft_ms": res.ttft_ms, "tokens_per_s": res.tokens_per_s}
+    return CheckResult("stem_answers_to_key", HARD, ok, detail), stats
+
+
 def make_stem(backend: Backend, witness: str, answer: str, passage: str, other_stems: list[str] | None = None,
-              retries: int = 2) -> StemResult:
-    """Ask for one question about the code-picked answer. The answer is never read from the output."""
-    user = f"{_STEM_EXAMPLE}Now your turn.\nSentence: {witness}\nAnswer: {answer}\nQuestion:"
-    attempts = _run_attempts(backend, _chat(backend, STEM_SYSTEM, user), "stem", {"sentence": witness, "answer": answer},
-                             48, lambda t: stem_checks(t, answer, witness, passage, other_stems), retries)
+              retries: int = 2, verify: bool = True) -> StemResult:
+    """Ask for one question about the code-picked answer. The answer is never read from the output.
+
+    With `verify`, a draft that passes the text checks is also answered back by the model (verify_stem), and is
+    only accepted if that answer is the key. Each verification is one more short model call.
+    """
+    user = f"Sentence: {witness}\nAnswer: {answer}"
+    prompt = chat_for(backend, STEM_SYSTEM, user, examples=_STEM_EXAMPLES)
+    verifications: list[dict | None] = []
+
+    def check(text: str) -> list[CheckResult]:
+        results = stem_checks(text, answer, witness, passage, other_stems)
+        if verify and not failures(results, HARD):
+            result, stats = verify_stem(backend, text, witness, answer)
+            results.append(result)
+            verifications.append(stats)
+        else:
+            verifications.append(None)
+        return results
+
+    attempts = _run_attempts(backend, prompt, "stem", {"sentence": witness, "answer": answer}, 48, check, retries)
+    for a, v in zip(attempts, verifications):
+        a.verify = v
     usable = [a for a in attempts if a.text and not failures(a.checks, HARD)]
     if usable:
         best = min(usable, key=_score)

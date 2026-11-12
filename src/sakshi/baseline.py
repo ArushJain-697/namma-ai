@@ -17,7 +17,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 
-from .backends.base import Backend, llama3_chat
+from .backends.base import Backend, chat_for
 from .text import content_stems, contains_term
 
 MODES = ("targeted", "free", "grounded")
@@ -71,7 +71,7 @@ def run_baseline(backend: Backend, passage: str, mode: str, sentence: str | None
     """One model call. Returns (parsed items, raw text). `extra` is read by the stub only."""
     if mode not in MODES:
         raise ValueError(f"unknown baseline mode {mode!r}")
-    prompt = llama3_chat(SYSTEM[mode], user_prompt(mode, passage, sentence), bos=getattr(backend, "bos_in_prompt", False))
+    prompt = chat_for(backend, SYSTEM[mode], user_prompt(mode, passage, sentence))
     payload = {"passage": passage, "sentence": sentence or "", **(extra or {})}
     res = backend.generate(prompt, max_new_tokens=160 if mode == "free" else 90, temperature=temperature, seed=seed,
                            task=f"baseline_{mode}", payload=payload)

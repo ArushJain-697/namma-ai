@@ -1,3 +1,4 @@
+import os
 from types import SimpleNamespace
 
 from sakshi.backends.executorch_backend import ExecuTorchBackend
@@ -29,8 +30,7 @@ class CountingRunner:
 
     def generate(self, prompt, cfg, tok_cb, stats_cb):
         n = len(prompt.split()) + cfg.num_bos + (1 if self.auto_bos else 0)
-        for t in ("Iron", " rusts", " in", " damp", " air"):
-            tok_cb(t)
+        os.write(1, b"Iron rusts in damp air")  # like the real runner: text goes to fd 1, no token callback
         stats_cb(SimpleNamespace(inference_start_ms=0, prompt_eval_end_ms=10, first_token_ms=20, inference_end_ms=120,
                                  num_prompt_tokens=n, num_generated_tokens=5))
 

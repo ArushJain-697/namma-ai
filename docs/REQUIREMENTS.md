@@ -1,6 +1,8 @@
 # Requirement map: the brief, Problem Statement 1
 
-*Status is what has actually been run. As of 4 Nov 2026 nothing has run on a Raspberry Pi or a real model; "tested here" means against a stub model in a cloud container.*
+*Superseded on 13 Nov 2026 by `docs/SUBMISSION.md`: the full pipeline has now run with a real model (Qwen3-0.6B
+through ExecuTorch) on an Apple M4 Mac and on an Arduino UNO Q (ARM Cortex-A53, offline). Not yet on a Raspberry Pi.
+The table below is the 4 Nov state, kept for history.*
 
 | Brief (verbatim where quoted) | How it is met | Command | Status |
 |---|---|---|---|

@@ -11,7 +11,7 @@ from __future__ import annotations
 import sys
 import time
 
-from .backends.base import llama3_chat
+from .backends.base import chat_for
 from .metrics import capture_env
 
 SYSTEM = "You rewrite one sentence for a school student in simple words. Keep every number and name. Add nothing new."
@@ -72,7 +72,7 @@ def run_smoke(backend, max_new: int = 48, out=print) -> dict:
     for v in verdicts:
         out(v)
 
-    prompt = llama3_chat(SYSTEM, USER, bos=getattr(backend, "bos_in_prompt", False))
+    prompt = chat_for(backend, SYSTEM, USER)
     runs = []
     for label in ("cold", "warm"):
         t0 = time.perf_counter()
@@ -108,11 +108,12 @@ def main(argv=None) -> int:
     p.add_argument("--num-bos", type=int, default=0)
     p.add_argument("--max-new", type=int, default=48)
     p.add_argument("--hash-model", action="store_true")
+    p.add_argument("--chat-format", default="auto", choices=["auto", "llama3", "chatml", "qwen3"])
     a = p.parse_args(argv)
     try:
         backend = ExecuTorchBackend(a.model, a.tokenizer, bos_in_prompt=a.bos_in_prompt, num_bos=a.num_bos,
-                                    hash_model=a.hash_model)
-    except (FileNotFoundError, ImportError, RuntimeError) as e:
+                                    hash_model=a.hash_model, chat_format=a.chat_format)
+    except (FileNotFoundError, ImportError, RuntimeError, ValueError) as e:
         print(f"SMOKE FAILED before generating: {e}")
         return 2
     return 0 if run_smoke(backend, a.max_new)["ok"] else 1

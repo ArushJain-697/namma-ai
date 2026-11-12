@@ -18,6 +18,8 @@ def add_backend_args(p: argparse.ArgumentParser) -> None:
     p.add_argument("--bos-in-prompt", action="store_true", help="put <|begin_of_text|> in the prompt (see build map T17)")
     p.add_argument("--num-bos", type=int, default=0, help="BOS tokens the runner adds (see scripts/pi_smoke.py)")
     p.add_argument("--hash-model", action="store_true", help="sha256 the .pte for the run card (slow on a Pi)")
+    p.add_argument("--chat-format", default="auto", choices=["auto", "llama3", "chatml", "qwen3"],
+                   help="prompt template; auto reads it from the tokenizer (Qwen3 -> qwen3, Qwen2.5 -> chatml)")
 
 
 def build_backend(args):
@@ -38,7 +40,7 @@ def build_backend(args):
         try:
             from .executorch_backend import ExecuTorchBackend
             return ExecuTorchBackend(args.model, args.tokenizer, bos_in_prompt=args.bos_in_prompt, num_bos=args.num_bos,
-                                     hash_model=args.hash_model)
-        except (FileNotFoundError, ImportError, RuntimeError) as e:  # a clear message, not a traceback
+                                     hash_model=args.hash_model, chat_format=getattr(args, "chat_format", "auto"))
+        except (FileNotFoundError, ImportError, RuntimeError, ValueError) as e:  # a clear message, not a traceback
             sys.exit(f"The ExecuTorch backend is not available: {e}")
     sys.exit(f"unknown backend {b!r}")
