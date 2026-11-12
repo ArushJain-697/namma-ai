@@ -1,0 +1,142 @@
+{
+ "topic": {
+  "id": "SOC-CIV-SOCIALDIV",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   10
+  ],
+  "title": "Gender, religion and caste in politics",
+  "scope": "gender division, women's representation, communalism, secular state, caste in politics"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 700,
+  "candidatesTokenCount": 1029,
+  "totalTokenCount": 1729,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 700
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 3.8,
+ "response": {
+  "concepts": [
+   {
+    "key": "gender_division",
+    "name": "Gender Division and Public/Private Sphere",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "The division of labor between men and women is biologically determined and natural.",
+      "why": "Students often observe traditional household roles in their own families and assume these are innate rather than socially constructed.",
+      "fix": "Gender roles are social constructs created by society, not biological necessities; they vary across cultures and time.",
+      "probe": {
+       "question": "Why do women mostly perform domestic chores like cooking and cleaning?",
+       "wrong_answer": "Because women are naturally born with the instinct and physical ability to do housework better than men."
+      },
+      "error_type": "stereotype",
+      "trigger_cues": [
+       "sexual division of labour",
+       "domestic sphere",
+       "public sphere",
+       "social construction"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "women_representation",
+    "name": "Women's Political Representation",
+    "prereqs": [
+     "gender_division"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Increasing the number of women in parliament will automatically solve all problems faced by women.",
+      "why": "Students often believe that identity alone guarantees specific policy outcomes without considering political ideologies.",
+      "fix": "While representation is important, political parties and their ideologies also dictate how issues are addressed, regardless of the gender of the representative.",
+      "probe": {
+       "question": "If 50% of MPs are women, will all gender-based discrimination disappear?",
+       "wrong_answer": "Yes, because women representatives will naturally prioritize and solve all women's issues."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "women's representation",
+       "legislature",
+       "political empowerment",
+       "gender equality"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "communalism",
+    "name": "Communalism and the Secular State",
+    "prereqs": [
+     "gender_division"
+    ],
+    "misconceptions": [
+     {
+      "statement": "A secular state is one that is against all religions.",
+      "why": "Students often confuse 'secularism' with 'atheism' due to common misconceptions in popular media.",
+      "fix": "A secular state does not favor any religion but treats all religions with equal respect and provides no official status to any single faith.",
+      "probe": {
+       "question": "Does a secular government allow religious festivals to be celebrated?",
+       "wrong_answer": "No, because a secular government must ban all religious activities to remain neutral."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "secularism",
+       "communalism",
+       "religious identity",
+       "state neutrality"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "caste_politics",
+    "name": "Caste in Politics and Politics in Caste",
+    "prereqs": [
+     "gender_division"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Caste is the only factor that determines how people vote in India.",
+      "why": "Media coverage of 'vote banks' often oversimplifies complex electoral behavior into single-factor explanations.",
+      "fix": "Caste is one of many factors influencing voting; economic development, party performance, and individual candidate appeal also play significant roles.",
+      "probe": {
+       "question": "Why do political parties choose candidates from specific castes in a constituency?",
+       "wrong_answer": "Because voters only care about their own caste and will never vote for anyone else."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "caste system",
+       "vote bank",
+       "electoral politics",
+       "social hierarchy"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Power Sharing",
+   "Federalism",
+   "Democracy and Diversity"
+  ]
+ },
+ "problems": []
+}

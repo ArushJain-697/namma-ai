@@ -1,0 +1,146 @@
+{
+ "topic": {
+  "id": "SOC-ECO-GLOBALISATION",
+  "subject": "social",
+  "strand": "economics",
+  "grades": [
+   10
+  ],
+  "title": "Globalisation and the Indian economy",
+  "scope": "MNCs, foreign trade, liberalisation, WTO, impact on producers and workers, fair globalisation"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 700,
+  "candidatesTokenCount": 1014,
+  "totalTokenCount": 1714,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 700
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.0,
+ "response": {
+  "concepts": [
+   {
+    "key": "foreign_trade",
+    "name": "Foreign Trade and Integration",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Foreign trade only benefits the country that exports more goods.",
+      "why": "Students often view trade as a zero-sum game similar to a sports competition.",
+      "fix": "Trade allows countries to access a wider variety of goods and services, often at lower costs, benefiting consumers in both nations.",
+      "probe": {
+       "question": "If India imports more from China than it exports, is India losing money?",
+       "wrong_answer": "Yes, because money is flowing out of India to China without a balanced return."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "import",
+       "export",
+       "market",
+       "trade",
+       "goods"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "mncs",
+    "name": "Role of Multinational Corporations",
+    "prereqs": [
+     "foreign_trade"
+    ],
+    "misconceptions": [
+     {
+      "statement": "MNCs always bring better technology and higher wages to the host country.",
+      "why": "Textbooks often highlight the positive aspects of MNCs like investment and job creation, ignoring the exploitative side.",
+      "fix": "While MNCs bring capital and technology, they often seek low-cost labor and may not always pass on benefits to local workers.",
+      "probe": {
+       "question": "Does an MNC setting up a factory in a village automatically improve the standard of living for all local workers?",
+       "wrong_answer": "Yes, because MNCs always provide high-tech jobs and fair wages to everyone they hire."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "mnc",
+       "investment",
+       "production",
+       "technology",
+       "globalisation"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "liberalisation",
+    "name": "Liberalisation and Policy",
+    "prereqs": [
+     "foreign_trade",
+     "mncs"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Liberalisation means the government has no control over the economy anymore.",
+      "why": "The term 'free market' is often misinterpreted as a complete absence of government intervention.",
+      "fix": "Liberalisation removes trade barriers, but the government still regulates sectors to protect consumers and ensure fair competition.",
+      "probe": {
+       "question": "After 1991, can the Indian government still stop a foreign company from selling harmful products?",
+       "wrong_answer": "No, because liberalisation means the government cannot interfere in business decisions."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "liberalisation",
+       "trade barriers",
+       "government policy",
+       "regulations",
+       "1991"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "wto",
+    "name": "WTO and Fair Globalisation",
+    "prereqs": [
+     "liberalisation"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The WTO is a neutral organization that ensures all countries trade fairly.",
+      "why": "Students often assume international organizations are inherently democratic and unbiased.",
+      "fix": "The WTO is dominated by developed nations, and its rules often favor their interests over those of developing countries.",
+      "probe": {
+       "question": "Does the WTO treat all member countries equally in trade negotiations?",
+       "wrong_answer": "Yes, because it is an international organization designed to ensure fair rules for everyone."
+      },
+      "error_type": "confuses_institutions",
+      "trigger_cues": [
+       "wto",
+       "fair globalisation",
+       "trade rules",
+       "international",
+       "developed countries"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Sectors of the Indian Economy",
+   "Money and Credit"
+  ]
+ },
+ "problems": []
+}

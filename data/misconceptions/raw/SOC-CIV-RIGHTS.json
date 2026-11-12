@@ -1,0 +1,160 @@
+{
+ "topic": {
+  "id": "SOC-CIV-RIGHTS",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   9
+  ],
+  "title": "Democratic rights",
+  "scope": "Fundamental Rights, right to constitutional remedies, NHRC, expanding scope of rights"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 690,
+  "candidatesTokenCount": 1213,
+  "totalTokenCount": 1903,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 690
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 43.9,
+ "response": {
+  "concepts": [
+   {
+    "key": "fundamental_rights",
+    "name": "Nature and Purpose of Fundamental Rights",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Fundamental rights mean I can do whatever I want at any time.",
+      "why": "Students often confuse the concept of 'freedom' with 'absolute liberty' without considering social responsibility.",
+      "fix": "Fundamental rights are subject to reasonable restrictions to ensure public order, morality, and the rights of others.",
+      "probe": {
+       "question": "Can you play loud music at 2 AM in a residential area if you have the right to freedom?",
+       "wrong_answer": "Yes, because I have the fundamental right to freedom and expression."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "freedom",
+       "liberty",
+       "reasonable restrictions",
+       "public order"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "Fundamental rights are only for protecting citizens from other citizens.",
+      "why": "Students often focus on interpersonal conflicts rather than the constitutional relationship between the state and the individual.",
+      "fix": "Fundamental rights are primarily protections for citizens against the arbitrary power of the state or government.",
+      "probe": {
+       "question": "Who are fundamental rights primarily designed to protect you from?",
+       "wrong_answer": "They protect me from other people who might try to hurt me or steal my things."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "state power",
+       "arbitrary",
+       "constitutional protection",
+       "citizen"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "constitutional_remedies",
+    "name": "Right to Constitutional Remedies",
+    "prereqs": [
+     "fundamental_rights"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The court will automatically punish anyone who breaks a law.",
+      "why": "Students assume the legal system acts like a self-starting machine rather than a reactive institution requiring a petition.",
+      "fix": "The Right to Constitutional Remedies allows citizens to move the court only when their fundamental rights are violated.",
+      "probe": {
+       "question": "If someone steals your bicycle, can you go to the Supreme Court directly under the Right to Constitutional Remedies?",
+       "wrong_answer": "Yes, because the court is there to punish anyone who breaks the law."
+      },
+      "error_type": "confuses_institutions",
+      "trigger_cues": [
+       "supreme court",
+       "high court",
+       "writs",
+       "violation of rights"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "nhrc",
+    "name": "Role of the NHRC",
+    "prereqs": [
+     "constitutional_remedies"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The NHRC is a court that can send people to jail.",
+      "why": "Students conflate any body with 'Commission' or 'Rights' in its name with the judiciary.",
+      "fix": "The NHRC is an independent commission that investigates human rights violations and makes recommendations, but it cannot prosecute or punish.",
+      "probe": {
+       "question": "If the NHRC finds a police officer guilty of torture, can it order the officer to be jailed?",
+       "wrong_answer": "Yes, the NHRC has the power to sentence the officer to jail."
+      },
+      "error_type": "confuses_institutions",
+      "trigger_cues": [
+       "human rights",
+       "commission",
+       "recommendations",
+       "investigation"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "expanding_scope",
+    "name": "Expanding Scope of Rights",
+    "prereqs": [
+     "fundamental_rights",
+     "constitutional_remedies"
+    ],
+    "misconceptions": [
+     {
+      "statement": "New rights like the Right to Information are fundamental rights written in the original Constitution.",
+      "why": "Students often fail to distinguish between original constitutional provisions and rights added later through laws or judicial interpretation.",
+      "fix": "Some rights are legal or statutory rights created by Parliament, which are different from the original Fundamental Rights in the Constitution.",
+      "probe": {
+       "question": "Is the Right to Information (RTI) an original fundamental right mentioned in the 1950 Constitution?",
+       "wrong_answer": "Yes, it has always been a fundamental right since the Constitution was written."
+      },
+      "error_type": "chronology_slip",
+      "trigger_cues": [
+       "rti",
+       "statutory rights",
+       "judicial interpretation",
+       "expanding scope"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "What is Democracy? Why Democracy?",
+   "Constitutional Design"
+  ]
+ },
+ "problems": []
+}

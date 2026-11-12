@@ -1,0 +1,135 @@
+{
+ "topic": {
+  "id": "SOC-CIV-INSTITUTIONS",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   9
+  ],
+  "title": "Working of institutions",
+  "scope": "President, Prime Minister and Council of Ministers, Parliament, Supreme Court, bureaucracy"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 691,
+  "candidatesTokenCount": 921,
+  "totalTokenCount": 1612,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 691
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 33.9,
+ "response": {
+  "concepts": [
+   {
+    "key": "parliament",
+    "name": "The Role and Structure of Parliament",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "The Parliament is the place where the Prime Minister makes all the laws alone.",
+      "why": "Media focus on the personality of the Prime Minister often overshadows the collective legislative process.",
+      "fix": "Laws are debated, amended, and passed by both houses of Parliament through a collective voting process.",
+      "probe": {
+       "question": "Who is responsible for passing a new law in India?",
+       "wrong_answer": "The Prime Minister decides and passes the law."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "legislature",
+       "law making",
+       "lok sabha",
+       "rajya sabha",
+       "debate"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "The Rajya Sabha is more powerful because its members are more experienced.",
+      "why": "Students often equate age and experience with higher political authority.",
+      "fix": "The Lok Sabha is more powerful in financial matters and no-confidence motions, making it the primary legislative body.",
+      "probe": {
+       "question": "Which house has the final say in money bills?",
+       "wrong_answer": "The Rajya Sabha, because it represents the states and has senior members."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "upper house",
+       "lower house",
+       "money bill",
+       "legislative power"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "executive",
+    "name": "Political vs. Permanent Executive",
+    "prereqs": [
+     "parliament"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Civil servants are the real bosses because they are more educated than ministers.",
+      "why": "Students confuse technical expertise and administrative continuity with democratic authority.",
+      "fix": "Ministers are elected representatives who hold the final decision-making power in a democracy.",
+      "probe": {
+       "question": "If a minister disagrees with a civil servant's advice, whose view prevails?",
+       "wrong_answer": "The civil servant's view, because they are experts and the minister is just a politician."
+      },
+      "error_type": "confuses_institutions",
+      "trigger_cues": [
+       "bureaucracy",
+       "civil servants",
+       "ministers",
+       "political executive",
+       "permanent executive"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "judiciary",
+    "name": "Independence of the Judiciary",
+    "prereqs": [
+     "parliament",
+     "executive"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The Supreme Court can change any law if the judges do not like it personally.",
+      "why": "Students often view the judiciary as an all-powerful body without understanding the constraint of the Constitution.",
+      "fix": "The Supreme Court can only declare laws invalid if they violate the basic structure or provisions of the Constitution.",
+      "probe": {
+       "question": "On what basis can the Supreme Court strike down a law passed by Parliament?",
+       "wrong_answer": "If the judges feel the law is bad or unfair for the country."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "judicial review",
+       "constitution",
+       "basic structure",
+       "legal validity"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Democracy and Constitution",
+   "Electoral Politics"
+  ]
+ },
+ "problems": []
+}

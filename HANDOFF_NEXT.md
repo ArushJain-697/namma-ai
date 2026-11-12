@@ -76,7 +76,15 @@ The older docs (`HANDOFF.md`, `BUILD_MAP.md`, `MASTER_BIBLE.md`) describe the 4 
   passage words: zero diagnostic value. Most common failure: answer leaks into the question (119).
 - **Before the demo**: consider showing only fill-ins + strongly verified questions, so no wrong key reaches judges.
 
-## Misconception library (in progress at handoff)
+## Misconception library: GENERATED AND ASSEMBLED (update after the notes below were written)
+- All 143 topics generated with gemini-3.1-flash-lite and assembled: **702 unique misconceptions, 515 concepts,
+  4 duplicates removed, 98 held out**, 0 topics with problems. Files in `data/misconceptions/` (library.jsonl,
+  concepts.jsonl, review.csv, stats.json, raw/). Not yet reviewed by a person: ask the user to go through review.csv.
+- BM25 matching (`scripts/check_library_match.py`): **top-1 topic right 37/40, in top 3 39/40, ~2 ms per passage**.
+  Misses: geo_soils (ranked India physical features first), geo_ghats, env_solar (matched circuits/solar system).
+  Step 1 below is therefore done except the human review and unit tests for `src/sakshi/misconceptions.py`.
+
+## Misconception library (notes from while it was running)
 - `data/misconceptions/topics.jsonl`: 143 NCERT Class 6-10 topics (science 67, social 76), names + scope only.
 - `scripts/build_misconception_library.py generate --model gemini-3.1-flash-lite --workers 2` was running; ~47 of
   143 done at handoff. **Rerun the same command to resume** (it skips topics already in `data/misconceptions/raw/`).

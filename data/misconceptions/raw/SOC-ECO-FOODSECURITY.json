@@ -1,0 +1,152 @@
+{
+ "topic": {
+  "id": "SOC-ECO-FOODSECURITY",
+  "subject": "social",
+  "strand": "economics",
+  "grades": [
+   9
+  ],
+  "title": "Food security in India",
+  "scope": "availability, access and affordability, buffer stock, public distribution system, ration shops, famine"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 693,
+  "candidatesTokenCount": 1103,
+  "totalTokenCount": 1796,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 693
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.5,
+ "response": {
+  "concepts": [
+   {
+    "key": "food_availability",
+    "name": "Food Availability",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Food security is only about having enough food produced within the country.",
+      "why": "Students often equate national production levels directly with the personal security of every citizen.",
+      "fix": "Food security also requires that food is accessible and affordable to all people, regardless of production levels.",
+      "probe": {
+       "question": "If India produces enough wheat to feed everyone, is there food security?",
+       "wrong_answer": "Yes, because the total production meets the population's needs."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "production",
+       "domestic output",
+       "total supply",
+       "self-sufficiency"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Famines are caused only by a lack of rainfall or natural disasters.",
+      "why": "Textbooks often highlight drought as the primary trigger for historical famines, ignoring socio-economic factors.",
+      "fix": "Famines are often caused by a combination of crop failure and the inability of people to purchase food due to poverty or distribution failures.",
+      "probe": {
+       "question": "Why do famines occur in a region?",
+       "wrong_answer": "They happen because it stops raining and crops stop growing."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "famine",
+       "drought",
+       "crop failure",
+       "natural disaster"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "access_affordability",
+    "name": "Access and Affordability",
+    "prereqs": [
+     "food_availability"
+    ],
+    "misconceptions": [
+     {
+      "statement": "If food is available in the market, everyone can afford to buy it.",
+      "why": "Students often assume that market availability automatically translates to individual purchasing power.",
+      "fix": "Even if food is available, people living in poverty may not have the income to purchase the required amount of food.",
+      "probe": {
+       "question": "Why might a person go hungry even if there is plenty of food in the local market?",
+       "wrong_answer": "Because the food is not actually available for sale."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "purchasing power",
+       "market price",
+       "income",
+       "affordability"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "pds_buffer_stock",
+    "name": "Buffer Stock and PDS",
+    "prereqs": [
+     "food_availability",
+     "access_affordability"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The Public Distribution System (PDS) provides free food to all citizens.",
+      "why": "Students confuse the concept of a government welfare scheme with universal free handouts.",
+      "fix": "The PDS provides food at subsidized prices to specific target groups, not free to everyone.",
+      "probe": {
+       "question": "Who gets food from a ration shop?",
+       "wrong_answer": "Every citizen can go and take food for free from the government."
+      },
+      "error_type": "confusing_institutions",
+      "trigger_cues": [
+       "ration shops",
+       "subsidized",
+       "fair price shops",
+       "pds"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Buffer stocks are kept by the government to make a profit by selling food later.",
+      "why": "Students apply the logic of private business to government economic interventions.",
+      "fix": "Buffer stocks are maintained to ensure food security during shortages and to stabilize prices, not for commercial profit.",
+      "probe": {
+       "question": "Why does the government store grains in warehouses?",
+       "wrong_answer": "To sell them later when prices are high so the government makes money."
+      },
+      "error_type": "confusing_institutions",
+      "trigger_cues": [
+       "buffer stock",
+       "fci",
+       "warehousing",
+       "price stabilization"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Poverty as a Challenge",
+   "Resources as Capital",
+   "Basic Market Economics"
+  ]
+ },
+ "problems": []
+}

@@ -1,0 +1,160 @@
+{
+ "topic": {
+  "id": "SOC-ECO-DEVELOPMENT",
+  "subject": "social",
+  "strand": "economics",
+  "grades": [
+   10
+  ],
+  "title": "Development",
+  "scope": "different goals, national and per capita income, HDI, literacy and infant mortality, sustainability"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 693,
+  "candidatesTokenCount": 1246,
+  "totalTokenCount": 1939,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 693
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.3,
+ "response": {
+  "concepts": [
+   {
+    "key": "development_goals",
+    "name": "Diverse Development Goals",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Development means the same thing for every person in society.",
+      "why": "Students often conflate their own personal aspirations with universal societal progress.",
+      "fix": "Development is subjective; what is progress for one person, like building a dam, may be destructive for another, like a displaced farmer.",
+      "probe": {
+       "question": "If a government builds a large industrial factory, is it development for everyone?",
+       "wrong_answer": "Yes, because factories create jobs and increase production for the country."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "aspirations",
+       "conflicting goals",
+       "personal progress",
+       "social development"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     },
+     {
+      "statement": "Money is the only indicator of a person's development.",
+      "why": "The emphasis on income in media and daily life overshadows non-material needs.",
+      "fix": "Development includes non-material goals like freedom, security, equal treatment, and respect, which are as important as income.",
+      "probe": {
+       "question": "Would you prefer a high-paying job with no holidays and constant fear of firing, or a lower-paying job with job security and respect?",
+       "wrong_answer": "The high-paying job, because money is the only way to measure development."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "material goods",
+       "income",
+       "non-material goals",
+       "quality of life"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "national_income",
+    "name": "National and Per Capita Income",
+    "prereqs": [
+     "development_goals"
+    ],
+    "misconceptions": [
+     {
+      "statement": "A country with a higher total national income is always more developed than one with a lower total income.",
+      "why": "Students often fail to account for the size of the population when comparing aggregates.",
+      "fix": "Total income does not tell us how it is distributed; per capita income is a better measure as it accounts for population size.",
+      "probe": {
+       "question": "Country A has a total income of 100 crores and 10 people, Country B has 200 crores and 1000 people. Which is better off?",
+       "wrong_answer": "Country B, because its total national income is higher."
+      },
+      "error_type": "numerical_misreading",
+      "trigger_cues": [
+       "total income",
+       "average income",
+       "population size",
+       "per capita"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "hdi_indicators",
+    "name": "HDI and Social Indicators",
+    "prereqs": [
+     "national_income"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Literacy rate and infant mortality are just statistics and don't reflect the actual quality of life.",
+      "why": "Students view these as abstract numbers rather than indicators of healthcare and education access.",
+      "fix": "These indicators directly reflect the government's investment in public facilities like schools and hospitals, which are essential for human development.",
+      "probe": {
+       "question": "Why is a state with high per capita income but low literacy considered less developed?",
+       "wrong_answer": "It doesn't matter, because money is the only thing that counts for development."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "literacy rate",
+       "infant mortality",
+       "public facilities",
+       "human development index"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "sustainability",
+    "name": "Sustainability of Development",
+    "prereqs": [
+     "hdi_indicators"
+    ],
+    "misconceptions": [
+     {
+      "statement": "We can use natural resources as much as we want today because future technology will solve all shortages.",
+      "why": "Technological optimism is often reinforced by media and lack of understanding of non-renewable resource limits.",
+      "fix": "Many resources like groundwater and crude oil are non-renewable; once exhausted, they cannot be replaced, threatening future generations.",
+      "probe": {
+       "question": "Is it okay to deplete groundwater rapidly if it helps our economy grow today?",
+       "wrong_answer": "Yes, because scientists will invent new ways to get water later."
+      },
+      "error_type": "presentism",
+      "trigger_cues": [
+       "non-renewable resources",
+       "future generations",
+       "environmental degradation",
+       "sustainability"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Basic Arithmetic",
+   "Introduction to Geography",
+   "Civics Basics"
+  ]
+ },
+ "problems": []
+}

@@ -1,0 +1,161 @@
+{
+ "topic": {
+  "id": "SOC-ECO-SECTORS",
+  "subject": "social",
+  "strand": "economics",
+  "grades": [
+   10
+  ],
+  "title": "Sectors of the Indian economy",
+  "scope": "primary, secondary and tertiary sectors, GDP, organised and unorganised sectors, public and private sectors, MGNREGA"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 705,
+  "candidatesTokenCount": 1190,
+  "totalTokenCount": 1895,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 705
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.4,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Sectors of Economic Activity",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "The primary sector is only about farming.",
+      "why": "Students often associate 'primary' exclusively with agriculture due to the dominance of farming in rural Indian life.",
+      "fix": "The primary sector includes all activities where goods are produced by exploiting natural resources, such as fishing, mining, and forestry, not just agriculture.",
+      "probe": {
+       "question": "Is mining a primary sector activity?",
+       "wrong_answer": "No, it is industrial work, so it must be secondary."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "natural resources",
+       "extraction",
+       "agriculture",
+       "fishing",
+       "mining"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "The tertiary sector does not produce anything valuable because it does not make physical goods.",
+      "why": "Students equate 'production' with the physical transformation of raw materials into tangible products.",
+      "fix": "The tertiary sector produces intangible services that are essential for the economy, such as transport, banking, and communication, which add significant value.",
+      "probe": {
+       "question": "Does a teacher contribute to the economy?",
+       "wrong_answer": "No, because they do not produce any physical goods or products."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "services",
+       "intangible",
+       "support",
+       "value addition"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Gross Domestic Product (GDP)",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "GDP is the sum of all goods produced in a country.",
+      "why": "Students often overlook the 'value' aspect and focus on the physical counting of items.",
+      "fix": "GDP is the value of all final goods and services produced within a country during a particular year; intermediate goods are excluded to avoid double counting.",
+      "probe": {
+       "question": "If a farmer sells wheat to a flour mill and the mill sells flour to a biscuit company, how is this counted in GDP?",
+       "wrong_answer": "You add the value of the wheat, the flour, and the biscuits together to get the total."
+      },
+      "error_type": "numerical_misreading",
+      "trigger_cues": [
+       "final goods",
+       "intermediate goods",
+       "double counting",
+       "total value"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "AAAS Project 2061"
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Organised vs Unorganised Sectors",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "All government jobs are organised and all private jobs are unorganised.",
+      "why": "Students conflate the ownership of the enterprise (public/private) with the nature of the employment contract (organised/unorganised).",
+      "fix": "Organised sectors are defined by formal rules, job security, and legal registration, which can exist in both public and private enterprises.",
+      "probe": {
+       "question": "Is a person working in a small private shop with no fixed hours in the organised sector?",
+       "wrong_answer": "Yes, because it is a private business, not a government one."
+      },
+      "error_type": "confuses_institutions",
+      "trigger_cues": [
+       "job security",
+       "formal rules",
+       "registration",
+       "employment terms"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Public and Private Sectors",
+    "prereqs": [
+     "c1",
+     "c3"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The public sector exists only to provide free services to the poor.",
+      "why": "Students associate the public sector primarily with welfare schemes like PDS or MGNREGA.",
+      "fix": "The public sector is owned by the government to provide essential services and infrastructure for the benefit of the entire society, not just for charity.",
+      "probe": {
+       "question": "Why does the government run the Railways?",
+       "wrong_answer": "To provide free travel for people who cannot afford it."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "government ownership",
+       "public interest",
+       "infrastructure",
+       "welfare"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Money and Credit",
+   "Resources and Development"
+  ]
+ },
+ "problems": []
+}

@@ -1,0 +1,155 @@
+{
+ "topic": {
+  "id": "SOC-ECO-PEOPLE",
+  "subject": "social",
+  "strand": "economics",
+  "grades": [
+   9
+  ],
+  "title": "People as resource",
+  "scope": "human capital, education and health, primary/secondary/tertiary activities, disguised and seasonal unemployment"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 695,
+  "candidatesTokenCount": 1154,
+  "totalTokenCount": 1849,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 695
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.8,
+ "response": {
+  "concepts": [
+   {
+    "key": "economic_activities",
+    "name": "Economic Activities (Primary, Secondary, Tertiary)",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Only work that involves manufacturing goods is considered an economic activity.",
+      "why": "Students often equate 'production' with physical factories and ignore the value added by services.",
+      "fix": "Economic activity includes any work that adds value to the national income, including services like teaching or banking.",
+      "probe": {
+       "question": "Is a teacher working in a school performing an economic activity?",
+       "wrong_answer": "No, because they are not producing any physical goods."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "primary sector",
+       "secondary sector",
+       "tertiary sector",
+       "production",
+       "economic activity"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Primary activities are less important than tertiary activities because they are 'old-fashioned'.",
+      "why": "The common perception that modern development means moving away from agriculture leads to devaluing the primary sector.",
+      "fix": "All sectors are interdependent; the primary sector provides the raw materials and food that sustain the secondary and tertiary sectors.",
+      "probe": {
+       "question": "Which sector is most important for a country's economy?",
+       "wrong_answer": "The tertiary sector is the only important one because it represents modern development."
+      },
+      "error_type": "presentism",
+      "trigger_cues": [
+       "agriculture",
+       "raw materials",
+       "services",
+       "interdependence"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "human_capital",
+    "name": "Human Capital Formation",
+    "prereqs": [
+     "economic_activities"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Spending money on education and health is just a personal expense, not an investment.",
+      "why": "Students view education as a consumption item because they see it as a cost to their parents rather than a long-term productive asset.",
+      "fix": "Investment in human capital through education and health increases the productivity and future earning capacity of individuals, benefiting the whole economy.",
+      "probe": {
+       "question": "Why does the government spend money on public schools and hospitals?",
+       "wrong_answer": "It is just a welfare measure to help poor people, not an investment."
+      },
+      "error_type": "confusing_institutions",
+      "trigger_cues": [
+       "human capital",
+       "investment",
+       "productivity",
+       "skills",
+       "education",
+       "health"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "unemployment",
+    "name": "Disguised and Seasonal Unemployment",
+    "prereqs": [
+     "economic_activities",
+     "human_capital"
+    ],
+    "misconceptions": [
+     {
+      "statement": "If a person is working on a farm all day, they cannot be considered unemployed.",
+      "why": "Students define unemployment strictly as 'having no job' rather than 'not being productively employed'.",
+      "fix": "Disguised unemployment occurs when more people are working than required; if some were removed, total production would remain the same.",
+      "probe": {
+       "question": "If 8 people work on a farm that only needs 5, are the extra 3 unemployed?",
+       "wrong_answer": "No, they are employed because they are working on the field every day."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "disguised unemployment",
+       "seasonal unemployment",
+       "productivity",
+       "surplus labor"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     },
+     {
+      "statement": "Seasonal unemployment only happens to people who are lazy and don't want to work year-round.",
+      "why": "The term 'unemployment' is often associated with personal failure rather than structural economic conditions.",
+      "fix": "Seasonal unemployment is a structural issue where work is only available during specific harvest or sowing seasons, leaving workers idle otherwise.",
+      "probe": {
+       "question": "Why are some agricultural laborers without work for months?",
+       "wrong_answer": "They are lazy and choose not to find work during the off-season."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "seasonal unemployment",
+       "agricultural cycle",
+       "off-season",
+       "structural"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Basic Geography",
+   "Introduction to Indian Economy",
+   "Basic Statistics"
+  ]
+ },
+ "problems": []
+}

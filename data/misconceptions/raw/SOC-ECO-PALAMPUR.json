@@ -1,0 +1,164 @@
+{
+ "topic": {
+  "id": "SOC-ECO-PALAMPUR",
+  "subject": "social",
+  "strand": "economics",
+  "grades": [
+   9
+  ],
+  "title": "Factors of production: the story of a village",
+  "scope": "land, labour, physical and human capital, multiple cropping, Green Revolution, non-farm activities"
+ },
+ "model": "gemini-3.1-flash-lite",
+ "usage": {
+  "promptTokenCount": 700,
+  "candidatesTokenCount": 1162,
+  "totalTokenCount": 1862,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 700
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 9.7,
+ "response": {
+  "concepts": [
+   {
+    "key": "c1",
+    "name": "Factors of Production",
+    "prereqs": [],
+    "misconceptions": [
+     {
+      "statement": "Only money is considered capital in production.",
+      "why": "Students often conflate the everyday use of 'capital' as money with the economic definition of physical capital.",
+      "fix": "Capital includes physical assets like tools, machines, and buildings, not just the money used to buy them.",
+      "probe": {
+       "question": "If a farmer uses his own tractor to plough his field, is that capital?",
+       "wrong_answer": "No, because he did not spend money to hire it."
+      },
+      "error_type": "confusing_related_terms",
+      "trigger_cues": [
+       "physical capital",
+       "tools",
+       "machines",
+       "buildings",
+       "investment"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     },
+     {
+      "statement": "Labour only refers to physical manual work.",
+      "why": "Students associate labour with the visible effort of farm workers, ignoring the human capital aspect.",
+      "fix": "Labour includes both manual work and the knowledge, skills, and expertise required to manage production.",
+      "probe": {
+       "question": "Is a person who plans the crop rotation and manages the farm workers considered labour?",
+       "wrong_answer": "No, they are the owner, not a labourer."
+      },
+      "error_type": "stereotype",
+      "trigger_cues": [
+       "labour",
+       "human capital",
+       "farm workers",
+       "skills",
+       "knowledge"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "HBCSE study"
+     }
+    ]
+   },
+   {
+    "key": "c2",
+    "name": "Land and Multiple Cropping",
+    "prereqs": [
+     "c1"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Land is an infinite resource that can always be expanded for farming.",
+      "why": "Students often view the landscape as vast and fail to realize that cultivable land is fixed.",
+      "fix": "Land is a fixed factor of production; we cannot create more land, so we must increase productivity on existing plots.",
+      "probe": {
+       "question": "Why can't a village just clear more forest to increase production indefinitely?",
+       "wrong_answer": "Because they are lazy; there is plenty of land available if they want to use it."
+      },
+      "error_type": "overgeneralisation",
+      "trigger_cues": [
+       "fixed factor",
+       "cultivable land",
+       "productivity",
+       "land area"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   },
+   {
+    "key": "c3",
+    "name": "Green Revolution and Modern Farming",
+    "prereqs": [
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "The Green Revolution was purely beneficial with no negative consequences.",
+      "why": "Textbooks often highlight the increase in food grain production, overshadowing the environmental costs.",
+      "fix": "While it increased yields, it also led to groundwater depletion and soil degradation due to chemical overuse.",
+      "probe": {
+       "question": "What is the long-term impact of using chemical fertilizers and tube wells for irrigation?",
+       "wrong_answer": "It only helps because it makes crops grow faster and bigger without any side effects."
+      },
+      "error_type": "single_cause_explanation",
+      "trigger_cues": [
+       "green revolution",
+       "high yielding varieties",
+       "chemical fertilizers",
+       "groundwater",
+       "yield"
+      ],
+      "confidence": "lit_supported",
+      "source_hint": "Driver et al. children's ideas"
+     }
+    ]
+   },
+   {
+    "key": "c4",
+    "name": "Non-farm Activities",
+    "prereqs": [
+     "c1",
+     "c2"
+    ],
+    "misconceptions": [
+     {
+      "statement": "Villages are only for farming and cannot have other businesses.",
+      "why": "The title 'The Story of a Village' leads students to believe the economy is exclusively agricultural.",
+      "fix": "Villages have diverse economies including transport, shopkeeping, and small-scale manufacturing to support the population.",
+      "probe": {
+       "question": "Can a person in a village earn money without owning or working on a farm?",
+       "wrong_answer": "No, because villages are only meant for agriculture."
+      },
+      "error_type": "stereotype",
+      "trigger_cues": [
+       "non-farm activities",
+       "transport",
+       "shopkeeping",
+       "small-scale manufacturing",
+       "dairy"
+      ],
+      "confidence": "plausible",
+      "source_hint": null
+     }
+    ]
+   }
+  ],
+  "requires_topics": [
+   "Basic Geography of India",
+   "Introduction to Primary, Secondary, and Tertiary Sectors"
+  ]
+ },
+ "problems": []
+}
