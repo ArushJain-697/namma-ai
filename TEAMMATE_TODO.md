@@ -27,7 +27,7 @@ The growth loop below re-runs it every 5 rounds; you do not need to run it by ha
 ## Job B: CANCELLED (training data is now the other teammate's job, with Opus, in a new format; see
 `QUESTION_QUALITY_HANDOFF.md`). Do not run `make_dataset.py` on this laptop.
 
-## Job C (your only job): grow the misconception graph all day grow the misconception graph all day
+## Job C (your only job): grow the misconception graph all day
 ```bash
 bash scripts/grow_graph.sh        # runs forever; Ctrl-C to stop; log: results/grow_graph.log
 ```
