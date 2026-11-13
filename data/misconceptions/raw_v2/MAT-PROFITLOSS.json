@@ -1,0 +1,918 @@
+{
+ "topic": {
+  "id": "MAT-PROFITLOSS",
+  "subject": "maths",
+  "strand": "maths",
+  "grades": [
+   7,
+   8
+  ],
+  "title": "Profit, loss, discount and GST",
+  "scope": "profit and loss percent always on cost price, discount on marked price, successive discounts are not additive, selling price vs cost price, GST added on price, markup vs margin, 20% gain then 20% loss does not cancel"
+ },
+ "model": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 7539,
+  "promptTokenCount": 2
+ },
+ "seconds": 50.3,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Cost price, selling price, profit and loss",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "percentage as per hundred",
+     "multiplication and subtraction of decimals"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Profit and loss percent",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "percentage of a quantity",
+     "ratio"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Discount and marked price",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "percentage of a quantity"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "GST and tax on price",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n3"
+    ],
+    "external_prereqs": [
+     "percentage of a quantity",
+     "what is a tax"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Meaning of CP and SP",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "buying and selling"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Finding profit or loss amount",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "subtraction"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Overheads and extra costs",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "addition of decimals"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Percent on cost price",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": [
+     "percentage of a quantity"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Finding SP or CP from percent",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": [
+     "multiplying by decimal factors",
+     "solving simple linear equations"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Gain then loss of same percent",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": [
+     "percentage change of different bases"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Marked price and discount amount",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "percentage of a quantity"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Discount percent and sale price",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": [
+     "subtraction"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "Successive discounts",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n12"
+    ],
+    "external_prereqs": [
+     "multiplying by decimal factors"
+    ]
+   },
+   {
+    "key": "n14",
+    "name": "Markup versus profit margin",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n8",
+     "n11"
+    ],
+    "external_prereqs": [
+     "ratio"
+    ]
+   },
+   {
+    "key": "n15",
+    "name": "Computing GST and final bill",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "percentage of a quantity"
+    ]
+   },
+   {
+    "key": "n16",
+    "name": "GST rate slabs and CGST/SGST split",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [
+     "n15"
+    ],
+    "external_prereqs": [
+     "fractions as halves"
+    ]
+   },
+   {
+    "key": "n17",
+    "name": "Profit or loss is the difference of SP and CP",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": [
+     "comparing numbers"
+    ]
+   },
+   {
+    "key": "n18",
+    "name": "Profit/loss percent = amount/CP x 100",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": [
+     "percentage formula"
+    ]
+   },
+   {
+    "key": "n19",
+    "name": "SP = CP x (1 + p/100) for gain",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [
+     "n18"
+    ],
+    "external_prereqs": [
+     "multiplying by decimal factors"
+    ]
+   },
+   {
+    "key": "n20",
+    "name": "Finding CP when SP and percent are given",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [
+     "n19"
+    ],
+    "external_prereqs": [
+     "division of decimals",
+     "solving simple linear equations"
+    ]
+   },
+   {
+    "key": "n21",
+    "name": "Loss percent is never above 100",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n18"
+    ],
+    "external_prereqs": [
+     "meaning of percent"
+    ]
+   },
+   {
+    "key": "n22",
+    "name": "Discount is calculated on marked price",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [],
+    "external_prereqs": [
+     "percentage of a quantity"
+    ]
+   },
+   {
+    "key": "n23",
+    "name": "Sale price = MP minus discount",
+    "level": 3,
+    "parent": "n12",
+    "prereqs": [
+     "n22"
+    ],
+    "external_prereqs": [
+     "subtraction"
+    ]
+   },
+   {
+    "key": "n24",
+    "name": "Second discount is on reduced price",
+    "level": 3,
+    "parent": "n13",
+    "prereqs": [
+     "n23"
+    ],
+    "external_prereqs": [
+     "percentage of a quantity"
+    ]
+   },
+   {
+    "key": "n25",
+    "name": "Net discount is less than sum of discounts",
+    "level": 3,
+    "parent": "n13",
+    "prereqs": [
+     "n24"
+    ],
+    "external_prereqs": [
+     "multiplying by decimal factors"
+    ]
+   },
+   {
+    "key": "n26",
+    "name": "GST is added to the price before tax",
+    "level": 3,
+    "parent": "n15",
+    "prereqs": [],
+    "external_prereqs": [
+     "percentage increase"
+    ]
+   },
+   {
+    "key": "n27",
+    "name": "Removing GST from a bill needs division by 1+r",
+    "level": 3,
+    "parent": "n15",
+    "prereqs": [
+     "n26"
+    ],
+    "external_prereqs": [
+     "solving simple linear equations"
+    ]
+   },
+   {
+    "key": "n28",
+    "name": "Discount first then GST on the reduced price",
+    "level": 3,
+    "parent": "n15",
+    "prereqs": [
+     "n26",
+     "n23"
+    ],
+    "external_prereqs": [
+     "order of operations"
+    ]
+   },
+   {
+    "key": "n29",
+    "name": "Markup is on CP, margin is on SP",
+    "level": 3,
+    "parent": "n14",
+    "prereqs": [
+     "n18"
+    ],
+    "external_prereqs": [
+     "percentage of a quantity"
+    ]
+   },
+   {
+    "key": "n30",
+    "name": "Equal gain and loss percent give a net loss",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [
+     "n19"
+    ],
+    "external_prereqs": [
+     "percentage of a quantity"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n18",
+    "statement": "Profit percent is always found by dividing the profit by the selling price.",
+    "why": "The selling price is the bigger and more visible number in a sale, so it feels like the whole.",
+    "fix": "Profit and loss percent are found on the cost price, because the cost is what was invested.",
+    "probe": {
+     "question": "A shirt bought for Rs 200 is sold for Rs 250. What is the profit percent?",
+     "wrong_answer": "20%"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "the final or biggest quantity is always the whole",
+    "causes": [
+     "m3"
+    ],
+    "trigger_cues": [
+     "profit percent",
+     "cost price",
+     "selling price",
+     "gain",
+     "base",
+     "hundred"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of student errors in percentage base identification"
+   },
+   {
+    "key": "m2",
+    "node": "n17",
+    "statement": "If the selling price is more than the cost price you have a loss.",
+    "why": "Students mix up which of the two numbers is paid and which is received.",
+    "fix": "Profit happens when SP is greater than CP; loss happens when SP is less than CP.",
+    "probe": {
+     "question": "CP is Rs 400 and SP is Rs 460. Is it profit or loss?",
+     "wrong_answer": "Loss, because 460 is more than 400"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "selling price",
+     "cost price",
+     "greater than",
+     "profit",
+     "loss"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n5",
+    "statement": "Cost price and selling price mean the same thing.",
+    "why": "Both are called the price of the article in daily talk.",
+    "fix": "Cost price is what the seller pays to get the article; selling price is what the buyer pays the seller.",
+    "probe": {
+     "question": "A trader buys for Rs 80 and sells for Rs 100. What is the cost price?",
+     "wrong_answer": "Rs 100"
+    },
+    "error_type": "language_confusion",
+    "root_belief": "similar sounding terms mean the same thing",
+    "causes": [],
+    "trigger_cues": [
+     "cost price",
+     "selling price",
+     "buys",
+     "sells",
+     "trader"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n7",
+    "statement": "Repair and transport money spent after buying is not part of the cost price.",
+    "why": "Students think cost price is only the amount written on the bill of purchase.",
+    "fix": "Overheads such as repair, transport and labour are added to the purchase price to get the cost price.",
+    "probe": {
+     "question": "A cycle is bought for Rs 1000 and Rs 200 is spent on repairs, then sold for Rs 1320. Profit percent?",
+     "wrong_answer": "32%"
+    },
+    "error_type": "other",
+    "root_belief": "only the first or obvious number counts",
+    "causes": [],
+    "trigger_cues": [
+     "overheads",
+     "repair",
+     "transport",
+     "cost price",
+     "labour",
+     "added"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "textbook error analyses in commercial arithmetic"
+   },
+   {
+    "key": "m5",
+    "node": "n21",
+    "statement": "Loss percent can be more than 100 if the loss is large.",
+    "why": "Gain percent can exceed 100, so students assume loss can too.",
+    "fix": "Loss cannot exceed the cost price, so loss percent is at most 100.",
+    "probe": {
+     "question": "Can a loss percent be 150%?",
+     "wrong_answer": "Yes, if the article is sold very cheaply"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a rule that works one way works the opposite way",
+    "causes": [],
+    "trigger_cues": [
+     "loss percent",
+     "more than 100",
+     "cost price",
+     "sold at zero",
+     "limit"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m6",
+    "node": "n19",
+    "statement": "A 25% gain means the selling price is 25 more than the cost price whatever the cost is.",
+    "why": "Students treat percent as a fixed number of rupees.",
+    "fix": "A 25% gain is one quarter of the cost price, so the rupee gain depends on the cost.",
+    "probe": {
+     "question": "An article costs Rs 80. Find the SP for a 25% gain.",
+     "wrong_answer": "Rs 105"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "percent is an absolute amount, not a part",
+    "causes": [],
+    "trigger_cues": [
+     "gain percent",
+     "selling price",
+     "25%",
+     "of cost price",
+     "add"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on percent as absolute versus relative quantity"
+   },
+   {
+    "key": "m7",
+    "node": "n20",
+    "statement": "To find the cost price when a 20% profit gives SP, subtract 20% of the SP from the SP.",
+    "why": "Students apply the percent to the number given in the question.",
+    "fix": "SP is 120% of CP, so CP is SP divided by 1.2, not SP minus 20% of SP.",
+    "probe": {
+     "question": "An article is sold for Rs 600 at a 20% profit. Find the cost price.",
+     "wrong_answer": "Rs 480"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "percent is always taken of the given number",
+    "causes": [],
+    "trigger_cues": [
+     "find cost price",
+     "sold at profit",
+     "given selling price",
+     "percent of",
+     "reverse"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on reverse percentage problems"
+   },
+   {
+    "key": "m8",
+    "node": "n30",
+    "statement": "A 20% gain followed by a 20% loss brings you back to the starting price.",
+    "why": "Students think plus and minus of the same number cancel.",
+    "fix": "The two percents are on different bases, so the final price is 96% of the start, a 4% net loss.",
+    "probe": {
+     "question": "A price Rs 100 rises 20% and then falls 20%. What is the final price?",
+     "wrong_answer": "Rs 100"
+    },
+    "error_type": "sign_error_belief",
+    "root_belief": "opposite changes of the same size cancel",
+    "causes": [],
+    "trigger_cues": [
+     "gain then loss",
+     "20 percent",
+     "same percent",
+     "original price",
+     "net",
+     "cancel"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on percentage increase and decrease reversal"
+   },
+   {
+    "key": "m9",
+    "node": "n10",
+    "statement": "Selling at x% profit and then buying back at x% less gives no overall change.",
+    "why": "Students pay attention to the equal percent and ignore which price it is taken on.",
+    "fix": "Every percent is on its own starting price, so equal up and down percents leave a small net loss.",
+    "probe": {
+     "question": "Rs 500 is increased by 10% and then decreased by 10%. Find the final amount.",
+     "wrong_answer": "Rs 500"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a rule from whole numbers works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "increase",
+     "decrease",
+     "same percent",
+     "final amount",
+     "base changes"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m10",
+    "node": "n22",
+    "statement": "Discount is always a percent of the cost price.",
+    "why": "Students carry over the rule that profit percent uses the cost price.",
+    "fix": "Discount is taken on the marked price, which is the price written on the article.",
+    "probe": {
+     "question": "MP is Rs 500, CP is Rs 400, discount is 10%. What is the discount?",
+     "wrong_answer": "Rs 40"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a rule from one case applies to all cases",
+    "causes": [
+     "m12"
+    ],
+    "trigger_cues": [
+     "discount",
+     "marked price",
+     "percent of",
+     "cost price",
+     "list price"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of base confusion in commercial percentages"
+   },
+   {
+    "key": "m11",
+    "node": "n23",
+    "statement": "The discount amount is the new price you pay.",
+    "why": "The discount is the number in the offer, so students read it as the answer.",
+    "fix": "Discount is what you save; the price paid is the marked price minus the discount.",
+    "probe": {
+     "question": "MP is Rs 800 with 25% discount. What do you pay?",
+     "wrong_answer": "Rs 200"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "the last number computed is the final answer",
+    "causes": [],
+    "trigger_cues": [
+     "discount",
+     "pay",
+     "sale price",
+     "marked price",
+     "save"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m12",
+    "node": "n11",
+    "statement": "A discount means the shopkeeper makes a loss.",
+    "why": "Students link giving money off with losing money.",
+    "fix": "A discount is taken from the marked price, which is usually above cost, so the seller can still gain.",
+    "probe": {
+     "question": "CP is Rs 600, MP is Rs 1000, discount 20%. Is there a loss?",
+     "wrong_answer": "Yes, because there is a discount"
+    },
+    "error_type": "language_confusion",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "discount",
+     "marked price",
+     "loss",
+     "sale",
+     "shopkeeper"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m13",
+    "node": "n25",
+    "statement": "Two successive discounts of 20% and 10% equal a single discount of 30%.",
+    "why": "Students add percents as ordinary numbers.",
+    "fix": "The second discount is on the reduced price, so the net discount is 28%, less than 30%.",
+    "probe": {
+     "question": "A 20% and then 10% discount equal one discount of how much?",
+     "wrong_answer": "30%"
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "percents can be added like plain numbers",
+    "causes": [],
+    "trigger_cues": [
+     "successive discount",
+     "single discount",
+     "add",
+     "20 and 10",
+     "equivalent"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on additive reasoning with percentages"
+   },
+   {
+    "key": "m14",
+    "node": "n24",
+    "statement": "The second discount is calculated on the original marked price.",
+    "why": "Students keep using the marked price as the only base they know.",
+    "fix": "The second discount is on the price after the first discount.",
+    "probe": {
+     "question": "MP Rs 1000, discounts 10% and 10%. Final price?",
+     "wrong_answer": "Rs 800"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "the first number given is always the base",
+    "causes": [
+     "m13"
+    ],
+    "trigger_cues": [
+     "second discount",
+     "reduced price",
+     "marked price",
+     "successive",
+     "after first"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of base shifting in successive percent problems"
+   },
+   {
+    "key": "m15",
+    "node": "n13",
+    "statement": "Changing the order of two successive discounts changes the final price.",
+    "why": "Students think the first discount does more work than the second.",
+    "fix": "The final price is the same in either order because it is a product of the same factors.",
+    "probe": {
+     "question": "Is 20% then 10% cheaper than 10% then 20% on Rs 1000?",
+     "wrong_answer": "Yes, the bigger discount first gives a lower price"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "order always matters in a sequence",
+    "causes": [],
+    "trigger_cues": [
+     "order",
+     "successive discount",
+     "first discount",
+     "final price",
+     "same"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m16",
+    "node": "n26",
+    "statement": "GST is included in the price and is subtracted from it.",
+    "why": "Prices in shops often already include tax, so students think GST reduces the price.",
+    "fix": "GST is added to the price before tax, so the bill is higher than the base price.",
+    "probe": {
+     "question": "An item costs Rs 500 and GST is 18%. What is the bill?",
+     "wrong_answer": "Rs 410"
+    },
+    "error_type": "sign_error_belief",
+    "root_belief": "tax or fee is a reduction",
+    "causes": [],
+    "trigger_cues": [
+     "gst",
+     "tax",
+     "bill",
+     "added",
+     "price before tax"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m17",
+    "node": "n27",
+    "statement": "To remove 18% GST from a bill of Rs 1180, subtract 18% of 1180.",
+    "why": "Students use the percent on the number given.",
+    "fix": "The bill is 118% of the base price, so divide by 1.18 to get Rs 1000.",
+    "probe": {
+     "question": "A bill of Rs 1180 includes 18% GST. Find the price before GST.",
+     "wrong_answer": "Rs 967.60"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "percent is always taken of the given number",
+    "causes": [],
+    "trigger_cues": [
+     "includes gst",
+     "price before tax",
+     "inclusive",
+     "bill",
+     "remove tax"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on reverse percentage problems"
+   },
+   {
+    "key": "m18",
+    "node": "n28",
+    "statement": "GST is charged on the marked price, not on the price after discount.",
+    "why": "Students use the marked price as the base for everything.",
+    "fix": "GST is charged on the price the buyer actually pays after discount, the taxable value.",
+    "probe": {
+     "question": "MP Rs 1000, discount 10%, GST 5%. Find the bill.",
+     "wrong_answer": "Rs 950"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "the first number given is always the base",
+    "causes": [],
+    "trigger_cues": [
+     "gst",
+     "discount",
+     "marked price",
+     "taxable value",
+     "bill"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m19",
+    "node": "n16",
+    "statement": "CGST and SGST are each equal to the full GST rate.",
+    "why": "Students see 9% and 9% and do not connect them to the 18% total.",
+    "fix": "GST is split equally between CGST and SGST, so each is half the rate, and together they make the full GST.",
+    "probe": {
+     "question": "GST is 12%. What are CGST and SGST?",
+     "wrong_answer": "12% each, total 24%"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "parts of a whole each equal the whole",
+    "causes": [],
+    "trigger_cues": [
+     "cgst",
+     "sgst",
+     "gst rate",
+     "half",
+     "state",
+     "centre"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m20",
+    "node": "n29",
+    "statement": "Markup percent and profit margin percent on an item are the same number.",
+    "why": "Both describe the extra over cost and are used loosely together.",
+    "fix": "Markup is found on the cost price and margin on the selling price, so for the same profit the markup is larger.",
+    "probe": {
+     "question": "CP Rs 80, SP Rs 100. What are markup and margin?",
+     "wrong_answer": "Both 20%"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar sounding terms mean the same thing",
+    "causes": [],
+    "trigger_cues": [
+     "markup",
+     "margin",
+     "cost price",
+     "selling price",
+     "percent of"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "business mathematics education studies on base confusion"
+   },
+   {
+    "key": "m21",
+    "node": "n14",
+    "statement": "A marked price is the cost price plus the discount.",
+    "why": "Students link the tag price to the discount word only.",
+    "fix": "The marked price is the tag price chosen by the seller; the discount is subtracted from it to get the sale price.",
+    "probe": {
+     "question": "MP is Rs 600 with 10% discount. Cost price is Rs 500. What is the sale price?",
+     "wrong_answer": "Rs 660"
+    },
+    "error_type": "sign_error_belief",
+    "root_belief": "a rule from whole numbers works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "marked price",
+     "discount",
+     "sale price",
+     "tag",
+     "list price"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m22",
+    "node": "n8",
+    "statement": "A profit of Rs 20 always means 20 percent profit.",
+    "why": "The same number is read as both rupees and percent.",
+    "fix": "Percent profit depends on the cost price, so Rs 20 is 20% only when the cost is Rs 100.",
+    "probe": {
+     "question": "A toy is bought for Rs 50 and sold for Rs 70. What is the profit percent?",
+     "wrong_answer": "20%"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "percent is an absolute amount, not a part",
+    "causes": [],
+    "trigger_cues": [
+     "profit",
+     "percent",
+     "rupees",
+     "cost price",
+     "amount"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on percent versus absolute amount confusion"
+   },
+   {
+    "key": "m23",
+    "node": "n9",
+    "statement": "A larger percent gain always means a larger rupee gain.",
+    "why": "Students compare percents without checking the cost price.",
+    "fix": "The rupee gain is percent times cost, so a small percent of a large cost can be bigger than a large percent of a small cost.",
+    "probe": {
+     "question": "Which is more profit: 30% on Rs 100 or 10% on Rs 1000?",
+     "wrong_answer": "30% on Rs 100"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "bigger or more means more effect",
+    "causes": [],
+    "trigger_cues": [
+     "percent gain",
+     "rupee profit",
+     "cost price",
+     "compare",
+     "larger"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on proportional reasoning with percents"
+   }
+  ]
+ },
+ "problems": []
+}
