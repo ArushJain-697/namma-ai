@@ -1,0 +1,863 @@
+{
+ "topic": {
+  "id": "MAT-MEANMEDMODE",
+  "subject": "maths",
+  "strand": "maths",
+  "grades": [
+   7,
+   8,
+   9,
+   10
+  ],
+  "title": "Mean, median and mode",
+  "scope": "mean as balancing point, median needs ordered data, mode can be absent or multiple, effect of outliers, choosing the right average, weighted mean, average of averages"
+ },
+ "model": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 10957,
+  "promptTokenCount": 2
+ },
+ "seconds": 78.2,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Mean (arithmetic average)",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "addition and division of whole numbers",
+     "decimals"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Median (middle value)",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "ordering numbers",
+     "even and odd numbers"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Mode (most frequent value)",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "tally marks and frequency tables"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Comparing averages and choosing one",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1",
+     "n2",
+     "n3"
+    ],
+    "external_prereqs": [
+     "reading data from tables and bar graphs"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Computing the mean",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "addition of whole numbers",
+     "division of whole numbers",
+     "frequency tables"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Mean as balancing point",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "positive and negative differences",
+     "integers"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Weighted mean and average of averages",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "multiplication of whole numbers",
+     "ratio and proportion"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Ordering data",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "comparing and ordering numbers"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Finding the middle value",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": [
+     "counting a list of items",
+     "mean of two numbers"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Identifying the mode",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "frequency tables",
+     "tally marks"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Effect of outliers",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [
+     "n5",
+     "n9"
+    ],
+    "external_prereqs": [
+     "comparing large and small numbers"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Choosing the right average",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": [
+     "types of data: numerical and categorical"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "Mean = sum of values ÷ number of values",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": [
+     "addition of whole numbers",
+     "division of whole numbers"
+    ]
+   },
+   {
+    "key": "n14",
+    "name": "Zeros and repeated values all count in the mean",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": [
+     "zero as a number"
+    ]
+   },
+   {
+    "key": "n15",
+    "name": "Mean lies between smallest and largest value and need not be in the data",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": [
+     "decimals",
+     "number line"
+    ]
+   },
+   {
+    "key": "n16",
+    "name": "Deviations from the mean add up to zero",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": [
+     "adding integers",
+     "subtracting integers"
+    ]
+   },
+   {
+    "key": "n17",
+    "name": "Weighted mean = sum of (value × weight) ÷ sum of weights",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n13",
+     "n14"
+    ],
+    "external_prereqs": [
+     "multiplication of whole numbers"
+    ]
+   },
+   {
+    "key": "n18",
+    "name": "Combining group averages needs group sizes",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": [
+     "speed = distance ÷ time",
+     "multiplication of whole numbers"
+    ]
+   },
+   {
+    "key": "n19",
+    "name": "Data must be sorted before choosing the median",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": [
+     "ascending order"
+    ]
+   },
+   {
+    "key": "n20",
+    "name": "Odd count: median is the ((n+1)/2)th sorted value",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [
+     "n19"
+    ],
+    "external_prereqs": [
+     "counting positions in a list"
+    ]
+   },
+   {
+    "key": "n21",
+    "name": "Even count: median is the mean of the two middle values",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [
+     "n20"
+    ],
+    "external_prereqs": [
+     "mean of two numbers",
+     "decimals"
+    ]
+   },
+   {
+    "key": "n22",
+    "name": "Mode is the value that occurs most, not how many times",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [],
+    "external_prereqs": [
+     "frequency"
+    ]
+   },
+   {
+    "key": "n23",
+    "name": "A data set can have no mode or several modes",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [
+     "n22"
+    ],
+    "external_prereqs": [
+     "frequency"
+    ]
+   },
+   {
+    "key": "n24",
+    "name": "An outlier pulls the mean strongly",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": [
+     "large and small numbers"
+    ]
+   },
+   {
+    "key": "n25",
+    "name": "Median and mode resist outliers",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [
+     "n19",
+     "n22"
+    ],
+    "external_prereqs": [
+     "ordering numbers"
+    ]
+   },
+   {
+    "key": "n26",
+    "name": "Use mode for the most common or popular item",
+    "level": 3,
+    "parent": "n12",
+    "prereqs": [
+     "n22"
+    ],
+    "external_prereqs": [
+     "categorical data"
+    ]
+   },
+   {
+    "key": "n27",
+    "name": "Use median for skewed data with extreme values",
+    "level": 3,
+    "parent": "n12",
+    "prereqs": [
+     "n24",
+     "n25"
+    ],
+    "external_prereqs": [
+     "income and price data in daily life"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n13",
+    "statement": "The mean is the middle number of the data.",
+    "why": "Mean, median and average all sound like 'the centre', so students mix them up.",
+    "fix": "The mean is found by adding all values and dividing by how many there are; the middle value is the median.",
+    "probe": {
+     "question": "Find the mean of 2, 3 and 10.",
+     "wrong_answer": "3"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar-sounding terms mean the same thing",
+    "causes": [],
+    "trigger_cues": [
+     "mean",
+     "median",
+     "middle",
+     "average",
+     "centre",
+     "sum",
+     "divide"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on students' conceptions of average and measures of centre"
+   },
+   {
+    "key": "m2",
+    "node": "n14",
+    "statement": "A zero in the data can be left out when finding the mean.",
+    "why": "Zero means 'nothing', so students think it adds nothing and need not be counted.",
+    "fix": "A zero adds nothing to the sum but it is still one observation, so it must be counted when dividing.",
+    "probe": {
+     "question": "Three students scored 0, 10 and 20. Find the mean score.",
+     "wrong_answer": "15"
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "zero means nothing, so ignore it",
+    "causes": [],
+    "trigger_cues": [
+     "zero",
+     "absent",
+     "mean",
+     "number of observations",
+     "divide",
+     "score"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of students' treatment of zero in computing averages"
+   },
+   {
+    "key": "m3",
+    "node": "n14",
+    "statement": "A value that repeats is counted only once when finding the mean.",
+    "why": "Students treat the data as a list of different values and skip repeats as redundant.",
+    "fix": "Every observation counts, so a repeated value is added each time it occurs and counted each time.",
+    "probe": {
+     "question": "Find the mean of 4, 4, 4 and 10.",
+     "wrong_answer": "7"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "repeating something adds no new information",
+    "causes": [],
+    "trigger_cues": [
+     "repeated",
+     "same value",
+     "frequency",
+     "mean",
+     "observations",
+     "total"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n15",
+    "statement": "The mean must be one of the values in the data, and a whole number if the data are whole numbers.",
+    "why": "Students expect an answer to look like the things being counted.",
+    "fix": "The mean can be a decimal and need not appear in the data, e.g. an average of 2.5 children per family.",
+    "probe": {
+     "question": "The number of children in 4 families is 2, 3, 2, 3. What is the mean? Can it be a whole number only?",
+     "wrong_answer": "It must be 2 or 3, so 2 or 3"
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "answers must look like the things counted",
+    "causes": [],
+    "trigger_cues": [
+     "mean",
+     "average",
+     "children per family",
+     "decimal",
+     "fraction",
+     "not possible"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on 'average family has 2.5 children' type items"
+   },
+   {
+    "key": "m5",
+    "node": "n16",
+    "statement": "The mean is the value with equal numbers of observations below and above it.",
+    "why": "Students think 'average' splits the data evenly by count, like the median does.",
+    "fix": "The mean balances the distances: the total below it equals the total above it, but the number of values on each side can differ.",
+    "probe": {
+     "question": "For 1, 2, 3, 4, 100 the mean is 22. How many values are below the mean?",
+     "wrong_answer": "Two, because half the values are below the mean"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "an average splits things equally by number",
+    "causes": [],
+    "trigger_cues": [
+     "mean",
+     "balance",
+     "deviation",
+     "below",
+     "above",
+     "equal",
+     "half"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on mean as balance point versus median"
+   },
+   {
+    "key": "m6",
+    "node": "n6",
+    "statement": "Adding a new value equal to the current mean changes the mean.",
+    "why": "Students think any new data point must shift the average.",
+    "fix": "Adding a value equal to the mean keeps the total deviation zero, so the mean stays the same.",
+    "probe": {
+     "question": "Five numbers have mean 20. A sixth number, 20, is added. What is the new mean?",
+     "wrong_answer": "More than 20"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "any addition always changes the result",
+    "causes": [],
+    "trigger_cues": [
+     "new value",
+     "added",
+     "mean stays",
+     "balance",
+     "total",
+     "new mean"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n17",
+    "statement": "A weighted mean is just the ordinary mean of the values, ignoring weights.",
+    "why": "Students are used to every item counting equally.",
+    "fix": "A value with a bigger weight counts more, so multiply each value by its weight, add, and divide by the total weight.",
+    "probe": {
+     "question": "A student scores 80 in a test of weight 1 and 60 in a test of weight 3. What is the weighted mean?",
+     "wrong_answer": "70"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "all items count equally",
+    "causes": [],
+    "trigger_cues": [
+     "weighted",
+     "weight",
+     "importance",
+     "marks",
+     "frequency",
+     "multiply",
+     "total weight"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on students' understanding of weighted averages"
+   },
+   {
+    "key": "m8",
+    "node": "n18",
+    "statement": "The mean of two groups together is the average of their two means, whatever the group sizes.",
+    "why": "Students treat each mean as a single number and forget how many values it stands for.",
+    "fix": "Each group mean must be weighted by its size: total of all values ÷ total number of values.",
+    "probe": {
+     "question": "Class A has 20 students with mean 60 and class B has 30 students with mean 80. What is the mean of all 50?",
+     "wrong_answer": "70"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "all items count equally",
+    "causes": [],
+    "trigger_cues": [
+     "average of averages",
+     "combined mean",
+     "two groups",
+     "number of students",
+     "total marks"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on averaging averages and group sizes"
+   },
+   {
+    "key": "m9",
+    "node": "n18",
+    "statement": "If a journey is done at 60 km/h one way and 40 km/h back, the average speed is 50 km/h.",
+    "why": "Speeds look like ordinary numbers that can be averaged directly.",
+    "fix": "Average speed is total distance ÷ total time. For equal distances it is less than 50 km/h, here 48 km/h.",
+    "probe": {
+     "question": "A bus goes 120 km at 60 km/h and returns 120 km at 40 km/h. Find the average speed for the whole trip.",
+     "wrong_answer": "50 km/h"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a rule that works for plain numbers works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "average speed",
+     "total distance",
+     "total time",
+     "return journey",
+     "km/h",
+     "rate"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on averaging rates and ratios"
+   },
+   {
+    "key": "m10",
+    "node": "n19",
+    "statement": "The median is the middle item of the list in the order it is given.",
+    "why": "The word 'middle' is taken to mean the middle position without arranging the data.",
+    "fix": "Data must first be arranged in order from smallest to largest, then the middle value is the median.",
+    "probe": {
+     "question": "Find the median of 7, 2, 9, 4, 5.",
+     "wrong_answer": "9"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "skip the preparatory step, the rule still works",
+    "causes": [],
+    "trigger_cues": [
+     "median",
+     "middle",
+     "arrange",
+     "ascending order",
+     "sorted",
+     "unordered"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of errors in finding the median"
+   },
+   {
+    "key": "m11",
+    "node": "n20",
+    "statement": "For 9 ordered values the median is the 4th value because 9 ÷ 2 is about 4.",
+    "why": "Students halve the count instead of using the position (n+1)/2.",
+    "fix": "For 9 ordered values the median is the 5th value, since 4 values lie on each side.",
+    "probe": {
+     "question": "Which position is the median in 9 ordered values?",
+     "wrong_answer": "4th"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "halving a count gives the middle position",
+    "causes": [],
+    "trigger_cues": [
+     "median",
+     "position",
+     "odd number",
+     "middle term",
+     "(n+1)/2",
+     "ordered"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m12",
+    "node": "n21",
+    "statement": "When there are two middle values, the median is the lower one.",
+    "why": "Students want the median to be an actual data value, so they choose one of the two.",
+    "fix": "With an even number of values the median is the mean of the two middle values.",
+    "probe": {
+     "question": "Find the median of 3, 5, 7, 9.",
+     "wrong_answer": "5"
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "answers must look like the things counted",
+    "causes": [],
+    "trigger_cues": [
+     "median",
+     "even number",
+     "two middle",
+     "mean of",
+     "average of the middle",
+     "ordered"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of errors in finding the median for even-sized data"
+   },
+   {
+    "key": "m13",
+    "node": "n9",
+    "statement": "The median is the number halfway between the smallest and largest values.",
+    "why": "Students think 'middle' means the midpoint of the range.",
+    "fix": "The median is the middle value of the ordered data by position, not the midpoint of the range.",
+    "probe": {
+     "question": "Find the median of 1, 2, 3, 10, 20.",
+     "wrong_answer": "10.5"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "middle means halfway between the ends",
+    "causes": [],
+    "trigger_cues": [
+     "median",
+     "middle",
+     "range",
+     "smallest",
+     "largest",
+     "midpoint",
+     "ordered"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m14",
+    "node": "n22",
+    "statement": "The mode is how many times the most common value occurs.",
+    "why": "The frequency column is the number students see most prominently.",
+    "fix": "The mode is the value itself that occurs most often; the number of times is its frequency.",
+    "probe": {
+     "question": "Find the mode of 3, 3, 5, 5, 5, 8.",
+     "wrong_answer": "3"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "how many and which one are the same",
+    "causes": [],
+    "trigger_cues": [
+     "mode",
+     "frequency",
+     "most often",
+     "tally",
+     "highest frequency",
+     "occurs"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on reading mode from frequency tables"
+   },
+   {
+    "key": "m15",
+    "node": "n23",
+    "statement": "Every data set has exactly one mode.",
+    "why": "Examples in class usually have one clear mode, so students expect one answer always.",
+    "fix": "A data set can have two or more modes, or none if no value repeats more than the others.",
+    "probe": {
+     "question": "What is the mode of 2, 3, 3, 4, 4, 5?",
+     "wrong_answer": "3 only"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a question always has exactly one answer",
+    "causes": [],
+    "trigger_cues": [
+     "mode",
+     "bimodal",
+     "two modes",
+     "no mode",
+     "same frequency",
+     "most often"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on students' ideas of mode"
+   },
+   {
+    "key": "m16",
+    "node": "n23",
+    "statement": "If no value repeats, the mode is 0.",
+    "why": "Students use zero to say 'nothing found'.",
+    "fix": "If no value occurs more often than the others, the data has no mode; 0 is a number, not 'none'.",
+    "probe": {
+     "question": "What is the mode of 4, 7, 9, 12?",
+     "wrong_answer": "0"
+    },
+    "error_type": "other",
+    "root_belief": "nothing is shown by writing zero",
+    "causes": [],
+    "trigger_cues": [
+     "mode",
+     "no mode",
+     "none",
+     "each once",
+     "no repeat",
+     "zero"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m17",
+    "node": "n24",
+    "statement": "An extreme value is a mistake and must be removed before finding any average.",
+    "why": "Students think unusual data must be wrong data.",
+    "fix": "An extreme value may be genuine; it pulls the mean, so we may choose the median instead of deleting it.",
+    "probe": {
+     "question": "Salaries are 10000, 12000, 11000, 13000 and 200000. Is 200000 a mistake to be deleted?",
+     "wrong_answer": "Yes, it must be a mistake so remove it"
+    },
+    "error_type": "other",
+    "root_belief": "unusual things must be mistakes",
+    "causes": [],
+    "trigger_cues": [
+     "outlier",
+     "extreme value",
+     "very large",
+     "salary",
+     "remove",
+     "mean increases"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m18",
+    "node": "n25",
+    "statement": "A very large value changes the median as much as it changes the mean.",
+    "why": "Students think every average reacts to every value.",
+    "fix": "The median depends on position, so one extreme value barely changes it, while the mean changes a lot.",
+    "probe": {
+     "question": "For 4, 5, 6, 7, 8 the median is 6. If 8 becomes 80, what is the new median?",
+     "wrong_answer": "About 20, like the mean"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "all averages behave the same way",
+    "causes": [],
+    "trigger_cues": [
+     "outlier",
+     "median unchanged",
+     "mean changes",
+     "extreme",
+     "resistant",
+     "change one value"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on students' reasoning about robustness of mean and median"
+   },
+   {
+    "key": "m19",
+    "node": "n26",
+    "statement": "The mean is the best average to use for every kind of data.",
+    "why": "The mean is taught first and most, so it feels like 'the' average.",
+    "fix": "The mean needs numbers that can be added; for the most popular choice like a shoe size or colour, use the mode.",
+    "probe": {
+     "question": "A shopkeeper wants to stock the most sold shoe size. Which average should be used?",
+     "wrong_answer": "The mean size, 7.3"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "the method taught first always works",
+    "causes": [
+     "m20"
+    ],
+    "trigger_cues": [
+     "most popular",
+     "most sold",
+     "best average",
+     "shoe size",
+     "mode",
+     "categorical"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on choosing a suitable measure of centre"
+   },
+   {
+    "key": "m20",
+    "node": "n27",
+    "statement": "The mean is always the fairest typical value because it uses every number in the data.",
+    "why": "Students feel that using all data is always better than using only the middle.",
+    "fix": "When there are extreme values the mean is pulled away from most data, so the median is a better typical value.",
+    "probe": {
+     "question": "Five incomes are 15000, 16000, 14000, 15000 and 100000. Which average is a fairer typical income?",
+     "wrong_answer": "The mean, 32000, because it uses all incomes"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "using all the data is always better",
+    "causes": [],
+    "trigger_cues": [
+     "typical",
+     "income",
+     "skewed",
+     "extreme values",
+     "fair",
+     "median is better",
+     "representative"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on students' justification when choosing mean or median"
+   },
+   {
+    "key": "m21",
+    "node": "n5",
+    "statement": "From a frequency table, the mean is the sum of frequencies divided by the number of rows.",
+    "why": "Students treat every number in the table as the same kind of data.",
+    "fix": "Multiply each value by its frequency, add these, then divide by the total frequency.",
+    "probe": {
+     "question": "Values 1, 2, 3 have frequencies 1, 1, 8. Find the mean.",
+     "wrong_answer": "3.33"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "all numbers in a table are the same kind",
+    "causes": [],
+    "trigger_cues": [
+     "frequency table",
+     "frequency",
+     "x f",
+     "sum of frequencies",
+     "mean from table",
+     "tally"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}

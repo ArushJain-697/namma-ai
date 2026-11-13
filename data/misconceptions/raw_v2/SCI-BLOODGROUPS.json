@@ -1,0 +1,906 @@
+{
+ "topic": {
+  "id": "SCI-BLOODGROUPS",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   8,
+   10
+  ],
+  "title": "Blood, blood groups and donation",
+  "scope": "Red cells, white cells, platelets and plasma, ABO and Rh groups, antigens vs antibodies, universal donor and recipient, why mixing wrong groups clumps blood, clotting, blood is not 'used up' by donating and is replaced"
+ },
+ "model": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 11845,
+  "promptTokenCount": 2
+ },
+ "seconds": 84.3,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Components of blood and their jobs",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "blood as the transport fluid of the circulatory system"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Red blood cells",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "respiration needs oxygen"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "RBCs carry oxygen using haemoglobin",
+    "level": 3,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "oxygen is needed by body cells"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Haemoglobin is the red iron-containing pigment",
+    "level": 3,
+    "parent": "n2",
+    "prereqs": [
+     "n3"
+    ],
+    "external_prereqs": [
+     "iron as a mineral in food"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "White blood cells",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "germs cause disease"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "WBCs defend the body against germs",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": [
+     "germs cause disease"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Platelets and clotting",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Platelets help blood to clot at a wound",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "A clot seals the wound and stops blood loss",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Plasma",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "mixtures and dissolved substances"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Plasma is the pale liquid carrying dissolved food, waste, hormones and CO2",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [],
+    "external_prereqs": [
+     "solute and solution"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "ABO and Rh blood groups",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Antigens and antibodies",
+    "level": 2,
+    "parent": "n12",
+    "prereqs": [
+     "n2",
+     "n10"
+    ],
+    "external_prereqs": [
+     "germs cause disease"
+    ]
+   },
+   {
+    "key": "n14",
+    "name": "Antigens are markers on the surface of red cells",
+    "level": 3,
+    "parent": "n13",
+    "prereqs": [
+     "n3"
+    ],
+    "external_prereqs": [
+     "cells have a surface membrane"
+    ]
+   },
+   {
+    "key": "n15",
+    "name": "Antibodies are proteins in plasma that attack foreign antigens",
+    "level": 3,
+    "parent": "n13",
+    "prereqs": [
+     "n11",
+     "n14"
+    ],
+    "external_prereqs": [
+     "proteins"
+    ]
+   },
+   {
+    "key": "n16",
+    "name": "The ABO system",
+    "level": 2,
+    "parent": "n12",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n17",
+    "name": "Group A has A antigen and anti-B; group B has B antigen and anti-A",
+    "level": 3,
+    "parent": "n16",
+    "prereqs": [
+     "n14",
+     "n15"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n18",
+    "name": "Group O has no antigens but both anti-A and anti-B",
+    "level": 3,
+    "parent": "n16",
+    "prereqs": [
+     "n14",
+     "n15"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n19",
+    "name": "Group AB has both antigens and neither antibody",
+    "level": 3,
+    "parent": "n16",
+    "prereqs": [
+     "n14",
+     "n15"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n20",
+    "name": "The Rh factor",
+    "level": 2,
+    "parent": "n12",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n21",
+    "name": "Rh-positive has the Rh antigen; Rh-negative lacks it",
+    "level": 3,
+    "parent": "n20",
+    "prereqs": [
+     "n14"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n22",
+    "name": "Rh-negative people make anti-Rh antibodies only after exposure to Rh+ blood",
+    "level": 3,
+    "parent": "n20",
+    "prereqs": [
+     "n15",
+     "n21"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n23",
+    "name": "Blood donation and transfusion",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n24",
+    "name": "Matching donor and recipient",
+    "level": 2,
+    "parent": "n23",
+    "prereqs": [
+     "n16",
+     "n20"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n25",
+    "name": "Mismatch makes recipient antibodies clump donor red cells",
+    "level": 3,
+    "parent": "n24",
+    "prereqs": [
+     "n14",
+     "n15"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n26",
+    "name": "O negative is the universal donor",
+    "level": 3,
+    "parent": "n24",
+    "prereqs": [
+     "n18",
+     "n21",
+     "n25"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n27",
+    "name": "AB positive is the universal recipient",
+    "level": 3,
+    "parent": "n24",
+    "prereqs": [
+     "n19",
+     "n21",
+     "n25"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n28",
+    "name": "Giving blood",
+    "level": 2,
+    "parent": "n23",
+    "prereqs": [
+     "n2",
+     "n10"
+    ],
+    "external_prereqs": [
+     "volume and quantity in litres and millilitres"
+    ]
+   },
+   {
+    "key": "n29",
+    "name": "The body replaces donated plasma and cells",
+    "level": 3,
+    "parent": "n28",
+    "prereqs": [
+     "n2",
+     "n11"
+    ],
+    "external_prereqs": [
+     "bone marrow makes blood cells"
+    ]
+   },
+   {
+    "key": "n30",
+    "name": "A donation is a small fraction of the roughly 5 litres of blood",
+    "level": 3,
+    "parent": "n28",
+    "prereqs": [],
+    "external_prereqs": [
+     "comparing quantities in millilitres and litres"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n11",
+    "statement": "Plasma is the red part of the blood.",
+    "why": "Whole blood looks red, so students assume the liquid itself is red.",
+    "fix": "Plasma is a pale yellowish liquid. Blood looks red because of the haemoglobin inside the red cells.",
+    "probe": {
+     "question": "After the blood cells are removed, what colour is the remaining plasma?",
+     "wrong_answer": "Red"
+    },
+    "error_type": "visible_only",
+    "root_belief": "the whole's visible look is true of every part",
+    "causes": [],
+    "trigger_cues": [
+     "plasma",
+     "pale",
+     "yellow",
+     "liquid",
+     "straw",
+     "colour"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n11",
+    "statement": "Blood is just red cells floating in water.",
+    "why": "Students picture the liquid as plain water and overlook what it carries.",
+    "fix": "The liquid part, plasma, is mostly water but also carries dissolved food, hormones, salts, proteins and waste.",
+    "probe": {
+     "question": "How does digested food reach the body cells in blood?",
+     "wrong_answer": "Only the red cells carry it; the liquid is just water"
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "a body liquid is just plain water",
+    "causes": [],
+    "trigger_cues": [
+     "plasma",
+     "dissolved",
+     "transport",
+     "hormones",
+     "nutrients",
+     "water"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n3",
+    "statement": "Oxygen is carried dissolved in the plasma, not by the red cells.",
+    "why": "Students think gases simply dissolve in a liquid like sugar in water.",
+    "fix": "Most oxygen is carried by haemoglobin inside red blood cells. Plasma carries very little.",
+    "probe": {
+     "question": "Which part of blood mainly carries oxygen?",
+     "wrong_answer": "Plasma"
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "things in a liquid are carried simply by dissolving",
+    "causes": [],
+    "trigger_cues": [
+     "oxygen",
+     "haemoglobin",
+     "transport",
+     "red cells",
+     "lungs",
+     "dissolved"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n4",
+    "statement": "Blood inside the veins is blue and turns red only when it meets air.",
+    "why": "Veins look blue through the skin and diagrams colour them blue.",
+    "fix": "Blood is always red. Oxygen-poor blood is dark red and oxygen-rich blood is bright red. Veins look blue because of how light passes through skin.",
+    "probe": {
+     "question": "What colour is blood inside a vein before it leaves the body?",
+     "wrong_answer": "Blue"
+    },
+    "error_type": "visible_only",
+    "root_belief": "what I see on the surface is the real property",
+    "causes": [],
+    "trigger_cues": [
+     "veins",
+     "blue",
+     "deoxygenated",
+     "dark red",
+     "haemoglobin",
+     "diagram"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of common misconceptions about circulation and blood among school students"
+   },
+   {
+    "key": "m5",
+    "node": "n6",
+    "statement": "A higher white cell count always means a person is healthier.",
+    "why": "Students think more defenders is always better.",
+    "fix": "A very high white cell count often shows an infection or other illness, so it is not a sign of better health.",
+    "probe": {
+     "question": "A blood test shows many more white cells than normal. What does it show?",
+     "wrong_answer": "The person is extra healthy and strong"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "bigger or more means better",
+    "causes": [],
+    "trigger_cues": [
+     "white blood cells",
+     "count",
+     "infection",
+     "defence",
+     "increase",
+     "germs"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m6",
+    "node": "n8",
+    "statement": "Platelets are white blood cells that fight germs.",
+    "why": "Both are colourless or pale and both are linked to wounds in the textbook.",
+    "fix": "Platelets are tiny cell fragments that help blood clot. White blood cells are the ones that fight germs.",
+    "probe": {
+     "question": "Which blood part fights germs that enter a cut?",
+     "wrong_answer": "Platelets"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar-looking things do the same job",
+    "causes": [],
+    "trigger_cues": [
+     "platelets",
+     "white cells",
+     "clot",
+     "germs",
+     "cut",
+     "fragments"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n8",
+    "statement": "Blood clots because red cells stick together, as in wrong blood groups.",
+    "why": "Students link every 'sticking together' of blood to one event.",
+    "fix": "Clotting is caused by platelets and proteins forming a mesh at a wound. Clumping from wrong blood groups is a different process involving antibodies.",
+    "probe": {
+     "question": "What makes blood clot at a cut?",
+     "wrong_answer": "Red cells clump together"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar-sounding processes are the same process",
+    "causes": [],
+    "trigger_cues": [
+     "clot",
+     "clump",
+     "platelets",
+     "agglutination",
+     "cut",
+     "fibrin"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m8",
+    "node": "n9",
+    "statement": "Blood clots simply because it dries when it meets air.",
+    "why": "Everyday experience shows blood hardening on the skin as it dries.",
+    "fix": "A clot is made by platelets and proteins even in a wet wound, not only by drying. It stops further bleeding and lets the skin heal.",
+    "probe": {
+     "question": "Why does blood stop flowing from a small cut?",
+     "wrong_answer": "Air dries it up"
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "a change in a material is just drying or cooling",
+    "causes": [],
+    "trigger_cues": [
+     "clot",
+     "scab",
+     "dries",
+     "air",
+     "bleeding",
+     "platelets"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "classroom studies of children's ideas about blood and wound healing"
+   },
+   {
+    "key": "m9",
+    "node": "n14",
+    "statement": "Antigens are the body's defence chemicals and antibodies are the invaders.",
+    "why": "The two words sound alike and students reverse their roles.",
+    "fix": "Antigens are markers, such as those on red cells or on germs. Antibodies are the defence proteins made against foreign antigens.",
+    "probe": {
+     "question": "Which one is the defence protein?",
+     "wrong_answer": "Antigen"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar sounding terms mean the same thing",
+    "causes": [],
+    "trigger_cues": [
+     "antigen",
+     "antibody",
+     "defence",
+     "foreign",
+     "marker",
+     "protein"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "concept inventories and teacher reports on immunology vocabulary confusion"
+   },
+   {
+    "key": "m10",
+    "node": "n14",
+    "statement": "A and B antigens are found floating in the plasma.",
+    "why": "Students think everything in blood floats in the liquid.",
+    "fix": "The A and B antigens sit on the surface of red blood cells. The antibodies are the ones in the plasma.",
+    "probe": {
+     "question": "Where are the antigens of group A blood located?",
+     "wrong_answer": "Dissolved in the plasma"
+    },
+    "error_type": "part_whole",
+    "root_belief": "everything in a mixture is spread through the liquid",
+    "causes": [],
+    "trigger_cues": [
+     "surface",
+     "red cells",
+     "antigen",
+     "plasma",
+     "membrane",
+     "located"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n15",
+    "statement": "People have anti-A or anti-B antibodies only after they have been given the wrong blood.",
+    "why": "Students believe antibodies are always made after an attack, as with vaccines.",
+    "fix": "Anti-A and anti-B antibodies are already in plasma from early life for the antigens a person lacks. A first mismatched transfusion can therefore be dangerous.",
+    "probe": {
+     "question": "A group A person gets group B blood for the first time. Are there anti-B antibodies already?",
+     "wrong_answer": "No, they form only after the transfusion"
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "a rule from one case works everywhere",
+    "causes": [
+     "m16"
+    ],
+    "trigger_cues": [
+     "antibodies",
+     "naturally",
+     "first",
+     "transfusion",
+     "plasma",
+     "anti-b"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "teaching studies on antibody timing in ABO and Rh systems"
+   },
+   {
+    "key": "m12",
+    "node": "n17",
+    "statement": "A person with blood group A has anti-A antibodies.",
+    "why": "Students match the letter with the same letter in the antibody.",
+    "fix": "Group A has the A antigen and anti-B antibodies. A person never has antibodies against their own antigens.",
+    "probe": {
+     "question": "What antibodies are in the plasma of group A blood?",
+     "wrong_answer": "Anti-A"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "same name means the same thing",
+    "causes": [
+     "m16"
+    ],
+    "trigger_cues": [
+     "group a",
+     "anti-b",
+     "antigen",
+     "antibody",
+     "plasma",
+     "letters"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "misconception lists in biology teaching literature on blood groups"
+   },
+   {
+    "key": "m13",
+    "node": "n18",
+    "statement": "Group O blood has no antigens, so it has no antibodies either.",
+    "why": "Students think nothing on the cells means nothing anywhere in the blood.",
+    "fix": "Group O red cells carry no A or B antigens, but the plasma has both anti-A and anti-B antibodies.",
+    "probe": {
+     "question": "What antibodies does group O plasma contain?",
+     "wrong_answer": "None"
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "none of one thing means none of everything",
+    "causes": [
+     "m18"
+    ],
+    "trigger_cues": [
+     "group o",
+     "no antigens",
+     "anti-a",
+     "anti-b",
+     "plasma",
+     "both"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m14",
+    "node": "n19",
+    "statement": "Group AB has both anti-A and anti-B antibodies because it has both letters.",
+    "why": "Students add the letters to the antibodies instead of the antigens.",
+    "fix": "Group AB has both A and B antigens and no anti-A or anti-B antibodies.",
+    "probe": {
+     "question": "What antibodies are in AB plasma?",
+     "wrong_answer": "Anti-A and anti-B"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a label names what the body has in every part",
+    "causes": [
+     "m19"
+    ],
+    "trigger_cues": [
+     "group ab",
+     "both antigens",
+     "no antibodies",
+     "anti-a",
+     "anti-b",
+     "plasma"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m15",
+    "node": "n21",
+    "statement": "Rh-positive blood is positively charged and Rh-negative is negatively charged.",
+    "why": "Students read the signs as electrical charge from everyday and science use.",
+    "fix": "Positive means the Rh antigen is present on the red cells, and negative means it is absent. It has nothing to do with electric charge.",
+    "probe": {
+     "question": "What does Rh-negative mean?",
+     "wrong_answer": "The blood carries a negative electric charge"
+    },
+    "error_type": "everyday_language",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "rh factor",
+     "positive",
+     "negative",
+     "antigen",
+     "present",
+     "absent"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m16",
+    "node": "n22",
+    "statement": "Rh-negative people are born with anti-Rh antibodies, like the anti-A and anti-B of ABO.",
+    "why": "Students carry the ABO pattern over to the Rh system.",
+    "fix": "Rh-negative people make anti-Rh antibodies only after exposure to Rh-positive blood, for example by transfusion or a pregnancy.",
+    "probe": {
+     "question": "An Rh-negative person gets Rh-positive blood for the first time. Are anti-Rh antibodies already present?",
+     "wrong_answer": "Yes, from birth"
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "a rule from one case works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "rh negative",
+     "anti-rh",
+     "exposure",
+     "first transfusion",
+     "pregnancy",
+     "sensitised"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "teaching studies on Rh sensitisation and ABO comparison"
+   },
+   {
+    "key": "m17",
+    "node": "n25",
+    "statement": "Wrong blood clumps because two different bloods simply cannot mix, like oil and water.",
+    "why": "Students think different kinds of liquids will not blend.",
+    "fix": "Clumping occurs because the recipient's antibodies attach to antigens on the donor's red cells and make them stick together.",
+    "probe": {
+     "question": "Why does A blood clump when given to a group B person?",
+     "wrong_answer": "Different bloods cannot mix"
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "different things cannot mix",
+    "causes": [],
+    "trigger_cues": [
+     "agglutination",
+     "clump",
+     "mismatch",
+     "antibody",
+     "antigen",
+     "transfusion"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies on students' explanations of transfusion reactions"
+   },
+   {
+    "key": "m18",
+    "node": "n25",
+    "statement": "The donor's antibodies attack the recipient's red cells, so the donor's plasma matters most.",
+    "why": "Students think the one giving is the one who acts.",
+    "fix": "The recipient's antibodies attack the donor's red cells. The donor's own antibodies are usually diluted in the larger volume of the recipient's blood.",
+    "probe": {
+     "question": "Whose antibodies cause the clumping in a wrong transfusion?",
+     "wrong_answer": "The donor's"
+    },
+    "error_type": "part_whole",
+    "root_belief": "the giver decides the outcome",
+    "causes": [],
+    "trigger_cues": [
+     "recipient",
+     "donor",
+     "antibodies",
+     "attack",
+     "red cells",
+     "transfusion"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m19",
+    "node": "n26",
+    "statement": "Group O people can receive blood from any group.",
+    "why": "Students mix up universal donor with universal recipient.",
+    "fix": "Group O people can only receive O blood because they carry anti-A and anti-B. It is group AB+ that can receive from all groups.",
+    "probe": {
+     "question": "Can a group O person safely receive A blood?",
+     "wrong_answer": "Yes, O accepts all"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "none of something means accepting everything",
+    "causes": [],
+    "trigger_cues": [
+     "universal donor",
+     "universal recipient",
+     "group o",
+     "receive",
+     "accept",
+     "all groups"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "classroom concept checks on universal donor and recipient"
+   },
+   {
+    "key": "m20",
+    "node": "n27",
+    "statement": "AB-positive is the universal donor because it contains both antigens.",
+    "why": "Students think more antigens means more ability to give.",
+    "fix": "AB+ can receive from every group but can give only to AB+. The universal donor is O negative.",
+    "probe": {
+     "question": "Which group can give blood to all groups?",
+     "wrong_answer": "AB positive"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "having more means more power",
+    "causes": [],
+    "trigger_cues": [
+     "ab positive",
+     "universal recipient",
+     "universal donor",
+     "antigens",
+     "both",
+     "receive"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m21",
+    "node": "n29",
+    "statement": "Blood given in a donation is lost for good and the body cannot make it again.",
+    "why": "Students think the body has a fixed stock that only gets used up.",
+    "fix": "The body quickly makes new plasma and new red cells in the bone marrow, so the donated blood is replaced.",
+    "probe": {
+     "question": "A person donates blood. What happens to the amount of blood later?",
+     "wrong_answer": "It stays lower for life"
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "a lost amount is gone forever",
+    "causes": [],
+    "trigger_cues": [
+     "donation",
+     "replaced",
+     "bone marrow",
+     "new cells",
+     "regenerate",
+     "lost"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "public health surveys of donor myths and fears"
+   },
+   {
+    "key": "m22",
+    "node": "n29",
+    "statement": "A donor's blood is back to normal the same day.",
+    "why": "Students assume the body fixes things at once.",
+    "fix": "Plasma is replaced within a day or two, but red cells take several weeks to be rebuilt, which is why donors wait before giving again.",
+    "probe": {
+     "question": "How long do the red cells take to be replaced after donating?",
+     "wrong_answer": "A few hours"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "changes happen instantly or not at all",
+    "causes": [],
+    "trigger_cues": [
+     "weeks",
+     "replace",
+     "red cells",
+     "donate again",
+     "interval",
+     "plasma"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m23",
+    "node": "n30",
+    "statement": "Donating blood takes about half of a person's blood, around 2 to 3 litres.",
+    "why": "Students picture a blood bag as a very large share of the body's blood.",
+    "fix": "An adult has about 5 litres and a donation takes only about 350 to 450 millilitres, a small fraction.",
+    "probe": {
+     "question": "About how much blood is taken in one donation?",
+     "wrong_answer": "2 to 3 litres"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "what is taken feels larger than it is",
+    "causes": [
+     "m21"
+    ],
+    "trigger_cues": [
+     "litres",
+     "millilitres",
+     "donation",
+     "bag",
+     "total blood",
+     "adult"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}
