@@ -44,6 +44,8 @@ def main():
     ap.add_argument("--ask", type=float, default=0.62, help="similarity from which Sonnet is asked")
     ap.add_argument("--roots", type=int, default=120, help="number of root-belief groups")
     ap.add_argument("--batch", type=int, default=40)
+    ap.add_argument("--recheck-auto", action="store_true",
+                    help="keep the Sonnet-judged links and roots in links_v2.json, send the auto-linked ones to Sonnet too")
     args = ap.parse_args()
 
     from sentence_transformers import SentenceTransformer
@@ -67,7 +69,11 @@ def main():
     C = enc([f"{c['name']} ({c['topic']})" for c in concepts])
     Q = enc([name for _, name in pairs])
     S = Q @ C.T
-    links, ask = [], []
+    links, ask, auto_pairs = [], [], set()
+    if args.recheck_auto:
+        prev = json.load(open(OUT))
+        links = [l for l in prev["prereq_links"] if l["how"] == "sonnet"]
+        auto_pairs = {(l["src"], l["via"]) for l in prev["prereq_links"] if l["how"] == "meaning"}
     for k, (cid, name) in enumerate(pairs):
         me = by_id[cid]
         ok = [j for j, c in enumerate(concepts) if c["topic_id"] != me["topic_id"]
@@ -77,6 +83,10 @@ def main():
         sims = S[k, ok]
         order = np.argsort(-sims)[:5]
         top = [(concepts[ok[i]], float(sims[i])) for i in order]
+        if args.recheck_auto:
+            if (cid, name) in auto_pairs:
+                ask.append((cid, name, top))
+            continue
         if top[0][1] >= args.auto and (len(top) < 2 or top[0][1] - top[1][1] >= 0.02):
             links.append({"src": cid, "dst": top[0][0]["id"], "via": name, "how": "meaning", "score": round(top[0][1], 3)})
         elif top[0][1] >= args.ask:
@@ -106,6 +116,12 @@ def main():
                 links.append({"src": cid, "dst": top[o - 1][0]["id"], "via": name, "how": "sonnet",
                               "score": round(top[o - 1][1], 3)})
         print(f"  sonnet batch {b // args.batch + 1}/{(len(ask) + args.batch - 1) // args.batch}: links now {len(links)}", flush=True)
+
+    if args.recheck_auto:  # roots were already done: keep them
+        prev["prereq_links"] = links
+        json.dump(prev, open(OUT, "w"), indent=1)
+        print(f"rechecked: {len(links)} links ({sum(l['how'] == 'sonnet' for l in links)} Sonnet-checked)")
+        return
 
     # ---- 2. root beliefs -------------------------------------------------------------------------------
     from sklearn.cluster import AgglomerativeClustering
