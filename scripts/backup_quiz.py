@@ -42,7 +42,7 @@ from sakshi.text import split_sentences, tokens, STOPWORDS  # noqa: E402
 
 OUT = ROOT / "results" / "backup_quiz"
 MODEL = ROOT / "models" / "qwen3-0.6b-8da4w"
-VARIANTS = ("window", "passage", "hybrid", "hybrid_mis", "v3", "v4", "ft")
+VARIANTS = ("window", "passage", "hybrid", "hybrid_mis", "v3", "v4", "ft", "ft2")
 
 SYSTEM = (
     "You write one multiple-choice question for a Class 6-10 student about the key sentence of a text.\n"
@@ -209,7 +209,7 @@ def cmd_generate(a) -> None:
         with open(OUT / f"{v}.jsonl", "w") as f:
             for p in passages:
                 t = time.time()
-                if v == "ft":
+                if v in ("ft", "ft2"):
                     r = quiz_ft(m, p["text"])
                 elif v == "v3":
                     r = quiz_v3(m, p["text"], beliefs, lib)
