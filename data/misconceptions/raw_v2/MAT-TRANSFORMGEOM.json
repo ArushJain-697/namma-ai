@@ -1,0 +1,604 @@
+{
+ "topic": {
+  "id": "MAT-TRANSFORMGEOM",
+  "subject": "maths",
+  "strand": "maths",
+  "grades": [
+   8,
+   9,
+   10
+  ],
+  "title": "Translations, reflections and rotations",
+  "scope": "Sliding, flipping and turning shapes; reflection in an axis and image coordinates; rotation about a point by 90° and 180°; which properties stay unchanged; the image is congruent to the original; the order of transformations matters."
+ },
+ "model": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 6841,
+  "promptTokenCount": 2
+ },
+ "seconds": 47.2,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Translation (sliding)",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "coordinates in the Cartesian plane",
+     "directions on a grid"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Reflection (flipping)",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "coordinates in the Cartesian plane",
+     "perpendicular lines",
+     "symmetry of shapes"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Rotation (turning)",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "angles and their measure",
+     "clockwise and anticlockwise",
+     "coordinates in the Cartesian plane"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Properties and combinations of transformations",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1",
+     "n2",
+     "n3"
+    ],
+    "external_prereqs": [
+     "congruence of figures"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Describing a translation",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "positive and negative numbers"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Image coordinates after translation",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "addition of integers"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Mirror line and image",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Reflection in the axes",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": [
+     "signs of coordinates in quadrants"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Rotation about a point",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Rotation by 90 and 180 degrees",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n9"
+    ],
+    "external_prereqs": [
+     "right angle and straight angle"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Invariant properties",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "length, angle and area"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Order of transformations",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Translation moves every point by the same distance and direction",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Translation does not turn or flip the shape",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Translation by (a, b) changes (x, y) to (x+a, y+b)",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n16",
+    "name": "Negative shift means left or down",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n15"
+    ],
+    "external_prereqs": [
+     "negative numbers on number line"
+    ]
+   },
+   {
+    "key": "n17",
+    "name": "Image is as far behind the mirror as object is in front",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": [
+     "distance between point and line"
+    ]
+   },
+   {
+    "key": "n18",
+    "name": "Line joining point and image is perpendicular to mirror line",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n19",
+    "name": "Points on the mirror line do not move",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n20",
+    "name": "Reflection in x-axis: (x, y) to (x, -y)",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n21",
+    "name": "Reflection in y-axis: (x, y) to (-x, y)",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n22",
+    "name": "Reflection reverses orientation (left-right swap)",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n23",
+    "name": "Centre of rotation stays fixed",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n24",
+    "name": "Every point turns through the same angle about the centre",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [
+     "n23"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n25",
+    "name": "Positive angle is anticlockwise, 90 degrees is a quarter turn",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [
+     "n24"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n26",
+    "name": "Rotation by 180 degrees about origin: (x, y) to (-x, -y)",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [
+     "n24"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n27",
+    "name": "Rotation by 90 degrees anticlockwise about origin: (x, y) to (-y, x)",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [
+     "n25"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n28",
+    "name": "Image is congruent: lengths, angles, area unchanged",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [],
+    "external_prereqs": [
+     "congruent figures"
+    ]
+   },
+   {
+    "key": "n29",
+    "name": "Position and orientation may change",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [
+     "n28"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n30",
+    "name": "Doing two transformations in a different order can give a different image",
+    "level": 3,
+    "parent": "n12",
+    "prereqs": [
+     "n28"
+    ],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n13",
+    "statement": "In a translation, only the corner points move and the rest of the shape stays where it was.",
+    "why": "Students track vertices only and picture the shape as being redrawn.",
+    "fix": "Every point of the shape moves by the same distance in the same direction, so the whole shape slides.",
+    "probe": {
+     "question": "A triangle is slid 3 units right. Which points of the triangle move?",
+     "wrong_answer": "Only the three corners move"
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "only the obvious parts are affected",
+    "causes": [],
+    "trigger_cues": [
+     "every point",
+     "slide",
+     "same distance",
+     "same direction",
+     "translation",
+     "vertices"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n14",
+    "statement": "A translated shape looks different from the original because it has moved.",
+    "why": "Students confuse change of position with change of the shape itself.",
+    "fix": "A translation only changes position; the image has the same size, shape and direction as the object.",
+    "probe": {
+     "question": "Does a figure slid 5 units up change its shape or orientation?",
+     "wrong_answer": "Yes, it looks different after moving"
+    },
+    "error_type": "other",
+    "root_belief": "moving something changes what it is",
+    "causes": [],
+    "trigger_cues": [
+     "slide",
+     "translation",
+     "same shape",
+     "same size",
+     "position",
+     "orientation"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n15",
+    "statement": "In a translation (a, b), the first number moves the point up or down and the second moves it sideways.",
+    "why": "Students mix up the order of x and y or read the shift as rows then columns.",
+    "fix": "The first number is the shift along the x-axis (sideways) and the second is the shift along the y-axis (up or down).",
+    "probe": {
+     "question": "Point (2, 3) is translated by (4, 1). What is the image?",
+     "wrong_answer": "(3, 7)"
+    }
+   },
+   {
+    "key": "m4",
+    "node": "n17",
+    "statement": "The image in a mirror is as far from the mirror line as the object is from the nearest corner of the shape, not from every point.",
+    "why": "Students measure distance only for one convenient point and assume the rest of the image just follows along.",
+    "fix": "Every point of the image is exactly as far behind the mirror line as the matching point of the object is in front of it. Measure each point's distance separately, at right angles to the line.",
+    "probe": {
+     "question": "Point A is 3 cm in front of a mirror line and point B of the same shape is 5 cm in front. How far behind the mirror line is the image of B?",
+     "wrong_answer": "3 cm, because the whole image is placed at the same distance as the nearest point."
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "One measurement fixes the whole image",
+    "causes": [],
+    "trigger_cues": [
+     "distance",
+     "mirror line",
+     "image",
+     "nearest point",
+     "measure",
+     "behind the mirror"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n18",
+    "statement": "The distance from a point to the mirror line is measured along any slanting line, not only at right angles.",
+    "why": "Students measure the distance along a slanting line or from a ruler placed at any angle. This gives a longer distance and a tilted image.",
+    "fix": "Distance to the mirror line is the shortest distance, measured along the perpendicular. The line joining a point and its image is perpendicular to the mirror line, and the mirror line cuts it into two equal parts.",
+    "probe": {
+     "question": "A point P is reflected in a vertical mirror line. Along which direction is the image P' found from P?",
+     "wrong_answer": "Along any slanting line from P, as long as P' is at the same distance on the other side."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Distance can be measured in any direction",
+    "causes": [],
+    "trigger_cues": [
+     "perpendicular",
+     "mirror line",
+     "distance",
+     "slanting",
+     "join point and image"
+    ],
+    "confidence": "plausible",
+    "source_hint": "Studies on school geometry and reflection"
+   },
+   {
+    "key": "m6",
+    "node": "n19",
+    "statement": "A shape touching the mirror line gets moved to the other side, so its touching point also moves.",
+    "why": "Students believe every point must cross to the other side. They do not see that a point already on the line is at zero distance from it.",
+    "fix": "A point on the mirror line is 0 cm from the line, so its image is at 0 cm on the other side. It is the same point and stays where it is. Such points are called invariant points.",
+    "probe": {
+     "question": "Triangle ABC has vertex A on the mirror line. Where is A' after reflection?",
+     "wrong_answer": "A' is a different point on the other side of the line, away from A."
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "Every point must cross the mirror line",
+    "causes": [],
+    "trigger_cues": [
+     "point on mirror line",
+     "vertex on the line",
+     "invariant point",
+     "reflection",
+     "stays fixed"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n7",
+    "statement": "A mirror line must be vertical or horizontal, so a slanting line cannot be a mirror line.",
+    "why": "Textbook figures and the axes show mainly upright or flat mirror lines, so students form a narrow picture of what a mirror line looks like.",
+    "fix": "A mirror line can have any direction. A slanting line like y = x works too. Fold along the line, and the object and the image match exactly.",
+    "probe": {
+     "question": "Reflect the point (2, 5) in the line y = x. Can this be done?",
+     "wrong_answer": "No, y = x is slanting, so it cannot be a mirror line."
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "Mirror lines are only upright or flat",
+    "causes": [],
+    "trigger_cues": [
+     "slanting mirror line",
+     "y = x",
+     "diagonal line",
+     "reflect",
+     "any direction"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Research on students' reflection in oblique lines"
+   },
+   {
+    "key": "m8",
+    "node": "n20",
+    "statement": "Reflection in the x-axis changes (x, y) to (-x, y).",
+    "why": "Students mix up the axis they reflect in with the coordinate that changes. They think a flip over the x-axis flips left and right.",
+    "fix": "In the x-axis, the point goes up or down across the axis, so only y changes sign. (x, y) becomes (x, -y). The x-coordinate stays the same.",
+    "probe": {
+     "question": "What is the image of (3, 4) after reflection in the x-axis?",
+     "wrong_answer": "(-3, 4)"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Mirror axis names the coordinate that changes",
+    "causes": [],
+    "trigger_cues": [
+     "reflection in x-axis",
+     "image of point",
+     "coordinates",
+     "change sign",
+     "(x, y)"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Studies on coordinate reflections"
+   },
+   {
+    "key": "m9",
+    "node": "n23",
+    "statement": "In a rotation, the shape turns about its own centre, so the centre of rotation is always the middle of the shape.",
+    "why": "Spinning objects such as a wheel or a fan turn about their own middle. Students then assume a centre is always inside the shape.",
+    "fix": "The centre of rotation can be any point, inside, on or outside the shape. The shape turns about that point, and only the centre stays fixed. Changing the centre changes the image's position.",
+    "probe": {
+     "question": "Triangle ABC is rotated 90° about the point A. Where does the centre of rotation lie?",
+     "wrong_answer": "At the middle of the triangle, so the triangle turns on the spot."
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "Rotation always happens about the shape's middle",
+    "causes": [],
+    "trigger_cues": [
+     "centre of rotation",
+     "rotate about a point",
+     "vertex as centre",
+     "turns about",
+     "fixed point"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Research on rotation misconceptions in secondary school"
+   },
+   {
+    "key": "m10",
+    "node": "n25",
+    "statement": "A rotation of 90° means the shape turns clockwise, as the hands of a clock do.",
+    "why": "Clocks are the turning objects students know best. They treat their direction as the normal direction and ignore the sign convention.",
+    "fix": "By convention, a positive angle is anticlockwise. +90° is a quarter turn anticlockwise and -90° is a quarter turn clockwise. If a question says clockwise, we must say so.",
+    "probe": {
+     "question": "The point (2, 0) is rotated 90° about the origin, with no direction stated. Which point is the image?",
+     "wrong_answer": "(0, -2), because it moves clockwise."
+    },
+    "error_type": "sign_error_belief",
+    "root_belief": "Turning direction is clockwise by default",
+    "causes": [],
+    "trigger_cues": [
+     "rotate 90 degrees",
+     "positive angle",
+     "anticlockwise",
+     "clockwise",
+     "direction not stated"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n26",
+    "statement": "Rotation by 180° about the origin changes (x, y) to (-x, y), the same as a reflection in the y-axis.",
+    "why": "Students see the signs flip and a left-right swap. They then keep one sign and change only the x-coordinate, treating a half turn as a flip.",
+    "fix": "A half turn changes both signs, so (x, y) becomes (-x, -y). A reflection in the y-axis changes only x. A half turn also reverses orientation of position in two directions and does not make a mirror image.",
+    "probe": {
+     "question": "What is the image of (2, 3) after a 180° rotation about the origin?",
+     "wrong_answer": "(-2, 3)"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Half turn and flip are the same",
+    "causes": [],
+    "trigger_cues": [
+     "rotation by 180 degrees",
+     "about the origin",
+     "half turn",
+     "image of (x, y)",
+     "signs change"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Studies comparing reflection and rotation in coordinates"
+   },
+   {
+    "key": "m12",
+    "node": "n12",
+    "statement": "Reflecting then translating always gives the same image as translating then reflecting, so order never matters.",
+    "why": "Students use addition-style thinking that works for several translations, then apply the same idea to every pair of transformations.",
+    "fix": "Order matters for most pairs of transformations. Two translations can be done in any order, but a reflection with a translation can give different images. Test with one point to check, for example (1, 2) with a shift of (3, 0) and reflection in the y-axis.",
+    "probe": {
+     "question": "Point (1, 2) is shifted by (3, 0) and then reflected in the y-axis. Is the image the same if the reflection is done first?",
+     "wrong_answer": "Yes, both give (4, 2), because the order does not matter."
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "Order never matters in transformations",
+    "causes": [],
+    "trigger_cues": [
+     "order of transformations",
+     "then reflect",
+     "then translate",
+     "same image",
+     "combination"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Research on composition of transformations"
+   }
+  ]
+ },
+ "problems": [
+  "only 3 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

@@ -1,0 +1,906 @@
+{
+ "topic": {
+  "id": "MAT-PROOFLOGIC",
+  "subject": "maths",
+  "strand": "maths",
+  "grades": [
+   9,
+   10
+  ],
+  "title": "Proofs, converses and counterexamples",
+  "scope": "Statement vs converse; if-then reasoning; one counterexample disproves a claim; examples do not prove a general statement; given, to-prove and reasons in proofs; theorem vs axiom; proof by contradiction."
+ },
+ "model": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 8073,
+  "promptTokenCount": 4
+ },
+ "seconds": 124.3,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Statements and converses",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "what is a mathematical statement",
+     "true and false statements"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Disproving and testing claims",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "basic number properties",
+     "basic geometry shapes"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Structure of a proof",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "basic geometry facts about angles and triangles"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "If-then statements",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Converse of a statement",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "Counterexamples",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Examples versus proof",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "variables as general numbers"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Parts of a proof",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Axioms and theorems",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "Euclid's postulates"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Proof by contradiction",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n8",
+     "n6"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "If-then has a condition (if part) and a conclusion (then part)",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "If-then claim is false only when condition holds but conclusion fails",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Converse swaps the if part and then part",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "A true statement can have a false converse",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n13",
+     "n6"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Some statements and their converses are both true",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": [
+     "linear pair axiom",
+     "parallel lines and transversal angles"
+    ]
+   },
+   {
+    "key": "n16",
+    "name": "One valid counterexample disproves a claim",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n17",
+    "name": "A counterexample must satisfy the condition yet break the conclusion",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n12"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n18",
+    "name": "Failing to find a counterexample does not prove a claim",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n16"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n19",
+    "name": "Checking many examples does not prove a general statement",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n20",
+    "name": "Measuring a drawing does not prove a geometric result",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n19"
+    ],
+    "external_prereqs": [
+     "using a protractor and ruler"
+    ]
+   },
+   {
+    "key": "n21",
+    "name": "A proof must work for every case that fits the condition",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n19"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n22",
+    "name": "Given is what is assumed true in the problem",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n23",
+    "name": "To prove is the conclusion we must reach",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n24",
+    "name": "Every step needs a reason: given, axiom or earlier theorem",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n22",
+     "n23"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n25",
+    "name": "Axioms are accepted without proof",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": [
+     "Euclid's axioms"
+    ]
+   },
+   {
+    "key": "n26",
+    "name": "Theorems are statements proved from axioms and earlier results",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [
+     "n25"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n27",
+    "name": "Do not assume the conclusion while proving it",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n23",
+     "n24"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n28",
+    "name": "Contradiction starts by assuming the conclusion is false",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [
+     "n23"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n29",
+    "name": "Reaching a contradiction shows the assumption was wrong, so the conclusion is true",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [
+     "n28",
+     "n24"
+    ],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n11",
+    "statement": "In 'If a number is divisible by 6, then it is even', the 'then' part is what is given.",
+    "why": "Students read the statement as a story and treat the final fact as the starting information.",
+    "fix": "The 'if' part is the condition we are given and the 'then' part is what follows from it.",
+    "probe": {
+     "question": "In 'If a quadrilateral is a square, then its diagonals are equal', what is given?",
+     "wrong_answer": "Its diagonals are equal"
+    },
+    "error_type": "language_confusion",
+    "root_belief": "the last thing mentioned is the starting fact",
+    "causes": [
+     "m4"
+    ],
+    "trigger_cues": [
+     "if",
+     "then",
+     "hypothesis",
+     "conclusion",
+     "given",
+     "condition"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n12",
+    "statement": "If the condition of an if-then statement is not true for an example, the statement is false for that example.",
+    "why": "Students think a statement must be satisfied in every case, including cases where it does not apply.",
+    "fix": "A claim of the form 'if A then B' says nothing about cases where A is not true, so those cases cannot make it false.",
+    "probe": {
+     "question": "Does the number 7 show that 'If a number is divisible by 4, then it is even' is false?",
+     "wrong_answer": "Yes, 7 is not divisible by 4 so it fails."
+    },
+    "error_type": "other",
+    "root_belief": "a rule must hold in every case, even irrelevant ones",
+    "causes": [],
+    "trigger_cues": [
+     "if",
+     "then",
+     "not satisfied",
+     "condition",
+     "false",
+     "vacuous"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on conditional reasoning and the truth-table task in secondary students",
+    "statement_extra": null
+   },
+   {
+    "key": "m3",
+    "node": "n13",
+    "statement": "The converse of a statement is its negative, made by adding 'not' to both parts.",
+    "why": "Converse, opposite and negation are all vaguely thought of as 'the reverse'.",
+    "fix": "The converse swaps the if part and the then part; no 'not' is added.",
+    "probe": {
+     "question": "What is the converse of 'If a triangle is equilateral, then it is isosceles'?",
+     "wrong_answer": "If a triangle is not equilateral, then it is not isosceles"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar sounding terms mean the same thing",
+    "causes": [],
+    "trigger_cues": [
+     "converse",
+     "opposite",
+     "negation",
+     "inverse",
+     "reverse",
+     "swap"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of students confusing converse, inverse and contrapositive in school geometry",
+    "statement_extra": null
+   },
+   {
+    "key": "m4",
+    "node": "n13",
+    "statement": "The converse of 'If A then B' is 'If B is false then A is false'.",
+    "why": "Students mix up the converse with the contrapositive, which sounds like a reversal too.",
+    "fix": "The converse is 'If B then A'. 'If not B then not A' is a different statement called the contrapositive.",
+    "probe": {
+     "question": "Write the converse of 'If two angles are vertically opposite, then they are equal'.",
+     "wrong_answer": "If two angles are not equal, then they are not vertically opposite"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a word means a nearby but different idea",
+    "causes": [],
+    "trigger_cues": [
+     "converse",
+     "contrapositive",
+     "not",
+     "reverse",
+     "if then"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on logical reasoning with conditionals in school mathematics",
+    "statement_extra": null
+   },
+   {
+    "key": "m5",
+    "node": "n14",
+    "statement": "If a statement is true, its converse must also be true.",
+    "why": "Students treat if-then as meaning 'is the same as', as in an equation.",
+    "fix": "A true statement may have a false converse. Each one must be checked separately.",
+    "probe": {
+     "question": "'If a number is divisible by 10, then it is divisible by 5' is true. Is its converse 'If divisible by 5, then divisible by 10' true?",
+     "wrong_answer": "Yes, it must be true too"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a relation works equally in both directions",
+    "causes": [
+     "m6"
+    ],
+    "trigger_cues": [
+     "converse",
+     "true",
+     "false",
+     "if then",
+     "reverse",
+     "both ways"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "documented in studies of converse errors in geometry proof by school students",
+    "statement_extra": null
+   },
+   {
+    "key": "m6",
+    "node": "n14",
+    "statement": "If a statement is proved, no check is needed for its converse because it is automatically proved.",
+    "why": "Students treat a proof as covering both directions.",
+    "fix": "The converse is a new statement and needs its own proof or a counterexample.",
+    "probe": {
+     "question": "We proved 'If a quadrilateral is a rectangle, its diagonals are equal'. Is 'If diagonals are equal, it is a rectangle' now proved?",
+     "wrong_answer": "Yes, the same proof covers it"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "proving one direction proves the reverse",
+    "causes": [],
+    "trigger_cues": [
+     "converse",
+     "proved",
+     "proof",
+     "reverse",
+     "also true"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n15",
+    "statement": "A statement and its converse can never both be true.",
+    "why": "After learning that converses are often false, students over-correct.",
+    "fix": "Some pairs are both true, for example the parallel-lines angle results and their converses.",
+    "probe": {
+     "question": "'If two lines are parallel, corresponding angles are equal.' Can the converse also be true?",
+     "wrong_answer": "No, a statement and its converse cannot both be true"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "one learned warning applies in every case",
+    "causes": [],
+    "trigger_cues": [
+     "converse",
+     "both true",
+     "parallel lines",
+     "corresponding angles",
+     "iff"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m8",
+    "node": "n16",
+    "statement": "A counterexample only shows the claim is false for that one case, and the claim may still be true generally.",
+    "why": "Students think a general claim needs many failures before it is rejected.",
+    "fix": "A general claim says it holds in all cases, so one valid failing case makes it false.",
+    "probe": {
+     "question": "A student says 'All primes are odd'. 2 is prime and even. Is the claim false?",
+     "wrong_answer": "No, only one exception, it is mostly true"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "one exception does not break a rule",
+    "causes": [],
+    "trigger_cues": [
+     "counterexample",
+     "exception",
+     "all",
+     "always",
+     "false",
+     "one case"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on students' acceptance of counterexamples in school mathematics proof",
+    "statement_extra": null
+   },
+   {
+    "key": "m9",
+    "node": "n16",
+    "statement": "To disprove a claim you must find a counterexample that is a famous or large case, not a small simple one.",
+    "why": "Students feel a serious claim needs a serious refutation.",
+    "fix": "Any valid case, however small or simple, that breaks the claim is enough.",
+    "probe": {
+     "question": "Disprove 'For every x, x squared is greater than x'.",
+     "wrong_answer": "Small numbers like 1 don't count, we need a large number"
+    },
+    "error_type": "other",
+    "root_belief": "bigger or more serious means stronger evidence",
+    "causes": [],
+    "trigger_cues": [
+     "counterexample",
+     "simple",
+     "small",
+     "disprove",
+     "one case"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m10",
+    "node": "n17",
+    "statement": "Any example where the conclusion is false is a counterexample.",
+    "why": "Students ignore the condition and look only at the conclusion.",
+    "fix": "A counterexample must satisfy the if part and still fail the then part.",
+    "probe": {
+     "question": "For 'If a number is divisible by 4, then it is even', is 7 (not even? no, odd) a counterexample?",
+     "wrong_answer": "Yes, 7 is odd, so it is a counterexample"
+    },
+    "error_type": "other",
+    "root_belief": "only the final result matters, not the conditions",
+    "causes": [],
+    "trigger_cues": [
+     "counterexample",
+     "condition",
+     "conclusion",
+     "satisfy",
+     "if part"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on counterexample construction by students",
+    "statement_extra": null
+   },
+   {
+    "key": "m11",
+    "node": "n18",
+    "statement": "If I cannot find a counterexample after trying, the claim is proved true.",
+    "why": "Students treat the absence of evidence against as evidence for.",
+    "fix": "Not finding a counterexample only means none has been found yet; a proof is still needed.",
+    "probe": {
+     "question": "I tried 20 numbers and none disprove 'n squared plus n plus 41 is prime'. Is it proved?",
+     "wrong_answer": "Yes, 20 tests with no failure prove it"
+    },
+    "error_type": "other",
+    "root_belief": "what I cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "no counterexample",
+     "tried",
+     "tested",
+     "prove",
+     "always true"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of empirical reasoning versus deductive proof in secondary students",
+    "statement_extra": null
+   },
+   {
+    "key": "m12",
+    "node": "n19",
+    "statement": "If a claim works for several examples, it is proved for all cases.",
+    "why": "Everyday and science thinking uses repeated observation as proof.",
+    "fix": "Examples can support a guess but only a logical argument for a general case proves it.",
+    "probe": {
+     "question": "The sum of 3 and 5, 7 and 9, 11 and 13 is even. Is 'sum of two odd numbers is even' proved?",
+     "wrong_answer": "Yes, it worked for three pairs"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "repeated observation proves a rule",
+    "causes": [
+     "m13"
+    ],
+    "trigger_cues": [
+     "examples",
+     "verify",
+     "proof",
+     "general",
+     "always",
+     "for all"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "classic research on school students' empirical proof schemes (e.g. Healy and Hoyles style studies)",
+    "statement_extra": null
+   },
+   {
+    "key": "m13",
+    "node": "n20",
+    "statement": "Drawing a triangle and measuring its angles to get 180 degrees proves the angle sum property.",
+    "why": "Textbook activities use measuring, so it feels like proof.",
+    "fix": "Measurement is approximate and covers only one drawing; a proof uses reasoned steps for every triangle.",
+    "probe": {
+     "question": "You measure angles of one triangle and get 180°. Have you proved the angle sum property?",
+     "wrong_answer": "Yes, measurement proves it"
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "seeing or measuring something is proof of it",
+    "causes": [],
+    "trigger_cues": [
+     "measure",
+     "protractor",
+     "drawing",
+     "angle sum",
+     "activity",
+     "verify"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on students' use of diagrams and measurement as proof in geometry",
+    "statement_extra": null
+   },
+   {
+    "key": "m14",
+    "node": "n20",
+    "statement": "A proof about a triangle in a diagram applies only to that triangle as drawn.",
+    "why": "Students see the figure as one specific object.",
+    "fix": "A figure in a proof stands for any triangle, so the argument holds for all such triangles.",
+    "probe": {
+     "question": "We prove the angle sum for triangle ABC. Does it hold for another triangle PQR?",
+     "wrong_answer": "No, only for ABC"
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "a picture is only that one object",
+    "causes": [],
+    "trigger_cues": [
+     "triangle ABC",
+     "figure",
+     "diagram",
+     "any triangle",
+     "general"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on generality of diagrams in geometry proof",
+    "statement_extra": null
+   },
+   {
+    "key": "m15",
+    "node": "n21",
+    "statement": "A proof for one special case, such as an equilateral triangle, proves the result for all triangles.",
+    "why": "Students pick the easiest case and assume it represents all.",
+    "fix": "A proof must use only what is given for all such figures; special properties of a special case may not be used.",
+    "probe": {
+     "question": "To prove a result for any triangle, a student proves it for an equilateral triangle. Is that enough?",
+     "wrong_answer": "Yes, a triangle is a triangle"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "one typical case represents all cases",
+    "causes": [],
+    "trigger_cues": [
+     "any triangle",
+     "special case",
+     "general proof",
+     "prove for all",
+     "equilateral"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of generalisation from special cases in geometric proof",
+    "statement_extra": null
+   },
+   {
+    "key": "m16",
+    "node": "n22",
+    "statement": "In a proof, 'given' means anything that looks true in the figure.",
+    "why": "Students trust the diagram's appearance.",
+    "fix": "Only what is stated in the problem is given; looks in a figure are not facts.",
+    "probe": {
+     "question": "A figure looks like two lines are perpendicular but it is not stated. Can we use it as given?",
+     "wrong_answer": "Yes, it looks perpendicular"
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "what looks true in a picture is true",
+    "causes": [],
+    "trigger_cues": [
+     "given",
+     "figure",
+     "looks",
+     "perpendicular",
+     "assume"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on reliance on diagram appearance in geometry proof",
+    "statement_extra": null
+   },
+   {
+    "key": "m17",
+    "node": "n23",
+    "statement": "The 'to prove' statement is also a fact we can use in the steps.",
+    "why": "Students see it as known because the book states it.",
+    "fix": "The 'to prove' statement is only the target; we cannot use it as a reason for the steps.",
+    "probe": {
+     "question": "To prove AB equals CD, can you use AB equals CD as a reason?",
+     "wrong_answer": "Yes, it is written in the question"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "anything written in the question is a fact",
+    "causes": [],
+    "trigger_cues": [
+     "to prove",
+     "given",
+     "assume",
+     "circular",
+     "reason"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on circular reasoning in student proofs",
+    "statement_extra": null
+   },
+   {
+    "key": "m18",
+    "node": "n24",
+    "statement": "A proof is just a list of correct statements; reasons are not needed.",
+    "why": "Students focus on getting the answer, as in calculations.",
+    "fix": "Each step needs a reason, such as given, an axiom or an earlier theorem, to be a proof.",
+    "probe": {
+     "question": "Is writing the correct steps with no reasons a complete proof?",
+     "wrong_answer": "Yes, correct steps are enough"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "correct answer matters more than the justification",
+    "causes": [],
+    "trigger_cues": [
+     "reason",
+     "because",
+     "step",
+     "justify",
+     "prove"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of students' proof writing without justification in school geometry",
+    "statement_extra": null
+   },
+   {
+    "key": "m19",
+    "node": "n25",
+    "statement": "Axioms are unproven guesses that may be wrong, so they are weaker than theorems.",
+    "why": "Students link 'not proved' with 'uncertain'.",
+    "fix": "Axioms are basic statements we accept as true, and all theorems rest on them.",
+    "probe": {
+     "question": "Which is more reliable, an axiom or a theorem?",
+     "wrong_answer": "A theorem, since an axiom is not proved"
+    },
+    "error_type": "language_confusion",
+    "root_belief": "unproved means uncertain or unreliable",
+    "causes": [],
+    "trigger_cues": [
+     "axiom",
+     "postulate",
+     "assume",
+     "unproved",
+     "self-evident"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m20",
+    "node": "n26",
+    "statement": "A theorem is just another word for an axiom.",
+    "why": "Both are called 'true statements' in textbooks.",
+    "fix": "An axiom is accepted without proof; a theorem is a statement that has been proved.",
+    "probe": {
+     "question": "The angle sum of a triangle is 180°. Is it an axiom or a theorem?",
+     "wrong_answer": "An axiom"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar sounding terms mean the same thing",
+    "causes": [],
+    "trigger_cues": [
+     "theorem",
+     "axiom",
+     "proved",
+     "postulate",
+     "statement"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m21",
+    "node": "n27",
+    "statement": "It is fine to start a proof by assuming what we have to prove.",
+    "why": "Students want to work backwards from the answer, as in checking equations.",
+    "fix": "Assuming the conclusion makes the argument circular; we must start from the given facts.",
+    "probe": {
+     "question": "To prove two angles are equal, can you begin by writing they are equal?",
+     "wrong_answer": "Yes, then I can show it follows"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "working backwards from the answer is always valid",
+    "causes": [],
+    "trigger_cues": [
+     "assume",
+     "circular",
+     "begin",
+     "starting point",
+     "to prove"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on circular reasoning in student proof attempts",
+    "statement_extra": null
+   },
+   {
+    "key": "m22",
+    "node": "n28",
+    "statement": "In proof by contradiction we begin by assuming the conclusion is true.",
+    "why": "Students mix up what is assumed with what is to be shown.",
+    "fix": "We begin by assuming the conclusion is false, the opposite of what we want, and show it leads to an impossibility.",
+    "probe": {
+     "question": "To prove root 2 is irrational by contradiction, what do we assume first?",
+     "wrong_answer": "That root 2 is irrational"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "the thing to prove is the thing to assume",
+    "causes": [],
+    "trigger_cues": [
+     "contradiction",
+     "assume",
+     "opposite",
+     "suppose",
+     "irrational"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of student difficulty with indirect proof",
+    "statement_extra": null
+   },
+   {
+    "key": "m23",
+    "node": "n29",
+    "statement": "A contradiction means we made a mistake in calculation, not that the assumption was false.",
+    "why": "Students expect their own errors, not a logical result.",
+    "fix": "If every step is correct, the contradiction comes from the assumption, so the assumption is false.",
+    "probe": {
+     "question": "After assuming root 2 is rational we reach a contradiction. What does it mean?",
+     "wrong_answer": "I made a calculation mistake"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "a surprising result means my own error",
+    "causes": [],
+    "trigger_cues": [
+     "contradiction",
+     "impossible",
+     "assumption",
+     "wrong",
+     "therefore"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on student understanding of indirect proof structure",
+    "statement_extra": null
+   },
+   {
+    "key": "m24",
+    "node": "n29",
+    "statement": "A proof by contradiction is not a real proof because it does not show the result directly.",
+    "why": "Students think only direct steps count.",
+    "fix": "It is a valid method: if the opposite is impossible, the claim must be true.",
+    "probe": {
+     "question": "Is a proof by contradiction as valid as a direct proof?",
+     "wrong_answer": "No, it is only a roundabout way"
+    },
+    "error_type": "other",
+    "root_belief": "only a direct route counts as valid",
+    "causes": [],
+    "trigger_cues": [
+     "contradiction",
+     "indirect",
+     "valid proof",
+     "opposite",
+     "impossible"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}
