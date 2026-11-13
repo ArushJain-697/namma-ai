@@ -1,44 +1,57 @@
 # Demo script and failure runbook
 
-*Draft 4 Nov 2026, from Master Bible section 11 (v1.3) and what was actually built. Timings are TARGETS: nothing here has been rehearsed on a Pi or with a stopwatch yet (build map T33). Rehearse with `bash scripts/demo.sh`; with no `BACKEND_ARGS` it uses the stub and says SIMULATED.*
+*Rewritten 13 Nov 2026 for the current design (diagnostic quiz from the misconception graph). The 4 Nov version
+(fill-in-the-blank fallback, "witness" framing) is retired. Not yet rehearsed with a stopwatch or on a Pi 5. Pitch
+facts and Q&A: `docs/PITCH.md`.*
+
+## Which quiz command on the day (decide at the venue, before judging)
+
+| Situation | Command (on the Pi) |
+|---|---|
+| Fine-tuned model ready AND its Job 6 numbers beat the backup (sensible > 19%) | `bash ~/pi-kit/test.sh ~/passage.txt` (runs `sakshi run`: summary, quiz, run card) |
+| Otherwise: the backup (plain model, v2) | `~/sakshi-venv/bin/python scripts/backup_quiz.py demo ~/passage.txt` (summary, quiz, run card) |
+
+Start the run **before** speaking (it takes about a minute on the Pi; measure it in rehearsal). Never claim the
+backup's questions are good: Sonnet rated 19% of them sensible.
 
 ## The 3:00 arc
 
-| Time | Beat | Command / screen | Say (honest version) |
+| Time | Beat | Screen / command | Say (honest version) |
 |---|---|---|---|
-| 0:00 | **Hook.** One student, one passage, no internet. QR cards already on the table so judges can join the Wi-Fi during this and the next beat. | Pi, no slides | "A Class 7 student rereads today's passage. She can read every word and can't tell if she understood it. [Illustrative, or a real quote.]" |
-| 0:15 | **Offline toggle.** Unplug Ethernet on camera. | `bash scripts/prove_offline.sh demo` | "No route out. The result line says so; if it says UNKNOWN I'd tell you." |
-| 0:25 | **The villain (trap, shown).** A saved baseline failure next to Sakshi on the same sentence. | `python -m sakshi villain demo/villain.json` | "This is a SAVED run, chosen because the baseline failed. It answered from the model's memory, not the passage." |
-| 1:00 | **Judges are the students.** Two pre-joined phones, or the terminal quiz. Get one wrong on purpose; the sentence lights up; a second question comes from that sentence. | `python -m sakshi serve RUN` or `study RUN` | "Every answer shows the sentence it came from." |
-| 1:45 | **A judge plants the trap.** Sentences with a question are listed; the judge edits one. Only that question changes; the stale summary line is caught by the number check. | `python -m sakshi edit RUN --list` then `--sentence N --text '...'` | "Everything else is exactly as it was." |
-| 2:15 | **Impact explanation (deliverable 5)** from the organiser's passage, with the run card on screen. | Terminal | Template in the bible, section 11 |
-| 2:30 | **Proof card.** Caveat first, then numbers from the metrics file. | `python scripts/proof_card.py` | "These passages are built to expose the trap, so this is not the baseline's everyday rate." |
-| 2:50 | **Close.** | | "No witness, no question. We haven't tested learning gains; that's the pilot." |
+| 0:00 | **Hook** | Pi terminal, nothing else | "A Class 8 student in a rural government school finishes today's science passage. Only 67.5% of Class 8 students in rural government schools can read a Class 2 text (ASER 2024). Reading the words is not understanding them, and she has no internet to check." |
+| 0:15 | **Offline proof** (live toggle) | Unplug Ethernet / Wi-Fi off, then `bash scripts/prove_offline.sh demo` | "No route out. If it said UNKNOWN I would tell you." |
+| 0:25 | **The organisers' passage goes in** (already running since before the talk) | The run's output scrolling | "A 0.6-billion-parameter model on this Pi, through ExecuTorch, 4-bit weights. No cloud." |
+| 0:40 | **The idea** (while it finishes) | `data/misconceptions/graph/viewer.html` on the laptop | "Everyone makes quizzes that give a score. Ours gives a diagnosis: every wrong option is a real student belief, from a graph of 3,398 misconceptions across Class 6 to 10, grouped into 120 root beliefs." |
+| 1:10 | **The output** (deliverable) | Summary, then the questions with the passage sentence each answer comes from | "Code picks the sentence; the model writes the question; the wrong options come from the graph; the model must answer its own question correctly or the question is dropped." |
+| 1:40 | **A judge answers** | Ask a judge to pick an answer to Q1 (terminal `study`, or read aloud) | If wrong: "That option is the belief '...' — this is what a teacher learns from a wrong answer." |
+| 2:10 | **Run card** (deliverable) | The run card | Read time, model, size, peak memory. "Memory was 2.5 GB; we cut it to 1.7 GB by sizing the model's memory to what a quiz needs, with identical answers." |
+| 2:25 | **Impact** (deliverable) | One example from the organisers' passage | One question from their passage + the belief behind one wrong option + who it helps |
+| 2:45 | **Confess and close** | — | "Not tested with students yet; the misconceptions were drafted by AI from research and not yet reviewed by teachers; a small model makes imperfect questions, which is why every answer shows its sentence. Next: one school pilot." |
 
-**60-second table walkaround:** the villain (20 s) -> a judge answers on their phone (30 s) -> run card (10 s).
+**60-second table walkaround:** offline proof (10 s) → one question + the belief behind a wrong option (30 s) →
+run card (20 s).
 
 ## Say it before they ask
-- Simulated or prepared things are named as such ("saved run", "prepared output").
-- GREEN means "passed the rules and shows its sentence", not "correct".
-- Sakshi's key following the passage is a **guarantee of the design** (code picks the key), not a model result; the summary is the real test.
-- A plain "is the answer in the passage?" check also catches these planted facts (our own test says so); the design's value is that the key cannot be invented at all.
-- No students have used it.
+- Name anything saved or prepared ("this is a saved run from 10 minutes ago").
+- The Pi numbers are from today; earlier numbers are from a Mac and an Arduino UNO Q.
+- Do NOT say the quiz beats word-spotting (not supported by our own test, see `docs/PITCH.md` section 3).
 
 ## Failure runbook
 
 | What breaks | Do this | Say |
 |---|---|---|
-| Model won't load / `prepare` fails | Show the SAVED RUN (`results/*.json`) with `report` and `study` | "The model didn't load; this is a saved run from earlier." |
-| Generation too slow | Start `prepare` before the talk; show true elapsed time from the run card | |
-| Judge's edit too slow (>15 s measured) | Move the edit to Q&A | |
-| Hotspot / phones fail | Judges play in the terminal (`study`); same beats | "The phone page is an extra; the terminal is the deliverable." |
-| Prove-offline says NOT OFFLINE or UNKNOWN | Unplug, re-run; if still not, **do not claim offline** | Say so plainly |
-| The trap doesn't fire live | Use the saved villain; if none exists, skip the beat and say why | |
-| Pi dies | Backup recording | "This is a recording." |
+| "Illegal instruction" on load | `.kit_model` -> portable model (`pi-kit/CHECKLIST.md`) | "Older chip path; slower but same answers." |
+| Model won't load at all | Show the saved run from rehearsal (`results/pi_run.json` + its printout) | "The model didn't load; this is a saved run from earlier today." |
+| Run slower than the slot | Start it before the talk; if still running, show the saved run and the live elapsed time | |
+| Fewer than 3 questions | Run the backup command on the same passage, or show the saved run | "The checks dropped questions rather than show bad ones." |
+| A question is clearly wrong on screen | Say so | "That one slipped past the checks; this is a 0.6B model." |
+| prove_offline says NOT OFFLINE / UNKNOWN | Unplug again and re-run; if still not, **do not claim offline** | Say so plainly |
+| Pi dies | Backup recording | "This is a recording of a full run." |
 
-## Before the demo
-- [ ] `bash scripts/selfcheck.sh` green on the demo machine.
-- [ ] Two full stopwatch rehearsals; backup recording exists.
-- [ ] Saved villain made from a REAL trapping case (`scripts/save_villain.py` refuses otherwise).
-- [ ] Hotspot tested with 5 phones (iPhone and Android), mobile data off; QR cards printed in advance.
-- [ ] Proof card regenerated from the final metrics files; no number typed by hand.
+## Before the demo (checklist)
+- [ ] Decide the quiz command (table at the top) from the teammate's Job 6 numbers.
+- [ ] Re-pack `pi-kit/namma-ai.tar` with the final code, model and `data/misconceptions/index/` (rebuilt 13 Nov after the graph merge; not in git).
+- [ ] `QUICK=1 bash test.sh` on the Pi, then one full run; write the numbers into `docs/SUBMISSION.md`.
+- [ ] Two stopwatch rehearsals; one backup recording of a clean full run.
+- [ ] Fan on; record the second run, not the first.
+- [ ] Graph viewer opens offline on the laptop.
