@@ -1,0 +1,566 @@
+{
+ "topic": {
+  "id": "MAT-ORDEROPS",
+  "subject": "maths",
+  "strand": "maths",
+  "grades": [
+   6,
+   7,
+   8
+  ],
+  "title": "Order of operations (BODMAS)",
+  "scope": "BODMAS/PEMDAS precedence; multiplication before division is wrong, they have equal rank and go left to right; same for addition and subtraction; brackets order; 8-3+2 and 48÷2×3; negative signs with brackets; calculator versus hand results"
+ },
+ "model": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 6623,
+  "promptTokenCount": 2
+ },
+ "seconds": 42.5,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Precedence of operations",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "four operations on whole numbers"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Brackets and grouping",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "integers and their signs"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Evaluating and checking expressions",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1",
+     "n2"
+    ],
+    "external_prereqs": [
+     "using a calculator"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Ranking of operations",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Left-to-right rule for equal rank",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "Orders (powers) in expressions",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "exponents as repeated multiplication"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Order of brackets",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Brackets with signs",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": [
+     "subtraction of integers"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Hidden grouping",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": [
+     "fractions as division"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Step-by-step evaluation",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Calculator versus hand",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Writing expressions from words",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": [
+     "translating word problems"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "Multiplication and division have equal rank",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Addition and subtraction have equal rank",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Multiplication/division come before addition/subtraction",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "meaning of multiplication as repeated addition"
+    ]
+   },
+   {
+    "key": "n16",
+    "name": "Work equal-rank operations from left to right",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n13",
+     "n14"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n17",
+    "name": "8-3+2 equals 7",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n14"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n18",
+    "name": "48÷2×3 equals 72",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n19",
+    "name": "Power is done before multiplying",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": [
+     "squares and cubes"
+    ]
+   },
+   {
+    "key": "n20",
+    "name": "Innermost bracket first",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n21",
+    "name": "Bracket order: ( ) then { } then [ ]",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n20"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n22",
+    "name": "A minus sign before a bracket changes every sign inside",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": [
+     "subtraction of integers"
+    ]
+   },
+   {
+    "key": "n23",
+    "name": "A number touching a bracket multiplies the whole bracket",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": [
+     "multiplication of integers"
+    ]
+   },
+   {
+    "key": "n24",
+    "name": "Fraction bar groups numerator and denominator",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": [
+     "fractions as division"
+    ]
+   },
+   {
+    "key": "n25",
+    "name": "Do one operation per line, copy the rest",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [
+     "n16"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n26",
+    "name": "Scientific calculators apply BODMAS; basic ones may not",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [
+     "n16"
+    ],
+    "external_prereqs": [
+     "using a calculator"
+    ]
+   },
+   {
+    "key": "n27",
+    "name": "Brackets change the meaning of an expression",
+    "level": 3,
+    "parent": "n12",
+    "prereqs": [
+     "n20"
+    ],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n13",
+    "statement": "Multiplication always comes before division because M comes before D in BODMAS.",
+    "why": "The letters in the word BODMAS are read as a strict ranking.",
+    "fix": "Multiplication and division have the same rank, so we do whichever comes first from the left.",
+    "probe": {
+     "question": "Find 48 ÷ 2 × 3.",
+     "wrong_answer": "8"
+    }
+   },
+   {
+    "id": "m2",
+    "node": "n5",
+    "statement": "In 8 - 3 + 2, addition must be done before subtraction, so the answer is 3.",
+    "why": "Student treats A before S in BODMAS as a strict order, ignoring that addition and subtraction have equal rank.",
+    "fix": "Addition and subtraction have equal rank, so work left to right: 8 - 3 = 5, then 5 + 2 = 7.",
+    "probe": {
+     "question": "Find the value of 8 - 3 + 2.",
+     "wrong_answer": "3"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "Letter order in BODMAS fixes the order of operations",
+    "causes": [],
+    "trigger_cues": [
+     "addition before subtraction",
+     "bodmas letter order",
+     "a comes before s",
+     "8-3+2"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on student errors with order of operations",
+    "key": "m2"
+   },
+   {
+    "id": "m3",
+    "node": "n18",
+    "statement": "In 48 ÷ 2 × 3, multiplication is done first, so the answer is 8.",
+    "why": "Student believes multiplication always outranks division, ignoring left-to-right rule for equal rank.",
+    "fix": "Division and multiplication have equal rank, so go left to right: 48 ÷ 2 = 24, then 24 × 3 = 72.",
+    "probe": {
+     "question": "Find the value of 48 ÷ 2 × 3.",
+     "wrong_answer": "8"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "Multiplication outranks division in every expression",
+    "causes": [],
+    "trigger_cues": [
+     "48 divided by 2 times 3",
+     "multiply first",
+     "division and multiplication",
+     "left to right"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of students' misuse of BODMAS/PEMDAS mnemonics",
+    "key": "m3"
+   },
+   {
+    "id": "m4",
+    "node": "n19",
+    "statement": "In 2 × 3², you multiply 2 × 3 first and then square, so the answer is 36.",
+    "why": "Student reads the expression left to right and ignores that orders (powers) rank above multiplication.",
+    "fix": "Do the power first: 3² = 9, then 2 × 9 = 18.",
+    "probe": {
+     "question": "Find the value of 2 × 3².",
+     "wrong_answer": "36"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "Operations are always done in written left-to-right order",
+    "causes": [],
+    "trigger_cues": [
+     "power with multiplication",
+     "square after multiplying",
+     "2 times 3 squared",
+     "exponent order"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on exponent and order-of-operations errors",
+    "key": "m4"
+   },
+   {
+    "id": "m5",
+    "node": "n6",
+    "statement": "3² means 3 × 2, so 3² equals 6.",
+    "why": "Student reads the index as a multiplier instead of the number of times the base is multiplied by itself.",
+    "fix": "3² means 3 × 3 = 9; the small number tells how many times the base is used as a factor.",
+    "probe": {
+     "question": "Find the value of 5 + 4².",
+     "wrong_answer": "13"
+    },
+    "error_type": "notation_misread",
+    "root_belief": "A power means base times the index",
+    "causes": [],
+    "trigger_cues": [
+     "square means times two",
+     "power as multiplication",
+     "index misread",
+     "exponent notation"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies on exponent notation misconceptions",
+    "key": "m5"
+   },
+   {
+    "id": "m6",
+    "node": "n20",
+    "statement": "In brackets inside brackets, you should start with the outermost bracket first.",
+    "why": "Student works from the left or outside, as they read, rather than from the innermost bracket.",
+    "fix": "Simplify the innermost bracket first and then move outward step by step.",
+    "probe": {
+     "question": "Find the value of 20 - (3 + (2 × 4)).",
+     "wrong_answer": "12 (computing 3 + 2 = 5, 5 × 4 = 20, 20 - 20 = 0 gives 0; or 20 - 3 = 17, 17 + 8 = 25)"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "Work from outside in, following reading direction",
+    "causes": [],
+    "trigger_cues": [
+     "nested brackets",
+     "outer bracket first",
+     "bracket inside bracket",
+     "innermost"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher observation",
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n21",
+    "statement": "Curly brackets { } are always done before round brackets ( ) because they are bigger.",
+    "why": "Student judges priority by the size or look of the bracket instead of by nesting.",
+    "fix": "Round ( ) is cleared first, then { }, then [ ] when they are nested in that order; work from the innermost bracket outward.",
+    "probe": {
+     "question": "Find the value of 30 - {4 + (2 × 3)}.",
+     "wrong_answer": "0"
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "Larger-looking brackets have higher priority",
+    "causes": [],
+    "trigger_cues": [
+     "curly bracket first",
+     "bigger bracket",
+     "round bracket order",
+     "types of brackets"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher observation",
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n22",
+    "statement": "In 10 - (3 + 2), the minus sign only changes the first number inside, so it is 10 - 3 + 2 = 9.",
+    "why": "Student drops the bracket and applies the minus sign only to the first term.",
+    "fix": "The minus sign applies to the whole bracket: 10 - (3 + 2) = 10 - 5 = 5, or 10 - 3 - 2 = 5.",
+    "probe": {
+     "question": "Remove the bracket and simplify: 10 - (3 + 2).",
+     "wrong_answer": "9"
+    },
+    "error_type": "sign_error_belief",
+    "root_belief": "A minus sign affects only the next term",
+    "causes": [],
+    "trigger_cues": [
+     "minus before bracket",
+     "remove bracket",
+     "sign inside bracket",
+     "only first term"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on bracket expansion and sign errors",
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n23",
+    "statement": "In 4(3 + 2), the 4 touching the bracket means 4 is added to the numbers, giving 4 + 3 + 2 = 9.",
+    "why": "Student ignores that a number written next to a bracket means multiplication.",
+    "fix": "No sign between a number and a bracket means multiply: 4(3 + 2) = 4 × 5 = 20.",
+    "probe": {
+     "question": "Find the value of 4(3 + 2).",
+     "wrong_answer": "9"
+    },
+    "error_type": "notation_misread",
+    "root_belief": "Juxtaposition means addition, not multiplication",
+    "causes": [],
+    "trigger_cues": [
+     "number next to bracket",
+     "hidden multiplication",
+     "no sign before bracket",
+     "juxtaposition"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on implicit multiplication notation",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n24",
+    "statement": "In (6 + 4) ÷ 2, the fraction bar in 6 + 4 over 2 divides only the 4, so the answer is 8.",
+    "why": "Student does not see the fraction bar as a bracket around the numerator, so divides only the nearest number.",
+    "fix": "The bar groups the whole numerator: (6 + 4)/2 = 10 ÷ 2 = 5.",
+    "probe": {
+     "question": "Find the value of (6 + 4)/2 written as a fraction.",
+     "wrong_answer": "8"
+    },
+    "error_type": "notation_misread",
+    "root_belief": "A fraction bar divides only the adjacent number",
+    "causes": [],
+    "trigger_cues": [
+     "fraction bar",
+     "numerator sum",
+     "divide whole top",
+     "hidden bracket"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on hidden grouping in fractions",
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n25",
+    "statement": "To save time, you can do all the operations in one line without copying the rest, and the answer will still be right.",
+    "why": "Student combines several operations at once and loses or changes terms that were not yet worked.",
+    "fix": "Do one operation per line and copy the remaining expression unchanged, so no term is dropped.",
+    "probe": {
+     "question": "Simplify 12 + 6 ÷ 3 - 1 step by step. What is the first line after one step?",
+     "wrong_answer": "18 ÷ 3 - 1 = 6 - 1 = 5, done as '12 + 6 = 18' first"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "Skipping written steps never causes mistakes",
+    "causes": [],
+    "trigger_cues": [
+     "skip steps",
+     "one line",
+     "copy the rest",
+     "do all at once"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher observation",
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n26",
+    "statement": "A basic calculator always gives the right answer for 2 + 3 × 4 because it follows BODMAS.",
+    "why": "Student trusts every calculator, not knowing basic ones may evaluate in the order keys are pressed.",
+    "fix": "Scientific calculators apply BODMAS and give 14; basic ones may work left to right and give 20, so check by hand.",
+    "probe": {
+     "question": "A basic calculator shows 20 for 2 + 3 × 4. Is it correct?",
+     "wrong_answer": "Yes, the calculator is always correct, so 20"
+    },
+    "error_type": "other",
+    "root_belief": "All calculators follow BODMAS automatically",
+    "causes": [],
+    "trigger_cues": [
+     "calculator answer",
+     "basic calculator",
+     "trust calculator",
+     "2+3×4"
+    ],
+    "confidence": "plausible",
+    "source_hint": "research on calculator use and order of operations",
+    "key": "m12"
+   }
+  ]
+ },
+ "problems": [
+  "only 1 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}
