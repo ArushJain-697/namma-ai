@@ -29,13 +29,17 @@ misconception diagnosis and a spaced-revision plan on top of the same quiz.*
 | | |
 |---|---|
 | Model | Qwen3-0.6B (instruct, thinking mode off), Apache 2.0. Organisers confirmed no model restriction; their suggestion Qwen2.5-0.5B-Instruct also runs (see below) |
-| Conversion | `optimum-cli export executorch --model Qwen/Qwen3-0.6B --task text-generation --recipe xnnpack --use_custom_sdpa --use_custom_kv_cache --qlinear 8da4w --qembedding 8w` (4-bit weights, 8-bit dynamic activations, XNNPACK) |
+| Conversion | `optimum-cli export executorch --model Qwen/Qwen3-0.6B --task text-generation --recipe xnnpack --use_custom_sdpa --use_custom_kv_cache --qlinear 8da4w --qembedding 8w --max_seq_len 1024` (4-bit weights, 8-bit dynamic activations, XNNPACK) |
 | Runtime | ExecuTorch 1.5.1 `TextLLMRunner`, Python, on the device |
 | Command | `python -m sakshi run PASSAGE --backend executorch --model model.pte --tokenizer tokenizer.json` |
 
 Older ARM chips without the dot-product instructions (Cortex-A53, e.g. the Arduino UNO Q) cannot load the custom
-attention kernels; for them the model is converted without `--use_custom_sdpa --use_custom_kv_cache` and with
-`--max_seq_len 1024`. The code picks the right kernels automatically.
+attention kernels; for them the model is converted without `--use_custom_sdpa --use_custom_kv_cache`. The code
+picks the right kernels automatically.
+
+Memory choice: the model reserves memory for its whole context limit up front. Our longest call needs ~600 tokens,
+so we export with a 1,024-token limit instead of the default 2,048: peak memory fell from 2.49 GB to 1.67 GB on the
+Mac, same speed, identical answers on 8 test passages.
 
 ## 3. Short summary and at least three relevant questions, in the terminal
 
@@ -52,7 +56,7 @@ sentence that proves it), then the run card. `python -m sakshi study RUN` replay
 |---|---|---|---|---|---|---|
 | **Raspberry Pi 5, 8 GB** | 469 MB | TO MEASURE | TO MEASURE | TO MEASURE | TO MEASURE | the judged device |
 | Arduino UNO Q (Cortex-A53, 4 GB) | 470 MB (portable, 1k) | 3347 s (56 min) | 9.8 tok/s | 0.37 tok/s | 1.7 GB | network OFF; 21 calls; no custom kernels on this chip, so writing is very slow; same questions word for word as on the Mac |
-| Apple M4 Mac (development) | 469 MB | 19.7 s | 854 tok/s | 96 tok/s | 2.5 GB | 31 model calls, 4669 tokens in, 1355 out |
+| Apple M4 Mac (development) | 469 MB | 20.4 s | 826 tok/s | 95 tok/s | 1.7 GB | 32 model calls, 4817 tokens in, 1376 out; 1,024-token export (the 2,048 default peaked at 2.5 GB) |
 
 Peak memory is the whole Python process (it includes torch), so it overstates the model alone.
 

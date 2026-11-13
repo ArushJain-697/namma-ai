@@ -31,11 +31,13 @@ Fallback if the 0.6B results are weak: `--model Qwen/Qwen3-1.7B` (about 1.5-3 h 
 ```bash
 .venv-export/bin/optimum-cli export executorch --model out/qwen3-0.6b-diag/merged --task text-generation \
   --recipe xnnpack --use_custom_sdpa --use_custom_kv_cache --qlinear 8da4w --qlinear_group_size 32 \
-  --qembedding 8w --max_seq_len 2048 --output_dir models/qwen3-0.6b-diag-8da4w
+  --qembedding 8w --max_seq_len 1024 --output_dir models/qwen3-0.6b-diag-8da4w
 cp out/qwen3-0.6b-diag/merged/tokenizer.json models/qwen3-0.6b-diag-8da4w/
 ```
-For the Arduino UNO Q (Cortex-A53) also make a portable copy: drop `--use_custom_sdpa --use_custom_kv_cache`
-and use `--max_seq_len 1024`.
+Keep `--max_seq_len 1024`: the model reserves memory for the whole limit, and 2048 costs ~0.8 GB more RAM
+(2.49 GB vs 1.67 GB peak on the Mac) for the same speed and identical answers; one quiz call needs ~600 tokens.
+Do not use `--qembedding 4w`: it saves only ~75 MB and changed every test answer.
+For the Arduino UNO Q (Cortex-A53) also make a portable copy: drop `--use_custom_sdpa --use_custom_kv_cache`.
 If 4-bit quality drops more than about 2 points against the merged model on the test set, export with
 `--qlinear 8da8w` instead (bigger file, slower, near-lossless).
 

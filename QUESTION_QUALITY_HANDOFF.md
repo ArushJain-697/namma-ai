@@ -66,6 +66,19 @@ model call per question, short output so 0.6B stays fast and never runs out of t
 - Checks to keep: answer supported by the evidence sentence (word overlap or NLI), no option repeated, no wrong
   option equal to the answer, lengths similar, no answer words leaked into the question, valid JSON.
 - Keep `max_new_tokens` around 120 per question. Stop generation at the closing brace if possible.
+- **Decided (13 Nov): one call per question, plus one call for the summary (5 calls per quiz). Do not switch to
+  "all 4 questions in one call"; train and run in this layout only.** Speed budget for it (Qwen3 tokenizer, our 200
+  test passages: passage avg 246 / max 323 tokens; one question in this format ~84 tokens; prompt per call ~400):
+  | Pi 5 speed (read / write tokens per s) | Whole quiz |
+  |---|---|
+  | good: 150 / 22 | ~31 s |
+  | likely: 60 / 20 (published Pi 5 Qwen3-0.6B decode is 21-23 tok/s, llama.cpp, not ExecuTorch) | ~52 s |
+  | bad: 30 / 8 | ~115 s |
+  So keep every call short: rubric + gold examples must stay small (each extra 100 prompt tokens costs ~8 s per
+  quiz on the Pi in the likely case), no retries by default (a retry costs ~10 s), no best-of-2 unless the Pi
+  measures much faster than "likely". Today's old pipeline (~25 calls, ~4,000 tokens in) would take ~2 minutes.
+- When exporting the fine-tuned model, use `--max_seq_len 1024` (as in `train/README.md`), not 2048: same speed and
+  answers, but peak memory 1.67 GB instead of 2.49 GB. So keep every call (prompt + answer) under ~900 tokens.
 - Remove the fill-in-the-blank fallback from the demo path (`generate_bank` and `sakshi run`): if a slot fails twice,
   try another evidence sentence; if still under 3 questions, show fewer rather than fill-in-the-blank.
 - Update `tests/test_diagnostic.py`; run `.venv/bin/python -m pytest -q --ignore=tests/test_resident.py`.
