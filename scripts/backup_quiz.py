@@ -42,7 +42,7 @@ from sakshi.text import split_sentences, tokens, STOPWORDS  # noqa: E402
 
 OUT = ROOT / "results" / "backup_quiz"
 MODEL = ROOT / "models" / "qwen3-0.6b-8da4w"
-VARIANTS = ("window", "passage", "hybrid", "hybrid_mis", "v3", "v4")
+VARIANTS = ("window", "passage", "hybrid", "hybrid_mis", "v3", "v4", "ft")
 
 SYSTEM = (
     "You write one multiple-choice question for a Class 6-10 student about the key sentence of a text.\n"
@@ -99,6 +99,12 @@ def window(sents: list[str], i: int) -> str:
 
 
 def parse(text: str) -> dict | None:
+    # The runner does not stop at Qwen's end-of-turn marker, so the model keeps writing after "Answer: X" (often a
+    # second, unrelated question). Everything after the first answer line is dropped.
+    cut = re.search(r"Answer:\s*\(?[ABCD]\b[^\n]*", text)
+    if cut:
+        why = re.search(r"\nWhy:[^\n]*", text[cut.end():])
+        text = text[: cut.end()] + (why.group(0) if why and why.start() == 0 else "")
     q = re.search(r"Question:\s*(.+)", text)
     opts = {m.group(1): m.group(2).strip() for m in re.finditer(r"^\s*([ABCD])[).:]\s*(.+)$", text, re.M)}
     ans = re.search(r"Answer:\s*\(?([ABCD])\b", text)
@@ -114,7 +120,7 @@ def code_check(item: dict) -> str | None:
     q, opts, key = item["q"], item["options"], item["options"][item["answer"]]
     if BANNED.search(q) or any(BANNED.search(o) for o in opts):
         return "banned phrase (blank / all-none of the above)"
-    if len({o.lower().strip(" .") for o in opts}) < 4:
+    if len({o.lower().strip(" .") for o in opts}) < len(opts) or len(opts) < 3:
         return "repeated option"
     if len(tokens(q)) > 30 or any(len(tokens(o)) > 14 for o in opts):
         return "too long"
@@ -145,13 +151,14 @@ class Model:
 
 
 def self_check(m: Model, ctx: str, item: dict, rng: random.Random) -> tuple[bool, str]:
-    order = list(range(4))
+    order = list(range(len(item["options"])))
     rng.shuffle(order)
     user = f"Text: {ctx}\nQuestion: {item['q']}\n" + "\n".join(f"{c}) {item['options'][j]}"
                                                               for c, j in zip("ABCD", order))
     out = m.run(CHECK_SYSTEM, user, 4, kind="check")
     got = re.match(r"\s*\(?([ABCD])", out)
-    picked = order["ABCD".index(got.group(1))] if got else -1
+    k = "ABCD".index(got.group(1)) if got else -1
+    picked = order[k] if 0 <= k < len(order) else -1
     return picked == item["answer"], (got.group(1) if got else out.strip()[:20])
 
 
@@ -194,7 +201,7 @@ def pi_seconds(calls: list[dict], read: float = 60, write: float = 20) -> float:
 def cmd_generate(a) -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     passages = [json.loads(l) for l in open(ROOT / "data/passages/eval/passages.jsonl")][: a.limit]
-    m = Model()
+    m = Model(Path(a.model))
     from sakshi.misconceptions import Library
     lib = Library.load()
     beliefs = Beliefs(lib) if {"v3", "v4"} & set(a.variants) else None
@@ -202,7 +209,9 @@ def cmd_generate(a) -> None:
         with open(OUT / f"{v}.jsonl", "w") as f:
             for p in passages:
                 t = time.time()
-                if v == "v3":
+                if v == "ft":
+                    r = quiz_ft(m, p["text"])
+                elif v == "v3":
                     r = quiz_v3(m, p["text"], beliefs, lib)
                 elif v == "v4":
                     r = quiz_v4(m, p["text"], beliefs, lib)
@@ -375,6 +384,7 @@ def main() -> None:
     g = sub.add_parser("generate")
     g.add_argument("--limit", type=int, default=None)
     g.add_argument("--variants", nargs="+", default=list(VARIANTS))
+    g.add_argument("--model", default=str(MODEL), help="model folder (model.pte + tokenizer.json)")
     j = sub.add_parser("judge")
     j.add_argument("--judge-model", default="sonnet")
     sub.add_parser("report")
@@ -763,6 +773,53 @@ def quiz_v4(m: "Model", passage: str, beliefs: "Beliefs", lib, n: int = 4, seed:
         return quiz_v3(m, passage, beliefs, lib, n=n, seed=seed)
     finally:
         mixed_wrong = orig
+
+
+
+# ---- ft: the model fine-tuned on SciQ + RACE (train/finetune_mac.py, data from scripts/make_mcq_dataset.py) ----
+# Same layout as its training data: a 3-sentence window + the key sentence in, the whole question out. Code picks
+# the key sentence and checks the result; the self-check stays as the last filter.
+def quiz_ft(m: "Model", passage: str, n: int = 4, seed: int = 0, self_check_on: bool = True) -> dict:
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from make_mcq_dataset import SYSTEM as FT_SYSTEM, user_turn
+    rng = random.Random(seed)
+    sents = split_sentences(passage)
+    start = len(m.calls)
+    kept, rejected = [], []
+    for i in pick_sentences(passage):
+        if len(kept) == n:
+            break
+        raw = m.run(FT_SYSTEM, user_turn(sents, i), 90, kind="question", prefix="Question:")
+        rec = {"evidence": sents[i], "raw": raw, "source": "ft"}
+        item = parse(raw)
+        if item is None:
+            rejected.append({**rec, "reason": "could not parse"})
+            continue
+        key_text = item["options"][item["answer"]]  # the model puts the key in A ~80% of the time: shuffle
+        # small models repeat an option ("hot, hot"); drop the copies and keep the question if 3 distinct options
+        # remain: three options are as good as four (Rodriguez 2005, meta-analysis of 80 years of research)
+        seen, uniq = set(), []
+        for o in item["options"]:
+            k = o.lower().strip(" .")
+            if k not in seen:
+                seen.add(k)
+                uniq.append(o)
+        if len(uniq) >= 3 and key_text in uniq:
+            item["options"] = uniq
+        rng.shuffle(item["options"])
+        item["answer"] = item["options"].index(key_text)
+        rec.update(item)
+        why = code_check(item)
+        if why:
+            rejected.append({**rec, "reason": why})
+            continue
+        if self_check_on:
+            ok, said = self_check(m, window(sents, i), item, rng)
+            if not ok:
+                rejected.append({**rec, "reason": f"self-check failed (picked {said})"})
+                continue
+        kept.append(rec)
+    return {"kept": kept, "rejected": rejected, "calls": m.calls[start:]}
 
 
 if __name__ == "__main__":
