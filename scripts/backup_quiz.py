@@ -337,7 +337,8 @@ def cmd_demo(a) -> None:
     from sakshi.misconceptions import Library
     passage = Path(a.passage).read_text()
     t0 = time.time()
-    m, lib = Model(), Library.load()
+    mdir = Path(a.model)
+    m, lib = Model(mdir), Library.load()
     load = time.time() - t0
     t1 = time.time()
     summ = make_whole_summary(m.b, passage, retries=1)
@@ -358,9 +359,9 @@ def cmd_demo(a) -> None:
         print(f"   Answer: {'ABCD'[q['answer']]}   (from the passage: \"{q['evidence']}\")")
     c = m.calls
     rss = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / (2**20 if sys.platform == "darwin" else 2**10)
-    size = os.path.getsize(MODEL / "model.pte") / 2**20
+    size = os.path.getsize(mdir / "model.pte") / 2**20
     print(f"\nRUN CARD (model ran on this device through ExecuTorch; no cloud call)\n"
-          f"Model:   Qwen3-0.6B, ExecuTorch 8da4w ({MODEL.name}), {size:.0f} MB on disk\n"
+          f"Model:   Qwen3-0.6B, ExecuTorch 8da4w ({mdir.name}), {size:.0f} MB on disk\n"
           f"Memory:  peak {rss:.0f} MB (whole process)\n"
           f"Time:    {time.time() - t0:.1f} s total (load {load:.1f} s, summary {t_sum:.1f} s, quiz {t_quiz:.1f} s)\n"
           f"Calls:   {len(c)} model calls ({n_sum_calls} summary), {sum(x['in'] for x in c)} tokens in, "
@@ -379,6 +380,8 @@ def main() -> None:
     sub.add_parser("report")
     d = sub.add_parser("demo")
     d.add_argument("passage")
+    d.add_argument("--model", default=str(MODEL), help="model folder with model.pte + tokenizer.json "
+                   "(UNO Q / Pi 4: the portable model)")
     a = ap.parse_args()
     {"generate": cmd_generate, "judge": cmd_judge, "report": cmd_report, "demo": cmd_demo}[a.cmd](a)
 

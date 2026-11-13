@@ -30,11 +30,11 @@ while true; do
   say "generate + deepen"
   python3 scripts/build_misconception_graph.py generate --workers 2 --models "$MODELS" 2>&1 | tee -a "$LOG" | tail -2
   python3 scripts/build_misconception_graph.py deepen --workers 2 --models "$MODELS" 2>&1 | tee -a "$LOG" | tail -1
-  if [ $((round % 5)) -eq 0 ]; then  # every 5 rounds: re-link prerequisites and roots by meaning (Sonnet-checked)
+  if [ $((round % 5)) -eq 0 ]; then  # every 5 rounds: link the NEW topics (earlier Sonnet links and named roots are kept)
     say "re-link by meaning (every 5 rounds)"
     mv data/misconceptions/links_v2.json data/misconceptions/links_v2.prev.json 2>/dev/null
     python3 scripts/build_misconception_graph.py assemble >/dev/null 2>&1   # plain graph for the fixer to read
-    $ML scripts/fix_graph_links.py 2>&1 | grep -vE "Warning|warn|W11|Loading" | tail -4 | tee -a "$LOG"
+    $ML scripts/fix_graph_links.py --incremental 2>&1 | grep -vE "Warning|warn|W11|Loading" | tail -6 | tee -a "$LOG"
     [ -f data/misconceptions/links_v2.json ] || mv data/misconceptions/links_v2.prev.json data/misconceptions/links_v2.json
   fi
   say "assemble + viewer + checks"
