@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0418-MAT-PROBABILITY",
+  "topic_id": "MAT-PROBABILITY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a passage that shows a common wrong method and corrects it",
+  "seed": 418
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 1075,
+  "candidatesTokenCount": 1311,
+  "totalTokenCount": 2386,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1075
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-PROBABILITY-K6-M2",
+  "MAT-PROBABILITY-K18-M17",
+  "MAT-PROBABILITY-K18-M18",
+  "MAT-PROBABILITY-K19-M19",
+  "MAT-PROBABILITY-K25-M25",
+  "MAT-PROBABILITY-K19-M20",
+  "MAT-PROBABILITY-K24-M24",
+  "MAT-PROBABILITY-K24-M23",
+  "MAT-PROBABILITY-K23-M22",
+  "MAT-PROBABILITY-K9-M7",
+  "MAT-PROBABILITY-K9-M8",
+  "MAT-PROBABILITY-K7-M3",
+  "MAT-PROBABILITY-K6-M1",
+  "MAT-PROBABILITY-K17-M15"
+ ],
+ "response": {
+  "passage": "In our mathematics class, we often discuss the probability of events. A common mistake is thinking that if a coin lands on heads several times, the next toss is more likely to be tails to balance it out. In reality, each coin toss is an independent event, and the probability of heads remains exactly 1/2. Another frequent error is believing that the probability of an event can exceed 1. By definition, the probability of any event E, denoted as P(E), must always lie between 0 and 1, inclusive. Some students also struggle with complementary events. If the probability of an event occurring is P(E), then the probability of it not occurring is P(not E) = 1 - P(E). For example, if P(E) is 0.3, then P(not E) is 0.7, not 0.3. Finally, remember that an event with a probability of 0 is impossible; it cannot happen under any circumstances. Unlike experimental probability, which changes based on the number of trials, theoretical probability is a fixed value based on equally likely outcomes. As we increase the number of trials, the experimental probability gets closer to the theoretical probability, but they are rarely identical in small samples.",
+  "summary": "This passage clarifies that probability values are bounded between 0 and 1 and explains the concept of independent events. It also highlights how to calculate the probability of complementary events and distinguishes between experimental and theoretical probability.",
+  "items": [
+   {
+    "evidence": "In reality, each coin toss is an independent event, and the probability of heads remains exactly 1/2.",
+    "answer": "1/2",
+    "stem": "After a coin shows heads five times in a row, what is the probability of getting heads on the next toss?",
+    "options": [
+     {
+      "belief_id": "MAT-PROBABILITY-K6-M1",
+      "why": "Believes tails is more likely after a streak of heads.",
+      "text": "Less than 1/2"
+     },
+     {
+      "belief_id": "MAT-PROBABILITY-K6-M2",
+      "why": "Believes the coin is 'hot' and favors heads.",
+      "text": "More than 1/2"
+     },
+     {
+      "belief_id": "MAT-PROBABILITY-K18-M18",
+      "why": "Confuses denominators, thinking larger numbers mean smaller fractions.",
+      "text": "1/3"
+     }
+    ]
+   },
+   {
+    "evidence": "By definition, the probability of any event E, denoted as P(E), must always lie between 0 and 1, inclusive.",
+    "answer": "between 0 and 1",
+    "stem": "What is the valid range for the numerical value of any probability?",
+    "options": [
+     {
+      "belief_id": "MAT-PROBABILITY-K18-M17",
+      "why": "Believes probability can exceed the value of one.",
+      "text": "Any number up to 5"
+     },
+     {
+      "belief_id": "MAT-PROBABILITY-K19-M20",
+      "why": "Believes probability must be either zero or one.",
+      "text": "Only 0 or 1"
+     },
+     {
+      "belief_id": "MAT-PROBABILITY-K17-M15",
+      "why": "Confuses ratio of favorable to unfavorable outcomes.",
+      "text": "Favorable divided by unfavorable"
+     }
+    ]
+   },
+   {
+    "evidence": "For example, if P(E) is 0.3, then P(not E) is 0.7, not 0.3.",
+    "answer": "0.7",
+    "stem": "If the probability of an event is 0.3, what is the probability of its complement?",
+    "options": [
+     {
+      "belief_id": "MAT-PROBABILITY-K24-M23",
+      "why": "Believes the complement is the same as the event.",
+      "text": "0.3"
+     },
+     {
+      "belief_id": "MAT-PROBABILITY-K24-M24",
+      "why": "Believes the sum of probabilities equals a number like 2.",
+      "text": "1.7"
+     },
+     {
+      "belief_id": "MAT-PROBABILITY-K25-M25",
+      "why": "Confuses complement with a different specific outcome.",
+      "text": "0.6"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, remember that an event with a probability of 0 is impossible; it cannot happen under any circumstances.",
+    "answer": "impossible",
+    "stem": "What does it mean if the probability of an event is 0?",
+    "options": [
+     {
+      "belief_id": "MAT-PROBABILITY-K19-M19",
+      "why": "Believes zero probability means it is just very unlikely.",
+      "text": "Very unlikely"
+     },
+     {
+      "belief_id": "MAT-PROBABILITY-K23-M22",
+      "why": "Believes an event must contain only one outcome.",
+      "text": "Contains only one outcome"
+     },
+     {
+      "belief_id": "MAT-PROBABILITY-K9-M8",
+      "why": "Believes probability must be unfair or non-zero.",
+      "text": "The die is unfair"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 8.0
+}

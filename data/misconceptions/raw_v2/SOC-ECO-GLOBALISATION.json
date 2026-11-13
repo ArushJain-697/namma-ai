@@ -1,0 +1,440 @@
+{
+ "topic": {
+  "id": "SOC-ECO-GLOBALISATION",
+  "subject": "social",
+  "strand": "economics",
+  "grades": [
+   10
+  ],
+  "title": "Globalisation and the Indian economy",
+  "scope": "MNCs, foreign trade, liberalisation, WTO, impact on producers and workers, fair globalisation"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 833,
+  "candidatesTokenCount": 1356,
+  "totalTokenCount": 2189,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 833
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.8,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Globalisation and MNCs",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "basic definition of trade"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Foreign Trade and Integration",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "geography of transport"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Liberalisation and Policy",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "role of government"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "MNC Operations",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Production across countries",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "Market Integration",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Trade barriers",
+    "level": 3,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "taxation"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Liberalisation process",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Role of WTO",
+    "level": 3,
+    "parent": "n3",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": [
+     "international law"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Impact on producers",
+    "level": 3,
+    "parent": "n2",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Fair Globalisation",
+    "level": 3,
+    "parent": "n3",
+    "prereqs": [
+     "n9"
+    ],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n5",
+    "statement": "MNCs only produce goods in their home country.",
+    "why": "Students assume a company's identity is tied strictly to its country of origin.",
+    "fix": "MNCs set up production units in countries where labor is cheap and resources are available to maximize profit.",
+    "probe": {
+     "question": "Where does a US-based MNC produce its goods?",
+     "wrong_answer": "Only in the USA"
+    },
+    "error_type": "confuses_related_terms",
+    "root_belief": "A brand's origin dictates its entire operational geography.",
+    "causes": [],
+    "trigger_cues": [
+     "production",
+     "units",
+     "global",
+     "spread",
+     "offshore"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n7",
+    "statement": "Removing trade barriers always helps every local producer.",
+    "why": "Students equate 'free trade' with 'fair trade' for everyone.",
+    "fix": "Removing barriers allows cheaper imports, which can force small, less efficient local producers out of business.",
+    "probe": {
+     "question": "What happens to small toy makers when trade barriers are removed?",
+     "wrong_answer": "They sell more because of global competition"
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Competition is always beneficial for all participants.",
+    "causes": [],
+    "trigger_cues": [
+     "barriers",
+     "tax",
+     "import",
+     "liberalisation",
+     "competition"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on economic misconceptions"
+   },
+   {
+    "key": "m3",
+    "node": "n9",
+    "statement": "The WTO is a democratic body where all countries have equal power.",
+    "why": "Students assume international organizations function like national parliaments.",
+    "fix": "The WTO is dominated by developed countries that often force developing nations to follow rules that favor the rich.",
+    "probe": {
+     "question": "Does the WTO treat all member countries equally?",
+     "wrong_answer": "Yes, it is a democratic global parliament"
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "International organizations are inherently neutral and fair.",
+    "causes": [],
+    "trigger_cues": [
+     "wto",
+     "rules",
+     "trade",
+     "developed",
+     "developing"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n11",
+    "statement": "Globalisation is a natural process that cannot be changed by government policy.",
+    "why": "Students view globalisation as a technological inevitability rather than a political choice.",
+    "fix": "Globalisation is shaped by government policies; fair globalisation can be achieved through better labor laws and support for small producers.",
+    "probe": {
+     "question": "Can the government make globalisation fairer?",
+     "wrong_answer": "No, it is a global market force beyond control"
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Economic forces are laws of nature.",
+    "causes": [],
+    "trigger_cues": [
+     "fair",
+     "policy",
+     "government",
+     "labour",
+     "support"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n4",
+    "statement": "An MNC owns and runs all its factories itself in every country.",
+    "why": "Students see big brand names and assume direct ownership everywhere, missing partnerships and contracts.",
+    "fix": "MNCs often set up production by buying local companies, partnering with them, or placing orders with small local producers who supply goods at low prices.",
+    "probe": {
+     "question": "A large foreign brand gets its garments made in India by small local factories under orders. Who owns those factories?",
+     "wrong_answer": "The MNC owns them."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Companies must own everything they sell",
+    "causes": [],
+    "trigger_cues": [
+     "mnc",
+     "owns",
+     "factory",
+     "own",
+     "brand",
+     "local",
+     "supplier"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 10 Economics Ch.4 text and classroom discussion"
+   },
+   {
+    "key": "m6",
+    "node": "n4",
+    "statement": "MNCs set up factories in a country mainly to help that country's people get jobs.",
+    "why": "Students link foreign investment with job creation and ignore the company's own profit motive.",
+    "fix": "MNCs set up production where costs of labour and other inputs are low and markets are close, so as to earn more profit; jobs are a side effect.",
+    "probe": {
+     "question": "Why does an MNC choose to set up a factory in a particular region of India?",
+     "wrong_answer": "To provide employment to the people there."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Companies invest mainly to help the host country",
+    "causes": [],
+    "trigger_cues": [
+     "why",
+     "mnc",
+     "set up",
+     "factory",
+     "region",
+     "choose",
+     "employment"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n5",
+    "statement": "Production across countries means a product is made completely in one place and then shipped abroad.",
+    "why": "Students think of trade as only exchange of finished goods and not of production spread in stages.",
+    "fix": "Production is split into parts made in different countries, where each stage is done at the place with the lowest cost, and then assembled.",
+    "probe": {
+     "question": "A phone's design is in one country, parts in another and assembly in a third. What is this called?",
+     "wrong_answer": "Ordinary export of a finished good."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Goods are produced wholly in one place",
+    "causes": [],
+    "trigger_cues": [
+     "production",
+     "split",
+     "parts",
+     "assembled",
+     "countries",
+     "stages",
+     "phone"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 10 Economics Ch.4"
+   },
+   {
+    "key": "m8",
+    "node": "n6",
+    "statement": "Foreign trade only means exporting goods from a country to other countries.",
+    "why": "Students notice exports in news and forget imports are also part of trade.",
+    "fix": "Foreign trade includes both exports and imports; it links markets of different countries and gives buyers more choice of goods.",
+    "probe": {
+     "question": "When Indian shops sell imported Chinese toys, does this show integration with foreign markets?",
+     "wrong_answer": "No, because trade means only selling Indian goods abroad."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Trade means selling abroad only",
+    "causes": [],
+    "trigger_cues": [
+     "foreign trade",
+     "export",
+     "import",
+     "market",
+     "integration",
+     "imported",
+     "toys"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m9",
+    "node": "n6",
+    "statement": "Foreign trade gives benefits only to the producers, not to consumers.",
+    "why": "Students think of trade as business activity and overlook what buyers gain.",
+    "fix": "Foreign trade gives consumers more choice and often lower prices, while producers get a wider market to sell in.",
+    "probe": {
+     "question": "After imports of goods began, what changed for Indian consumers?",
+     "wrong_answer": "Nothing changed for consumers; only producers gained."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Trade only benefits sellers",
+    "causes": [],
+    "trigger_cues": [
+     "consumers",
+     "choice",
+     "prices",
+     "imports",
+     "benefit",
+     "buyers",
+     "trade"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m10",
+    "node": "n7",
+    "statement": "Trade barriers like import tax were removed in India because the WTO forced the country to do so in 1947.",
+    "why": "Students mix the dates and the agents of reform, joining WTO and liberalisation together.",
+    "fix": "India removed many trade barriers from 1991 as part of its own liberalisation policy; a tax on imports is a trade barrier and quotas also limit imports.",
+    "probe": {
+     "question": "When did India begin removing many trade barriers like import tax and quotas?",
+     "wrong_answer": "In 1947, at the WTO's order."
+    },
+    "error_type": "chronology_slip",
+    "root_belief": "Trade reforms came from outside at independence",
+    "causes": [],
+    "trigger_cues": [
+     "trade barriers",
+     "import tax",
+     "quota",
+     "1991",
+     "when",
+     "removed",
+     "india"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 10 Economics Ch.4"
+   },
+   {
+    "key": "m11",
+    "node": "n10",
+    "statement": "After liberalisation, Indian small producers all became bigger and richer through competition.",
+    "why": "Students take the word competition as always leading to growth and ignore weaker firms.",
+    "fix": "Competition has helped some Indian companies grow, but many small producers, such as in batteries, capacitors, plastics, toys and vegetable oil, had to shut down or lose jobs.",
+    "probe": {
+     "question": "What happened to many small Indian toy makers when cheap imports came in?",
+     "wrong_answer": "They all grew bigger and earned more."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Competition benefits all producers equally",
+    "causes": [],
+    "trigger_cues": [
+     "small producers",
+     "competition",
+     "toys",
+     "imports",
+     "shut down",
+     "liberalisation",
+     "jobs"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 10 Economics Ch.4"
+   },
+   {
+    "key": "m12",
+    "node": "n11",
+    "statement": "Fair globalisation means every country should open its markets the same amount.",
+    "why": "Students equate fairness with identical treatment and ignore differences in the capacity of rich and poor countries.",
+    "fix": "Fair globalisation creates opportunities for all and ensures benefits are shared better; rules should protect the weak, and developed countries should also cut their own trade barriers.",
+    "probe": {
+     "question": "What would make globalisation fair for developing countries?",
+     "wrong_answer": "Every country, rich or poor, opening its markets equally."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Fairness means identical rules for all",
+    "causes": [],
+    "trigger_cues": [
+     "fair globalisation",
+     "developing",
+     "rich",
+     "poor",
+     "equal",
+     "rules",
+     "markets"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

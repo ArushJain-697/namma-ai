@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "test-0157-GENERIC-a_stargazing_night",
+  "topic_id": null,
+  "split": "test",
+  "generic": true,
+  "theme": "a stargazing night",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a diary entry or letter by a student",
+  "seed": 157
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 713,
+  "candidatesTokenCount": 1070,
+  "totalTokenCount": 1783,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 713
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "October 14th. Dear Diary, tonight was magical. My uncle, Mr. Sharma, took me and my cousin Rohan to the outskirts of Dehradun to watch the meteor shower. We reached the open field at 8:30 PM, far away from the city lights. The sky was incredibly clear because the lack of pollution allowed the stars to shine brightly. I felt like an astronaut floating in space. Rohan kept pointing at the constellations, but I was busy counting the shooting stars. By midnight, I had spotted 12 distinct streaks of light crossing the dark horizon. Mr. Sharma told us that we were lucky to witness such a clear view. I am so tired now, but my heart is full of wonder. It is amazing how a simple night under the stars can make you feel so small yet so connected to the universe. I hope we can go back again next month when the moon is not so bright.",
+  "summary": "A student describes a memorable night spent stargazing near Dehradun with family. They observed a meteor shower and felt a deep connection to the universe.",
+  "items": [
+   {
+    "evidence": "We reached the open field at 8:30 PM, far away from the city lights.",
+    "answer": "the outskirts of Dehradun",
+    "stem": "Where did the group go to observe the night sky?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Mistakes the person named near the time for the location.",
+      "text": "Mr. Sharma"
+     },
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Mistakes the time mentioned for the location.",
+      "text": "8:30 PM"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a true fact from the text that is not the location.",
+      "text": "an open field"
+     }
+    ]
+   },
+   {
+    "evidence": "The sky was incredibly clear because the lack of pollution allowed the stars to shine brightly.",
+    "answer": "lack of pollution",
+    "stem": "What was the primary reason the stars were visible?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Reverses the cause and effect relationship.",
+      "text": "the stars shining brightly"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks a noun phrase appearing near the cause.",
+      "text": "the sky"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Provides a true detail that is not the cause.",
+      "text": "the clear night"
+     }
+    ]
+   },
+   {
+    "evidence": "By midnight, I had spotted 12 distinct streaks of light crossing the dark horizon.",
+    "answer": "12",
+    "stem": "How many shooting stars did the narrator count?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses a different number found in the passage.",
+      "text": "14"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks a noun near the number instead of the count.",
+      "text": "midnight"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Uses an absolute quantifier not supported by the text.",
+      "text": "all of them"
+     }
+    ]
+   },
+   {
+    "evidence": "I am so tired now, but my heart is full of wonder.",
+    "answer": "full of wonder",
+    "stem": "How did the narrator feel at the end of the night?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Interprets the emotional state as a physical state.",
+      "text": "so tired"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks a word appearing in the same sentence.",
+      "text": "the night"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Provides a true fact that is not the feeling.",
+      "text": "connected to the universe"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 6.5
+}

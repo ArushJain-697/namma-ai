@@ -1,0 +1,488 @@
+{
+ "topic": {
+  "id": "SCI-BIO-FOOD",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   6
+  ],
+  "title": "Components of food",
+  "scope": "carbohydrates, proteins, fats, vitamins, minerals, roughage, water, balanced diet, deficiency diseases, food tests"
+ },
+ "model": "gemini-3-flash-preview/key2",
+ "usage": {
+  "promptTokenCount": 838,
+  "candidatesTokenCount": 4217,
+  "totalTokenCount": 6451,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 838
+   }
+  ],
+  "thoughtsTokenCount": 1396,
+  "serviceTier": "standard"
+ },
+ "seconds": 34.6,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Nutrients and Functions",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "sources of food",
+     "basic body parts"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Dietary Balance and Essentials",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3",
+    "name": "Testing and Deficiencies",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1",
+     "n2"
+    ],
+    "external_prereqs": [
+     "observation skills"
+    ]
+   },
+   {
+    "key": "n1.1",
+    "name": "Energy-giving Nutrients",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.2",
+    "name": "Body-building Nutrients",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.3",
+    "name": "Protective Nutrients",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.1.1",
+    "name": "Carbohydrates provide energy",
+    "level": 3,
+    "parent": "n1.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.1.2",
+    "name": "Fats provide more energy than carbs",
+    "level": 3,
+    "parent": "n1.1",
+    "prereqs": [
+     "n1.1.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.2.1",
+    "name": "Proteins for growth and repair",
+    "level": 3,
+    "parent": "n1.2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.3.1",
+    "name": "Vitamins protect against diseases",
+    "level": 3,
+    "parent": "n1.3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.3.2",
+    "name": "Minerals for specific body functions",
+    "level": 3,
+    "parent": "n1.3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.1",
+    "name": "Non-nutrient Essentials",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.1.1",
+    "name": "Roughage for digestion",
+    "level": 3,
+    "parent": "n2.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.1.2",
+    "name": "Water for absorption and waste",
+    "level": 3,
+    "parent": "n2.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.2",
+    "name": "Balanced Diet Principles",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n1.1",
+     "n1.2",
+     "n1.3",
+     "n2.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.2.1",
+    "name": "Nutrient proportions in diet",
+    "level": 3,
+    "parent": "n2.2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.2.2",
+    "name": "Effect of cooking on nutrients",
+    "level": 3,
+    "parent": "n2.2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.1",
+    "name": "Food Testing Methods",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n1.1",
+     "n1.2"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.1.1",
+    "name": "Iodine test for starch",
+    "level": 3,
+    "parent": "n3.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.2",
+    "name": "Deficiency Diseases",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n1.3"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.2.1",
+    "name": "Specific nutrient-disease links",
+    "level": 3,
+    "parent": "n3.2",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n1.3.1",
+    "statement": "Vitamins provide energy to the body for playing and running.",
+    "why": "Students often associate anything 'healthy' or 'protective' with the immediate feeling of energy.",
+    "fix": "Vitamins do not provide energy; they help protect our body against diseases and keep our eyes, bones, and gums healthy. Carbohydrates and fats are the actual energy providers.",
+    "probe": {
+     "question": "If you feel tired and need immediate energy, should you eat a vitamin pill or a bowl of rice?",
+     "wrong_answer": "A vitamin pill."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "all beneficial things perform the same function",
+    "causes": [],
+    "trigger_cues": [
+     "vitamins",
+     "energy",
+     "strength",
+     "health"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "concept inventories in biology education"
+   },
+   {
+    "key": "m2",
+    "node": "n1.1.2",
+    "statement": "Fats are always harmful and should be completely removed from our diet.",
+    "why": "Everyday health warnings about obesity lead students to view fats as purely toxic substances.",
+    "fix": "Fats are essential nutrients that provide more energy than carbohydrates. We need them in small quantities for a healthy body.",
+    "probe": {
+     "question": "Is a diet with zero grams of fat the healthiest diet for a growing child?",
+     "wrong_answer": "Yes, because fat only makes people fat."
+    },
+    "error_type": "everyday_language",
+    "root_belief": "substances are either purely good or purely bad",
+    "causes": [],
+    "trigger_cues": [
+     "fats",
+     "harmful",
+     "obesity",
+     "oil"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n2.1.1",
+    "statement": "Roughage is a nutrient that helps us grow taller.",
+    "why": "Students assume all components of food must be 'nutrients' that contribute to growth.",
+    "fix": "Roughage (dietary fibre) is not a nutrient and does not provide growth; it is the undigested part of food that helps our body get rid of waste.",
+    "probe": {
+     "question": "What is the main job of roughage in our food?",
+     "wrong_answer": "To help us grow and build muscles."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "all food components are nutrients",
+    "causes": [],
+    "trigger_cues": [
+     "roughage",
+     "fibre",
+     "digestion",
+     "growth"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n2.2.1",
+    "statement": "A balanced diet means eating equal amounts of every nutrient.",
+    "why": "The word 'balanced' is interpreted as 'mathematically equal' rather than 'proportionally appropriate'.",
+    "fix": "A balanced diet contains different nutrients in the specific proportions our body needs, not in equal amounts. For example, we need more carbohydrates than vitamins.",
+    "probe": {
+     "question": "If you eat 100g of fats, 100g of vitamins, and 100g of proteins, is that a balanced diet?",
+     "wrong_answer": "Yes, because all amounts are equal and balanced."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "balance means equal quantity",
+    "causes": [],
+    "trigger_cues": [
+     "balanced diet",
+     "equal",
+     "proportions",
+     "amount"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on student ideas about diet"
+   },
+   {
+    "key": "m5",
+    "node": "n3.2.1",
+    "statement": "Deficiency diseases like scurvy can spread from one person to another by coughing.",
+    "why": "Students overgeneralize the concept of 'disease' to mean 'germ-based infection'.",
+    "fix": "Deficiency diseases are caused by a lack of nutrients and are not communicable. You cannot 'catch' them from someone else.",
+    "probe": {
+     "question": "If your friend has night blindness, can you get it by sitting next to them?",
+     "wrong_answer": "Yes, because it is a disease."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "all diseases are caused by germs",
+    "causes": [],
+    "trigger_cues": [
+     "deficiency",
+     "scurvy",
+     "spread",
+     "communicable"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas in Science"
+   },
+   {
+    "key": "m6",
+    "node": "n2.2.2",
+    "statement": "Washing vegetables after cutting them makes them cleaner and healthier.",
+    "why": "Students focus on the visible removal of dirt without understanding the invisible loss of vitamins.",
+    "fix": "Washing vegetables after cutting them leads to the loss of many water-soluble vitamins. It is better to wash them before cutting.",
+    "probe": {
+     "question": "Why should we avoid washing peeled and chopped vegetables?",
+     "wrong_answer": "Because the water will make the vegetables dirty again."
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "more cleaning always leads to better health",
+    "causes": [],
+    "trigger_cues": [
+     "washing",
+     "cutting",
+     "vitamins",
+     "cooking"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n1.3.2",
+    "statement": "The iron in our food is the same as the hard metal used to make nails.",
+    "why": "Literal interpretation of the word 'iron' based on everyday objects.",
+    "fix": "The iron in food is a mineral in a chemical form that our body can absorb to make blood; it is not tiny pieces of hard metal.",
+    "probe": {
+     "question": "If a food is rich in iron, does it mean it contains small metal pieces?",
+     "wrong_answer": "Yes, that is why it makes our body strong like metal."
+    },
+    "error_type": "everyday_language",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "iron",
+     "minerals",
+     "metal",
+     "blood"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m8",
+    "node": "n3.1.1",
+    "statement": "The iodine test turns food blue-black if it contains any kind of sugar.",
+    "why": "Students confuse the specific carbohydrate 'starch' with the general category of 'sugar'.",
+    "fix": "The iodine test specifically detects starch. It does not turn blue-black for simple sugars like glucose.",
+    "probe": {
+     "question": "Will a solution of plain table sugar turn blue-black when iodine is added?",
+     "wrong_answer": "Yes, because sugar is a carbohydrate."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a test for a part works for the whole",
+    "causes": [],
+    "trigger_cues": [
+     "iodine",
+     "starch",
+     "sugar",
+     "blue-black"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m9",
+    "node": "n2.1.2",
+    "statement": "We only get water for our body when we drink it from a glass.",
+    "why": "Students only account for visible, direct consumption of liquids.",
+    "fix": "Our body gets water not just from drinking, but also from many food items like fruits, vegetables, and even milk or tea.",
+    "probe": {
+     "question": "If you eat a juicy watermelon, are you providing water to your body?",
+     "wrong_answer": "No, you are only eating food, not drinking."
+    },
+    "error_type": "visible_only",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "water",
+     "liquids",
+     "absorption",
+     "drinking"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m10",
+    "node": "n1.1.2",
+    "statement": "If a food item does not leave an oily mark on paper, it contains no fats.",
+    "why": "Reliance on the simplest physical test without considering hidden or bound fats.",
+    "fix": "While the paper test is a good indicator, some foods have very small amounts of fat or 'hidden' fats that might not leave a visible oily patch easily.",
+    "probe": {
+     "question": "Can a food have fat even if it doesn't feel greasy to touch?",
+     "wrong_answer": "No, fat must always be oily and visible."
+    },
+    "error_type": "visible_only",
+    "root_belief": "physical properties are always immediately apparent",
+    "causes": [],
+    "trigger_cues": [
+     "fats",
+     "paper test",
+     "oily patch",
+     "grease"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n1.2.1",
+    "statement": "Only people who want to build big muscles need to eat protein.",
+    "why": "Association of protein with gym culture and bodybuilding supplements.",
+    "fix": "Everyone needs protein for the basic repair of damaged body tissues and for general growth, not just for building large muscles.",
+    "probe": {
+     "question": "Does a child who doesn't exercise still need protein?",
+     "wrong_answer": "No, because they are not trying to be a bodybuilder."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "specialized use cases apply to everyone",
+    "causes": [],
+    "trigger_cues": [
+     "protein",
+     "muscles",
+     "growth",
+     "repair"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m12",
+    "node": "n3.2.1",
+    "statement": "Eating a huge amount of Vitamin A can cure a broken bone.",
+    "why": "General belief that 'vitamins' are a magic cure-all for any physical injury.",
+    "fix": "Specific nutrients prevent specific deficiencies. Vitamin A is for vision; Calcium and Vitamin D are needed for bones.",
+    "probe": {
+     "question": "Which nutrient would specifically help strengthen weak bones?",
+     "wrong_answer": "Vitamin A or Vitamin C."
+    },
+    "error_type": "single_cause",
+    "root_belief": "one good thing fixes everything",
+    "causes": [],
+    "trigger_cues": [
+     "deficiency",
+     "vitamin a",
+     "bones",
+     "cure"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   }
+  ]
+ },
+ "problems": []
+}

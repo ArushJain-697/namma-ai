@@ -1,0 +1,563 @@
+{
+ "topic": {
+  "id": "SCI-BIO-RESPIRATION",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   7,
+   10
+  ],
+  "title": "Respiration in organisms",
+  "scope": "breathing vs respiration, aerobic and anaerobic respiration, breathing rate, respiration in plants and other animals"
+ },
+ "model": "gemini-3-flash-preview/key3",
+ "usage": {
+  "promptTokenCount": 840,
+  "candidatesTokenCount": 4505,
+  "totalTokenCount": 9143,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 840
+   }
+  ],
+  "thoughtsTokenCount": 3798,
+  "serviceTier": "standard"
+ },
+ "seconds": 30.7,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "The Nature of Respiration",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "concept of energy",
+     "food as fuel"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Cellular Respiration",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "basic cell structure"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Energy release from food",
+    "level": 3,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "glucose"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Types of Respiration",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Aerobic Respiration",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "chemical equations"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Anaerobic in Yeast",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "microorganisms"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Anaerobic in Muscles",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Mechanism of Breathing",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "air pressure"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Physical act of breathing",
+    "level": 2,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Inhalation and Exhalation mechanics",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": [
+     "volume and pressure relationship"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Gas exchange in Alveoli",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": [
+     "diffusion"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Breathing Rate",
+    "level": 2,
+    "parent": "n8",
+    "prereqs": [
+     "n9"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Respiration in Other Organisms",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Insects and Earthworms",
+    "level": 2,
+    "parent": "n13",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Aquatic Respiration",
+    "level": 2,
+    "parent": "n13",
+    "prereqs": [],
+    "external_prereqs": [
+     "dissolved gases"
+    ]
+   },
+   {
+    "key": "n16",
+    "name": "Plant Respiration",
+    "level": 2,
+    "parent": "n13",
+    "prereqs": [],
+    "external_prereqs": [
+     "photosynthesis"
+    ]
+   },
+   {
+    "key": "n17",
+    "name": "Stomatal gas exchange",
+    "level": 3,
+    "parent": "n16",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n18",
+    "name": "Respiration vs Photosynthesis timing",
+    "level": 3,
+    "parent": "n16",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n19",
+    "name": "Root respiration",
+    "level": 3,
+    "parent": "n16",
+    "prereqs": [],
+    "external_prereqs": [
+     "soil composition"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n2",
+    "statement": "Respiration is just another word for breathing.",
+    "why": "In everyday conversation, people use 'respiration' to mean inhaling and exhaling.",
+    "fix": "Breathing is the physical act of gas exchange, while respiration is the chemical process of breaking down food for energy inside cells.",
+    "probe": {
+     "question": "If a cell has oxygen but no glucose, can it perform respiration?",
+     "wrong_answer": "Yes, because it can still breathe."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "breathing",
+     "respiration",
+     "energy",
+     "air",
+     "lungs"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's children's ideas in science"
+   },
+   {
+    "key": "m2",
+    "node": "n5",
+    "statement": "Aerobic respiration is the process of 'making' oxygen for the body.",
+    "why": "Confusion between 'using' and 'producing' in chemical cycles.",
+    "fix": "Aerobic respiration consumes oxygen to release energy from food; it does not create oxygen.",
+    "probe": {
+     "question": "Does the amount of oxygen in a sealed jar increase if a mouse is respiring inside?",
+     "wrong_answer": "Yes, because the mouse is respiring."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "inputs and outputs are interchangeable",
+    "causes": [],
+    "trigger_cues": [
+     "aerobic",
+     "oxygen",
+     "produce",
+     "energy",
+     "glucose"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n6",
+    "statement": "Yeast only performs respiration when making bread rise.",
+    "why": "Students only associate microbes with their industrial utility.",
+    "fix": "Yeast respires to stay alive and grow; the CO2 that makes bread rise is just a byproduct of its survival process.",
+    "probe": {
+     "question": "Does yeast in a dry packet respire before you add it to dough?",
+     "wrong_answer": "No, it only starts when it needs to make bread."
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "biological processes exist for human utility",
+    "causes": [],
+    "trigger_cues": [
+     "yeast",
+     "bread",
+     "anaerobic",
+     "alcohol",
+     "rise"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n3",
+    "statement": "Respiration only happens in the lungs of animals.",
+    "why": "Lungs are the most visible organ associated with the word 'breathing'.",
+    "fix": "Respiration occurs in every single living cell of an organism's body to provide energy for that cell.",
+    "probe": {
+     "question": "Does a cell in your big toe perform respiration?",
+     "wrong_answer": "No, only the lungs do that."
+    },
+    "error_type": "part_whole",
+    "root_belief": "a function only happens at its primary site",
+    "causes": [],
+    "trigger_cues": [
+     "cell",
+     "lungs",
+     "energy",
+     "body",
+     "respiration"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m5",
+    "node": "n9",
+    "statement": "We inhale pure oxygen and exhale pure carbon dioxide.",
+    "why": "Textbooks simplify gas exchange diagrams to show O2 going in and CO2 coming out.",
+    "fix": "We inhale a mixture of gases (mostly nitrogen) and exhale a mixture that still contains significant oxygen but more CO2 than before.",
+    "probe": {
+     "question": "What is the most abundant gas in the air we breathe in?",
+     "wrong_answer": "Oxygen."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "only the functional component matters",
+    "causes": [],
+    "trigger_cues": [
+     "inhale",
+     "exhale",
+     "oxygen",
+     "carbon dioxide",
+     "mixture"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Mumbai"
+   },
+   {
+    "key": "m6",
+    "node": "n7",
+    "statement": "Lactic acid is produced because the body stops respiring during heavy exercise.",
+    "why": "Students think anaerobic means the normal process has failed or stopped.",
+    "fix": "Anaerobic respiration is an additional pathway to provide energy quickly when oxygen supply is insufficient, not a replacement for all respiration.",
+    "probe": {
+     "question": "During a fast run, do your muscle cells stop using oxygen entirely?",
+     "wrong_answer": "Yes, they switch entirely to lactic acid."
+    },
+    "error_type": "single_cause",
+    "root_belief": "one process replaces another entirely",
+    "causes": [],
+    "trigger_cues": [
+     "lactic acid",
+     "muscles",
+     "cramps",
+     "exercise",
+     "anaerobic"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n12",
+    "statement": "Breathing rate is a fixed number for every human.",
+    "why": "Students often see a single 'average' value in textbooks and take it as a constant.",
+    "fix": "Breathing rate varies significantly based on age, health, and physical activity levels.",
+    "probe": {
+     "question": "If your resting rate is 15, will it be 15 while you are sleeping?",
+     "wrong_answer": "Yes, it never changes."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "averages are absolute constants",
+    "causes": [],
+    "trigger_cues": [
+     "rate",
+     "average",
+     "minute",
+     "breathing",
+     "constant"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m8",
+    "node": "n18",
+    "statement": "Plants only respire at night when they are not doing photosynthesis.",
+    "why": "Students think plants only need one gas exchange process at a time and photosynthesis is 'day breathing'.",
+    "fix": "Respiration is a continuous process for all living cells to stay alive, occurring 24/7 in plants.",
+    "probe": {
+     "question": "Do plant cells need energy from glucose during the daytime?",
+     "wrong_answer": "No, they only make glucose then; they don't use it."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "mutually exclusive processes cannot happen simultaneously",
+    "causes": [],
+    "trigger_cues": [
+     "plants",
+     "night",
+     "photosynthesis",
+     "oxygen",
+     "carbon dioxide"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m9",
+    "node": "n14",
+    "statement": "Earthworms breathe through their mouths like humans do.",
+    "why": "Students project human anatomy onto all animals.",
+    "fix": "Earthworms exchange gases directly through their moist skin, not through a mouth or lungs.",
+    "probe": {
+     "question": "If an earthworm's skin dries out, can it still breathe through its mouth?",
+     "wrong_answer": "Yes, it will just use its mouth."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "all animals function like humans",
+    "causes": [],
+    "trigger_cues": [
+     "earthworm",
+     "skin",
+     "moist",
+     "mouth",
+     "breathe"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m10",
+    "node": "n10",
+    "statement": "Air entering the lungs causes the chest to expand.",
+    "why": "It looks like a balloon being blown up where the air pressure creates the expansion.",
+    "fix": "Muscle contraction (diaphragm and ribs) expands the chest cavity first, which then pulls air in.",
+    "probe": {
+     "question": "What happens first: the ribs move out or the air enters?",
+     "wrong_answer": "Air enters first and pushes the ribs."
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "the visible result is the cause",
+    "causes": [],
+    "trigger_cues": [
+     "chest",
+     "expand",
+     "ribs",
+     "diaphragm",
+     "inhalation"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m11",
+    "node": "n15",
+    "statement": "Fish breathe by breaking down water molecules (H2O) to get oxygen.",
+    "why": "Students know water contains oxygen atoms.",
+    "fix": "Fish use gills to extract dissolved oxygen gas (O2) from the water, not the oxygen atoms inside water molecules.",
+    "probe": {
+     "question": "Can a fish breathe in distilled water that has no air bubbled into it?",
+     "wrong_answer": "Yes, because it gets oxygen from the H2O."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "substances are sums of their chemical parts",
+    "causes": [],
+    "trigger_cues": [
+     "fish",
+     "gills",
+     "water",
+     "dissolved",
+     "oxygen"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's children's ideas in science"
+   },
+   {
+    "key": "m12",
+    "node": "n19",
+    "statement": "Roots do not need oxygen because they are buried in the soil.",
+    "why": "Students assume oxygen is only available in the open air.",
+    "fix": "Roots take up oxygen from the air spaces present between soil particles to perform respiration.",
+    "probe": {
+     "question": "Why does a plant die if the soil is waterlogged for a long time?",
+     "wrong_answer": "Because it gets too much water."
+    },
+    "error_type": "visible_only",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "roots",
+     "soil",
+     "air",
+     "oxygen",
+     "space"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m13",
+    "node": "n17",
+    "statement": "Stomata are only for letting out water (transpiration).",
+    "why": "Students often learn transpiration first and don't link stomata to gas exchange.",
+    "fix": "Stomata are the primary ports for the entry and exit of both oxygen and carbon dioxide.",
+    "probe": {
+     "question": "How does CO2 enter a leaf for photosynthesis?",
+     "wrong_answer": "Through the roots."
+    },
+    "error_type": "single_cause",
+    "root_belief": "one structure has only one function",
+    "causes": [],
+    "trigger_cues": [
+     "stomata",
+     "leaves",
+     "gas",
+     "exchange",
+     "transpiration"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m14",
+    "node": "n11",
+    "statement": "Oxygen turns into carbon dioxide inside the lungs.",
+    "why": "The proximity of the exchange makes it look like a direct conversion.",
+    "fix": "Oxygen enters the blood to go to cells, while carbon dioxide produced by cells enters the lungs to be exhaled; they are different molecules.",
+    "probe": {
+     "question": "Is the carbon atom in exhaled CO2 the same atom that was in the inhaled oxygen?",
+     "wrong_answer": "Yes."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "matter changes identity through simple contact",
+    "causes": [],
+    "trigger_cues": [
+     "lungs",
+     "exchange",
+     "oxygen",
+     "carbon dioxide",
+     "conversion"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m15",
+    "node": "n4",
+    "statement": "Anaerobic respiration is just as efficient as aerobic respiration.",
+    "why": "Students don't realize the difference in energy yield.",
+    "fix": "Aerobic respiration releases much more energy per glucose molecule than anaerobic respiration.",
+    "probe": {
+     "question": "If a cell has no oxygen, will it get the same energy from one sugar molecule?",
+     "wrong_answer": "Yes."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "all similar processes have equal magnitude",
+    "causes": [],
+    "trigger_cues": [
+     "anaerobic",
+     "aerobic",
+     "energy",
+     "efficiency",
+     "glucose"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}

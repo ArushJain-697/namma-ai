@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0752-GENERIC-a_cricket_match_between_two_sc",
+  "topic_id": null,
+  "split": "train",
+  "generic": true,
+  "theme": "a cricket match between two schools",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a news-style report about a real-world situation",
+  "seed": 752
+ },
+ "model": "gemini-3.1-flash-lite/key3",
+ "usage": {
+  "promptTokenCount": 720,
+  "candidatesTokenCount": 1128,
+  "totalTokenCount": 1848,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 720
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "On 14th November, the annual inter-school cricket final between Green Valley Academy and St. Jude’s High took place at the Nehru Stadium. The atmosphere was electric as over 500 spectators gathered to witness the clash. Green Valley batted first, setting a target of 145 runs. Their captain, Rohan Sharma, played a brilliant innings, scoring 62 runs before being caught at the boundary. St. Jude’s struggled initially against the spin bowling of Vikram Singh, who took four wickets in his opening spell. However, the match turned in the final over when the pitch conditions changed due to the sudden evening dew. Because the dew made the ball slippery, the bowlers could not grip it properly, allowing the St. Jude’s tail-enders to score the winning runs. The match concluded with a thrilling victory for St. Jude’s, who celebrated their hard-fought win under the floodlights. The tournament organizers praised both teams for their sportsmanship and dedication throughout the season.",
+  "summary": "St. Jude’s High defeated Green Valley Academy in a thrilling cricket final at Nehru Stadium. The match was decided in the final over when slippery conditions made bowling difficult. Both teams were commended for their excellent performance and spirit.",
+  "items": [
+   {
+    "evidence": "The atmosphere was electric as over 500 spectators gathered to witness the clash.",
+    "answer": "over 500",
+    "stem": "How many people watched the cricket match at the stadium?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses a number from the text that is not the answer.",
+      "text": "145"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks a proper noun near the question words.",
+      "text": "Nehru Stadium"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Generalizes a number as an absolute quantity.",
+      "text": "All spectators"
+     }
+    ]
+   },
+   {
+    "evidence": "Their captain, Rohan Sharma, played a brilliant innings, scoring 62 runs before being caught at the boundary.",
+    "answer": "Rohan Sharma",
+    "stem": "Who was the player that scored 62 runs for Green Valley?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects a name mentioned nearby in the text.",
+      "text": "Vikram Singh"
+     },
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Interprets a name as a common noun.",
+      "text": "The captain"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Assumes all players scored the same amount.",
+      "text": "Every player"
+     }
+    ]
+   },
+   {
+    "evidence": "Because the dew made the ball slippery, the bowlers could not grip it properly, allowing the St. Jude’s tail-enders to score the winning runs.",
+    "answer": "the ball slippery",
+    "stem": "What was the main reason the bowlers struggled to grip the ball?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Reverses the cause and effect relationship.",
+      "text": "The winning runs"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks a noun phrase located near the cause.",
+      "text": "St. Jude’s"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Provides a true fact that is not the cause.",
+      "text": "The final over"
+     }
+    ]
+   },
+   {
+    "evidence": "The match concluded with a thrilling victory for St. Jude’s, who celebrated their hard-fought win under the floodlights.",
+    "answer": "St. Jude’s",
+    "stem": "Which school won the final match?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M5",
+      "why": "Confuses similar sounding school names.",
+      "text": "Green Valley"
+     },
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Uses the everyday meaning of a victory.",
+      "text": "A hard-fought win"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks a location mentioned in the same sentence.",
+      "text": "The floodlights"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 5.8
+}

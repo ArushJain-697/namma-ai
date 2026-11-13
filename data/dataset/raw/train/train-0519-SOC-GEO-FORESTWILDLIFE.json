@@ -1,0 +1,84 @@
+{
+ "job": {
+  "job": "train-0519-SOC-GEO-FORESTWILDLIFE",
+  "topic_id": "SOC-GEO-FORESTWILDLIFE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a passage rich in numbers, dates or measurements",
+  "seed": 519
+ },
+ "model": "gemini-3.1-flash-lite/key3",
+ "usage": {
+  "promptTokenCount": 627,
+  "candidatesTokenCount": 848,
+  "totalTokenCount": 1475,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 627
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "SOC-GEO-FORESTWILDLIFE-K6-M1",
+  "SOC-GEO-FORESTWILDLIFE-K9-M3",
+  "SOC-GEO-FORESTWILDLIFE-K13-M4"
+ ],
+ "response": {
+  "passage": "India hosts a vast array of biodiversity, managed through diverse conservation frameworks. As of recent assessments, more than half of the total forest land in India is declared as Reserved Forests. These areas are not restricted to government officials; rather, they are managed by the state to provide valuable timber and forest produce to the public while maintaining strict environmental regulations. Beyond state control, local communities play a vital role in conservation. In many regions, indigenous groups protect 'sacred groves', which are patches of forest preserved for their cultural and spiritual significance, often serving as a sanctuary for diverse flora and fauna beyond just medicinal plants. Furthermore, national efforts like Project Tiger, launched in 1973, have evolved significantly. While it initially focused on preventing poaching, its primary objective today is to maintain viable populations of tigers in their natural habitats by protecting the entire ecosystem. This includes managing prey density and securing corridors for movement, ensuring the species thrives in the wild. By integrating these strategies, India aims to balance human needs with the urgent necessity of ecological preservation, moving beyond simple protectionism toward holistic landscape management that benefits both nature and the people who depend on it for their daily survival.",
+  "summary": "India manages its rich biodiversity through a combination of state-controlled Reserved Forests and community-led conservation efforts. Modern initiatives like Project Tiger focus on holistic ecosystem health rather than just individual species protection.",
+  "items": [
+   {
+    "evidence": "These areas are not restricted to government officials; rather, they are managed by the state to provide valuable timber and forest produce to the public while maintaining strict environmental regulations.",
+    "answer": "provide timber to the public",
+    "stem": "What is the primary purpose of managing Reserved Forests?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-FORESTWILDLIFE-K6-M1",
+      "why": "Student believes the area is exclusively for government use.",
+      "text": "for government officials only"
+     }
+    ]
+   },
+   {
+    "evidence": "In many regions, indigenous groups protect 'sacred groves', which are patches of forest preserved for their cultural and spiritual significance, often serving as a sanctuary for diverse flora and fauna beyond just medicinal plants.",
+    "answer": "cultural and spiritual significance",
+    "stem": "Why do local communities protect sacred groves?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-FORESTWILDLIFE-K13-M4",
+      "why": "Student assumes protection is solely for economic medicinal value.",
+      "text": "to harvest expensive medicinal herbs"
+     }
+    ]
+   },
+   {
+    "evidence": "While it initially focused on preventing poaching, its primary objective today is to maintain viable populations of tigers in their natural habitats by protecting the entire ecosystem.",
+    "answer": "protecting the entire ecosystem",
+    "stem": "What is the current main goal of Project Tiger?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-FORESTWILDLIFE-K9-M3",
+      "why": "Student ignores the ecosystem focus, focusing only on hunting.",
+      "text": "to stop people from shooting tigers"
+     }
+    ]
+   },
+   {
+    "evidence": "As of recent assessments, more than half of the total forest land in India is declared as Reserved Forests.",
+    "answer": "more than half",
+    "stem": "How much of India's forest land is currently classified as Reserved Forests?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-FORESTWILDLIFE-K6-M1",
+      "why": "Student confuses classification status with restricted access rights.",
+      "text": "only government-owned land"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 3.2
+}

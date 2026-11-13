@@ -1,0 +1,469 @@
+{
+ "topic": {
+  "id": "MAT-INTEGERS",
+  "subject": "maths",
+  "strand": "maths",
+  "grades": [
+   6,
+   7
+  ],
+  "title": "Integers",
+  "scope": "negative numbers, number line, ordering, addition, subtraction, multiplication and division of integers"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 842,
+  "candidatesTokenCount": 1722,
+  "totalTokenCount": 2564,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 842
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 6.6,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Number Line and Ordering",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "whole numbers",
+     "number line concept"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Addition and Subtraction",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "addition and subtraction of whole numbers"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Multiplication and Division",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "multiplication tables",
+     "division of whole numbers"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Negative Numbers",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "concept of zero"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Comparing Integers",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "ordering of whole numbers"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Addition Rules",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Subtraction as Addition of Inverse",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Multiplication Signs",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Division Signs",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Integers represent opposite directions",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Further from zero means smaller for negatives",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Adding negative makes number smaller",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Subtracting negative is same as subtracting positive",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Product of two negatives is negative",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n11",
+    "statement": "-5 is smaller than -10 because 5 is smaller than 10.",
+    "why": "Students apply whole number magnitude rules to negative integers.",
+    "fix": "On the number line, numbers to the right are always greater; -5 is to the right of -10.",
+    "probe": {
+     "question": "Which is greater: -8 or -3?",
+     "wrong_answer": "-8"
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "a rule from whole numbers works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "greater",
+     "smaller",
+     "compare",
+     "number line",
+     "left",
+     "right"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic studies"
+   },
+   {
+    "key": "m2",
+    "node": "n12",
+    "statement": "Adding a negative number always makes the total smaller.",
+    "why": "Students confuse the operation of addition with the property of the negative sign.",
+    "fix": "Adding a negative number is equivalent to subtracting its positive counterpart.",
+    "probe": {
+     "question": "What is 5 + (-3)?",
+     "wrong_answer": "2 (thinking it must be smaller than 5)"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "bigger or more means more effect",
+    "causes": [],
+    "trigger_cues": [
+     "add",
+     "negative",
+     "sum",
+     "total",
+     "increase",
+     "decrease"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n14",
+    "statement": "The product of two negative numbers is negative.",
+    "why": "Students assume the negative sign 'wins' or persists in the result.",
+    "fix": "The product of two negative numbers is always positive.",
+    "probe": {
+     "question": "What is -4 * -3?",
+     "wrong_answer": "-12"
+    },
+    "error_type": "sign_error_belief",
+    "root_belief": "a rule from whole numbers works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "multiply",
+     "product",
+     "negative",
+     "sign",
+     "result"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver children's ideas"
+   },
+   {
+    "key": "m4",
+    "node": "n13",
+    "statement": "Subtracting a negative number is the same as subtracting a positive.",
+    "why": "Students ignore the double negative sign and treat it as a single subtraction.",
+    "fix": "Subtracting a negative number is the same as adding a positive number.",
+    "probe": {
+     "question": "What is 10 - (-5)?",
+     "wrong_answer": "5"
+    },
+    "error_type": "notation_misread",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "subtract",
+     "minus",
+     "negative",
+     "difference",
+     "inverse"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "id": "m5",
+    "node": "n6",
+    "statement": "When adding a positive and a negative number, you always give the answer the sign of the first number.",
+    "why": "Students learn a surface rule 'keep the first sign' and ignore which number has the greater absolute value.",
+    "fix": "For unlike signs, subtract the smaller absolute value from the larger and take the sign of the number with the larger absolute value. E.g. 3 + (-7) = -4.",
+    "probe": {
+     "question": "Find 3 + (-7).",
+     "wrong_answer": "4"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "Answer takes sign of the first number",
+    "causes": [],
+    "trigger_cues": [
+     "add",
+     "unlike signs",
+     "positive and negative",
+     "first number",
+     "sign of answer"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom error analysis",
+    "key": "m5"
+   },
+   {
+    "id": "m6",
+    "node": "n6",
+    "statement": "When adding two negative numbers, the negatives cancel and the answer is positive.",
+    "why": "Students confuse the rule for multiplying two negatives with the rule for adding them.",
+    "fix": "Adding two negative numbers means moving further left on the number line, so the sum is negative. E.g. (-3) + (-4) = -7.",
+    "probe": {
+     "question": "Find (-3) + (-4).",
+     "wrong_answer": "7"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Two negatives always make a positive",
+    "causes": [],
+    "trigger_cues": [
+     "add",
+     "two negatives",
+     "same signs",
+     "cancel",
+     "sum negative"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on integer addition errors",
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n7",
+    "statement": "Subtraction is commutative, so 3 - 8 gives the same answer as 8 - 3.",
+    "why": "Students think of subtraction as 'the bigger minus the smaller' and drop the sign when the result is below zero.",
+    "fix": "Subtraction is not commutative. 3 - 8 = 3 + (-8) = -5, while 8 - 3 = 5.",
+    "probe": {
+     "question": "Find 3 - 8.",
+     "wrong_answer": "5"
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "Smaller minus bigger is the same as reversed",
+    "causes": [],
+    "trigger_cues": [
+     "subtract",
+     "smaller minus bigger",
+     "order",
+     "result below zero",
+     "swap numbers"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on whole-number bias in integer subtraction",
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n5",
+    "statement": "Any negative number is greater than 0 or at least equal to it, as 0 means nothing.",
+    "why": "Students link negative numbers with 'nothing' and think zero is the lowest possible value.",
+    "fix": "Zero is greater than every negative number, because negatives lie to the left of 0 on the number line.",
+    "probe": {
+     "question": "Which is greater, 0 or -4?",
+     "wrong_answer": "-4"
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "Zero is the smallest possible number",
+    "causes": [],
+    "trigger_cues": [
+     "compare",
+     "zero",
+     "negative",
+     "greater",
+     "smallest number"
+    ],
+    "confidence": "plausible",
+    "source_hint": null,
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n4",
+    "statement": "The minus sign in -5 only means 'subtract' and does not tell us that the number itself is negative.",
+    "why": "Students only know the minus sign as an operation from whole-number arithmetic.",
+    "fix": "The minus sign can show an operation (7 - 5) or the sign of a number (-5, five units left of zero). Position tells which one.",
+    "probe": {
+     "question": "What does the sign in 'x = -5' mean? How is it read?",
+     "wrong_answer": "It means subtract 5 from something, so there is nothing to read as a number."
+    },
+    "error_type": "notation_misread",
+    "root_belief": "Minus sign always indicates the operation subtraction",
+    "causes": [],
+    "trigger_cues": [
+     "minus sign",
+     "negative sign",
+     "subtract",
+     "symbol meaning",
+     "read -5"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on dual meaning of the minus sign",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n8",
+    "statement": "The product of a negative and a positive number is positive when the positive number is larger.",
+    "why": "Students base the sign on which number is bigger instead of how many factors are negative.",
+    "fix": "A positive times a negative is always negative. E.g. 8 × (-2) = -16.",
+    "probe": {
+     "question": "Find 8 × (-2).",
+     "wrong_answer": "16"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "Bigger number decides the sign of the product",
+    "causes": [],
+    "trigger_cues": [
+     "multiply",
+     "negative times positive",
+     "larger number",
+     "sign of product",
+     "unlike signs"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom error analysis",
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n9",
+    "statement": "When a negative number is divided by a positive number, the answer is positive because division reduces the number.",
+    "why": "Students think division only 'shares out' and cannot make the answer negative; they apply sign rules without meaning.",
+    "fix": "Dividing integers with unlike signs gives a negative quotient. E.g. (-12) ÷ 3 = -4, since 3 × (-4) = -12.",
+    "probe": {
+     "question": "Find (-12) ÷ 3.",
+     "wrong_answer": "4"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "Division always gives a positive result",
+    "causes": [],
+    "trigger_cues": [
+     "divide",
+     "negative divided by positive",
+     "sign of quotient",
+     "unlike signs",
+     "sharing"
+    ],
+    "confidence": "plausible",
+    "source_hint": null,
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n10",
+    "statement": "A negative number cannot show a real-life quantity, since you cannot have less than nothing.",
+    "why": "Students link numbers only to counting objects, so they cannot read a loss, debt or fall as an opposite direction.",
+    "fix": "Integers show opposite situations: profit and loss, rise and fall, above and below sea level, using positive and negative numbers.",
+    "probe": {
+     "question": "A diver is 15 m below sea level. How can this be written as an integer?",
+     "wrong_answer": "It cannot be written, only 15 m"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "Numbers only count real objects present",
+    "causes": [],
+    "trigger_cues": [
+     "real life",
+     "below sea level",
+     "loss",
+     "debt",
+     "opposite direction"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on historical and student resistance to negatives",
+    "key": "m12"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

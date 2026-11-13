@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0675-GENERIC-Nutrition_in_animals",
+  "topic_id": "SCI-BIO-ANIMALNUTRITION",
+  "split": "train",
+  "generic": true,
+  "theme": "Nutrition in animals",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a question-and-answer (FAQ) style passage",
+  "seed": 675
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 714,
+  "candidatesTokenCount": 1169,
+  "totalTokenCount": 1883,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 714
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "Dr. Anjali Rao, a nutritionist based in Pune, explains the complexities of animal digestion in her latest FAQ guide. She notes that cows possess a specialized stomach with four compartments to process tough cellulose. In 2018, researchers at the Mysore Veterinary Institute discovered that this complex structure allows cows to extract energy from grass that other animals cannot digest. Dr. Rao emphasizes that because cows chew their cud, they can break down plant fibers efficiently. However, she warns that feeding cows processed grains can lead to acidosis, a condition where the stomach pH drops dangerously low. When asked about human digestion, Dr. Rao mentions that humans lack these four compartments, which is why we cannot survive on a diet of raw grass alone. She notes that 12 percent of her patients in Pune struggle with digestive issues due to poor fiber intake. Ultimately, she concludes that the digestive system dictates the diet, not the other way around. Understanding these biological limits is crucial for farmers like Mr. Suresh, who manages a large dairy farm in rural Maharashtra. He often consults these guidelines to ensure his livestock remains healthy throughout the year.",
+  "summary": "This passage explains why cows have a unique four-compartment stomach to digest grass. It highlights the differences between bovine and human digestive systems and the importance of proper nutrition.",
+  "items": [
+   {
+    "evidence": "In 2018, researchers at the Mysore Veterinary Institute discovered that this complex structure allows cows to extract energy from grass that other animals cannot digest.",
+    "answer": "cows",
+    "stem": "Which animals are able to derive energy from grass due to their complex stomach structure?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Mistakenly picks the nearest proper noun mentioned in the sentence.",
+      "text": "Mysore Veterinary Institute"
+     },
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Mistakenly uses the year mentioned in the sentence as the answer.",
+      "text": "2018"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Picks a true fact from the passage that does not answer.",
+      "text": "other animals"
+     }
+    ]
+   },
+   {
+    "evidence": "Dr. Rao emphasizes that because cows chew their cud, they can break down plant fibers efficiently.",
+    "answer": "chew their cud",
+    "stem": "What action enables cows to process plant fibers with high efficiency?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Reverses the cause and effect relationship stated in the text.",
+      "text": "break down plant fibers"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects the person named in the sentence instead of the action.",
+      "text": "Dr. Rao"
+     },
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Uses an everyday meaning of chewing instead of the specific process.",
+      "text": "eating processed grains"
+     }
+    ]
+   },
+   {
+    "evidence": "She notes that 12 percent of her patients in Pune struggle with digestive issues due to poor fiber intake.",
+    "answer": "12 percent",
+    "stem": "What portion of Dr. Rao's patients experience problems with their digestion?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects the place name mentioned in the sentence.",
+      "text": "Pune"
+     },
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses the number of stomach compartments instead of the patient statistic.",
+      "text": "four"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a true fact about the patients that is not the portion.",
+      "text": "poor fiber intake"
+     }
+    ]
+   },
+   {
+    "evidence": "Understanding these biological limits is crucial for farmers like Mr. Suresh, who manages a large dairy farm in rural Maharashtra.",
+    "answer": "Mr. Suresh",
+    "stem": "Who finds the knowledge of digestive biological limits important for his work?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects the location mentioned at the end of the sentence.",
+      "text": "Maharashtra"
+     },
+     {
+      "belief_id": "GEN-READ-M5",
+      "why": "Confuses the farmer with the nutritionist mentioned earlier.",
+      "text": "Dr. Anjali Rao"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Assumes all farmers in the region share this specific trait.",
+      "text": "all dairy farmers"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.8
+}

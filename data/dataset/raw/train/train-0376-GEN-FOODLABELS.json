@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0376-GEN-FOODLABELS",
+  "topic_id": "GEN-FOODLABELS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a step-by-step explanation of a process",
+  "seed": 376
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 1064,
+  "candidatesTokenCount": 1263,
+  "totalTokenCount": 2327,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1064
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-FOODLABELS-K23-M18",
+  "GEN-FOODLABELS-K14-M3",
+  "GEN-FOODLABELS-K29-M25",
+  "GEN-FOODLABELS-K22-M15",
+  "GEN-FOODLABELS-K18-M9",
+  "GEN-FOODLABELS-K20-M13",
+  "GEN-FOODLABELS-K22-M16",
+  "GEN-FOODLABELS-K12-M26",
+  "GEN-FOODLABELS-K27-M22",
+  "GEN-FOODLABELS-K20-M12",
+  "GEN-FOODLABELS-K13-M1",
+  "GEN-FOODLABELS-K28-M23",
+  "GEN-FOODLABELS-K15-M4",
+  "GEN-FOODLABELS-K24-M19"
+ ],
+ "response": {
+  "passage": "When you pick up a packaged food item, the first thing to check is the ingredient list, which is always arranged by weight. The ingredient listed first is the one present in the largest quantity, not the smallest. Many people mistakenly think that if sugar is not the first item, the food is low in sugar, but manufacturers often use different names like corn syrup or dextrose to hide added sugars. Next, look for the FSSAI logo, which confirms that the manufacturer follows food safety standards, but remember that this logo does not mean the food is necessarily healthy or nutritious. You must also check the nutrition facts table carefully. Pay attention to the 'serving size' because the nutrient values listed are usually for one serving, not for the entire packet. If you eat the whole packet, you are consuming multiple servings. Finally, look for the vegetarian mark, which is a green dot inside a green square. If a product does not have this specific mark, you cannot assume it is vegetarian, as it might contain hidden animal-derived ingredients. Always read the label thoroughly to understand exactly what you are eating instead of relying on marketing claims like 'natural' or 'no added sugar' on the front of the package.",
+  "summary": "Reading food labels helps you understand what is actually inside your snacks. By checking ingredient order, serving sizes, and official marks, you can make better food choices. Always look past marketing claims to see the real nutritional value.",
+  "items": [
+   {
+    "evidence": "The ingredient listed first is the one present in the largest quantity, not the smallest.",
+    "answer": "largest quantity",
+    "stem": "What does the first item in the ingredient list represent?",
+    "options": [
+     {
+      "belief_id": "GEN-FOODLABELS-K13-M1",
+      "why": "Student believes the first ingredient is the smallest amount.",
+      "text": "smallest quantity"
+     },
+     {
+      "belief_id": "GEN-FOODLABELS-K14-M3",
+      "why": "Student assumes first position indicates low sugar content.",
+      "text": "low sugar content"
+     },
+     {
+      "belief_id": "GEN-FOODLABELS-K20-M12",
+      "why": "Student confuses ingredient order with percentage of weight.",
+      "text": "twenty percent weight"
+     }
+    ]
+   },
+   {
+    "evidence": "The FSSAI logo, which confirms that the manufacturer follows food safety standards, but remember that this logo does not mean the food is necessarily healthy or nutritious.",
+    "answer": "follows food safety standards",
+    "stem": "What is the actual purpose of the FSSAI logo on a food packet?",
+    "options": [
+     {
+      "belief_id": "GEN-FOODLABELS-K22-M15",
+      "why": "Student believes the logo is a stamp of health.",
+      "text": "guarantees the food is healthy"
+     },
+     {
+      "belief_id": "GEN-FOODLABELS-K22-M16",
+      "why": "Student thinks the logo implies a universal licence number.",
+      "text": "proves all products share one number"
+     },
+     {
+      "belief_id": "GEN-FOODLABELS-K12-M26",
+      "why": "Student assumes safety logo implies low fat content.",
+      "text": "indicates the food is low fat"
+     }
+    ]
+   },
+   {
+    "evidence": "Pay attention to the 'serving size' because the nutrient values listed are usually for one serving, not for the entire packet.",
+    "answer": "one serving",
+    "stem": "For what amount are the nutrient values on a label typically calculated?",
+    "options": [
+     {
+      "belief_id": "GEN-FOODLABELS-K18-M9",
+      "why": "Student thinks the whole packet equals one serving.",
+      "text": "the entire packet"
+     },
+     {
+      "belief_id": "GEN-FOODLABELS-K20-M13",
+      "why": "Student thinks values represent daily reference needs.",
+      "text": "daily reference amount"
+     },
+     {
+      "belief_id": "GEN-FOODLABELS-K20-M12",
+      "why": "Student thinks values represent the total weight.",
+      "text": "total product weight"
+     }
+    ]
+   },
+   {
+    "evidence": "If a product does not have this specific mark, you cannot assume it is vegetarian, as it might contain hidden animal-derived ingredients.",
+    "answer": "cannot assume it is vegetarian",
+    "stem": "What should you conclude if a food package lacks a vegetarian mark?",
+    "options": [
+     {
+      "belief_id": "GEN-FOODLABELS-K23-M18",
+      "why": "Student assumes absence of mark means it is veg.",
+      "text": "it is definitely vegetarian"
+     },
+     {
+      "belief_id": "GEN-FOODLABELS-K24-M19",
+      "why": "Student thinks eggs are veg regardless of marks.",
+      "text": "it contains only eggs"
+     },
+     {
+      "belief_id": "GEN-FOODLABELS-K29-M25",
+      "why": "Student assumes natural products are always vegetarian.",
+      "text": "it is a natural product"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 5.3
+}

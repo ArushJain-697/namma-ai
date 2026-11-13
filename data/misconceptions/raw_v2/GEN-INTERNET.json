@@ -1,0 +1,831 @@
+{
+ "topic": {
+  "id": "GEN-INTERNET",
+  "subject": "general",
+  "strand": "technology",
+  "grades": [
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "title": "How the internet works",
+  "scope": "devices, routers, servers, IP addresses, data in packets, mobile towers vs undersea cables, the cloud is someone's computer"
+ },
+ "model": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 6799,
+  "promptTokenCount": 2
+ },
+ "seconds": 51.0,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Devices and networks",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "what is a computer or phone"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Addresses and data travel",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "idea of a postal address"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Physical connections",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "light and radio waves"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Servers, web and cloud",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1",
+     "n2"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Internet is a network of networks",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "what is a network"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Router and ISP",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Internet vs Wi-Fi vs Web",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "IP addresses",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "idea of a postal address"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Domain names and DNS",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Packets",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": [
+     "files and data size"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Undersea cables",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "light travels through glass fibre"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Mobile towers and Wi-Fi",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "radio waves"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "Servers and websites",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "The cloud",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Internet network of many networks, no single owner",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n16",
+    "name": "Router forwards data between networks",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n17",
+    "name": "ISP sells access to the internet",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n18",
+    "name": "Wi-Fi only links device to router",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n16"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n19",
+    "name": "Web is a service that runs on the internet",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n20",
+    "name": "Every connected device has an IP address",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n21",
+    "name": "IP address is not a physical street location",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n20"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n22",
+    "name": "DNS turns names into IP addresses",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n23",
+    "name": "Files are split into small packets",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n24",
+    "name": "Packets may take different routes and are reassembled",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [
+     "n23",
+     "n16"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n25",
+    "name": "Most international data travels by undersea fibre cables",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n26",
+    "name": "Fibre cables carry data as light pulses",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [],
+    "external_prereqs": [
+     "light reflects inside glass"
+    ]
+   },
+   {
+    "key": "n27",
+    "name": "A mobile tower links phone to the wired network",
+    "level": 3,
+    "parent": "n12",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n28",
+    "name": "A server is a computer that serves data on request",
+    "level": 3,
+    "parent": "n13",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n29",
+    "name": "Website data is stored on servers, not in the air",
+    "level": 3,
+    "parent": "n13",
+    "prereqs": [
+     "n28"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n30",
+    "name": "The cloud is other people's computers in data centres",
+    "level": 3,
+    "parent": "n14",
+    "prereqs": [
+     "n28"
+    ],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n15",
+    "statement": "One company or government owns and controls the whole internet.",
+    "why": "Students see a few big brands like Google and Jio and assume they run everything.",
+    "fix": "The internet is thousands of separate networks run by companies, governments and universities that agree to connect using common rules. No one owner controls all of it.",
+    "probe": {
+     "question": "Who owns the internet?",
+     "wrong_answer": "Google (or the government) owns it."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "big visible things have one owner in charge",
+    "causes": [],
+    "trigger_cues": [
+     "network of networks",
+     "owns",
+     "connected",
+     "thousands",
+     "independent",
+     "protocols"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n15",
+    "statement": "The internet is a single giant computer somewhere.",
+    "why": "People talk about 'the net' as one place or thing.",
+    "fix": "The internet is a huge number of computers and devices joined by cables and radio links. There is no single central computer.",
+    "probe": {
+     "question": "Where is the internet located?",
+     "wrong_answer": "In one huge central computer."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "one name means one single object",
+    "causes": [
+     "m1"
+    ],
+    "trigger_cues": [
+     "network",
+     "millions",
+     "computers",
+     "connected",
+     "central",
+     "worldwide"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of students' mental models of the internet in computing education research"
+   },
+   {
+    "key": "m3",
+    "node": "n16",
+    "statement": "A router makes the internet; without it the internet does not exist.",
+    "why": "Home internet stops when the router is off, so it seems to create the internet.",
+    "fix": "A router only passes data between your devices and other networks. The internet itself is the worldwide set of connected networks.",
+    "probe": {
+     "question": "A router is the source of internet. True or false?",
+     "wrong_answer": "True, the router produces the internet."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "the device I touch is the source of everything",
+    "causes": [
+     "m4"
+    ],
+    "trigger_cues": [
+     "router",
+     "modem",
+     "forwards",
+     "connects",
+     "network",
+     "gateway"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n18",
+    "statement": "Wi-Fi and the internet are the same thing.",
+    "why": "Phones show 'Wi-Fi' as the way to get online, so the words are used interchangeably.",
+    "fix": "Wi-Fi is a radio link between your device and a router. A Wi-Fi network can exist with no internet connection at all.",
+    "probe": {
+     "question": "Your Wi-Fi is connected but no website opens. What is wrong?",
+     "wrong_answer": "Nothing, Wi-Fi connected means the internet is working."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "two related terms mean the same thing",
+    "causes": [],
+    "trigger_cues": [
+     "wi-fi",
+     "wireless",
+     "router",
+     "local network",
+     "internet access",
+     "radio"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "computing education research on learners confusing Wi-Fi, web and internet"
+   },
+   {
+    "key": "m5",
+    "node": "n17",
+    "statement": "Internet data is free because it just exists in the air; ISPs only fix wires.",
+    "why": "Students never see the infrastructure cost behind the connection.",
+    "fix": "An ISP owns or rents cables and equipment that connect you to the wider internet, and charges for that access.",
+    "probe": {
+     "question": "Why do we pay an ISP every month?",
+     "wrong_answer": "For nothing real, the internet is already in the air."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "what you cannot see does not cost anything",
+    "causes": [],
+    "trigger_cues": [
+     "isp",
+     "broadband",
+     "subscription",
+     "service provider",
+     "connection",
+     "plan"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m6",
+    "node": "n19",
+    "statement": "The World Wide Web and the internet are the same thing.",
+    "why": "Everyday speech uses 'net' and 'web' interchangeably.",
+    "fix": "The internet is the network of connected devices; the web is one service on it, made of web pages. Email and video calls also use the internet without being the web.",
+    "probe": {
+     "question": "Is email part of the web or the internet?",
+     "wrong_answer": "Email is the web, because the web is the internet."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "two related terms mean the same thing",
+    "causes": [],
+    "trigger_cues": [
+     "world wide web",
+     "browser",
+     "email",
+     "services",
+     "internet",
+     "web pages"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on school students' conceptions of internet versus web"
+   },
+   {
+    "key": "m7",
+    "node": "n20",
+    "statement": "Only computers and phones have IP addresses; a smart TV or CCTV camera does not.",
+    "why": "Students link addresses with obvious computing devices.",
+    "fix": "Any device that connects to a network, such as a TV, camera or smartwatch, gets an IP address to be found.",
+    "probe": {
+     "question": "Does a Wi-Fi CCTV camera need an IP address?",
+     "wrong_answer": "No, only computers do."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "a rule applies only to the typical example",
+    "causes": [],
+    "trigger_cues": [
+     "ip address",
+     "device",
+     "smart",
+     "camera",
+     "connected",
+     "network"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m8",
+    "node": "n21",
+    "statement": "An IP address tells exactly which house a person lives in.",
+    "why": "The word 'address' suggests a home address, and crime shows reinforce it.",
+    "fix": "An IP address identifies a connection on a network and can change; it usually shows only a rough area of the provider, not a house.",
+    "probe": {
+     "question": "If you know someone's IP address, can you find their exact flat?",
+     "wrong_answer": "Yes, it gives the exact house location."
+    },
+    "error_type": "media_misinformation",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "ip address",
+     "location",
+     "address",
+     "internet provider",
+     "identify",
+     "hacker"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of misconceptions about IP addresses and online privacy"
+   },
+   {
+    "key": "m9",
+    "node": "n22",
+    "statement": "You must type the numbers of an IP address to reach a website; names like google.com are the real address.",
+    "why": "Students only ever see names, so names seem to be the actual address.",
+    "fix": "Computers find websites using IP numbers. DNS works like a phone book that looks up the number for the name you type.",
+    "probe": {
+     "question": "What does DNS do when you type a website name?",
+     "wrong_answer": "Nothing; the name itself directly points to the website."
+    },
+    "error_type": "other",
+    "root_belief": "what I see is all that is happening",
+    "causes": [],
+    "trigger_cues": [
+     "dns",
+     "domain name",
+     "ip address",
+     "lookup",
+     "phone book",
+     "website name"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m10",
+    "node": "n23",
+    "statement": "A video or photo travels over the internet as one single block.",
+    "why": "A file looks like one object on screen, so students assume it moves whole.",
+    "fix": "Files are cut into many small packets, each with the destination address, and sent separately.",
+    "probe": {
+     "question": "How does a large photo get sent to a friend?",
+     "wrong_answer": "The whole photo moves as one piece along one path."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "things move the way they look",
+    "causes": [
+     "m11"
+    ],
+    "trigger_cues": [
+     "packets",
+     "split",
+     "pieces",
+     "file",
+     "sent",
+     "destination"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on learners' mental models of data transmission"
+   },
+   {
+    "key": "m11",
+    "node": "n24",
+    "statement": "All packets of a message follow the same path and arrive in order.",
+    "why": "Students imagine one fixed road like a pipe or a train line.",
+    "fix": "Each packet may take a different route and arrive out of order; the receiving device puts them back in order.",
+    "probe": {
+     "question": "Two packets of one message take different routes. What happens?",
+     "wrong_answer": "This cannot happen; all must use the same path."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "one fixed path connects start and end",
+    "causes": [],
+    "trigger_cues": [
+     "route",
+     "packets",
+     "reassemble",
+     "order",
+     "path",
+     "routers"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of students' pipe or direct-line models of the internet"
+   },
+   {
+    "key": "m12",
+    "node": "n25",
+    "statement": "Most internet data between countries goes through satellites.",
+    "why": "Satellites are famous in news and space lessons, while cables are hidden under the sea.",
+    "fix": "About 95 percent or more of international data travels through undersea fibre-optic cables; satellites carry only a small share.",
+    "probe": {
+     "question": "How does a video call from India to the USA mostly travel?",
+     "wrong_answer": "Through satellites in space."
+    },
+    "error_type": "media_misinformation",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "undersea",
+     "submarine cable",
+     "satellite",
+     "ocean",
+     "international",
+     "landing station"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "surveys of public and student beliefs about internet infrastructure"
+   },
+   {
+    "key": "m13",
+    "node": "n26",
+    "statement": "Undersea cables carry data as electricity in copper wires or as radio waves.",
+    "why": "Students know wires from electricity lessons and assume all cables carry current.",
+    "fix": "Undersea internet cables use hair-thin glass fibres that carry data as pulses of light.",
+    "probe": {
+     "question": "What carries data inside an undersea internet cable?",
+     "wrong_answer": "Electric current in copper wire."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a familiar rule from one topic works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "optical fibre",
+     "light",
+     "glass",
+     "pulses",
+     "cable",
+     "reflection"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m14",
+    "node": "n27",
+    "statement": "Mobile phones connect to the internet directly through satellites, with no towers needed.",
+    "why": "Phone signals feel wireless and 'from the sky'.",
+    "fix": "A phone sends radio signals to a nearby mobile tower, which is joined to the wired network by cables.",
+    "probe": {
+     "question": "What does your phone connect to when you open a website on mobile data?",
+     "wrong_answer": "A satellite directly above."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "wireless means nothing physical is involved",
+    "causes": [],
+    "trigger_cues": [
+     "mobile tower",
+     "base station",
+     "signal",
+     "mobile data",
+     "radio waves",
+     "cable"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on students' ideas of wireless communication"
+   },
+   {
+    "key": "m15",
+    "node": "n12",
+    "statement": "Wireless internet needs no wires anywhere; the whole path is through the air.",
+    "why": "The word 'wireless' is taken to apply to the whole journey.",
+    "fix": "Wireless covers only the last hop from device to tower or router. After that, data travels through wires and fibre cables.",
+    "probe": {
+     "question": "Is any wire used when you browse on mobile data?",
+     "wrong_answer": "No wires at all, everything is in the air."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [
+     "m14"
+    ],
+    "trigger_cues": [
+     "wireless",
+     "last mile",
+     "tower",
+     "fibre",
+     "backhaul",
+     "radio"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "computing education studies on learners' mental models of wireless networks"
+   },
+   {
+    "key": "m16",
+    "node": "n28",
+    "statement": "A server is a special kind of machine different from ordinary computers.",
+    "why": "The word 'server' sounds like exotic technology.",
+    "fix": "A server is a computer running software that answers requests; it is usually more powerful and runs all the time.",
+    "probe": {
+     "question": "Can an ordinary laptop work as a server?",
+     "wrong_answer": "No, servers are a completely different kind of machine."
+    },
+    "error_type": "other",
+    "root_belief": "special names mean special kinds of thing",
+    "causes": [],
+    "trigger_cues": [
+     "server",
+     "client",
+     "request",
+     "respond",
+     "software",
+     "computer"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m17",
+    "node": "n29",
+    "statement": "A website's pages are stored on your own phone or are just floating in the internet.",
+    "why": "Pages appear instantly, so they seem to be already here or everywhere.",
+    "fix": "A website's files are stored on a server. Your browser requests them and shows a copy.",
+    "probe": {
+     "question": "Where is a website stored?",
+     "wrong_answer": "In the internet itself, or on my phone."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "website",
+     "server",
+     "stored",
+     "browser",
+     "request",
+     "files"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies on learners' beliefs about where web content lives"
+   },
+   {
+    "key": "m18",
+    "node": "n30",
+    "statement": "The cloud is data floating in the sky or a magical space with no physical place.",
+    "why": "The word 'cloud' and its icon suggest something in the air.",
+    "fix": "The cloud means computers owned by other companies in large buildings called data centres, which you use over the internet.",
+    "probe": {
+     "question": "Where are your cloud photos really kept?",
+     "wrong_answer": "Up in the air in a cloud."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [
+     "m19"
+    ],
+    "trigger_cues": [
+     "cloud",
+     "data centre",
+     "storage",
+     "remote",
+     "servers",
+     "backup"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on public and student understanding of cloud storage"
+   },
+   {
+    "key": "m19",
+    "node": "n30",
+    "statement": "Photos saved in the cloud can never be lost or deleted.",
+    "why": "Cloud seems permanent and unlimited.",
+    "fix": "Cloud data can be lost if an account is closed, deleted by mistake or hacked, so important files need backups.",
+    "probe": {
+     "question": "Do you need another copy of an important file saved in the cloud?",
+     "wrong_answer": "No, the cloud always keeps it safe forever."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "unseen things are perfectly safe and permanent",
+    "causes": [],
+    "trigger_cues": [
+     "cloud",
+     "backup",
+     "delete",
+     "account",
+     "storage",
+     "security"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m20",
+    "node": "n13",
+    "statement": "Faster internet always means the website's server is nearby.",
+    "why": "Students think speed depends only on distance.",
+    "fix": "Speed depends on many things: your connection, network traffic and server load, not only distance.",
+    "probe": {
+     "question": "A site loads slowly even though the server is in your city. Why?",
+     "wrong_answer": "Impossible; nearby servers are always fast."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "one event has one single cause",
+    "causes": [],
+    "trigger_cues": [
+     "speed",
+     "bandwidth",
+     "latency",
+     "server",
+     "traffic",
+     "distance"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m21",
+    "node": "n10",
+    "statement": "Sending data over the internet uses up the data like fuel, so it disappears from my device.",
+    "why": "Mobile 'data packs' are described as being used up.",
+    "fix": "Sending a file only copies it; the original stays with you. A data pack counts how much data is transferred.",
+    "probe": {
+     "question": "After you email a photo, is it still on your phone?",
+     "wrong_answer": "No, it has moved and is gone."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "sending something means you no longer have it",
+    "causes": [],
+    "trigger_cues": [
+     "copy",
+     "send",
+     "data pack",
+     "transfer",
+     "download",
+     "upload"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}

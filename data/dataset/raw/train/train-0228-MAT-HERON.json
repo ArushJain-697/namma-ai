@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0228-MAT-HERON",
+  "topic_id": "MAT-HERON",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a puzzle or game that uses the idea",
+  "seed": 228
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1051,
+  "candidatesTokenCount": 1419,
+  "totalTokenCount": 2470,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1051
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-HERON-K11-M1",
+  "MAT-HERON-K23-M17",
+  "MAT-HERON-K25-M19",
+  "MAT-HERON-K18-M11",
+  "MAT-HERON-K14-M5",
+  "MAT-HERON-K17-M8",
+  "MAT-HERON-K16-M7",
+  "MAT-HERON-K15-M6",
+  "MAT-HERON-K21-M15",
+  "MAT-HERON-K12-M2",
+  "MAT-HERON-K12-M3",
+  "MAT-HERON-K27-M22",
+  "MAT-HERON-K22-M16",
+  "MAT-HERON-K26-M21"
+ ],
+ "response": {
+  "passage": "Rohan is designing a triangular garden patch for his school project. He knows the sides of the triangle are in the ratio 3:4:5, but he needs to find the actual lengths to calculate the area. He remembers that the perimeter is 60 cm, so he divides the perimeter by the sum of the ratio parts to find the common multiplier, which is 5. Thus, the sides are 15 cm, 20 cm, and 25 cm. To find the area, Rohan first calculates the semi-perimeter, s, which is half of the total perimeter, giving him 30 cm. He knows that Heron's formula is the square root of s(s-a)(s-b)(s-c). He carefully substitutes his values to get the square root of 30(15)(10)(5), which simplifies to 150 cm². Rohan also realizes that because this is a right-angled triangle, he could have simply used half the product of the two shorter sides. Finally, he considers a rhombus-shaped flower bed nearby. He knows the area of a rhombus is half the product of its diagonals, not just the product of the diagonals themselves. He measures the diagonals as 8 cm and 6 cm, calculating the area as 24 cm².",
+  "summary": "Rohan uses Heron's formula and geometric properties to calculate the areas of different garden shapes. He correctly identifies side lengths from ratios and applies formulas for triangles and rhombi.",
+  "items": [
+   {
+    "evidence": "He knows the sides of the triangle are in the ratio 3:4:5, but he needs to find the actual lengths to calculate the area.",
+    "answer": "15 cm, 20 cm, and 25 cm",
+    "stem": "Based on the perimeter of 60 cm, what are the actual lengths of the sides?",
+    "options": [
+     {
+      "belief_id": "MAT-HERON-K23-M17",
+      "why": "Student assumes ratio numbers are the actual side lengths.",
+      "text": "3 cm, 4 cm, and 5 cm"
+     },
+     {
+      "belief_id": "MAT-HERON-K21-M15",
+      "why": "Student incorrectly calculates sides based on a false semi-perimeter.",
+      "text": "6 cm, 8 cm, and 10 cm"
+     },
+     {
+      "belief_id": "MAT-HERON-K22-M16",
+      "why": "Student fails to scale the ratio correctly to the perimeter.",
+      "text": "10 cm, 10 cm, and 40 cm"
+     }
+    ]
+   },
+   {
+    "evidence": "He knows that the perimeter is 60 cm, so he divides the perimeter by the sum of the ratio parts to find the common multiplier, which is 5. Thus, the sides are 15 cm, 20 cm, and 25 cm. To find the area, Rohan first calculates the semi-perimeter, s, which is half of the total perimeter, giving him 30 cm.",
+    "answer": "30 cm",
+    "stem": "What is the correct value of the semi-perimeter s for this triangle?",
+    "options": [
+     {
+      "belief_id": "MAT-HERON-K17-M8",
+      "why": "Student confuses semi-perimeter with the full perimeter.",
+      "text": "60 cm"
+     },
+     {
+      "belief_id": "MAT-HERON-K18-M11",
+      "why": "Student applies an incorrect formula involving multiplication of sides.",
+      "text": "150 cm"
+     },
+     {
+      "belief_id": "MAT-HERON-K21-M15",
+      "why": "Student uses an arbitrary calculation for the semi-perimeter.",
+      "text": "6.5 cm"
+     }
+    ]
+   },
+   {
+    "evidence": "He knows that Heron's formula is the square root of s(s-a)(s-b)(s-c).",
+    "answer": "square root of s(s-a)(s-b)(s-c)",
+    "stem": "Which expression correctly represents the calculation of the area using Heron's formula?",
+    "options": [
+     {
+      "belief_id": "MAT-HERON-K18-M11",
+      "why": "Student believes the formula involves only multiplication without subtraction.",
+      "text": "s(a+b+c)"
+     },
+     {
+      "belief_id": "MAT-HERON-K14-M5",
+      "why": "Student uses a formula meant only for equilateral triangles.",
+      "text": "a squared divided by 2"
+     },
+     {
+      "belief_id": "MAT-HERON-K11-M1",
+      "why": "Student omits the square root and the semi-perimeter logic.",
+      "text": "base times height"
+     }
+    ]
+   },
+   {
+    "evidence": "He knows the area of a rhombus is half the product of its diagonals, not just the product of the diagonals themselves.",
+    "answer": "half the product of its diagonals",
+    "stem": "How is the area of a rhombus correctly determined?",
+    "options": [
+     {
+      "belief_id": "MAT-HERON-K26-M21",
+      "why": "Student believes the area is simply the product of diagonals.",
+      "text": "product of the two diagonals"
+     },
+     {
+      "belief_id": "MAT-HERON-K27-M22",
+      "why": "Student confuses rhombus area with parallelogram base-height logic.",
+      "text": "base times its slant side"
+     },
+     {
+      "belief_id": "MAT-HERON-K25-M19",
+      "why": "Student assumes the area is the product of two triangles.",
+      "text": "product of two triangle areas"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 6.2
+}

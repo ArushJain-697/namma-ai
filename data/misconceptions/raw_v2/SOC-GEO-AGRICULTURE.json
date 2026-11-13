@@ -1,0 +1,459 @@
+{
+ "topic": {
+  "id": "SOC-GEO-AGRICULTURE",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   8,
+   10
+  ],
+  "title": "Agriculture",
+  "scope": "types of farming, cropping seasons, major crops, food security, technological and institutional reforms"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 831,
+  "candidatesTokenCount": 1505,
+  "totalTokenCount": 2336,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 831
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.9,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Types of Farming",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "basic needs of humans"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Cropping Seasons and Major Crops",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "climate and weather"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Technological and Institutional Reforms",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "role of government"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Primitive Subsistence Farming",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "history of human evolution"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Intensive Subsistence Farming",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "population density"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Commercial Farming",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "market economy"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Kharif, Rabi, and Zaid",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "seasons in India"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Food Security",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "poverty and hunger"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Slash and Burn agriculture",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "natural ecosystem"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "High population pressure on land",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": [
+     "land scarcity"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Use of HYV seeds and fertilizers",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": [
+     "science of plant growth"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Minimum Support Price (MSP)",
+    "level": 3,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "basic economics"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "Land Reform Acts",
+    "level": 3,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "independence of India"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n4",
+    "statement": "Primitive farming is only practiced by tribal people in remote forests.",
+    "why": "Students associate 'primitive' with 'tribal' due to media stereotypes.",
+    "fix": "It is a method of cultivation based on natural environmental conditions and family labor, not defined by the ethnicity of the farmer.",
+    "probe": {
+     "question": "Can a farmer in a non-tribal village practice primitive subsistence farming?",
+     "wrong_answer": "No, because they are not tribal."
+    },
+    "error_type": "stereotype",
+    "root_belief": "Labels define the nature of an activity.",
+    "causes": [],
+    "trigger_cues": [
+     "primitive",
+     "subsistence",
+     "tribal",
+     "jhumming",
+     "slash and burn"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n7",
+    "statement": "Rabi crops are grown in summer because they need a lot of heat.",
+    "why": "Students confuse the harvest time (summer) with the growing time.",
+    "fix": "Rabi crops are sown in winter and harvested in summer; they require cool weather for germination and warm weather for maturation.",
+    "probe": {
+     "question": "When are wheat seeds sown?",
+     "wrong_answer": "In the summer, because it is a Rabi crop."
+    },
+    "error_type": "chronology_slip",
+    "root_belief": "Harvest time is the same as growing time.",
+    "causes": [],
+    "trigger_cues": [
+     "rabi",
+     "winter",
+     "summer",
+     "sowing",
+     "harvesting"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic studies"
+   },
+   {
+    "key": "m3",
+    "node": "n12",
+    "statement": "MSP is the price at which the government sells food to the poor.",
+    "why": "Students confuse the procurement price (MSP) with the issue price (PDS).",
+    "fix": "MSP is the price at which the government buys crops from farmers to ensure they get a fair return.",
+    "probe": {
+     "question": "Who receives the MSP payment?",
+     "wrong_answer": "The poor people buying ration."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Government schemes always involve selling to the public.",
+    "causes": [],
+    "trigger_cues": [
+     "msp",
+     "government",
+     "procurement",
+     "farmers",
+     "support price"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n11",
+    "statement": "Using more fertilizers always leads to higher crop yields indefinitely.",
+    "why": "Students apply a linear 'more is better' logic without considering soil health.",
+    "fix": "Excessive use of fertilizers degrades soil quality and reduces fertility over time, leading to lower yields in the long run.",
+    "probe": {
+     "question": "What happens if a farmer doubles the recommended fertilizer dose?",
+     "wrong_answer": "The crop will grow twice as fast and yield more."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Bigger or more means more effect.",
+    "causes": [],
+    "trigger_cues": [
+     "fertilizers",
+     "hyv seeds",
+     "yield",
+     "commercial",
+     "soil"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "id": "m5",
+    "node": "n5",
+    "statement": "Intensive subsistence farming means using lots of machines and big farms to grow crops for sale.",
+    "why": "Students read 'intensive' as 'industrial' and link it with mechanisation and large scale.",
+    "fix": "Intensive subsistence farming is done on small plots using lots of labour and farm inputs to get high output per unit of land, mainly to feed the farmer's family.",
+    "probe": {
+     "question": "A farmer in a crowded part of the Ganga plain works a tiny plot with family labour and grows rice for his family. Which type of farming is this?",
+     "wrong_answer": "Commercial farming, because the work is very intensive."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Intensive means large-scale and machine-based",
+    "causes": [],
+    "trigger_cues": [
+     "intensive",
+     "subsistence",
+     "machines",
+     "big farms",
+     "sale",
+     "small plot"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom experience / NCERT exercise answers",
+    "key": "m5"
+   },
+   {
+    "id": "m6",
+    "node": "n6",
+    "statement": "Commercial farming means farmers do not grow food crops like rice or wheat.",
+    "why": "Students link commercial farming only with cash crops like tea and cotton.",
+    "fix": "Commercial farming means crops are grown mainly for sale; the crop can be rice or wheat too, as in Punjab and Haryana, where the commercialisation level is high.",
+    "probe": {
+     "question": "Rice is grown for sale in Punjab and Haryana on a large scale. What type of farming is it?",
+     "wrong_answer": "Subsistence farming, because rice is a food crop."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Crop type decides farming type, not purpose",
+    "causes": [],
+    "trigger_cues": [
+     "commercial",
+     "rice",
+     "wheat",
+     "food crop",
+     "cash crop",
+     "punjab"
+    ],
+    "confidence": "plausible",
+    "source_hint": "textbook-based classroom questions",
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n7",
+    "statement": "Zaid crops are grown in the same season as Kharif crops, in the monsoon.",
+    "why": "Students remember Zaid as a 'summer-ish' season and mix it with the rainy season.",
+    "fix": "Zaid is a short season between Rabi and Kharif, in summer (March to June), with crops like watermelon, cucumber and fodder. Kharif starts with the monsoon in June–July.",
+    "probe": {
+     "question": "In which season are watermelon and cucumber mainly grown in India?",
+     "wrong_answer": "Kharif, because they need rain."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Zaid is the same as Kharif",
+    "causes": [],
+    "trigger_cues": [
+     "zaid",
+     "kharif",
+     "season",
+     "watermelon",
+     "summer",
+     "monsoon"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 10 Geography Ch. 4",
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n8",
+    "statement": "Food security just means that a country grows enough food in total.",
+    "why": "Students focus on national production and ignore access and affordability.",
+    "fix": "Food security means all people have availability, access and affordability of food at all times. Enough production does not help if poor people cannot buy it.",
+    "probe": {
+     "question": "India has big food grain stocks, yet some poor people still sleep hungry. Is India food secure?",
+     "wrong_answer": "Yes, because food is available in the country."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Food security equals total food production",
+    "causes": [],
+    "trigger_cues": [
+     "food security",
+     "availability",
+     "hungry",
+     "enough food",
+     "stock",
+     "access"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT Class 9 Economics / FAO definition studies",
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n9",
+    "statement": "Slash and burn farming is done on the same plot every year.",
+    "why": "Students picture a fixed field and do not see the shifting cycle.",
+    "fix": "Farmers clear and burn a patch, grow crops for a few years, then abandon it when soil fertility falls and move to a new patch. This is also called shifting agriculture.",
+    "probe": {
+     "question": "After a few harvests on a burnt patch, what does the slash and burn farmer do?",
+     "wrong_answer": "Adds fertilizer and continues farming on the same patch."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "All farming uses permanent fixed fields",
+    "causes": [],
+    "trigger_cues": [
+     "slash and burn",
+     "shifting",
+     "jhum",
+     "patch",
+     "abandon",
+     "same plot"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 8 Geography",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n10",
+    "statement": "High population pressure on land is the reason farms in India are large.",
+    "why": "Students think more people means more land taken up for farming.",
+    "fix": "Land is limited, so more people means each family's plot gets divided into smaller holdings through inheritance. Small holdings lead to intensive farming.",
+    "probe": {
+     "question": "In densely populated areas, what happens to the size of farm holdings over generations?",
+     "wrong_answer": "They become larger because more people need more food."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "More people means bigger farms",
+    "causes": [],
+    "trigger_cues": [
+     "population pressure",
+     "land",
+     "holding size",
+     "small farms",
+     "inheritance",
+     "fragmentation"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 10 Geography Ch. 4",
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n11",
+    "statement": "HYV seeds give high yields on their own without needing irrigation or other inputs.",
+    "why": "The name 'high yielding' suggests the seed alone does everything.",
+    "fix": "HYV seeds give high yields only with assured irrigation, fertilizers and pesticides. This package is why the Green Revolution worked best in Punjab, Haryana and western UP.",
+    "probe": {
+     "question": "A farmer sows HYV wheat in a dry field without irrigation or fertilizers. What happens to the yield?",
+     "wrong_answer": "It will still be very high because the seed is high yielding."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Improved seeds alone guarantee high yield",
+    "causes": [],
+    "trigger_cues": [
+     "hyv",
+     "high yielding",
+     "seeds",
+     "irrigation",
+     "green revolution",
+     "yield"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 10 Geography / Green Revolution case studies",
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n13",
+    "statement": "Land reform acts took land from all farmers and gave it to the government.",
+    "why": "Students mix land reform with land acquisition or collectivisation.",
+    "fix": "Land reforms such as abolition of zamindari and land ceiling aimed to take surplus land from big landlords and give it to tenants and landless farmers, and to remove middlemen.",
+    "probe": {
+     "question": "Who received the surplus land taken from big landlords under land ceiling laws?",
+     "wrong_answer": "The government kept it all as state farms."
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "Land reform means state takes all private land",
+    "causes": [],
+    "trigger_cues": [
+     "land reform",
+     "zamindari",
+     "land ceiling",
+     "landless",
+     "tenants",
+     "surplus land"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 10 Geography / Class 8 Civics",
+    "key": "m12"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

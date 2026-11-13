@@ -1,0 +1,133 @@
+{
+ "job": {
+  "job": "train-0380-GEN-INTEREST",
+  "topic_id": "GEN-INTEREST",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a question-and-answer (FAQ) style passage",
+  "seed": 380
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 1062,
+  "candidatesTokenCount": 1218,
+  "totalTokenCount": 2280,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1062
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-INTEREST-K7-M1",
+  "GEN-INTEREST-K10-M4",
+  "GEN-INTEREST-K28-M12",
+  "GEN-INTEREST-K20-M9",
+  "GEN-INTEREST-K11-M5",
+  "GEN-INTEREST-K23-M11",
+  "GEN-INTEREST-K8-M2",
+  "GEN-INTEREST-K15-M8",
+  "GEN-INTEREST-K12-M7",
+  "GEN-INTEREST-K22-M10",
+  "GEN-INTEREST-K13-M6",
+  "GEN-INTEREST-K5-M3"
+ ],
+ "response": {
+  "passage": "Understanding how loans work is essential for managing personal finances. When you borrow money, you pay back the principal plus interest. Simple interest is calculated only on the original principal, while compound interest is calculated on the principal plus any accumulated interest. For the first year, simple interest and compound interest are identical because no interest has accumulated yet. If a loan is compounded half-yearly, you must divide the annual interest rate by two and double the number of years to find the total periods. When calculating interest for a period shorter than a year, such as six months, you must express the time as a fraction of a year, specifically 0.5, rather than using the number 6. Furthermore, a longer loan tenure reduces your monthly EMI, but it significantly increases the total amount of interest you pay over the life of the loan. Finally, always check for hidden fees, as a loan with a lower interest rate might actually cost more overall if it includes high processing charges or insurance premiums compared to a loan with a slightly higher rate.",
+  "summary": "This passage explains the fundamental differences between simple and compound interest calculations. It also highlights how loan tenure and hidden fees impact the total cost of borrowing.",
+  "items": [
+   {
+    "evidence": "For the first year, simple interest and compound interest are identical because no interest has accumulated yet.",
+    "answer": "identical",
+    "stem": "How do simple and compound interest compare during the very first year of a loan?",
+    "options": [
+     {
+      "belief_id": "GEN-INTEREST-K10-M4",
+      "why": "Student incorrectly believes compound interest is always higher.",
+      "text": "compound is more"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K5-M3",
+      "why": "Student thinks the rate itself increases annually.",
+      "text": "rate increases"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K22-M10",
+      "why": "Student confuses flat rates with compound interest.",
+      "text": "flat rate applies"
+     }
+    ]
+   },
+   {
+    "evidence": "If a loan is compounded half-yearly, you must divide the annual interest rate by two and double the number of years to find the total periods.",
+    "answer": "double the number of years",
+    "stem": "What adjustment must you make to the time variable when calculating interest compounded half-yearly?",
+    "options": [
+     {
+      "belief_id": "GEN-INTEREST-K11-M5",
+      "why": "Student incorrectly keeps the number of years the same.",
+      "text": "keep years same"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K7-M1",
+      "why": "Student ignores the impact of time on interest.",
+      "text": "time does not matter"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K12-M7",
+      "why": "Student incorrectly assumes monthly rates apply.",
+      "text": "use monthly rate"
+     }
+    ]
+   },
+   {
+    "evidence": "When calculating interest for a period shorter than a year, such as six months, you must express the time as a fraction of a year, specifically 0.5, rather than using the number 6.",
+    "answer": "0.5",
+    "stem": "What value should be used for time when calculating interest for a six-month duration?",
+    "options": [
+     {
+      "belief_id": "GEN-INTEREST-K13-M6",
+      "why": "Student uses the raw number of months as the time.",
+      "text": "6"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K8-M2",
+      "why": "Student confuses total repayment with interest calculation.",
+      "text": "total amount"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K15-M8",
+      "why": "Student treats interest as a simple division.",
+      "text": "1 divided by 6"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, always check for hidden fees, as a loan with a lower interest rate might actually cost more overall if it includes high processing charges or insurance premiums compared to a loan with a slightly higher rate.",
+    "answer": "check for hidden fees",
+    "stem": "Why should a borrower be cautious even when offered a loan with a very low interest rate?",
+    "options": [
+     {
+      "belief_id": "GEN-INTEREST-K23-M11",
+      "why": "Student ignores non-interest costs in loan comparisons.",
+      "text": "rate is lowest"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K20-M9",
+      "why": "Student focuses only on monthly EMI size.",
+      "text": "EMI is smaller"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K28-M12",
+      "why": "Student assumes interest-free terms cover all costs.",
+      "text": "interest-free period"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 51.3
+}

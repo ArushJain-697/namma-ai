@@ -1,0 +1,496 @@
+{
+ "topic": {
+  "id": "SOC-CIV-CONSTITUTION",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   8
+  ],
+  "title": "The Indian Constitution",
+  "scope": "why a constitution, key features, federalism, parliamentary government, separation of powers, Fundamental Rights and Duties"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 831,
+  "candidatesTokenCount": 1603,
+  "totalTokenCount": 2434,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 831
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 6.2,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Purpose of Constitution",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "concept of democracy",
+     "role of government"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Key Features of Indian Constitution",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "history of Indian independence"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Fundamental Rights and Duties",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "human rights"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Defining Constitution",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "what is a rule"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Federalism",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "levels of government"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Parliamentary Form",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "elections"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Separation of Powers",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": [
+     "branches of government"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Fundamental Rights",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "individual freedom"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Constitution as a rulebook",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "rules in games"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Protection against misuse of power",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [
+     "n9"
+    ],
+    "external_prereqs": [
+     "power dynamics"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "More than one level of government",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": [
+     "state vs central"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Universal Adult Franchise",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": [
+     "voting"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "Legislature Executive Judiciary",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": [
+     "roles of institutions"
+    ]
+   },
+   {
+    "key": "n14",
+    "name": "Right to Equality",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": [
+     "social discrimination"
+    ]
+   },
+   {
+    "key": "n15",
+    "name": "Fundamental Duties",
+    "level": 3,
+    "parent": "n3",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": [
+     "civic responsibility"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n4",
+    "statement": "The Constitution is a list of laws that the government imposes on the people.",
+    "why": "Students often confuse the Constitution with the Penal Code or general government orders.",
+    "fix": "The Constitution is a set of rules that defines the powers of the government and protects the rights of the citizens against the government.",
+    "probe": {
+     "question": "Who is the Constitution primarily meant to control?",
+     "wrong_answer": "The citizens"
+    },
+    "error_type": "confusing_institutions",
+    "root_belief": "Authority always flows top-down.",
+    "causes": [],
+    "trigger_cues": [
+     "rules",
+     "government",
+     "laws",
+     "power",
+     "citizens"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on civics concepts"
+   },
+   {
+    "key": "m2",
+    "node": "n5",
+    "statement": "Federalism means the Central government is the boss of the State government.",
+    "why": "Students observe the central government having more visibility in national news.",
+    "fix": "Federalism means power is shared between the central and state governments, with each having its own sphere of authority.",
+    "probe": {
+     "question": "Can a state government make its own laws on subjects in the State List?",
+     "wrong_answer": "No, it must ask the center first."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Hierarchy is the only way to organize power.",
+    "causes": [],
+    "trigger_cues": [
+     "state",
+     "central",
+     "levels",
+     "government",
+     "power"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n7",
+    "statement": "The Judiciary is a branch of the government that helps the Prime Minister make laws.",
+    "why": "Students often see all government branches as a single team working together.",
+    "fix": "The Judiciary is independent and acts as a check on the other branches, ensuring laws follow the Constitution.",
+    "probe": {
+     "question": "What is the role of the Judiciary?",
+     "wrong_answer": "To assist the government in implementing policies."
+    },
+    "error_type": "confusing_institutions",
+    "root_belief": "All government parts have the same goal.",
+    "causes": [],
+    "trigger_cues": [
+     "judiciary",
+     "legislature",
+     "executive",
+     "separation",
+     "powers"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's children's ideas"
+   },
+   {
+    "key": "m4",
+    "node": "n8",
+    "statement": "Fundamental Rights mean I can do whatever I want at any time.",
+    "why": "Students conflate 'rights' with 'absolute freedom' without considering social responsibility.",
+    "fix": "Fundamental Rights are subject to 'reasonable restrictions' to ensure the rights of others and public order.",
+    "probe": {
+     "question": "Can you shout fire in a crowded theater just because you have freedom of speech?",
+     "wrong_answer": "Yes, it is my right."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "A word means its everyday meaning.",
+    "causes": [],
+    "trigger_cues": [
+     "rights",
+     "freedom",
+     "speech",
+     "equality",
+     "restrictions"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "id": "m5",
+    "node": "n6",
+    "statement": "In India the President actually runs the country and takes all the big decisions himself.",
+    "why": "Students see the President as the head of state with the highest rank and assume formal power means real power.",
+    "fix": "India has a parliamentary form: the Prime Minister and the Council of Ministers, answerable to Parliament, hold real executive power, and the President acts on their advice.",
+    "probe": {
+     "question": "Who is really responsible for running the government day to day and answers to the Lok Sabha?",
+     "wrong_answer": "The President"
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "Highest rank means real decision-making power",
+    "causes": [],
+    "trigger_cues": [
+     "president",
+     "prime minister",
+     "who runs",
+     "real power",
+     "head of state",
+     "council of ministers"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 8 Social and Political Life; teacher observation",
+    "key": "m5"
+   },
+   {
+    "id": "m6",
+    "node": "n12",
+    "statement": "Only people who are educated or own property can vote in India.",
+    "why": "Students carry over ideas about older systems or assume voting needs a qualification.",
+    "fix": "Universal Adult Franchise means every citizen aged 18 and above can vote, whatever their education, wealth, religion, caste or gender.",
+    "probe": {
+     "question": "Can a 40-year-old citizen who never went to school vote in a Lok Sabha election?",
+     "wrong_answer": "No, because she is not educated."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Voting is a privilege earned by qualifications",
+    "causes": [],
+    "trigger_cues": [
+     "who can vote",
+     "educated",
+     "property",
+     "literate",
+     "adult franchise",
+     "eligible"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom discussion; NCERT Class 8 Civics",
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n7",
+    "statement": "Separation of powers means the legislature, executive and judiciary work separately and never interact with each other.",
+    "why": "The word 'separation' is read as complete isolation rather than a division of functions.",
+    "fix": "Each organ has its own role, but they check and balance one another, for example courts can strike down unconstitutional laws and Parliament passes the laws the executive carries out.",
+    "probe": {
+     "question": "Can the judiciary ever check what Parliament or the executive does?",
+     "wrong_answer": "No, they are separate so they cannot interfere in each other's work."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Separation means complete isolation, with no checks",
+    "causes": [],
+    "trigger_cues": [
+     "separation of powers",
+     "checks and balances",
+     "judiciary",
+     "interfere",
+     "three organs",
+     "separate"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 8 Civics; teacher observation",
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n13",
+    "statement": "The police and officials who implement laws are part of the legislature.",
+    "why": "Students link anything to do with laws to the body that makes them.",
+    "fix": "The legislature (Parliament, State Assemblies) makes laws; the executive, including the PM, ministers and civil servants such as police, implements them.",
+    "probe": {
+     "question": "Which organ of government does a District Collector belong to?",
+     "wrong_answer": "The legislature, because they work with laws."
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "Anyone dealing with laws belongs to law-making body",
+    "causes": [],
+    "trigger_cues": [
+     "police",
+     "collector",
+     "implement laws",
+     "legislature",
+     "executive",
+     "who makes laws"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 8 Civics; common student confusion",
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n14",
+    "statement": "Right to Equality means everyone must be treated exactly the same, so reservations and special help are unconstitutional.",
+    "why": "Equality is understood as identical treatment, not as fairness for people who start from unequal positions.",
+    "fix": "Right to Equality means equality before law and no discrimination on grounds like religion, caste, sex or birth; the Constitution also allows special provisions for disadvantaged groups to achieve real equality.",
+    "probe": {
+     "question": "Is a seat reserved for Scheduled Castes in Parliament against the Right to Equality?",
+     "wrong_answer": "Yes, because everyone must be treated exactly the same."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Equality means identical treatment in every case",
+    "causes": [],
+    "trigger_cues": [
+     "equality",
+     "reservation",
+     "same treatment",
+     "discrimination",
+     "special provisions",
+     "unfair"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on student conceptions of equality in civics education",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n15",
+    "statement": "Fundamental Duties are laws, and a citizen who ignores them can be taken to court by the Constitution automatically.",
+    "why": "Students treat everything in the Constitution as an enforceable punishment-backed rule.",
+    "fix": "Fundamental Duties are moral obligations of citizens, like respecting the national flag and protecting public property, and are not directly enforceable in court, though other laws may apply to related acts.",
+    "probe": {
+     "question": "Will a person be jailed under the Fundamental Duties just for not valuing our composite culture?",
+     "wrong_answer": "Yes, the Constitution punishes anyone who breaks a duty."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Every constitutional clause carries direct legal punishment",
+    "causes": [],
+    "trigger_cues": [
+     "duties",
+     "punishment",
+     "court",
+     "obligation",
+     "citizen",
+     "jail",
+     "enforce"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher observation; NCERT Class 8 Civics",
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n11",
+    "statement": "States have their own powers only because the Centre allows it, and these powers can be taken away whenever the Centre wants.",
+    "why": "Students see the Centre as the bigger level and think State powers are lent.",
+    "fix": "The Constitution divides powers between Union, State and Concurrent lists. State powers are given by the Constitution itself, not by the Centre's favour.",
+    "probe": {
+     "question": "Who decides what subjects a State government can make laws on?",
+     "wrong_answer": "The Central government decides this whenever it likes."
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "Lower governments hold only borrowed power",
+    "causes": [],
+    "trigger_cues": [
+     "state list",
+     "union list",
+     "who gives powers",
+     "state government",
+     "centre",
+     "concurrent"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 8 Civics; classroom discussion",
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n10",
+    "statement": "Only ordinary citizens need to follow the Constitution; the Prime Minister and ministers are above it.",
+    "why": "Students see leaders as powerful and assume rules bind only the weak.",
+    "fix": "The Constitution binds everyone, including the PM, ministers and officials. It limits their power so they cannot misuse it, and courts can set aside their unlawful acts.",
+    "probe": {
+     "question": "If a minister breaks a constitutional rule, can a court declare the action invalid?",
+     "wrong_answer": "No, because ministers are above the Constitution."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Powerful people are exempt from rules",
+    "causes": [],
+    "trigger_cues": [
+     "prime minister",
+     "above law",
+     "ministers",
+     "misuse of power",
+     "court",
+     "everyone follows"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 8 Civics; teacher observation",
+    "key": "m12"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

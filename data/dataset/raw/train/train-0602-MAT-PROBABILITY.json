@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0602-MAT-PROBABILITY",
+  "topic_id": "MAT-PROBABILITY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a step-by-step worked example",
+  "seed": 602
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1046,
+  "candidatesTokenCount": 1327,
+  "totalTokenCount": 2373,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1046
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-PROBABILITY-K23-M22",
+  "MAT-PROBABILITY-K16-M14",
+  "MAT-PROBABILITY-K24-M23",
+  "MAT-PROBABILITY-K7-M3",
+  "MAT-PROBABILITY-K18-M17",
+  "MAT-PROBABILITY-K7-M4",
+  "MAT-PROBABILITY-K8-M5",
+  "MAT-PROBABILITY-K10-M9",
+  "MAT-PROBABILITY-K24-M24",
+  "MAT-PROBABILITY-K6-M1",
+  "MAT-PROBABILITY-K22-M21",
+  "MAT-PROBABILITY-K14-M10",
+  "MAT-PROBABILITY-K6-M2",
+  "MAT-PROBABILITY-K25-M25"
+ ],
+ "response": {
+  "passage": "In a probability experiment, we look at all possible outcomes in a sample space. For a standard six-sided die, the sample space is {1, 2, 3, 4, 5, 6}, meaning there are six equally likely outcomes. If we define an event as 'rolling an even number', the outcomes are {2, 4, 6}. The probability of this event is the number of favorable outcomes divided by the total number of possible outcomes, which is 3/6 or 0.5. Probability is always a value between 0 and 1, inclusive. If the probability of an event E occurring is 0.5, the probability of the complement event, 'not E', is calculated as 1 minus 0.5, which equals 0.5. These two probabilities must always sum to exactly 1. It is important to remember that probability represents long-term frequency, not a guarantee of short-term results. For instance, tossing a coin ten times does not guarantee exactly five heads; the outcome of each toss is independent, and previous results do not influence future ones. Finally, the sum of probabilities of all elementary events in an experiment is always 1, not the number of outcomes. Understanding these rules helps us avoid common errors when predicting chance events.",
+  "summary": "This passage explains the fundamental rules of probability, including calculating event likelihoods and complementary events. It emphasizes that probability values are restricted between 0 and 1 and that individual trials are independent events.",
+  "items": [
+   {
+    "evidence": "The probability of this event is the number of favorable outcomes divided by the total number of possible outcomes, which is 3/6 or 0.5.",
+    "answer": "3/6 or 0.5",
+    "stem": "What is the calculated probability of rolling an even number on a standard die?",
+    "options": [
+     {
+      "belief_id": "MAT-PROBABILITY-K10-M9",
+      "why": "Student ignores the total sample space and only counts successes.",
+      "text": "3"
+     },
+     {
+      "belief_id": "MAT-PROBABILITY-K18-M17",
+      "why": "Student believes probability can exceed 1.",
+      "text": "6/3 or 2"
+     },
+     {
+      "belief_id": "MAT-PROBABILITY-K8-M5",
+      "why": "Student confuses probability with a ratio of successes to failures.",
+      "text": "3/3 or 1"
+     }
+    ]
+   },
+   {
+    "evidence": "If the probability of an event E occurring is 0.5, the probability of the complement event, 'not E', is calculated as 1 minus 0.5, which equals 0.5.",
+    "answer": "0.5",
+    "stem": "If the probability of an event is 0.5, what is the probability of its complement?",
+    "options": [
+     {
+      "belief_id": "MAT-PROBABILITY-K24-M23",
+      "why": "Student thinks the complement is the same as the event.",
+      "text": "0.5"
+     },
+     {
+      "belief_id": "MAT-PROBABILITY-K24-M24",
+      "why": "Student adds probabilities to a fixed counting number.",
+      "text": "1.5"
+     },
+     {
+      "belief_id": "MAT-PROBABILITY-K25-M25",
+      "why": "Student confuses complement with a specific different outcome.",
+      "text": "0.1"
+     }
+    ]
+   },
+   {
+    "evidence": "For instance, tossing a coin ten times does not guarantee exactly five heads; the outcome of each toss is independent, and previous results do not influence future ones.",
+    "answer": "does not guarantee exactly five heads",
+    "stem": "What is true about tossing a coin ten times?",
+    "options": [
+     {
+      "belief_id": "MAT-PROBABILITY-K7-M3",
+      "why": "Student believes in a fixed outcome for small trials.",
+      "text": "it must give exactly 5 heads"
+     },
+     {
+      "belief_id": "MAT-PROBABILITY-K6-M1",
+      "why": "Student believes previous results influence future outcomes.",
+      "text": "tails is more likely after heads"
+     },
+     {
+      "belief_id": "MAT-PROBABILITY-K6-M2",
+      "why": "Student believes in a 'hot' streak effect.",
+      "text": "heads is more likely after heads"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, the sum of probabilities of all elementary events in an experiment is always 1, not the number of outcomes.",
+    "answer": "always 1",
+    "stem": "What is the sum of probabilities of all elementary events in an experiment?",
+    "options": [
+     {
+      "belief_id": "MAT-PROBABILITY-K22-M21",
+      "why": "Student believes the sum equals the number of outcomes.",
+      "text": "6"
+     },
+     {
+      "belief_id": "MAT-PROBABILITY-K24-M24",
+      "why": "Student believes the sum is a fixed large number.",
+      "text": "100"
+     },
+     {
+      "belief_id": "MAT-PROBABILITY-K18-M17",
+      "why": "Student believes the sum can be greater than 1.",
+      "text": "5/4"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.4
+}

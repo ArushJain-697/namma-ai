@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0428-MAT-STATISTICS",
+  "topic_id": "MAT-STATISTICS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a rule explained with two contrasting examples",
+  "seed": 428
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 1020,
+  "candidatesTokenCount": 1227,
+  "totalTokenCount": 2247,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1020
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-STATISTICS-K28-M22",
+  "MAT-STATISTICS-K19-M16",
+  "MAT-STATISTICS-K13-M8",
+  "MAT-STATISTICS-K28-M21",
+  "MAT-STATISTICS-K22-M15",
+  "MAT-STATISTICS-K21-M14",
+  "MAT-STATISTICS-K6-M2",
+  "MAT-STATISTICS-K9-M5",
+  "MAT-STATISTICS-K15-M9",
+  "MAT-STATISTICS-K18-M12",
+  "MAT-STATISTICS-K24-M17",
+  "MAT-STATISTICS-K14-M10",
+  "MAT-STATISTICS-K11-M7",
+  "MAT-STATISTICS-K30-M24"
+ ],
+ "response": {
+  "passage": "When analyzing data, we must distinguish between primary and secondary sources. Primary data is collected by the investigator for a specific purpose, such as a student conducting their own survey on favorite sports. In contrast, secondary data is gathered from existing records, like using government census reports for a project. When presenting data, a histogram is used for continuous class intervals, where bars must touch to show the continuity of the data range. This differs from a bar graph, which represents categorical data with gaps between bars. Furthermore, when calculating the mean of grouped data, we use the class mark, which is the midpoint of each interval. We multiply each class mark by its frequency, sum these products, and then divide by the total frequency of all observations, not the number of classes. Finally, remember that the mode is the specific value or class interval that appears most frequently in a data set. A data set can have more than one mode or even no mode at all, depending on the frequency distribution. For example, if the values 5 and 8 both appear with the highest frequency, the set is bimodal, meaning it has two modes rather than just one.",
+  "summary": "This passage explains the difference between primary and secondary data sources. It also clarifies the structural rules for histograms and the correct method for calculating the mean of grouped data. Finally, it highlights that a data set can possess multiple modes.",
+  "items": [
+   {
+    "evidence": "Secondary data is gathered from existing records, like using government census reports for a project.",
+    "answer": "secondary data",
+    "stem": "If a student uses official government statistics for their school project, what type of data are they using?",
+    "options": [
+     {
+      "belief_id": "MAT-STATISTICS-K6-M2",
+      "why": "Mistakenly assumes official sources are always primary data.",
+      "text": "primary data"
+     },
+     {
+      "belief_id": "MAT-STATISTICS-K28-M22",
+      "why": "Irrelevant application of the single mode misconception.",
+      "text": "bimodal data"
+     },
+     {
+      "belief_id": "MAT-STATISTICS-K19-M16",
+      "why": "Irrelevant application of the mean value misconception.",
+      "text": "mean data"
+     }
+    ]
+   },
+   {
+    "evidence": "A histogram is used for continuous class intervals, where bars must touch to show the continuity of the data range.",
+    "answer": "bars must touch",
+    "stem": "How should the bars be arranged when drawing a histogram for continuous data?",
+    "options": [
+     {
+      "belief_id": "MAT-STATISTICS-K13-M8",
+      "why": "Confuses histogram structure with bar graph structure.",
+      "text": "leave gaps between bars"
+     },
+     {
+      "belief_id": "MAT-STATISTICS-K14-M10",
+      "why": "Confuses the axes orientation of a histogram.",
+      "text": "vertical axis shows classes"
+     },
+     {
+      "belief_id": "MAT-STATISTICS-K18-M12",
+      "why": "Confuses histogram bars with frequency polygon endpoints.",
+      "text": "end without touching axis"
+     }
+    ]
+   },
+   {
+    "evidence": "We multiply each class mark by its frequency, sum these products, and then divide by the total frequency of all observations, not the number of classes.",
+    "answer": "total frequency",
+    "stem": "When calculating the mean for grouped data, what should the sum of the products be divided by?",
+    "options": [
+     {
+      "belief_id": "MAT-STATISTICS-K22-M15",
+      "why": "Incorrectly divides by the count of classes.",
+      "text": "number of classes"
+     },
+     {
+      "belief_id": "MAT-STATISTICS-K21-M14",
+      "why": "Incorrectly assumes division by class count.",
+      "text": "sum of class marks"
+     },
+     {
+      "belief_id": "MAT-STATISTICS-K11-M7",
+      "why": "Confuses frequency with cumulative frequency.",
+      "text": "cumulative frequency"
+     }
+    ]
+   },
+   {
+    "evidence": "A data set can have more than one mode or even no mode at all, depending on the frequency distribution.",
+    "answer": "more than one mode",
+    "stem": "Which statement accurately describes the possible number of modes in a data set?",
+    "options": [
+     {
+      "belief_id": "MAT-STATISTICS-K28-M22",
+      "why": "Incorrectly assumes every set has exactly one mode.",
+      "text": "exactly one mode"
+     },
+     {
+      "belief_id": "MAT-STATISTICS-K30-M24",
+      "why": "Confuses mode with mean and median equality.",
+      "text": "equal to the mean"
+     },
+     {
+      "belief_id": "MAT-STATISTICS-K28-M21",
+      "why": "Confuses the frequency value with the mode.",
+      "text": "the highest frequency"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.4
+}

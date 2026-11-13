@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0219-MAT-COORDGEOM",
+  "topic_id": "MAT-COORDGEOM",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a step-by-step worked example",
+  "seed": 219
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 903,
+  "candidatesTokenCount": 1296,
+  "totalTokenCount": 2199,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 903
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-COORDGEOM-K19-M7",
+  "MAT-COORDGEOM-K17-M6",
+  "MAT-COORDGEOM-K14-M4",
+  "MAT-COORDGEOM-K16-M9",
+  "MAT-COORDGEOM-K20-M10",
+  "MAT-COORDGEOM-K21-M11",
+  "MAT-COORDGEOM-K6-M5",
+  "MAT-COORDGEOM-K13-M3",
+  "MAT-COORDGEOM-K15-M8"
+ ],
+ "response": {
+  "passage": "In coordinate geometry, we use a Cartesian plane to locate points using an ordered pair (x, y). The first number, x, represents the horizontal distance from the y-axis, while the second number, y, represents the vertical distance from the x-axis. The intersection of the two axes is called the origin, which is always denoted by the coordinates (0, 0). When plotting points, we must ensure the scale on both axes is identical to maintain geometric accuracy. For example, if we want to find the distance between two points, (x1, y1) and (x2, y2), we use the formula involving the square root of the sum of squared differences: the square root of (x2 - x1)² + (y2 - y1)². This formula works regardless of the order of subtraction because squaring any difference always results in a positive value. Finally, remember that a point like (3, 0) does not belong to any quadrant; it lies exactly on the x-axis because its vertical distance from the x-axis is zero. Similarly, a point like (0, 4) lies on the y-axis. Always check the signs carefully: a point is only in the third quadrant if both its x and y coordinates are negative.",
+  "summary": "This passage explains the basics of the Cartesian plane, including how to read coordinates and calculate distances correctly. It clarifies the role of the origin, the importance of consistent scales, and the specific locations of points on axes versus quadrants.",
+  "items": [
+   {
+    "evidence": "The intersection of the two axes is called the origin, which is always denoted by the coordinates (0, 0).",
+    "answer": "(0, 0)",
+    "stem": "What are the coordinates of the origin point?",
+    "options": [
+     {
+      "belief_id": "MAT-COORDGEOM-K6-M5",
+      "why": "Student believes counting starts from 1, not 0.",
+      "text": "(1, 1)"
+     },
+     {
+      "belief_id": "MAT-COORDGEOM-K17-M6",
+      "why": "Student confuses axis position with origin coordinates.",
+      "text": "(0, 4)"
+     },
+     {
+      "belief_id": "MAT-COORDGEOM-K15-M8",
+      "why": "Student ignores coordinate order and specific values.",
+      "text": "(5, 2)"
+     }
+    ]
+   },
+   {
+    "evidence": "The first number, x, represents the horizontal distance from the y-axis, while the second number, y, represents the vertical distance from the x-axis.",
+    "answer": "horizontal distance",
+    "stem": "In the coordinate pair (x, y), what does the first number represent?",
+    "options": [
+     {
+      "belief_id": "MAT-COORDGEOM-K14-M4",
+      "why": "Student reverses the definitions of x and y coordinates.",
+      "text": "vertical distance"
+     },
+     {
+      "belief_id": "MAT-COORDGEOM-K20-M10",
+      "why": "Student confuses coordinate definition with distance calculation.",
+      "text": "sum of coordinates"
+     },
+     {
+      "belief_id": "MAT-COORDGEOM-K21-M11",
+      "why": "Student incorrectly applies subtraction logic to coordinate definition.",
+      "text": "difference of coordinates"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, remember that a point like (3, 0) does not belong to any quadrant; it lies exactly on the x-axis because its vertical distance from the x-axis is zero.",
+    "answer": "on the x-axis",
+    "stem": "Where is the point (3, 0) located on the Cartesian plane?",
+    "options": [
+     {
+      "belief_id": "MAT-COORDGEOM-K19-M7",
+      "why": "Student assumes positive x-coordinate means first quadrant.",
+      "text": "first quadrant"
+     },
+     {
+      "belief_id": "MAT-COORDGEOM-K13-M3",
+      "why": "Student incorrectly assumes negative coordinates define the third quadrant.",
+      "text": "third quadrant"
+     },
+     {
+      "belief_id": "MAT-COORDGEOM-K16-M9",
+      "why": "Student assumes axes can be scaled to force points into quadrants.",
+      "text": "second quadrant"
+     }
+    ]
+   },
+   {
+    "evidence": "This formula works regardless of the order of subtraction because squaring any difference always results in a positive value.",
+    "answer": "always results in a positive value",
+    "stem": "Why does the order of subtraction not affect the distance formula result?",
+    "options": [
+     {
+      "belief_id": "MAT-COORDGEOM-K21-M11",
+      "why": "Student thinks negative differences change the result sign.",
+      "text": "it produces a negative value"
+     },
+     {
+      "belief_id": "MAT-COORDGEOM-K20-M10",
+      "why": "Student ignores the squaring step in the formula.",
+      "text": "it is just simple addition"
+     },
+     {
+      "belief_id": "MAT-COORDGEOM-K15-M8",
+      "why": "Student thinks order is irrelevant due to number identity.",
+      "text": "the numbers are the same"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.9
+}

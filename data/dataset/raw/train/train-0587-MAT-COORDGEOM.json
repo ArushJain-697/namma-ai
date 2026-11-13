@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0587-MAT-COORDGEOM",
+  "topic_id": "MAT-COORDGEOM",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a market or shop situation that uses the idea",
+  "seed": 587
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 906,
+  "candidatesTokenCount": 1232,
+  "totalTokenCount": 2138,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 906
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-COORDGEOM-K17-M6",
+  "MAT-COORDGEOM-K20-M10",
+  "MAT-COORDGEOM-K14-M4",
+  "MAT-COORDGEOM-K6-M5",
+  "MAT-COORDGEOM-K16-M9",
+  "MAT-COORDGEOM-K19-M7",
+  "MAT-COORDGEOM-K21-M11",
+  "MAT-COORDGEOM-K13-M3",
+  "MAT-COORDGEOM-K15-M8"
+ ],
+ "response": {
+  "passage": "Rohan is designing a layout for his new stationery shop on a large grid map. He marks the main entrance at the origin, which is the point (0, 0), where both the horizontal and vertical measurements begin. To ensure accuracy, Rohan uses a uniform scale where every grid square represents exactly one meter on both axes. He places the pen display at point (3, 0) to be easily accessible from the entrance. Because this point lies directly on the horizontal line, it is not inside any quadrant. Rohan then places the notebook shelf at (2, 5) and the art supplies at (5, 2). He carefully distinguishes between these two locations because the first number represents the horizontal distance from the entrance, while the second number represents the vertical distance. Finally, he calculates the distance between the entrance (0, 0) and the pen display (3, 0) using the square root of the sum of squared differences, ensuring his measurements are precise for the floor plan.",
+  "summary": "Rohan uses a coordinate grid to map out his stationery shop layout. He ensures consistent scaling and precise placement of items to distinguish between different locations on the floor.",
+  "items": [
+   {
+    "evidence": "Rohan marks the main entrance at the origin, which is the point (0, 0), where both the horizontal and vertical measurements begin.",
+    "answer": "(0, 0)",
+    "stem": "What are the exact coordinates of the shop's main entrance?",
+    "options": [
+     {
+      "belief_id": "MAT-COORDGEOM-K6-M5",
+      "why": "Student assumes counting starts from 1 instead of 0.",
+      "text": "(1, 1)"
+     },
+     {
+      "belief_id": "MAT-COORDGEOM-K17-M6",
+      "why": "Student confuses the origin with a point on an axis.",
+      "text": "(0, 4)"
+     },
+     {
+      "belief_id": "MAT-COORDGEOM-K15-M8",
+      "why": "Student ignores the specific order of coordinates.",
+      "text": "(0, 1)"
+     }
+    ]
+   },
+   {
+    "evidence": "He places the pen display at point (3, 0) to be easily accessible from the entrance.",
+    "answer": "not inside any quadrant",
+    "stem": "Where is the pen display located in relation to the quadrants?",
+    "options": [
+     {
+      "belief_id": "MAT-COORDGEOM-K19-M7",
+      "why": "Student assumes positive coordinates always mean the first quadrant.",
+      "text": "First quadrant"
+     },
+     {
+      "belief_id": "MAT-COORDGEOM-K13-M3",
+      "why": "Student incorrectly assumes negative coordinates define the third quadrant.",
+      "text": "Third quadrant"
+     },
+     {
+      "belief_id": "MAT-COORDGEOM-K17-M6",
+      "why": "Student thinks points on axes must have a zero x-coordinate.",
+      "text": "On the y-axis"
+     }
+    ]
+   },
+   {
+    "evidence": "He carefully distinguishes between these two locations because the first number represents the horizontal distance from the entrance, while the second number represents the vertical distance.",
+    "answer": "horizontal distance",
+    "stem": "What does the first number in the coordinate pair (2, 5) represent?",
+    "options": [
+     {
+      "belief_id": "MAT-COORDGEOM-K14-M4",
+      "why": "Student swaps the meaning of x and y coordinates.",
+      "text": "vertical distance"
+     },
+     {
+      "belief_id": "MAT-COORDGEOM-K15-M8",
+      "why": "Student thinks the order of numbers does not matter.",
+      "text": "the same as 5"
+     },
+     {
+      "belief_id": "MAT-COORDGEOM-K16-M9",
+      "why": "Student confuses coordinate meaning with arbitrary scale spacing.",
+      "text": "a variable scale"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, he calculates the distance between the entrance (0, 0) and the pen display (3, 0) using the square root of the sum of squared differences, ensuring his measurements are precise for the floor plan.",
+    "answer": "square root of the sum of squared differences",
+    "stem": "How must Rohan correctly calculate the distance between two points?",
+    "options": [
+     {
+      "belief_id": "MAT-COORDGEOM-K20-M10",
+      "why": "Student ignores the square root and squaring steps.",
+      "text": "sum of the differences"
+     },
+     {
+      "belief_id": "MAT-COORDGEOM-K21-M11",
+      "why": "Student thinks subtraction order changes the distance value.",
+      "text": "negative distance value"
+     },
+     {
+      "belief_id": "MAT-COORDGEOM-K16-M9",
+      "why": "Student assumes distance is independent of the grid scale.",
+      "text": "any arbitrary unit"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.2
+}

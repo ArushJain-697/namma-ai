@@ -1,0 +1,72 @@
+{
+ "job": {
+  "job": "train-0329-SOC-ECO-SECTORS",
+  "topic_id": "SOC-ECO-SECTORS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a news-style report about a real-world situation",
+  "seed": 329
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 612,
+  "candidatesTokenCount": 717,
+  "totalTokenCount": 1329,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 612
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "SOC-ECO-SECTORS-K4-M1",
+  "SOC-ECO-SECTORS-K14-M4",
+  "SOC-ECO-SECTORS-K11-M2"
+ ],
+ "response": {
+  "passage": "In the village of Rampur, the local economy is undergoing a significant transformation. While agriculture remains the backbone, the primary sector now includes diverse activities like fishing, forestry, and mining, which extract natural resources directly. Many villagers have moved to the nearby town to work in a new textile factory, representing the secondary sector. This factory processes raw cotton into finished cloth, adding value to the primary products. Meanwhile, the tertiary sector is booming as transport, banking, and communication services support these growing industries. To track this progress, the government calculates the Gross Domestic Product, which is the total value of all final goods and services produced within the country during a particular year. To support those struggling with seasonal unemployment, the government implements the MGNREGA scheme. This policy guarantees one hundred days of wage employment in a year specifically for rural households, providing a vital safety net for those who cannot find work in the agricultural off-season. Unlike the organised sector, which offers fixed hours and job security, many workers in the unorganised sector still face irregular wages and lack formal contracts. By balancing these sectors, the nation aims for sustainable development that benefits both rural and urban populations through structured economic growth.",
+  "summary": "The Indian economy relies on the primary, secondary, and tertiary sectors to create value and support growth. The government uses GDP to measure economic output and provides schemes like MGNREGA to support rural workers.",
+  "items": [
+   {
+    "evidence": "While agriculture remains the backbone, the primary sector now includes diverse activities like fishing, forestry, and mining, which extract natural resources directly.",
+    "answer": "fishing, forestry, and mining",
+    "stem": "Besides farming, which other activities are classified under the primary sector?",
+    "options": [
+     {
+      "belief_id": "SOC-ECO-SECTORS-K4-M1",
+      "why": "Student incorrectly assumes primary sector is limited to farming only.",
+      "text": "only industrial manufacturing processes"
+     }
+    ]
+   },
+   {
+    "evidence": "The government calculates the Gross Domestic Product, which is the total value of all final goods and services produced within the country during a particular year.",
+    "answer": "final goods and services",
+    "stem": "What does the Gross Domestic Product measure in an economy?",
+    "options": [
+     {
+      "belief_id": "SOC-ECO-SECTORS-K11-M2",
+      "why": "Student ignores the value of services in GDP calculation.",
+      "text": "the sum of all goods produced"
+     }
+    ]
+   },
+   {
+    "evidence": "This policy guarantees one hundred days of wage employment in a year specifically for rural households, providing a vital safety net for those who cannot find work in the agricultural off-season.",
+    "answer": "rural households",
+    "stem": "Who is the primary target for the employment guarantee under MGNREGA?",
+    "options": [
+     {
+      "belief_id": "SOC-ECO-SECTORS-K14-M4",
+      "why": "Student incorrectly believes the scheme applies to city dwellers.",
+      "text": "everyone living in the city"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 3.1
+}

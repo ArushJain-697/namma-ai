@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0240-MAT-REALNUMBERS",
+  "topic_id": "MAT-REALNUMBERS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a market or shop situation that uses the idea",
+  "seed": 240
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 1160,
+  "candidatesTokenCount": 1316,
+  "totalTokenCount": 2476,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1160
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-REALNUMBERS-K23-M14",
+  "MAT-REALNUMBERS-K26-M18",
+  "MAT-REALNUMBERS-K16-M5",
+  "MAT-REALNUMBERS-K24-M15",
+  "MAT-REALNUMBERS-K21-M11",
+  "MAT-REALNUMBERS-K22-M12",
+  "MAT-REALNUMBERS-K20-M9",
+  "MAT-REALNUMBERS-K10-M19",
+  "MAT-REALNUMBERS-K20-M10",
+  "MAT-REALNUMBERS-K25-M16",
+  "MAT-REALNUMBERS-K25-M17",
+  "MAT-REALNUMBERS-K17-M6",
+  "MAT-REALNUMBERS-K11-M21",
+  "MAT-REALNUMBERS-K19-M8"
+ ],
+ "response": {
+  "passage": "In a local market, a shopkeeper organizes his stock of sweets. He has two types of boxes: one containing 12 pieces and another containing 18 pieces. To ensure he has equal stacks of each, he calculates the Least Common Multiple (LCM) of 12 and 18. He writes 12 as 2 squared times 3, and 18 as 2 times 3 squared. By taking the highest power of each prime factor present, he finds the LCM is 36. He also notes that the Highest Common Factor (HCF) is 6, obtained by taking the lowest power of common prime factors. He reminds his assistant that while the product of two numbers equals the product of their HCF and LCM, this rule does not apply to three different types of boxes. Later, a customer asks if the ratio of the box dimensions, which is 22 divided by 7, makes the value irrational. The shopkeeper explains that 22/7 is a rational approximation, but the true value of pi is indeed irrational. Finally, he checks a new batch of 4 raised to the power n sweets, noting that since 4 only contains the prime factor 2, it can never end in the digit 0, regardless of the value of n.",
+  "summary": "The shopkeeper uses prime factorisation to manage his sweet inventory and determine stack sizes. He correctly distinguishes between rational approximations and irrational numbers while applying rules for HCF and LCM.",
+  "items": [
+   {
+    "evidence": "By taking the highest power of each prime factor present, he finds the LCM is 36.",
+    "answer": "highest power",
+    "stem": "What criteria does the shopkeeper use to determine the LCM of the two numbers?",
+    "options": [
+     {
+      "belief_id": "MAT-REALNUMBERS-K22-M12",
+      "why": "Student incorrectly uses only common primes with smallest powers.",
+      "text": "lowest common power"
+     },
+     {
+      "belief_id": "MAT-REALNUMBERS-K20-M9",
+      "why": "Student incorrectly multiplies all prime factors of both numbers.",
+      "text": "all prime factors"
+     },
+     {
+      "belief_id": "MAT-REALNUMBERS-K20-M10",
+      "why": "Student confuses HCF logic with LCM logic.",
+      "text": "greatest common power"
+     }
+    ]
+   },
+   {
+    "evidence": "He reminds his assistant that while the product of two numbers equals the product of their HCF and LCM, this rule does not apply to three different types of boxes.",
+    "answer": "does not apply",
+    "stem": "What is the validity of the HCF-LCM product rule when dealing with three distinct quantities?",
+    "options": [
+     {
+      "belief_id": "MAT-REALNUMBERS-K24-M15",
+      "why": "Student incorrectly assumes the rule works for three numbers.",
+      "text": "always applies"
+     },
+     {
+      "belief_id": "MAT-REALNUMBERS-K23-M14",
+      "why": "Student confuses the product rule with a sum rule.",
+      "text": "equals their sum"
+     },
+     {
+      "belief_id": "MAT-REALNUMBERS-K21-M11",
+      "why": "Student believes no HCF exists if factors are distinct.",
+      "text": "has no HCF"
+     }
+    ]
+   },
+   {
+    "evidence": "The shopkeeper explains that 22/7 is a rational approximation, but the true value of pi is indeed irrational.",
+    "answer": "is indeed irrational",
+    "stem": "How does the shopkeeper classify the true value of pi compared to the fraction 22/7?",
+    "options": [
+     {
+      "belief_id": "MAT-REALNUMBERS-K25-M17",
+      "why": "Student believes the fraction is exactly equal to pi.",
+      "text": "is a rational number"
+     },
+     {
+      "belief_id": "MAT-REALNUMBERS-K25-M16",
+      "why": "Student assumes all long decimals are irrational.",
+      "text": "is a long decimal"
+     },
+     {
+      "belief_id": "MAT-REALNUMBERS-K26-M18",
+      "why": "Student incorrectly assumes all roots are irrational.",
+      "text": "is a square root"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, he checks a new batch of 4 raised to the power n sweets, noting that since 4 only contains the prime factor 2, it can never end in the digit 0, regardless of the value of n.",
+    "answer": "never end in",
+    "stem": "What is the outcome for the last digit of 4 raised to the power n?",
+    "options": [
+     {
+      "belief_id": "MAT-REALNUMBERS-K19-M8",
+      "why": "Student thinks checking specific values proves the general case.",
+      "text": "depends on n"
+     },
+     {
+      "belief_id": "MAT-REALNUMBERS-K16-M5",
+      "why": "Student assumes changing order changes the factorisation.",
+      "text": "changes with order"
+     },
+     {
+      "belief_id": "MAT-REALNUMBERS-K10-M19",
+      "why": "Student thinks non-fractional numbers are not rational.",
+      "text": "is not rational"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 126.6
+}

@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0789-GENERIC-Electricity",
+  "topic_id": "SCI-PHY-ELECTRICITY10",
+  "split": "train",
+  "generic": true,
+  "theme": "Electricity",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a cause-and-effect explanation",
+  "seed": 789
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 706,
+  "candidatesTokenCount": 1143,
+  "totalTokenCount": 1849,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 706
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "In the small town of Rampur, electricity supply was inconsistent until 2012. Mr. Sharma, the local engineer, observed that the frequent power cuts were caused by the heavy load on the old transformer during the peak evening hours. When the sun sets, every household turns on their lights and fans simultaneously, which forces the transformer to overheat and shut down. In 2015, the government installed a new, high-capacity transformer to handle this surge. Ms. Gupta, the district collector, inaugurated the system, noting that the upgrade was essential for the town's growth. Since then, the residents of Rampur have enjoyed stable power. However, some villagers still believe that the transformer shuts down because the wind blows too hard against the wires. Mr. Sharma explains that the wind is merely a result of the cooling fans inside the unit, not the cause of the power failure. He often reminds the youth that while the new machine is powerful, it still requires regular maintenance to prevent future outages.",
+  "summary": "Rampur faced frequent power cuts due to an overloaded transformer during peak evening hours. In 2015, the government installed a new transformer to solve this issue. The town now enjoys stable electricity thanks to this upgrade and proper maintenance.",
+  "items": [
+   {
+    "evidence": "In the small town of Rampur, electricity supply was inconsistent until 2012.",
+    "answer": "2012",
+    "stem": "When did the town finally start having a reliable power supply?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Mistakenly selected the first number mentioned in the passage.",
+      "text": "2015"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selected the person mentioned in the same sentence.",
+      "text": "Mr. Sharma"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Provided a true fact that does not answer the question.",
+      "text": "Rampur"
+     }
+    ]
+   },
+   {
+    "evidence": "When the sun sets, every household turns on their lights and fans simultaneously, which forces the transformer to overheat and shut down.",
+    "answer": "the transformer to overheat",
+    "stem": "What happens to the equipment when everyone uses electricity at the same time?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Interpreted the technical term as an everyday physical action.",
+      "text": "the machine gets tired"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selected the people mentioned in the same sentence.",
+      "text": "every household"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Stated a true fact that is not the direct result.",
+      "text": "lights and fans"
+     }
+    ]
+   },
+   {
+    "evidence": "Ms. Gupta, the district collector, inaugurated the system, noting that the upgrade was essential for the town's growth.",
+    "answer": "Ms. Gupta",
+    "stem": "Who officially opened the new power system in the town?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selected the person mentioned later in the text.",
+      "text": "Mr. Sharma"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Used a true fact that does not answer the question.",
+      "text": "the district collector"
+     },
+     {
+      "belief_id": "GEN-READ-M5",
+      "why": "Confused the role of the engineer with the collector.",
+      "text": "the local engineer"
+     }
+    ]
+   },
+   {
+    "evidence": "Mr. Sharma explains that the wind is merely a result of the cooling fans inside the unit, not the cause of the power failure.",
+    "stem": "What is the actual reason for the wind felt near the transformer?",
+    "answer": "the cooling fans",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Reversed the cause and effect stated in the passage.",
+      "text": "the power failure"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selected the person mentioned in the same sentence.",
+      "text": "Mr. Sharma"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Used a true fact that is not the cause.",
+      "text": "the transformer unit"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 61.1
+}

@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0421-MAT-QUADRILATERALS",
+  "topic_id": "MAT-QUADRILATERALS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a rule explained with two contrasting examples",
+  "seed": 421
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 1109,
+  "candidatesTokenCount": 1292,
+  "totalTokenCount": 2401,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1109
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-QUADRILATERALS-K16-M12",
+  "MAT-QUADRILATERALS-K11-M5",
+  "MAT-QUADRILATERALS-K21-M14",
+  "MAT-QUADRILATERALS-K22-M15",
+  "MAT-QUADRILATERALS-K7-M1",
+  "MAT-QUADRILATERALS-K23-M16",
+  "MAT-QUADRILATERALS-K10-M3",
+  "MAT-QUADRILATERALS-K8-M2",
+  "MAT-QUADRILATERALS-K14-M13",
+  "MAT-QUADRILATERALS-K10-M4",
+  "MAT-QUADRILATERALS-K15-M11",
+  "MAT-QUADRILATERALS-K12-M7",
+  "MAT-QUADRILATERALS-K13-M8",
+  "MAT-QUADRILATERALS-K24-M18"
+ ],
+ "response": {
+  "passage": "Understanding the properties of quadrilaterals requires careful observation of their sides and angles. A common error is assuming that all quadrilaterals behave like triangles; however, while a triangle's angles sum to 180°, the four interior angles of any quadrilateral always sum to 360°. Another frequent mistake involves the diagonals of special parallelograms. For instance, in a rectangle, the diagonals are equal in length, but in a rhombus, the diagonals are not necessarily equal. Furthermore, students often confuse the definitions of polygons. A polygon is defined as a simple closed curve made of line segments. If a polygon has an interior angle greater than 180°, it is called a concave polygon, which is still a valid polygon despite its 'dented' appearance. Finally, consider the regularity of shapes. A polygon is only regular if all its sides and all its interior angles are equal. For example, a rhombus has four equal sides, but because its angles are not all equal, it is not a regular polygon. In contrast, a square has both equal sides and equal angles, making it a regular quadrilateral. Always check both angles and sides before classifying a shape's regularity or its specific properties.",
+  "summary": "Quadrilaterals have an interior angle sum of 360 degrees, unlike triangles. Regular polygons must have both equal sides and equal angles. Concave shapes are still valid polygons even if they appear dented.",
+  "items": [
+   {
+    "evidence": "the four interior angles of any quadrilateral always sum to 360°.",
+    "answer": "360°",
+    "stem": "What is the total sum of the interior angles of a four-sided polygon?",
+    "options": [
+     {
+      "belief_id": "MAT-QUADRILATERALS-K14-M13",
+      "why": "Student incorrectly applies the triangle angle sum rule.",
+      "text": "180°"
+     },
+     {
+      "belief_id": "MAT-QUADRILATERALS-K10-M4",
+      "why": "Student uses the wrong formula for angle sums.",
+      "text": "720°"
+     },
+     {
+      "belief_id": "MAT-QUADRILATERALS-K10-M3",
+      "why": "Student assumes the sum is always 360 degrees regardless of sides.",
+      "text": "540°"
+     }
+    ]
+   },
+   {
+    "evidence": "in a rhombus, the diagonals are not necessarily equal.",
+    "answer": "not necessarily equal",
+    "stem": "How do the lengths of the diagonals of a rhombus compare?",
+    "options": [
+     {
+      "belief_id": "MAT-QUADRILATERALS-K24-M18",
+      "why": "Student incorrectly assumes rhombus diagonals are equal like rectangles.",
+      "text": "always equal"
+     },
+     {
+      "belief_id": "MAT-QUADRILATERALS-K23-M16",
+      "why": "Student assumes all parallelogram diagonals are equal.",
+      "text": "equal in length"
+     },
+     {
+      "belief_id": "MAT-QUADRILATERALS-K16-M12",
+      "why": "Student confuses rhombus properties with kite properties.",
+      "text": "always perpendicular"
+     }
+    ]
+   },
+   {
+    "evidence": "If a polygon has an interior angle greater than 180°, it is called a concave polygon, which is still a valid polygon despite its 'dented' appearance.",
+    "answer": "still a valid polygon",
+    "stem": "Is a shape with an angle larger than 180 degrees considered a polygon?",
+    "options": [
+     {
+      "belief_id": "MAT-QUADRILATERALS-K7-M1",
+      "why": "Student believes dented shapes cannot be polygons.",
+      "text": "not a polygon"
+     },
+     {
+      "belief_id": "MAT-QUADRILATERALS-K15-M11",
+      "why": "Student confuses concave properties with trapezium definitions.",
+      "text": "only a trapezium"
+     },
+     {
+      "belief_id": "MAT-QUADRILATERALS-K13-M8",
+      "why": "Student incorrectly labels the shape as a diamond.",
+      "text": "only a diamond"
+     }
+    ]
+   },
+   {
+    "evidence": "A polygon is only regular if all its sides and all its interior angles are equal.",
+    "answer": "all its sides and all its interior angles are equal",
+    "stem": "What condition must be met for a polygon to be classified as regular?",
+    "options": [
+     {
+      "belief_id": "MAT-QUADRILATERALS-K8-M2",
+      "why": "Student believes equal sides alone make a polygon regular.",
+      "text": "all its sides are equal"
+     },
+     {
+      "belief_id": "MAT-QUADRILATERALS-K12-M7",
+      "why": "Student focuses only on the division of angles.",
+      "text": "angles are 360 divided by sides"
+     },
+     {
+      "belief_id": "MAT-QUADRILATERALS-K21-M14",
+      "why": "Student assumes all angles are equal in any quadrilateral.",
+      "text": "all its interior angles are equal"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 7.9
+}

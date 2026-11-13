@@ -1,0 +1,85 @@
+{
+ "job": {
+  "job": "test-0026-SOC-GEO-CLIMATE",
+  "topic_id": "SOC-GEO-CLIMATE",
+  "split": "test",
+  "test_only_topic": true,
+  "grade": 9,
+  "style": "a question-and-answer (FAQ) style passage",
+  "seed": 26
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 668,
+  "candidatesTokenCount": 819,
+  "totalTokenCount": 1487,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 668
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "SOC-GEO-CLIMATE-K13-M4",
+  "SOC-GEO-CLIMATE-K11-M1",
+  "SOC-GEO-CLIMATE-K15-M3",
+  "SOC-GEO-CLIMATE-K12-M2"
+ ],
+ "response": {
+  "passage": "Q: How do we understand India's climate and weather? A: Weather refers to the state of the atmosphere over an area at any point in time, while climate is the sum total of weather conditions over a large area for a long period, typically thirty years or more. Q: Does the Tropic of Cancer define the entire climate? A: No, while it passes through the middle of the country, India experiences diverse climates because the Himalayas block cold winds and the vast coastline moderates temperatures. Q: How do winds move across India? A: Winds do not move in straight lines; they are deflected by the Earth's rotation, moving from high-pressure areas to low-pressure areas in curved paths. Q: Do mountains completely stop rainfall? A: Not exactly, as rain shadow areas are regions on the leeward side of mountains that receive significantly less rainfall than the windward side, but they are not completely dry. Q: Why is the monsoon important? A: The monsoon is a seasonal reversal in the wind system that brings the bulk of India's annual rainfall, sustaining agriculture across the nation.",
+  "summary": "This passage explains the distinction between weather and climate while clarifying how geographical features and wind patterns influence India's rainfall. It highlights that climate is a long-term average and that wind movement is complex rather than linear.",
+  "items": [
+   {
+    "evidence": "climate is the sum total of weather conditions over a large area for a long period, typically thirty years or more.",
+    "answer": "long period",
+    "stem": "What is the primary factor that distinguishes climate from the weather of a single day?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-CLIMATE-K11-M1",
+      "why": "Student confuses long-term climate with daily weather patterns.",
+      "text": "a single day"
+     }
+    ]
+   },
+   {
+    "evidence": "India experiences diverse climates because the Himalayas block cold winds and the vast coastline moderates temperatures.",
+    "answer": "diverse climates",
+    "stem": "What is the actual climatic result of India's geography despite the Tropic of Cancer passing through it?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-CLIMATE-K12-M2",
+      "why": "Student assumes the Tropic of Cancer makes the climate uniform.",
+      "text": "a tropical climate"
+     }
+    ]
+   },
+   {
+    "evidence": "Winds do not move in straight lines; they are deflected by the Earth's rotation, moving from high-pressure areas to low-pressure areas in curved paths.",
+    "answer": "curved paths",
+    "stem": "How do winds travel between pressure zones across the Indian subcontinent?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-CLIMATE-K13-M4",
+      "why": "Student ignores the Coriolis effect on wind direction.",
+      "text": "straight lines"
+     }
+    ]
+   },
+   {
+    "evidence": "rain shadow areas are regions on the leeward side of mountains that receive significantly less rainfall than the windward side, but they are not completely dry.",
+    "answer": "significantly less rainfall",
+    "stem": "What is the characteristic of rainfall in a rain shadow area?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-CLIMATE-K15-M3",
+      "why": "Student believes rain shadow means zero precipitation.",
+      "text": "no rain at all"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 3.5
+}

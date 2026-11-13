@@ -138,6 +138,14 @@ class StubBackend(Backend):
             s, a = payload.get("sentence", ""), payload.get("answer", "")
             faulty = self.mode != "off_key" and self._faulty((task, s, a))
             text = self._stem_fault(s, a) if faulty else self._stem_ok(s, a)
+        elif task == "diagnostic":  # sakshi.diagnostic: a well-formed item built from the payload (stub only)
+            import json as _json
+            words = [w.strip(".,;:") for w in payload.get("evidence", "").split() if len(w.strip(".,;:")) > 3]
+            answer = " ".join(words[-2:]) if words else "it"
+            opts = [{"b": f"B{i + 1}", "why": "follows the belief",
+                     "text": " ".join(((m.get("probe") or {}).get("wrong_answer") or m["statement"]).split()[:6])}
+                    for i, m in enumerate(payload.get("beliefs", [])[:3])]
+            text = _json.dumps({"answer": answer, "stem": "According to the passage, what is true here?", "options": opts})
         elif task == "answer":  # answering its own question back (generate.verify_stem)
             a = payload.get("answer", "")
             off = self.mode == "off_key" and self._faulty((task, payload.get("question", ""), a))

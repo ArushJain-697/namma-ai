@@ -1,0 +1,450 @@
+{
+ "topic": {
+  "id": "SOC-CIV-DIVERSITY",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   6
+  ],
+  "title": "Understanding diversity and discrimination",
+  "scope": "diversity in India, prejudice, stereotypes, inequality, discrimination, Ambedkar's experience"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 827,
+  "candidatesTokenCount": 1437,
+  "totalTokenCount": 2264,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 827
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.7,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Diversity in India",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "geography of India"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Prejudice and Stereotypes",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "social interaction"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Inequality and Discrimination",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "concept of democracy"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Diversity as coexistence",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Defining stereotypes",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "Nature of prejudice",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Caste-based discrimination",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "Indian history"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Constitutional equality",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": [
+     "what is a democracy"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Diversity is not inequality",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Stereotypes fix traits to groups",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Prejudice is judging without knowing",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Ambedkar's experience of caste",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Equality is a fundamental right",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n9",
+    "statement": "People who speak different languages or wear different clothes are unequal.",
+    "why": "Students often conflate 'difference' with 'hierarchy' based on social observation.",
+    "fix": "Diversity means having different cultures, but everyone has equal value and rights.",
+    "probe": {
+     "question": "If two people speak different languages, who is more important?",
+     "wrong_answer": "The one who speaks the dominant language."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Difference implies a ranking of value.",
+    "causes": [
+     "m2"
+    ],
+    "trigger_cues": [
+     "diversity",
+     "language",
+     "culture",
+     "unequal",
+     "difference"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's children's ideas in social science"
+   },
+   {
+    "key": "m2",
+    "node": "n10",
+    "statement": "All members of a group share the same personality traits.",
+    "why": "Cognitive tendency to simplify complex social information into categories.",
+    "fix": "Individuals within any group are unique and have diverse personalities and interests.",
+    "probe": {
+     "question": "Are all people from a specific region lazy?",
+     "wrong_answer": "Yes, they are known to be lazy."
+    },
+    "error_type": "stereotype",
+    "root_belief": "Categorization defines the essence of individuals.",
+    "causes": [],
+    "trigger_cues": [
+     "stereotypes",
+     "group",
+     "traits",
+     "fixed",
+     "generalization"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m3",
+    "node": "n11",
+    "statement": "Prejudice is just having a strong opinion about something.",
+    "why": "Confusion between personal preference and social prejudice.",
+    "fix": "Prejudice is judging others negatively without knowing the facts or having evidence.",
+    "probe": {
+     "question": "Is it prejudice to dislike a specific food?",
+     "wrong_answer": "Yes, that is prejudice."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "A word means its everyday meaning.",
+    "causes": [],
+    "trigger_cues": [
+     "prejudice",
+     "opinion",
+     "negative",
+     "judgment",
+     "facts"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n13",
+    "statement": "The law automatically makes everyone equal in real life.",
+    "why": "Students assume legal rules have immediate, perfect enforcement.",
+    "fix": "The law provides the framework for equality, but social discrimination still persists in practice.",
+    "probe": {
+     "question": "Since the Constitution says everyone is equal, does discrimination exist anymore?",
+     "wrong_answer": "No, discrimination has ended because it is illegal."
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "Rules are always perfectly followed.",
+    "causes": [],
+    "trigger_cues": [
+     "constitution",
+     "law",
+     "equality",
+     "rights",
+     "discrimination"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Mumbai research"
+   },
+   {
+    "id": "m5",
+    "node": "n4",
+    "statement": "Diversity means people from different groups live separately and should not mix.",
+    "why": "Students see visible differences and assume each group lives in its own space; they confuse variety with separation.",
+    "fix": "Diversity means many different groups live together and share places, festivals and daily life. India's unity comes from this coexistence.",
+    "probe": {
+     "question": "In a diverse village, where would people of different religions and languages live and celebrate festivals?",
+     "wrong_answer": "Each group should live in its own area and celebrate only among themselves."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Difference requires separation, not coexistence",
+    "causes": [],
+    "trigger_cues": [
+     "diversity",
+     "live together",
+     "separate",
+     "different groups",
+     "mix",
+     "festivals"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom discussion observations",
+    "key": "m5"
+   },
+   {
+    "id": "m6",
+    "node": "n4",
+    "statement": "Diversity in India means only differences of religion.",
+    "why": "Religion is the most visible and discussed difference, so students narrow diversity to it.",
+    "fix": "Diversity includes language, food, dress, festivals, region, religion and ways of life. Each is part of India's variety.",
+    "probe": {
+     "question": "List the kinds of diversity you can find in India.",
+     "wrong_answer": "Only different religions like Hindu, Muslim, Sikh and Christian."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "One familiar kind of difference stands for all diversity",
+    "causes": [],
+    "trigger_cues": [
+     "diversity",
+     "only",
+     "religion",
+     "kinds of difference",
+     "india",
+     "language"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher-educator experience",
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n5",
+    "statement": "A stereotype is always a bad or insulting thing said about a group.",
+    "why": "Students link stereotypes only with abuse, ignoring that fixed 'positive' ideas also stereotype.",
+    "fix": "A stereotype is a fixed, oversimplified idea about a group. Even a 'good' one, like 'all girls are good at cooking', is a stereotype and limits people.",
+    "probe": {
+     "question": "Is 'boys are naturally good at maths' a stereotype?",
+     "wrong_answer": "No, it is a compliment, so it is not a stereotype."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Only negative statements count as stereotypes",
+    "causes": [],
+    "trigger_cues": [
+     "stereotype",
+     "compliment",
+     "positive",
+     "good at",
+     "boys",
+     "girls"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on children's gender stereotypes",
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n5",
+    "statement": "Stereotypes are true because they come from what many people say.",
+    "why": "Students treat repeated or popular statements as evidence.",
+    "fix": "Stereotypes are not based on facts about each person. Many people repeating an idea does not make it true; we must check by knowing individuals.",
+    "probe": {
+     "question": "Everyone in class says people from a certain region are lazy. Is it true?",
+     "wrong_answer": "Yes, since so many people say it, it must be true."
+    },
+    "error_type": "other",
+    "root_belief": "Popular belief is proof of truth",
+    "causes": [],
+    "trigger_cues": [
+     "everyone says",
+     "stereotype",
+     "true",
+     "many people",
+     "lazy",
+     "region"
+    ],
+    "confidence": "plausible",
+    "source_hint": null,
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n6",
+    "statement": "Prejudice is only about disliking people; it cannot be a favourable feeling.",
+    "why": "The word is heard only in contexts of hatred, so students miss that pre-judging can be favourable too.",
+    "fix": "Prejudice means forming a judgement about someone before knowing them. It can be negative or favourable, but it is still unfair because it ignores the person.",
+    "probe": {
+     "question": "A teacher assumes a new student from a rich family will be clever without knowing them. Is this prejudice?",
+     "wrong_answer": "No, because the teacher likes the student, prejudice is only dislike."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Prejudice means only hatred",
+    "causes": [],
+    "trigger_cues": [
+     "prejudice",
+     "dislike",
+     "hate",
+     "favourable",
+     "judge",
+     "before knowing"
+    ],
+    "confidence": "plausible",
+    "source_hint": "social psychology teaching resources",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n11",
+    "statement": "Prejudice goes away once we meet a person from that group even once.",
+    "why": "Students think one meeting fully corrects a view, ignoring how deeply held ideas persist.",
+    "fix": "Prejudice reduces when we get to know many individuals and question our ideas over time. One meeting may not change an old belief.",
+    "probe": {
+     "question": "Rohan met one kind person from another community. Is his prejudice about that community now finished?",
+     "wrong_answer": "Yes, meeting one person removes all prejudice."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "One experience fully removes deep-held prejudice",
+    "causes": [],
+    "trigger_cues": [
+     "prejudice",
+     "meet",
+     "once",
+     "one person",
+     "removed",
+     "community"
+    ],
+    "confidence": "plausible",
+    "source_hint": null,
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n7",
+    "statement": "Caste-based discrimination ended long ago and no longer happens in India.",
+    "why": "Students see caste in history chapters and assume it belongs only to the past (presentism-like gap).",
+    "fix": "Though the Constitution forbids it, caste discrimination still occurs in some places today. Laws and everyday change both need effort.",
+    "probe": {
+     "question": "Does anyone in India today face discrimination because of caste?",
+     "wrong_answer": "No, caste discrimination ended in the past."
+    },
+    "error_type": "chronology_slip",
+    "root_belief": "Social evils end once they are outlawed",
+    "causes": [],
+    "trigger_cues": [
+     "caste",
+     "discrimination",
+     "today",
+     "still",
+     "ended",
+     "past"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT chapter discussion; Ambedkar narrative",
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n12",
+    "statement": "Ambedkar faced discrimination because he was uneducated or poor.",
+    "why": "Students link unfair treatment with lack of schooling or money, missing the caste cause.",
+    "fix": "Ambedkar was a brilliant student who studied widely, yet he was treated unfairly because of his caste. Discrimination was about birth, not ability.",
+    "probe": {
+     "question": "Why was young Ambedkar made to sit separately and denied water at school?",
+     "wrong_answer": "Because he was poor and not good at studies."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Discrimination is caused by poverty or lack of ability",
+    "causes": [],
+    "trigger_cues": [
+     "ambedkar",
+     "school",
+     "sit separately",
+     "water",
+     "poor",
+     "why"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT text on Ambedkar's childhood",
+    "key": "m12"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

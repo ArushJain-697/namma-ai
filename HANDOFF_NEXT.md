@@ -1,5 +1,56 @@
 # Handoff for the next Claude session (written 13 Nov 2026, the night before the hackathon)
 
+## MORNING STATUS (13 Nov, ~08:00)
+- Graph: 220 topics (maths 44, science 67, social 76, general 32, + GEN-READ reading-skill set), 4,531 concepts,
+  2,813 misconceptions, 1,440 cross-topic prerequisite links, 1,870 root beliefs (78 span subjects). Viewer:
+  `data/misconceptions/graph/viewer.html`. Writers: gemini-3-flash-preview (deep, ~89 topics), Sonnet 5.5 via
+  `claude -p` (deep, ~80 topics), gemini-3.1-flash-lite (thin, 60 topics: being deepened by Sonnet this morning,
+  log `results/deepen_morning.log`; the Claude CLI hit the 5-hour plan limit overnight, now treated as quota).
+- Dataset READY: `data/dataset/train.jsonl` 2,623 + `val.jsonl` 135 examples (800 passages, 182 topics, 19% generic
+  reading-skill menu), `test_passages.jsonl` 200 (70 test-only topics, 70 new on training topics, 20 off-syllabus,
+  40 hand-written). All teacher items from gemini-3.1-flash-lite (strong quota was spent). Stats: `data/dataset/stats.json`.
+- Matching (keyword only, `scripts/check_library_match.py`): general topics pulled top-1 from 37/40 to 34/40;
+  `GENERAL_WEIGHT = 0.6` in `src/sakshi/misconceptions.py` brought it to 36/40 (top-3 38/40). Remaining misses are
+  thin topics (being deepened) and env_solar -> GEN-RENEWABLES (arguably correct).
+- Off-syllabus thresholds: calibration with the full graph suggested GENERIC_COS 0.69 / GENERIC_KW 100 (12/12
+  off caught, 0/40 on flagged); `src/sakshi/diagnostic.py` still has 0.65 / 65: update after the re-assembly.
+- Running: baseline eval (`results/eval_diag_base`), then `scripts/overnight_mapping.sh` (retriever fine-tune,
+  mapping comparison -> `results/mapping/`, helper export, eval with mapper -> `results/eval_diag_base_mapper`).
+
+## LATEST (night of 13 Nov, ~03:30): overnight data pipeline
+The user asked for, by morning: a detailed misconception graph for all Class 6-10 Maths/Science/Social, the
+fine-tuning dataset, the 200-passage test set, and a fine-tuning kit for a teammate's laptop. Then: fine-tune,
+test on 200 passages, then retention (daily interleaved revision quizzes). Core problem-statement deliverables first.
+- **Running detached:** `nohup bash scripts/overnight.sh` -> log `results/overnight.log`. Steps:
+  1 graph (`scripts/build_misconception_graph.py generate`, 187 topics incl. 44 new maths topics)
+  2 assemble graph + `scripts/graph_viewer.py` (-> `data/misconceptions/graph/viewer.html`) + matcher check
+  3 training passages (`scripts/make_dataset.py generate --split train --n 800`)
+  4 test passages (`--split test --n 160`, plus the 40 hand-written = 200)
+  5 `make_dataset.py build` -> `data/dataset/train.jsonl`, `val.jsonl`, `test_passages.jsonl`, `stats.json`
+  7 baseline: plain Qwen3-0.6B in diagnostic mode on the 200 passages -> `results/eval_diag_base/`
+  Rerunning `bash scripts/overnight.sh` resumes (every step skips finished work).
+- **Gemini keys:** 4 keys in `.env` (GEMINI_API_KEY, _2, _3, _4; never print or commit). Free tier:
+  `gemini-3-flash-preview` gives deep output but only ~20 requests/day/key; `gemini-3.1-flash-lite` has much more
+  quota but thinner output. `Teacher` in `scripts/build_misconception_library.py` rotates preview on every key,
+  then flash-lite on every key; raw files record which model wrote each topic (`model` field). Pro: no free quota.
+- **Graph v2** (`data/misconceptions/graph/`): nodes subject/topic/concept (level 1-3)/misconception/root_belief;
+  edges part_of, needs (incl. cross-topic, resolved by name similarity), about, causes, from_root, topic_needs.
+  `assemble` also rewrites `library.jsonl` + `concepts.jsonl` (v2 ids like `MAT-FRACTIONS-K12-M3`) for the matcher.
+  Old v1 raw answers are in `data/misconceptions/raw/` (unused now).
+- **Diagnostic format** (shared by training and device): `src/sakshi/diagnostic.py`. One call per question:
+  passage + code-chosen evidence sentence + belief menu B1-B5 -> JSON {answer, stem, options[{b, why, text}x3]}.
+  `generate_bank()` is the device pipeline (summary, library match, evidence, calls, `check_item`, bank JSON for
+  the retention engine). Tests: `tests/test_diagnostic.py`.
+- **Fine-tuning kit:** `train/` (README, requirements, `finetune_qwen3_lora.py`: TRL+PEFT, plain LoRA r32/a32,
+  all-linear, lr 2e-4, 2 epochs, batch 16, len 2048, completion-only, fp16 on T4, merges to `out/.../merged`;
+  prompt rendered with the repo's own `chat_prompt` so it is byte-identical to the device). Export + eval commands
+  in `train/README.md`. Not yet run on a GPU: do the `--limit 64` smoke test first.
+- **Eval:** `scripts/eval_diagnostic.py` (report.md with every question/option/misconception, rating.csv, totals).
+- Morning checklist: read `results/overnight.log`; check `data/dataset/stats.json` (target ~2,000+ train examples);
+  open the viewer; if quota stopped a step, rerun `bash scripts/overnight.sh` (keys reset daily); hand `train/` +
+  `data/dataset/` to the teammate; nothing from tonight is committed yet.
+
+
 Read this first, then `docs/SUBMISSION.md` (deliverables + measured numbers) and
 `reports/Diagnostic MCQ small model design.md` (the researched architecture and fine-tuning plan).
 The older docs (`HANDOFF.md`, `BUILD_MAP.md`, `MASTER_BIBLE.md`) describe the 4 Nov "Sakshi" design and are history.

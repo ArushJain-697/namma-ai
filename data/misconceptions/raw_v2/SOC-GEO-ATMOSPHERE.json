@@ -1,0 +1,449 @@
+{
+ "topic": {
+  "id": "SOC-GEO-ATMOSPHERE",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   7
+  ],
+  "title": "Air and the atmosphere",
+  "scope": "composition of atmosphere, layers, weather and climate, temperature, air pressure, winds, moisture"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 829,
+  "candidatesTokenCount": 1415,
+  "totalTokenCount": 2244,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 829
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 5.8,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Composition of Atmosphere",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "states of matter"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Structure and Dynamics",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "gravity"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Weather and Climate",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "time measurement"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Gases in Air",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "atoms and molecules"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Role of Gases",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": [
+     "photosynthesis"
+    ]
+   },
+   {
+    "key": "n21",
+    "name": "Layers of Atmosphere",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "layers of earth"
+    ]
+   },
+   {
+    "key": "n22",
+    "name": "Air Pressure and Wind",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "force and motion"
+    ]
+   },
+   {
+    "key": "n31",
+    "name": "Temperature and Moisture",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "water cycle"
+    ]
+   },
+   {
+    "key": "n111",
+    "name": "Nitrogen is most abundant",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n112",
+    "name": "Oxygen is needed for burning",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n211",
+    "name": "Troposphere contains weather",
+    "level": 3,
+    "parent": "n21",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n221",
+    "name": "Wind moves high to low pressure",
+    "level": 3,
+    "parent": "n22",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n311",
+    "name": "Humidity is water vapor in air",
+    "level": 3,
+    "parent": "n31",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n111",
+    "statement": "Oxygen is the most abundant gas because it is the most important for life.",
+    "why": "Students confuse biological importance with physical quantity.",
+    "fix": "Nitrogen makes up 78% of the air, while oxygen is only 21%.",
+    "probe": {
+     "question": "Which gas makes up the largest part of the air we breathe?",
+     "wrong_answer": "Oxygen"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "importance equals quantity",
+    "causes": [],
+    "trigger_cues": [
+     "nitrogen",
+     "oxygen",
+     "abundance",
+     "percentage",
+     "atmosphere"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic studies"
+   },
+   {
+    "key": "m2",
+    "node": "n221",
+    "statement": "Wind is caused by the air pushing itself forward.",
+    "why": "Students struggle to visualize invisible pressure gradients.",
+    "fix": "Wind is the horizontal movement of air from areas of high pressure to low pressure.",
+    "probe": {
+     "question": "Why does wind blow?",
+     "wrong_answer": "Air has a force that pushes it along."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "motion requires an internal agent",
+    "causes": [],
+    "trigger_cues": [
+     "wind",
+     "pressure",
+     "high",
+     "low",
+     "movement"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n311",
+    "statement": "Humidity is the same as rain.",
+    "why": "Students associate moisture only with visible liquid water.",
+    "fix": "Humidity is the amount of invisible water vapor present in the air.",
+    "probe": {
+     "question": "Is the air humid if it is not raining?",
+     "wrong_answer": "No, humidity only happens when it rains."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "humidity",
+     "water vapor",
+     "moisture",
+     "air",
+     "rain"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver children's ideas"
+   },
+   {
+    "key": "m4",
+    "node": "n211",
+    "statement": "The atmosphere ends where the clouds end.",
+    "why": "Students equate the visible extent of weather with the entire atmosphere.",
+    "fix": "The atmosphere extends hundreds of kilometers above the surface, far beyond the clouds.",
+    "probe": {
+     "question": "Where does the atmosphere end?",
+     "wrong_answer": "At the top of the clouds."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "atmosphere",
+     "clouds",
+     "layers",
+     "height",
+     "space"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "id": "m5",
+    "node": "n12",
+    "statement": "Oxygen is the only gas that living things need from the air.",
+    "why": "Lessons stress breathing oxygen, so students ignore other gases like carbon dioxide for plants and nitrogen for soil fertility.",
+    "fix": "Plants use carbon dioxide for photosynthesis, and nitrogen is needed to make proteins (taken up via soil bacteria). Oxygen is only one of the useful gases.",
+    "probe": {
+     "question": "Which gas from air do green plants use to make food?",
+     "wrong_answer": "Oxygen, because it is the gas all living things need."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Only oxygen matters among atmospheric gases",
+    "causes": [],
+    "trigger_cues": [
+     "only gas",
+     "plants need",
+     "carbon dioxide",
+     "useful gases",
+     "living things",
+     "photosynthesis"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom questioning, NCERT-based exercises",
+    "key": "m5"
+   },
+   {
+    "id": "m6",
+    "node": "n112",
+    "statement": "Oxygen itself burns, like a fuel.",
+    "why": "Students see fire grow in air and think oxygen is the thing being burnt.",
+    "fix": "Oxygen supports burning; it is not a fuel. Fuel burns in the presence of oxygen.",
+    "probe": {
+     "question": "What happens to a candle in a closed jar of pure oxygen compared with fuel?",
+     "wrong_answer": "Oxygen is the thing that burns, so the oxygen is what is used as fuel."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Supporting combustion means being flammable",
+    "causes": [],
+    "trigger_cues": [
+     "oxygen burns",
+     "fuel",
+     "fire",
+     "flammable",
+     "supports burning",
+     "candle"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "science education research on combustion",
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n111",
+    "statement": "Air is made only of oxygen and carbon dioxide.",
+    "why": "Students know breathing in oxygen and breathing out carbon dioxide, so they think these two make up the air.",
+    "fix": "Air is about 78% nitrogen and 21% oxygen, with small amounts of argon, carbon dioxide, water vapour and other gases.",
+    "probe": {
+     "question": "Name the gases that make up air.",
+     "wrong_answer": "Oxygen and carbon dioxide only."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Air equals the gases we breathe",
+    "causes": [],
+    "trigger_cues": [
+     "air made of",
+     "gases in air",
+     "breathe in",
+     "breathe out",
+     "only two gases"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher observation",
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n21",
+    "statement": "Air gets warmer as we go higher up in the troposphere because we get closer to the Sun.",
+    "why": "Students think nearer to the Sun means hotter, ignoring that the ground heats the air.",
+    "fix": "In the troposphere temperature falls with height, since the air is heated mainly from the warm Earth's surface.",
+    "probe": {
+     "question": "Is it warmer or colder at the top of a high mountain, and why?",
+     "wrong_answer": "Warmer, because the mountain top is closer to the Sun."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Closer to the Sun always means hotter",
+    "causes": [],
+    "trigger_cues": [
+     "higher up",
+     "closer to sun",
+     "mountain",
+     "temperature",
+     "troposphere",
+     "hotter"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on temperature and altitude conceptions",
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n211",
+    "statement": "Weather such as rain, clouds and storms happens in the stratosphere.",
+    "why": "Students think all the upper sky is one region, or that planes and storms share the same height.",
+    "fix": "Almost all weather happens in the troposphere, the lowest layer. The stratosphere is calm and holds the ozone layer.",
+    "probe": {
+     "question": "In which layer of the atmosphere do clouds and rain occur?",
+     "wrong_answer": "The stratosphere."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Weather occurs in every atmospheric layer",
+    "causes": [],
+    "trigger_cues": [
+     "rain",
+     "clouds",
+     "stratosphere",
+     "troposphere",
+     "storms",
+     "which layer"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT-based exam errors",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n22",
+    "statement": "Air has no weight and therefore exerts no pressure.",
+    "why": "Air is invisible and feels light, so students think it weighs nothing.",
+    "fix": "Air has weight, and the air above us presses on every surface; this is air pressure, which we do not feel because it acts equally from all sides.",
+    "probe": {
+     "question": "Does the air around us press on our body?",
+     "wrong_answer": "No, air is weightless so it does not press on anything."
+    },
+    "error_type": "other",
+    "root_belief": "Invisible things have no weight",
+    "causes": [],
+    "trigger_cues": [
+     "air weight",
+     "air pressure",
+     "press on us",
+     "invisible",
+     "weightless",
+     "feel pressure"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on children's ideas about air",
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n221",
+    "statement": "Wind blows from low pressure areas to high pressure areas.",
+    "why": "Students mix up the direction, thinking air is pulled into the crowded high-pressure zone.",
+    "fix": "Wind blows from high pressure to low pressure areas, trying to even out the difference.",
+    "probe": {
+     "question": "A region has low pressure and its neighbour has high pressure. Which way does wind blow?",
+     "wrong_answer": "From the low-pressure area to the high-pressure area."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Air moves toward the denser, higher pressure",
+    "causes": [],
+    "trigger_cues": [
+     "high pressure",
+     "low pressure",
+     "wind direction",
+     "blows from",
+     "towards",
+     "pressure difference"
+    ],
+    "confidence": "plausible",
+    "source_hint": "geography classroom assessments",
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n31",
+    "statement": "Hot air always holds less moisture because heat dries water out of it.",
+    "why": "Students link heat with drying clothes and think hot air cannot carry water vapour.",
+    "fix": "Warm air can hold more water vapour than cold air. Humidity is usually higher in hot, coastal places.",
+    "probe": {
+     "question": "Which can hold more water vapour: warm air or cold air?",
+     "wrong_answer": "Cold air, because heat dries the moisture out."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Heat removes water from air",
+    "causes": [],
+    "trigger_cues": [
+     "hot air",
+     "moisture",
+     "water vapour",
+     "holds more",
+     "cold air",
+     "dries"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher observation",
+    "key": "m12"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

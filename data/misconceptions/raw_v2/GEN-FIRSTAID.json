@@ -1,0 +1,563 @@
+{
+ "topic": {
+  "id": "GEN-FIRSTAID",
+  "subject": "general",
+  "strand": "health",
+  "grades": [
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "title": "First aid",
+  "scope": "burns, cuts and bleeding, snake bites, fainting, CPR basics, what NOT to do, emergency numbers 112 and 108"
+ },
+ "model": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 7155,
+  "promptTokenCount": 2
+ },
+ "seconds": 50.9,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Wounds, bleeding and burns",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "parts of the human body",
+     "what blood is and why it flows"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Bites, fainting and collapse",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "nervous system and brain basics"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Emergency response and CPR",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "heart and circulation",
+     "breathing and the lungs"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Cuts and bleeding",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Burns",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "heat and temperature"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Direct pressure stops bleeding",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "pressure"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Wash a minor cut with clean running water",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "germs cause infection"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Nosebleed: sit up, lean forward, pinch soft nose",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Cool a burn under running water for 10-20 minutes",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": [
+     "heat flows from hot to cold"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Do not apply ointments, butter or burst blisters",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n9"
+    ],
+    "external_prereqs": [
+     "skin as protective barrier"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Snake bite",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "venom and poison"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Fainting",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "blood supply to brain"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "Keep the bitten limb still and get to hospital fast",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Antivenom from hospital is the only treatment",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": [
+     "antibodies and vaccines"
+    ]
+   },
+   {
+    "key": "n15",
+    "name": "Do not cut, suck or tie tightly a snake bite",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n16",
+    "name": "Lay the person down and raise the legs",
+    "level": 3,
+    "parent": "n12",
+    "prereqs": [],
+    "external_prereqs": [
+     "gravity and blood flow"
+    ]
+   },
+   {
+    "key": "n17",
+    "name": "Do not give food or water until fully awake",
+    "level": 3,
+    "parent": "n12",
+    "prereqs": [
+     "n16"
+    ],
+    "external_prereqs": [
+     "swallowing and choking"
+    ]
+   },
+   {
+    "key": "n18",
+    "name": "Calling for help",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n19",
+    "name": "CPR basics",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n18"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n20",
+    "name": "112 is the single national emergency number",
+    "level": 3,
+    "parent": "n18",
+    "prereqs": [],
+    "external_prereqs": [
+     "telephone and mobile network"
+    ]
+   },
+   {
+    "key": "n21",
+    "name": "108 is the ambulance service number in many states",
+    "level": 3,
+    "parent": "n18",
+    "prereqs": [
+     "n20"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n22",
+    "name": "Check response and breathing before starting CPR",
+    "level": 3,
+    "parent": "n19",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n23",
+    "name": "Chest compressions: centre of chest, hard and fast",
+    "level": 3,
+    "parent": "n19",
+    "prereqs": [
+     "n22"
+    ],
+    "external_prereqs": [
+     "heart pumps blood"
+    ]
+   },
+   {
+    "key": "n24",
+    "name": "CPR keeps blood moving until help arrives; it does not restart the heart by itself",
+    "level": 3,
+    "parent": "n19",
+    "prereqs": [
+     "n23"
+    ],
+    "external_prereqs": [
+     "heart pumps blood"
+    ]
+   },
+   {
+    "key": "n25",
+    "name": "Make the scene safe before helping",
+    "level": 3,
+    "parent": "n18",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n6",
+    "statement": "Tying a tight rope above a bleeding wound is the best way to stop bleeding.",
+    "why": "Films and old stories show tourniquets as the standard answer to any bleeding.",
+    "fix": "Pressing firmly on the wound with a clean cloth is the first step. A tight band can damage the limb and is only for trained people in life-threatening bleeding.",
+    "probe": {
+     "question": "A boy's arm is bleeding from a cut. What should you do first?",
+     "wrong_answer": "Tie a tight rope above the cut."
+    },
+    "error_type": "media_misinformation",
+    "root_belief": "stronger, more extreme action works better",
+    "causes": [],
+    "trigger_cues": [
+     "bleeding",
+     "pressure",
+     "tourniquet",
+     "cloth",
+     "bandage",
+     "wound"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n6",
+    "statement": "If a cloth soaks through with blood, you should remove it and put on a fresh one.",
+    "why": "Students think the soaked cloth is now useless and must be replaced.",
+    "fix": "Do not remove the soaked cloth because it disturbs the clot. Add more cloth on top and keep pressing.",
+    "probe": {
+     "question": "The cloth on a wound is full of blood. What next?",
+     "wrong_answer": "Remove it and put a new cloth directly on the wound."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "used things must be replaced to work",
+    "causes": [],
+    "trigger_cues": [
+     "clot",
+     "soaked",
+     "cloth",
+     "press",
+     "bleeding",
+     "dressing"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n7",
+    "statement": "Pouring turmeric, ash or toothpaste on a cut heals it and prevents infection.",
+    "why": "Home remedies are passed down in families as natural antiseptics.",
+    "fix": "These can bring in germs and cause infection. Wash the cut with clean running water and cover it with a clean dressing.",
+    "probe": {
+     "question": "What should you put on a fresh cut to keep germs away?",
+     "wrong_answer": "Turmeric powder or ash."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "natural or traditional means safe and effective",
+    "causes": [],
+    "trigger_cues": [
+     "cut",
+     "wound",
+     "antiseptic",
+     "infection",
+     "clean",
+     "germs"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n7",
+    "statement": "A cut must be rubbed or scrubbed hard to get it properly clean.",
+    "why": "Students link cleaning with scrubbing as with dirty clothes or utensils.",
+    "fix": "Rinse gently under clean running water and pat dry around it. Hard scrubbing hurts the tissue and can restart bleeding.",
+    "probe": {
+     "question": "How should you clean a scraped knee?",
+     "wrong_answer": "Scrub it hard with a cloth until no dirt is visible."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "a rule from one situation works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "scrape",
+     "wash",
+     "clean",
+     "dirt",
+     "gently",
+     "running water"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n8",
+    "statement": "For a nosebleed you should tilt your head back so the blood does not come out.",
+    "why": "It seems that lifting the head will stop blood from flowing out.",
+    "fix": "Sit up, lean slightly forward and pinch the soft part of the nose for about 10 minutes. Tilting back lets blood run down the throat.",
+    "probe": {
+     "question": "A girl has a nosebleed. How should she hold her head?",
+     "wrong_answer": "Tilt it backwards."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "hiding a problem is the same as solving it",
+    "causes": [],
+    "trigger_cues": [
+     "nosebleed",
+     "nose",
+     "head",
+     "lean forward",
+     "pinch",
+     "blood"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m6",
+    "node": "n9",
+    "statement": "Ice or ice-cold water is the best thing to put on a burn.",
+    "why": "Students think the colder the cooling, the faster the relief.",
+    "fix": "Use cool running tap water for 10 to 20 minutes. Ice can further damage burnt skin.",
+    "probe": {
+     "question": "What should you put on a hot-water burn on the hand?",
+     "wrong_answer": "Ice cubes."
+    }
+   },
+   {
+    "key": "m7",
+    "node": "n14",
+    "statement": "Sucking out the venom or using a herbal paste from a local healer is enough to treat a snake bite.",
+    "why": "Stories and local practices suggest that removing venom from the bite or using herbs neutralises it, so hospital care seems optional.",
+    "fix": "Only antivenom given in a hospital neutralises snake venom. Sucking or herbal remedies do not work and waste precious time. Go to hospital at once.",
+    "probe": {
+     "question": "A farmer is bitten by a snake. A villager offers a herbal paste that he says cures snake bites. What should the family do?",
+     "wrong_answer": "Apply the herbal paste and wait a day; go to hospital only if the swelling gets worse."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "Traditional home remedies can replace medical treatment",
+    "causes": [],
+    "trigger_cues": [
+     "snake",
+     "bite",
+     "herbal",
+     "paste",
+     "healer",
+     "venom",
+     "cure"
+    ],
+    "confidence": "plausible",
+    "source_hint": "WHO snakebite guidance; Government of India national snakebite management protocol"
+   },
+   {
+    "key": "m8",
+    "node": "n13",
+    "statement": "After a snake bite the person should run or walk quickly to the hospital.",
+    "why": "Students think speed means moving fast on foot, but they forget that movement pumps venom faster through the body.",
+    "fix": "Keep the person calm and the bitten limb still, and carry or transport them to hospital by vehicle. Walking and running spread the venom faster.",
+    "probe": {
+     "question": "A girl is bitten on the leg by a snake and the hospital is 1 km away. How should she get there?",
+     "wrong_answer": "She should run to the hospital as fast as she can so she gets there sooner."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Faster own movement always means faster help",
+    "causes": [],
+    "trigger_cues": [
+     "snake",
+     "bite",
+     "leg",
+     "run",
+     "walk",
+     "hospital",
+     "hurry"
+    ],
+    "confidence": "plausible",
+    "source_hint": "WHO snakebite guidance; Government of India national snakebite management protocol"
+   },
+   {
+    "key": "m9",
+    "node": "n17",
+    "statement": "A person who has fainted should be given water or sprinkled with water on the face and made to drink it right away.",
+    "why": "Films show people being splashed and given water to revive them, so students believe drinking helps wake them up.",
+    "fix": "Lay the person down and raise their legs. Give nothing to eat or drink until fully awake, as they could choke.",
+    "probe": {
+     "question": "A classmate faints in assembly and starts to open their eyes. What do you do first?",
+     "wrong_answer": "Pour water into their mouth so they drink and recover quickly."
+    },
+    "error_type": "media_misinformation",
+    "root_belief": "Giving drinks revives anyone who feels weak",
+    "causes": [],
+    "trigger_cues": [
+     "faint",
+     "water",
+     "drink",
+     "wake",
+     "assembly",
+     "dizzy",
+     "collapse"
+    ],
+    "confidence": "plausible",
+    "source_hint": "Indian Red Cross / St John first aid manuals"
+   },
+   {
+    "key": "m10",
+    "node": "n16",
+    "statement": "A person who feels faint should be kept sitting or standing upright, with the head held high.",
+    "why": "Students think upright is the normal healthy position, and lying down looks like giving up.",
+    "fix": "Fainting happens when blood flow to the brain drops. Lying flat with legs raised helps blood reach the brain.",
+    "probe": {
+     "question": "A girl turns pale and says she feels faint. How should she be positioned?",
+     "wrong_answer": "Make her stand up straight, or hold her upright, and fan her."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "Upright posture keeps a person alert",
+    "causes": [],
+    "trigger_cues": [
+     "faint",
+     "pale",
+     "dizzy",
+     "stand",
+     "upright",
+     "sit",
+     "head"
+    ],
+    "confidence": "plausible",
+    "source_hint": "Indian Red Cross / St John first aid manuals"
+   },
+   {
+    "key": "m11",
+    "node": "n24",
+    "statement": "CPR is done to make the heart start beating again, and it works like a restart button.",
+    "why": "TV scenes show the person waking up right after compressions, so students think CPR restarts the heart.",
+    "fix": "CPR only keeps blood and oxygen moving to the brain and organs until help arrives. A defibrillator and medical care are needed to restart a normal heartbeat.",
+    "probe": {
+     "question": "After 5 minutes of CPR the person has not woken up. What does this mean?",
+     "wrong_answer": "CPR has failed, so you should stop because it did not restart the heart."
+    },
+    "error_type": "media_misinformation",
+    "root_belief": "First aid fully cures the problem itself",
+    "causes": [],
+    "trigger_cues": [
+     "cpr",
+     "restart",
+     "heart",
+     "wake",
+     "films",
+     "compressions",
+     "stop"
+    ],
+    "confidence": "plausible",
+    "source_hint": "WHO / Indian Resuscitation Council CPR guidance"
+   },
+   {
+    "key": "m12",
+    "node": "n20",
+    "statement": "In an emergency you must call 100 for police, 102 for ambulance and 101 for fire, and there is no single number.",
+    "why": "Older separate numbers are widely known, so students think each service needs its own number.",
+    "fix": "112 is India's single national emergency number for police, fire and ambulance. Separate numbers like 108 also work in many states.",
+    "probe": {
+     "question": "A house is on fire and people are injured. Which number can you dial that reaches all services?",
+     "wrong_answer": "There is none; you must dial 101 for fire, then 102 for ambulance separately."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Each emergency service has only its own number",
+    "causes": [],
+    "trigger_cues": [
+     "emergency",
+     "number",
+     "112",
+     "100",
+     "101",
+     "102",
+     "dial"
+    ],
+    "confidence": "plausible",
+    "source_hint": "Government of India ERSS 112 official information"
+   }
+  ]
+ },
+ "problems": [],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

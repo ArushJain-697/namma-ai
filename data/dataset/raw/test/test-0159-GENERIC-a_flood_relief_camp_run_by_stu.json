@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "test-0159-GENERIC-a_flood_relief_camp_run_by_stu",
+  "topic_id": null,
+  "split": "test",
+  "generic": true,
+  "theme": "a flood relief camp run by students",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a cause-and-effect explanation",
+  "seed": 159
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 718,
+  "candidatesTokenCount": 1118,
+  "totalTokenCount": 1836,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 718
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "In the village of Rampur, the heavy monsoon rains caused the local river to overflow its banks on July 12th. By the next morning, 45 families had lost their homes to the rising water. Seeing the distress, a group of students from Green Valley School set up a relief camp in the village community hall. Rohan, the student leader, organized the distribution of dry rations. He explained that the camp was established because the village roads were blocked by mud, preventing trucks from reaching the affected families. Meanwhile, Priya, a volunteer, managed the medical supplies. The students worked tirelessly for 10 days to ensure everyone received food and clean water. Because the students provided immediate aid, the health of the villagers remained stable during the crisis. The camp finally closed on July 22nd, after the water levels receded and the main road was cleared by the government workers. The villagers were grateful for the youth's quick thinking and dedication during the difficult time.",
+  "summary": "Students from Green Valley School organized a relief camp in Rampur after floods destroyed homes. They provided food and medical aid for ten days until the roads were cleared. Their efforts helped keep the villagers healthy during the crisis.",
+  "items": [
+   {
+    "evidence": "He explained that the camp was established because the village roads were blocked by mud, preventing trucks from reaching the affected families.",
+    "answer": "village roads were blocked by mud",
+    "stem": "What was the primary reason the students set up the relief camp?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Confuses the result of the camp with the cause.",
+      "text": "the health of the villagers remained stable"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks a person named near the cause.",
+      "text": "Rohan the student leader"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a true fact that is not the cause.",
+      "text": "the local river overflowed its banks"
+     }
+    ]
+   },
+   {
+    "evidence": "By the next morning, 45 families had lost their homes to the rising water.",
+    "answer": "45 families",
+    "stem": "How many households were affected by the flood in Rampur?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Selects a random number mentioned in the text.",
+      "text": "10 days"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks a date mentioned in the same sentence.",
+      "text": "July 12th"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Uses an absolute generalization not supported by text.",
+      "text": "all families in the village"
+     }
+    ]
+   },
+   {
+    "evidence": "The students worked tirelessly for 10 days to ensure everyone received food and clean water.",
+    "answer": "10 days",
+    "stem": "For what duration did the student volunteers operate the camp?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses a date instead of a duration.",
+      "text": "July 22nd"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks a number from the start of the passage.",
+      "text": "45 days"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Assumes the work was done forever.",
+      "text": "always"
+     }
+    ]
+   },
+   {
+    "evidence": "The camp finally closed on July 22nd, after the water levels receded and the main road was cleared by the government workers.",
+    "answer": "government workers",
+    "stem": "Who was responsible for clearing the main road?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks the student leader named nearby.",
+      "text": "Rohan"
+     },
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Interprets workers as students based on context.",
+      "text": "the student volunteers"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a true fact that is not the actor.",
+      "text": "the villagers"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.6
+}

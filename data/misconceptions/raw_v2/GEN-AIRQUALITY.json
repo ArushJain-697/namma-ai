@@ -1,0 +1,719 @@
+{
+ "topic": {
+  "id": "GEN-AIRQUALITY",
+  "subject": "general",
+  "strand": "environment",
+  "grades": [
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "title": "Air quality and AQI",
+  "scope": "PM2.5 and PM10, AQI scale and colours, sources of smog, masks, stubble burning, indoor air from chulhas"
+ },
+ "model": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 7644,
+  "promptTokenCount": 2
+ },
+ "seconds": 54.1,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Air pollutants and particulate matter",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "air is a mixture of gases",
+     "units of length (micrometre)"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Measuring air quality: AQI",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "reading scales and tables"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Sources of air pollution",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "combustion of fuels"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Protection and reducing exposure",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1",
+     "n3"
+    ],
+    "external_prereqs": [
+     "human respiratory system"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "PM2.5 and PM10",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "units of length (micrometre)"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Gaseous pollutants",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "common gases in air",
+     "carbon dioxide and carbon monoxide"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Visibility and haze",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "light scattering"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Meaning of PM numbers",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": [
+     "units of length (micrometre)"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Particle size and entry into the body",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": [
+     "human respiratory system"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "PM is not only dust",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": [
+     "solids and liquid droplets"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "CO, NO2, SO2 and ozone are gases",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": [
+     "common gases in air"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Pollutant gases can be invisible and odourless",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Smog forms from smoke, fog and gases",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n10"
+    ],
+    "external_prereqs": [
+     "fog formation",
+     "condensation"
+    ]
+   },
+   {
+    "key": "n14",
+    "name": "AQI scale and colours",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "reading scales and tables"
+    ]
+   },
+   {
+    "key": "n15",
+    "name": "How AQI is calculated",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n14"
+    ],
+    "external_prereqs": [
+     "ratio and maximum of a set of values"
+    ]
+   },
+   {
+    "key": "n16",
+    "name": "Higher AQI means worse air",
+    "level": 3,
+    "parent": "n14",
+    "prereqs": [],
+    "external_prereqs": [
+     "reading scales and tables"
+    ]
+   },
+   {
+    "key": "n17",
+    "name": "AQI categories from Good to Severe",
+    "level": 3,
+    "parent": "n14",
+    "prereqs": [
+     "n16"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n18",
+    "name": "AQI uses the worst pollutant",
+    "level": 3,
+    "parent": "n15",
+    "prereqs": [
+     "n16"
+    ],
+    "external_prereqs": [
+     "ratio and maximum of a set of values"
+    ]
+   },
+   {
+    "key": "n19",
+    "name": "AQI is for a place and a time, not a fixed value",
+    "level": 3,
+    "parent": "n15",
+    "prereqs": [
+     "n16"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n20",
+    "name": "Outdoor sources",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "combustion of fuels"
+    ]
+   },
+   {
+    "key": "n21",
+    "name": "Indoor sources",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "combustion of fuels"
+    ]
+   },
+   {
+    "key": "n22",
+    "name": "Stubble burning and winter smog",
+    "level": 3,
+    "parent": "n20",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": [
+     "crop residue",
+     "temperature inversion basics"
+    ]
+   },
+   {
+    "key": "n23",
+    "name": "Vehicles and industry as sources",
+    "level": 3,
+    "parent": "n20",
+    "prereqs": [],
+    "external_prereqs": [
+     "combustion of fuels"
+    ]
+   },
+   {
+    "key": "n24",
+    "name": "Firecrackers and Diwali pollution",
+    "level": 3,
+    "parent": "n20",
+    "prereqs": [],
+    "external_prereqs": [
+     "combustion of fuels"
+    ]
+   },
+   {
+    "key": "n25",
+    "name": "Chulha and solid-fuel smoke indoors",
+    "level": 3,
+    "parent": "n21",
+    "prereqs": [
+     "n10"
+    ],
+    "external_prereqs": [
+     "incomplete combustion"
+    ]
+   },
+   {
+    "key": "n26",
+    "name": "Indoor air can be worse than outdoor",
+    "level": 3,
+    "parent": "n21",
+    "prereqs": [
+     "n25"
+    ],
+    "external_prereqs": [
+     "ventilation"
+    ]
+   },
+   {
+    "key": "n27",
+    "name": "Masks",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "filtering"
+    ]
+   },
+   {
+    "key": "n28",
+    "name": "Reducing pollution at source",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n29",
+    "name": "Cloth and surgical masks vs N95",
+    "level": 3,
+    "parent": "n27",
+    "prereqs": [
+     "n9"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n30",
+    "name": "Fit of mask matters",
+    "level": 3,
+    "parent": "n27",
+    "prereqs": [
+     "n29"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n31",
+    "name": "Clean fuels and crop residue management",
+    "level": 3,
+    "parent": "n28",
+    "prereqs": [
+     "n22",
+     "n25"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n32",
+    "name": "Plants and trees do not fully clean air",
+    "level": 3,
+    "parent": "n28",
+    "prereqs": [
+     "n20"
+    ],
+    "external_prereqs": [
+     "photosynthesis"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n8",
+    "statement": "PM2.5 means 2.5 percent of the air is pollution.",
+    "why": "Students read the number as a percentage or amount because of the word 'PM' and the figure.",
+    "fix": "PM2.5 means particles up to 2.5 micrometres across, not a percentage. PM10 means particles up to 10 micrometres across.",
+    "probe": {
+     "question": "What does the 2.5 in PM2.5 tell us?",
+     "wrong_answer": "That 2.5 percent of the air is pollution."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a number in a name is an amount",
+    "causes": [],
+    "trigger_cues": [
+     "pm2.5",
+     "micrometre",
+     "diameter",
+     "particulate",
+     "particles",
+     "size"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n8",
+    "statement": "PM10 particles are smaller than PM2.5 particles because 10 is a bigger number.",
+    "why": "Students think a bigger number means a finer or stronger thing.",
+    "fix": "PM10 includes particles up to 10 micrometres, which are larger than PM2.5 (up to 2.5 micrometres). PM2.5 is the finer dust.",
+    "probe": {
+     "question": "Which is finer, PM2.5 or PM10?",
+     "wrong_answer": "PM10, because 10 is more than 2.5."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "bigger number means smaller or finer thing",
+    "causes": [
+     "m3"
+    ],
+    "trigger_cues": [
+     "pm10",
+     "pm2.5",
+     "coarse",
+     "fine",
+     "diameter",
+     "micrometre"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n9",
+    "statement": "The larger particles, PM10, are more dangerous because they are bigger.",
+    "why": "Students feel bigger or more visible particles must do more harm.",
+    "fix": "Smaller PM2.5 particles go deeper into the lungs and can enter the blood, so they are usually more harmful to health. Larger particles mostly get caught in the nose and throat.",
+    "probe": {
+     "question": "Which particles go deeper into the lungs, PM2.5 or PM10?",
+     "wrong_answer": "PM10, because they are bigger and heavier."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "bigger or more means more effect",
+    "causes": [],
+    "trigger_cues": [
+     "lungs",
+     "deep",
+     "bloodstream",
+     "fine particles",
+     "inhale",
+     "health"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n10",
+    "statement": "PM2.5 and PM10 are just dust from the ground.",
+    "why": "Everyday word 'dust' is used for anything floating in dirty air.",
+    "fix": "Particulate matter includes soot, smoke, ash, liquid droplets and particles formed from gases, as well as soil dust.",
+    "probe": {
+     "question": "Name what PM can be made of.",
+     "wrong_answer": "Only dust and sand from the soil."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "soot",
+     "droplets",
+     "ash",
+     "particulate",
+     "smoke",
+     "dust"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n12",
+    "statement": "If the air looks clear and has no smell, it is clean and safe to breathe.",
+    "why": "Students rely on what they can see and smell.",
+    "fix": "Many harmful pollutants, such as carbon monoxide and very fine particles, are invisible or odourless. Air quality is checked with instruments and the AQI, not by looking.",
+    "probe": {
+     "question": "The sky is blue and there is no smell. Is the air definitely clean?",
+     "wrong_answer": "Yes, we can see it is clean."
+    }
+   },
+   {
+    "id": "m6",
+    "node": "n16",
+    "statement": "If the AQI is 100, the air is 100 percent polluted.",
+    "why": "Students read the AQI number as a percentage, like marks out of 100, instead of an index on a scale.",
+    "fix": "AQI is an index, not a percentage. In India's scale, 0-50 is Good, 51-100 Satisfactory, 101-200 Moderate, 201-300 Poor, 301-400 Very Poor and 401-500 Severe. A bigger number means worse air.",
+    "probe": {
+     "question": "A city's AQI is 100. What does this number tell you?",
+     "wrong_answer": "The air is completely (100 percent) polluted."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "Index numbers are percentages",
+    "causes": [],
+    "trigger_cues": [
+     "aqi",
+     "100",
+     "percent",
+     "polluted",
+     "index",
+     "number"
+    ],
+    "confidence": "plausible",
+    "source_hint": "CPCB National AQI documentation",
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n18",
+    "statement": "The AQI is the average of all pollutant values.",
+    "why": "Students think a combined index must be a mean of everything measured, like an average of marks.",
+    "fix": "For each pollutant a sub-index is calculated. The AQI is the highest sub-index, so the worst pollutant decides the AQI and the category.",
+    "probe": {
+     "question": "PM2.5 has a sub-index of 350 and all other pollutants are below 50. What is the AQI?",
+     "wrong_answer": "About 100, the average of all the pollutants."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Combined indices are averages of parts",
+    "causes": [],
+    "trigger_cues": [
+     "aqi",
+     "average",
+     "pollutants",
+     "calculated",
+     "worst",
+     "sub-index"
+    ],
+    "confidence": "plausible",
+    "source_hint": "CPCB National AQI technical document",
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n19",
+    "statement": "A city has one fixed AQI that stays the same all day and everywhere in it.",
+    "why": "Students hear a city's AQI quoted as a single number in the news and think it is a permanent property of the city.",
+    "fix": "AQI changes with place, time of day, weather, wind and sources. Monitoring stations in the same city can show different values, and it is usually reported as a 24-hour average or live reading.",
+    "probe": {
+     "question": "The AQI at one station in Delhi is 380 in the morning. Will the AQI be 380 at another station in the evening?",
+     "wrong_answer": "Yes, a city has one AQI, so it stays 380 everywhere all day."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Air quality is a fixed city property",
+    "causes": [],
+    "trigger_cues": [
+     "aqi",
+     "city",
+     "same",
+     "all day",
+     "station",
+     "changes",
+     "morning"
+    ],
+    "confidence": "plausible",
+    "source_hint": "CPCB real-time AQI dashboard",
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n22",
+    "statement": "Winter smog in North India is caused only by stubble burning.",
+    "why": "News headlines each year highlight stubble burning, so students treat it as the single cause.",
+    "fix": "Stubble burning adds a lot of smoke in October-November, but vehicles, industry, dust, construction and burning of waste also add pollution. Cold weather, low wind and temperature inversion trap the pollutants near the ground.",
+    "probe": {
+     "question": "If all stubble burning stopped, would Delhi's winter air become completely clean?",
+     "wrong_answer": "Yes, stubble burning is the only cause of winter smog."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "One cause explains a complex problem",
+    "causes": [],
+    "trigger_cues": [
+     "stubble",
+     "burning",
+     "winter",
+     "smog",
+     "delhi",
+     "only cause",
+     "farmers"
+    ],
+    "confidence": "plausible",
+    "source_hint": "Government of India / CAQM / news explainers",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n24",
+    "statement": "Air pollution from Diwali firecrackers disappears by the next morning.",
+    "why": "Students see the smoke and noise end after the celebration and assume the pollution ends too.",
+    "fix": "Fine particles and gases from crackers stay in the air for many hours to days, especially in cold, still weather, and can make AQI Severe or Very Poor for a long time.",
+    "probe": {
+     "question": "How long does the pollution from firecrackers burst on Diwali night stay in the air?",
+     "wrong_answer": "Only during the night; it is gone by morning."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "Pollution vanishes when visible source stops",
+    "causes": [],
+    "trigger_cues": [
+     "diwali",
+     "crackers",
+     "next morning",
+     "smoke",
+     "gone",
+     "night"
+    ],
+    "confidence": "plausible",
+    "source_hint": "CPCB post-Diwali air quality reports",
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n26",
+    "statement": "Staying inside a closed house always keeps you safe from air pollution.",
+    "why": "Students assume walls and doors keep all pollution outside and see indoors as safe.",
+    "fix": "Outdoor particles seep in through gaps, and indoor sources like chulha smoke, incense, mosquito coils and cooking fumes add pollution. With poor ventilation, indoor air can be as bad or worse than outdoor air. WHO says household air pollution causes millions of deaths a year.",
+    "probe": {
+     "question": "A family cooks on a wood chulha in a small closed room. Is the air inside safe because it is indoors?",
+     "wrong_answer": "Yes, being inside a closed room always protects from pollution."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Indoors is always safe from pollution",
+    "causes": [],
+    "trigger_cues": [
+     "indoor",
+     "closed",
+     "house",
+     "safe",
+     "windows",
+     "chulha",
+     "inside"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "WHO household air pollution fact sheet",
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n29",
+    "statement": "A cloth mask or a surgical mask protects as well as an N95 against PM2.5.",
+    "why": "Students think any mask covering nose and mouth works the same against all dust and smoke.",
+    "fix": "Cloth and ordinary surgical masks filter few fine particles and have gaps at the sides. A well-fitted N95 filters at least 95 percent of fine particles, including PM2.5.",
+    "probe": {
+     "question": "Which mask gives better protection from PM2.5 smoke: a cloth mask, or a well-fitted N95?",
+     "wrong_answer": "Both give the same protection."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "All masks filter equally",
+    "causes": [],
+    "trigger_cues": [
+     "mask",
+     "cloth",
+     "surgical",
+     "n95",
+     "pm2.5",
+     "same protection"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "WHO / MoHFW mask guidance; filtration studies",
+    "key": "m12"
+   },
+   {
+    "id": "m13",
+    "node": "n32",
+    "statement": "Planting a few trees or keeping a few indoor plants will fully clean polluted city air.",
+    "why": "Students learn that plants give oxygen and absorb carbon dioxide, and extend this to removing all pollution.",
+    "fix": "Trees trap some dust and gases, but their effect is small compared with the amount of pollution released. A few plants cannot clean heavily polluted air. Cutting pollution at the source is essential, and trees are helpful as a addition.",
+    "probe": {
+     "question": "Can keeping many indoor plants in a room replace the need to reduce smoke from the chulha?",
+     "wrong_answer": "Yes, plants will clean all the smoke from the air."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "Plants remove all air pollution",
+    "causes": [],
+    "trigger_cues": [
+     "plants",
+     "trees",
+     "clean air",
+     "oxygen",
+     "indoor plants",
+     "purify"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Research on indoor plants and air cleaning; CPCB / MoEFCC",
+    "key": "m13"
+   },
+   {
+    "id": "m14",
+    "node": "n30",
+    "statement": "Any mask that covers the nose and mouth protects fully, even if it is loose.",
+    "why": "Students focus on the mask material and ignore air leaking around the edges.",
+    "fix": "Air takes the easiest path, so gaps at the nose, cheeks or chin let unfiltered air in. A mask protects well only when it seals snugly on the face.",
+    "probe": {
+     "question": "An N95 mask is loose and has gaps at the sides. Does it still filter 95 percent of particles you breathe?",
+     "wrong_answer": "Yes, the filter material works the same however it fits."
+    },
+    "error_type": "other",
+    "root_belief": "Mask material alone determines protection",
+    "causes": [],
+    "trigger_cues": [
+     "mask",
+     "loose",
+     "gap",
+     "fit",
+     "n95",
+     "seal"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Respirator fit-testing research; WHO guidance",
+    "key": "m14"
+   }
+  ]
+ },
+ "problems": [
+  "only 5 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

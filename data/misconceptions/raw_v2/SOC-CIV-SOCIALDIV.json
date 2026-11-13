@@ -1,0 +1,475 @@
+{
+ "topic": {
+  "id": "SOC-CIV-SOCIALDIV",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   10
+  ],
+  "title": "Gender, religion and caste in politics",
+  "scope": "gender division, women's representation, communalism, secular state, caste in politics"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 833,
+  "candidatesTokenCount": 1752,
+  "totalTokenCount": 2585,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 833
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 5.7,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Gender and Politics",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "what is a democracy"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Religion and Communalism",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "secularism definition"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Caste in Politics",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "social stratification"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Gender Division",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "division of labour"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Women's Representation",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "electoral process"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Communalism",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "nationalism"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Secular State",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": [
+     "indian constitution"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Caste System",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "social hierarchy"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Caste in Politics",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": [
+     "political parties"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Sexual Division of Labour",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "domestic work"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Feminist Movement",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "social movements"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Women's Reservation in India",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": [
+     "local self-government"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "Communal Politics",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": [
+     "identity politics"
+    ]
+   },
+   {
+    "key": "n14",
+    "name": "Secularism in India",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": [
+     "fundamental rights"
+    ]
+   },
+   {
+    "key": "n15",
+    "name": "Caste-based Politics",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": [
+     "vote bank politics"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n10",
+    "statement": "The sexual division of labour is a natural biological necessity.",
+    "why": "Students confuse social roles with biological traits.",
+    "fix": "It is a social construct where domestic work is assigned to women and public work to men, not a biological requirement.",
+    "probe": {
+     "question": "Why do women do most of the housework?",
+     "wrong_answer": "Because they are naturally better at it."
+    },
+    "error_type": "stereotype",
+    "root_belief": "Social norms are natural laws",
+    "causes": [],
+    "trigger_cues": [
+     "domestic",
+     "labour",
+     "division",
+     "nature",
+     "biology"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "gender studies pedagogy"
+   },
+   {
+    "key": "m2",
+    "node": "n12",
+    "statement": "Women have 33% reservation in the Lok Sabha.",
+    "why": "Students confuse local government reservation with national parliament reservation.",
+    "fix": "Reservation for women exists in local bodies (Panchayats/Municipalities), but not yet in the Lok Sabha or State Assemblies.",
+    "probe": {
+     "question": "Is there reservation for women in the Indian Parliament?",
+     "wrong_answer": "Yes, 33 percent."
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "Rules apply uniformly across all levels",
+    "causes": [],
+    "trigger_cues": [
+     "reservation",
+     "lok sabha",
+     "parliament",
+     "women",
+     "seats"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n13",
+    "statement": "Communalism is simply being religious.",
+    "why": "Students equate personal faith with political ideology.",
+    "fix": "Communalism is the belief that followers of a particular religion must belong to one community and their interests are fundamentally opposed to others.",
+    "probe": {
+     "question": "What is communalism?",
+     "wrong_answer": "It means being very religious and following all rituals."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "A word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "religion",
+     "communalism",
+     "politics",
+     "community",
+     "interest"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT diagnostic studies"
+   },
+   {
+    "key": "m4",
+    "node": "n14",
+    "statement": "A secular state must be anti-religious.",
+    "why": "Students confuse the Western model of separation with the Indian model of equal respect.",
+    "fix": "The Indian secular state does not separate religion and state entirely but ensures equal distance and respect for all religions.",
+    "probe": {
+     "question": "Does a secular state ban religious symbols?",
+     "wrong_answer": "Yes, because it must be neutral by removing all religion."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Neutrality requires total absence",
+    "causes": [],
+    "trigger_cues": [
+     "secular",
+     "state",
+     "religion",
+     "neutral",
+     "equal"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "civics curriculum research"
+   },
+   {
+    "key": "m5",
+    "node": "n15",
+    "statement": "Caste in politics always leads to negative outcomes.",
+    "why": "Students over-focus on caste-based violence and ignore political representation.",
+    "fix": "Caste in politics can also give marginalized groups a voice and power, leading to more inclusive decision-making.",
+    "probe": {
+     "question": "Is caste in politics always bad?",
+     "wrong_answer": "Yes, it only causes division and conflict."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "One event has one single cause",
+    "causes": [],
+    "trigger_cues": [
+     "caste",
+     "politics",
+     "vote",
+     "representation",
+     "conflict"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m6",
+    "node": "n5",
+    "statement": "Women's representation in politics is high in India because women vote in large numbers.",
+    "why": "Students equate high voter turnout with holding office, so they conflate participation as voters with representation as elected members.",
+    "fix": "Women's turnout is now close to men's, but women are still few among elected members: about 14% of Lok Sabha members and under 5% in many state assemblies.",
+    "probe": {
+     "question": "Women vote in large numbers in India. Does this mean women are well represented in the Lok Sabha?",
+     "wrong_answer": "Yes, because many women vote, they are well represented in Parliament."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Voting participation equals representation in elected bodies",
+    "causes": [],
+    "trigger_cues": [
+     "women",
+     "vote",
+     "turnout",
+     "representation",
+     "lok sabha",
+     "well represented"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Democratic Politics II, Ch. 4 and classroom assessment"
+   },
+   {
+    "key": "m7",
+    "node": "n4",
+    "statement": "Gender division means only that boys and girls are biologically different.",
+    "why": "Students use 'gender' and 'sex' interchangeably and miss that gender division is a social hierarchy of roles and status.",
+    "fix": "Gender division is a social arrangement based on stereotyped roles, not biology. It shows up in unequal literacy, wages and sex ratio, and in the belief that public life is for men.",
+    "probe": {
+     "question": "What does gender division mean?",
+     "wrong_answer": "It means the natural physical differences between men and women."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Gender is the same as biological sex",
+    "causes": [],
+    "trigger_cues": [
+     "gender division",
+     "meaning",
+     "biological",
+     "men and women",
+     "difference",
+     "natural"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Research on students' gender-sex concept confusion; NCERT Ch. 4"
+   },
+   {
+    "key": "m8",
+    "node": "n12",
+    "statement": "Panchayats and municipalities have no reservation for women; reservation exists only in Parliament.",
+    "why": "Students know reservation as a debated Parliament issue and miss that local bodies already have it.",
+    "fix": "Since 1992-93 amendments, one-third of seats in rural panchayats and urban municipalities are reserved for women. Reservation for Parliament and state assemblies was a pending demand then.",
+    "probe": {
+     "question": "Where in India are one-third of seats reserved for women in elected bodies?",
+     "wrong_answer": "Only in the Lok Sabha; local bodies have none."
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "Reservation applies only at the national level",
+    "causes": [],
+    "trigger_cues": [
+     "reservation",
+     "panchayat",
+     "municipality",
+     "local bodies",
+     "one-third",
+     "women seats"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Democratic Politics II, Ch. 4"
+   },
+   {
+    "key": "m9",
+    "node": "n6",
+    "statement": "Communalism is a problem only of the majority religious community.",
+    "why": "Students link communalism with riots by the majority and miss that any community can follow communal politics.",
+    "fix": "Communalism is the idea that religion is the basis of social community and political interests. Any religious group, majority or minority, can practise it.",
+    "probe": {
+     "question": "Can a minority community's leaders also practise communal politics?",
+     "wrong_answer": "No, communalism is only done by the majority community."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Communalism belongs to one kind of group",
+    "causes": [],
+    "trigger_cues": [
+     "communalism",
+     "minority",
+     "majority",
+     "community",
+     "religion",
+     "politics"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Ch. 4 on communalism in various forms"
+   },
+   {
+    "key": "m10",
+    "node": "n7",
+    "statement": "A secular state has an official religion chosen by the majority.",
+    "why": "Students mix democracy as majority rule with secularism and assume the majority religion becomes the state religion.",
+    "fix": "India has no official religion. The Constitution gives no special status to any religion and protects freedom to profess, practise and propagate any faith.",
+    "probe": {
+     "question": "Which religion is the official religion of India since most people follow it?",
+     "wrong_answer": "Hinduism, because the majority follows it, is the state religion."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Majority rule means majority religion governs the state",
+    "causes": [],
+    "trigger_cues": [
+     "official religion",
+     "state religion",
+     "majority",
+     "india",
+     "secular",
+     "constitution"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Ch. 4; Constitution Preamble"
+   },
+   {
+    "key": "m11",
+    "node": "n8",
+    "statement": "The caste system has disappeared from India because it is now illegal.",
+    "why": "Students think that laws and urbanisation have ended caste in practice.",
+    "fix": "Caste discrimination is banned and economic change has weakened some old practices. But caste identity still shapes marriage, jobs and politics, and inequalities remain.",
+    "probe": {
+     "question": "Does caste still matter in India after laws banned caste discrimination?",
+     "wrong_answer": "No, caste has completely vanished because the law made it illegal."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "A law banning a practice ends it",
+    "causes": [],
+    "trigger_cues": [
+     "caste",
+     "disappeared",
+     "illegal",
+     "law",
+     "still exists",
+     "discrimination"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Ch. 4 on caste inequalities today"
+   },
+   {
+    "key": "m12",
+    "node": "n15",
+    "statement": "Elections in India are decided only by caste and a candidate wins if their caste has most voters.",
+    "why": "Students see caste mentioned in electoral politics and turn it into the only cause of results.",
+    "fix": "Parties consider caste composition, but voters also weigh party, performance, leaders and issues. Voters of one caste are not all united, and sitting governments often lose.",
+    "probe": {
+     "question": "Why does a party win in a constituency where one caste has the most voters?",
+     "wrong_answer": "Only because that caste has the most voters, so its candidate always wins."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "One social factor alone decides election outcomes",
+    "causes": [],
+    "trigger_cues": [
+     "caste",
+     "election",
+     "win",
+     "most voters",
+     "constituency",
+     "candidate"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Ch. 4; election studies"
+   }
+  ]
+ },
+ "problems": [
+  "only 5 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

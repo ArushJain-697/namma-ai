@@ -1,0 +1,460 @@
+{
+ "topic": {
+  "id": "SCI-PHY-GRAVITATION",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   9
+  ],
+  "title": "Gravitation",
+  "scope": "universal law of gravitation, free fall, g, mass vs weight, thrust and pressure, buoyancy, Archimedes' principle"
+ },
+ "model": "gemini-3-flash-preview",
+ "usage": {
+  "promptTokenCount": 838,
+  "candidatesTokenCount": 3861,
+  "totalTokenCount": 5921,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 838
+   }
+  ],
+  "thoughtsTokenCount": 1222,
+  "serviceTier": "standard"
+ },
+ "seconds": 20.7,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Universal Gravitation and Free Fall",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "Newton's laws of motion",
+     "concept of force",
+     "acceleration"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Mass, Weight and Variation of g",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "units of measurement",
+     "vector vs scalar"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Fluids: Pressure and Buoyancy",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "concept of density",
+     "area and volume"
+    ]
+   },
+   {
+    "key": "n1.1",
+    "name": "Universal Law of Gravitation",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "inverse square relationship"
+    ]
+   },
+   {
+    "key": "n1.1.1",
+    "name": "Force proportional to product of masses",
+    "level": 3,
+    "parent": "n1.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.1.2",
+    "name": "Force inversely proportional to square of distance",
+    "level": 3,
+    "parent": "n1.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.2",
+    "name": "Free Fall and g",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n1.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.2.1",
+    "name": "g is independent of falling object's mass",
+    "level": 3,
+    "parent": "n1.2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.1",
+    "name": "Mass vs Weight",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.1.1",
+    "name": "Mass is constant across the universe",
+    "level": 3,
+    "parent": "n2.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.1.2",
+    "name": "Weight is a force (W=mg)",
+    "level": 3,
+    "parent": "n2.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.1",
+    "name": "Thrust and Pressure",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.1.1",
+    "name": "Pressure depends on contact area",
+    "level": 3,
+    "parent": "n3.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.2",
+    "name": "Archimedes' Principle and Buoyancy",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n3.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.2.1",
+    "name": "Buoyant force equals weight of displaced fluid",
+    "level": 3,
+    "parent": "n3.2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.2.2",
+    "name": "Relative density determines floating/sinking",
+    "level": 3,
+    "parent": "n3.2",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n1.1.1",
+    "statement": "Gravity only exists between planets or very large celestial bodies.",
+    "why": "Students only hear about gravity in the context of Earth, the Moon, or the Sun in textbooks.",
+    "fix": "Every object in the universe with mass attracts every other object with mass, no matter how small.",
+    "probe": {
+     "question": "Does a pen on your desk exert a gravitational force on you?",
+     "wrong_answer": "No, because the pen is too small to have gravity."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "only large things have significant properties",
+    "causes": [],
+    "trigger_cues": [
+     "universal",
+     "attraction",
+     "mass",
+     "planets",
+     "objects"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on gravity concepts"
+   },
+   {
+    "key": "m2",
+    "node": "n1.1.2",
+    "statement": "Earth's gravity ends as soon as you leave the atmosphere.",
+    "why": "Students see videos of 'weightless' astronauts and assume gravity has vanished.",
+    "fix": "Gravity extends infinitely into space, though it gets weaker with distance; astronauts are actually in free fall.",
+    "probe": {
+     "question": "If a satellite is orbiting just above the atmosphere, is Earth's gravity acting on it?",
+     "wrong_answer": "No, it is in space where there is no gravity."
+    },
+    "error_type": "visible_only",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "distance",
+     "atmosphere",
+     "space",
+     "orbit",
+     "weakens"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m3",
+    "node": "n1.2.1",
+    "statement": "Heavier objects fall faster than lighter objects in a vacuum.",
+    "why": "Everyday experience with air resistance (feathers vs stones) creates a strong intuition.",
+    "fix": "In the absence of air resistance, all objects fall with the same acceleration 'g' regardless of mass.",
+    "probe": {
+     "question": "If a 10kg iron ball and a 1kg iron ball are dropped together in a vacuum, which hits first?",
+     "wrong_answer": "The 10kg ball because it is heavier."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "more mass means more speed",
+    "causes": [],
+    "trigger_cues": [
+     "free fall",
+     "vacuum",
+     "acceleration",
+     "dropped",
+     "heavier"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas"
+   },
+   {
+    "key": "m4",
+    "node": "n2.1",
+    "statement": "Mass and weight are the same thing and can be used interchangeably.",
+    "why": "In everyday language, people use 'weight' when they mean 'mass' (e.g., 'my weight is 60 kg').",
+    "fix": "Mass is the quantity of matter and is scalar; weight is the force of gravity acting on that mass and is a vector.",
+    "probe": {
+     "question": "What is the SI unit of weight?",
+     "wrong_answer": "Kilogram (kg)."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [
+     "m5"
+    ],
+    "trigger_cues": [
+     "kilogram",
+     "newton",
+     "mass",
+     "weight",
+     "measure"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT textbook common errors"
+   },
+   {
+    "key": "m5",
+    "node": "n2.1.1",
+    "statement": "Your mass would change if you went to the Moon.",
+    "why": "Students confuse the feeling of being 'lighter' with having less 'stuff' in their body.",
+    "fix": "Mass is a constant property of an object; only the gravitational pull (weight) changes on the Moon.",
+    "probe": {
+     "question": "If your mass is 50kg on Earth, what is your mass on the Moon?",
+     "wrong_answer": "It would be less than 50kg."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "properties change when the environment changes",
+    "causes": [],
+    "trigger_cues": [
+     "moon",
+     "earth",
+     "constant",
+     "location",
+     "mass"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m6",
+    "node": "n3.1.1",
+    "statement": "A large flat board exerts more pressure on the ground than a small sharp nail if pushed with the same force.",
+    "why": "Students associate 'larger size' with 'more pressure' because the object looks more imposing.",
+    "fix": "Pressure is force divided by area; a smaller area results in much higher pressure for the same force.",
+    "probe": {
+     "question": "Why does a sharp needle pierce skin easily compared to a blunt rod?",
+     "wrong_answer": "Because the needle is smaller and has less resistance."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "bigger or more means more effect",
+    "causes": [],
+    "trigger_cues": [
+     "area",
+     "pressure",
+     "force",
+     "sharp",
+     "contact"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m7",
+    "node": "n3.2.1",
+    "statement": "The buoyant force on an object depends on the object's weight.",
+    "why": "Students think heavy objects 'push back' harder against the water.",
+    "fix": "Buoyant force depends only on the volume of the displaced fluid and the fluid's density, not the object's mass.",
+    "probe": {
+     "question": "Two balls of the same size, one lead and one plastic, are submerged. Which has more buoyant force?",
+     "wrong_answer": "The lead ball because it is heavier."
+    },
+    "error_type": "single_cause",
+    "root_belief": "the object is the sole cause of the force",
+    "causes": [],
+    "trigger_cues": [
+     "buoyancy",
+     "displaced",
+     "upthrust",
+     "weight",
+     "volume"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Concept Inventories in Physics"
+   },
+   {
+    "key": "m8",
+    "node": "n3.2.2",
+    "statement": "Heavy objects always sink and light objects always float.",
+    "why": "Observations of small stones sinking while large logs float are often misinterpreted by ignoring density.",
+    "fix": "Sinking or floating depends on the density of the object relative to the fluid, not its total mass.",
+    "probe": {
+     "question": "Will a massive wooden log float or sink in a lake?",
+     "wrong_answer": "Sink, because it is very heavy."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "heaviness causes sinking",
+    "causes": [],
+    "trigger_cues": [
+     "float",
+     "sink",
+     "density",
+     "heavy",
+     "light"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas"
+   },
+   {
+    "key": "m9",
+    "node": "n3.2",
+    "statement": "Objects lose mass when they are submerged in water.",
+    "why": "Objects feel easier to lift in water, so students think the 'matter' has decreased.",
+    "fix": "Objects only lose 'apparent weight' due to the upward buoyant force; their actual mass remains unchanged.",
+    "probe": {
+     "question": "If you weigh a stone in water, why does the scale show a lower reading?",
+     "wrong_answer": "Because the water dissolves some of its mass or makes it lighter."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "feelings represent physical changes in matter",
+    "causes": [],
+    "trigger_cues": [
+     "apparent",
+     "submerged",
+     "weight",
+     "loss",
+     "water"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m10",
+    "node": "n1.2",
+    "statement": "There is no gravity in a vacuum.",
+    "why": "Students confuse the absence of air with the absence of gravitational fields.",
+    "fix": "Gravity is an interaction between masses and does not require a medium like air to act.",
+    "probe": {
+     "question": "If we pump all the air out of a room, will you float to the ceiling?",
+     "wrong_answer": "Yes, because there is no gravity in a vacuum."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "forces need a medium to travel",
+    "causes": [],
+    "trigger_cues": [
+     "vacuum",
+     "air",
+     "medium",
+     "gravity",
+     "float"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research"
+   },
+   {
+    "key": "m11",
+    "node": "n1.1.2",
+    "statement": "The gravitational force between two objects doubles if the distance between them is halved.",
+    "why": "Students assume a linear relationship rather than an inverse-square relationship.",
+    "fix": "According to the inverse square law, if the distance is halved, the force becomes four times stronger.",
+    "probe": {
+     "question": "If the distance between two masses is reduced to half, what happens to the force?",
+     "wrong_answer": "The force doubles."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "relationships are always linear",
+    "causes": [],
+    "trigger_cues": [
+     "distance",
+     "inverse",
+     "square",
+     "halved",
+     "force"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m12",
+    "node": "n3.1.1",
+    "statement": "Fluids only exert pressure in the downward direction.",
+    "why": "Students associate pressure with weight, which they know acts downwards.",
+    "fix": "Fluid pressure acts in all directions at any given point within the fluid.",
+    "probe": {
+     "question": "Does water in a bucket push against the side walls?",
+     "wrong_answer": "No, it only pushes on the bottom because of its weight."
+    },
+    "error_type": "single_cause",
+    "root_belief": "gravity only works downwards",
+    "causes": [],
+    "trigger_cues": [
+     "fluid",
+     "pressure",
+     "direction",
+     "walls",
+     "downward"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   }
+  ]
+ },
+ "problems": []
+}

@@ -1,0 +1,460 @@
+{
+ "topic": {
+  "id": "SOC-CIV-JUDICIARY",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   8
+  ],
+  "title": "The judiciary",
+  "scope": "independence of judiciary, structure of courts, civil vs criminal law, appeals, access to justice, PIL"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 829,
+  "candidatesTokenCount": 1570,
+  "totalTokenCount": 2399,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 829
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 18.3,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Structure of Judiciary",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "levels of government"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Independence and Role",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "separation of powers"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Types of Law and Access",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "fundamental rights"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Hierarchy of Courts",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "vertical hierarchy"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Appellate System",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "Judicial Independence",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "checks and balances"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Civil vs Criminal Law",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "types of crimes"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Access to Justice/PIL",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "role of media"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Supreme Court is apex",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "High Court jurisdiction",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Appeals move upwards",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Judges are not controlled by politicians",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Civil law deals with disputes",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Criminal law deals with offences",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "PIL allows public interest",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n9",
+    "statement": "The Supreme Court can directly hear any case from a village.",
+    "why": "Students assume the highest authority has total control over all levels.",
+    "fix": "The Supreme Court usually hears cases that have already gone through lower courts or involve constitutional matters.",
+    "probe": {
+     "question": "Can you go to the Supreme Court for a minor land dispute in your village?",
+     "wrong_answer": "Yes, because it is the highest court."
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "Higher authority has absolute power over everything.",
+    "causes": [],
+    "trigger_cues": [
+     "supreme court",
+     "apex",
+     "highest",
+     "jurisdiction",
+     "appeal"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n12",
+    "statement": "The President or Prime Minister can fire a judge if they dislike a verdict.",
+    "why": "Students conflate executive power with judicial power.",
+    "fix": "Judges have security of tenure and can only be removed through a complex impeachment process by Parliament.",
+    "probe": {
+     "question": "What happens if the government is unhappy with a Supreme Court verdict?",
+     "wrong_answer": "The government can dismiss the judges."
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "The leader controls all government branches.",
+    "causes": [],
+    "trigger_cues": [
+     "independence",
+     "executive",
+     "judiciary",
+     "impeachment",
+     "appointment"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on civics"
+   },
+   {
+    "key": "m3",
+    "node": "n13",
+    "statement": "Civil law is about punishing people for crimes like theft.",
+    "why": "Students use the everyday meaning of 'civil' as 'polite' or 'non-violent'.",
+    "fix": "Civil law deals with disputes over property, rent, or contracts, not crimes.",
+    "probe": {
+     "question": "Is theft a civil law case?",
+     "wrong_answer": "Yes, because it is a dispute between two people."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "A word means its everyday meaning.",
+    "causes": [],
+    "trigger_cues": [
+     "civil law",
+     "dispute",
+     "property",
+     "contract",
+     "offence"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's children's ideas"
+   },
+   {
+    "key": "m4",
+    "node": "n15",
+    "statement": "A PIL is a case filed by the government to help the poor.",
+    "why": "Students assume the government is the only entity that can initiate public welfare.",
+    "fix": "A PIL can be filed by any individual or organization on behalf of those whose rights are violated.",
+    "probe": {
+     "question": "Who can file a PIL?",
+     "wrong_answer": "Only the government or the police."
+    },
+    "error_type": "confuses_people_or_places",
+    "root_belief": "One event has one single cause (government).",
+    "causes": [],
+    "trigger_cues": [
+     "pil",
+     "public interest",
+     "litigation",
+     "rights",
+     "court"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n4",
+    "statement": "The High Court is a lower court that sits under the District Court in each district.",
+    "why": "Students think 'High' and 'District' are ordered by local size, or read the court list in the wrong order.",
+    "fix": "The order is Supreme Court at the top, then High Court at the state level, then District Court, then subordinate courts. High Courts are above District Courts.",
+    "probe": {
+     "question": "Which court is higher in the hierarchy, the High Court or the District Court?",
+     "wrong_answer": "The District Court, because the High Court works under it."
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "Court rank follows local area size, not hierarchy",
+    "causes": [],
+    "trigger_cues": [
+     "high court",
+     "district court",
+     "which is higher",
+     "hierarchy",
+     "below",
+     "above"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 8 Social and Political Life, chapter on the judiciary"
+   },
+   {
+    "key": "m6",
+    "node": "n5",
+    "statement": "Once a District Court gives a judgment, nobody can challenge it.",
+    "why": "Students treat a court verdict as the end of the matter, like a final exam result.",
+    "fix": "A person who is not satisfied with a lower court's decision can appeal to a higher court. This is the appellate system.",
+    "probe": {
+     "question": "Rahim loses his case in the District Court and thinks the decision is wrong. What can he do?",
+     "wrong_answer": "Nothing, because the District Court's decision is final."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Any court verdict is final and unchangeable",
+    "causes": [],
+    "trigger_cues": [
+     "lost the case",
+     "not satisfied",
+     "district court",
+     "challenge",
+     "appeal",
+     "final"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 8 judiciary chapter, section on appeal"
+   },
+   {
+    "key": "m7",
+    "node": "n11",
+    "statement": "An appeal means filing the same case again in the same court.",
+    "why": "Students confuse 'appeal' with 'refiling' or 'repeating' a case.",
+    "fix": "An appeal is a petition to a higher court asking it to review and change the lower court's decision.",
+    "probe": {
+     "question": "What does it mean to file an appeal?",
+     "wrong_answer": "It means starting the same case again in the same court from the beginning."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "An appeal repeats the case at the same level",
+    "causes": [],
+    "trigger_cues": [
+     "appeal",
+     "same court",
+     "file again",
+     "new case",
+     "higher court",
+     "review"
+    ],
+    "confidence": "plausible",
+    "source_hint": "Class 8 student interviews or classroom discussion"
+   },
+   {
+    "key": "m8",
+    "node": "n6",
+    "statement": "Judicial independence means judges can do whatever they like and nobody can question them.",
+    "why": "Students mix up independence from the legislature and executive with having no rules or accountability.",
+    "fix": "Independence means judges are not controlled by the government in giving decisions. They still follow the Constitution and the law, and their decisions can be reviewed by higher courts.",
+    "probe": {
+     "question": "Since the judiciary is independent, can a High Court judge's decision ever be reviewed?",
+     "wrong_answer": "No, independent judges cannot be questioned or reviewed by anyone."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Independence means freedom from all rules",
+    "causes": [],
+    "trigger_cues": [
+     "independent",
+     "judge",
+     "do what they like",
+     "questioned",
+     "review",
+     "accountable"
+    ],
+    "confidence": "plausible",
+    "source_hint": "Civics education research on separation of powers"
+   },
+   {
+    "key": "m9",
+    "node": "n12",
+    "statement": "Only the government can bring a case against a minister, because courts cannot try those in power.",
+    "why": "Students assume that powerful officials are above the courts.",
+    "fix": "The judiciary can hear cases against the government and its officials. Everyone, including ministers, is equal before the law and subject to the courts.",
+    "probe": {
+     "question": "A citizen believes a minister has broken the law. Can the court hear a case against the minister?",
+     "wrong_answer": "No, ministers are too powerful to be taken to court."
+    },
+    "error_type": "stereotype",
+    "root_belief": "Powerful officials are above the courts",
+    "causes": [],
+    "trigger_cues": [
+     "minister",
+     "court",
+     "above the law",
+     "powerful",
+     "case against government",
+     "equal"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 8, rule of law and the courts"
+   },
+   {
+    "key": "m10",
+    "node": "n7",
+    "statement": "Civil and criminal cases are both tried by a police officer who decides who is guilty.",
+    "why": "Students confuse the police role of investigation with the judge's role of deciding.",
+    "fix": "In a criminal case the police investigate and file a charge sheet, but the court decides guilt after a fair trial. In a civil case, a person approaches the court directly with a petition.",
+    "probe": {
+     "question": "In a criminal case such as theft, who decides whether the accused is guilty?",
+     "wrong_answer": "The police officer decides guilt after the investigation."
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "Police and courts perform the same function",
+    "causes": [],
+    "trigger_cues": [
+     "police",
+     "guilty",
+     "who decides",
+     "criminal case",
+     "investigate",
+     "charge sheet"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Research on children's understanding of legal institutions"
+   },
+   {
+    "key": "m11",
+    "node": "n8",
+    "statement": "A poor person cannot get justice because every case needs an expensive lawyer.",
+    "why": "Students generalise from the cost of private lawyers and miss legal aid and the PIL route.",
+    "fix": "The Constitution seeks equal access to justice. Legal aid supports the poor, and through PIL even a letter or postcard can start a case on behalf of others.",
+    "probe": {
+     "question": "Can a person with no money still approach a court for justice?",
+     "wrong_answer": "No, only people who can pay a lawyer can go to court."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Justice access depends only on ability to pay",
+    "causes": [],
+    "trigger_cues": [
+     "poor",
+     "lawyer",
+     "expensive",
+     "legal aid",
+     "cost",
+     "access to justice"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 8 judiciary chapter on access to justice"
+   },
+   {
+    "key": "m12",
+    "node": "n10",
+    "statement": "A High Court can hear cases from anywhere in India.",
+    "why": "Students blur the nationwide reach of the Supreme Court with the state-level reach of a High Court.",
+    "fix": "A High Court has jurisdiction over its own state or group of states and hears appeals from the lower courts in that area. The Supreme Court is the court for the whole country.",
+    "probe": {
+     "question": "Can the Kerala High Court hear an appeal against a District Court judgment from Punjab?",
+     "wrong_answer": "Yes, a High Court can hear cases from every state in India."
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "All higher courts cover the entire country",
+    "causes": [],
+    "trigger_cues": [
+     "high court",
+     "jurisdiction",
+     "state",
+     "kerala",
+     "punjab",
+     "whole india"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 8, Chapter 5 The Judiciary"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

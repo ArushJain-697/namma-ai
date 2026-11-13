@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0408-MAT-FACTORISATION",
+  "topic_id": "MAT-FACTORISATION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a step-by-step worked example",
+  "seed": 408
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 1081,
+  "candidatesTokenCount": 1397,
+  "totalTokenCount": 2478,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1081
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-FACTORISATION-K19-M12",
+  "MAT-FACTORISATION-K10-M1",
+  "MAT-FACTORISATION-K23-M20",
+  "MAT-FACTORISATION-K21-M16",
+  "MAT-FACTORISATION-K11-M3",
+  "MAT-FACTORISATION-K14-M7",
+  "MAT-FACTORISATION-K7-M24",
+  "MAT-FACTORISATION-K20-M14",
+  "MAT-FACTORISATION-K20-M13",
+  "MAT-FACTORISATION-K24-M21",
+  "MAT-FACTORISATION-K22-M18",
+  "MAT-FACTORISATION-K5-M2",
+  "MAT-FACTORISATION-K13-M5",
+  "MAT-FACTORISATION-K25-M23"
+ ],
+ "response": {
+  "passage": "Factorisation is the process of writing an algebraic expression as a product of its factors. To factorise x^2 - 6x + 9, we look for two numbers that multiply to 9 and add to -6, which are -3 and -3, giving us (x - 3)^2. It is important to note that (x - 3)^2 is not the same as x^2 - 9, because the identity a^2 - b^2 equals (a - b)(a + b), not (a - b)^2. When we divide an expression like (4x^2 - 25) by (2x - 5), we first factorise the numerator as (2x - 5)(2x + 5). The square root of 4x^2 is 2x, not 4x. After dividing, we get 2x + 5. Always check your work by multiplying the factors back together to ensure you return to the original expression. If you have an expression like 6xy + 9xz, you must take out both the common number 3 and the common variable x to get 3x(2y + 3z). Finally, remember that every term, including the number 1, can be a factor, and dividing a term by itself results in 1, not 0. By following these steps carefully, you ensure your algebraic manipulations are accurate and mathematically sound.",
+  "summary": "Factorisation involves breaking expressions into products using identities and common factors. Always verify your results by multiplying factors back and remember that division by a term results in one. Correct identification of squares and common factors is essential for accuracy.",
+  "items": [
+   {
+    "evidence": "It is important to note that (x - 3)^2 is not the same as x^2 - 9, because the identity a^2 - b^2 equals (a - b)(a + b), not (a - b)^2.",
+    "answer": "(a - b)(a + b)",
+    "stem": "What is the correct expanded form of the difference of two squares identity?",
+    "options": [
+     {
+      "belief_id": "MAT-FACTORISATION-K20-M13",
+      "why": "Student confuses the difference of squares with a perfect square.",
+      "text": "(a - b)^2"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K19-M12",
+      "why": "Student incorrectly assumes a minus sign implies a difference of squares.",
+      "text": "(a - b)(a - b)"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K20-M14",
+      "why": "Student incorrectly applies the difference of squares to a sum.",
+      "text": "(a + b)(a + b)"
+     }
+    ]
+   },
+   {
+    "evidence": "The square root of 4x^2 is 2x, not 4x.",
+    "answer": "2x",
+    "stem": "When factorising 4x^2 - 25, what is the correct square root of the first term?",
+    "options": [
+     {
+      "belief_id": "MAT-FACTORISATION-K21-M16",
+      "why": "Student fails to take the square root of the coefficient.",
+      "text": "4x"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K5-M2",
+      "why": "Student confuses the term itself with its square root.",
+      "text": "4x^2"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K10-M1",
+      "why": "Student incorrectly identifies factors instead of the root.",
+      "text": "1"
+     }
+    ]
+   },
+   {
+    "evidence": "If you have an expression like 6xy + 9xz, you must take out both the common number 3 and the common variable x to get 3x(2y + 3z).",
+    "answer": "3x(2y + 3z)",
+    "stem": "What is the correct way to factorise 6xy + 9xz?",
+    "options": [
+     {
+      "belief_id": "MAT-FACTORISATION-K13-M5",
+      "why": "Student only factors the numerical coefficient.",
+      "text": "3(2xy + 3xz)"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K11-M3",
+      "why": "Student thinks any bracketed expression is fully factorised.",
+      "text": "x(6y + 9z)"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K24-M21",
+      "why": "Student only divides the first term by the common factor.",
+      "text": "3x(2y + 9xz)"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, remember that every term, including the number 1, can be a factor, and dividing a term by itself results in 1, not 0.",
+    "answer": "1",
+    "stem": "What is the result of dividing any non-zero algebraic term by itself?",
+    "options": [
+     {
+      "belief_id": "MAT-FACTORISATION-K23-M20",
+      "why": "Student incorrectly believes division by self results in zero.",
+      "text": "0"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K10-M1",
+      "why": "Student ignores the identity property of division.",
+      "text": "The term itself"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K25-M23",
+      "why": "Student incorrectly subtracts terms instead of dividing.",
+      "text": "The term minus one"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 6.6
+}

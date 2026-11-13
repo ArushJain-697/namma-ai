@@ -1,0 +1,125 @@
+{
+ "job": {
+  "job": "train-0516-SOC-GEO-DOMAINS",
+  "topic_id": "SOC-GEO-DOMAINS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a conversation between a teacher and two students",
+  "seed": 516
+ },
+ "model": "gemini-3.1-flash-lite/key3",
+ "usage": {
+  "promptTokenCount": 630,
+  "candidatesTokenCount": 1254,
+  "totalTokenCount": 1884,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 630
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "SOC-GEO-DOMAINS-K11-M4",
+  "SOC-GEO-DOMAINS-K5-M1",
+  "SOC-GEO-DOMAINS-K10-M3",
+  "SOC-GEO-DOMAINS-K8-M2"
+ ],
+ "response": {
+  "passage": "Teacher: Today, let us explore the four domains of the Earth. Rohan, can you tell me where life exists? Rohan: I think life is only found on the land surface of the continents. Teacher: Not quite, Rohan. The biosphere is the narrow zone where land, water, and air interact, allowing life to thrive in all three. Priya, what about the air we breathe? Priya: Is oxygen the most abundant gas? Teacher: Actually, nitrogen makes up 78 percent of the atmosphere, while oxygen is only 21 percent. Now, consider the oceans. Do you think they are all the same? Rohan: I believe all ocean water has the same salt content. Teacher: That is a common mistake; salinity varies significantly across different regions due to evaporation and freshwater inflow. Finally, remember that continents are massive landmasses resting on tectonic plates, not islands floating on water. Priya: So, the Earth is a complex system of interconnected layers rather than just floating parts? Teacher: Exactly. The lithosphere, atmosphere, and hydrosphere work together to support the biosphere, which extends from the deep ocean floor to the high atmosphere.",
+  "summary": "The Earth consists of four interconnected domains: the lithosphere, atmosphere, hydrosphere, and biosphere. These layers interact to support life, which exists beyond just the land surface. Each domain has unique characteristics, such as varying salinity in oceans and specific gas compositions in the air.",
+  "items": [
+   {
+    "evidence": "The biosphere is the narrow zone where land, water, and air interact, allowing life to thrive in all three.",
+    "answer": "land, water, and air",
+    "stem": "In which areas does the biosphere allow life to thrive?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-DOMAINS-K11-M4",
+      "why": "Student incorrectly limits the biosphere to land only.",
+      "text": "only the land surface"
+     },
+     {
+      "belief_id": "SOC-GEO-DOMAINS-K5-M1",
+      "why": "Student confuses the biosphere with floating landmasses.",
+      "text": "large islands floating on water"
+     },
+     {
+      "belief_id": "SOC-GEO-DOMAINS-K10-M3",
+      "why": "Student incorrectly focuses on ocean salinity levels.",
+      "text": "only areas with equal salt content"
+     }
+    ]
+   },
+   {
+    "evidence": "Actually, nitrogen makes up 78 percent of the atmosphere, while oxygen is only 21 percent.",
+    "answer": "nitrogen",
+    "stem": "Which gas is found in the highest quantity in our atmosphere?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-DOMAINS-K8-M2",
+      "why": "Student assumes oxygen is the primary atmospheric gas.",
+      "text": "oxygen"
+     },
+     {
+      "belief_id": "SOC-GEO-DOMAINS-K11-M4",
+      "why": "Student confuses atmospheric gases with land-based life requirements.",
+      "text": "carbon dioxide"
+     },
+     {
+      "belief_id": "SOC-GEO-DOMAINS-K10-M3",
+      "why": "Student incorrectly applies salt-related concepts to air.",
+      "text": "salt particles"
+     }
+    ]
+   },
+   {
+    "evidence": "That is a common mistake; salinity varies significantly across different regions due to evaporation and freshwater inflow.",
+    "answer": "varies significantly",
+    "stem": "How does the salt content of ocean water change across different regions?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-DOMAINS-K10-M3",
+      "why": "Student incorrectly assumes uniformity in ocean salt levels.",
+      "text": "is always the same"
+     },
+     {
+      "belief_id": "SOC-GEO-DOMAINS-K5-M1",
+      "why": "Student links salinity to the movement of islands.",
+      "text": "floats with the continents"
+     },
+     {
+      "belief_id": "SOC-GEO-DOMAINS-K8-M2",
+      "why": "Student incorrectly links salinity to oxygen levels.",
+      "text": "depends on oxygen levels"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, remember that continents are massive landmasses resting on tectonic plates, not islands floating on water.",
+    "answer": "massive landmasses resting on tectonic plates",
+    "stem": "What is the true nature of continents on Earth?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-DOMAINS-K5-M1",
+      "why": "Student incorrectly views continents as floating islands.",
+      "text": "large islands floating on water"
+     },
+     {
+      "belief_id": "SOC-GEO-DOMAINS-K11-M4",
+      "why": "Student limits the definition to just the surface.",
+      "text": "only the surface of the land"
+     },
+     {
+      "belief_id": "SOC-GEO-DOMAINS-K8-M2",
+      "why": "Student incorrectly links landmasses to atmospheric gas.",
+      "text": "layers of oxygen and nitrogen"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.5
+}

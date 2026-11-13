@@ -1,0 +1,84 @@
+{
+ "job": {
+  "job": "train-0344-SOC-GEO-SOILS",
+  "topic_id": "SOC-GEO-SOILS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a news-style report about a real-world situation",
+  "seed": 344
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 613,
+  "candidatesTokenCount": 849,
+  "totalTokenCount": 1462,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 613
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "SOC-GEO-SOILS-K5-M1",
+  "SOC-GEO-SOILS-K12-M3",
+  "SOC-GEO-SOILS-K6-M2"
+ ],
+ "response": {
+  "passage": "In a recent agricultural report, experts highlighted the diverse soil landscape of India. While many believe alluvial soil is restricted to the Northern Plains, it is also found in the narrow corridors of the eastern coastal plains, particularly in the deltas of the Mahanadi, Godavari, and Krishna rivers. Farmers in the Deccan Plateau are often surprised to learn that black soil, known for its moisture-retention capacity, does not derive its dark color from high humus content. Instead, its deep color is primarily due to the presence of titaniferous magnetite and iron-rich minerals formed from volcanic rocks. Furthermore, the report addressed the growing concern of soil degradation. While human actions like deforestation and overgrazing are major contributors, natural forces are equally responsible. Wind and water currents frequently strip away fertile topsoil, especially in arid regions, proving that erosion is not solely a human-induced phenomenon. To combat this, experts suggest that sustainable land management is essential for long-term food security. By understanding that soil characteristics are shaped by complex geological processes rather than just human intervention or organic accumulation, farmers can better implement conservation strategies like contour ploughing and terrace farming to protect their land from further loss.",
+  "summary": "India's soil diversity extends beyond common misconceptions, with alluvial soil appearing in coastal deltas and black soil's color linked to minerals rather than humus. Additionally, soil erosion is driven by both natural forces and human activities, requiring comprehensive conservation efforts.",
+  "items": [
+   {
+    "evidence": "While many believe alluvial soil is restricted to the Northern Plains, it is also found in the narrow corridors of the eastern coastal plains, particularly in the deltas of the Mahanadi, Godavari, and Krishna rivers.",
+    "answer": "eastern coastal plains",
+    "stem": "Besides the Northern Plains, where else can alluvial soil be found in India?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-SOILS-K5-M1",
+      "why": "Student assumes alluvial soil is exclusive to the Northern Plains.",
+      "text": "Only the Northern Plains"
+     }
+    ]
+   },
+   {
+    "evidence": "Instead, its deep color is primarily due to the presence of titaniferous magnetite and iron-rich minerals formed from volcanic rocks.",
+    "answer": "titaniferous magnetite and iron-rich minerals",
+    "stem": "What is the primary reason for the dark color of black soil?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-SOILS-K6-M2",
+      "why": "Student incorrectly attributes the dark color to organic matter.",
+      "text": "high humus content"
+     }
+    ]
+   },
+   {
+    "evidence": "Wind and water currents frequently strip away fertile topsoil, especially in arid regions, proving that erosion is not solely a human-induced phenomenon.",
+    "answer": "Wind and water currents",
+    "stem": "What natural forces contribute to the process of soil erosion?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-SOILS-K12-M3",
+      "why": "Student believes erosion is caused only by human activity.",
+      "text": "Human activity only"
+     }
+    ]
+   },
+   {
+    "evidence": "While human actions like deforestation and overgrazing are major contributors, natural forces are equally responsible.",
+    "answer": "natural forces",
+    "stem": "What is equally responsible for soil degradation alongside human actions?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-SOILS-K12-M3",
+      "why": "Student ignores natural factors, focusing only on human impact.",
+      "text": "Only deforestation and overgrazing"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 48.7
+}

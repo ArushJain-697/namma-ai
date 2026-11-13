@@ -1,0 +1,480 @@
+{
+ "topic": {
+  "id": "MAT-ALGEBRAINTRO",
+  "subject": "maths",
+  "strand": "maths",
+  "grades": [
+   6
+  ],
+  "title": "Introduction to algebra",
+  "scope": "variables, expressions with variables, using letters for rules, equations, solution by trial"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 838,
+  "candidatesTokenCount": 1487,
+  "totalTokenCount": 2325,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 838
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.9,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Variables as placeholders",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "basic arithmetic operations"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Algebraic expressions",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "arithmetic operations"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Equations and solutions",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "equality concept"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Letters as unknown numbers",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "number sense"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Generalizing patterns",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "number patterns"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Forming expressions",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "arithmetic operations"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Evaluating expressions",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": [
+     "substitution"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Concept of equality",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "balance scale"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Trial and error method",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": [
+     "logical reasoning"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Letters represent specific values",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "digits"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Letters represent objects",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "language"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Operations with variables",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "arithmetic"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "Expressions vs Equations",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": [
+     "symbols"
+    ]
+   },
+   {
+    "key": "n14",
+    "name": "Trial method logic",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": [
+     "guessing"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n11",
+    "statement": "The letter 'a' in 5a stands for apples.",
+    "why": "Students map letters to the first letter of objects they see in word problems.",
+    "fix": "A letter is a symbol for a number, not an object or a label.",
+    "probe": {
+     "question": "If 5a represents 5 apples, what does 5b represent?",
+     "wrong_answer": "5 bananas"
+    },
+    "error_type": "language_confusion",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "letter",
+     "stands for",
+     "represents",
+     "variable",
+     "symbol"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's children's ideas in science"
+   },
+   {
+    "key": "m2",
+    "node": "n12",
+    "statement": "x + x is x^2.",
+    "why": "Students overgeneralize the rule of multiplication to addition.",
+    "fix": "x + x is 2x, while x multiplied by x is x^2.",
+    "probe": {
+     "question": "What is y + y?",
+     "wrong_answer": "y^2"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a rule from multiplication works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "sum",
+     "add",
+     "variable",
+     "expression",
+     "simplify"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research"
+   },
+   {
+    "key": "m3",
+    "node": "n13",
+    "statement": "An expression like x + 5 is an equation.",
+    "why": "Students confuse the presence of a variable with the presence of an equality sign.",
+    "fix": "An equation must have an equals sign (=) to show two sides are equal.",
+    "probe": {
+     "question": "Is x + 3 = 7 an expression?",
+     "wrong_answer": "Yes"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "symbols are interchangeable",
+    "causes": [],
+    "trigger_cues": [
+     "expression",
+     "equation",
+     "equals",
+     "sign",
+     "variable"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n10",
+    "statement": "The letter x always stands for 10.",
+    "why": "Students see Roman numerals where X is 10 and apply it to algebra.",
+    "fix": "In algebra, a letter can represent any number depending on the problem.",
+    "probe": {
+     "question": "In the equation x + 2 = 5, what is x?",
+     "wrong_answer": "10"
+    },
+    "error_type": "notation_misread",
+    "root_belief": "a symbol has one fixed meaning",
+    "causes": [],
+    "trigger_cues": [
+     "letter",
+     "value",
+     "unknown",
+     "number",
+     "fixed"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "id": "m5",
+    "node": "n4",
+    "statement": "A letter can only stand for one number in a whole problem, so n in n + n = 2n must be a single fixed number.",
+    "why": "Students link letters with a single unknown from equations and miss that a letter can vary across many values in a general rule.",
+    "fix": "In a general rule like n + n = 2n, the letter n can be any number. It is a variable and takes many values, not one fixed value.",
+    "probe": {
+     "question": "Is n + n = 2n true only for one value of n, or for many? Give your answer.",
+     "wrong_answer": "Only for one value of n, like n = 5."
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "A letter always means one fixed number",
+    "causes": [],
+    "trigger_cues": [
+     "letter",
+     "any number",
+     "general rule",
+     "always true",
+     "one value"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on variable interpretations (Kuchemann, Booth)",
+    "key": "m5"
+   },
+   {
+    "id": "m6",
+    "node": "n4",
+    "statement": "Different letters must stand for different numbers, so x and y can never be equal.",
+    "why": "Students assume each new letter needs its own distinct value, like different names for different people.",
+    "fix": "Different letters may stand for the same number or different numbers. x = 3 and y = 3 is allowed.",
+    "probe": {
+     "question": "If x + y = 8, can x = 4 and y = 4?",
+     "wrong_answer": "No, x and y are different letters so they must have different values."
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "Different letters mean different numbers",
+    "causes": [],
+    "trigger_cues": [
+     "different letters",
+     "x and y",
+     "same value",
+     "two unknowns"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on variable interpretations in school algebra",
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n5",
+    "statement": "A pattern rule is found by looking at the difference between terms only, so the rule for 4, 8, 12, ... is n + 4.",
+    "why": "Students notice the repeated adding of 4 and use it as the rule without linking it to the position number.",
+    "fix": "The rule links the position n to the term. For 4, 8, 12, ... the nth term is 4 × n, written 4n.",
+    "probe": {
+     "question": "For the pattern 4, 8, 12, 16, ..., what is the rule for the nth term?",
+     "wrong_answer": "n + 4"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "Pattern rule is just the repeated difference added",
+    "causes": [],
+    "trigger_cues": [
+     "pattern",
+     "nth term",
+     "rule",
+     "difference",
+     "sequence",
+     "matchstick"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on generalising patterns (recursive vs explicit rules)",
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n6",
+    "statement": "The expression for '5 more than n' is 5n.",
+    "why": "Students read 'five' and 'n' side by side and join them, because writing letters together feels like writing the words in order.",
+    "fix": "'5 more than n' means add 5 to n, so it is n + 5. 5n means 5 times n.",
+    "probe": {
+     "question": "Write an expression for 'a number n increased by 5'.",
+     "wrong_answer": "5n"
+    },
+    "error_type": "language_confusion",
+    "root_belief": "Joining symbols together shows any combining of words",
+    "causes": [],
+    "trigger_cues": [
+     "more than",
+     "increased by",
+     "write expression",
+     "5 more",
+     "words to algebra"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher observation, translation of words into algebra",
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n6",
+    "statement": "'3 less than n' is written 3 - n.",
+    "why": "Students write the numbers in the same order as spoken words, ignoring that 'less than' reverses the order.",
+    "fix": "'3 less than n' means take 3 away from n, so it is n - 3. For n = 10 it gives 7.",
+    "probe": {
+     "question": "Write an expression for '4 less than y'.",
+     "wrong_answer": "4 - y"
+    },
+    "error_type": "language_confusion",
+    "root_belief": "Algebra order follows the word order of the sentence",
+    "causes": [],
+    "trigger_cues": [
+     "less than",
+     "subtract from",
+     "fewer than",
+     "write expression"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on word-to-symbol translation errors",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n7",
+    "statement": "If n = 4, then 3n means 34.",
+    "why": "Students treat the juxtaposition of 3 and n as writing digits side by side, like place value.",
+    "fix": "3n means 3 times n. When n = 4, 3n = 3 × 4 = 12, not 34.",
+    "probe": {
+     "question": "Find the value of 3n when n = 4.",
+     "wrong_answer": "34"
+    },
+    "error_type": "place_value",
+    "root_belief": "Adjacent symbols are digits written side by side",
+    "causes": [],
+    "trigger_cues": [
+     "value of",
+     "put n equal",
+     "substitute",
+     "3n",
+     "when n ="
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on concatenation in algebra (Booth, Kieran)",
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n8",
+    "statement": "The equals sign means 'find the answer', so in 7 + 3 = 4 + 6 the answer must be written after the first sum.",
+    "why": "Students see = as an instruction to calculate, not a statement that both sides have the same value.",
+    "fix": "The equals sign shows both sides have the same value. 7 + 3 = 10 and 4 + 6 = 10, so the statement is true.",
+    "probe": {
+     "question": "Is 7 + 3 = 4 + 6 true or false?",
+     "wrong_answer": "False, because 7 + 3 is 10, not 4 + 6."
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "Equals sign means do the calculation",
+    "causes": [],
+    "trigger_cues": [
+     "equals sign",
+     "both sides",
+     "true or false",
+     "balance",
+     "equal"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on operational view of the equals sign (Kieran, Falkner)",
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n14",
+    "statement": "In trial and error, once one value makes the left side bigger than the right side, that value is the solution.",
+    "why": "Students stop at a value that looks close or gives a larger result, without checking for exact equality of both sides.",
+    "fix": "A value is a solution only when both sides become exactly equal. If the left side is bigger or smaller, try another value.",
+    "probe": {
+     "question": "For x + 6 = 10, you try x = 5 and get 11. Is x = 5 the solution?",
+     "wrong_answer": "Yes, because 11 is more than 10, so it works."
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "Close or larger result is good enough",
+    "causes": [],
+    "trigger_cues": [
+     "try values",
+     "check",
+     "left side",
+     "right side",
+     "solution",
+     "trial"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation of trial and error",
+    "key": "m12"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

@@ -1,0 +1,506 @@
+{
+ "topic": {
+  "id": "SCI-CHM-ATOMS",
+  "subject": "science",
+  "strand": "chemistry",
+  "grades": [
+   9
+  ],
+  "title": "Atoms and molecules",
+  "scope": "laws of chemical combination, atoms, molecules, atomic mass, ions, chemical formulae, mole idea"
+ },
+ "model": "gemini-3-flash-preview/key2",
+ "usage": {
+  "promptTokenCount": 834,
+  "candidatesTokenCount": 4051,
+  "totalTokenCount": 6826,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 834
+   }
+  ],
+  "thoughtsTokenCount": 1941,
+  "serviceTier": "standard"
+ },
+ "seconds": 21.7,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Laws of Chemical Combination",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "physical vs chemical change",
+     "mass measurement"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Law of Conservation of Mass",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3",
+    "name": "Mass constancy in reactions",
+    "level": 3,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n4",
+    "name": "Law of Constant Proportions",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "ratio and proportion"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Fixed mass ratios in compounds",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "Atoms and Molecules",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "states of matter"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Nature of Atoms",
+    "level": 2,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Atoms as building blocks",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Relative atomic mass",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": [
+     "fractions"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Molecules and Ions",
+    "level": 2,
+    "parent": "n6",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Molecules of elements and compounds",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Ions and Valency",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [],
+    "external_prereqs": [
+     "electric charge"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "Chemical Formulae",
+    "level": 2,
+    "parent": "n6",
+    "prereqs": [
+     "n11",
+     "n12"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Writing formulae using valency",
+    "level": 3,
+    "parent": "n13",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "The Mole Concept",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n9",
+     "n13"
+    ],
+    "external_prereqs": [
+     "scientific notation",
+     "unit conversion"
+    ]
+   },
+   {
+    "key": "n16",
+    "name": "Avogadro Constant",
+    "level": 2,
+    "parent": "n15",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n17",
+    "name": "Mole as a counting unit",
+    "level": 3,
+    "parent": "n16",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n18",
+    "name": "Molar Mass",
+    "level": 2,
+    "parent": "n15",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n19",
+    "name": "Gram atomic and molecular mass",
+    "level": 3,
+    "parent": "n18",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n20",
+    "name": "Mole-Mass conversions",
+    "level": 3,
+    "parent": "n18",
+    "prereqs": [
+     "n19"
+    ],
+    "external_prereqs": [
+     "multiplication and division"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n3",
+    "statement": "Mass is lost during a chemical reaction if a gas is produced.",
+    "why": "Students do not perceive gas as having mass because it is often invisible and escapes.",
+    "fix": "Mass is always conserved; if a gas is produced, its mass must be included in the total product mass.",
+    "probe": {
+     "question": "If 10g of calcium carbonate is heated in an open vessel and 4.4g of CO2 escapes, what is the mass of the remaining residue?",
+     "wrong_answer": "10g"
+    },
+    "error_type": "visible_only",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "burning",
+     "gas",
+     "escapes",
+     "open vessel",
+     "mass"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic studies on conservation of mass"
+   },
+   {
+    "key": "m2",
+    "node": "n5",
+    "statement": "The ratio of elements in a compound depends on how the compound was prepared.",
+    "why": "Students think the process or source of a substance dictates its internal composition.",
+    "fix": "A pure chemical compound always contains the same elements combined in the same proportion by mass, regardless of source.",
+    "probe": {
+     "question": "Will water from a river and water made in a lab have different mass ratios of Hydrogen to Oxygen?",
+     "wrong_answer": "Yes, lab water is purer so the ratio is different."
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "the process determines the product properties",
+    "causes": [],
+    "trigger_cues": [
+     "source",
+     "preparation",
+     "ratio",
+     "pure",
+     "proportion"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m3",
+    "node": "n8",
+    "statement": "Atoms expand or grow in size when a substance is heated.",
+    "why": "Students apply the macroscopic observation of thermal expansion to the microscopic particles themselves.",
+    "fix": "Atoms do not change size; heating only increases the space and vibration between them.",
+    "probe": {
+     "question": "What happens to the size of an individual iron atom when an iron rod is heated?",
+     "wrong_answer": "The atom gets larger."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "macro properties apply to micro particles",
+    "causes": [],
+    "trigger_cues": [
+     "expansion",
+     "heating",
+     "size",
+     "atom",
+     "volume"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas in Science"
+   },
+   {
+    "key": "m4",
+    "node": "n9",
+    "statement": "The atomic mass of an element is the actual mass of one single atom in grams.",
+    "why": "Students struggle with the scale of $10^{-24}$ grams and find relative units abstract.",
+    "fix": "Atomic mass is a relative mass compared to 1/12th the mass of a Carbon-12 atom, expressed in 'u'.",
+    "probe": {
+     "question": "If the atomic mass of Oxygen is 16u, does one atom of Oxygen weigh 16 grams?",
+     "wrong_answer": "Yes"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "a number must represent a familiar unit",
+    "causes": [
+     "m9"
+    ],
+    "trigger_cues": [
+     "atomic mass",
+     "unit",
+     "carbon-12",
+     "relative",
+     "grams"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n11",
+    "statement": "Molecules only exist in compounds, not in elements.",
+    "why": "Everyday language suggests a 'molecule' is a mixture or combination of different things.",
+    "fix": "Molecules can be formed by atoms of the same element (e.g., O2) or different elements (e.g., H2O).",
+    "probe": {
+     "question": "Is O2 considered a molecule or just two atoms?",
+     "wrong_answer": "It is just two atoms, not a molecule."
+    },
+    "error_type": "everyday_language",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "molecule",
+     "element",
+     "compound",
+     "oxygen",
+     "nitrogen"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m6",
+    "node": "n12",
+    "statement": "A positive ion (cation) is formed when an atom gains a proton.",
+    "why": "Students associate the 'plus' sign with the mathematical operation of addition.",
+    "fix": "Ions are formed only by the loss or gain of electrons; a cation is formed by losing electrons.",
+    "probe": {
+     "question": "How does a neutral Sodium atom become a Na+ ion?",
+     "wrong_answer": "By adding a proton to the nucleus."
+    },
+    "error_type": "single_cause",
+    "root_belief": "positive means adding something",
+    "causes": [],
+    "trigger_cues": [
+     "cation",
+     "positive",
+     "charge",
+     "proton",
+     "electron"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Chemistry Misconceptions"
+   },
+   {
+    "key": "m7",
+    "node": "n14",
+    "statement": "In a chemical formula like H2O, the number 2 refers to the Oxygen atom.",
+    "why": "Students may read left-to-right and associate the number with the symbol that follows it.",
+    "fix": "The subscript in a chemical formula always refers to the atom immediately preceding it.",
+    "probe": {
+     "question": "In the formula MgCl2, how many Magnesium atoms are there?",
+     "wrong_answer": "Two"
+    },
+    "error_type": "other",
+    "root_belief": "spatial proximity determines relationship",
+    "causes": [],
+    "trigger_cues": [
+     "formula",
+     "subscript",
+     "ratio",
+     "symbol",
+     "writing"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m8",
+    "node": "n17",
+    "statement": "One mole of a heavy substance contains more particles than one mole of a light substance.",
+    "why": "Students confuse the 'amount of substance' (count) with the 'mass' of the substance.",
+    "fix": "One mole of any substance always contains exactly $6.022 \\times 10^{23}$ particles, regardless of its mass.",
+    "probe": {
+     "question": "Which contains more atoms: 1 mole of Gold or 1 mole of Helium?",
+     "wrong_answer": "1 mole of Gold because Gold atoms are heavier."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "heavier or bigger means more quantity",
+    "causes": [],
+    "trigger_cues": [
+     "mole",
+     "avogadro",
+     "particles",
+     "atoms",
+     "comparison"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Concept Inventories in Chemistry"
+   },
+   {
+    "key": "m9",
+    "node": "n19",
+    "statement": "Molar mass is the mass of one single molecule in grams.",
+    "why": "Confusion between the mass of a single microscopic particle and the mass of a macroscopic collection (a mole).",
+    "fix": "Molar mass is the mass of $6.022 \\times 10^{23}$ particles in grams; it is numerically equal to atomic/molecular mass.",
+    "probe": {
+     "question": "What is the mass of one single water molecule?",
+     "wrong_answer": "18 grams"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "confusing the part with the whole",
+    "causes": [],
+    "trigger_cues": [
+     "molar mass",
+     "molecular mass",
+     "grams",
+     "water",
+     "calculate"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m10",
+    "node": "n12",
+    "statement": "Valency and ionic charge are the same thing.",
+    "why": "For many simple ions, the magnitude of the charge is equal to the valency, leading to overgeneralization.",
+    "fix": "Valency is the combining capacity (a number), while charge is an electrical state (positive or negative).",
+    "probe": {
+     "question": "What is the valency of Chlorine in NaCl?",
+     "wrong_answer": "-1"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "related concepts are identical",
+    "causes": [],
+    "trigger_cues": [
+     "valency",
+     "charge",
+     "ion",
+     "combining capacity",
+     "symbol"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n8",
+    "statement": "Atoms are like tiny solid balls with no empty space inside.",
+    "why": "The 'billiard ball' model used in early instruction is taken literally by students.",
+    "fix": "Atoms consist of a tiny nucleus and a large amount of empty space where electrons are present.",
+    "probe": {
+     "question": "If you could look inside an atom, what would you see between the nucleus and electrons?",
+     "wrong_answer": "Solid matter or air."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "matter is continuous and solid",
+    "causes": [],
+    "trigger_cues": [
+     "structure",
+     "solid",
+     "sphere",
+     "dalton",
+     "empty space"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas in Science"
+   },
+   {
+    "key": "m12",
+    "node": "n20",
+    "statement": "To find the number of moles, you should multiply the given mass by the molar mass.",
+    "why": "Students often guess the mathematical operation (multiplication vs division) without understanding the relationship.",
+    "fix": "Number of moles is calculated by dividing the given mass by the molar mass.",
+    "probe": {
+     "question": "How many moles are in 36g of water (Molar mass = 18g/mol)?",
+     "wrong_answer": "648 moles"
+    },
+    "error_type": "other",
+    "root_belief": "math in science is just picking an operation",
+    "causes": [],
+    "trigger_cues": [
+     "calculate",
+     "moles",
+     "mass",
+     "formula",
+     "conversion"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}

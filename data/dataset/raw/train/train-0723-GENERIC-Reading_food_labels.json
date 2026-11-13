@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0723-GENERIC-Reading_food_labels",
+  "topic_id": "GEN-FOODLABELS",
+  "split": "train",
+  "generic": true,
+  "theme": "Reading food labels",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a step-by-step explanation of a process",
+  "seed": 723
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 713,
+  "candidatesTokenCount": 1117,
+  "totalTokenCount": 1830,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 713
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "Reading a food label is a vital skill for every student in India. Last Tuesday, Mr. Sharma, our science teacher in Delhi, explained the process using a packet of biscuits. First, look for the 'Serving Size' at the top, which tells you how much of the product is in one portion. Mr. Sharma noted that a single packet often contains 4 servings. Next, check the 'Total Sugars' line. If the label lists 12 grams of sugar per serving, you must multiply that by the number of servings to find the total amount in the packet. This calculation is necessary because the sugar content per serving is smaller than the total amount in the whole container. Finally, always look at the 'Ingredients' list, which is arranged by weight. The first item listed is the most abundant ingredient in the food. My friend Rohan, who lives in Mumbai, once ignored this and bought a snack that was mostly sugar. By following these three steps, you can make healthier choices for your body. Remember, reading the fine print helps you understand exactly what you are consuming every day.",
+  "summary": "This passage explains how to read food labels by checking serving sizes, calculating total sugar, and reviewing ingredient lists. It emphasizes that these steps help students make healthier dietary choices.",
+  "items": [
+   {
+    "evidence": "Last Tuesday, Mr. Sharma, our science teacher in Delhi, explained the process using a packet of biscuits.",
+    "answer": "Mr. Sharma",
+    "stem": "Who taught the class about reading labels?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Student picks the place name mentioned near the question.",
+      "text": "Delhi"
+     },
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Student picks a number from the text as an answer.",
+      "text": "4"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Student picks a true fact that does not answer who.",
+      "text": "A packet of biscuits"
+     }
+    ]
+   },
+   {
+    "evidence": "Mr. Sharma noted that a single packet often contains 4 servings.",
+    "answer": "4",
+    "stem": "How many portions are typically found in one biscuit packet?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Student picks the person named in the same sentence.",
+      "text": "Mr. Sharma"
+     },
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Student picks a different number found later in the text.",
+      "text": "12"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Student picks a true fact that is not the count.",
+      "text": "A single packet"
+     }
+    ]
+   },
+   {
+    "evidence": "This calculation is necessary because the sugar content per serving is smaller than the total amount in the whole container.",
+    "answer": "sugar content per serving is smaller",
+    "stem": "Why must you multiply the sugar amount by the number of servings?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Student reverses the cause and effect relationship.",
+      "text": "The total amount is smaller than the serving"
+     },
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Student interprets 'calculation' as a school math homework task.",
+      "text": "To finish the math homework"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Student picks a true fact about ingredients instead of sugar.",
+      "text": "The ingredients are listed by weight"
+     }
+    ]
+   },
+   {
+    "evidence": "My friend Rohan, who lives in Mumbai, once ignored this and bought a snack that was mostly sugar.",
+    "answer": "Rohan",
+    "stem": "Who made a mistake by not checking the ingredients list?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Student picks the place name mentioned in the sentence.",
+      "text": "Mumbai"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Student assumes all students make this mistake.",
+      "text": "Every student"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Student picks a true fact about the snack.",
+      "text": "Mostly sugar"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 3.8
+}

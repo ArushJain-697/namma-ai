@@ -1,0 +1,454 @@
+{
+ "topic": {
+  "id": "SOC-ECO-POVERTY",
+  "subject": "social",
+  "strand": "economics",
+  "grades": [
+   9
+  ],
+  "title": "Poverty as a challenge",
+  "scope": "poverty line, measuring poverty, causes, vulnerable groups, anti-poverty schemes"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 826,
+  "candidatesTokenCount": 1520,
+  "totalTokenCount": 2346,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 826
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 5.2,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Measuring Poverty",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "basic arithmetic",
+     "concept of income"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Causes of Poverty",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "historical context of colonialism"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Anti-Poverty Measures",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "role of government"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Poverty Line Definition",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "definition of a standard"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Indicators of Poverty",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "standard of living"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Historical Causes",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "British rule in India"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Socio-Economic Causes",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "social inequality"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Vulnerable Groups",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "social stratification"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Government Schemes",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "public policy"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Poverty Line is a fixed monetary value",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Poverty is only lack of money",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Poverty is solely due to laziness",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "MGNREGA provides permanent jobs",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n10",
+    "statement": "The poverty line is the same amount of money for every person in India.",
+    "why": "Students ignore that the poverty line varies by rural/urban areas and states due to cost of living.",
+    "fix": "The poverty line is a minimum threshold that varies based on regional price differences and rural-urban consumption needs.",
+    "probe": {
+     "question": "If the poverty line is Rs 816 in rural areas, is it the same in urban areas?",
+     "wrong_answer": "Yes, it is a national fixed standard."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "a single rule applies to all contexts",
+    "causes": [],
+    "trigger_cues": [
+     "poverty line",
+     "rural",
+     "urban",
+     "consumption",
+     "minimum"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n11",
+    "statement": "Poverty is only about not having enough money to buy food.",
+    "why": "Students equate poverty with physical hunger, ignoring social exclusion and illiteracy.",
+    "fix": "Poverty includes social exclusion, lack of access to healthcare, clean water, and education, not just income.",
+    "probe": {
+     "question": "Can a person with money still be considered poor?",
+     "wrong_answer": "No, if they have money they are not poor."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "social exclusion",
+     "illiteracy",
+     "healthcare",
+     "standard of living"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on social science concepts"
+   },
+   {
+    "key": "m3",
+    "node": "n12",
+    "statement": "People are poor because they do not work hard enough.",
+    "why": "Students overemphasize individual agency while ignoring structural barriers like caste and historical exploitation.",
+    "fix": "Poverty is often the result of structural factors like lack of land, low job opportunities, and historical social discrimination.",
+    "probe": {
+     "question": "Why are some communities consistently poorer than others?",
+     "wrong_answer": "They lack the motivation to work hard."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "one event has one single cause",
+    "causes": [],
+    "trigger_cues": [
+     "laziness",
+     "hard work",
+     "structural",
+     "inequality",
+     "caste"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m4",
+    "node": "n13",
+    "statement": "MGNREGA guarantees a permanent job for everyone for their whole life.",
+    "why": "Students confuse the 'right to work' with permanent employment.",
+    "fix": "MGNREGA provides 100 days of guaranteed wage employment to rural households, not permanent jobs.",
+    "probe": {
+     "question": "Does MGNREGA provide a permanent government job?",
+     "wrong_answer": "Yes, it is a permanent job scheme."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "mgnrega",
+     "guarantee",
+     "100 days",
+     "wage employment"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "id": "m5",
+    "node": "n5",
+    "statement": "Poverty is measured only by income, so literacy, health and nutrition do not count as indicators.",
+    "why": "Students equate poverty with low earnings and overlook the social indicators in the syllabus.",
+    "fix": "Poverty indicators include income and consumption, but also illiteracy, malnutrition, poor health, lack of job opportunities, and lack of access to safe drinking water and sanitation.",
+    "probe": {
+     "question": "Which of these is used as an indicator of poverty: a child's malnutrition level, or only the family's monthly income?",
+     "wrong_answer": "Only the family's monthly income, because malnutrition is a health matter and not poverty."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Poverty means income alone, not wider deprivation",
+    "causes": [],
+    "trigger_cues": [
+     "indicators",
+     "poverty",
+     "measured",
+     "income",
+     "literacy",
+     "health",
+     "nutrition"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 9 Economics, Poverty as a Challenge",
+    "key": "m5"
+   },
+   {
+    "id": "m6",
+    "node": "n4",
+    "statement": "The poverty line is set by each village or family according to what they feel they need.",
+    "why": "Students think the line is a personal or local opinion rather than an official estimate.",
+    "fix": "The poverty line is estimated by the government (Planning Commission, now NITI Aayog, using NSSO survey data) from the money needed for a minimum calorie intake and other basic needs, with separate lines for rural and urban areas.",
+    "probe": {
+     "question": "Who estimates the poverty line in India?",
+     "wrong_answer": "Each village decides it for itself based on what its families feel they need."
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "Poverty line is decided locally or personally",
+    "causes": [],
+    "trigger_cues": [
+     "who",
+     "decides",
+     "poverty line",
+     "estimates",
+     "government",
+     "survey"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 9 Economics, Poverty as a Challenge",
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n4",
+    "statement": "The poverty line is based on a 2400 calorie requirement in both villages and cities.",
+    "why": "Students memorise one calorie figure and apply it everywhere, overlooking that needs differ.",
+    "fix": "The accepted norm is 2400 calories per person per day in rural areas and 2100 in urban areas, because rural people do more physical work.",
+    "probe": {
+     "question": "What daily calorie requirement is used for the urban poverty line?",
+     "wrong_answer": "2400 calories, the same as the rural line."
+    },
+    "error_type": "numerical_misreading",
+    "root_belief": "One calorie norm applies to all areas",
+    "causes": [],
+    "trigger_cues": [
+     "calorie",
+     "urban",
+     "rural",
+     "2100",
+     "2400",
+     "poverty line"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 9 Economics, Poverty as a Challenge",
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n6",
+    "statement": "Poverty in India began only after independence because of government failure.",
+    "why": "Students think of poverty as a recent political problem, ignoring colonial history.",
+    "fix": "Widespread poverty has historical roots in British colonial rule, which decayed handicrafts and textiles, and in low growth rates and high population growth in the decades after.",
+    "probe": {
+     "question": "Which period's policies contributed to the historical roots of India's poverty?",
+     "wrong_answer": "Poverty began only after 1947 as a result of independent India's governments."
+    },
+    "error_type": "chronology_slip",
+    "root_belief": "Poverty is a recent problem with no colonial roots",
+    "causes": [],
+    "trigger_cues": [
+     "historical",
+     "causes",
+     "british",
+     "colonial",
+     "independence",
+     "handicrafts"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 9 Economics, Poverty as a Challenge",
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n7",
+    "statement": "Rapid population growth is the only reason India has poverty.",
+    "why": "Students pick up the 'too many people' explanation and treat it as the sole cause.",
+    "fix": "Poverty has many causes: unequal land and income distribution, unemployment, low agricultural productivity, social customs and expensive ceremonies, illiteracy, and indebtedness, besides population growth.",
+    "probe": {
+     "question": "Why do many families in India remain poor?",
+     "wrong_answer": "Only because the population is too large."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "One cause alone explains poverty",
+    "causes": [],
+    "trigger_cues": [
+     "why",
+     "poor",
+     "population",
+     "causes",
+     "unemployment",
+     "inequality"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Research on student single-cause reasoning in social science; NCERT",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n8",
+    "statement": "Poverty affects all castes and households equally.",
+    "why": "Students overgeneralise and ignore differences in who is more likely to be poor.",
+    "fix": "Scheduled Caste and Scheduled Tribe households, casual labourers in urban areas and agricultural labourers in rural areas are the most vulnerable; women, children and the elderly also suffer more within poor families.",
+    "probe": {
+     "question": "Which group is more likely to be poor: agricultural labourer households or all groups equally?",
+     "wrong_answer": "All groups are equally likely to be poor."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Poverty hits every social group equally",
+    "causes": [],
+    "trigger_cues": [
+     "vulnerable",
+     "groups",
+     "caste",
+     "scheduled",
+     "labourers",
+     "equally"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 9 Economics, Poverty as a Challenge",
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n8",
+    "statement": "Poverty exists only in rural India, and cities have no poor people.",
+    "why": "Students picture poverty as village landlessness and imagine cities as prosperous.",
+    "fix": "Poverty exists in both rural and urban India; urban poor include casual labourers and slum dwellers, and the poverty line is estimated for both.",
+    "probe": {
+     "question": "Do poor people live in Indian cities too?",
+     "wrong_answer": "No, poverty is found only in villages."
+    },
+    "error_type": "stereotype",
+    "root_belief": "Poverty is a village-only phenomenon",
+    "causes": [],
+    "trigger_cues": [
+     "urban",
+     "cities",
+     "slum",
+     "rural",
+     "poor",
+     "where"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 9 Economics, Poverty as a Challenge",
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n9",
+    "statement": "The Public Distribution System gives free food to everyone in India.",
+    "why": "Students mix up PDS and free-meal schemes, and ignore the subsidised pricing and targeting.",
+    "fix": "PDS supplies foodgrains and other items at subsidised prices through ration shops, with the poor targeted through ration cards; it is not free for all.",
+    "probe": {
+     "question": "How do families get food under the PDS?",
+     "wrong_answer": "Everyone receives it completely free from ration shops."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Government schemes give everything free to all",
+    "causes": [],
+    "trigger_cues": [
+     "pds",
+     "ration",
+     "subsidised",
+     "free",
+     "food",
+     "scheme"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 9 Economics, Poverty as a Challenge",
+    "key": "m12"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

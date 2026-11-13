@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0192-GEN-FOODLABELS",
+  "topic_id": "GEN-FOODLABELS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a comparison of two related ideas",
+  "seed": 192
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1053,
+  "candidatesTokenCount": 1192,
+  "totalTokenCount": 2245,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1053
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-FOODLABELS-K25-M20",
+  "GEN-FOODLABELS-K13-M1",
+  "GEN-FOODLABELS-K23-M17",
+  "GEN-FOODLABELS-K20-M12",
+  "GEN-FOODLABELS-K26-M21",
+  "GEN-FOODLABELS-K14-M3",
+  "GEN-FOODLABELS-K12-M26",
+  "GEN-FOODLABELS-K20-M13",
+  "GEN-FOODLABELS-K28-M23",
+  "GEN-FOODLABELS-K27-M22",
+  "GEN-FOODLABELS-K16-M6",
+  "GEN-FOODLABELS-K22-M15",
+  "GEN-FOODLABELS-K18-M9",
+  "GEN-FOODLABELS-K19-M11"
+ ],
+ "response": {
+  "passage": "When buying packaged snacks, students often get confused by the information printed on the labels. First, look at the ingredient list, which is always arranged by weight. The ingredient listed first is present in the largest quantity, not the smallest. Many people assume that if sugar is not the first ingredient, the food is low in sugar, but manufacturers often use multiple names for sugar like syrup or dextrose to hide the total amount. Second, check the nutrition facts table carefully. The values provided are usually per serving, not for the entire packet. If you eat the whole bag, you are consuming multiple servings and thus more calories than the label suggests. Third, understand the symbols. A green dot indicates the product is vegetarian, but it does not mean the food is free from chemicals or additives. Finally, pay attention to dates. An expiry date indicates when a product is no longer safe to consume, whereas a 'best before' date refers to the peak quality of the food. Always store products as instructed, because the date is only valid if the packaging remains sealed and stored in a cool, dry place as recommended by the manufacturer.",
+  "summary": "Food labels provide essential information about ingredients, serving sizes, and safety dates. Understanding these details helps consumers make healthier choices and avoid common marketing traps. Always check storage instructions to ensure the dates remain reliable.",
+  "items": [
+   {
+    "evidence": "The ingredient listed first is present in the largest quantity, not the smallest.",
+    "answer": "largest quantity",
+    "stem": "Which amount does the first ingredient on a food label represent?",
+    "options": [
+     {
+      "belief_id": "GEN-FOODLABELS-K13-M1",
+      "why": "Student thinks the first ingredient is the smallest amount.",
+      "text": "smallest quantity"
+     },
+     {
+      "belief_id": "GEN-FOODLABELS-K14-M3",
+      "why": "Student thinks position determines if sugar is low.",
+      "text": "a low amount"
+     },
+     {
+      "belief_id": "GEN-FOODLABELS-K16-M6",
+      "why": "Student confuses ingredient order with chemical codes.",
+      "text": "a harmful chemical"
+     }
+    ]
+   },
+   {
+    "evidence": "The values provided are usually per serving, not for the entire packet.",
+    "answer": "per serving",
+    "stem": "What do the nutrition values on a label typically represent?",
+    "options": [
+     {
+      "belief_id": "GEN-FOODLABELS-K18-M9",
+      "why": "Student thinks the whole packet equals one serving.",
+      "text": "the entire packet"
+     },
+     {
+      "belief_id": "GEN-FOODLABELS-K20-M12",
+      "why": "Student thinks values show percentage of total weight.",
+      "text": "percentage of weight"
+     },
+     {
+      "belief_id": "GEN-FOODLABELS-K20-M13",
+      "why": "Student thinks values are fixed for everyone.",
+      "text": "exact daily needs"
+     }
+    ]
+   },
+   {
+    "evidence": "A green dot indicates the product is vegetarian, but it does not mean the food is free from chemicals or additives.",
+    "answer": "product is vegetarian",
+    "stem": "What is the actual meaning of a green dot on a food package?",
+    "options": [
+     {
+      "belief_id": "GEN-FOODLABELS-K23-M17",
+      "why": "Student thinks green dot means no additives.",
+      "text": "no chemicals present"
+     },
+     {
+      "belief_id": "GEN-FOODLABELS-K22-M15",
+      "why": "Student thinks symbols indicate health status.",
+      "text": "the food is healthy"
+     },
+     {
+      "belief_id": "GEN-FOODLABELS-K12-M26",
+      "why": "Student thinks symbols indicate low fat content.",
+      "text": "low fat content"
+     }
+    ]
+   },
+   {
+    "evidence": "An expiry date indicates when a product is no longer safe to consume, whereas a 'best before' date refers to the peak quality of the food.",
+    "answer": "no longer safe",
+    "stem": "What happens to food after its expiry date?",
+    "options": [
+     {
+      "belief_id": "GEN-FOODLABELS-K25-M20",
+      "why": "Student thinks food is safe if it looks fine.",
+      "text": "it is still safe"
+     },
+     {
+      "belief_id": "GEN-FOODLABELS-K26-M21",
+      "why": "Student thinks expiry and best before are identical.",
+      "text": "it loses peak quality"
+     },
+     {
+      "belief_id": "GEN-FOODLABELS-K27-M22",
+      "why": "Student ignores storage conditions for safety.",
+      "text": "it depends on storage"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 7.2
+}

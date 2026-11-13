@@ -1,0 +1,438 @@
+{
+ "topic": {
+  "id": "SOC-ECO-DEVELOPMENT",
+  "subject": "social",
+  "strand": "economics",
+  "grades": [
+   10
+  ],
+  "title": "Development",
+  "scope": "different goals, national and per capita income, HDI, literacy and infant mortality, sustainability"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 826,
+  "candidatesTokenCount": 1413,
+  "totalTokenCount": 2239,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 826
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 5.0,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Developmental Goals",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "basic needs vs wants"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "National Income Metrics",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "basic arithmetic",
+     "averages"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Human Development Indicators",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "health and literacy basics"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Sustainability",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "natural resources"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Diverse Goals",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "individual perspective"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Conflicting Goals",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Per Capita Income",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "division"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "HDI Components",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Resource Depletion",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "renewable vs non-renewable"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Income is not everything",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Averages hide disparities",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Literacy and IMR",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n7",
+    "statement": "A higher per capita income means everyone in the country is equally rich.",
+    "why": "Students confuse the mathematical average with an equal distribution of wealth.",
+    "fix": "Per capita income is an average; it does not show how income is distributed among the rich and the poor.",
+    "probe": {
+     "question": "If Country A has a higher average income than Country B, is every citizen in A richer than in B?",
+     "wrong_answer": "Yes, because the average is higher."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Averages represent the status of every individual.",
+    "causes": [],
+    "trigger_cues": [
+     "per capita",
+     "average income",
+     "national income",
+     "wealth distribution"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on statistical literacy"
+   },
+   {
+    "key": "m2",
+    "node": "n10",
+    "statement": "Development is only about earning more money.",
+    "why": "Students equate economic growth with the broader concept of human development.",
+    "fix": "Development includes non-material goals like freedom, security, equal treatment, and a clean environment.",
+    "probe": {
+     "question": "Which is a better measure of development: salary or freedom and health?",
+     "wrong_answer": "Salary, because money buys everything."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Money is the sole indicator of success.",
+    "causes": [],
+    "trigger_cues": [
+     "material goals",
+     "non-material goals",
+     "income",
+     "development"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT pedagogical framework"
+   },
+   {
+    "key": "m3",
+    "node": "n9",
+    "statement": "Sustainability means we should stop using all natural resources.",
+    "why": "Students interpret 'sustainability' as 'total preservation' rather than 'judicious use'.",
+    "fix": "Sustainability means using resources in a way that meets current needs without compromising the ability of future generations to meet theirs.",
+    "probe": {
+     "question": "Is sustainable development about stopping all mining?",
+     "wrong_answer": "Yes, we must stop using resources to save them."
+    },
+    "error_type": "other",
+    "root_belief": "Conservation means zero consumption.",
+    "causes": [],
+    "trigger_cues": [
+     "sustainability",
+     "future generations",
+     "natural resources",
+     "depletion"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n12",
+    "statement": "Literacy rate is the percentage of people who can write their name.",
+    "why": "Students confuse basic literacy with functional literacy.",
+    "fix": "Literacy rate measures the proportion of the 7-year-old and above population that can read and write with understanding in any language.",
+    "probe": {
+     "question": "Who is counted as literate?",
+     "wrong_answer": "Anyone who can sign their name."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "A word means its everyday meaning.",
+    "causes": [],
+    "trigger_cues": [
+     "literacy rate",
+     "7 years",
+     "understanding",
+     "population"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Census of India definitions"
+   },
+   {
+    "id": "m5",
+    "node": "n7",
+    "statement": "Per capita income is the total income earned by the whole country.",
+    "why": "Students confuse 'per capita' with the national total and ignore that it is divided by population.",
+    "fix": "Per capita income is the country's total income divided by its total population, so it is the average income per person.",
+    "probe": {
+     "question": "A country earns a total of Rs 10,00,000 crore and has 100 crore people. What is its per capita income?",
+     "wrong_answer": "Rs 10,00,000 crore, because per capita income is the total income of the country."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "per capita means total, not average per person",
+    "causes": [],
+    "trigger_cues": [
+     "per capita",
+     "total income",
+     "country income",
+     "divided by population",
+     "average income"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation",
+    "key": "m5"
+   },
+   {
+    "id": "m6",
+    "node": "n7",
+    "statement": "A country with a larger population always has a higher per capita income.",
+    "why": "Students link a big population with a big economy and forget that population is the divisor.",
+    "fix": "For the same total income, a larger population gives a lower per capita income because the income is shared among more people.",
+    "probe": {
+     "question": "Two countries have the same total income, but country A has twice the population of country B. Which has the higher per capita income?",
+     "wrong_answer": "Country A, because more people means more income per person."
+    },
+    "error_type": "numerical_misreading",
+    "root_belief": "more people always means more income per person",
+    "causes": [],
+    "trigger_cues": [
+     "population",
+     "larger population",
+     "per capita income",
+     "same total income",
+     "compare countries"
+    ],
+    "confidence": "plausible",
+    "source_hint": null,
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n8",
+    "statement": "HDI is calculated only from a country's income and wealth.",
+    "why": "Students carry over the idea of income as the only measure of development and ignore the other HDI components.",
+    "fix": "HDI combines three parts: health (life expectancy), education (years of schooling) and standard of living (per capita income).",
+    "probe": {
+     "question": "Name the components used to calculate the Human Development Index.",
+     "wrong_answer": "Only GDP and per capita income, since HDI measures how rich a country is."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "HDI is just another income measure",
+    "causes": [],
+    "trigger_cues": [
+     "hdi",
+     "components",
+     "human development index",
+     "how calculated",
+     "life expectancy",
+     "schooling"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT-based exam answers",
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n8",
+    "statement": "The HDI rank is given by the United Nations Development Programme (UNDP), and the World Bank prepares it.",
+    "why": "Students mix up the UNDP, which publishes the Human Development Report, with the World Bank, which classifies countries by income.",
+    "fix": "The UNDP publishes the Human Development Report and HDI rankings. The World Bank classifies countries by income as rich or low-income.",
+    "probe": {
+     "question": "Which organisation publishes the Human Development Report with HDI rankings?",
+     "wrong_answer": "The World Bank publishes the Human Development Report."
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "all international development bodies do the same work",
+    "causes": [],
+    "trigger_cues": [
+     "undp",
+     "world bank",
+     "human development report",
+     "who publishes",
+     "hdi ranking"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT textbook",
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n9",
+    "statement": "Groundwater and fossil fuels are renewable resources that will never run out.",
+    "why": "Students see water and fuel as always available and mix up renewable and non-renewable resources.",
+    "fix": "Groundwater is used faster than it is replenished in many places, and fossil fuels take millions of years to form, so overuse depletes them.",
+    "probe": {
+     "question": "Why do experts warn about falling groundwater levels in Punjab and Haryana?",
+     "wrong_answer": "They need not worry, because groundwater is renewable and always refills itself however much is used."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "renewable means unlimited whatever the rate of use",
+    "causes": [],
+    "trigger_cues": [
+     "groundwater",
+     "renewable",
+     "non-renewable",
+     "fossil fuels",
+     "running out",
+     "depletion"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "science education research on resources",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n10",
+    "statement": "A country with a high per capita income must also have good health and education.",
+    "why": "Students assume income automatically buys good health and schooling for everyone.",
+    "fix": "Income does not buy everything. Kerala has a lower per capita income than Haryana but a better literacy rate and a lower infant mortality rate. Public facilities like schools and health centres matter.",
+    "probe": {
+     "question": "Haryana has a higher per capita income than Kerala. Which state has the better literacy rate and lower IMR?",
+     "wrong_answer": "Haryana, since its higher income gives better schools and hospitals."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "money alone guarantees health and education",
+    "causes": [],
+    "trigger_cues": [
+     "haryana",
+     "kerala",
+     "per capita income",
+     "literacy",
+     "infant mortality",
+     "compare states"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 10 Economics",
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n11",
+    "statement": "If the average income of a country is high, then every person in it earns near that average.",
+    "why": "Students read an average as a typical value and miss that a few very rich people can pull it up.",
+    "fix": "An average hides differences. Some people may earn far more and others far less than the average, so look at the distribution too.",
+    "probe": {
+     "question": "Five people earn Rs 1,000 each and one earns Rs 25,000. The average is Rs 5,000. Is it a good picture of what most of them earn?",
+     "wrong_answer": "Yes, most people in the group earn about Rs 5,000."
+    },
+    "error_type": "numerical_misreading",
+    "root_belief": "an average represents each individual's value",
+    "causes": [],
+    "trigger_cues": [
+     "average income",
+     "most people earn",
+     "one rich person",
+     "distribution",
+     "typical",
+     "disparity"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "mathematics education research on mean",
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n12",
+    "statement": "Infant Mortality Rate is the number of infants who die out of every 100 people in the country.",
+    "why": "Students mix up the base for IMR with percentages of the whole population.",
+    "fix": "IMR is the number of children who die before the age of one year, per 1000 live births in that year.",
+    "probe": {
+     "question": "What does an IMR of 30 mean?",
+     "wrong_answer": "Thirty out of every hundred people in the country die in infancy."
+    },
+    "error_type": "numerical_misreading",
+    "root_belief": "rates are always per hundred of the whole population",
+    "causes": [],
+    "trigger_cues": [
+     "infant mortality rate",
+     "imr",
+     "per 1000",
+     "live births",
+     "before age one",
+     "rate meaning"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 10 Economics",
+    "key": "m12"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "test-0042-MAT-SIMPLEEQ",
+  "topic_id": "MAT-SIMPLEEQ",
+  "split": "test",
+  "test_only_topic": true,
+  "grade": 7,
+  "style": "a conversation between a teacher and two students",
+  "seed": 42
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 1205,
+  "candidatesTokenCount": 1292,
+  "totalTokenCount": 2497,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1205
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-SIMPLEEQ-K18-M22",
+  "MAT-SIMPLEEQ-K6-M6",
+  "MAT-SIMPLEEQ-K8-M3",
+  "MAT-SIMPLEEQ-K20-M16",
+  "MAT-SIMPLEEQ-K15-M10",
+  "MAT-SIMPLEEQ-K19-M13",
+  "MAT-SIMPLEEQ-K21-M17",
+  "MAT-SIMPLEEQ-K22-M20",
+  "MAT-SIMPLEEQ-K9-M7",
+  "MAT-SIMPLEEQ-K20-M14",
+  "MAT-SIMPLEEQ-K22-M19",
+  "MAT-SIMPLEEQ-K20-M15",
+  "MAT-SIMPLEEQ-K12-M11",
+  "MAT-SIMPLEEQ-K7-M2"
+ ],
+ "response": {
+  "passage": "Teacher: Today we are solving equations like 2x + 3 = 11. Remember, an equation is a balance scale where the equals sign is the center. If you add or subtract, you must do it to both sides to keep the balance. Rohan, how would you start solving 2x + 3 = 11? Rohan: I think I should add 2 and 3 first to get 5x = 11. Teacher: Not quite, Rohan. The 2 is multiplying the x, so they are a single term. You cannot combine them with the 3. You must remove the constant first by subtracting 3 from both sides. Priya: So, if I subtract 3, I get 2x = 8. Then, do I divide by 2 to find x? Teacher: Exactly, Priya. Dividing both sides by 2 gives x = 4. Always remember that 2x means 2 multiplied by x, not a digit like 24. Finally, check your answer by putting 4 back into the original equation: 2(4) + 3 equals 8 + 3, which is 11. If the left side matches the right side, your solution is correct. Never assume the equation is true for any value; it is only true for specific numbers that balance the scale.",
+  "summary": "This conversation explains that equations are like balance scales requiring identical operations on both sides. It clarifies that terms cannot be combined incorrectly and emphasizes checking solutions by substituting values back into the original equation.",
+  "items": [
+   {
+    "evidence": "If you add or subtract, you must do it to both sides to keep the balance.",
+    "answer": "do it to both sides",
+    "stem": "What must you do to maintain the balance of an equation when you add or subtract a number?",
+    "options": [
+     {
+      "belief_id": "MAT-SIMPLEEQ-K6-M6",
+      "why": "Believes adding to one side keeps the equation true.",
+      "text": "add it to only one side"
+     },
+     {
+      "belief_id": "MAT-SIMPLEEQ-K20-M14",
+      "why": "Believes subtraction is the only operation needed regardless of the sign.",
+      "text": "always subtract from both sides"
+     },
+     {
+      "belief_id": "MAT-SIMPLEEQ-K20-M16",
+      "why": "Believes guessing is sufficient without following formal steps.",
+      "text": "guess a number that fits"
+     }
+    ]
+   },
+   {
+    "evidence": "The 2 is multiplying the x, so they are a single term.",
+    "answer": "a single term",
+    "stem": "Why can you not combine 2x and 3 in the equation 2x + 3 = 11?",
+    "options": [
+     {
+      "belief_id": "MAT-SIMPLEEQ-K18-M22",
+      "why": "Believes coefficients and constants can be added together.",
+      "text": "they make 5x"
+     },
+     {
+      "belief_id": "MAT-SIMPLEEQ-K7-M2",
+      "why": "Believes the variable represents an object, not a number.",
+      "text": "x represents an object"
+     },
+     {
+      "belief_id": "MAT-SIMPLEEQ-K12-M11",
+      "why": "Believes any expression with a variable is an equation.",
+      "text": "it is not an equation"
+     }
+    ]
+   },
+   {
+    "evidence": "Always remember that 2x means 2 multiplied by x, not a digit like 24.",
+    "answer": "2 multiplied by x",
+    "stem": "What does the expression 2x represent in an algebraic equation?",
+    "options": [
+     {
+      "belief_id": "MAT-SIMPLEEQ-K8-M3",
+      "why": "Believes variables and coefficients are just written together as digits.",
+      "text": "the digits 2 and x"
+     },
+     {
+      "belief_id": "MAT-SIMPLEEQ-K19-M13",
+      "why": "Believes transposing changes the multiplication to subtraction.",
+      "text": "2 minus x"
+     },
+     {
+      "belief_id": "MAT-SIMPLEEQ-K21-M17",
+      "why": "Believes division is the first step before subtraction.",
+      "text": "x divided by 2"
+     }
+    ]
+   },
+   {
+    "evidence": "If the left side matches the right side, your solution is correct.",
+    "answer": "matches the right side",
+    "stem": "How do you verify that your calculated value for x is the correct solution?",
+    "options": [
+     {
+      "belief_id": "MAT-SIMPLEEQ-K22-M20",
+      "why": "Believes a larger number on the left indicates correctness.",
+      "text": "left side is bigger"
+     },
+     {
+      "belief_id": "MAT-SIMPLEEQ-K22-M19",
+      "why": "Believes checking is unnecessary if the steps look right.",
+      "text": "the working looks right"
+     },
+     {
+      "belief_id": "MAT-SIMPLEEQ-K9-M7",
+      "why": "Believes the equation is true for any value.",
+      "text": "any value works"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 45.2
+}

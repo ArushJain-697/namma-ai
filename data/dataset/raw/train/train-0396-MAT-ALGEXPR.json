@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0396-MAT-ALGEXPR",
+  "topic_id": "MAT-ALGEXPR",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a clear textbook explanation with one worked example",
+  "seed": 396
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 1153,
+  "candidatesTokenCount": 1406,
+  "totalTokenCount": 2559,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1153
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-ALGEXPR-K13-M1",
+  "MAT-ALGEXPR-K20-M16",
+  "MAT-ALGEXPR-K19-M14",
+  "MAT-ALGEXPR-K18-M11",
+  "MAT-ALGEXPR-K20-M15",
+  "MAT-ALGEXPR-K11-M4",
+  "MAT-ALGEXPR-K14-M5",
+  "MAT-ALGEXPR-K21-M17",
+  "MAT-ALGEXPR-K22-M18",
+  "MAT-ALGEXPR-K23-M20",
+  "MAT-ALGEXPR-K24-M22",
+  "MAT-ALGEXPR-K22-M19",
+  "MAT-ALGEXPR-K26-M24",
+  "MAT-ALGEXPR-K17-M10"
+ ],
+ "response": {
+  "passage": "In algebra, we use letters to represent unknown values. A term is a product of factors, such as 3x, where 3 is the numerical coefficient and x is the variable. When we multiply terms, we add the exponents of the same base, so x² multiplied by x³ equals x⁵. When a number is placed outside a bracket, like 2x(3x + 4), it must be distributed to every term inside, resulting in 6x² + 8x. This is different from addition; for example, x + x equals 2x, not x². Another common error occurs when squaring a binomial. The identity (a + b)² equals a² + 2ab + b². This means the square of a sum includes an extra middle term, 2ab, which represents the combined area of two rectangles. For instance, (x + 3)² becomes x² + 6x + 9. Finally, when subtracting one expression from another, such as subtracting (2x - 3) from (5x + 4), we must change the signs of every term in the expression being subtracted. This gives us (5x + 4) - 2x + 3, which simplifies to 3x + 7. Always remember that algebraic identities are universal tools that work for both variables and numbers, allowing us to calculate values like 102² by treating it as (100 + 2)².",
+  "summary": "Algebraic expressions involve specific rules for operations, including distribution, exponent addition, and binomial expansion. Understanding these identities helps simplify complex expressions and perform calculations efficiently. Always apply operations to every term within brackets to ensure accuracy.",
+  "items": [
+   {
+    "evidence": "When we multiply terms, we add the exponents of the same base, so x² multiplied by x³ equals x⁵.",
+    "answer": "x⁵",
+    "stem": "What is the result of multiplying x² by x³?",
+    "options": [
+     {
+      "belief_id": "MAT-ALGEXPR-K19-M14",
+      "why": "Student incorrectly multiplies the powers instead of adding them.",
+      "text": "x⁶"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K17-M10",
+      "why": "Student confuses multiplication of variables with repeated addition.",
+      "text": "x⁵ is wrong, it should be x² + x³"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K14-M5",
+      "why": "Student assumes variables with different powers are like terms.",
+      "text": "5x"
+     }
+    ]
+   },
+   {
+    "evidence": "When a number is placed outside a bracket, like 2x(3x + 4), it must be distributed to every term inside, resulting in 6x² + 8x.",
+    "answer": "6x² + 8x",
+    "stem": "What is the correct expansion of 2x(3x + 4)?",
+    "options": [
+     {
+      "belief_id": "MAT-ALGEXPR-K20-M15",
+      "why": "Student only multiplies the first term inside the bracket.",
+      "text": "6x² + 4"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K20-M16",
+      "why": "Student fails to distribute the term to the constant.",
+      "text": "6x² + 4x"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K13-M1",
+      "why": "Student treats the algebraic term as a multi-digit number.",
+      "text": "23x + 4"
+     }
+    ]
+   },
+   {
+    "evidence": "The identity (a + b)² equals a² + 2ab + b².",
+    "answer": "a² + 2ab + b²",
+    "stem": "What is the expanded form of the square of a binomial (a + b)²?",
+    "options": [
+     {
+      "belief_id": "MAT-ALGEXPR-K22-M18",
+      "why": "Student ignores the middle term in the binomial expansion.",
+      "text": "a² + b²"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K22-M19",
+      "why": "Student assumes the area is only the sum of two squares.",
+      "text": "a² + 4"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K21-M17",
+      "why": "Student only multiplies the first and last terms.",
+      "text": "a² + b² + 2ab is wrong, it is a² + b²"
+     }
+    ]
+   },
+   {
+    "evidence": "When subtracting one expression from another, such as subtracting (2x - 3) from (5x + 4), we must change the signs of every term in the expression being subtracted.",
+    "answer": "change the signs of every term",
+    "stem": "What is the rule when subtracting one algebraic expression from another?",
+    "options": [
+     {
+      "belief_id": "MAT-ALGEXPR-K18-M11",
+      "why": "Student only changes the sign of the first term.",
+      "text": "change the sign of the first term only"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K11-M4",
+      "why": "Student confuses coefficients with the entire term structure.",
+      "text": "change only the numerical coefficient sign"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K26-M24",
+      "why": "Student believes operations only apply to letters, not signs.",
+      "text": "only subtract the constant terms"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.5
+}

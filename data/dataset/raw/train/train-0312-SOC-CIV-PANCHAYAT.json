@@ -1,0 +1,85 @@
+{
+ "job": {
+  "job": "train-0312-SOC-CIV-PANCHAYAT",
+  "topic_id": "SOC-CIV-PANCHAYAT",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a passage rich in numbers, dates or measurements",
+  "seed": 312
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 674,
+  "candidatesTokenCount": 836,
+  "totalTokenCount": 1510,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 674
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "SOC-CIV-PANCHAYAT-K8-M1",
+  "SOC-CIV-PANCHAYAT-K7-M4",
+  "SOC-CIV-PANCHAYAT-K11-M3",
+  "SOC-CIV-PANCHAYAT-K9-M2"
+ ],
+ "response": {
+  "passage": "In the village of Rampur, the local governance structure is organized into three distinct levels. The foundation is the Gram Sabha, which includes every adult resident of the village who is 18 years or older, ensuring that all citizens have a voice in local affairs. The Gram Sabha elects the Gram Panchayat, which consists of a Sarpanch and several Ward members who serve for a five-year term. Decisions regarding village development, such as building a school or fixing a road, are made collectively by the Gram Sabha, not by the Sarpanch alone. Above the village level, the Panchayat Samiti coordinates activities at the block level. Finally, the Zila Parishad oversees the entire district, managing funds and development projects, but it does not possess the authority to create national laws. In urban areas, the system differs slightly; residents vote to elect their own Ward Councillors to represent their specific neighborhoods in the Municipal Corporation. These councillors are directly chosen by the local voters rather than being appointed by government officials. This democratic structure ensures that power is distributed across different levels, preventing any single individual from holding absolute control over village or city administration.",
+  "summary": "The Panchayati Raj system operates through a democratic hierarchy from the village level to the district level. Local governance relies on the collective participation of citizens and elected representatives rather than individual authority.",
+  "items": [
+   {
+    "evidence": "The foundation is the Gram Sabha, which includes every adult resident of the village who is 18 years or older, ensuring that all citizens have a voice in local affairs.",
+    "answer": "every adult resident",
+    "stem": "Who are the members that constitute the Gram Sabha?",
+    "options": [
+     {
+      "belief_id": "SOC-CIV-PANCHAYAT-K8-M1",
+      "why": "Student incorrectly limits membership to only elected officials.",
+      "text": "only the Sarpanch and Ward members"
+     }
+    ]
+   },
+   {
+    "evidence": "Decisions regarding village development, such as building a school or fixing a road, are made collectively by the Gram Sabha, not by the Sarpanch alone.",
+    "answer": "collectively by the Gram Sabha",
+    "stem": "How are important development decisions made in the village?",
+    "options": [
+     {
+      "belief_id": "SOC-CIV-PANCHAYAT-K9-M2",
+      "why": "Student believes the Sarpanch has total individual authority.",
+      "text": "by the Sarpanch acting alone"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, the Zila Parishad oversees the entire district, managing funds and development projects, but it does not possess the authority to create national laws.",
+    "answer": "does not possess the authority",
+    "stem": "What is the role of the Zila Parishad regarding national legislation?",
+    "options": [
+     {
+      "belief_id": "SOC-CIV-PANCHAYAT-K11-M3",
+      "why": "Student confuses local district bodies with national parliament.",
+      "text": "it makes laws for the country"
+     }
+    ]
+   },
+   {
+    "evidence": "These councillors are directly chosen by the local voters rather than being appointed by government officials.",
+    "answer": "directly chosen by the local voters",
+    "stem": "How are Ward Councillors selected for the Municipal Corporation?",
+    "options": [
+     {
+      "belief_id": "SOC-CIV-PANCHAYAT-K7-M4",
+      "why": "Student thinks officials are appointed rather than elected.",
+      "text": "selected by government officials"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 3.8
+}

@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0052-MAT-QUADRATIC",
+  "topic_id": "MAT-QUADRATIC",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a puzzle or game that uses the idea",
+  "seed": 52
+ },
+ "model": "gemini-3.1-flash-lite/key3",
+ "usage": {
+  "promptTokenCount": 1155,
+  "candidatesTokenCount": 1355,
+  "totalTokenCount": 2510,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1155
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-QUADRATIC-K22-M22",
+  "MAT-QUADRATIC-K17-M14",
+  "MAT-QUADRATIC-K24-M21",
+  "MAT-QUADRATIC-K17-M13",
+  "MAT-QUADRATIC-K9-M4",
+  "MAT-QUADRATIC-K10-M6",
+  "MAT-QUADRATIC-K28-M26",
+  "MAT-QUADRATIC-K7-M1",
+  "MAT-QUADRATIC-K15-M11",
+  "MAT-QUADRATIC-K11-M7",
+  "MAT-QUADRATIC-K20-M16",
+  "MAT-QUADRATIC-K14-M8",
+  "MAT-QUADRATIC-K27-M24",
+  "MAT-QUADRATIC-K8-M3"
+ ],
+ "response": {
+  "passage": "Rohan is designing a rectangular garden game board where the area must be exactly 40 square units. He writes the equation x² - 3x = 40 to represent the dimensions. To solve this, he first rearranges it into the standard form ax² + bx + c = 0, identifying a=1, b=-3, and c=-40. Rohan knows that for any quadratic equation, the discriminant D = b² - 4ac helps determine the nature of the roots. He calculates D = (-3)² - 4(1)(-40), which equals 9 + 160 = 169. Since 169 is greater than zero, he concludes there are two distinct real roots. He then factors the equation into (x - 8)(x + 5) = 0. He realizes that while x = 8 and x = -5 are both mathematical solutions to the equation, a physical length cannot be negative. Therefore, he rejects x = -5 and keeps x = 8 as the only valid dimension for his garden board. He checks his work by substituting 8 back into the original expression, confirming that 8² - 3(8) indeed equals 40. Rohan successfully avoids common traps, ensuring his quadratic model perfectly matches the physical reality of his game design.",
+  "summary": "Rohan models a garden board area using a quadratic equation and solves it systematically. He correctly identifies the standard form and uses the discriminant to understand the roots. Finally, he validates his solution by rejecting physically impossible values.",
+  "items": [
+   {
+    "evidence": "He writes the equation x² - 3x = 40 to represent the dimensions.",
+    "answer": "x² - 3x - 40 = 0",
+    "stem": "What is the correct standard form of the equation Rohan is using?",
+    "options": [
+     {
+      "belief_id": "MAT-QUADRATIC-K9-M4",
+      "why": "Student assumes the equation is already in standard form.",
+      "text": "x² - 3x = 40"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K8-M3",
+      "why": "Student ignores the requirement that 'a' cannot be zero.",
+      "text": "0x² - 3x - 40 = 0"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K7-M1",
+      "why": "Student incorrectly includes higher powers in a quadratic.",
+      "text": "x³ - 3x² - 40 = 0"
+     }
+    ]
+   },
+   {
+    "evidence": "He calculates D = (-3)² - 4(1)(-40), which equals 9 + 160 = 169.",
+    "answer": "169",
+    "stem": "What is the correct value of the discriminant for this equation?",
+    "options": [
+     {
+      "belief_id": "MAT-QUADRATIC-K17-M13",
+      "why": "Student squares -3 as -9 instead of 9.",
+      "text": "-9 + 160 = 151"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K24-M21",
+      "why": "Student assumes negative discriminants have no solutions at all.",
+      "text": "No solution"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K22-M22",
+      "why": "Student assumes D>0 implies both roots must be positive.",
+      "text": "Two positive roots"
+     }
+    ]
+   },
+   {
+    "evidence": "He then factors the equation into (x - 8)(x + 5) = 0.",
+    "answer": "x = 8 and x = -5",
+    "stem": "What are the two roots obtained from the factored equation?",
+    "options": [
+     {
+      "belief_id": "MAT-QUADRATIC-K15-M11",
+      "why": "Student flips the sign of the factors incorrectly.",
+      "text": "x = -8 and x = 5"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K11-M7",
+      "why": "Student assumes roots must be identical in some cases.",
+      "text": "x = 8 and x = 8"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K20-M16",
+      "why": "Student assumes only one root exists for the equation.",
+      "text": "x = 8"
+     }
+    ]
+   },
+   {
+    "evidence": "Therefore, he rejects x = -5 and keeps x = 8 as the only valid dimension for his garden board.",
+    "answer": "rejects x = -5",
+    "stem": "Why does Rohan choose to ignore one of the calculated roots?",
+    "options": [
+     {
+      "belief_id": "MAT-QUADRATIC-K28-M26",
+      "why": "Student assumes any root satisfying the equation is valid.",
+      "text": "He accepts both roots"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K14-M8",
+      "why": "Student incorrectly assumes roots must be positive integers.",
+      "text": "Because -5 is not a factor"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K10-M6",
+      "why": "Student confuses roots with square roots of the constant.",
+      "text": "He only wants the square root"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 5.5
+}

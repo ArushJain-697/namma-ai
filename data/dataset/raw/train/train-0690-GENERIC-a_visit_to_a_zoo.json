@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0690-GENERIC-a_visit_to_a_zoo",
+  "topic_id": null,
+  "split": "train",
+  "generic": true,
+  "theme": "a visit to a zoo",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a news-style report about a real-world situation",
+  "seed": 690
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 720,
+  "candidatesTokenCount": 1121,
+  "totalTokenCount": 1841,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 720
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "On October 12, the City Zoological Park witnessed a peculiar incident during the morning feeding session. Mr. Rajesh Khanna, the head zookeeper, reported that the enclosure for the Himalayan Red Pandas was left unlocked due to a technical failure in the automated latch system. As a result, the two pandas wandered into the adjacent bamboo garden, causing a brief panic among the visitors. Ms. Sunita Rao, a local botanist, was present at the scene and noted that the animals were attracted to the garden because the bamboo shoots were particularly fresh that morning. By 10:30 AM, the security team had safely returned both animals to their habitat. The park management has since announced that they will replace all electronic locks with manual ones to prevent future escapes. While some visitors suggested that the pandas were trying to escape the heat, the park authorities clarified that the animals were simply following their natural foraging instincts. No injuries were reported, and the park resumed normal operations by noon.",
+  "summary": "A technical failure at the City Zoological Park led to two red pandas escaping their enclosure. The animals were safely retrieved after they were found eating fresh bamboo in a nearby garden.",
+  "items": [
+   {
+    "evidence": "On October 12, the City Zoological Park witnessed a peculiar incident during the morning feeding session.",
+    "answer": "October 12",
+    "stem": "When did the unusual event at the zoo take place?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses a number from the text incorrectly as the answer.",
+      "text": "10:30 AM"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks a name mentioned near the date in the text.",
+      "text": "Rajesh Khanna"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a true fact from the text that is irrelevant.",
+      "text": "Morning feeding session"
+     }
+    ]
+   },
+   {
+    "evidence": "Ms. Sunita Rao, a local botanist, was present at the scene and noted that the animals were attracted to the garden because the bamboo shoots were particularly fresh that morning.",
+    "answer": "fresh bamboo shoots",
+    "stem": "What drew the red pandas into the bamboo garden?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Reverses the cause and effect relationship stated in the text.",
+      "text": "The pandas' presence"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects the person named in the same sentence.",
+      "text": "Sunita Rao"
+     },
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Interprets 'attracted' as a romantic or social meaning.",
+      "text": "Social interaction"
+     }
+    ]
+   },
+   {
+    "evidence": "By 10:30 AM, the security team had safely returned both animals to their habitat.",
+    "answer": "two",
+    "stem": "How many red pandas were involved in the incident?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses a time number from the text as a count.",
+      "text": "10"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Assumes all animals in the zoo were involved.",
+      "text": "All animals"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Uses a true detail that does not answer the question.",
+      "text": "The security team"
+     }
+    ]
+   },
+   {
+    "evidence": "The park management has since announced that they will replace all electronic locks with manual ones to prevent future escapes.",
+    "answer": "manual ones",
+    "stem": "What type of locks will the park install to improve security?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M5",
+      "why": "Confuses 'electronic' with 'electric' or similar sounding terms.",
+      "text": "Electronic locks"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Assumes all locks in the park are being replaced.",
+      "text": "All locks"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks the subject mentioned in the same sentence.",
+      "text": "Park management"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 17.0
+}

@@ -1,0 +1,485 @@
+{
+ "topic": {
+  "id": "SCI-BIO-PLANTPARTS",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   6
+  ],
+  "title": "Getting to know plants",
+  "scope": "herbs, shrubs, trees, stem, leaf, root, venation, flower parts, functions of each part"
+ },
+ "model": "gemini-3-flash-preview/key2",
+ "usage": {
+  "promptTokenCount": 838,
+  "candidatesTokenCount": 3993,
+  "totalTokenCount": 5916,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 838
+   }
+  ],
+  "thoughtsTokenCount": 1085,
+  "serviceTier": "standard"
+ },
+ "seconds": 19.9,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Classification of Plants",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2",
+    "name": "Vegetative Parts and Functions",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "living and non-living things"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Reproductive Parts",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.1",
+    "name": "Growth Habits",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.1.1",
+    "name": "Herbs",
+    "level": 3,
+    "parent": "n1.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.1.2",
+    "name": "Shrubs",
+    "level": 3,
+    "parent": "n1.1",
+    "prereqs": [
+     "n1.1.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.1.3",
+    "name": "Trees",
+    "level": 3,
+    "parent": "n1.1",
+    "prereqs": [
+     "n1.1.2"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.1.4",
+    "name": "Creepers and Climbers",
+    "level": 3,
+    "parent": "n1.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.1",
+    "name": "The Stem",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.1.1",
+    "name": "Stem Conduction",
+    "level": 3,
+    "parent": "n2.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.2",
+    "name": "The Leaf",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.2.1",
+    "name": "Venation Patterns",
+    "level": 3,
+    "parent": "n2.2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.2.2",
+    "name": "Transpiration",
+    "level": 3,
+    "parent": "n2.2",
+    "prereqs": [],
+    "external_prereqs": [
+     "evaporation"
+    ]
+   },
+   {
+    "key": "n2.2.3",
+    "name": "Photosynthesis",
+    "level": 3,
+    "parent": "n2.2",
+    "prereqs": [],
+    "external_prereqs": [
+     "energy"
+    ]
+   },
+   {
+    "key": "n2.3",
+    "name": "The Root",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.3.1",
+    "name": "Root Types",
+    "level": 3,
+    "parent": "n2.3",
+    "prereqs": [
+     "n2.2.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.3.2",
+    "name": "Absorption and Anchorage",
+    "level": 3,
+    "parent": "n2.3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.1",
+    "name": "Flower Structure",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.1.1",
+    "name": "Sepals and Petals",
+    "level": 3,
+    "parent": "n3.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.1.2",
+    "name": "Stamens and Pistil",
+    "level": 3,
+    "parent": "n3.1",
+    "prereqs": [
+     "n3.1.1"
+    ],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n1.1.1",
+    "statement": "Any small plant with a green stem is a baby tree.",
+    "why": "Students often assume small size indicates a young stage of a larger organism.",
+    "fix": "Herbs are a specific category of plants that stay small and have soft, green stems throughout their life.",
+    "probe": {
+     "question": "If you see a small plant with a soft green stem, will it definitely grow into a tall tree?",
+     "wrong_answer": "Yes, it is just a baby tree right now."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "small things are just young versions of big things",
+    "causes": [],
+    "trigger_cues": [
+     "herb",
+     "green",
+     "soft",
+     "stem",
+     "growth"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's research on children's ideas"
+   },
+   {
+    "key": "m2",
+    "node": "n2.1.1",
+    "statement": "The stem only carries water from the roots to the leaves.",
+    "why": "Students focus on the upward movement of water and ignore the transport of food.",
+    "fix": "The stem acts as a two-way street, carrying water/minerals up and food from leaves to other parts.",
+    "probe": {
+     "question": "Does the stem carry anything from the leaves to the roots?",
+     "wrong_answer": "No, it only carries water up from the roots."
+    },
+    "error_type": "single_cause",
+    "root_belief": "biological structures have only one function",
+    "causes": [],
+    "trigger_cues": [
+     "stem",
+     "conduct",
+     "transport",
+     "upward",
+     "downward"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n2.2.3",
+    "statement": "Plants get their food from the soil through their roots.",
+    "why": "Everyday experience of 'feeding' plants with fertilizer or water leads to this belief.",
+    "fix": "Plants make their own food in their leaves using sunlight, air, and water; soil only provides minerals.",
+    "probe": {
+     "question": "Where does a plant get the energy-rich food it needs to grow?",
+     "wrong_answer": "It sucks up food from the soil through roots."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "all living things eat like humans do",
+    "causes": [],
+    "trigger_cues": [
+     "food",
+     "soil",
+     "roots",
+     "photosynthesis",
+     "nutrition"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m4",
+    "node": "n2.2.2",
+    "statement": "Transpiration is the plant 'sweating' to stay cool like humans.",
+    "why": "Students apply human physiological experiences to plants.",
+    "fix": "Transpiration is the loss of water vapor from leaves, which helps in pulling water up from the roots.",
+    "probe": {
+     "question": "Why do plants release water vapor from their leaves?",
+     "wrong_answer": "Because they are hot and need to sweat."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "plants function exactly like animals",
+    "causes": [],
+    "trigger_cues": [
+     "transpiration",
+     "water vapor",
+     "leaves",
+     "loss"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic studies"
+   },
+   {
+    "key": "m5",
+    "node": "n2.1",
+    "statement": "If a plant part is underground, it must be a root.",
+    "why": "Students use location as the primary defining characteristic rather than structure.",
+    "fix": "Some stems, like potatoes and ginger, grow underground to store food.",
+    "probe": {
+     "question": "Is a potato a root because it grows under the ground?",
+     "wrong_answer": "Yes, everything under the ground is a root."
+    },
+    "error_type": "visible_only",
+    "root_belief": "location defines the identity of an object",
+    "causes": [],
+    "trigger_cues": [
+     "underground",
+     "potato",
+     "ginger",
+     "stem",
+     "root"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT textbook common pitfalls"
+   },
+   {
+    "key": "m6",
+    "node": "n3.1.1",
+    "statement": "The green leaf-like parts at the base of a flower are just small leaves.",
+    "why": "They look identical to leaves in color and texture.",
+    "fix": "These are sepals, which are specific flower parts that protect the bud.",
+    "probe": {
+     "question": "What are the green leaf-like structures protecting a flower bud called?",
+     "wrong_answer": "They are just baby leaves of the plant."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "things that look alike are the same thing",
+    "causes": [],
+    "trigger_cues": [
+     "sepals",
+     "bud",
+     "flower",
+     "green",
+     "leaf"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n2.3.1",
+    "statement": "All plants have one main thick root going deep into the soil.",
+    "why": "The taproot is the 'prototypical' root taught first or seen in diagrams.",
+    "fix": "Many plants, like grass and wheat, have fibrous roots where all roots look similar and spread out.",
+    "probe": {
+     "question": "Does a bunch of grass have one main central root?",
+     "wrong_answer": "Yes, every plant has one main thick root."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "one example represents the whole category",
+    "causes": [],
+    "trigger_cues": [
+     "taproot",
+     "fibrous",
+     "main root",
+     "grass"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m8",
+    "node": "n2.2.1",
+    "statement": "Leaf venation is just a pattern and has no relation to other plant parts.",
+    "why": "Students see patterns as decorative rather than functional or structural indicators.",
+    "fix": "Leaf venation is directly linked to the type of root system the plant has.",
+    "probe": {
+     "question": "Can you guess the type of roots a plant has by looking at its leaves?",
+     "wrong_answer": "No, the leaf pattern has nothing to do with the roots."
+    },
+    "error_type": "part_whole",
+    "root_belief": "different parts of a system are independent",
+    "causes": [],
+    "trigger_cues": [
+     "venation",
+     "reticulate",
+     "parallel",
+     "root",
+     "relationship"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT Class 6 pedagogical notes"
+   },
+   {
+    "key": "m9",
+    "node": "n3.1.2",
+    "statement": "Only the colorful petals are part of the flower; the inner parts are something else.",
+    "why": "Petals are the most visible and 'famous' part of the flower.",
+    "fix": "A flower includes sepals, petals, stamens, and the pistil; all are essential parts.",
+    "probe": {
+     "question": "If you remove the petals, is the remaining center part still part of the flower?",
+     "wrong_answer": "No, the flower is gone once the petals are removed."
+    },
+    "error_type": "visible_only",
+    "root_belief": "the most prominent part is the whole object",
+    "causes": [],
+    "trigger_cues": [
+     "petals",
+     "flower",
+     "stamen",
+     "pistil",
+     "parts"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m10",
+    "node": "n2.2.3",
+    "statement": "Sunlight is a material that plants 'eat' to grow.",
+    "why": "Confusion between energy sources and matter/food.",
+    "fix": "Sunlight provides the energy for a chemical process; it is not a physical food item.",
+    "probe": {
+     "question": "Is sunlight a type of food for the plant?",
+     "wrong_answer": "Yes, it is the main food that plants eat."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "energy and matter are the same thing",
+    "causes": [],
+    "trigger_cues": [
+     "sunlight",
+     "food",
+     "energy",
+     "photosynthesis"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m11",
+    "node": "n1.1.2",
+    "statement": "Shrubs are just herbs that have grown for a few years.",
+    "why": "Difficulty distinguishing between growth stages and distinct biological categories.",
+    "fix": "Shrubs are a distinct category with hard, woody stems branching near the base, unlike herbs.",
+    "probe": {
+     "question": "Will a coriander herb eventually become a rose shrub if we wait long enough?",
+     "wrong_answer": "Yes, it will grow a woody stem and become a shrub."
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "all small plants are just early stages of larger ones",
+    "causes": [],
+    "trigger_cues": [
+     "shrub",
+     "herb",
+     "woody",
+     "base",
+     "branching"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m12",
+    "node": "n2.3.2",
+    "statement": "Roots only hold the plant in the ground; they don't do anything else.",
+    "why": "Anchorage is the most physically obvious function when pulling a weed.",
+    "fix": "Roots also absorb water and essential minerals from the soil for the plant.",
+    "probe": {
+     "question": "If we put a plant in water without soil, why does it need roots?",
+     "wrong_answer": "It doesn't; roots are only for sticking to the soil."
+    },
+    "error_type": "single_cause",
+    "root_belief": "an object has only its most obvious function",
+    "causes": [],
+    "trigger_cues": [
+     "roots",
+     "anchor",
+     "absorb",
+     "minerals",
+     "soil"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}

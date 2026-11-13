@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0391-GEN-SCAMS",
+  "topic_id": "GEN-SCAMS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 391
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 1159,
+  "candidatesTokenCount": 1298,
+  "totalTokenCount": 2457,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1159
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-SCAMS-K15-M16",
+  "GEN-SCAMS-K19-M21",
+  "GEN-SCAMS-K5-M5",
+  "GEN-SCAMS-K5-M4",
+  "GEN-SCAMS-K15-M17",
+  "GEN-SCAMS-K10-M11",
+  "GEN-SCAMS-K18-M20",
+  "GEN-SCAMS-K7-M9",
+  "GEN-SCAMS-K12-M15",
+  "GEN-SCAMS-K6-M6",
+  "GEN-SCAMS-K16-M18",
+  "GEN-SCAMS-K10-M12",
+  "GEN-SCAMS-K23-M23",
+  "GEN-SCAMS-K11-M14"
+ ],
+ "response": {
+  "passage": "Many people believe that if a caller knows their name or claims to be from a bank, they are trustworthy and must follow instructions immediately to avoid account closure. This is a dangerous myth. Banks will never ask you to share your OTP, PIN, or CVV over a phone call, even if they claim it is for a KYC update. If you receive a message asking you to click a link to update your KYC, do not click it, as legitimate banks do not operate this way. Furthermore, some scammers promise high monthly returns on investments and ask you to keep the deal secret from your family. They might even show you a fancy office or a certificate to look official. Remember, a high-return scheme that requires secrecy is almost always a fraud. If you ever lose money, do not wait or feel ashamed; report the incident immediately to the official cybercrime portal or your bank. Never trust a phone number provided by a stranger; always use the official contact details found on the back of your debit card or the bank's verified website. By staying alert and never sharing your secret banking codes, you can keep your money safe from those who try to trick you.",
+  "summary": "Scammers often use fake urgency and official-looking documents to steal money. You should never share your secret banking codes like OTPs or PINs with anyone. Always verify information through official bank channels rather than trusting strangers.",
+  "items": [
+   {
+    "evidence": "Banks will never ask you to share your OTP, PIN, or CVV over a phone call, even if they claim it is for a KYC update.",
+    "answer": "never ask you to share",
+    "stem": "What is the official policy of banks regarding your OTP or PIN during a phone call?",
+    "options": [
+     {
+      "belief_id": "GEN-SCAMS-K15-M16",
+      "why": "Believes bank employees are authorized to collect secret codes.",
+      "text": "ask for it to verify identity"
+     },
+     {
+      "belief_id": "GEN-SCAMS-K5-M4",
+      "why": "Believes sharing details is necessary to prevent account blocking.",
+      "text": "require it to update KYC"
+     },
+     {
+      "belief_id": "GEN-SCAMS-K15-M17",
+      "why": "Believes CVV is public information like a card number.",
+      "text": "collect only the CVV number"
+     }
+    ]
+   },
+   {
+    "evidence": "Remember, a high-return scheme that requires secrecy is almost always a fraud.",
+    "answer": "almost always a fraud",
+    "stem": "How should you view an investment opportunity that demands you keep it hidden from your family?",
+    "options": [
+     {
+      "belief_id": "GEN-SCAMS-K11-M14",
+      "why": "Believes secrecy is a sign of an exclusive opportunity.",
+      "text": "a special chance for profit"
+     },
+     {
+      "belief_id": "GEN-SCAMS-K10-M11",
+      "why": "Believes a written guarantee makes any scheme safe.",
+      "text": "a safe guaranteed investment"
+     },
+     {
+      "belief_id": "GEN-SCAMS-K10-M12",
+      "why": "Believes high returns are just better business skills.",
+      "text": "a smart way to earn"
+     }
+    ]
+   },
+   {
+    "evidence": "If you ever lose money, do not wait or feel ashamed; report the incident immediately to the official cybercrime portal or your bank.",
+    "answer": "report the incident immediately",
+    "stem": "What is the correct action to take if you realize you have been scammed?",
+    "options": [
+     {
+      "belief_id": "GEN-SCAMS-K23-M23",
+      "why": "Believes reporting is useless once money is gone.",
+      "text": "wait and see what happens"
+     },
+     {
+      "belief_id": "GEN-SCAMS-K7-M9",
+      "why": "Believes bringing in more people can recover losses.",
+      "text": "invite friends to join in"
+     },
+     {
+      "belief_id": "GEN-SCAMS-K5-M5",
+      "why": "Believes quick action only applies to clicking links.",
+      "text": "click the link sent later"
+     }
+    ]
+   },
+   {
+    "evidence": "Never trust a phone number provided by a stranger; always use the official contact details found on the back of your debit card or the bank's verified website.",
+    "answer": "use the official contact details",
+    "stem": "How can you verify if a caller claiming to be from your bank is actually genuine?",
+    "options": [
+     {
+      "belief_id": "GEN-SCAMS-K18-M20",
+      "why": "Believes the caller's provided number is a valid verification.",
+      "text": "call the number they provided"
+     },
+     {
+      "belief_id": "GEN-SCAMS-K12-M15",
+      "why": "Believes a normal mobile number indicates a safe caller.",
+      "text": "check if it is a mobile number"
+     },
+     {
+      "belief_id": "GEN-SCAMS-K19-M21",
+      "why": "Believes official-looking IDs are proof of legitimacy.",
+      "text": "ask for their office address"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 12.1
+}

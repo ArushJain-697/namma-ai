@@ -1,0 +1,899 @@
+{
+ "topic": {
+  "id": "MAT-HERON",
+  "subject": "maths",
+  "strand": "maths",
+  "grades": [
+   9
+  ],
+  "title": "Areas and Heron's formula",
+  "scope": "area of triangle by Heron's formula, area of quadrilaterals"
+ },
+ "model": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 7777,
+  "promptTokenCount": 2
+ },
+ "seconds": 51.8,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Area of triangles",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "area of a triangle as half base times height",
+     "square roots"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Heron's formula",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "algebraic expressions"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Area of quadrilaterals",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1",
+     "n2"
+    ],
+    "external_prereqs": [
+     "properties of quadrilaterals"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Basic triangle area",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "area as square units"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Special triangles",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "Pythagoras theorem"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Semi-perimeter",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "perimeter of a figure"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Applying the formula",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": [
+     "subtraction and multiplication of numbers"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Using Heron's formula in problems",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": [
+     "ratio and proportion",
+     "units of length"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Splitting quadrilaterals",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": [
+     "diagonal of a polygon"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Special quadrilateral areas",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n9"
+    ],
+    "external_prereqs": [
+     "properties of parallelogram and rhombus"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Area = half base times corresponding height",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "perpendicular lines"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Height is perpendicular to the base",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "perpendicular lines",
+     "altitude"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "Area is in square units",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "area as square units"
+    ]
+   },
+   {
+    "key": "n14",
+    "name": "Equilateral triangle area is (√3/4)a²",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": [
+     "Pythagoras theorem"
+    ]
+   },
+   {
+    "key": "n15",
+    "name": "Isosceles triangle area formula",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": [
+     "Pythagoras theorem"
+    ]
+   },
+   {
+    "key": "n16",
+    "name": "Right triangle: legs serve as base and height",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": [
+     "right angle"
+    ]
+   },
+   {
+    "key": "n17",
+    "name": "s is half the perimeter",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": [
+     "perimeter of a figure"
+    ]
+   },
+   {
+    "key": "n18",
+    "name": "Heron's formula is √(s(s−a)(s−b)(s−c))",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": [
+     "square roots"
+    ]
+   },
+   {
+    "key": "n19",
+    "name": "Subtract each side from s separately",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n18"
+    ],
+    "external_prereqs": [
+     "subtraction of numbers"
+    ]
+   },
+   {
+    "key": "n20",
+    "name": "Take the square root at the end",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n18"
+    ],
+    "external_prereqs": [
+     "square roots",
+     "perfect squares"
+    ]
+   },
+   {
+    "key": "n21",
+    "name": "Heron's formula works for every triangle",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n18"
+    ],
+    "external_prereqs": [
+     "types of triangles"
+    ]
+   },
+   {
+    "key": "n22",
+    "name": "Sides must be in the same unit",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": [
+     "unit conversion"
+    ]
+   },
+   {
+    "key": "n23",
+    "name": "Sides given as a ratio need a multiplier",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n18"
+    ],
+    "external_prereqs": [
+     "ratio and proportion",
+     "linear equations"
+    ]
+   },
+   {
+    "key": "n24",
+    "name": "A diagonal splits a quadrilateral into two triangles",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": [
+     "diagonal of a polygon"
+    ]
+   },
+   {
+    "key": "n25",
+    "name": "Total area is the sum of the triangle areas",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [
+     "n24"
+    ],
+    "external_prereqs": [
+     "addition of areas"
+    ]
+   },
+   {
+    "key": "n26",
+    "name": "Rhombus area is half product of diagonals",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [
+     "n24"
+    ],
+    "external_prereqs": [
+     "diagonals of a rhombus bisect at right angles"
+    ]
+   },
+   {
+    "key": "n27",
+    "name": "Parallelogram area is base times height, not slant side",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [
+     "n12"
+    ],
+    "external_prereqs": [
+     "parallelogram properties"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n11",
+    "statement": "The area of a triangle is base times height, with no half.",
+    "why": "Students blend the rectangle rule with the triangle rule.",
+    "fix": "A triangle is half of a parallelogram or rectangle on the same base and height, so its area is ½ × base × height.",
+    "probe": {
+     "question": "A triangle has base 10 cm and height 6 cm. What is its area?",
+     "wrong_answer": "60 cm²"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a rule from one shape works for all shapes",
+    "causes": [],
+    "trigger_cues": [
+     "half",
+     "base",
+     "height",
+     "area",
+     "triangle",
+     "rectangle"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on student errors in area measurement formulas"
+   },
+   {
+    "key": "m2",
+    "node": "n12",
+    "statement": "The height of a triangle is always one of its sides.",
+    "why": "Students mostly see right-angled or upright triangles drawn on a horizontal base.",
+    "fix": "The height is the perpendicular distance from a vertex to the opposite side, and it usually lies inside the triangle, not along a side.",
+    "probe": {
+     "question": "A triangle has sides 5, 5 and 6 cm and perpendicular height 4 cm on the base 6 cm. What height do you use?",
+     "wrong_answer": "5 cm, because it is a side"
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "a typical picture is the only possible case",
+    "causes": [
+     "m1b"
+    ],
+    "trigger_cues": [
+     "height",
+     "altitude",
+     "perpendicular",
+     "vertex",
+     "opposite side"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on prototype images and height of triangles and parallelograms"
+   },
+   {
+    "key": "m3",
+    "node": "n12",
+    "statement": "Height can be measured along any slanting side.",
+    "why": "Students treat any length from the vertex to the base line as the height.",
+    "fix": "Height must make a right angle with the base. A slanting side is longer than the height and gives a wrong area.",
+    "probe": {
+     "question": "A parallelogram has base 8 cm, slant side 5 cm and perpendicular height 4 cm. What is its area?",
+     "wrong_answer": "40 cm²"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "any length that looks similar is the same measure",
+    "causes": [],
+    "trigger_cues": [
+     "slant",
+     "side",
+     "perpendicular",
+     "height",
+     "parallelogram"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on area formulas for parallelograms"
+   },
+   {
+    "key": "m4",
+    "node": "n13",
+    "statement": "The area of a triangle can be written in cm or m.",
+    "why": "Students mix length units with area units.",
+    "fix": "Area counts squares, so it is written in square units such as cm² or m².",
+    "probe": {
+     "question": "Give the unit of the area of a triangle with sides in cm.",
+     "wrong_answer": "cm"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "all measures use the same kind of unit",
+    "causes": [],
+    "trigger_cues": [
+     "square",
+     "units",
+     "cm",
+     "area",
+     "measure"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on area versus perimeter and units"
+   },
+   {
+    "key": "m5",
+    "node": "n14",
+    "statement": "The area of an equilateral triangle of side a is a²/2.",
+    "why": "Students copy the square or right-triangle shortcut.",
+    "fix": "The height of an equilateral triangle is (√3/2)a, so the area is (√3/4)a².",
+    "probe": {
+     "question": "Find the area of an equilateral triangle of side 4 cm.",
+     "wrong_answer": "8 cm²"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a rule from whole numbers works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "equilateral",
+     "side",
+     "root",
+     "three",
+     "area",
+     "a squared"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m6",
+    "node": "n15",
+    "statement": "In an isosceles triangle, the area is half of the equal side times the base.",
+    "why": "Students use the two sides they can see as base and height.",
+    "fix": "Find the height using Pythagoras on half the base, then use ½ × base × height, or use Heron's formula.",
+    "probe": {
+     "question": "Find the area of an isosceles triangle with equal sides 5 cm and base 6 cm.",
+     "wrong_answer": "15 cm²"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "given numbers should be multiplied directly",
+    "causes": [],
+    "trigger_cues": [
+     "isosceles",
+     "equal sides",
+     "base",
+     "height",
+     "pythagoras"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n16",
+    "statement": "Heron's formula is required for a right-angled triangle.",
+    "why": "Students think the new formula replaces all earlier ones.",
+    "fix": "In a right triangle the two legs are base and height, so ½ × leg × leg is simpler, though Heron's formula also gives the same answer.",
+    "probe": {
+     "question": "Which is the quickest way to find the area of a triangle with sides 6, 8 and 10 cm?",
+     "wrong_answer": "Only Heron's formula works"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "the newest method replaces all earlier methods",
+    "causes": [],
+    "trigger_cues": [
+     "right angled",
+     "legs",
+     "heron",
+     "base",
+     "height"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m8",
+    "node": "n17",
+    "statement": "In Heron's formula, s means the perimeter.",
+    "why": "Students mix the letter s with the whole perimeter.",
+    "fix": "s is the semi-perimeter, which is half the sum of the three sides.",
+    "probe": {
+     "question": "Sides are 5, 12 and 13 cm. What is s?",
+     "wrong_answer": "30 cm"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar terms mean the same thing",
+    "causes": [
+     "m9"
+    ],
+    "trigger_cues": [
+     "semi-perimeter",
+     "perimeter",
+     "s",
+     "half",
+     "sum of sides"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on student errors with formula symbols and Heron's formula"
+   },
+   {
+    "key": "m9",
+    "node": "n19",
+    "statement": "In s(s−a)(s−b)(s−c), you subtract the sum of the sides from s.",
+    "why": "Students read the brackets as one subtraction.",
+    "fix": "Subtract each side from s separately to get s−a, s−b and s−c, then multiply them with s.",
+    "probe": {
+     "question": "For sides 5, 12, 13 (s = 15), find the value inside the root.",
+     "wrong_answer": "15 × (15 − 30) which is −225"
+    },
+    "error_type": "notation_misread",
+    "root_belief": "symbols in brackets combine into one operation",
+    "causes": [],
+    "trigger_cues": [
+     "s minus a",
+     "brackets",
+     "each side",
+     "semi-perimeter",
+     "subtract"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m10",
+    "node": "n18",
+    "statement": "Heron's formula is s(s−a)(s−b)(s−c), with the square root applied only to s.",
+    "why": "Students forget what the root symbol covers.",
+    "fix": "The square root covers the whole product s(s−a)(s−b)(s−c).",
+    "probe": {
+     "question": "Sides 5, 12, 13 (s = 15). Find the area.",
+     "wrong_answer": "√15 × 10 × 3 × 2"
+    },
+    "error_type": "notation_misread",
+    "root_belief": "a symbol applies only to what is next to it",
+    "causes": [],
+    "trigger_cues": [
+     "square root",
+     "under the root",
+     "product",
+     "s minus",
+     "area"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n18",
+    "statement": "Heron's formula is s(a+b+c) type, the sides are just added and multiplied.",
+    "why": "Students recall the formula as a pile of symbols.",
+    "fix": "Heron's formula uses s and the three differences s−a, s−b, s−c, not the sum of sides again.",
+    "probe": {
+     "question": "Area of triangle with sides 3, 4, 5 by Heron's formula?",
+     "wrong_answer": "√(6 × 12) = √72"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "memorised formulas need no understanding",
+    "causes": [],
+    "trigger_cues": [
+     "heron",
+     "formula",
+     "sides",
+     "s",
+     "semi-perimeter"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m12",
+    "node": "n20",
+    "statement": "The final area is the product under the root, with no root taken.",
+    "why": "Students stop after computing the product.",
+    "fix": "The root is the last step. The area is the square root of the product, in square units.",
+    "probe": {
+     "question": "For 5, 12, 13 the product is 900. What is the area?",
+     "wrong_answer": "900 cm²"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "the last step of a procedure is optional",
+    "causes": [],
+    "trigger_cues": [
+     "square root",
+     "product",
+     "final answer",
+     "area",
+     "900"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m13",
+    "node": "n20",
+    "statement": "The square root of a sum or product splits into separate roots by adding.",
+    "why": "Students think square root distributes over addition.",
+    "fix": "√(a+b) is not √a + √b. Multiply the numbers first, then take one root, or factorise into perfect squares.",
+    "probe": {
+     "question": "Find √(9 + 16).",
+     "wrong_answer": "3 + 4 = 7"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "an operation distributes over everything inside brackets",
+    "causes": [],
+    "trigger_cues": [
+     "square root",
+     "sum",
+     "factorise",
+     "perfect square",
+     "simplify"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on algebra errors with roots and distribution"
+   },
+   {
+    "key": "m14",
+    "node": "n21",
+    "statement": "Heron's formula works only for scalene triangles.",
+    "why": "Students see examples with three different sides only.",
+    "fix": "It works for every triangle: scalene, isosceles, equilateral and right-angled.",
+    "probe": {
+     "question": "Can Heron's formula be used for a triangle with sides 5, 5, 6?",
+     "wrong_answer": "No, two sides are equal"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a method works only for the examples seen",
+    "causes": [],
+    "trigger_cues": [
+     "scalene",
+     "isosceles",
+     "equilateral",
+     "heron",
+     "any triangle"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m15",
+    "node": "n21",
+    "statement": "Any three lengths can be the sides of a triangle, so Heron's formula always gives an area.",
+    "why": "Students never check the triangle inequality.",
+    "fix": "Each side must be shorter than the sum of the other two. Otherwise a factor s−a becomes zero or negative and no triangle exists.",
+    "probe": {
+     "question": "Can sides 2, 3, 8 cm form a triangle with an area given by Heron's formula?",
+     "wrong_answer": "Yes, s = 6.5 and compute the area"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "a formula can be applied without checking conditions",
+    "causes": [],
+    "trigger_cues": [
+     "triangle inequality",
+     "sum of two sides",
+     "exists",
+     "negative",
+     "side"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on student reasoning about triangle existence"
+   },
+   {
+    "key": "m16",
+    "node": "n22",
+    "statement": "Sides in m and cm can be put into Heron's formula as they are.",
+    "why": "Students focus on the numbers and ignore units.",
+    "fix": "Convert all sides to the same unit before finding s, or the answer will be wrong.",
+    "probe": {
+     "question": "Sides are 3 m, 400 cm and 5 m. What is s?",
+     "wrong_answer": "(3 + 400 + 5)/2 = 204"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "numbers matter and units do not",
+    "causes": [],
+    "trigger_cues": [
+     "convert",
+     "units",
+     "metre",
+     "centimetre",
+     "same unit"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on unit conversion errors in measurement"
+   },
+   {
+    "key": "m17",
+    "node": "n23",
+    "statement": "If sides are in the ratio 3:4:5, the sides are 3, 4 and 5 cm.",
+    "why": "Students treat ratio numbers as actual lengths.",
+    "fix": "The sides are 3x, 4x and 5x. Use the perimeter to find x first.",
+    "probe": {
+     "question": "Sides are in ratio 3:4:5 and perimeter is 60 cm. Find the sides.",
+     "wrong_answer": "3 cm, 4 cm, 5 cm"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "ratio numbers are the actual quantities",
+    "causes": [],
+    "trigger_cues": [
+     "ratio",
+     "perimeter",
+     "multiplier",
+     "x",
+     "sides"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on ratio and proportional reasoning errors"
+   },
+   {
+    "key": "m18",
+    "node": "n24",
+    "statement": "A quadrilateral can be split into triangles only along a diagonal that is inside and equal in length to the other diagonal.",
+    "why": "Students think of rectangles, where diagonals are equal.",
+    "fix": "Any diagonal that lies inside the quadrilateral splits it into two triangles. The diagonals do not need to be equal.",
+    "probe": {
+     "question": "Can a kite with unequal diagonals be split into two triangles by one diagonal?",
+     "wrong_answer": "No, diagonals are unequal"
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "properties of the usual example hold for all",
+    "causes": [],
+    "trigger_cues": [
+     "diagonal",
+     "split",
+     "triangles",
+     "quadrilateral",
+     "kite"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m19",
+    "node": "n25",
+    "statement": "The area of a quadrilateral is the product of its two triangles' areas.",
+    "why": "Students confuse combining areas with multiplying.",
+    "fix": "Areas of parts add up, so the quadrilateral's area is the sum of the two triangle areas.",
+    "probe": {
+     "question": "A diagonal splits a quadrilateral into triangles of area 6 cm² and 4 cm². What is its area?",
+     "wrong_answer": "24 cm²"
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "combining quantities means multiplying them",
+    "causes": [],
+    "trigger_cues": [
+     "sum",
+     "add",
+     "triangles",
+     "diagonal",
+     "total area"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m20",
+    "node": "n25",
+    "statement": "A quadrilateral's area can be found from its four sides using Heron's formula directly.",
+    "why": "Students extend a formula for three sides to four.",
+    "fix": "Four sides do not fix a quadrilateral's shape. You need a diagonal or an angle to split it into triangles.",
+    "probe": {
+     "question": "Sides of a quadrilateral are 3, 4, 5, 6 cm. Find its area using Heron's formula with s = 9.",
+     "wrong_answer": "√(9·6·5·4·3)"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a rule for three works for any number",
+    "causes": [],
+    "trigger_cues": [
+     "four sides",
+     "quadrilateral",
+     "diagonal",
+     "heron",
+     "shape not fixed"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m21",
+    "node": "n26",
+    "statement": "The area of a rhombus is the product of its diagonals.",
+    "why": "Students drop the half, like in the triangle rule.",
+    "fix": "A rhombus is made of four congruent right triangles, so its area is ½ × d₁ × d₂.",
+    "probe": {
+     "question": "A rhombus has diagonals 8 cm and 6 cm. Find its area.",
+     "wrong_answer": "48 cm²"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a rule from whole numbers works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "rhombus",
+     "diagonals",
+     "half",
+     "product",
+     "area"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on area formula errors for quadrilaterals"
+   },
+   {
+    "key": "m22",
+    "node": "n27",
+    "statement": "The area of a parallelogram is base times its slant side.",
+    "why": "Students multiply the two side lengths as for a rectangle.",
+    "fix": "The area is base × perpendicular height. A parallelogram is not a rectangle, so the slant side is not the height.",
+    "probe": {
+     "question": "A parallelogram has sides 10 cm and 6 cm and perpendicular height 5 cm on the 10 cm base. Find its area.",
+     "wrong_answer": "60 cm²"
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "every four-sided shape behaves like a rectangle",
+    "causes": [],
+    "trigger_cues": [
+     "parallelogram",
+     "slant",
+     "side",
+     "perpendicular height",
+     "base"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on students' area of parallelograms and rectangle prototypes"
+   },
+   {
+    "key": "m23",
+    "node": "n10",
+    "statement": "Quadrilaterals with the same perimeter have the same area.",
+    "why": "Students link perimeter and area as one measure.",
+    "fix": "Different shapes with the same perimeter can have different areas.",
+    "probe": {
+     "question": "A square and a long thin rectangle have perimeter 20 cm. Do they have the same area?",
+     "wrong_answer": "Yes, same perimeter"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "two related measures always change together",
+    "causes": [],
+    "trigger_cues": [
+     "perimeter",
+     "same",
+     "area",
+     "square",
+     "rectangle"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on area and perimeter confusion"
+   },
+   {
+    "key": "m24",
+    "node": "n6",
+    "statement": "Heron's formula needs the height, so it cannot be used before finding it.",
+    "why": "Students think all triangle area formulas need height.",
+    "fix": "Heron's formula uses only the three sides, which is why it is useful when height is unknown.",
+    "probe": {
+     "question": "Can we find the area of a triangle with sides 7, 8 and 9 cm without its height?",
+     "wrong_answer": "No, height is needed"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "one formula is the only way to get a result",
+    "causes": [],
+    "trigger_cues": [
+     "height",
+     "three sides",
+     "heron",
+     "unknown",
+     "without height"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}

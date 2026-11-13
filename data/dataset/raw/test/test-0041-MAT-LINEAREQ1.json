@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "test-0041-MAT-LINEAREQ1",
+  "topic_id": "MAT-LINEAREQ1",
+  "split": "test",
+  "test_only_topic": true,
+  "grade": 8,
+  "style": "a step-by-step worked example",
+  "seed": 41
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 1241,
+  "candidatesTokenCount": 1360,
+  "totalTokenCount": 2601,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1241
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-LINEAREQ1-K8-M2",
+  "MAT-LINEAREQ1-K14-M7",
+  "MAT-LINEAREQ1-K9-M4",
+  "MAT-LINEAREQ1-K23-M20",
+  "MAT-LINEAREQ1-K10-M5",
+  "MAT-LINEAREQ1-K26-M22",
+  "MAT-LINEAREQ1-K17-M12",
+  "MAT-LINEAREQ1-K23-M21",
+  "MAT-LINEAREQ1-K27-M24",
+  "MAT-LINEAREQ1-K18-M15",
+  "MAT-LINEAREQ1-K8-M3",
+  "MAT-LINEAREQ1-K21-M16",
+  "MAT-LINEAREQ1-K19-M17",
+  "MAT-LINEAREQ1-K18-M14"
+ ],
+ "response": {
+  "passage": "To solve the equation 5 - (x - 2) = 3(x + 4), we must carefully handle brackets. First, the minus sign outside the parentheses changes the sign of every term inside, so 5 - (x - 2) becomes 5 - x + 2, which simplifies to 7 - x. On the right side, the number 3 must multiply both x and 4, resulting in 3x + 12. Now, our equation is 7 - x = 3x + 12. To solve for x, we need to collect all variable terms on one side. We add x to both sides to get 7 = 4x + 12. Next, we subtract 12 from both sides, yielding -5 = 4x. Finally, we divide by 4 to find that x = -5/4. Remember, x is a specific unknown number that makes the equation true, not just a label for an object. We can verify this by substituting -5/4 back into the original equation. If the left side equals the right side, our solution is correct. Unlike an expression, which can have different values depending on x, an equation has a fixed root that satisfies the equality. Always ensure you perform the same operation on both sides to maintain balance.",
+  "summary": "This guide explains how to solve linear equations by correctly expanding brackets and grouping variables. It highlights the importance of substituting the root back into the equation to verify the result.",
+  "items": [
+   {
+    "evidence": "the minus sign outside the parentheses changes the sign of every term inside, so 5 - (x - 2) becomes 5 - x + 2",
+    "answer": "5 - x + 2",
+    "stem": "When simplifying 5 - (x - 2), what is the correct result after applying the negative sign?",
+    "options": [
+     {
+      "belief_id": "MAT-LINEAREQ1-K21-M16",
+      "why": "Student incorrectly assumes the minus sign only affects the first term.",
+      "text": "5 - x - 2"
+     },
+     {
+      "belief_id": "MAT-LINEAREQ1-K8-M2",
+      "why": "Student treats the expression as something to be solved for x immediately.",
+      "text": "x = 3"
+     },
+     {
+      "belief_id": "MAT-LINEAREQ1-K26-M22",
+      "why": "Student confuses the variable with a label for an object.",
+      "text": "5 - apples - 2"
+     }
+    ]
+   },
+   {
+    "evidence": "the number 3 must multiply both x and 4, resulting in 3x + 12",
+    "answer": "3x + 12",
+    "stem": "What is the correct expansion of the term 3(x + 4)?",
+    "options": [
+     {
+      "belief_id": "MAT-LINEAREQ1-K19-M17",
+      "why": "Student fails to distribute the multiplier to the second term inside.",
+      "text": "3x + 4"
+     },
+     {
+      "belief_id": "MAT-LINEAREQ1-K14-M7",
+      "why": "Student only multiplies the first term on the side.",
+      "text": "3x + 4 = 18"
+     },
+     {
+      "belief_id": "MAT-LINEAREQ1-K9-M4",
+      "why": "Student assumes the solution is simply the constant on the right.",
+      "text": "12"
+     }
+    ]
+   },
+   {
+    "evidence": "x is a specific unknown number that makes the equation true, not just a label for an object.",
+    "answer": "a specific unknown number",
+    "stem": "In the context of this linear equation, what does the variable x represent?",
+    "options": [
+     {
+      "belief_id": "MAT-LINEAREQ1-K26-M22",
+      "why": "Student believes the letter is just a label for an object.",
+      "text": "a label for an object"
+     },
+     {
+      "belief_id": "MAT-LINEAREQ1-K8-M3",
+      "why": "Student thinks the variable can represent any value simultaneously.",
+      "text": "any number"
+     },
+     {
+      "belief_id": "MAT-LINEAREQ1-K9-M4",
+      "why": "Student believes the solution is just the right-hand side constant.",
+      "text": "the right-hand side value"
+     }
+    ]
+   },
+   {
+    "evidence": "We can verify this by substituting -5/4 back into the original equation.",
+    "answer": "substituting -5/4",
+    "stem": "How do you confirm that -5/4 is indeed the correct solution to the equation?",
+    "options": [
+     {
+      "belief_id": "MAT-LINEAREQ1-K10-M5",
+      "why": "Student believes checking means just redoing the same calculation steps.",
+      "text": "solve the equation again"
+     },
+     {
+      "belief_id": "MAT-LINEAREQ1-K18-M15",
+      "why": "Student incorrectly assumes division of negatives results in a negative.",
+      "text": "divide -5 by 4 to get -1.25"
+     },
+     {
+      "belief_id": "MAT-LINEAREQ1-K18-M14",
+      "why": "Student ignores the negative sign in the final result.",
+      "text": "use 5/4 instead of -5/4"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 54.2
+}

@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0582-MAT-AP",
+  "topic_id": "MAT-AP",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a market or shop situation that uses the idea",
+  "seed": 582
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1146,
+  "candidatesTokenCount": 1280,
+  "totalTokenCount": 2426,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1146
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-AP-K24-M21",
+  "MAT-AP-K19-M16",
+  "MAT-AP-K23-M23",
+  "MAT-AP-K21-M19",
+  "MAT-AP-K15-M12",
+  "MAT-AP-K8-M2",
+  "MAT-AP-K10-M5",
+  "MAT-AP-K7-M3",
+  "MAT-AP-K23-M22",
+  "MAT-AP-K22-M20",
+  "MAT-AP-K16-M14",
+  "MAT-AP-K15-M11",
+  "MAT-AP-K16-M13",
+  "MAT-AP-K20-M18"
+ ],
+ "response": {
+  "passage": "Rohan visits a local stationery shop to buy notebooks for his school project. The shopkeeper offers a special deal: the first notebook costs 40 rupees, and each subsequent notebook costs 5 rupees less than the previous one because they are slightly damaged. Rohan decides to buy a stack of 6 notebooks. He wants to calculate the total cost of these 6 notebooks to ensure he has enough money. He notes that the first term 'a' is 40 and the common difference 'd' is -5. He carefully lists the prices as 40, 35, 30, 25, 20, and 15. To find the total amount he needs to pay, he adds these six values together to get 165 rupees. He realizes that simply multiplying the last term by the number of notebooks would not give the correct sum. He also checks if the price reduction pattern is consistent by comparing the difference between the first two terms and the second and third terms. Since 35 minus 40 is -5 and 30 minus 35 is also -5, he confirms it is an arithmetic progression. He avoids the mistake of assuming the total cost is just the sixth term multiplied by six.",
+  "summary": "Rohan calculates the total cost of buying six notebooks with a decreasing price pattern. He uses the properties of an arithmetic progression to ensure his total sum is accurate.",
+  "items": [
+   {
+    "evidence": "The shopkeeper offers a special deal: the first notebook costs 40 rupees, and each subsequent notebook costs 5 rupees less than the previous one because they are slightly damaged.",
+    "answer": "-5",
+    "stem": "What is the common difference for the sequence of notebook prices?",
+    "options": [
+     {
+      "belief_id": "MAT-AP-K10-M5",
+      "why": "Student believes common difference cannot be negative.",
+      "text": "5"
+     },
+     {
+      "belief_id": "MAT-AP-K23-M23",
+      "why": "Student confuses percentage decrease with fixed difference.",
+      "text": "0.05"
+     },
+     {
+      "belief_id": "MAT-AP-K16-M13",
+      "why": "Student incorrectly divides terms to find difference.",
+      "text": "8"
+     }
+    ]
+   },
+   {
+    "evidence": "Since 35 minus 40 is -5 and 30 minus 35 is also -5, he confirms it is an arithmetic progression.",
+    "answer": "comparing the difference between the first two terms and the second and third terms",
+    "stem": "How did Rohan verify that the price list forms an arithmetic progression?",
+    "options": [
+     {
+      "belief_id": "MAT-AP-K7-M3",
+      "why": "Student thinks checking only two terms is sufficient.",
+      "text": "by checking only the first two prices"
+     },
+     {
+      "belief_id": "MAT-AP-K8-M2",
+      "why": "Student thinks any increasing sequence is an AP.",
+      "text": "by observing the prices are changing"
+     },
+     {
+      "belief_id": "MAT-AP-K22-M20",
+      "why": "Student confuses the nth term with the sum.",
+      "text": "by calculating the sum of the terms"
+     }
+    ]
+   },
+   {
+    "evidence": "He notes that the first term 'a' is 40 and the common difference 'd' is -5.",
+    "answer": "40",
+    "stem": "If the shopkeeper changed the deal to start at 50 rupees, what would be the value of 'a'?",
+    "options": [
+     {
+      "belief_id": "MAT-AP-K23-M22",
+      "why": "Student assumes the total number of items is 'a'.",
+      "text": "6"
+     },
+     {
+      "belief_id": "MAT-AP-K20-M18",
+      "why": "Student confuses the last term with the first term.",
+      "text": "25"
+     },
+     {
+      "belief_id": "MAT-AP-K16-M14",
+      "why": "Student uses incorrect subtraction logic for variables.",
+      "text": "45"
+     }
+    ]
+   },
+   {
+    "evidence": "He realizes that simply multiplying the last term by the number of notebooks would not give the correct sum.",
+    "answer": "not give the correct sum",
+    "stem": "Why is multiplying the last term by the number of notebooks incorrect for finding the total cost?",
+    "options": [
+     {
+      "belief_id": "MAT-AP-K19-M16",
+      "why": "Student believes sum is n times the nth term.",
+      "text": "it is the standard formula for sum"
+     },
+     {
+      "belief_id": "MAT-AP-K24-M21",
+      "why": "Student confuses nth term formula with total sum.",
+      "text": "it represents the total after n days"
+     },
+     {
+      "belief_id": "MAT-AP-K21-M19",
+      "why": "Student confuses sum calculation with term subtraction.",
+      "text": "it is the difference between S_n and S_n-1"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 15.3
+}

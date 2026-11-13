@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "test-0121-MAT-AP",
+  "topic_id": "MAT-AP",
+  "split": "test",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a puzzle or game that uses the idea",
+  "seed": 121
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 1150,
+  "candidatesTokenCount": 1287,
+  "totalTokenCount": 2437,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1150
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-AP-K19-M15",
+  "MAT-AP-K14-M9",
+  "MAT-AP-K8-M2",
+  "MAT-AP-K13-M8",
+  "MAT-AP-K20-M18",
+  "MAT-AP-K9-M4",
+  "MAT-AP-K22-M20",
+  "MAT-AP-K16-M14",
+  "MAT-AP-K15-M12",
+  "MAT-AP-K12-M10",
+  "MAT-AP-K7-M1",
+  "MAT-AP-K23-M22",
+  "MAT-AP-K19-M16",
+  "MAT-AP-K23-M23"
+ ],
+ "response": {
+  "passage": "Rohan is helping his grandfather organize a massive collection of antique coins. He starts with 5 coins in the first box and decides to add 4 more coins into every subsequent box to keep the pattern consistent. This means the second box has 9 coins, the third has 13, and so on. Rohan realizes this is an Arithmetic Progression where the first term 'a' is 5 and the common difference 'd' is 4. To find the number of coins in the 10th box, he uses the formula a_n = a + (n-1)d. He calculates 5 + (10-1) times 4, which equals 41. Later, he wants to calculate the total number of coins in the first 10 boxes combined. He uses the sum formula S_n = n/2 * [2a + (n-1)d]. He carefully multiplies 2 by the first term 5 to get 10, adds it to the product of 9 and 4, and finally multiplies the whole bracket by 5. This gives him a total of 230 coins. Rohan notes that the common difference is found by subtracting an earlier term from the one that follows it, such as 9 minus 5, which is 4. He avoids the mistake of thinking the sum is just the number of terms times the last term, or that the formula involves squaring the first term.",
+  "summary": "Rohan uses arithmetic progression formulas to count coins arranged in boxes with a constant increase. He correctly applies the nth term and sum formulas to determine the total count.",
+  "items": [
+   {
+    "evidence": "Rohan realizes this is an Arithmetic Progression where the first term 'a' is 5 and the common difference 'd' is 4.",
+    "answer": "4",
+    "stem": "How is the constant increase between the boxes determined?",
+    "options": [
+     {
+      "belief_id": "MAT-AP-K9-M4",
+      "why": "Student subtracts earlier term from later term incorrectly.",
+      "text": "5 - 9 = -4"
+     },
+     {
+      "belief_id": "MAT-AP-K7-M1",
+      "why": "Student confuses constant growth with a specific difference.",
+      "text": "3"
+     },
+     {
+      "belief_id": "MAT-AP-K23-M23",
+      "why": "Student assumes percentage growth applies to d.",
+      "text": "10"
+     }
+    ]
+   },
+   {
+    "evidence": "He calculates 5 + (10-1) times 4, which equals 41.",
+    "answer": "41",
+    "stem": "What is the total number of coins in the tenth box?",
+    "options": [
+     {
+      "belief_id": "MAT-AP-K14-M9",
+      "why": "Student ignores the (n-1) part of the formula.",
+      "text": "45"
+     },
+     {
+      "belief_id": "MAT-AP-K12-M10",
+      "why": "Student adds a and (n-1) before multiplying.",
+      "text": "54"
+     },
+     {
+      "belief_id": "MAT-AP-K13-M8",
+      "why": "Student assumes the term value is the position.",
+      "text": "10"
+     }
+    ]
+   },
+   {
+    "evidence": "He carefully multiplies 2 by the first term 5 to get 10, adds it to the product of 9 and 4, and finally multiplies the whole bracket by 5.",
+    "answer": "230",
+    "stem": "What is the total sum of coins in the first ten boxes?",
+    "options": [
+     {
+      "belief_id": "MAT-AP-K19-M15",
+      "why": "Student squares the first term instead of doubling.",
+      "text": "195"
+     },
+     {
+      "belief_id": "MAT-AP-K19-M16",
+      "why": "Student multiplies n by the nth term.",
+      "text": "410"
+     },
+     {
+      "belief_id": "MAT-AP-K22-M20",
+      "why": "Student confuses the sum with the nth term.",
+      "text": "41"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan notes that the common difference is found by subtracting an earlier term from the one that follows it, such as 9 minus 5, which is 4.",
+    "answer": "9 minus 5",
+    "stem": "Which calculation correctly identifies the common difference?",
+    "options": [
+     {
+      "belief_id": "MAT-AP-K16-M14",
+      "why": "Student subtracts terms without accounting for position.",
+      "text": "13 minus 9 plus 4"
+     },
+     {
+      "belief_id": "MAT-AP-K8-M2",
+      "why": "Student assumes any increasing sequence is an AP.",
+      "text": "5 plus 4 plus 4"
+     },
+     {
+      "belief_id": "MAT-AP-K20-M18",
+      "why": "Student confuses the last term with the difference.",
+      "text": "41 minus 37"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.3
+}

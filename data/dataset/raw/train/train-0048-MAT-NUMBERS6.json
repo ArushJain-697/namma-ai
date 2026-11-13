@@ -1,0 +1,124 @@
+{
+ "job": {
+  "job": "train-0048-MAT-NUMBERS6",
+  "topic_id": "MAT-NUMBERS6",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a step-by-step worked example",
+  "seed": 48
+ },
+ "model": "gemini-3.1-flash-lite/key3",
+ "usage": {
+  "promptTokenCount": 610,
+  "candidatesTokenCount": 1234,
+  "totalTokenCount": 1844,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 610
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-NUMBERS6-K8-M2",
+  "MAT-NUMBERS6-K12-M3",
+  "MAT-NUMBERS6-K14-M5"
+ ],
+ "response": {
+  "passage": "In our daily lives, we use two main systems to write large numbers: the Indian system and the International system. In the Indian system, we place the first comma after three digits from the right, and then after every two digits. For example, the number 1,234,567 in the International system is written as 12,34,567 in the Indian system. When comparing two numbers, always count the total digits first. A number with more digits is always greater than a number with fewer digits, regardless of the leading zeros. If the number of digits is the same, compare the digits from the leftmost place value. Furthermore, we use Roman numerals for numbering. A key rule is that symbols like I, X, C, and M can be repeated for addition, but never more than three times in a row. For instance, to write 40, we do not write XXXX, but rather XL, which means 50 minus 10. Understanding these rules helps us avoid mistakes when reading large values or writing dates in Roman format. Always check the system you are using before placing your commas or calculating values.",
+  "summary": "This passage explains the differences between Indian and International number systems and how to compare numbers correctly. It also highlights the strict rules for repeating symbols in Roman numerals.",
+  "items": [
+   {
+    "evidence": "In the Indian system, we place the first comma after three digits from the right, and then after every two digits.",
+    "answer": "after every two digits",
+    "stem": "Where do we place commas after the first one in the Indian system?",
+    "options": [
+     {
+      "belief_id": "MAT-NUMBERS6-K8-M2",
+      "why": "Student assumes commas always follow a two-digit pattern.",
+      "text": "after every single digit"
+     },
+     {
+      "belief_id": "MAT-NUMBERS6-K12-M3",
+      "why": "Student confuses digit placement with total number size.",
+      "text": "after every three digits"
+     },
+     {
+      "belief_id": "MAT-NUMBERS6-K14-M5",
+      "why": "Student applies Roman numeral repetition logic to commas.",
+      "text": "after every four digits"
+     }
+    ]
+   },
+   {
+    "evidence": "A number with more digits is always greater than a number with fewer digits, regardless of the leading zeros.",
+    "answer": "more digits",
+    "stem": "What is the primary factor to consider when determining if one number is larger than another?",
+    "options": [
+     {
+      "belief_id": "MAT-NUMBERS6-K8-M2",
+      "why": "Student focuses on comma placement instead of digit count.",
+      "text": "the comma placement"
+     },
+     {
+      "belief_id": "MAT-NUMBERS6-K12-M3",
+      "why": "Student ignores leading zeros and counts total digits.",
+      "text": "the leading zeros"
+     },
+     {
+      "belief_id": "MAT-NUMBERS6-K14-M5",
+      "why": "Student applies Roman repetition rules to digit counting.",
+      "text": "the repeated digits"
+     }
+    ]
+   },
+   {
+    "evidence": "A key rule is that symbols like I, X, C, and M can be repeated for addition, but never more than three times in a row.",
+    "answer": "never more than three times",
+    "stem": "How many times can we repeat symbols like I or X in Roman numerals?",
+    "options": [
+     {
+      "belief_id": "MAT-NUMBERS6-K14-M5",
+      "why": "Student believes symbols can be repeated indefinitely.",
+      "text": "as many times as needed"
+     },
+     {
+      "belief_id": "MAT-NUMBERS6-K8-M2",
+      "why": "Student applies comma grouping logic to symbol repetition.",
+      "text": "exactly two times"
+     },
+     {
+      "belief_id": "MAT-NUMBERS6-K12-M3",
+      "why": "Student thinks more symbols always mean a larger value.",
+      "text": "four times or more"
+     }
+    ]
+   },
+   {
+    "evidence": "For instance, to write 40, we do not write XXXX, but rather XL, which means 50 minus 10.",
+    "answer": "XL",
+    "stem": "Which is the correct way to represent the number 40 in Roman numerals?",
+    "options": [
+     {
+      "belief_id": "MAT-NUMBERS6-K14-M5",
+      "why": "Student incorrectly repeats X four times.",
+      "text": "XXXX"
+     },
+     {
+      "belief_id": "MAT-NUMBERS6-K8-M2",
+      "why": "Student applies comma-based grouping to Roman symbols.",
+      "text": "XX,XX"
+     },
+     {
+      "belief_id": "MAT-NUMBERS6-K12-M3",
+      "why": "Student assumes more symbols equal a larger number.",
+      "text": "XXXXX"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 5.7
+}

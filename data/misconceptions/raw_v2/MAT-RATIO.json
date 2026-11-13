@@ -1,0 +1,509 @@
+{
+ "topic": {
+  "id": "MAT-RATIO",
+  "subject": "maths",
+  "strand": "maths",
+  "grades": [
+   6,
+   7
+  ],
+  "title": "Ratio and proportion",
+  "scope": "ratio as comparison, equivalent ratios, proportion, unitary method"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 837,
+  "candidatesTokenCount": 1634,
+  "totalTokenCount": 2471,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 837
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.9,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Ratio as Comparison",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "division",
+     "fractions"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Equivalent Ratios",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "equivalent fractions"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Proportion",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "equality"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Unitary Method",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "multiplication",
+     "division"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Ratio notation",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "fractions"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Order in ratio",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Simplifying ratios",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "HCF"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Scaling ratios",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": [
+     "multiplication"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Definition of proportion",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Finding missing terms",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n9"
+    ],
+    "external_prereqs": [
+     "algebraic equations"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Unit value calculation",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "division"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Applying unit value",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": [
+     "multiplication"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "Ratio requires same units",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": [
+     "measurement"
+    ]
+   },
+   {
+    "key": "n14",
+    "name": "Ratio as part-to-whole",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": [
+     "fractions"
+    ]
+   },
+   {
+    "key": "n15",
+    "name": "Cross-product rule",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n5",
+    "statement": "A ratio of 2:3 is the same as 3:2.",
+    "why": "Students ignore the sequence of quantities mentioned in the problem statement.",
+    "fix": "The order of numbers in a ratio is fixed; the first number corresponds to the first quantity mentioned.",
+    "probe": {
+     "question": "If there are 2 boys and 3 girls, what is the ratio of girls to boys?",
+     "wrong_answer": "2:3"
+    },
+    "error_type": "notation_misread",
+    "root_belief": "order does not matter in mathematical expressions",
+    "causes": [],
+    "trigger_cues": [
+     "ratio",
+     "order",
+     "sequence",
+     "first",
+     "second"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "math education research on ratio"
+   },
+   {
+    "key": "m2",
+    "node": "n13",
+    "statement": "You can find the ratio of 50 cm to 2 meters by writing 50:2.",
+    "why": "Students focus only on the numbers and ignore the units attached to them.",
+    "fix": "Ratios compare quantities of the same kind; convert both to the same unit before writing the ratio.",
+    "probe": {
+     "question": "What is the ratio of 50 cm to 2 m?",
+     "wrong_answer": "50:2"
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "numbers exist independently of their units",
+    "causes": [],
+    "trigger_cues": [
+     "units",
+     "convert",
+     "same kind",
+     "cm",
+     "meters"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT diagnostic studies"
+   },
+   {
+    "key": "m3",
+    "node": "n14",
+    "statement": "In a ratio of 2:3, the first part represents 2/3 of the total.",
+    "why": "Students confuse ratios with fractions (part-to-whole).",
+    "fix": "A ratio of 2:3 means there are 2 parts of one and 3 parts of another, making 5 parts in total.",
+    "probe": {
+     "question": "In a class, the ratio of boys to girls is 2:3. What fraction of students are boys?",
+     "wrong_answer": "2/3"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a ratio is just a fraction",
+    "causes": [],
+    "trigger_cues": [
+     "part",
+     "whole",
+     "fraction",
+     "total",
+     "ratio"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research"
+   },
+   {
+    "key": "m4",
+    "node": "n11",
+    "statement": "To find the cost of 5 pens if 3 cost 15, you add 15+5.",
+    "why": "Students apply additive reasoning instead of multiplicative reasoning.",
+    "fix": "Find the cost of one item first (15/3 = 5) and then multiply by the required quantity.",
+    "probe": {
+     "question": "If 3 pens cost 15 rupees, how much for 5 pens?",
+     "wrong_answer": "20"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "addition is the default operation for all problems",
+    "causes": [],
+    "trigger_cues": [
+     "unitary",
+     "cost",
+     "more",
+     "less",
+     "multiply"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "id": "m5",
+    "node": "n7",
+    "statement": "To simplify a ratio, you subtract the same number from both terms.",
+    "why": "Students carry over additive reasoning from 'making numbers smaller' and treat both terms alike without noticing that ratio is multiplicative.",
+    "fix": "Simplify by dividing both terms by their common factor (HCF). 8:12 becomes 2:3 on dividing by 4. Subtracting 4 from each gives 4:8 = 1:2, which is a different ratio.",
+    "probe": {
+     "question": "Simplify the ratio 8:12.",
+     "wrong_answer": "4:8 (subtracting 4 from both)"
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "Additive change preserves comparison between quantities",
+    "causes": [],
+    "trigger_cues": [
+     "simplify",
+     "reduce",
+     "smaller numbers",
+     "subtract both terms",
+     "lowest form"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Research on additive vs multiplicative reasoning in proportion (Hart, Kerslake; Lamon)",
+    "key": "m5"
+   },
+   {
+    "id": "m6",
+    "node": "n8",
+    "statement": "To make an equivalent ratio, you add the same number to both terms.",
+    "why": "Students extend the pattern 2:3, 3:4, 4:5 by adding and think the 'difference stays the same' means the ratio stays the same.",
+    "fix": "Multiply (or divide) both terms by the same non-zero number. 2:3 becomes 4:6, 6:9 and so on. Adding 2 to both gives 4:5, which is not equal to 2:3.",
+    "probe": {
+     "question": "Write a ratio equivalent to 2:3 in which the first term is 6.",
+     "wrong_answer": "6:7 (add 4 to both terms)"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "Equal difference means equal ratio",
+    "causes": [],
+    "trigger_cues": [
+     "equivalent ratio",
+     "same number to both",
+     "first term becomes",
+     "scale up",
+     "fill in the blank"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Classic additive strategy in proportional reasoning research (Hart 1981; Tourniaire & Pulos)",
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n9",
+    "statement": "Two ratios are in proportion if their terms are close or have the same difference.",
+    "why": "Students judge by looking at the numbers rather than comparing the ratios in simplest form.",
+    "fix": "Two ratios are in proportion only if they are equal, i.e. they reduce to the same simplest form. 3:5 and 6:10 are in proportion, but 3:5 and 5:7 are not even though both have a difference of 2.",
+    "probe": {
+     "question": "Are 3:5 and 5:7 in proportion?",
+     "wrong_answer": "Yes, because both pairs differ by 2."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Proportion means numbers look similar or differ equally",
+    "causes": [],
+    "trigger_cues": [
+     "are in proportion",
+     "check proportion",
+     "same difference",
+     "compare two ratios",
+     "yes or no"
+    ],
+    "confidence": "plausible",
+    "source_hint": null,
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n10",
+    "statement": "In a proportion, the missing term is found by adding the difference between the known terms.",
+    "why": "Students fill the blank by spotting the gap between numbers in one ratio and applying it to the other.",
+    "fix": "Use equal ratios or the multiplying factor. For 2:5 = 6:__, 2 was multiplied by 3 to get 6, so 5 x 3 = 15. The answer is 15, not 9.",
+    "probe": {
+     "question": "Find the missing term: 2:5 = 6:__",
+     "wrong_answer": "9 (since 6 + 3, as 5 - 2 = 3)"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "Fixed gap between terms keeps proportion",
+    "causes": [],
+    "trigger_cues": [
+     "find the missing term",
+     "fill in the blank",
+     "a:b = c:?",
+     "complete the proportion",
+     "what is x"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Research on additive errors in missing-value problems (Kaput & West; Cramer & Post)",
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n11",
+    "statement": "The unit value is always found by dividing the bigger number by the smaller number.",
+    "why": "Students memorise 'divide big by small' instead of asking what quantity is shared by one unit.",
+    "fix": "The unit value is the quantity for ONE item: divide the total by the number of items. If 4 kg of rice cost Rs 20, cost of 1 kg is 20 / 4 = Rs 5. Always check which quantity you want per one.",
+    "probe": {
+     "question": "A car travels 3 km in 12 minutes. How many km does it travel in 1 minute?",
+     "wrong_answer": "4 km (12 / 3)"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "Division always puts the larger number first",
+    "causes": [],
+    "trigger_cues": [
+     "per one",
+     "how much for 1",
+     "divide bigger by smaller",
+     "rate",
+     "unit rate"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Research on division misconception that the larger number must be the dividend (Fischbein et al.)",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n12",
+    "statement": "After finding the unit value, you divide it by the new number of items to get the total.",
+    "why": "Students recall that the unit method involves division and apply it again at the second step instead of multiplying.",
+    "fix": "Unit value x number of items = total cost. If 1 pen costs Rs 5, then 7 pens cost 5 x 7 = Rs 35, not 5 / 7.",
+    "probe": {
+     "question": "If 4 notebooks cost Rs 60, what is the cost of 7 notebooks?",
+     "wrong_answer": "Rs 2.14 (15 / 7)"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "Unit method means dividing at every step",
+    "causes": [],
+    "trigger_cues": [
+     "cost of more items",
+     "unit method",
+     "find cost of",
+     "after finding one",
+     "total for many"
+    ],
+    "confidence": "plausible",
+    "source_hint": null,
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n13",
+    "statement": "Units can be ignored when comparing two quantities as long as both are lengths.",
+    "why": "Students think 'same kind of thing' is enough and ignore that ratios need the same unit of measure.",
+    "fix": "Both quantities must be in the same unit. Convert first: 1 m = 100 cm, so 2 m : 50 cm = 200 cm : 50 cm = 4:1. Same dimension is not enough; the units must also match.",
+    "probe": {
+     "question": "Find the ratio of 3 m to 60 cm.",
+     "wrong_answer": "3:60, which is 1:20"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "Same type of quantity is enough for ratio",
+    "causes": [],
+    "trigger_cues": [
+     "ratio of metres to centimetres",
+     "different units",
+     "convert",
+     "kg and g",
+     "hours and minutes"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Indian classroom studies and NCERT exemplar error analyses on ratio with unlike units",
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n14",
+    "statement": "A ratio of boys to girls 3:2 means 3 boys and 2 girls in the class.",
+    "why": "Students treat ratio terms as actual counts rather than relative sizes that can scale.",
+    "fix": "The ratio 3:2 is a comparison; the actual numbers are multiples of 3 and 2. If there are 30 students in total, the 5 parts each equal 6, so there are 18 boys and 12 girls.",
+    "probe": {
+     "question": "The ratio of boys to girls in a class of 40 is 3:2. How many girls are there?",
+     "wrong_answer": "2 girls"
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "Ratio terms are the actual quantities",
+    "causes": [],
+    "trigger_cues": [
+     "ratio of boys to girls",
+     "total students",
+     "how many girls",
+     "share in the ratio",
+     "class of"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Studies of ratio as actual count vs relative comparison (Lamon; Behr et al.)",
+    "key": "m12"
+   },
+   {
+    "id": "m13",
+    "node": "n15",
+    "statement": "In the cross-product rule you multiply the terms on the same side of the equal sign.",
+    "why": "Students remember 'multiply and divide' but not which pairs of terms to cross, so they pair the numerators with each other.",
+    "fix": "For a:b = c:d, the product of extremes (a x d) equals the product of means (b x c). For 2:3 = x:12, 3 x x = 2 x 12, so x = 8.",
+    "probe": {
+     "question": "Use cross-multiplication to find x if 2:3 = x:12.",
+     "wrong_answer": "x = 18 (2 x 3 = 6, then 6 x 12 / 4... multiplying 3 x 12 / 2)"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "Cross-multiplying pairs are chosen by memorised pattern",
+    "causes": [],
+    "trigger_cues": [
+     "cross multiply",
+     "product of means",
+     "product of extremes",
+     "find x",
+     "a:b = c:d"
+    ],
+    "confidence": "plausible",
+    "source_hint": null,
+    "key": "m13"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

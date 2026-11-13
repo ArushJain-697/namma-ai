@@ -1,0 +1,833 @@
+{
+ "topic": {
+  "id": "MAT-AP",
+  "subject": "maths",
+  "strand": "maths",
+  "grades": [
+   10
+  ],
+  "title": "Arithmetic progressions",
+  "scope": "common difference, nth term, sum of first n terms, applications"
+ },
+ "model": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 7270,
+  "promptTokenCount": 2
+ },
+ "seconds": 52.2,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Sequences and common difference",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "patterns in number lists",
+     "subtraction of integers"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "nth term of an AP",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "substituting values in algebraic expressions"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Sum of first n terms",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "solving linear equations",
+     "BODMAS order of operations"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Applications of AP",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2",
+     "n3"
+    ],
+    "external_prereqs": [
+     "forming equations from word problems"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Recognising an AP",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "Finding common difference d",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Constant difference, not ratio, defines an AP",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": [
+     "difference versus ratio"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "A list with a regular but non-constant pattern is not an AP",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": [
+     "squares of numbers"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "d = a(k+1) - a(k) (later minus earlier)",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": [
+     "subtraction of negative numbers"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "d can be negative or zero",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n9"
+    ],
+    "external_prereqs": [
+     "negative numbers on number line"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Meaning of a, d, n, a_n",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "algebraic notation"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Formula a_n = a + (n-1)d",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "a_n is the term at position n, not n times anything",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [],
+    "external_prereqs": [
+     "subscript notation"
+    ]
+   },
+   {
+    "key": "n14",
+    "name": "To reach nth term, d is added (n-1) times",
+    "level": 3,
+    "parent": "n12",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Finding which term a given number is / checking membership",
+    "level": 3,
+    "parent": "n12",
+    "prereqs": [
+     "n14"
+    ],
+    "external_prereqs": [
+     "solving linear equations"
+    ]
+   },
+   {
+    "key": "n16",
+    "name": "Common difference from two given terms",
+    "level": 3,
+    "parent": "n12",
+    "prereqs": [
+     "n14"
+    ],
+    "external_prereqs": [
+     "solving simultaneous equations"
+    ]
+   },
+   {
+    "key": "n17",
+    "name": "Sum formulas",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n18",
+    "name": "Using last term l and number of terms",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n19",
+    "name": "S_n = n/2[2a+(n-1)d]",
+    "level": 3,
+    "parent": "n17",
+    "prereqs": [],
+    "external_prereqs": [
+     "order of operations"
+    ]
+   },
+   {
+    "key": "n20",
+    "name": "S_n = n/2 (a + l) needs the last term",
+    "level": 3,
+    "parent": "n18",
+    "prereqs": [
+     "n19"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n21",
+    "name": "a_n = S_n - S_(n-1)",
+    "level": 3,
+    "parent": "n18",
+    "prereqs": [
+     "n19"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n22",
+    "name": "Sum of first n terms is not the nth term",
+    "level": 3,
+    "parent": "n17",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n23",
+    "name": "Translating word problems into a, d, n",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "reading word problems"
+    ]
+   },
+   {
+    "key": "n24",
+    "name": "Choosing between a_n and S_n in a problem",
+    "level": 3,
+    "parent": "n23",
+    "prereqs": [
+     "n22"
+    ],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n7",
+    "statement": "A list like 2, 4, 8, 16 is an AP because each term grows by the same rule.",
+    "why": "Students see a consistent pattern and treat any regular pattern as an AP.",
+    "fix": "In an AP the same number is added each time. 2, 4, 8, 16 multiplies by 2, so differences 2, 4, 8 are not equal.",
+    "probe": {
+     "question": "Is 3, 9, 27, 81 an AP?",
+     "wrong_answer": "Yes, it is an AP with common difference 3"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "any visible pattern counts as the named pattern",
+    "causes": [],
+    "trigger_cues": [
+     "arithmetic progression",
+     "common difference",
+     "same number added",
+     "ratio",
+     "pattern",
+     "list of numbers"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "teacher-reported errors on AP versus GP confusion in secondary maths studies"
+   },
+   {
+    "key": "m2",
+    "node": "n8",
+    "statement": "1, 4, 9, 16, 25 is an AP because the numbers keep increasing.",
+    "why": "Students equate increasing with equal increase.",
+    "fix": "Differences must all be equal. Here they are 3, 5, 7, 9, so it is not an AP.",
+    "probe": {
+     "question": "Is 1, 4, 9, 16 an AP?",
+     "wrong_answer": "Yes, it always increases"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "going up steadily means going up equally",
+    "causes": [],
+    "trigger_cues": [
+     "not an ap",
+     "differences",
+     "increasing",
+     "squares",
+     "unequal",
+     "check"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n7",
+    "statement": "Checking only the first two terms is enough to say a list is an AP.",
+    "why": "Students generalise from one example of difference.",
+    "fix": "The difference must be the same between every pair of consecutive terms, so all must be checked.",
+    "probe": {
+     "question": "Is 2, 4, 6, 9, 12 an AP?",
+     "wrong_answer": "Yes, since 4-2=2"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "one example is enough to prove a rule",
+    "causes": [],
+    "trigger_cues": [
+     "consecutive terms",
+     "every pair",
+     "same difference",
+     "check",
+     "verify",
+     "all terms"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n9",
+    "statement": "The common difference is found by subtracting the later term from the earlier one.",
+    "why": "Students subtract in the order the numbers are written, large minus small, or earlier first.",
+    "fix": "d = a2 - a1, the later term minus the earlier one; for decreasing APs d comes out negative.",
+    "probe": {
+     "question": "Find d for 10, 7, 4, 1.",
+     "wrong_answer": "d = 10 - 7 = 3"
+    },
+    "error_type": "sign_error_belief",
+    "root_belief": "subtraction always gives a positive answer",
+    "causes": [
+     "m5"
+    ],
+    "trigger_cues": [
+     "common difference",
+     "subtract",
+     "next term",
+     "previous term",
+     "decreasing",
+     "negative"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "documented sign and order errors in subtraction in algebra studies"
+   },
+   {
+    "key": "m5",
+    "node": "n10",
+    "statement": "The common difference of an AP can never be negative or zero.",
+    "why": "Students think 'difference' is a positive distance and progressions must grow.",
+    "fix": "d can be negative (terms decrease) or zero (all terms equal, like 5, 5, 5).",
+    "probe": {
+     "question": "Is 5, 5, 5, 5 an AP?",
+     "wrong_answer": "No, because there is no difference"
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "a quantity named as a size is always positive",
+    "causes": [],
+    "trigger_cues": [
+     "negative",
+     "zero",
+     "decreasing",
+     "constant list",
+     "common difference",
+     "same terms"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m6",
+    "node": "n10",
+    "statement": "A list that decreases, like 20, 15, 10, 5, is not a progression.",
+    "why": "The word 'progression' suggests moving forward or increasing.",
+    "fix": "A decreasing list is an AP with negative d, here d = -5.",
+    "probe": {
+     "question": "Is 20, 15, 10, 5 an AP?",
+     "wrong_answer": "No, because it is going down"
+    },
+    "error_type": "language_confusion",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [
+     "m5"
+    ],
+    "trigger_cues": [
+     "progression",
+     "decreasing",
+     "going down",
+     "negative difference",
+     "ap"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n13",
+    "statement": "a_n means a multiplied by n.",
+    "why": "Students read the subscript like an algebraic product.",
+    "fix": "a_n is the term at position n; the subscript only labels position and is not multiplied.",
+    "probe": {
+     "question": "If a_3 = 12, what is a_3 when a = 4?",
+     "wrong_answer": "a_3 = 4 x 3 = 12 for any AP"
+    },
+    "error_type": "notation_misread",
+    "root_belief": "symbols written together are multiplied",
+    "causes": [
+     "m8"
+    ],
+    "trigger_cues": [
+     "nth term",
+     "a_n",
+     "subscript",
+     "position",
+     "term number",
+     "notation"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on algebraic notation misreadings, subscripts treated as multipliers"
+   },
+   {
+    "key": "m8",
+    "node": "n13",
+    "statement": "a_n and n are the same thing, so the nth term equals n.",
+    "why": "Students confuse the position number with the value in that position.",
+    "fix": "n tells the position; a_n is the value there, e.g. in 5, 8, 11, the 3rd term a_3 is 11, not 3.",
+    "probe": {
+     "question": "What is the 4th term of 5, 8, 11, 14?",
+     "wrong_answer": "4"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a label and the thing labelled are the same",
+    "causes": [],
+    "trigger_cues": [
+     "position",
+     "nth term",
+     "value",
+     "term number",
+     "which term"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m9",
+    "node": "n14",
+    "statement": "The nth term is a + nd.",
+    "why": "Students think the nth term has n steps from the start, like counting jumps from a.",
+    "fix": "The first term is already a, so only (n-1) jumps of d are added: a_n = a + (n-1)d.",
+    "probe": {
+     "question": "Find the 10th term of 3, 7, 11, ...",
+     "wrong_answer": "3 + 10 x 4 = 43"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "counting positions equals counting steps between them",
+    "causes": [],
+    "trigger_cues": [
+     "nth term",
+     "n-1",
+     "first term",
+     "add d",
+     "position",
+     "formula"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "fence-post or off-by-one errors reported in pattern and sequence research"
+   },
+   {
+    "key": "m10",
+    "node": "n12",
+    "statement": "In a + (n-1)d, you should add a and (n-1) first and then multiply by d.",
+    "why": "Students work left to right ignoring bracket and multiplication precedence.",
+    "fix": "Multiply (n-1) by d first, then add a: a + ((n-1) x d).",
+    "probe": {
+     "question": "Find a_5 for a=2, d=3.",
+     "wrong_answer": "(2+4) x 3 = 18"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "calculate strictly left to right",
+    "causes": [],
+    "trigger_cues": [
+     "a + (n-1)d",
+     "substitute",
+     "bracket",
+     "order of operations",
+     "multiply first"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "order of operations errors in algebra misconception research"
+   },
+   {
+    "key": "m11",
+    "node": "n15",
+    "statement": "If solving a + (n-1)d = given number gives a fraction for n, you can just round it and the number is still in the AP.",
+    "why": "Students treat n as any number and want an answer to the equation.",
+    "fix": "n must be a positive whole number; if it is a fraction or negative, the number is not a term of the AP.",
+    "probe": {
+     "question": "Is 100 a term of 3, 8, 13, ...?",
+     "wrong_answer": "n = 20.4, so roughly the 20th term; yes"
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "any solution of an equation is acceptable",
+    "causes": [],
+    "trigger_cues": [
+     "is a term of",
+     "which term",
+     "find n",
+     "positive integer",
+     "fraction",
+     "not a term"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on ignoring context constraints on solutions in word problems"
+   },
+   {
+    "key": "m12",
+    "node": "n15",
+    "statement": "To find which term a number is, divide the number by d.",
+    "why": "Students pattern-match from multiples like 5, 10, 15 and ignore the first term.",
+    "fix": "Use a + (n-1)d = number and solve for n; dividing works only when a = d.",
+    "probe": {
+     "question": "Which term of 4, 7, 10, ... is 25?",
+     "wrong_answer": "25 / 3 so about the 8th term"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a rule from a special case works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "which term",
+     "multiples",
+     "divide",
+     "first term",
+     "solve for n"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m13",
+    "node": "n16",
+    "statement": "Given a_3 and a_7, d is found by dividing a_7 by a_3.",
+    "why": "Students mix up gap in positions with ratio of values.",
+    "fix": "The difference a_7 - a_3 equals 4d, so d = (a_7 - a_3)/4.",
+    "probe": {
+     "question": "a_3 = 9, a_7 = 21. Find d.",
+     "wrong_answer": "d = 21/9"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "difference and ratio are interchangeable ways to compare",
+    "causes": [],
+    "trigger_cues": [
+     "given two terms",
+     "find d",
+     "a_7",
+     "a_3",
+     "subtract",
+     "positions apart"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m14",
+    "node": "n16",
+    "statement": "If a_3 = 9 and a_7 = 21, then d = a_7 - a_3 = 12.",
+    "why": "Students forget that terms are several steps apart, not adjacent.",
+    "fix": "The terms are 4 positions apart, so 4d = 12 and d = 3.",
+    "probe": {
+     "question": "a_2 = 5, a_6 = 17. Find d.",
+     "wrong_answer": "d = 17 - 5 = 12"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "any two values differ by one step",
+    "causes": [],
+    "trigger_cues": [
+     "two terms",
+     "difference of terms",
+     "positions",
+     "steps",
+     "a_6",
+     "a_2"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m15",
+    "node": "n19",
+    "statement": "In S_n = n/2[2a+(n-1)d], the 2a means a squared.",
+    "why": "Students misread the coefficient 2 in front of a, or mix with power notation.",
+    "fix": "2a means 2 times a, so the bracket holds twice the first term plus (n-1)d.",
+    "probe": {
+     "question": "Find S_3 for a=3, d=2.",
+     "wrong_answer": "3/2[3^2+2x2] = 19.5"
+    },
+    "error_type": "notation_misread",
+    "root_belief": "symbols written together are multiplied",
+    "causes": [],
+    "trigger_cues": [
+     "sum formula",
+     "2a",
+     "first term",
+     "bracket",
+     "s_n",
+     "coefficient"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m16",
+    "node": "n19",
+    "statement": "The sum of n terms is n times the nth term.",
+    "why": "Students extend 'n copies' of one number from repeated addition.",
+    "fix": "Terms differ, so sum is n times the average of first and last terms: n/2(a + l).",
+    "probe": {
+     "question": "Find the sum of 2, 4, 6, 8.",
+     "wrong_answer": "4 x 8 = 32"
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "repeated addition means multiplying one value",
+    "causes": [],
+    "trigger_cues": [
+     "sum",
+     "n terms",
+     "average",
+     "last term",
+     "total",
+     "add"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m17",
+    "node": "n20",
+    "statement": "The formula n/2(a + l) can be used when only a, d and n are known, with l as the nth term unknown.",
+    "why": "Students plug in without checking that l is known.",
+    "fix": "First find l = a + (n-1)d, or use n/2[2a+(n-1)d] directly.",
+    "probe": {
+     "question": "Find S_10 for a=2, d=3 using n/2(a+l).",
+     "wrong_answer": "5(2 + 3) = 25"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "formulas can be filled using any available number",
+    "causes": [],
+    "trigger_cues": [
+     "last term",
+     "l",
+     "formula",
+     "a + l",
+     "unknown",
+     "find sum"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m18",
+    "node": "n20",
+    "statement": "The last term l is always the same as d or a_n for any given n.",
+    "why": "Students think the last term is a fixed quantity rather than depending on how many terms are added.",
+    "fix": "The last term depends on which n you stop at: l = a + (n-1)d changes as n changes.",
+    "probe": {
+     "question": "In an AP with a=1, d=2, what is l when n=5?",
+     "wrong_answer": "l = 2"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a label and the thing labelled are the same",
+    "causes": [],
+    "trigger_cues": [
+     "last term",
+     "l",
+     "d",
+     "a_n",
+     "stop at",
+     "finite ap"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m19",
+    "node": "n21",
+    "statement": "The nth term is found as S_n - S_(n+1).",
+    "why": "Students mix up which neighbouring sum to remove.",
+    "fix": "a_n = S_n - S_(n-1); the sum up to n minus the sum up to the term before it.",
+    "probe": {
+     "question": "If S_n = n^2, find a_3.",
+     "wrong_answer": "9 - 16 = -7"
+    },
+    "error_type": "sign_error_belief",
+    "root_belief": "subtraction order does not matter",
+    "causes": [],
+    "trigger_cues": [
+     "s_n",
+     "a_n",
+     "s_(n-1)",
+     "nth term from sum",
+     "subtract sums"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m20",
+    "node": "n22",
+    "statement": "The sum of the first n terms S_n is the same as a_n, the nth term.",
+    "why": "Both are labelled with n and students merge their meanings.",
+    "fix": "S_n adds all n terms; a_n is just the single nth term.",
+    "probe": {
+     "question": "For 2, 4, 6, 8, what is S_4?",
+     "wrong_answer": "8"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar symbols mean similar things",
+    "causes": [
+     "m21"
+    ],
+    "trigger_cues": [
+     "s_n",
+     "a_n",
+     "sum of n terms",
+     "nth term",
+     "total",
+     "single term"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies on confusion between term and sum in sequence and series learning"
+   },
+   {
+    "key": "m21",
+    "node": "n24",
+    "statement": "If a problem says 'total after n days', you should use the nth term formula.",
+    "why": "Students pick the formula they know best without reading what is asked.",
+    "fix": "'Total' or 'sum' calls for S_n; 'amount on the nth day' calls for a_n.",
+    "probe": {
+     "question": "Saves Rs 5 on day 1, 10 on day 2, 15 on day 3. Total after 10 days?",
+     "wrong_answer": "5 + 9 x 5 = 50"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "pick the familiar formula, ignore what is asked",
+    "causes": [],
+    "trigger_cues": [
+     "total",
+     "after n days",
+     "sum",
+     "savings",
+     "amount on",
+     "word problem"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on key-word driven and formula-matching errors in word problems"
+   },
+   {
+    "key": "m22",
+    "node": "n23",
+    "statement": "In a word problem, the first amount given is always a and the number of years given is always n.",
+    "why": "Students assign letters by order of appearance, not meaning.",
+    "fix": "Identify the first term, the constant increase d, and how many terms; the starting value may be at n=0 or the number of terms may differ from years.",
+    "probe": {
+     "question": "Salary Rs 5000 in year 1 rising Rs 200 yearly. Salary in 6th year?",
+     "wrong_answer": "n = 5000"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "first number given maps to first symbol",
+    "causes": [],
+    "trigger_cues": [
+     "first term",
+     "each year",
+     "increase",
+     "starting",
+     "number of terms",
+     "word problem"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m23",
+    "node": "n23",
+    "statement": "A yearly increase of 5% gives an AP with d = 5.",
+    "why": "Students treat a percentage increase as an added fixed amount.",
+    "fix": "A percentage of the current amount changes every year, so the differences are not equal; it is not an AP.",
+    "probe": {
+     "question": "Rs 1000 grows 10% each year: is 1000, 1100, 1210 an AP?",
+     "wrong_answer": "Yes, d = 10"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "percent increase means same increase each time",
+    "causes": [],
+    "trigger_cues": [
+     "percent",
+     "interest",
+     "grows",
+     "each year",
+     "compound",
+     "fixed amount"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}

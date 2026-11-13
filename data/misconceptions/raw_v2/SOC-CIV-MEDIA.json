@@ -1,0 +1,475 @@
+{
+ "topic": {
+  "id": "SOC-CIV-MEDIA",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   7
+  ],
+  "title": "Media and advertising",
+  "scope": "media and technology, money and media, balanced reporting, advertising, brands, democracy"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 826,
+  "candidatesTokenCount": 1570,
+  "totalTokenCount": 2396,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 826
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 6.1,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Media and Technology",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "basic definition of communication"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Media and Money",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "concept of profit"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Advertising and Democracy",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1",
+     "n2"
+    ],
+    "external_prereqs": [
+     "meaning of democracy"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Role of Technology",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "types of electronic devices"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Mass Media",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "Media Costs",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "cost of production"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Balanced Reporting",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "definition of bias"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Advertising Influence",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Media in Democracy",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": [
+     "fundamental rights"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Technology changes over time",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "history of inventions"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Mass media reaches millions",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Advertising funds media",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Independent media provides all views",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Ads create brand loyalty",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Media sets the agenda",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n13",
+    "statement": "If a news channel is independent, it must be telling the absolute truth.",
+    "why": "Students conflate 'independent from government' with 'objective and unbiased'.",
+    "fix": "Independent media is free from government control but can still be biased due to corporate interests or editorial choices.",
+    "probe": {
+     "question": "Can a private newspaper be biased?",
+     "wrong_answer": "No, only government-run media is biased."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Independence equals total objectivity.",
+    "causes": [],
+    "trigger_cues": [
+     "independent",
+     "media",
+     "truth",
+     "bias",
+     "government"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n12",
+    "statement": "Advertisements are only meant to inform us about new products.",
+    "why": "Students focus on the explicit content of the ad rather than the underlying persuasive intent.",
+    "fix": "Advertisements are designed to persuade consumers to buy products by creating a desire or associating the product with a lifestyle.",
+    "probe": {
+     "question": "Why do companies spend money on ads?",
+     "wrong_answer": "To tell people what products are available."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Information is the only purpose of communication.",
+    "causes": [],
+    "trigger_cues": [
+     "advertising",
+     "products",
+     "inform",
+     "persuade",
+     "brands"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on media literacy"
+   },
+   {
+    "key": "m3",
+    "node": "n15",
+    "statement": "The media tells us what is important, so we should believe everything they highlight.",
+    "why": "Students assume that the frequency of news coverage equals the objective importance of an event.",
+    "fix": "Media sets the agenda by choosing which stories to highlight, but this does not mean those are the only important issues.",
+    "probe": {
+     "question": "If the news talks about a celebrity all day, is it the most important event in the country?",
+     "wrong_answer": "Yes, because the news says it is."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Frequency equals importance.",
+    "causes": [],
+    "trigger_cues": [
+     "agenda",
+     "highlight",
+     "news",
+     "important",
+     "coverage"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n14",
+    "statement": "Expensive brands are always better quality than cheaper, unbranded goods.",
+    "why": "Students internalize the messaging of advertisements that equate price with quality.",
+    "fix": "Advertising creates a brand image that makes products seem superior, but the actual quality may be the same as unbranded items.",
+    "probe": {
+     "question": "Is a branded shirt always better than a local one?",
+     "wrong_answer": "Yes, because the brand is famous."
+    },
+    "error_type": "stereotype",
+    "root_belief": "Higher price means higher quality.",
+    "causes": [],
+    "trigger_cues": [
+     "brands",
+     "quality",
+     "expensive",
+     "advertising",
+     "loyalty"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Consumer behavior studies"
+   },
+   {
+    "node": "n12",
+    "statement": "Newspapers and TV channels earn all their money from people buying them, not from advertisements.",
+    "why": "Students see the copy price or cable bill and do not notice that ads pay most production costs.",
+    "fix": "Media houses earn a large part of their income from advertisements. Sale price alone does not cover the cost, so ads fund media and keep it cheap.",
+    "probe": {
+     "question": "A newspaper costs only Rs 5 but is expensive to print. Where does most of the extra money come from?",
+     "wrong_answer": "From readers paying more money for each copy."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Consumers alone pay for all media costs",
+    "causes": [],
+    "trigger_cues": [
+     "newspaper",
+     "price",
+     "pays",
+     "money",
+     "earn",
+     "copy",
+     "cost"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 7 Social Science textbook; classroom observation",
+    "key": "m5"
+   },
+   {
+    "node": "n6",
+    "statement": "Media is free for us, so it costs nothing to run a TV channel or newspaper.",
+    "why": "Students watch TV or read free websites without paying and assume there are no costs.",
+    "fix": "Running media needs money for reporters, equipment, printing, broadcasting and salaries. Someone, often advertisers, pays for these.",
+    "probe": {
+     "question": "Why does a free TV channel still need money?",
+     "wrong_answer": "It does not need money because viewers watch it free."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Free to the viewer means free to produce",
+    "causes": [],
+    "trigger_cues": [
+     "free",
+     "channel",
+     "cost",
+     "run",
+     "produce",
+     "viewers",
+     "website"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher observation",
+    "key": "m6"
+   },
+   {
+    "node": "n10",
+    "statement": "Technology only changed how media looks, not who can reach or use it.",
+    "why": "Students see new gadgets as better screens and not as a change in access and speed.",
+    "fix": "New technology such as printing, radio, TV and the internet changed how fast news spreads and how many people can share or receive it.",
+    "probe": {
+     "question": "How did the internet change media compared with early newspapers?",
+     "wrong_answer": "It only made pictures look better; nothing else changed."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Technology changes only appearance, not reach",
+    "causes": [],
+    "trigger_cues": [
+     "technology",
+     "internet",
+     "changed",
+     "newspaper",
+     "speed",
+     "access",
+     "gadgets"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 7 Social Science textbook",
+    "key": "m7"
+   },
+   {
+    "node": "n11",
+    "statement": "Mass media means only television and nothing else reaches millions.",
+    "why": "TV is the most familiar medium at home, so students equate it with mass media.",
+    "fix": "Mass media includes newspapers, radio, TV, films and the internet. All of them reach very large numbers of people.",
+    "probe": {
+     "question": "Which of these are mass media: newspaper, radio, TV, internet?",
+     "wrong_answer": "Only TV is mass media."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Mass media equals television only",
+    "causes": [],
+    "trigger_cues": [
+     "mass",
+     "media",
+     "television",
+     "radio",
+     "newspaper",
+     "millions",
+     "reach"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation",
+    "key": "m8"
+   },
+   {
+    "node": "n14",
+    "statement": "If I like a brand's advertisement, I should buy that brand because the ad proves it is the best.",
+    "why": "Students treat an appealing ad, jingle or celebrity as evidence of product quality.",
+    "fix": "Ads aim to make people like and stay loyal to a brand, but they do not prove quality. We should compare price, quality and need before buying.",
+    "probe": {
+     "question": "A popular actor appears in a biscuit ad you love. What does this show about the biscuit?",
+     "wrong_answer": "It shows the biscuit must be the best quality."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Likeable advertising proves product quality",
+    "causes": [],
+    "trigger_cues": [
+     "advertisement",
+     "celebrity",
+     "actor",
+     "jingle",
+     "best",
+     "buy",
+     "brand"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "media literacy research on children and advertising",
+    "key": "m9"
+   },
+   {
+    "node": "n8",
+    "statement": "Advertisements affect only adults, so children are not influenced by them.",
+    "why": "Students think buying decisions belong only to those who earn money.",
+    "fix": "Ads target children too, and children influence what families buy, such as snacks, toys and clothes.",
+    "probe": {
+     "question": "Why do companies make colourful ads with cartoons during children's shows?",
+     "wrong_answer": "Children cannot be influenced, so it is only for decoration."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Only earners are influenced by advertising",
+    "causes": [],
+    "trigger_cues": [
+     "children",
+     "cartoon",
+     "ads",
+     "influence",
+     "toys",
+     "snacks",
+     "target"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on children's awareness of advertising intent",
+    "key": "m10"
+   },
+   {
+    "node": "n7",
+    "statement": "Balanced reporting means giving equal time to every opinion, even a false one.",
+    "why": "Students link balance with fairness in counting, not with checking facts.",
+    "fix": "Balanced reporting presents different sides fairly and accurately, based on facts, and does not treat falsehood as equal to evidence.",
+    "probe": {
+     "question": "A channel gives the same airtime to a proven fact and a rumour. Is this balanced reporting?",
+     "wrong_answer": "Yes, equal time to both makes it balanced."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Balance means equal time regardless of facts",
+    "causes": [],
+    "trigger_cues": [
+     "balanced",
+     "equal",
+     "time",
+     "opinion",
+     "rumour",
+     "fair",
+     "reporting"
+    ],
+    "confidence": "plausible",
+    "source_hint": "journalism education literature",
+    "key": "m11"
+   },
+   {
+    "node": "n9",
+    "statement": "In a democracy, media should always support the government.",
+    "why": "Students confuse respect for government with the media's duty to inform.",
+    "fix": "In a democracy, media should report on government work, including its mistakes, so citizens can question and make informed choices.",
+    "probe": {
+     "question": "A newspaper reports a mistake in a government scheme. What should the media have done?",
+     "wrong_answer": "It should have stayed quiet and supported the government."
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "Good media must agree with the government",
+    "causes": [],
+    "trigger_cues": [
+     "government",
+     "media",
+     "democracy",
+     "criticise",
+     "support",
+     "scheme",
+     "question"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 7 Social Science textbook; civics teaching",
+    "key": "m12"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

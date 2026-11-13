@@ -1,0 +1,519 @@
+{
+ "topic": {
+  "id": "SCI-CHM-ACIDSBASES",
+  "subject": "science",
+  "strand": "chemistry",
+  "grades": [
+   7,
+   10
+  ],
+  "title": "Acids, bases and salts",
+  "scope": "natural indicators, litmus, neutralisation, pH scale, everyday acids and bases, salts"
+ },
+ "model": "gemini-3-flash-preview/key2",
+ "usage": {
+  "promptTokenCount": 840,
+  "candidatesTokenCount": 3985,
+  "totalTokenCount": 8676,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 840
+   }
+  ],
+  "thoughtsTokenCount": 3851,
+  "serviceTier": "standard"
+ },
+ "seconds": 28.6,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Identification and Properties",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "physical state",
+     "chemical change"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Chemical Reactions and Neutralisation",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "chemical change",
+     "conservation of mass"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "pH Scale and Strength",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1",
+     "n2"
+    ],
+    "external_prereqs": [
+     "concept of concentration"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Physical Properties of Acids and Bases",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Indicators",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "Neutralisation Reaction",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n4",
+     "n5"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Everyday Neutralisation",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": [
+     "digestion in humans"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "The pH Scale",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Acid and Base Strength",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Salts and their Properties",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n6",
+     "n9"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Acids taste sour",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Bases are bitter and soapy",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Litmus color changes",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n11",
+     "n12"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Phenolphthalein behavior",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Acid + Base -> Salt + Water",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n11",
+     "n12"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n16",
+    "name": "Antacids for indigestion",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n15"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n17",
+    "name": "pH 7 is neutral",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n18",
+    "name": "pH < 7 is acidic",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n19",
+    "name": "Strong vs Weak acids",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [
+     "n18"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n20",
+    "name": "Salts can be acidic or basic",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [
+     "n15",
+     "n19"
+    ],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n11",
+    "statement": "All acids are dangerous and corrosive chemicals.",
+    "why": "Students associate the word 'acid' with media portrayals of burning or industrial hazards.",
+    "fix": "Many acids are found in food, like citric acid in lemons or lactic acid in curd, and are safe to consume.",
+    "probe": {
+     "question": "Is Vitamin C (ascorbic acid) a dangerous chemical?",
+     "wrong_answer": "Yes, because all acids are dangerous."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "labels describe the whole object",
+    "causes": [],
+    "trigger_cues": [
+     "acid",
+     "burn",
+     "danger",
+     "corrosive",
+     "hazard"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas in Science"
+   },
+   {
+    "key": "m2",
+    "node": "n11",
+    "statement": "Acids are always liquids.",
+    "why": "Most classroom experiments use aqueous solutions of acids.",
+    "fix": "Acids can exist as solids, like citric acid crystals or tartaric acid, before they are dissolved in water.",
+    "probe": {
+     "question": "Can a dry solid powder be an acid?",
+     "wrong_answer": "No, acids must be liquids."
+    },
+    "error_type": "visible_only",
+    "root_belief": "physical state defines identity",
+    "causes": [],
+    "trigger_cues": [
+     "liquid",
+     "solid",
+     "state",
+     "powder",
+     "gas"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m3",
+    "node": "n13",
+    "statement": "If litmus paper does not change color, the substance must be water.",
+    "why": "Students assume a lack of reaction implies the most common neutral substance they know.",
+    "fix": "A lack of color change only means the substance is not of the type the indicator detects; it could be neutral, or already the same color as the paper.",
+    "probe": {
+     "question": "If blue litmus stays blue, is the liquid definitely water?",
+     "wrong_answer": "Yes, because it didn't change."
+    },
+    "error_type": "single_cause",
+    "root_belief": "one event has one single cause",
+    "causes": [],
+    "trigger_cues": [
+     "litmus",
+     "neutral",
+     "water",
+     "color",
+     "change"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n15",
+    "statement": "Neutralisation results in the total disappearance of the acid and base.",
+    "why": "Students see two liquids mix and the 'acidic' properties vanish, assuming the matter is gone.",
+    "fix": "The atoms are rearranged to form new substances: a salt and water.",
+    "probe": {
+     "question": "What happens to the matter when an acid and base react?",
+     "wrong_answer": "The matter is destroyed and disappears."
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "reaction",
+     "disappear",
+     "vanish",
+     "product",
+     "mix"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas in Science"
+   },
+   {
+    "key": "m5",
+    "node": "n15",
+    "statement": "Neutralisation always results in a solution with a pH of exactly 7.",
+    "why": "The term 'neutralisation' implies a perfectly neutral outcome to students.",
+    "fix": "The pH depends on the strength of the acid and base; a strong acid and weak base will produce an acidic salt.",
+    "probe": {
+     "question": "If you mix a strong acid with a weak base, is the result pH 7?",
+     "wrong_answer": "Yes, neutralisation always makes it 7."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "opposite things cancel out completely",
+    "causes": [
+     "m10"
+    ],
+    "trigger_cues": [
+     "neutral",
+     "seven",
+     "balance",
+     "reaction",
+     "equal"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Mumbai"
+   },
+   {
+    "key": "m6",
+    "node": "n16",
+    "statement": "Antacids are a type of acid used to help the stomach.",
+    "why": "The name contains the word 'acid', leading to linguistic confusion.",
+    "fix": "Antacids are actually bases that react with excess stomach acid to neutralise it.",
+    "probe": {
+     "question": "What is the chemical nature of an antacid?",
+     "wrong_answer": "It is a type of acid."
+    },
+    "error_type": "everyday_language",
+    "root_belief": "similar sounding words are the same",
+    "causes": [],
+    "trigger_cues": [
+     "antacid",
+     "stomach",
+     "acid",
+     "medicine",
+     "relief"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n18",
+    "statement": "A higher pH number means a stronger acid.",
+    "why": "Students usually associate higher numbers with 'more' of a property.",
+    "fix": "The pH scale is inverse for acids; lower numbers (0-3) indicate stronger acids.",
+    "probe": {
+     "question": "Which is a stronger acid: pH 1 or pH 5?",
+     "wrong_answer": "pH 5 because the number is higher."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "bigger or more means more effect",
+    "causes": [],
+    "trigger_cues": [
+     "ph",
+     "scale",
+     "strong",
+     "number",
+     "level"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m8",
+    "node": "n19",
+    "statement": "A strong acid is the same as a concentrated acid.",
+    "why": "In everyday language, 'strong' coffee or 'strong' smell refers to concentration.",
+    "fix": "Strength refers to how much an acid dissociates into ions, while concentration refers to how much acid is dissolved in water.",
+    "probe": {
+     "question": "If I add a lot of water to a strong acid, does it become a weak acid?",
+     "wrong_answer": "Yes, it is now weak."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "intensity is the same as quantity",
+    "causes": [],
+    "trigger_cues": [
+     "strong",
+     "concentrated",
+     "dilute",
+     "water",
+     "amount"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Mumbai"
+   },
+   {
+    "key": "m9",
+    "node": "n20",
+    "statement": "The word 'salt' only refers to the common salt used in the kitchen.",
+    "why": "Students use the word 'salt' exclusively for Sodium Chloride in daily life.",
+    "fix": "In chemistry, a salt is a general term for any ionic compound formed from the neutralisation of an acid and a base.",
+    "probe": {
+     "question": "Is copper sulfate a salt?",
+     "wrong_answer": "No, only the white powder we eat is salt."
+    },
+    "error_type": "everyday_language",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "salt",
+     "table",
+     "food",
+     "sodium",
+     "chloride"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas in Science"
+   },
+   {
+    "key": "m10",
+    "node": "n20",
+    "statement": "All salts are neutral.",
+    "why": "Students believe that because salts are products of neutralisation, they must be neutral.",
+    "fix": "Salts can be acidic, basic, or neutral depending on the strength of the parent acid and base.",
+    "probe": {
+     "question": "What is the pH of a salt solution formed from a strong acid and weak base?",
+     "wrong_answer": "It must be 7 because it is a salt."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "a category name implies one property",
+    "causes": [],
+    "trigger_cues": [
+     "neutral",
+     "salt",
+     "ph",
+     "product",
+     "reaction"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Mumbai"
+   },
+   {
+    "key": "m11",
+    "node": "n12",
+    "statement": "Bases are not harmful because they feel soapy and are used in soap.",
+    "why": "Students contrast them with 'scary' acids and associate them with cleaning products.",
+    "fix": "Strong bases like Sodium Hydroxide are highly corrosive and can cause severe chemical burns.",
+    "probe": {
+     "question": "Are all bases safe to touch because they feel soapy?",
+     "wrong_answer": "Yes, bases are not corrosive like acids."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "safe things have no chemical properties",
+    "causes": [],
+    "trigger_cues": [
+     "base",
+     "soap",
+     "safe",
+     "touch",
+     "alkali"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m12",
+    "node": "n14",
+    "statement": "When phenolphthalein turns colorless, the substance has been destroyed.",
+    "why": "The disappearance of color is equated with the disappearance of the substance itself.",
+    "fix": "The substance is still there; the change to colorless is just a change in the chemical structure that affects how it reflects light.",
+    "probe": {
+     "question": "When phenolphthalein turns colorless in acid, where did the pink substance go?",
+     "wrong_answer": "The substance was destroyed."
+    },
+    "error_type": "visible_only",
+    "root_belief": "visible changes are the only changes",
+    "causes": [],
+    "trigger_cues": [
+     "phenolphthalein",
+     "colorless",
+     "clear",
+     "disappear",
+     "indicator"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}

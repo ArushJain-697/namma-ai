@@ -1,0 +1,124 @@
+{
+ "job": {
+  "job": "train-0054-MAT-RATIO",
+  "topic_id": "MAT-RATIO",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a market or shop situation that uses the idea",
+  "seed": 54
+ },
+ "model": "gemini-3.1-flash-lite/key3",
+ "usage": {
+  "promptTokenCount": 630,
+  "candidatesTokenCount": 1252,
+  "totalTokenCount": 1882,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 630
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-RATIO-K11-M4",
+  "MAT-RATIO-K14-M3",
+  "MAT-RATIO-K5-M1"
+ ],
+ "response": {
+  "passage": "Rohan visits the local vegetable market to help his mother buy supplies for the week. At the first stall, he notices that the shopkeeper sells potatoes in a fixed ratio. For every 2 kilograms of potatoes, the price is 30 rupees. Rohan calculates that if he wants 4 kilograms, he must pay 60 rupees because the ratio of weight to price remains constant. Next, he moves to the stationery corner to buy pens for his school project. The shopkeeper explains that a pack of 3 pens costs 15 rupees. Rohan wants to buy 5 pens, so he first finds the cost of a single pen by dividing 15 by 3, which is 5 rupees. He then multiplies 5 by 5 to find that 5 pens cost 25 rupees. Finally, he looks at a display of colorful ribbons. The shopkeeper says the ratio of red ribbons to blue ribbons is 2:3. Rohan understands that the red ribbons represent 2 parts out of the 5 total parts, meaning they are 2/5 of the collection, not 2/3. He carefully notes that the order matters, as 2:3 is different from 3:2, and he successfully completes his shopping list with these clear mathematical steps.",
+  "summary": "Rohan uses ratios and unit values to calculate prices and quantities at the market. He learns that ratios must be treated carefully regarding order and total parts. By finding the cost of a single item, he accurately determines the price for larger quantities.",
+  "items": [
+   {
+    "evidence": "For every 2 kilograms of potatoes, the price is 30 rupees.",
+    "answer": "2 kilograms",
+    "stem": "If the shopkeeper changes the display to 3:2, what amount of potatoes corresponds to the first part of the ratio?",
+    "options": [
+     {
+      "belief_id": "MAT-RATIO-K5-M1",
+      "why": "Student confuses the order of the ratio parts.",
+      "text": "3 kilograms"
+     },
+     {
+      "belief_id": "MAT-RATIO-K14-M3",
+      "why": "Student incorrectly assumes the first part is a fraction.",
+      "text": "2/5 kilograms"
+     },
+     {
+      "belief_id": "MAT-RATIO-K11-M4",
+      "why": "Student adds the ratio numbers instead of scaling.",
+      "text": "5 kilograms"
+     }
+    ]
+   },
+   {
+    "evidence": "The shopkeeper explains that a pack of 3 pens costs 15 rupees.",
+    "answer": "5 rupees",
+    "stem": "What is the price of one single pen?",
+    "options": [
+     {
+      "belief_id": "MAT-RATIO-K11-M4",
+      "why": "Student adds the numbers instead of dividing.",
+      "text": "18 rupees"
+     },
+     {
+      "belief_id": "MAT-RATIO-K14-M3",
+      "why": "Student treats the quantity as a fraction of price.",
+      "text": "1/5 rupees"
+     },
+     {
+      "belief_id": "MAT-RATIO-K5-M1",
+      "why": "Student swaps the ratio of pens to price.",
+      "text": "15 rupees"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan understands that the red ribbons represent 2 parts out of the 5 total parts, meaning they are 2/5 of the collection, not 2/3.",
+    "answer": "2/5",
+    "stem": "What fraction of the total ribbon collection is red?",
+    "options": [
+     {
+      "belief_id": "MAT-RATIO-K14-M3",
+      "why": "Student assumes the first part is over the second.",
+      "text": "2/3"
+     },
+     {
+      "belief_id": "MAT-RATIO-K5-M1",
+      "why": "Student reverses the ratio parts.",
+      "text": "3/5"
+     },
+     {
+      "belief_id": "MAT-RATIO-K11-M4",
+      "why": "Student adds the ratio components to find the fraction.",
+      "text": "5/2"
+     }
+    ]
+   },
+   {
+    "evidence": "He carefully notes that the order matters, as 2:3 is different from 3:2, and he successfully completes his shopping list with these clear mathematical steps.",
+    "answer": "different",
+    "stem": "How does the ratio 2:3 compare to 3:2?",
+    "options": [
+     {
+      "belief_id": "MAT-RATIO-K5-M1",
+      "why": "Student believes the order of a ratio does not matter.",
+      "text": "the same"
+     },
+     {
+      "belief_id": "MAT-RATIO-K14-M3",
+      "why": "Student confuses ratio order with fractional representation.",
+      "text": "2/3 of each"
+     },
+     {
+      "belief_id": "MAT-RATIO-K11-M4",
+      "why": "Student incorrectly adds the parts to compare them.",
+      "text": "equal to 5"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 3.4
+}

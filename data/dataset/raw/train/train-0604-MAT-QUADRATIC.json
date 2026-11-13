@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0604-MAT-QUADRATIC",
+  "topic_id": "MAT-QUADRATIC",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a passage that shows a common wrong method and corrects it",
+  "seed": 604
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1163,
+  "candidatesTokenCount": 1322,
+  "totalTokenCount": 2485,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1163
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-QUADRATIC-K19-M17",
+  "MAT-QUADRATIC-K21-M19",
+  "MAT-QUADRATIC-K7-M1",
+  "MAT-QUADRATIC-K24-M21",
+  "MAT-QUADRATIC-K17-M13",
+  "MAT-QUADRATIC-K25-M25",
+  "MAT-QUADRATIC-K28-M26",
+  "MAT-QUADRATIC-K15-M11",
+  "MAT-QUADRATIC-K11-M7",
+  "MAT-QUADRATIC-K23-M20",
+  "MAT-QUADRATIC-K7-M2",
+  "MAT-QUADRATIC-K9-M4",
+  "MAT-QUADRATIC-K17-M12",
+  "MAT-QUADRATIC-K17-M14"
+ ],
+ "response": {
+  "passage": "When solving the quadratic equation x² = 3x + 4, many students mistakenly identify the coefficients by looking at the equation as it is written. They assume a=1, b=3, and c=4, but this is incorrect because the equation must first be rearranged into the standard form ax² + bx + c = 0. By subtracting 3x and 4 from both sides, we get x² - 3x - 4 = 0, which gives us a=1, b=-3, and c=-4. Another common error occurs when calculating the discriminant D = b² - 4ac. For this equation, b² is (-3)², which equals 9, not -9. Students often forget that squaring a negative number results in a positive value. Furthermore, some students believe that if the discriminant is zero, the equation has no roots at all. In reality, D = 0 means the equation has two equal real roots. Finally, remember that a quadratic equation is defined by the highest power of the variable being two. If an equation contains an x³ term that does not cancel out, it is not a quadratic equation, even if it also contains an x² term. Always simplify your expressions fully before deciding on the nature of the equation or its roots.",
+  "summary": "To solve quadratic equations correctly, you must first arrange them into the standard form ax² + bx + c = 0. Always be careful with signs when calculating the discriminant and remember that the highest power of the variable must be two.",
+  "items": [
+   {
+    "evidence": "By subtracting 3x and 4 from both sides, we get x² - 3x - 4 = 0, which gives us a=1, b=-3, and c=-4.",
+    "answer": "a=1, b=-3, and c=-4",
+    "stem": "What are the correct coefficients after rearranging the equation into standard form?",
+    "options": [
+     {
+      "belief_id": "MAT-QUADRATIC-K9-M4",
+      "why": "Student fails to rearrange the equation before identifying coefficients.",
+      "text": "a=1, b=3, and c=4"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K17-M12",
+      "why": "Student incorrectly assumes -b is always a negative number.",
+      "text": "a=1, b=-3, and c=4"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K17-M13",
+      "why": "Student confuses the sign of the constant term.",
+      "text": "a=1, b=3, and c=-4"
+     }
+    ]
+   },
+   {
+    "evidence": "For this equation, b² is (-3)², which equals 9, not -9.",
+    "answer": "9",
+    "stem": "What is the correct value of b² when b is -3?",
+    "options": [
+     {
+      "belief_id": "MAT-QUADRATIC-K17-M13",
+      "why": "Student believes squaring a negative number results in a negative.",
+      "text": "-9"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K17-M14",
+      "why": "Student attempts to simplify the square incorrectly.",
+      "text": "3"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K21-M19",
+      "why": "Student confuses the discriminant value with the roots.",
+      "text": "4"
+     }
+    ]
+   },
+   {
+    "evidence": "In reality, D = 0 means the equation has two equal real roots.",
+    "answer": "two equal real roots",
+    "stem": "What is the nature of the roots when the discriminant is zero?",
+    "options": [
+     {
+      "belief_id": "MAT-QUADRATIC-K23-M20",
+      "why": "Student believes D=0 implies no roots exist.",
+      "text": "no roots at all"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K11-M7",
+      "why": "Student assumes roots must always be different.",
+      "text": "two different real roots"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K24-M21",
+      "why": "Student assumes D=0 implies the calculation is wrong.",
+      "text": "an error in calculation"
+     }
+    ]
+   },
+   {
+    "evidence": "If an equation contains an x³ term that does not cancel out, it is not a quadratic equation, even if it also contains an x² term.",
+    "answer": "not a quadratic equation",
+    "stem": "How is an equation classified if it contains an x³ term?",
+    "options": [
+     {
+      "belief_id": "MAT-QUADRATIC-K7-M1",
+      "why": "Student believes the presence of x² makes it quadratic.",
+      "text": "a quadratic equation"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K7-M2",
+      "why": "Student focuses only on the square term.",
+      "text": "a valid quadratic form"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K28-M26",
+      "why": "Student assumes any equation with a square is quadratic.",
+      "text": "a standard quadratic equation"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 16.1
+}

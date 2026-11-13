@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0243-MAT-SQUARES",
+  "topic_id": "MAT-SQUARES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a step-by-step worked example",
+  "seed": 243
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1064,
+  "candidatesTokenCount": 1133,
+  "totalTokenCount": 2197,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1064
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-SQUARES-K19-M13",
+  "MAT-SQUARES-K23-M18",
+  "MAT-SQUARES-K22-M3",
+  "MAT-SQUARES-K14-M7",
+  "MAT-SQUARES-K28-M24",
+  "MAT-SQUARES-K12-M5",
+  "MAT-SQUARES-K14-M8",
+  "MAT-SQUARES-K29-M25",
+  "MAT-SQUARES-K11-M4",
+  "MAT-SQUARES-K24-M20",
+  "MAT-SQUARES-K18-M12",
+  "MAT-SQUARES-K30-M26",
+  "MAT-SQUARES-K25-M21",
+  "MAT-SQUARES-K10-M1"
+ ],
+ "response": {
+  "passage": "Understanding exponents is crucial for mastering squares and cubes. A square of a number, like 7², means multiplying the base by itself: 7 × 7, which equals 49. It is not 7 × 2. Similarly, a cube like 2³ means 2 × 2 × 2, resulting in 8, not 2 × 3. When dealing with negative numbers, squaring a negative results in a positive value because a negative times a negative is positive; thus, (-5)² equals 25. However, cubing a negative number keeps the result negative, as (-3)³ equals -27. When finding roots, remember that the square root of 64 is 8, because 8 × 8 is 64, not 32. Furthermore, a number is a perfect cube only if its prime factors can be grouped into sets of three. For example, to check if 12 is a perfect square, we look at its factors: 2 × 2 × 3. Since the 3 is left alone, we must multiply by 3 to make it a perfect square, not by 12. Finally, note that not every number ending in a specific digit is a perfect square; for instance, 14 ends in 4 but is not a perfect square.",
+  "summary": "This passage explains the correct methods for calculating squares, cubes, and their roots. It highlights common errors regarding negative numbers, prime factorization, and the properties of perfect squares.",
+  "items": [
+   {
+    "evidence": "A square of a number, like 7², means multiplying the base by itself: 7 × 7, which equals 49.",
+    "answer": "49",
+    "stem": "What is the correct value of 7 squared?",
+    "options": [
+     {
+      "belief_id": "MAT-SQUARES-K10-M1",
+      "why": "Student thinks squaring means multiplying by two.",
+      "text": "14"
+     },
+     {
+      "belief_id": "MAT-SQUARES-K14-M7",
+      "why": "Student confuses positive and negative squaring rules.",
+      "text": "-49"
+     },
+     {
+      "belief_id": "MAT-SQUARES-K12-M5",
+      "why": "Student assumes the result must have the same number of digits.",
+      "text": "77"
+     }
+    ]
+   },
+   {
+    "evidence": "Similarly, a cube like 2³ means 2 × 2 × 2, resulting in 8, not 2 × 3.",
+    "answer": "8",
+    "stem": "What is the result of calculating 2 cubed?",
+    "options": [
+     {
+      "belief_id": "MAT-SQUARES-K22-M3",
+      "why": "Student thinks cubing means multiplying by three.",
+      "text": "6"
+     },
+     {
+      "belief_id": "MAT-SQUARES-K25-M21",
+      "why": "Student confuses cubing with finding a cube root.",
+      "text": "0.66"
+     },
+     {
+      "belief_id": "MAT-SQUARES-K23-M18",
+      "why": "Student applies negative sign logic incorrectly.",
+      "text": "-8"
+     }
+    ]
+   },
+   {
+    "evidence": "However, cubing a negative number keeps the result negative, as (-3)³ equals -27.",
+    "answer": "-27",
+    "stem": "What is the value of negative three cubed?",
+    "options": [
+     {
+      "belief_id": "MAT-SQUARES-K23-M18",
+      "why": "Student assumes negative times negative is always positive.",
+      "text": "27"
+     },
+     {
+      "belief_id": "MAT-SQUARES-K14-M7",
+      "why": "Student confuses squaring with cubing rules.",
+      "text": "9"
+     },
+     {
+      "belief_id": "MAT-SQUARES-K25-M21",
+      "why": "Student divides by three instead of cubing.",
+      "text": "-1"
+     }
+    ]
+   },
+   {
+    "evidence": "For example, to check if 12 is a perfect square, we look at its factors: 2 × 2 × 3.",
+    "answer": "2 × 2 × 3",
+    "stem": "What are the prime factors of 12?",
+    "options": [
+     {
+      "belief_id": "MAT-SQUARES-K18-M12",
+      "why": "Student thinks you multiply by the number itself.",
+      "text": "12 × 12"
+     },
+     {
+      "belief_id": "MAT-SQUARES-K24-M20",
+      "why": "Student confuses prime factor grouping rules.",
+      "text": "2 × 6"
+     },
+     {
+      "belief_id": "MAT-SQUARES-K11-M4",
+      "why": "Student incorrectly assumes factors based on last digit.",
+      "text": "4 × 3"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.2
+}

@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0615-MAT-TRIANGLEPROPS",
+  "topic_id": "MAT-TRIANGLEPROPS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a step-by-step worked example",
+  "seed": 615
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1095,
+  "candidatesTokenCount": 1283,
+  "totalTokenCount": 2378,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1095
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-TRIANGLEPROPS-K25-M22",
+  "MAT-TRIANGLEPROPS-K24-M20",
+  "MAT-TRIANGLEPROPS-K16-M12",
+  "MAT-TRIANGLEPROPS-K19-M14",
+  "MAT-TRIANGLEPROPS-K26-M23",
+  "MAT-TRIANGLEPROPS-K8-M2",
+  "MAT-TRIANGLEPROPS-K12-M6",
+  "MAT-TRIANGLEPROPS-K12-M8",
+  "MAT-TRIANGLEPROPS-K12-M7",
+  "MAT-TRIANGLEPROPS-K21-M16",
+  "MAT-TRIANGLEPROPS-K9-M4",
+  "MAT-TRIANGLEPROPS-K24-M19",
+  "MAT-TRIANGLEPROPS-K19-M15",
+  "MAT-TRIANGLEPROPS-K9-M3"
+ ],
+ "response": {
+  "passage": "To understand triangles, we must look at their unique properties. First, consider the angle sum property: the sum of all three interior angles in any triangle is always exactly 180 degrees, regardless of the triangle's size or shape. A common mistake is thinking larger triangles have larger angle sums, but this is false. Second, let us look at the sides. For any three lengths to form a triangle, the sum of the lengths of any two sides must be strictly greater than the length of the third side. If the sum equals the third side, the lines will simply lie flat and never meet to form a triangle. Third, consider the altitude. An altitude is a line segment drawn from a vertex perpendicular to the opposite side. Unlike a median, which always bisects the opposite side, an altitude does not have to bisect the side it meets. Finally, let us apply the Pythagoras property, which is exclusive to right-angled triangles. If a triangle has sides a, b, and hypotenuse c, then a squared plus b squared must equal c squared. After calculating the sum of the squares, you must find the square root to determine the final length of the hypotenuse.",
+  "summary": "Triangles follow strict rules regarding their angles, side lengths, and altitudes. The angle sum is always 180 degrees, and side lengths must satisfy the triangle inequality. Right-angled triangles specifically follow the Pythagoras property.",
+  "items": [
+   {
+    "evidence": "the sum of all three interior angles in any triangle is always exactly 180 degrees, regardless of the triangle's size or shape.",
+    "answer": "180 degrees",
+    "stem": "What is the total sum of the interior angles of a triangle?",
+    "options": [
+     {
+      "belief_id": "MAT-TRIANGLEPROPS-K12-M6",
+      "why": "Student thinks larger triangles have larger angle sums.",
+      "text": "Depends on the triangle size"
+     },
+     {
+      "belief_id": "MAT-TRIANGLEPROPS-K12-M7",
+      "why": "Student believes only specific triangles sum to 180.",
+      "text": "More than 180 degrees"
+     },
+     {
+      "belief_id": "MAT-TRIANGLEPROPS-K12-M8",
+      "why": "Student thinks triangles can have two obtuse angles.",
+      "text": "200 degrees"
+     }
+    ]
+   },
+   {
+    "evidence": "For any three lengths to form a triangle, the sum of the lengths of any two sides must be strictly greater than the length of the third side.",
+    "answer": "strictly greater",
+    "stem": "How must the sum of two sides compare to the third side to form a triangle?",
+    "options": [
+     {
+      "belief_id": "MAT-TRIANGLEPROPS-K19-M14",
+      "why": "Student thinks equal sum allows a triangle.",
+      "text": "Equal to the third"
+     },
+     {
+      "belief_id": "MAT-TRIANGLEPROPS-K19-M15",
+      "why": "Student thinks any three lengths work.",
+      "text": "Any three lengths"
+     },
+     {
+      "belief_id": "MAT-TRIANGLEPROPS-K21-M16",
+      "why": "Student thinks checking only one pair is sufficient.",
+      "text": "Only one pair"
+     }
+    ]
+   },
+   {
+    "evidence": "Unlike a median, which always bisects the opposite side, an altitude does not have to bisect the side it meets.",
+    "answer": "does not have to bisect",
+    "stem": "What is true about the relationship between an altitude and the side it meets?",
+    "options": [
+     {
+      "belief_id": "MAT-TRIANGLEPROPS-K9-M3",
+      "why": "Student confuses altitude with median properties.",
+      "text": "Always bisects the side"
+     },
+     {
+      "belief_id": "MAT-TRIANGLEPROPS-K9-M4",
+      "why": "Student thinks altitude is the slanted side.",
+      "text": "Is the slanted side"
+     },
+     {
+      "belief_id": "MAT-TRIANGLEPROPS-K8-M2",
+      "why": "Student thinks altitude must lie outside.",
+      "text": "Must lie outside"
+     }
+    ]
+   },
+   {
+    "evidence": "After calculating the sum of the squares, you must find the square root to determine the final length of the hypotenuse.",
+    "answer": "find the square root",
+    "stem": "What is the final step to find the hypotenuse length after calculating the sum of squares?",
+    "options": [
+     {
+      "belief_id": "MAT-TRIANGLEPROPS-K25-M22",
+      "why": "Student stops after finding c squared.",
+      "text": "Keep the squared value"
+     },
+     {
+      "belief_id": "MAT-TRIANGLEPROPS-K24-M19",
+      "why": "Student thinks hypotenuse is just sum of sides.",
+      "text": "Add the two sides"
+     },
+     {
+      "belief_id": "MAT-TRIANGLEPROPS-K24-M20",
+      "why": "Student thinks property applies to all triangles.",
+      "text": "Measure all angles"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 3.7
+}

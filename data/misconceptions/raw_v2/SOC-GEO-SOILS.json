@@ -1,0 +1,448 @@
+{
+ "topic": {
+  "id": "SOC-GEO-SOILS",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   10
+  ],
+  "title": "Soils of India",
+  "scope": "alluvial, black, red and yellow, laterite, arid and forest soils, soil erosion and conservation"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 832,
+  "candidatesTokenCount": 1457,
+  "totalTokenCount": 2289,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 832
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 9.1,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Soil Formation and Classification",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "weathering",
+     "climate"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Soil Types of India",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "map reading"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Soil Erosion and Conservation",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "human-environment interaction"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Factors of Soil Formation",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "geological time scale"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Alluvial Soil",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "river systems"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Black Soil",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "volcanic activity"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Laterite and Arid Soils",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "leaching process"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Erosion Causes",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "deforestation"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Conservation Methods",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "sustainable development"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Bangar vs Khadar",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": [
+     "sedimentation"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Regur Soil Properties",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": [
+     "clay mineralogy"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Gully Erosion",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": [
+     "topography"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n5",
+    "statement": "Alluvial soil is only found in the Northern Plains.",
+    "why": "Textbooks emphasize the Ganga-Brahmaputra plains, leading students to ignore coastal deltas.",
+    "fix": "Alluvial soil is also found in the eastern coastal plains, particularly in the deltas of the Mahanadi, Godavari, Krishna, and Kaveri rivers.",
+    "probe": {
+     "question": "Which of these regions contains alluvial soil?",
+     "wrong_answer": "Only the Northern Plains"
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "a category is defined by its most famous example",
+    "causes": [],
+    "trigger_cues": [
+     "northern plains",
+     "ganga",
+     "indus",
+     "brahmaputra",
+     "depositional"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n6",
+    "statement": "Black soil is black because it is rich in organic matter like humus.",
+    "why": "Students associate dark color in soil with high organic content (humus) from general biology.",
+    "fix": "Black soil is dark due to its chemical composition, specifically the presence of titanium and iron oxides, not high humus content.",
+    "probe": {
+     "question": "Why is black soil dark in color?",
+     "wrong_answer": "Because it has high humus content"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar appearances imply similar underlying causes",
+    "causes": [],
+    "trigger_cues": [
+     "regur",
+     "cotton",
+     "lava",
+     "black",
+     "moisture"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE misconception studies"
+   },
+   {
+    "key": "m3",
+    "node": "n12",
+    "statement": "Soil erosion is only caused by human activities like deforestation.",
+    "why": "Environmental education focuses heavily on human impact, ignoring natural geomorphic processes.",
+    "fix": "Soil erosion is caused by both human activities (deforestation, overgrazing) and natural forces like wind, water, and glaciers.",
+    "probe": {
+     "question": "What is the primary cause of soil erosion?",
+     "wrong_answer": "Human activity only"
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "one event has one single cause",
+    "causes": [],
+    "trigger_cues": [
+     "gully",
+     "ravines",
+     "badland",
+     "denudation",
+     "erosion"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n10",
+    "statement": "Bangar soil is more fertile than Khadar soil because it is older.",
+    "why": "Students confuse 'old' with 'better' or 'more mature' in a positive sense.",
+    "fix": "Khadar is more fertile because it is new alluvium deposited by floods every year, whereas Bangar is older alluvium with less mineral replenishment.",
+    "probe": {
+     "question": "Which soil is better for intensive agriculture?",
+     "wrong_answer": "Bangar because it is older"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "older things are inherently better or more valuable",
+    "causes": [],
+    "trigger_cues": [
+     "bangar",
+     "khadar",
+     "old",
+     "new",
+     "alluvium"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "id": "m5",
+    "node": "n4",
+    "statement": "Soil is formed only from the weathering of rocks, so climate and living organisms play no role.",
+    "why": "Students focus on parent rock as the visible starting material and treat soil as crushed rock.",
+    "fix": "Soil forms through the interaction of relief, parent material, climate, vegetation and other life forms, and time. Climate and organisms decide how fast weathering occurs and how much humus is added.",
+    "probe": {
+     "question": "Two places have the same parent rock, but one is hot and dry and the other is warm and rainy with forest. Will their soils be the same?",
+     "wrong_answer": "Yes, the soils will be the same because both come from the same rock."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Soil is just broken rock",
+    "causes": [],
+    "trigger_cues": [
+     "soil formation",
+     "parent rock",
+     "weathering",
+     "climate",
+     "humus",
+     "factors"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation of NCERT Class 10 answers",
+    "key": "m5"
+   },
+   {
+    "id": "m6",
+    "node": "n4",
+    "statement": "Soil formation is a quick process that takes only a few years.",
+    "why": "Students see soil in everyday life and do not grasp geological time scales.",
+    "fix": "Soil formation is very slow. Time is one of the factors, and a few centimetres of soil can take hundreds or thousands of years to form.",
+    "probe": {
+     "question": "About how long does it take for a thick layer of fertile soil to form from rock?",
+     "wrong_answer": "A few years, about 5 to 10."
+    },
+    "error_type": "numerical_misreading",
+    "root_belief": "Natural processes happen on short human timescales",
+    "causes": [],
+    "trigger_cues": [
+     "time",
+     "soil formation",
+     "how long",
+     "centimetres",
+     "slow process"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher-educator experience",
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n5",
+    "statement": "Alluvial soil is fertile mainly because it is rich in phosphorus and nitrogen.",
+    "why": "Students assume every fertile soil is rich in all major nutrients, so they overlook the specific NCERT facts.",
+    "fix": "Alluvial soil is generally rich in potash, phosphoric acid and lime. It is often poor in nitrogen and humus, so farmers add fertilisers.",
+    "probe": {
+     "question": "Which nutrients are alluvial soils rich in, according to NCERT?",
+     "wrong_answer": "Nitrogen and humus."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Fertile soil contains every nutrient",
+    "causes": [],
+    "trigger_cues": [
+     "alluvial",
+     "nutrients",
+     "potash",
+     "nitrogen",
+     "lime",
+     "fertile"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT-based exam answer scripts",
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n6",
+    "statement": "Black soil is best for growing rice and jute because it holds so much water.",
+    "why": "Students link water retention with crops that need water and forget the cotton association.",
+    "fix": "Black soil is ideal for cotton, which is why it is also called black cotton soil. It also suits sugarcane, wheat and pulses. Rice and jute are mostly grown in alluvial soil.",
+    "probe": {
+     "question": "Which crop is black soil most well known for?",
+     "wrong_answer": "Rice and jute."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Water-retentive soil suits water-loving crops",
+    "causes": [],
+    "trigger_cues": [
+     "black soil",
+     "crop",
+     "cotton",
+     "rice",
+     "jute",
+     "moisture"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT-based exam answer scripts",
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n7",
+    "statement": "Laterite soil is fertile and good for most crops because it forms in heavy rainfall regions.",
+    "why": "Students think plentiful rain always makes soil fertile.",
+    "fix": "Laterite forms from intense leaching in high temperature and heavy rain, which washes away nutrients. It is poor in humus and nutrients. With manures and fertilisers it can grow tea, coffee and cashew.",
+    "probe": {
+     "question": "Is laterite soil naturally fertile, given the heavy rainfall where it forms?",
+     "wrong_answer": "Yes, heavy rain keeps it fertile for all crops."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "More water always means more fertile soil",
+    "causes": [],
+    "trigger_cues": [
+     "laterite",
+     "leaching",
+     "heavy rainfall",
+     "fertile",
+     "tea coffee",
+     "nutrients"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT-based exam answer scripts",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n7",
+    "statement": "Arid soil is red or yellow in colour and very rich in humus.",
+    "why": "Students mix up the colours and properties of red and yellow soil with those of arid soil.",
+    "fix": "Arid soils are generally red to brown, sandy and saline, with a lack of humus and moisture. A kankar layer forms in the lower horizons.",
+    "probe": {
+     "question": "Describe the humus content of arid soils.",
+     "wrong_answer": "Arid soils are rich in humus."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Dry soils still hold plenty of organic matter",
+    "causes": [],
+    "trigger_cues": [
+     "arid soil",
+     "humus",
+     "kankar",
+     "saline",
+     "desert",
+     "sandy"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation of NCERT Class 10 answers",
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n10",
+    "statement": "Khadar is the older, coarser alluvium found far from rivers, and bangar is the new alluvium of the floodplains.",
+    "why": "Students reverse the two terms because both names sound alike and they memorise them without the setting.",
+    "fix": "Bangar is the older alluvium, with more kankar nodules, found away from the floodplains. Khadar is the newer alluvium, finer and found in the floodplains.",
+    "probe": {
+     "question": "Which alluvium is deposited fresh by floods in the river floodplains, bangar or khadar?",
+     "wrong_answer": "Bangar, because it is new."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Similar sounding terms are interchangeable",
+    "causes": [],
+    "trigger_cues": [
+     "khadar",
+     "bangar",
+     "new alluvium",
+     "floodplain",
+     "kankar",
+     "older"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT-based exam answer scripts",
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n12",
+    "statement": "Gully erosion is the removal of the top layer of soil by wind across open flat land.",
+    "why": "Students mix up the types of erosion and think any removal of topsoil is gully erosion.",
+    "fix": "Gully erosion is caused by running water cutting deep channels into the soil, mostly on slopes, which makes the land unfit for cultivation. It leaves badlands such as the Chambal ravines. Wind erosion is a separate process.",
+    "probe": {
+     "question": "What agent forms the deep channels called gullies?",
+     "wrong_answer": "Wind blowing across open land."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "All soil erosion types share one agent",
+    "causes": [],
+    "trigger_cues": [
+     "gully",
+     "ravines",
+     "badlands",
+     "water",
+     "wind erosion",
+     "channels"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT-based exam answer scripts",
+    "key": "m12"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

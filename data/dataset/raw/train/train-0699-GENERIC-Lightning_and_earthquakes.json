@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0699-GENERIC-Lightning_and_earthquakes",
+  "topic_id": "SCI-PHY-NATURALPHEN",
+  "split": "train",
+  "generic": true,
+  "theme": "Lightning and earthquakes",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a cause-and-effect explanation",
+  "seed": 699
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 710,
+  "candidatesTokenCount": 1166,
+  "totalTokenCount": 1876,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 710
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "In the remote village of Kodaikanal, local researcher Dr. Arjun observed two distinct natural phenomena during the monsoon of 2012. He noted that the rapid discharge of static electricity, known as lightning, often occurs when ice crystals collide within storm clouds. This process creates a sudden, intense heat that expands the surrounding air, resulting in the loud boom we call thunder. In contrast, Dr. Arjun studied the seismic shifts near the Himalayan foothills, where the movement of tectonic plates deep underground triggers earthquakes. Unlike lightning, which is an atmospheric event, earthquakes are caused by the shifting of massive rock layers beneath the Earth's surface. During his 45 days of field study, he recorded that while lightning strikes are instantaneous, the vibrations from an earthquake can last for several minutes. Dr. Arjun warned the residents of Shimla that ignoring these differences could lead to poor safety planning. He emphasized that because lightning is a surface-level electrical discharge, it requires different shelter protocols compared to the ground-shaking tremors of a tectonic shift. Understanding these distinct mechanisms is vital for disaster preparedness in mountainous regions.",
+  "summary": "The passage explains the different origins of lightning and earthquakes. It highlights that lightning is an atmospheric electrical event, while earthquakes result from underground tectonic plate movements.",
+  "items": [
+   {
+    "evidence": "He noted that the rapid discharge of static electricity, known as lightning, often occurs when ice crystals collide within storm clouds.",
+    "answer": "ice crystals collide",
+    "stem": "What action inside storm clouds leads to the creation of lightning?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Confuses the researcher named in the sentence for the cause.",
+      "text": "Dr. Arjun"
+     },
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Interprets 'discharge' as a common everyday task.",
+      "text": "a hospital discharge"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a true fact from the passage that is irrelevant.",
+      "text": "the monsoon of 2012"
+     }
+    ]
+   },
+   {
+    "evidence": "During his 45 days of field study, he recorded that while lightning strikes are instantaneous, the vibrations from an earthquake can last for several minutes.",
+    "answer": "several minutes",
+    "stem": "How long can the shaking from a seismic event continue?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Selects any number found in the passage.",
+      "text": "45 days"
+     },
+     {
+      "belief_id": "GEN-READ-M5",
+      "why": "Confuses 'vibrations' with 'lightning strikes' due to proximity.",
+      "text": "instantaneous"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Assumes all natural events last for the same duration.",
+      "text": "always one hour"
+     }
+    ]
+   },
+   {
+    "evidence": "He emphasized that because lightning is a surface-level electrical discharge, it requires different shelter protocols compared to the ground-shaking tremors of a tectonic shift.",
+    "answer": "different shelter protocols",
+    "stem": "What does the researcher suggest is necessary due to the nature of lightning?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Reverses the cause and effect relationship.",
+      "text": "surface-level electrical discharge"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Uses a location mentioned in the same context.",
+      "text": "Shimla"
+     },
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Interprets 'protocols' as a common social greeting.",
+      "text": "formal introductions"
+     }
+    ]
+   },
+   {
+    "evidence": "In contrast, Dr. Arjun studied the seismic shifts near the Himalayan foothills, where the movement of tectonic plates deep underground triggers earthquakes.",
+    "answer": "movement of tectonic plates",
+    "stem": "What is the primary cause of earthquakes according to the text?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks the person mentioned in the sentence.",
+      "text": "Dr. Arjun"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Assumes all ground movement is caused by the same thing.",
+      "text": "all rock layers"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Provides a location which is true but not the cause.",
+      "text": "Himalayan foothills"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.5
+}

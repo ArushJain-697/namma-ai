@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "test-0106-MAT-TRIANGLEPROPS",
+  "topic_id": "MAT-TRIANGLEPROPS",
+  "split": "test",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a passage that shows a common wrong method and corrects it",
+  "seed": 106
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 1065,
+  "candidatesTokenCount": 1331,
+  "totalTokenCount": 2396,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1065
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-TRIANGLEPROPS-K25-M21",
+  "MAT-TRIANGLEPROPS-K25-M22",
+  "MAT-TRIANGLEPROPS-K24-M20",
+  "MAT-TRIANGLEPROPS-K16-M11",
+  "MAT-TRIANGLEPROPS-K24-M19",
+  "MAT-TRIANGLEPROPS-K15-M10",
+  "MAT-TRIANGLEPROPS-K16-M12",
+  "MAT-TRIANGLEPROPS-K19-M15",
+  "MAT-TRIANGLEPROPS-K10-M5",
+  "MAT-TRIANGLEPROPS-K19-M14",
+  "MAT-TRIANGLEPROPS-K12-M7",
+  "MAT-TRIANGLEPROPS-K12-M6",
+  "MAT-TRIANGLEPROPS-K12-M8",
+  "MAT-TRIANGLEPROPS-K17-M13"
+ ],
+ "response": {
+  "passage": "Rohan was drawing triangles in his notebook to understand their properties. He drew a large triangle and a small one, then measured their angles. He mistakenly thought that the larger triangle must have a bigger angle sum than the smaller one. However, his teacher explained that the sum of all three interior angles of any triangle is always exactly 180 degrees, regardless of its size. Rohan then drew an exterior angle by extending one side of his triangle. He initially guessed that this exterior angle must equal the sum of all three interior angles, but he learned it actually equals the sum of the two opposite interior angles. Next, he tried to form a triangle using sticks of lengths 3 cm, 4 cm, and 7 cm. He thought they would connect, but the teacher showed that the sum of two sides must be strictly greater than the third side for a triangle to exist. Finally, Rohan looked at a right-angled triangle with legs of 3 cm and 4 cm. He tried to find the hypotenuse by adding the two legs to get 7 cm, but the Pythagoras property states that the square of the hypotenuse equals the sum of the squares of the two legs, making the hypotenuse 5 cm.",
+  "summary": "This passage clarifies that the angle sum of any triangle is always 180 degrees regardless of size. It also explains the conditions for triangle formation and the correct application of the Pythagoras property.",
+  "items": [
+   {
+    "evidence": "However, his teacher explained that the sum of all three interior angles of any triangle is always exactly 180 degrees, regardless of its size.",
+    "answer": "180 degrees",
+    "stem": "What is the total sum of the interior angles of any triangle?",
+    "options": [
+     {
+      "belief_id": "MAT-TRIANGLEPROPS-K12-M6",
+      "why": "Student believes larger triangles have a larger angle sum.",
+      "text": "Depends on the triangle size"
+     },
+     {
+      "belief_id": "MAT-TRIANGLEPROPS-K12-M7",
+      "why": "Student thinks only specific triangles sum to 180 degrees.",
+      "text": "Only for equilateral triangles"
+     },
+     {
+      "belief_id": "MAT-TRIANGLEPROPS-K12-M8",
+      "why": "Student thinks triangles can have multiple large angles.",
+      "text": "More than 180 degrees"
+     }
+    ]
+   },
+   {
+    "evidence": "He initially guessed that this exterior angle must equal the sum of all three interior angles, but he learned it actually equals the sum of the two opposite interior angles.",
+    "answer": "sum of the two opposite interior angles",
+    "stem": "To what is the exterior angle of a triangle equal?",
+    "options": [
+     {
+      "belief_id": "MAT-TRIANGLEPROPS-K16-M11",
+      "why": "Student incorrectly sums all three interior angles.",
+      "text": "Sum of all three interior angles"
+     },
+     {
+      "belief_id": "MAT-TRIANGLEPROPS-K16-M12",
+      "why": "Student confuses exterior angle with the adjacent interior angle.",
+      "text": "The adjacent interior angle"
+     },
+     {
+      "belief_id": "MAT-TRIANGLEPROPS-K17-M13",
+      "why": "Student assumes exterior angles must always be obtuse.",
+      "text": "An obtuse angle"
+     }
+    ]
+   },
+   {
+    "evidence": "He thought they would connect, but the teacher showed that the sum of two sides must be strictly greater than the third side for a triangle to exist.",
+    "answer": "strictly greater than the third side",
+    "stem": "What condition must be met for three lengths to form a triangle?",
+    "options": [
+     {
+      "belief_id": "MAT-TRIANGLEPROPS-K19-M15",
+      "why": "Student believes any three lengths form a triangle.",
+      "text": "Any three lengths work"
+     },
+     {
+      "belief_id": "MAT-TRIANGLEPROPS-K19-M14",
+      "why": "Student thinks equal sums can form a triangle.",
+      "text": "Sum equals the third side"
+     },
+     {
+      "belief_id": "MAT-TRIANGLEPROPS-K10-M5",
+      "why": "Student confuses side properties with altitude placement.",
+      "text": "The altitude must be inside"
+     }
+    ]
+   },
+   {
+    "evidence": "He tried to find the hypotenuse by adding the two legs to get 7 cm, but the Pythagoras property states that the square of the hypotenuse equals the sum of the squares of the two legs, making the hypotenuse 5 cm.",
+    "answer": "5 cm",
+    "stem": "What is the length of the hypotenuse for a triangle with legs 3 cm and 4 cm?",
+    "options": [
+     {
+      "belief_id": "MAT-TRIANGLEPROPS-K24-M19",
+      "why": "Student simply adds the two legs together.",
+      "text": "7 cm"
+     },
+     {
+      "belief_id": "MAT-TRIANGLEPROPS-K25-M22",
+      "why": "Student forgets to take the square root.",
+      "text": "25 cm"
+     },
+     {
+      "belief_id": "MAT-TRIANGLEPROPS-K25-M21",
+      "why": "Student adds squares incorrectly.",
+      "text": "Square root of 194"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.3
+}

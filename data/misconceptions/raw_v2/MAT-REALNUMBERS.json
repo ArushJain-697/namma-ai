@@ -1,0 +1,894 @@
+{
+ "topic": {
+  "id": "MAT-REALNUMBERS",
+  "subject": "maths",
+  "strand": "maths",
+  "grades": [
+   10
+  ],
+  "title": "Real numbers",
+  "scope": "fundamental theorem of arithmetic, HCF and LCM by prime factorisation, irrationality proofs"
+ },
+ "model": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 7761,
+  "promptTokenCount": 2
+ },
+ "seconds": 52.6,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Fundamental Theorem of Arithmetic",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2",
+    "name": "HCF and LCM using prime factorisation",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3",
+    "name": "Irrational numbers and proofs",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n4",
+    "name": "Primes, composites and factor trees",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "multiplication of whole numbers",
+     "divisibility of whole numbers"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Statement and uniqueness of factorisation",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "Using the theorem to test numbers",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "exponents and powers"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Finding HCF",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "factors and multiples"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Finding LCM",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "factors and multiples"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "HCF-LCM relationship",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n7",
+     "n8"
+    ],
+    "external_prereqs": [
+     "division of whole numbers"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Rational vs irrational numbers",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "fractions",
+     "decimal representation",
+     "number line"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Proof by contradiction",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n10"
+    ],
+    "external_prereqs": [
+     "logical reasoning basics"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Sums and products of irrationals",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n10",
+     "n11"
+    ],
+    "external_prereqs": [
+     "operations on fractions"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "A prime is divisible only by 1 and itself",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "1 is neither prime nor composite",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Factor tree ends only in primes",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n16",
+    "name": "Every composite has a unique prime factorisation up to order",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n15"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n17",
+    "name": "Writing the factorisation with exponents",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n16"
+    ],
+    "external_prereqs": [
+     "exponents and powers"
+    ]
+   },
+   {
+    "key": "n18",
+    "name": "A number ending in 0 needs both 2 and 5 as factors",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n16"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n19",
+    "name": "Checking if a^n can end in digit 0 or 4n etc",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n18"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n20",
+    "name": "HCF takes common primes with smallest power",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n21",
+    "name": "HCF of numbers with no common prime is 1",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n20"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n22",
+    "name": "LCM takes all primes with greatest power",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n23",
+    "name": "HCF times LCM equals product of two numbers",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [
+     "n20",
+     "n22"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n24",
+    "name": "The HCF-LCM product rule holds only for two numbers",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [
+     "n23"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n25",
+    "name": "Non-terminating non-repeating decimals are irrational",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [],
+    "external_prereqs": [
+     "decimal representation"
+    ]
+   },
+   {
+    "key": "n26",
+    "name": "Square root of a non-perfect-square prime is irrational",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [
+     "n16"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n27",
+    "name": "Assume p/q in lowest terms, derive common factor",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [
+     "n26"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n28",
+    "name": "Rational plus irrational is irrational",
+    "level": 3,
+    "parent": "n12",
+    "prereqs": [
+     "n27"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n29",
+    "name": "Sum or product of two irrationals can be rational",
+    "level": 3,
+    "parent": "n12",
+    "prereqs": [
+     "n28"
+    ],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n14",
+    "statement": "1 is a prime number because it is divisible by 1 and itself.",
+    "why": "Students apply the divisible-by-1-and-itself definition literally without noting it needs exactly two distinct factors.",
+    "fix": "A prime has exactly two different factors. 1 has only one factor, so it is neither prime nor composite.",
+    "probe": {
+     "question": "Is 1 a prime number? Give a reason.",
+     "wrong_answer": "Yes, 1 is divisible by 1 and by itself."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a definition's surface wording is the whole definition",
+    "causes": [
+     "m3"
+    ],
+    "trigger_cues": [
+     "prime",
+     "composite",
+     "neither",
+     "factors",
+     "divisible",
+     "one"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of student understanding of primes in number theory"
+   },
+   {
+    "key": "m2",
+    "node": "n13",
+    "statement": "All odd numbers are prime and 2 is not prime because it is even.",
+    "why": "Most primes seen are odd, so students link primeness with being odd.",
+    "fix": "2 is prime (only factors 1 and 2) and is the only even prime. Odd numbers like 9 and 15 are composite.",
+    "probe": {
+     "question": "Which of these are prime: 2, 9, 15, 17?",
+     "wrong_answer": "9, 15 and 17, but not 2."
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a common example shows the general rule",
+    "causes": [],
+    "trigger_cues": [
+     "prime",
+     "odd",
+     "even",
+     "two",
+     "smallest prime",
+     "composite"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on student concepts of prime numbers"
+   },
+   {
+    "key": "m3",
+    "node": "n15",
+    "statement": "A factor tree can stop at any factor like 4 or 9 once the numbers look small.",
+    "why": "Students stop splitting when numbers seem simple without checking for primality.",
+    "fix": "Keep splitting until every branch end is a prime number.",
+    "probe": {
+     "question": "Write the prime factorisation of 36 using a factor tree: 36 = 4 × 9.",
+     "wrong_answer": "36 = 4 × 9 is the prime factorisation."
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "a procedure ends when it looks done",
+    "causes": [],
+    "trigger_cues": [
+     "factor tree",
+     "prime factors",
+     "split",
+     "branches",
+     "composite",
+     "stop"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n16",
+    "statement": "A number can have different prime factorisations, like 12 = 2×6 and 12 = 3×4.",
+    "why": "Students confuse any factor pair with prime factorisation.",
+    "fix": "Apart from order, prime factorisation is unique: 12 = 2×2×3 always.",
+    "probe": {
+     "question": "Is the prime factorisation of 12 unique?",
+     "wrong_answer": "No, 2×6 and 3×4 are both valid ones."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "two names for similar things are the same",
+    "causes": [],
+    "trigger_cues": [
+     "unique",
+     "prime factorisation",
+     "order",
+     "fundamental theorem",
+     "product of primes"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n16",
+    "statement": "Writing the primes in a different order gives a different factorisation.",
+    "why": "Students read the product as an ordered list like a numeral.",
+    "fix": "Multiplication is commutative, so 2×3×5 and 5×3×2 are the same factorisation.",
+    "probe": {
+     "question": "Are 2×3×5 and 5×2×3 different prime factorisations of 30?",
+     "wrong_answer": "Yes, they are different."
+    },
+    "error_type": "notation_misread",
+    "root_belief": "order always changes meaning",
+    "causes": [],
+    "trigger_cues": [
+     "order",
+     "unique",
+     "product",
+     "primes",
+     "commutative",
+     "arrangement"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m6",
+    "node": "n17",
+    "statement": "2^3 × 3^2 means 2×3 × 3×2 = 36.",
+    "why": "Students read the exponent as multiplication by the base or as a repeat count.",
+    "fix": "2^3 = 2×2×2 = 8 and 3^2 = 9, so the product is 72.",
+    "probe": {
+     "question": "Evaluate 2^3 × 3^2.",
+     "wrong_answer": "2×3 × 3×2 = 36"
+    },
+    "error_type": "notation_misread",
+    "root_belief": "a power means multiply base by exponent",
+    "causes": [],
+    "trigger_cues": [
+     "exponent",
+     "power",
+     "prime factorisation",
+     "indices",
+     "2^3",
+     "product"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on student errors with exponents"
+   },
+   {
+    "key": "m7",
+    "node": "n18",
+    "statement": "A number ending in 0 only needs 2 or 5 as a factor, not both.",
+    "why": "Students notice that even numbers and multiples of 5 look related to ending digits.",
+    "fix": "Ending in 0 means divisible by 10, so both 2 and 5 must appear in the prime factorisation.",
+    "probe": {
+     "question": "Can 6^n end in digit 0?",
+     "wrong_answer": "Yes, since 6^n has factor 2, it can end in 0."
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "one matching feature is enough to qualify",
+    "causes": [],
+    "trigger_cues": [
+     "ends with zero",
+     "divisible by 10",
+     "factor 5",
+     "factor 2",
+     "digit",
+     "last digit"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m8",
+    "node": "n19",
+    "statement": "To show 4^n or 6^n cannot end in 0, you must compute many values of n and check.",
+    "why": "Students prefer testing examples over using the factorisation theorem.",
+    "fix": "Use prime factorisation: 4^n = 2^(2n) has no factor 5, so it never ends in 0 for any n.",
+    "probe": {
+     "question": "Show that 4^n never ends in 0.",
+     "wrong_answer": "4, 16, 64, 256 do not end in 0, so it never does."
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "a few examples prove a general claim",
+    "causes": [],
+    "trigger_cues": [
+     "for any natural number",
+     "ends with",
+     "never",
+     "factor 5",
+     "prime factorisation",
+     "power"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on proof and empirical reasoning in school mathematics"
+   },
+   {
+    "key": "m9",
+    "node": "n20",
+    "statement": "HCF is found by multiplying all the prime factors of both numbers.",
+    "why": "Students confuse HCF with LCM or product.",
+    "fix": "HCF uses only primes common to both numbers, each with its smallest power.",
+    "probe": {
+     "question": "Find HCF of 12 and 18.",
+     "wrong_answer": "2²×3×2×3² = 1296 or 216"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar-sounding procedures are interchangeable",
+    "causes": [],
+    "trigger_cues": [
+     "hcf",
+     "common",
+     "smallest power",
+     "prime factors",
+     "highest common factor"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies on students' confusion between HCF and LCM"
+   },
+   {
+    "key": "m10",
+    "node": "n20",
+    "statement": "For HCF take the greatest power of each common prime.",
+    "why": "The word 'highest' suggests choosing the highest power.",
+    "fix": "The highest common factor takes the smallest power of each common prime, since it must divide both numbers.",
+    "probe": {
+     "question": "HCF of 2³×3 and 2²×3²?",
+     "wrong_answer": "2³×3² = 72"
+    },
+    "error_type": "language_confusion",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [
+     "m9"
+    ],
+    "trigger_cues": [
+     "highest",
+     "greatest",
+     "smallest power",
+     "common",
+     "hcf",
+     "lowest power"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "classroom studies on HCF/LCM procedures"
+   },
+   {
+    "key": "m11",
+    "node": "n21",
+    "statement": "If two numbers share no prime factors, they have no HCF.",
+    "why": "Students think HCF must be a visible common factor greater than 1.",
+    "fix": "1 divides every number, so the HCF is 1 (the numbers are co-prime).",
+    "probe": {
+     "question": "HCF of 8 and 15?",
+     "wrong_answer": "There is no HCF."
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "nothing visible means nothing exists",
+    "causes": [],
+    "trigger_cues": [
+     "co-prime",
+     "no common factor",
+     "hcf",
+     "one",
+     "relatively prime"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m12",
+    "node": "n22",
+    "statement": "LCM takes only the common primes, using the smallest power.",
+    "why": "Students carry the HCF rule over to LCM.",
+    "fix": "LCM takes every prime that appears in either number, with its greatest power.",
+    "probe": {
+     "question": "LCM of 12 and 18?",
+     "wrong_answer": "2×3 = 6"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "one procedure fits similar problems",
+    "causes": [],
+    "trigger_cues": [
+     "lcm",
+     "greatest power",
+     "all primes",
+     "least common multiple",
+     "multiple"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies on students' confusion between HCF and LCM"
+   },
+   {
+    "key": "m13",
+    "node": "n22",
+    "statement": "LCM must be bigger than both numbers, so the LCM of 4 and 12 is 48.",
+    "why": "Students think multiplying gives the 'common multiple' and that LCM must be larger than both.",
+    "fix": "LCM can equal the larger number when it is a multiple of the other, so LCM of 4 and 12 is 12.",
+    "probe": {
+     "question": "LCM of 4 and 12?",
+     "wrong_answer": "48"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "combining always makes a bigger result",
+    "causes": [],
+    "trigger_cues": [
+     "lcm",
+     "multiple",
+     "product",
+     "smallest",
+     "common multiple"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m14",
+    "node": "n23",
+    "statement": "HCF × LCM of two numbers equals their sum.",
+    "why": "Students misremember which operation links them.",
+    "fix": "HCF × LCM = product of the two numbers.",
+    "probe": {
+     "question": "If HCF(6,8)=2 and LCM=24, check the relation.",
+     "wrong_answer": "2×24=48 ≠ 14, so it is wrong."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "remembered formulas are interchangeable",
+    "causes": [],
+    "trigger_cues": [
+     "hcf",
+     "lcm",
+     "product",
+     "relationship",
+     "two numbers"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m15",
+    "node": "n24",
+    "statement": "HCF × LCM = product of numbers holds for three numbers too.",
+    "why": "Students extend a two-number rule to any count.",
+    "fix": "The rule is true only for two numbers; for three it generally fails.",
+    "probe": {
+     "question": "Does HCF×LCM = a×b×c for 2, 4, 6?",
+     "wrong_answer": "Yes, 2×12 = 24 and 2×4×6 = 48 is fine"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a rule for two works for any number",
+    "causes": [],
+    "trigger_cues": [
+     "three numbers",
+     "hcf",
+     "lcm",
+     "product",
+     "relation"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m16",
+    "node": "n25",
+    "statement": "Any long decimal with many digits is irrational.",
+    "why": "Students judge irrationality by length rather than pattern.",
+    "fix": "A decimal is irrational only if it neither terminates nor repeats; long terminating or repeating decimals are rational.",
+    "probe": {
+     "question": "Is 0.142857142857... rational?",
+     "wrong_answer": "Irrational, since it goes on forever."
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "longer or more means a different kind",
+    "causes": [],
+    "trigger_cues": [
+     "non-terminating",
+     "repeating",
+     "decimal expansion",
+     "irrational",
+     "recurring"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on students' conceptions of rational and irrational numbers"
+   },
+   {
+    "key": "m17",
+    "node": "n25",
+    "statement": "22/7 is exactly π, so π is rational.",
+    "why": "Textbooks and exams use 22/7 as a value for π.",
+    "fix": "22/7 is only an approximation; π is irrational with non-terminating non-repeating decimal expansion.",
+    "probe": {
+     "question": "Is π rational because π = 22/7?",
+     "wrong_answer": "Yes, π = 22/7."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "an approximation is the exact value",
+    "causes": [],
+    "trigger_cues": [
+     "pi",
+     "22/7",
+     "approximation",
+     "irrational",
+     "non-terminating"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies on pi and irrational numbers in school"
+   },
+   {
+    "key": "m18",
+    "node": "n26",
+    "statement": "The square root of any number is irrational.",
+    "why": "Students recall √2 and √3 as the standard examples.",
+    "fix": "√n is rational when n is a perfect square, e.g. √16 = 4.",
+    "probe": {
+     "question": "Is √25 irrational?",
+     "wrong_answer": "Yes, it is a square root so irrational."
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a common example shows the general rule",
+    "causes": [],
+    "trigger_cues": [
+     "square root",
+     "perfect square",
+     "irrational",
+     "√2",
+     "rational"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on student concepts of irrational numbers"
+   },
+   {
+    "key": "m19",
+    "node": "n10",
+    "statement": "A number like 0.5 or -3 cannot be rational since it is not written as a fraction.",
+    "why": "Students see 'rational' as only meaning a visible p/q form.",
+    "fix": "A number is rational if it can be written as p/q with q ≠ 0; 0.5 = 1/2 and -3 = -3/1.",
+    "probe": {
+     "question": "Is 0.5 a rational number?",
+     "wrong_answer": "No, it is a decimal, not a fraction."
+    },
+    "error_type": "notation_misread",
+    "root_belief": "form shown determines the kind of number",
+    "causes": [],
+    "trigger_cues": [
+     "rational",
+     "p/q",
+     "decimal",
+     "integer",
+     "terminating"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on student concepts of rational numbers"
+   },
+   {
+    "key": "m20",
+    "node": "n27",
+    "statement": "In the proof of √2 irrational, p and q can share factors, since we only need p²=2q².",
+    "why": "Students skip the 'lowest terms' assumption as a technicality.",
+    "fix": "We assume p/q is in lowest terms; showing both are even contradicts that.",
+    "probe": {
+     "question": "Why do we assume p and q are co-prime?",
+     "wrong_answer": "It is not needed; any p and q work."
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "steps in a proof are just ritual",
+    "causes": [],
+    "trigger_cues": [
+     "contradiction",
+     "lowest terms",
+     "co-prime",
+     "assume",
+     "common factor",
+     "p/q"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on student understanding of proof by contradiction"
+   },
+   {
+    "key": "m21",
+    "node": "n11",
+    "statement": "A contradiction means our proof is wrong, so the original claim is false.",
+    "why": "Students treat reaching a contradiction as a failed attempt.",
+    "fix": "The contradiction shows that our assumption was false, so the opposite statement (irrational) is true.",
+    "probe": {
+     "question": "We assumed √2 is rational and got a contradiction. What does it show?",
+     "wrong_answer": "Our calculation is wrong; √2 is rational."
+    },
+    "error_type": "other",
+    "root_belief": "reaching a contradiction means an error was made",
+    "causes": [],
+    "trigger_cues": [
+     "contradiction",
+     "assumption",
+     "hence",
+     "irrational",
+     "wrong",
+     "proof"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on indirect proof difficulties"
+   },
+   {
+    "key": "m22",
+    "node": "n28",
+    "statement": "3 + √2 is rational because 3 is rational.",
+    "why": "Students think a rational part makes the whole rational.",
+    "fix": "A rational plus an irrational is always irrational, so 3 + √2 is irrational.",
+    "probe": {
+     "question": "Is 3 + √2 rational or irrational?",
+     "wrong_answer": "Rational, because 3 is rational."
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "the whole takes the nature of one part",
+    "causes": [],
+    "trigger_cues": [
+     "rational plus irrational",
+     "sum",
+     "irrational",
+     "3+√2",
+     "product"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m23",
+    "node": "n29",
+    "statement": "The sum of two irrationals is always irrational.",
+    "why": "Closure-style thinking is carried over from familiar number sets.",
+    "fix": "Sums or products of irrationals can be rational: √2 + (−√2) = 0 and √2 × √2 = 2.",
+    "probe": {
+     "question": "Is √2 × √2 irrational?",
+     "wrong_answer": "Yes, irrational times irrational is irrational."
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a rule that works for most cases works always",
+    "causes": [],
+    "trigger_cues": [
+     "sum of irrationals",
+     "product",
+     "rational",
+     "√2",
+     "closure"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of student reasoning about irrational number operations"
+   },
+   {
+    "key": "m24",
+    "node": "n9",
+    "statement": "HCF is always larger than LCM since 'highest' beats 'lowest'.",
+    "why": "Students rank the words 'highest' and 'lowest' rather than the numbers.",
+    "fix": "HCF divides both numbers so it is at most the smaller number, while LCM is at least the larger number.",
+    "probe": {
+     "question": "Which is bigger, HCF or LCM of 6 and 8?",
+     "wrong_answer": "HCF is bigger."
+    },
+    "error_type": "language_confusion",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "highest",
+     "lowest",
+     "hcf",
+     "lcm",
+     "greater",
+     "smaller"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}

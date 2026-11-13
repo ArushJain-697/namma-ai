@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0583-MAT-CIRCLEAREAS",
+  "topic_id": "MAT-CIRCLEAREAS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a market or shop situation that uses the idea",
+  "seed": 583
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1047,
+  "candidatesTokenCount": 1264,
+  "totalTokenCount": 2311,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1047
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-CIRCLEAREAS-K18-M16",
+  "MAT-CIRCLEAREAS-K14-M9",
+  "MAT-CIRCLEAREAS-K11-M2",
+  "MAT-CIRCLEAREAS-K17-M13",
+  "MAT-CIRCLEAREAS-K18-M15",
+  "MAT-CIRCLEAREAS-K13-M7",
+  "MAT-CIRCLEAREAS-K9-M28",
+  "MAT-CIRCLEAREAS-K12-M4",
+  "MAT-CIRCLEAREAS-K11-M3",
+  "MAT-CIRCLEAREAS-K23-M24",
+  "MAT-CIRCLEAREAS-K25-M27",
+  "MAT-CIRCLEAREAS-K6-M18",
+  "MAT-CIRCLEAREAS-K24-M25",
+  "MAT-CIRCLEAREAS-K16-M12"
+ ],
+ "response": {
+  "passage": "Rohan visits a local craft fair where he buys a circular decorative plate with a radius of 7 cm. He wants to calculate the boundary length, which is the circumference, calculated as 2πr, to add a golden lace around the edge. He also buys a small sector-shaped piece of wood for a project; the wood has a central angle of 60 degrees and a radius of 7 cm. To paint it, he correctly calculates the area of this sector using the formula (θ/360) × πr². Later, he watches a potter using a circular wheel with a diameter of 20 cm. The potter explains that in one complete rotation, the wheel covers a distance equal to its circumference, which is πd. Finally, Rohan looks at two circular coasters. The first has a radius of 5 cm, and the second has a radius of 10 cm. He realizes that because the radius of the second coaster is double that of the first, its area will be four times larger, not just double, because the radius is squared in the area formula πr².",
+  "summary": "Rohan learns about circular measurements while visiting a craft fair. He distinguishes between circumference and area formulas for different shapes. He also understands how rotation distance and scaling radii affect circular dimensions.",
+  "items": [
+   {
+    "evidence": "He wants to calculate the boundary length, which is the circumference, calculated as 2πr, to add a golden lace around the edge.",
+    "answer": "2πr",
+    "stem": "What is the correct mathematical expression to determine the total length of the lace needed for the circular plate's boundary?",
+    "options": [
+     {
+      "belief_id": "MAT-CIRCLEAREAS-K11-M2",
+      "why": "Confuses circumference formula with area formula.",
+      "text": "πr²"
+     },
+     {
+      "belief_id": "MAT-CIRCLEAREAS-K11-M3",
+      "why": "Confuses circumference with diameter.",
+      "text": "2r"
+     },
+     {
+      "belief_id": "MAT-CIRCLEAREAS-K12-M4",
+      "why": "Incorrectly uses radius instead of 2πr.",
+      "text": "πr"
+     }
+    ]
+   },
+   {
+    "evidence": "To paint it, he correctly calculates the area of this sector using the formula (θ/360) × πr².",
+    "answer": "(θ/360) × πr²",
+    "stem": "Which formula should be used to find the surface area of the wooden sector piece?",
+    "options": [
+     {
+      "belief_id": "MAT-CIRCLEAREAS-K17-M13",
+      "why": "Uses arc length formula for area calculation.",
+      "text": "(θ/360) × 2πr"
+     },
+     {
+      "belief_id": "MAT-CIRCLEAREAS-K18-M15",
+      "why": "Confuses area formula with arc length.",
+      "text": "(θ/360) × πr²"
+     },
+     {
+      "belief_id": "MAT-CIRCLEAREAS-K18-M16",
+      "why": "Uses linear angle-radius relationship instead of area.",
+      "text": "θ × r"
+     }
+    ]
+   },
+   {
+    "evidence": "The potter explains that in one complete rotation, the wheel covers a distance equal to its circumference, which is πd.",
+    "answer": "πd",
+    "stem": "What distance does the circular wheel travel during one full rotation?",
+    "options": [
+     {
+      "belief_id": "MAT-CIRCLEAREAS-K24-M25",
+      "why": "Believes distance equals diameter only.",
+      "text": "d"
+     },
+     {
+      "belief_id": "MAT-CIRCLEAREAS-K13-M7",
+      "why": "Uses fixed fraction regardless of wheel size.",
+      "text": "22/7 × d"
+     },
+     {
+      "belief_id": "MAT-CIRCLEAREAS-K16-M12",
+      "why": "Uses half circumference formula incorrectly.",
+      "text": "πr"
+     }
+    ]
+   },
+   {
+    "evidence": "He realizes that because the radius of the second coaster is double that of the first, its area will be four times larger, not just double, because the radius is squared in the area formula πr².",
+    "answer": "four times larger",
+    "stem": "How does the area of the second coaster compare to the first if its radius is twice as long?",
+    "options": [
+     {
+      "belief_id": "MAT-CIRCLEAREAS-K14-M9",
+      "why": "Assumes area scales linearly with radius.",
+      "text": "double"
+     },
+     {
+      "belief_id": "MAT-CIRCLEAREAS-K6-M18",
+      "why": "Assumes larger area implies larger radius.",
+      "text": "the larger one"
+     },
+     {
+      "belief_id": "MAT-CIRCLEAREAS-K23-M24",
+      "why": "Confuses area scaling with square side length.",
+      "text": "equal to diameter"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.2
+}

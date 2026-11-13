@@ -1,0 +1,133 @@
+{
+ "job": {
+  "job": "train-0655-SCI-PHY-ELECTRICITY10",
+  "topic_id": "SCI-PHY-ELECTRICITY10",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a clear textbook explanation",
+  "seed": 655
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1036,
+  "candidatesTokenCount": 1287,
+  "totalTokenCount": 2323,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1036
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "SCI-PHY-ELECTRICITY10-K14-M7",
+  "SCI-PHY-ELECTRICITY10-K20-M10",
+  "SCI-PHY-ELECTRICITY10-K21-M6",
+  "SCI-PHY-ELECTRICITY10-K16-M3",
+  "SCI-PHY-ELECTRICITY10-K6-M8",
+  "SCI-PHY-ELECTRICITY10-K5-M11",
+  "SCI-PHY-ELECTRICITY10-K15-M2",
+  "SCI-PHY-ELECTRICITY10-K22-M9",
+  "SCI-PHY-ELECTRICITY10-K17-M12",
+  "SCI-PHY-ELECTRICITY10-K19-M5",
+  "SCI-PHY-ELECTRICITY10-K18-M4",
+  "SCI-PHY-ELECTRICITY10-K13-M1"
+ ],
+ "response": {
+  "passage": "In an electric circuit, the battery acts as a source of energy that maintains a potential difference across the conductors. This potential difference drives the flow of charge, which we define as electric current. By convention, we describe current as flowing from the positive terminal to the negative terminal, even though the actual charge carriers, electrons, move in the opposite direction. When multiple components are connected in parallel, each branch experiences the full potential difference provided by the source, meaning the voltage does not get divided. Furthermore, the resistance of a metallic conductor is an intrinsic property determined by its material, length, and area; it remains constant regardless of the voltage applied across it. It is a common mistake to think that current is consumed by a bulb; in reality, the current entering a component is exactly equal to the current leaving it. Additionally, adding more resistors in parallel actually provides more paths for charge to flow, which effectively decreases the total resistance of the circuit. Finally, remember that resistivity is a property of the material itself and does not change if you simply cut the wire into smaller pieces.",
+  "summary": "Electric circuits rely on potential difference to drive current, which flows independently of the actual electron movement. Components in parallel share the same voltage, and resistance remains constant despite changes in applied voltage. Adding parallel paths reduces total resistance, and current is conserved throughout the entire circuit.",
+  "items": [
+   {
+    "evidence": "By convention, we describe current as flowing from the positive terminal to the negative terminal, even though the actual charge carriers, electrons, move in the opposite direction.",
+    "answer": "positive terminal to the negative terminal",
+    "stem": "What is the conventional direction of electric current in a circuit?",
+    "options": [
+     {
+      "belief_id": "SCI-PHY-ELECTRICITY10-K14-M7",
+      "why": "Confuses conventional current direction with electron flow direction.",
+      "text": "From negative to positive terminal"
+     },
+     {
+      "belief_id": "SCI-PHY-ELECTRICITY10-K5-M11",
+      "why": "Assumes electrons move at the speed of light.",
+      "text": "At the speed of light"
+     },
+     {
+      "belief_id": "SCI-PHY-ELECTRICITY10-K19-M5",
+      "why": "Believes current flows based on proximity to the battery.",
+      "text": "Towards the closest bulb"
+     }
+    ]
+   },
+   {
+    "evidence": "When multiple components are connected in parallel, each branch experiences the full potential difference provided by the source, meaning the voltage does not get divided.",
+    "answer": "does not get divided",
+    "stem": "In a parallel circuit, what happens to the total voltage across each branch?",
+    "options": [
+     {
+      "belief_id": "SCI-PHY-ELECTRICITY10-K20-M10",
+      "why": "Incorrectly assumes voltage is shared among branches.",
+      "text": "It is divided among branches"
+     },
+     {
+      "belief_id": "SCI-PHY-ELECTRICITY10-K15-M2",
+      "why": "Assumes battery output changes based on connection.",
+      "text": "It decreases based on load"
+     },
+     {
+      "belief_id": "SCI-PHY-ELECTRICITY10-K6-M8",
+      "why": "Confuses potential difference with current flow.",
+      "text": "It becomes zero"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, the resistance of a metallic conductor is an intrinsic property determined by its material, length, and area; it remains constant regardless of the voltage applied across it.",
+    "answer": "remains constant",
+    "stem": "How does the resistance of a conductor change when the applied voltage is increased?",
+    "options": [
+     {
+      "belief_id": "SCI-PHY-ELECTRICITY10-K16-M3",
+      "why": "Incorrectly links resistance changes to voltage changes.",
+      "text": "It increases proportionally"
+     },
+     {
+      "belief_id": "SCI-PHY-ELECTRICITY10-K17-M12",
+      "why": "Believes conductors have zero resistance.",
+      "text": "It stays at zero"
+     },
+     {
+      "belief_id": "SCI-PHY-ELECTRICITY10-K22-M9",
+      "why": "Assumes resistance changes due to heating.",
+      "text": "It decreases significantly"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, remember that resistivity is a property of the material itself and does not change if you simply cut the wire into smaller pieces.",
+    "answer": "does not change",
+    "stem": "What happens to the resistivity of a wire if it is cut into two equal halves?",
+    "options": [
+     {
+      "belief_id": "SCI-PHY-ELECTRICITY10-K18-M4",
+      "why": "Confuses resistivity with resistance.",
+      "text": "It becomes half"
+     },
+     {
+      "belief_id": "SCI-PHY-ELECTRICITY10-K13-M1",
+      "why": "Assumes properties are consumed like current.",
+      "text": "It is reduced"
+     },
+     {
+      "belief_id": "SCI-PHY-ELECTRICITY10-K21-M6",
+      "why": "Incorrectly applies parallel resistance logic.",
+      "text": "It doubles"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.5
+}

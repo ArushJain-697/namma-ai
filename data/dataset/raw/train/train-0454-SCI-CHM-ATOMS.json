@@ -1,0 +1,131 @@
+{
+ "job": {
+  "job": "train-0454-SCI-CHM-ATOMS",
+  "topic_id": "SCI-CHM-ATOMS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a passage rich in numbers, dates or measurements",
+  "seed": 454
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 880,
+  "candidatesTokenCount": 1279,
+  "totalTokenCount": 2159,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 880
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "SCI-CHM-ATOMS-K3-M1",
+  "SCI-CHM-ATOMS-K20-M12",
+  "SCI-CHM-ATOMS-K19-M9",
+  "SCI-CHM-ATOMS-K5-M2",
+  "SCI-CHM-ATOMS-K9-M4",
+  "SCI-CHM-ATOMS-K8-M3",
+  "SCI-CHM-ATOMS-K12-M10",
+  "SCI-CHM-ATOMS-K12-M6",
+  "SCI-CHM-ATOMS-K8-M11",
+  "SCI-CHM-ATOMS-K11-M5"
+ ],
+ "response": {
+  "passage": "In the world of chemistry, atoms are the fundamental building blocks of all matter. Contrary to the idea that atoms are solid spheres, they are mostly empty space with a tiny, dense nucleus at the center. When we measure the mass of an element, we use the atomic mass unit (u), which is defined as one-twelfth the mass of a carbon-12 atom, not the actual mass of a single atom in grams. For instance, water always consists of hydrogen and oxygen in a fixed mass ratio of 1:8, regardless of whether the water is collected from a river or synthesized in a laboratory. When chemical reactions occur, the total mass of the reactants always equals the total mass of the products, even if a gas is released during the process. To calculate the number of moles in a substance, we divide the given mass by its molar mass, which represents the mass of one mole of particles, not just a single molecule. Finally, ions are formed through the loss or gain of electrons, not by changing the number of protons in the nucleus, which would change the identity of the element itself.",
+  "summary": "Atoms are mostly empty space and follow strict laws of mass conservation and constant proportions. Moles are calculated by dividing mass by molar mass, and ions are formed by electron transfer.",
+  "items": [
+   {
+    "evidence": "Contrary to the idea that atoms are solid spheres, they are mostly empty space with a tiny, dense nucleus at the center.",
+    "answer": "mostly empty space",
+    "stem": "What is the internal structure of an atom according to the passage?",
+    "options": [
+     {
+      "belief_id": "SCI-CHM-ATOMS-K8-M11",
+      "why": "Student believes atoms are solid, ignoring the empty space.",
+      "text": "solid matter"
+     },
+     {
+      "belief_id": "SCI-CHM-ATOMS-K8-M3",
+      "why": "Student thinks atoms expand or grow when heated.",
+      "text": "a growing sphere"
+     },
+     {
+      "belief_id": "SCI-CHM-ATOMS-K9-M4",
+      "why": "Student confuses atomic mass with physical size.",
+      "text": "a heavy gram-sized ball"
+     }
+    ]
+   },
+   {
+    "evidence": "For instance, water always consists of hydrogen and oxygen in a fixed mass ratio of 1:8, regardless of whether the water is collected from a river or synthesized in a laboratory.",
+    "answer": "fixed mass ratio of 1:8",
+    "stem": "How does the composition of water change depending on its source?",
+    "options": [
+     {
+      "belief_id": "SCI-CHM-ATOMS-K5-M2",
+      "why": "Student thinks lab-made substances have different ratios.",
+      "text": "it varies by source"
+     },
+     {
+      "belief_id": "SCI-CHM-ATOMS-K11-M5",
+      "why": "Student thinks molecules only exist in compounds.",
+      "text": "it is just two atoms"
+     },
+     {
+      "belief_id": "SCI-CHM-ATOMS-K12-M10",
+      "why": "Student confuses ratio with ionic charge values.",
+      "text": "a charge of -1"
+     }
+    ]
+   },
+   {
+    "evidence": "When chemical reactions occur, the total mass of the reactants always equals the total mass of the products, even if a gas is released during the process.",
+    "answer": "always equals the total mass",
+    "stem": "What happens to the total mass during a reaction that releases gas?",
+    "options": [
+     {
+      "belief_id": "SCI-CHM-ATOMS-K3-M1",
+      "why": "Student thinks gas release causes mass loss.",
+      "text": "it decreases by 10g"
+     },
+     {
+      "belief_id": "SCI-CHM-ATOMS-K8-M3",
+      "why": "Student thinks atoms expand, increasing total mass.",
+      "text": "it increases due to expansion"
+     },
+     {
+      "belief_id": "SCI-CHM-ATOMS-K9-M4",
+      "why": "Student thinks mass is measured in grams per atom.",
+      "text": "it changes by atomic mass"
+     }
+    ]
+   },
+   {
+    "evidence": "To calculate the number of moles in a substance, we divide the given mass by its molar mass, which represents the mass of one mole of particles, not just a single molecule.",
+    "answer": "divide the given mass",
+    "stem": "What is the correct mathematical operation to determine the number of moles?",
+    "options": [
+     {
+      "belief_id": "SCI-CHM-ATOMS-K20-M12",
+      "why": "Student incorrectly multiplies instead of dividing.",
+      "text": "multiply by molar mass"
+     },
+     {
+      "belief_id": "SCI-CHM-ATOMS-K19-M9",
+      "why": "Student thinks molar mass is for one molecule.",
+      "text": "use 18 grams"
+     },
+     {
+      "belief_id": "SCI-CHM-ATOMS-K12-M6",
+      "why": "Student confuses mole calculation with proton addition.",
+      "text": "add a proton"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.3
+}

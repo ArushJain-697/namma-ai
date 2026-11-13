@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0242-MAT-SOLIDS",
+  "topic_id": "MAT-SOLIDS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a rule explained with two contrasting examples",
+  "seed": 242
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1020,
+  "candidatesTokenCount": 1272,
+  "totalTokenCount": 2292,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1020
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-SOLIDS-K26-M19",
+  "MAT-SOLIDS-K17-M8",
+  "MAT-SOLIDS-K13-M2",
+  "MAT-SOLIDS-K21-M10",
+  "MAT-SOLIDS-K14-M3",
+  "MAT-SOLIDS-K19-M13",
+  "MAT-SOLIDS-K22-M12",
+  "MAT-SOLIDS-K24-M16",
+  "MAT-SOLIDS-K17-M7",
+  "MAT-SOLIDS-K28-M23",
+  "MAT-SOLIDS-K23-M14",
+  "MAT-SOLIDS-K18-M9",
+  "MAT-SOLIDS-K16-M5",
+  "MAT-SOLIDS-K15-M4"
+ ],
+ "response": {
+  "passage": "To understand 3D shapes, we must distinguish between their visible features and their actual properties. A polyhedron is a solid made of flat polygonal faces. For any convex polyhedron, Euler’s formula states that the number of faces (F) plus the number of vertices (V) minus the number of edges (E) always equals two, written as F + V - E = 2. Consider a cube: it has 6 faces, 8 vertices, and 12 edges. Applying the formula, 6 + 8 - 12 equals 2, which confirms the rule. In contrast, consider a cylinder. A cylinder is not a polyhedron because it has a curved surface. While it has two circular flat faces, it also possesses two curved edges where the flat surfaces meet the curved side. If you look at a cylinder from the top, you see a circle, but from the side, you see a rectangle. These different views are necessary to understand the full shape, as no single view reveals the entire object. Furthermore, a pyramid is named specifically by the shape of its base. A square pyramid has a square base and four triangular side faces, totaling five faces, not four. Understanding these rules helps us identify solids correctly by their geometric properties rather than just their appearance.",
+  "summary": "3D shapes are defined by their geometric properties like faces, edges, and vertices rather than just their visual appearance. Euler's formula provides a consistent relationship between these parts for polyhedra. Pyramids and other solids are classified based on their specific structural features.",
+  "items": [
+   {
+    "evidence": "For any convex polyhedron, Euler’s formula states that the number of faces (F) plus the number of vertices (V) minus the number of edges (E) always equals two, written as F + V - E = 2.",
+    "answer": "F + V - E = 2",
+    "stem": "What is the correct mathematical relationship between the faces, vertices, and edges of a convex polyhedron?",
+    "options": [
+     {
+      "belief_id": "MAT-SOLIDS-K26-M19",
+      "why": "Student incorrectly adds all three components together.",
+      "text": "F + V + E = 2"
+     },
+     {
+      "belief_id": "MAT-SOLIDS-K26-M19",
+      "why": "Student incorrectly assumes the sum equals the total count.",
+      "text": "F + V + E = 26"
+     },
+     {
+      "belief_id": "MAT-SOLIDS-K26-M19",
+      "why": "Student confuses the formula with a simple addition.",
+      "text": "F - V + E = 2"
+     }
+    ]
+   },
+   {
+    "evidence": "While it has two circular flat faces, it also possesses two curved edges where the flat surfaces meet the curved side.",
+    "answer": "two curved edges",
+    "stem": "How many edges does a cylinder have according to its geometric properties?",
+    "options": [
+     {
+      "belief_id": "MAT-SOLIDS-K18-M9",
+      "why": "Student believes round shapes cannot have edges.",
+      "text": "zero edges"
+     },
+     {
+      "belief_id": "MAT-SOLIDS-K14-M3",
+      "why": "Student only counts straight lines as edges.",
+      "text": "four edges"
+     },
+     {
+      "belief_id": "MAT-SOLIDS-K14-M3",
+      "why": "Student incorrectly identifies the boundary lines.",
+      "text": "three edges"
+     }
+    ]
+   },
+   {
+    "evidence": "No single view reveals the entire object.",
+    "answer": "No single view",
+    "stem": "Why is it insufficient to look at only one perspective of a 3D solid?",
+    "options": [
+     {
+      "belief_id": "MAT-SOLIDS-K23-M14",
+      "why": "Student assumes all views are identical.",
+      "text": "All views are the same"
+     },
+     {
+      "belief_id": "MAT-SOLIDS-K13-M2",
+      "why": "Student assumes only visible parts exist.",
+      "text": "Only visible parts exist"
+     },
+     {
+      "belief_id": "MAT-SOLIDS-K24-M16",
+      "why": "Student assumes the view shows the total count.",
+      "text": "The view shows total cubes"
+     }
+    ]
+   },
+   {
+    "evidence": "A square pyramid has a square base and four triangular side faces, totaling five faces, not four.",
+    "answer": "five faces",
+    "stem": "How many total faces does a square pyramid possess?",
+    "options": [
+     {
+      "belief_id": "MAT-SOLIDS-K17-M7",
+      "why": "Student counts only the base sides.",
+      "text": "four faces"
+     },
+     {
+      "belief_id": "MAT-SOLIDS-K16-M5",
+      "why": "Student confuses pyramid faces with triangular prism faces.",
+      "text": "three faces"
+     },
+     {
+      "belief_id": "MAT-SOLIDS-K13-M2",
+      "why": "Student only counts the faces visible in a drawing.",
+      "text": "two faces"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 9.3
+}

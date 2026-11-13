@@ -1,0 +1,451 @@
+{
+ "topic": {
+  "id": "SOC-GEO-POPULATION",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   9
+  ],
+  "title": "Population",
+  "scope": "population size and distribution, density, growth, birth and death rates, migration, census"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 825,
+  "candidatesTokenCount": 1479,
+  "totalTokenCount": 2304,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 825
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.5,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Population Size and Distribution",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "basic map reading",
+     "arithmetic division"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Population Growth and Processes",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "basic arithmetic"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Population Characteristics",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "data interpretation"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Population Size",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "counting"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Population Density",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "area calculation"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Growth Rates",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "percentages"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Migration",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "social geography"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Census",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "government functions"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Total number of people",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "People per unit area",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Birth minus death rate",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Movement of people",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Official enumeration",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n5",
+    "statement": "High population size always means high population density.",
+    "why": "Students confuse total quantity with concentration per unit area.",
+    "fix": "Density depends on both the number of people and the total land area; a large country can have low density.",
+    "probe": {
+     "question": "If Country A has 1 million people in 10 sq km and Country B has 10 million in 1000 sq km, which is denser?",
+     "wrong_answer": "Country B because it has more people."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "bigger or more means more effect",
+    "causes": [],
+    "trigger_cues": [
+     "density",
+     "area",
+     "square kilometer",
+     "crowded",
+     "distribution"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic studies"
+   },
+   {
+    "key": "m2",
+    "node": "n6",
+    "statement": "Population growth is only caused by more births.",
+    "why": "Students often ignore the role of migration and death rates in net growth.",
+    "fix": "Population growth is the change in numbers over time, influenced by birth rates, death rates, and migration.",
+    "probe": {
+     "question": "Can a country's population grow if the birth rate is low?",
+     "wrong_answer": "No, because growth only comes from babies being born."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "one event has one single cause",
+    "causes": [],
+    "trigger_cues": [
+     "growth rate",
+     "birth rate",
+     "migration",
+     "increase",
+     "change"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n7",
+    "statement": "Migration is always moving from a village to a city.",
+    "why": "Students overgeneralize from common rural-to-urban trends seen in media.",
+    "fix": "Migration is any movement of people across regions, which can be rural-to-urban, urban-to-urban, or urban-to-rural.",
+    "probe": {
+     "question": "Is a person moving from one city to another considered a migrant?",
+     "wrong_answer": "No, migration only happens when moving from a village to a city."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "migration",
+     "movement",
+     "rural",
+     "urban",
+     "push factors"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's children's ideas"
+   },
+   {
+    "key": "m4",
+    "node": "n8",
+    "statement": "The census counts only the citizens of a country.",
+    "why": "Students confuse the legal definition of citizenship with the demographic purpose of a census.",
+    "fix": "A census counts all people residing in a country at a specific time, regardless of citizenship status.",
+    "probe": {
+     "question": "Are foreign nationals living in India counted in the Indian census?",
+     "wrong_answer": "No, only Indian citizens are counted."
+    },
+    "error_type": "confusing_institutions",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "census",
+     "enumeration",
+     "population",
+     "count",
+     "residing"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "id": "m5",
+    "node": "n5",
+    "statement": "Population density is the number of people divided by the total number of countries or states.",
+    "why": "Students remember 'divide' but not what to divide by, and confuse area with count of regions.",
+    "fix": "Population density is the number of persons per unit area, usually per square km, found by dividing population by area.",
+    "probe": {
+     "question": "A state has 6,00,000 people and an area of 3,000 sq km. How do you find its density?",
+     "wrong_answer": "Divide 6,00,000 by the number of states in the country."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Density divides people by something other than area",
+    "causes": [],
+    "trigger_cues": [
+     "density",
+     "calculate",
+     "divide",
+     "per sq km",
+     "area",
+     "formula"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom error analysis",
+    "key": "m5"
+   },
+   {
+    "id": "m6",
+    "node": "n10",
+    "statement": "A region with a large area must have a high population density.",
+    "why": "Students link big size with many people and ignore that density divides by area.",
+    "fix": "Density depends on people per unit area, so a large area with few people, such as a desert or mountain region, has low density.",
+    "probe": {
+     "question": "Region X is very large in area but has few people. Is its density high or low?",
+     "wrong_answer": "High, because the area is large."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Bigger area means more crowded",
+    "causes": [],
+    "trigger_cues": [
+     "large area",
+     "density",
+     "desert",
+     "mountain",
+     "few people",
+     "sparse"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher observation",
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n6",
+    "statement": "If the growth rate falls, the population of the country starts to decrease.",
+    "why": "Students treat a lower rate as negative growth rather than slower positive growth.",
+    "fix": "A falling but positive growth rate means population still increases, only more slowly. Population decreases only if the rate is negative.",
+    "probe": {
+     "question": "India's growth rate fell from 2.2% to 1.6%. What happened to its population?",
+     "wrong_answer": "It decreased because the growth rate went down."
+    },
+    "error_type": "numerical_misreading",
+    "root_belief": "Lower rate means shrinking quantity",
+    "causes": [],
+    "trigger_cues": [
+     "growth rate",
+     "fell",
+     "declined",
+     "decrease",
+     "percentage",
+     "slower"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on rate vs quantity reasoning",
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n11",
+    "statement": "Natural growth rate is the number of births in a year minus the number of deaths in that year.",
+    "why": "Students subtract counts and forget that rates are per thousand people.",
+    "fix": "Natural growth rate is the birth rate minus the death rate, both expressed per thousand persons, not raw numbers.",
+    "probe": {
+     "question": "In a year 5,000 babies were born and 2,000 people died in a town. What is its natural growth rate?",
+     "wrong_answer": "3,000 per year is the natural growth rate."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Rates are the same as raw counts",
+    "causes": [],
+    "trigger_cues": [
+     "natural growth",
+     "birth rate",
+     "death rate",
+     "per thousand",
+     "subtract",
+     "rate"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT exercise errors",
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n7",
+    "statement": "Migration only means moving to another country.",
+    "why": "Students link migration with emigration abroad, ignoring movement within a country.",
+    "fix": "Migration is movement between places and can be internal (within a country) or international (between countries).",
+    "probe": {
+     "question": "A family moves from Bihar to Punjab for work. Is it migration?",
+     "wrong_answer": "No, because they did not leave India."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Migration must cross a national border",
+    "causes": [],
+    "trigger_cues": [
+     "migration",
+     "within country",
+     "state to state",
+     "internal",
+     "abroad",
+     "moves"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT-based classroom questions",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n12",
+    "statement": "Only people who move permanently are migrants, not seasonal or temporary workers.",
+    "why": "Students think migration needs a permanent change of home.",
+    "fix": "Migration can be permanent or temporary or seasonal, such as workers moving for harvest or jobs.",
+    "probe": {
+     "question": "Labourers go to another state for six months of harvest work and return. Are they migrants?",
+     "wrong_answer": "No, since they did not settle there permanently."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Migration means permanent relocation only",
+    "causes": [],
+    "trigger_cues": [
+     "seasonal",
+     "temporary",
+     "labourers",
+     "return",
+     "harvest",
+     "migrants"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher observation",
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n8",
+    "statement": "The census is conducted every year in India.",
+    "why": "Students confuse the census with regular annual surveys or exams and school records.",
+    "fix": "In India the census is held every ten years; the first was in 1881 and the latest regular ones followed each decade.",
+    "probe": {
+     "question": "How often does India conduct its census?",
+     "wrong_answer": "Every year."
+    },
+    "error_type": "chronology_slip",
+    "root_belief": "Census is an annual exercise",
+    "causes": [],
+    "trigger_cues": [
+     "census",
+     "how often",
+     "every",
+     "years",
+     "1881",
+     "decade"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT textbook",
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n13",
+    "statement": "The census collects only the number of people and nothing else about them.",
+    "why": "Students equate the census with simple head counting.",
+    "fix": "The census also collects data on age, sex, literacy, occupation, religion, and housing, giving population characteristics.",
+    "probe": {
+     "question": "Apart from total population, what does the census record?",
+     "wrong_answer": "Nothing else, it only counts the number of people."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Census equals head count only",
+    "causes": [],
+    "trigger_cues": [
+     "census",
+     "records",
+     "literacy",
+     "occupation",
+     "age sex",
+     "data collected"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT textbook",
+    "key": "m12"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

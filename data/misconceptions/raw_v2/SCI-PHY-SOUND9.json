@@ -1,0 +1,496 @@
+{
+ "topic": {
+  "id": "SCI-PHY-SOUND9",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   9
+  ],
+  "title": "Sound waves",
+  "scope": "longitudinal waves, compressions and rarefactions, wavelength, frequency, speed of sound, echo, ultrasound"
+ },
+ "model": "gemini-3-flash-preview",
+ "usage": {
+  "promptTokenCount": 834,
+  "candidatesTokenCount": 4253,
+  "totalTokenCount": 7613,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 834
+   }
+  ],
+  "thoughtsTokenCount": 2526,
+  "serviceTier": "standard"
+ },
+ "seconds": 26.9,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Nature and Propagation of Sound",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "concept of vibration",
+     "states of matter"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Characteristics of Sound Waves",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "concept of time period"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Reflection and Applications",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "laws of reflection of light"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Propagation in Medium",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Wave Nature",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "Sound needs a medium",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Particles vibrate, don't travel",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Longitudinal wave mechanism",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Compressions and Rarefactions",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": [
+     "concept of density"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Wave Parameters",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Speed of Sound",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n10"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Frequency and Pitch",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Amplitude and Loudness",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Wavelength definition",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Speed formula v=fλ",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [
+     "n12",
+     "n14"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n16",
+    "name": "Speed in different media",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n17",
+    "name": "Reflection of Sound",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n18",
+    "name": "Echo and Reverberation",
+    "level": 3,
+    "parent": "n17",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n19",
+    "name": "Ultrasound and SONAR",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n20",
+    "name": "Human hearing range",
+    "level": 3,
+    "parent": "n19",
+    "prereqs": [
+     "n12"
+    ],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n7",
+    "statement": "Air particles travel from the speaker's mouth to the listener's ear.",
+    "why": "Students confuse the motion of the wave with the motion of the medium, similar to wind.",
+    "fix": "Particles only vibrate back and forth about their mean position; it is the energy/disturbance that travels.",
+    "probe": {
+     "question": "If a bell rings in a room, do the air molecules near the bell eventually reach your ear?",
+     "wrong_answer": "Yes, they carry the sound to my ear."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "matter moves with the energy",
+    "causes": [],
+    "trigger_cues": [
+     "travel",
+     "air",
+     "particles",
+     "source",
+     "ear"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on wave propagation"
+   },
+   {
+    "key": "m2",
+    "node": "n8",
+    "statement": "Sound waves move up and down like waves on a string.",
+    "why": "Textbooks represent sound using sine graphs, which students interpret as the physical shape of the wave.",
+    "fix": "Sound is a longitudinal wave where particles move parallel to the direction of wave travel, not perpendicular.",
+    "probe": {
+     "question": "In which direction do air particles move relative to the direction of a sound wave?",
+     "wrong_answer": "They move up and down at right angles to the wave."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "visual representations are literal reality",
+    "causes": [],
+    "trigger_cues": [
+     "transverse",
+     "shape",
+     "up",
+     "down",
+     "graph"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m3",
+    "node": "n16",
+    "statement": "Sound travels faster in air than in solids because solids are too dense to move through.",
+    "why": "Students apply their experience of walking through air vs. water/solids to sound.",
+    "fix": "Sound travels fastest in solids because the particles are closer together, allowing the disturbance to transfer more quickly.",
+    "probe": {
+     "question": "Will sound travel faster through a steel rod or through the air?",
+     "wrong_answer": "Through the air because it is thinner."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "less dense means less resistance to motion",
+    "causes": [],
+    "trigger_cues": [
+     "faster",
+     "solid",
+     "gas",
+     "medium",
+     "density"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas in Science"
+   },
+   {
+    "key": "m4",
+    "node": "n12",
+    "statement": "A high pitch sound is always louder than a low pitch sound.",
+    "why": "Students use 'high' and 'low' interchangeably for both volume and frequency in everyday speech.",
+    "fix": "Pitch depends on frequency, while loudness depends on amplitude; they are independent properties.",
+    "probe": {
+     "question": "If you whistle very softly but at a high note, is it necessarily louder than a deep drum beat?",
+     "wrong_answer": "Yes, because high notes are more powerful."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "different properties are actually the same",
+    "causes": [],
+    "trigger_cues": [
+     "pitch",
+     "loudness",
+     "high",
+     "volume",
+     "frequency"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n15",
+    "statement": "If you increase the frequency of a sound, its speed increases.",
+    "why": "Students think 'vibrating faster' must mean 'moving forward faster'.",
+    "fix": "The speed of sound is constant in a given medium; increasing frequency results in a shorter wavelength.",
+    "probe": {
+     "question": "If a singer hits a higher note, does that sound reach the back of the hall sooner than a lower note?",
+     "wrong_answer": "Yes, higher frequencies travel faster."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "faster vibration means faster travel",
+    "causes": [],
+    "trigger_cues": [
+     "frequency",
+     "speed",
+     "velocity",
+     "faster",
+     "increase"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Concept Inventories in Physics"
+   },
+   {
+    "key": "m6",
+    "node": "n6",
+    "statement": "Sound can travel through space if the explosion is big enough.",
+    "why": "Science fiction movies often show loud explosions in space.",
+    "fix": "Sound is a mechanical wave and requires a material medium to propagate; it cannot travel through a vacuum.",
+    "probe": {
+     "question": "Can astronauts on the moon hear a nearby rock crash without using radios?",
+     "wrong_answer": "Yes, if the crash is loud enough to cross the gap."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "more of one thing means more of another",
+    "causes": [],
+    "trigger_cues": [
+     "vacuum",
+     "space",
+     "medium",
+     "explosion",
+     "moon"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n9",
+    "statement": "A rarefaction is a region where there are no air particles at all.",
+    "why": "Students interpret 'low pressure' or 'low density' as 'empty'.",
+    "fix": "Rarefaction is a region where particles are spread further apart than average, but they are still present.",
+    "probe": {
+     "question": "What is inside a rarefaction in an air-borne sound wave?",
+     "wrong_answer": "A vacuum or empty space."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "low density means nothingness",
+    "causes": [],
+    "trigger_cues": [
+     "rarefaction",
+     "empty",
+     "density",
+     "pressure",
+     "particles"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m8",
+    "node": "n18",
+    "statement": "Echoes only occur in large empty halls or mountains.",
+    "why": "These are the only places where the time delay is long enough for humans to distinguish the echo.",
+    "fix": "Sound reflects off almost all surfaces, but we only hear an 'echo' if the reflected sound reaches us after 0.1 seconds.",
+    "probe": {
+     "question": "Does sound reflect off the walls of a small furnished bedroom?",
+     "wrong_answer": "No, because there is no echo in a small room."
+    },
+    "error_type": "everyday_language",
+    "root_belief": "phenomena only occur in extreme settings",
+    "causes": [],
+    "trigger_cues": [
+     "echo",
+     "reflection",
+     "distance",
+     "hall",
+     "mountain"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m9",
+    "node": "n19",
+    "statement": "Ultrasound is just very loud sound that can damage ears.",
+    "why": "The prefix 'ultra' is associated with 'extreme' or 'extra' in common usage.",
+    "fix": "Ultrasound refers to sound with a frequency higher than 20,000 Hz, which is beyond the human hearing range regardless of loudness.",
+    "probe": {
+     "question": "What makes a sound 'ultrasound'?",
+     "wrong_answer": "It is sound that is so loud it is dangerous."
+    },
+    "error_type": "everyday_language",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "ultrasound",
+     "loud",
+     "frequency",
+     "hearing",
+     "intensity"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m10",
+    "node": "n20",
+    "statement": "Humans can hear ultrasound if it is played at a very high volume.",
+    "why": "Students believe the limit of hearing is based on intensity rather than biological frequency response.",
+    "fix": "The human ear is biologically incapable of detecting frequencies above 20 kHz, no matter how loud they are.",
+    "probe": {
+     "question": "If we turn up the volume of a 30,000 Hz signal, will you eventually hear it?",
+     "wrong_answer": "Yes, it will become audible once it is loud enough."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "extreme values change the nature of the thing",
+    "causes": [],
+    "trigger_cues": [
+     "hearing",
+     "ultrasound",
+     "volume",
+     "limit",
+     "audible"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n11",
+    "statement": "The speed of sound is a universal constant like the speed of light.",
+    "why": "Students often memorize '344 m/s' as a fixed number without considering environmental factors.",
+    "fix": "The speed of sound changes significantly with temperature, humidity, and the nature of the medium.",
+    "probe": {
+     "question": "Does sound travel at the same speed on a hot summer day and a cold winter night?",
+     "wrong_answer": "Yes, the speed of sound is always 344 m/s."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "physical properties are independent of environment",
+    "causes": [],
+    "trigger_cues": [
+     "speed",
+     "constant",
+     "temperature",
+     "velocity",
+     "value"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m12",
+    "node": "n13",
+    "statement": "Loudness is determined by how fast the source is vibrating.",
+    "why": "Confusion between the 'strength' of a vibration (amplitude) and the 'speed' of vibration (frequency).",
+    "fix": "Loudness is determined by the amplitude of the vibration, while the speed of vibration determines the pitch.",
+    "probe": {
+     "question": "If you hit a drum harder, what property of the vibration are you primarily changing?",
+     "wrong_answer": "The frequency of the vibration."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "one event has one single cause",
+    "causes": [],
+    "trigger_cues": [
+     "loudness",
+     "amplitude",
+     "vibration",
+     "fast",
+     "energy"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Misconception studies"
+   }
+  ]
+ },
+ "problems": []
+}

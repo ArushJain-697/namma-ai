@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0610-MAT-SOLIDS",
+  "topic_id": "MAT-SOLIDS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a market or shop situation that uses the idea",
+  "seed": 610
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1018,
+  "candidatesTokenCount": 1242,
+  "totalTokenCount": 2260,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1018
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-SOLIDS-K17-M8",
+  "MAT-SOLIDS-K13-M2",
+  "MAT-SOLIDS-K18-M9",
+  "MAT-SOLIDS-K28-M23",
+  "MAT-SOLIDS-K16-M5",
+  "MAT-SOLIDS-K26-M19",
+  "MAT-SOLIDS-K25-M17",
+  "MAT-SOLIDS-K15-M4",
+  "MAT-SOLIDS-K19-M13",
+  "MAT-SOLIDS-K14-M3",
+  "MAT-SOLIDS-K13-M1",
+  "MAT-SOLIDS-K26-M20",
+  "MAT-SOLIDS-K25-M18",
+  "MAT-SOLIDS-K29-M22"
+ ],
+ "response": {
+  "passage": "Rohan visited a local packaging shop to understand how different boxes are designed for shipping goods. The shopkeeper showed him a cylindrical container used for storing spices. Rohan noticed that the cylinder has two flat circular faces and one curved surface, totaling three faces, but it has no straight edges because its surface is entirely smooth. Next, they looked at a triangular prism. The shopkeeper explained that a prism is a solid with two identical bases connected by rectangular side faces. This specific prism has five faces, six vertices, and nine edges. Rohan checked these values using Euler’s formula, which states that for any polyhedron, the number of faces plus the number of vertices minus the number of edges always equals two. Finally, they examined a pyramid with a square base. The shopkeeper pointed out that a pyramid is named based on the shape of its base, not its sides. Unlike a cylinder, a pyramid is a polyhedron because all its faces are flat polygons. Rohan realized that a net is a flat, two-dimensional pattern that can be folded to form a three-dimensional solid, rather than just a perspective drawing. He learned that visualizing these shapes helps in calculating the exact material needed for manufacturing.",
+  "summary": "The passage explains the properties of solids like cylinders, prisms, and pyramids, including their faces, edges, and vertices. It also clarifies the use of Euler's formula and the definition of a net for 3D shapes.",
+  "items": [
+   {
+    "evidence": "Rohan noticed that the cylinder has two flat circular faces and one curved surface, totaling three faces, but it has no straight edges because its surface is entirely smooth.",
+    "answer": "no straight edges",
+    "stem": "What is a key characteristic of the cylindrical container's edges?",
+    "options": [
+     {
+      "belief_id": "MAT-SOLIDS-K18-M9",
+      "why": "Believes round objects have no edges at all.",
+      "text": "zero edges"
+     },
+     {
+      "belief_id": "MAT-SOLIDS-K14-M3",
+      "why": "Counts curved boundaries as edges if they look like lines.",
+      "text": "two curved edges"
+     },
+     {
+      "belief_id": "MAT-SOLIDS-K13-M1",
+      "why": "Confuses the count of faces with the count of edges.",
+      "text": "three edges"
+     }
+    ]
+   },
+   {
+    "evidence": "This specific prism has five faces, six vertices, and nine edges.",
+    "answer": "five faces",
+    "stem": "How many faces does the triangular prism described have?",
+    "options": [
+     {
+      "belief_id": "MAT-SOLIDS-K16-M5",
+      "why": "Assumes face count is determined only by the base shape.",
+      "text": "three faces"
+     },
+     {
+      "belief_id": "MAT-SOLIDS-K13-M2",
+      "why": "Only counts the faces visible from a single perspective.",
+      "text": "three faces"
+     },
+     {
+      "belief_id": "MAT-SOLIDS-K28-M23",
+      "why": "Assumes any shape with rectangular faces must have six faces.",
+      "text": "six faces"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan checked these values using Euler’s formula, which states that for any polyhedron, the number of faces plus the number of vertices minus the number of edges always equals two.",
+    "answer": "equals two",
+    "stem": "What is the result of the calculation F + V - E according to Euler's formula?",
+    "options": [
+     {
+      "belief_id": "MAT-SOLIDS-K26-M19",
+      "why": "Incorrectly adds all three components together.",
+      "text": "twenty-six"
+     },
+     {
+      "belief_id": "MAT-SOLIDS-K26-M20",
+      "why": "Incorrectly rearranges the formula to add instead of subtract.",
+      "text": "thirteen"
+     },
+     {
+      "belief_id": "MAT-SOLIDS-K15-M4",
+      "why": "Assumes the formula result is zero for complex solids.",
+      "text": "zero"
+     }
+    ]
+   },
+   {
+    "evidence": "The shopkeeper pointed out that a pyramid is named based on the shape of its base, not its sides.",
+    "answer": "shape of its base",
+    "stem": "What determines the specific name of a pyramid?",
+    "options": [
+     {
+      "belief_id": "MAT-SOLIDS-K17-M8",
+      "why": "Believes the side faces determine the name of the pyramid.",
+      "text": "shape of its sides"
+     },
+     {
+      "belief_id": "MAT-SOLIDS-K25-M18",
+      "why": "Believes the shadow shape determines the name.",
+      "text": "shape of its shadow"
+     },
+     {
+      "belief_id": "MAT-SOLIDS-K19-M13",
+      "why": "Believes the perspective drawing determines the name.",
+      "text": "perspective drawing"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.1
+}

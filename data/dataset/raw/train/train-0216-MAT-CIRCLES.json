@@ -1,0 +1,131 @@
+{
+ "job": {
+  "job": "train-0216-MAT-CIRCLES",
+  "topic_id": "MAT-CIRCLES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a rule explained with two contrasting examples",
+  "seed": 216
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 960,
+  "candidatesTokenCount": 1298,
+  "totalTokenCount": 2258,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 960
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-CIRCLES-K12-M2",
+  "MAT-CIRCLES-K18-M5",
+  "MAT-CIRCLES-K26-M11",
+  "MAT-CIRCLES-K17-M7",
+  "MAT-CIRCLES-K23-M9",
+  "MAT-CIRCLES-K11-M1",
+  "MAT-CIRCLES-K20-M12",
+  "MAT-CIRCLES-K25-M10",
+  "MAT-CIRCLES-K13-M3",
+  "MAT-CIRCLES-K16-M4"
+ ],
+ "response": {
+  "passage": "In geometry, a circle is defined by its center and radius. A chord is a line segment with both endpoints on the circle. The diameter is the longest chord, passing through the center. If a line is drawn from the center perpendicular to a chord, it bisects that chord. For example, if a line from the center meets a 10 cm chord at a right angle, it splits it into two 5 cm segments. Conversely, a line from the center that merely touches a chord without being perpendicular does not necessarily bisect it. Regarding tangents, a tangent is a line that touches the circle at exactly one point. The radius at the point of contact is always perpendicular to the tangent. For instance, if a tangent touches at point P, the radius OP is perpendicular to the tangent. However, a line that crosses the circle at two points is a secant, not a tangent, and it is not perpendicular to the radius. Furthermore, from any single point outside the circle, exactly two tangents can be drawn, and these two tangents are always equal in length. This property holds regardless of the distance from the center, provided the point is external. Finally, for cyclic quadrilaterals, the sum of opposite angles is always 180 degrees, meaning they are supplementary, not necessarily equal.",
+  "summary": "A circle's properties include specific rules for chords, tangents, and cyclic quadrilaterals. Perpendicularity from the center bisects chords, while tangents from external points are always equal. Opposite angles in cyclic quadrilaterals must sum to 180 degrees.",
+  "items": [
+   {
+    "evidence": "The diameter is the longest chord, passing through the center.",
+    "answer": "The diameter",
+    "stem": "Which specific line segment represents the maximum possible length for a chord within any circle?",
+    "options": [
+     {
+      "belief_id": "MAT-CIRCLES-K11-M1",
+      "why": "Mistakenly assumes any chord near the center is the longest.",
+      "text": "Any chord near the middle"
+     },
+     {
+      "belief_id": "MAT-CIRCLES-K13-M3",
+      "why": "Confuses the bisection property with the definition of length.",
+      "text": "A bisected chord"
+     },
+     {
+      "belief_id": "MAT-CIRCLES-K12-M2",
+      "why": "Incorrectly links arc length to the chord's maximum potential.",
+      "text": "The longest arc"
+     }
+    ]
+   },
+   {
+    "evidence": "If a line is drawn from the center perpendicular to a chord, it bisects that chord.",
+    "answer": "perpendicular to a chord",
+    "stem": "Under what specific condition is a chord guaranteed to be split into two equal parts by a line from the center?",
+    "options": [
+     {
+      "belief_id": "MAT-CIRCLES-K13-M3",
+      "why": "Assumes any line from the center bisects the chord.",
+      "text": "Any line from the center"
+     },
+     {
+      "belief_id": "MAT-CIRCLES-K23-M9",
+      "why": "Confuses tangent-radius properties with chord-center properties.",
+      "text": "Touching the circle at A"
+     },
+     {
+      "belief_id": "MAT-CIRCLES-K16-M4",
+      "why": "Incorrectly requires an isosceles triangle for geometric properties.",
+      "text": "If the triangle is isosceles"
+     }
+    ]
+   },
+   {
+    "evidence": "The radius at the point of contact is always perpendicular to the tangent.",
+    "answer": "perpendicular to the tangent",
+    "stem": "What is the geometric relationship between the radius and the tangent at the point of contact?",
+    "options": [
+     {
+      "belief_id": "MAT-CIRCLES-K23-M9",
+      "why": "Assumes perpendicularity applies even when lines cross the circle.",
+      "text": "Perpendicular even if it crosses"
+     },
+     {
+      "belief_id": "MAT-CIRCLES-K25-M10",
+      "why": "Incorrectly links perpendicularity to the length of tangents.",
+      "text": "Equal to the tangent length"
+     },
+     {
+      "belief_id": "MAT-CIRCLES-K17-M7",
+      "why": "Applies angle equality logic to perpendicularity.",
+      "text": "Equal to other radii"
+     }
+    ]
+   },
+   {
+    "evidence": "For cyclic quadrilaterals, the sum of opposite angles is always 180 degrees, meaning they are supplementary, not necessarily equal.",
+    "answer": "180 degrees",
+    "stem": "What is the sum of the opposite angles in a cyclic quadrilateral?",
+    "options": [
+     {
+      "belief_id": "MAT-CIRCLES-K18-M5",
+      "why": "Believes opposite angles are always equal.",
+      "text": "They are always equal"
+     },
+     {
+      "belief_id": "MAT-CIRCLES-K20-M12",
+      "why": "Assumes any quadrilateral is cyclic.",
+      "text": "Any four points"
+     },
+     {
+      "belief_id": "MAT-CIRCLES-K17-M7",
+      "why": "Confuses angle properties of segments with cyclic quadrilaterals.",
+      "text": "The same as adjacent angles"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 6.2
+}

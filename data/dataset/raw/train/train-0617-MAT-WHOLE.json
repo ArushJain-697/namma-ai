@@ -1,0 +1,123 @@
+{
+ "job": {
+  "job": "train-0617-MAT-WHOLE",
+  "topic_id": "MAT-WHOLE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a passage that shows a common wrong method and corrects it",
+  "seed": 617
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 561,
+  "candidatesTokenCount": 1222,
+  "totalTokenCount": 1783,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 561
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-WHOLE-K12-M2",
+  "MAT-WHOLE-K13-M3"
+ ],
+ "response": {
+  "passage": "In our mathematics class, we often compare natural numbers and whole numbers. Natural numbers start from 1, 2, 3, and so on, while whole numbers include zero along with all natural numbers. Many students mistakenly believe that subtraction works just like addition, where changing the order of numbers does not change the result. However, subtraction is not commutative; for example, 5 minus 3 is 2, but 3 minus 5 is not a whole number. Another common error occurs when students try to find an identity element for subtraction. In addition, adding zero to any number leaves it unchanged, making zero the additive identity. Some students incorrectly assume that subtracting zero from a number is the same as subtracting the number from zero, or that zero acts as an identity for subtraction too. This is incorrect because subtracting zero from 5 gives 5, but subtracting 5 from zero does not result in 5. Always remember that operations like subtraction behave differently than addition, and properties like commutativity or identity elements do not apply to them in the same way. By checking your work on a number line, you can easily see that moving left or right changes your position differently depending on the order of the numbers.",
+  "summary": "This passage explains that whole numbers include zero and distinguishes them from natural numbers. It highlights that subtraction does not follow the same commutative or identity properties as addition.",
+  "items": [
+   {
+    "evidence": "Natural numbers start from 1, 2, 3, and so on, while whole numbers include zero along with all natural numbers.",
+    "answer": "include zero",
+    "stem": "What is the primary difference between the set of natural numbers and the set of whole numbers?",
+    "options": [
+     {
+      "belief_id": "MAT-WHOLE-K12-M2",
+      "why": "Student confuses set definitions with commutative properties of subtraction.",
+      "text": "are commutative"
+     },
+     {
+      "belief_id": "MAT-WHOLE-K13-M3",
+      "why": "Student incorrectly identifies zero as an identity element for all operations.",
+      "text": "have zero identity"
+     },
+     {
+      "belief_id": "MAT-WHOLE-K12-M2",
+      "why": "Student confuses ordering properties with set definitions.",
+      "text": "can be reversed"
+     }
+    ]
+   },
+   {
+    "evidence": "However, subtraction is not commutative; for example, 5 minus 3 is 2, but 3 minus 5 is not a whole number.",
+    "answer": "not commutative",
+    "stem": "Why does the order of numbers matter when performing subtraction?",
+    "options": [
+     {
+      "belief_id": "MAT-WHOLE-K12-M2",
+      "why": "Student believes subtraction order does not change the result.",
+      "text": "is always commutative"
+     },
+     {
+      "belief_id": "MAT-WHOLE-K13-M3",
+      "why": "Student incorrectly assumes zero makes subtraction commutative.",
+      "text": "uses zero identity"
+     },
+     {
+      "belief_id": "MAT-WHOLE-K12-M2",
+      "why": "Student assumes subtraction behaves like addition.",
+      "text": "is the same as addition"
+     }
+    ]
+   },
+   {
+    "evidence": "In addition, adding zero to any number leaves it unchanged, making zero the additive identity.",
+    "answer": "additive identity",
+    "stem": "What role does zero play when it is added to any whole number?",
+    "options": [
+     {
+      "belief_id": "MAT-WHOLE-K13-M3",
+      "why": "Student incorrectly applies the identity concept to subtraction.",
+      "text": "subtractive identity"
+     },
+     {
+      "belief_id": "MAT-WHOLE-K12-M2",
+      "why": "Student confuses identity with commutative property.",
+      "text": "commutative element"
+     },
+     {
+      "belief_id": "MAT-WHOLE-K13-M3",
+      "why": "Student assumes zero acts as an identity for all operations.",
+      "text": "universal identity"
+     }
+    ]
+   },
+   {
+    "evidence": "This is incorrect because subtracting zero from 5 gives 5, but subtracting 5 from zero does not result in 5.",
+    "answer": "does not result in 5",
+    "stem": "What happens when you subtract a whole number from zero?",
+    "options": [
+     {
+      "belief_id": "MAT-WHOLE-K13-M3",
+      "why": "Student believes zero is the identity element for subtraction.",
+      "text": "results in the number"
+     },
+     {
+      "belief_id": "MAT-WHOLE-K12-M2",
+      "why": "Student assumes subtraction is commutative.",
+      "text": "is the same as 5-0"
+     },
+     {
+      "belief_id": "MAT-WHOLE-K13-M3",
+      "why": "Student thinks zero leaves the number unchanged.",
+      "text": "gives the same number"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.3
+}

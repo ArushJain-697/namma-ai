@@ -1,0 +1,470 @@
+{
+ "topic": {
+  "id": "SOC-GEO-MINERALS",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   8,
+   10
+  ],
+  "title": "Minerals and energy resources",
+  "scope": "ferrous and non-ferrous minerals, mining, conventional and non-conventional energy, conservation of energy"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 837,
+  "candidatesTokenCount": 1545,
+  "totalTokenCount": 2382,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 837
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 5.7,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Classification of Minerals",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "states of matter",
+     "basic chemistry"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Mining and Extraction",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "geological processes"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Energy Resources",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "renewable vs non-renewable"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Ferrous vs Non-ferrous",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "properties of metals"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Metallic vs Non-metallic",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "classification of matter"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Mining Methods",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "human-environment interaction"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Conventional Energy",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "combustion"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Non-conventional Energy",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "physics of energy"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Conservation",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n7",
+     "n8"
+    ],
+    "external_prereqs": [
+     "sustainability"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Iron Ore as Ferrous",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Copper as Non-ferrous",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Open-cast vs Shaft Mining",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Coal as Fossil Fuel",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Solar as Renewable",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Need for Sustainable Use",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n4",
+    "statement": "All metallic minerals are ferrous.",
+    "why": "Students often associate the word 'metal' with 'iron' due to its common usage.",
+    "fix": "Ferrous minerals contain iron, while non-ferrous minerals like copper or gold do not contain iron.",
+    "probe": {
+     "question": "Is gold a ferrous mineral?",
+     "wrong_answer": "Yes, because it is a metal."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a category name implies all its members are identical",
+    "causes": [],
+    "trigger_cues": [
+     "ferrous",
+     "non-ferrous",
+     "iron",
+     "metal",
+     "ore"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n6",
+    "statement": "Mining is only done by digging deep vertical shafts.",
+    "why": "Visuals of mining in media often focus on deep underground shafts.",
+    "fix": "Mining can be open-cast (surface), shaft (deep underground), or drilling, depending on the depth of the mineral deposit.",
+    "probe": {
+     "question": "How is coal extracted if it is near the surface?",
+     "wrong_answer": "By digging a deep shaft."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "one specific example represents the entire process",
+    "causes": [],
+    "trigger_cues": [
+     "mining",
+     "shaft",
+     "open-cast",
+     "extraction",
+     "deposit"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's children's ideas"
+   },
+   {
+    "key": "m3",
+    "node": "n7",
+    "statement": "Coal is a renewable resource because we keep finding more.",
+    "why": "Confusing the rate of discovery with the rate of geological formation.",
+    "fix": "Coal is a non-renewable resource because it takes millions of years to form and cannot be replaced once consumed.",
+    "probe": {
+     "question": "Will we run out of coal?",
+     "wrong_answer": "No, we keep finding new mines."
+    },
+    "error_type": "other",
+    "root_belief": "human discovery equals natural replenishment",
+    "causes": [],
+    "trigger_cues": [
+     "coal",
+     "fossil fuel",
+     "renewable",
+     "non-renewable",
+     "formation"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n8",
+    "statement": "Non-conventional energy is always more efficient than conventional energy.",
+    "why": "Marketing and media hype around 'green' energy often ignore efficiency and scale constraints.",
+    "fix": "Non-conventional energy is sustainable, but its efficiency and reliability depend on technology and environmental conditions.",
+    "probe": {
+     "question": "Is solar energy always better than coal?",
+     "wrong_answer": "Yes, because it is non-conventional."
+    },
+    "error_type": "other",
+    "root_belief": "new is always better than old",
+    "causes": [],
+    "trigger_cues": [
+     "non-conventional",
+     "solar",
+     "wind",
+     "efficient",
+     "sustainable"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "id": "m5",
+    "key": "m5",
+    "node": "n5",
+    "statement": "Metallic minerals are always hard and non-metallic minerals are always soft.",
+    "why": "Students link 'metal' with strength and 'non-metal' with brittleness or softness, ignoring that diamond is non-metallic and very hard.",
+    "fix": "Metallic minerals contain metals (iron, copper, bauxite); non-metallic ones (mica, limestone, diamond, coal) do not. Hardness is not what separates the groups.",
+    "probe": {
+     "question": "Diamond is the hardest natural substance. Is it a metallic or non-metallic mineral?",
+     "wrong_answer": "Metallic, because it is very hard."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Hardness and strength define metallic minerals",
+    "causes": [],
+    "trigger_cues": [
+     "metallic",
+     "non-metallic",
+     "hard",
+     "soft",
+     "diamond",
+     "strong"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "id": "m6",
+    "key": "m6",
+    "node": "n4",
+    "statement": "Ferrous minerals are those that contain rust.",
+    "why": "Students know iron rusts and mix up the word 'ferrous' with the rust that forms on iron.",
+    "fix": "Ferrous minerals contain iron (iron ore, manganese, nickel, cobalt in steel-making); they are classified by iron content, not by rust. Non-ferrous minerals such as copper, bauxite and lead have no iron in them.",
+    "probe": {
+     "question": "Why is iron ore called a ferrous mineral?",
+     "wrong_answer": "Because it rusts when exposed to air and water."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Classification names come from visible properties like rust",
+    "causes": [],
+    "trigger_cues": [
+     "ferrous",
+     "rust",
+     "iron",
+     "why called",
+     "corrosion"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom misconception diagnostic items"
+   },
+   {
+    "id": "m7",
+    "key": "m7",
+    "node": "n12",
+    "statement": "Open-cast mining is done only on the surface of the ground by simply picking up minerals, with no machines or blasting.",
+    "why": "Students think 'open' means shallow and easy, and picture a small surface scraping.",
+    "fix": "Open-cast mining removes minerals from shallow deposits by digging large open pits, often with blasting, drilling and heavy machines; it is cheaper and quicker than shaft mining, which is used for deep deposits.",
+    "probe": {
+     "question": "Which method needs heavy machinery and blasting, open-cast or shaft mining?",
+     "wrong_answer": "Only shaft mining; open-cast is just picking minerals from the surface."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Open surface work means simple, small-scale activity",
+    "causes": [],
+    "trigger_cues": [
+     "open-cast",
+     "machines",
+     "blasting",
+     "surface",
+     "pit",
+     "shaft"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "id": "m8",
+    "key": "m8",
+    "node": "n6",
+    "statement": "Mining methods are chosen by the type of mineral, not by how deep the deposit lies.",
+    "why": "Students link a specific mineral with a specific method and miss the depth factor.",
+    "fix": "The method depends mainly on the depth and position of the deposit: shallow deposits use open-cast, deep ones use shaft (underground) mining; quarrying is used for stones near the surface.",
+    "probe": {
+     "question": "A coal seam lies very close to the surface. Which mining method is likely used?",
+     "wrong_answer": "Shaft mining, because coal is always mined that way."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Each mineral has one fixed mining method",
+    "causes": [],
+    "trigger_cues": [
+     "mining method",
+     "depth",
+     "deposit",
+     "choose",
+     "coal",
+     "shallow"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "id": "m9",
+    "key": "m9",
+    "node": "n14",
+    "statement": "Solar energy is renewable, so solar panels work equally well day and night and in all weather.",
+    "why": "Students equate 'renewable and inexhaustible' with 'always available', ignoring that the Sun is not available at night or in cloud.",
+    "fix": "Sunlight is a renewable resource, but the energy a panel gives depends on sunshine hours and weather, so storage (batteries) or other sources are needed at night and in cloudy periods.",
+    "probe": {
+     "question": "Can a solar panel alone power a village light all night?",
+     "wrong_answer": "Yes, because solar energy never runs out."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Renewable means constantly available without limits",
+    "causes": [],
+    "trigger_cues": [
+     "solar",
+     "panel",
+     "night",
+     "cloudy",
+     "renewable",
+     "always"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies on students' ideas about renewable energy"
+   },
+   {
+    "id": "m10",
+    "key": "m10",
+    "node": "n13",
+    "statement": "Coal is a fossil fuel because it is dug out of the ground like fossils.",
+    "why": "Students take 'fossil' to mean anything dug from the earth, not its origin from ancient living matter.",
+    "fix": "Coal is a fossil fuel because it formed over millions of years from plants buried and compressed under heat and pressure. Petroleum and natural gas form from marine organisms.",
+    "probe": {
+     "question": "Why is coal called a fossil fuel?",
+     "wrong_answer": "Because it is dug up from underground, like fossils."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Fossil fuel means anything extracted from underground",
+    "causes": [],
+    "trigger_cues": [
+     "fossil fuel",
+     "coal",
+     "why called",
+     "formed",
+     "dug",
+     "millions of years"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies on students' ideas about fossil fuels"
+   },
+   {
+    "id": "m11",
+    "key": "m11",
+    "node": "n7",
+    "statement": "Conventional energy sources are the ones that are new and modern, while non-conventional ones are old.",
+    "why": "Students read 'conventional' as 'advanced' rather than 'traditionally used'.",
+    "fix": "Conventional sources (coal, petroleum, natural gas, firewood, hydel power) have been in common use for long and are mostly exhaustible; non-conventional sources (solar, wind, tidal, biogas, geothermal) are newer and largely renewable.",
+    "probe": {
+     "question": "Which is the conventional source: coal or wind energy?",
+     "wrong_answer": "Wind energy, because it is the modern technology."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Conventional means modern or advanced",
+    "causes": [],
+    "trigger_cues": [
+     "conventional",
+     "non-conventional",
+     "modern",
+     "traditional",
+     "wind",
+     "coal"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "id": "m12",
+    "key": "m12",
+    "node": "n15",
+    "statement": "Conserving minerals means we should stop using them completely.",
+    "why": "Students think saving a resource means not using it, instead of using it carefully.",
+    "fix": "Sustainable use means using minerals and energy wisely: avoiding wastage, recycling metals, using substitutes and efficient technologies, and relying more on renewable sources so future generations also have them.",
+    "probe": {
+     "question": "What should we do to conserve mineral resources?",
+     "wrong_answer": "Stop mining and using them altogether."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Conservation means total non-use",
+    "causes": [],
+    "trigger_cues": [
+     "conserve",
+     "conservation",
+     "sustainable",
+     "stop using",
+     "recycle",
+     "future generations"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on students' conceptions of conservation"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

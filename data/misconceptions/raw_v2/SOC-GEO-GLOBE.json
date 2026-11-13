@@ -1,0 +1,449 @@
+{
+ "topic": {
+  "id": "SOC-GEO-GLOBE",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   6
+  ],
+  "title": "Globe: latitudes and longitudes",
+  "scope": "Equator, heat zones, Prime Meridian, longitude and time, Indian Standard Time"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 829,
+  "candidatesTokenCount": 1585,
+  "totalTokenCount": 2414,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 829
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 6.2,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Coordinate System",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "basic geometry",
+     "circles"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Heat Zones",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "sunlight and shadows"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Time and Longitude",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "rotation of earth",
+     "fractions"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Latitudes",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Longitudes",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "Equator and Poles",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Prime Meridian",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Sun's Rays and Heat",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "angle of incidence"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Torrid, Temperate, Frigid Zones",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Earth's Rotation and Time",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "rotation"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Indian Standard Time",
+    "level": 3,
+    "parent": "n3",
+    "prereqs": [
+     "n10"
+    ],
+    "external_prereqs": [
+     "standardization"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Grid System",
+    "level": 3,
+    "parent": "n1",
+    "prereqs": [
+     "n4",
+     "n5"
+    ],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n4",
+    "statement": "Latitudes are physical lines drawn on the Earth's surface.",
+    "why": "Students confuse map representations with physical reality.",
+    "fix": "Latitudes are imaginary circular lines used to measure distance from the equator.",
+    "probe": {
+     "question": "If you travel to the equator, will you see a line on the ground?",
+     "wrong_answer": "Yes, it is a painted line."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "equator",
+     "lines",
+     "drawn",
+     "surface",
+     "earth"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's children's ideas in science"
+   },
+   {
+    "key": "m2",
+    "node": "n5",
+    "statement": "Longitudes are parallel to each other like latitudes.",
+    "why": "Students assume all grid lines behave the same way.",
+    "fix": "Longitudes converge at the poles and are widest at the equator.",
+    "probe": {
+     "question": "Do longitudes stay the same distance apart?",
+     "wrong_answer": "Yes, they are parallel lines."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "a rule from whole numbers works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "longitude",
+     "parallel",
+     "distance",
+     "poles",
+     "equator"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n9",
+    "statement": "The Torrid Zone is hot because it is closer to the sun.",
+    "why": "Students confuse the angle of sunlight with physical distance.",
+    "fix": "The Torrid Zone receives direct vertical rays of the sun, which concentrate heat.",
+    "probe": {
+     "question": "Why is the Torrid Zone hot?",
+     "wrong_answer": "Because it is physically closer to the sun."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "bigger or more means more effect",
+    "causes": [],
+    "trigger_cues": [
+     "torrid",
+     "sun",
+     "closer",
+     "heat",
+     "rays"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on astronomy"
+   },
+   {
+    "key": "m4",
+    "node": "n10",
+    "statement": "Time is the same everywhere on Earth at the same moment.",
+    "why": "Daily experience of local time makes it hard to grasp global time zones.",
+    "fix": "Different longitudes face the sun at different times, causing time differences.",
+    "probe": {
+     "question": "If it is noon in London, is it noon in India?",
+     "wrong_answer": "Yes, noon is the same everywhere."
+    },
+    "error_type": "presentism",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "time",
+     "noon",
+     "earth",
+     "rotation",
+     "longitude"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m5",
+    "node": "n11",
+    "statement": "Indian Standard Time is based on the Prime Meridian.",
+    "why": "Students confuse the global reference point with local standard time.",
+    "fix": "IST is based on the 82.5°E longitude passing through Mirzapur.",
+    "probe": {
+     "question": "What longitude determines Indian time?",
+     "wrong_answer": "The Prime Meridian."
+    },
+    "error_type": "confuses_people_or_places",
+    "root_belief": "one event has one single cause",
+    "causes": [],
+    "trigger_cues": [
+     "ist",
+     "standard",
+     "time",
+     "meridian",
+     "longitude"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "id": "m6",
+    "node": "n6",
+    "statement": "The Equator is the line at 90 degrees latitude.",
+    "why": "Students remember 90° as the 'main' or biggest latitude and link it with the most important line, or confuse the Equator with the poles.",
+    "fix": "The Equator is 0° latitude, the starting line for measuring latitudes. The poles are at 90° N and 90° S.",
+    "probe": {
+     "question": "What is the value of latitude at the Equator?",
+     "wrong_answer": "90 degrees"
+    },
+    "error_type": "numerical_misreading",
+    "root_belief": "Biggest or most important line has the biggest number",
+    "causes": [],
+    "trigger_cues": [
+     "equator",
+     "degrees",
+     "0 degree",
+     "90 degrees",
+     "poles",
+     "starting line"
+    ],
+    "confidence": "plausible",
+    "source_hint": null,
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n4",
+    "statement": "The Equator is the longest of all the parallels, so the Tropic of Cancer is the same length as the Equator.",
+    "why": "Students see all latitudes as parallel horizontal circles on a flat map and assume equal length.",
+    "fix": "Parallels get smaller in length towards the poles. The Equator is the longest circle, and at the poles the latitude is just a point.",
+    "probe": {
+     "question": "Compare the length of the 60° N parallel with the Equator.",
+     "wrong_answer": "They are equal in length because both are latitudes."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Parallel lines on a map are all equal",
+    "causes": [],
+    "trigger_cues": [
+     "parallels",
+     "length",
+     "equator",
+     "longest",
+     "smaller",
+     "poles"
+    ],
+    "confidence": "plausible",
+    "source_hint": "Flat map projection reading studies",
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n7",
+    "statement": "The Prime Meridian passes through India because it is the starting line of longitudes.",
+    "why": "Students link the 'prime' or starting line to their own country or a famous place, instead of Greenwich.",
+    "fix": "The Prime Meridian is 0° longitude and passes through Greenwich near London, England. It divides the Earth into the Eastern and Western Hemispheres.",
+    "probe": {
+     "question": "Through which place does the 0° longitude pass?",
+     "wrong_answer": "New Delhi, India"
+    },
+    "error_type": "confuses_people_or_places",
+    "root_belief": "Starting reference lines pass through one's own country",
+    "causes": [],
+    "trigger_cues": [
+     "prime meridian",
+     "0 degree longitude",
+     "greenwich",
+     "starting line",
+     "passes through"
+    ],
+    "confidence": "plausible",
+    "source_hint": null,
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n8",
+    "statement": "The Sun's rays heat the whole Earth equally because the Sun is the same distance from everywhere.",
+    "why": "Students think of the Sun as a uniform heater and ignore the angle at which rays fall on the curved Earth.",
+    "fix": "Rays fall straight (vertically) near the Equator and slant towards the poles, spreading over a larger area, so heat is less there.",
+    "probe": {
+     "question": "Why is it much colder at the poles than at the Equator?",
+     "wrong_answer": "It is not; the Sun heats all places equally."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Sunlight arrives the same way everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "sun rays",
+     "slanting",
+     "vertical",
+     "poles colder",
+     "equator hot",
+     "angle"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Research on students' ideas about seasons and Sun's heating",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n9",
+    "statement": "The Frigid Zone is cold because it is far from the Sun's rays and has no sunlight at all.",
+    "why": "Students equate cold with total absence of sunlight, forgetting that polar regions receive slanting rays and sunlight for part of the year.",
+    "fix": "The Frigid Zone gets sunlight, but the rays are very slanting, so the heat is low. It lies between the Arctic or Antarctic Circle and the pole.",
+    "probe": {
+     "question": "Does the Frigid Zone ever receive sunlight?",
+     "wrong_answer": "No, it never gets sunlight, so it is cold."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Cold means no sunlight",
+    "causes": [],
+    "trigger_cues": [
+     "frigid zone",
+     "no sunlight",
+     "arctic circle",
+     "antarctic",
+     "cold",
+     "slanting rays"
+    ],
+    "confidence": "plausible",
+    "source_hint": null,
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n10",
+    "statement": "Places east of Greenwich are behind in time, and places to the west are ahead.",
+    "why": "Students reverse the direction because Greenwich is the 'standard' and they mix up which way the Earth rotates.",
+    "fix": "The Earth rotates from west to east, so places east see the Sun earlier and are ahead of GMT; places west are behind. India is ahead of GMT by 5 hours 30 minutes.",
+    "probe": {
+     "question": "When it is 12 noon at Greenwich, will it be earlier or later than noon in India?",
+     "wrong_answer": "Earlier than noon, because India is east of Greenwich."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "East means earlier and west means later",
+    "causes": [],
+    "trigger_cues": [
+     "east",
+     "west",
+     "ahead",
+     "behind",
+     "greenwich",
+     "time difference",
+     "india"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Studies on time zone and Earth rotation reasoning",
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n12",
+    "statement": "Latitude is always written first or second at will, and a place can be found with only one of its coordinates.",
+    "why": "Students think one line (latitude or longitude) is enough to name a point, forgetting that each only fixes a whole circle or line.",
+    "fix": "A place is located where its parallel and meridian cross, so both latitude and longitude are needed in the grid, usually latitude first.",
+    "probe": {
+     "question": "Is 20° N latitude enough to tell the exact location of a city?",
+     "wrong_answer": "Yes, 20° N is enough to find the exact city."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "One coordinate is enough to fix a place",
+    "causes": [],
+    "trigger_cues": [
+     "grid",
+     "latitude",
+     "longitude",
+     "exact location",
+     "both",
+     "crossing point"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Research on students' use of coordinate systems on globes and maps",
+    "key": "m12"
+   }
+  ]
+ },
+ "problems": [
+  "only 5 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

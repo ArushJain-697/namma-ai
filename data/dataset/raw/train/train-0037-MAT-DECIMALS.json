@@ -1,0 +1,133 @@
+{
+ "job": {
+  "job": "train-0037-MAT-DECIMALS",
+  "topic_id": "MAT-DECIMALS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a step-by-step worked example",
+  "seed": 37
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 1016,
+  "candidatesTokenCount": 1377,
+  "totalTokenCount": 2393,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1016
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-DECIMALS-K6-M5",
+  "MAT-DECIMALS-K7-M12",
+  "MAT-DECIMALS-K10-M7",
+  "MAT-DECIMALS-K9-M8",
+  "MAT-DECIMALS-K8-M4",
+  "MAT-DECIMALS-K7-M3",
+  "MAT-DECIMALS-K6-M6",
+  "MAT-DECIMALS-K4-M1",
+  "MAT-DECIMALS-K9-M9",
+  "MAT-DECIMALS-K6-M2",
+  "MAT-DECIMALS-K8-M10",
+  "MAT-DECIMALS-K11-M11"
+ ],
+ "response": {
+  "passage": "To compare decimals like 0.4 and 0.40, we must look at their place values. A decimal point is not a separator for two whole numbers; it marks the boundary between whole units and fractional parts. We can add placeholder zeros to the right of a decimal without changing its value, meaning 0.4 is exactly equal to 0.40. When we perform operations like addition or subtraction, we must align the decimal points vertically to ensure we are adding or subtracting the same place values, such as tenths with tenths and hundredths with hundredths. For example, when adding 5 and 0.3, we write 5 as 5.0 to align the units place, resulting in 5.3. If we compare 0.8 and 0.83, we look at the tenths place first. Since both have 8 in the tenths place, we move to the hundredths place. Because 0.8 has zero hundredths and 0.83 has three hundredths, 0.83 is the larger number. Finally, remember that 0.25 is not 1/25; it is 25 hundredths, which simplifies to the fraction 25/100 or 1/4. Always focus on the place value of each digit rather than the total number of digits present.",
+  "summary": "This passage explains how to correctly compare decimals by using place values and placeholder zeros. It also provides rules for aligning decimal points during addition and converting decimals to fractions.",
+  "items": [
+   {
+    "evidence": "We can add placeholder zeros to the right of a decimal without changing its value, meaning 0.4 is exactly equal to 0.40.",
+    "answer": "0.4 is exactly equal to 0.40",
+    "stem": "What is the relationship between 0.4 and 0.40?",
+    "options": [
+     {
+      "belief_id": "MAT-DECIMALS-K10-M7",
+      "why": "Student thinks more digits or trailing zeros increase the value.",
+      "text": "0.40 is greater than 0.4"
+     },
+     {
+      "belief_id": "MAT-DECIMALS-K6-M2",
+      "why": "Student believes more digits always mean a larger number.",
+      "text": "0.40 is larger than 0.4"
+     },
+     {
+      "belief_id": "MAT-DECIMALS-K6-M6",
+      "why": "Student thinks fewer digits mean a larger number.",
+      "text": "0.4 is larger than 0.40"
+     }
+    ]
+   },
+   {
+    "evidence": "For example, when adding 5 and 0.3, we write 5 as 5.0 to align the units place, resulting in 5.3.",
+    "answer": "5.3",
+    "stem": "What is the result of adding 5 and 0.3?",
+    "options": [
+     {
+      "belief_id": "MAT-DECIMALS-K11-M11",
+      "why": "Student aligns digits without considering place value.",
+      "text": "0.8"
+     },
+     {
+      "belief_id": "MAT-DECIMALS-K7-M3",
+      "why": "Student aligns the last digits on the right.",
+      "text": "5.30"
+     },
+     {
+      "belief_id": "MAT-DECIMALS-K4-M1",
+      "why": "Student treats the decimal as a separator of whole numbers.",
+      "text": "53"
+     }
+    ]
+   },
+   {
+    "evidence": "Because 0.8 has zero hundredths and 0.83 has three hundredths, 0.83 is the larger number.",
+    "answer": "0.83 is the larger number",
+    "stem": "Which decimal is greater, 0.8 or 0.83?",
+    "options": [
+     {
+      "belief_id": "MAT-DECIMALS-K6-M6",
+      "why": "Student thinks fewer digits make a number larger.",
+      "text": "0.8 is the larger number"
+     },
+     {
+      "belief_id": "MAT-DECIMALS-K6-M5",
+      "why": "Student thinks 0.05 is bigger than 0.5 due to zeros.",
+      "text": "0.8 is smaller than 0.83"
+     },
+     {
+      "belief_id": "MAT-DECIMALS-K10-M7",
+      "why": "Student incorrectly assumes more digits change the value.",
+      "text": "0.83 is smaller than 0.8"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, remember that 0.25 is not 1/25; it is 25 hundredths, which simplifies to the fraction 25/100 or 1/4.",
+    "answer": "1/4",
+    "stem": "What is the correct fractional form of 0.25?",
+    "options": [
+     {
+      "belief_id": "MAT-DECIMALS-K9-M8",
+      "why": "Student just moves digits over the fraction bar.",
+      "text": "1/25"
+     },
+     {
+      "belief_id": "MAT-DECIMALS-K9-M9",
+      "why": "Student confuses decimal digits with fraction denominators.",
+      "text": "1/3"
+     },
+     {
+      "belief_id": "MAT-DECIMALS-K8-M10",
+      "why": "Student misidentifies the place value of the digits.",
+      "text": "25/10"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.2
+}

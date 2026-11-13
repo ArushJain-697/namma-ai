@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0044-MAT-HERON",
+  "topic_id": "MAT-HERON",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a market or shop situation that uses the idea",
+  "seed": 44
+ },
+ "model": "gemini-3.1-flash-lite/key3",
+ "usage": {
+  "promptTokenCount": 1097,
+  "candidatesTokenCount": 1342,
+  "totalTokenCount": 2439,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1097
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-HERON-K18-M11",
+  "MAT-HERON-K25-M20",
+  "MAT-HERON-K26-M21",
+  "MAT-HERON-K21-M15",
+  "MAT-HERON-K12-M3",
+  "MAT-HERON-K23-M17",
+  "MAT-HERON-K19-M9",
+  "MAT-HERON-K20-M12",
+  "MAT-HERON-K22-M16",
+  "MAT-HERON-K12-M2",
+  "MAT-HERON-K6-M24",
+  "MAT-HERON-K11-M1",
+  "MAT-HERON-K15-M6",
+  "MAT-HERON-K10-M23"
+ ],
+ "response": {
+  "passage": "Rohan is helping his father manage a triangular plot of land near the local market to set up a vegetable stall. The plot has sides measuring 12 meters, 16 meters, and 20 meters. To calculate the area for planning the layout, Rohan first converts all measurements into meters, ensuring he does not mix units like centimeters with meters. He knows that the height of a triangle is not necessarily one of its sides, so he avoids assuming the slanting side is the altitude. Instead, he calculates the semi-perimeter by adding the three sides and dividing by two, which gives him 24 meters. He then uses Heron’s formula, taking the square root of the product of the semi-perimeter and the differences between the semi-perimeter and each side. Rohan realizes that a quadrilateral plot nearby with sides of 5, 6, 7, and 8 meters cannot be solved using Heron’s formula directly because the formula is specifically for triangles. He decides to split that quadrilateral into two triangles by drawing a diagonal. Finally, he remembers that the area of a triangle is always half the product of the base and height, but since he lacks the height, Heron’s formula is the perfect tool to find the area without needing to measure the altitude first.",
+  "summary": "Rohan uses Heron's formula to calculate the area of a triangular plot of land. He correctly handles units and understands that the formula applies to triangles, not quadrilaterals directly.",
+  "items": [
+   {
+    "evidence": "Rohan first converts all measurements into meters, ensuring he does not mix units like centimeters with meters.",
+    "answer": "convert all measurements into meters",
+    "stem": "What must Rohan do before applying Heron's formula if his measurements are in different units?",
+    "options": [
+     {
+      "belief_id": "MAT-HERON-K22-M16",
+      "why": "Student ignores unit conversion and adds values directly.",
+      "text": "add the values as they are"
+     },
+     {
+      "belief_id": "MAT-HERON-K18-M11",
+      "why": "Student believes formula is just simple multiplication of sides.",
+      "text": "multiply the sides together"
+     },
+     {
+      "belief_id": "MAT-HERON-K19-M9",
+      "why": "Student incorrectly subtracts the sum of sides from semi-perimeter.",
+      "text": "subtract the sum of sides"
+     }
+    ]
+   },
+   {
+    "evidence": "He knows that the height of a triangle is not necessarily one of its sides, so he avoids assuming the slanting side is the altitude.",
+    "answer": "not necessarily one of its sides",
+    "stem": "What is true regarding the altitude of a triangle in this context?",
+    "options": [
+     {
+      "belief_id": "MAT-HERON-K12-M2",
+      "why": "Student incorrectly assumes the height is a side.",
+      "text": "it is always a side"
+     },
+     {
+      "belief_id": "MAT-HERON-K12-M3",
+      "why": "Student believes any slanting side acts as height.",
+      "text": "it is any slanting side"
+     },
+     {
+      "belief_id": "MAT-HERON-K6-M24",
+      "why": "Student thinks height is mandatory for any area calculation.",
+      "text": "it must be measured first"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan realizes that a quadrilateral plot nearby with sides of 5, 6, 7, and 8 meters cannot be solved using Heron’s formula directly because the formula is specifically for triangles.",
+    "answer": "cannot be solved using Heron’s formula directly",
+    "stem": "Why can Heron's formula not be applied to a quadrilateral immediately?",
+    "options": [
+     {
+      "belief_id": "MAT-HERON-K25-M20",
+      "why": "Student incorrectly applies Heron's formula to four sides.",
+      "text": "it is calculated using four sides"
+     },
+     {
+      "belief_id": "MAT-HERON-K10-M23",
+      "why": "Student assumes perimeter dictates the area of quadrilaterals.",
+      "text": "it depends on the perimeter"
+     },
+     {
+      "belief_id": "MAT-HERON-K21-M15",
+      "why": "Student assumes any four lengths form a valid area.",
+      "text": "any four lengths work"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, he remembers that the area of a triangle is always half the product of the base and height, but since he lacks the height, Heron’s formula is the perfect tool to find the area without needing to measure the altitude first.",
+    "answer": "half the product of the base and height",
+    "stem": "What is the standard relationship between base and height for a triangle's area?",
+    "options": [
+     {
+      "belief_id": "MAT-HERON-K11-M1",
+      "why": "Student forgets the half multiplier in the formula.",
+      "text": "the product of base and height"
+     },
+     {
+      "belief_id": "MAT-HERON-K20-M12",
+      "why": "Student forgets to take the square root.",
+      "text": "the product under the root"
+     },
+     {
+      "belief_id": "MAT-HERON-K15-M6",
+      "why": "Student incorrectly uses half of one side times base.",
+      "text": "half the equal side times base"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.9
+}

@@ -1,0 +1,470 @@
+{
+ "topic": {
+  "id": "SOC-ECO-FOODSECURITY",
+  "subject": "social",
+  "strand": "economics",
+  "grades": [
+   9
+  ],
+  "title": "Food security in India",
+  "scope": "availability, access and affordability, buffer stock, public distribution system, ration shops, famine"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 827,
+  "candidatesTokenCount": 1509,
+  "totalTokenCount": 2336,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 827
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 44.0,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Food Security Dimensions",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "basic definition of needs"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Public Distribution System (PDS)",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "role of government"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Famine and Vulnerability",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "basic geography"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Availability",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "production vs consumption"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Access and Affordability",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "purchasing power"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Buffer Stock",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "storage concepts"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Ration Shops",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "retail trade"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Famine Characteristics",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "history of colonial India"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Food production within country",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Imports of food grains",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Purchasing power of poor",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": [
+     "income distribution"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "FCI role in procurement",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Targeted PDS and BPL cards",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Starvation deaths vs famine",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n4",
+    "statement": "Food security means that every village must produce all the food it consumes.",
+    "why": "Students confuse local self-sufficiency with national food security.",
+    "fix": "Food security is achieved when food is available through production, imports, and efficient distribution, not just local production.",
+    "probe": {
+     "question": "If a region grows only cotton, is it food insecure?",
+     "wrong_answer": "Yes, because it does not grow its own food."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "local production is the only source of supply",
+    "causes": [],
+    "trigger_cues": [
+     "production",
+     "availability",
+     "self-sufficiency",
+     "imports",
+     "domestic"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n5",
+    "statement": "If food is available in the market, everyone is food secure.",
+    "why": "Students equate market availability with individual access.",
+    "fix": "Access requires the ability to purchase food; even if food is available, the poor may lack the money to buy it.",
+    "probe": {
+     "question": "Why do people starve when shops are full of grain?",
+     "wrong_answer": "Because there is no food available in the country."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "availability equals access",
+    "causes": [],
+    "trigger_cues": [
+     "affordability",
+     "access",
+     "purchasing power",
+     "market",
+     "poverty"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on economic concepts"
+   },
+   {
+    "key": "m3",
+    "node": "n6",
+    "statement": "Buffer stocks are kept to make profit by selling grain when prices rise.",
+    "why": "Students apply commercial business logic to government welfare functions.",
+    "fix": "Buffer stocks are maintained by the FCI to ensure food availability during shortages and to stabilize prices for the poor.",
+    "probe": {
+     "question": "Why does the government store grain?",
+     "wrong_answer": "To sell it at high prices later for profit."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "all economic activity aims for profit",
+    "causes": [],
+    "trigger_cues": [
+     "fci",
+     "buffer stock",
+     "procurement",
+     "stabilization",
+     "government"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n13",
+    "statement": "Ration shops provide free food to everyone in the country.",
+    "why": "Students conflate the existence of a system with universal free access.",
+    "fix": "Ration shops provide food at subsidized prices, and they are targeted primarily at families below the poverty line.",
+    "probe": {
+     "question": "Who can buy from a ration shop?",
+     "wrong_answer": "Anyone who wants free food."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "government services are always free for all",
+    "causes": [],
+    "trigger_cues": [
+     "ration shops",
+     "pds",
+     "subsidized",
+     "bpl",
+     "targeted"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "id": "m5",
+    "node": "n9",
+    "statement": "If India produces record foodgrains, no one in the country can be food insecure.",
+    "why": "Students equate total production with food security and ignore distribution and purchasing power.",
+    "fix": "Food security needs availability, access and affordability together; even with high production, poor households may not be able to buy enough food.",
+    "probe": {
+     "question": "India has record wheat and rice production this year. Can some people still go hungry? Explain.",
+     "wrong_answer": "No, because when production is high everyone gets enough food."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Total production alone guarantees food security",
+    "causes": [],
+    "trigger_cues": [
+     "record",
+     "production",
+     "enough",
+     "everyone",
+     "hungry",
+     "foodgrains",
+     "surplus"
+    ],
+    "confidence": "plausible",
+    "source_hint": "Class 9 NCERT Economics, Ch. 4 and teacher observation",
+    "key": "m5"
+   },
+   {
+    "id": "m6",
+    "node": "n10",
+    "statement": "India depends mainly on imported food grains to feed its people.",
+    "why": "Students link food shortage and food security with imports, and recall past episodes like the 1960s wheat imports.",
+    "fix": "India is self-sufficient in foodgrains after the Green Revolution, mainly wheat and rice; it feeds its people from its own production and holds buffer stocks.",
+    "probe": {
+     "question": "Where does most of the grain for India's ration shops come from?",
+     "wrong_answer": "It is mostly imported from other countries."
+    },
+    "error_type": "chronology_slip",
+    "root_belief": "India still relies on foreign grain",
+    "causes": [],
+    "trigger_cues": [
+     "imported",
+     "foreign",
+     "grain",
+     "self-sufficient",
+     "green revolution",
+     "ration",
+     "wheat"
+    ],
+    "confidence": "plausible",
+    "source_hint": "Textbook analysis; Green Revolution chapter",
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n11",
+    "statement": "The poor are food insecure only because there is not enough food in the country.",
+    "why": "Students think hunger comes from scarcity and overlook lack of income and employment.",
+    "fix": "Poor people go hungry mainly because they lack the money to buy food (low purchasing power), even when food is available.",
+    "probe": {
+     "question": "Why can a poor landless labourer be hungry even when godowns are full?",
+     "wrong_answer": "Because the country does not have enough food."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Hunger always comes from food scarcity",
+    "causes": [],
+    "trigger_cues": [
+     "poor",
+     "hungry",
+     "godowns",
+     "full",
+     "buy",
+     "income",
+     "landless"
+    ],
+    "confidence": "plausible",
+    "source_hint": "Amartya Sen entitlement approach in NCERT discussion",
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n12",
+    "statement": "The Food Corporation of India sells ration to people directly in the villages.",
+    "why": "Students confuse FCI with ration shops, since both are connected to PDS.",
+    "fix": "FCI buys wheat and rice from farmers at minimum support price and stores it; ration shops (fair price shops) sell to consumers.",
+    "probe": {
+     "question": "Who buys wheat from farmers at MSP and who sells it to card-holders?",
+     "wrong_answer": "FCI does both, buying from farmers and selling to consumers at its shops."
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "FCI and ration shops are the same body",
+    "causes": [],
+    "trigger_cues": [
+     "fci",
+     "ration shop",
+     "buy",
+     "sell",
+     "farmers",
+     "msp",
+     "godown"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 9 Economics Ch. 4",
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n12",
+    "statement": "The government fixes minimum support price after the harvest, so it can lower it when there is a surplus.",
+    "why": "Students mix up MSP with market price and think it changes with supply.",
+    "fix": "MSP is announced by the government before the sowing season to encourage farmers to grow crops and ensure them a fair price.",
+    "probe": {
+     "question": "When is the minimum support price announced and why?",
+     "wrong_answer": "After harvest, to match the market price when there is a surplus."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "MSP is the same as market price",
+    "causes": [],
+    "trigger_cues": [
+     "msp",
+     "announced",
+     "sowing",
+     "harvest",
+     "price",
+     "support",
+     "farmers"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 9 Economics Ch. 4",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n13",
+    "statement": "Every household with a ration card gets food at the same price.",
+    "why": "Students think the PDS is uniform and overlook the categories of cards.",
+    "fix": "Under targeted PDS, cards are issued as Antyodaya, BPL and APL, and each category gets a different quantity at a different price; poorer families pay less.",
+    "probe": {
+     "question": "Does a BPL family pay the same price for ration as an APL family?",
+     "wrong_answer": "Yes, all card-holders pay the same price at the ration shop."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "All ration cards carry identical benefits",
+    "causes": [],
+    "trigger_cues": [
+     "ration card",
+     "bpl",
+     "apl",
+     "antyodaya",
+     "price",
+     "same",
+     "category"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 9 Economics Ch. 4",
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n14",
+    "statement": "A famine means many people have died of starvation, so deaths are needed to call it a famine.",
+    "why": "Students see starvation deaths as the definition of famine, though deaths are a result.",
+    "fix": "Famine is widespread hunger because of a lack of food or purchasing power, shown by rising food prices and people migrating; deaths are the extreme result, not the definition.",
+    "probe": {
+     "question": "Can a region be called famine-hit before anyone has died of starvation?",
+     "wrong_answer": "No, a famine only exists once many people have died."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Famine is defined by deaths",
+    "causes": [],
+    "trigger_cues": [
+     "famine",
+     "starvation",
+     "deaths",
+     "define",
+     "hunger",
+     "prices",
+     "migration"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT Class 9 Economics Ch. 4; Bengal famine 1943 discussion",
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n8",
+    "statement": "A famine is caused only by drought or crop failure.",
+    "why": "Students link famine with a natural disaster, forgetting that the Bengal famine of 1943 happened without a major fall in food availability.",
+    "fix": "Famines also arise from lack of access: when people lose income or prices rise sharply, they cannot buy food even when stocks exist.",
+    "probe": {
+     "question": "Name the only cause of a famine such as the Bengal famine.",
+     "wrong_answer": "A drought that destroyed the crops."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Natural disaster is the only cause of famine",
+    "causes": [],
+    "trigger_cues": [
+     "famine",
+     "drought",
+     "crop failure",
+     "bengal",
+     "cause",
+     "prices",
+     "natural"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Amartya Sen's work on the Bengal famine; NCERT Class 9",
+    "key": "m12"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

@@ -1,0 +1,910 @@
+{
+ "topic": {
+  "id": "GEN-TRAFFIC",
+  "subject": "general",
+  "strand": "safety",
+  "grades": [
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "title": "Road safety and traffic rules",
+  "scope": "traffic lights and signs, zebra crossings, helmets and seatbelts, why speed matters, minimum age for driving"
+ },
+ "model": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 7890,
+  "promptTokenCount": 2
+ },
+ "seconds": 56.7,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Traffic signals, signs and markings",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2",
+    "name": "Protective gear and safe behaviour",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3",
+    "name": "Speed, stopping and physics of crashes",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n4",
+    "name": "Rules, licences and responsibilities",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Traffic lights",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "colours and their everyday meaning"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Road signs",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "shapes: circle, triangle, rectangle"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Pedestrian crossings and footpaths",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Red means stop, green means go",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Amber/yellow means get ready to stop, not speed up",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Mandatory signs are circular, warning signs triangular",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Informatory signs are rectangular and give information",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n10"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Zebra crossing gives pedestrians a safe place to cross",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Look both ways and wait for vehicles to stop before crossing",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n12"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Walk on the footpath, or face traffic if there is none",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Helmets",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n16",
+    "name": "Seatbelts and child restraints",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "inertia: objects keep moving unless stopped"
+    ]
+   },
+   {
+    "key": "n17",
+    "name": "A helmet protects the head only if fastened and well fitted",
+    "level": 3,
+    "parent": "n15",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n18",
+    "name": "Pillion rider also needs a helmet",
+    "level": 3,
+    "parent": "n15",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n19",
+    "name": "Seatbelt holds body when the car stops suddenly",
+    "level": 3,
+    "parent": "n16",
+    "prereqs": [],
+    "external_prereqs": [
+     "inertia: objects keep moving unless stopped"
+    ]
+   },
+   {
+    "key": "n20",
+    "name": "Back-seat passengers also need seatbelts",
+    "level": 3,
+    "parent": "n16",
+    "prereqs": [
+     "n19"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n21",
+    "name": "Children should sit in the back with proper restraints",
+    "level": 3,
+    "parent": "n16",
+    "prereqs": [
+     "n19"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n22",
+    "name": "Speed and crash severity",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "speed as distance per time",
+     "concept of force"
+    ]
+   },
+   {
+    "key": "n23",
+    "name": "Stopping distance",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n22"
+    ],
+    "external_prereqs": [
+     "speed as distance per time"
+    ]
+   },
+   {
+    "key": "n24",
+    "name": "Higher speed makes injury much more severe",
+    "level": 3,
+    "parent": "n22",
+    "prereqs": [],
+    "external_prereqs": [
+     "kinetic energy depends on speed"
+    ]
+   },
+   {
+    "key": "n25",
+    "name": "Speed limits depend on road type, not just vehicle skill",
+    "level": 3,
+    "parent": "n22",
+    "prereqs": [
+     "n24"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n26",
+    "name": "Vehicles cannot stop instantly: reaction plus braking distance",
+    "level": 3,
+    "parent": "n23",
+    "prereqs": [],
+    "external_prereqs": [
+     "inertia: objects keep moving unless stopped"
+    ]
+   },
+   {
+    "key": "n27",
+    "name": "Wet roads and worn tyres lengthen braking distance",
+    "level": 3,
+    "parent": "n23",
+    "prereqs": [
+     "n26"
+    ],
+    "external_prereqs": [
+     "friction"
+    ]
+   },
+   {
+    "key": "n28",
+    "name": "Licence and minimum age",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n29",
+    "name": "Distracted and impaired driving",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n30",
+    "name": "Minimum age: 18 for ordinary vehicles; 16 for gearless two-wheelers up to 50cc",
+    "level": 3,
+    "parent": "n28",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n31",
+    "name": "Driving licence is needed before driving on public roads",
+    "level": 3,
+    "parent": "n28",
+    "prereqs": [
+     "n30"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n32",
+    "name": "Mobile phone use while driving raises crash risk",
+    "level": 3,
+    "parent": "n29",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n33",
+    "name": "Alcohol slows reactions and judgement",
+    "level": 3,
+    "parent": "n29",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n8",
+    "statement": "A green light means I can cross without looking because all traffic must be stopped.",
+    "why": "Students treat the colour as a guarantee rather than a signal others may break.",
+    "fix": "Green means you may go, but you must still check for vehicles that jump the red or turn across your path.",
+    "probe": {
+     "question": "The pedestrian light turns green. What should you do?",
+     "wrong_answer": "Walk straight across without looking."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "a rule is always followed by everyone",
+    "causes": [],
+    "trigger_cues": [
+     "green",
+     "signal",
+     "pedestrian",
+     "cross",
+     "look",
+     "vehicles"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n9",
+    "statement": "Yellow light means speed up to get through before it turns red.",
+    "why": "Drivers around them often accelerate at amber to beat the red.",
+    "fix": "Yellow means the signal is about to turn red, so slow down and stop unless you are too close to stop safely.",
+    "probe": {
+     "question": "The light turns yellow as you approach. What do you do?",
+     "wrong_answer": "Speed up to cross before red."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "what people commonly do is the rule",
+    "causes": [],
+    "trigger_cues": [
+     "yellow",
+     "amber",
+     "signal",
+     "slow down",
+     "red",
+     "stop"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "road safety studies of driver behaviour at signalised junctions",
+    "community": null
+   },
+   {
+    "key": "m3",
+    "node": "n9",
+    "statement": "Amber means the same as green, so you can go.",
+    "why": "Amber is seen as a lighter version of go.",
+    "fix": "Amber is a warning between green and red: prepare to stop.",
+    "probe": {
+     "question": "What does the amber light tell a driver?",
+     "wrong_answer": "Keep going as if it were green."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "amber",
+     "yellow",
+     "warning",
+     "prepare",
+     "stop",
+     "green"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n10",
+    "statement": "The shape of a road sign does not matter; only the picture counts.",
+    "why": "Children look at the picture and ignore the border shape.",
+    "fix": "Shape tells the type: circles give orders, triangles warn of danger, rectangles inform.",
+    "probe": {
+     "question": "A triangular sign shows a bend ahead. What type is it?",
+     "wrong_answer": "It is an order you must obey, like a circular sign."
+    },
+    "error_type": "other",
+    "root_belief": "only the main detail matters, not the form",
+    "causes": [],
+    "trigger_cues": [
+     "shape",
+     "circular",
+     "triangular",
+     "mandatory",
+     "warning",
+     "sign"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n11",
+    "statement": "Signs are only advice, so ignoring them is not an offence.",
+    "why": "Students see people ignore signs without immediate consequence.",
+    "fix": "Mandatory signs are legal rules, and breaking them is punishable by fine; warning and information signs help you drive safely.",
+    "probe": {
+     "question": "Is a 'No entry' sign just a suggestion?",
+     "wrong_answer": "Yes, you may enter if the road is empty."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "rules not enforced right now are optional",
+    "causes": [],
+    "trigger_cues": [
+     "mandatory",
+     "sign",
+     "fine",
+     "offence",
+     "no entry",
+     "rule"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m6",
+    "node": "n12",
+    "statement": "At a zebra crossing, pedestrians can step out without checking because vehicles must always stop.",
+    "why": "Students hear that pedestrians have right of way.",
+    "fix": "Drivers should give way, but a fast vehicle cannot stop at once, so pedestrians must check and make eye contact before stepping.",
+    "probe": {
+     "question": "You reach a zebra crossing with a car approaching fast. What do you do?",
+     "wrong_answer": "Walk out because the car must stop."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "having the right means being safe",
+    "causes": [],
+    "trigger_cues": [
+     "zebra crossing",
+     "right of way",
+     "pedestrian",
+     "stop",
+     "give way",
+     "check"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "pedestrian safety studies on right-of-way assumptions"
+   },
+   {
+    "key": "m7",
+    "node": "n13",
+    "statement": "It is safe to cross anywhere if I run fast.",
+    "why": "Students overrate their own speed compared with vehicles.",
+    "fix": "Cross at marked crossings, because drivers cannot judge or stop for a running child and running raises the risk of falling.",
+    "probe": {
+     "question": "No crossing nearby, a road is busy. Safe to run across?",
+     "wrong_answer": "Yes, if I run fast enough."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "my own speed can beat any danger",
+    "causes": [],
+    "trigger_cues": [
+     "cross",
+     "run",
+     "road",
+     "crossing",
+     "vehicle",
+     "speed"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "child pedestrian road-crossing judgement studies"
+   },
+   {
+    "key": "m8",
+    "node": "n14",
+    "statement": "Pedestrians should walk with the traffic on the road edge where there is no footpath.",
+    "why": "Students think walking the same way as vehicles is natural.",
+    "fix": "Where there is no footpath, walk on the right side facing oncoming traffic so you can see vehicles coming (in India, where traffic keeps left).",
+    "probe": {
+     "question": "No footpath on a village road. Which side should you walk?",
+     "wrong_answer": "Left side, with the traffic behind you."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "same direction as others is always safest",
+    "causes": [],
+    "trigger_cues": [
+     "footpath",
+     "walk",
+     "right side",
+     "facing",
+     "traffic",
+     "road edge"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m9",
+    "node": "n17",
+    "statement": "Wearing a helmet loosely or unfastened still protects the head.",
+    "why": "Students think owning or wearing it is enough.",
+    "fix": "An unfastened helmet can fly off in a crash; it must be buckled and snug.",
+    "probe": {
+     "question": "A rider wears a helmet with the strap open. Is the head protected?",
+     "wrong_answer": "Yes, the helmet is on."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "having the object is enough without correct use",
+    "causes": [],
+    "trigger_cues": [
+     "helmet",
+     "strap",
+     "fastened",
+     "fit",
+     "head",
+     "crash"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "WHO helmet safety manuals"
+   },
+   {
+    "key": "m10",
+    "node": "n17",
+    "statement": "Helmets are only for long highway trips, not short rides in the neighbourhood.",
+    "why": "Danger is linked to distance and highways.",
+    "fix": "Many crashes happen close to home at low speeds; a helmet should be worn on every ride.",
+    "probe": {
+     "question": "Do you need a helmet for a 5-minute ride to the shop?",
+     "wrong_answer": "No, it is a short trip."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "short or small exposure means small risk",
+    "causes": [],
+    "trigger_cues": [
+     "helmet",
+     "short trip",
+     "nearby",
+     "crash",
+     "every ride"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "WHO road safety reports on crash locations"
+   },
+   {
+    "key": "m11",
+    "node": "n18",
+    "statement": "Only the person driving the two-wheeler needs a helmet.",
+    "why": "The driver is seen as the only one at risk.",
+    "fix": "The pillion rider is just as likely to be thrown off and hit the head, so needs a helmet too.",
+    "probe": {
+     "question": "A father drives and his child sits behind. Who must wear a helmet?",
+     "wrong_answer": "Only the father."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "only the one in control is at risk",
+    "causes": [],
+    "trigger_cues": [
+     "pillion",
+     "helmet",
+     "passenger",
+     "two-wheeler",
+     "child",
+     "rider"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m12",
+    "node": "n19",
+    "statement": "Seatbelts are not needed when the car moves slowly.",
+    "why": "Slow feels harmless.",
+    "fix": "Even at city speeds the body keeps moving forward when the car stops suddenly, and the belt prevents hitting the dashboard.",
+    "probe": {
+     "question": "A car at 30 km/h brakes suddenly. Does a seatbelt matter?",
+     "wrong_answer": "No, it is too slow to hurt."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "small numbers mean no real effect",
+    "causes": [],
+    "trigger_cues": [
+     "seatbelt",
+     "slow",
+     "sudden stop",
+     "inertia",
+     "forward",
+     "dashboard"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "WHO seat-belt guidance and inertia misconception research"
+   },
+   {
+    "key": "m13",
+    "node": "n19",
+    "statement": "In a crash, the car's airbag does the job of a seatbelt, so the belt is unnecessary.",
+    "why": "Airbags are heavily advertised as safety devices.",
+    "fix": "Airbags are designed to work together with seatbelts; without a belt, an airbag may not protect and can even injure.",
+    "probe": {
+     "question": "A car has airbags. Is a seatbelt needed?",
+     "wrong_answer": "No, the airbag is enough."
+    },
+    "error_type": "media_misinformation",
+    "root_belief": "one safety feature replaces all others",
+    "causes": [],
+    "trigger_cues": [
+     "airbag",
+     "seatbelt",
+     "crash",
+     "safety",
+     "protect",
+     "car"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "vehicle safety guidance from road safety authorities"
+   },
+   {
+    "key": "m14",
+    "node": "n20",
+    "statement": "Only front-seat passengers need to wear seatbelts.",
+    "why": "People think the front is the dangerous place.",
+    "fix": "Rear passengers without belts can be thrown forward and injure themselves and front-seat people.",
+    "probe": {
+     "question": "You sit in the back of a car. Do you need a belt?",
+     "wrong_answer": "No, only the front seat needs it."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "danger is only where it is most visible",
+    "causes": [],
+    "trigger_cues": [
+     "back seat",
+     "seatbelt",
+     "rear",
+     "passenger",
+     "thrown",
+     "front"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "WHO road safety reports on rear-seat belt use"
+   },
+   {
+    "key": "m15",
+    "node": "n21",
+    "statement": "A small child is safest held in an adult's lap in the front seat.",
+    "why": "Parents feel their arms are the safest place.",
+    "fix": "An adult cannot hold a child in a crash; children should sit in the back in a proper child seat or belt.",
+    "probe": {
+     "question": "Where should a 3-year-old travel in a car?",
+     "wrong_answer": "On a parent's lap in front."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "personal strength can replace equipment",
+    "causes": [],
+    "trigger_cues": [
+     "child",
+     "lap",
+     "front seat",
+     "child seat",
+     "back seat",
+     "restraint"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "WHO child restraint guidance"
+   },
+   {
+    "key": "m16",
+    "node": "n24",
+    "statement": "Doubling the speed only doubles the danger of a crash.",
+    "why": "Students assume linear growth.",
+    "fix": "Crash energy grows with the square of speed, so doubling speed makes impact about four times as strong.",
+    "probe": {
+     "question": "A car at 40 km/h hits a wall versus 80 km/h. How much worse is the impact?",
+     "wrong_answer": "Twice as bad."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "effects grow in direct proportion to cause",
+    "causes": [],
+    "trigger_cues": [
+     "speed",
+     "double",
+     "energy",
+     "impact",
+     "square",
+     "crash"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies on proportional reasoning in kinetic energy"
+   },
+   {
+    "key": "m17",
+    "node": "n24",
+    "statement": "Speed only matters when the driver is inexperienced; skilled drivers can go fast safely.",
+    "why": "Students trust skill over physics.",
+    "fix": "Skill does not change physics; at high speed even experts need much more distance to stop and crashes are more severe.",
+    "probe": {
+     "question": "Can an expert driver safely exceed the limit in a crowded street?",
+     "wrong_answer": "Yes, skill makes it safe."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "skill can override physical laws",
+    "causes": [],
+    "trigger_cues": [
+     "speed limit",
+     "expert",
+     "skill",
+     "crowded",
+     "physics",
+     "stop"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m18",
+    "node": "n25",
+    "statement": "Speed limits exist only so police can collect fines.",
+    "why": "Students see enforcement and fines more than the reason.",
+    "fix": "Limits are set from how far a vehicle needs to stop and how many people, such as pedestrians, use that road.",
+    "probe": {
+     "question": "Why is there a 25 km/h limit near a school?",
+     "wrong_answer": "So that police can fine people."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "rules exist for authority's benefit, not safety",
+    "causes": [],
+    "trigger_cues": [
+     "speed limit",
+     "school zone",
+     "fine",
+     "police",
+     "pedestrians",
+     "safety"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m19",
+    "node": "n26",
+    "statement": "When a driver presses the brake, the vehicle stops at once.",
+    "why": "Students see braking as an instant action.",
+    "fix": "The driver needs reaction time, and then the vehicle keeps moving during braking, so stopping takes extra distance.",
+    "probe": {
+     "question": "A child runs onto the road 5 m ahead of a car at 40 km/h. Will it stop in time?",
+     "wrong_answer": "Yes, the driver just brakes and it stops."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "changes happen instantly",
+    "causes": [],
+    "trigger_cues": [
+     "brake",
+     "stopping distance",
+     "reaction time",
+     "inertia",
+     "stop",
+     "distance"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on children's ideas of motion and stopping"
+   },
+   {
+    "key": "m20",
+    "node": "n27",
+    "statement": "Brakes work equally well on dry and wet roads.",
+    "why": "Students think brakes alone control stopping.",
+    "fix": "Wet roads reduce friction, so tyres grip less and the stopping distance is longer.",
+    "probe": {
+     "question": "On a rainy day, does stopping distance change?",
+     "wrong_answer": "No, brakes work the same."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "one component alone determines the result",
+    "causes": [],
+    "trigger_cues": [
+     "wet road",
+     "rain",
+     "friction",
+     "tyres",
+     "braking distance",
+     "skid"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies on friction and motion misconceptions"
+   },
+   {
+    "key": "m21",
+    "node": "n30",
+    "statement": "Anyone above 14 can drive any motorbike on public roads.",
+    "why": "Students see underage riders on the road and assume it is allowed.",
+    "fix": "The minimum age is generally 18; 16 is allowed only for gearless two-wheelers up to 50cc, with a licence.",
+    "probe": {
+     "question": "Can a 15-year-old drive a 100cc motorbike on the road?",
+     "wrong_answer": "Yes, if they can ride well."
+    },
+    "error_type": "media_misinformation",
+    "root_belief": "what is commonly seen is allowed",
+    "causes": [],
+    "trigger_cues": [
+     "minimum age",
+     "18",
+     "licence",
+     "two-wheeler",
+     "underage",
+     "50cc"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m22",
+    "node": "n31",
+    "statement": "A licence is needed only for cars, not for scooters or mopeds.",
+    "why": "Smaller vehicles seem less serious.",
+    "fix": "A licence is required for every motor vehicle on public roads, including scooters and mopeds.",
+    "probe": {
+     "question": "Does a 16-year-old on a low-power scooter need a licence?",
+     "wrong_answer": "No, scooters do not need one."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "smaller things need fewer rules",
+    "causes": [],
+    "trigger_cues": [
+     "licence",
+     "scooter",
+     "moped",
+     "public road",
+     "motor vehicle",
+     "permit"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m23",
+    "node": "n32",
+    "statement": "Talking on the phone with hands-free is perfectly safe while driving.",
+    "why": "Students think the only danger is holding the phone.",
+    "fix": "Hands-free talking still distracts the mind and slows reactions; it is safer not to use a phone while driving.",
+    "probe": {
+     "question": "A driver uses a hands-free headset. Is the risk gone?",
+     "wrong_answer": "Yes, both hands are on the wheel."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "only physical actions matter, not attention",
+    "causes": [],
+    "trigger_cues": [
+     "phone",
+     "hands-free",
+     "distraction",
+     "attention",
+     "driving",
+     "crash"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "WHO and driver-distraction research"
+   },
+   {
+    "key": "m24",
+    "node": "n33",
+    "statement": "A little alcohol makes a driver more relaxed and careful.",
+    "why": "Alcohol is believed to calm people.",
+    "fix": "Alcohol slows reactions and weakens judgement even in small amounts; drinking and driving is a crime.",
+    "probe": {
+     "question": "Does one drink improve driving?",
+     "wrong_answer": "Yes, it makes the driver calmer."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "a feeling of control means better control",
+    "causes": [],
+    "trigger_cues": [
+     "alcohol",
+     "drink",
+     "reaction",
+     "judgement",
+     "driving",
+     "crash"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "WHO road safety reports on drink-driving"
+   }
+  ]
+ },
+ "problems": []
+}

@@ -1,0 +1,469 @@
+{
+ "topic": {
+  "id": "SCI-BIO-TRANSPORT",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   7,
+   10
+  ],
+  "title": "Transportation in animals and plants",
+  "scope": "blood, heart, arteries and veins, heartbeat and pulse, excretion, xylem, phloem, transpiration"
+ },
+ "model": "gemini-3-flash-preview/key3",
+ "usage": {
+  "promptTokenCount": 845,
+  "candidatesTokenCount": 4129,
+  "totalTokenCount": 6950,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 845
+   }
+  ],
+  "thoughtsTokenCount": 1976,
+  "serviceTier": "standard"
+ },
+ "seconds": 87.0,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Circulatory System in Humans",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "cells as basic units",
+     "concept of nutrients"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Excretory System in Humans",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "digestion and waste"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Transport in Plants",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "photosynthesis",
+     "evaporation"
+    ]
+   },
+   {
+    "key": "n1.1",
+    "name": "Blood Components",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.2",
+    "name": "Blood Vessels",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n1.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.3",
+    "name": "Heart and Circulation",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n1.2"
+    ],
+    "external_prereqs": [
+     "muscle contraction"
+    ]
+   },
+   {
+    "key": "n2.1",
+    "name": "Kidney and Urine Formation",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n1.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.1",
+    "name": "Vascular Tissues",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.2",
+    "name": "Absorption and Transpiration",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n3.1"
+    ],
+    "external_prereqs": [
+     "suction pressure"
+    ]
+   },
+   {
+    "key": "n1.1.1",
+    "name": "Hemoglobin and Oxygen",
+    "level": 3,
+    "parent": "n1.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.2.1",
+    "name": "Arteries vs Veins",
+    "level": 3,
+    "parent": "n1.2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.3.1",
+    "name": "Heart Chambers",
+    "level": 3,
+    "parent": "n1.3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.3.2",
+    "name": "Pulse and Heartbeat",
+    "level": 3,
+    "parent": "n1.3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.1.1",
+    "name": "Filtration in Nephrons",
+    "level": 3,
+    "parent": "n2.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.1.1",
+    "name": "Xylem Function",
+    "level": 3,
+    "parent": "n3.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.1.2",
+    "name": "Phloem Function",
+    "level": 3,
+    "parent": "n3.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.2.1",
+    "name": "Transpiration Pull",
+    "level": 3,
+    "parent": "n3.2",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n1.1.1",
+    "statement": "Deoxygenated blood inside our veins is blue in color.",
+    "why": "Veins appear blue through the skin and diagrams often use blue to represent deoxygenated blood.",
+    "fix": "Human blood is always red; deoxygenated blood is just a darker shade of red. It looks blue through skin due to how light interacts with tissue.",
+    "probe": {
+     "question": "If you were to see blood inside a vein before it touches air, what color would it be?",
+     "wrong_answer": "Blue"
+    },
+    "error_type": "visible_only",
+    "root_belief": "what you see is the only reality",
+    "causes": [],
+    "trigger_cues": [
+     "veins",
+     "blue",
+     "skin",
+     "color",
+     "oxygen"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m2",
+    "node": "n1.2.1",
+    "statement": "All arteries carry oxygen-rich blood and all veins carry carbon dioxide-rich blood.",
+    "why": "Students overgeneralize the primary function of the systemic circuit.",
+    "fix": "Arteries carry blood away from the heart and veins carry it towards the heart. The pulmonary artery carries CO2-rich blood to the lungs, and the pulmonary vein carries O2-rich blood to the heart.",
+    "probe": {
+     "question": "Which vessel carries deoxygenated blood from the heart to the lungs?",
+     "wrong_answer": "Pulmonary vein"
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "rules have no exceptions",
+    "causes": [],
+    "trigger_cues": [
+     "artery",
+     "vein",
+     "pulmonary",
+     "oxygenated",
+     "direction"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic studies"
+   },
+   {
+    "key": "m3",
+    "node": "n1.3.1",
+    "statement": "The heart is the organ where blood is actually created.",
+    "why": "The heart is the central organ of the system, leading to the belief it is the source of the fluid itself.",
+    "fix": "The heart only pumps blood; blood cells are actually produced in the bone marrow of certain bones.",
+    "probe": {
+     "question": "Where are new red blood cells made in the human body?",
+     "wrong_answer": "In the heart"
+    },
+    "error_type": "single_cause",
+    "root_belief": "one organ does everything for a system",
+    "causes": [],
+    "trigger_cues": [
+     "heart",
+     "production",
+     "source",
+     "blood",
+     "marrow"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n1.3.2",
+    "statement": "Pulse and heartbeat are two completely different and unrelated processes.",
+    "why": "Students feel the pulse in the wrist and the heartbeat in the chest, perceiving them as separate events.",
+    "fix": "The pulse is the direct result of the heartbeat; every time the heart pumps blood into the arteries, it creates a throb called a pulse.",
+    "probe": {
+     "question": "If your heart rate increases, what happens to your pulse rate?",
+     "wrong_answer": "It stays the same because they are different"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "different locations mean different processes",
+    "causes": [],
+    "trigger_cues": [
+     "pulse",
+     "heartbeat",
+     "wrist",
+     "chest",
+     "rate"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m5",
+    "node": "n2.1.1",
+    "statement": "Excretion and egestion are the same thing.",
+    "why": "Both involve removing waste from the body, leading to linguistic and conceptual blurring.",
+    "fix": "Excretion is the removal of metabolic wastes (like urea in urine) from the blood, while egestion is the removal of undigested food as faeces.",
+    "probe": {
+     "question": "Is passing stool (faeces) an example of excretion in the biological sense?",
+     "wrong_answer": "Yes"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "all waste removal is the same process",
+    "causes": [],
+    "trigger_cues": [
+     "excretion",
+     "egestion",
+     "waste",
+     "urine",
+     "faeces"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas"
+   },
+   {
+    "key": "m6",
+    "node": "n3.1.1",
+    "statement": "Plants 'suck' water up through the xylem like a person using a straw.",
+    "why": "Students apply human-centric mechanical actions to biological processes they cannot see.",
+    "fix": "Water moves up due to transpiration pull, a physical force created by evaporation from leaves, and capillary action, not active sucking.",
+    "probe": {
+     "question": "What provides the main force to move water to the top of a tall tree?",
+     "wrong_answer": "The plant sucks it up using energy"
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "biological processes mimic human actions",
+    "causes": [],
+    "trigger_cues": [
+     "xylem",
+     "sucking",
+     "straw",
+     "upward",
+     "force"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Concept Inventories in Biology"
+   },
+   {
+    "key": "m7",
+    "node": "n3.1.2",
+    "statement": "Food in plants only moves downwards from the leaves to the roots.",
+    "why": "Gravity and the fact that leaves are usually 'up' lead to the belief that transport is unidirectional.",
+    "fix": "Phloem transports food in both upward and downward directions to reach all parts of the plant, including growing buds and storage organs.",
+    "probe": {
+     "question": "In spring, how does stored sugar move from roots to new growing buds?",
+     "wrong_answer": "It cannot move upwards in the phloem"
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "gravity dictates all movement",
+    "causes": [],
+    "trigger_cues": [
+     "phloem",
+     "downward",
+     "direction",
+     "leaves",
+     "sugar"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m8",
+    "node": "n3.2.1",
+    "statement": "Transpiration is a waste of water and has no benefit to the plant.",
+    "why": "Students see water loss as inherently negative for survival.",
+    "fix": "Transpiration creates the suction pull needed to transport water and minerals and also helps in cooling the plant.",
+    "probe": {
+     "question": "What would happen to water transport if a plant stopped transpiring?",
+     "wrong_answer": "It would improve because water is saved"
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "loss is always bad",
+    "causes": [],
+    "trigger_cues": [
+     "transpiration",
+     "evaporation",
+     "loss",
+     "cooling",
+     "pull"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Mumbai"
+   },
+   {
+    "key": "m9",
+    "node": "n2.1.1",
+    "statement": "The kidneys produce urine directly from the food we eat in the stomach.",
+    "why": "Students lack a clear understanding of the blood's role as an intermediary in transport.",
+    "fix": "Kidneys filter waste from the blood; the food must first be digested and absorbed into the blood before wastes reach the kidneys.",
+    "probe": {
+     "question": "How does waste from your cells reach the kidneys?",
+     "wrong_answer": "Through the digestive pipe"
+    },
+    "error_type": "single_cause",
+    "root_belief": "connected systems are one single pipe",
+    "causes": [],
+    "trigger_cues": [
+     "kidney",
+     "urine",
+     "food",
+     "stomach",
+     "filter"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m10",
+    "node": "n1.3.1",
+    "statement": "The left and right sides of the heart are connected so blood can flow between them.",
+    "why": "Students assume the heart is one big hollow bag rather than a partitioned pump.",
+    "fix": "The heart has a wall called the septum that completely separates the left and right sides to prevent mixing of oxygenated and deoxygenated blood.",
+    "probe": {
+     "question": "What prevents oxygen-rich blood from mixing with carbon dioxide-rich blood in the heart?",
+     "wrong_answer": "The blood knows which way to go"
+    },
+    "error_type": "part_whole",
+    "root_belief": "an organ is a simple container",
+    "causes": [],
+    "trigger_cues": [
+     "septum",
+     "mixing",
+     "chambers",
+     "left",
+     "right"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m11",
+    "node": "n3.2.1",
+    "statement": "Roots 'search' for water in the soil and grow towards it intentionally.",
+    "why": "Attributing human-like intentions and senses to plants.",
+    "fix": "Roots grow in all directions; they simply grow more successfully and branch more in areas where they happen to encounter moisture.",
+    "probe": {
+     "question": "How do roots find water deep in the ground?",
+     "wrong_answer": "They sense where it is and turn towards it"
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "plants have intentions and desires",
+    "causes": [],
+    "trigger_cues": [
+     "roots",
+     "search",
+     "water",
+     "growth",
+     "soil"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas"
+   },
+   {
+    "key": "m12",
+    "node": "n1.1.1",
+    "statement": "Blood is mostly made of red blood cells and contains very little liquid.",
+    "why": "The name 'blood' and its red appearance make students focus on the cells rather than the medium.",
+    "fix": "More than half of the blood (about 55%) is actually a straw-colored liquid called plasma.",
+    "probe": {
+     "question": "What is the largest component of human blood by volume?",
+     "wrong_answer": "Red blood cells"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "the most visible part is the largest part",
+    "causes": [],
+    "trigger_cues": [
+     "plasma",
+     "liquid",
+     "component",
+     "volume",
+     "percentage"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}

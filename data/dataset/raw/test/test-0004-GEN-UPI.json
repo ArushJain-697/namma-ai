@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "test-0004-GEN-UPI",
+  "topic_id": "GEN-UPI",
+  "split": "test",
+  "test_only_topic": true,
+  "grade": 10,
+  "style": "a clear textbook explanation",
+  "seed": 4
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 1030,
+  "candidatesTokenCount": 1239,
+  "totalTokenCount": 2269,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1030
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-UPI-K21-M14",
+  "GEN-UPI-K20-M21",
+  "GEN-UPI-K18-M11",
+  "GEN-UPI-K15-M6",
+  "GEN-UPI-K13-M3",
+  "GEN-UPI-K21-M12",
+  "GEN-UPI-K20-M20",
+  "GEN-UPI-K26-M19",
+  "GEN-UPI-K25-M18",
+  "GEN-UPI-K25-M17",
+  "GEN-UPI-K19-M9",
+  "GEN-UPI-K16-M7",
+  "GEN-UPI-K11-M1",
+  "GEN-UPI-K23-M15"
+ ],
+ "response": {
+  "passage": "Unified Payments Interface (UPI) is a real-time payment system that allows you to transfer money directly between bank accounts using a mobile device. It is important to understand that UPI is not a digital wallet; the money you send or receive stays in your bank account, and the app only acts as a secure bridge. To receive money, you simply share your UPI ID or QR code; you never need to enter your UPI PIN to get paid. Entering your PIN is only required when you are authorizing a payment from your account. Furthermore, UPI transactions are free of any service charges for the sender. When scanning a QR code at a shop, always verify that it is not a sticker placed over the original one, as fraudsters often replace genuine codes with their own. If you ever suspect a fraudulent transaction, you should report it immediately to your bank or the official UPI app support team rather than waiting. Remember that bank officials will never call you to ask for your UPI PIN or OTP, and you should never install screen-sharing apps requested by strangers, as these allow them to control your device and steal your funds.",
+  "summary": "UPI is a secure system that links directly to your bank account without storing money like a wallet. It is free to use, and you should never share your PIN or OTP with anyone, even if they claim to be from a bank.",
+  "items": [
+   {
+    "evidence": "It is important to understand that UPI is not a digital wallet; the money you send or receive stays in your bank account, and the app only acts as a secure bridge.",
+    "answer": "stays in your bank account",
+    "stem": "Where is your money actually held when you use a UPI application?",
+    "options": [
+     {
+      "belief_id": "GEN-UPI-K11-M1",
+      "why": "Student thinks money is stored inside the app.",
+      "text": "It is stored inside the app"
+     },
+     {
+      "belief_id": "GEN-UPI-K13-M3",
+      "why": "Student thinks UPI requires a specific hardware wallet.",
+      "text": "It is kept in a digital wallet"
+     },
+     {
+      "belief_id": "GEN-UPI-K20-M20",
+      "why": "Student thinks money disappears once sent.",
+      "text": "It is lost during the transfer"
+     }
+    ]
+   },
+   {
+    "evidence": "To receive money, you simply share your UPI ID or QR code; you never need to enter your UPI PIN to get paid.",
+    "answer": "never need to enter your UPI PIN",
+    "stem": "What is the requirement for receiving funds through a UPI transaction?",
+    "options": [
+     {
+      "belief_id": "GEN-UPI-K18-M11",
+      "why": "Student believes PIN is needed for incoming payments.",
+      "text": "You must enter your UPI PIN"
+     },
+     {
+      "belief_id": "GEN-UPI-K23-M15",
+      "why": "Student confuses collect requests with receiving money.",
+      "text": "You must approve a collect request"
+     },
+     {
+      "belief_id": "GEN-UPI-K21-M12",
+      "why": "Student thinks scanning a code is for receiving.",
+      "text": "You must scan a buyer's code"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, UPI transactions are free of any service charges for the sender.",
+    "answer": "free of any service charges",
+    "stem": "How much does it cost to send money using the UPI system?",
+    "options": [
+     {
+      "belief_id": "GEN-UPI-K26-M19",
+      "why": "Student assumes all digital payments have fees.",
+      "text": "It costs a small fee"
+     },
+     {
+      "belief_id": "GEN-UPI-K25-M18",
+      "why": "Student thinks limits imply costs per app.",
+      "text": "It costs a fee per app"
+     },
+     {
+      "belief_id": "GEN-UPI-K25-M17",
+      "why": "Student confuses transaction limits with service fees.",
+      "text": "It costs a percentage of money"
+     }
+    ]
+   },
+   {
+    "evidence": "If you ever suspect a fraudulent transaction, you should report it immediately to your bank or the official UPI app support team rather than waiting.",
+    "answer": "report it immediately",
+    "stem": "What is the correct action if you suspect you have been a victim of UPI fraud?",
+    "options": [
+     {
+      "belief_id": "GEN-UPI-K20-M21",
+      "why": "Student thinks waiting is safer to confirm fraud.",
+      "text": "Wait a few days"
+     },
+     {
+      "belief_id": "GEN-UPI-K20-M20",
+      "why": "Student believes the money is already gone.",
+      "text": "Accept the loss forever"
+     },
+     {
+      "belief_id": "GEN-UPI-K19-M9",
+      "why": "Student thinks installing apps helps resolve issues.",
+      "text": "Install a support app"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 25.5
+}

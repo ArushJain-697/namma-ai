@@ -1,0 +1,133 @@
+{
+ "job": {
+  "job": "train-0564-GEN-INTEREST",
+  "topic_id": "GEN-INTEREST",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a passage rich in numbers, dates or measurements",
+  "seed": 564
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1058,
+  "candidatesTokenCount": 1387,
+  "totalTokenCount": 2445,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1058
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-INTEREST-K8-M2",
+  "GEN-INTEREST-K12-M7",
+  "GEN-INTEREST-K20-M9",
+  "GEN-INTEREST-K15-M8",
+  "GEN-INTEREST-K5-M3",
+  "GEN-INTEREST-K22-M10",
+  "GEN-INTEREST-K23-M11",
+  "GEN-INTEREST-K28-M12",
+  "GEN-INTEREST-K7-M1",
+  "GEN-INTEREST-K13-M6",
+  "GEN-INTEREST-K10-M4",
+  "GEN-INTEREST-K11-M5"
+ ],
+ "response": {
+  "passage": "Rohan needs a loan of Rs 1,00,000 for his small business. Bank A offers a simple interest loan at 10% per annum for 2 years, meaning he pays Rs 20,000 as interest plus the principal. Bank B offers a compound interest loan at 10% per annum, compounded annually. Rohan must understand that for the first year, both simple and compound interest yield the same Rs 10,000 charge. However, in the second year, compound interest applies to the new total, making it costlier. Rohan also considers a credit card for emergency supplies. He learns that the interest-free period only applies if he pays his entire outstanding balance in full by the due date. If he pays only a partial amount, the bank charges interest on the full balance from the purchase date. Furthermore, he compares two loan schemes: a flat rate of 8% and a reducing-balance rate of 8%. He discovers the reducing-balance method is cheaper because interest is calculated only on the remaining unpaid principal each month, whereas the flat rate charges interest on the original loan amount throughout the tenure. Finally, he notes that a 6-month loan requires setting the time variable T to 0.5 years in the interest formula, as rates are quoted per annum.",
+  "summary": "This passage explains the differences between simple and compound interest, the mechanics of credit card debt, and how loan calculation methods like reducing-balance affect total costs. It clarifies that interest rates are annual and time must be adjusted accordingly for shorter periods.",
+  "items": [
+   {
+    "evidence": "Rohan must understand that for the first year, both simple and compound interest yield the same Rs 10,000 charge.",
+    "answer": "the same Rs 10,000 charge",
+    "stem": "How does the interest amount compare between simple and compound interest during the very first year of a loan?",
+    "options": [
+     {
+      "belief_id": "GEN-INTEREST-K10-M4",
+      "why": "Student incorrectly assumes compound interest is always higher.",
+      "text": "Compound interest is higher"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K5-M3",
+      "why": "Student thinks the rate itself increases during the first year.",
+      "text": "More than 10% interest"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K7-M1",
+      "why": "Student ignores the time factor in the calculation.",
+      "text": "It depends on the loan tenure"
+     }
+    ]
+   },
+   {
+    "evidence": "He learns that the interest-free period only applies if he pays his entire outstanding balance in full by the due date.",
+    "answer": "pays his entire outstanding balance",
+    "stem": "What is the condition required to benefit from the interest-free period on a credit card?",
+    "options": [
+     {
+      "belief_id": "GEN-INTEREST-K28-M12",
+      "why": "Student believes partial payment qualifies for the interest-free period.",
+      "text": "Pays only part of the bill"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K23-M11",
+      "why": "Student assumes low interest rates negate other hidden costs.",
+      "text": "Pays the minimum due amount"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K15-M8",
+      "why": "Student confuses EMI division with credit card repayment rules.",
+      "text": "Divides the bill into equal parts"
+     }
+    ]
+   },
+   {
+    "evidence": "He discovers the reducing-balance method is cheaper because interest is calculated only on the remaining unpaid principal each month, whereas the flat rate charges interest on the original loan amount throughout the tenure.",
+    "answer": "reducing-balance method is cheaper",
+    "stem": "Why is the reducing-balance interest method generally more affordable for a borrower than a flat rate method?",
+    "options": [
+     {
+      "belief_id": "GEN-INTEREST-K22-M10",
+      "why": "Student assumes the same percentage rate implies the same cost.",
+      "text": "Both methods cost the same"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K20-M9",
+      "why": "Student confuses total cost with the size of the EMI.",
+      "text": "The flat rate has smaller EMIs"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K15-M8",
+      "why": "Student assumes interest is just the principal divided by time.",
+      "text": "Flat rate divides principal equally"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, he notes that a 6-month loan requires setting the time variable T to 0.5 years in the interest formula, as rates are quoted per annum.",
+    "answer": "T to 0.5 years",
+    "stem": "How should the time variable be represented when calculating interest for a loan duration of six months?",
+    "options": [
+     {
+      "belief_id": "GEN-INTEREST-K13-M6",
+      "why": "Student incorrectly uses the number of months as the time value.",
+      "text": "T to 6"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K12-M7",
+      "why": "Student assumes the rate is monthly, leading to a different time calculation.",
+      "text": "T to 6 months at 2% rate"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K11-M5",
+      "why": "Student incorrectly halves the rate for a 6-month period.",
+      "text": "T to 1 year at half rate"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.8
+}

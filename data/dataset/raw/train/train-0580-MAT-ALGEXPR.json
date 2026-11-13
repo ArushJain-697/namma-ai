@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0580-MAT-ALGEXPR",
+  "topic_id": "MAT-ALGEXPR",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a market or shop situation that uses the idea",
+  "seed": 580
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1160,
+  "candidatesTokenCount": 1352,
+  "totalTokenCount": 2512,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1160
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-ALGEXPR-K13-M1",
+  "MAT-ALGEXPR-K18-M11",
+  "MAT-ALGEXPR-K14-M5",
+  "MAT-ALGEXPR-K20-M16",
+  "MAT-ALGEXPR-K25-M23",
+  "MAT-ALGEXPR-K17-M9",
+  "MAT-ALGEXPR-K12-M2",
+  "MAT-ALGEXPR-K18-M12",
+  "MAT-ALGEXPR-K21-M17",
+  "MAT-ALGEXPR-K17-M10",
+  "MAT-ALGEXPR-K23-M20",
+  "MAT-ALGEXPR-K22-M18",
+  "MAT-ALGEXPR-K15-M6",
+  "MAT-ALGEXPR-K22-M19"
+ ],
+ "response": {
+  "passage": "Rohan visits a stationery shop to buy supplies for his project. He picks up 3 identical notebooks, each costing x rupees, and 2 pens, each costing y rupees. The shopkeeper writes the total cost as 3x + 2y. Rohan asks if he can combine these into 5xy, but the shopkeeper explains that since notebooks and pens are different items, their costs cannot be added into a single term. Next, Rohan buys a special pack of 4 boxes, where each box contains (x + 3) pencils. The shopkeeper calculates the total pencils as 4x + 12, explaining that the 4 must multiply both the x and the 3 inside the bracket. Rohan then considers a square-shaped craft paper with a side length of (x + 2). He remembers a formula for the area of a square and writes it as (x + 2)², which expands to x² + 4x + 4. He realizes that the area is not just x² + 4, because the middle term 4x is essential for the total area. Finally, he subtracts a bill of (2x - 3) from his total budget of (5x + 4). He carefully changes the signs of both terms in the bracket to get 3x + 7, ensuring the subtraction applies to the entire expression.",
+  "summary": "This passage explains how to handle algebraic expressions in a real-world shopping context. It highlights the importance of keeping unlike terms separate, distributing multipliers correctly, and expanding squares properly.",
+  "items": [
+   {
+    "evidence": "Rohan asks if he can combine these into 5xy, but the shopkeeper explains that since notebooks and pens are different items, their costs cannot be added into a single term.",
+    "answer": "cannot be added",
+    "stem": "Why can the cost of notebooks and pens not be simplified into 5xy?",
+    "options": [
+     {
+      "belief_id": "MAT-ALGEXPR-K15-M6",
+      "why": "Student incorrectly believes unlike terms can be combined into one.",
+      "text": "5xy"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K14-M5",
+      "why": "Student incorrectly assumes variables make terms like.",
+      "text": "they have variables"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K17-M9",
+      "why": "Student incorrectly adds powers of the variables.",
+      "text": "5x²y²"
+     }
+    ]
+   },
+   {
+    "evidence": "The shopkeeper calculates the total pencils as 4x + 12, explaining that the 4 must multiply both the x and the 3 inside the bracket.",
+    "answer": "4x + 12",
+    "stem": "What is the correct total number of pencils in the 4 boxes?",
+    "options": [
+     {
+      "belief_id": "MAT-ALGEXPR-K20-M16",
+      "why": "Student fails to distribute the multiplier to the second term.",
+      "text": "4x + 3"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K13-M1",
+      "why": "Student treats the multiplier as a digit concatenation.",
+      "text": "4x3"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K12-M2",
+      "why": "Student ignores the coefficient of the variable term.",
+      "text": "x + 12"
+     }
+    ]
+   },
+   {
+    "evidence": "He realizes that the area is not just x² + 4, because the middle term 4x is essential for the total area.",
+    "answer": "x² + 4x + 4",
+    "stem": "What is the correct expansion for the area of the square paper?",
+    "options": [
+     {
+      "belief_id": "MAT-ALGEXPR-K22-M18",
+      "why": "Student incorrectly assumes the square of a sum is sum of squares.",
+      "text": "x² + 4"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K22-M19",
+      "why": "Student ignores the cross-product area in the square.",
+      "text": "x² + 2"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K23-M20",
+      "why": "Student incorrectly applies difference of squares identity.",
+      "text": "x² - 4"
+     }
+    ]
+   },
+   {
+    "evidence": "He carefully changes the signs of both terms in the bracket to get 3x + 7, ensuring the subtraction applies to the entire expression.",
+    "answer": "3x + 7",
+    "stem": "What is the result of subtracting (2x - 3) from (5x + 4)?",
+    "options": [
+     {
+      "belief_id": "MAT-ALGEXPR-K18-M11",
+      "why": "Student fails to distribute the negative sign to the second term.",
+      "text": "3x + 1"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K18-M12",
+      "why": "Student subtracts in the wrong order.",
+      "text": "-3x - 7"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K17-M9",
+      "why": "Student incorrectly subtracts coefficients and changes powers.",
+      "text": "3x² + 7"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 14.5
+}

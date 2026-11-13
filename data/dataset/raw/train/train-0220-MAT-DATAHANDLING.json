@@ -1,0 +1,131 @@
+{
+ "job": {
+  "job": "train-0220-MAT-DATAHANDLING",
+  "topic_id": "MAT-DATAHANDLING",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a step-by-step worked example",
+  "seed": 220
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 895,
+  "candidatesTokenCount": 1221,
+  "totalTokenCount": 2116,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 895
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-DATAHANDLING-K8-M9",
+  "MAT-DATAHANDLING-K5-M1",
+  "MAT-DATAHANDLING-K7-M2",
+  "MAT-DATAHANDLING-K7-M7",
+  "MAT-DATAHANDLING-K11-M11",
+  "MAT-DATAHANDLING-K10-M8",
+  "MAT-DATAHANDLING-K6-M4",
+  "MAT-DATAHANDLING-K8-M10",
+  "MAT-DATAHANDLING-K12-M12",
+  "MAT-DATAHANDLING-K6-M6"
+ ],
+ "response": {
+  "passage": "In our class, we collected data on how many hours students spent reading books last week. The data set is: 0, 5, 5, 5, 8, 10. To find the mean, we must include the zero because it represents a student who read for no hours, so we add all six numbers to get 33 and divide by the total count of six, resulting in 5.5. Next, we look at the median, which is the middle value. Since there are six numbers, we take the two middle values, 5 and 5, add them, and divide by two to get 5. The mode is the value that appears most frequently, which is 5 because it appears three times. Finally, we draw a bar graph to show this. On our graph, each gap between marks on the scale represents 2 units, not 1, so we must be careful when reading the height of the bars. Remember, the width of the bars does not change the value they represent; only the height matters. By organizing data this way, we can clearly see the reading habits of our classmates without being misled by common mistakes.",
+  "summary": "This passage explains how to calculate the mean, median, and mode using a specific data set. It also highlights the importance of correctly interpreting bar graph scales and bar dimensions.",
+  "items": [
+   {
+    "evidence": "To find the mean, we must include the zero because it represents a student who read for no hours, so we add all six numbers to get 33 and divide by the total count of six, resulting in 5.5.",
+    "answer": "5.5",
+    "stem": "What is the correct mean of the reading hours data set?",
+    "options": [
+     {
+      "belief_id": "MAT-DATAHANDLING-K10-M8",
+      "why": "Student ignores the zero, dividing the sum by three.",
+      "text": "8"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K7-M2",
+      "why": "Student assumes the mean must be a value present.",
+      "text": "5"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K7-M7",
+      "why": "Student divides by the number of unique values.",
+      "text": "11"
+     }
+    ]
+   },
+   {
+    "evidence": "Since there are six numbers, we take the two middle values, 5 and 5, add them, and divide by two to get 5.",
+    "answer": "5",
+    "stem": "How do you calculate the median for this even-numbered data set?",
+    "options": [
+     {
+      "belief_id": "MAT-DATAHANDLING-K8-M9",
+      "why": "Student picks the middle number from the original list.",
+      "text": "7"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K8-M10",
+      "why": "Student selects the larger of the two middle values.",
+      "text": "8"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K6-M6",
+      "why": "Student confuses the median process with scale intervals.",
+      "text": "13"
+     }
+    ]
+   },
+   {
+    "evidence": "The mode is the value that appears most frequently, which is 5 because it appears three times.",
+    "answer": "5",
+    "stem": "Which value represents the mode of the data?",
+    "options": [
+     {
+      "belief_id": "MAT-DATAHANDLING-K11-M11",
+      "why": "Student identifies the frequency count instead of the value.",
+      "text": "3"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K7-M2",
+      "why": "Student selects the highest value in the set.",
+      "text": "10"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K5-M1",
+      "why": "Student assumes the mode is the first unit.",
+      "text": "0"
+     }
+    ]
+   },
+   {
+    "evidence": "Remember, the width of the bars does not change the value they represent; only the height matters.",
+    "answer": "only the height matters",
+    "stem": "What is the most important feature when reading a bar graph?",
+    "options": [
+     {
+      "belief_id": "MAT-DATAHANDLING-K6-M4",
+      "why": "Student incorrectly believes the width affects the value.",
+      "text": "depends on the width"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K6-M6",
+      "why": "Student focuses on the gap size rather than height.",
+      "text": "the gap between marks"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K5-M1",
+      "why": "Student assumes every symbol represents one unit.",
+      "text": "the number of symbols"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 7.0
+}

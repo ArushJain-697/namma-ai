@@ -1,0 +1,85 @@
+{
+ "job": {
+  "job": "train-0496-SOC-CIV-PANCHAYAT",
+  "topic_id": "SOC-CIV-PANCHAYAT",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a news-style report about a real-world situation",
+  "seed": 496
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 676,
+  "candidatesTokenCount": 859,
+  "totalTokenCount": 1535,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 676
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "SOC-CIV-PANCHAYAT-K11-M3",
+  "SOC-CIV-PANCHAYAT-K8-M1",
+  "SOC-CIV-PANCHAYAT-K9-M2",
+  "SOC-CIV-PANCHAYAT-K7-M4"
+ ],
+ "response": {
+  "passage": "In the village of Rampur, a lively meeting took place yesterday under the banyan tree. This was a meeting of the Gram Sabha, where every adult resident of the village who is on the voter list gathered to discuss local issues. Unlike the Panchayat, which consists only of elected members, the Gram Sabha includes all villagers who have the right to vote. During the session, the villagers questioned the Sarpanch about the new water tank project. The Sarpanch explained that he cannot make decisions alone; he must get approval from the elected Ward members and the Gram Sabha. After the meeting, the village head reminded everyone that the Gram Panchayat handles local village development, while the Zila Parishad coordinates activities at the district level, not national law-making. Meanwhile, in the nearby town of Nagar, citizens were preparing for municipal elections. Residents were excited to vote for their Ward Councillors, who are chosen by the people to represent their specific local areas in the city council. These councillors are elected representatives, not government appointees, ensuring that every neighborhood has a voice in urban planning. The atmosphere in both the village and the town shows how local self-government works to solve problems at the grassroots level through active participation.",
+  "summary": "Local government functions through the active participation of citizens in the Gram Sabha and municipal elections. Elected representatives like Sarpanchs and Ward Councillors work with the community rather than holding absolute power.",
+  "items": [
+   {
+    "evidence": "Unlike the Panchayat, which consists only of elected members, the Gram Sabha includes all villagers who have the right to vote.",
+    "answer": "all villagers who have the right to vote",
+    "stem": "Who are the members that make up the Gram Sabha?",
+    "options": [
+     {
+      "belief_id": "SOC-CIV-PANCHAYAT-K8-M1",
+      "why": "Student incorrectly thinks only elected members form the Sabha.",
+      "text": "Only the Sarpanch and the Ward members"
+     }
+    ]
+   },
+   {
+    "evidence": "The Sarpanch explained that he cannot make decisions alone; he must get approval from the elected Ward members and the Gram Sabha.",
+    "answer": "get approval from the elected Ward members",
+    "stem": "How does the Sarpanch ensure decisions are made for the village?",
+    "options": [
+     {
+      "belief_id": "SOC-CIV-PANCHAYAT-K9-M2",
+      "why": "Student believes the Sarpanch has absolute authority.",
+      "text": "He makes all village decisions alone"
+     }
+    ]
+   },
+   {
+    "evidence": "The village head reminded everyone that the Gram Panchayat handles local village development, while the Zila Parishad coordinates activities at the district level, not national law-making.",
+    "answer": "coordinates activities at the district level",
+    "stem": "What is the primary role of the Zila Parishad?",
+    "options": [
+     {
+      "belief_id": "SOC-CIV-PANCHAYAT-K11-M3",
+      "why": "Student confuses district level with national legislative power.",
+      "text": "It makes laws for the whole country"
+     }
+    ]
+   },
+   {
+    "evidence": "Residents were excited to vote for their Ward Councillors, who are chosen by the people to represent their specific local areas in the city council.",
+    "answer": "chosen by the people",
+    "stem": "How are Ward Councillors selected to represent their areas?",
+    "options": [
+     {
+      "belief_id": "SOC-CIV-PANCHAYAT-K7-M4",
+      "why": "Student incorrectly assumes they are appointed by officials.",
+      "text": "Selected by the city mayor"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 59.0
+}

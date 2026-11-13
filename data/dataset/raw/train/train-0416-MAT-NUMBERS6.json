@@ -1,0 +1,124 @@
+{
+ "job": {
+  "job": "train-0416-MAT-NUMBERS6",
+  "topic_id": "MAT-NUMBERS6",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a rule explained with two contrasting examples",
+  "seed": 416
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 609,
+  "candidatesTokenCount": 1273,
+  "totalTokenCount": 1882,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 609
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-NUMBERS6-K14-M5",
+  "MAT-NUMBERS6-K8-M2",
+  "MAT-NUMBERS6-K12-M3"
+ ],
+ "response": {
+  "passage": "In mathematics, how we write and read numbers depends on the system we use. In the Indian system, we place commas after the first three digits from the right, and then after every two digits, such as 1,25,432. In contrast, the International system uses commas after every three digits, like 125,432. Another important rule involves Roman numerals. While symbols like I, X, and C can be repeated to represent values, no symbol can be repeated more than three times in a row. For instance, XXX is 30, but we cannot write XXXX for 40; instead, we use XL. Finally, when comparing numbers, we must look at the actual value rather than just the number of digits. A number like 005 is simply 5, which is much smaller than 12, even though 005 has three digits and 12 has only two. Always remember that leading zeros do not increase the value of a number. By following these specific rules for place value, symbols, and comparison, you can avoid common errors in large numbers and ensure your calculations are accurate.",
+  "summary": "Number systems use specific comma placements to group digits. Roman numerals have strict repetition limits, and leading zeros do not change a number's true value.",
+  "items": [
+   {
+    "evidence": "In the Indian system, we place commas after the first three digits from the right, and then after every two digits, such as 1,25,432.",
+    "answer": "after every two digits",
+    "stem": "How should you place commas after the first three digits when writing a number in the Indian system?",
+    "options": [
+     {
+      "belief_id": "MAT-NUMBERS6-K8-M2",
+      "why": "Student incorrectly applies the two-digit rule to all systems.",
+      "text": "after every two digits regardless"
+     },
+     {
+      "belief_id": "MAT-NUMBERS6-K14-M5",
+      "why": "Student confuses comma placement with Roman numeral repetition rules.",
+      "text": "after every three digits"
+     },
+     {
+      "belief_id": "MAT-NUMBERS6-K12-M3",
+      "why": "Student incorrectly assumes larger numbers need more commas.",
+      "text": "only at the very end"
+     }
+    ]
+   },
+   {
+    "evidence": "While symbols like I, X, and C can be repeated to represent values, no symbol can be repeated more than three times in a row.",
+    "answer": "no symbol can be repeated",
+    "stem": "What is the rule regarding the repetition of Roman numeral symbols?",
+    "options": [
+     {
+      "belief_id": "MAT-NUMBERS6-K14-M5",
+      "why": "Student believes symbols can be repeated as needed.",
+      "text": "symbols can be repeated infinitely"
+     },
+     {
+      "belief_id": "MAT-NUMBERS6-K8-M2",
+      "why": "Student applies comma placement logic to Roman symbols.",
+      "text": "symbols repeat every two digits"
+     },
+     {
+      "belief_id": "MAT-NUMBERS6-K12-M3",
+      "why": "Student assumes more symbols always mean a larger value.",
+      "text": "symbols must increase with digits"
+     }
+    ]
+   },
+   {
+    "evidence": "A number like 005 is simply 5, which is much smaller than 12, even though 005 has three digits and 12 has only two.",
+    "answer": "much smaller than 12",
+    "stem": "How does the value of 005 compare to 12?",
+    "options": [
+     {
+      "belief_id": "MAT-NUMBERS6-K12-M3",
+      "why": "Student thinks more digits mean a larger number.",
+      "text": "larger than 12"
+     },
+     {
+      "belief_id": "MAT-NUMBERS6-K8-M2",
+      "why": "Student focuses on comma placement instead of value.",
+      "text": "equal to 12"
+     },
+     {
+      "belief_id": "MAT-NUMBERS6-K14-M5",
+      "why": "Student confuses digit count with Roman numeral rules.",
+      "text": "the same as 0055"
+     }
+    ]
+   },
+   {
+    "evidence": "Always remember that leading zeros do not increase the value of a number.",
+    "answer": "do not increase the value",
+    "stem": "What effect do leading zeros have on a number?",
+    "options": [
+     {
+      "belief_id": "MAT-NUMBERS6-K12-M3",
+      "why": "Student thinks more digits make the number larger.",
+      "text": "they make the number larger"
+     },
+     {
+      "belief_id": "MAT-NUMBERS6-K8-M2",
+      "why": "Student thinks zeros act as separators like commas.",
+      "text": "they act as comma separators"
+     },
+     {
+      "belief_id": "MAT-NUMBERS6-K14-M5",
+      "why": "Student confuses zeros with Roman numeral symbols.",
+      "text": "they add to the symbol count"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 3.6
+}

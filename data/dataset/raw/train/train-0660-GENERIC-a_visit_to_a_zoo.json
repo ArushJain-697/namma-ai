@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0660-GENERIC-a_visit_to_a_zoo",
+  "topic_id": null,
+  "split": "train",
+  "generic": true,
+  "theme": "a visit to a zoo",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a question-and-answer (FAQ) style passage",
+  "seed": 660
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 718,
+  "candidatesTokenCount": 1138,
+  "totalTokenCount": 1856,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 718
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "Welcome to the City Zoo FAQ. Q: Who manages the zoo? A: Mr. Sharma, the head curator, oversees all operations since 2012. Q: Why are the nocturnal house lights dimmed during the day? A: The lights are dimmed because the animals are active at night, allowing visitors to observe their natural behavior in a simulated dark environment. Q: Can I feed the monkeys? A: No, feeding is strictly prohibited because human food causes digestive issues in primates. Q: How many species are currently housed here? A: We currently host 45 unique species in our enclosures. Q: Is the zoo open on public holidays? A: Yes, the zoo remains open on all public holidays, including Republic Day, to accommodate the high number of visitors. Q: Who is the famous visitor mentioned in our archives? A: In 1995, the renowned scientist Dr. A.P.J. Abdul Kalam visited the facility to study the migratory patterns of birds. Q: Are the enclosures cleaned daily? A: Yes, the cleaning staff ensures that all 12 main zones are sanitized every morning before opening hours.",
+  "summary": "This FAQ provides information about the management, operational rules, and history of the City Zoo. It clarifies visitor guidelines and explains the reasoning behind specific animal care practices.",
+  "items": [
+   {
+    "evidence": "The lights are dimmed because the animals are active at night, allowing visitors to observe their natural behavior in a simulated dark environment.",
+    "answer": "animals are active at night",
+    "stem": "What is the reason for dimming the lights in the nocturnal house?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Mistakes the result for the cause of the dimming.",
+      "text": "visitors observe natural behavior"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks a name mentioned in the same context.",
+      "text": "Mr. Sharma"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a true fact that does not explain why.",
+      "text": "simulated dark environment"
+     }
+    ]
+   },
+   {
+    "evidence": "In 1995, the renowned scientist Dr. A.P.J. Abdul Kalam visited the facility to study the migratory patterns of birds.",
+    "answer": "Dr. A.P.J. Abdul Kalam",
+    "stem": "Who came to the zoo to research bird migration?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses a number from the passage as an answer.",
+      "text": "1995"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects a name mentioned earlier in the text.",
+      "text": "Mr. Sharma"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a true fact but not the person.",
+      "text": "migratory patterns"
+     }
+    ]
+   },
+   {
+    "evidence": "The cleaning staff ensures that all 12 main zones are sanitized every morning before opening hours.",
+    "answer": "12",
+    "stem": "How many zones undergo daily cleaning?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses a different number found in the passage.",
+      "text": "45"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Uses a noun phrase near the number.",
+      "text": "main zones"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Assumes all areas are cleaned without evidence.",
+      "text": "all areas"
+     }
+    ]
+   },
+   {
+    "evidence": "No, feeding is strictly prohibited because human food causes digestive issues in primates.",
+    "answer": "digestive issues",
+    "stem": "What happens to primates when they consume food brought by visitors?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Interprets 'human food' as food for humans.",
+      "text": "they eat human meals"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Uses the subject of the sentence.",
+      "text": "primates"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States the rule instead of the effect.",
+      "text": "feeding is prohibited"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 76.6
+}

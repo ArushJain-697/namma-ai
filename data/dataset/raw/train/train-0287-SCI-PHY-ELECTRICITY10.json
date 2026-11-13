@@ -1,0 +1,133 @@
+{
+ "job": {
+  "job": "train-0287-SCI-PHY-ELECTRICITY10",
+  "topic_id": "SCI-PHY-ELECTRICITY10",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a news-style report about a real-world situation",
+  "seed": 287
+ },
+ "model": "gemini-3.1-flash-lite/key3",
+ "usage": {
+  "promptTokenCount": 1043,
+  "candidatesTokenCount": 1226,
+  "totalTokenCount": 2269,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1043
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "SCI-PHY-ELECTRICITY10-K20-M10",
+  "SCI-PHY-ELECTRICITY10-K16-M3",
+  "SCI-PHY-ELECTRICITY10-K5-M11",
+  "SCI-PHY-ELECTRICITY10-K14-M7",
+  "SCI-PHY-ELECTRICITY10-K17-M12",
+  "SCI-PHY-ELECTRICITY10-K18-M4",
+  "SCI-PHY-ELECTRICITY10-K6-M8",
+  "SCI-PHY-ELECTRICITY10-K15-M2",
+  "SCI-PHY-ELECTRICITY10-K19-M5",
+  "SCI-PHY-ELECTRICITY10-K21-M6",
+  "SCI-PHY-ELECTRICITY10-K13-M1",
+  "SCI-PHY-ELECTRICITY10-K22-M9"
+ ],
+ "response": {
+  "passage": "In a bustling city workshop, an electrician is setting up a display of decorative lights. He connects two identical bulbs in a parallel circuit to a 12-volt battery. A curious apprentice asks if the bulb closer to the positive terminal will glow brighter, but the electrician explains that the potential difference across each branch remains exactly 12 volts. He then demonstrates that adding a second bulb in parallel actually decreases the total resistance of the circuit, allowing more current to flow from the source. The apprentice notices a thin copper wire connecting the components and wonders if it has zero resistance. The electrician clarifies that while copper is an excellent conductor, it still possesses a small amount of resistance, which causes it to heat up when a high current passes through. Finally, he explains that current is not 'consumed' by the bulbs; the amount of charge flowing into a bulb is exactly equal to the amount flowing out. The electrician emphasizes that electricity is a continuous flow, and the battery acts as a pump, providing the energy needed to maintain the potential difference across the circuit components regardless of the path taken.",
+  "summary": "This report explains how parallel circuits maintain constant voltage across branches while total resistance decreases with more components. It also clarifies that conductors possess inherent resistance and that electric current is conserved throughout a circuit.",
+  "items": [
+   {
+    "evidence": "the potential difference across each branch remains exactly 12 volts.",
+    "answer": "12 volts",
+    "stem": "What is the voltage across each branch in this parallel circuit?",
+    "options": [
+     {
+      "belief_id": "SCI-PHY-ELECTRICITY10-K20-M10",
+      "why": "Student thinks voltage is divided among branches.",
+      "text": "6 volts"
+     },
+     {
+      "belief_id": "SCI-PHY-ELECTRICITY10-K15-M2",
+      "why": "Student thinks battery supplies constant current, not voltage.",
+      "text": "It depends on the current"
+     },
+     {
+      "belief_id": "SCI-PHY-ELECTRICITY10-K19-M5",
+      "why": "Student thinks position affects potential distribution.",
+      "text": "Higher near the positive terminal"
+     }
+    ]
+   },
+   {
+    "evidence": "adding a second bulb in parallel actually decreases the total resistance of the circuit",
+    "answer": "decreases the total resistance",
+    "stem": "What happens to the total resistance when you add another bulb in parallel?",
+    "options": [
+     {
+      "belief_id": "SCI-PHY-ELECTRICITY10-K21-M6",
+      "why": "Student thinks adding components always increases resistance.",
+      "text": "It increases the total resistance"
+     },
+     {
+      "belief_id": "SCI-PHY-ELECTRICITY10-K16-M3",
+      "why": "Student thinks resistance changes based on voltage.",
+      "text": "The resistance doubles"
+     },
+     {
+      "belief_id": "SCI-PHY-ELECTRICITY10-K18-M4",
+      "why": "Student confuses resistivity with total circuit resistance.",
+      "text": "Resistivity becomes half"
+     }
+    ]
+   },
+   {
+    "evidence": "while copper is an excellent conductor, it still possesses a small amount of resistance, which causes it to heat up when a high current passes through.",
+    "answer": "possesses a small amount of resistance",
+    "stem": "Why does a copper wire get hot when high current flows through it?",
+    "options": [
+     {
+      "belief_id": "SCI-PHY-ELECTRICITY10-K17-M12",
+      "why": "Student believes conductors have zero resistance.",
+      "text": "It has zero resistance"
+     },
+     {
+      "belief_id": "SCI-PHY-ELECTRICITY10-K22-M9",
+      "why": "Student thinks low resistance prevents heating.",
+      "text": "Resistance is too low to heat"
+     },
+     {
+      "belief_id": "SCI-PHY-ELECTRICITY10-K16-M3",
+      "why": "Student thinks resistance changes with current.",
+      "text": "Resistance suddenly increases"
+     }
+    ]
+   },
+   {
+    "evidence": "the amount of charge flowing into a bulb is exactly equal to the amount flowing out.",
+    "answer": "exactly equal",
+    "stem": "How does the current entering a bulb compare to the current leaving it?",
+    "options": [
+     {
+      "belief_id": "SCI-PHY-ELECTRICITY10-K13-M1",
+      "why": "Student thinks the bulb consumes the current.",
+      "text": "It is less at the exit"
+     },
+     {
+      "belief_id": "SCI-PHY-ELECTRICITY10-K14-M7",
+      "why": "Student confuses current direction with consumption.",
+      "text": "It flows from positive to negative"
+     },
+     {
+      "belief_id": "SCI-PHY-ELECTRICITY10-K5-M11",
+      "why": "Student thinks electrons are consumed as fuel.",
+      "text": "It is consumed by the bulb"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.4
+}

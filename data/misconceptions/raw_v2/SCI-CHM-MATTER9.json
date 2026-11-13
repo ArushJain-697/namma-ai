@@ -1,0 +1,478 @@
+{
+ "topic": {
+  "id": "SCI-CHM-MATTER9",
+  "subject": "science",
+  "strand": "chemistry",
+  "grades": [
+   9
+  ],
+  "title": "Matter in our surroundings",
+  "scope": "particle nature of matter, states, change of state, latent heat, evaporation and cooling, effect of pressure"
+ },
+ "model": "gemini-3-flash-preview/key2",
+ "usage": {
+  "promptTokenCount": 837,
+  "candidatesTokenCount": 4111,
+  "totalTokenCount": 6152,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 837
+   }
+  ],
+  "thoughtsTokenCount": 1204,
+  "serviceTier": "standard"
+ },
+ "seconds": 19.1,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Nature and Characteristics of Particles",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2",
+    "name": "States of Matter and their Properties",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3",
+    "name": "Change of State and Energy",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1",
+     "n2"
+    ],
+    "external_prereqs": [
+     "concept of heat",
+     "temperature measurement"
+    ]
+   },
+   {
+    "key": "n1.1",
+    "name": "Particulate Nature of Matter",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.2",
+    "name": "Characteristics of Particles",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n1.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.1",
+    "name": "Properties of Solids, Liquids, and Gases",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.2",
+    "name": "Diffusion",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n1.2"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.1",
+    "name": "Effect of Temperature",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.2",
+    "name": "Latent Heat",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n3.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.3",
+    "name": "Evaporation and Cooling",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n3.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.4",
+    "name": "Effect of Pressure",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n2.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.1.1",
+    "name": "Matter is made of tiny particles",
+    "level": 3,
+    "parent": "n1.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.2.1",
+    "name": "Particles have space between them",
+    "level": 3,
+    "parent": "n1.2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.2.2",
+    "name": "Particles are in continuous motion",
+    "level": 3,
+    "parent": "n1.2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.1.1",
+    "name": "Gases have high compressibility",
+    "level": 3,
+    "parent": "n2.1",
+    "prereqs": [
+     "n1.2.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.1.1",
+    "name": "Melting and Boiling points",
+    "level": 3,
+    "parent": "n3.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.2.1",
+    "name": "Latent heat of fusion and vaporization",
+    "level": 3,
+    "parent": "n3.2",
+    "prereqs": [
+     "n3.1.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.3.1",
+    "name": "Factors affecting evaporation",
+    "level": 3,
+    "parent": "n3.3",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n1.1.1",
+    "statement": "Matter is continuous like a solid block and has no internal structure.",
+    "why": "The macroscopic appearance of solids like wood or iron suggests a single continuous entity.",
+    "fix": "Matter is particulate in nature, meaning it is made of millions of tiny, discrete particles with spaces between them.",
+    "probe": {
+     "question": "If you dissolve sugar in water, why does the water level not rise significantly?",
+     "wrong_answer": "Because sugar is a liquid or it disappears into the water's volume."
+    },
+    "error_type": "visible_only",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "continuous",
+     "block",
+     "structure",
+     "divided",
+     "particles"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on particulate nature of matter"
+   },
+   {
+    "key": "m2",
+    "node": "n1.2.1",
+    "statement": "The space between particles is filled with air.",
+    "why": "Students find it difficult to conceptualize a vacuum and assume air is everywhere.",
+    "fix": "The space between particles of a substance is empty (vacuum); air is itself made of particles with space between them.",
+    "probe": {
+     "question": "What exists in the space between two water molecules?",
+     "wrong_answer": "Air or oxygen."
+    },
+    "error_type": "everyday_language",
+    "root_belief": "empty space must be filled with air",
+    "causes": [],
+    "trigger_cues": [
+     "space",
+     "between",
+     "vacuum",
+     "filled",
+     "intermolecular"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas in Science"
+   },
+   {
+    "key": "m3",
+    "node": "n1.2.2",
+    "statement": "Particles in a solid do not move at all.",
+    "why": "Since the solid object is stationary, students assume its internal components are also stationary.",
+    "fix": "Particles in a solid are in continuous motion, but they only vibrate about their fixed positions.",
+    "probe": {
+     "question": "Do the particles in a block of ice move?",
+     "wrong_answer": "No, they are frozen in place and cannot move."
+    },
+    "error_type": "visible_only",
+    "root_belief": "macro properties apply to micro particles",
+    "causes": [],
+    "trigger_cues": [
+     "vibrate",
+     "motion",
+     "fixed",
+     "position",
+     "kinetic"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m4",
+    "node": "n1.2.2",
+    "statement": "Individual particles expand or grow larger when heated.",
+    "why": "Students observe the whole object expanding and attribute this change to the particles themselves.",
+    "fix": "Particles do not change size; heating increases their kinetic energy, causing them to move further apart.",
+    "probe": {
+     "question": "When an iron rod is heated and expands, what happens to the size of each iron atom?",
+     "wrong_answer": "Each atom gets slightly bigger."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "properties of the whole belong to the parts",
+    "causes": [],
+    "trigger_cues": [
+     "expand",
+     "heating",
+     "size",
+     "volume",
+     "increase"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Concept Inventories in Chemistry"
+   },
+   {
+    "key": "m5",
+    "node": "n2.1.1",
+    "statement": "Gases can be compressed because the particles themselves are soft and squishy.",
+    "why": "Students relate compressibility to the texture of everyday objects like sponges.",
+    "fix": "Gases are compressible because there are large empty spaces between the particles, not because the particles change shape.",
+    "probe": {
+     "question": "Why can you push the piston of a syringe filled with air?",
+     "wrong_answer": "Because air particles are soft and can be flattened."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "material properties explain physical behavior",
+    "causes": [],
+    "trigger_cues": [
+     "compress",
+     "syringe",
+     "soft",
+     "pressure",
+     "space"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m6",
+    "node": "n3.1.1",
+    "statement": "Temperature always increases when heat is supplied to a substance.",
+    "why": "In everyday experience, heating usually results in a temperature rise.",
+    "fix": "During a change of state, the temperature remains constant because the heat is used as latent heat to break forces of attraction.",
+    "probe": {
+     "question": "What happens to the temperature of boiling water as you continue to heat it?",
+     "wrong_answer": "The temperature keeps rising above 100 degrees Celsius."
+    },
+    "error_type": "single_cause",
+    "root_belief": "more input always means more output",
+    "causes": [
+     "m7"
+    ],
+    "trigger_cues": [
+     "constant",
+     "boiling",
+     "melting",
+     "heat",
+     "supply"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT Science Textbook Class 9"
+   },
+   {
+    "key": "m7",
+    "node": "n3.2.1",
+    "statement": "Latent heat is 'hidden' because it is stored inside the particles as a substance.",
+    "why": "The word 'latent' means hidden, leading to the idea of physical storage.",
+    "fix": "Latent heat is the energy consumed to overcome the inter-particle forces of attraction during a phase change.",
+    "probe": {
+     "question": "Where does the energy go when ice melts at 0 degrees?",
+     "wrong_answer": "It is hidden inside the water molecules."
+    },
+    "error_type": "everyday_language",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "latent",
+     "hidden",
+     "fusion",
+     "vaporization",
+     "attraction"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m8",
+    "node": "n3.3.1",
+    "statement": "Evaporation only occurs at the boiling point of a liquid.",
+    "why": "Students confuse evaporation with boiling because both involve a liquid becoming a gas.",
+    "fix": "Evaporation is a surface phenomenon that occurs at any temperature below the boiling point.",
+    "probe": {
+     "question": "How do wet clothes dry on a cold day?",
+     "wrong_answer": "The water must reach 100 degrees to turn into vapor."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar processes are identical",
+    "causes": [],
+    "trigger_cues": [
+     "evaporation",
+     "boiling",
+     "surface",
+     "temperature",
+     "clothes"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m9",
+    "node": "n3.3.1",
+    "statement": "Bubbles in boiling water are made of air or heat.",
+    "why": "Students see bubbles and associate them with the most common gas they know (air).",
+    "fix": "The bubbles in boiling water consist of water vapor (water in gaseous state).",
+    "probe": {
+     "question": "What is inside the bubbles that rise when water boils?",
+     "wrong_answer": "Air that was trapped in the water."
+    },
+    "error_type": "visible_only",
+    "root_belief": "all gases are air",
+    "causes": [],
+    "trigger_cues": [
+     "bubbles",
+     "boiling",
+     "vapor",
+     "inside",
+     "gas"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Misconception studies"
+   },
+   {
+    "key": "m10",
+    "node": "n3.3.1",
+    "statement": "Humidity increases the rate of evaporation.",
+    "why": "Students may think 'more water in the air' helps 'pull' more water out.",
+    "fix": "High humidity decreases the rate of evaporation because the air already holds a lot of water vapor.",
+    "probe": {
+     "question": "Why do we sweat more and feel sticky on a rainy day?",
+     "wrong_answer": "Because the high humidity makes our sweat evaporate faster."
+    },
+    "error_type": "other",
+    "root_belief": "more of a factor increases the process",
+    "causes": [],
+    "trigger_cues": [
+     "humidity",
+     "rate",
+     "sweat",
+     "vapor",
+     "dry"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n2.2",
+    "statement": "Diffusion is a force that pulls particles together.",
+    "why": "Students see substances mixing and assume an active force is driving the movement.",
+    "fix": "Diffusion is the spontaneous intermixing of particles due to their own random kinetic motion.",
+    "probe": {
+     "question": "Why does the smell of perfume spread in a room?",
+     "wrong_answer": "The air pulls the perfume particles toward the corners."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "motion requires an active force",
+    "causes": [],
+    "trigger_cues": [
+     "diffusion",
+     "mixing",
+     "random",
+     "motion",
+     "smell"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m12",
+    "node": "n1.1.1",
+    "statement": "Particles of a liquid are 'wet' or 'blue' if the liquid is blue.",
+    "why": "Macro-scale properties like color or state are projected onto the microscopic particles.",
+    "fix": "Individual particles do not have properties like 'wetness' or 'color'; these are collective properties of many particles.",
+    "probe": {
+     "question": "If you look at a single water molecule, is it wet?",
+     "wrong_answer": "Yes, because water is a liquid and all liquids are wet."
+    },
+    "error_type": "part_whole",
+    "root_belief": "properties of the whole belong to the parts",
+    "causes": [],
+    "trigger_cues": [
+     "wet",
+     "color",
+     "molecule",
+     "property",
+     "liquid"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's research"
+   }
+  ]
+ },
+ "problems": []
+}

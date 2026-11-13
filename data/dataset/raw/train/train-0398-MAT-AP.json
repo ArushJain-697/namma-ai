@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0398-MAT-AP",
+  "topic_id": "MAT-AP",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a conversation between a teacher and two students",
+  "seed": 398
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 1130,
+  "candidatesTokenCount": 1296,
+  "totalTokenCount": 2426,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1130
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-AP-K14-M9",
+  "MAT-AP-K20-M18",
+  "MAT-AP-K15-M12",
+  "MAT-AP-K10-M5",
+  "MAT-AP-K9-M4",
+  "MAT-AP-K23-M22",
+  "MAT-AP-K23-M23",
+  "MAT-AP-K13-M8",
+  "MAT-AP-K15-M11",
+  "MAT-AP-K24-M21",
+  "MAT-AP-K7-M1",
+  "MAT-AP-K8-M2",
+  "MAT-AP-K16-M13",
+  "MAT-AP-K7-M3"
+ ],
+ "response": {
+  "passage": "Teacher: Today we are looking at Arithmetic Progressions. Remember, an AP is a list of numbers where the difference between any two consecutive terms is constant. Rohan, if I have 10, 7, 4, 1, what is the common difference? Rohan: Since 10 minus 7 is 3, the difference is 3. Teacher: Not quite. You must subtract the earlier term from the later one, so 7 minus 10 gives a common difference of -3. Priya: Does that mean the common difference must always be positive? Teacher: No, it can be negative or zero. Now, consider the sequence 2, 4, 8, 16. Is this an AP? Priya: Yes, because it grows by a rule. Teacher: Actually, no. An AP must have a constant difference between every single pair of consecutive terms. Here, 4-2 is 2, but 8-4 is 4. Since the differences are not the same, it is not an AP. Finally, to find the nth term, we use the formula a_n = a + (n-1)d. If you want to find the 10th term of an AP starting with 3 and a difference of 4, you calculate 3 + (10-1) times 4, which is 39. Do not confuse the term value with the position n; they are distinct concepts.",
+  "summary": "An Arithmetic Progression requires a constant difference between all consecutive terms, which can be positive, negative, or zero. The nth term formula accounts for the position n by multiplying the difference by n-1.",
+  "items": [
+   {
+    "evidence": "You must subtract the earlier term from the later one, so 7 minus 10 gives a common difference of -3.",
+    "answer": "-3",
+    "stem": "What is the correct common difference for the sequence 10, 7, 4, 1?",
+    "options": [
+     {
+      "belief_id": "MAT-AP-K9-M4",
+      "why": "Subtracts earlier from later, ignoring the correct order.",
+      "text": "3"
+     },
+     {
+      "belief_id": "MAT-AP-K10-M5",
+      "why": "Assumes the difference cannot be negative.",
+      "text": "0"
+     },
+     {
+      "belief_id": "MAT-AP-K16-M13",
+      "why": "Attempts to divide terms instead of subtracting.",
+      "text": "0.7"
+     }
+    ]
+   },
+   {
+    "evidence": "An AP must have a constant difference between every single pair of consecutive terms.",
+    "answer": "constant difference",
+    "stem": "What is the essential requirement for a sequence to be classified as an Arithmetic Progression?",
+    "options": [
+     {
+      "belief_id": "MAT-AP-K7-M1",
+      "why": "Believes any consistent growth rule defines an AP.",
+      "text": "consistent growth rule"
+     },
+     {
+      "belief_id": "MAT-AP-K8-M2",
+      "why": "Believes any increasing sequence is an AP.",
+      "text": "increasing numbers"
+     },
+     {
+      "belief_id": "MAT-AP-K7-M3",
+      "why": "Believes checking only the first two terms suffices.",
+      "text": "first two terms match"
+     }
+    ]
+   },
+   {
+    "evidence": "If you want to find the 10th term of an AP starting with 3 and a difference of 4, you calculate 3 + (10-1) times 4, which is 39.",
+    "answer": "39",
+    "stem": "What is the value of the 10th term in an AP where a=3 and d=4?",
+    "options": [
+     {
+      "belief_id": "MAT-AP-K14-M9",
+      "why": "Uses the incorrect formula a + nd.",
+      "text": "43"
+     },
+     {
+      "belief_id": "MAT-AP-K13-M8",
+      "why": "Confuses the term value with the position n.",
+      "text": "10"
+     },
+     {
+      "belief_id": "MAT-AP-K24-M21",
+      "why": "Misapplies the formula for total sum instead.",
+      "text": "50"
+     }
+    ]
+   },
+   {
+    "evidence": "Do not confuse the term value with the position n; they are distinct concepts.",
+    "answer": "distinct concepts",
+    "stem": "How should a student view the relationship between the term value and its position n?",
+    "options": [
+     {
+      "belief_id": "MAT-AP-K13-M8",
+      "why": "Believes the term value is identical to n.",
+      "text": "the same thing"
+     },
+     {
+      "belief_id": "MAT-AP-K20-M18",
+      "why": "Believes the last term is always the same as n.",
+      "text": "equal to the last term"
+     },
+     {
+      "belief_id": "MAT-AP-K15-M12",
+      "why": "Believes n is found by dividing by d.",
+      "text": "found by dividing by d"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 11.2
+}

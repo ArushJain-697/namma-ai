@@ -1,0 +1,495 @@
+{
+ "topic": {
+  "id": "SOC-ECO-PEOPLE",
+  "subject": "social",
+  "strand": "economics",
+  "grades": [
+   9
+  ],
+  "title": "People as resource",
+  "scope": "human capital, education and health, primary/secondary/tertiary activities, disguised and seasonal unemployment"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 829,
+  "candidatesTokenCount": 1639,
+  "totalTokenCount": 2468,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 829
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.6,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Human Capital Formation",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "definition of resources"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Economic Activities",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "basic sectors of economy"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Unemployment",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "labor force definition"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Investment in Human Capital",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "investment concept"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Education and Health",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "public services"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Sectors of Economy",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "primary/secondary/tertiary sectors"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Market vs Non-market",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": [
+     "monetary exchange"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Disguised Unemployment",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": [
+     "labor productivity"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Seasonal Unemployment",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": [
+     "agricultural cycles"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Education increases productivity",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "skill development"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Health improves efficiency",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "biological health"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Primary sector is only farming",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": [
+     "agriculture"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "Market activities involve pay",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": [
+     "wages"
+    ]
+   },
+   {
+    "key": "n14",
+    "name": "Non-market is for self-consumption",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": [
+     "subsistence"
+    ]
+   },
+   {
+    "key": "n15",
+    "name": "Disguised means hidden",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": [
+     "meaning of words"
+    ]
+   },
+   {
+    "key": "n16",
+    "name": "Seasonal means weather-dependent",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": [
+     "seasons"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n4",
+    "statement": "Spending on education is an expense, not an investment.",
+    "why": "Students confuse personal household spending with economic capital formation.",
+    "fix": "Investment in education yields future returns through higher productivity and earnings, similar to investing in machinery.",
+    "probe": {
+     "question": "Why is education considered an investment?",
+     "wrong_answer": "It is just a cost parents pay for school fees."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "spending",
+     "expense",
+     "investment",
+     "returns",
+     "human capital"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n8",
+    "statement": "Disguised unemployment means people are hiding from work.",
+    "why": "The word 'disguised' is interpreted literally as 'hidden' or 'secret'.",
+    "fix": "It refers to a situation where more people are working than required, so removing some would not reduce total output.",
+    "probe": {
+     "question": "What is disguised unemployment?",
+     "wrong_answer": "When people pretend to be unemployed to get government benefits."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "disguised",
+     "hidden",
+     "unemployment",
+     "output",
+     "surplus labor"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on linguistic misconceptions"
+   },
+   {
+    "key": "m3",
+    "node": "n12",
+    "statement": "Primary sector only includes farming and crop production.",
+    "why": "Textbooks often use farming as the primary example, leading to overgeneralization.",
+    "fix": "The primary sector includes all extraction of natural resources, such as fishing, mining, and forestry, not just farming.",
+    "probe": {
+     "question": "Which of these is a primary activity?",
+     "wrong_answer": "Only farming."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "one example represents the whole category",
+    "causes": [],
+    "trigger_cues": [
+     "primary",
+     "farming",
+     "agriculture",
+     "natural resources",
+     "extraction"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n13",
+    "statement": "Any work done at home is a non-market activity.",
+    "why": "Students assume all domestic work is non-market, ignoring that some home-based work produces goods for sale.",
+    "fix": "Non-market activities are those for self-consumption; if goods produced at home are sold in the market, they are market activities.",
+    "probe": {
+     "question": "Is weaving baskets at home for sale a market activity?",
+     "wrong_answer": "No, because it is done at home."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "location defines the nature of the activity",
+    "causes": [],
+    "trigger_cues": [
+     "market",
+     "non-market",
+     "home",
+     "self-consumption",
+     "sale"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n5",
+    "statement": "Health care only means going to a doctor when you are ill, so it does not affect a person's work or the country's growth.",
+    "why": "Students link health only with treatment of disease and not with the ability to work and contribute to the economy.",
+    "fix": "A healthy person is more efficient and can work longer and better. Good health, along with education, adds to a country's human capital and growth.",
+    "probe": {
+     "question": "Why does a government spend money on hospitals and public health in a country's economic development?",
+     "wrong_answer": "Only to cure sick people; it has nothing to do with the economy or production."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Health matters only for individual illness, not economic output",
+    "causes": [],
+    "trigger_cues": [
+     "health",
+     "hospital",
+     "doctor",
+     "efficiency",
+     "growth",
+     "ill"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom discussion / teacher experience"
+   },
+   {
+    "key": "m6",
+    "node": "n10",
+    "statement": "Education increases only the educated person's own salary and does not benefit society.",
+    "why": "Students see schooling as a personal route to a job and ignore its wider social effects.",
+    "fix": "Education raises productivity and also gives social benefits such as better awareness, innovation, and growth of the whole economy, along with the individual's income.",
+    "probe": {
+     "question": "Who benefits when a country has a larger number of educated people?",
+     "wrong_answer": "Only the educated people themselves, through higher pay; society gains nothing."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Benefits of education are purely private",
+    "causes": [],
+    "trigger_cues": [
+     "education",
+     "benefit",
+     "society",
+     "salary",
+     "educated",
+     "country"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT-based student responses"
+   },
+   {
+    "key": "m7",
+    "node": "n6",
+    "statement": "The secondary sector is the sector that comes second in importance, not the one that processes raw materials.",
+    "why": "Students read 'secondary' as ranking importance rather than the order of production.",
+    "fix": "The secondary sector (manufacturing) turns raw materials from the primary sector into finished goods, e.g. cotton into cloth. Primary, secondary and tertiary show the stage of production, not importance.",
+    "probe": {
+     "question": "Why is the cloth-making factory called part of the secondary sector?",
+     "wrong_answer": "Because it is the second most important sector after agriculture."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Sector names show importance rank",
+    "causes": [],
+    "trigger_cues": [
+     "secondary",
+     "sector",
+     "factory",
+     "manufacturing",
+     "second",
+     "raw material"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher experience"
+   },
+   {
+    "key": "m8",
+    "node": "n6",
+    "statement": "Tertiary sector workers like teachers, doctors and bankers do not produce anything, so they are not part of economic activity.",
+    "why": "Students think only physical goods count as production.",
+    "fix": "Tertiary sector activities provide services that help the primary and secondary sectors and are economic activities because they add value and earn income.",
+    "probe": {
+     "question": "Is a bank clerk's work an economic activity?",
+     "wrong_answer": "No, because a clerk does not make any goods."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Only goods production counts as economic activity",
+    "causes": [],
+    "trigger_cues": [
+     "services",
+     "teacher",
+     "doctor",
+     "bank",
+     "produce",
+     "goods",
+     "tertiary"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom discussion"
+   },
+   {
+    "key": "m9",
+    "node": "n13",
+    "statement": "Market activities are only those done in a market place where goods are bought and sold.",
+    "why": "Students take 'market' literally as a physical place.",
+    "fix": "Market activities are any activities done for pay or profit, including salaried jobs in offices, schools, hospitals or factories, not only shop-based trading.",
+    "probe": {
+     "question": "Is a teacher in a private school doing a market activity?",
+     "wrong_answer": "No, because a school is not a market place."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Market activity means a physical market place",
+    "causes": [],
+    "trigger_cues": [
+     "market",
+     "activity",
+     "pay",
+     "teacher",
+     "school",
+     "salary"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher experience"
+   },
+   {
+    "key": "m10",
+    "node": "n14",
+    "statement": "A housewife's work is non-market so it has no economic value at all.",
+    "why": "Students equate lack of pay with lack of value or of being an economic activity.",
+    "fix": "Non-market activities are done for self-consumption and not for pay; they are still valuable work, though not counted as market output. Housework is not paid but still has worth.",
+    "probe": {
+     "question": "Does the cooking and cleaning done by a homemaker have value to the family?",
+     "wrong_answer": "No, because she is not paid, so it is of no value."
+    },
+    "error_type": "stereotype",
+    "root_belief": "Unpaid work has no value",
+    "causes": [],
+    "trigger_cues": [
+     "housewife",
+     "unpaid",
+     "cooking",
+     "non-market",
+     "value",
+     "home"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom discussion"
+   },
+   {
+    "key": "m11",
+    "node": "n9",
+    "statement": "Seasonal unemployment happens only in farming because of bad weather like drought.",
+    "why": "Students link 'seasonal' with weather and with farmers only.",
+    "fix": "Seasonal unemployment is when people cannot find work in some months of the year because the work is not available then; it is common in agriculture but also in industries like ice-cream, umbrella or tourism work.",
+    "probe": {
+     "question": "An ice-cream factory worker has no job in winter months. What kind of unemployment is it?",
+     "wrong_answer": "Not seasonal, since seasonal unemployment is only for farmers."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Seasonal unemployment is only for farmers",
+    "causes": [],
+    "trigger_cues": [
+     "seasonal",
+     "unemployment",
+     "winter",
+     "factory",
+     "farmers",
+     "months"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher experience"
+   },
+   {
+    "key": "m12",
+    "node": "n8",
+    "statement": "In disguised unemployment all the people in the family are without any work and earn nothing.",
+    "why": "Students confuse partial or surplus work with complete joblessness.",
+    "fix": "In disguised unemployment more people are working than needed, so some appear employed but add nothing to output; removing them does not reduce production.",
+    "probe": {
+     "question": "Five members work on a farm needing three. If two leave, what happens to output?",
+     "wrong_answer": "Output falls a lot, since all five were needed and busy."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Visible work means productive contribution",
+    "causes": [],
+    "trigger_cues": [
+     "disguised",
+     "farm",
+     "family",
+     "extra",
+     "output",
+     "leave"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT-based student responses"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

@@ -1,0 +1,450 @@
+{
+ "topic": {
+  "id": "SOC-GEO-WATERRES",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   10
+  ],
+  "title": "Water resources",
+  "scope": "water scarcity, multipurpose river projects and dams, debates over dams, rainwater harvesting, traditional systems"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 829,
+  "candidatesTokenCount": 1249,
+  "totalTokenCount": 2078,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 829
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.4,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Water Scarcity",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "water cycle",
+     "basic geography"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Multipurpose River Projects",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "basic physics of energy"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Rainwater Harvesting",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "traditional knowledge"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Causes of Scarcity",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "population growth"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Water Management",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "Dams as Temples",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "industrialization"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Social/Environmental Impact",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": [
+     "human rights"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Traditional Methods",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "history of agriculture"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Scarcity is not just low rainfall",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "definition of resource"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Over-exploitation due to population",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Dams control floods",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Dams cause displacement",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Roof top harvesting",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n9",
+    "statement": "Water scarcity is caused only by lack of rainfall.",
+    "why": "Students equate scarcity with drought, ignoring human consumption patterns.",
+    "fix": "Scarcity can occur even with sufficient rainfall due to over-exploitation, pollution, and unequal distribution.",
+    "probe": {
+     "question": "Can a region with high rainfall face water scarcity?",
+     "wrong_answer": "No, because rain provides enough water for everyone."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "one event has one single cause",
+    "causes": [],
+    "trigger_cues": [
+     "rainfall",
+     "drought",
+     "scarcity",
+     "availability",
+     "precipitation"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on resource scarcity"
+   },
+   {
+    "key": "m2",
+    "node": "n11",
+    "statement": "Dams are always the best solution to prevent floods.",
+    "why": "Students assume that if a structure is built to hold water, it must prevent all flooding.",
+    "fix": "Dams often worsen floods during heavy releases or due to sedimentation, and they disrupt natural river flow.",
+    "probe": {
+     "question": "Do dams always stop floods?",
+     "wrong_answer": "Yes, they hold back all the extra water."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "bigger or more means more effect",
+    "causes": [],
+    "trigger_cues": [
+     "dams",
+     "floods",
+     "river",
+     "control",
+     "sedimentation"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n13",
+    "statement": "Rainwater harvesting is only for rural areas.",
+    "why": "Students associate traditional systems with villages and ignore modern urban applications.",
+    "fix": "Rainwater harvesting is highly effective in urban areas through rooftop collection to recharge groundwater.",
+    "probe": {
+     "question": "Can cities use rainwater harvesting?",
+     "wrong_answer": "No, it is a traditional village practice."
+    },
+    "error_type": "stereotype",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "rooftop",
+     "harvesting",
+     "urban",
+     "traditional",
+     "groundwater"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n4",
+    "statement": "Water scarcity happens only in deserts and dry regions, never in places with big rivers.",
+    "why": "Students link scarcity with visible dryness and ignore the problem of uneven availability and demand.",
+    "fix": "Scarcity can occur even in areas with plenty of water, because of overuse, pollution and unequal access, as in Indian cities on large rivers.",
+    "probe": {
+     "question": "Can a city located beside a large river face a water shortage? Why or why not?",
+     "wrong_answer": "No, a city next to a big river always has enough water."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Scarcity means physical dryness only",
+    "causes": [],
+    "trigger_cues": [
+     "river",
+     "desert",
+     "dry",
+     "scarcity",
+     "city",
+     "enough water"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation"
+   },
+   {
+    "key": "m5",
+    "node": "n4",
+    "statement": "Industrial pollution of water does not cause water scarcity because the water is still there.",
+    "why": "Students equate scarcity with the quantity of water and ignore quality.",
+    "fix": "Polluted water is unfit for use, so it reduces the usable supply; NCERT lists pollution from industries and agriculture as a cause of scarcity.",
+    "probe": {
+     "question": "A river has plenty of water but is badly polluted by factories. Is there a water scarcity for people using it?",
+     "wrong_answer": "No, as long as the river has a lot of water there is no scarcity."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Only the quantity of water matters, not quality",
+    "causes": [],
+    "trigger_cues": [
+     "pollution",
+     "factories",
+     "quality",
+     "usable",
+     "river",
+     "scarcity"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT-based student answers"
+   },
+   {
+    "key": "m6",
+    "node": "n10",
+    "statement": "Population growth affects only the food supply, not the availability of water.",
+    "why": "Students link population with food and housing but not with per-person water use.",
+    "fix": "More people need more water for domestic use, irrigation and industry, so per capita availability falls and over-exploitation of water rises.",
+    "probe": {
+     "question": "How does a growing population affect water resources?",
+     "wrong_answer": "It only increases the demand for food and has no effect on water availability."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Population pressure does not involve water demand",
+    "causes": [],
+    "trigger_cues": [
+     "population",
+     "growth",
+     "water",
+     "demand",
+     "per person",
+     "over-exploitation"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation"
+   },
+   {
+    "key": "m7",
+    "node": "n10",
+    "statement": "Irrigation and green revolution farming use very little water compared with households.",
+    "why": "Students see daily household use but not the large water needs of crops and farms.",
+    "fix": "Agriculture, especially irrigated crops like rice, wheat and sugarcane, is the biggest user of water and has led to falling groundwater levels.",
+    "probe": {
+     "question": "Which group uses the largest share of water: households or irrigated agriculture?",
+     "wrong_answer": "Households, because people use water every day and farms use only a little."
+    },
+    "error_type": "numerical_misreading",
+    "root_belief": "Visible daily use equals the largest water use",
+    "causes": [],
+    "trigger_cues": [
+     "irrigation",
+     "farming",
+     "households",
+     "groundwater",
+     "wheat",
+     "largest user"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT-based student answers"
+   },
+   {
+    "key": "m8",
+    "node": "n6",
+    "statement": "Nehru called dams the temples of modern India because they are religious places built on rivers.",
+    "why": "Students take the word temple literally and confuse the metaphor with worship.",
+    "fix": "Nehru used 'temples of modern India' because dams bring industrial development, agricultural growth and jobs, not because they are religious.",
+    "probe": {
+     "question": "Why did Jawaharlal Nehru call dams the 'temples of modern India'?",
+     "wrong_answer": "Because temples were built near dams and people worship there."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Metaphors in textbooks are literal statements",
+    "causes": [],
+    "trigger_cues": [
+     "nehru",
+     "temples",
+     "modern india",
+     "dams",
+     "why called",
+     "worship"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher reports"
+   },
+   {
+    "key": "m9",
+    "node": "n2",
+    "statement": "A multipurpose river project is built only to produce electricity.",
+    "why": "Students identify dams such as Bhakra Nangal with hydroelectric power alone.",
+    "fix": "Multipurpose projects serve several aims at once: irrigation, hydroelectricity, water supply, flood control, inland navigation and fish breeding.",
+    "probe": {
+     "question": "Why are dams like Hirakud called multipurpose projects?",
+     "wrong_answer": "Because they are used to generate electricity only."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Dams exist for a single purpose",
+    "causes": [],
+    "trigger_cues": [
+     "multipurpose",
+     "hirakud",
+     "bhakra",
+     "electricity",
+     "purposes",
+     "dam"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT-based student answers"
+   },
+   {
+    "key": "m10",
+    "node": "n7",
+    "statement": "Dams have only benefits and cause no harm to rivers or the environment.",
+    "why": "Textbook praise of development leads students to ignore ecological costs.",
+    "fix": "Dams disturb the natural flow of rivers, cause sedimentation, harm aquatic life and vegetation, and can increase flood risk and conflicts, leading to protests like Narmada Bachao Andolan.",
+    "probe": {
+     "question": "Why did people protest against the Sardar Sarovar dam?",
+     "wrong_answer": "They had no real reason, as dams cause no damage to the environment."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Development projects have no negative effects",
+    "causes": [],
+    "trigger_cues": [
+     "dam",
+     "environment",
+     "narmada",
+     "protest",
+     "harm",
+     "fish"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation"
+   },
+   {
+    "key": "m11",
+    "node": "n12",
+    "statement": "People displaced by dams are always fully compensated and resettled, so they lose nothing.",
+    "why": "Students assume government projects automatically give fair rehabilitation.",
+    "fix": "Many displaced people, often tribals and the poor, lost land and livelihoods and were not adequately rehabilitated, which fuelled movements like Narmada Bachao Andolan.",
+    "probe": {
+     "question": "Why did displaced people oppose dams like Sardar Sarovar?",
+     "wrong_answer": "They did not oppose it because they were all given good land and homes."
+    },
+    "error_type": "presentism",
+    "root_belief": "Official projects always treat affected people fairly",
+    "causes": [],
+    "trigger_cues": [
+     "displaced",
+     "rehabilitation",
+     "tribals",
+     "compensation",
+     "land",
+     "oppose"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT-based student answers"
+   },
+   {
+    "key": "m12",
+    "node": "n8",
+    "statement": "Traditional water harvesting methods like tankas and johads are outdated and useless today.",
+    "why": "Students think modern technology like dams has replaced old methods.",
+    "fix": "Tankas, johads, kuls and bamboo drip irrigation are low-cost, local and still used; Gendathur in Karnataka and Tamil Nadu's compulsory roof-top harvesting show their value.",
+    "probe": {
+     "question": "Are traditional methods like johads and tankas useful for water conservation today?",
+     "wrong_answer": "No, they are old and only modern dams can conserve water."
+    },
+    "error_type": "presentism",
+    "root_belief": "Old methods are always inferior to modern ones",
+    "causes": [],
+    "trigger_cues": [
+     "johad",
+     "tanka",
+     "traditional",
+     "outdated",
+     "modern",
+     "conservation"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher reports"
+   }
+  ]
+ },
+ "problems": [
+  "only 3 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

@@ -1,0 +1,131 @@
+{
+ "job": {
+  "job": "train-0588-MAT-DATAHANDLING",
+  "topic_id": "MAT-DATAHANDLING",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a step-by-step worked example",
+  "seed": 588
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 895,
+  "candidatesTokenCount": 1301,
+  "totalTokenCount": 2196,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 895
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-DATAHANDLING-K10-M8",
+  "MAT-DATAHANDLING-K8-M10",
+  "MAT-DATAHANDLING-K7-M2",
+  "MAT-DATAHANDLING-K12-M12",
+  "MAT-DATAHANDLING-K11-M11",
+  "MAT-DATAHANDLING-K6-M4",
+  "MAT-DATAHANDLING-K5-M1",
+  "MAT-DATAHANDLING-K6-M6",
+  "MAT-DATAHANDLING-K7-M7",
+  "MAT-DATAHANDLING-K8-M9"
+ ],
+ "response": {
+  "passage": "In our class, we collected data on the number of books each student read last month. The data set is: 0, 5, 5, 5, 8, 12. First, to find the mean, we must include the zero because it represents a student who read no books, making the total sum 35. We divide this sum by the total count of six observations, resulting in a mean of approximately 5.83. This shows that the mean does not have to be one of the numbers present in the original data set. Next, to find the median, we arrange the numbers in ascending order. Since there are six values, an even number, we take the two middle numbers, which are 5 and 5. We calculate the average of these two, which is 5. Finally, we look at the mode, which is the value that appears most frequently. Here, the number 5 appears three times, so the mode is 5. It is important to remember that the mode is the value itself, not the frequency of its occurrence. When drawing a bar graph for this data, ensure the scale is consistent, where each gap between marks represents a fixed value like 2 units, rather than assuming every gap is always 1 unit.",
+  "summary": "This passage explains how to calculate the mean, median, and mode using a specific data set. It also highlights the importance of including zeros and using consistent scales in graphs.",
+  "items": [
+   {
+    "evidence": "First, to find the mean, we must include the zero because it represents a student who read no books, making the total sum 35.",
+    "answer": "include the zero",
+    "stem": "When calculating the mean of a data set containing a zero, what is the correct mathematical procedure?",
+    "options": [
+     {
+      "belief_id": "MAT-DATAHANDLING-K10-M8",
+      "why": "Student thinks zero adds nothing and can be ignored.",
+      "text": "leave the zero out"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K7-M7",
+      "why": "Student divides by the number of unique values instead of total count.",
+      "text": "divide by five"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K7-M2",
+      "why": "Student assumes the mean must be a number from the set.",
+      "text": "pick the middle value"
+     }
+    ]
+   },
+   {
+    "evidence": "This shows that the mean does not have to be one of the numbers present in the original data set.",
+    "answer": "does not have to be",
+    "stem": "What is true regarding the relationship between the calculated mean and the numbers in the original data set?",
+    "options": [
+     {
+      "belief_id": "MAT-DATAHANDLING-K7-M2",
+      "why": "Student believes the mean must be a value from the data.",
+      "text": "must always be"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K10-M8",
+      "why": "Student thinks the mean is only valid if it matches a data point.",
+      "text": "is usually equal to"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K8-M9",
+      "why": "Student confuses mean with a specific data position.",
+      "text": "is the middle value"
+     }
+    ]
+   },
+   {
+    "evidence": "Since there are six values, an even number, we take the two middle numbers, which are 5 and 5.",
+    "answer": "take the two middle numbers",
+    "stem": "How do you determine the median when the data set contains an even number of observations?",
+    "options": [
+     {
+      "belief_id": "MAT-DATAHANDLING-K8-M10",
+      "why": "Student incorrectly picks the larger of the two middle values.",
+      "text": "pick the larger middle value"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K8-M9",
+      "why": "Student ignores the need to sort the data first.",
+      "text": "take the middle given value"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K11-M11",
+      "why": "Student confuses median calculation with finding the mode.",
+      "text": "find the most frequent value"
+     }
+    ]
+   },
+   {
+    "evidence": "Here, the number 5 appears three times, so the mode is 5.",
+    "answer": "the mode is 5",
+    "stem": "Based on the frequency of the number 5 in the data set, what is the mode?",
+    "options": [
+     {
+      "belief_id": "MAT-DATAHANDLING-K11-M11",
+      "why": "Student identifies the frequency instead of the value.",
+      "text": "the mode is 3"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K11-M11",
+      "why": "Student confuses the highest value with the mode.",
+      "text": "the mode is 12"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K7-M2",
+      "why": "Student thinks the mode must be a unique value.",
+      "text": "the mode is 8"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.2
+}

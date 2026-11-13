@@ -1,0 +1,83 @@
+{
+ "job": {
+  "job": "train-0433-MAT-WHOLE",
+  "topic_id": "MAT-WHOLE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a market or shop situation that uses the idea",
+  "seed": 433
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 559,
+  "candidatesTokenCount": 770,
+  "totalTokenCount": 1329,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 559
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-WHOLE-K13-M3",
+  "MAT-WHOLE-K12-M2"
+ ],
+ "response": {
+  "passage": "Rohan visited the local stationery market to buy supplies for his school project. He started with 10 notebooks in his bag. He decided to give 0 notebooks to his friend, and he still had 10 notebooks left, showing that 0 is the identity element for addition. When he reached the shop, he saw that natural numbers start from 1, while whole numbers include 0 and all natural numbers. Rohan wanted to buy 5 pens but had 8 pens in his basket, so he calculated 8 minus 5 to see he had 3 pens remaining. He realized that if he tried to subtract 8 from 5, the result would not be a whole number, proving that subtraction is not commutative. He also noticed that while adding items is simple, subtracting them requires care because the order of numbers changes the result entirely. He concluded that whole numbers are useful for counting items in a shop, starting from zero, and helping him manage his inventory correctly. By the end of the day, Rohan understood that whole numbers help us track quantities accurately, and he felt confident about his math project.",
+  "summary": "Rohan learns about whole numbers and their properties while shopping for school supplies. He discovers that whole numbers include zero and that subtraction behaves differently than addition.",
+  "items": [
+   {
+    "evidence": "He decided to give 0 notebooks to his friend, and he still had 10 notebooks left, showing that 0 is the identity element for addition.",
+    "answer": "0",
+    "stem": "Which number acts as the identity element when added to a quantity?",
+    "options": [
+     {
+      "belief_id": "MAT-WHOLE-K13-M3",
+      "why": "Student incorrectly applies the identity property to subtraction.",
+      "text": "10"
+     }
+    ]
+   },
+   {
+    "evidence": "He realized that if he tried to subtract 8 from 5, the result would not be a whole number, proving that subtraction is not commutative.",
+    "answer": "not commutative",
+    "stem": "What is the nature of subtraction regarding the order of numbers?",
+    "options": [
+     {
+      "belief_id": "MAT-WHOLE-K12-M2",
+      "why": "Student assumes subtraction order does not affect the outcome.",
+      "text": "commutative"
+     }
+    ]
+   },
+   {
+    "evidence": "He also noticed that while adding items is simple, subtracting them requires care because the order of numbers changes the result entirely.",
+    "answer": "order of numbers",
+    "stem": "What factor causes the result of a subtraction problem to change?",
+    "options": [
+     {
+      "belief_id": "MAT-WHOLE-K12-M2",
+      "why": "Student believes the order of subtraction is irrelevant.",
+      "text": "the total count"
+     }
+    ]
+   },
+   {
+    "evidence": "He started with 10 notebooks in his bag.",
+    "answer": "10",
+    "stem": "How many notebooks did Rohan have initially before giving any away?",
+    "options": [
+     {
+      "belief_id": "MAT-WHOLE-K13-M3",
+      "why": "Student confuses the identity element with the starting quantity.",
+      "text": "0"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 3.4
+}

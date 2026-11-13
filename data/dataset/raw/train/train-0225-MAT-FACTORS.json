@@ -1,0 +1,131 @@
+{
+ "job": {
+  "job": "train-0225-MAT-FACTORS",
+  "topic_id": "MAT-FACTORS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a passage that shows a common wrong method and corrects it",
+  "seed": 225
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 895,
+  "candidatesTokenCount": 1269,
+  "totalTokenCount": 2164,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 895
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-FACTORS-K5-M6",
+  "MAT-FACTORS-K13-M13",
+  "MAT-FACTORS-K9-M9",
+  "MAT-FACTORS-K12-M1",
+  "MAT-FACTORS-K10-M10",
+  "MAT-FACTORS-K11-M11",
+  "MAT-FACTORS-K15-M2",
+  "MAT-FACTORS-K12-M12",
+  "MAT-FACTORS-K10-M3",
+  "MAT-FACTORS-K7-M5"
+ ],
+ "response": {
+  "passage": "Rohan was struggling with his math homework on factors and multiples. He thought that the factors of 12 were only 2, 3, 4, and 6, forgetting that every number is divisible by 1 and itself. His teacher explained that factors are all numbers that divide a given number exactly. Rohan also believed that the multiples of 5 stopped at 50, but his teacher reminded him that multiples are infinite and continue far beyond the standard multiplication table. Next, they looked at prime numbers. Rohan insisted that 1 was a prime number, but the teacher clarified that a prime number must have exactly two distinct factors: 1 and the number itself. Since 1 only has one factor, it is neither prime nor composite. Finally, they discussed divisibility by 3. Rohan incorrectly checked the last digit of 27, thinking it was not divisible by 3 because 7 is odd. The teacher corrected him, stating that for divisibility by 3, we must add the digits together and check if the sum is divisible by 3. Since 2 plus 7 equals 9, and 9 is divisible by 3, then 27 is also divisible by 3. Rohan realized that understanding these rules prevents common mistakes.",
+  "summary": "The passage explains that factors include 1 and the number itself, while multiples are infinite. It also clarifies that 1 is not prime and provides the correct rule for checking divisibility by 3.",
+  "items": [
+   {
+    "evidence": "His teacher explained that factors are all numbers that divide a given number exactly.",
+    "answer": "all numbers that divide a given number",
+    "stem": "What is the correct definition of factors for a given number?",
+    "options": [
+     {
+      "belief_id": "MAT-FACTORS-K5-M6",
+      "why": "Student ignores 1 and the number itself as factors.",
+      "text": "only the numbers between 1 and the number"
+     },
+     {
+      "belief_id": "MAT-FACTORS-K12-M12",
+      "why": "Student assumes larger numbers always have more factors.",
+      "text": "the largest possible divisors of that number"
+     },
+     {
+      "belief_id": "MAT-FACTORS-K10-M3",
+      "why": "Student confuses factors with the concept of HCF.",
+      "text": "only numbers smaller than the given number"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan also believed that the multiples of 5 stopped at 50, but his teacher reminded him that multiples are infinite and continue far beyond the standard multiplication table.",
+    "answer": "infinite",
+    "stem": "How far do the multiples of a specific number extend?",
+    "options": [
+     {
+      "belief_id": "MAT-FACTORS-K13-M13",
+      "why": "Student believes multiples stop after the table of 10.",
+      "text": "until the number multiplied by ten"
+     },
+     {
+      "belief_id": "MAT-FACTORS-K11-M11",
+      "why": "Student confuses multiples with the LCM concept.",
+      "text": "the largest number in the set"
+     },
+     {
+      "belief_id": "MAT-FACTORS-K10-M10",
+      "why": "Student assumes multiplication is the only way to find multiples.",
+      "text": "the product of the two numbers"
+     }
+    ]
+   },
+   {
+    "evidence": "Since 1 only has one factor, it is neither prime nor composite.",
+    "answer": "neither prime nor composite",
+    "stem": "What is the classification of the number 1?",
+    "options": [
+     {
+      "belief_id": "MAT-FACTORS-K12-M1",
+      "why": "Student incorrectly identifies 1 as a prime number.",
+      "text": "a prime number"
+     },
+     {
+      "belief_id": "MAT-FACTORS-K7-M5",
+      "why": "Student thinks even numbers cannot be prime.",
+      "text": "an even prime number"
+     },
+     {
+      "belief_id": "MAT-FACTORS-K9-M9",
+      "why": "Student confuses prime classification with factorisation steps.",
+      "text": "a composite number"
+     }
+    ]
+   },
+   {
+    "evidence": "The teacher corrected him, stating that for divisibility by 3, we must add the digits together and check if the sum is divisible by 3.",
+    "answer": "add the digits together",
+    "stem": "What is the correct method to check if a number is divisible by 3?",
+    "options": [
+     {
+      "belief_id": "MAT-FACTORS-K15-M2",
+      "why": "Student focuses only on the last digit.",
+      "text": "look at the last digit only"
+     },
+     {
+      "belief_id": "MAT-FACTORS-K10-M10",
+      "why": "Student assumes multiplication is involved in divisibility.",
+      "text": "multiply the digits by three"
+     },
+     {
+      "belief_id": "MAT-FACTORS-K7-M5",
+      "why": "Student incorrectly relates divisibility to even numbers.",
+      "text": "check if the number is even"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.9
+}

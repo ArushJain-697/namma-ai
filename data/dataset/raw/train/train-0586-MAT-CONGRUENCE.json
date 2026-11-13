@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0586-MAT-CONGRUENCE",
+  "topic_id": "MAT-CONGRUENCE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a rule explained with two contrasting examples",
+  "seed": 586
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1106,
+  "candidatesTokenCount": 1276,
+  "totalTokenCount": 2382,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1106
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-CONGRUENCE-K21-M14",
+  "MAT-CONGRUENCE-K19-M12",
+  "MAT-CONGRUENCE-K15-M7",
+  "MAT-CONGRUENCE-K23-M17",
+  "MAT-CONGRUENCE-K11-M3",
+  "MAT-CONGRUENCE-K13-M5",
+  "MAT-CONGRUENCE-K16-M19",
+  "MAT-CONGRUENCE-K10-M1",
+  "MAT-CONGRUENCE-K12-M4",
+  "MAT-CONGRUENCE-K16-M8",
+  "MAT-CONGRUENCE-K24-M18",
+  "MAT-CONGRUENCE-K14-M6",
+  "MAT-CONGRUENCE-K18-M11",
+  "MAT-CONGRUENCE-K22-M16"
+ ],
+ "response": {
+  "passage": "Congruence means two figures are identical in both shape and size, meaning they can perfectly overlap. For instance, two squares are only congruent if their side lengths are exactly equal; if one is larger, they are similar but not congruent. When checking triangle congruence, the order of vertices matters because it defines the correspondence. For example, if triangle ABC is congruent to triangle PQR, then vertex A must correspond to P, B to Q, and C to R. A common mistake is thinking any three equal angles prove congruence, but AAA only proves similarity, not congruence. Similarly, the SAS criterion requires the equal angle to be the included angle between the two equal sides. If the angle is not between the sides, the triangles might not be congruent. Furthermore, when using RHS, the right angle must be opposite the hypotenuse, and the equal side must be the hypotenuse itself. Finally, remember that a shared side between two triangles counts as an equal pair for both, as it is the same segment for both shapes. Always name the specific criterion used to justify your proof, as simply stating the triangles are congruent is incomplete without identifying the corresponding parts and the rule applied.",
+  "summary": "Congruence requires identical shape and size, which is determined by specific criteria like SAS or RHS. The order of vertices and the position of sides and angles are critical for proving triangles are congruent. Simply having equal angles or sides is not enough unless they match the formal criteria.",
+  "items": [
+   {
+    "evidence": "For instance, two squares are only congruent if their side lengths are exactly equal; if one is larger, they are similar but not congruent.",
+    "answer": "side lengths are exactly equal",
+    "stem": "What must be true for two squares to be considered congruent?",
+    "options": [
+     {
+      "belief_id": "MAT-CONGRUENCE-K10-M1",
+      "why": "Student ignores size and focuses only on the shape.",
+      "text": "they are both squares"
+     },
+     {
+      "belief_id": "MAT-CONGRUENCE-K12-M4",
+      "why": "Student assumes equal angles are sufficient for congruence.",
+      "text": "all their angles are equal"
+     },
+     {
+      "belief_id": "MAT-CONGRUENCE-K22-M16",
+      "why": "Student confuses congruence with similarity.",
+      "text": "they are similar figures"
+     }
+    ]
+   },
+   {
+    "evidence": "Similarly, the SAS criterion requires the equal angle to be the included angle between the two equal sides.",
+    "answer": "the included angle",
+    "stem": "Which angle position is necessary for the SAS congruence criterion?",
+    "options": [
+     {
+      "belief_id": "MAT-CONGRUENCE-K16-M8",
+      "why": "Student believes any angle works for SAS.",
+      "text": "any angle of the triangle"
+     },
+     {
+      "belief_id": "MAT-CONGRUENCE-K15-M7",
+      "why": "Student confuses SAS with SSS requirements.",
+      "text": "three parts are equal"
+     },
+     {
+      "belief_id": "MAT-CONGRUENCE-K16-M19",
+      "why": "Student assumes the third side must be equal.",
+      "text": "the third side"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, when using RHS, the right angle must be opposite the hypotenuse, and the equal side must be the hypotenuse itself.",
+    "answer": "the hypotenuse itself",
+    "stem": "In the RHS criterion, which side must be equal besides the right angle?",
+    "options": [
+     {
+      "belief_id": "MAT-CONGRUENCE-K21-M14",
+      "why": "Student thinks any side works if there is a right angle.",
+      "text": "any side of the triangle"
+     },
+     {
+      "belief_id": "MAT-CONGRUENCE-K14-M6",
+      "why": "Student relies on visual appearance rather than geometry.",
+      "text": "the longest looking side"
+     },
+     {
+      "belief_id": "MAT-CONGRUENCE-K16-M19",
+      "why": "Student assumes any two sides equal implies congruence.",
+      "text": "any other side"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, remember that a shared side between two triangles counts as an equal pair for both, as it is the same segment for both shapes.",
+    "answer": "counts as an equal pair",
+    "stem": "How should a common side shared by two triangles be treated in a proof?",
+    "options": [
+     {
+      "belief_id": "MAT-CONGRUENCE-K24-M18",
+      "why": "Student thinks a shared side cannot be counted twice.",
+      "text": "it cannot be counted"
+     },
+     {
+      "belief_id": "MAT-CONGRUENCE-K13-M5",
+      "why": "Student thinks sides can be matched in any order.",
+      "text": "it matches any side"
+     },
+     {
+      "belief_id": "MAT-CONGRUENCE-K11-M3",
+      "why": "Student thinks orientation changes the side's validity.",
+      "text": "it is only valid if not flipped"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 13.6
+}

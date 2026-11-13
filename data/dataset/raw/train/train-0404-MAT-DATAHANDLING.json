@@ -1,0 +1,131 @@
+{
+ "job": {
+  "job": "train-0404-MAT-DATAHANDLING",
+  "topic_id": "MAT-DATAHANDLING",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a conversation between a teacher and two students",
+  "seed": 404
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 895,
+  "candidatesTokenCount": 1237,
+  "totalTokenCount": 2132,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 895
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-DATAHANDLING-K6-M4",
+  "MAT-DATAHANDLING-K6-M6",
+  "MAT-DATAHANDLING-K12-M12",
+  "MAT-DATAHANDLING-K10-M8",
+  "MAT-DATAHANDLING-K11-M11",
+  "MAT-DATAHANDLING-K8-M10",
+  "MAT-DATAHANDLING-K7-M7",
+  "MAT-DATAHANDLING-K5-M1",
+  "MAT-DATAHANDLING-K8-M9",
+  "MAT-DATAHANDLING-K7-M2"
+ ],
+ "response": {
+  "passage": "Teacher: Today, we are analyzing the scores of our cricket team: 0, 6, 8, and 10. Rohan, how do we find the mean? Rohan: I think we add 6, 8, and 10, then divide by 3 to get 8, because zero adds nothing to the total. Teacher: That is a common mistake, Rohan. You must include the zero, meaning the sum is 24 divided by 4, which is 6. Meera, what about the median of these scores? Meera: Since the numbers are already ordered, the middle is between 6 and 8, so I will pick 8. Teacher: Actually, when you have an even number of observations, you find the average of the two middle values, which is 7. Now, look at this pictograph where one star symbol represents 5 runs. If there are 3 stars, how many runs were scored? Meera: Since there are 3 stars, the total is 3 runs. Teacher: No, Meera, you must multiply the number of symbols by the value of each symbol. Finally, remember that in a bar graph, the scale might show each gap as 2 units, not just 1. Always check the axis labels carefully before you calculate anything.",
+  "summary": "The teacher explains how to correctly calculate the mean by including zero and finding the median of even-numbered datasets. They also clarify that pictograph symbols represent specific values and bar graph scales vary.",
+  "items": [
+   {
+    "evidence": "You must include the zero, meaning the sum is 24 divided by 4, which is 6.",
+    "answer": "6",
+    "stem": "What is the correct mean of the cricket team's scores?",
+    "options": [
+     {
+      "belief_id": "MAT-DATAHANDLING-K10-M8",
+      "why": "Student ignores zero, dividing the sum of non-zero values.",
+      "text": "8"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K7-M2",
+      "why": "Student assumes the mean must be a value present.",
+      "text": "10"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K7-M7",
+      "why": "Student divides by the number of unique values.",
+      "text": "12"
+     }
+    ]
+   },
+   {
+    "evidence": "Actually, when you have an even number of observations, you find the average of the two middle values, which is 7.",
+    "answer": "7",
+    "stem": "What is the median of the scores 0, 6, 8, and 10?",
+    "options": [
+     {
+      "belief_id": "MAT-DATAHANDLING-K8-M10",
+      "why": "Student picks the larger of the two middle values.",
+      "text": "8"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K8-M9",
+      "why": "Student picks the middle value as they appear.",
+      "text": "6"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K11-M11",
+      "why": "Student mistakes the mode for the median.",
+      "text": "0"
+     }
+    ]
+   },
+   {
+    "evidence": "No, Meera, you must multiply the number of symbols by the value of each symbol.",
+    "answer": "15",
+    "stem": "If one star represents 5 runs, what is the total for 3 stars?",
+    "options": [
+     {
+      "belief_id": "MAT-DATAHANDLING-K5-M1",
+      "why": "Student assumes one symbol equals one unit.",
+      "text": "3"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K6-M4",
+      "why": "Student focuses on visual size rather than symbol value.",
+      "text": "5"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K6-M6",
+      "why": "Student adds the scale value to the count.",
+      "text": "8"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, remember that in a bar graph, the scale might show each gap as 2 units, not just 1.",
+    "answer": "2 units",
+    "stem": "What should you check on a bar graph axis before calculating?",
+    "options": [
+     {
+      "belief_id": "MAT-DATAHANDLING-K6-M6",
+      "why": "Student assumes every gap represents a single unit.",
+      "text": "1 unit"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K6-M4",
+      "why": "Student focuses on bar width instead of scale.",
+      "text": "bar width"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K12-M12",
+      "why": "Student guesses based on probability patterns.",
+      "text": "13 units"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 28.1
+}

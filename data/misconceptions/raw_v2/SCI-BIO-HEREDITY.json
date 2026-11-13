@@ -1,0 +1,540 @@
+{
+ "topic": {
+  "id": "SCI-BIO-HEREDITY",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   10
+  ],
+  "title": "Heredity and evolution",
+  "scope": "variation, Mendel's experiments, dominant and recessive traits, sex determination, evolution and natural selection"
+ },
+ "model": "gemini-3-flash-preview/key3",
+ "usage": {
+  "promptTokenCount": 837,
+  "candidatesTokenCount": 4726,
+  "totalTokenCount": 9155,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 837
+   }
+  ],
+  "thoughtsTokenCount": 3592,
+  "serviceTier": "standard"
+ },
+ "seconds": 31.9,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Heredity and Variation",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "sexual and asexual reproduction",
+     "cell division",
+     "structure of a cell"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Sex Determination",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "human reproductive system"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Evolution and Speciation",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "ecosystems",
+     "adaptation"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Variation in Populations",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Mendelian Inheritance",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "Mechanism of Sex Determination",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Natural Selection",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Speciation",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "DNA copying creates small variations",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "DNA structure"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Variations accumulate over generations",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [
+     "n9"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Dominant alleles mask recessive alleles",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Phenotype is the observable trait",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Gametes receive only one allele per gene",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": [
+     "meiosis"
+    ]
+   },
+   {
+    "key": "n14",
+    "name": "Traits are inherited independently",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Human females are XX and males are XY",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n16",
+    "name": "Sperm determines the child's sex",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n15"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n17",
+    "name": "Acquired traits do not affect germ cells",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n18",
+    "name": "Natural selection favors advantageous variations",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n10"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n19",
+    "name": "Genetic drift changes allele frequency by chance",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n10"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n20",
+    "name": "Geographical isolation leads to speciation",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n18"
+    ],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n11",
+    "statement": "Dominant traits are always the most common in a population.",
+    "why": "Students confuse the biological meaning of 'dominant' with the everyday meaning of 'prevailing' or 'powerful'.",
+    "fix": "Dominance only refers to the expression of a trait in a heterozygote; commonness depends on natural selection and population history.",
+    "probe": {
+     "question": "If polydactyly (extra fingers) is a dominant trait, why don't most people have extra fingers?",
+     "wrong_answer": "Because the dominant trait hasn't taken over yet."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "dominant",
+     "recessive",
+     "population",
+     "frequency"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic studies"
+   },
+   {
+    "key": "m2",
+    "node": "n11",
+    "statement": "Recessive traits are physically weaker or 'broken' versions of genes.",
+    "why": "The word 'recessive' implies retreating or being inferior in a social context.",
+    "fix": "Recessive alleles are simply versions of a gene that only express their phenotype when two copies are present; they are not inherently 'weak'.",
+    "probe": {
+     "question": "Does a recessive allele eventually disappear from a population because it is weak?",
+     "wrong_answer": "Yes, dominant alleles eventually replace them."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "stronger or more means more effect",
+    "causes": [],
+    "trigger_cues": [
+     "recessive",
+     "allele",
+     "weak",
+     "masking"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n16",
+    "statement": "The mother is responsible for the sex of the child.",
+    "why": "In many cultures, the person carrying the baby is assumed to be the one determining its characteristics.",
+    "fix": "In humans, females carry two X chromosomes and always contribute an X, while males carry one X and one Y; thus, the sperm determines the sex.",
+    "probe": {
+     "question": "Which parent's gamete determines if a baby will be a boy?",
+     "wrong_answer": "The mother's egg."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "the visible actor is the cause",
+    "causes": [],
+    "trigger_cues": [
+     "sex",
+     "determination",
+     "mother",
+     "father",
+     "child"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT textbook social context"
+   },
+   {
+    "key": "m4",
+    "node": "n17",
+    "statement": "Traits acquired during a person's life, like big muscles, are passed to their children.",
+    "why": "Students often believe that any change in the parent's body is automatically reflected in the offspring.",
+    "fix": "Only changes in the DNA of germ cells (sperm or eggs) are inherited; somatic changes like muscle growth do not alter DNA.",
+    "probe": {
+     "question": "If a person loses an arm in an accident, will their children be born with one arm?",
+     "wrong_answer": "Yes, because the parent's body changed."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "direct transfer of experience",
+    "causes": [],
+    "trigger_cues": [
+     "acquired",
+     "inherited",
+     "muscles",
+     "offspring"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's research"
+   },
+   {
+    "key": "m5",
+    "node": "n18",
+    "statement": "Evolution happens because organisms 'need' to change to survive.",
+    "why": "Students attribute intent and purpose to biological processes (teleology).",
+    "fix": "Evolution is not goal-oriented; it occurs because individuals with existing advantageous variations are more likely to survive and reproduce.",
+    "probe": {
+     "question": "Why did giraffes develop long necks?",
+     "wrong_answer": "Because they needed to reach the high leaves to survive."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "purpose drives change",
+    "causes": [],
+    "trigger_cues": [
+     "need",
+     "survive",
+     "evolution",
+     "adaptation"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m6",
+    "node": "n12",
+    "statement": "The phenotype of an organism is exactly the same as its genotype.",
+    "why": "Students often ignore the existence of hidden recessive alleles.",
+    "fix": "Genotype is the genetic makeup (e.g., Tt), while phenotype is the physical expression (e.g., Tall); different genotypes can result in the same phenotype.",
+    "probe": {
+     "question": "Can two tall pea plants produce a short pea plant?",
+     "wrong_answer": "No, because tall plants only have tall genes."
+    },
+    "error_type": "visible_only",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "phenotype",
+     "genotype",
+     "observable",
+     "traits"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n9",
+    "statement": "Asexual reproduction produces offspring with absolutely no variation.",
+    "why": "Textbooks often emphasize that asexual offspring are 'clones', leading to the idea of perfect identity.",
+    "fix": "Even in asexual reproduction, small variations occur due to inaccuracies in DNA copying.",
+    "probe": {
+     "question": "Do bacteria in a colony have any differences between them?",
+     "wrong_answer": "No, they are all identical copies."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "absolute rules have no exceptions",
+    "causes": [],
+    "trigger_cues": [
+     "asexual",
+     "clones",
+     "variation",
+     "copying"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT Class 10 Biology"
+   },
+   {
+    "key": "m8",
+    "node": "n15",
+    "statement": "All animals use X and Y chromosomes to determine sex.",
+    "why": "Students generalize the human system to the entire animal kingdom.",
+    "fix": "Sex determination varies; some reptiles use temperature, and birds use a ZW system.",
+    "probe": {
+     "question": "Do all animals have the same XX/XY system as humans?",
+     "wrong_answer": "Yes, it is the universal way sex is decided."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "one rule works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "chromosomes",
+     "sex",
+     "determination",
+     "reptiles"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT textbook examples"
+   },
+   {
+    "key": "m9",
+    "node": "n18",
+    "statement": "Evolution is a ladder of progress leading to 'perfect' or 'better' organisms.",
+    "why": "The common 'March of Progress' image suggests a linear path from 'primitive' to 'advanced'.",
+    "fix": "Evolution is a branching process that results in organisms adapted to their specific environment, not a move toward perfection.",
+    "probe": {
+     "question": "Are modern humans 'more evolved' than modern bacteria?",
+     "wrong_answer": "Yes, because humans are more complex and better."
+    },
+    "error_type": "other",
+    "root_belief": "progress is linear and upward",
+    "causes": [],
+    "trigger_cues": [
+     "progress",
+     "advanced",
+     "primitive",
+     "evolution"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m10",
+    "node": "n19",
+    "statement": "Genetic drift is a purposeful process that helps a population adapt.",
+    "why": "Students struggle to grasp that significant changes can happen purely by chance.",
+    "fix": "Genetic drift is a change in allele frequency due to random sampling or accidents, not because the change is beneficial.",
+    "probe": {
+     "question": "If a fire kills all the blue beetles in a forest by chance, is this natural selection?",
+     "wrong_answer": "Yes, because the blue ones were not fit enough."
+    },
+    "error_type": "single_cause",
+    "root_belief": "random events have a hidden purpose",
+    "causes": [],
+    "trigger_cues": [
+     "drift",
+     "chance",
+     "accident",
+     "frequency"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n14",
+    "statement": "All traits from one parent are inherited together as a single package.",
+    "why": "Students may not understand that chromosomes sort independently during gamete formation.",
+    "fix": "Due to independent assortment, traits like hair color and eye color can be inherited separately from each other.",
+    "probe": {
+     "question": "If a father has black hair and brown eyes, must his child inherit both together?",
+     "wrong_answer": "Yes, traits from one parent stay together."
+    },
+    "error_type": "part_whole",
+    "root_belief": "things that look similar go together",
+    "causes": [],
+    "trigger_cues": [
+     "independent",
+     "assortment",
+     "traits",
+     "package"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Mendel's Law of Independent Assortment studies"
+   },
+   {
+    "key": "m12",
+    "node": "n13",
+    "statement": "Gametes carry two alleles for every gene, just like normal body cells.",
+    "why": "Difficulty in understanding the reduction of chromosome numbers during meiosis.",
+    "fix": "Gametes are haploid, meaning they carry only one allele for each gene, which then combine during fertilization.",
+    "probe": {
+     "question": "How many alleles for the 'height' gene does a single sperm cell carry?",
+     "wrong_answer": "Two, one for tall and one for short."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "the part is the same as the whole",
+    "causes": [],
+    "trigger_cues": [
+     "gamete",
+     "allele",
+     "segregation",
+     "meiosis"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m13",
+    "node": "n4",
+    "statement": "All variations are harmful to the organism.",
+    "why": "The word 'mutation' or 'variation' is often associated with diseases or deformities in popular media.",
+    "fix": "Variations can be harmful, neutral, or beneficial; beneficial ones are the basis for evolution.",
+    "probe": {
+     "question": "Is variation always a bad thing for a species?",
+     "wrong_answer": "Yes, because it means the DNA is broken."
+    },
+    "error_type": "other",
+    "root_belief": "change is always bad",
+    "causes": [],
+    "trigger_cues": [
+     "variation",
+     "harmful",
+     "beneficial",
+     "mutation"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m14",
+    "node": "n5",
+    "statement": "Mendel's 3:1 ratio means that if a couple has 4 children, exactly 1 will have the recessive trait.",
+    "why": "Students treat probabilistic ratios as deterministic counts for small samples.",
+    "fix": "The 3:1 ratio is a probability for each individual offspring; in small samples, the actual outcome can vary significantly.",
+    "probe": {
+     "question": "If two heterozygous tall plants have 4 seeds, will exactly one be short?",
+     "wrong_answer": "Yes, because the ratio is 3:1."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "probability is a fixed outcome",
+    "causes": [],
+    "trigger_cues": [
+     "ratio",
+     "mendel",
+     "probability",
+     "offspring"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Statistics in genetics education research"
+   }
+  ]
+ },
+ "problems": []
+}

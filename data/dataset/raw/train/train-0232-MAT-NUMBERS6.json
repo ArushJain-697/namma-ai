@@ -1,0 +1,124 @@
+{
+ "job": {
+  "job": "train-0232-MAT-NUMBERS6",
+  "topic_id": "MAT-NUMBERS6",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a passage that shows a common wrong method and corrects it",
+  "seed": 232
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 613,
+  "candidatesTokenCount": 1196,
+  "totalTokenCount": 1809,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 613
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-NUMBERS6-K14-M5",
+  "MAT-NUMBERS6-K8-M2",
+  "MAT-NUMBERS6-K12-M3"
+ ],
+ "response": {
+  "passage": "In our daily life, we often handle large numbers, but we must be careful how we write them. Some students think that adding more digits to the left of a number always makes it bigger, but 005 is just 5. We must also be careful with commas. In the Indian system, we place the first comma after three digits from the right, and then after every two digits. For example, ten lakhs is written as 10,00,000. If you follow the International system, you place commas after every three digits. Another common mistake happens with Roman numerals. Many students believe they can repeat symbols like X as many times as they want to represent any value, but the rule is that no symbol can be repeated more than three times. Therefore, forty is written as XL, not XXXX. By following these specific rules for place value and symbols, we ensure our mathematical communication remains clear and accurate for everyone. Always check your system of notation before placing your commas or calculating your totals.",
+  "summary": "This passage explains the correct rules for using commas in different number systems and the limitations on repeating Roman numerals. It also clarifies that leading zeros do not increase the value of a number.",
+  "items": [
+   {
+    "evidence": "Some students think that adding more digits to the left of a number always makes it bigger, but 005 is just 5.",
+    "answer": "5",
+    "stem": "What is the actual value of the number 005?",
+    "options": [
+     {
+      "belief_id": "MAT-NUMBERS6-K12-M3",
+      "why": "Believes more digits always mean a larger number.",
+      "text": "500"
+     },
+     {
+      "belief_id": "MAT-NUMBERS6-K8-M2",
+      "why": "Misapplies comma rules to small numbers.",
+      "text": "0,05"
+     },
+     {
+      "belief_id": "MAT-NUMBERS6-K14-M5",
+      "why": "Repeats digits incorrectly to represent value.",
+      "text": "555"
+     }
+    ]
+   },
+   {
+    "evidence": "In the Indian system, we place the first comma after three digits from the right, and then after every two digits.",
+    "answer": "after every two digits",
+    "stem": "Where do you place commas after the first one in the Indian system?",
+    "options": [
+     {
+      "belief_id": "MAT-NUMBERS6-K8-M2",
+      "why": "Believes commas always follow a two-digit pattern.",
+      "text": "after every three digits"
+     },
+     {
+      "belief_id": "MAT-NUMBERS6-K12-M3",
+      "why": "Confuses digit count with place value magnitude.",
+      "text": "after every five digits"
+     },
+     {
+      "belief_id": "MAT-NUMBERS6-K14-M5",
+      "why": "Repeats symbols/patterns regardless of rules.",
+      "text": "after every single digit"
+     }
+    ]
+   },
+   {
+    "evidence": "Many students believe they can repeat symbols like X as many times as they want to represent any value, but the rule is that no symbol can be repeated more than three times.",
+    "answer": "more than three times",
+    "stem": "What is the limit for repeating a Roman numeral symbol?",
+    "options": [
+     {
+      "belief_id": "MAT-NUMBERS6-K14-M5",
+      "why": "Believes symbols can be repeated indefinitely.",
+      "text": "no limit at all"
+     },
+     {
+      "belief_id": "MAT-NUMBERS6-K8-M2",
+      "why": "Applies the two-digit comma rule to symbols.",
+      "text": "more than two times"
+     },
+     {
+      "belief_id": "MAT-NUMBERS6-K12-M3",
+      "why": "Thinks more symbols always mean a larger value.",
+      "text": "more than five times"
+     }
+    ]
+   },
+   {
+    "evidence": "Therefore, forty is written as XL, not XXXX.",
+    "answer": "XL",
+    "stem": "Which is the correct way to write forty in Roman numerals?",
+    "options": [
+     {
+      "belief_id": "MAT-NUMBERS6-K14-M5",
+      "why": "Repeats X four times to make forty.",
+      "text": "XXXX"
+     },
+     {
+      "belief_id": "MAT-NUMBERS6-K8-M2",
+      "why": "Attempts to use comma-like grouping for symbols.",
+      "text": "X,X,X,X"
+     },
+     {
+      "belief_id": "MAT-NUMBERS6-K12-M3",
+      "why": "Uses more digits to represent a larger value.",
+      "text": "XXXXX"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 5.6
+}

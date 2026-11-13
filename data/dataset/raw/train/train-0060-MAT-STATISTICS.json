@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0060-MAT-STATISTICS",
+  "topic_id": "MAT-STATISTICS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a puzzle or game that uses the idea",
+  "seed": 60
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1057,
+  "candidatesTokenCount": 1294,
+  "totalTokenCount": 2351,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1057
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-STATISTICS-K24-M17",
+  "MAT-STATISTICS-K29-M23",
+  "MAT-STATISTICS-K28-M21",
+  "MAT-STATISTICS-K10-M6",
+  "MAT-STATISTICS-K25-M18",
+  "MAT-STATISTICS-K22-M15",
+  "MAT-STATISTICS-K19-M16",
+  "MAT-STATISTICS-K15-M9",
+  "MAT-STATISTICS-K30-M24",
+  "MAT-STATISTICS-K9-M5",
+  "MAT-STATISTICS-K21-M14",
+  "MAT-STATISTICS-K9-M4",
+  "MAT-STATISTICS-K6-M2",
+  "MAT-STATISTICS-K13-M8"
+ ],
+ "response": {
+  "passage": "In the village of Mathpur, the local council tracks the daily rainfall to help farmers. They collect data from the official government weather website, which is secondary data because the council did not measure it themselves. The rainfall is recorded in continuous intervals: 0-10mm, 10-20mm, and 20-30mm. If a day records exactly 20mm of rain, it is placed into the 20-30mm interval to ensure no overlap occurs. To find the representative value of the 10-20mm group, we calculate the class mark by finding the average of the limits, which is 15mm. When drawing a histogram for this data, the bars must touch each other because the data is continuous, unlike a bar graph which has gaps. The council also calculates the mean rainfall for the week. They multiply each class mark by its frequency, sum these products, and divide by the total number of observations. Finally, they identify the modal class by looking for the interval with the highest frequency, not just the largest class mark. This systematic approach ensures that the farmers get accurate information for their crops, even if the calculated mean is a decimal value that does not appear in the original daily records.",
+  "summary": "The passage explains how the Mathpur council processes rainfall data using continuous intervals and statistical methods. It highlights the importance of correct grouping, class marks, and histogram construction for accurate analysis.",
+  "items": [
+   {
+    "evidence": "They collect data from the official government weather website, which is secondary data because the council did not measure it themselves.",
+    "answer": "secondary data",
+    "stem": "How should the council classify the rainfall records they obtained from the government website?",
+    "options": [
+     {
+      "belief_id": "MAT-STATISTICS-K6-M2",
+      "why": "Mistakenly assumes official sources are always primary data.",
+      "text": "primary data"
+     },
+     {
+      "belief_id": "MAT-STATISTICS-K9-M5",
+      "why": "Confuses data source classification with interval continuity.",
+      "text": "continuous data"
+     },
+     {
+      "belief_id": "MAT-STATISTICS-K13-M8",
+      "why": "Confuses data source classification with graph types.",
+      "text": "bar graph data"
+     }
+    ]
+   },
+   {
+    "evidence": "If a day records exactly 20mm of rain, it is placed into the 20-30mm interval to ensure no overlap occurs.",
+    "answer": "20-30mm interval",
+    "stem": "Where should a rainfall reading of exactly 20mm be recorded to maintain consistent grouping?",
+    "options": [
+     {
+      "belief_id": "MAT-STATISTICS-K9-M4",
+      "why": "Believes the boundary value belongs to both intervals.",
+      "text": "both 10-20mm and 20-30mm"
+     },
+     {
+      "belief_id": "MAT-STATISTICS-K9-M5",
+      "why": "Believes boundary values can be ignored in continuous data.",
+      "text": "10-19mm interval"
+     },
+     {
+      "belief_id": "MAT-STATISTICS-K10-M6",
+      "why": "Confuses boundary placement with class mark calculation.",
+      "text": "10mm"
+     }
+    ]
+   },
+   {
+    "evidence": "To find the representative value of the 10-20mm group, we calculate the class mark by finding the average of the limits, which is 15mm.",
+    "answer": "15mm",
+    "stem": "What is the correct representative value for the 10-20mm rainfall interval?",
+    "options": [
+     {
+      "belief_id": "MAT-STATISTICS-K10-M6",
+      "why": "Believes the class mark is just the lower limit.",
+      "text": "10mm"
+     },
+     {
+      "belief_id": "MAT-STATISTICS-K21-M14",
+      "why": "Confuses class mark with the mean of all marks.",
+      "text": "10"
+     },
+     {
+      "belief_id": "MAT-STATISTICS-K22-M15",
+      "why": "Confuses class mark with grouped mean calculation.",
+      "text": "80mm"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, they identify the modal class by looking for the interval with the highest frequency, not just the largest class mark.",
+    "answer": "interval with the highest frequency",
+    "stem": "How is the modal class correctly determined for the rainfall data?",
+    "options": [
+     {
+      "belief_id": "MAT-STATISTICS-K29-M23",
+      "why": "Believes the modal class is the one with the highest mark.",
+      "text": "class with the largest class mark"
+     },
+     {
+      "belief_id": "MAT-STATISTICS-K28-M21",
+      "why": "Confuses the frequency value with the class interval.",
+      "text": "the highest frequency value"
+     },
+     {
+      "belief_id": "MAT-STATISTICS-K30-M24",
+      "why": "Assumes mode is interchangeable with other averages.",
+      "text": "the mean rainfall value"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 7.1
+}

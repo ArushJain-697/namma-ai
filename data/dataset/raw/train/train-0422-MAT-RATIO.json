@@ -1,0 +1,124 @@
+{
+ "job": {
+  "job": "train-0422-MAT-RATIO",
+  "topic_id": "MAT-RATIO",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a conversation between a teacher and two students",
+  "seed": 422
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 629,
+  "candidatesTokenCount": 1244,
+  "totalTokenCount": 1873,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 629
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-RATIO-K5-M1",
+  "MAT-RATIO-K11-M4",
+  "MAT-RATIO-K14-M3"
+ ],
+ "response": {
+  "passage": "In the classroom, Teacher Meera asked Rohan and Sita to solve a problem about buying notebooks. 'If 3 notebooks cost 45 rupees, how much would 5 notebooks cost?' she asked. Rohan quickly replied, 'I think we should just add 45 and 5 to get 50 rupees.' Teacher Meera shook her head and explained, 'No, Rohan, that is incorrect. We must first find the cost of one notebook.' She continued, 'If 3 notebooks cost 45, then 1 notebook costs 45 divided by 3, which is 15 rupees. Now, for 5 notebooks, we multiply 15 by 5 to get 75 rupees.' Sita then asked about ratios. 'Teacher, if we have a ratio of red to blue beads as 2:3, does that mean the red beads are two-thirds of the total?' Meera smiled and corrected her, 'Not quite, Sita. The total parts are 2 plus 3, which equals 5. So, the red beads are two-fifths of the total. Also, remember that the order matters; a ratio of 2:3 is definitely not the same as 3:2 because the first number refers to the first item mentioned.'",
+  "summary": "The teacher explains the unitary method to calculate costs by finding the unit value first. She also clarifies that ratios depend on the total number of parts and that the order of numbers in a ratio is significant.",
+  "items": [
+   {
+    "evidence": "If 3 notebooks cost 45, then 1 notebook costs 45 divided by 3, which is 15 rupees.",
+    "answer": "15 rupees",
+    "stem": "What is the cost of a single notebook if three notebooks cost 45 rupees?",
+    "options": [
+     {
+      "belief_id": "MAT-RATIO-K11-M4",
+      "why": "Student adds the total cost and quantity instead of dividing.",
+      "text": "48 rupees"
+     },
+     {
+      "belief_id": "MAT-RATIO-K5-M1",
+      "why": "Student confuses the order of division and multiplication.",
+      "text": "135 rupees"
+     },
+     {
+      "belief_id": "MAT-RATIO-K14-M3",
+      "why": "Student incorrectly applies a fractional part logic to cost.",
+      "text": "30 rupees"
+     }
+    ]
+   },
+   {
+    "evidence": "The total parts are 2 plus 3, which equals 5.",
+    "answer": "5",
+    "stem": "In a ratio of 2:3, what is the total number of parts?",
+    "options": [
+     {
+      "belief_id": "MAT-RATIO-K14-M3",
+      "why": "Student assumes the second part is the total denominator.",
+      "text": "3"
+     },
+     {
+      "belief_id": "MAT-RATIO-K5-M1",
+      "why": "Student flips the ratio parts to calculate the total.",
+      "text": "6"
+     },
+     {
+      "belief_id": "MAT-RATIO-K11-M4",
+      "why": "Student adds the ratio numbers to the cost value.",
+      "text": "50"
+     }
+    ]
+   },
+   {
+    "evidence": "So, the red beads are two-fifths of the total.",
+    "answer": "two-fifths",
+    "stem": "If the ratio of red to blue beads is 2:3, what fraction of the total are the red beads?",
+    "options": [
+     {
+      "belief_id": "MAT-RATIO-K14-M3",
+      "why": "Student uses the first part over the second part.",
+      "text": "two-thirds"
+     },
+     {
+      "belief_id": "MAT-RATIO-K5-M1",
+      "why": "Student reverses the ratio parts for the fraction.",
+      "text": "three-fifths"
+     },
+     {
+      "belief_id": "MAT-RATIO-K11-M4",
+      "why": "Student adds the ratio parts to the numerator.",
+      "text": "five-fifths"
+     }
+    ]
+   },
+   {
+    "evidence": "a ratio of 2:3 is definitely not the same as 3:2",
+    "answer": "not the same",
+    "stem": "How does a ratio of 2:3 compare to a ratio of 3:2?",
+    "options": [
+     {
+      "belief_id": "MAT-RATIO-K5-M1",
+      "why": "Student believes the order of ratio terms does not matter.",
+      "text": "the same"
+     },
+     {
+      "belief_id": "MAT-RATIO-K14-M3",
+      "why": "Student assumes the ratio represents a fixed fraction.",
+      "text": "equal to 2/3"
+     },
+     {
+      "belief_id": "MAT-RATIO-K11-M4",
+      "why": "Student tries to perform addition on the ratio terms.",
+      "text": "equal to 5"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 6.3
+}

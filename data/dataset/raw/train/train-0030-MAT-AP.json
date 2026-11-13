@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0030-MAT-AP",
+  "topic_id": "MAT-AP",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a clear textbook explanation with one worked example",
+  "seed": 30
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 1161,
+  "candidatesTokenCount": 1440,
+  "totalTokenCount": 2601,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1161
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-AP-K13-M8",
+  "MAT-AP-K10-M5",
+  "MAT-AP-K16-M14",
+  "MAT-AP-K23-M22",
+  "MAT-AP-K19-M15",
+  "MAT-AP-K19-M16",
+  "MAT-AP-K21-M19",
+  "MAT-AP-K9-M4",
+  "MAT-AP-K24-M21",
+  "MAT-AP-K12-M10",
+  "MAT-AP-K20-M18",
+  "MAT-AP-K7-M3",
+  "MAT-AP-K16-M13",
+  "MAT-AP-K20-M17"
+ ],
+ "response": {
+  "passage": "An Arithmetic Progression (AP) is a sequence of numbers where the difference between any two consecutive terms is constant. This constant value is called the common difference, denoted by 'd'. To find 'd', always subtract the preceding term from the succeeding term, such as a2 minus a1. The common difference can be positive, negative, or even zero. The nth term of an AP is calculated using the formula an = a + (n - 1)d, where 'a' is the first term and 'n' is the position of the term. It is crucial to follow the order of operations: multiply (n - 1) by 'd' first, then add the result to 'a'. For example, in an AP starting with 5, 8, 11, 14, the first term 'a' is 5 and the common difference 'd' is 3. To find the 10th term, we calculate 5 + (10 - 1) * 3, which equals 5 + 9 * 3, resulting in 32. Note that the sum of the first n terms is not simply n times the nth term; instead, we use the specific sum formula Sn = n/2[2a + (n - 1)d]. Always verify at least three terms to confirm a sequence is an AP, as checking only the first two is insufficient to identify the pattern.",
+  "summary": "An Arithmetic Progression is defined by a constant difference between consecutive terms. We use specific formulas to calculate the nth term and the sum of terms accurately. Always follow the correct order of operations and verify multiple terms to confirm the progression.",
+  "items": [
+   {
+    "evidence": "To find 'd', always subtract the preceding term from the succeeding term, such as a2 minus a1.",
+    "answer": "subtract the preceding term from the succeeding term",
+    "stem": "What is the correct method for calculating the common difference between two consecutive terms?",
+    "options": [
+     {
+      "belief_id": "MAT-AP-K9-M4",
+      "why": "Student subtracts the earlier term from the later one incorrectly.",
+      "text": "subtract the later term from the earlier one"
+     },
+     {
+      "belief_id": "MAT-AP-K16-M13",
+      "why": "Student incorrectly assumes division is used for common difference.",
+      "text": "divide the later term by the earlier one"
+     },
+     {
+      "belief_id": "MAT-AP-K10-M5",
+      "why": "Student believes the difference must always be positive.",
+      "text": "add the terms together to find the difference"
+     }
+    ]
+   },
+   {
+    "evidence": "It is crucial to follow the order of operations: multiply (n - 1) by 'd' first, then add the result to 'a'.",
+    "answer": "multiply (n - 1) by 'd' first",
+    "stem": "When calculating the nth term, which step must be performed before adding the first term 'a'?",
+    "options": [
+     {
+      "belief_id": "MAT-AP-K12-M10",
+      "why": "Student adds 'a' and 'n-1' before multiplying by 'd'.",
+      "text": "add 'a' and '(n-1)' together first"
+     },
+     {
+      "belief_id": "MAT-AP-K19-M15",
+      "why": "Student confuses the formula structure with squaring the term.",
+      "text": "square the first term 'a' before multiplying"
+     },
+     {
+      "belief_id": "MAT-AP-K13-M8",
+      "why": "Student assumes the nth term is just the value of n.",
+      "text": "set the value of the term equal to n"
+     }
+    ]
+   },
+   {
+    "evidence": "Note that the sum of the first n terms is not simply n times the nth term; instead, we use the specific sum formula Sn = n/2[2a + (n - 1)d].",
+    "answer": "use the specific sum formula",
+    "stem": "How should one correctly determine the total sum of the first n terms of an arithmetic progression?",
+    "options": [
+     {
+      "belief_id": "MAT-AP-K19-M16",
+      "why": "Student incorrectly multiplies the number of terms by the last term.",
+      "text": "multiply the number of terms by the nth term"
+     },
+     {
+      "belief_id": "MAT-AP-K24-M21",
+      "why": "Student confuses the sum formula with the nth term formula.",
+      "text": "apply the nth term formula to the total"
+     },
+     {
+      "belief_id": "MAT-AP-K21-M19",
+      "why": "Student uses an incorrect relationship between sums and terms.",
+      "text": "subtract the (n+1)th sum from the nth sum"
+     }
+    ]
+   },
+   {
+    "evidence": "Always verify at least three terms to confirm a sequence is an AP, as checking only the first two is insufficient to identify the pattern.",
+    "answer": "verify at least three terms",
+    "stem": "What is the minimum requirement to confirm that a given sequence of numbers is indeed an arithmetic progression?",
+    "options": [
+     {
+      "belief_id": "MAT-AP-K7-M3",
+      "why": "Student believes checking only the first two terms is enough.",
+      "text": "check only the first two terms"
+     },
+     {
+      "belief_id": "MAT-AP-K20-M18",
+      "why": "Student confuses the last term with the common difference.",
+      "text": "ensure the last term equals the common difference"
+     },
+     {
+      "belief_id": "MAT-AP-K20-M17",
+      "why": "Student incorrectly assumes the sum formula works with unknown variables.",
+      "text": "use the sum formula with only 'a' and 'd'"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.1
+}

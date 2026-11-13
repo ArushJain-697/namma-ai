@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0262-SCI-BIO-PLANTNUTRITION",
+  "topic_id": "SCI-BIO-PLANTNUTRITION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a diary entry or letter by a student",
+  "seed": 262
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 899,
+  "candidatesTokenCount": 1270,
+  "totalTokenCount": 2169,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 899
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "SCI-BIO-PLANTNUTRITION-K6-M2",
+  "SCI-BIO-PLANTNUTRITION-K7-M10",
+  "SCI-BIO-PLANTNUTRITION-K5-M1",
+  "SCI-BIO-PLANTNUTRITION-K11-M5",
+  "SCI-BIO-PLANTNUTRITION-K14-M11",
+  "SCI-BIO-PLANTNUTRITION-K7-M3",
+  "SCI-BIO-PLANTNUTRITION-K10-M4",
+  "SCI-BIO-PLANTNUTRITION-K9-M9",
+  "SCI-BIO-PLANTNUTRITION-K13-M7"
+ ],
+ "response": {
+  "passage": "Dear Diary, today I visited my uncle’s farm and learned so much about how plants survive. I saw a beautiful red-leafed plant, and my uncle explained that it still contains chlorophyll, just masked by other pigments, so it can still perform photosynthesis. We also looked at a Venus flytrap; he clarified that it makes its own food through photosynthesis but catches insects specifically to obtain nitrogen, which is often missing in its soil. I was surprised to see a Cuscuta vine wrapped around a hedge. My uncle warned me that it is a parasite, stealing vital nutrients from the host plant and harming it, rather than helping it. Finally, we discussed how legumes grow. He showed me small nodules on their roots containing Rhizobium bacteria. These helpful partners convert atmospheric nitrogen into a form the plant can use, which is essential because plants cannot absorb nitrogen gas directly from the air through their leaves. It is amazing how plants have such unique ways to thrive in different environments!",
+  "summary": "Plants use various strategies like photosynthesis, symbiotic relationships, and specialized hunting to survive. They rely on complex biological processes rather than just soil absorption to meet their nutritional needs.",
+  "items": [
+   {
+    "evidence": "I saw a beautiful red-leafed plant, and my uncle explained that it still contains chlorophyll, just masked by other pigments, so it can still perform photosynthesis.",
+    "answer": "it still contains chlorophyll",
+    "stem": "Why can a plant with red leaves still produce its own food?",
+    "options": [
+     {
+      "belief_id": "SCI-BIO-PLANTNUTRITION-K6-M2",
+      "why": "Student thinks non-green leaves lack the necessary chlorophyll.",
+      "text": "it does not have green color"
+     },
+     {
+      "belief_id": "SCI-BIO-PLANTNUTRITION-K5-M1",
+      "why": "Student assumes all nutrients come from soil absorption.",
+      "text": "it absorbs nutrients from soil"
+     },
+     {
+      "belief_id": "SCI-BIO-PLANTNUTRITION-K10-M4",
+      "why": "Student assumes plants need insects to make glucose.",
+      "text": "it catches insects for glucose"
+     }
+    ]
+   },
+   {
+    "evidence": "We also looked at a Venus flytrap; he clarified that it makes its own food through photosynthesis but catches insects specifically to obtain nitrogen, which is often missing in its soil.",
+    "answer": "to obtain nitrogen",
+    "stem": "What is the primary reason an insectivorous plant captures insects?",
+    "options": [
+     {
+      "belief_id": "SCI-BIO-PLANTNUTRITION-K10-M4",
+      "why": "Student believes the plant cannot perform photosynthesis.",
+      "text": "it cannot make its food"
+     },
+     {
+      "belief_id": "SCI-BIO-PLANTNUTRITION-K5-M1",
+      "why": "Student thinks all food comes from soil particles.",
+      "text": "to get soil nutrients"
+     },
+     {
+      "belief_id": "SCI-BIO-PLANTNUTRITION-K7-M3",
+      "why": "Student thinks plants only use carbon dioxide.",
+      "text": "to get carbon dioxide"
+     }
+    ]
+   },
+   {
+    "evidence": "My uncle warned me that it is a parasite, stealing vital nutrients from the host plant and harming it, rather than helping it.",
+    "answer": "stealing vital nutrients",
+    "stem": "How does a parasitic plant like Cuscuta interact with its host?",
+    "options": [
+     {
+      "belief_id": "SCI-BIO-PLANTNUTRITION-K9-M9",
+      "why": "Student believes the parasite shares food with the host.",
+      "text": "by sharing food together"
+     },
+     {
+      "belief_id": "SCI-BIO-PLANTNUTRITION-K14-M11",
+      "why": "Student confuses parasitic behavior with bacterial symbiosis.",
+      "text": "by infecting it like bacteria"
+     },
+     {
+      "belief_id": "SCI-BIO-PLANTNUTRITION-K11-M5",
+      "why": "Student thinks it acts like a fungus in soil.",
+      "text": "by growing in the ground"
+     }
+    ]
+   },
+   {
+    "evidence": "These helpful partners convert atmospheric nitrogen into a form the plant can use, which is essential because plants cannot absorb nitrogen gas directly from the air through their leaves.",
+    "answer": "cannot absorb nitrogen gas",
+    "stem": "Why do plants require Rhizobium bacteria to get nitrogen?",
+    "options": [
+     {
+      "belief_id": "SCI-BIO-PLANTNUTRITION-K13-M7",
+      "why": "Student believes leaves can take in nitrogen directly.",
+      "text": "they take it through stomata"
+     },
+     {
+      "belief_id": "SCI-BIO-PLANTNUTRITION-K14-M11",
+      "why": "Student thinks the bacteria are harmful pests.",
+      "text": "they are harmful to plants"
+     },
+     {
+      "belief_id": "SCI-BIO-PLANTNUTRITION-K5-M1",
+      "why": "Student assumes roots absorb everything from soil.",
+      "text": "roots absorb it from soil"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.1
+}

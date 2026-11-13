@@ -1,0 +1,471 @@
+{
+ "topic": {
+  "id": "SOC-GEO-VEGETATION",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   9
+  ],
+  "title": "Natural vegetation and wildlife",
+  "scope": "tropical evergreen and deciduous forests, thorn forests, mangroves, montane forests, wildlife reserves"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 828,
+  "candidatesTokenCount": 1561,
+  "totalTokenCount": 2389,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 828
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 5.2,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Factors affecting vegetation",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "climate basics",
+     "latitude and altitude"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Forest types",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "map reading"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Wildlife and conservation",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "ecosystem balance"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Role of rainfall",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "precipitation"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Role of temperature",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "temperature zones"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Tropical Evergreen forests",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Tropical Deciduous forests",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Thorn and Mangrove forests",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Montane forests",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "altitude"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Biodiversity and reserves",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "food chain"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Rainfall determines forest density",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Evergreen means never shedding leaves",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Deciduous trees die in dry season",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Mangroves only grow in salt water",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Temperature drops with altitude",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n12",
+    "statement": "Evergreen trees never shed their leaves at all.",
+    "why": "Students interpret 'evergreen' literally as 'always green' without leaf loss.",
+    "fix": "Evergreen trees do shed leaves, but they do it at different times of the year so the forest always appears green.",
+    "probe": {
+     "question": "Why do evergreen forests look green throughout the year?",
+     "wrong_answer": "Because the trees never lose their leaves."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "evergreen",
+     "shedding",
+     "leaves",
+     "year-round",
+     "forest"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "science education research on plant biology"
+   },
+   {
+    "key": "m2",
+    "node": "n13",
+    "statement": "Deciduous trees are dead during the dry season.",
+    "why": "Students associate leaf shedding with plant death.",
+    "fix": "Deciduous trees shed leaves to conserve water during dry periods and regrow them when moisture is available.",
+    "probe": {
+     "question": "What happens to deciduous trees in the dry season?",
+     "wrong_answer": "They die and wait for the next rain to grow back."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "deciduous",
+     "dry season",
+     "shed",
+     "water",
+     "conserve"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n11",
+    "statement": "All forests need the same amount of rain to grow.",
+    "why": "Students fail to differentiate between forest types based on climate requirements.",
+    "fix": "Different forest types have specific rainfall requirements; for example, evergreen forests need over 200cm, while thorn forests need less than 70cm.",
+    "probe": {
+     "question": "Do all forests require the same rainfall?",
+     "wrong_answer": "Yes, all forests need high rainfall to survive."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "one event has one single cause",
+    "causes": [],
+    "trigger_cues": [
+     "rainfall",
+     "growth",
+     "forest",
+     "density",
+     "climate"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n14",
+    "statement": "Mangroves are only found in the ocean.",
+    "why": "Students confuse coastal ecosystems with open ocean environments.",
+    "fix": "Mangroves grow in coastal areas, deltas, and estuaries where fresh water from rivers mixes with salt water.",
+    "probe": {
+     "question": "Where are mangrove forests typically found?",
+     "wrong_answer": "Deep in the middle of the ocean."
+    },
+    "error_type": "confuses_people_or_places",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "mangrove",
+     "coastal",
+     "delta",
+     "estuary",
+     "salt water"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "id": "m5",
+    "node": "n6",
+    "statement": "Tropical evergreen forests are found only in India's Western Ghats.",
+    "why": "Textbook examples of Western Ghats and Northeast India are remembered as the only places.",
+    "fix": "Tropical evergreen forests also grow in the Andaman and Nicobar Islands and the Northeastern states, wherever rainfall is above 200 cm.",
+    "probe": {
+     "question": "Name one region other than the Western Ghats where tropical evergreen forests are found.",
+     "wrong_answer": "There is none, they grow only in the Western Ghats."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Examples given in a textbook are the only places",
+    "causes": [],
+    "trigger_cues": [
+     "evergreen",
+     "western ghats",
+     "only",
+     "found",
+     "where",
+     "andaman"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom experience",
+    "key": "m5"
+   },
+   {
+    "id": "m6",
+    "node": "n6",
+    "statement": "Tropical evergreen forests have only a few kinds of trees, like a plantation.",
+    "why": "Students think dense forest means many trees of the same kind, as seen in plantations.",
+    "fix": "Tropical evergreen forests have very many species of trees, shrubs and creepers growing in several layers, so they are very dense and varied.",
+    "probe": {
+     "question": "Are evergreen forests made of one or two main tree species?",
+     "wrong_answer": "Yes, only one or two types of trees grow there."
+    },
+    "error_type": "stereotype",
+    "root_belief": "Dense forest means uniform trees",
+    "causes": [],
+    "trigger_cues": [
+     "evergreen",
+     "species",
+     "variety",
+     "dense",
+     "trees",
+     "layers"
+    ],
+    "confidence": "plausible",
+    "source_hint": "science education studies on biodiversity",
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n7",
+    "statement": "Deciduous trees shed their leaves because of cold winter, not because of dryness.",
+    "why": "Students link leaf fall with autumn in cold countries.",
+    "fix": "In monsoon (tropical deciduous) forests the trees shed leaves in the dry summer season to conserve water.",
+    "probe": {
+     "question": "Why do tropical deciduous trees shed their leaves?",
+     "wrong_answer": "Because it becomes too cold."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Leaf fall is always caused by cold",
+    "causes": [],
+    "trigger_cues": [
+     "deciduous",
+     "shed",
+     "leaves",
+     "why",
+     "cold",
+     "season"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies on students' ideas about plants and seasons",
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n8",
+    "statement": "Thorn forests grow in areas with heavy rainfall.",
+    "why": "Students think any forest needs a lot of rain, and confuse thorn forests with dense forests.",
+    "fix": "Tropical thorn forests grow in dry regions with less than 70 cm of rainfall, with thorny bushes and long roots.",
+    "probe": {
+     "question": "Is rainfall in thorn forest regions more than 200 cm?",
+     "wrong_answer": "Yes, they get very heavy rainfall."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "All forests need heavy rainfall",
+    "causes": [],
+    "trigger_cues": [
+     "thorn",
+     "forest",
+     "rainfall",
+     "dry",
+     "desert",
+     "cm"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom experience",
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n8",
+    "statement": "Mangrove forests are found only on the coast of West Bengal.",
+    "why": "The Sundarbans is the only mangrove example most students remember.",
+    "fix": "Mangroves grow in tidal areas of deltas and coasts, including the Sundarbans, Mahanadi, Godavari and Krishna deltas and Andaman and Nicobar Islands.",
+    "probe": {
+     "question": "Which Indian delta other than the Ganga-Brahmaputra has mangroves?",
+     "wrong_answer": "None, only West Bengal has mangroves."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "One famous example is the only example",
+    "causes": [],
+    "trigger_cues": [
+     "mangrove",
+     "sundarbans",
+     "west bengal",
+     "delta",
+     "coast",
+     "where"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom experience",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n9",
+    "statement": "Mountain forests have the same kind of trees at all heights.",
+    "why": "Students picture a mountain as one forest from bottom to top.",
+    "fix": "In montane forests the vegetation changes with height, from tropical to temperate forests, then coniferous, alpine meadows and tundra near the top.",
+    "probe": {
+     "question": "What type of vegetation is found near the snowline of a mountain?",
+     "wrong_answer": "Same dense forest as at the foot of the mountain."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Vegetation is uniform across a region",
+    "causes": [],
+    "trigger_cues": [
+     "mountain",
+     "altitude",
+     "vegetation",
+     "height",
+     "coniferous",
+     "tundra"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "geography education research on altitudinal zonation",
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n15",
+    "statement": "Temperature rises as one goes higher up a mountain because it is closer to the sun.",
+    "why": "Students reason from distance to the sun rather than from thinner air and heat from the ground.",
+    "fix": "Temperature falls with height, about 6.5°C for every 1000 m, so higher places are cooler and have different vegetation.",
+    "probe": {
+     "question": "Will the top of a 3000 m mountain be warmer or colder than its base?",
+     "wrong_answer": "Warmer, because it is nearer to the sun."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Nearer the sun means warmer",
+    "causes": [],
+    "trigger_cues": [
+     "altitude",
+     "height",
+     "temperature",
+     "mountain",
+     "sun",
+     "closer"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on student ideas about seasons and temperature",
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n10",
+    "statement": "Biosphere reserves are the same as zoos, where animals are kept in cages.",
+    "why": "Students link wildlife protection with captive animals.",
+    "fix": "Biosphere reserves are large protected natural areas where plants, animals and local people live in natural habitats, and animals are not caged.",
+    "probe": {
+     "question": "How are animals kept in a biosphere reserve?",
+     "wrong_answer": "In cages and enclosures, like a zoo."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Conservation means keeping animals captive",
+    "causes": [],
+    "trigger_cues": [
+     "biosphere",
+     "reserve",
+     "zoo",
+     "animals",
+     "cages",
+     "protected"
+    ],
+    "confidence": "plausible",
+    "source_hint": "conservation education studies",
+    "key": "m12"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

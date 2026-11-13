@@ -1,0 +1,487 @@
+{
+ "topic": {
+  "id": "SCI-PHY-EYE10",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   10
+  ],
+  "title": "The human eye and the colourful world",
+  "scope": "accommodation, myopia and hypermetropia, prism dispersion, rainbow, atmospheric refraction, scattering, blue sky"
+ },
+ "model": "gemini-3-flash-preview",
+ "usage": {
+  "promptTokenCount": 842,
+  "candidatesTokenCount": 4161,
+  "totalTokenCount": 7733,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 842
+   }
+  ],
+  "thoughtsTokenCount": 2730,
+  "serviceTier": "standard"
+ },
+ "seconds": 32.0,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Human Eye and Vision Defects",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "refraction of light",
+     "spherical lenses"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Dispersion and Rainbows",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "refraction of light",
+     "speed of light in different media"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Atmospheric Optical Phenomena",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "refraction of light",
+     "composition of atmosphere"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Accommodation Mechanism",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "focal length of lenses"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Vision Defects and Correction",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "converging and diverging lenses"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Prism and Spectrum",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "laws of refraction"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Rainbow Formation",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Atmospheric Refraction",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "refractive index"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Scattering of Light",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "wavelength of light"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Ciliary Muscle Action",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Near and Far Points",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Myopia Correction",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Hypermetropia Correction",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Angle of Deviation",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Spectrum Recombination",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n16",
+    "name": "Internal Reflection in Drops",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n17",
+    "name": "Star Twinkling",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n18",
+    "name": "Advanced Sunrise",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n19",
+    "name": "Blue Sky Physics",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n20",
+    "name": "Red Sunset Physics",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [
+     "n19"
+    ],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n10",
+    "statement": "The eye lens moves forward and backward to focus on objects at different distances.",
+    "why": "Students overgeneralize from how mechanical camera lenses or magnifying glasses are used.",
+    "fix": "The eye lens is fixed in position; ciliary muscles change its curvature and focal length to focus.",
+    "probe": {
+     "question": "How does the eye focus on a nearby book after looking at a distant tree?",
+     "wrong_answer": "The lens moves closer to the retina."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "technology works the same as biology",
+    "causes": [],
+    "trigger_cues": [
+     "focus",
+     "ciliary",
+     "lens",
+     "distance"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas in Science"
+   },
+   {
+    "key": "m2",
+    "node": "n12",
+    "statement": "A person with myopia cannot see distant objects at all.",
+    "why": "Students use everyday language where 'cannot see' implies total blindness for those objects.",
+    "fix": "Myopic people can see distant objects, but the images are blurred because they form in front of the retina.",
+    "probe": {
+     "question": "What does a myopic person see when looking at a far-off mountain?",
+     "wrong_answer": "Nothing, it is completely invisible."
+    },
+    "error_type": "everyday_language",
+    "root_belief": "all or nothing thinking",
+    "causes": [],
+    "trigger_cues": [
+     "myopia",
+     "distant",
+     "blurred",
+     "vision"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n13",
+    "statement": "Hypermetropic eyes see distant objects perfectly without any muscular effort.",
+    "why": "The term 'far-sighted' suggests distant vision is normal or superior.",
+    "fix": "The eye must still accommodate to focus distant objects if the eyeball is too short, leading to eye strain.",
+    "probe": {
+     "question": "Does a hypermetropic eye need to adjust its lens to see a distant star?",
+     "wrong_answer": "No, it sees far things naturally without effort."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "hypermetropia",
+     "far-sighted",
+     "distant",
+     "effort"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n15",
+    "statement": "A glass prism adds colors to the white light passing through it.",
+    "why": "Students observe colors appearing where there were none, assuming the prism is the source.",
+    "fix": "White light already contains all colors; the prism only separates them by refracting different wavelengths at different angles.",
+    "probe": {
+     "question": "Where do the colors in a spectrum come from?",
+     "wrong_answer": "The glass material of the prism creates them."
+    },
+    "error_type": "single_cause",
+    "root_belief": "the instrument creates the effect",
+    "causes": [],
+    "trigger_cues": [
+     "prism",
+     "white light",
+     "spectrum",
+     "colors"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Mumbai research on optics"
+   },
+   {
+    "key": "m5",
+    "node": "n16",
+    "statement": "A rainbow is a physical object located at a specific spot in the sky.",
+    "why": "Its distinct shape and appearance make it look like a solid arch.",
+    "fix": "A rainbow is an optical phenomenon that depends on the observer's position relative to the sun and rain.",
+    "probe": {
+     "question": "If you walk toward a rainbow, can you eventually reach its base?",
+     "wrong_answer": "Yes, it is located where the rain is falling."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "what you see is a physical object",
+    "causes": [],
+    "trigger_cues": [
+     "rainbow",
+     "location",
+     "observer",
+     "sky"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m6",
+    "node": "n17",
+    "statement": "Stars twinkle because their actual brightness keeps changing.",
+    "why": "Students assume the observed change in the product (light) must be due to a change in the source.",
+    "fix": "Twinkling is caused by the continuous changing of the Earth's atmospheric density, which refracts star light randomly.",
+    "probe": {
+     "question": "Why do stars twinkle but planets usually do not?",
+     "wrong_answer": "Stars are burning gas that flickers like a flame."
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "change in effect implies change in source",
+    "causes": [],
+    "trigger_cues": [
+     "twinkle",
+     "stars",
+     "atmosphere",
+     "refraction"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT Physics Class 10"
+   },
+   {
+    "key": "m7",
+    "node": "n18",
+    "statement": "We see the sun at its actual physical position during sunrise.",
+    "why": "The brain assumes light travels in perfectly straight lines from the source to the eye.",
+    "fix": "Due to atmospheric refraction, the sun is visible about two minutes before it actually crosses the horizon.",
+    "probe": {
+     "question": "When you see the sun rise, where is it actually located?",
+     "wrong_answer": "Exactly at the horizon where I see it."
+    },
+    "error_type": "visible_only",
+    "root_belief": "light always travels in straight lines",
+    "causes": [],
+    "trigger_cues": [
+     "sunrise",
+     "horizon",
+     "apparent",
+     "position"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m8",
+    "node": "n19",
+    "statement": "The sky is blue because it reflects the color of the ocean.",
+    "why": "Students look for a large blue source to explain the blue sky, and oceans cover most of Earth.",
+    "fix": "The sky is blue because gas molecules in the atmosphere scatter shorter blue wavelengths more than longer red ones.",
+    "probe": {
+     "question": "Why is the sky blue even in the middle of a large desert?",
+     "wrong_answer": "It is reflecting the distant ocean or blue light from elsewhere."
+    },
+    "error_type": "single_cause",
+    "root_belief": "external appearance reflects a nearby source",
+    "causes": [],
+    "trigger_cues": [
+     "blue",
+     "sky",
+     "scattering",
+     "ocean"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Common student misconceptions in India"
+   },
+   {
+    "key": "m9",
+    "node": "n20",
+    "statement": "The sun turns red at sunset because it is cooling down as the day ends.",
+    "why": "Intuitive reasoning that red color is associated with lower heat or embers of a fire.",
+    "fix": "At sunset, light travels through more atmosphere; blue light is scattered away, leaving mostly red light to reach us.",
+    "probe": {
+     "question": "Why does the sun look white at noon but red at sunset?",
+     "wrong_answer": "The sun's temperature drops significantly in the evening."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "color change indicates internal state change",
+    "causes": [],
+    "trigger_cues": [
+     "sunset",
+     "red",
+     "scattering",
+     "atmosphere"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m10",
+    "node": "n12",
+    "statement": "Concave lenses are used to treat far-sightedness because they make things look bigger.",
+    "why": "Confusion between the names of lenses and the names of the defects they correct.",
+    "fix": "Concave lenses diverge light and are used for myopia (near-sightedness) to move the image back onto the retina.",
+    "probe": {
+     "question": "Which lens would you give to someone who cannot see distant objects clearly?",
+     "wrong_answer": "A convex lens."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "opposites are interchangeable",
+    "causes": [],
+    "trigger_cues": [
+     "concave",
+     "convex",
+     "myopia",
+     "correction"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n10",
+    "statement": "The eye lens becomes thinner and flatter to focus on nearby objects.",
+    "why": "Students confuse the relationship between lens thickness and focal length.",
+    "fix": "To see nearby objects, ciliary muscles contract, making the lens thicker and more curved to increase its converging power.",
+    "probe": {
+     "question": "What happens to the shape of the eye lens when you read a book closely?",
+     "wrong_answer": "It becomes thin and elongated."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "more effort means more stretching",
+    "causes": [],
+    "trigger_cues": [
+     "ciliary",
+     "thick",
+     "thin",
+     "curvature"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT textbook diagrams"
+   },
+   {
+    "key": "m12",
+    "node": "n19",
+    "statement": "Light is only scattered by large particles like dust and smoke.",
+    "why": "Tyndall effect is visible with dust, while molecular scattering is invisible to the naked eye.",
+    "fix": "Very fine molecules of air (nitrogen and oxygen) also scatter light, specifically shorter wavelengths like blue.",
+    "probe": {
+     "question": "Would a perfectly clean atmosphere without dust still have a blue sky?",
+     "wrong_answer": "No, because there would be no particles to hit the light."
+    },
+    "error_type": "visible_only",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "scattering",
+     "molecules",
+     "dust",
+     "tyndall"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   }
+  ]
+ },
+ "problems": []
+}

@@ -1,0 +1,133 @@
+{
+ "job": {
+  "job": "test-0092-GEN-INTEREST",
+  "topic_id": "GEN-INTEREST",
+  "split": "test",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a conversation between a teacher and two students",
+  "seed": 92
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 1057,
+  "candidatesTokenCount": 1322,
+  "totalTokenCount": 2379,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1057
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-INTEREST-K8-M2",
+  "GEN-INTEREST-K5-M3",
+  "GEN-INTEREST-K15-M8",
+  "GEN-INTEREST-K10-M4",
+  "GEN-INTEREST-K7-M1",
+  "GEN-INTEREST-K13-M6",
+  "GEN-INTEREST-K28-M12",
+  "GEN-INTEREST-K11-M5",
+  "GEN-INTEREST-K23-M11",
+  "GEN-INTEREST-K22-M10",
+  "GEN-INTEREST-K20-M9",
+  "GEN-INTEREST-K12-M7"
+ ],
+ "response": {
+  "passage": "In the classroom, Mr. Sharma explained how loans work. 'When you borrow money, you pay back the principal plus interest,' he said. Rohan asked, 'So, if I borrow 10,000 for one year at 10% interest, I just pay back 1,000?' Mr. Sharma shook his head. 'No, Rohan. That 1,000 is only the interest; you must return the original 10,000 too. The total repayment is 11,000.' Priya then asked about EMIs. 'My brother says an EMI is just the total loan divided by the months.' Mr. Sharma corrected her, 'Not quite. An EMI includes both principal and interest, so it is always higher than that simple division.' He then discussed compounding. 'If interest is compounded half-yearly, you must halve the annual rate and double the number of time periods.' Rohan looked confused, 'But doesn't the interest rate increase every year with compounding?' Mr. Sharma smiled, 'No, the rate stays constant; it is the principal that grows as interest is added to it. Also, remember that for a six-month period, you must use T = 0.5 years in your calculations, not 6.' Finally, he warned, 'Always check for hidden fees, as a lower interest rate does not always mean the cheapest loan.'",
+  "summary": "Mr. Sharma explains that loan repayments include both principal and interest, while clarifying that EMIs are more than simple divisions. He also corrects common errors regarding compounding periods, time units, and total loan costs.",
+  "items": [
+   {
+    "evidence": "No, Rohan. That 1,000 is only the interest; you must return the original 10,000 too.",
+    "answer": "11,000",
+    "stem": "What is the total amount Rohan must pay back after one year?",
+    "options": [
+     {
+      "belief_id": "GEN-INTEREST-K8-M2",
+      "why": "Student confuses interest with the total repayment amount.",
+      "text": "1,000"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K10-M4",
+      "why": "Student incorrectly assumes compound interest applies even in the first year.",
+      "text": "1,100"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K12-M7",
+      "why": "Student applies monthly rate logic to an annual calculation.",
+      "text": "12,000"
+     }
+    ]
+   },
+   {
+    "evidence": "An EMI includes both principal and interest, so it is always higher than that simple division.",
+    "answer": "higher than that simple division",
+    "stem": "How does the actual EMI compare to the loan amount divided by the number of months?",
+    "options": [
+     {
+      "belief_id": "GEN-INTEREST-K15-M8",
+      "why": "Student believes EMI is just a simple division of principal.",
+      "text": "equal to that simple division"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K20-M9",
+      "why": "Student assumes longer tenure always results in lower total costs.",
+      "text": "lower than that simple division"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K22-M10",
+      "why": "Student thinks flat rates and reducing balances are identical.",
+      "text": "the same as that simple division"
+     }
+    ]
+   },
+   {
+    "evidence": "If interest is compounded half-yearly, you must halve the annual rate and double the number of time periods.",
+    "answer": "halve the annual rate and double",
+    "stem": "What adjustment is required when interest is compounded half-yearly?",
+    "options": [
+     {
+      "belief_id": "GEN-INTEREST-K11-M5",
+      "why": "Student forgets to double the number of periods.",
+      "text": "halve the rate but keep time"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K5-M3",
+      "why": "Student believes the interest rate itself increases over time.",
+      "text": "increase the rate every year"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K7-M1",
+      "why": "Student ignores the impact of time on interest calculations.",
+      "text": "ignore time and keep rate"
+     }
+    ]
+   },
+   {
+    "evidence": "Also, remember that for a six-month period, you must use T = 0.5 years in your calculations, not 6.",
+    "answer": "0.5 years",
+    "stem": "What value should be used for T in the interest formula for a six-month duration?",
+    "options": [
+     {
+      "belief_id": "GEN-INTEREST-K13-M6",
+      "why": "Student uses months instead of years in the formula.",
+      "text": "6"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K23-M11",
+      "why": "Student assumes low rates imply no other calculation factors.",
+      "text": "0.06"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K28-M12",
+      "why": "Student confuses interest-free periods with calculation time units.",
+      "text": "0"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 16.5
+}

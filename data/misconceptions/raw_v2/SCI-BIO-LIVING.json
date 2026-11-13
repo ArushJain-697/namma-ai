@@ -1,0 +1,481 @@
+{
+ "topic": {
+  "id": "SCI-BIO-LIVING",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   6
+  ],
+  "title": "Living organisms and their surroundings",
+  "scope": "characteristics of living things, habitat, adaptation, biotic and abiotic components"
+ },
+ "model": "gemini-3-flash-preview/key2",
+ "usage": {
+  "promptTokenCount": 830,
+  "candidatesTokenCount": 4155,
+  "totalTokenCount": 7600,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 830
+   }
+  ],
+  "thoughtsTokenCount": 2615,
+  "serviceTier": "standard"
+ },
+ "seconds": 26.5,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Characteristics of Living Organisms",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2",
+    "name": "Habitat and Components",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3",
+    "name": "Adaptation and Survival",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1",
+     "n2"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n4",
+    "name": "Growth and Movement",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Metabolic Processes",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "Response and Reproduction",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Biotic and Abiotic Factors",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Types of Habitats",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Mechanisms of Adaptation",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Movement as a life process",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Growth in living things",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Respiration vs Breathing",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Excretion in plants and animals",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Response to stimuli",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Seeds as living things",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n16",
+    "name": "Soil and Air as abiotic factors",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n17",
+    "name": "Desert adaptations",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n16"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n18",
+    "name": "Aquatic adaptations",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n16"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n19",
+    "name": "Adaptation takes long periods",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n20",
+    "name": "Acclimatisation vs Adaptation",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [
+     "n19"
+    ],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n10",
+    "statement": "If an object does not move from one place to another, it is not alive.",
+    "why": "Students observe animals moving but see plants as stationary objects.",
+    "fix": "Plants are living things that do not move from place to place, but they show internal movements like water transport and opening of flowers.",
+    "probe": {
+     "question": "Is a mango tree alive even though it stays in the same spot for years?",
+     "wrong_answer": "No, because it cannot walk or run like animals."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "visible movement is the only sign of life",
+    "causes": [],
+    "trigger_cues": [
+     "move",
+     "walk",
+     "stationary",
+     "plant",
+     "alive"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic studies on living/non-living"
+   },
+   {
+    "key": "m2",
+    "node": "n11",
+    "statement": "Clouds are living things because they grow in size.",
+    "why": "Students associate any increase in size with the biological process of growth.",
+    "fix": "Living things grow from within using food, whereas clouds increase in size by accumulating water vapor from the outside.",
+    "probe": {
+     "question": "Why is a growing cloud not considered a living organism?",
+     "wrong_answer": "Because it doesn't have a mouth, but it is still growing like a baby."
+    },
+    "error_type": "visible_only",
+    "root_belief": "outward appearance defines internal nature",
+    "causes": [],
+    "trigger_cues": [
+     "cloud",
+     "grow",
+     "size",
+     "increase",
+     "living"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m3",
+    "node": "n12",
+    "statement": "Plants only respire at night when they are not photosynthesizing.",
+    "why": "Students confuse the gas exchange of photosynthesis with the continuous process of respiration.",
+    "fix": "Respiration is a continuous process that happens in all living cells, including plants, both day and night.",
+    "probe": {
+     "question": "When do plants take in oxygen for energy?",
+     "wrong_answer": "Only at night, because during the day they only do photosynthesis."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "biological processes are synonymous with everyday actions",
+    "causes": [],
+    "trigger_cues": [
+     "respire",
+     "night",
+     "oxygen",
+     "day",
+     "photosynthesis"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas in Science"
+   },
+   {
+    "key": "m4",
+    "node": "n14",
+    "statement": "Plants do not respond to stimuli because they don't have senses.",
+    "why": "Plant responses are often slow or subtle compared to the quick reactions of animals.",
+    "fix": "Plants respond to stimuli like light, gravity, and touch, such as a sunflower turning towards the sun.",
+    "probe": {
+     "question": "What happens when you place a potted plant near a window with sunlight?",
+     "wrong_answer": "It just sits there; it doesn't know where the sun is."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "plants are passive objects",
+    "causes": [],
+    "trigger_cues": [
+     "stimuli",
+     "light",
+     "touch",
+     "respond",
+     "sunflower"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m5",
+    "node": "n15",
+    "statement": "Dry seeds are non-living objects until they are planted in soil.",
+    "why": "Seeds in a packet show no visible signs of life like growth or movement.",
+    "fix": "Seeds are living things in a dormant state; they carry out life processes very slowly until they find the right conditions to germinate.",
+    "probe": {
+     "question": "Is a moong seed in a jar alive or dead?",
+     "wrong_answer": "It is non-living because it is dry and not growing."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "dormancy is the same as death",
+    "causes": [],
+    "trigger_cues": [
+     "seed",
+     "dry",
+     "dormant",
+     "germinate",
+     "living"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Concept Inventory"
+   },
+   {
+    "key": "m6",
+    "node": "n16",
+    "statement": "Abiotic factors like soil and air are just surroundings and not part of the habitat.",
+    "why": "Students often focus only on the living residents when defining a 'home'.",
+    "fix": "A habitat includes both biotic (living) and abiotic (non-living) components that interact to support life.",
+    "probe": {
+     "question": "What makes up a pond habitat?",
+     "wrong_answer": "Just the fish, frogs, and plants living in the water."
+    },
+    "error_type": "part_whole",
+    "root_belief": "environment is just a background",
+    "causes": [],
+    "trigger_cues": [
+     "abiotic",
+     "soil",
+     "air",
+     "habitat",
+     "components"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n17",
+    "statement": "Camels store liquid water in their humps to survive in the desert.",
+    "why": "The hump is a prominent storage-like structure and camels go long periods without drinking.",
+    "fix": "The hump stores fat, which serves as a food reserve; camels conserve water by producing concentrated urine and not sweating.",
+    "probe": {
+     "question": "What is inside a camel's hump?",
+     "wrong_answer": "A large sac of water for the camel to drink later."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "structures have one obvious purpose",
+    "causes": [],
+    "trigger_cues": [
+     "camel",
+     "hump",
+     "water",
+     "desert",
+     "storage"
+    ],
+    "confidence": "plausible",
+    "source_hint": "Common Indian classroom observation"
+   },
+   {
+    "key": "m8",
+    "node": "n20",
+    "statement": "If you move a desert plant to a mountain, it will grow thick fur to adapt immediately.",
+    "why": "Students confuse adaptation (evolutionary) with the idea of an organism 'trying' to change.",
+    "fix": "Adaptations are inherited features developed over thousands of years; an individual cannot change its physical structure to adapt to a new environment instantly.",
+    "probe": {
+     "question": "Can a single cactus change its shape to survive in a cold forest if moved today?",
+     "wrong_answer": "Yes, it will change its leaves to stay warm."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "evolutionary change happens within a lifetime",
+    "causes": [],
+    "trigger_cues": [
+     "adapt",
+     "change",
+     "mountain",
+     "cactus",
+     "survive"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m9",
+    "node": "n13",
+    "statement": "Plants do not excrete waste because they don't have a digestive system.",
+    "why": "Students associate excretion only with animal-like waste removal.",
+    "fix": "Plants excrete waste products through secretions, dropping old leaves, or storing wastes in vacuoles.",
+    "probe": {
+     "question": "How do plants get rid of unwanted materials?",
+     "wrong_answer": "They don't; they use everything they take in."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "humans/animals are the prototype for all life",
+    "causes": [],
+    "trigger_cues": [
+     "excrete",
+     "waste",
+     "leaves",
+     "secretion",
+     "plant"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m10",
+    "node": "n7",
+    "statement": "A piece of wood is an abiotic component because it is not moving or growing.",
+    "why": "Students categorize anything that isn't currently alive as abiotic.",
+    "fix": "Biotic components include living things and things that were once part of a living organism, like fallen leaves or wood.",
+    "probe": {
+     "question": "Is a fallen branch in a forest biotic or abiotic?",
+     "wrong_answer": "Abiotic, because it is dead and like a rock."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "origin determines current category",
+    "causes": [],
+    "trigger_cues": [
+     "biotic",
+     "abiotic",
+     "wood",
+     "dead",
+     "component"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Exemplar context"
+   },
+   {
+    "key": "m11",
+    "node": "n18",
+    "statement": "Fish breathe by swallowing water and turning it into air in their stomachs.",
+    "why": "Students see fish opening and closing their mouths constantly.",
+    "fix": "Fish use gills to absorb oxygen dissolved in water; the water passes over the gills and out through slits.",
+    "probe": {
+     "question": "Why do fish constantly open their mouths?",
+     "wrong_answer": "To drink water so they can get air from it in their bellies."
+    },
+    "error_type": "visible_only",
+    "root_belief": "visible actions imply simple functions",
+    "causes": [],
+    "trigger_cues": [
+     "fish",
+     "breathe",
+     "gills",
+     "water",
+     "mouth"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Driver's Children's Ideas"
+   },
+   {
+    "key": "m12",
+    "node": "n17",
+    "statement": "Cactus spines are only for protection against animals.",
+    "why": "Spines look like needles, and needles are for protection.",
+    "fix": "Cactus spines are actually modified leaves that reduce water loss by transpiration and also provide shade.",
+    "probe": {
+     "question": "Why does a cactus have spines instead of broad leaves?",
+     "wrong_answer": "Only to prick animals that try to eat them."
+    },
+    "error_type": "single_cause",
+    "root_belief": "structures have one obvious purpose",
+    "causes": [],
+    "trigger_cues": [
+     "cactus",
+     "spines",
+     "leaves",
+     "protection",
+     "transpiration"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}

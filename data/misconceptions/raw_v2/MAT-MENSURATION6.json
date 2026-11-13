@@ -1,0 +1,473 @@
+{
+ "topic": {
+  "id": "MAT-MENSURATION6",
+  "subject": "maths",
+  "strand": "maths",
+  "grades": [
+   6,
+   7
+  ],
+  "title": "Perimeter and area",
+  "scope": "perimeter of shapes, area of rectangle and square, area of triangle and parallelogram, circumference and area of circle, units"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 849,
+  "candidatesTokenCount": 1598,
+  "totalTokenCount": 2447,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 849
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 5.3,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Perimeter",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "addition of whole numbers",
+     "concept of length"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Area of Rectilinear Shapes",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "multiplication of whole numbers",
+     "grid counting"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Area of Polygons",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "multiplication of fractions",
+     "properties of triangles"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Circles",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "decimal multiplication",
+     "pi approximation"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Perimeter Definition",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "closed figures"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Perimeter of Polygons",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "addition"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Area of Rectangle/Square",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "multiplication"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Area of Triangle/Parallelogram",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": [
+     "division"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Circumference",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "multiplication"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Circle Area",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [
+     "n9"
+    ],
+    "external_prereqs": [
+     "squaring numbers"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Units of Measurement",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "conversion of units"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Summing boundary lengths",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Length x Width formula",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Base and Height relationship",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Square units conversion",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [],
+    "external_prereqs": [
+     "conversion factors"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n5",
+    "statement": "Perimeter is the space inside a shape.",
+    "why": "Students confuse the boundary with the region enclosed by it.",
+    "fix": "Perimeter is the total length of the boundary of a closed figure.",
+    "probe": {
+     "question": "What is the perimeter of a square field?",
+     "wrong_answer": "The area of the field."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "A word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "boundary",
+     "distance around",
+     "edge",
+     "length"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on geometric concepts"
+   },
+   {
+    "key": "m2",
+    "node": "n7",
+    "statement": "If two shapes have the same perimeter, they must have the same area.",
+    "why": "Students overgeneralize that perimeter and area are directly proportional.",
+    "fix": "Shapes with the same perimeter can have different areas depending on their dimensions.",
+    "probe": {
+     "question": "Do a 4x4 square and a 2x6 rectangle have the same area?",
+     "wrong_answer": "Yes, because their perimeters are equal."
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "Bigger or more means more effect",
+    "causes": [],
+    "trigger_cues": [
+     "same perimeter",
+     "equal area",
+     "rectangle",
+     "square"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m3",
+    "node": "n15",
+    "statement": "1 square meter is equal to 100 square centimeters.",
+    "why": "Students apply linear conversion (1m = 100cm) to area without squaring the conversion factor.",
+    "fix": "Since 1m = 100cm, 1 sq m = 100cm * 100cm = 10,000 sq cm.",
+    "probe": {
+     "question": "How many square cm are in 1 square meter?",
+     "wrong_answer": "100"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "A rule from whole numbers works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "conversion",
+     "square meters",
+     "square centimeters",
+     "units"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m4",
+    "node": "n14",
+    "statement": "The height of a triangle is always one of its sides.",
+    "why": "Students rely on visual prototypes where the height is often a vertical side.",
+    "fix": "Height is the perpendicular distance from the base to the opposite vertex, which may not be a side.",
+    "probe": {
+     "question": "In an obtuse triangle, is the height one of the sides?",
+     "wrong_answer": "Yes"
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "What you see is the only possibility",
+    "causes": [],
+    "trigger_cues": [
+     "height",
+     "base",
+     "triangle",
+     "perpendicular"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's children's ideas"
+   },
+   {
+    "key": "m5",
+    "node": "n7",
+    "statement": "The area of a rectangle is found by adding its length and width.",
+    "why": "Students mix up the perimeter idea of adding sides with the area idea of covering a surface, and addition feels natural for combining two measures.",
+    "fix": "Area counts the unit squares covering the rectangle, so it is length × width. For 5 cm by 3 cm, 3 rows of 5 squares give 15 sq cm.",
+    "probe": {
+     "question": "What is the area of a rectangle 8 cm long and 5 cm wide?",
+     "wrong_answer": "13 sq cm"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Area is found by adding the given measurements",
+    "causes": [],
+    "trigger_cues": [
+     "area",
+     "rectangle",
+     "length",
+     "width",
+     "add",
+     "find the area"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on area and perimeter confusion in school students"
+   },
+   {
+    "key": "m6",
+    "node": "n6",
+    "statement": "To find the perimeter of a rectangle, add only the length and the width.",
+    "why": "Students remember 'length and width' as the two given numbers and stop after adding them once, forgetting that each side appears twice.",
+    "fix": "Perimeter is the total length of all four sides: l + w + l + w = 2 × (l + w).",
+    "probe": {
+     "question": "A rectangle is 9 cm long and 4 cm wide. What is its perimeter?",
+     "wrong_answer": "13 cm"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "Only the given measurements are added, not every side",
+    "causes": [],
+    "trigger_cues": [
+     "perimeter",
+     "rectangle",
+     "length",
+     "width",
+     "boundary",
+     "total"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom error analysis"
+   },
+   {
+    "key": "m7",
+    "node": "n8",
+    "statement": "The area of a triangle is base × height, with no need to halve it.",
+    "why": "Students carry over the rectangle and parallelogram formula and forget that a triangle is half of a parallelogram.",
+    "fix": "Two identical triangles make a parallelogram of area base × height, so one triangle has area ½ × base × height.",
+    "probe": {
+     "question": "Find the area of a triangle with base 6 cm and height 4 cm.",
+     "wrong_answer": "24 sq cm"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "All area formulas are simply two dimensions multiplied",
+    "causes": [],
+    "trigger_cues": [
+     "area",
+     "triangle",
+     "base",
+     "height",
+     "formula",
+     "multiply"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "mathematics education research on area formulas"
+   },
+   {
+    "key": "m8",
+    "node": "n8",
+    "statement": "The area of a parallelogram is the product of its two adjacent sides.",
+    "why": "Students see a slanted parallelogram as a rectangle and multiply the side lengths they can see, such as the slanting side.",
+    "fix": "Area of a parallelogram is base × perpendicular height. The slanting side is longer than the height, so side × side is too big.",
+    "probe": {
+     "question": "A parallelogram has base 10 cm, slant side 6 cm and perpendicular height 5 cm. What is its area?",
+     "wrong_answer": "60 sq cm"
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "Area uses the sides visible, not the perpendicular height",
+    "causes": [],
+    "trigger_cues": [
+     "parallelogram",
+     "slant side",
+     "height",
+     "area",
+     "base",
+     "multiply sides"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on parallelogram area and height"
+   },
+   {
+    "key": "m9",
+    "node": "n9",
+    "statement": "The circumference of a circle is 2 × π × diameter.",
+    "why": "Students remember the 2 and π from 2πr and apply them to whatever length they are given, without checking whether it is radius or diameter.",
+    "fix": "Circumference = π × diameter = 2 × π × radius. Always check whether the given length is the radius or the diameter.",
+    "probe": {
+     "question": "A circle has diameter 14 cm. Find its circumference (π = 22/7).",
+     "wrong_answer": "88 cm"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "Memorised formulas apply to any given length",
+    "causes": [],
+    "trigger_cues": [
+     "circumference",
+     "diameter",
+     "radius",
+     "2πr",
+     "circle",
+     "formula"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom error analysis"
+   },
+   {
+    "key": "m10",
+    "node": "n10",
+    "statement": "The area of a circle is π × r × 2.",
+    "why": "Students read r² as 'r times 2', confusing the exponent with multiplication, and mix the area formula with the circumference formula.",
+    "fix": "Area of a circle = π × r × r (r squared). For r = 7 cm, area = 22/7 × 7 × 7 = 154 sq cm.",
+    "probe": {
+     "question": "Find the area of a circle of radius 7 cm (π = 22/7).",
+     "wrong_answer": "44 sq cm"
+    },
+    "error_type": "notation_misread",
+    "root_belief": "A squared number means multiplying it by two",
+    "causes": [],
+    "trigger_cues": [
+     "circle",
+     "area",
+     "radius squared",
+     "r squared",
+     "pi r",
+     "formula"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on squaring errors and circle formulas"
+   },
+   {
+    "key": "m11",
+    "node": "n15",
+    "statement": "The area of a shape given in metres can be changed to square centimetres by multiplying by 100.",
+    "why": "Students use the length conversion 1 m = 100 cm without noticing that area involves two dimensions, each converted.",
+    "fix": "1 m = 100 cm, so 1 sq m = 100 × 100 = 10,000 sq cm. Multiply by 10,000 to change sq m into sq cm.",
+    "probe": {
+     "question": "Express an area of 3 sq m in square centimetres.",
+     "wrong_answer": "300 sq cm"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "Area units convert like length units",
+    "causes": [],
+    "trigger_cues": [
+     "convert",
+     "sq m to sq cm",
+     "area units",
+     "metre",
+     "centimetre",
+     "square units"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on measurement unit conversion errors"
+   },
+   {
+    "key": "m12",
+    "node": "n14",
+    "statement": "The height of a parallelogram is the length of its slanting side.",
+    "why": "Students think of height as 'how tall the figure looks' or as a side they can already read from the figure, and slanted sides seem to point upward.",
+    "fix": "Height is the perpendicular distance from the base to the opposite side, drawn at a right angle to the base. It is shorter than the slant side.",
+    "probe": {
+     "question": "A parallelogram has base 12 cm, slant side 5 cm and perpendicular height 4 cm. Which length do you use as height in the area formula?",
+     "wrong_answer": "5 cm"
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "Height is a visible side, not a perpendicular distance",
+    "causes": [],
+    "trigger_cues": [
+     "height",
+     "parallelogram",
+     "slant side",
+     "perpendicular",
+     "base",
+     "altitude"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on height and base in area of parallelograms"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

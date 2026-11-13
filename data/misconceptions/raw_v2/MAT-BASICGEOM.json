@@ -1,0 +1,471 @@
+{
+ "topic": {
+  "id": "MAT-BASICGEOM",
+  "subject": "maths",
+  "strand": "maths",
+  "grades": [
+   6
+  ],
+  "title": "Basic geometrical ideas",
+  "scope": "point, line, line segment, ray, curves, polygons, angles, triangles, circles"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 840,
+  "candidatesTokenCount": 1617,
+  "totalTokenCount": 2457,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 840
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 5.0,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Fundamental Elements",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "spatial awareness"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Polygons and Curves",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "closed shapes"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Angles and Circles",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "measurement"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Points and Lines",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "physical objects"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Line Segments and Rays",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "Polygons",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "sides and vertices"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Curves",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Angles",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "rotation"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Circles",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "distance"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Point has no dimension",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Line extends infinitely",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Ray has one endpoint",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Triangle is a 3-sided polygon",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Open vs Closed curves",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Angle is space between rays",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n16",
+    "name": "Circle parts: radius and diameter",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n11",
+    "statement": "A line is a physical object with a specific thickness.",
+    "why": "Students confuse the mathematical concept of a line with drawn lines in notebooks.",
+    "fix": "A mathematical line has length but no width or thickness; it is an abstract concept.",
+    "probe": {
+     "question": "If you zoom in on a line drawn with a pencil, does it get thicker?",
+     "wrong_answer": "Yes, because it is made of graphite."
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "line",
+     "infinite",
+     "pencil",
+     "drawing",
+     "thickness"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's children's ideas in science"
+   },
+   {
+    "key": "m2",
+    "node": "n12",
+    "statement": "A ray can be drawn in any direction, but it must start from the left.",
+    "why": "Students often see rays depicted starting from the left in textbooks.",
+    "fix": "A ray starts at a fixed point and extends infinitely in any direction.",
+    "probe": {
+     "question": "Is this a ray: an arrow pointing left starting from a dot?",
+     "wrong_answer": "No, rays must point to the right."
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "a rule from whole numbers works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "ray",
+     "endpoint",
+     "arrow",
+     "direction",
+     "start"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n15",
+    "statement": "The size of an angle depends on the length of the rays.",
+    "why": "Students confuse the length of the lines with the amount of rotation (opening).",
+    "fix": "An angle is the measure of rotation between two rays; length of rays does not change the angle.",
+    "probe": {
+     "question": "Which angle is larger: one with 2cm rays or one with 5cm rays, both open the same amount?",
+     "wrong_answer": "The one with 5cm rays."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "bigger or more means more effect",
+    "causes": [],
+    "trigger_cues": [
+     "angle",
+     "rays",
+     "size",
+     "opening",
+     "measure"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Mumbai research"
+   },
+   {
+    "key": "m4",
+    "node": "n16",
+    "statement": "The radius is the same as the diameter.",
+    "why": "Students often confuse the two terms because both relate to the circle's size.",
+    "fix": "The diameter is twice the length of the radius; the radius is the distance from the center to the edge.",
+    "probe": {
+     "question": "If the radius is 3cm, what is the diameter?",
+     "wrong_answer": "3cm"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "circle",
+     "radius",
+     "diameter",
+     "center",
+     "distance"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "id": "m5",
+    "node": "n4",
+    "statement": "A line segment and a line are the same thing, so a line has two endpoints.",
+    "why": "Students draw lines on paper with two ends and treat the drawn picture as the whole line.",
+    "fix": "A line extends endlessly in both directions and has no endpoints. A line segment is a part of a line with two fixed endpoints.",
+    "probe": {
+     "question": "How many endpoints does a line passing through points A and B have?",
+     "wrong_answer": "Two, A and B."
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "A drawn picture shows the whole object",
+    "causes": [],
+    "trigger_cues": [
+     "line",
+     "endpoints",
+     "points a and b",
+     "how many",
+     "passing through"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "mathematics education research on geometric prototypes",
+    "key": "m5"
+   },
+   {
+    "id": "m6",
+    "node": "n4",
+    "statement": "Only one line can pass through two given points, but many lines can pass through one point.",
+    "why": "The statement is half right, and students carry the true half too far by reading 'many' as 'some' or 'none' for a single point.",
+    "fix": "Infinitely many lines pass through one point. Exactly one line passes through two distinct points.",
+    "probe": {
+     "question": "How many lines can be drawn through a single point P?",
+     "wrong_answer": "Only one line."
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "One point fixes exactly one line",
+    "causes": [],
+    "trigger_cues": [
+     "how many lines",
+     "through a point",
+     "single point",
+     "pass through"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation",
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n5",
+    "statement": "A line segment AB is different from a segment BA.",
+    "why": "Students link order of letters with direction, as they do with reading and writing.",
+    "fix": "Segment AB and segment BA are the same segment with the same endpoints and the same length. Only rays depend on which point is the starting point.",
+    "probe": {
+     "question": "Are segment PQ and segment QP the same? Say yes or no.",
+     "wrong_answer": "No, they start from different points."
+    },
+    "error_type": "notation_misread",
+    "root_belief": "Order of letters always matters",
+    "causes": [],
+    "trigger_cues": [
+     "segment pq",
+     "segment qp",
+     "same or different",
+     "naming",
+     "order of letters"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher experience",
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n6",
+    "statement": "Any closed figure with straight sides is a polygon only if it looks like a regular shape, such as a regular pentagon or a regular hexagon.",
+    "why": "Students see only regular, symmetric shapes in textbooks and posters, so they reject irregular ones.",
+    "fix": "A polygon is any closed figure made only of line segments. Its sides can have different lengths and its angles can differ.",
+    "probe": {
+     "question": "A closed figure has 5 straight sides of different lengths. Is it a polygon?",
+     "wrong_answer": "No, because its sides are not equal."
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "Only regular, standard-looking shapes count as examples",
+    "causes": [],
+    "trigger_cues": [
+     "polygon",
+     "unequal sides",
+     "irregular",
+     "closed figure",
+     "straight sides"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "van Hiele-based research on shape prototypes",
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n13",
+    "statement": "A triangle must have its base at the bottom and its apex pointing up.",
+    "why": "Triangles in books are nearly always shown upright in one orientation.",
+    "fix": "A triangle is any closed figure with three sides and three angles, in any orientation.",
+    "probe": {
+     "question": "A triangle is turned upside down with its point facing down. Is it still a triangle?",
+     "wrong_answer": "No, it is not a triangle now."
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "Shapes must appear in the standard orientation",
+    "causes": [],
+    "trigger_cues": [
+     "triangle",
+     "upside down",
+     "rotated",
+     "orientation",
+     "still a triangle"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on prototype orientation in geometry",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n14",
+    "statement": "A closed curve must be a circle or an oval, so a figure with sharp corners cannot be a closed curve.",
+    "why": "The word 'curve' suggests a smooth, bent line, so students think straight parts rule a figure out.",
+    "fix": "A curve can have straight parts and corners. If it begins and ends at the same point without a gap, it is a closed curve, and a triangle or a square is one.",
+    "probe": {
+     "question": "Is a square a closed curve?",
+     "wrong_answer": "No, because it is not round or curved."
+    },
+    "error_type": "language_confusion",
+    "root_belief": "The word curve means smooth and bending",
+    "causes": [],
+    "trigger_cues": [
+     "closed curve",
+     "square",
+     "corners",
+     "curve",
+     "round"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT classroom practice",
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n14",
+    "statement": "A curve that crosses itself is not a curve, and a curve that is not closed has to be an open curve.",
+    "why": "Students split curves into 'neat' simple ones and 'tangled' ones, and they equate any curve not closed with a simple open one.",
+    "fix": "A curve may cross itself. It is open if its ends do not meet, and closed if it starts and ends at the same point, whether or not it crosses itself.",
+    "probe": {
+     "question": "A figure-8 curve starts and ends at the same point. Is it open or closed?",
+     "wrong_answer": "It is not a curve, because it crosses itself."
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "Proper curves must be simple and tidy",
+    "causes": [],
+    "trigger_cues": [
+     "curve",
+     "crosses itself",
+     "figure of 8",
+     "open or closed",
+     "same point"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher experience",
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n16",
+    "statement": "The diameter of a circle can be drawn from any point on the circle to any other point on it, so it need not pass through the centre.",
+    "why": "Students mix up chords with diameters because both join two points on the circle.",
+    "fix": "A diameter is a line segment through the centre with both endpoints on the circle. A segment joining two points that misses the centre is not a diameter and is shorter than the diameter.",
+    "probe": {
+     "question": "A segment joins two points on a circle but does not pass through the centre. Is it a diameter?",
+     "wrong_answer": "Yes, both its ends are on the circle."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Any segment joining two circle points is the diameter",
+    "causes": [],
+    "trigger_cues": [
+     "diameter",
+     "two points on circle",
+     "not through centre",
+     "chord",
+     "joins"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "misconception studies on circle terminology",
+    "key": "m12"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

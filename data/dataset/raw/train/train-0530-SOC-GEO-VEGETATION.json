@@ -1,0 +1,125 @@
+{
+ "job": {
+  "job": "train-0530-SOC-GEO-VEGETATION",
+  "topic_id": "SOC-GEO-VEGETATION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a short story with Indian characters in everyday life",
+  "seed": 530
+ },
+ "model": "gemini-3.1-flash-lite/key3",
+ "usage": {
+  "promptTokenCount": 664,
+  "candidatesTokenCount": 1296,
+  "totalTokenCount": 1960,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 664
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "SOC-GEO-VEGETATION-K13-M2",
+  "SOC-GEO-VEGETATION-K14-M4",
+  "SOC-GEO-VEGETATION-K12-M1",
+  "SOC-GEO-VEGETATION-K11-M3"
+ ],
+ "response": {
+  "passage": "Rohan and his grandfather sat under a large banyan tree in their village near the Sundarbans. Rohan asked why the trees in the nearby forest looked so different from the ones in the mountains. Grandfather explained that nature is diverse. He pointed to the lush green trees nearby, noting that Tropical Evergreen forests keep their leaves throughout the year, though they do shed a few old leaves at different times, so they never appear bare. He then pointed to the teak trees, explaining that Tropical Deciduous forests shed their leaves for about six to eight weeks in the dry season to conserve moisture, but they are very much alive and waiting for the monsoon. Rohan asked if the mangroves in the delta were growing in the deep ocean. Grandfather laughed, clarifying that mangroves thrive in the coastal areas where rivers meet the sea, specifically in tidal mudflats, not in the deep ocean. He added that while some forests like the evergreen ones require very heavy rainfall, other types like thorn forests survive in areas with less than 70 cm of rain. Every forest type has its own unique water needs and survival strategy, shaped by the climate of its specific region.",
+  "summary": "The passage explains that different forest types have unique adaptations to climate, such as shedding leaves or thriving in specific water conditions. It clarifies that evergreen trees are not permanently leafy, deciduous trees are not dead during dry spells, and mangroves are coastal, not deep-sea plants.",
+  "items": [
+   {
+    "evidence": "Tropical Evergreen forests keep their leaves throughout the year, though they do shed a few old leaves at different times, so they never appear bare.",
+    "answer": "shed a few old leaves",
+    "stem": "What actually happens to the leaves of Tropical Evergreen forests?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-VEGETATION-K12-M1",
+      "why": "Student believes they never lose any leaves at all.",
+      "text": "they never lose any leaves"
+     },
+     {
+      "belief_id": "SOC-GEO-VEGETATION-K13-M2",
+      "why": "Student confuses evergreen shedding with deciduous seasonal death.",
+      "text": "they die during dry seasons"
+     },
+     {
+      "belief_id": "SOC-GEO-VEGETATION-K11-M3",
+      "why": "Student assumes all forests behave identically regarding leaf cycles.",
+      "text": "they shed all leaves simultaneously"
+     }
+    ]
+   },
+   {
+    "evidence": "Tropical Deciduous forests shed their leaves for about six to eight weeks in the dry season to conserve moisture, but they are very much alive and waiting for the monsoon.",
+    "answer": "very much alive",
+    "stem": "What is the state of deciduous trees during the dry season?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-VEGETATION-K13-M2",
+      "why": "Student believes the trees are dead until rain returns.",
+      "text": "they are dead"
+     },
+     {
+      "belief_id": "SOC-GEO-VEGETATION-K12-M1",
+      "why": "Student assumes they must keep leaves to be alive.",
+      "text": "they are losing their evergreen nature"
+     },
+     {
+      "belief_id": "SOC-GEO-VEGETATION-K11-M3",
+      "why": "Student thinks they need constant rain to survive.",
+      "text": "they are dying from lack of rain"
+     }
+    ]
+   },
+   {
+    "evidence": "He pointed to the coastal areas where rivers meet the sea, specifically in tidal mudflats, not in the deep ocean.",
+    "answer": "coastal areas",
+    "stem": "Where are mangrove forests typically found?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-VEGETATION-K14-M4",
+      "why": "Student believes mangroves grow in deep ocean water.",
+      "text": "deep in the middle of the ocean"
+     },
+     {
+      "belief_id": "SOC-GEO-VEGETATION-K11-M3",
+      "why": "Student assumes all forests require the same environment.",
+      "text": "in high rainfall mountain regions"
+     },
+     {
+      "belief_id": "SOC-GEO-VEGETATION-K13-M2",
+      "why": "Student confuses mangrove habitat with deciduous dry zones.",
+      "text": "in dry, arid desert zones"
+     }
+    ]
+   },
+   {
+    "evidence": "Every forest type has its own unique water needs and survival strategy, shaped by the climate of its specific region.",
+    "answer": "unique water needs",
+    "stem": "Do all forest types require the same amount of rainfall to grow?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-VEGETATION-K11-M3",
+      "why": "Student assumes all forests need high rainfall.",
+      "text": "yes, they all need high rainfall"
+     },
+     {
+      "belief_id": "SOC-GEO-VEGETATION-K14-M4",
+      "why": "Student thinks only ocean-based forests need water.",
+      "text": "only those near the ocean"
+     },
+     {
+      "belief_id": "SOC-GEO-VEGETATION-K12-M1",
+      "why": "Student believes rainfall is irrelevant to forest type.",
+      "text": "no, rainfall does not affect them"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.6
+}

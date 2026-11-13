@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0214-MAT-AP",
+  "topic_id": "MAT-AP",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a step-by-step worked example",
+  "seed": 214
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1152,
+  "candidatesTokenCount": 1405,
+  "totalTokenCount": 2557,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1152
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-AP-K22-M20",
+  "MAT-AP-K15-M11",
+  "MAT-AP-K16-M13",
+  "MAT-AP-K24-M21",
+  "MAT-AP-K23-M23",
+  "MAT-AP-K20-M18",
+  "MAT-AP-K13-M8",
+  "MAT-AP-K19-M15",
+  "MAT-AP-K7-M3",
+  "MAT-AP-K8-M2",
+  "MAT-AP-K23-M22",
+  "MAT-AP-K9-M4",
+  "MAT-AP-K10-M5",
+  "MAT-AP-K7-M1"
+ ],
+ "response": {
+  "passage": "An Arithmetic Progression (AP) is a sequence where the difference between any two consecutive terms is constant. For example, in the sequence 5, 8, 11, 14, the common difference 'd' is found by subtracting the first term from the second, giving 8 - 5 = 3. A common mistake is to assume any increasing sequence is an AP, but 1, 4, 9, 16 is not an AP because the differences are not constant. To find the nth term, we use the formula a_n = a + (n - 1)d, where 'a' is the first term and 'n' is the position number. If you are asked to find which term equals a specific value, you must solve for 'n'. If your calculation results in a fraction like 20.4, it means that value does not exist in the sequence, as 'n' must always be a positive integer. Furthermore, the sum of the first n terms, denoted as S_n, is the total of all terms up to that position, which is entirely different from the value of the nth term itself. Always remember that 'd' can be positive, negative, or zero; it is simply the difference between any term and its preceding term.",
+  "summary": "This passage explains the definition of an Arithmetic Progression and how to correctly identify one. It also clarifies the distinction between the nth term and the sum of terms, while emphasizing that the position 'n' must be a whole number.",
+  "items": [
+   {
+    "evidence": "For example, in the sequence 5, 8, 11, 14, the common difference 'd' is found by subtracting the first term from the second, giving 8 - 5 = 3.",
+    "answer": "subtracting the first term from the second",
+    "stem": "How is the common difference 'd' correctly calculated in an arithmetic progression?",
+    "options": [
+     {
+      "belief_id": "MAT-AP-K9-M4",
+      "why": "Student subtracts the smaller term from the larger term incorrectly.",
+      "text": "subtracting the earlier term from the later"
+     },
+     {
+      "belief_id": "MAT-AP-K16-M13",
+      "why": "Student incorrectly uses division instead of subtraction for difference.",
+      "text": "dividing the second term by the first"
+     },
+     {
+      "belief_id": "MAT-AP-K7-M1",
+      "why": "Student confuses AP with sequences having a multiplicative rule.",
+      "text": "finding the ratio between consecutive terms"
+     }
+    ]
+   },
+   {
+    "evidence": "A common mistake is to assume any increasing sequence is an AP, but 1, 4, 9, 16 is not an AP because the differences are not constant.",
+    "answer": "the differences are not constant",
+    "stem": "Why is the sequence 1, 4, 9, 16 not considered an arithmetic progression?",
+    "options": [
+     {
+      "belief_id": "MAT-AP-K8-M2",
+      "why": "Student believes any sequence that increases is an AP.",
+      "text": "because the numbers keep increasing"
+     },
+     {
+      "belief_id": "MAT-AP-K7-M3",
+      "why": "Student thinks checking only the first two terms is sufficient.",
+      "text": "because the first two terms have a difference"
+     },
+     {
+      "belief_id": "MAT-AP-K10-M5",
+      "why": "Student assumes APs cannot have changing differences.",
+      "text": "because the common difference is negative"
+     }
+    ]
+   },
+   {
+    "evidence": "If your calculation results in a fraction like 20.4, it means that value does not exist in the sequence, as 'n' must always be a positive integer.",
+    "answer": "n must always be a positive integer",
+    "stem": "What does it imply if solving for the position 'n' results in a non-integer value?",
+    "options": [
+     {
+      "belief_id": "MAT-AP-K15-M11",
+      "why": "Student thinks they can round the result to the nearest term.",
+      "text": "the value is the 20th term"
+     },
+     {
+      "belief_id": "MAT-AP-K13-M8",
+      "why": "Student confuses the term value with the position index.",
+      "text": "the term value is 20.4"
+     },
+     {
+      "belief_id": "MAT-AP-K23-M22",
+      "why": "Student assumes the given number is always the position n.",
+      "text": "the sequence has 20.4 terms"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, the sum of the first n terms, denoted as S_n, is the total of all terms up to that position, which is entirely different from the value of the nth term itself.",
+    "answer": "entirely different from the nth term",
+    "stem": "How does the sum of the first n terms relate to the value of the nth term?",
+    "options": [
+     {
+      "belief_id": "MAT-AP-K22-M20",
+      "why": "Student assumes sum and nth term are the same.",
+      "text": "they are the same value"
+     },
+     {
+      "belief_id": "MAT-AP-K24-M21",
+      "why": "Student uses nth term formula for total sums.",
+      "text": "the sum is calculated using a_n"
+     },
+     {
+      "belief_id": "MAT-AP-K19-M15",
+      "why": "Student confuses the formula structure with exponentiation.",
+      "text": "the sum is the nth term squared"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 7.8
+}

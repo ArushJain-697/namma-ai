@@ -1,0 +1,439 @@
+{
+ "topic": {
+  "id": "SOC-HIS-INDUSTRIAL",
+  "subject": "social",
+  "strand": "history",
+  "grades": [
+   10
+  ],
+  "title": "The age of industrialisation",
+  "scope": "proto-industrialisation, factories, hand labour vs machines, Indian textiles, industrialists, advertising"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 831,
+  "candidatesTokenCount": 1460,
+  "totalTokenCount": 2291,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 831
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 34.7,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Proto-industrialisation",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "feudalism",
+     "rural-urban divide"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Industrialisation and Factories",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "steam engine invention"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Hand Labour vs Machines",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "economic cost-benefit"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Indian Textiles and Industrialists",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "colonial trade"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "The Merchant System",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "The Putting-out System",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Factory System Rise",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Steam Power Impact",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Preference for Hand Labour",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Seasonal Nature of Demand",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Decline of Indian Textiles",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Role of Indian Entrepreneurs",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n6",
+    "statement": "Proto-industrialisation was just a small-scale version of the factory system.",
+    "why": "Students assume industrialisation is a linear progression of technology rather than a shift in production organization.",
+    "fix": "Proto-industrialisation was a decentralized network where merchants provided raw materials to rural artisans working from home, not in factories.",
+    "probe": {
+     "question": "Where did the production take place in the proto-industrial system?",
+     "wrong_answer": "In small urban factories."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "History is a linear progression of technology.",
+    "causes": [],
+    "trigger_cues": [
+     "merchants",
+     "rural",
+     "artisans",
+     "putting-out",
+     "production"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n8",
+    "statement": "The steam engine immediately replaced all human labour in factories.",
+    "why": "Students conflate the invention of a machine with its immediate, universal adoption.",
+    "fix": "Steam engines were expensive and prone to breakdown; industrialists were often cautious and preferred cheap human labour for many tasks.",
+    "probe": {
+     "question": "Why were industrialists hesitant to adopt steam power initially?",
+     "wrong_answer": "Because they wanted to protect the environment."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "New technology is always more efficient and adopted instantly.",
+    "causes": [],
+    "trigger_cues": [
+     "steam",
+     "engine",
+     "expensive",
+     "breakdown",
+     "cautious"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's children's ideas in science"
+   },
+   {
+    "key": "m3",
+    "node": "n10",
+    "statement": "Hand labour was preferred because it was always of higher quality than machine goods.",
+    "why": "Students romanticize 'handmade' as superior, ignoring the economic reasons (seasonality) cited in the text.",
+    "fix": "Hand labour was preferred because machines could not produce intricate designs or handle the seasonal fluctuations in demand efficiently.",
+    "probe": {
+     "question": "Why did some industrialists prefer hand labour over machines?",
+     "wrong_answer": "Because machine goods were always of poor quality."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Handmade is inherently better than machine-made.",
+    "causes": [],
+    "trigger_cues": [
+     "seasonal",
+     "demand",
+     "intricate",
+     "designs",
+     "fluctuations"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n11",
+    "statement": "Indian textiles disappeared because they were inferior to British machine-made goods.",
+    "why": "Students assume the colonial power won because their products were objectively better, ignoring trade barriers and colonial policy.",
+    "fix": "Indian textiles declined due to high import duties in Britain and the systematic exclusion of Indian goods from the market by colonial policies.",
+    "probe": {
+     "question": "What was the primary reason for the decline of Indian textiles?",
+     "wrong_answer": "Indian weavers refused to use new technology."
+    },
+    "error_type": "presentism",
+    "root_belief": "Market success is solely determined by product quality.",
+    "causes": [],
+    "trigger_cues": [
+     "decline",
+     "textiles",
+     "import",
+     "duties",
+     "colonial"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Mumbai"
+   },
+   {
+    "id": "m5",
+    "node": "n5",
+    "statement": "Merchants in the putting-out system were the same as the factory owners who employed workers in their own buildings.",
+    "why": "Students merge the two roles of 'business owner' and assume all employers of workers ran factories.",
+    "fix": "Merchants gave raw material to peasant and artisan families in villages, who worked at home and returned finished goods. Factories came later and gathered workers under one roof.",
+    "probe": {
+     "question": "Where did the workers of a clothier in the putting-out system do their work?",
+     "wrong_answer": "In the merchant's own factory building in the town."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "All employers of workers were factory owners",
+    "causes": [],
+    "trigger_cues": [
+     "merchant",
+     "clothier",
+     "putting out",
+     "workers",
+     "factory",
+     "village"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom misconception observation",
+    "key": "m5"
+   },
+   {
+    "id": "m6",
+    "node": "n5",
+    "statement": "Merchants went to the countryside because town people refused to buy cloth.",
+    "why": "Students look for a demand problem and ignore that town guilds controlled production.",
+    "fix": "Town guilds were powerful, controlled trade, restricted new entrants and fixed prices, so merchants could not easily expand in towns. Peasants and artisans in villages were poor and willing to work for them.",
+    "probe": {
+     "question": "Why did merchants move to the countryside to get goods produced?",
+     "wrong_answer": "Because townspeople did not want to buy cloth any more."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Business moves only because of falling demand",
+    "causes": [],
+    "trigger_cues": [
+     "merchants",
+     "countryside",
+     "guilds",
+     "towns",
+     "why",
+     "peasants"
+    ],
+    "confidence": "plausible",
+    "source_hint": "textbook-based teacher reports",
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n6",
+    "statement": "Peasants joined the putting-out system because they had no land or work and were forced to.",
+    "why": "Students assume all rural workers were landless and unemployed, as in later factory labour.",
+    "fix": "Poor peasants and cottagers with small plots of land needed extra income, since their tiny plots could not support the family. They worked for merchants alongside farming and used family labour.",
+    "probe": {
+     "question": "Why did cottagers and poor peasants work for merchants in villages?",
+     "wrong_answer": "They had no land at all and no other work, so they had no choice."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Rural workers were all landless and jobless",
+    "causes": [],
+    "trigger_cues": [
+     "cottagers",
+     "peasants",
+     "extra income",
+     "small plots",
+     "village",
+     "family"
+    ],
+    "confidence": "plausible",
+    "source_hint": "textbook-based teacher reports",
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n7",
+    "statement": "Factories first came up in England before the 1730s and spread quickly across the whole country.",
+    "why": "Students treat the age of industrialisation as starting early and spreading evenly.",
+    "fix": "The earliest factories in England came up only by the 1730s, and their number multiplied rapidly from the late eighteenth century, especially in cotton. Even then, much of production stayed outside factories.",
+    "probe": {
+     "question": "When did the earliest factories come up in England?",
+     "wrong_answer": "In the 1600s, long before the 1730s, and they covered the whole country at once."
+    },
+    "error_type": "chronology_slip",
+    "root_belief": "Industrial change was early and uniformly rapid",
+    "causes": [],
+    "trigger_cues": [
+     "earliest factories",
+     "england",
+     "1730s",
+     "when",
+     "cotton",
+     "spread"
+    ],
+    "confidence": "plausible",
+    "source_hint": "textbook-based exam error analysis",
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n7",
+    "statement": "Cotton and iron mills were the first factories in England because they were the biggest industries.",
+    "why": "Students mix the dominant sector with the pioneering one and know little about cotton's rise.",
+    "fix": "Cotton and metal industries were the leading sectors of industrialisation, but cotton became the first symbol of the new era with the rise of cheap cotton mills after the 1840s. Traditional industries such as clothing and furniture kept much of the workforce.",
+    "probe": {
+     "question": "Which industries employed most workers in nineteenth-century Britain?",
+     "wrong_answer": "Cotton and metal factories employed the majority of workers."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Leading sectors employed most workers",
+    "causes": [],
+    "trigger_cues": [
+     "cotton",
+     "metal",
+     "most workers",
+     "employed",
+     "britain",
+     "traditional industries"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "history education research on modern industrialisation",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n8",
+    "statement": "James Watt invented the steam engine, so it was already in use in factories everywhere from his time.",
+    "why": "Students credit the improver as the inventor and assume invention equals adoption.",
+    "fix": "Newcomen made the first steam engine; Watt improved it and patented his version in 1781. Even after that, steam engines spread slowly, because they were costly and many owners did not trust them.",
+    "probe": {
+     "question": "Who invented the steam engine, and how fast did it spread?",
+     "wrong_answer": "James Watt invented it, and every factory used it at once."
+    },
+    "error_type": "confuses_people_or_places",
+    "root_belief": "Improver of a machine is its inventor",
+    "causes": [],
+    "trigger_cues": [
+     "watt",
+     "newcomen",
+     "steam engine",
+     "invented",
+     "patent",
+     "1781"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT-based textbook error analysis",
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n9",
+    "statement": "Industrialists preferred hand labour only because machines were too expensive to buy.",
+    "why": "Students consider only one cost factor and ignore demand patterns and the nature of the product.",
+    "fix": "Labour was plentiful and cheap, so there was little incentive to use machines. Also, seasonal work and changing fashions meant that detailed, varied designs needed skilled human hands.",
+    "probe": {
+     "question": "Why did many industrialists in Victorian Britain prefer hand labour to machines?",
+     "wrong_answer": "Only because machines were too costly to buy."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "One cost factor explains the choice",
+    "causes": [],
+    "trigger_cues": [
+     "hand labour",
+     "machines",
+     "preferred",
+     "cheap labour",
+     "costly",
+     "victorian"
+    ],
+    "confidence": "plausible",
+    "source_hint": "textbook-based teacher reports",
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n10",
+    "statement": "Seasonal demand meant factories shut for months, so workers in them stayed unemployed all year.",
+    "why": "Students think 'seasonal' means a complete halt rather than a swing in the demand for labour.",
+    "fix": "In industries like gas works, breweries, bookbinding and printing, demand peaked in the cold months, and in London the social season also raised demand. Owners hired extra hands in the peak season and often laid off the rest, so employment changed with seasons.",
+    "probe": {
+     "question": "What did seasonal demand mean for employers who relied on hand labour?",
+     "wrong_answer": "Their factories closed for months and nobody worked in them."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Seasonal means total shutdown",
+    "causes": [],
+    "trigger_cues": [
+     "seasonal",
+     "demand",
+     "gas works",
+     "breweries",
+     "london season",
+     "workers"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom misconception observation",
+    "key": "m12"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

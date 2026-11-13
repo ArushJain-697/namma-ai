@@ -1,0 +1,864 @@
+{
+ "topic": {
+  "id": "GEN-UPI",
+  "subject": "general",
+  "strand": "money",
+  "grades": [
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "title": "UPI and digital payments",
+  "scope": "how UPI works, PIN vs OTP, QR codes, collect requests, transaction limits, receiving money never needs a PIN"
+ },
+ "model": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 10536,
+  "promptTokenCount": 2
+ },
+ "seconds": 78.1,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "How UPI works",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "what a bank account is",
+     "basic mobile phone use"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Keeping UPI safe",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "what a password or secret code is"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Paying and receiving with UPI",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "rupees and paise",
+     "reading numbers up to lakhs"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "UPI as a system",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "difference between cash and digital money"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "UPI ID and linked account",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "what an address is"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "UPI PIN and OTP",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "what a password or secret code is"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Spotting and handling fraud",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": [
+     "why strangers should not be trusted with personal information"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "QR codes",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "what a barcode or QR code is"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Collect requests",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": [
+     "sender and receiver of money"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Transaction limits and charges",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "per day and per month as time units",
+     "reading large numbers such as 1 lakh"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Money moves bank to bank",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "what a bank account is"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "NPCI runs UPI; apps are only interfaces",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": [
+     "difference between a service and an app"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "UPI can work without a smartphone",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": [
+     "feature phone versus smartphone"
+    ]
+   },
+   {
+    "key": "n14",
+    "name": "UPI ID is a public payment address",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": [
+     "what an address is"
+    ]
+   },
+   {
+    "key": "n15",
+    "name": "UPI PIN is private and needed to send money",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": [
+     "what a password or secret code is"
+    ]
+   },
+   {
+    "key": "n16",
+    "name": "OTP is a one-time code that is never shared",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": [
+     "SMS messages"
+    ]
+   },
+   {
+    "key": "n17",
+    "name": "UPI PIN, OTP and ATM PIN are different things",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n15",
+     "n16"
+    ],
+    "external_prereqs": [
+     "debit card basics"
+    ]
+   },
+   {
+    "key": "n18",
+    "name": "Receiving money never needs a PIN",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n15"
+    ],
+    "external_prereqs": [
+     "difference between sending and receiving"
+    ]
+   },
+   {
+    "key": "n19",
+    "name": "Fake callers and screen-sharing apps",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n15",
+     "n16"
+    ],
+    "external_prereqs": [
+     "what an app is and how apps are installed"
+    ]
+   },
+   {
+    "key": "n20",
+    "name": "Report fraud quickly (1930, bank)",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n19"
+    ],
+    "external_prereqs": [
+     "what a helpline is"
+    ]
+   },
+   {
+    "key": "n21",
+    "name": "A QR code only carries payee details",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n14"
+    ],
+    "external_prereqs": [
+     "what a QR code is"
+    ]
+   },
+   {
+    "key": "n22",
+    "name": "Check payee name before paying",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n21",
+     "n15"
+    ],
+    "external_prereqs": [
+     "reading and comparing names"
+    ]
+   },
+   {
+    "key": "n23",
+    "name": "Approving a collect request sends money",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [
+     "n18"
+    ],
+    "external_prereqs": [
+     "difference between a request and a payment"
+    ]
+   },
+   {
+    "key": "n24",
+    "name": "Decline collect requests you did not expect",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [
+     "n23"
+    ],
+    "external_prereqs": [
+     "why strangers should not be trusted with personal information"
+    ]
+   },
+   {
+    "key": "n25",
+    "name": "Daily UPI limit is usually Rs 1 lakh",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [],
+    "external_prereqs": [
+     "reading large numbers such as 1 lakh"
+    ]
+   },
+   {
+    "key": "n26",
+    "name": "Ordinary UPI payments are free for users",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": [
+     "what a service charge is"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n11",
+    "statement": "The money I pay with UPI is stored inside the UPI app, like a wallet.",
+    "why": "Apps show balances and payment history, so students think the app holds the money.",
+    "fix": "The money stays in your bank account. UPI sends it directly from your bank to the receiver's bank.",
+    "probe": {
+     "question": "If your UPI app is deleted from your phone, what happens to the money in your account?",
+     "wrong_answer": "The money is lost because it was kept inside the app."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "the visible app holds the actual thing",
+    "causes": [
+     "m2"
+    ],
+    "trigger_cues": [
+     "upi",
+     "bank account",
+     "linked",
+     "app",
+     "wallet",
+     "balance",
+     "direct"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n12",
+    "statement": "UPI is a private company's app, like PhonePe or Google Pay.",
+    "why": "Students only ever see the brand-name apps and never the system behind them.",
+    "fix": "UPI is a payment system built by NPCI, supported by RBI. PhonePe, Google Pay, BHIM and others are apps that connect to it.",
+    "probe": {
+     "question": "Who owns UPI?",
+     "wrong_answer": "Google, because Google Pay is the main UPI app."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "the visible brand is the whole system",
+    "causes": [],
+    "trigger_cues": [
+     "npci",
+     "upi",
+     "app",
+     "interface",
+     "phonepe",
+     "google pay",
+     "bhim"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n13",
+    "statement": "UPI can only be used on a smartphone with internet.",
+    "why": "Most students see UPI only through smartphone apps.",
+    "fix": "UPI can also work on basic phones through services like *99# and UPI 123PAY, without a smartphone app.",
+    "probe": {
+     "question": "Can a person with a basic keypad phone make a UPI payment?",
+     "wrong_answer": "No, UPI needs a smartphone and internet."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "what I commonly see is the only way",
+    "causes": [],
+    "trigger_cues": [
+     "feature phone",
+     "*99#",
+     "upi123pay",
+     "keypad",
+     "without internet",
+     "smartphone"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n14",
+    "statement": "If someone knows my UPI ID, they can take money out of my account.",
+    "why": "Students treat every detail of the account as a password.",
+    "fix": "A UPI ID is like an address for receiving money. Taking money out needs your UPI PIN, so sharing the ID is safe.",
+    "probe": {
+     "question": "You give your UPI ID to a friend so they can pay you back. Is it dangerous?",
+     "wrong_answer": "Yes, because they can now take money from my account."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "knowing information means having access",
+    "causes": [],
+    "trigger_cues": [
+     "upi id",
+     "vpa",
+     "address",
+     "share",
+     "receive",
+     "handle"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n15",
+    "statement": "The UPI PIN is the same as my ATM card PIN or phone lock code.",
+    "why": "All three are short numeric codes and are used for similar-sounding security.",
+    "fix": "The UPI PIN is set separately for UPI. It can be different from the ATM PIN and the phone lock code, and must be kept secret like them.",
+    "probe": {
+     "question": "You forgot your UPI PIN. Can you use your phone lock code instead?",
+     "wrong_answer": "Yes, the UPI PIN is the same as the phone lock code."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar-looking things are the same thing",
+    "causes": [],
+    "trigger_cues": [
+     "upi pin",
+     "atm pin",
+     "phone lock",
+     "set pin",
+     "four digit",
+     "six digit"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m6",
+    "node": "n15",
+    "statement": "A bank or UPI app employee may sometimes need my PIN to fix a problem.",
+    "why": "Students believe officials need complete access to help them.",
+    "fix": "No bank or UPI app staff will ever ask for your PIN. Anyone who asks for it is a fraudster.",
+    "probe": {
+     "question": "A caller says they are from your bank and need your UPI PIN to reverse a failed payment. What do you do?",
+     "wrong_answer": "Give the PIN, since they are from the bank."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "an official helper needs full access",
+    "causes": [
+     "m8"
+    ],
+    "trigger_cues": [
+     "pin",
+     "bank staff",
+     "customer care",
+     "secret",
+     "never share",
+     "employee"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "RBI and NPCI public awareness campaigns on digital fraud; surveys of fraud victims",
+    "tags": null
+   },
+   {
+    "key": "m7",
+    "node": "n16",
+    "statement": "An OTP is safe to tell someone if they say they are from my bank.",
+    "why": "Students trust anyone who claims authority and think OTPs are harmless numbers.",
+    "fix": "An OTP is meant only for you. Never share it with anyone, including people who say they are from the bank.",
+    "probe": {
+     "question": "A caller from 'the bank' asks for the OTP you just received to cancel a wrong payment. Should you tell it?",
+     "wrong_answer": "Yes, because they are from the bank."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "people claiming authority can be trusted",
+    "causes": [
+     "m8"
+    ],
+    "trigger_cues": [
+     "otp",
+     "one time password",
+     "bank caller",
+     "verify",
+     "never share",
+     "sms"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "RBI public awareness material on OTP fraud; studies of vishing victims",
+    "tags": null
+   },
+   {
+    "key": "m8",
+    "node": "n19",
+    "statement": "A caller who knows my name and bank details must be genuine.",
+    "why": "Students think only a real bank could know such personal details.",
+    "fix": "Fraudsters collect names and details from leaks and social media. Knowing your details does not prove a caller is genuine.",
+    "probe": {
+     "question": "A caller says your name, bank and last four account digits and asks for your OTP. Is the caller real?",
+     "wrong_answer": "Yes, they know my details so they must be from the bank."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "knowing personal details proves identity",
+    "causes": [],
+    "trigger_cues": [
+     "caller",
+     "name",
+     "account number",
+     "details",
+     "genuine",
+     "fraud",
+     "vishing"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "cyber-safety awareness research on social engineering and impersonation scams",
+    "tags": null
+   },
+   {
+    "key": "m9",
+    "node": "n19",
+    "statement": "Installing an app a helpful caller asks for is harmless as long as I do not say my PIN.",
+    "why": "Students think a secret is only given away by saying it aloud.",
+    "fix": "Screen-sharing or remote-access apps let a stranger watch your screen and see your PIN and OTP. Never install them on a stranger's advice.",
+    "probe": {
+     "question": "A caller asks you to install a screen-sharing app 'to fix your refund' but says not to tell the PIN. Is it safe?",
+     "wrong_answer": "Yes, since I am not telling the PIN."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "a secret is only lost if I say it",
+    "causes": [],
+    "trigger_cues": [
+     "screen sharing",
+     "remote access",
+     "install app",
+     "anydesk",
+     "refund",
+     "caller"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m10",
+    "node": "n17",
+    "statement": "The OTP that arrives on my phone is my UPI PIN.",
+    "why": "Both are secret numeric codes used for approving money matters.",
+    "fix": "A PIN is a fixed secret you create and remember. An OTP is a new code sent for one use only and expires quickly.",
+    "probe": {
+     "question": "Is your UPI PIN the number that comes by SMS each time?",
+     "wrong_answer": "Yes, the SMS number is the PIN."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar-looking things are the same thing",
+    "causes": [],
+    "trigger_cues": [
+     "pin",
+     "otp",
+     "sms",
+     "one time",
+     "fixed",
+     "expires",
+     "code"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n18",
+    "statement": "To receive money by UPI I must enter my PIN.",
+    "why": "Students copy the sending steps and assume every money step needs a PIN.",
+    "fix": "A PIN is needed only to send money. Receiving money never needs your PIN, so anyone asking for it to 'send you money' is cheating.",
+    "probe": {
+     "question": "A buyer says: 'Enter your PIN to receive my payment.' What do you do?",
+     "wrong_answer": "Enter the PIN because receiving needs it."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "every step of a process needs the same checks",
+    "causes": [
+     "m12",
+     "m13"
+    ],
+    "trigger_cues": [
+     "receive money",
+     "pin",
+     "never needed",
+     "scam",
+     "buyer",
+     "olx",
+     "payment"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "RBI and NPCI awareness advisories on receive-money and marketplace scams",
+    "tags": null
+   },
+   {
+    "key": "m12",
+    "node": "n21",
+    "statement": "Scanning a QR code sent by a buyer will make money come into my account.",
+    "why": "Students think scanning always means taking and not giving.",
+    "fix": "Scanning a QR code and entering a PIN sends money out of your account. You never need to scan anything to receive money.",
+    "probe": {
+     "question": "A buyer sends you a QR code to scan so they can pay you. What happens when you scan and enter your PIN?",
+     "wrong_answer": "I receive the money."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "the direction of an action is always inward",
+    "causes": [],
+    "trigger_cues": [
+     "qr code",
+     "scan",
+     "buyer",
+     "receive",
+     "pay",
+     "marketplace",
+     "scam"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NPCI and RBI fraud awareness advisories on QR code scams",
+    "tags": null
+   },
+   {
+    "key": "m13",
+    "node": "n22",
+    "statement": "Only the amount matters when paying a QR code; the name shown does not.",
+    "why": "Students focus on the number they type and skip the payee details.",
+    "fix": "Always read the payee name on the confirmation screen. A wrong name may mean you are paying a stranger.",
+    "probe": {
+     "question": "You scan a shop's QR but the name shown is a person you don't know. What should you do?",
+     "wrong_answer": "Pay anyway, since the amount is correct."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "only the numbers matter",
+    "causes": [],
+    "trigger_cues": [
+     "payee name",
+     "confirm",
+     "qr",
+     "verify",
+     "amount",
+     "shop"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m14",
+    "node": "n21",
+    "statement": "A printed QR code at a shop is always genuine.",
+    "why": "Students trust anything that looks official and printed.",
+    "fix": "Fraudsters can paste fake QR codes over real ones. Check the payee name shown after scanning.",
+    "probe": {
+     "question": "A QR sticker is pasted at a roadside stall. Is it safe to pay without checking?",
+     "wrong_answer": "Yes, a printed QR is always genuine."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "looking official means genuine",
+    "causes": [],
+    "trigger_cues": [
+     "qr sticker",
+     "fake qr",
+     "shop",
+     "printed",
+     "check name",
+     "merchant"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m15",
+    "node": "n23",
+    "statement": "Approving a collect request means I will receive money.",
+    "why": "The word 'accept' sounds like receiving something.",
+    "fix": "A collect request asks you to pay. Approving it and entering your PIN sends money out of your account.",
+    "probe": {
+     "question": "You get a collect request from a stranger. If you approve it, who gets the money?",
+     "wrong_answer": "I get the money."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "collect request",
+     "approve",
+     "accept",
+     "pay",
+     "request money",
+     "pin"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NPCI and RBI awareness advisories on collect request fraud",
+    "tags": null
+   },
+   {
+    "key": "m16",
+    "node": "n24",
+    "statement": "A collect request mentioning a prize or refund is safe to approve.",
+    "why": "Students believe a good-sounding message means a good purpose.",
+    "fix": "Scammers use words like refund, cashback or prize to trick you. Decline any collect request you did not expect.",
+    "probe": {
+     "question": "A collect request says 'Cashback Rs 500, approve to claim'. What do you do?",
+     "wrong_answer": "Approve it to get the cashback."
+    },
+    "error_type": "media_misinformation",
+    "root_belief": "a nice message means a nice intention",
+    "causes": [],
+    "trigger_cues": [
+     "collect request",
+     "cashback",
+     "prize",
+     "refund",
+     "decline",
+     "claim",
+     "lottery"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m17",
+    "node": "n25",
+    "statement": "There is no limit on how much money can be sent by UPI in a day.",
+    "why": "Digital payments feel unlimited because no physical cash is handled.",
+    "fix": "UPI has limits, usually Rs 1 lakh a day per account for most payments. Banks and apps may set lower limits.",
+    "probe": {
+     "question": "Can you send Rs 5 lakh to a friend through UPI in one day?",
+     "wrong_answer": "Yes, UPI has no limit."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "digital things have no limits",
+    "causes": [],
+    "trigger_cues": [
+     "limit",
+     "per day",
+     "1 lakh",
+     "transaction",
+     "npci",
+     "bank limit"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m18",
+    "node": "n25",
+    "statement": "Using two different UPI apps gives me a separate daily limit on each.",
+    "why": "Students think each app keeps its own count.",
+    "fix": "Limits are set on the bank account, so using more apps does not add more limit for the same account.",
+    "probe": {
+     "question": "Your limit is Rs 1 lakh a day. Can you send Rs 1 lakh from one app and Rs 1 lakh from another for the same account?",
+     "wrong_answer": "Yes, each app has its own limit."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "separate containers have separate limits",
+    "causes": [],
+    "trigger_cues": [
+     "limit",
+     "two apps",
+     "same account",
+     "bank",
+     "daily",
+     "per account"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m19",
+    "node": "n26",
+    "statement": "Every UPI payment costs the sender a fee.",
+    "why": "Students assume digital services always charge, like card or transfer fees.",
+    "fix": "Ordinary UPI payments between people and to shops are free for users.",
+    "probe": {
+     "question": "Do you pay a fee to send Rs 100 to a friend by UPI?",
+     "wrong_answer": "Yes, UPI always charges a fee."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "every service must charge a fee",
+    "causes": [],
+    "trigger_cues": [
+     "fee",
+     "charge",
+     "free",
+     "mdr",
+     "p2p",
+     "service charge"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m20",
+    "node": "n20",
+    "statement": "Once money is sent through UPI to a fraudster, nothing can be done.",
+    "why": "Students think digital payments cannot be undone.",
+    "fix": "Report immediately to your bank and call 1930 or use cybercrime.gov.in. Quick reporting can help freeze the money.",
+    "probe": {
+     "question": "You were cheated of Rs 2000 by UPI. What is the point of reporting?",
+     "wrong_answer": "No point, money sent is gone forever."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "what is done digitally cannot be undone",
+    "causes": [],
+    "trigger_cues": [
+     "report",
+     "1930",
+     "cybercrime",
+     "freeze",
+     "bank",
+     "complaint",
+     "fraud"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m21",
+    "node": "n20",
+    "statement": "I should wait a few days before reporting a UPI fraud to be sure.",
+    "why": "Students feel unsure and hope the money may return.",
+    "fix": "Report within minutes or hours. Faster reporting gives a better chance to stop the money from being withdrawn.",
+    "probe": {
+     "question": "You notice a fraud payment. When should you report it?",
+     "wrong_answer": "After a few days when I am sure."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "waiting is harmless",
+    "causes": [],
+    "trigger_cues": [
+     "report",
+     "quickly",
+     "golden hour",
+     "delay",
+     "complaint",
+     "1930"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}

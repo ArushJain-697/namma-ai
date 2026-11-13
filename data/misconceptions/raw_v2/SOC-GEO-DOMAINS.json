@@ -1,0 +1,436 @@
+{
+ "topic": {
+  "id": "SOC-GEO-DOMAINS",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   6
+  ],
+  "title": "Major domains of the Earth",
+  "scope": "lithosphere, hydrosphere, atmosphere, biosphere, continents and oceans"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 825,
+  "candidatesTokenCount": 1375,
+  "totalTokenCount": 2200,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 825
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 5.6,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Lithosphere",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "landforms",
+     "basic map reading"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Hydrosphere",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "states of matter"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Atmosphere",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "gases in air"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Biosphere",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1",
+     "n2",
+     "n3"
+    ],
+    "external_prereqs": [
+     "living vs non-living"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Continents",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "continents vs countries"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Oceans",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "water bodies"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Layers of Atmosphere",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "gravity"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Composition of Air",
+    "level": 3,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "percentage concept"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Crust and Mantle",
+    "level": 3,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "earth structure"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Ocean Water Salinity",
+    "level": 3,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "solubility"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Interdependence",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [
+     "n1",
+     "n2",
+     "n3"
+    ],
+    "external_prereqs": [
+     "ecosystem basics"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n5",
+    "statement": "Continents are just large islands floating on the ocean.",
+    "why": "Students visualize land as objects sitting on top of water.",
+    "fix": "Continents are massive landmasses that form the upper layer of the Earth's crust, not floating objects.",
+    "probe": {
+     "question": "Do continents move like boats on the ocean?",
+     "wrong_answer": "Yes, they float on water."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "continents",
+     "landmass",
+     "floating",
+     "ocean",
+     "crust"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on Earth science"
+   },
+   {
+    "key": "m2",
+    "node": "n8",
+    "statement": "Oxygen is the most abundant gas in the atmosphere.",
+    "why": "Students confuse the importance of oxygen for life with its quantity.",
+    "fix": "Nitrogen is the most abundant gas, making up about 78% of the atmosphere, while oxygen is only 21%.",
+    "probe": {
+     "question": "Which gas makes up the largest part of the air we breathe?",
+     "wrong_answer": "Oxygen"
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "importance equals quantity",
+    "causes": [],
+    "trigger_cues": [
+     "atmosphere",
+     "oxygen",
+     "nitrogen",
+     "abundant",
+     "air"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Concept inventories"
+   },
+   {
+    "key": "m3",
+    "node": "n10",
+    "statement": "All ocean water is equally salty.",
+    "why": "Students assume uniform properties for large bodies of water.",
+    "fix": "Salinity varies depending on evaporation rates, rainfall, and river inflow in different regions.",
+    "probe": {
+     "question": "Is the salt content the same in the Arctic Ocean and the Indian Ocean?",
+     "wrong_answer": "Yes, all ocean water has the same salt content."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "a rule from whole numbers works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "ocean",
+     "salinity",
+     "salt",
+     "water",
+     "evaporation"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n11",
+    "statement": "The biosphere only exists on the surface of the land.",
+    "why": "Students associate life only with visible land environments.",
+    "fix": "The biosphere includes life in the atmosphere, deep oceans, and the soil, not just the surface.",
+    "probe": {
+     "question": "Can life exist deep in the ocean or high in the air?",
+     "wrong_answer": "No, life is only on the land surface."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "biosphere",
+     "life",
+     "land",
+     "atmosphere",
+     "ocean"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's children's ideas"
+   },
+   {
+    "key": "m5",
+    "node": "n5",
+    "statement": "There are only five continents, one for each ocean.",
+    "why": "Students link the number of continents with the number of oceans, or recall 'five' from the Olympic rings.",
+    "fix": "There are seven continents: Asia, Africa, North America, South America, Antarctica, Europe and Australia. There are five oceans, and the two sets are not paired.",
+    "probe": {
+     "question": "How many continents are there on the Earth?",
+     "wrong_answer": "Five, one for each ocean."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Number of continents equals number of oceans",
+    "causes": [],
+    "trigger_cues": [
+     "how many continents",
+     "five continents",
+     "seven continents",
+     "number of oceans",
+     "olympic rings"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation; Olympic rings"
+   },
+   {
+    "key": "m6",
+    "node": "n5",
+    "statement": "Asia is the largest continent and Australia is the smallest, so Australia is a country and not a continent.",
+    "why": "Australia is both a country and a continent, and students merge the two ideas.",
+    "fix": "Australia is the smallest continent and is also a country. Asia is the largest continent. A continent can contain many countries or just one.",
+    "probe": {
+     "question": "Is Australia a continent or a country?",
+     "wrong_answer": "Only a country, because continents must contain many countries."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "A continent must contain many countries",
+    "causes": [],
+    "trigger_cues": [
+     "australia",
+     "continent or country",
+     "smallest continent",
+     "largest continent",
+     "countries in continent"
+    ],
+    "confidence": "plausible",
+    "source_hint": "textbook-based reasoning"
+   },
+   {
+    "key": "m7",
+    "node": "n6",
+    "statement": "The Pacific Ocean is the smallest ocean because it is called 'Pacific', meaning calm.",
+    "why": "Students infer size from the name or from the calm impression of the word.",
+    "fix": "The Pacific Ocean is the largest and deepest ocean, covering about one-third of the Earth's surface. The Arctic Ocean is the smallest.",
+    "probe": {
+     "question": "Which is the largest ocean of the world?",
+     "wrong_answer": "The Atlantic Ocean, because Pacific means calm and small."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Names of places tell their size",
+    "causes": [],
+    "trigger_cues": [
+     "largest ocean",
+     "pacific ocean",
+     "smallest ocean",
+     "arctic ocean",
+     "deepest ocean"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation"
+   },
+   {
+    "key": "m8",
+    "node": "n6",
+    "statement": "The Indian Ocean belongs only to India.",
+    "why": "Students read the name as ownership and not as a geographical feature.",
+    "fix": "The Indian Ocean is named after India, but it is a shared water body touching Asia, Africa, Australia and Antarctica. No country owns it.",
+    "probe": {
+     "question": "Which countries have coasts on the Indian Ocean?",
+     "wrong_answer": "Only India, as the ocean belongs to India."
+    },
+    "error_type": "confuses_people_or_places",
+    "root_belief": "Place names mean that country owns the feature",
+    "causes": [],
+    "trigger_cues": [
+     "indian ocean",
+     "named after india",
+     "belongs to",
+     "shared ocean",
+     "coast countries"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation"
+   },
+   {
+    "key": "m9",
+    "node": "n7",
+    "statement": "The ozone layer is the lowest layer of the atmosphere and is the air we breathe.",
+    "why": "Students confuse the ozone layer, which protects us, with the troposphere, where we live.",
+    "fix": "We breathe in the troposphere, the lowest layer. The ozone layer lies higher, in the stratosphere, and absorbs harmful ultraviolet rays.",
+    "probe": {
+     "question": "In which layer of the atmosphere do we live and breathe?",
+     "wrong_answer": "In the ozone layer, because it protects us and is closest to the ground."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Protective layer is the nearest layer",
+    "causes": [],
+    "trigger_cues": [
+     "ozone layer",
+     "troposphere",
+     "stratosphere",
+     "layer we breathe",
+     "lowest layer",
+     "ultraviolet"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on student conceptions of atmosphere and ozone"
+   },
+   {
+    "key": "m10",
+    "node": "n7",
+    "statement": "It gets hotter and hotter as we go higher up in the atmosphere, because we get closer to the Sun.",
+    "why": "Students think nearness to the Sun alone decides temperature.",
+    "fix": "In the troposphere, temperature falls with height, which is why mountain tops are cold. The air is heated mainly from the ground, not directly by the Sun.",
+    "probe": {
+     "question": "Why is the top of a high mountain colder than the plains?",
+     "wrong_answer": "It should be hotter, as the mountain top is nearer to the Sun."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Nearer to the Sun always means hotter",
+    "causes": [],
+    "trigger_cues": [
+     "higher up",
+     "temperature",
+     "mountain cold",
+     "closer to sun",
+     "troposphere",
+     "altitude"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on student ideas of temperature and the Sun"
+   },
+   {
+    "key": "m11",
+    "node": "n9",
+    "statement": "The Earth is solid rock all the way through, and the crust is its deepest part.",
+    "why": "Students picture the Earth as a uniform ball and treat the crust as the whole body, or the centre.",
+    "fix": "The crust is the thin, outermost layer. Below it are the mantle and then the core, the innermost part, which is very hot.",
+    "probe": {
+     "question": "Which is the innermost layer of the Earth?",
+     "wrong_answer": "The crust, since it is the hardest rock."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Earth is uniform solid rock throughout",
+    "causes": [],
+    "trigger_cues": [
+     "layers of earth",
+     "crust",
+     "mantle",
+     "core",
+     "innermost layer",
+     "inside the earth",
+     "thin layer"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on children's ideas about Earth's interior"
+   },
+   {
+    "key": "m12",
+    "node": "n11",
+    "statement": "The four domains of the Earth are separate and do not affect each other.",
+    "why": "Students learn the domains as separate topics with separate names and do not link them.",
+    "fix": "The domains interact. Plants in the biosphere take water from the hydrosphere and air from the atmosphere, and grow on soil from the lithosphere.",
+    "probe": {
+     "question": "How does a plant depend on the other domains of the Earth?",
+     "wrong_answer": "It does not, because a plant belongs only to the biosphere."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Earth's domains work independently of each other",
+    "causes": [],
+    "trigger_cues": [
+     "interdependence",
+     "domains interact",
+     "plant needs water",
+     "air soil water",
+     "four domains",
+     "depend on each other"
+    ],
+    "confidence": "plausible",
+    "source_hint": "textbook-based reasoning"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

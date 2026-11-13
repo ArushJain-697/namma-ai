@@ -1,0 +1,468 @@
+{
+ "topic": {
+  "id": "SCI-PHY-MAGNETIC10",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   10
+  ],
+  "title": "Magnetic effects of electric current",
+  "scope": "magnetic field lines, field around a wire and solenoid, force on a conductor, domestic circuits, short circuit, earthing"
+ },
+ "model": "gemini-3-flash-preview/key2",
+ "usage": {
+  "promptTokenCount": 843,
+  "candidatesTokenCount": 3759,
+  "totalTokenCount": 5767,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 843
+   }
+  ],
+  "thoughtsTokenCount": 1165,
+  "serviceTier": "standard"
+ },
+ "seconds": 50.2,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Magnetic Fields and Field Lines",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "concept of force",
+     "properties of magnets"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Electromagnetism",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "electric current",
+     "potential difference"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Force and Motors",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "vectors",
+     "mechanical energy"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Domestic Electric Circuits",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "electric power",
+     "heating effect of current"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Properties of Field Lines",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "Field Lines never intersect",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Relative strength of field",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Field around Straight Wire",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Right-Hand Thumb Rule",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Field in a Solenoid",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Uniform field inside solenoid",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Force on Current-Carrying Conductor",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": [
+     "Newton's laws of motion"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "Fleming's Left-Hand Rule",
+    "level": 3,
+    "parent": "n12",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Safety Devices and Wiring",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Function of Earth Wire",
+    "level": 3,
+    "parent": "n14",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n16",
+    "name": "Short Circuit and Overloading",
+    "level": 3,
+    "parent": "n14",
+    "prereqs": [],
+    "external_prereqs": [
+     "Ohm's law"
+    ]
+   },
+   {
+    "key": "n17",
+    "name": "Role of Electric Fuse",
+    "level": 3,
+    "parent": "n14",
+    "prereqs": [
+     "n16"
+    ],
+    "external_prereqs": [
+     "Joule's heating"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n5",
+    "statement": "Magnetic field lines are real physical threads that exist around a magnet.",
+    "why": "Students take the visual representation in diagrams literally as physical objects.",
+    "fix": "Field lines are imaginary lines used to represent the direction and strength of the magnetic field.",
+    "probe": {
+     "question": "If you move your hand through a magnetic field, why don't you feel the lines snapping?",
+     "wrong_answer": "Because the lines are too thin or made of energy."
+    },
+    "error_type": "visible_only",
+    "root_belief": "what is drawn must exist physically",
+    "causes": [],
+    "trigger_cues": [
+     "iron filings",
+     "pattern",
+     "lines of force",
+     "drawing"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas in Science"
+   },
+   {
+    "key": "m2",
+    "node": "n6",
+    "statement": "Magnetic field lines can cross if two very strong magnets are brought close together.",
+    "why": "Students think strength can overcome the rule of non-intersection.",
+    "fix": "Field lines never intersect because the magnetic field at any point has only one unique direction.",
+    "probe": {
+     "question": "What would a compass needle do if it were placed at a point where two field lines crossed?",
+     "wrong_answer": "It would point in two directions at once or spin."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "more force can break physical rules",
+    "causes": [],
+    "trigger_cues": [
+     "intersect",
+     "cross",
+     "compass",
+     "resultant"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Diagnostic Research"
+   },
+   {
+    "key": "m3",
+    "node": "n9",
+    "statement": "The Right-Hand Thumb Rule is used to find the direction of the force on the wire.",
+    "why": "Confusion between different hand rules (Thumb vs Left-Hand).",
+    "fix": "The Right-Hand Thumb Rule is only for finding the direction of the magnetic field around a current-carrying conductor.",
+    "probe": {
+     "question": "You want to find which way a wire will move in a magnetic field. Which rule do you use?",
+     "wrong_answer": "Right-Hand Thumb Rule."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "one rule applies to all hand gestures",
+    "causes": [],
+    "trigger_cues": [
+     "thumb",
+     "direction",
+     "circular",
+     "current"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n11",
+    "statement": "The magnetic field inside a solenoid is zero because it is an empty space.",
+    "why": "Belief that fields require a medium or a solid core to exist.",
+    "fix": "The magnetic field inside a solenoid is uniform and strong, represented by parallel straight lines.",
+    "probe": {
+     "question": "Describe the magnetic field at the very center of a long current-carrying solenoid.",
+     "wrong_answer": "There is no field because there is no iron core there."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "empty space cannot contain physical properties",
+    "causes": [],
+    "trigger_cues": [
+     "inside",
+     "uniform",
+     "parallel",
+     "hollow"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Concept Inventories in Electromagnetics"
+   },
+   {
+    "key": "m5",
+    "node": "n13",
+    "statement": "In Fleming's Left-Hand Rule, the thumb represents the direction of the magnetic field.",
+    "why": "Arbitrary assignment of fingers due to lack of mnemonic practice.",
+    "fix": "The thumb represents the Force (Motion), the forefinger represents the Field, and the middle finger represents the Current.",
+    "probe": {
+     "question": "Using the Left-Hand Rule, which finger points toward the North pole of the external magnet?",
+     "wrong_answer": "The thumb."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "labels of parts are interchangeable",
+    "causes": [],
+    "trigger_cues": [
+     "left hand",
+     "motion",
+     "forefinger",
+     "perpendicular"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m6",
+    "node": "n15",
+    "statement": "The earth wire is used to complete the circuit so the appliance can turn on.",
+    "why": "Confusing the function of the neutral wire with the earth wire.",
+    "fix": "The earth wire is a safety measure that provides a low-resistance path for leakage current to the ground.",
+    "probe": {
+     "question": "Will a toaster work if the earth wire is disconnected but live and neutral are connected?",
+     "wrong_answer": "No, the circuit is incomplete."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "all wires in a plug serve the same purpose",
+    "causes": [],
+    "trigger_cues": [
+     "green",
+     "safety",
+     "ground",
+     "shock"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m7",
+    "node": "n16",
+    "statement": "A short circuit happens when the length of the wire in the circuit is too short.",
+    "why": "Literal interpretation of the everyday word 'short'.",
+    "fix": "A short circuit occurs when the live wire and neutral wire come into direct contact, causing resistance to drop to nearly zero.",
+    "probe": {
+     "question": "Why does a short circuit cause a fire?",
+     "wrong_answer": "Because the electricity doesn't have enough room to travel in the short wire."
+    },
+    "error_type": "everyday_language",
+    "root_belief": "scientific terms mean their everyday definitions",
+    "causes": [
+     "m8"
+    ],
+    "trigger_cues": [
+     "short circuit",
+     "contact",
+     "insulation",
+     "live"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m8",
+    "node": "n17",
+    "statement": "A fuse 'creates' more power when the appliance needs it.",
+    "why": "Misunderstanding the fuse as a source of energy rather than a breaker.",
+    "fix": "A fuse is a safety device that melts and breaks the circuit when current exceeds a safe limit.",
+    "probe": {
+     "question": "What happens to the wire inside a fuse during an overload?",
+     "wrong_answer": "It expands to let more current through."
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "components are active providers of the main effect",
+    "causes": [],
+    "trigger_cues": [
+     "fuse",
+     "melt",
+     "rating",
+     "limit"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m9",
+    "node": "n12",
+    "statement": "A magnetic field exerts a force on any charge, even if it is standing still.",
+    "why": "Overgeneralizing the interaction between magnets and charges.",
+    "fix": "A magnetic field only exerts a force on a moving charge or a current-carrying conductor.",
+    "probe": {
+     "question": "A stationary electron is placed in a strong magnetic field. What is the force on it?",
+     "wrong_answer": "It will move towards the North pole."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "fields affect everything in their vicinity equally",
+    "causes": [],
+    "trigger_cues": [
+     "stationary",
+     "charge",
+     "force",
+     "electron"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Mumbai Research"
+   },
+   {
+    "key": "m10",
+    "node": "n7",
+    "statement": "The magnetic field is strongest at the center of a bar magnet.",
+    "why": "Intuition that the 'heart' or center of an object is its most powerful part.",
+    "fix": "The magnetic field is strongest at the poles where the field lines are most crowded.",
+    "probe": {
+     "question": "Where will a bar magnet pick up the most iron filings?",
+     "wrong_answer": "In the middle of the magnet."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "the center is the source of power",
+    "causes": [],
+    "trigger_cues": [
+     "poles",
+     "strength",
+     "degree of closeness",
+     "crowded"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas in Science"
+   },
+   {
+    "key": "m11",
+    "node": "n10",
+    "statement": "A solenoid only has a magnetic field if it has an iron core inside it.",
+    "why": "Confusing a solenoid with an electromagnet.",
+    "fix": "A solenoid produces a magnetic field whenever current flows through it; an iron core only increases the field strength.",
+    "probe": {
+     "question": "Does a coil of copper wire produce a magnetic field when connected to a battery?",
+     "wrong_answer": "No, because copper is not magnetic."
+    },
+    "error_type": "single_cause",
+    "root_belief": "magnetic effects require magnetic materials",
+    "causes": [],
+    "trigger_cues": [
+     "soft iron",
+     "core",
+     "electromagnet",
+     "coil"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m12",
+    "node": "n16",
+    "statement": "Overloading and short circuit are the same thing.",
+    "why": "Both lead to the fuse blowing and involve high current.",
+    "fix": "Overloading is connecting too many appliances to one socket; a short circuit is the direct contact of live and neutral wires.",
+    "probe": {
+     "question": "If you plug five heaters into one extension cord, is that a short circuit?",
+     "wrong_answer": "Yes, because the wires will get hot and touch."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar outcomes imply identical causes",
+    "causes": [],
+    "trigger_cues": [
+     "overloading",
+     "socket",
+     "simultaneously",
+     "capacity"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}

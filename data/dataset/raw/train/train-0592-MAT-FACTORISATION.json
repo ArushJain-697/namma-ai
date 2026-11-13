@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0592-MAT-FACTORISATION",
+  "topic_id": "MAT-FACTORISATION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a conversation between a teacher and two students",
+  "seed": 592
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1095,
+  "candidatesTokenCount": 1307,
+  "totalTokenCount": 2402,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1095
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-FACTORISATION-K17-M10",
+  "MAT-FACTORISATION-K19-M12",
+  "MAT-FACTORISATION-K13-M5",
+  "MAT-FACTORISATION-K16-M9",
+  "MAT-FACTORISATION-K5-M2",
+  "MAT-FACTORISATION-K15-M8",
+  "MAT-FACTORISATION-K25-M23",
+  "MAT-FACTORISATION-K22-M18",
+  "MAT-FACTORISATION-K10-M1",
+  "MAT-FACTORISATION-K21-M16",
+  "MAT-FACTORISATION-K26-M22",
+  "MAT-FACTORISATION-K20-M13",
+  "MAT-FACTORISATION-K12-M4",
+  "MAT-FACTORISATION-K20-M14"
+ ],
+ "response": {
+  "passage": "Teacher: Today, let us look at factorisation. Rohan, if you have 6x + 3, what is the factorised form? Rohan: I think it is 3(2x), because I just took out the number. Teacher: Not quite, Rohan. When you take out a common factor, you must divide every term. If you take out 3, you are left with 2x + 1, because 3 divided by 3 is 1. Priya: Oh, I see! What about regrouping terms like ax + by + ay + bx? I tried to group ax and by, but they have nothing in common. Teacher: You can rearrange them first! Group ax with ay and bx with by. Also, remember that when you factor out a negative, you must change the signs inside the bracket. For example, -2x + 6 becomes -2(x - 3). Finally, be careful with identities. The expression x^2 - 9 is a difference of squares, which is (x - 3)(x + 3), not (x - 3)^2. And remember, x^2 + 9 cannot be factorised using these simple identities because it is a sum of squares, not a difference. Always check your signs and ensure every term is accounted for when factoring.",
+  "summary": "Factorisation requires dividing every term by the common factor and carefully managing signs when factoring out negatives. Algebraic identities like the difference of squares must be applied correctly, while sums of squares do not follow the same pattern.",
+  "items": [
+   {
+    "evidence": "If you take out 3, you are left with 2x + 1, because 3 divided by 3 is 1.",
+    "answer": "2x + 1",
+    "stem": "What remains after taking 3 as a common factor from 6x + 3?",
+    "options": [
+     {
+      "belief_id": "MAT-FACTORISATION-K13-M5",
+      "why": "Student ignores the variable term and only divides the constant.",
+      "text": "2x"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K12-M4",
+      "why": "Student assumes the divided term leaves nothing behind.",
+      "text": "2x"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K5-M2",
+      "why": "Student confuses the original terms with the factorised result.",
+      "text": "6x and 3"
+     }
+    ]
+   },
+   {
+    "evidence": "Group ax with ay and bx with by.",
+    "answer": "ax with ay",
+    "stem": "Which terms should be grouped together to factorise ax + by + ay + bx?",
+    "options": [
+     {
+      "belief_id": "MAT-FACTORISATION-K16-M9",
+      "why": "Student believes only adjacent terms can be grouped.",
+      "text": "ax and by"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K15-M8",
+      "why": "Student incorrectly assumes grouping leads to disappearing brackets.",
+      "text": "(a + b)"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K10-M1",
+      "why": "Student fails to identify common variables as factors.",
+      "text": "a and x"
+     }
+    ]
+   },
+   {
+    "evidence": "For example, -2x + 6 becomes -2(x - 3).",
+    "answer": "-2(x - 3)",
+    "stem": "What is the correct way to factorise -2x + 6?",
+    "options": [
+     {
+      "belief_id": "MAT-FACTORISATION-K17-M10",
+      "why": "Student fails to change the sign inside the bracket.",
+      "text": "-2(x + 3)"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K22-M18",
+      "why": "Student ignores the negative sign during factorisation.",
+      "text": "2(x + 3)"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K13-M5",
+      "why": "Student only considers the numerical common factor.",
+      "text": "-2(x + 6)"
+     }
+    ]
+   },
+   {
+    "evidence": "The expression x^2 - 9 is a difference of squares, which is (x - 3)(x + 3), not (x - 3)^2.",
+    "answer": "(x - 3)(x + 3)",
+    "stem": "How should the expression x^2 - 9 be correctly factorised?",
+    "options": [
+     {
+      "belief_id": "MAT-FACTORISATION-K20-M13",
+      "why": "Student confuses difference of squares with a perfect square.",
+      "text": "(x - 3)^2"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K19-M12",
+      "why": "Student incorrectly applies signs for a perfect square.",
+      "text": "(x - 3)(x - 3)"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K20-M14",
+      "why": "Student incorrectly applies the pattern to a sum of squares.",
+      "text": "(x + 3)(x + 3)"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.3
+}

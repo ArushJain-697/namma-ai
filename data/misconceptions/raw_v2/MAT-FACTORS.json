@@ -1,0 +1,480 @@
+{
+ "topic": {
+  "id": "MAT-FACTORS",
+  "subject": "maths",
+  "strand": "maths",
+  "grades": [
+   6
+  ],
+  "title": "Playing with numbers",
+  "scope": "factors and multiples, prime and composite, divisibility rules, HCF and LCM, prime factorisation"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 842,
+  "candidatesTokenCount": 1673,
+  "totalTokenCount": 2515,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 842
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 64.6,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Factors and Multiples",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "multiplication tables",
+     "division of whole numbers"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Prime and Composite Numbers",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "concept of factors"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Divisibility Rules",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "place value",
+     "addition"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "HCF and LCM",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1",
+     "n2"
+    ],
+    "external_prereqs": [
+     "multiplication",
+     "division"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Factor Identification",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "division"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Multiple Identification",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "multiplication"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Prime Classification",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Divisibility by 2, 3, 5, 10",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "place value"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Prime Factorisation",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "HCF Calculation",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [
+     "n5",
+     "n9"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "LCM Calculation",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [
+     "n6",
+     "n9"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Factors are limited",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Multiples are infinite",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "1 is prime",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Divisibility by 3 rule",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": [
+     "sum of digits"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n12",
+    "statement": "The number 1 is a prime number.",
+    "why": "Students confuse the definition of prime (exactly two factors) with the uniqueness of 1.",
+    "fix": "A prime number must have exactly two distinct factors: 1 and itself. 1 only has one factor, so it is neither prime nor composite.",
+    "probe": {
+     "question": "Which of these is a prime number: 1, 2, 3?",
+     "wrong_answer": "1"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "definitions are flexible based on number size",
+    "causes": [],
+    "trigger_cues": [
+     "prime",
+     "composite",
+     "number",
+     "factors"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on number concepts"
+   },
+   {
+    "key": "m2",
+    "node": "n15",
+    "statement": "To check divisibility by 3, look only at the last digit.",
+    "why": "Students overgeneralize the rule for 2, 5, and 10 to all divisibility tests.",
+    "fix": "The rule for 3 is to add the digits of the number; if the sum is divisible by 3, the whole number is.",
+    "probe": {
+     "question": "Is 13 divisible by 3?",
+     "wrong_answer": "No, because 3 is not even"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a rule from whole numbers works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "divisibility",
+     "rule",
+     "sum",
+     "digits",
+     "last"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n10",
+    "statement": "HCF of two numbers is always smaller than both numbers.",
+    "why": "Students confuse HCF (Highest Common Factor) with the concept of a common multiple.",
+    "fix": "The HCF is the largest factor that divides both numbers, so it can be equal to the smaller number but never larger.",
+    "probe": {
+     "question": "What is the HCF of 5 and 10?",
+     "wrong_answer": "50"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "bigger or more means more effect",
+    "causes": [],
+    "trigger_cues": [
+     "highest",
+     "common",
+     "factor",
+     "hcf"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m4",
+    "node": "n7",
+    "statement": "All odd numbers are prime numbers.",
+    "why": "Students notice that 2 is the only even prime and 3, 5, 7 are odd, so they overgeneralise that oddness means prime.",
+    "fix": "Odd numbers like 9, 15, 21 have factors other than 1 and themselves, so they are composite. A prime has exactly two factors.",
+    "probe": {
+     "question": "Is 9 a prime number? Why or why not?",
+     "wrong_answer": "Yes, 9 is prime because it is odd."
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "Odd numbers behave like primes",
+    "causes": [],
+    "trigger_cues": [
+     "odd",
+     "prime",
+     "9",
+     "15",
+     "21",
+     "only divisible by"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation"
+   },
+   {
+    "key": "m5",
+    "node": "n7",
+    "statement": "2 is not a prime number because it is even.",
+    "why": "Students learn that even numbers are divisible by 2, so they think every even number is composite, forgetting that 2 itself has only two factors.",
+    "fix": "2 has exactly two factors, 1 and 2, so it is prime. It is the smallest and the only even prime number.",
+    "probe": {
+     "question": "Is 2 a prime number?",
+     "wrong_answer": "No, 2 is even so it is divisible by 2 and is not prime."
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "All even numbers are composite",
+    "causes": [],
+    "trigger_cues": [
+     "2",
+     "even",
+     "prime",
+     "smallest prime",
+     "divisible by 2"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation"
+   },
+   {
+    "key": "m6",
+    "node": "n5",
+    "statement": "The factors of a number do not include the number itself or 1.",
+    "why": "Students think of factors as the 'smaller parts' that make up a number, so they leave out 1 and the number itself.",
+    "fix": "Every number is divisible by 1 and by itself, so both are always factors. For example, the factors of 12 are 1, 2, 3, 4, 6, 12.",
+    "probe": {
+     "question": "List all the factors of 12.",
+     "wrong_answer": "2, 3, 4, 6"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Factors are only the proper inner parts",
+    "causes": [],
+    "trigger_cues": [
+     "list all factors",
+     "factors of 12",
+     "1 and itself",
+     "every factor"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher reports"
+   },
+   {
+    "key": "m7",
+    "node": "n6",
+    "statement": "The multiples of a number are the same as its factors.",
+    "why": "Students mix up the words 'factor' and 'multiple' because both relate a number to another by multiplication.",
+    "fix": "Factors divide the number exactly and are finite; multiples are the numbers you get by multiplying it, e.g. multiples of 4 are 4, 8, 12, 16...",
+    "probe": {
+     "question": "Write the first four multiples of 6.",
+     "wrong_answer": "1, 2, 3, 6"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Factor and multiple mean the same thing",
+    "causes": [],
+    "trigger_cues": [
+     "multiples of",
+     "first four multiples",
+     "factor",
+     "multiple",
+     "list"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on factor-multiple confusion in school maths"
+   },
+   {
+    "key": "m8",
+    "node": "n8",
+    "statement": "A number is divisible by 5 if its last digit is 5 only.",
+    "why": "Students remember only the example 5, 15, 25 and forget that 0 as last digit also gives a multiple of 5.",
+    "fix": "A number is divisible by 5 if its ones digit is 0 or 5. So 40 and 120 are divisible by 5.",
+    "probe": {
+     "question": "Is 70 divisible by 5?",
+     "wrong_answer": "No, because it does not end in 5."
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "Rule applies to one example digit only",
+    "causes": [],
+    "trigger_cues": [
+     "divisible by 5",
+     "last digit",
+     "ends in 0",
+     "70",
+     "40"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m9",
+    "node": "n9",
+    "statement": "Prime factorisation of a number can stop when the factors are any two smaller numbers.",
+    "why": "Students follow the multiplication step procedure without understanding that every factor in the final answer must itself be prime.",
+    "fix": "Keep splitting factors until all of them are primes. For 36, 6 × 6 is not complete; 2 × 2 × 3 × 3 is.",
+    "probe": {
+     "question": "Write the prime factorisation of 36.",
+     "wrong_answer": "36 = 4 × 9"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "Any factor pair counts as complete factorisation",
+    "causes": [],
+    "trigger_cues": [
+     "prime factorisation",
+     "factor tree",
+     "write 36 as product",
+     "product of primes"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies on factor tree errors"
+   },
+   {
+    "key": "m10",
+    "node": "n10",
+    "statement": "The HCF of two numbers is found by multiplying them together.",
+    "why": "Students confuse HCF with the product of numbers, or take multiplication as the default way to combine two numbers.",
+    "fix": "HCF is the greatest number that divides both exactly. List common factors or use prime factorisation and take common primes. HCF of 8 and 12 is 4, not 96.",
+    "probe": {
+     "question": "Find the HCF of 8 and 12.",
+     "wrong_answer": "96"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "Combining two numbers means multiplying them",
+    "causes": [],
+    "trigger_cues": [
+     "hcf of",
+     "find hcf",
+     "greatest common factor",
+     "two numbers"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher reports"
+   },
+   {
+    "key": "m11",
+    "node": "n11",
+    "statement": "The LCM of two numbers is the larger of the two numbers always.",
+    "why": "Students see examples like LCM of 4 and 8 being 8 and generalise, ignoring cases where neither divides the other.",
+    "fix": "The LCM is the smallest number divisible by both. It equals the larger number only when the larger is a multiple of the smaller. LCM of 4 and 6 is 12.",
+    "probe": {
+     "question": "Find the LCM of 4 and 6.",
+     "wrong_answer": "6"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "Special case results apply to all cases",
+    "causes": [],
+    "trigger_cues": [
+     "lcm of",
+     "smallest common multiple",
+     "4 and 6",
+     "find lcm"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation"
+   },
+   {
+    "key": "m12",
+    "node": "n12",
+    "statement": "Bigger numbers always have more factors than smaller numbers.",
+    "why": "Students use whole-number thinking that larger size means larger count, ignoring structure like primes.",
+    "fix": "Number of factors depends on the number's structure, not its size. 97 has only 2 factors while 12 has 6.",
+    "probe": {
+     "question": "Which has more factors, 97 or 12?",
+     "wrong_answer": "97, because it is the bigger number."
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "Larger number means more of everything",
+    "causes": [],
+    "trigger_cues": [
+     "which has more factors",
+     "bigger number",
+     "97",
+     "count factors"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation"
+   },
+   {
+    "key": "m13",
+    "node": "n13",
+    "statement": "Multiples of a number stop after the multiple of 10, like a table.",
+    "why": "Students learn multiplication tables only up to 10 and think the list of multiples ends there.",
+    "fix": "You can keep multiplying by 11, 12, 13 and so on forever, so multiples are infinite. There is no largest multiple of 5.",
+    "probe": {
+     "question": "What is the largest multiple of 5?",
+     "wrong_answer": "50, because the table of 5 ends at 5 × 10."
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "Multiples end where the table ends",
+    "causes": [],
+    "trigger_cues": [
+     "largest multiple",
+     "last multiple",
+     "table of",
+     "how many multiples"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on finite-infinite concept in number theory"
+   }
+  ]
+ },
+ "problems": [
+  "only 3 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

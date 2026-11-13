@@ -1,0 +1,479 @@
+{
+ "topic": {
+  "id": "SCI-PHY-CHEMCURRENT",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   8
+  ],
+  "title": "Chemical effects of electric current",
+  "scope": "conduction in liquids, electrolysis basics, electroplating, tester with LED"
+ },
+ "model": "gemini-3-flash-preview",
+ "usage": {
+  "promptTokenCount": 830,
+  "candidatesTokenCount": 4068,
+  "totalTokenCount": 6508,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 830
+   }
+  ],
+  "thoughtsTokenCount": 1610,
+  "serviceTier": "standard"
+ },
+ "seconds": 23.4,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Electrical Conduction in Liquids",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "simple electric circuit",
+     "conductors and insulators"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Chemical Effects of Current",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "chemical change basics"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Electroplating",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "properties of metals"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Conductivity of different liquids",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Distilled water is an insulator",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "Tap water and salt solutions conduct",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Testing weak currents",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "magnetic effect of current"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "LED tester for weak current",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Magnetic compass tester",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "LED lead polarity",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Electrolysis basics",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Gas bubble formation at electrodes",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Metal deposition on electrodes",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Color change in electrolyte",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Mechanism of Electroplating",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n16",
+    "name": "Metal transfer from anode to cathode",
+    "level": 3,
+    "parent": "n15",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n17",
+    "name": "Role of electrolyte in electroplating",
+    "level": 3,
+    "parent": "n15",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n18",
+    "name": "Applications of electroplating",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n15"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n19",
+    "name": "Chromium plating for shine",
+    "level": 3,
+    "parent": "n18",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n20",
+    "name": "Zinc coating for rust prevention",
+    "level": 3,
+    "parent": "n18",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n5",
+    "statement": "Pure distilled water conducts electricity just like tap water.",
+    "why": "Students generalize their experience that water and electricity are a dangerous combination.",
+    "fix": "Distilled water is free of salts and is a poor conductor; it does not conduct electricity.",
+    "probe": {
+     "question": "If you use a battery and a bulb with pure distilled water, will the bulb glow?",
+     "wrong_answer": "Yes, because water is a conductor."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "All forms of a substance behave identically.",
+    "causes": [],
+    "trigger_cues": [
+     "distilled",
+     "pure",
+     "water",
+     "conduction"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic studies on electricity"
+   },
+   {
+    "key": "m2",
+    "node": "n8",
+    "statement": "If the bulb in a tester does not glow, no current is flowing through the liquid.",
+    "why": "Students rely on visible light as the only indicator of electrical flow.",
+    "fix": "The current might be too weak to make the bulb glow; an LED or magnetic compass is needed for weak currents.",
+    "probe": {
+     "question": "A student tests lemon juice with a bulb tester and it doesn't glow. Is there current?",
+     "wrong_answer": "No, the circuit is broken because the bulb is off."
+    },
+    "error_type": "visible_only",
+    "root_belief": "No visible effect means no underlying process.",
+    "causes": [],
+    "trigger_cues": [
+     "bulb",
+     "glow",
+     "tester",
+     "weak"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m3",
+    "node": "n10",
+    "statement": "It doesn't matter which way you connect the two wires of an LED.",
+    "why": "Standard bulbs work regardless of orientation, so students apply this to LEDs.",
+    "fix": "An LED has polarity; the longer lead must be connected to the positive terminal.",
+    "probe": {
+     "question": "Why did the LED not glow even though the circuit was complete?",
+     "wrong_answer": "The LED is probably fused or the battery is dead."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Symmetry in components implies identical function.",
+    "causes": [],
+    "trigger_cues": [
+     "led",
+     "leads",
+     "longer",
+     "shorter"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n12",
+    "statement": "The bubbles formed during electrolysis are just the water boiling.",
+    "why": "Bubbles in water are most commonly associated with boiling in everyday life.",
+    "fix": "The bubbles are actually gases like oxygen and hydrogen produced by a chemical reaction.",
+    "probe": {
+     "question": "What are the bubbles seen near the electrodes in water electrolysis?",
+     "wrong_answer": "Steam or water vapor from heating."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "Similar appearances mean identical processes.",
+    "causes": [],
+    "trigger_cues": [
+     "bubbles",
+     "electrodes",
+     "gas",
+     "water"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas in Science"
+   },
+   {
+    "key": "m5",
+    "node": "n16",
+    "statement": "In electroplating, the metal atoms travel through the air or jump directly between plates.",
+    "why": "Students struggle to visualize the role of the solution in transporting ions.",
+    "fix": "Metal ions from the solution deposit on the cathode, and the anode dissolves to replenish the solution.",
+    "probe": {
+     "question": "How does copper get from one plate to the other in a copper sulfate solution?",
+     "wrong_answer": "It moves through the water without changing into anything else."
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "Matter moves directly from source to destination.",
+    "causes": [],
+    "trigger_cues": [
+     "transfer",
+     "copper",
+     "plate",
+     "solution"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m6",
+    "node": "n4",
+    "statement": "Liquids conduct electricity using free electrons just like copper wires.",
+    "why": "Students carry over the model of metallic conduction to all states of matter.",
+    "fix": "Liquids conduct electricity through the movement of ions, not free electrons.",
+    "probe": {
+     "question": "What carries the electric charge through a salt solution?",
+     "wrong_answer": "Electrons flowing through the liquid."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Mechanism in one state applies to all states.",
+    "causes": [],
+    "trigger_cues": [
+     "conduction",
+     "liquid",
+     "ions",
+     "electrons"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Concept Inventories in Chemistry/Physics"
+   },
+   {
+    "key": "m7",
+    "node": "n20",
+    "statement": "Iron is coated with zinc because zinc is 'stronger' than iron.",
+    "why": "Students use everyday meanings of 'strong' to explain protection.",
+    "fix": "Zinc is used because it is more reactive and prevents the iron underneath from rusting.",
+    "probe": {
+     "question": "Why do we plate iron bridge girders with zinc?",
+     "wrong_answer": "To make the iron harder and harder to break."
+    },
+    "error_type": "everyday_language",
+    "root_belief": "A word means its everyday meaning.",
+    "causes": [],
+    "trigger_cues": [
+     "zinc",
+     "coating",
+     "rust",
+     "iron"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m8",
+    "node": "n6",
+    "statement": "Adding sugar to water makes it a good conductor because the sugar dissolves.",
+    "why": "Students confuse 'dissolving' with 'ionizing'.",
+    "fix": "Sugar dissolves as molecules, not ions, so sugar solution does not conduct electricity.",
+    "probe": {
+     "question": "Will a circuit be completed if you use a sugar solution?",
+     "wrong_answer": "Yes, because the sugar has dissolved in the water."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Dissolving always produces mobile charged particles.",
+    "causes": [],
+    "trigger_cues": [
+     "sugar",
+     "solution",
+     "dissolve",
+     "conduct"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic questions"
+   },
+   {
+    "key": "m9",
+    "node": "n13",
+    "statement": "Electricity 'creates' the metal that is deposited on the electrode.",
+    "why": "The appearance of new solid metal seems like creation from energy.",
+    "fix": "Electricity only provides the energy to move existing metal ions from the solution to the electrode.",
+    "probe": {
+     "question": "Where does the copper on the spoon come from during electroplating?",
+     "wrong_answer": "The electricity turns into copper when it hits the spoon."
+    },
+    "error_type": "other",
+    "root_belief": "Energy can be directly converted into matter.",
+    "causes": [],
+    "trigger_cues": [
+     "deposit",
+     "metal",
+     "electricity",
+     "formed"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m10",
+    "node": "n9",
+    "statement": "The magnetic needle moves because the liquid itself becomes a magnet.",
+    "why": "Students misattribute the magnetic field of the wire to the liquid in the beaker.",
+    "fix": "The needle moves because the current in the wire wrapped around the compass creates a magnetic field.",
+    "probe": {
+     "question": "Why does the compass needle deflect when the tester leads are dipped in lemon juice?",
+     "wrong_answer": "Because lemon juice is magnetic when electricity is in it."
+    },
+    "error_type": "single_cause",
+    "root_belief": "The nearest object is the cause of the effect.",
+    "causes": [],
+    "trigger_cues": [
+     "compass",
+     "needle",
+     "deflection",
+     "magnetic"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n19",
+    "statement": "Chromium plating is done to make the whole object out of chromium.",
+    "why": "Students don't distinguish between a surface coating and the bulk material.",
+    "fix": "Only a thin layer of chromium is deposited to save costs while providing shine and rust resistance.",
+    "probe": {
+     "question": "Is a 'chrome' bicycle handle made entirely of chromium?",
+     "wrong_answer": "Yes, that is why it is so shiny and doesn't rust."
+    },
+    "error_type": "part_whole",
+    "root_belief": "The surface represents the whole object.",
+    "causes": [],
+    "trigger_cues": [
+     "chromium",
+     "plating",
+     "shiny",
+     "layer"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m12",
+    "node": "n17",
+    "statement": "The liquid in the beaker is just there to hold the electrodes and doesn't participate.",
+    "why": "The liquid looks unchanged to the naked eye during the early stages.",
+    "fix": "The electrolyte is essential as it provides the ions that carry the current and provide the metal for plating.",
+    "probe": {
+     "question": "Can we use plain distilled water for copper plating if the copper plates are present?",
+     "wrong_answer": "Yes, the water just needs to let the electricity pass between plates."
+    },
+    "error_type": "visible_only",
+    "root_belief": "If a substance doesn't disappear, it isn't reacting.",
+    "causes": [],
+    "trigger_cues": [
+     "electrolyte",
+     "solution",
+     "participate",
+     "role"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Chemistry education research on electrolytes"
+   }
+  ]
+ },
+ "problems": []
+}

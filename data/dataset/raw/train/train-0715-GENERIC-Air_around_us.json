@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0715-GENERIC-Air_around_us",
+  "topic_id": "SCI-CHM-AIR",
+  "split": "train",
+  "generic": true,
+  "theme": "Air around us",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a passage rich in numbers, dates or measurements",
+  "seed": 715
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 712,
+  "candidatesTokenCount": 1182,
+  "totalTokenCount": 1894,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 712
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "In the bustling town of Leh, Mr. Tenzin noticed that his balloon, inflated with 5 liters of air, shrank significantly during the cold night of January 12th. He consulted his neighbor, Dr. Meena, who explained that air molecules move closer together when the temperature drops, causing the volume to decrease. This phenomenon is why the pressure inside tires often drops during winter mornings. Interestingly, Dr. Meena mentioned that in the humid plains of Kolkata, air holds more moisture, which makes the air feel heavier compared to the dry mountain air of Leh. Mr. Tenzin was surprised to learn that air is not just empty space but a mixture of gases. He decided to conduct an experiment on February 20th, using 10 liters of air to see if the same shrinkage occurred in a heated room. He found that the volume remained stable because the heat kept the molecules active. By observing these changes, Mr. Tenzin understood that temperature directly influences the behavior of air. He shared his findings with the local school children, hoping they would appreciate the invisible forces surrounding them every day.",
+  "summary": "Mr. Tenzin observes how temperature changes affect the volume of air in balloons. He learns from Dr. Meena that cold temperatures cause air molecules to contract. This experiment helps him understand the physical properties of air.",
+  "items": [
+   {
+    "evidence": "Mr. Tenzin noticed that his balloon, inflated with 5 liters of air, shrank significantly during the cold night of January 12th.",
+    "answer": "5 liters",
+    "stem": "What was the initial volume of air inside the balloon before it shrank?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses a different number found later in the passage.",
+      "text": "10 liters"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects a name mentioned near the volume measurement.",
+      "text": "Dr. Meena"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Provides a true fact that does not answer the question.",
+      "text": "The cold night"
+     }
+    ]
+   },
+   {
+    "evidence": "Dr. Meena, who explained that air molecules move closer together when the temperature drops, causing the volume to decrease.",
+    "answer": "air molecules move closer together",
+    "stem": "What happens to air molecules when the temperature decreases?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Reverses the cause and effect relationship described.",
+      "text": "the temperature drops"
+     },
+     {
+      "belief_id": "GEN-READ-M5",
+      "why": "Confuses molecules with a similar sounding term.",
+      "text": "the volume decreases"
+     },
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Uses an everyday meaning of shrinking instead of scientific behavior.",
+      "text": "they get tired"
+     }
+    ]
+   },
+   {
+    "evidence": "Dr. Meena mentioned that in the humid plains of Kolkata, air holds more moisture, which makes the air feel heavier compared to the dry mountain air of Leh.",
+    "answer": "more moisture",
+    "stem": "Why does the air in Kolkata feel heavier than the air in Leh?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks a location name mentioned in the same sentence.",
+      "text": "Leh"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Assumes all mountain air is always dry.",
+      "text": "all mountain air"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a true fact that is not the cause.",
+      "text": "humid plains"
+     }
+    ]
+   },
+   {
+    "evidence": "He decided to conduct an experiment on February 20th, using 10 liters of air to see if the same shrinkage occurred in a heated room.",
+    "answer": "February 20th",
+    "stem": "On which date did Mr. Tenzin perform his second experiment?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses the date of the first observation.",
+      "text": "January 12th"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Uses the name of the person conducting the experiment.",
+      "text": "Mr. Tenzin"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Provides a true detail that is not a date.",
+      "text": "a heated room"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 5.1
+}

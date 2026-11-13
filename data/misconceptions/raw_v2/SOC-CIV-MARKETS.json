@@ -1,0 +1,430 @@
+{
+ "topic": {
+  "id": "SOC-CIV-MARKETS",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   7
+  ],
+  "title": "Markets around us",
+  "scope": "weekly markets, shops, malls, chain of markets, wholesale and retail, market and equality"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 828,
+  "candidatesTokenCount": 1459,
+  "totalTokenCount": 2287,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 828
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 5.7,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Types of Markets",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2",
+    "name": "Market Chain and Distribution",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3",
+    "name": "Markets and Equality",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "concept of social justice"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Weekly Markets",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Shops and Malls",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "Wholesale vs Retail",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Chain of Markets",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Economic Inequality",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "basic arithmetic"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Weekly markets happen once a week",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Malls sell branded items",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Wholesale is buying in bulk",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Goods pass through intermediaries",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Purchasing power affects choices",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n4",
+    "statement": "Weekly markets are only for poor people.",
+    "why": "Students associate the lack of permanent infrastructure with lower social status.",
+    "fix": "Weekly markets are for everyone as they offer a wide variety of goods at competitive prices, often cheaper than permanent shops.",
+    "probe": {
+     "question": "Who shops at a weekly market?",
+     "wrong_answer": "Only people who cannot afford to go to malls."
+    },
+    "error_type": "stereotype",
+    "root_belief": "Appearance determines the quality and target audience.",
+    "causes": [],
+    "trigger_cues": [
+     "weekly",
+     "market",
+     "cheap",
+     "variety",
+     "traders"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n5",
+    "statement": "All items in a mall are of better quality than those in a local shop.",
+    "why": "Students equate high price and fancy surroundings with superior product quality.",
+    "fix": "Malls sell branded goods which may be expensive due to advertising and overheads, but the quality is not necessarily better than unbranded goods.",
+    "probe": {
+     "question": "Is a shirt from a mall always better than one from a local shop?",
+     "wrong_answer": "Yes, because it is sold in a mall."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Higher price always means higher quality.",
+    "causes": [],
+    "trigger_cues": [
+     "mall",
+     "branded",
+     "expensive",
+     "showroom",
+     "quality"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "consumer behavior research"
+   },
+   {
+    "key": "m3",
+    "node": "n6",
+    "statement": "Wholesale markets are where goods are made.",
+    "why": "Students confuse the place of sale (wholesale) with the place of production (factory).",
+    "fix": "Wholesale markets are where traders buy goods in bulk from factories to sell to retailers, not where production happens.",
+    "probe": {
+     "question": "Where does a wholesaler get their goods?",
+     "wrong_answer": "They make them in the wholesale market."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "A place is defined by its primary activity.",
+    "causes": [],
+    "trigger_cues": [
+     "wholesale",
+     "bulk",
+     "trader",
+     "factory",
+     "retailer"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n7",
+    "statement": "The price of a product is the same everywhere in the chain.",
+    "why": "Students ignore the costs added by transport, storage, and profit margins at each step.",
+    "fix": "The price increases as a product moves from the factory to the wholesaler, then the retailer, because each person adds their profit and covers expenses.",
+    "probe": {
+     "question": "Why is a pen more expensive in a shop than at the factory?",
+     "wrong_answer": "The shopkeeper is just charging extra for no reason."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "One event has one single cause.",
+    "causes": [],
+    "trigger_cues": [
+     "chain",
+     "price",
+     "profit",
+     "transport",
+     "retailer"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE concept inventory"
+   },
+   {
+    "key": "m5",
+    "node": "n4",
+    "statement": "A weekly market is held on the same fixed day in every town and village.",
+    "why": "Students generalise from their own local market's day and assume the schedule is uniform everywhere.",
+    "fix": "Each weekly market is held on a particular day of the week, and the day differs from place to place so traders can move between markets on different days.",
+    "probe": {
+     "question": "A trader sells in the weekly market of Village A on Monday. On which day will the weekly market of nearby Village B be held?",
+     "wrong_answer": "Also on Monday, because all weekly markets are held on the same day."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Local arrangements are the same everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "weekly market",
+     "which day",
+     "same day",
+     "every village",
+     "fixed day",
+     "held on"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m6",
+    "node": "n4",
+    "statement": "Goods in a weekly market are costlier than in shops because there are no permanent shops.",
+    "why": "Students link a shop's permanence and rent with lower prices, or assume temporary means expensive.",
+    "fix": "Weekly markets have no fixed shops and so traders' costs are low; goods are often cheaper and bargaining is common.",
+    "probe": {
+     "question": "Why do people often find vegetables cheaper in the weekly market than in a shop?",
+     "wrong_answer": "They are not cheaper; weekly market goods are always costlier than in shops."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Temporary sellers must charge higher prices",
+    "causes": [],
+    "trigger_cues": [
+     "weekly market",
+     "cheaper",
+     "costlier",
+     "price",
+     "bargain",
+     "no permanent shop"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom misconception reports"
+   },
+   {
+    "key": "m7",
+    "node": "n5",
+    "statement": "A shop and a mall are the same thing, only the name is different.",
+    "why": "Both sell goods directly to buyers, so students treat them as one kind of market.",
+    "fix": "Shops are usually single, smaller places selling a few kinds of goods; malls are large buildings housing many shops, often air-conditioned, under one roof.",
+    "probe": {
+     "question": "How is a mall different from a neighbourhood shop?",
+     "wrong_answer": "There is no difference; a mall is just another name for a shop."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Similar-looking places are identical",
+    "causes": [],
+    "trigger_cues": [
+     "mall",
+     "shop",
+     "difference",
+     "under one roof",
+     "many shops",
+     "neighbourhood"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m8",
+    "node": "n5",
+    "statement": "Bargaining is possible in malls just as in weekly markets.",
+    "why": "Students carry the habit of bargaining from weekly markets and street shops to all places.",
+    "fix": "In malls, prices are fixed and printed on the items; bargaining is common in weekly markets and small shops.",
+    "probe": {
+     "question": "Meena wants a lower price for a shirt in a mall. What will she most likely be able to do?",
+     "wrong_answer": "Bargain with the salesperson, as people do in every market."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "All markets work like the one I know",
+    "causes": [],
+    "trigger_cues": [
+     "bargain",
+     "mall",
+     "fixed price",
+     "price tag",
+     "weekly market",
+     "reduce price"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m9",
+    "node": "n6",
+    "statement": "Retailers sell goods only to wholesalers and not to ordinary customers.",
+    "why": "Students reverse the direction of the chain or mix up the two terms.",
+    "fix": "Retailers buy from wholesalers and sell small quantities directly to consumers; wholesalers sell in large quantities to retailers.",
+    "probe": {
+     "question": "To whom does a retailer sell goods?",
+     "wrong_answer": "To wholesalers, who then sell to the customers."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Chain direction is reversible",
+    "causes": [],
+    "trigger_cues": [
+     "retailer",
+     "wholesaler",
+     "sells to",
+     "consumer",
+     "direction",
+     "buys from"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher observation"
+   },
+   {
+    "key": "m10",
+    "node": "n7",
+    "statement": "Intermediaries in the market chain are unnecessary and only raise the price for no reason.",
+    "why": "Students see that each middleman adds a margin and conclude they add no value.",
+    "fix": "Traders in the chain collect, store, transport and distribute goods to buyers far away, though their margins add to the final price.",
+    "probe": {
+     "question": "Why do goods pass through wholesalers and traders before reaching the buyer?",
+     "wrong_answer": "They serve no purpose; they only make goods more expensive."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Middlemen serve no useful function",
+    "causes": [],
+    "trigger_cues": [
+     "middlemen",
+     "intermediaries",
+     "traders",
+     "chain",
+     "price rise",
+     "why needed"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n11",
+    "statement": "Anyone buying a large quantity of goods for personal use is a wholesaler.",
+    "why": "Students focus on the word bulk and ignore that wholesalers buy to resell.",
+    "fix": "Wholesalers buy in bulk in order to sell to retailers; a family buying lots of rice for its own use is still a consumer.",
+    "probe": {
+     "question": "A family buys 50 kg of rice for its own use. What are they?",
+     "wrong_answer": "Wholesalers, because they bought a large quantity."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Quantity alone defines the buyer type",
+    "causes": [],
+    "trigger_cues": [
+     "bulk",
+     "50 kg",
+     "wholesaler",
+     "own use",
+     "resell",
+     "large quantity"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m12",
+    "node": "n13",
+    "statement": "Everyone can buy the same goods because anyone can walk into any market.",
+    "why": "Students think that access to a market means equal ability to buy.",
+    "fix": "What people can buy depends on their income and purchasing power; markets are open but poorer people can afford fewer things.",
+    "probe": {
+     "question": "Two families visit the same mall. Why might they buy very different things?",
+     "wrong_answer": "They will not; everyone in the same market can buy the same goods."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Open access means equal ability to buy",
+    "causes": [],
+    "trigger_cues": [
+     "same market",
+     "afford",
+     "income",
+     "buy",
+     "purchasing power",
+     "equal"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom misconception reports"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

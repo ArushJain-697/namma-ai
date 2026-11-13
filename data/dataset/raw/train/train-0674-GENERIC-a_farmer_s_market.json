@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0674-GENERIC-a_farmer_s_market",
+  "topic_id": null,
+  "split": "train",
+  "generic": true,
+  "theme": "a farmer's market",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a cause-and-effect explanation",
+  "seed": 674
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 714,
+  "candidatesTokenCount": 1122,
+  "totalTokenCount": 1836,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 714
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "The Sunday farmer's market at Green Valley Orchard is a bustling hub for local agriculture. Every week, Mr. Sharma brings his organic spinach from the northern hills, while Mrs. Gupta arrives early to sell her famous homemade pickles. The market operates from 6:00 AM to 12:00 PM, attracting hundreds of residents from the nearby town of Malpur. A significant shift occurred last year when the local government installed solar-powered lights, which allowed vendors to set up stalls before dawn. Because the market now opens earlier, the total volume of fresh produce sold has increased by 45 percent. This growth has encouraged young farmers like Arjun to bring his exotic dragon fruits to the stalls. However, some critics argue that the increased crowd causes traffic congestion near the main gate. Despite this, the community values the direct connection between the grower and the buyer. The market remains a vital space for the economy of Malpur, proving that small changes in infrastructure can lead to substantial improvements in local trade.",
+  "summary": "The Green Valley farmer's market has grown significantly due to improved infrastructure like solar lighting. This change allows vendors to start earlier, leading to higher sales and more participation from local farmers.",
+  "items": [
+   {
+    "evidence": "The market operates from 6:00 AM to 12:00 PM, attracting hundreds of residents from the nearby town of Malpur.",
+    "answer": "Malpur",
+    "stem": "Where do the majority of the market's visitors reside?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Mistakenly picks the nearest named location in the sentence.",
+      "text": "Green Valley"
+     },
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Mistakenly picks a number found in the same sentence.",
+      "text": "6:00 AM"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Picks a true fact that does not answer the question.",
+      "text": "The northern hills"
+     }
+    ]
+   },
+   {
+    "evidence": "Because the market now opens earlier, the total volume of fresh produce sold has increased by 45 percent.",
+    "answer": "45 percent",
+    "stem": "By what amount did the sales of fresh produce rise?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Confuses the cause with the effect.",
+      "text": "Opening earlier"
+     },
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Picks a number from a different part of the text.",
+      "text": "12:00"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a true fact about the market's operation.",
+      "text": "The solar lights"
+     }
+    ]
+   },
+   {
+    "evidence": "This growth has encouraged young farmers like Arjun to bring his exotic dragon fruits to the stalls.",
+    "answer": "Arjun",
+    "stem": "Who began selling exotic fruits due to the market's expansion?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks a name mentioned elsewhere in the passage.",
+      "text": "Mr. Sharma"
+     },
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Interprets 'young' as a literal job title.",
+      "text": "Young farmers"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Picks a product mentioned in the sentence.",
+      "text": "Dragon fruits"
+     }
+    ]
+   },
+   {
+    "evidence": "However, some critics argue that the increased crowd causes traffic congestion near the main gate.",
+    "answer": "traffic congestion",
+    "stem": "What negative impact do critics associate with the larger number of visitors?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Uses the everyday meaning of 'crowd' instead of the context.",
+      "text": "The increased crowd"
+     },
+     {
+      "belief_id": "GEN-READ-M5",
+      "why": "Confuses 'congestion' with a similar-sounding term.",
+      "text": "Construction"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Picks a location mentioned in the sentence.",
+      "text": "The main gate"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.4
+}

@@ -1,0 +1,447 @@
+{
+ "topic": {
+  "id": "MAT-DATAHANDLING",
+  "subject": "maths",
+  "strand": "maths",
+  "grades": [
+   6,
+   7,
+   8
+  ],
+  "title": "Data handling",
+  "scope": "recording data, pictographs, bar graphs, mean, median, mode, pie charts, chance"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 848,
+  "candidatesTokenCount": 1422,
+  "totalTokenCount": 2270,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 848
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 5.8,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Data Collection and Organization",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "counting",
+     "tally marks"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Visual Representation",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "basic geometry",
+     "measurement"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Measures of Central Tendency",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "arithmetic operations",
+     "fractions"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Recording Data",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "counting"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Pictographs",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "multiplication"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Bar Graphs",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "number line"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Mean",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "division"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Median and Mode",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "ordering numbers"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Interpreting Scale",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": [
+     "multiplication"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Calculating Average",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": [
+     "division"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Identifying Mode",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": [
+     "frequency"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Chance and Probability",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "fractions"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n5",
+    "statement": "One symbol in a pictograph always represents one unit.",
+    "why": "Students ignore the scale/key provided in the pictograph.",
+    "fix": "Always check the key or legend to see how many units one symbol represents.",
+    "probe": {
+     "question": "If a symbol of a star represents 10 apples, how many apples are 3 stars?",
+     "wrong_answer": "3"
+    },
+    "error_type": "notation_misread",
+    "root_belief": "what you see is exactly what it is",
+    "causes": [],
+    "trigger_cues": [
+     "pictograph",
+     "symbol",
+     "key",
+     "represents",
+     "scale"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on data representation"
+   },
+   {
+    "key": "m2",
+    "node": "n7",
+    "statement": "The mean must be one of the numbers in the data set.",
+    "why": "Students confuse the mean with the mode or median.",
+    "fix": "The mean is a calculated average and often results in a value not present in the original data.",
+    "probe": {
+     "question": "What is the mean of 2 and 4?",
+     "wrong_answer": "2 or 4"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a rule from whole numbers works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "mean",
+     "average",
+     "data",
+     "sum",
+     "total"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m3",
+    "node": "n11",
+    "statement": "If all numbers appear once, there is no mode.",
+    "why": "Students believe a mode must appear more than once to be 'popular'.",
+    "fix": "If every value appears with the same frequency, the data set has no mode.",
+    "probe": {
+     "question": "What is the mode of 1, 2, 3?",
+     "wrong_answer": "1, 2, and 3"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "mode",
+     "frequency",
+     "most frequent",
+     "data set"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n6",
+    "statement": "The height of the bar is the only thing that matters, not the width.",
+    "why": "Students focus on the visual height and ignore the scale on the axis.",
+    "fix": "The height represents the frequency, but the scale on the axis determines the actual value.",
+    "probe": {
+     "question": "If a bar reaches the mark 5 on the y-axis, what is its value?",
+     "wrong_answer": "depends on the width"
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "bigger or more means more effect",
+    "causes": [],
+    "trigger_cues": [
+     "bar graph",
+     "axis",
+     "height",
+     "scale",
+     "frequency"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's children's ideas"
+   },
+   {
+    "key": "m5",
+    "node": "n6",
+    "statement": "A bar graph can start its vertical axis at any number, and the bars still show the true size ratios.",
+    "why": "Students think only the bar tops matter, so a truncated axis seems harmless; they do not see that bar lengths then exaggerate differences.",
+    "fix": "In a bar graph the scale should start at 0 and be equally spaced. Bar lengths are compared to show how many times larger one value is than another.",
+    "probe": {
+     "question": "On a bar graph with axis starting at 50, one bar is at 60 and another at 90. The second bar looks how many times as tall as the first, and are the values in that ratio?",
+     "wrong_answer": "The second bar looks 3 times as tall, so the value is 3 times as big."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "bar length always shows true proportion regardless of axis start",
+    "causes": [],
+    "trigger_cues": [
+     "axis starts at",
+     "bar looks taller",
+     "compare bar heights",
+     "scale begins",
+     "how many times"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on graph comprehension and truncated axes"
+   },
+   {
+    "key": "m6",
+    "node": "n6",
+    "statement": "Each gap between two marks on the scale of a bar graph always stands for 1 unit.",
+    "why": "Students are used to counting by ones on a ruler or number line and read each division as one.",
+    "fix": "First find the value of one division: (difference between two labelled marks) divided by (number of divisions between them). Then read each bar using that value.",
+    "probe": {
+     "question": "On a bar graph the axis is labelled 0, 10, 20 with 5 small divisions between each label. A bar reaches 3 small divisions above 10. What is its value?",
+     "wrong_answer": "13"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "scale divisions always count in ones",
+    "causes": [],
+    "trigger_cues": [
+     "small divisions between labels",
+     "read the scale",
+     "value of one division",
+     "bar ends between marks"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on graph scale interpretation errors"
+   },
+   {
+    "key": "m7",
+    "node": "n7",
+    "statement": "To find the mean, add up the numbers and divide by how many different values there are.",
+    "why": "Students count only distinct values and ignore repeated observations, so the divisor is wrong.",
+    "fix": "Mean = sum of all observations divided by the total number of observations, counting repeats each time.",
+    "probe": {
+     "question": "Find the mean of 4, 4, 4, 10.",
+     "wrong_answer": "Sum is 22, there are 2 different numbers, so mean is 11."
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "repeated values count only once when averaging",
+    "causes": [],
+    "trigger_cues": [
+     "find the mean of",
+     "repeated numbers",
+     "add and divide",
+     "frequency table average"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on students' understanding of average"
+   },
+   {
+    "key": "m8",
+    "node": "n10",
+    "statement": "A zero in the data can be left out when calculating the average because it adds nothing.",
+    "why": "Since zero adds nothing to the sum, students think it contributes nothing at all, forgetting it still counts as an observation.",
+    "fix": "A zero is an observation. Include it in the count when dividing, because it lowers the mean.",
+    "probe": {
+     "question": "A child scored 0, 6, 8, 10 in four tests. What is the average score?",
+     "wrong_answer": "(6+8+10) divided by 3 = 8"
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "zero is nothing so it does not count",
+    "causes": [],
+    "trigger_cues": [
+     "scored zero",
+     "absent",
+     "average with 0",
+     "no goals",
+     "find the average"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on average and zero value (Strauss and Bichler)"
+   },
+   {
+    "key": "m9",
+    "node": "n8",
+    "statement": "The median is the middle number of the data in the order it is given.",
+    "why": "Students pick the middle position without arranging the data, because they skip the ordering step.",
+    "fix": "Arrange the data in ascending or descending order first, then pick the middle value. For an even count, take the mean of the two middle values.",
+    "probe": {
+     "question": "Find the median of 9, 2, 7, 1, 5.",
+     "wrong_answer": "7"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "middle position in given order gives the median",
+    "causes": [],
+    "trigger_cues": [
+     "find the median",
+     "unordered data",
+     "middle value",
+     "list of numbers"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on students' median misconceptions"
+   },
+   {
+    "key": "m10",
+    "node": "n8",
+    "statement": "When there is an even number of observations, the median is the larger of the two middle values.",
+    "why": "Students want the median to be an actual data value, so they choose one of the two middle numbers.",
+    "fix": "With an even number of observations, the median is the mean of the two middle values.",
+    "probe": {
+     "question": "Find the median of 3, 5, 8, 12.",
+     "wrong_answer": "8"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "the median must be one of the data values",
+    "causes": [],
+    "trigger_cues": [
+     "even number of observations",
+     "two middle values",
+     "four numbers",
+     "median of"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n11",
+    "statement": "The mode is the highest value in the data, or how many times the most common value occurs.",
+    "why": "Students mix up the value that is most frequent with the largest value or with its count.",
+    "fix": "The mode is the observation that occurs most often. Its frequency is only how many times it occurs, not the mode itself.",
+    "probe": {
+     "question": "Find the mode of 2, 5, 5, 5, 9, 9.",
+     "wrong_answer": "3, because 5 occurs three times"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "mode means largest value or its count",
+    "causes": [],
+    "trigger_cues": [
+     "find the mode",
+     "most frequent",
+     "occurs most often",
+     "highest value",
+     "how many times"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on mean, median and mode confusion"
+   },
+   {
+    "key": "m12",
+    "node": "n12",
+    "statement": "If a coin has landed heads three times in a row, tails is more likely next.",
+    "why": "Students believe chance must even out quickly, so a run of one result makes the other due.",
+    "fix": "Each toss is independent, so the chance of heads or tails is still equally likely every time, whatever happened before.",
+    "probe": {
+     "question": "A fair coin shows heads 3 times in a row. Which is more likely on the next toss?",
+     "wrong_answer": "Tails is more likely because heads has come too many times."
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "past outcomes change independent future chances",
+    "causes": [],
+    "trigger_cues": [
+     "coin tossed",
+     "in a row",
+     "next toss",
+     "more likely",
+     "due to come"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on gambler's fallacy (Tversky and Kahneman, Fischbein)"
+   }
+  ]
+ },
+ "problems": [
+  "n12: dropped cyclic prereq n1",
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

@@ -1,0 +1,518 @@
+{
+ "topic": {
+  "id": "SCI-BIO-LIFEPROCESSES",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   10
+  ],
+  "title": "Life processes",
+  "scope": "nutrition, respiration, transportation and excretion in plants and animals, kidney and nephron"
+ },
+ "model": "gemini-3-flash-preview/key3",
+ "usage": {
+  "promptTokenCount": 832,
+  "candidatesTokenCount": 3946,
+  "totalTokenCount": 6379,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 832
+   }
+  ],
+  "thoughtsTokenCount": 1601,
+  "serviceTier": "standard"
+ },
+ "seconds": 21.1,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Nutrition",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "cell structure",
+     "chemical reactions"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Respiration",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "diffusion",
+     "gases"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Transportation",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1",
+     "n2"
+    ],
+    "external_prereqs": [
+     "pressure",
+     "fluids"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Excretion",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n3"
+    ],
+    "external_prereqs": [
+     "filtration"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Autotrophic Nutrition",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "chlorophyll",
+     "sunlight"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Human Digestion",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "enzymes"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Cellular Respiration",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "mitochondria",
+     "glucose"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Human Respiratory System",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "lungs"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Human Circulatory System",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "heart"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Plant Transport",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "evaporation"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Human Excretory System",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [
+     "n9"
+    ],
+    "external_prereqs": [
+     "waste removal"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Photosynthesis Mechanism",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": [
+     "carbon dioxide"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "Stomatal Gas Exchange",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": [
+     "guard cells"
+    ]
+   },
+   {
+    "key": "n14",
+    "name": "Villi Absorption",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": [
+     "surface area"
+    ]
+   },
+   {
+    "key": "n15",
+    "name": "ATP Energy Currency",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": [
+     "energy"
+    ]
+   },
+   {
+    "key": "n16",
+    "name": "Alveoli Gas Exchange",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": [
+     "capillaries"
+    ]
+   },
+   {
+    "key": "n17",
+    "name": "Double Circulation",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": [
+     "oxygenated blood"
+    ]
+   },
+   {
+    "key": "n18",
+    "name": "Xylem and Phloem",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [],
+    "external_prereqs": [
+     "tissues"
+    ]
+   },
+   {
+    "key": "n19",
+    "name": "Nephron Filtration",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [],
+    "external_prereqs": [
+     "urea"
+    ]
+   },
+   {
+    "key": "n20",
+    "name": "Selective Reabsorption",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [
+     "n19"
+    ],
+    "external_prereqs": [
+     "osmosis"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n5",
+    "statement": "Plants get their food from the soil through their roots.",
+    "why": "Students observe plants growing in soil and assume soil is the source of mass.",
+    "fix": "Plants make their own food (glucose) using sunlight, CO2, and water; soil only provides minerals and water.",
+    "probe": {
+     "question": "If a plant grows in a pot, why doesn't the weight of the soil decrease significantly?",
+     "wrong_answer": "Because the plant only takes a tiny bit of soil food."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "external source is the only source of food",
+    "causes": [],
+    "trigger_cues": [
+     "soil",
+     "roots",
+     "nutrients",
+     "growth"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061 Science Literacy Maps"
+   },
+   {
+    "key": "m2",
+    "node": "n8",
+    "statement": "Respiration and breathing are the same process.",
+    "why": "The terms are used interchangeably in everyday conversation.",
+    "fix": "Breathing is the physical act of gas exchange, while respiration is the chemical breakdown of food to release energy inside cells.",
+    "probe": {
+     "question": "Does respiration occur in a person who is holding their breath?",
+     "wrong_answer": "No, because they are not breathing."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [
+     "m9"
+    ],
+    "trigger_cues": [
+     "breathing",
+     "lungs",
+     "inhale",
+     "energy"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Misconceptions in Biology"
+   },
+   {
+    "key": "m3",
+    "node": "n13",
+    "statement": "Plants only respire at night and photosynthesize during the day.",
+    "why": "Students think photosynthesis replaces respiration in plants during the day.",
+    "fix": "Respiration is a continuous process in all living cells, occurring both day and night to maintain life.",
+    "probe": {
+     "question": "When do plant cells use oxygen to break down glucose?",
+     "wrong_answer": "Only at night when there is no sun."
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "one event has one single cause or time",
+    "causes": [],
+    "trigger_cues": [
+     "day",
+     "night",
+     "oxygen",
+     "carbon dioxide"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas in Science"
+   },
+   {
+    "key": "m4",
+    "node": "n17",
+    "statement": "Arteries always carry oxygenated blood and veins always carry deoxygenated blood.",
+    "why": "This is the general rule taught initially, ignoring the pulmonary circuit exceptions.",
+    "fix": "Arteries carry blood away from the heart and veins carry it towards the heart; pulmonary arteries carry deoxygenated blood.",
+    "probe": {
+     "question": "Which vessel carries blood from the heart to the lungs?",
+     "wrong_answer": "Pulmonary vein, because it must be oxygenated."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "a general rule works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "artery",
+     "vein",
+     "oxygen",
+     "pulmonary"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n11",
+    "statement": "Excretion is the process of getting rid of undigested food (feces).",
+    "why": "Both involve removing 'waste' from the body, leading to linguistic confusion.",
+    "fix": "Excretion is the removal of metabolic nitrogenous wastes like urea; removing undigested food is called egestion.",
+    "probe": {
+     "question": "Is passing stool an example of excretion in the biological sense?",
+     "wrong_answer": "Yes, because it is waste leaving the body."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar outcomes imply identical processes",
+    "causes": [],
+    "trigger_cues": [
+     "waste",
+     "feces",
+     "urine",
+     "removal"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m6",
+    "node": "n9",
+    "statement": "The heart is responsible for creating or purifying the blood.",
+    "why": "The heart's central role in circulation leads to over-attributing functions to it.",
+    "fix": "The heart only pumps blood; blood cells are made in bone marrow and purified (oxygenated) in the lungs.",
+    "probe": {
+     "question": "What happens to blood when it enters the heart?",
+     "wrong_answer": "It gets cleaned and turned back into red blood."
+    },
+    "error_type": "single_cause",
+    "root_belief": "the most visible part does everything",
+    "causes": [],
+    "trigger_cues": [
+     "heart",
+     "pump",
+     "purify",
+     "blood"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n19",
+    "statement": "The kidney acts like a sieve that just lets small things fall through.",
+    "why": "Simplified analogies of 'filtration' lead to a passive view of the organ.",
+    "fix": "Kidneys use complex pressure-based filtration and active selective reabsorption to maintain balance.",
+    "probe": {
+     "question": "Why doesn't glucose normally appear in urine if it is a small molecule?",
+     "wrong_answer": "Because the kidney sieve holes are too small for glucose."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "complex processes work like simple mechanical tools",
+    "causes": [],
+    "trigger_cues": [
+     "filter",
+     "nephron",
+     "sieve",
+     "urine"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m8",
+    "node": "n18",
+    "statement": "Water moves up a tree because the roots push it up.",
+    "why": "Students find it easier to imagine a push from the bottom than a pull from the top.",
+    "fix": "While root pressure exists, the main force for tall trees is the transpiration pull caused by evaporation from leaves.",
+    "probe": {
+     "question": "How does water reach the top of a 100-meter tall redwood tree?",
+     "wrong_answer": "The roots pump the water with high pressure."
+    },
+    "error_type": "single_cause",
+    "root_belief": "movement requires a push from behind",
+    "causes": [],
+    "trigger_cues": [
+     "xylem",
+     "roots",
+     "transpiration",
+     "upward"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Concept Inventories"
+   },
+   {
+    "key": "m9",
+    "node": "n15",
+    "statement": "Energy is produced in the lungs during breathing.",
+    "why": "Students associate the intake of oxygen directly with the immediate production of energy.",
+    "fix": "Lungs only exchange gases; energy (ATP) is produced inside every individual cell during cellular respiration.",
+    "probe": {
+     "question": "Where exactly is the energy in your body generated?",
+     "wrong_answer": "In the lungs when we inhale oxygen."
+    },
+    "error_type": "part_whole",
+    "root_belief": "the organ is the only site of function",
+    "causes": [],
+    "trigger_cues": [
+     "energy",
+     "atp",
+     "lungs",
+     "cells"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m10",
+    "node": "n14",
+    "statement": "The small intestine is smooth inside to let food slide easily.",
+    "why": "Everyday experience with pipes suggests smooth surfaces are better for flow.",
+    "fix": "The small intestine has millions of tiny finger-like projections called villi to increase surface area for absorption.",
+    "probe": {
+     "question": "What would happen if the inner lining of the small intestine was perfectly smooth?",
+     "wrong_answer": "Digestion would be faster because food moves quickly."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "smoothness facilitates movement",
+    "causes": [],
+    "trigger_cues": [
+     "villi",
+     "absorption",
+     "intestine",
+     "surface"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n7",
+    "statement": "Anaerobic respiration only happens in bacteria and yeast, not humans.",
+    "why": "Textbooks often emphasize yeast fermentation as the primary example.",
+    "fix": "Human muscle cells undergo anaerobic respiration (producing lactic acid) during vigorous exercise when oxygen is low.",
+    "probe": {
+     "question": "Why do your muscles ache after a very fast sprint?",
+     "wrong_answer": "Because they ran out of air and stopped respiring."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "biological processes are exclusive to certain groups",
+    "causes": [],
+    "trigger_cues": [
+     "anaerobic",
+     "lactic acid",
+     "muscles",
+     "yeast"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT Exemplar Problems"
+   },
+   {
+    "key": "m12",
+    "node": "n20",
+    "statement": "The body gets rid of all the liquid it filters in the kidney.",
+    "why": "Students assume that once something is 'filtered' out of the blood, it is gone.",
+    "fix": "Most of the initial filtrate (water, glucose, amino acids) is selectively reabsorbed back into the blood.",
+    "probe": {
+     "question": "If 180 liters are filtered by kidneys daily, why do we only pass 1-2 liters of urine?",
+     "wrong_answer": "Because the rest evaporates from the skin."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "output must equal input",
+    "causes": [],
+    "trigger_cues": [
+     "reabsorption",
+     "filtrate",
+     "urine",
+     "nephron"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}

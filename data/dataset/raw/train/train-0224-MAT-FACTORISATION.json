@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0224-MAT-FACTORISATION",
+  "topic_id": "MAT-FACTORISATION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a step-by-step worked example",
+  "seed": 224
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1090,
+  "candidatesTokenCount": 1318,
+  "totalTokenCount": 2408,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1090
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-FACTORISATION-K22-M18",
+  "MAT-FACTORISATION-K21-M16",
+  "MAT-FACTORISATION-K12-M4",
+  "MAT-FACTORISATION-K20-M14",
+  "MAT-FACTORISATION-K19-M12",
+  "MAT-FACTORISATION-K26-M22",
+  "MAT-FACTORISATION-K23-M20",
+  "MAT-FACTORISATION-K13-M5",
+  "MAT-FACTORISATION-K14-M7",
+  "MAT-FACTORISATION-K10-M1",
+  "MAT-FACTORISATION-K24-M21",
+  "MAT-FACTORISATION-K17-M10",
+  "MAT-FACTORISATION-K20-M13",
+  "MAT-FACTORISATION-K25-M23"
+ ],
+ "response": {
+  "passage": "Factorisation is the process of writing an algebraic expression as a product of its factors. When you factorise an expression like 3x + 6, you must identify the greatest common factor for both the number and the variable parts. Here, 3 is the common factor, so we write 3(x + 2). Notice that when you divide 3x by 3, you are left with x, not zero. Next, consider the expression x^2 - 16. This is a difference of two squares, which follows the identity a^2 - b^2 = (a - b)(a + b). Therefore, x^2 - 16 becomes (x - 4)(x + 4). Students often mistakenly factorise x^2 + 16 as (x + 4)(x - 4), but that identity only applies to subtraction. Furthermore, when dividing an expression like (x^2 - 9) / (x - 3), you must factorise the numerator first to get (x - 3)(x + 3) / (x - 3). By cancelling the common factor (x - 3), you are left with (x + 3). It is incorrect to simply cancel the 3s to leave x, as division requires cancelling the entire factor. Always verify your work by multiplying your factors back together to ensure you return to the original expression.",
+  "summary": "Factorisation involves identifying common factors or using algebraic identities to express terms as a product. It is crucial to handle signs, variables, and division carefully to avoid common errors. Always check your final result by expanding the factors to confirm they match the original expression.",
+  "items": [
+   {
+    "evidence": "Notice that when you divide 3x by 3, you are left with x, not zero.",
+    "answer": "x",
+    "stem": "What remains when you divide the term 3x by its common factor 3?",
+    "options": [
+     {
+      "belief_id": "MAT-FACTORISATION-K23-M20",
+      "why": "Student believes a term divided by itself results in zero.",
+      "text": "0"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K12-M4",
+      "why": "Student believes nothing is left when a factor is removed.",
+      "text": "nothing"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K10-M1",
+      "why": "Student incorrectly identifies the factors of the term.",
+      "text": "3"
+     }
+    ]
+   },
+   {
+    "evidence": "Therefore, x^2 - 16 becomes (x - 4)(x + 4).",
+    "answer": "(x - 4)(x + 4)",
+    "stem": "How should the expression x^2 - 16 be correctly factorised?",
+    "options": [
+     {
+      "belief_id": "MAT-FACTORISATION-K20-M14",
+      "why": "Student applies the difference of squares identity to a sum.",
+      "text": "(x + 4)(x - 4)"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K20-M13",
+      "why": "Student confuses difference of squares with a perfect square.",
+      "text": "(x - 4)^2"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K21-M16",
+      "why": "Student incorrectly calculates the square root of the term.",
+      "text": "(4x - 4)(4x + 4)"
+     }
+    ]
+   },
+   {
+    "evidence": "By cancelling the common factor (x - 3), you are left with (x + 3).",
+    "answer": "(x + 3)",
+    "stem": "What is the result of simplifying (x^2 - 9) / (x - 3)?",
+    "options": [
+     {
+      "belief_id": "MAT-FACTORISATION-K26-M22",
+      "why": "Student incorrectly cancels individual terms instead of factors.",
+      "text": "x"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K25-M23",
+      "why": "Student attempts to divide matching terms individually.",
+      "text": "x + 3"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K19-M12",
+      "why": "Student confuses the sign in the factorised result.",
+      "text": "(x - 3)"
+     }
+    ]
+   },
+   {
+    "evidence": "Always verify your work by multiplying your factors back together to ensure you return to the original expression.",
+    "answer": "multiplying your factors back together",
+    "stem": "What is the recommended method to ensure your factorisation is correct?",
+    "options": [
+     {
+      "belief_id": "MAT-FACTORISATION-K14-M7",
+      "why": "Student believes following steps makes verification unnecessary.",
+      "text": "following the steps"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K24-M21",
+      "why": "Student incorrectly assumes only the first term matters.",
+      "text": "dividing the first term"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K13-M5",
+      "why": "Student believes only numbers need to be checked.",
+      "text": "checking the number part"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.6
+}

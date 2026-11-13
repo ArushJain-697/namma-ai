@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0785-GENERIC-Heat_and_temperature",
+  "topic_id": "SCI-PHY-HEAT",
+  "split": "train",
+  "generic": true,
+  "theme": "Heat and temperature",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a news-style report about a real-world situation",
+  "seed": 785
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 716,
+  "candidatesTokenCount": 1129,
+  "totalTokenCount": 1845,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 716
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "On May 12, the bustling town of Bikaner experienced an unprecedented heatwave that pushed mercury levels to a staggering 48 degrees Celsius. Local meteorologist Dr. Arjun Singh reported that the extreme heat was primarily caused by dry, hot winds blowing from the Thar Desert. As the temperature climbed, the municipal corporation issued a strict advisory for residents to stay indoors between 12 PM and 4 PM. Shopkeeper Ramesh Kumar noted that his daily sales of clay water pots surged as people sought traditional cooling methods. While some residents believed that the intense heat was a result of the high number of tourists visiting the nearby Karni Mata Temple, Dr. Singh clarified that the atmospheric pressure shift was the true culprit. By 6 PM, the heat began to subside, providing relief to the weary population. However, the local administration has warned that if these desert winds continue, the town may face water shortages throughout the month. The district collector, Ms. Sunita Rao, has requested that all citizens conserve water to ensure the supply lasts until the monsoon arrives in July.",
+  "summary": "Bikaner faced a severe heatwave on May 12 caused by hot desert winds. Local authorities have advised residents to stay indoors and conserve water to manage the impact of the rising temperatures.",
+  "items": [
+   {
+    "evidence": "On May 12, the bustling town of Bikaner experienced an unprecedented heatwave that pushed mercury levels to a staggering 48 degrees Celsius.",
+    "answer": "48 degrees Celsius",
+    "stem": "What was the peak temperature recorded in Bikaner during the heatwave?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses a number from the passage incorrectly.",
+      "text": "12"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks a proper noun near the question.",
+      "text": "Bikaner"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a true fact that is not the answer.",
+      "text": "May 12"
+     }
+    ]
+   },
+   {
+    "evidence": "Local meteorologist Dr. Arjun Singh reported that the extreme heat was primarily caused by dry, hot winds blowing from the Thar Desert.",
+    "answer": "dry, hot winds",
+    "stem": "What was the primary reason for the extreme heat in the town?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Confuses the cause and the effect.",
+      "text": "extreme heat"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects the person named in the sentence.",
+      "text": "Dr. Arjun Singh"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Uses a location mentioned in the sentence.",
+      "text": "Thar Desert"
+     }
+    ]
+   },
+   {
+    "evidence": "Shopkeeper Ramesh Kumar noted that his daily sales of clay water pots surged as people sought traditional cooling methods.",
+    "answer": "clay water pots",
+    "stem": "What item did residents buy more of to stay cool?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects the person mentioned in the sentence.",
+      "text": "Ramesh Kumar"
+     },
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Interprets a word based on everyday meaning.",
+      "text": "traditional cooling"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Mentions a true detail not related to the item.",
+      "text": "daily sales"
+     }
+    ]
+   },
+   {
+    "evidence": "The district collector, Ms. Sunita Rao, has requested that all citizens conserve water to ensure the supply lasts until the monsoon arrives in July.",
+    "answer": "conserve water",
+    "stem": "What action did the district collector ask the citizens to take?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects the person mentioned in the sentence.",
+      "text": "Ms. Sunita Rao"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Assumes a universal rule about citizens.",
+      "text": "all citizens"
+     },
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses the month name as an action.",
+      "text": "July"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.1
+}

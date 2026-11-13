@@ -1,0 +1,962 @@
+{
+ "topic": {
+  "id": "GEN-FOODLABELS",
+  "subject": "general",
+  "strand": "nutrition",
+  "grades": [
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "title": "Reading food labels",
+  "scope": "ingredients list order, nutrition facts per serving, FSSAI logo, veg/non-veg marks, expiry vs best before, 'no added sugar' tricks"
+ },
+ "model": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 8607,
+  "promptTokenCount": 2
+ },
+ "seconds": 61.5,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Reading the ingredients list",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2",
+    "name": "Reading the nutrition facts",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3",
+    "name": "Marks, logos and symbols on packs",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n4",
+    "name": "Dates and marketing claims",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Ingredient order",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "comparing quantities by size"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Hidden names and additives",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "sugars as carbohydrates"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Per serving vs per pack",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "multiplication of whole numbers",
+     "unit conversion g and mg"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Nutrients and daily needs",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": [
+     "nutrients in food",
+     "percentage"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "FSSAI logo and licence",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "role of government regulation"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Veg and non-veg marks",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Expiry vs best before",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "food spoilage by microbes"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Claims like no added sugar",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [
+     "n6",
+     "n8"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Ingredients are listed from most to least by weight",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": [
+     "comparing quantities by size"
+    ]
+   },
+   {
+    "key": "n14",
+    "name": "Splitting one ingredient into several names pushes it down the list",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Sugar has many names (sucrose, glucose syrup, maltose, jaggery, honey)",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n16",
+    "name": "Additives appear with class names or INS numbers",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n17",
+    "name": "Nutrition values are given for a stated serving size or 100 g",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n18",
+    "name": "Multiply the per-serving value by servings eaten",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": [
+     "multiplication of whole numbers"
+    ]
+   },
+   {
+    "key": "n19",
+    "name": "Calories (kcal) measure energy, not fat",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": [
+     "energy from food"
+    ]
+   },
+   {
+    "key": "n20",
+    "name": "Percent daily value compares with a daily reference",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": [
+     "percentage"
+    ]
+   },
+   {
+    "key": "n21",
+    "name": "Total sugar includes natural and added sugar",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n15"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n22",
+    "name": "FSSAI logo with licence number shows the food is registered/licensed",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n23",
+    "name": "Green dot in a square means vegetarian; brown dot in a triangle/square means non-vegetarian",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n24",
+    "name": "Egg is marked non-vegetarian in India",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [
+     "n23"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n25",
+    "name": "Expiry/use by date means do not eat after it",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n26",
+    "name": "Best before date is about quality, not safety",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [
+     "n25"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n27",
+    "name": "Storage instructions affect shelf life",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [],
+    "external_prereqs": [
+     "food spoilage by microbes"
+    ]
+   },
+   {
+    "key": "n28",
+    "name": "No added sugar does not mean sugar free",
+    "level": 3,
+    "parent": "n12",
+    "prereqs": [
+     "n21"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n29",
+    "name": "Words like natural, multigrain, or healthy are not proof of nutrition",
+    "level": 3,
+    "parent": "n12",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n13",
+    "statement": "The first ingredient on the label is the smallest amount.",
+    "why": "Students think lists start with small things or read the list as an unordered mix.",
+    "fix": "Ingredients are listed in descending order of weight, so the first one is present in the largest amount.",
+    "probe": {
+     "question": "A biscuit lists: wheat flour, sugar, palm oil, salt. Which is present in the largest amount?",
+     "wrong_answer": "Salt"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "lists start with the least important item",
+    "causes": [],
+    "trigger_cues": [
+     "ingredients",
+     "listed",
+     "descending",
+     "order",
+     "weight",
+     "first",
+     "largest"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n13",
+    "statement": "The order of ingredients on a label is random or alphabetical.",
+    "why": "Students rarely notice that label lists follow a rule and assume any list is arbitrary.",
+    "fix": "The order follows a rule: the ingredient with the most weight comes first and the least comes last.",
+    "probe": {
+     "question": "Why is sugar listed before salt in a juice label?",
+     "wrong_answer": "Because s comes before... it is just in any order"
+    },
+    "error_type": "other",
+    "root_belief": "a list has no hidden rule behind its order",
+    "causes": [
+     "m1"
+    ],
+    "trigger_cues": [
+     "ingredients",
+     "order",
+     "alphabetical",
+     "random",
+     "list",
+     "weight"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n14",
+    "statement": "If sugar is not the first ingredient, the food has little sugar.",
+    "why": "Students look only at the first item and ignore that sugar may be split into many names.",
+    "fix": "A product can list sugar, glucose syrup and maltose separately, so each sits lower but together they may be the largest part.",
+    "probe": {
+     "question": "A cereal lists: wheat, sugar, glucose syrup, honey, maltodextrin. Is it low in sugar because wheat is first?",
+     "wrong_answer": "Yes, sugar is only second so it is low"
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "one visible part tells the whole story",
+    "causes": [],
+    "trigger_cues": [
+     "sugar",
+     "ingredient",
+     "position",
+     "glucose syrup",
+     "maltose",
+     "total",
+     "split"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n15",
+    "statement": "Only the word 'sugar' on a label means the food has sugar.",
+    "why": "Students match the everyday word and miss technical names.",
+    "fix": "Sugar appears as sucrose, glucose, fructose, dextrose, maltose, syrups, honey, jaggery and more.",
+    "probe": {
+     "question": "A drink lists 'high fructose corn syrup' but not 'sugar'. Does it contain sugar?",
+     "wrong_answer": "No, sugar is not listed"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a word means only its everyday meaning",
+    "causes": [
+     "m3"
+    ],
+    "trigger_cues": [
+     "sugar",
+     "sucrose",
+     "glucose",
+     "fructose",
+     "syrup",
+     "dextrose",
+     "names"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of consumer food-label comprehension and nutrition literacy",
+    "error_type_note": null
+   },
+   {
+    "key": "m5",
+    "node": "n15",
+    "statement": "Honey, jaggery or fruit juice concentrate are not sugar, so they do not count as added sugar.",
+    "why": "Natural-sounding products are thought of as healthy, separate from sugar.",
+    "fix": "Honey, jaggery and fruit juice concentrate are sugars too; when added to a food they count as added sugar.",
+    "probe": {
+     "question": "A bar is sweetened with jaggery syrup. Does it have added sugar?",
+     "wrong_answer": "No, jaggery is natural, not sugar"
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "natural means harmless or different in kind",
+    "causes": [
+     "m23"
+    ],
+    "trigger_cues": [
+     "honey",
+     "jaggery",
+     "natural",
+     "added sugar",
+     "syrup",
+     "concentrate"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on the 'natural' health halo in consumer perception",
+    "error_type_note": null
+   },
+   {
+    "key": "m6",
+    "node": "n16",
+    "statement": "Anything with a code like INS or E-number is a harmful chemical.",
+    "why": "Numbers and chemical-sounding names seem artificial and dangerous.",
+    "fix": "INS numbers are standard codes for approved additives, and some are natural, like INS 330 citric acid; safety depends on the additive and amount.",
+    "probe": {
+     "question": "A jam lists INS 330 (citric acid). Should you avoid it as harmful?",
+     "wrong_answer": "Yes, any number code is harmful"
+    },
+    "error_type": "media_misinformation",
+    "root_belief": "chemical-sounding means dangerous",
+    "causes": [],
+    "trigger_cues": [
+     "ins",
+     "additive",
+     "preservative",
+     "number",
+     "code",
+     "chemical",
+     "emulsifier"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n17",
+    "statement": "The nutrition values on the label are for the whole packet.",
+    "why": "Students assume a label describes the entire product they hold.",
+    "fix": "Values are usually per 100 g or per serving, so check the serving size and the number of servings in the pack.",
+    "probe": {
+     "question": "A 200 g pack says 10 g fat per 100 g. How much fat is in the pack?",
+     "wrong_answer": "10 g"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "a number describes the whole object",
+    "causes": [
+     "m9"
+    ],
+    "trigger_cues": [
+     "per serving",
+     "per 100 g",
+     "serving size",
+     "pack",
+     "label",
+     "values"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of consumers' calculation errors with serving-size information",
+    "error_type_note": null
+   },
+   {
+    "key": "m8",
+    "node": "n17",
+    "statement": "A small serving size on the label means the food is low in sugar and fat.",
+    "why": "Students see small numbers and do not check how small the serving is.",
+    "fix": "Makers can choose a tiny serving size to make numbers look small; compare per 100 g to judge fairly.",
+    "probe": {
+     "question": "Chips A: 5 g fat per 20 g serving. Chips B: 8 g fat per 50 g serving. Which has less fat per 100 g?",
+     "wrong_answer": "A, because 5 is smaller than 8"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "bigger or more means more effect",
+    "causes": [],
+    "trigger_cues": [
+     "serving size",
+     "per 100 g",
+     "compare",
+     "fat",
+     "sugar",
+     "small",
+     "grams"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "consumer research on serving-size manipulation and label comparison",
+    "error_type_note": null
+   },
+   {
+    "key": "m9",
+    "node": "n18",
+    "statement": "Eating the whole packet gives the same nutrients as one serving.",
+    "why": "Students ignore the 'servings per pack' line.",
+    "fix": "If a pack has 3 servings and you eat all, multiply every value by 3.",
+    "probe": {
+     "question": "One serving has 150 kcal and the pack has 4 servings. You eat it all. How many kcal?",
+     "wrong_answer": "150 kcal"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "a rule from one unit works for any amount",
+    "causes": [],
+    "trigger_cues": [
+     "servings per pack",
+     "multiply",
+     "whole packet",
+     "kcal",
+     "serving",
+     "total"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of consumer errors in multi-serving packages",
+    "error_type_note": null
+   },
+   {
+    "key": "m10",
+    "node": "n19",
+    "statement": "Calories are the same as fat.",
+    "why": "Everyday talk links 'high calories' only with fatty food.",
+    "fix": "Calories measure energy; carbohydrates, proteins and fats all provide energy, and fat gives the most per gram.",
+    "probe": {
+     "question": "A fat-free sugary drink has 120 kcal. Where does the energy come from?",
+     "wrong_answer": "From fat"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "calories",
+     "kcal",
+     "energy",
+     "fat",
+     "carbohydrate",
+     "protein"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of student ideas about food and energy",
+    "error_type_note": null
+   },
+   {
+    "key": "m11",
+    "node": "n19",
+    "statement": "Zero fat means zero calories.",
+    "why": "Fat is thought to be the only source of calories.",
+    "fix": "Foods without fat can still have many calories from sugar or starch.",
+    "probe": {
+     "question": "A fat-free biscuit has 90 g carbohydrate per 100 g. Does it have calories?",
+     "wrong_answer": "No, it is fat free"
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "one component accounts for the whole quantity",
+    "causes": [],
+    "trigger_cues": [
+     "fat free",
+     "zero fat",
+     "calories",
+     "energy",
+     "carbohydrate",
+     "sugar"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m12",
+    "node": "n20",
+    "statement": "The percent daily value shows how much of the food's weight is that nutrient.",
+    "why": "Percent on a label is mistaken for percent composition.",
+    "fix": "Percent daily value shows how much of a person's daily recommended amount one serving gives.",
+    "probe": {
+     "question": "A snack shows 20% daily value of sodium. What does this mean?",
+     "wrong_answer": "20% of the snack's weight is sodium"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a percent always means part of the object itself",
+    "causes": [],
+    "trigger_cues": [
+     "percent",
+     "daily value",
+     "reference",
+     "serving",
+     "sodium",
+     "recommended"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m13",
+    "node": "n20",
+    "statement": "The daily reference amounts on labels are exact needs for every person.",
+    "why": "A single printed number looks like a personal prescription.",
+    "fix": "Labels use a standard reference (about 2000 kcal); children, adults and active people need different amounts.",
+    "probe": {
+     "question": "A label says 2000 kcal a day. Is this the exact need of a Class 8 student?",
+     "wrong_answer": "Yes, everyone needs exactly 2000 kcal"
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "one number fits every case",
+    "causes": [],
+    "trigger_cues": [
+     "2000 kcal",
+     "daily",
+     "reference",
+     "age",
+     "needs",
+     "energy"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m14",
+    "node": "n21",
+    "statement": "Total sugar on the label is all added sugar.",
+    "why": "Students don't know milk and fruit have their own natural sugar.",
+    "fix": "Total sugar includes natural sugar (like lactose in milk) plus added sugar; look for the 'added sugars' line.",
+    "probe": {
+     "question": "Plain milk shows 5 g total sugar with no sugar in ingredients. Is sugar added?",
+     "wrong_answer": "Yes, 5 g is added sugar"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "two related terms mean the same thing",
+    "causes": [],
+    "trigger_cues": [
+     "total sugar",
+     "added sugar",
+     "natural",
+     "lactose",
+     "milk",
+     "fruit"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m15",
+    "node": "n22",
+    "statement": "An FSSAI logo means the food is healthy.",
+    "why": "A government mark is taken as a stamp of goodness.",
+    "fix": "The FSSAI logo and licence number show the food business is registered and meets safety rules, not that it is nutritious.",
+    "probe": {
+     "question": "A packet of fried chips has an FSSAI logo. Is it a healthy food?",
+     "wrong_answer": "Yes, FSSAI approved means healthy"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "approved means good for you",
+    "causes": [],
+    "trigger_cues": [
+     "fssai",
+     "logo",
+     "licence",
+     "safety",
+     "regulator",
+     "healthy"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on consumer interpretation of certification and health halo effects",
+    "error_type_note": null
+   },
+   {
+    "key": "m16",
+    "node": "n22",
+    "statement": "The FSSAI licence number is the same on all products.",
+    "why": "Students see it as a general logo, not a unique number.",
+    "fix": "Each food business has its own 14-digit FSSAI licence or registration number, which can be verified.",
+    "probe": {
+     "question": "Two brands print FSSAI numbers. Should they be identical?",
+     "wrong_answer": "Yes, FSSAI has one number for all"
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "a symbol is identical everywhere it appears",
+    "causes": [],
+    "trigger_cues": [
+     "fssai",
+     "licence number",
+     "14-digit",
+     "registration",
+     "verify",
+     "brand"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m17",
+    "node": "n23",
+    "statement": "A green dot means the food has no chemicals or additives.",
+    "why": "Green is linked with natural and pure.",
+    "fix": "The green mark only means the product is vegetarian (no meat, fish or egg); it can still have additives.",
+    "probe": {
+     "question": "A green-dot candy lists colours and preservatives. Is that a contradiction?",
+     "wrong_answer": "Yes, green dot means no additives"
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "a colour sign means more than its stated meaning",
+    "causes": [],
+    "trigger_cues": [
+     "green dot",
+     "vegetarian",
+     "symbol",
+     "additive",
+     "square",
+     "mark"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m18",
+    "node": "n23",
+    "statement": "Any food without a mark can be taken as vegetarian.",
+    "why": "Students think the mark is only for special foods.",
+    "fix": "Packaged foods must show a green or brown mark; missing marks mean you should not assume, and check the ingredients.",
+    "probe": {
+     "question": "A packet has no dot. Is it vegetarian?",
+     "wrong_answer": "Yes, no mark means veg"
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "absence of a sign means the default is safe",
+    "causes": [],
+    "trigger_cues": [
+     "mark",
+     "dot",
+     "vegetarian",
+     "missing",
+     "packaged",
+     "ingredients"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m19",
+    "node": "n24",
+    "statement": "Eggs are vegetarian because they do not involve killing an animal.",
+    "why": "Everyday family views on egg differ and some call it veg.",
+    "fix": "In Indian food labelling, egg counts as non-vegetarian and gets the brown mark, except milk and milk products, which are vegetarian.",
+    "probe": {
+     "question": "Which mark goes on an egg biscuit?",
+     "wrong_answer": "Green dot"
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "personal habit defines the official rule",
+    "causes": [],
+    "trigger_cues": [
+     "egg",
+     "non-vegetarian",
+     "brown",
+     "green",
+     "milk",
+     "symbol"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m20",
+    "node": "n25",
+    "statement": "Food is safe to eat for some days after its expiry or use-by date if it looks fine.",
+    "why": "Students judge safety by appearance and smell.",
+    "fix": "After the expiry or use-by date the food may be unsafe even if it looks fine, because harmful germs or toxins cannot always be seen.",
+    "probe": {
+     "question": "Milk powder is a week past its expiry date but looks normal. Should you use it?",
+     "wrong_answer": "Yes, it looks fine"
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "expiry",
+     "use by",
+     "unsafe",
+     "germs",
+     "looks fine",
+     "smell"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of consumer date-label interpretation and food waste",
+    "error_type_note": null
+   },
+   {
+    "key": "m21",
+    "node": "n26",
+    "statement": "Best before and expiry date mean the same thing.",
+    "why": "Both words show dates and are used interchangeably.",
+    "fix": "Best before is about quality like taste and crunch; expiry or use by is about safety.",
+    "probe": {
+     "question": "What does a 'best before' date on biscuits tell you compared to expiry on medicine?",
+     "wrong_answer": "Both mean unsafe after that date"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar words mean the same thing",
+    "causes": [
+     "m20"
+    ],
+    "trigger_cues": [
+     "best before",
+     "expiry",
+     "quality",
+     "safety",
+     "date",
+     "use by"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "consumer surveys on confusion between date labels",
+    "error_type_note": null
+   },
+   {
+    "key": "m22",
+    "node": "n27",
+    "statement": "The date on the pack is valid however the food is stored.",
+    "why": "Students see the date as a fixed property of the pack.",
+    "fix": "Dates apply only when stored as directed; an opened or badly stored pack, such as milk left out, can spoil sooner.",
+    "probe": {
+     "question": "A packet says 'best before 6 months, keep refrigerated after opening'. You leave it open on a hot shelf. Is it fine for 6 months?",
+     "wrong_answer": "Yes, the date says 6 months"
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "a printed value ignores conditions",
+    "causes": [],
+    "trigger_cues": [
+     "storage",
+     "opened",
+     "refrigerate",
+     "shelf life",
+     "date",
+     "spoil"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m23",
+    "node": "n28",
+    "statement": "'No added sugar' means the food has no sugar and is safe for diabetics.",
+    "why": "The claim sounds like sugar-free.",
+    "fix": "No added sugar only means none was added; the food can still have natural sugar from fruit or milk or starch that raises blood sugar.",
+    "probe": {
+     "question": "A juice says 'no added sugar' and shows 24 g sugar per glass. Is it sugar free?",
+     "wrong_answer": "Yes, it has no sugar"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "no added sugar",
+     "sugar free",
+     "natural sugar",
+     "juice",
+     "diabetes",
+     "claim"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of consumer understanding of nutrition claims",
+    "error_type_note": null
+   },
+   {
+    "key": "m24",
+    "node": "n28",
+    "statement": "Sugar-free products have no calories.",
+    "why": "Students equate removing sugar with removing all energy.",
+    "fix": "Sugar-free foods can still have calories from fat, starch or sugar alcohols.",
+    "probe": {
+     "question": "A sugar-free chocolate shows 500 kcal per 100 g. Is that possible?",
+     "wrong_answer": "No, sugar free means zero kcal"
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "one component accounts for the whole quantity",
+    "causes": [],
+    "trigger_cues": [
+     "sugar free",
+     "calories",
+     "fat",
+     "sugar alcohol",
+     "chocolate",
+     "energy"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m25",
+    "node": "n29",
+    "statement": "Foods labelled 'natural', 'multigrain' or 'made with real fruit' are healthy.",
+    "why": "Front-of-pack words are read as proof of quality.",
+    "fix": "These words are not tightly regulated measures; check the ingredients and nutrition facts, e.g. multigrain may be mostly refined flour.",
+    "probe": {
+     "question": "A bread says 'multigrain' but lists refined wheat flour first. Is it whole grain?",
+     "wrong_answer": "Yes, multigrain means whole grain"
+    },
+    "error_type": "media_misinformation",
+    "root_belief": "advertising words show real quality",
+    "causes": [],
+    "trigger_cues": [
+     "natural",
+     "multigrain",
+     "real fruit",
+     "healthy",
+     "claim",
+     "advertisement",
+     "front of pack"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on health halo effects of front-of-pack claims",
+    "error_type_note": null
+   },
+   {
+    "key": "m26",
+    "node": "n12",
+    "statement": "A 'low fat' food is always low in calories and healthy to eat in large amounts.",
+    "why": "One reduced nutrient is taken to mean the whole product is light.",
+    "fix": "Low-fat foods often contain extra sugar and can still have many calories, so eating a lot adds up.",
+    "probe": {
+     "question": "A low-fat cookie has 450 kcal per 100 g. Can you eat many without worry?",
+     "wrong_answer": "Yes, it is low fat so it is light"
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "fewer of one part means better overall",
+    "causes": [],
+    "trigger_cues": [
+     "low fat",
+     "calories",
+     "sugar",
+     "claim",
+     "light",
+     "healthy"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of health halo and overeating with low-fat labels",
+    "error_type_note": null
+   }
+  ]
+ },
+ "problems": []
+}

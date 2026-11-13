@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0050-MAT-PROBABILITY",
+  "topic_id": "MAT-PROBABILITY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a conversation between a teacher and two students",
+  "seed": 50
+ },
+ "model": "gemini-3.1-flash-lite/key3",
+ "usage": {
+  "promptTokenCount": 1037,
+  "candidatesTokenCount": 1270,
+  "totalTokenCount": 2307,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1037
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-PROBABILITY-K15-M12",
+  "MAT-PROBABILITY-K17-M15",
+  "MAT-PROBABILITY-K23-M22",
+  "MAT-PROBABILITY-K8-M5",
+  "MAT-PROBABILITY-K24-M23",
+  "MAT-PROBABILITY-K6-M1",
+  "MAT-PROBABILITY-K9-M8",
+  "MAT-PROBABILITY-K18-M17",
+  "MAT-PROBABILITY-K22-M21",
+  "MAT-PROBABILITY-K6-M2",
+  "MAT-PROBABILITY-K18-M18",
+  "MAT-PROBABILITY-K19-M20",
+  "MAT-PROBABILITY-K7-M4",
+  "MAT-PROBABILITY-K9-M7"
+ ],
+ "response": {
+  "passage": "Teacher: Today, let us discuss probability. Imagine we toss a coin 10 times and get 8 heads. What is the experimental probability of getting a head? Rahul: Is it 8 divided by 2, because we have two outcomes? Teacher: Not quite, Rahul. Experimental probability is the number of successful trials divided by the total number of trials. So, it is 8/10. Priya: But teacher, if we toss it 1000 times, the result will be exactly 500 heads, right? Teacher: Not necessarily. As the number of trials increases, the experimental probability gets closer to the theoretical probability, but they are rarely identical. Rahul: What if the probability of an event is 0.4? Does that mean the probability of it not happening is also 0.4? Teacher: No, the sum of the probabilities of an event and its complement is always 1. So, if P(E) is 0.4, P(not E) must be 0.6. Priya: I once read that a probability can be 5/4 if the event is very likely. Teacher: That is incorrect. A probability value must always lie between 0 and 1 inclusive. It can never exceed 1, as the number of favourable outcomes cannot exceed the total possible outcomes.",
+  "summary": "This discussion clarifies that experimental probability is based on total trials, not just outcomes. It explains that probabilities must be between 0 and 1, and that complementary events sum to 1.",
+  "items": [
+   {
+    "evidence": "Experimental probability is the number of successful trials divided by the total number of trials.",
+    "answer": "successful trials divided by total trials",
+    "stem": "How do we correctly calculate the experimental probability of an event?",
+    "options": [
+     {
+      "belief_id": "MAT-PROBABILITY-K8-M5",
+      "why": "Student confuses successful trials with failures.",
+      "text": "successful trials divided by failures"
+     },
+     {
+      "belief_id": "MAT-PROBABILITY-K15-M12",
+      "why": "Student assumes all two-outcome events are 1/2.",
+      "text": "always exactly 1/2"
+     },
+     {
+      "belief_id": "MAT-PROBABILITY-K17-M15",
+      "why": "Student uses ratio of favourable to unfavourable.",
+      "text": "favourable divided by unfavourable"
+     }
+    ]
+   },
+   {
+    "evidence": "As the number of trials increases, the experimental probability gets closer to the theoretical probability, but they are rarely identical.",
+    "answer": "rarely identical",
+    "stem": "What is the relationship between experimental and theoretical probability as trials increase?",
+    "options": [
+     {
+      "belief_id": "MAT-PROBABILITY-K9-M8",
+      "why": "Student believes they must be equal.",
+      "text": "they must be equal"
+     },
+     {
+      "belief_id": "MAT-PROBABILITY-K9-M7",
+      "why": "Student thinks small trials are as reliable as large.",
+      "text": "they are equally reliable"
+     },
+     {
+      "belief_id": "MAT-PROBABILITY-K6-M1",
+      "why": "Student thinks outcomes balance out perfectly.",
+      "text": "they become perfectly balanced"
+     }
+    ]
+   },
+   {
+    "evidence": "So, if P(E) is 0.4, P(not E) must be 0.6.",
+    "answer": "0.6",
+    "stem": "If the probability of an event occurring is 0.4, what is the probability of it not occurring?",
+    "options": [
+     {
+      "belief_id": "MAT-PROBABILITY-K24-M23",
+      "why": "Student thinks complementary events have equal probability.",
+      "text": "0.4"
+     },
+     {
+      "belief_id": "MAT-PROBABILITY-K19-M20",
+      "why": "Student thinks probability must be 0 or 1.",
+      "text": "0 or 1"
+     },
+     {
+      "belief_id": "MAT-PROBABILITY-K7-M4",
+      "why": "Student confuses probability with certainty.",
+      "text": "it will not happen"
+     }
+    ]
+   },
+   {
+    "evidence": "A probability value must always lie between 0 and 1 inclusive.",
+    "answer": "between 0 and 1",
+    "stem": "What is the possible range for the value of any probability?",
+    "options": [
+     {
+      "belief_id": "MAT-PROBABILITY-K18-M17",
+      "why": "Student thinks probability can exceed 1.",
+      "text": "any value above 0"
+     },
+     {
+      "belief_id": "MAT-PROBABILITY-K22-M21",
+      "why": "Student thinks probabilities sum to total outcomes.",
+      "text": "up to the number of outcomes"
+     },
+     {
+      "belief_id": "MAT-PROBABILITY-K18-M18",
+      "why": "Student compares fractions based on denominator size.",
+      "text": "any fraction with a large denominator"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 6.1
+}

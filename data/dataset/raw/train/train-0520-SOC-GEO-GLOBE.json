@@ -1,0 +1,126 @@
+{
+ "job": {
+  "job": "train-0520-SOC-GEO-GLOBE",
+  "topic_id": "SOC-GEO-GLOBE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a news-style report about a real-world situation",
+  "seed": 520
+ },
+ "model": "gemini-3.1-flash-lite/key3",
+ "usage": {
+  "promptTokenCount": 682,
+  "candidatesTokenCount": 1255,
+  "totalTokenCount": 1937,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 682
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "SOC-GEO-GLOBE-K10-M4",
+  "SOC-GEO-GLOBE-K9-M3",
+  "SOC-GEO-GLOBE-K5-M2",
+  "SOC-GEO-GLOBE-K11-M5",
+  "SOC-GEO-GLOBE-K4-M1"
+ ],
+ "response": {
+  "passage": "As the Earth spins on its axis, the sun illuminates only one half of our planet at any given time, creating a constant cycle of day and night. This rotation means that when it is noon in London, it is already evening in India. These time differences occur because the Earth is divided into imaginary vertical lines called longitudes. Unlike latitudes, which run parallel to each other like rungs on a ladder, longitudes converge at the poles and are not parallel. While we use these lines to track time, they are purely conceptual tools used by geographers and are not physical markings on the ground. The sun's heat also varies across the globe based on these coordinates. The area near the Equator, known as the Torrid Zone, receives the most direct sunlight throughout the year. It is not hot because it is physically closer to the sun, but because the sun’s rays strike this region at a perpendicular angle, concentrating heat over a smaller area. Meanwhile, India calculates its own time using a specific longitude passing through Mirzapur, which is distinct from the Prime Meridian used by other nations. Understanding these invisible lines helps us coordinate global travel and communication effectively.",
+  "summary": "The Earth's rotation creates time differences across the globe, which are measured using imaginary vertical lines called longitudes. These lines, along with latitudes, help us understand how sunlight intensity and time zones vary across different regions.",
+  "items": [
+   {
+    "evidence": "This rotation means that when it is noon in London, it is already evening in India.",
+    "answer": "noon in London",
+    "stem": "If it is evening in India, what is the time in London?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-GLOBE-K10-M4",
+      "why": "Student assumes time is universal and identical everywhere.",
+      "text": "evening in London"
+     },
+     {
+      "belief_id": "SOC-GEO-GLOBE-K11-M5",
+      "why": "Student confuses local time with Prime Meridian time.",
+      "text": "noon at Prime Meridian"
+     },
+     {
+      "belief_id": "SOC-GEO-GLOBE-K5-M2",
+      "why": "Student incorrectly applies parallel longitude logic to time.",
+      "text": "morning in London"
+     }
+    ]
+   },
+   {
+    "evidence": "Unlike latitudes, which run parallel to each other like rungs on a ladder, longitudes converge at the poles and are not parallel.",
+    "answer": "converge at the poles",
+    "stem": "What is the true geometric relationship between longitudes?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-GLOBE-K5-M2",
+      "why": "Student believes longitudes are parallel like latitudes.",
+      "text": "they are parallel lines"
+     },
+     {
+      "belief_id": "SOC-GEO-GLOBE-K4-M1",
+      "why": "Student confuses geometric shape with physical markings.",
+      "text": "they are painted lines"
+     },
+     {
+      "belief_id": "SOC-GEO-GLOBE-K10-M4",
+      "why": "Student assumes lines must be parallel to track time.",
+      "text": "they remain equidistant everywhere"
+     }
+    ]
+   },
+   {
+    "evidence": "While we use these lines to track time, they are purely conceptual tools used by geographers and are not physical markings on the ground.",
+    "answer": "purely conceptual tools",
+    "stem": "How should we describe the lines drawn on a globe?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-GLOBE-K4-M1",
+      "why": "Student believes the lines are physically drawn on Earth.",
+      "text": "physical painted lines"
+     },
+     {
+      "belief_id": "SOC-GEO-GLOBE-K5-M2",
+      "why": "Student thinks lines are permanent parallel structures.",
+      "text": "permanent parallel barriers"
+     },
+     {
+      "belief_id": "SOC-GEO-GLOBE-K11-M5",
+      "why": "Student assumes lines are defined by the Prime Meridian.",
+      "text": "Prime Meridian markers"
+     }
+    ]
+   },
+   {
+    "evidence": "It is not hot because it is physically closer to the sun, but because the sun’s rays strike this region at a perpendicular angle, concentrating heat over a smaller area.",
+    "answer": "sun’s rays strike at perpendicular angle",
+    "stem": "Why is the Torrid Zone significantly hotter than other regions?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-GLOBE-K9-M3",
+      "why": "Student believes distance to the sun causes heat.",
+      "text": "it is closer to the sun"
+     },
+     {
+      "belief_id": "SOC-GEO-GLOBE-K10-M4",
+      "why": "Student assumes heat is uniform across all longitudes.",
+      "text": "the time is always noon"
+     },
+     {
+      "belief_id": "SOC-GEO-GLOBE-K4-M1",
+      "why": "Student thinks physical lines trap heat there.",
+      "text": "the Equator line traps heat"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 8.3
+}

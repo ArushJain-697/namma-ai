@@ -1,0 +1,466 @@
+{
+ "topic": {
+  "id": "SCI-ESS-WEATHER",
+  "subject": "science",
+  "strand": "earth_space",
+  "grades": [
+   7
+  ],
+  "title": "Weather, climate and adaptations",
+  "scope": "weather vs climate, elements of weather, polar and tropical rainforest adaptations, winds, storms and cyclones"
+ },
+ "model": "gemini-3-flash-preview/key3",
+ "usage": {
+  "promptTokenCount": 838,
+  "candidatesTokenCount": 4030,
+  "totalTokenCount": 6003,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 838
+   }
+  ],
+  "thoughtsTokenCount": 1135,
+  "serviceTier": "standard"
+ },
+ "seconds": 19.4,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Weather and Climate",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2",
+    "name": "Elements of Weather",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "states of matter",
+     "measurement of temperature"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Adaptations to Climate",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "basic needs of living things"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Winds and Storms",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "concept of air pressure",
+     "heat transfer"
+    ]
+   },
+   {
+    "key": "n1.1",
+    "name": "Weather Definition",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.2",
+    "name": "Climate Definition",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n1.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.1.1",
+    "name": "Weather is day-to-day",
+    "level": 3,
+    "parent": "n1.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.2.1",
+    "name": "Climate is 25-year average",
+    "level": 3,
+    "parent": "n1.2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.1",
+    "name": "Temperature Elements",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.1.1",
+    "name": "Max/Min Temperature Timing",
+    "level": 3,
+    "parent": "n2.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.2",
+    "name": "Humidity and Rain",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.1",
+    "name": "Polar Adaptations",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.1.1",
+    "name": "Polar Bear Insulation",
+    "level": 3,
+    "parent": "n3.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.2",
+    "name": "Tropical Adaptations",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.2.1",
+    "name": "Competition for Food",
+    "level": 3,
+    "parent": "n3.2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n4.1",
+    "name": "Air Pressure and Wind",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n4.1.1",
+    "name": "High Speed Wind Low Pressure",
+    "level": 3,
+    "parent": "n4.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n4.2",
+    "name": "Cyclone Formation",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [
+     "n4.1.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n4.2.1",
+    "name": "The Eye of Cyclone",
+    "level": 3,
+    "parent": "n4.2",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n1.1.1",
+    "statement": "Weather and climate mean the same thing.",
+    "why": "In everyday conversation, people use 'climate' to describe today's heat or rain.",
+    "fix": "Weather is the short-term state of the atmosphere, while climate is the average weather pattern over a long period like 25 years.",
+    "probe": {
+     "question": "If it rains heavily today in a desert, has the climate changed?",
+     "wrong_answer": "Yes, the climate has become rainy."
+    },
+    "error_type": "everyday_language",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "daily",
+     "average",
+     "pattern",
+     "years"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m2",
+    "node": "n2.1.1",
+    "statement": "The maximum temperature of the day occurs at exactly 12 noon.",
+    "why": "Students believe that because the sun is directly overhead, it must be the hottest moment.",
+    "fix": "The maximum temperature usually occurs in the afternoon because the earth continues to absorb heat even after the sun passes its highest point.",
+    "probe": {
+     "question": "At what time is it usually hottest during a summer day?",
+     "wrong_answer": "At 12:00 PM sharp."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "maximum cause produces maximum effect instantly",
+    "causes": [],
+    "trigger_cues": [
+     "afternoon",
+     "noon",
+     "maximum",
+     "thermometer"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n2.2",
+    "statement": "Humidity only exists when it is raining.",
+    "why": "Students only associate moisture in the air with visible rain or wetness.",
+    "fix": "Humidity is the measure of invisible water vapor in the air, which is present even on sunny days.",
+    "probe": {
+     "question": "Is there humidity in the air on a hot, dry day before a storm?",
+     "wrong_answer": "No, because there is no rain yet."
+    },
+    "error_type": "visible_only",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "moisture",
+     "vapor",
+     "hygrometer",
+     "damp"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas"
+   },
+   {
+    "key": "m4",
+    "node": "n3.1.1",
+    "statement": "Polar bears have white fur primarily to keep them warm.",
+    "why": "Students associate fur thickness and color with warmth rather than camouflage.",
+    "fix": "While fur provides warmth, the white color is specifically an adaptation for camouflage against snow to help in hunting.",
+    "probe": {
+     "question": "Why is a polar bear's fur white instead of black?",
+     "wrong_answer": "White fur traps more heat from the sun."
+    },
+    "error_type": "single_cause",
+    "root_belief": "one feature has only one obvious function",
+    "causes": [],
+    "trigger_cues": [
+     "camouflage",
+     "predator",
+     "snow",
+     "white"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n3.2.1",
+    "statement": "Animals in tropical rainforests only adapt to the hot weather.",
+    "why": "The name 'tropical' makes students focus only on temperature.",
+    "fix": "Animals also adapt to intense competition for food and living space due to the high density of life.",
+    "probe": {
+     "question": "Why does the Toucan have a long, large beak?",
+     "wrong_answer": "To fan itself and stay cool in the heat."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "the most prominent feature explains everything",
+    "causes": [],
+    "trigger_cues": [
+     "competition",
+     "food",
+     "toucan",
+     "beak"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m6",
+    "node": "n4.1.1",
+    "statement": "High speed winds create high air pressure.",
+    "why": "Intuition suggests that fast-moving things 'push' harder, creating more pressure.",
+    "fix": "High speed winds are actually accompanied by reduced air pressure.",
+    "probe": {
+     "question": "If you blow air over a strip of paper, why does it lift up?",
+     "wrong_answer": "Because the fast air pushes it up with high pressure."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "more speed means more force or pressure",
+    "causes": [],
+    "trigger_cues": [
+     "reduced",
+     "speed",
+     "lift",
+     "blowing"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Concept Inventory"
+   },
+   {
+    "key": "m7",
+    "node": "n4.2.1",
+    "statement": "The eye of a cyclone is the most violent and windy part.",
+    "why": "Students assume the center of a storm must be the most intense part.",
+    "fix": "The eye is actually a calm area with light winds and no clouds.",
+    "probe": {
+     "question": "What would you experience if you were exactly in the center of a cyclone?",
+     "wrong_answer": "The strongest winds and heaviest rain of the whole storm."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "the center of action is the most intense",
+    "causes": [],
+    "trigger_cues": [
+     "eye",
+     "calm",
+     "center",
+     "storm"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m8",
+    "node": "n4.1",
+    "statement": "Air only moves from low pressure to high pressure to fill the space.",
+    "why": "Confusion about the direction of flow in fluids.",
+    "fix": "Air always moves from regions of high air pressure to regions of low air pressure.",
+    "probe": {
+     "question": "In which direction does wind blow between two areas of different pressure?",
+     "wrong_answer": "From low pressure to high pressure."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "things move to where they are needed",
+    "causes": [],
+    "trigger_cues": [
+     "direction",
+     "high",
+     "low",
+     "region"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m9",
+    "node": "n4.1",
+    "statement": "Hot air is heavier than cold air because it contains more heat energy.",
+    "why": "Students think adding 'heat' adds 'weight' or 'substance'.",
+    "fix": "Hot air expands, becomes less dense, and is therefore lighter than cold air.",
+    "probe": {
+     "question": "Why does smoke from a fire go upwards?",
+     "wrong_answer": "Because the heat carries the heavy air up."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "more energy means more weight",
+    "causes": [],
+    "trigger_cues": [
+     "lighter",
+     "expands",
+     "smoke",
+     "rising"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas"
+   },
+   {
+    "key": "m10",
+    "node": "n3.1",
+    "statement": "Penguins live in the North Pole and Polar Bears live in the South Pole.",
+    "why": "Students group all 'cold' animals together in one location.",
+    "fix": "Polar bears live in the Arctic (North) and Penguins live in the Antarctic (South).",
+    "probe": {
+     "question": "Where would you find a wild penguin?",
+     "wrong_answer": "In the North Pole with polar bears."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "similar things belong in the same place",
+    "causes": [],
+    "trigger_cues": [
+     "arctic",
+     "antarctic",
+     "penguin",
+     "region"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n4.2",
+    "statement": "Thunderstorms and Cyclones are the same thing.",
+    "why": "Both involve rain and wind, so they are seen as identical.",
+    "fix": "A thunderstorm is a local storm with thunder/lightning; a cyclone is a massive revolving system of very low pressure.",
+    "probe": {
+     "question": "Is every heavy rain with thunder called a cyclone?",
+     "wrong_answer": "Yes, they are just different names for the same storm."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar effects imply identical causes",
+    "causes": [],
+    "trigger_cues": [
+     "thunderstorm",
+     "cyclone",
+     "lightning",
+     "revolving"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m12",
+    "node": "n1.2.1",
+    "statement": "If it is a very cold winter, global warming (climate change) is fake.",
+    "why": "Confusing a single weather event with long-term climate trends.",
+    "fix": "Climate is the average over 25 years; one cold winter is just a weather variation and doesn't change the long-term warming trend.",
+    "probe": {
+     "question": "Does a single week of record-breaking cold prove the climate is not getting warmer?",
+     "wrong_answer": "Yes, because it shows the earth is getting colder."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "a single instance represents the whole",
+    "causes": [],
+    "trigger_cues": [
+     "average",
+     "trend",
+     "variation",
+     "long-term"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Climate Literacy Framework"
+   }
+  ]
+ },
+ "problems": []
+}

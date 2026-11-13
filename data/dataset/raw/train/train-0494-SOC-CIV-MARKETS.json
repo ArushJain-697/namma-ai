@@ -1,0 +1,125 @@
+{
+ "job": {
+  "job": "train-0494-SOC-CIV-MARKETS",
+  "topic_id": "SOC-CIV-MARKETS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a passage rich in numbers, dates or measurements",
+  "seed": 494
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 650,
+  "candidatesTokenCount": 1326,
+  "totalTokenCount": 1976,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 650
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "SOC-CIV-MARKETS-K7-M4",
+  "SOC-CIV-MARKETS-K6-M3",
+  "SOC-CIV-MARKETS-K4-M1",
+  "SOC-CIV-MARKETS-K5-M2"
+ ],
+ "response": {
+  "passage": "In our town, the journey of a cotton shirt begins at a large wholesale market where traders buy thousands of units directly from factories. These traders then distribute the goods to various retailers. A local shopkeeper buys a shirt for 200 rupees from a wholesaler and sells it for 300 rupees to cover their rent and labor. Meanwhile, a branded mall in the city center procures the same shirt from a distributor for 450 rupees and sells it for 900 rupees, accounting for their high maintenance costs and air-conditioned facilities. Interestingly, a weekly market vendor sells that identical shirt for 250 rupees because they have very low overhead costs. Many families, regardless of their income, visit these weekly markets to find affordable deals, as the quality of the fabric remains consistent across these different outlets. It is a common mistake to assume that goods are manufactured within the wholesale market itself; in reality, these markets simply act as massive storage and distribution hubs for goods produced in distant factories. Prices vary significantly across these locations, not because of the product's inherent quality, but because of the different expenses each seller incurs to bring the item to the consumer.",
+  "summary": "Products move through a chain from factories to wholesalers and finally to various retail outlets. The price of an item changes at each stage based on the seller's operational costs rather than the quality of the item.",
+  "items": [
+   {
+    "evidence": "A local shopkeeper buys a shirt for 200 rupees from a wholesaler and sells it for 300 rupees to cover their rent and labor.",
+    "answer": "cover their rent and labor",
+    "stem": "Why does the local shopkeeper charge more than the price they paid to the wholesaler?",
+    "options": [
+     {
+      "belief_id": "SOC-CIV-MARKETS-K7-M4",
+      "why": "Student believes price should be uniform regardless of business costs.",
+      "text": "they are charging extra for no reason"
+     },
+     {
+      "belief_id": "SOC-CIV-MARKETS-K5-M2",
+      "why": "Student assumes higher price implies better quality in a shop.",
+      "text": "the shirt is of better quality"
+     },
+     {
+      "belief_id": "SOC-CIV-MARKETS-K4-M1",
+      "why": "Student thinks local shops are only for low-income buyers.",
+      "text": "they only sell to poor people"
+     }
+    ]
+   },
+   {
+    "evidence": "Many families, regardless of their income, visit these weekly markets to find affordable deals, as the quality of the fabric remains consistent across these different outlets.",
+    "answer": "regardless of their income",
+    "stem": "Who typically shops at the weekly markets according to the text?",
+    "options": [
+     {
+      "belief_id": "SOC-CIV-MARKETS-K4-M1",
+      "why": "Student assumes weekly markets are exclusively for the poor.",
+      "text": "only people who cannot afford malls"
+     },
+     {
+      "belief_id": "SOC-CIV-MARKETS-K5-M2",
+      "why": "Student thinks quality is lower, so only poor people shop there.",
+      "text": "people looking for low quality goods"
+     },
+     {
+      "belief_id": "SOC-CIV-MARKETS-K7-M4",
+      "why": "Student thinks prices are the same, so income does not matter.",
+      "text": "only people who want the same price"
+     }
+    ]
+   },
+   {
+    "evidence": "It is a common mistake to assume that goods are manufactured within the wholesale market itself; in reality, these markets simply act as massive storage and distribution hubs for goods produced in distant factories.",
+    "answer": "storage and distribution hubs",
+    "stem": "What is the primary function of a wholesale market?",
+    "options": [
+     {
+      "belief_id": "SOC-CIV-MARKETS-K6-M3",
+      "why": "Student believes production happens at the wholesale market.",
+      "text": "they make the goods there"
+     },
+     {
+      "belief_id": "SOC-CIV-MARKETS-K5-M2",
+      "why": "Student thinks wholesale markets sell only high quality items.",
+      "text": "they sell only premium quality items"
+     },
+     {
+      "belief_id": "SOC-CIV-MARKETS-K7-M4",
+      "why": "Student thinks wholesale markets set the final consumer price.",
+      "text": "they decide the final market price"
+     }
+    ]
+   },
+   {
+    "evidence": "Prices vary significantly across these locations, not because of the product's inherent quality, but because of the different expenses each seller incurs to bring the item to the consumer.",
+    "answer": "different expenses each seller incurs",
+    "stem": "What is the main reason for price differences between a mall and a weekly market?",
+    "options": [
+     {
+      "belief_id": "SOC-CIV-MARKETS-K5-M2",
+      "why": "Student assumes higher prices in malls mean better quality.",
+      "text": "the mall items are better quality"
+     },
+     {
+      "belief_id": "SOC-CIV-MARKETS-K7-M4",
+      "why": "Student believes prices should be the same everywhere.",
+      "text": "the sellers are charging extra unfairly"
+     },
+     {
+      "belief_id": "SOC-CIV-MARKETS-K6-M3",
+      "why": "Student thinks manufacturing location causes the price difference.",
+      "text": "the goods are made in different places"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.2
+}

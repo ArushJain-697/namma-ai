@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0258-SCI-BIO-HEALTH",
+  "topic_id": "SCI-BIO-HEALTH",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a news-style report about a real-world situation",
+  "seed": 258
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 871,
+  "candidatesTokenCount": 1230,
+  "totalTokenCount": 2101,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 871
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "SCI-BIO-HEALTH-K17-M6",
+  "SCI-BIO-HEALTH-K4-M1",
+  "SCI-BIO-HEALTH-K15-M11",
+  "SCI-BIO-HEALTH-K10-M7",
+  "SCI-BIO-HEALTH-K3-M12",
+  "SCI-BIO-HEALTH-K25-M4",
+  "SCI-BIO-HEALTH-K14-M5",
+  "SCI-BIO-HEALTH-K18-M3",
+  "SCI-BIO-HEALTH-K15-M2"
+ ],
+ "response": {
+  "passage": "In a recent health awareness drive, local doctors addressed common myths regarding community well-being. Dr. Sharma emphasized that health is not merely the absence of disease, but a state of physical, mental, and social well-being. A person might feel fine but still be unhealthy due to poor social conditions or lack of clean water. Furthermore, the doctor clarified that not all illnesses are caused by external germs. Some, like diabetes or genetic disorders, arise from internal metabolic or hereditary factors. Regarding infections, the team explained that pathogens like viruses are distinct from bacteria, possessing different structures and life cycles. While antibiotics are powerful tools, they specifically target bacterial processes and are ineffective against viral infections like the common cold. Finally, the team highlighted that disease transmission is not limited to direct physical contact. Pathogens can travel through contaminated air, water, or vectors like mosquitoes, which act as carriers rather than the primary cause of the disease. Prevention remains superior to treatment; for instance, vaccines are administered to healthy individuals to build immunity before exposure, rather than curing those already suffering from symptoms. Community hygiene is essential, as individual health is deeply connected to the environment we share with others.",
+  "summary": "Health is a broad state of well-being influenced by both internal factors and the community environment. Understanding the difference between pathogens and the proper use of medical treatments is vital for effective disease prevention.",
+  "items": [
+   {
+    "evidence": "A person might feel fine but still be unhealthy due to poor social conditions or lack of clean water.",
+    "answer": "poor social conditions",
+    "stem": "What can make a person unhealthy even if they do not have a specific disease?",
+    "options": [
+     {
+      "belief_id": "SCI-BIO-HEALTH-K4-M1",
+      "why": "Student equates absence of disease with being healthy.",
+      "text": "nothing, they are healthy"
+     },
+     {
+      "belief_id": "SCI-BIO-HEALTH-K3-M12",
+      "why": "Student ignores the role of community and environment.",
+      "text": "lack of personal exercise"
+     },
+     {
+      "belief_id": "SCI-BIO-HEALTH-K10-M7",
+      "why": "Student believes all health issues are germ-related.",
+      "text": "presence of invisible germs"
+     }
+    ]
+   },
+   {
+    "evidence": "Some, like diabetes or genetic disorders, arise from internal metabolic or hereditary factors.",
+    "answer": "internal metabolic or hereditary factors",
+    "stem": "What is the origin of non-infectious conditions like diabetes?",
+    "options": [
+     {
+      "belief_id": "SCI-BIO-HEALTH-K10-M7",
+      "why": "Student assumes all diseases must be caused by germs.",
+      "text": "external microorganisms entering the body"
+     },
+     {
+      "belief_id": "SCI-BIO-HEALTH-K14-M5",
+      "why": "Student incorrectly attributes all illness to bacteria.",
+      "text": "harmful bacteria in the body"
+     },
+     {
+      "belief_id": "SCI-BIO-HEALTH-K15-M11",
+      "why": "Student confuses metabolic issues with viral infections.",
+      "text": "tiny viruses infecting cells"
+     }
+    ]
+   },
+   {
+    "evidence": "Pathogens can travel through contaminated air, water, or vectors like mosquitoes, which act as carriers rather than the primary cause of the disease.",
+    "answer": "vectors like mosquitoes",
+    "stem": "What serves as a carrier for pathogens instead of being the root cause?",
+    "options": [
+     {
+      "belief_id": "SCI-BIO-HEALTH-K18-M3",
+      "why": "Student believes the vector is the disease cause.",
+      "text": "the mosquitoes themselves"
+     },
+     {
+      "belief_id": "SCI-BIO-HEALTH-K17-M6",
+      "why": "Student thinks physical contact is the only transmission method.",
+      "text": "an infected person's hand"
+     },
+     {
+      "belief_id": "SCI-BIO-HEALTH-K10-M7",
+      "why": "Student assumes all spread is via direct germ contact.",
+      "text": "direct contact with germs"
+     }
+    ]
+   },
+   {
+    "evidence": "vaccines are administered to healthy individuals to build immunity before exposure, rather than curing those already suffering from symptoms.",
+    "answer": "build immunity before exposure",
+    "stem": "What is the primary purpose of administering a vaccine?",
+    "options": [
+     {
+      "belief_id": "SCI-BIO-HEALTH-K25-M4",
+      "why": "Student thinks vaccines are treatments for the sick.",
+      "text": "curing a person already sick"
+     },
+     {
+      "belief_id": "SCI-BIO-HEALTH-K15-M2",
+      "why": "Student confuses vaccines with antibiotic treatment logic.",
+      "text": "killing the common cold virus"
+     },
+     {
+      "belief_id": "SCI-BIO-HEALTH-K14-M5",
+      "why": "Student thinks vaccines kill all harmful bacteria.",
+      "text": "removing all harmful bacteria"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.3
+}

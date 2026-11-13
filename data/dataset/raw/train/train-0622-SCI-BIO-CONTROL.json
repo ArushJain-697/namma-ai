@@ -1,0 +1,131 @@
+{
+ "job": {
+  "job": "train-0622-SCI-BIO-CONTROL",
+  "topic_id": "SCI-BIO-CONTROL",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a question-and-answer (FAQ) style passage",
+  "seed": 622
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 882,
+  "candidatesTokenCount": 1262,
+  "totalTokenCount": 2144,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 882
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "SCI-BIO-CONTROL-K12-M7",
+  "SCI-BIO-CONTROL-K14-M2",
+  "SCI-BIO-CONTROL-K8-M11",
+  "SCI-BIO-CONTROL-K17-M4",
+  "SCI-BIO-CONTROL-K18-M9",
+  "SCI-BIO-CONTROL-K7-M3",
+  "SCI-BIO-CONTROL-K20-M6",
+  "SCI-BIO-CONTROL-K15-M8",
+  "SCI-BIO-CONTROL-K13-M1",
+  "SCI-BIO-CONTROL-K19-M5"
+ ],
+ "response": {
+  "passage": "How does our body and plant life manage coordination? In animals, the nervous system uses neurons to transmit information. These cells are specialized to carry signals in only one direction, from the dendrites to the axon terminal. When a signal reaches the end of a neuron, it must cross a tiny gap called a synapse. Here, the electrical impulse is converted into a chemical messenger that diffuses across the gap to trigger a new impulse in the next cell. Reflex actions, such as pulling your hand away from a hot object, are managed by the spinal cord, not the brain, to ensure speed. Meanwhile, plants coordinate through chemical signals called hormones. Auxin is a key hormone that promotes growth. When sunlight hits one side of a plant stem, auxin redistributes to the shaded side, causing cells there to grow faster, which makes the plant bend toward the light. Unlike animals, plants do not possess a nervous system or nerves to sense their environment. Furthermore, endocrine glands in animals release hormones directly into the bloodstream, which then travel throughout the body to reach target organs, independent of the brain's direct permission for every release. This feedback mechanism ensures that hormone levels remain balanced based on the body's current needs.",
+  "summary": "This passage explains how animals use unidirectional neurons and reflex arcs for rapid responses, while plants rely on hormonal redistribution for growth. It also clarifies that endocrine systems function through chemical feedback loops rather than direct brain control.",
+  "items": [
+   {
+    "evidence": "These cells are specialized to carry signals in only one direction, from the dendrites to the axon terminal.",
+    "answer": "only one direction",
+    "stem": "How does information travel along a single neuron?",
+    "options": [
+     {
+      "belief_id": "SCI-BIO-CONTROL-K12-M7",
+      "why": "Student incorrectly assumes signals flow both ways.",
+      "text": "in both directions"
+     },
+     {
+      "belief_id": "SCI-BIO-CONTROL-K7-M3",
+      "why": "Student confuses animal neurons with plant signaling.",
+      "text": "via a network of nerves"
+     },
+     {
+      "belief_id": "SCI-BIO-CONTROL-K13-M1",
+      "why": "Student confuses impulse direction with transmission method.",
+      "text": "as an electric spark"
+     }
+    ]
+   },
+   {
+    "evidence": "Reflex actions, such as pulling your hand away from a hot object, are managed by the spinal cord, not the brain, to ensure speed.",
+    "answer": "the spinal cord",
+    "stem": "Which part of the body is primarily responsible for the immediate execution of a reflex action?",
+    "options": [
+     {
+      "belief_id": "SCI-BIO-CONTROL-K14-M2",
+      "why": "Student incorrectly believes the brain controls reflexes.",
+      "text": "the cerebrum"
+     },
+     {
+      "belief_id": "SCI-BIO-CONTROL-K15-M8",
+      "why": "Student incorrectly identifies the cerebellum as the controller.",
+      "text": "the cerebellum"
+     },
+     {
+      "belief_id": "SCI-BIO-CONTROL-K19-M5",
+      "why": "Student confuses reflex control with hormone production.",
+      "text": "the endocrine gland"
+     }
+    ]
+   },
+   {
+    "evidence": "When sunlight hits one side of a plant stem, auxin redistributes to the shaded side, causing cells there to grow faster, which makes the plant bend toward the light.",
+    "answer": "auxin redistributes",
+    "stem": "Why does a plant stem bend toward the source of light?",
+    "options": [
+     {
+      "belief_id": "SCI-BIO-CONTROL-K8-M11",
+      "why": "Student assumes the plant has conscious intent.",
+      "text": "because it wants food"
+     },
+     {
+      "belief_id": "SCI-BIO-CONTROL-K17-M4",
+      "why": "Student assumes light destroys the hormone.",
+      "text": "light destroys the auxin"
+     },
+     {
+      "belief_id": "SCI-BIO-CONTROL-K18-M9",
+      "why": "Student assumes all hormones function to increase height.",
+      "text": "all hormones increase growth"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, endocrine glands in animals release hormones directly into the bloodstream, which then travel throughout the body to reach target organs, independent of the brain's direct permission for every release.",
+    "answer": "independent of the brain's direct permission",
+    "stem": "How does the body regulate the release of hormones from endocrine glands?",
+    "options": [
+     {
+      "belief_id": "SCI-BIO-CONTROL-K20-M6",
+      "why": "Student believes the brain must authorize hormone release.",
+      "text": "by asking the brain's permission"
+     },
+     {
+      "belief_id": "SCI-BIO-CONTROL-K19-M5",
+      "why": "Student thinks hormones stay inside the gland.",
+      "text": "it stays in the gland"
+     },
+     {
+      "belief_id": "SCI-BIO-CONTROL-K7-M3",
+      "why": "Student incorrectly applies nerve-like signaling to hormones.",
+      "text": "via a nervous system signal"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 18.7
+}

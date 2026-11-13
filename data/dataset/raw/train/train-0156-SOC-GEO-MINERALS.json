@@ -1,0 +1,84 @@
+{
+ "job": {
+  "job": "train-0156-SOC-GEO-MINERALS",
+  "topic_id": "SOC-GEO-MINERALS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a passage rich in numbers, dates or measurements",
+  "seed": 156
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 614,
+  "candidatesTokenCount": 894,
+  "totalTokenCount": 1508,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 614
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "SOC-GEO-MINERALS-K4-M1",
+  "SOC-GEO-MINERALS-K8-M4",
+  "SOC-GEO-MINERALS-K6-M2"
+ ],
+ "response": {
+  "passage": "India possesses a diverse range of mineral resources essential for industrial growth. Minerals are broadly classified into metallic and non-metallic categories. Metallic minerals are further divided into ferrous and non-ferrous types. Ferrous minerals, like iron ore, account for about three-fourths of the total value of metallic mineral production in India. In contrast, non-ferrous minerals, such as copper and lead, are vital but relatively scarce. Extraction methods vary significantly based on depth. While some minerals are found in surface deposits, others require deep-seated mining. Shaft mining involves digging deep vertical tunnels to reach minerals, but it is not the only method; open-cast mining is used for shallow deposits. Energy resources are equally critical for development. Conventional sources like coal and petroleum currently provide the bulk of India's power, contributing over 80% of the total energy supply. These are finite and exhaustible. Conversely, non-conventional sources like solar and wind energy are gaining momentum due to their sustainability. However, it is a common error to assume that non-conventional sources are inherently more efficient than conventional ones; currently, conventional sources remain the primary drivers of industrial output due to their high energy density and established infrastructure. Conservation of these resources is mandatory to ensure that future generations can meet their own needs while we maintain our current industrial pace.",
+  "summary": "India relies on a mix of metallic and non-metallic minerals, extracted through various methods like shaft and open-cast mining. While conventional energy sources currently dominate the power sector, the country is increasingly shifting focus toward sustainable non-conventional energy.",
+  "items": [
+   {
+    "evidence": "Metallic minerals are further divided into ferrous and non-ferrous types.",
+    "answer": "divided into ferrous and non-ferrous",
+    "stem": "How are metallic minerals categorized in the Indian mineral sector?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-MINERALS-K4-M1",
+      "why": "Student assumes all metallic minerals belong to the ferrous category.",
+      "text": "they are all classified as ferrous"
+     }
+    ]
+   },
+   {
+    "evidence": "Shaft mining involves digging deep vertical tunnels to reach minerals, but it is not the only method; open-cast mining is used for shallow deposits.",
+    "answer": "open-cast mining",
+    "stem": "Which technique is utilized for extracting minerals located near the surface?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-MINERALS-K6-M2",
+      "why": "Student believes mining is restricted to deep vertical shaft digging.",
+      "text": "deep vertical shaft mining"
+     }
+    ]
+   },
+   {
+    "evidence": "Conventional sources like coal and petroleum currently provide the bulk of India's power, contributing over 80% of the total energy supply.",
+    "answer": "over 80%",
+    "stem": "What percentage of India's total energy supply is currently provided by conventional sources?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-MINERALS-K8-M4",
+      "why": "Student assumes non-conventional energy is more efficient and dominant.",
+      "text": "less than 20%"
+     }
+    ]
+   },
+   {
+    "evidence": "However, it is a common error to assume that non-conventional sources are inherently more efficient than conventional ones; currently, conventional sources remain the primary drivers of industrial output due to their high energy density and established infrastructure.",
+    "answer": "remain the primary drivers",
+    "stem": "Why do conventional energy sources continue to dominate India's industrial output?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-MINERALS-K8-M4",
+      "why": "Student incorrectly believes non-conventional sources are always more efficient.",
+      "text": "they are less efficient than solar"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 7.6
+}

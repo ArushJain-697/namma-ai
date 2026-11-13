@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0591-MAT-EXPONENTS",
+  "topic_id": "MAT-EXPONENTS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a market or shop situation that uses the idea",
+  "seed": 591
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1125,
+  "candidatesTokenCount": 1309,
+  "totalTokenCount": 2434,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1125
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-EXPONENTS-K30-M25",
+  "MAT-EXPONENTS-K18-M11",
+  "MAT-EXPONENTS-K31-M26",
+  "MAT-EXPONENTS-K16-M8",
+  "MAT-EXPONENTS-K8-M2",
+  "MAT-EXPONENTS-K16-M7",
+  "MAT-EXPONENTS-K19-M12",
+  "MAT-EXPONENTS-K24-M18",
+  "MAT-EXPONENTS-K28-M22",
+  "MAT-EXPONENTS-K17-M9",
+  "MAT-EXPONENTS-K17-M10",
+  "MAT-EXPONENTS-K10-M1",
+  "MAT-EXPONENTS-K20-M14",
+  "MAT-EXPONENTS-K30-M24"
+ ],
+ "response": {
+  "passage": "Rohan visits a science exhibition where he learns about the microscopic world. He sees a display showing the thickness of a human hair, which is approximately 0.00005 meters. The guide explains that to write this in standard form, we must express it as a number between 1 and 10 multiplied by a power of ten. Moving the decimal point five places to the right gives 5 x 10^-5. Rohan then looks at a model of a giant star, which has a mass of 2^3 times 2^4 kilograms. The guide explains that when multiplying powers with the same base, we add the exponents, resulting in 2^7 kilograms. Next, they discuss a small bacteria sample. One student asks if 2^3 times 3^3 equals 6^6. The guide clarifies that when exponents are the same, we multiply the bases but keep the exponent the same, so it is 6^3. Finally, they look at a tiny dust particle measuring 0.0004 meters. Rohan correctly identifies this as 4 x 10^-4. He realizes that exponents are not just repeated multiplication of the base, but a way to track decimal shifts and growth patterns efficiently. By understanding these rules, he can easily compare the sizes of stars and tiny particles without getting confused by the number of zeros.",
+  "summary": "The passage explains how to write small numbers in standard form and how to apply exponent laws during multiplication. It clarifies common mistakes regarding base and exponent operations in a science exhibition context.",
+  "items": [
+   {
+    "evidence": "Moving the decimal point five places to the right gives 5 x 10^-5.",
+    "answer": "5 x 10^-5",
+    "stem": "What is the correct standard form for the thickness of a human hair, 0.00005 meters?",
+    "options": [
+     {
+      "belief_id": "MAT-EXPONENTS-K30-M25",
+      "why": "Counts zeros instead of counting decimal places moved.",
+      "text": "5 x 10^-4"
+     },
+     {
+      "belief_id": "MAT-EXPONENTS-K30-M24",
+      "why": "Confuses negative exponent for small numbers with positive.",
+      "text": "5 x 10^5"
+     },
+     {
+      "belief_id": "MAT-EXPONENTS-K24-M18",
+      "why": "Assumes negative exponent makes the whole value negative.",
+      "text": "-5 x 10^5"
+     }
+    ]
+   },
+   {
+    "evidence": "The guide explains that when multiplying powers with the same base, we add the exponents, resulting in 2^7 kilograms.",
+    "answer": "2^7",
+    "stem": "How should we calculate the mass of the star represented by 2^3 times 2^4?",
+    "options": [
+     {
+      "belief_id": "MAT-EXPONENTS-K16-M8",
+      "why": "Multiplies exponents instead of adding them.",
+      "text": "2^12"
+     },
+     {
+      "belief_id": "MAT-EXPONENTS-K16-M7",
+      "why": "Multiplies the bases and adds the exponents.",
+      "text": "4^7"
+     },
+     {
+      "belief_id": "MAT-EXPONENTS-K20-M14",
+      "why": "Applies multiplication rule to addition incorrectly.",
+      "text": "2^12"
+     }
+    ]
+   },
+   {
+    "evidence": "The guide clarifies that when exponents are the same, we multiply the bases but keep the exponent the same, so it is 6^3.",
+    "answer": "6^3",
+    "stem": "What is the result of multiplying 2^3 by 3^3?",
+    "options": [
+     {
+      "belief_id": "MAT-EXPONENTS-K19-M12",
+      "why": "Multiplies bases and adds exponents incorrectly.",
+      "text": "6^6"
+     },
+     {
+      "belief_id": "MAT-EXPONENTS-K16-M8",
+      "why": "Multiplies exponents incorrectly.",
+      "text": "6^9"
+     },
+     {
+      "belief_id": "MAT-EXPONENTS-K10-M1",
+      "why": "Treats exponent as a multiplier for the base.",
+      "text": "6 x 3"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan correctly identifies this as 4 x 10^-4.",
+    "answer": "4 x 10^-4",
+    "stem": "How is the dust particle measurement of 0.0004 meters written in standard form?",
+    "options": [
+     {
+      "belief_id": "MAT-EXPONENTS-K30-M25",
+      "why": "Counts zeros incorrectly for standard form.",
+      "text": "4 x 10^-3"
+     },
+     {
+      "belief_id": "MAT-EXPONENTS-K30-M24",
+      "why": "Uses positive exponent for a small decimal.",
+      "text": "4 x 10^4"
+     },
+     {
+      "belief_id": "MAT-EXPONENTS-K28-M22",
+      "why": "Incorrectly identifies standard form notation.",
+      "text": "40 x 10^-5"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 16.1
+}

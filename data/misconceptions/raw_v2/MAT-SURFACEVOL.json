@@ -1,0 +1,874 @@
+{
+ "topic": {
+  "id": "MAT-SURFACEVOL",
+  "subject": "maths",
+  "strand": "maths",
+  "grades": [
+   9,
+   10
+  ],
+  "title": "Surface areas and volumes",
+  "scope": "cube, cuboid, cylinder, cone, sphere, combinations of solids, units of volume and capacity"
+ },
+ "model": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 7767,
+  "promptTokenCount": 2
+ },
+ "seconds": 52.9,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Surface area of solids",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "area of rectangle, square, triangle, circle",
+     "perimeter and circumference of a circle"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Volume of solids",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "multiplication of whole numbers",
+     "idea of space occupied by an object"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Combined solids and conversions",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1",
+     "n2"
+    ],
+    "external_prereqs": [
+     "unit conversion in length",
+     "ratio and proportion"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Cube and cuboid surface area",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "area of rectangle"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Cylinder surface area",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "circumference of a circle"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Cone and sphere surface area",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "Pythagoras theorem",
+     "area of circle"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Total vs lateral (curved) surface area",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Cuboid TSA = 2(lb+bh+hl)",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Cube TSA = 6a²",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Curved surface of cylinder is a rectangle 2πr × h",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": [
+     "circumference of a circle"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Cylinder TSA = 2πr(r+h)",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n10"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Slant height l² = r² + h²",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": [
+     "Pythagoras theorem"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "Cone CSA = πrl",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n12"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Sphere surface area = 4πr²",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": [
+     "area of circle"
+    ]
+   },
+   {
+    "key": "n15",
+    "name": "Hemisphere CSA 2πr² and TSA 3πr²",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n14"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n16",
+    "name": "Volume as space occupied, measured in cubic units",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "idea of space occupied by an object"
+    ]
+   },
+   {
+    "key": "n17",
+    "name": "Volume of cube and cuboid",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n16"
+    ],
+    "external_prereqs": [
+     "multiplication of whole numbers"
+    ]
+   },
+   {
+    "key": "n18",
+    "name": "Volume of cylinder, cone, sphere",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": [
+     "area of circle"
+    ]
+   },
+   {
+    "key": "n19",
+    "name": "Volume = base area × height for prisms/cylinders",
+    "level": 3,
+    "parent": "n17",
+    "prereqs": [
+     "n16"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n20",
+    "name": "Cone volume is one-third of cylinder volume",
+    "level": 3,
+    "parent": "n18",
+    "prereqs": [
+     "n19"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n21",
+    "name": "Sphere volume = 4/3 πr³",
+    "level": 3,
+    "parent": "n18",
+    "prereqs": [
+     "n19"
+    ],
+    "external_prereqs": [
+     "cube of a number"
+    ]
+   },
+   {
+    "key": "n22",
+    "name": "Surface area of combined solids",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n7",
+     "n13",
+     "n15"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n23",
+    "name": "Volume of combined and melted-recast solids",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n20",
+     "n21"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n24",
+    "name": "Units: cm³, m³, litre, 1 L = 1000 cm³",
+    "level": 3,
+    "parent": "n3",
+    "prereqs": [
+     "n16"
+    ],
+    "external_prereqs": [
+     "unit conversion in length"
+    ]
+   },
+   {
+    "key": "n25",
+    "name": "Volume is conserved when a solid is reshaped",
+    "level": 3,
+    "parent": "n23",
+    "prereqs": [
+     "n16"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n26",
+    "name": "Joined faces are hidden and not counted in surface area",
+    "level": 3,
+    "parent": "n22",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n7",
+    "statement": "Total surface area is the same as curved surface area.",
+    "why": "Students remember one 'surface area' formula and ignore the flat ends.",
+    "fix": "Curved (lateral) surface area excludes the top and bottom; total surface area includes all faces, curved and flat.",
+    "probe": {
+     "question": "Find the total surface area of a closed cylinder with r=7 cm, h=10 cm (π=22/7).",
+     "wrong_answer": "440 cm² (only 2πrh)"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar-sounding terms mean the same thing",
+    "causes": [],
+    "trigger_cues": [
+     "total",
+     "lateral",
+     "curved",
+     "surface area",
+     "closed",
+     "faces"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "classroom studies of mensuration errors in secondary students"
+   },
+   {
+    "key": "m2",
+    "node": "n8",
+    "statement": "The surface area of a cuboid is lb + bh + hl.",
+    "why": "Students forget each face appears twice, remembering only three different faces.",
+    "fix": "A cuboid has six faces in three equal pairs, so TSA = 2(lb + bh + hl).",
+    "probe": {
+     "question": "Find TSA of a cuboid 4 cm × 3 cm × 2 cm.",
+     "wrong_answer": "26 cm²"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "remembering a formula without its meaning is enough",
+    "causes": [],
+    "trigger_cues": [
+     "cuboid",
+     "faces",
+     "pairs",
+     "lb",
+     "bh",
+     "hl"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n9",
+    "statement": "The surface area of a cube is a³.",
+    "why": "Students mix up the volume formula with the area formula.",
+    "fix": "A cube has 6 square faces each of area a², so TSA = 6a²; a³ is its volume.",
+    "probe": {
+     "question": "Find the surface area of a cube of side 5 cm.",
+     "wrong_answer": "125 cm²"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "formulas for related quantities are interchangeable",
+    "causes": [],
+    "trigger_cues": [
+     "cube",
+     "side",
+     "six faces",
+     "a squared",
+     "a cubed"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on area–volume formula confusion in students"
+   },
+   {
+    "key": "m4",
+    "node": "n10",
+    "statement": "The curved surface of a cylinder, when opened out, is a circle.",
+    "why": "Students picture the circular ends and the round shape together.",
+    "fix": "Opened out, the curved surface is a rectangle with length 2πr (circumference of the base) and width h.",
+    "probe": {
+     "question": "A label covers the curved side of a can with r=7 cm, h=10 cm. Area of the label?",
+     "wrong_answer": "154 cm² (πr²)"
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "a round object has a round-shaped flat net",
+    "causes": [
+     "m1"
+    ],
+    "trigger_cues": [
+     "curved surface",
+     "rectangle",
+     "unrolled",
+     "circumference",
+     "label",
+     "opened out"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n11",
+    "statement": "The total surface area of a cylinder is 2πrh + πr².",
+    "why": "Students count only one circular end, forgetting the top and bottom both exist.",
+    "fix": "A closed cylinder has two circular ends, so TSA = 2πrh + 2πr² = 2πr(r+h).",
+    "probe": {
+     "question": "TSA of a closed cylinder r=7 cm, h=10 cm (π=22/7)?",
+     "wrong_answer": "594 cm²"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "counting parts is unnecessary if a formula looks familiar",
+    "causes": [],
+    "trigger_cues": [
+     "closed cylinder",
+     "two circular ends",
+     "top and bottom",
+     "total surface"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m6",
+    "node": "n12",
+    "statement": "The slant height of a cone is the same as its vertical height.",
+    "why": "Both are 'heights' and students draw them as one line.",
+    "fix": "Slant height l is along the cone's surface and is longer than the height h; l = √(r² + h²).",
+    "probe": {
+     "question": "A cone has r=3 cm and h=4 cm. Find its slant height.",
+     "wrong_answer": "4 cm"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [
+     "m7"
+    ],
+    "trigger_cues": [
+     "slant height",
+     "vertical height",
+     "cone",
+     "perpendicular",
+     "l squared"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of cone and pyramid height confusion in geometry learning"
+   },
+   {
+    "key": "m7",
+    "node": "n13",
+    "statement": "The curved surface area of a cone is πrh.",
+    "why": "Students copy the cylinder pattern and use the height they were given.",
+    "fix": "The cone's curved surface area is πrl, using the slant height l, not the vertical height h.",
+    "probe": {
+     "question": "Find the CSA of a cone with r=3 cm, h=4 cm (π=3.14).",
+     "wrong_answer": "37.68 cm²"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a formula for one shape works for similar shapes",
+    "causes": [],
+    "trigger_cues": [
+     "cone",
+     "curved surface",
+     "slant height",
+     "πrl",
+     "height given"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "error analysis of mensuration problems in secondary classrooms"
+   },
+   {
+    "key": "m8",
+    "node": "n14",
+    "statement": "The surface area of a sphere is πr², the same as a circle.",
+    "why": "Students see a circle in the sphere's outline and reuse the circle's area.",
+    "fix": "A sphere's surface area is 4πr², four times the area of its great circle.",
+    "probe": {
+     "question": "Find the surface area of a sphere with radius 7 cm (π=22/7).",
+     "wrong_answer": "154 cm²"
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "what a shape looks like from one view is all of it",
+    "causes": [],
+    "trigger_cues": [
+     "sphere",
+     "4πr²",
+     "great circle",
+     "surface area",
+     "radius"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m9",
+    "node": "n15",
+    "statement": "The total surface area of a solid hemisphere is 2πr².",
+    "why": "Students halve 4πr² and forget the flat circular face.",
+    "fix": "A solid hemisphere has a curved surface 2πr² plus a flat circular base πr², so TSA = 3πr².",
+    "probe": {
+     "question": "TSA of a solid hemisphere of radius 7 cm (π=22/7)?",
+     "wrong_answer": "308 cm²"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "half of a shape has half of every quantity",
+    "causes": [],
+    "trigger_cues": [
+     "hemisphere",
+     "half sphere",
+     "flat face",
+     "3πr²",
+     "solid"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on halving misconceptions in geometry measurement"
+   },
+   {
+    "key": "m10",
+    "node": "n16",
+    "statement": "Volume is measured in square units like cm².",
+    "why": "Students first learn area in square units and keep using them.",
+    "fix": "Volume counts unit cubes, so it is measured in cubic units like cm³ or m³.",
+    "probe": {
+     "question": "A cube has side 3 cm. State its volume with unit.",
+     "wrong_answer": "27 cm²"
+    },
+    "error_type": "notation_misread",
+    "root_belief": "a rule from one dimension works in all dimensions",
+    "causes": [],
+    "trigger_cues": [
+     "cubic units",
+     "cm³",
+     "square units",
+     "volume",
+     "unit cubes"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on students' understanding of units of area and volume"
+   },
+   {
+    "key": "m11",
+    "node": "n16",
+    "statement": "A taller container always has a larger volume.",
+    "why": "Students judge capacity by one dimension they notice.",
+    "fix": "Volume depends on all dimensions together, so a taller but narrower container can hold less.",
+    "probe": {
+     "question": "Cylinder A: r=2, h=10. Cylinder B: r=5, h=4. Which has larger volume?",
+     "wrong_answer": "A, because it is taller"
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "one visible feature decides the whole quantity",
+    "causes": [],
+    "trigger_cues": [
+     "taller",
+     "capacity",
+     "larger volume",
+     "narrow",
+     "wide",
+     "compare"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Piagetian conservation-of-volume studies"
+   },
+   {
+    "key": "m12",
+    "node": "n17",
+    "statement": "Volume of a cuboid is found by adding length, breadth and height.",
+    "why": "Students mix up adding dimensions with multiplying them.",
+    "fix": "Volume of a cuboid = l × b × h, the number of unit cubes in layers.",
+    "probe": {
+     "question": "Volume of a cuboid 5 cm × 4 cm × 3 cm?",
+     "wrong_answer": "12 cm³"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "combining quantities always means adding them",
+    "causes": [],
+    "trigger_cues": [
+     "cuboid",
+     "length",
+     "breadth",
+     "height",
+     "product",
+     "layers"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m13",
+    "node": "n19",
+    "statement": "Volume of a cylinder is 2πrh.",
+    "why": "Students confuse curved surface area with volume.",
+    "fix": "Volume = base area × height = πr²h; 2πrh is the curved surface area.",
+    "probe": {
+     "question": "Volume of a cylinder r=7 cm, h=10 cm (π=22/7)?",
+     "wrong_answer": "440 cm³"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "formulas for related quantities are interchangeable",
+    "causes": [],
+    "trigger_cues": [
+     "cylinder",
+     "volume",
+     "πr²h",
+     "base area",
+     "curved surface"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on area–volume formula confusion in students"
+   },
+   {
+    "key": "m14",
+    "node": "n20",
+    "statement": "A cone's volume is half of the cylinder of the same base and height.",
+    "why": "Students guess 'half' as the familiar fraction for pointed shapes.",
+    "fix": "A cone's volume is one-third of the cylinder with the same base and height: (1/3)πr²h.",
+    "probe": {
+     "question": "Cylinder volume is 90 cm³. What is the volume of a cone of same base and height?",
+     "wrong_answer": "45 cm³"
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "familiar simple fractions fit every situation",
+    "causes": [],
+    "trigger_cues": [
+     "cone",
+     "one-third",
+     "cylinder",
+     "same base",
+     "same height"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m15",
+    "node": "n21",
+    "statement": "Volume of a sphere is (4/3)πr².",
+    "why": "Students blend the surface area 4πr² with the volume formula.",
+    "fix": "Volume of a sphere is (4/3)πr³, with radius cubed because volume has three dimensions.",
+    "probe": {
+     "question": "Volume of a sphere with r=3 cm (π=3.14)?",
+     "wrong_answer": "37.68 cm³"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "formulas for related quantities are interchangeable",
+    "causes": [],
+    "trigger_cues": [
+     "sphere",
+     "4/3",
+     "πr³",
+     "cubed",
+     "volume"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m16",
+    "node": "n21",
+    "statement": "If the radius of a sphere is doubled, its volume doubles.",
+    "why": "Students assume quantities scale in direct proportion to the radius.",
+    "fix": "Volume varies as r³, so doubling the radius makes the volume 8 times; surface area becomes 4 times.",
+    "probe": {
+     "question": "Radius of a ball is doubled. By what factor does its volume change?",
+     "wrong_answer": "2 times"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "doubling one thing doubles everything related to it",
+    "causes": [],
+    "trigger_cues": [
+     "radius doubled",
+     "volume",
+     "ratio",
+     "scale",
+     "r cubed"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on proportional reasoning with area and volume under scaling"
+   },
+   {
+    "key": "m17",
+    "node": "n24",
+    "statement": "1 m³ equals 100 cm³.",
+    "why": "Students use 1 m = 100 cm without cubing the factor.",
+    "fix": "1 m³ = 100 × 100 × 100 cm³ = 10,00,000 cm³.",
+    "probe": {
+     "question": "Convert 2 m³ to cm³.",
+     "wrong_answer": "200 cm³"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "length conversion factors apply unchanged to area and volume",
+    "causes": [],
+    "trigger_cues": [
+     "m³",
+     "cm³",
+     "convert",
+     "conversion",
+     "cubic metre"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of unit conversion errors for area and volume"
+   },
+   {
+    "key": "m18",
+    "node": "n24",
+    "statement": "One litre equals 100 cm³.",
+    "why": "Students link litre with the base-ten 100 from centimetres.",
+    "fix": "1 litre = 1000 cm³, the volume of a 10 cm cube.",
+    "probe": {
+     "question": "A tank holds 5000 cm³ of water. How many litres?",
+     "wrong_answer": "50 litres"
+    },
+    "error_type": "place_value",
+    "root_belief": "remembered numbers can be swapped without checking",
+    "causes": [],
+    "trigger_cues": [
+     "litre",
+     "capacity",
+     "1000 cm³",
+     "millilitre",
+     "tank"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m19",
+    "node": "n26",
+    "statement": "When two solids are joined, the surface area is the sum of their separate total surface areas.",
+    "why": "Students add finished formulas without picturing the joined faces.",
+    "fix": "The joined faces are inside and not on the outside, so they are left out; only exposed surfaces are counted.",
+    "probe": {
+     "question": "A cone is placed on a cylinder of same radius. Total outer surface area?",
+     "wrong_answer": "TSA of cylinder + TSA of cone"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "the whole is just the sum of its parts",
+    "causes": [],
+    "trigger_cues": [
+     "combination",
+     "joined",
+     "surmounted",
+     "hemisphere on cylinder",
+     "exposed surface"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on students' errors with composite solids"
+   },
+   {
+    "key": "m20",
+    "node": "n22",
+    "statement": "The surface area of a combined solid is the same as its volume calculation done on the surfaces.",
+    "why": "Students treat the two ideas as one process and add everything.",
+    "fix": "Surface area adds the outer faces' areas, while volume adds the space; they are separate calculations.",
+    "probe": {
+     "question": "A toy is a hemisphere on a cone. Will you add volumes to find paint needed?",
+     "wrong_answer": "Yes, add the volumes"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "two related measures are one and the same",
+    "causes": [],
+    "trigger_cues": [
+     "toy",
+     "paint",
+     "combination",
+     "surface area",
+     "volume",
+     "outer"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m21",
+    "node": "n25",
+    "statement": "When a solid is melted and recast, its surface area stays the same.",
+    "why": "Students think of conservation of material as conservation of every measure.",
+    "fix": "Only volume stays the same when reshaped; the surface area usually changes with shape.",
+    "probe": {
+     "question": "A sphere is melted into small spheres. Does total surface area stay same?",
+     "wrong_answer": "Yes, same material so same surface area"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "if one quantity is conserved, all quantities are conserved",
+    "causes": [],
+    "trigger_cues": [
+     "melted",
+     "recast",
+     "reshaped",
+     "same volume",
+     "number of spheres"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "conservation-task studies in Piagetian research"
+   },
+   {
+    "key": "m22",
+    "node": "n23",
+    "statement": "The number of small spheres made from a big sphere equals the ratio of their radii.",
+    "why": "Students use the radii ratio instead of volumes.",
+    "fix": "Number of spheres = volume of big ÷ volume of small, which is the ratio of radius cubes.",
+    "probe": {
+     "question": "A sphere of radius 6 cm is melted into spheres of radius 2 cm. How many?",
+     "wrong_answer": "3"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "doubling one thing doubles everything related to it",
+    "causes": [],
+    "trigger_cues": [
+     "melted",
+     "small spheres",
+     "number of",
+     "radius",
+     "ratio",
+     "recast"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on proportional reasoning with area and volume under scaling"
+   },
+   {
+    "key": "m23",
+    "node": "n23",
+    "statement": "The volume of a hollow cylinder (pipe) is πR²h plus πr²h.",
+    "why": "Students add the two circles without seeing the inner space is empty.",
+    "fix": "Material volume of a pipe = πh(R² − r²), outer volume minus the inner hollow.",
+    "probe": {
+     "question": "A pipe has outer radius 5, inner radius 3, length 10. Volume of metal?",
+     "wrong_answer": "π×10×(25+9) = 340π"
+    },
+    "error_type": "sign_error_belief",
+    "root_belief": "combining parts always means adding",
+    "causes": [],
+    "trigger_cues": [
+     "hollow",
+     "pipe",
+     "outer radius",
+     "inner radius",
+     "thickness",
+     "material"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m24",
+    "node": "n4",
+    "statement": "A cube and a cuboid of the same volume must have the same surface area.",
+    "why": "Students think surface area is determined by volume.",
+    "fix": "Different shapes with the same volume can have different surface areas; the cube has the least.",
+    "probe": {
+     "question": "Cube of volume 64 cm³ and cuboid 16×2×2 cm. Do they have equal surface area?",
+     "wrong_answer": "Yes, both have volume 64"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "if one quantity is conserved, all quantities are conserved",
+    "causes": [],
+    "trigger_cues": [
+     "same volume",
+     "surface area",
+     "cube",
+     "cuboid",
+     "compare",
+     "packaging"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on area–perimeter and surface–volume independence"
+   }
+  ]
+ },
+ "problems": []
+}

@@ -1,0 +1,695 @@
+{
+ "topic": {
+  "id": "GEN-INTEREST",
+  "subject": "general",
+  "strand": "money",
+  "grades": [
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "title": "Interest and loans",
+  "scope": "simple vs compound interest, borrowing costs, EMIs, credit cards, why high interest loans trap people"
+ },
+ "model": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 10381,
+  "promptTokenCount": 2
+ },
+ "seconds": 77.9,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Interest and how money grows",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "percentages",
+     "multiplication of whole numbers"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Loans, borrowing cost and EMIs",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "division of whole numbers"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Credit cards and debt traps",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1",
+     "n2"
+    ],
+    "external_prereqs": [
+     "percentages"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Simple interest",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "percentages"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Compound interest",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "percentages"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Rate and time conventions",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "units of time",
+     "fractions"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "SI = P x R x T / 100",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [
+     "n12"
+    ],
+    "external_prereqs": [
+     "percentages",
+     "multiplication of whole numbers"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Amount = Principal + Interest",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": [
+     "addition of whole numbers"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Compound interest is earned on earlier interest too",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n7",
+     "n8"
+    ],
+    "external_prereqs": [
+     "percentages"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "CI equals SI for the first period, then exceeds it",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n9",
+     "n7"
+    ],
+    "external_prereqs": [
+     "comparing numbers"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Half-yearly compounding: halve the rate, double the periods",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n9",
+     "n12",
+     "n13"
+    ],
+    "external_prereqs": [
+     "fractions"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Rate is per year unless stated otherwise",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": [
+     "percentages"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "Convert months or days to years before using the formula",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n12"
+    ],
+    "external_prereqs": [
+     "fractions",
+     "units of time"
+    ]
+   },
+   {
+    "key": "n14",
+    "name": "Cost of borrowing",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": [
+     "what is a bank"
+    ]
+   },
+   {
+    "key": "n15",
+    "name": "Equated monthly instalments (EMI)",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n14"
+    ],
+    "external_prereqs": [
+     "division of whole numbers"
+    ]
+   },
+   {
+    "key": "n16",
+    "name": "Comparing loan offers",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n14",
+     "n15"
+    ],
+    "external_prereqs": [
+     "comparing numbers"
+    ]
+   },
+   {
+    "key": "n17",
+    "name": "A borrower repays the principal plus interest",
+    "level": 3,
+    "parent": "n14",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": [
+     "what is a loan"
+    ]
+   },
+   {
+    "key": "n18",
+    "name": "Interest rates differ by lender and risk",
+    "level": 3,
+    "parent": "n14",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": [
+     "what is a bank"
+    ]
+   },
+   {
+    "key": "n19",
+    "name": "Each EMI contains both principal and interest",
+    "level": 3,
+    "parent": "n15",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": [
+     "division of whole numbers"
+    ]
+   },
+   {
+    "key": "n20",
+    "name": "Longer tenure lowers EMI but raises total interest",
+    "level": 3,
+    "parent": "n15",
+    "prereqs": [
+     "n19",
+     "n7"
+    ],
+    "external_prereqs": [
+     "multiplication of whole numbers"
+    ]
+   },
+   {
+    "key": "n21",
+    "name": "Early EMIs are mostly interest on a reducing balance",
+    "level": 3,
+    "parent": "n15",
+    "prereqs": [
+     "n19",
+     "n9"
+    ],
+    "external_prereqs": [
+     "subtraction of whole numbers"
+    ]
+   },
+   {
+    "key": "n22",
+    "name": "Flat rate vs reducing-balance rate",
+    "level": 3,
+    "parent": "n16",
+    "prereqs": [
+     "n21",
+     "n7"
+    ],
+    "external_prereqs": [
+     "percentages"
+    ]
+   },
+   {
+    "key": "n23",
+    "name": "Fees and charges add to the loan cost",
+    "level": 3,
+    "parent": "n16",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": [
+     "addition of whole numbers"
+    ]
+   },
+   {
+    "key": "n24",
+    "name": "How a credit card works",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": [
+     "digital payments"
+    ]
+   },
+   {
+    "key": "n25",
+    "name": "Why high-interest debt traps people",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n9"
+    ],
+    "external_prereqs": [
+     "percentages"
+    ]
+   },
+   {
+    "key": "n26",
+    "name": "A credit card spends the bank's money, not yours",
+    "level": 3,
+    "parent": "n24",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": [
+     "what is a bank"
+    ]
+   },
+   {
+    "key": "n27",
+    "name": "Paying only the minimum due leaves interest-bearing debt",
+    "level": 3,
+    "parent": "n24",
+    "prereqs": [
+     "n26",
+     "n9"
+    ],
+    "external_prereqs": [
+     "percentages"
+    ]
+   },
+   {
+    "key": "n28",
+    "name": "Interest-free period needs full bill payment on time",
+    "level": 3,
+    "parent": "n24",
+    "prereqs": [
+     "n26"
+    ],
+    "external_prereqs": [
+     "calendar and dates"
+    ]
+   },
+   {
+    "key": "n29",
+    "name": "Unpaid interest is added to the debt and grows",
+    "level": 3,
+    "parent": "n25",
+    "prereqs": [
+     "n9",
+     "n27"
+    ],
+    "external_prereqs": [
+     "percentages"
+    ]
+   },
+   {
+    "key": "n30",
+    "name": "Borrowing again to repay old debt deepens the trap",
+    "level": 3,
+    "parent": "n25",
+    "prereqs": [
+     "n18",
+     "n29"
+    ],
+    "external_prereqs": [
+     "budgeting income and expenses"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n7",
+    "statement": "Simple interest does not depend on how long the money is kept or borrowed.",
+    "why": "Students focus on principal and rate, the 'visible' numbers, and treat time as just a label.",
+    "fix": "Simple interest grows with time: double the years and the interest doubles, since SI = P x R x T / 100.",
+    "probe": {
+     "question": "What is the simple interest on Rs 2000 at 5% per year for 1 year, and for 3 years?",
+     "wrong_answer": "Rs 100 in both cases"
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "only the main quantity matters, not duration",
+    "causes": [],
+    "trigger_cues": [
+     "simple interest",
+     "time",
+     "years",
+     "principal",
+     "rate",
+     "formula"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n8",
+    "statement": "The simple interest on a loan is the total money you pay back at the end.",
+    "why": "The words interest and amount are used loosely in daily talk about money owed.",
+    "fix": "Interest is only the extra money; the amount to repay is principal plus interest.",
+    "probe": {
+     "question": "Rs 1000 is borrowed at 10% simple interest per year for 2 years. How much must be repaid?",
+     "wrong_answer": "Rs 200"
+    }
+   },
+   {
+    "id": "m3",
+    "node": "n5",
+    "statement": "Compound interest means the interest rate itself keeps increasing every year.",
+    "why": "Students hear that money 'grows faster' and assume the rate rises, instead of seeing that the same rate applies to a growing balance.",
+    "fix": "The rate stays the same. Interest is calculated each period on a bigger amount (principal plus earlier interest), so the rupee interest grows.",
+    "probe": {
+     "question": "Rs 1000 is invested at 10% per year compound interest. What rate applies in the second year?",
+     "wrong_answer": "More than 10%, because it is compound interest."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Growth in interest amount means growth in rate",
+    "causes": [],
+    "trigger_cues": [
+     "compound",
+     "rate",
+     "increases",
+     "every",
+     "year",
+     "grows",
+     "faster"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher observation",
+    "key": "m3"
+   },
+   {
+    "id": "m4",
+    "node": "n10",
+    "statement": "Compound interest is always larger than simple interest, even for the first year.",
+    "why": "Students overgeneralise 'CI beats SI' without noticing that no earlier interest exists in the first period.",
+    "fix": "For the first period (one year with annual compounding) CI and SI are equal. CI becomes larger only from the second period onward.",
+    "probe": {
+     "question": "For Rs 2000 at 5% per year for 1 year, is CI more than SI?",
+     "wrong_answer": "Yes, CI is more than SI even for one year."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Compound always beats simple from the start",
+    "causes": [],
+    "trigger_cues": [
+     "compound",
+     "simple",
+     "first",
+     "year",
+     "always",
+     "greater",
+     "one"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 8 exercises",
+    "key": "m4"
+   },
+   {
+    "id": "m5",
+    "node": "n11",
+    "statement": "For half-yearly compounding, you halve the rate but keep the number of years the same.",
+    "why": "Students remember 'halve the rate' but forget that the number of periods doubles.",
+    "fix": "Half-yearly compounding means 2 periods per year at half the annual rate, so n years gives 2n periods.",
+    "probe": {
+     "question": "Find the amount on Rs 1000 for 2 years at 10% per year compounded half-yearly. How many periods and what rate per period?",
+     "wrong_answer": "2 periods at 5% each."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Only the rate changes with compounding frequency",
+    "causes": [],
+    "trigger_cues": [
+     "half-yearly",
+     "compounded",
+     "rate",
+     "halve",
+     "periods",
+     "years",
+     "amount"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "textbook error analysis",
+    "key": "m5"
+   },
+   {
+    "id": "m6",
+    "node": "n13",
+    "statement": "For 6 months, you put T = 6 in the formula SI = PRT/100.",
+    "why": "Students plug the number given without converting units, since the formula only shows 'T'.",
+    "fix": "Rate is per year, so convert time to years: 6 months = 6/12 = 0.5 year before using the formula.",
+    "probe": {
+     "question": "Find SI on Rs 1000 at 10% per year for 6 months.",
+     "wrong_answer": "Rs 600"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "Use time number as given, ignoring units",
+    "causes": [],
+    "trigger_cues": [
+     "months",
+     "days",
+     "time",
+     "simple",
+     "interest",
+     "formula",
+     "convert"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "textbook error analysis",
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n12",
+    "statement": "A rate such as 2% means 2% per month unless it says per year.",
+    "why": "Everyday talk of monthly money lenders' rates and monthly pocket-money or EMI payments makes students assume a monthly default.",
+    "fix": "Unless stated otherwise, an interest rate in problems is per annum (per year). A monthly rate must be stated as 'per month'.",
+    "probe": {
+     "question": "Rs 5000 is lent at 2% simple interest. Time is 1 year. What is the interest, assuming the rate is per year?",
+     "wrong_answer": "Rs 1200, taking the rate as 2% per month."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "Rates default to the payment period",
+    "causes": [],
+    "trigger_cues": [
+     "rate",
+     "percent",
+     "per",
+     "month",
+     "year",
+     "unless",
+     "stated"
+    ],
+    "confidence": "plausible",
+    "source_hint": null,
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n15",
+    "statement": "An EMI is just the loan amount divided equally by the number of months.",
+    "why": "Students think of repayment as splitting the borrowed sum evenly and ignore the interest.",
+    "fix": "EMI includes interest as well as principal repayment, so it is more than loan amount divided by months.",
+    "probe": {
+     "question": "A Rs 1,20,000 loan is repaid in 12 EMIs with interest. Is each EMI exactly Rs 10,000?",
+     "wrong_answer": "Yes, Rs 1,20,000 divided by 12 is Rs 10,000."
+    },
+    "error_type": "everyday_myth",
+    "root_belief": "Repayment equals principal split into parts",
+    "causes": [],
+    "trigger_cues": [
+     "emi",
+     "monthly",
+     "instalment",
+     "divide",
+     "months",
+     "loan",
+     "equal"
+    ],
+    "confidence": "plausible",
+    "source_hint": "financial literacy surveys",
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n20",
+    "statement": "A longer loan tenure means you pay less in total because each EMI is smaller.",
+    "why": "Students focus on the smaller monthly payment and overlook the extra months of interest.",
+    "fix": "A longer tenure lowers each EMI but interest accrues for more months, so total interest paid is higher.",
+    "probe": {
+     "question": "Which costs less overall: a 5-year loan or a 10-year loan for the same amount at the same rate?",
+     "wrong_answer": "The 10-year loan, because the EMI is smaller."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Smaller payment means lower total cost",
+    "causes": [],
+    "trigger_cues": [
+     "tenure",
+     "longer",
+     "emi",
+     "lower",
+     "total",
+     "cost",
+     "years"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "RBI financial literacy material",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n22",
+    "statement": "A flat rate of 8% and a reducing-balance rate of 8% cost the borrower the same.",
+    "why": "Students see the same percentage and assume the same cost, overlooking what it is charged on.",
+    "fix": "A flat rate charges interest on the original principal for the whole tenure, while reducing-balance interest is charged only on the outstanding balance. So a flat rate costs more; its effective rate is higher.",
+    "probe": {
+     "question": "Loan A is 8% flat and Loan B is 8% reducing balance, same amount and tenure. Which costs more?",
+     "wrong_answer": "Both cost the same because both are 8%."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Same quoted percentage means same cost",
+    "causes": [],
+    "trigger_cues": [
+     "flat",
+     "reducing",
+     "balance",
+     "rate",
+     "same",
+     "8%",
+     "loan"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "RBI consumer awareness material",
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n23",
+    "statement": "If the interest rate is low, the loan has no other costs to worry about.",
+    "why": "Students treat the advertised interest rate as the entire price of the loan.",
+    "fix": "Processing fees, late-payment charges and prepayment charges add to the cost. Compare the total cost, not just the interest rate.",
+    "probe": {
+     "question": "Bank A offers 9% with a 2% processing fee. Bank B offers 9.2% with no fee. Which is surely cheaper because of the lower rate?",
+     "wrong_answer": "Bank A, since 9% is lower than 9.2%."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Interest rate alone defines loan cost",
+    "causes": [],
+    "trigger_cues": [
+     "low",
+     "rate",
+     "fees",
+     "processing",
+     "charges",
+     "cheaper",
+     "loan"
+    ],
+    "confidence": "plausible",
+    "source_hint": "RBI consumer awareness material",
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n28",
+    "statement": "A credit card's interest-free period applies even if you pay only part of the bill.",
+    "why": "Students hear 'interest-free' and assume any payment within the period avoids interest.",
+    "fix": "The interest-free period usually applies only when the full bill is paid by the due date. Otherwise interest is charged on the unpaid amount, often from the purchase date.",
+    "probe": {
+     "question": "You spent Rs 10,000 on a credit card and pay Rs 6,000 by the due date. Is the remaining Rs 4,000 free of interest?",
+     "wrong_answer": "Yes, you paid within the interest-free period."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Partial payment keeps the free period",
+    "causes": [],
+    "trigger_cues": [
+     "credit",
+     "card",
+     "interest-free",
+     "partial",
+     "due",
+     "date",
+     "bill"
+    ],
+    "confidence": "plausible",
+    "source_hint": "RBI consumer awareness material",
+    "key": "m12"
+   }
+  ]
+ },
+ "problems": [
+  "only 2 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

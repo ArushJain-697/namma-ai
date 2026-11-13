@@ -1,0 +1,125 @@
+{
+ "job": {
+  "job": "test-0028-SOC-GEO-POPULATION",
+  "topic_id": "SOC-GEO-POPULATION",
+  "split": "test",
+  "test_only_topic": true,
+  "grade": 9,
+  "style": "a step-by-step explanation of a process",
+  "seed": 28
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 639,
+  "candidatesTokenCount": 1258,
+  "totalTokenCount": 1897,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 639
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "SOC-GEO-POPULATION-K6-M2",
+  "SOC-GEO-POPULATION-K8-M4",
+  "SOC-GEO-POPULATION-K7-M3",
+  "SOC-GEO-POPULATION-K5-M1"
+ ],
+ "response": {
+  "passage": "Understanding the population of a country involves more than just counting heads. The Census of India is a comprehensive exercise that records every person residing within the country’s borders, regardless of their citizenship status, at a specific point in time. This data helps us understand how many people live in a region. However, population size alone does not tell the whole story. We must also look at population density, which is the number of persons per unit area. A large country with a vast land area might have a huge population but a low density, while a small country with fewer people might be very crowded. Furthermore, the total number of people changes over time due to three main processes: births, deaths, and migration. Migration is the movement of people across regions, which can occur between villages, from cities to villages, or between different urban areas. It is not limited to rural-to-urban movement. Finally, population growth is not solely determined by the number of births. It is the net result of the birth rate, the death rate, and the balance of people moving in and out of the country. By analyzing these factors together, we get a clear picture of how a nation’s demographic structure evolves.",
+  "summary": "Population dynamics are determined by births, deaths, and migration rather than just births. The census records all residents, and population density depends on both land area and total count.",
+  "items": [
+   {
+    "evidence": "The Census of India is a comprehensive exercise that records every person residing within the country’s borders, regardless of their citizenship status, at a specific point in time.",
+    "answer": "every person residing within the country",
+    "stem": "Who is included in the official Census of India count?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-POPULATION-K8-M4",
+      "why": "Student incorrectly assumes only citizens are counted.",
+      "text": "only those holding Indian citizenship"
+     },
+     {
+      "belief_id": "SOC-GEO-POPULATION-K6-M2",
+      "why": "Student confuses census counting with birth registration.",
+      "text": "only individuals born in India"
+     },
+     {
+      "belief_id": "SOC-GEO-POPULATION-K7-M3",
+      "why": "Student incorrectly links census to migration patterns.",
+      "text": "only people moving to cities"
+     }
+    ]
+   },
+   {
+    "evidence": "A large country with a vast land area might have a huge population but a low density, while a small country with fewer people might be very crowded.",
+    "answer": "low density",
+    "stem": "What is the result for a large country with a vast land area and a huge population?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-POPULATION-K5-M1",
+      "why": "Student assumes high population always equals high density.",
+      "text": "a very high density"
+     },
+     {
+      "belief_id": "SOC-GEO-POPULATION-K6-M2",
+      "why": "Student incorrectly attributes density to birth rates.",
+      "text": "a high birth rate"
+     },
+     {
+      "belief_id": "SOC-GEO-POPULATION-K7-M3",
+      "why": "Student incorrectly links density to migration.",
+      "text": "a high migration rate"
+     }
+    ]
+   },
+   {
+    "evidence": "Migration is the movement of people across regions, which can occur between villages, from cities to villages, or between different urban areas.",
+    "answer": "movement of people across regions",
+    "stem": "How is the process of migration correctly defined?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-POPULATION-K7-M3",
+      "why": "Student believes migration is only rural to urban.",
+      "text": "moving from a village to a city"
+     },
+     {
+      "belief_id": "SOC-GEO-POPULATION-K6-M2",
+      "why": "Student confuses migration with population growth from births.",
+      "text": "the increase in the birth rate"
+     },
+     {
+      "belief_id": "SOC-GEO-POPULATION-K8-M4",
+      "why": "Student incorrectly links migration to citizenship status.",
+      "text": "citizens moving within the country"
+     }
+    ]
+   },
+   {
+    "evidence": "It is the net result of the birth rate, the death rate, and the balance of people moving in and out of the country.",
+    "answer": "net result of birth, death, and migration",
+    "stem": "What determines the total population growth of a nation?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-POPULATION-K6-M2",
+      "why": "Student ignores deaths and migration in growth.",
+      "text": "only the number of births"
+     },
+     {
+      "belief_id": "SOC-GEO-POPULATION-K5-M1",
+      "why": "Student incorrectly links growth to density.",
+      "text": "the total population density"
+     },
+     {
+      "belief_id": "SOC-GEO-POPULATION-K8-M4",
+      "why": "Student incorrectly limits growth to citizens.",
+      "text": "the number of registered citizens"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.7
+}

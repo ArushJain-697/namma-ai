@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0061-MAT-SURFACEVOL",
+  "topic_id": "MAT-SURFACEVOL",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a passage that shows a common wrong method and corrects it",
+  "seed": 61
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1037,
+  "candidatesTokenCount": 1290,
+  "totalTokenCount": 2327,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1037
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-SURFACEVOL-K20-M14",
+  "MAT-SURFACEVOL-K17-M12",
+  "MAT-SURFACEVOL-K8-M2",
+  "MAT-SURFACEVOL-K24-M18",
+  "MAT-SURFACEVOL-K26-M19",
+  "MAT-SURFACEVOL-K14-M8",
+  "MAT-SURFACEVOL-K9-M3",
+  "MAT-SURFACEVOL-K15-M9",
+  "MAT-SURFACEVOL-K7-M1",
+  "MAT-SURFACEVOL-K21-M16",
+  "MAT-SURFACEVOL-K12-M6",
+  "MAT-SURFACEVOL-K23-M22",
+  "MAT-SURFACEVOL-K24-M17",
+  "MAT-SURFACEVOL-K11-M5"
+ ],
+ "response": {
+  "passage": "When calculating the surface area and volume of combined solids, students often make errors by misapplying formulas. For instance, consider a toy shaped like a cone mounted on a hemisphere. A common mistake is to calculate the total surface area by simply adding the total surface area of a cone and the total surface area of a hemisphere. However, because the base of the cone and the top of the hemisphere are hidden inside the joint, they are not part of the external surface area. The correct approach is to sum only the curved surface areas of the two parts. Another frequent error occurs when students confuse the total surface area of a solid hemisphere with its curved surface area. While the curved surface area is 2πr², the total surface area includes the flat circular base, making it 3πr². Furthermore, students often incorrectly assume that if the radius of a sphere is doubled, its volume also doubles. In reality, since the volume formula is 4/3πr³, doubling the radius increases the volume by a factor of eight. Finally, remember that 1 cubic meter is equivalent to 1,000,000 cubic centimeters, not 100 cubic centimeters, which is a common unit conversion trap.",
+  "summary": "This passage explains how to correctly calculate the surface area of combined solids and highlights common errors in unit conversion and volume scaling. It emphasizes that only external surfaces count and that volume changes exponentially with radius.",
+  "items": [
+   {
+    "evidence": "The correct approach is to sum only the curved surface areas of the two parts.",
+    "answer": "sum only the curved surface areas",
+    "stem": "How should you calculate the total surface area of a cone mounted on a hemisphere?",
+    "options": [
+     {
+      "belief_id": "MAT-SURFACEVOL-K26-M19",
+      "why": "Student adds total surface areas instead of excluding hidden faces.",
+      "text": "TSA of cylinder + TSA of cone"
+     },
+     {
+      "belief_id": "MAT-SURFACEVOL-K7-M1",
+      "why": "Student confuses total surface area with curved surface area.",
+      "text": "440 cm² (only 2πrh)"
+     },
+     {
+      "belief_id": "MAT-SURFACEVOL-K8-M2",
+      "why": "Student uses a simplified additive formula for surface area.",
+      "text": "26 cm²"
+     }
+    ]
+   },
+   {
+    "evidence": "While the curved surface area is 2πr², the total surface area includes the flat circular base, making it 3πr².",
+    "answer": "3πr²",
+    "stem": "What is the total surface area of a solid hemisphere?",
+    "options": [
+     {
+      "belief_id": "MAT-SURFACEVOL-K15-M9",
+      "why": "Student ignores the flat circular base of the hemisphere.",
+      "text": "2πr²"
+     },
+     {
+      "belief_id": "MAT-SURFACEVOL-K14-M8",
+      "why": "Student confuses sphere surface area with circle area.",
+      "text": "πr²"
+     },
+     {
+      "belief_id": "MAT-SURFACEVOL-K11-M5",
+      "why": "Student applies a cylinder-based formula to a hemisphere.",
+      "text": "594 cm²"
+     }
+    ]
+   },
+   {
+    "evidence": "In reality, since the volume formula is 4/3πr³, doubling the radius increases the volume by a factor of eight.",
+    "answer": "factor of eight",
+    "stem": "What happens to the volume of a sphere if its radius is doubled?",
+    "options": [
+     {
+      "belief_id": "MAT-SURFACEVOL-K21-M16",
+      "why": "Student assumes volume scales linearly with the radius.",
+      "text": "2 times"
+     },
+     {
+      "belief_id": "MAT-SURFACEVOL-K23-M22",
+      "why": "Student incorrectly uses the ratio of radii for volume.",
+      "text": "3"
+     },
+     {
+      "belief_id": "MAT-SURFACEVOL-K20-M14",
+      "why": "Student assumes volume is half of the cylinder volume.",
+      "text": "45 cm³"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, remember that 1 cubic meter is equivalent to 1,000,000 cubic centimeters, not 100 cubic centimeters, which is a common unit conversion trap.",
+    "answer": "1,000,000 cubic centimeters",
+    "stem": "What is the correct volume equivalent of 1 cubic meter?",
+    "options": [
+     {
+      "belief_id": "MAT-SURFACEVOL-K24-M17",
+      "why": "Student confuses linear conversion with cubic conversion.",
+      "text": "200 cm³"
+     },
+     {
+      "belief_id": "MAT-SURFACEVOL-K24-M18",
+      "why": "Student confuses litre conversion with cubic centimeter conversion.",
+      "text": "50 litres"
+     },
+     {
+      "belief_id": "MAT-SURFACEVOL-K17-M12",
+      "why": "Student uses additive logic instead of multiplicative conversion.",
+      "text": "12 cm³"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 5.9
+}

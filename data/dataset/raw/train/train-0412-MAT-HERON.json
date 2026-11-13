@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0412-MAT-HERON",
+  "topic_id": "MAT-HERON",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a step-by-step worked example",
+  "seed": 412
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 1093,
+  "candidatesTokenCount": 1311,
+  "totalTokenCount": 2404,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1093
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-HERON-K26-M21",
+  "MAT-HERON-K16-M7",
+  "MAT-HERON-K21-M15",
+  "MAT-HERON-K12-M3",
+  "MAT-HERON-K25-M20",
+  "MAT-HERON-K25-M19",
+  "MAT-HERON-K18-M11",
+  "MAT-HERON-K11-M1",
+  "MAT-HERON-K22-M16",
+  "MAT-HERON-K19-M9",
+  "MAT-HERON-K23-M17",
+  "MAT-HERON-K6-M24",
+  "MAT-HERON-K27-M22",
+  "MAT-HERON-K15-M6"
+ ],
+ "response": {
+  "passage": "To calculate the area of a triangle, we must first ensure all side lengths are in the same unit. If a triangle has sides of 30 cm and 4 m, we must convert 4 m to 400 cm before proceeding. Once units match, we calculate the semi-perimeter 's' by adding the three sides and dividing by two. For a triangle with sides 3, 4, and 5 cm, the semi-perimeter is (3+4+5)/2 = 6 cm. Heron's formula then uses the square root of the product of 's' and the three differences: s-a, s-b, and s-c. It is important to note that this formula works for any triangle, even when the height is unknown, unlike the basic formula which requires half the base times the height. If you are given a quadrilateral with four sides, you cannot simply plug those four values into Heron's formula. Instead, you must draw a diagonal to split the quadrilateral into two separate triangles. You calculate the area of each triangle individually using Heron's formula and then add these two areas together to find the total area of the quadrilateral. Never multiply the areas of the two triangles together, as that would be mathematically incorrect. Always remember that the area of a triangle is half the product of its base and perpendicular height.",
+  "summary": "This passage explains how to correctly apply Heron's formula by ensuring consistent units and splitting complex shapes. It clarifies that Heron's formula is a versatile tool for triangles and outlines the correct method for finding the area of a quadrilateral.",
+  "items": [
+   {
+    "evidence": "If a triangle has sides of 30 cm and 4 m, we must convert 4 m to 400 cm before proceeding.",
+    "answer": "convert 4 m to 400 cm",
+    "stem": "What is the necessary first step when side lengths are given in different units?",
+    "options": [
+     {
+      "belief_id": "MAT-HERON-K22-M16",
+      "why": "Student ignores unit conversion and adds values directly.",
+      "text": "add the values as they are"
+     },
+     {
+      "belief_id": "MAT-HERON-K23-M17",
+      "why": "Student assumes ratios represent actual side lengths.",
+      "text": "assume the ratio is the length"
+     },
+     {
+      "belief_id": "MAT-HERON-K18-M11",
+      "why": "Student believes sides are just added and multiplied.",
+      "text": "multiply the sides together"
+     }
+    ]
+   },
+   {
+    "evidence": "It is important to note that this formula works for any triangle, even when the height is unknown, unlike the basic formula which requires half the base times the height.",
+    "answer": "works for any triangle",
+    "stem": "When is it appropriate to use Heron's formula for a triangle?",
+    "options": [
+     {
+      "belief_id": "MAT-HERON-K6-M24",
+      "why": "Student believes height is mandatory for Heron's formula.",
+      "text": "only after finding the height"
+     },
+     {
+      "belief_id": "MAT-HERON-K16-M7",
+      "why": "Student thinks Heron's is only for right triangles.",
+      "text": "only for right-angled triangles"
+     },
+     {
+      "belief_id": "MAT-HERON-K11-M1",
+      "why": "Student ignores the half factor in basic area.",
+      "text": "only if base times height"
+     }
+    ]
+   },
+   {
+    "evidence": "Instead, you must draw a diagonal to split the quadrilateral into two separate triangles.",
+    "answer": "split the quadrilateral",
+    "stem": "How should you approach finding the area of a quadrilateral using Heron's formula?",
+    "options": [
+     {
+      "belief_id": "MAT-HERON-K25-M20",
+      "why": "Student tries to use all four sides at once.",
+      "text": "use all four sides directly"
+     },
+     {
+      "belief_id": "MAT-HERON-K26-M21",
+      "why": "Student confuses quadrilateral area with diagonal product.",
+      "text": "multiply the two diagonals"
+     },
+     {
+      "belief_id": "MAT-HERON-K25-M19",
+      "why": "Student incorrectly multiplies the areas of the triangles.",
+      "text": "multiply the two triangle areas"
+     }
+    ]
+   },
+   {
+    "evidence": "Always remember that the area of a triangle is half the product of its base and perpendicular height.",
+    "answer": "half the product",
+    "stem": "What is the correct relationship between base and height for a triangle's area?",
+    "options": [
+     {
+      "belief_id": "MAT-HERON-K12-M3",
+      "why": "Student uses slanting side instead of perpendicular height.",
+      "text": "base times the slant side"
+     },
+     {
+      "belief_id": "MAT-HERON-K15-M6",
+      "why": "Student incorrectly uses only one side for area.",
+      "text": "half the equal side length"
+     },
+     {
+      "belief_id": "MAT-HERON-K27-M22",
+      "why": "Student applies parallelogram logic to a triangle.",
+      "text": "base times the slant side"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.0
+}

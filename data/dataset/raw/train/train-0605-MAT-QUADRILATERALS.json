@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0605-MAT-QUADRILATERALS",
+  "topic_id": "MAT-QUADRILATERALS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a step-by-step worked example",
+  "seed": 605
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1116,
+  "candidatesTokenCount": 1350,
+  "totalTokenCount": 2466,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1116
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-QUADRILATERALS-K16-M12",
+  "MAT-QUADRILATERALS-K21-M14",
+  "MAT-QUADRILATERALS-K11-M5",
+  "MAT-QUADRILATERALS-K23-M16",
+  "MAT-QUADRILATERALS-K28-M21",
+  "MAT-QUADRILATERALS-K7-M1",
+  "MAT-QUADRILATERALS-K17-M9",
+  "MAT-QUADRILATERALS-K28-M22",
+  "MAT-QUADRILATERALS-K12-M7",
+  "MAT-QUADRILATERALS-K14-M13",
+  "MAT-QUADRILATERALS-K10-M3",
+  "MAT-QUADRILATERALS-K15-M11",
+  "MAT-QUADRILATERALS-K13-M8",
+  "MAT-QUADRILATERALS-K24-M18"
+ ],
+ "response": {
+  "passage": "Quadrilaterals are four-sided polygons, and their properties are often misunderstood. First, consider the sum of interior angles. While a triangle’s angles sum to 180°, a quadrilateral can be split into two triangles, meaning its four interior angles must always sum to 360°. Second, let us look at parallelograms. A parallelogram is defined by two pairs of parallel sides. A rectangle is a special parallelogram with equal diagonals, but a square is a more specific type that is both a rectangle and a rhombus. Third, consider the diagonals of a rhombus. Unlike a rectangle, the diagonals of a rhombus are not necessarily equal in length; they bisect each other at right angles. Finally, the mid-point theorem states that the segment joining the midpoints of two sides of a triangle is parallel to the third side and exactly half its length. This segment is only half the length of the third side when it connects two midpoints, not when it connects a midpoint to any other point. Understanding these definitions helps us classify shapes correctly. A kite, for instance, has two pairs of adjacent equal sides, not opposite sides, distinguishing it from a parallelogram. By mastering these specific geometric rules, you can accurately identify and analyze any quadrilateral you encounter in your studies.",
+  "summary": "This passage explains the fundamental properties of quadrilaterals, including angle sums and specific characteristics of parallelograms and rhombi. It also clarifies the mid-point theorem and distinguishes between different types of polygons.",
+  "items": [
+   {
+    "evidence": "a quadrilateral can be split into two triangles, meaning its four interior angles must always sum to 360°.",
+    "answer": "360°",
+    "stem": "What is the total sum of the interior angles of any quadrilateral?",
+    "options": [
+     {
+      "belief_id": "MAT-QUADRILATERALS-K14-M13",
+      "why": "Student assumes quadrilateral sum follows triangle sum of 180 degrees.",
+      "text": "180°"
+     },
+     {
+      "belief_id": "MAT-QUADRILATERALS-K10-M3",
+      "why": "Student thinks the sum is always 360 regardless of shape.",
+      "text": "180° for all polygons"
+     },
+     {
+      "belief_id": "MAT-QUADRILATERALS-K11-M5",
+      "why": "Student believes sum increases with sides, choosing a larger value.",
+      "text": "720°"
+     }
+    ]
+   },
+   {
+    "evidence": "Unlike a rectangle, the diagonals of a rhombus are not necessarily equal in length; they bisect each other at right angles.",
+    "answer": "not necessarily equal",
+    "stem": "How do the lengths of the diagonals of a rhombus compare to each other?",
+    "options": [
+     {
+      "belief_id": "MAT-QUADRILATERALS-K24-M18",
+      "why": "Student incorrectly assumes rhombus diagonals are equal like a rectangle.",
+      "text": "They are always equal"
+     },
+     {
+      "belief_id": "MAT-QUADRILATERALS-K23-M16",
+      "why": "Student assumes all parallelograms have equal diagonals.",
+      "text": "Equal to 10 cm"
+     },
+     {
+      "belief_id": "MAT-QUADRILATERALS-K13-M8",
+      "why": "Student thinks rhombus is a square, so diagonals must be equal.",
+      "text": "Equal in length"
+     }
+    ]
+   },
+   {
+    "evidence": "This segment is only half the length of the third side when it connects two midpoints, not when it connects a midpoint to any other point.",
+    "answer": "half the length",
+    "stem": "What is the length of the segment connecting two midpoints of a triangle relative to the third side?",
+    "options": [
+     {
+      "belief_id": "MAT-QUADRILATERALS-K28-M21",
+      "why": "Student thinks the segment is equal to the third side.",
+      "text": "Equal to the third side"
+     },
+     {
+      "belief_id": "MAT-QUADRILATERALS-K28-M22",
+      "why": "Student thinks it is half even if not connecting two midpoints.",
+      "text": "Half, regardless of endpoints"
+     },
+     {
+      "belief_id": "MAT-QUADRILATERALS-K28-M21",
+      "why": "Student confuses the theorem with the full side length.",
+      "text": "Double the third side"
+     }
+    ]
+   },
+   {
+    "evidence": "A kite, for instance, has two pairs of adjacent equal sides, not opposite sides, distinguishing it from a parallelogram.",
+    "answer": "adjacent equal sides",
+    "stem": "Which property correctly describes the sides of a kite?",
+    "options": [
+     {
+      "belief_id": "MAT-QUADRILATERALS-K16-M12",
+      "why": "Student incorrectly applies parallelogram properties to a kite.",
+      "text": "Two pairs of opposite equal sides"
+     },
+     {
+      "belief_id": "MAT-QUADRILATERALS-K15-M11",
+      "why": "Student confuses kite properties with trapezium properties.",
+      "text": "Two pairs of parallel sides"
+     },
+     {
+      "belief_id": "MAT-QUADRILATERALS-K13-M8",
+      "why": "Student thinks a kite is just a tilted square.",
+      "text": "Four equal sides"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 14.6
+}

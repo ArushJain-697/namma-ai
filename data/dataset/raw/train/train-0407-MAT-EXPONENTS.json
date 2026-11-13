@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0407-MAT-EXPONENTS",
+  "topic_id": "MAT-EXPONENTS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a rule explained with two contrasting examples",
+  "seed": 407
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 1127,
+  "candidatesTokenCount": 1289,
+  "totalTokenCount": 2416,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1127
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-EXPONENTS-K12-M5",
+  "MAT-EXPONENTS-K9-M3",
+  "MAT-EXPONENTS-K18-M11",
+  "MAT-EXPONENTS-K7-M6",
+  "MAT-EXPONENTS-K30-M24",
+  "MAT-EXPONENTS-K31-M27",
+  "MAT-EXPONENTS-K24-M18",
+  "MAT-EXPONENTS-K16-M8",
+  "MAT-EXPONENTS-K24-M20",
+  "MAT-EXPONENTS-K17-M9",
+  "MAT-EXPONENTS-K10-M1",
+  "MAT-EXPONENTS-K20-M14",
+  "MAT-EXPONENTS-K30-M25",
+  "MAT-EXPONENTS-K16-M7"
+ ],
+ "response": {
+  "passage": "Exponents are a shorthand way to write repeated multiplication. The base is the number being multiplied, and the exponent tells us how many times to use the base as a factor. For example, 2^3 means 2 × 2 × 2, which equals 8, not 2 × 3. When we multiply powers with the same base, we add the exponents, such as 2^3 × 2^4 = 2^(3+4) = 2^7. However, this rule only applies to multiplication; you cannot add exponents when adding the numbers themselves. Another important rule is that a negative exponent represents a reciprocal. For instance, 2^(-3) is equal to 1 / (2^3), which is 1/8. This is different from a negative base; (-3)^2 means (-3) × (-3) = 9, whereas -3^2 means -(3 × 3) = -9. Finally, when dealing with fractions, the exponent applies to both the numerator and the denominator. So, (2/3)^2 is (2^2) / (3^2), which equals 4/9. Understanding these distinctions prevents common errors in calculation. Always check if you are multiplying, adding, or dealing with negative signs before applying your power rules.",
+  "summary": "Exponents represent repeated multiplication and follow specific rules for operations. It is crucial to distinguish between multiplying powers, handling negative exponents, and applying powers to fractions. Always identify the base and the operation correctly to avoid calculation errors.",
+  "items": [
+   {
+    "evidence": "For example, 2^3 means 2 × 2 × 2, which equals 8, not 2 × 3.",
+    "answer": "8",
+    "stem": "What is the correct value of 2^3?",
+    "options": [
+     {
+      "belief_id": "MAT-EXPONENTS-K10-M1",
+      "why": "Student confuses exponentiation with multiplication of base and exponent.",
+      "text": "6"
+     },
+     {
+      "belief_id": "MAT-EXPONENTS-K9-M3",
+      "why": "Student incorrectly assumes the exponent indicates the number of zeros.",
+      "text": "20"
+     },
+     {
+      "belief_id": "MAT-EXPONENTS-K24-M20",
+      "why": "Student miscalculates the base power as a simple product.",
+      "text": "1/6"
+     }
+    ]
+   },
+   {
+    "evidence": "When we multiply powers with the same base, we add the exponents, such as 2^3 × 2^4 = 2^(3+4) = 2^7.",
+    "answer": "2^7",
+    "stem": "What is the result of multiplying 2^3 by 2^4?",
+    "options": [
+     {
+      "belief_id": "MAT-EXPONENTS-K16-M8",
+      "why": "Student incorrectly multiplies the exponents instead of adding them.",
+      "text": "2^12"
+     },
+     {
+      "belief_id": "MAT-EXPONENTS-K16-M7",
+      "why": "Student incorrectly multiplies the bases and adds the exponents.",
+      "text": "4^7"
+     },
+     {
+      "belief_id": "MAT-EXPONENTS-K18-M11",
+      "why": "Student confuses the power of a power rule with product rule.",
+      "text": "2^5"
+     }
+    ]
+   },
+   {
+    "evidence": "For instance, 2^(-3) is equal to 1 / (2^3), which is 1/8.",
+    "answer": "1/8",
+    "stem": "What is the value of 2^(-3)?",
+    "options": [
+     {
+      "belief_id": "MAT-EXPONENTS-K24-M18",
+      "why": "Student assumes a negative exponent results in a negative value.",
+      "text": "-8"
+     },
+     {
+      "belief_id": "MAT-EXPONENTS-K24-M20",
+      "why": "Student miscalculates the value of the denominator 2^3.",
+      "text": "1/6"
+     },
+     {
+      "belief_id": "MAT-EXPONENTS-K10-M1",
+      "why": "Student treats the exponent as a multiplier for the base.",
+      "text": "-6"
+     }
+    ]
+   },
+   {
+    "evidence": "So, (2/3)^2 is (2^2) / (3^2), which equals 4/9.",
+    "answer": "4/9",
+    "stem": "What is the correct way to calculate (2/3)^2?",
+    "options": [
+     {
+      "belief_id": "MAT-EXPONENTS-K7-M6",
+      "why": "Student applies the exponent only to the numerator.",
+      "text": "4/3"
+     },
+     {
+      "belief_id": "MAT-EXPONENTS-K10-M1",
+      "why": "Student multiplies the base by the exponent incorrectly.",
+      "text": "4/6"
+     },
+     {
+      "belief_id": "MAT-EXPONENTS-K17-M9",
+      "why": "Student incorrectly simplifies the fraction before squaring.",
+      "text": "1/9"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 6.4
+}

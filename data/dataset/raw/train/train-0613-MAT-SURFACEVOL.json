@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0613-MAT-SURFACEVOL",
+  "topic_id": "MAT-SURFACEVOL",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a rule explained with two contrasting examples",
+  "seed": 613
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1042,
+  "candidatesTokenCount": 1251,
+  "totalTokenCount": 2293,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1042
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-SURFACEVOL-K13-M7",
+  "MAT-SURFACEVOL-K9-M3",
+  "MAT-SURFACEVOL-K24-M18",
+  "MAT-SURFACEVOL-K11-M5",
+  "MAT-SURFACEVOL-K22-M20",
+  "MAT-SURFACEVOL-K21-M16",
+  "MAT-SURFACEVOL-K14-M8",
+  "MAT-SURFACEVOL-K7-M1",
+  "MAT-SURFACEVOL-K17-M12",
+  "MAT-SURFACEVOL-K20-M14",
+  "MAT-SURFACEVOL-K15-M9",
+  "MAT-SURFACEVOL-K23-M22",
+  "MAT-SURFACEVOL-K26-M19",
+  "MAT-SURFACEVOL-K8-M2"
+ ],
+ "response": {
+  "passage": "When calculating the surface area of combined solids, we must only consider the exposed faces. For example, if you place a solid cone on top of a cylinder, the circular base of the cone and the corresponding part of the cylinder's top are hidden; therefore, the total surface area is the sum of the cylinder's curved surface, the cylinder's bottom base, and the cone's curved surface area, which is calculated using the slant height 'l' as πrl. Conversely, when calculating the volume of combined solids, we simply add the volumes of the individual components because volume measures the total space occupied. For instance, a hemisphere mounted on a cylinder has a total volume equal to the sum of the cylinder's volume and the hemisphere's volume, which is (2/3)πr³. Remember that for a sphere, the total surface area is 4πr², which is four times the area of a circle. Furthermore, when converting units, always remember that 1000 cubic centimetres make one litre. If you double the radius of a sphere, the volume increases by a factor of eight, not two, because volume depends on the cube of the radius. Always distinguish between surface area, which covers the exterior, and volume, which measures internal capacity.",
+  "summary": "Calculating surface area for combined solids requires excluding hidden internal faces, whereas volume is simply the sum of individual parts. Understanding these geometric properties prevents common errors in unit conversion and scaling.",
+  "items": [
+   {
+    "evidence": "the cone's curved surface area, which is calculated using the slant height 'l' as πrl.",
+    "answer": "πrl",
+    "stem": "What is the correct formula for the curved surface area of a cone?",
+    "options": [
+     {
+      "belief_id": "MAT-SURFACEVOL-K13-M7",
+      "why": "Student incorrectly uses height instead of slant height.",
+      "text": "πrh"
+     },
+     {
+      "belief_id": "MAT-SURFACEVOL-K14-M8",
+      "why": "Student confuses cone surface area with circle area.",
+      "text": "πr²"
+     },
+     {
+      "belief_id": "MAT-SURFACEVOL-K15-M9",
+      "why": "Student confuses cone area with hemisphere surface area.",
+      "text": "2πr²"
+     }
+    ]
+   },
+   {
+    "evidence": "1000 cubic centimetres make one litre.",
+    "answer": "1000 cubic centimetres",
+    "stem": "How many cubic centimetres are equivalent to one litre?",
+    "options": [
+     {
+      "belief_id": "MAT-SURFACEVOL-K24-M18",
+      "why": "Student incorrectly believes 100 cm³ equals one litre.",
+      "text": "100 cubic centimetres"
+     },
+     {
+      "belief_id": "MAT-SURFACEVOL-K23-M22",
+      "why": "Student uses a random ratio instead of conversion factor.",
+      "text": "3 cubic centimetres"
+     },
+     {
+      "belief_id": "MAT-SURFACEVOL-K21-M16",
+      "why": "Student uses the doubling factor misconception.",
+      "text": "2 cubic centimetres"
+     }
+    ]
+   },
+   {
+    "evidence": "the total surface area is the sum of the cylinder's curved surface, the cylinder's bottom base, and the cone's curved surface area",
+    "answer": "sum of specific exposed surfaces",
+    "stem": "How is the total surface area of a cone joined to a cylinder determined?",
+    "options": [
+     {
+      "belief_id": "MAT-SURFACEVOL-K26-M19",
+      "why": "Student adds total surface areas ignoring hidden faces.",
+      "text": "TSA of cylinder plus TSA of cone"
+     },
+     {
+      "belief_id": "MAT-SURFACEVOL-K22-M20",
+      "why": "Student confuses surface area with volume addition.",
+      "text": "Sum of their individual volumes"
+     },
+     {
+      "belief_id": "MAT-SURFACEVOL-K7-M1",
+      "why": "Student ignores the base area of the cylinder.",
+      "text": "Only the curved surface areas"
+     }
+    ]
+   },
+   {
+    "evidence": "If you double the radius of a sphere, the volume increases by a factor of eight, not two",
+    "answer": "eight",
+    "stem": "By what factor does the volume of a sphere increase if its radius is doubled?",
+    "options": [
+     {
+      "belief_id": "MAT-SURFACEVOL-K21-M16",
+      "why": "Student incorrectly assumes volume scales linearly with radius.",
+      "text": "two"
+     },
+     {
+      "belief_id": "MAT-SURFACEVOL-K23-M22",
+      "why": "Student uses the ratio of radii as the factor.",
+      "text": "three"
+     },
+     {
+      "belief_id": "MAT-SURFACEVOL-K20-M14",
+      "why": "Student applies a fraction related to cone-cylinder volume.",
+      "text": "one half"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.1
+}

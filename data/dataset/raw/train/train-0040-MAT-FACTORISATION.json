@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0040-MAT-FACTORISATION",
+  "topic_id": "MAT-FACTORISATION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a market or shop situation that uses the idea",
+  "seed": 40
+ },
+ "model": "gemini-3.1-flash-lite/key3",
+ "usage": {
+  "promptTokenCount": 1083,
+  "candidatesTokenCount": 1462,
+  "totalTokenCount": 2545,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1083
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-FACTORISATION-K15-M8",
+  "MAT-FACTORISATION-K19-M12",
+  "MAT-FACTORISATION-K23-M20",
+  "MAT-FACTORISATION-K26-M22",
+  "MAT-FACTORISATION-K10-M1",
+  "MAT-FACTORISATION-K20-M14",
+  "MAT-FACTORISATION-K17-M10",
+  "MAT-FACTORISATION-K7-M24",
+  "MAT-FACTORISATION-K14-M7",
+  "MAT-FACTORISATION-K11-M3",
+  "MAT-FACTORISATION-K12-M4",
+  "MAT-FACTORISATION-K21-M16",
+  "MAT-FACTORISATION-K22-M18",
+  "MAT-FACTORISATION-K20-M13"
+ ],
+ "response": {
+  "passage": "Rohan runs a small stationery shop where he sells notebooks in bundles. He recently received a shipment of 4x^2 - 16 notebooks. To organize his shelf, he decides to factorise this expression. He knows that 4x^2 - 16 is a difference of two squares, which follows the identity a^2 - b^2 = (a - b)(a + b). By taking out the common factor of 4, he gets 4(x^2 - 4), which then simplifies to 4(x - 2)(x + 2). A customer asks for 3x + 9 notebooks, and Rohan explains that he can factorise this as 3(x + 3). He emphasizes that when he takes out the common factor 3, the term 3x becomes x and the 9 becomes 3, because 3 divided by 3 leaves 1. Later, he helps a student with the expression x^2 - 6x + 9. He warns the student that this is a perfect square trinomial, (x - 3)^2, not (x - 3)(x + 3). Finally, he shows that if he has 2x + 4, he can write it as 2(x + 2). He checks his work by multiplying 2 by x and 2 by 2 to get back to 2x + 4, ensuring his factorisation is correct. He reminds everyone that every number has at least two factors: 1 and itself.",
+  "summary": "Rohan uses algebraic factorisation to organize his stationery shop inventory. He demonstrates how to use identities and common factors to simplify expressions correctly. He also emphasizes the importance of verifying results through multiplication.",
+  "items": [
+   {
+    "evidence": "He knows that 4x^2 - 16 is a difference of two squares, which follows the identity a^2 - b^2 = (a - b)(a + b).",
+    "answer": "(x - 2)(x + 2)",
+    "stem": "What is the correct factorisation for the expression x^2 - 4?",
+    "options": [
+     {
+      "belief_id": "MAT-FACTORISATION-K20-M14",
+      "why": "Mistakes sum of squares logic for difference of squares.",
+      "text": "(x + 2)(x - 2)"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K20-M13",
+      "why": "Confuses difference of squares with a perfect square.",
+      "text": "(x - 2)^2"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K21-M16",
+      "why": "Incorrectly assumes the square root of 4x^2 is 4x.",
+      "text": "(4x - 2)(4x + 2)"
+     }
+    ]
+   },
+   {
+    "evidence": "He emphasizes that when he takes out the common factor 3, the term 3x becomes x and the 9 becomes 3, because 3 divided by 3 leaves 1.",
+    "answer": "x + 3",
+    "stem": "What remains inside the bracket when 3 is factored out of 3x + 9?",
+    "options": [
+     {
+      "belief_id": "MAT-FACTORISATION-K26-M22",
+      "why": "Incorrectly cancels the 3s to leave only x.",
+      "text": "x"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K12-M4",
+      "why": "Believes the term 3 disappears when factored out.",
+      "text": "3(x + 9)"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K15-M8",
+      "why": "Thinks the bracket disappears after factoring.",
+      "text": "x + 3"
+     }
+    ]
+   },
+   {
+    "evidence": "He warns the student that this is a perfect square trinomial, (x - 3)^2, not (x - 3)(x + 3).",
+    "answer": "(x - 3)^2",
+    "stem": "How should the expression x^2 - 6x + 9 be correctly factorised?",
+    "options": [
+     {
+      "belief_id": "MAT-FACTORISATION-K19-M12",
+      "why": "Applies the difference of squares identity incorrectly.",
+      "text": "(x - 3)(x + 3)"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K22-M18",
+      "why": "Ignores the sign of the constant term.",
+      "text": "(x + 3)(x + 3)"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K11-M3",
+      "why": "Believes any bracketed expression is fully factorised.",
+      "text": "(x - 3)(x - 3)"
+     }
+    ]
+   },
+   {
+    "evidence": "He checks his work by multiplying 2 by x and 2 by 2 to get back to 2x + 4, ensuring his factorisation is correct.",
+    "answer": "multiplying 2 by x and 2 by 2",
+    "stem": "How does Rohan confirm that his factorisation of 2x + 4 is accurate?",
+    "options": [
+     {
+      "belief_id": "MAT-FACTORISATION-K14-M7",
+      "why": "Believes following steps is enough without checking.",
+      "text": "He assumes the steps are always correct"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K10-M1",
+      "why": "Believes 1 and the term itself are not factors.",
+      "text": "He checks if 1 is a factor"
+     },
+     {
+      "belief_id": "MAT-FACTORISATION-K7-M24",
+      "why": "Thinks changing order makes the expression invalid.",
+      "text": "He checks if the order is changed"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 5.9
+}

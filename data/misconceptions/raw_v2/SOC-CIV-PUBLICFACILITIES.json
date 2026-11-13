@@ -1,0 +1,442 @@
+{
+ "topic": {
+  "id": "SOC-CIV-PUBLICFACILITIES",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   8
+  ],
+  "title": "Public facilities and law",
+  "scope": "water as a right, role of government, sanitation, public transport, minimum wages, workers' safety, Bhopal"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 833,
+  "candidatesTokenCount": 1166,
+  "totalTokenCount": 1999,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 833
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.0,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Public Facilities",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "what is a democracy"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Law and Social Justice",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "role of government"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Water and Sanitation",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "basic human needs"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Public Transport",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "urbanization"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Labor Laws",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "market economy"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Bhopal Gas Tragedy",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "industrialization"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Water as a fundamental right",
+    "level": 3,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "Article 21"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Government role in infrastructure",
+    "level": 3,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "taxation"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Minimum wage definition",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": [
+     "value of money"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Worker safety standards",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": [
+     "human rights"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Corporate accountability",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": [
+     "legal liability"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n7",
+    "statement": "Water is a commodity that should only be provided to those who can pay for it.",
+    "why": "Students often equate public services with private market goods.",
+    "fix": "Water is a fundamental right essential for life, and the government must ensure universal access regardless of ability to pay.",
+    "probe": {
+     "question": "Should the government provide free water to poor households?",
+     "wrong_answer": "No, because water costs money to process and distribute."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Market rules apply to all human needs.",
+    "causes": [],
+    "trigger_cues": [
+     "fundamental right",
+     "access",
+     "universal",
+     "affordability",
+     "private companies"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on civic concepts"
+   },
+   {
+    "key": "m2",
+    "node": "n9",
+    "statement": "Minimum wage laws are unnecessary because employers should pay whatever they want.",
+    "why": "Students often view labor as a simple transaction without power imbalances.",
+    "fix": "Minimum wages prevent the exploitation of workers who have little bargaining power against powerful employers.",
+    "probe": {
+     "question": "Why does the government set a minimum wage?",
+     "wrong_answer": "To stop companies from making too much profit."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Free market is always fair.",
+    "causes": [],
+    "trigger_cues": [
+     "minimum wage",
+     "exploitation",
+     "bargaining power",
+     "labor laws",
+     "fairness"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n11",
+    "statement": "The Bhopal Gas Tragedy was just an accident caused by bad luck.",
+    "why": "Students often ignore systemic negligence in favor of random chance.",
+    "fix": "It was a result of corporate negligence and weak safety laws that prioritized profit over human lives.",
+    "probe": {
+     "question": "What was the main cause of the Bhopal disaster?",
+     "wrong_answer": "It was an unavoidable accident that could happen anywhere."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Bad outcomes are just accidents.",
+    "causes": [],
+    "trigger_cues": [
+     "negligence",
+     "safety standards",
+     "corporate",
+     "accountability",
+     "disaster"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT pedagogy analysis"
+   },
+   {
+    "id": "m4",
+    "node": "n3",
+    "statement": "Providing clean water and sanitation is the job of individual households, not the government.",
+    "why": "Students see families buying filters, tanks and tankers, and assume water supply is a private matter.",
+    "fix": "Water supply and sanitation are public facilities that the government must provide to everyone. Private effort cannot replace a public system, and the poor cannot afford it.",
+    "probe": {
+     "question": "Who is mainly responsible for building water pipelines and sewage systems in a city?",
+     "wrong_answer": "Each household should arrange its own water and sewage."
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "Public services are private responsibilities",
+    "causes": [],
+    "trigger_cues": [
+     "who provides",
+     "water supply",
+     "sanitation",
+     "household",
+     "responsibility",
+     "pipeline"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom discussion",
+    "key": "m4"
+   },
+   {
+    "id": "m5",
+    "node": "n3",
+    "statement": "If a city has a water supply, every neighbourhood in it gets enough water.",
+    "why": "Students assume that the existence of a service means equal access to it.",
+    "fix": "Water supply is often unequal. Rich colonies get plenty while poor settlements get little and pay more to private tankers. Governments must reduce this inequality.",
+    "probe": {
+     "question": "A city has a municipal water supply. Does every area get equal water?",
+     "wrong_answer": "Yes, once a city has water supply all areas get equal and enough water."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Existence of service means equal access",
+    "causes": [],
+    "trigger_cues": [
+     "equal",
+     "water supply",
+     "all areas",
+     "poor",
+     "tanker",
+     "enough"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Social and Political Life textbook",
+    "key": "m5"
+   },
+   {
+    "id": "m6",
+    "node": "n4",
+    "statement": "Public transport like buses and trains is only for poor people who cannot buy vehicles.",
+    "why": "Students link private cars with status and buses with poverty.",
+    "fix": "Public transport is a public facility for everyone. It reduces traffic, pollution and cost, and serves people of all incomes.",
+    "probe": {
+     "question": "Who is public transport meant for?",
+     "wrong_answer": "Only poor people who cannot afford their own vehicle."
+    },
+    "error_type": "stereotype",
+    "root_belief": "Public facilities are only for the poor",
+    "causes": [],
+    "trigger_cues": [
+     "public transport",
+     "who uses",
+     "bus",
+     "train",
+     "poor",
+     "private car"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom discussion",
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n4",
+    "statement": "Private vehicles are better than public transport for society because they carry people more conveniently.",
+    "why": "Students judge by personal convenience rather than overall benefit to the community.",
+    "fix": "Buses and trains carry many more people per road space and use less fuel per person. Many private cars cause jams and pollution.",
+    "probe": {
+     "question": "Which solves a city's traffic problem better, more private cars or more buses?",
+     "wrong_answer": "More private cars, since they are more convenient."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Individual convenience equals social benefit",
+    "causes": [],
+    "trigger_cues": [
+     "traffic",
+     "private cars",
+     "buses",
+     "congestion",
+     "pollution",
+     "better for city"
+    ],
+    "confidence": "plausible",
+    "source_hint": null,
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n5",
+    "statement": "Labour laws protect only factory workers and not farm workers, domestic helpers or daily wage workers.",
+    "why": "Students picture workers only as people in factories with uniforms.",
+    "fix": "Labour laws aim to protect all workers, including those in the unorganised sector such as daily wage labourers, farm and domestic workers, though enforcement is weaker there.",
+    "probe": {
+     "question": "Does a construction labourer paid daily have rights under labour laws?",
+     "wrong_answer": "No, laws only cover factory workers."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Laws cover only formal workplaces",
+    "causes": [],
+    "trigger_cues": [
+     "labour laws",
+     "daily wage",
+     "construction",
+     "domestic worker",
+     "covered",
+     "unorganised"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Economics textbook",
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n6",
+    "statement": "The Bhopal Gas Tragedy happened at a government-run plant.",
+    "why": "Students assume large factories and disasters are always linked to the government.",
+    "fix": "The gas leak in December 1984 was from Union Carbide, a foreign-owned private company's pesticide plant. The government's duty was to enforce safety rules and help victims.",
+    "probe": {
+     "question": "Who ran the factory where the Bhopal gas leaked?",
+     "wrong_answer": "The Indian government."
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "Big enterprises are government-owned",
+    "causes": [],
+    "trigger_cues": [
+     "bhopal",
+     "who owned",
+     "factory",
+     "union carbide",
+     "government",
+     "plant"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Social and Political Life textbook",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n7",
+    "statement": "A fundamental right to water means water must be free for everyone and nobody can be charged anything.",
+    "why": "Students confuse right to access with zero price.",
+    "fix": "The Supreme Court held that the Right to Life under Article 21 includes safe water. The government must ensure everyone can access it, and charges must be affordable, with the poor protected.",
+    "probe": {
+     "question": "If water is a fundamental right, can the government charge any fee?",
+     "wrong_answer": "No, it must always be completely free."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Right to access means free of cost",
+    "causes": [],
+    "trigger_cues": [
+     "right to water",
+     "free",
+     "fee",
+     "article 21",
+     "charge",
+     "afford"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Social and Political Life textbook",
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n10",
+    "statement": "Worker safety is the worker's own responsibility, not the employer's.",
+    "why": "Students think accidents occur because workers are careless.",
+    "fix": "Employers must provide safe conditions, equipment and training, and the government must enforce safety laws. Workers' care alone cannot prevent disasters.",
+    "probe": {
+     "question": "A worker is injured by faulty machinery. Who is responsible for safety?",
+     "wrong_answer": "The worker should have been more careful."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Blame lies with the individual, not the system",
+    "causes": [],
+    "trigger_cues": [
+     "worker safety",
+     "injured",
+     "machine",
+     "responsible",
+     "employer",
+     "careless"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "classroom discussion",
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n11",
+    "statement": "Once a company pays a small compensation, it has no further responsibility for harm it caused.",
+    "why": "Students treat payment as settling everything, ignoring prevention and punishment.",
+    "fix": "Companies must be accountable: pay adequate compensation, clean up damage, and follow safety laws. Courts and government must ensure justice, as the Bhopal victims' continuing struggle shows.",
+    "probe": {
+     "question": "A company pays some money after a gas leak. Is it now free of responsibility?",
+     "wrong_answer": "Yes, paying compensation ends its responsibility."
+    },
+    "error_type": "other",
+    "root_belief": "Payment cancels all responsibility",
+    "causes": [],
+    "trigger_cues": [
+     "compensation",
+     "company responsibility",
+     "pay",
+     "accountable",
+     "gas leak",
+     "punish"
+    ],
+    "confidence": "plausible",
+    "source_hint": null,
+    "key": "m12"
+   }
+  ]
+ },
+ "problems": [
+  "only 3 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

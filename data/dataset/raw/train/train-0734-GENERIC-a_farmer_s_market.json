@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0734-GENERIC-a_farmer_s_market",
+  "topic_id": null,
+  "split": "train",
+  "generic": true,
+  "theme": "a farmer's market",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a conversation between a teacher and two students",
+  "seed": 734
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 717,
+  "candidatesTokenCount": 1179,
+  "totalTokenCount": 1896,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 717
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "Mr. Sharma stood near the vibrant stalls of the Sunday Farmers Market with his students, Rohan and Meera. 'Look at the variety,' Mr. Sharma said, pointing toward the organic produce. 'The local farmers bring their harvest here every week because the soil in the nearby village of Rampur is rich in minerals.' Rohan noticed a vendor selling honey. 'Sir, why is this jar priced at 150 rupees?' Rohan asked. Mr. Sharma explained, 'The price is higher because the bees are fed exclusively on wild lavender flowers, which are rare.' Meera pointed to a display of apples. 'I read that 400 kilograms of these apples were sold yesterday,' she noted. Mr. Sharma smiled, 'That is correct, Meera. The market has grown significantly since 2012, when it first started with only five stalls.' As they walked, Rohan felt exhausted from the heat. 'I am tired, so the market must be tired too,' he joked. Mr. Sharma laughed, 'The market is a place of trade, not a living being, Rohan. It remains busy because people value fresh food.'",
+  "summary": "Mr. Sharma takes his students, Rohan and Meera, to a local farmers market to observe trade. They discuss the reasons behind produce pricing and the history of the market's growth. The visit highlights the difference between agricultural facts and personal feelings.",
+  "items": [
+   {
+    "evidence": "The local farmers bring their harvest here every week because the soil in the nearby village of Rampur is rich in minerals.",
+    "answer": "soil in the nearby village",
+    "stem": "What is the primary reason farmers bring their harvest to the market?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Mistakes the result for the cause of the farmers' actions.",
+      "text": "the local farmers' harvest"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects a nearby noun phrase instead of the actual cause.",
+      "text": "the vibrant Sunday market"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a fact from the text that is not the cause.",
+      "text": "the weekly market schedule"
+     }
+    ]
+   },
+   {
+    "evidence": "The price is higher because the bees are fed exclusively on wild lavender flowers, which are rare.",
+    "answer": "wild lavender flowers",
+    "stem": "What specific factor makes the honey more expensive?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks a nearby noun phrase instead of the cause.",
+      "text": "the jar of honey"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Uses a true fact that does not explain the price.",
+      "text": "the price of 150 rupees"
+     },
+     {
+      "belief_id": "GEN-READ-M5",
+      "why": "Confuses the honey with the flowers mentioned nearby.",
+      "text": "the rare honey bees"
+     }
+    ]
+   },
+   {
+    "evidence": "The market has grown significantly since 2012, when it first started with only five stalls.",
+    "answer": "five stalls",
+    "stem": "How many stalls were present when the market began?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Selects a different number found elsewhere in the passage.",
+      "text": "400 kilograms"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks a date instead of the quantity requested.",
+      "text": "the year 2012"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Assumes all markets start with the same number.",
+      "text": "all market stalls"
+     }
+    ]
+   },
+   {
+    "evidence": "The market is a place of trade, not a living being, Rohan.",
+    "answer": "a place of trade",
+    "stem": "How does Mr. Sharma define the market?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Interprets the market as a tired living entity.",
+      "text": "a tired living being"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Uses the student's name mentioned in the same sentence.",
+      "text": "the student Rohan"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Uses a true fact about the market's history.",
+      "text": "a growing market since 2012"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.0
+}

@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0601-MAT-POLYNOMIALS",
+  "topic_id": "MAT-POLYNOMIALS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a conversation between a teacher and two students",
+  "seed": 601
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1124,
+  "candidatesTokenCount": 1280,
+  "totalTokenCount": 2404,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1124
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-POLYNOMIALS-K23-M20",
+  "MAT-POLYNOMIALS-K9-M3",
+  "MAT-POLYNOMIALS-K29-M25",
+  "MAT-POLYNOMIALS-K10-M6",
+  "MAT-POLYNOMIALS-K29-M26",
+  "MAT-POLYNOMIALS-K30-M28",
+  "MAT-POLYNOMIALS-K15-M15",
+  "MAT-POLYNOMIALS-K16-M16",
+  "MAT-POLYNOMIALS-K14-M13",
+  "MAT-POLYNOMIALS-K14-M14",
+  "MAT-POLYNOMIALS-K25-M22",
+  "MAT-POLYNOMIALS-K11-M8",
+  "MAT-POLYNOMIALS-K21-M18",
+  "MAT-POLYNOMIALS-K8-M1"
+ ],
+ "response": {
+  "passage": "Teacher: Today, let's clarify some common mistakes in polynomials. Rahul, what is the degree of 5x + 3x^4 + 2x^2? Rahul: Is it 1 because it is the first term? Teacher: No, the degree is the highest power of the variable, which is 4 here. Priya, what about the polynomial x^2 - 5x + 6? Priya: The coefficient of x is 5, right? Teacher: Careful, the coefficient includes the sign, so it is -5. Also, remember that a polynomial must have non-negative integer exponents for variables; 1/x + 2 is not a polynomial because 1/x is x raised to -1. Now, consider the factor theorem. If (x - 3) is a factor of p(x), then p(3) must be 0, not p(-3). Finally, for the zero of a polynomial, we look for the x-value that makes the entire expression equal to zero. For x + 4, setting x + 4 = 0 gives x = -4. Many students mistakenly think the zero is 4, but that would make the expression 8. Always check your signs and powers carefully.",
+  "summary": "This passage explains how to correctly identify the degree of a polynomial and its coefficients. It also clarifies the factor theorem and the method for finding the zero of a linear polynomial.",
+  "items": [
+   {
+    "evidence": "No, the degree is the highest power of the variable, which is 4 here.",
+    "answer": "4",
+    "stem": "What is the degree of the polynomial 5x + 3x^4 + 2x^2?",
+    "options": [
+     {
+      "belief_id": "MAT-POLYNOMIALS-K9-M3",
+      "why": "Student assumes the first term determines the degree.",
+      "text": "1"
+     },
+     {
+      "belief_id": "MAT-POLYNOMIALS-K11-M8",
+      "why": "Student confuses degree with constant polynomial rules.",
+      "text": "0"
+     },
+     {
+      "belief_id": "MAT-POLYNOMIALS-K15-M15",
+      "why": "Student incorrectly applies quadratic zero count to this quartic.",
+      "text": "2"
+     }
+    ]
+   },
+   {
+    "evidence": "Careful, the coefficient includes the sign, so it is -5.",
+    "answer": "-5",
+    "stem": "What is the coefficient of x in the expression x^2 - 5x + 6?",
+    "options": [
+     {
+      "belief_id": "MAT-POLYNOMIALS-K10-M6",
+      "why": "Student ignores the negative sign before the term.",
+      "text": "5"
+     },
+     {
+      "belief_id": "MAT-POLYNOMIALS-K30-M28",
+      "why": "Student confuses the middle coefficient with the product of zeroes.",
+      "text": "6"
+     },
+     {
+      "belief_id": "MAT-POLYNOMIALS-K14-M14",
+      "why": "Student incorrectly identifies the constant as the coefficient.",
+      "text": "1"
+     }
+    ]
+   },
+   {
+    "evidence": "If (x - 3) is a factor of p(x), then p(3) must be 0, not p(-3).",
+    "answer": "p(3)",
+    "stem": "Which value must equal zero if (x - 3) is a factor of p(x)?",
+    "options": [
+     {
+      "belief_id": "MAT-POLYNOMIALS-K29-M25",
+      "why": "Student confuses the factor (x-a) with the value p(-a).",
+      "text": "p(-3)"
+     },
+     {
+      "belief_id": "MAT-POLYNOMIALS-K14-M13",
+      "why": "Student assumes the zero must be the constant itself.",
+      "text": "p(0)"
+     },
+     {
+      "belief_id": "MAT-POLYNOMIALS-K29-M26",
+      "why": "Student assumes factor theorem applies even if remainder is non-zero.",
+      "text": "p(1)"
+     }
+    ]
+   },
+   {
+    "evidence": "For x + 4, setting x + 4 = 0 gives x = -4.",
+    "answer": "-4",
+    "stem": "What is the zero of the polynomial x + 4?",
+    "options": [
+     {
+      "belief_id": "MAT-POLYNOMIALS-K14-M14",
+      "why": "Student ignores the sign change required to reach zero.",
+      "text": "4"
+     },
+     {
+      "belief_id": "MAT-POLYNOMIALS-K16-M16",
+      "why": "Student confuses the zero with the y-intercept value.",
+      "text": "0"
+     },
+     {
+      "belief_id": "MAT-POLYNOMIALS-K14-M13",
+      "why": "Student assumes the zero is related to the coefficient.",
+      "text": "1"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 3.8
+}

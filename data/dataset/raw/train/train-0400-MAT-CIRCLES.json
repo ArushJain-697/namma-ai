@@ -1,0 +1,131 @@
+{
+ "job": {
+  "job": "train-0400-MAT-CIRCLES",
+  "topic_id": "MAT-CIRCLES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a rule explained with two contrasting examples",
+  "seed": 400
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 960,
+  "candidatesTokenCount": 1292,
+  "totalTokenCount": 2252,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 960
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-CIRCLES-K17-M7",
+  "MAT-CIRCLES-K13-M3",
+  "MAT-CIRCLES-K12-M2",
+  "MAT-CIRCLES-K16-M4",
+  "MAT-CIRCLES-K25-M10",
+  "MAT-CIRCLES-K11-M1",
+  "MAT-CIRCLES-K23-M9",
+  "MAT-CIRCLES-K20-M12",
+  "MAT-CIRCLES-K26-M11",
+  "MAT-CIRCLES-K18-M5"
+ ],
+ "response": {
+  "passage": "In geometry, understanding circle properties requires precision. First, consider a line drawn from the centre of a circle to a chord. This line only bisects the chord if it is perpendicular to it; a random line from the centre does not guarantee bisection. For example, if a line is drawn from the centre to a chord but is not perpendicular, the chord segments remain unequal. Second, consider tangents drawn from an external point. Two tangents drawn from any single point outside a circle are always equal in length, regardless of the circle's radius or the point's distance. For instance, if you draw two tangents from point P to a circle, they will be equal even if the circle is small or large. Third, remember that the angle in a semicircle is always 90 degrees, forming a right-angled triangle regardless of whether the triangle is isosceles or scalene. Finally, note that a cyclic quadrilateral must have its four vertices on the circle, and its opposite angles must sum to 180 degrees, not be equal to each other. A rectangle is a cyclic quadrilateral, but a random rhombus is not, as its vertices do not necessarily lie on a single circle.",
+  "summary": "Circle properties involve specific conditions for chords, tangents, and angles. Perpendicularity is key for chords, while tangents from external points are always equal. Cyclic quadrilaterals require vertices on the circle and supplementary opposite angles.",
+  "items": [
+   {
+    "evidence": "This line only bisects the chord if it is perpendicular to it; a random line from the centre does not guarantee bisection.",
+    "answer": "if it is perpendicular",
+    "stem": "Under what condition does a line from the centre of a circle bisect a chord?",
+    "options": [
+     {
+      "belief_id": "MAT-CIRCLES-K13-M3",
+      "why": "Student assumes any line from centre bisects the chord.",
+      "text": "if it originates from the centre"
+     },
+     {
+      "belief_id": "MAT-CIRCLES-K11-M1",
+      "why": "Student confuses chord position with bisection properties.",
+      "text": "if it passes near the middle"
+     },
+     {
+      "belief_id": "MAT-CIRCLES-K23-M9",
+      "why": "Student confuses tangent-radius property with chord bisection.",
+      "text": "if it touches the circle"
+     }
+    ]
+   },
+   {
+    "evidence": "Two tangents drawn from any single point outside a circle are always equal in length, regardless of the circle's radius or the point's distance.",
+    "answer": "always equal in length",
+    "stem": "What is true about two tangents drawn from an external point to a circle?",
+    "options": [
+     {
+      "belief_id": "MAT-CIRCLES-K25-M10",
+      "why": "Student thinks equality depends on distance from centre.",
+      "text": "equal only if distances match"
+     },
+     {
+      "belief_id": "MAT-CIRCLES-K26-M11",
+      "why": "Student believes tangents can exist inside the circle.",
+      "text": "equal if drawn from inside"
+     },
+     {
+      "belief_id": "MAT-CIRCLES-K12-M2",
+      "why": "Student thinks equality depends on arc length.",
+      "text": "equal only if arcs match"
+     }
+    ]
+   },
+   {
+    "evidence": "Third, remember that the angle in a semicircle is always 90 degrees, forming a right-angled triangle regardless of whether the triangle is isosceles or scalene.",
+    "answer": "always 90 degrees",
+    "stem": "What is the measure of an angle inscribed in a semicircle?",
+    "options": [
+     {
+      "belief_id": "MAT-CIRCLES-K16-M4",
+      "why": "Student thinks it only works for isosceles triangles.",
+      "text": "90 degrees if isosceles"
+     },
+     {
+      "belief_id": "MAT-CIRCLES-K17-M7",
+      "why": "Student confuses segment angles with semicircle properties.",
+      "text": "equal to other segment angles"
+     },
+     {
+      "belief_id": "MAT-CIRCLES-K23-M9",
+      "why": "Student applies tangent-radius logic to inscribed angles.",
+      "text": "perpendicular to the diameter"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, note that a cyclic quadrilateral must have its four vertices on the circle, and its opposite angles must sum to 180 degrees, not be equal to each other.",
+    "answer": "sum to 180 degrees",
+    "stem": "What is the relationship between opposite angles of a cyclic quadrilateral?",
+    "options": [
+     {
+      "belief_id": "MAT-CIRCLES-K18-M5",
+      "why": "Student incorrectly assumes opposite angles are equal.",
+      "text": "they are equal"
+     },
+     {
+      "belief_id": "MAT-CIRCLES-K20-M12",
+      "why": "Student assumes all quadrilaterals are cyclic.",
+      "text": "they are always 90 degrees"
+     },
+     {
+      "belief_id": "MAT-CIRCLES-K17-M7",
+      "why": "Student confuses cyclic properties with segment angles.",
+      "text": "equal to the same segment"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 6.3
+}

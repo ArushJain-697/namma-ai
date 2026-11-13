@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0728-GENERIC-a_street_food_stall",
+  "topic_id": null,
+  "split": "train",
+  "generic": true,
+  "theme": "a street food stall",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a question-and-answer (FAQ) style passage",
+  "seed": 728
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 716,
+  "candidatesTokenCount": 1110,
+  "totalTokenCount": 1826,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 716
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "Welcome to 'Ramesh’s Chat Corner', located near the bustling Gandhi Market. We have been serving the community since 1998. Many customers ask us why our spicy aloo tikki is so popular. The secret is simple: we use a special blend of spices sourced directly from the hills of Ooty. Because we fry the tikkis in pure desi ghee, they develop a unique, golden-brown crunch that keeps people coming back. Our head chef, Sunita, manages the stall every day from 4 PM to 9 PM. We currently offer 12 different types of snacks on our menu. Some visitors mistakenly believe that 'chat' refers only to casual conversation, but here it refers to our savory street food. Please note that we do not accept digital payments, as our small stall operates entirely on cash to ensure quick service for everyone in the queue.",
+  "summary": "Ramesh’s Chat Corner is a popular street food stall near Gandhi Market known for its spicy aloo tikki. The stall uses high-quality ingredients and operates during evening hours. They focus on cash transactions to maintain efficiency.",
+  "items": [
+   {
+    "evidence": "We have been serving the community since 1998.",
+    "answer": "1998",
+    "stem": "In which year did the food stall begin its operations?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses a number from the text that is not the year.",
+      "text": "12"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects a nearby proper noun instead of the date.",
+      "text": "Gandhi Market"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Provides a true fact that does not answer the question.",
+      "text": "Serving the community"
+     }
+    ]
+   },
+   {
+    "evidence": "Because we fry the tikkis in pure desi ghee, they develop a unique, golden-brown crunch that keeps people coming back.",
+    "answer": "pure desi ghee",
+    "stem": "What is the primary reason the tikkis achieve their signature crunch?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Reverses the cause and effect relationship described in the passage.",
+      "text": "a unique golden-brown crunch"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Uses a location name mentioned near the cause.",
+      "text": "the hills of Ooty"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a true fact about the food that is not the cause.",
+      "text": "spicy aloo tikki"
+     }
+    ]
+   },
+   {
+    "evidence": "Our head chef, Sunita, manages the stall every day from 4 PM to 9 PM.",
+    "answer": "Sunita",
+    "stem": "Who is responsible for overseeing the stall's daily operations?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks a name mentioned in the first sentence.",
+      "text": "Ramesh"
+     },
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses a number from the sentence instead of the person.",
+      "text": "4 PM"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a true fact about the stall's schedule.",
+      "text": "every day"
+     }
+    ]
+   },
+   {
+    "evidence": "Some visitors mistakenly believe that 'chat' refers only to casual conversation, but here it refers to our savory street food.",
+    "answer": "savory street food",
+    "stem": "What is the actual meaning of the term 'chat' at this stall?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Uses the common dictionary definition instead of the context.",
+      "text": "casual conversation"
+     },
+     {
+      "belief_id": "GEN-READ-M5",
+      "why": "Confuses the term with a similar-sounding word.",
+      "text": "a digital payment"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Provides a true fact about visitor behavior.",
+      "text": "some visitors"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 3.6
+}

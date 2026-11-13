@@ -1,0 +1,500 @@
+{
+ "topic": {
+  "id": "SCI-PHY-SOUND8",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   8
+  ],
+  "title": "Sound",
+  "scope": "vibration, medium needed, human voice and ear, amplitude, frequency, loudness and pitch, audible range, noise pollution"
+ },
+ "model": "gemini-3-flash-preview",
+ "usage": {
+  "promptTokenCount": 836,
+  "candidatesTokenCount": 4246,
+  "totalTokenCount": 7157,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 836
+   }
+  ],
+  "thoughtsTokenCount": 2075,
+  "serviceTier": "standard"
+ },
+ "seconds": 24.5,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Production and Propagation",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "concept of force",
+     "states of matter"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Characteristics of Sound",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3",
+    "name": "Perception and Environment",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "human body systems"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Mechanism of Production",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Medium Requirements",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "Frequency and Pitch",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Amplitude and Loudness",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Human Hearing Mechanism",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Audible Range",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Noise and Health",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Vibration produces sound",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Vocal cords in humans",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Sound needs a medium",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Vacuum blocks sound",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Frequency definition",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": [
+     "division of time"
+    ]
+   },
+   {
+    "key": "n16",
+    "name": "Pitch-Frequency link",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n15"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n17",
+    "name": "Amplitude definition",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n18",
+    "name": "Loudness-Amplitude link",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n19",
+    "name": "Eardrum vibration",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n20",
+    "name": "Human 20Hz-20kHz range",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [
+     "n15"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n21",
+    "name": "Noise pollution effects",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n11",
+    "statement": "Sound is a physical substance that flows through the air like a gas.",
+    "why": "Students observe sound moving from a source to their ears and treat it as a material object.",
+    "fix": "Sound is not matter; it is a form of energy that travels as a vibration through particles of a medium.",
+    "probe": {
+     "question": "If you pump all the air out of a jar containing a ringing bell, why does the sound stop?",
+     "wrong_answer": "Because the sound particles have no air to carry them out."
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "processes are interpreted as substances",
+    "causes": [
+     "m4"
+    ],
+    "trigger_cues": [
+     "travels",
+     "moves",
+     "reaches",
+     "source"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic research on sound"
+   },
+   {
+    "key": "m2",
+    "node": "n11",
+    "statement": "If an object doesn't look like it is moving, it is not vibrating to produce sound.",
+    "why": "Vibrations in many objects like a table or a bell are too small or fast for the human eye to see.",
+    "fix": "All objects producing sound are vibrating, even if the movement is microscopic.",
+    "probe": {
+     "question": "Does a steel spoon vibrate when you tap it gently on a table?",
+     "wrong_answer": "No, because it looks perfectly still."
+    },
+    "error_type": "visible_only",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "vibration",
+     "still",
+     "motionless",
+     "touch"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas in Science"
+   },
+   {
+    "key": "m3",
+    "node": "n13",
+    "statement": "Sound travels fastest in air because air is thin and offers less resistance.",
+    "why": "In everyday life, we move through air more easily than through water or solids.",
+    "fix": "Sound travels fastest in solids because the particles are packed closely together, allowing vibrations to pass quickly.",
+    "probe": {
+     "question": "Will sound travel faster through a wooden bench or through the air?",
+     "wrong_answer": "Through the air because wood is a solid block."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "less dense means less resistance",
+    "causes": [],
+    "trigger_cues": [
+     "speed",
+     "solid",
+     "liquid",
+     "gas",
+     "fastest"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m4",
+    "node": "n14",
+    "statement": "Sound can travel through space because light from the sun reaches us.",
+    "why": "Students overgeneralize the properties of light waves to sound waves.",
+    "fix": "Unlike light, sound is a mechanical wave and requires a material medium to propagate; it cannot travel in a vacuum.",
+    "probe": {
+     "question": "Can two astronauts on the moon hear each other shout if they are not using radios?",
+     "wrong_answer": "Yes, sound travels through space just like sunlight."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "all waves behave like light",
+    "causes": [],
+    "trigger_cues": [
+     "vacuum",
+     "space",
+     "moon",
+     "medium"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Concept Inventories in Physics"
+   },
+   {
+    "key": "m5",
+    "node": "n16",
+    "statement": "High-pitched sounds are always louder than low-pitched sounds.",
+    "why": "Shrill sounds are often perceived as more 'piercing' or intense.",
+    "fix": "Pitch depends on frequency, while loudness depends on amplitude; a high-pitched sound can be very soft.",
+    "probe": {
+     "question": "If a bird chirps very softly and a lion roars deeply, which has a higher pitch?",
+     "wrong_answer": "The lion, because its sound is much stronger."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "distinct properties of one thing are the same",
+    "causes": [],
+    "trigger_cues": [
+     "pitch",
+     "loudness",
+     "shrill",
+     "frequency"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m6",
+    "node": "n18",
+    "statement": "Loudness is determined by how fast an object vibrates.",
+    "why": "Students confuse the rate of vibration (frequency) with the force of vibration (amplitude).",
+    "fix": "Loudness is determined by the amplitude of vibration, not the frequency.",
+    "probe": {
+     "question": "If you strike a drum harder, what changes to make it louder?",
+     "wrong_answer": "It vibrates faster."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "more effort means more of every output",
+    "causes": [],
+    "trigger_cues": [
+     "loudness",
+     "amplitude",
+     "vibrate",
+     "harder"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n19",
+    "statement": "The eardrum is a filter that chooses which sounds to let into the brain.",
+    "why": "Students use biological 'gatekeeper' analogies for sensory organs.",
+    "fix": "The eardrum is a thin membrane that vibrates in response to sound waves and passes those vibrations to the inner ear.",
+    "probe": {
+     "question": "What is the main job of the eardrum?",
+     "wrong_answer": "To decide which sounds are important enough to hear."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "organs act with conscious purpose",
+    "causes": [],
+    "trigger_cues": [
+     "eardrum",
+     "hearing",
+     "brain",
+     "signals"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m8",
+    "node": "n20",
+    "statement": "Humans can hear any sound as long as it is loud enough.",
+    "why": "Students assume the only limit to hearing is the volume of the sound.",
+    "fix": "Humans can only hear sounds within the frequency range of 20 Hz to 20,000 Hz, regardless of loudness.",
+    "probe": {
+     "question": "If a whistle produces a sound at 30,000 Hz very loudly, can a human hear it?",
+     "wrong_answer": "Yes, if it is loud enough it will be audible."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "more of one input overcomes all limits",
+    "causes": [],
+    "trigger_cues": [
+     "audible",
+     "range",
+     "hertz",
+     "ultrasonic"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT textbook common errors section"
+   },
+   {
+    "key": "m9",
+    "node": "n21",
+    "statement": "Noise pollution only affects our ears and hearing ability.",
+    "why": "Since sound is sensed by ears, students conclude the damage is localized there.",
+    "fix": "Noise pollution can cause non-auditory issues like lack of sleep, hypertension, and anxiety.",
+    "probe": {
+     "question": "Can loud noise cause health problems other than deafness?",
+     "wrong_answer": "No, because sound only interacts with the ears."
+    },
+    "error_type": "single_cause",
+    "root_belief": "one event has one single localized effect",
+    "causes": [],
+    "trigger_cues": [
+     "pollution",
+     "health",
+     "hypertension",
+     "anxiety"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m10",
+    "node": "n12",
+    "statement": "We produce sound using only our mouth and tongue.",
+    "why": "The movement of the mouth and tongue is visible during speech, while the larynx is hidden.",
+    "fix": "Sound is produced by the vibration of vocal cords in the larynx (voice box) in the throat.",
+    "probe": {
+     "question": "Where does the sound of your voice actually start?",
+     "wrong_answer": "In the mouth when the tongue moves."
+    },
+    "error_type": "visible_only",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "vocal cords",
+     "voice",
+     "larynx",
+     "throat"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n15",
+    "statement": "Frequency is the total number of vibrations an object makes before it stops.",
+    "why": "Students confuse 'rate' (per second) with 'total count'.",
+    "fix": "Frequency is specifically the number of oscillations or vibrations per second.",
+    "probe": {
+     "question": "If a pendulum swings 10 times in 5 seconds, what is its frequency?",
+     "wrong_answer": "10."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "a total quantity represents a rate",
+    "causes": [],
+    "trigger_cues": [
+     "frequency",
+     "hertz",
+     "second",
+     "oscillations"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Physics Education Research"
+   },
+   {
+    "key": "m12",
+    "node": "n17",
+    "statement": "Amplitude is the distance from the leftmost point to the rightmost point of a vibration.",
+    "why": "Students measure the 'total width' of the movement instead of the displacement from the center.",
+    "fix": "Amplitude is the maximum displacement of a vibrating object from its central mean position.",
+    "probe": {
+     "question": "If a string moves 2cm up and 2cm down from its rest position, what is the amplitude?",
+     "wrong_answer": "4cm."
+    },
+    "error_type": "everyday_language",
+    "root_belief": "size is the total extent of an object",
+    "causes": [],
+    "trigger_cues": [
+     "amplitude",
+     "displacement",
+     "mean",
+     "position"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}

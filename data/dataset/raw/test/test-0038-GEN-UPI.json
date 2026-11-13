@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "test-0038-GEN-UPI",
+  "topic_id": "GEN-UPI",
+  "split": "test",
+  "test_only_topic": true,
+  "grade": 10,
+  "style": "a conversation between a teacher and two students",
+  "seed": 38
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 1052,
+  "candidatesTokenCount": 1171,
+  "totalTokenCount": 2223,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1052
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-UPI-K23-M15",
+  "GEN-UPI-K25-M18",
+  "GEN-UPI-K12-M2",
+  "GEN-UPI-K15-M5",
+  "GEN-UPI-K16-M7",
+  "GEN-UPI-K26-M19",
+  "GEN-UPI-K18-M11",
+  "GEN-UPI-K19-M9",
+  "GEN-UPI-K22-M13",
+  "GEN-UPI-K25-M17",
+  "GEN-UPI-K17-M10",
+  "GEN-UPI-K11-M1",
+  "GEN-UPI-K15-M6",
+  "GEN-UPI-K19-M8"
+ ],
+ "response": {
+  "passage": "Teacher: Today, let's clarify how UPI works. Remember, UPI is a public infrastructure, not a private company's app. When you use an app like PhonePe or Google Pay, they are just interfaces to access your bank account directly. Rahul: So, if I want to receive money, do I need to enter my UPI PIN? Teacher: No, Rahul. You only enter your PIN when you are sending money, never when receiving it. Priya: What about the safety of my details? A caller once asked me to install an app to 'fix' my account. Teacher: That is a dangerous scam. Never install apps or share OTPs, even if the caller claims to be from your bank. Bank employees will never ask for your PIN or OTP. Also, always check the name on the screen when scanning a QR code. If the name does not match the person you are paying, stop immediately. Finally, remember that UPI is a direct bank-to-bank transfer system; your money stays in your bank account, not inside the UPI app itself. If you delete the app, your money remains safe in your bank.",
+  "summary": "UPI is a secure, bank-to-bank payment system that acts as an interface rather than a digital wallet. Users must never share PINs or OTPs and should always verify the recipient's name during QR transactions.",
+  "items": [
+   {
+    "evidence": "You only enter your PIN when you are sending money, never when receiving it.",
+    "answer": "sending money",
+    "stem": "Under what specific circumstance are you required to enter your UPI PIN?",
+    "options": [
+     {
+      "belief_id": "GEN-UPI-K18-M11",
+      "why": "Believes receiving money requires a PIN.",
+      "text": "receiving money"
+     },
+     {
+      "belief_id": "GEN-UPI-K15-M5",
+      "why": "Confuses UPI PIN with phone lock code.",
+      "text": "unlocking my phone"
+     },
+     {
+      "belief_id": "GEN-UPI-K15-M6",
+      "why": "Believes bank staff need PIN for support.",
+      "text": "fixing a bank issue"
+     }
+    ]
+   },
+   {
+    "evidence": "Bank employees will never ask for your PIN or OTP.",
+    "answer": "never ask",
+    "stem": "How should you respond if a bank employee requests your OTP over the phone?",
+    "options": [
+     {
+      "belief_id": "GEN-UPI-K16-M7",
+      "why": "Trusts callers claiming to be bank staff.",
+      "text": "provide the OTP"
+     },
+     {
+      "belief_id": "GEN-UPI-K19-M9",
+      "why": "Thinks sharing OTP is safe without PIN.",
+      "text": "share the OTP only"
+     },
+     {
+      "belief_id": "GEN-UPI-K19-M8",
+      "why": "Trusts callers who know personal details.",
+      "text": "verify their identity first"
+     }
+    ]
+   },
+   {
+    "evidence": "If the name does not match the person you are paying, stop immediately.",
+    "answer": "stop immediately",
+    "stem": "What is the correct action if the name on the QR scanner differs from the intended recipient?",
+    "options": [
+     {
+      "belief_id": "GEN-UPI-K22-M13",
+      "why": "Prioritizes amount over the recipient's name.",
+      "text": "proceed with payment"
+     },
+     {
+      "belief_id": "GEN-UPI-K26-M19",
+      "why": "Assumes a fee is the main concern.",
+      "text": "check for extra charges"
+     },
+     {
+      "belief_id": "GEN-UPI-K23-M15",
+      "why": "Confuses payment with a collect request.",
+      "text": "approve the request"
+     }
+    ]
+   },
+   {
+    "evidence": "your money stays in your bank account, not inside the UPI app itself.",
+    "answer": "bank account",
+    "stem": "Where is your money actually stored when you use a UPI application?",
+    "options": [
+     {
+      "belief_id": "GEN-UPI-K11-M1",
+      "why": "Believes money is stored in the app.",
+      "text": "inside the app"
+     },
+     {
+      "belief_id": "GEN-UPI-K12-M2",
+      "why": "Believes the app provider holds funds.",
+      "text": "with the app provider"
+     },
+     {
+      "belief_id": "GEN-UPI-K17-M10",
+      "why": "Confuses SMS/OTP with account balance storage.",
+      "text": "in the SMS history"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 12.5
+}

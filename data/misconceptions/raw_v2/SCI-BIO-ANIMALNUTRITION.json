@@ -1,0 +1,471 @@
+{
+ "topic": {
+  "id": "SCI-BIO-ANIMALNUTRITION",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   7
+  ],
+  "title": "Nutrition in animals",
+  "scope": "human digestive system, digestion in mouth, stomach and intestines, absorption, villi, digestion in ruminants, amoeba"
+ },
+ "model": "gemini-3-flash-preview/key3",
+ "usage": {
+  "promptTokenCount": 839,
+  "candidatesTokenCount": 4108,
+  "totalTokenCount": 6271,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 839
+   }
+  ],
+  "thoughtsTokenCount": 1324,
+  "serviceTier": "standard"
+ },
+ "seconds": 20.9,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Human Digestive System",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "components of food",
+     "basic body parts"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Absorption and Assimilation",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "concept of energy"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Nutrition in Other Organisms",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "classification of animals"
+    ]
+   },
+   {
+    "key": "n1.1",
+    "name": "Ingestion and Mouth",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.2",
+    "name": "Stomach and Small Intestine",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n1.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.3",
+    "name": "Large Intestine and Egestion",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n1.2"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.1.1",
+    "name": "Salivary Starch Breakdown",
+    "level": 3,
+    "parent": "n1.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.1.2",
+    "name": "Mechanical Breakdown by Teeth",
+    "level": 3,
+    "parent": "n1.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.2.1",
+    "name": "Stomach Acid Functions",
+    "level": 3,
+    "parent": "n1.2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.2.2",
+    "name": "Bile and Fat Digestion",
+    "level": 3,
+    "parent": "n1.2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.2.3",
+    "name": "Pancreatic Juice Action",
+    "level": 3,
+    "parent": "n1.2",
+    "prereqs": [
+     "n1.2.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.3.1",
+    "name": "Water Absorption",
+    "level": 3,
+    "parent": "n1.3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.1",
+    "name": "Villi and Surface Area",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n1.2"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.1.1",
+    "name": "Villi Structure",
+    "level": 3,
+    "parent": "n2.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.2",
+    "name": "Assimilation Process",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n2.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.1",
+    "name": "Ruminant Digestion",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.1.1",
+    "name": "Cellulose Breakdown",
+    "level": 3,
+    "parent": "n3.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.2",
+    "name": "Amoeba Feeding",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.2.1",
+    "name": "Pseudopodia Function",
+    "level": 3,
+    "parent": "n3.2",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n1.2",
+    "statement": "Digestion only happens in the stomach.",
+    "why": "The stomach is the most famous organ associated with food and hunger in everyday talk.",
+    "fix": "Digestion begins in the mouth with saliva and continues in the small intestine where it is actually completed.",
+    "probe": {
+     "question": "Where does the chemical breakdown of food first begin?",
+     "wrong_answer": "In the stomach"
+    },
+    "error_type": "single_cause",
+    "root_belief": "one organ does all the work",
+    "causes": [],
+    "trigger_cues": [
+     "stomach",
+     "digestion",
+     "organ",
+     "food"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic studies"
+   },
+   {
+    "key": "m2",
+    "node": "n1.1.1",
+    "statement": "Saliva only makes food slippery so it can be swallowed easily.",
+    "why": "Students only feel the physical lubrication of saliva and cannot see the chemical breakdown of starch.",
+    "fix": "Saliva contains enzymes that chemically break down complex starch into simpler sugars.",
+    "probe": {
+     "question": "If you chew bread for a long time, it tastes sweet. Why?",
+     "wrong_answer": "Because saliva is naturally a sweet liquid"
+    },
+    "error_type": "visible_only",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "saliva",
+     "mouth",
+     "starch",
+     "sugar"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m3",
+    "node": "n1.2.1",
+    "statement": "Stomach acid is used to melt all the food we eat into a liquid.",
+    "why": "Students equate 'acid' with 'corrosive liquid' that dissolves everything like in cartoons.",
+    "fix": "Stomach acid primarily kills bacteria and creates an acidic environment for protein-digesting juices to work.",
+    "probe": {
+     "question": "What is the main purpose of hydrochloric acid in the stomach?",
+     "wrong_answer": "To melt the food into a liquid state"
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "substances act like universal solvents",
+    "causes": [],
+    "trigger_cues": [
+     "acid",
+     "hydrochloric",
+     "stomach",
+     "bacteria"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n1.3",
+    "statement": "The large intestine is where the most important nutrients are absorbed.",
+    "why": "Students assume the 'large' intestine is more important or that absorption happens at the very end of the journey.",
+    "fix": "Almost all nutrient absorption happens in the small intestine; the large intestine only absorbs water and some salts.",
+    "probe": {
+     "question": "In which part of the digestive tract are nutrients like proteins and fats absorbed?",
+     "wrong_answer": "Large intestine"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "bigger means more important",
+    "causes": [],
+    "trigger_cues": [
+     "large intestine",
+     "absorption",
+     "nutrients",
+     "water"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m5",
+    "node": "n2.1.1",
+    "statement": "Villi are tiny hairs that filter out waste from the food.",
+    "why": "Students confuse the appearance of villi with eyelashes or air filters that 'trap' things.",
+    "fix": "Villi are finger-like outgrowths that increase surface area to help absorb digested food into the blood.",
+    "probe": {
+     "question": "What is the function of the villi in the small intestine?",
+     "wrong_answer": "To filter out dirt and waste from food"
+    },
+    "error_type": "everyday_language",
+    "root_belief": "biological structures act like macroscopic tools",
+    "causes": [],
+    "trigger_cues": [
+     "villi",
+     "surface area",
+     "absorption",
+     "finger-like"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m6",
+    "node": "n3.1.1",
+    "statement": "Humans could digest grass if we just chewed it as much as cows do.",
+    "why": "Students think the difference is mechanical (chewing) rather than chemical (enzymes/bacteria).",
+    "fix": "Humans lack the specific bacteria and stomach chambers required to break down cellulose found in grass.",
+    "probe": {
+     "question": "Why can't humans survive by eating only grass?",
+     "wrong_answer": "Because our teeth are not strong enough to chew it"
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "physical effort can overcome chemical limitations",
+    "causes": [],
+    "trigger_cues": [
+     "cellulose",
+     "grass",
+     "ruminants",
+     "bacteria"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's research"
+   },
+   {
+    "key": "m7",
+    "node": "n3.2.1",
+    "statement": "Amoeba has a tiny mouth that is too small to see.",
+    "why": "Students believe all living things must have the same basic organs as humans (anthropomorphism).",
+    "fix": "Amoeba has no fixed mouth; it uses temporary finger-like extensions called pseudopodia to engulf food.",
+    "probe": {
+     "question": "How does an Amoeba take in its food?",
+     "wrong_answer": "Through a microscopic mouth opening"
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "all life must have human-like structures",
+    "causes": [],
+    "trigger_cues": [
+     "amoeba",
+     "pseudopodia",
+     "mouth",
+     "vacuole"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Concept Inventory"
+   },
+   {
+    "key": "m8",
+    "node": "n1.2.2",
+    "statement": "Bile is produced by the stomach to digest all types of food.",
+    "why": "Students associate all digestive juices with the stomach and don't distinguish between food types.",
+    "fix": "Bile is produced by the liver and stored in the gall bladder; it specifically helps in the digestion of fats.",
+    "probe": {
+     "question": "Which organ produces bile and what does it help digest?",
+     "wrong_answer": "The stomach digests proteins"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "all digestive fluids are the same",
+    "causes": [],
+    "trigger_cues": [
+     "bile",
+     "liver",
+     "fats",
+     "gall bladder"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m9",
+    "node": "n1.3",
+    "statement": "Egestion and excretion are just two words for the same process.",
+    "why": "Both involve removing waste from the body, and students don't distinguish between undigested food and cellular waste.",
+    "fix": "Egestion is the removal of undigested food (faeces), while excretion is the removal of metabolic wastes like urine.",
+    "probe": {
+     "question": "Is the removal of undigested food called excretion?",
+     "wrong_answer": "Yes, because it is waste leaving the body"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar outcomes imply identical processes",
+    "causes": [],
+    "trigger_cues": [
+     "egestion",
+     "excretion",
+     "waste",
+     "faeces"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT Exemplar common errors"
+   },
+   {
+    "key": "m10",
+    "node": "n2.2",
+    "statement": "Food is converted into energy inside the stomach.",
+    "why": "Students feel an immediate 'energy boost' after eating and link it to the first place food goes.",
+    "fix": "Food is broken down into nutrients, absorbed into the blood, and then used by cells throughout the body to release energy.",
+    "probe": {
+     "question": "Where is the energy from food actually released for the body to use?",
+     "wrong_answer": "In the stomach during digestion"
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "the start of a process is where the result happens",
+    "causes": [],
+    "trigger_cues": [
+     "assimilation",
+     "energy",
+     "cells",
+     "blood"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m11",
+    "node": "n1.1.2",
+    "statement": "Milk teeth have no roots and that is why they fall out.",
+    "why": "Because they fall out easily, children assume they aren't 'anchored' like permanent teeth.",
+    "fix": "Milk teeth do have roots; these roots are gradually dissolved by the permanent teeth growing underneath them.",
+    "probe": {
+     "question": "Why do milk teeth fall out?",
+     "wrong_answer": "Because they are just sitting on the gums without roots"
+    },
+    "error_type": "other",
+    "root_belief": "temporary things have no functional depth",
+    "causes": [],
+    "trigger_cues": [
+     "milk teeth",
+     "permanent teeth",
+     "roots",
+     "dentition"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m12",
+    "node": "n3.1",
+    "statement": "Cows have four separate stomachs.",
+    "why": "The term 'four-chambered stomach' is often misinterpreted as four independent organs.",
+    "fix": "Ruminants have a single stomach divided into four distinct compartments or chambers.",
+    "probe": {
+     "question": "How many stomachs does a cow have?",
+     "wrong_answer": "Four stomachs"
+    },
+    "error_type": "part_whole",
+    "root_belief": "chambers are the same as whole organs",
+    "causes": [],
+    "trigger_cues": [
+     "rumen",
+     "ruminant",
+     "stomach",
+     "chamber"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}

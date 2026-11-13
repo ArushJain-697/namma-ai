@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0417-MAT-POLYNOMIALS",
+  "topic_id": "MAT-POLYNOMIALS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a passage that shows a common wrong method and corrects it",
+  "seed": 417
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 1149,
+  "candidatesTokenCount": 1291,
+  "totalTokenCount": 2440,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1149
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-POLYNOMIALS-K9-M5",
+  "MAT-POLYNOMIALS-K10-M6",
+  "MAT-POLYNOMIALS-K22-M19",
+  "MAT-POLYNOMIALS-K14-M13",
+  "MAT-POLYNOMIALS-K21-M18",
+  "MAT-POLYNOMIALS-K30-M27",
+  "MAT-POLYNOMIALS-K28-M24",
+  "MAT-POLYNOMIALS-K25-M22",
+  "MAT-POLYNOMIALS-K11-M8",
+  "MAT-POLYNOMIALS-K30-M28",
+  "MAT-POLYNOMIALS-K28-M23",
+  "MAT-POLYNOMIALS-K13-M11",
+  "MAT-POLYNOMIALS-K23-M20",
+  "MAT-POLYNOMIALS-K13-M12"
+ ],
+ "response": {
+  "passage": "In algebra, students often make errors when evaluating polynomials or simplifying expressions. For instance, when asked to evaluate p(x) = x^2 + 3 at x = -2, some students calculate (-2)^2 as -4, leading to a result of -1. However, the correct method is to square the negative number, which results in positive 4, making the final value 7. Another common mistake occurs with the identity (a + b)^2. Many students incorrectly assume it equals a^2 + b^2, forgetting the middle term 2ab. The correct expansion is a^2 + 2ab + b^2. Furthermore, students often confuse the degree of a polynomial. For a term like x^2y^3, the degree is the sum of the exponents, which is 5, not just the highest individual power. Finally, when finding the product of zeroes for a quadratic polynomial ax^2 + bx + c, the correct value is c/a. Some students mistakenly believe the product is simply the middle coefficient, b, which is incorrect. Understanding these rules ensures accuracy in algebraic manipulations and prevents common pitfalls in polynomial arithmetic.",
+  "summary": "This passage explains how to correctly evaluate polynomials and expand algebraic identities. It also clarifies how to determine the degree of a term and find the product of zeroes for quadratic equations.",
+  "items": [
+   {
+    "evidence": "However, the correct method is to square the negative number, which results in positive 4, making the final value 7.",
+    "answer": "7",
+    "stem": "What is the correct result when evaluating p(x) = x^2 + 3 at x = -2?",
+    "options": [
+     {
+      "belief_id": "MAT-POLYNOMIALS-K13-M11",
+      "why": "Student incorrectly squares -2 as -4 instead of 4.",
+      "text": "-1"
+     },
+     {
+      "belief_id": "MAT-POLYNOMIALS-K28-M23",
+      "why": "Student incorrectly substitutes -2 into x^2+1 instead of x^2+3.",
+      "text": "5"
+     },
+     {
+      "belief_id": "MAT-POLYNOMIALS-K13-M12",
+      "why": "Student treats p(-2) as p multiplied by -2.",
+      "text": "-2p"
+     }
+    ]
+   },
+   {
+    "evidence": "The correct expansion is a^2 + 2ab + b^2.",
+    "answer": "a^2 + 2ab + b^2",
+    "stem": "Which expression represents the correct expansion of (a + b)^2?",
+    "options": [
+     {
+      "belief_id": "MAT-POLYNOMIALS-K23-M20",
+      "why": "Student ignores the middle term 2ab.",
+      "text": "a^2 + b^2"
+     },
+     {
+      "belief_id": "MAT-POLYNOMIALS-K25-M22",
+      "why": "Student confuses the square identity with the cube identity.",
+      "text": "(a + b)^3"
+     },
+     {
+      "belief_id": "MAT-POLYNOMIALS-K21-M18",
+      "why": "Student incorrectly adds terms with different powers.",
+      "text": "5a^2b^2"
+     }
+    ]
+   },
+   {
+    "evidence": "For a term like x^2y^3, the degree is the sum of the exponents, which is 5, not just the highest individual power.",
+    "answer": "5",
+    "stem": "What is the degree of the term x^2y^3?",
+    "options": [
+     {
+      "belief_id": "MAT-POLYNOMIALS-K9-M5",
+      "why": "Student only considers the highest individual exponent.",
+      "text": "3"
+     },
+     {
+      "belief_id": "MAT-POLYNOMIALS-K11-M8",
+      "why": "Student incorrectly assumes the degree is 1.",
+      "text": "1"
+     },
+     {
+      "belief_id": "MAT-POLYNOMIALS-K22-M19",
+      "why": "Student incorrectly multiplies exponents instead of adding them.",
+      "text": "6"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, when finding the product of zeroes for a quadratic polynomial ax^2 + bx + c, the correct value is c/a.",
+    "answer": "c/a",
+    "stem": "What is the correct formula for the product of zeroes of a quadratic polynomial?",
+    "options": [
+     {
+      "belief_id": "MAT-POLYNOMIALS-K30-M28",
+      "why": "Student incorrectly identifies the middle coefficient as the product.",
+      "text": "b"
+     },
+     {
+      "belief_id": "MAT-POLYNOMIALS-K30-M27",
+      "why": "Student confuses the product formula with the sum formula.",
+      "text": "-b/a"
+     },
+     {
+      "belief_id": "MAT-POLYNOMIALS-K10-M6",
+      "why": "Student incorrectly uses the coefficient value instead of the ratio.",
+      "text": "5"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.9
+}

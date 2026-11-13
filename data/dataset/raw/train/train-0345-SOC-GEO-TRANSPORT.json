@@ -1,0 +1,125 @@
+{
+ "job": {
+  "job": "train-0345-SOC-GEO-TRANSPORT",
+  "topic_id": "SOC-GEO-TRANSPORT",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a conversation between a teacher and two students",
+  "seed": 345
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 618,
+  "candidatesTokenCount": 1224,
+  "totalTokenCount": 1842,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 618
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "SOC-GEO-TRANSPORT-K11-M2",
+  "SOC-GEO-TRANSPORT-K10-M4",
+  "SOC-GEO-TRANSPORT-K8-M1",
+  "SOC-GEO-TRANSPORT-K13-M3"
+ ],
+ "response": {
+  "passage": "Teacher: Today we are discussing India's lifelines. Rohan, what do you think about our transport network? Rohan: I believe the Golden Quadrilateral is the most important, as it connects all major state capitals to boost trade. Teacher: Actually, Rohan, it links major industrial, agricultural, and cultural hubs, not every state capital. Priya, what about pipelines? Priya: I think pipelines are only used to transport water for drinking. Teacher: That is a common mistake; they are essential for transporting crude oil, petroleum, and natural gas from refineries to inland locations. Priya: What about using our rivers for large ships to increase trade? Teacher: Not all rivers are navigable for large ships due to depth and seasonal flow. Regarding trade, a country is considered economically healthy when its exports exceed its imports, creating a favorable balance of trade, rather than just keeping them equal. It is about the value of goods exchanged. Rohan: So, it is not just about moving water or balancing numbers? Teacher: Exactly. It is about strategic connectivity and the value of what we trade globally.",
+  "summary": "The passage clarifies that the Golden Quadrilateral connects major economic hubs rather than all state capitals. It also explains that pipelines transport fuels, not just water, and highlights that a favorable trade balance requires exports to exceed imports.",
+  "items": [
+   {
+    "evidence": "Actually, Rohan, it links major industrial, agricultural, and cultural hubs, not every state capital.",
+    "answer": "major industrial, agricultural, and cultural hubs",
+    "stem": "Which locations are primarily connected by the Golden Quadrilateral?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-TRANSPORT-K8-M1",
+      "why": "Student assumes the network connects all state capitals.",
+      "text": "all major state capitals"
+     },
+     {
+      "belief_id": "SOC-GEO-TRANSPORT-K11-M2",
+      "why": "Student confuses transport networks with water supply infrastructure.",
+      "text": "all major water treatment plants"
+     },
+     {
+      "belief_id": "SOC-GEO-TRANSPORT-K13-M3",
+      "why": "Student confuses trade balance with hub connectivity.",
+      "text": "all cities with equal imports"
+     }
+    ]
+   },
+   {
+    "evidence": "That is a common mistake; they are essential for transporting crude oil, petroleum, and natural gas from refineries to inland locations.",
+    "answer": "crude oil, petroleum, and natural gas",
+    "stem": "What is the primary function of pipelines in India's transport network?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-TRANSPORT-K11-M2",
+      "why": "Student believes pipelines are restricted to water transport.",
+      "text": "supplying drinking water"
+     },
+     {
+      "belief_id": "SOC-GEO-TRANSPORT-K8-M1",
+      "why": "Student incorrectly links pipelines to road network connectivity.",
+      "text": "connecting major state capitals"
+     },
+     {
+      "belief_id": "SOC-GEO-TRANSPORT-K10-M4",
+      "why": "Student confuses pipeline usage with river navigation.",
+      "text": "transporting large ships"
+     }
+    ]
+   },
+   {
+    "evidence": "Not all rivers are navigable for large ships due to depth and seasonal flow.",
+    "answer": "due to depth and seasonal flow",
+    "stem": "Why are some Indian rivers unsuitable for large shipping vessels?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-TRANSPORT-K10-M4",
+      "why": "Student assumes all rivers are navigable by default.",
+      "text": "because they are rivers"
+     },
+     {
+      "belief_id": "SOC-GEO-TRANSPORT-K11-M2",
+      "why": "Student incorrectly thinks rivers are only for water supply.",
+      "text": "they only transport drinking water"
+     },
+     {
+      "belief_id": "SOC-GEO-TRANSPORT-K13-M3",
+      "why": "Student incorrectly links river navigation to trade balance.",
+      "text": "exports do not equal imports"
+     }
+    ]
+   },
+   {
+    "evidence": "Regarding trade, a country is considered economically healthy when its exports exceed its imports, creating a favorable balance of trade, rather than just keeping them equal.",
+    "answer": "exports exceed its imports",
+    "stem": "When is a country's balance of trade considered favorable?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-TRANSPORT-K13-M3",
+      "why": "Student believes equality is the goal for economic health.",
+      "text": "when exports equal imports"
+     },
+     {
+      "belief_id": "SOC-GEO-TRANSPORT-K8-M1",
+      "why": "Student incorrectly links trade balance to road connectivity.",
+      "text": "when capitals are connected"
+     },
+     {
+      "belief_id": "SOC-GEO-TRANSPORT-K11-M2",
+      "why": "Student incorrectly links trade balance to water supply.",
+      "text": "when water is exported"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 12.5
+}

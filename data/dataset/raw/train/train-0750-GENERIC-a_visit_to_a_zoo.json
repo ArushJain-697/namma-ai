@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0750-GENERIC-a_visit_to_a_zoo",
+  "topic_id": null,
+  "split": "train",
+  "generic": true,
+  "theme": "a visit to a zoo",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a question-and-answer (FAQ) style passage",
+  "seed": 750
+ },
+ "model": "gemini-3.1-flash-lite/key3",
+ "usage": {
+  "promptTokenCount": 720,
+  "candidatesTokenCount": 1139,
+  "totalTokenCount": 1859,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 720
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "Welcome to the City Zoological Park FAQ. Q: Who manages the park? A: Mr. Rajesh Sharma oversees daily operations, while the City Council handles the budget. Q: Why are the nocturnal enclosures kept dark during the day? A: Because the animals are active at night, we dim the lights to mimic their natural habitat. Q: How many species are currently housed here? A: We have 42 distinct species, including the rare Bengal Tiger. Q: Can visitors feed the animals? A: No, feeding is strictly prohibited because improper food causes digestive distress in our residents. Q: When was the park founded? A: The park was established in 1994, following a donation from the Gupta family. Q: Is the park open on public holidays? A: Yes, we remain open every day except for Republic Day, when the staff takes a break. Q: What should I do if I lose my belongings? A: Please report to the main office near the entrance. Q: Are there guided tours available? A: Yes, Mrs. Sunita Rao leads group tours every Saturday morning for students. Q: Why do the lions roar so loudly? A: They roar to mark their territory against other predators in the vicinity.",
+  "summary": "This FAQ provides essential information about the City Zoological Park's management, operations, and visitor rules. It highlights specific policies regarding animal care, park history, and available visitor services.",
+  "items": [
+   {
+    "evidence": "Because the animals are active at night, we dim the lights to mimic their natural habitat.",
+    "answer": "mimic their natural habitat",
+    "stem": "What is the primary purpose of dimming the lights in the nocturnal enclosures?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Mistakes the result for the cause of the action.",
+      "text": "because the animals are active"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects a person mentioned in the nearby text.",
+      "text": "Mr. Rajesh Sharma"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a true fact that does not answer why.",
+      "text": "to keep them in the dark"
+     }
+    ]
+   },
+   {
+    "evidence": "We have 42 distinct species, including the rare Bengal Tiger.",
+    "answer": "42",
+    "stem": "How many different types of animals reside within the park?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Picks a random year mentioned in the passage.",
+      "text": "1994"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Uses a proper noun appearing in the same sentence.",
+      "text": "Bengal Tiger"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Assumes all animals are rare species.",
+      "text": "all species"
+     }
+    ]
+   },
+   {
+    "evidence": "No, feeding is strictly prohibited because improper food causes digestive distress in our residents.",
+    "answer": "digestive distress",
+    "stem": "What negative health outcome occurs when visitors feed the animals?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Interprets 'residents' as human citizens of the city.",
+      "text": "human illness"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Uses the name of the park manager.",
+      "text": "Mr. Rajesh Sharma"
+     },
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Confuses the cause with the effect.",
+      "text": "improper food"
+     }
+    ]
+   },
+   {
+    "evidence": "Yes, Mrs. Sunita Rao leads group tours every Saturday morning for students.",
+    "answer": "Mrs. Sunita Rao",
+    "stem": "Who is responsible for conducting the group tours for students?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M5",
+      "why": "Confuses the guide with the park manager.",
+      "text": "Mr. Rajesh Sharma"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Assumes all staff members lead tours.",
+      "text": "all staff"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a true fact that is not the person.",
+      "text": "Saturday morning"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 3.9
+}

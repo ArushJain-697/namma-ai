@@ -1,0 +1,134 @@
+{
+ "job": {
+  "job": "train-0460-SCI-CHM-PURE",
+  "topic_id": "SCI-CHM-PURE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a question-and-answer (FAQ) style passage",
+  "seed": 460
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 1061,
+  "candidatesTokenCount": 1233,
+  "totalTokenCount": 2294,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1061
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "SCI-CHM-PURE-K14-M11",
+  "SCI-CHM-PURE-K15-M4",
+  "SCI-CHM-PURE-K10-M3",
+  "SCI-CHM-PURE-K21-M13",
+  "SCI-CHM-PURE-K7-M15",
+  "SCI-CHM-PURE-K11-M5",
+  "SCI-CHM-PURE-K6-M12",
+  "SCI-CHM-PURE-K24-M8",
+  "SCI-CHM-PURE-K19-M9",
+  "SCI-CHM-PURE-K7-M2",
+  "SCI-CHM-PURE-K25-M10",
+  "SCI-CHM-PURE-K20-M14",
+  "SCI-CHM-PURE-K18-M7"
+ ],
+ "response": {
+  "passage": "Welcome to our Science FAQ corner! Many students often ask about the nature of matter. First, remember that a mixture is not a pure substance just because it looks uniform; even if you cannot see different parts, it might still be a mixture. Second, a compound is a chemical substance that cannot be separated into its elements by physical methods like filtration or distillation. Third, regarding solutions, the concentration is calculated by dividing the mass of the solute by the total mass of the solution, not just the solvent. Fourth, consider colloids like milk. Even though they appear uniform and do not settle over time, they are actually heterogeneous mixtures. Finally, when you heat a saltwater solution to dryness, the water evaporates as steam, but the salt remains behind as a solid residue because the solute does not disappear or turn into gas.",
+  "summary": "This passage clarifies the differences between mixtures and pure substances. It also explains how to calculate solution concentration and describes the behavior of colloids and solutes during evaporation.",
+  "items": [
+   {
+    "evidence": "First, remember that a mixture is not a pure substance just because it looks uniform; even if you cannot see different parts, it might still be a mixture.",
+    "answer": "it might still be a mixture",
+    "stem": "If a liquid mixture appears perfectly clear and uniform to the naked eye, what can we conclude about its purity?",
+    "options": [
+     {
+      "belief_id": "SCI-CHM-PURE-K7-M2",
+      "why": "Student assumes uniform appearance equals a pure substance.",
+      "text": "it must be a pure substance"
+     },
+     {
+      "belief_id": "SCI-CHM-PURE-K6-M12",
+      "why": "Student assumes mixtures have fixed boiling points like pure substances.",
+      "text": "it has a fixed boiling point"
+     },
+     {
+      "belief_id": "SCI-CHM-PURE-K7-M15",
+      "why": "Student confuses mixture properties with compound properties.",
+      "text": "it is definitely a compound"
+     }
+    ]
+   },
+   {
+    "evidence": "Second, a compound is a chemical substance that cannot be separated into its elements by physical methods like filtration or distillation.",
+    "answer": "cannot be separated",
+    "stem": "Why is it impossible to isolate individual elements from a compound using simple physical techniques?",
+    "options": [
+     {
+      "belief_id": "SCI-CHM-PURE-K25-M10",
+      "why": "Student believes physical methods can break down compounds.",
+      "text": "they can be separated by filtration"
+     },
+     {
+      "belief_id": "SCI-CHM-PURE-K19-M9",
+      "why": "Student equates distillation with simple boiling processes.",
+      "text": "distillation is just boiling the liquid"
+     },
+     {
+      "belief_id": "SCI-CHM-PURE-K24-M8",
+      "why": "Student assumes compounds retain original element properties.",
+      "text": "elements retain their original properties"
+     }
+    ]
+   },
+   {
+    "evidence": "Third, regarding solutions, the concentration is calculated by dividing the mass of the solute by the total mass of the solution, not just the solvent.",
+    "answer": "total mass of the solution",
+    "stem": "What is the correct denominator when calculating the concentration of a solution?",
+    "options": [
+     {
+      "belief_id": "SCI-CHM-PURE-K11-M5",
+      "why": "Student incorrectly uses only the solvent mass.",
+      "text": "the mass of the solvent"
+     },
+     {
+      "belief_id": "SCI-CHM-PURE-K10-M3",
+      "why": "Student assumes solute must be a solid.",
+      "text": "the mass of the solid solute"
+     },
+     {
+      "belief_id": "SCI-CHM-PURE-K20-M14",
+      "why": "Student confuses concentration with color separation.",
+      "text": "the mass of the colored particles"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, when you heat a saltwater solution to dryness, the water evaporates as steam, but the salt remains behind as a solid residue because the solute does not disappear or turn into gas.",
+    "answer": "solute does not disappear",
+    "stem": "What happens to the salt when a saltwater solution is heated until all the water has evaporated?",
+    "options": [
+     {
+      "belief_id": "SCI-CHM-PURE-K18-M7",
+      "why": "Student believes the solute evaporates with the solvent.",
+      "text": "the salt evaporates with the water"
+     },
+     {
+      "belief_id": "SCI-CHM-PURE-K14-M11",
+      "why": "Student thinks the liquid reflects light during heating.",
+      "text": "the liquid reflects light and vanishes"
+     },
+     {
+      "belief_id": "SCI-CHM-PURE-K21-M13",
+      "why": "Student thinks particles become weightless during phase changes.",
+      "text": "the salt particles become weightless"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 8.9
+}

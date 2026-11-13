@@ -1,0 +1,131 @@
+{
+ "job": {
+  "job": "train-0036-MAT-DATAHANDLING",
+  "topic_id": "MAT-DATAHANDLING",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a passage that shows a common wrong method and corrects it",
+  "seed": 36
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 898,
+  "candidatesTokenCount": 1331,
+  "totalTokenCount": 2229,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 898
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-DATAHANDLING-K7-M2",
+  "MAT-DATAHANDLING-K6-M6",
+  "MAT-DATAHANDLING-K12-M12",
+  "MAT-DATAHANDLING-K7-M7",
+  "MAT-DATAHANDLING-K8-M10",
+  "MAT-DATAHANDLING-K6-M4",
+  "MAT-DATAHANDLING-K8-M9",
+  "MAT-DATAHANDLING-K11-M11",
+  "MAT-DATAHANDLING-K5-M1",
+  "MAT-DATAHANDLING-K10-M8"
+ ],
+ "response": {
+  "passage": "In our class data project, we recorded the number of books read by students: 0, 5, 5, 8, 10, and 12. To find the mean, we must include every observation, even the zero, because it represents a student who read no books. We add these values to get 40 and divide by the total count of 6, resulting in a mean of 6.67. Some students mistakenly think the mean must be one of the original numbers, but it is often a decimal. When finding the median for an even number of observations, we must take the average of the two middle values, which are 5 and 8. Adding them gives 13, and dividing by 2 results in a median of 6.5. A common error is picking the larger middle value, but the correct method requires averaging them. Furthermore, we identified the mode as 5, because it is the value that appears most frequently. Some students incorrectly claim the mode is 3, confusing the frequency of the value with the value itself. Finally, when drawing our bar graph, we noticed the scale intervals were 2 units each, not 1, showing that we must always check the axis labels carefully rather than assuming a standard unit gap.",
+  "summary": "This passage explains how to correctly calculate the mean, median, and mode for a data set. It highlights the importance of including all values, averaging the middle terms, and interpreting graph scales accurately.",
+  "items": [
+   {
+    "evidence": "To find the mean, we must include every observation, even the zero, because it represents a student who read no books.",
+    "answer": "include every observation",
+    "stem": "What is the correct procedure when calculating the mean of a data set containing a zero?",
+    "options": [
+     {
+      "belief_id": "MAT-DATAHANDLING-K10-M8",
+      "why": "Believes zero adds nothing and can be ignored in calculations.",
+      "text": "exclude the zero from the sum"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K7-M7",
+      "why": "Believes you divide by the number of unique values.",
+      "text": "divide the sum by five"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K7-M2",
+      "why": "Believes the mean must be a number from the set.",
+      "text": "select the middle value"
+     }
+    ]
+   },
+   {
+    "evidence": "When finding the median for an even number of observations, we must take the average of the two middle values, which are 5 and 8.",
+    "answer": "average of the two middle values",
+    "stem": "How do you determine the median when there is an even number of data points?",
+    "options": [
+     {
+      "belief_id": "MAT-DATAHANDLING-K8-M10",
+      "why": "Believes the median is the larger of the middle pair.",
+      "text": "choose the larger middle value"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K8-M9",
+      "why": "Believes the median is the middle of the given order.",
+      "text": "pick the middle number as given"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K7-M2",
+      "why": "Believes the median must be one of the data points.",
+      "text": "round to the nearest whole number"
+     }
+    ]
+   },
+   {
+    "evidence": "Some students incorrectly claim the mode is 3, confusing the frequency of the value with the value itself.",
+    "answer": "confusing the frequency of the value",
+    "stem": "Why do some students incorrectly identify the mode in a data set?",
+    "options": [
+     {
+      "belief_id": "MAT-DATAHANDLING-K11-M11",
+      "why": "Believes the mode is the highest frequency count.",
+      "text": "they report the count instead"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K7-M2",
+      "why": "Believes the mode must be the largest number.",
+      "text": "they pick the maximum value"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K10-M8",
+      "why": "Believes zero is the mode if it appears often.",
+      "text": "they ignore the smallest value"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, when drawing our bar graph, we noticed the scale intervals were 2 units each, not 1, showing that we must always check the axis labels carefully rather than assuming a standard unit gap.",
+    "answer": "check the axis labels carefully",
+    "stem": "What is the best way to interpret the scale of a bar graph correctly?",
+    "options": [
+     {
+      "belief_id": "MAT-DATAHANDLING-K6-M6",
+      "why": "Believes every gap must represent exactly one unit.",
+      "text": "assume each gap is one"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K6-M4",
+      "why": "Believes the width of the bar determines the value.",
+      "text": "measure the width of bars"
+     },
+     {
+      "belief_id": "MAT-DATAHANDLING-K5-M1",
+      "why": "Believes one symbol or gap equals one unit.",
+      "text": "count the number of bars"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 17.4
+}

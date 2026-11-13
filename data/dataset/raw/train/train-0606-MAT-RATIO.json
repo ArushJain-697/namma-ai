@@ -1,0 +1,124 @@
+{
+ "job": {
+  "job": "train-0606-MAT-RATIO",
+  "topic_id": "MAT-RATIO",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a passage that shows a common wrong method and corrects it",
+  "seed": 606
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 632,
+  "candidatesTokenCount": 1259,
+  "totalTokenCount": 1891,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 632
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-RATIO-K14-M3",
+  "MAT-RATIO-K5-M1",
+  "MAT-RATIO-K11-M4"
+ ],
+ "response": {
+  "passage": "In a school art project, Rohan and Sita mixed red and yellow paint in a ratio of 2:3 to create a custom orange shade. Rohan mistakenly thought that because the ratio is 2:3, the red paint makes up 2/3 of the total mixture. However, this is incorrect because the total parts are 2 plus 3, which equals 5. Therefore, red paint is actually 2/5 of the total. Later, they needed to buy more supplies. They found that 3 brushes cost 45 rupees. Sita tried to find the cost of 5 brushes by adding 45 and 5, but that is a common error. To find the correct price, we must first find the unit value by dividing 45 by 3, which gives 15 rupees per brush. Multiplying 15 by 5 shows that 5 brushes cost 75 rupees. Finally, remember that the order in a ratio matters significantly. A ratio of 2:3 means 2 parts of red for every 3 parts of yellow, which is completely different from 3:2. If you swap the numbers, you change the color intensity entirely, proving that 2:3 is not the same as 3:2.",
+  "summary": "This passage explains how to correctly calculate parts of a whole in a ratio and how to use the unitary method for pricing. It also highlights that the order of numbers in a ratio is fixed and cannot be swapped.",
+  "items": [
+   {
+    "evidence": "Therefore, red paint is actually 2/5 of the total.",
+    "answer": "2/5",
+    "stem": "What fraction of the total mixture is represented by the red paint in a 2:3 ratio?",
+    "options": [
+     {
+      "belief_id": "MAT-RATIO-K14-M3",
+      "why": "Student incorrectly assumes the first part is over the second.",
+      "text": "2/3"
+     },
+     {
+      "belief_id": "MAT-RATIO-K5-M1",
+      "why": "Student confuses the ratio parts with the total fraction.",
+      "text": "3/2"
+     },
+     {
+      "belief_id": "MAT-RATIO-K11-M4",
+      "why": "Student adds the ratio numbers instead of finding a fraction.",
+      "text": "5/2"
+     }
+    ]
+   },
+   {
+    "evidence": "Multiplying 15 by 5 shows that 5 brushes cost 75 rupees.",
+    "answer": "75 rupees",
+    "stem": "If 3 brushes cost 45 rupees, what is the total cost for 5 brushes?",
+    "options": [
+     {
+      "belief_id": "MAT-RATIO-K11-M4",
+      "why": "Student incorrectly adds the total cost and the quantity.",
+      "text": "50 rupees"
+     },
+     {
+      "belief_id": "MAT-RATIO-K14-M3",
+      "why": "Student applies a fraction logic to a cost problem.",
+      "text": "30 rupees"
+     },
+     {
+      "belief_id": "MAT-RATIO-K5-M1",
+      "why": "Student swaps the ratio of brushes to cost.",
+      "text": "27 rupees"
+     }
+    ]
+   },
+   {
+    "evidence": "If you swap the numbers, you change the color intensity entirely, proving that 2:3 is not the same as 3:2.",
+    "answer": "not the same",
+    "stem": "How does the ratio 2:3 compare to the ratio 3:2?",
+    "options": [
+     {
+      "belief_id": "MAT-RATIO-K5-M1",
+      "why": "Student believes order does not matter in ratios.",
+      "text": "the same"
+     },
+     {
+      "belief_id": "MAT-RATIO-K14-M3",
+      "why": "Student thinks the ratio represents a fraction of one.",
+      "text": "equal to one"
+     },
+     {
+      "belief_id": "MAT-RATIO-K11-M4",
+      "why": "Student thinks the ratio is a sum of parts.",
+      "text": "equal to five"
+     }
+    ]
+   },
+   {
+    "evidence": "To find the correct price, we must first find the unit value by dividing 45 by 3, which gives 15 rupees per brush.",
+    "answer": "15 rupees",
+    "stem": "What is the cost of a single brush if three brushes cost 45 rupees?",
+    "options": [
+     {
+      "belief_id": "MAT-RATIO-K11-M4",
+      "why": "Student adds the numbers instead of dividing.",
+      "text": "48 rupees"
+     },
+     {
+      "belief_id": "MAT-RATIO-K14-M3",
+      "why": "Student uses the ratio parts to divide the cost.",
+      "text": "22.5 rupees"
+     },
+     {
+      "belief_id": "MAT-RATIO-K5-M1",
+      "why": "Student swaps the divisor and dividend.",
+      "text": "0.06 rupees"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 3.5
+}

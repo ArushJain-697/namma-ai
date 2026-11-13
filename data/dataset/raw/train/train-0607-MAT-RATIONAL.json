@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0607-MAT-RATIONAL",
+  "topic_id": "MAT-RATIONAL",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a conversation between a teacher and two students",
+  "seed": 607
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1149,
+  "candidatesTokenCount": 1312,
+  "totalTokenCount": 2461,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1149
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-RATIONAL-K17-M16",
+  "MAT-RATIONAL-K29-M27",
+  "MAT-RATIONAL-K17-M15",
+  "MAT-RATIONAL-K24-M21",
+  "MAT-RATIONAL-K21-M17",
+  "MAT-RATIONAL-K7-M7",
+  "MAT-RATIONAL-K10-M10",
+  "MAT-RATIONAL-K27-M24",
+  "MAT-RATIONAL-K11-M11",
+  "MAT-RATIONAL-K15-M14",
+  "MAT-RATIONAL-K21-M18",
+  "MAT-RATIONAL-K24-M20",
+  "MAT-RATIONAL-K25-M22",
+  "MAT-RATIONAL-K29-M26"
+ ],
+ "response": {
+  "passage": "Teacher: Today, let us explore rational numbers. Remember, a rational number is any value that can be written as p/q, where p and q are integers and q is not zero. Rohan, if you add 1/2 and 1/3, what do you get? Rohan: I think it is 2/5, because we add the numerators and denominators separately. Teacher: That is a common mistake! You must find a common denominator first, making them 3/6 and 2/6, which adds up to 5/6. Priya, what about multiplying 1/2 and 1/3? Priya: Since multiplication makes numbers bigger, the result must be greater than 1/2. Teacher: Actually, multiplying by a fraction smaller than one makes the value smaller, so 1/2 times 1/3 is 1/6. Now, consider the number -1/2 and -1/4. Which is larger? Rohan: -1/2 is larger because 1/2 is greater than 1/4. Teacher: Not quite. On the number line, numbers to the right are always greater, so -1/4 is to the right of -1/2, making it larger. Finally, remember that between any two rational numbers, there are infinitely many other rational numbers. You can always find a midpoint, no matter how small the gap seems. This density property means we never run out of space between two fractions.",
+  "summary": "This conversation clarifies common errors in rational number operations and comparisons. It highlights the importance of common denominators, the effect of multiplication, and the density property of rational numbers.",
+  "items": [
+   {
+    "evidence": "You must find a common denominator first, making them 3/6 and 2/6, which adds up to 5/6.",
+    "answer": "5/6",
+    "stem": "What is the correct sum of 1/2 and 1/3 after finding a common denominator?",
+    "options": [
+     {
+      "belief_id": "MAT-RATIONAL-K21-M17",
+      "why": "Student adds numerators and denominators separately.",
+      "text": "2/5"
+     },
+     {
+      "belief_id": "MAT-RATIONAL-K21-M18",
+      "why": "Student adds the denominators after making them equal.",
+      "text": "3/12"
+     },
+     {
+      "belief_id": "MAT-RATIONAL-K24-M21",
+      "why": "Student incorrectly applies multiplication logic to addition.",
+      "text": "6/5"
+     }
+    ]
+   },
+   {
+    "evidence": "Actually, multiplying by a fraction smaller than one makes the value smaller, so 1/2 times 1/3 is 1/6.",
+    "answer": "1/6",
+    "stem": "What is the result of multiplying 1/2 by 1/3?",
+    "options": [
+     {
+      "belief_id": "MAT-RATIONAL-K24-M20",
+      "why": "Student believes multiplication always increases the value.",
+      "text": "Greater than 1/2"
+     },
+     {
+      "belief_id": "MAT-RATIONAL-K25-M22",
+      "why": "Student confuses division logic with multiplication.",
+      "text": "Smaller than 1/6"
+     },
+     {
+      "belief_id": "MAT-RATIONAL-K24-M21",
+      "why": "Student applies addition error logic to multiplication.",
+      "text": "6/5"
+     }
+    ]
+   },
+   {
+    "evidence": "On the number line, numbers to the right are always greater, so -1/4 is to the right of -1/2, making it larger.",
+    "answer": "-1/4",
+    "stem": "Which of these two negative rational numbers is the larger value?",
+    "options": [
+     {
+      "belief_id": "MAT-RATIONAL-K15-M14",
+      "why": "Student ignores the negative sign when comparing magnitudes.",
+      "text": "-1/2"
+     },
+     {
+      "belief_id": "MAT-RATIONAL-K10-M10",
+      "why": "Student thinks negative position changes the value type.",
+      "text": "Positive 1/4"
+     },
+     {
+      "belief_id": "MAT-RATIONAL-K11-M11",
+      "why": "Student assumes all rationals must be between 0 and 1.",
+      "text": "0"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, remember that between any two rational numbers, there are infinitely many other rational numbers.",
+    "answer": "infinitely many",
+    "stem": "How many rational numbers exist between any two given rational numbers?",
+    "options": [
+     {
+      "belief_id": "MAT-RATIONAL-K17-M16",
+      "why": "Student believes the gap limits the number of rationals.",
+      "text": "a limited number"
+     },
+     {
+      "belief_id": "MAT-RATIONAL-K17-M15",
+      "why": "Student thinks consecutive numerators imply no numbers between.",
+      "text": "none"
+     },
+     {
+      "belief_id": "MAT-RATIONAL-K27-M24",
+      "why": "Student confuses density with the result of division.",
+      "text": "only one"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 8.4
+}

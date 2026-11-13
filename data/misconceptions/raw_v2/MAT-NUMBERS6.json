@@ -1,0 +1,437 @@
+{
+ "topic": {
+  "id": "MAT-NUMBERS6",
+  "subject": "maths",
+  "strand": "maths",
+  "grades": [
+   6
+  ],
+  "title": "Knowing our numbers",
+  "scope": "place value, Indian and international systems, comparing and ordering large numbers, estimation and rounding, Roman numerals"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 840,
+  "candidatesTokenCount": 1683,
+  "totalTokenCount": 2523,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 840
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 7.6,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Place Value and Systems",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "counting",
+     "basic addition"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Comparing and Ordering",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "number line",
+     "whole numbers"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Estimation and Rounding",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "inequalities"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Roman Numerals",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "addition",
+     "subtraction"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Indian System",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "International System",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Digit Position Value",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": [
+     "place value of digits"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Comma Placement",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Comparing Large Numbers",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Rounding to Nearest Ten/Hundred",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Roman Symbol Rules",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Comparing digit count",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Rounding midpoint rule",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Additive/Subtractive Principle",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n7",
+    "statement": "The value of a digit is the same regardless of its position.",
+    "why": "Students often focus on the face value of the digit rather than its positional weight.",
+    "fix": "The value of a digit is determined by its place (ones, tens, hundreds, etc.) in the number.",
+    "probe": {
+     "question": "What is the value of 5 in 502?",
+     "wrong_answer": "5"
+    },
+    "error_type": "place_value",
+    "root_belief": "a digit is a static object",
+    "causes": [],
+    "trigger_cues": [
+     "place",
+     "value",
+     "digit",
+     "position",
+     "hundreds"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic studies"
+   },
+   {
+    "key": "m2",
+    "node": "n8",
+    "statement": "Commas are placed after every two digits regardless of the system.",
+    "why": "Overgeneralization of the Indian system pattern.",
+    "fix": "The Indian system uses commas after 3 digits then every 2, while the International system uses commas every 3 digits.",
+    "probe": {
+     "question": "Write 1,000,000 in Indian system.",
+     "wrong_answer": "10,00,000"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "one rule works for all contexts",
+    "causes": [],
+    "trigger_cues": [
+     "comma",
+     "indian",
+     "international",
+     "system",
+     "period"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n12",
+    "statement": "A number with more digits is always larger.",
+    "why": "This is true for whole numbers, but students fail to consider decimals or leading zeros.",
+    "fix": "While true for whole numbers, comparing numbers requires looking at the highest place value first.",
+    "probe": {
+     "question": "Which is bigger: 005 or 4?",
+     "wrong_answer": "005"
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "more digits means more quantity",
+    "causes": [],
+    "trigger_cues": [
+     "compare",
+     "larger",
+     "smaller",
+     "digits",
+     "count"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver children's ideas"
+   },
+   {
+    "key": "m4",
+    "node": "n13",
+    "statement": "Rounding 5 always rounds down.",
+    "why": "Students often memorize a partial rule without understanding the midpoint convention.",
+    "fix": "By convention, 5 is rounded up to the next higher ten or hundred.",
+    "probe": {
+     "question": "Round 15 to the nearest ten.",
+     "wrong_answer": "10"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "rules are arbitrary",
+    "causes": [],
+    "trigger_cues": [
+     "round",
+     "nearest",
+     "estimate",
+     "midpoint",
+     "five"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n14",
+    "statement": "Roman numerals can be repeated as many times as needed to make a number.",
+    "why": "Students treat Roman symbols like tally marks.",
+    "fix": "Symbols like I, X, C can be repeated at most three times.",
+    "probe": {
+     "question": "Write 40 in Roman numerals.",
+     "wrong_answer": "XXXX"
+    },
+    "error_type": "notation_misread",
+    "root_belief": "symbols are just tallies",
+    "causes": [],
+    "trigger_cues": [
+     "roman",
+     "numerals",
+     "repeat",
+     "symbols",
+     "value"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m6",
+    "node": "n5",
+    "statement": "In the Indian system, the place after thousands is called ten thousands and then millions.",
+    "why": "Student mixes Indian and international names for higher places because both are taught together.",
+    "fix": "In the Indian system the places go Ones, Tens, Hundreds, Thousands, Ten Thousands, Lakhs, Ten Lakhs, Crores. 'Million' belongs to the international system.",
+    "probe": {
+     "question": "Write 10,00,000 in words using the Indian system.",
+     "wrong_answer": "One million"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Names of places are the same in both systems",
+    "causes": [],
+    "trigger_cues": [
+     "lakh",
+     "million",
+     "indian system",
+     "ten lakh",
+     "names of places"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation"
+   },
+   {
+    "key": "m7",
+    "node": "n6",
+    "statement": "One million is equal to 1,00,000 because it has five zeros like a lakh.",
+    "why": "Student confuses the sizes of lakh and million and counts zeros loosely.",
+    "fix": "1 million = 10 lakh = 10,00,000 (seven digits, six zeros). 1 lakh = 1,00,000 has five zeros.",
+    "probe": {
+     "question": "How many lakhs make one million?",
+     "wrong_answer": "1 lakh"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "Lakh and million are the same size",
+    "causes": [],
+    "trigger_cues": [
+     "million",
+     "lakh",
+     "how many zeros",
+     "convert",
+     "equal to"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher reports"
+   },
+   {
+    "key": "m8",
+    "node": "n9",
+    "statement": "If two numbers have the same number of digits, the one with the bigger last digit is greater.",
+    "why": "Student compares from the right (ones place) instead of the leftmost digit.",
+    "fix": "Compare digits from the leftmost place; the first place where they differ decides which number is greater.",
+    "probe": {
+     "question": "Which is greater: 4,539 or 4,712?",
+     "wrong_answer": "4,539, because 9 is greater than 2"
+    },
+    "error_type": "place_value",
+    "root_belief": "Comparison starts from the ones digit",
+    "causes": [],
+    "trigger_cues": [
+     "same digits",
+     "which is greater",
+     "compare",
+     "last digit",
+     "leftmost digit"
+    ],
+    "confidence": "plausible",
+    "source_hint": "misconception research on whole number comparison"
+   },
+   {
+    "key": "m9",
+    "node": "n10",
+    "statement": "To round to the nearest hundred, you look at the ones digit.",
+    "why": "Student applies the rounding procedure without tying the deciding digit to the place being rounded.",
+    "fix": "To round to the nearest hundred, look at the tens digit. 5 or more rounds up, less than 5 rounds down.",
+    "probe": {
+     "question": "Round 3,463 to the nearest hundred.",
+     "wrong_answer": "3,500 (because 3 in the ones place is less than 5, so... 3,460)"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "Always check the last digit when rounding",
+    "causes": [],
+    "trigger_cues": [
+     "round",
+     "nearest hundred",
+     "which digit to check",
+     "ones digit",
+     "tens digit"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation"
+   },
+   {
+    "key": "m10",
+    "node": "n13",
+    "statement": "When rounding, every digit after the rounding place becomes a 9 if rounding down.",
+    "why": "Student mixes rounding down with 'one less than' idea, or leaves the digits unchanged instead of replacing with zeros.",
+    "fix": "After rounding, all digits to the right of the rounded place become zeros, e.g. 3,463 rounds to 3,500.",
+    "probe": {
+     "question": "Round 7,238 to the nearest hundred.",
+     "wrong_answer": "7,299"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "Rounded digits keep or change arbitrarily",
+    "causes": [],
+    "trigger_cues": [
+     "round down",
+     "replace with zeros",
+     "digits after",
+     "nearest hundred",
+     "rounded number"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n14",
+    "statement": "A smaller Roman symbol written before a bigger one is added, so IX means 11.",
+    "why": "Student reads left to right and adds everything, ignoring the subtractive rule.",
+    "fix": "A smaller symbol placed before a larger one is subtracted: IX = 10 − 1 = 9. Placed after, it is added: XI = 11.",
+    "probe": {
+     "question": "Write the value of IV in our number system.",
+     "wrong_answer": "6"
+    },
+    "error_type": "notation_misread",
+    "root_belief": "Roman symbols are always added left to right",
+    "causes": [],
+    "trigger_cues": [
+     "roman numeral",
+     "IX",
+     "IV",
+     "smaller before bigger",
+     "subtract"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "mathematics education research on Roman numerals"
+   },
+   {
+    "key": "m12",
+    "node": "n11",
+    "statement": "Any smaller Roman symbol can be subtracted from any larger one, so VX is 5 and IC is 99.",
+    "why": "Student overgeneralises the subtraction rule without knowing which symbols can be subtracted from which.",
+    "fix": "Only I, X and C can be subtracted, and only from the next two larger symbols (I from V and X; X from L and C; C from D and M). V, L and D are never subtracted. So 5 is V, and 99 is XCIX.",
+    "probe": {
+     "question": "Write 95 in Roman numerals.",
+     "wrong_answer": "VC"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "Subtraction rule works for any pair of symbols",
+    "causes": [],
+    "trigger_cues": [
+     "roman numeral",
+     "subtract",
+     "VC",
+     "IC",
+     "write in roman"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 6 exercises, teacher reports"
+   }
+  ]
+ },
+ "problems": [
+  "only 5 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

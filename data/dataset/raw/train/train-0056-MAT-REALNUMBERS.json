@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0056-MAT-REALNUMBERS",
+  "topic_id": "MAT-REALNUMBERS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a clear textbook explanation with one worked example",
+  "seed": 56
+ },
+ "model": "gemini-3.1-flash-lite/key3",
+ "usage": {
+  "promptTokenCount": 1179,
+  "candidatesTokenCount": 1349,
+  "totalTokenCount": 2528,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1179
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-REALNUMBERS-K11-M21",
+  "MAT-REALNUMBERS-K16-M5",
+  "MAT-REALNUMBERS-K20-M9",
+  "MAT-REALNUMBERS-K21-M11",
+  "MAT-REALNUMBERS-K28-M22",
+  "MAT-REALNUMBERS-K22-M13",
+  "MAT-REALNUMBERS-K20-M10",
+  "MAT-REALNUMBERS-K18-M7",
+  "MAT-REALNUMBERS-K25-M17",
+  "MAT-REALNUMBERS-K24-M15",
+  "MAT-REALNUMBERS-K29-M23",
+  "MAT-REALNUMBERS-K19-M8",
+  "MAT-REALNUMBERS-K15-M3",
+  "MAT-REALNUMBERS-K17-M6"
+ ],
+ "response": {
+  "passage": "The Fundamental Theorem of Arithmetic states that every composite number can be expressed as a product of primes, and this representation is unique, apart from the order in which the prime factors occur. For example, to find the prime factorisation of 36, we must break it down until only primes remain: 36 = 2 × 2 × 3 × 3 = 2² × 3². Stopping at 4 × 9 is incorrect because 4 and 9 are composite numbers. When finding the Highest Common Factor (HCF) of two numbers, we identify the smallest power of each common prime factor present in both numbers. If two numbers share no common prime factors, their HCF is 1, as 1 is a factor of every integer. Furthermore, a number ends in the digit zero if and only if its prime factorisation contains both the prime numbers 2 and 5. For instance, 6ⁿ = (2 × 3)ⁿ = 2ⁿ × 3ⁿ; since it lacks the factor 5, it can never end in zero for any natural number n. Finally, remember that the relationship HCF(a, b) × LCM(a, b) = a × b is strictly valid only for two positive integers and does not extend to three or more numbers.",
+  "summary": "Every composite number has a unique prime factorisation that must be fully broken down into prime numbers. The HCF is determined by common prime factors, and a number ends in zero only if it contains both 2 and 5 as factors.",
+  "items": [
+   {
+    "evidence": "For example, to find the prime factorisation of 36, we must break it down until only primes remain: 36 = 2 × 2 × 3 × 3 = 2² × 3².",
+    "answer": "2² × 3²",
+    "stem": "What is the correct prime factorisation of 36?",
+    "options": [
+     {
+      "belief_id": "MAT-REALNUMBERS-K15-M3",
+      "why": "Student stops at composite factors 4 and 9.",
+      "text": "4 × 9"
+     },
+     {
+      "belief_id": "MAT-REALNUMBERS-K17-M6",
+      "why": "Student incorrectly expands powers as 2×3×3×2.",
+      "text": "36"
+     },
+     {
+      "belief_id": "MAT-REALNUMBERS-K16-M5",
+      "why": "Student believes different order creates a different factorisation.",
+      "text": "3² × 2²"
+     }
+    ]
+   },
+   {
+    "evidence": "If two numbers share no common prime factors, their HCF is 1, as 1 is a factor of every integer.",
+    "answer": "1",
+    "stem": "What is the HCF of two numbers that share no common prime factors?",
+    "options": [
+     {
+      "belief_id": "MAT-REALNUMBERS-K21-M11",
+      "why": "Student thinks no common factors means no HCF exists.",
+      "text": "None"
+     },
+     {
+      "belief_id": "MAT-REALNUMBERS-K20-M9",
+      "why": "Student multiplies all factors of both numbers.",
+      "text": "Product of all factors"
+     },
+     {
+      "belief_id": "MAT-REALNUMBERS-K20-M10",
+      "why": "Student confuses HCF with LCM logic.",
+      "text": "The greatest prime power"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, a number ends in the digit zero if and only if its prime factorisation contains both the prime numbers 2 and 5.",
+    "answer": "both the prime numbers 2 and 5",
+    "stem": "What is required for a number to end in the digit zero?",
+    "options": [
+     {
+      "belief_id": "MAT-REALNUMBERS-K18-M7",
+      "why": "Student thinks only one of 2 or 5 is sufficient.",
+      "text": "Either 2 or 5"
+     },
+     {
+      "belief_id": "MAT-REALNUMBERS-K19-M8",
+      "why": "Student thinks checking specific values is sufficient.",
+      "text": "Testing values of n"
+     },
+     {
+      "belief_id": "MAT-REALNUMBERS-K25-M17",
+      "why": "Student confuses rational approximations with prime factors.",
+      "text": "A factor of 10"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, remember that the relationship HCF(a, b) × LCM(a, b) = a × b is strictly valid only for two positive integers and does not extend to three or more numbers.",
+    "answer": "only for two positive integers",
+    "stem": "When is the relationship HCF × LCM = product of numbers valid?",
+    "options": [
+     {
+      "belief_id": "MAT-REALNUMBERS-K24-M15",
+      "why": "Student incorrectly applies the rule to three numbers.",
+      "text": "For any number of integers"
+     },
+     {
+      "belief_id": "MAT-REALNUMBERS-K22-M13",
+      "why": "Student confuses LCM magnitude with the product rule.",
+      "text": "When LCM is larger"
+     },
+     {
+      "belief_id": "MAT-REALNUMBERS-K29-M23",
+      "why": "Student applies irrational number logic to integers.",
+      "text": "For irrational numbers"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 19.9
+}

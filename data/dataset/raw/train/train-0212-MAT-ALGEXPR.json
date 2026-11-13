@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0212-MAT-ALGEXPR",
+  "topic_id": "MAT-ALGEXPR",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a step-by-step worked example",
+  "seed": 212
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1148,
+  "candidatesTokenCount": 1330,
+  "totalTokenCount": 2478,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1148
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-ALGEXPR-K20-M15",
+  "MAT-ALGEXPR-K23-M20",
+  "MAT-ALGEXPR-K17-M10",
+  "MAT-ALGEXPR-K14-M5",
+  "MAT-ALGEXPR-K20-M16",
+  "MAT-ALGEXPR-K24-M22",
+  "MAT-ALGEXPR-K18-M11",
+  "MAT-ALGEXPR-K17-M9",
+  "MAT-ALGEXPR-K22-M19",
+  "MAT-ALGEXPR-K26-M24",
+  "MAT-ALGEXPR-K15-M6",
+  "MAT-ALGEXPR-K13-M1",
+  "MAT-ALGEXPR-K22-M18",
+  "MAT-ALGEXPR-K11-M4"
+ ],
+ "response": {
+  "passage": "To simplify algebraic expressions, we must carefully follow the rules of distribution and grouping. First, consider the expression 3(x + 5). When multiplying a number outside a bracket, you must multiply it by every term inside, giving 3x + 15. A common mistake is to multiply only the first term, but the distributive property requires applying the factor to both. Second, when adding terms, we only combine like terms, which are terms with the exact same variables and exponents. For example, 2x and 5x are like terms and add to 7x, but 2x and 5x² are unlike because their powers differ. Adding them would not result in 7x³ or 7x². Third, when subtracting an entire expression like (4x - 2) from (7x + 5), you must change the sign of every term inside the second bracket. This becomes 7x + 5 - 4x + 2, which simplifies to 3x + 7. Finally, remember that identities like (a + b)² = a² + 2ab + b² are universal tools. When calculating 102², we can treat it as (100 + 2)², which equals 100² + 2(100)(2) + 2², resulting in 10404. This shows that identities are not just for letters but are powerful shortcuts for numbers too.",
+  "summary": "This guide explains how to correctly distribute numbers into brackets, combine only like terms, and apply signs during subtraction. It also demonstrates how algebraic identities serve as efficient shortcuts for numerical calculations.",
+  "items": [
+   {
+    "evidence": "When multiplying a number outside a bracket, you must multiply it by every term inside, giving 3x + 15.",
+    "answer": "3x + 15",
+    "stem": "What is the correct result of multiplying 3 by the expression (x + 5)?",
+    "options": [
+     {
+      "belief_id": "MAT-ALGEXPR-K20-M15",
+      "why": "Student multiplies only the first term inside the bracket.",
+      "text": "3x + 5"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K20-M16",
+      "why": "Student ignores the second term during distribution.",
+      "text": "3x + 5"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K13-M1",
+      "why": "Student treats the expression as a concatenated number.",
+      "text": "35"
+     }
+    ]
+   },
+   {
+    "evidence": "For example, 2x and 5x are like terms and add to 7x, but 2x and 5x² are unlike because their powers differ.",
+    "answer": "7x",
+    "stem": "What is the sum of 2x and 5x?",
+    "options": [
+     {
+      "belief_id": "MAT-ALGEXPR-K17-M9",
+      "why": "Student incorrectly adds the powers of the variables.",
+      "text": "7x²"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K17-M10",
+      "why": "Student thinks adding variables increases the exponent.",
+      "text": "7x³"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K15-M6",
+      "why": "Student incorrectly combines unlike terms into a product.",
+      "text": "7x²"
+     }
+    ]
+   },
+   {
+    "evidence": "This becomes 7x + 5 - 4x + 2, which simplifies to 3x + 7.",
+    "answer": "3x + 7",
+    "stem": "What is the result of subtracting (4x - 2) from (7x + 5)?",
+    "options": [
+     {
+      "belief_id": "MAT-ALGEXPR-K18-M11",
+      "why": "Student fails to distribute the negative to the second term.",
+      "text": "3x + 3"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K14-M5",
+      "why": "Student confuses term types during subtraction process.",
+      "text": "3x² + 7"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K11-M4",
+      "why": "Student misidentifies coefficients during the subtraction step.",
+      "text": "3 + 7"
+     }
+    ]
+   },
+   {
+    "evidence": "This shows that identities are not just for letters but are powerful shortcuts for numbers too.",
+    "answer": "powerful shortcuts",
+    "stem": "How should we view algebraic identities when working with numbers?",
+    "options": [
+     {
+      "belief_id": "MAT-ALGEXPR-K26-M24",
+      "why": "Student believes identities cannot be used for numbers.",
+      "text": "useless for numbers"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K22-M18",
+      "why": "Student assumes identities are just simple square sums.",
+      "text": "a² + b²"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K22-M19",
+      "why": "Student thinks identities only represent area of squares.",
+      "text": "area pictures"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 5.6
+}

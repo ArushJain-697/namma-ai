@@ -1,0 +1,484 @@
+{
+ "topic": {
+  "id": "SCI-PHY-WORKENERGY",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   9
+  ],
+  "title": "Work and energy",
+  "scope": "work in physics, kinetic and potential energy, conservation of energy, power, commercial unit of energy"
+ },
+ "model": "gemini-3-flash-preview",
+ "usage": {
+  "promptTokenCount": 834,
+  "candidatesTokenCount": 4116,
+  "totalTokenCount": 7496,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 834
+   }
+  ],
+  "thoughtsTokenCount": 2546,
+  "serviceTier": "standard"
+ },
+ "seconds": 26.0,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Scientific Work",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "concept of force",
+     "concept of displacement"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Energy Forms",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "mass and weight"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Conservation and Power",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "time measurement"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Conditions for Work",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Mathematical Work",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "multiplication"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Kinetic Energy",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "velocity"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Potential Energy",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "acceleration due to gravity"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Law of Conservation",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n6",
+     "n7"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Power",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "division"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Commercial Unit",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n9"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Displacement Requirement",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Force-Displacement Angle",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "W = Fs Formula",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "KE = 1/2 mv^2",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "PE = mgh",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n16",
+    "name": "Total Mechanical Energy",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n17",
+    "name": "P = W/t",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n18",
+    "name": "1 kWh = 3.6 MJ",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n11",
+    "statement": "If I push a heavy wall until I am exhausted, I have done a lot of work.",
+    "why": "Students confuse biological effort and fatigue with the physics definition of work.",
+    "fix": "In physics, work is only done when a force causes a displacement; if the wall doesn't move, work is zero.",
+    "probe": {
+     "question": "A student pushes a stationary truck for 1 hour but it doesn't budge. How much work is done?",
+     "wrong_answer": "A large amount of work because the student is tired."
+    },
+    "error_type": "everyday_language",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "push",
+     "wall",
+     "tired",
+     "exhausted",
+     "effort"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas in Science"
+   },
+   {
+    "key": "m2",
+    "node": "n12",
+    "statement": "A coolie carrying a suitcase on his head while walking horizontally is doing work on the suitcase.",
+    "why": "Students see movement and force and assume work must be happening.",
+    "fix": "Work is zero when the force (upward) is perpendicular to the displacement (horizontal).",
+    "probe": {
+     "question": "A person holds a 10kg box and walks 5m on a level floor. What is the work done by the lifting force?",
+     "wrong_answer": "50 Joules"
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "effort equals work",
+    "causes": [],
+    "trigger_cues": [
+     "coolie",
+     "head",
+     "horizontal",
+     "carrying",
+     "perpendicular"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic studies"
+   },
+   {
+    "key": "m3",
+    "node": "n14",
+    "statement": "If the speed of a car doubles, its kinetic energy also doubles.",
+    "why": "Students often assume linear relationships between variables.",
+    "fix": "Kinetic energy is proportional to the square of velocity, so doubling speed quadruples the energy.",
+    "probe": {
+     "question": "A car's speed increases from 10 m/s to 20 m/s. By what factor does its KE change?",
+     "wrong_answer": "It doubles."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "linear relationships apply to everything",
+    "causes": [],
+    "trigger_cues": [
+     "speed",
+     "double",
+     "velocity",
+     "kinetic",
+     "square"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m4",
+    "node": "n15",
+    "statement": "Potential energy depends on the path taken to reach a certain height.",
+    "why": "Students think a longer path (like a ramp) requires more energy to overcome.",
+    "fix": "Gravitational potential energy depends only on the vertical height difference, not the path taken.",
+    "probe": {
+     "question": "Object A is lifted vertically 2m. Object B is pushed up a 5m ramp to the same 2m height. Which has more PE?",
+     "wrong_answer": "Object B because the path is longer."
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "the process determines the final state",
+    "causes": [],
+    "trigger_cues": [
+     "path",
+     "ramp",
+     "stairs",
+     "vertical",
+     "height"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT textbook exercises"
+   },
+   {
+    "key": "m5",
+    "node": "n16",
+    "statement": "When a moving ball comes to a stop on the floor, its energy is destroyed.",
+    "why": "Students cannot see the heat or sound energy, so they assume the energy vanished.",
+    "fix": "Energy is never destroyed; it transforms into other forms like heat due to friction and sound.",
+    "probe": {
+     "question": "A rolling ball stops due to friction. Where did its kinetic energy go?",
+     "wrong_answer": "It was used up and now it is gone."
+    },
+    "error_type": "visible_only",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "stop",
+     "friction",
+     "destroyed",
+     "disappear",
+     "lost"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Concept Inventories in Physics"
+   },
+   {
+    "key": "m6",
+    "node": "n17",
+    "statement": "A person who finishes a job faster has done more work than a slower person.",
+    "why": "Students confuse the rate of doing work (power) with the total amount of work.",
+    "fix": "Work depends only on force and displacement; time only affects the power.",
+    "probe": {
+     "question": "Anil climbs stairs in 10s. Sunil climbs the same stairs in 20s. Who did more work?",
+     "wrong_answer": "Anil because he was faster."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "faster means more",
+    "causes": [],
+    "trigger_cues": [
+     "faster",
+     "time",
+     "rate",
+     "power",
+     "climb"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n10",
+    "statement": "The kilowatt-hour (kWh) is a unit of power.",
+    "why": "The presence of the word 'watt' leads students to associate it with power.",
+    "fix": "kWh is a unit of energy (Power x Time), used for commercial electricity billing.",
+    "probe": {
+     "question": "Your electricity bill says you used 50 units (kWh). What physical quantity is this?",
+     "wrong_answer": "Power"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar names mean similar things",
+    "causes": [],
+    "trigger_cues": [
+     "unit",
+     "bill",
+     "commercial",
+     "kilowatt-hour",
+     "electricity"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m8",
+    "node": "n6",
+    "statement": "Only living things or machines have energy.",
+    "why": "Students associate energy with the ability to move or 'life force'.",
+    "fix": "All objects, living or non-living, can possess energy based on their motion or position.",
+    "probe": {
+     "question": "Does a non-living rock sitting on a cliff have energy?",
+     "wrong_answer": "No, because it is not alive and not moving."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "only active things have properties",
+    "causes": [],
+    "trigger_cues": [
+     "living",
+     "machine",
+     "rock",
+     "possess",
+     "object"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Driver's Children's Ideas in Science"
+   },
+   {
+    "key": "m9",
+    "node": "n15",
+    "statement": "An object on the ground has zero potential energy.",
+    "why": "Students treat the ground as an absolute zero for energy.",
+    "fix": "Potential energy is relative; an object on the ground still has PE relative to a basement or a pit.",
+    "probe": {
+     "question": "If we dig a hole next to a ball on the ground, does the ball's potential energy change relative to the hole?",
+     "wrong_answer": "No, it is zero because it is on the ground."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "zero is an absolute floor",
+    "causes": [],
+    "trigger_cues": [
+     "ground",
+     "zero",
+     "reference",
+     "floor",
+     "surface"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m10",
+    "node": "n13",
+    "statement": "Work cannot be negative because it is not a vector.",
+    "why": "Students confuse the scalar nature of work with the inability to have a negative value.",
+    "fix": "Work is a scalar, but it can be negative if the force and displacement are in opposite directions.",
+    "probe": {
+     "question": "What is the sign of work done by friction on a sliding block?",
+     "wrong_answer": "Positive, because work is a scalar."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "scalars cannot be negative",
+    "causes": [],
+    "trigger_cues": [
+     "negative",
+     "scalar",
+     "friction",
+     "opposite",
+     "direction"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Physics Education Research"
+   },
+   {
+    "key": "m11",
+    "node": "n8",
+    "statement": "Batteries and fuels create energy.",
+    "why": "Language like 'generating power' or 'producing energy' suggests creation from nothing.",
+    "fix": "Batteries and fuels only transform stored chemical energy into other forms like electrical or heat energy.",
+    "probe": {
+     "question": "Where does the energy in a battery come from?",
+     "wrong_answer": "The battery creates it when you turn it on."
+    },
+    "error_type": "single_cause",
+    "root_belief": "sources create things from nothing",
+    "causes": [],
+    "trigger_cues": [
+     "create",
+     "battery",
+     "fuel",
+     "produce",
+     "generate"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m12",
+    "node": "n9",
+    "statement": "A more powerful engine always does more work than a less powerful one.",
+    "why": "Students equate 'power' with 'strength' or 'total capacity'.",
+    "fix": "A more powerful engine does work faster, but a less powerful engine can do more total work if it runs for a longer time.",
+    "probe": {
+     "question": "Engine A (100W) runs for 1 hour. Engine B (500W) runs for 1 minute. Which did more work?",
+     "wrong_answer": "Engine B because it is more powerful."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "strength and power are the same",
+    "causes": [],
+    "trigger_cues": [
+     "powerful",
+     "engine",
+     "more",
+     "total",
+     "capacity"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}

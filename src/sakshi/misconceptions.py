@@ -18,6 +18,7 @@ from dataclasses import dataclass, field
 
 from .text import content_stems
 
+GENERAL_WEIGHT = 0.6  # general-interest topics count 60% when ranking against syllabus topics
 DEFAULT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "data", "misconceptions")
 
 
@@ -45,8 +46,12 @@ class Match:
 
 class Library:
     def __init__(self, misconceptions: list[dict], concepts: list[dict], include_held_out: bool = True):
-        self.items = [m for m in misconceptions if not m.get("duplicate_of") and (include_held_out or not m.get("held_out"))]
-        self.by_id = {m["id"]: m for m in self.items}
+        usable = [m for m in misconceptions if not m.get("duplicate_of") and (include_held_out or not m.get("held_out"))]
+        # Generic reading-skill beliefs fit every passage, so they are kept out of topic matching and used only
+        # as the fallback menu (see diagnostic.generic_menu).
+        self.generic = [m for m in usable if m.get("subject") == "reading_skill"]
+        self.items = [m for m in usable if m.get("subject") != "reading_skill"]
+        self.by_id = {m["id"]: m for m in usable}
         self.concepts = {c["id"]: c for c in concepts}
         self.docs = [Counter(_doc_terms(m, m.get("topic", ""))) for m in self.items]
         self.lengths = [sum(d.values()) for d in self.docs]
@@ -83,7 +88,9 @@ class Library:
         for m, s in zip(self.items, scores):
             per_topic[m["topic_id"]].append(s)
         titles = {m["topic_id"]: m.get("topic", "") for m in self.items}
-        ranked = sorted(((sum(sorted(v, reverse=True)[:3]), t) for t, v in per_topic.items()), reverse=True)
+        # Syllabus topics are preferred: a general-interest topic (GEN-*) must clearly out-score them to win.
+        ranked = sorted(((sum(sorted(v, reverse=True)[:3]) * (GENERAL_WEIGHT if t.startswith("GEN-") else 1.0), t)
+                         for t, v in per_topic.items()), reverse=True)
         topics = [TopicHit(t, titles[t], round(s, 2)) for s, t in ranked[:n_topics] if s > 0]
         if not topics:
             return Match([], [])

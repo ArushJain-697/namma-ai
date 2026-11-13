@@ -1,0 +1,83 @@
+{
+ "job": {
+  "job": "train-0249-MAT-WHOLE",
+  "topic_id": "MAT-WHOLE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a conversation between a teacher and two students",
+  "seed": 249
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 558,
+  "candidatesTokenCount": 800,
+  "totalTokenCount": 1358,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 558
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-WHOLE-K12-M2",
+  "MAT-WHOLE-K13-M3"
+ ],
+ "response": {
+  "passage": "Teacher: Today, let us discuss the properties of whole numbers. Rohan, if we subtract 3 from 7, what do we get? Rohan: That is 4, teacher. Teacher: Correct. Now, what if we subtract 7 from 3? Rohan: That would also be 4, because subtraction is just finding the difference. Teacher: Actually, that is a common mistake. Subtraction is not commutative; 7 minus 3 is 4, but 3 minus 7 is not a whole number. Priya: I see. Does that mean 0 acts like a special number for subtraction, just like it does for addition? Teacher: Not quite, Priya. Adding 0 to any number keeps it the same, so 0 is the identity element for addition. However, if you subtract 0 from a number, the result is the number itself, but subtracting a number from 0 does not give you that number back. Therefore, 0 is not the identity element for subtraction. Remember, natural numbers start from 1, while whole numbers include 0 and all natural numbers. When we place these on a number line, whole numbers extend infinitely to the right, starting from 0. Always check the order of your numbers carefully before performing operations.",
+  "summary": "The passage explains that subtraction is not commutative and that 0 does not function as an identity element for subtraction. It also clarifies the difference between natural numbers and whole numbers on the number line.",
+  "items": [
+   {
+    "evidence": "Subtraction is not commutative; 7 minus 3 is 4, but 3 minus 7 is not a whole number.",
+    "answer": "not commutative",
+    "stem": "What is the correct mathematical property regarding the subtraction of two whole numbers?",
+    "options": [
+     {
+      "belief_id": "MAT-WHOLE-K12-M2",
+      "why": "Student incorrectly assumes subtraction order does not change the result.",
+      "text": "commutative"
+     }
+    ]
+   },
+   {
+    "evidence": "Therefore, 0 is not the identity element for subtraction.",
+    "answer": "not the identity element",
+    "stem": "Why is zero considered special in addition but not in subtraction?",
+    "options": [
+     {
+      "belief_id": "MAT-WHOLE-K13-M3",
+      "why": "Student incorrectly applies the addition identity rule to subtraction.",
+      "text": "the identity element"
+     }
+    ]
+   },
+   {
+    "evidence": "Remember, natural numbers start from 1, while whole numbers include 0 and all natural numbers.",
+    "answer": "include 0",
+    "stem": "How do whole numbers differ from natural numbers?",
+    "options": [
+     {
+      "belief_id": "MAT-WHOLE-K12-M2",
+      "why": "Student confuses set definitions with operational properties.",
+      "text": "are commutative"
+     }
+    ]
+   },
+   {
+    "evidence": "When we place these on a number line, whole numbers extend infinitely to the right, starting from 0.",
+    "answer": "starting from 0",
+    "stem": "Where do whole numbers begin on a number line?",
+    "options": [
+     {
+      "belief_id": "MAT-WHOLE-K13-M3",
+      "why": "Student associates zero with identity properties rather than position.",
+      "text": "at the identity"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 3.6
+}

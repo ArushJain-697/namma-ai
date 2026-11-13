@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0739-GENERIC-Comparing_quantities",
+  "topic_id": "MAT-COMPARINGQTY",
+  "split": "train",
+  "generic": true,
+  "theme": "Comparing quantities",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a news-style report about a real-world situation",
+  "seed": 739
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 712,
+  "candidatesTokenCount": 1209,
+  "totalTokenCount": 1921,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 712
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "In the bustling town of Kodaikanal, local strawberry farmers are facing a unique challenge this season. Mr. Arjun, the head of the Hillside Cooperative, reported that the farm at Green Valley produced 450 kilograms of strawberries this June. Meanwhile, the smaller plot at Misty Ridge yielded only 280 kilograms. The difference in output is primarily due to the installation of a new automated drip irrigation system at Green Valley, which ensures consistent water supply to the roots. While Misty Ridge relies on traditional rainfall, the efficiency of the new system allows the Green Valley plants to grow faster and produce more fruit. Local shopkeeper Mrs. Meena noted that because the Green Valley harvest is larger, the market price for their berries has dropped to 120 rupees per kilogram to encourage quick sales. In contrast, the rarer Misty Ridge berries are being sold at 180 rupees per kilogram. Residents are now debating whether the technology is worth the investment, as the cost of maintaining the irrigation system is quite high. Despite the debate, the cooperative plans to expand the system to all farms by next year to increase the total regional yield.",
+  "summary": "Kodaikanal strawberry farmers are comparing yields between two farms using different irrigation methods. The farm with the new automated system produced more fruit, leading to lower market prices compared to the traditional farm.",
+  "items": [
+   {
+    "evidence": "Mr. Arjun, the head of the Hillside Cooperative, reported that the farm at Green Valley produced 450 kilograms of strawberries this June.",
+    "answer": "450 kilograms",
+    "stem": "What was the total weight of strawberries harvested at the Green Valley farm?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Mistakenly picks the other number mentioned in the text.",
+      "text": "280 kilograms"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects the person named near the quantity in the sentence.",
+      "text": "Mr. Arjun"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Selects a true fact that does not answer the question.",
+      "text": "This June"
+     }
+    ]
+   },
+   {
+    "evidence": "The difference in output is primarily due to the installation of a new automated drip irrigation system at Green Valley, which ensures consistent water supply to the roots.",
+    "answer": "automated drip irrigation system",
+    "stem": "What caused the higher strawberry production at the Green Valley farm?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Reverses the cause and effect relationship mentioned in the text.",
+      "text": "Consistent water supply"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects the location named in the same sentence.",
+      "text": "Green Valley"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a true fact about the system that isn't the cause.",
+      "text": "Consistent water supply to the roots"
+     }
+    ]
+   },
+   {
+    "evidence": "Local shopkeeper Mrs. Meena noted that because the Green Valley harvest is larger, the market price for their berries has dropped to 120 rupees per kilogram to encourage quick sales.",
+    "answer": "120 rupees",
+    "stem": "What is the current market price for strawberries from the Green Valley farm?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Picks a different price mentioned elsewhere in the passage.",
+      "text": "180 rupees"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects the person named in the sentence.",
+      "text": "Mrs. Meena"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Provides a true statement about the goal of the price.",
+      "text": "To encourage quick sales"
+     }
+    ]
+   },
+   {
+    "evidence": "Despite the debate, the cooperative plans to expand the system to all farms by next year to increase the total regional yield.",
+    "answer": "increase the total regional yield",
+    "stem": "What is the main goal of expanding the irrigation system to all farms?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Assumes the goal applies to all farms without exception.",
+      "text": "To make all farms identical"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects the entity mentioned at the start of the sentence.",
+      "text": "The cooperative"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a true fact about the timing of the plan.",
+      "text": "By next year"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 12.6
+}

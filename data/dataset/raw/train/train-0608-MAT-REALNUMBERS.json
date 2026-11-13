@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0608-MAT-REALNUMBERS",
+  "topic_id": "MAT-REALNUMBERS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a rule explained with two contrasting examples",
+  "seed": 608
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1141,
+  "candidatesTokenCount": 1309,
+  "totalTokenCount": 2450,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1141
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-REALNUMBERS-K21-M11",
+  "MAT-REALNUMBERS-K24-M15",
+  "MAT-REALNUMBERS-K16-M5",
+  "MAT-REALNUMBERS-K10-M19",
+  "MAT-REALNUMBERS-K29-M23",
+  "MAT-REALNUMBERS-K22-M12",
+  "MAT-REALNUMBERS-K17-M6",
+  "MAT-REALNUMBERS-K27-M20",
+  "MAT-REALNUMBERS-K15-M3",
+  "MAT-REALNUMBERS-K28-M22",
+  "MAT-REALNUMBERS-K20-M10",
+  "MAT-REALNUMBERS-K22-M13",
+  "MAT-REALNUMBERS-K13-M2",
+  "MAT-REALNUMBERS-K25-M16"
+ ],
+ "response": {
+  "passage": "The Fundamental Theorem of Arithmetic states that every composite number can be expressed as a product of primes, and this representation is unique, apart from the order in which the prime factors occur. For example, 36 can be written as 2 × 2 × 3 × 3, which is the same as 3 × 3 × 2 × 2. You must continue splitting factors until only prime numbers remain; stopping at 4 or 9 is incorrect because they are composite. Furthermore, the relationship HCF(a, b) × LCM(a, b) = a × b is strictly valid only for two numbers. If you apply this to three numbers, such as 2, 4, and 6, the product of the numbers is 48, while the HCF × LCM is only 24, showing the formula fails. Finally, remember that rational numbers include any value that can be expressed as a fraction p/q, where p and q are integers and q is not zero. This means that simple decimals like 0.5, which is 1/2, or negative integers like -3, which is -3/1, are perfectly rational. Do not be misled by the appearance of a number; always check if it fits the definition of a ratio of two integers.",
+  "summary": "Every composite number has a unique prime factorization, and the HCF-LCM product rule is limited to two numbers. Rational numbers are defined by their ability to be written as a fraction of two integers.",
+  "items": [
+   {
+    "evidence": "The Fundamental Theorem of Arithmetic states that every composite number can be expressed as a product of primes, and this representation is unique, apart from the order in which the prime factors occur.",
+    "answer": "the order",
+    "stem": "What does not change the uniqueness of a prime factorization?",
+    "options": [
+     {
+      "belief_id": "MAT-REALNUMBERS-K16-M5",
+      "why": "Student thinks changing order creates a different factorization.",
+      "text": "the prime factors"
+     },
+     {
+      "belief_id": "MAT-REALNUMBERS-K13-M2",
+      "why": "Student believes only odd numbers are prime.",
+      "text": "the odd numbers"
+     },
+     {
+      "belief_id": "MAT-REALNUMBERS-K15-M3",
+      "why": "Student thinks factorization stops at composite factors.",
+      "text": "the composite factors"
+     }
+    ]
+   },
+   {
+    "evidence": "You must continue splitting factors until only prime numbers remain; stopping at 4 or 9 is incorrect because they are composite.",
+    "answer": "only prime numbers",
+    "stem": "At what point should you stop splitting the factors of a number?",
+    "options": [
+     {
+      "belief_id": "MAT-REALNUMBERS-K15-M3",
+      "why": "Student believes stopping at 4 or 9 is acceptable.",
+      "text": "at 4 or 9"
+     },
+     {
+      "belief_id": "MAT-REALNUMBERS-K17-M6",
+      "why": "Student confuses powers with multiplication of factors.",
+      "text": "at 36"
+     },
+     {
+      "belief_id": "MAT-REALNUMBERS-K16-M5",
+      "why": "Student thinks order changes the result.",
+      "text": "at the first order"
+     }
+    ]
+   },
+   {
+    "evidence": "If you apply this to three numbers, such as 2, 4, and 6, the product of the numbers is 48, while the HCF × LCM is only 24, showing the formula fails.",
+    "answer": "only two numbers",
+    "stem": "For how many numbers is the HCF and LCM product relationship valid?",
+    "options": [
+     {
+      "belief_id": "MAT-REALNUMBERS-K24-M15",
+      "why": "Student incorrectly assumes the rule applies to three numbers.",
+      "text": "three numbers"
+     },
+     {
+      "belief_id": "MAT-REALNUMBERS-K22-M13",
+      "why": "Student thinks LCM must be the product.",
+      "text": "any number of integers"
+     },
+     {
+      "belief_id": "MAT-REALNUMBERS-K21-M11",
+      "why": "Student thinks HCF does not exist for some sets.",
+      "text": "only numbers with common factors"
+     }
+    ]
+   },
+   {
+    "evidence": "This means that simple decimals like 0.5, which is 1/2, or negative integers like -3, which is -3/1, are perfectly rational.",
+    "answer": "perfectly rational",
+    "stem": "How should we classify numbers like 0.5 or -3?",
+    "options": [
+     {
+      "belief_id": "MAT-REALNUMBERS-K10-M19",
+      "why": "Student believes decimals or negatives cannot be rational.",
+      "text": "not rational"
+     },
+     {
+      "belief_id": "MAT-REALNUMBERS-K25-M16",
+      "why": "Student thinks long decimals are irrational.",
+      "text": "irrational"
+     },
+     {
+      "belief_id": "MAT-REALNUMBERS-K28-M22",
+      "why": "Student thinks rationality depends on individual digits.",
+      "text": "partially rational"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.1
+}

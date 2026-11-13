@@ -1,0 +1,488 @@
+{
+ "topic": {
+  "id": "SOC-HIS-PRINT",
+  "subject": "social",
+  "strand": "history",
+  "grades": [
+   10
+  ],
+  "title": "Print culture and the modern world",
+  "scope": "printing in China, Gutenberg, print and reformation, print in India, debates, censorship"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 831,
+  "candidatesTokenCount": 1496,
+  "totalTokenCount": 2327,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 831
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 35.5,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Origins of Print",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "ancient civilizations"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "The Print Revolution",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "industrial revolution"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Print in India",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "colonialism"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Woodblock printing",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "handcrafting"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Gutenberg press",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "mechanical engineering"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Impact of print",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "social change"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Colonial print culture",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "colonial administration"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Religious debates",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": [
+     "religious reform"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "China used woodblocks",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Gutenberg invented movable type",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Print led to Reformation",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Vernacular press act",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Print created public sphere",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Print and women's education",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n10",
+    "statement": "Gutenberg was the first person to ever use movable type.",
+    "why": "Textbooks emphasize his press, ignoring earlier Asian developments.",
+    "fix": "Gutenberg developed the mechanical printing press in Europe, but movable type technology existed earlier in China and Korea.",
+    "probe": {
+     "question": "Who invented movable type printing?",
+     "wrong_answer": "Johannes Gutenberg"
+    },
+    "error_type": "confuses_people_or_places",
+    "root_belief": "Western inventions are the only significant ones.",
+    "causes": [],
+    "trigger_cues": [
+     "gutenberg",
+     "movable type",
+     "invention",
+     "press",
+     "europe"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on history of technology"
+   },
+   {
+    "key": "m2",
+    "node": "n11",
+    "statement": "The printing press was the sole reason the Reformation happened.",
+    "why": "Students simplify complex historical processes into single events.",
+    "fix": "Print helped spread ideas quickly, but the Reformation was driven by deep-seated religious and political grievances.",
+    "probe": {
+     "question": "What caused the Reformation?",
+     "wrong_answer": "The invention of the printing press."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "one event has one single cause",
+    "causes": [],
+    "trigger_cues": [
+     "reformation",
+     "martin luther",
+     "print",
+     "spread",
+     "ideas"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n12",
+    "statement": "The Vernacular Press Act banned all newspapers in India.",
+    "why": "Students confuse 'censorship' with 'total prohibition'.",
+    "fix": "The Act gave the government power to censor reports and editorials in vernacular newspapers, not ban them entirely.",
+    "probe": {
+     "question": "What did the Vernacular Press Act do?",
+     "wrong_answer": "It shut down all Indian newspapers."
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "authority has absolute power",
+    "causes": [],
+    "trigger_cues": [
+     "vernacular",
+     "press act",
+     "censorship",
+     "government",
+     "newspapers"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n14",
+    "statement": "Print culture immediately made all Indian women literate.",
+    "why": "Students assume that the availability of books automatically leads to universal literacy.",
+    "fix": "Print culture provided the means for women to read, but social barriers and patriarchal norms meant literacy rates grew very slowly.",
+    "probe": {
+     "question": "How did print affect women in 19th century India?",
+     "wrong_answer": "It made all women literate overnight."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "availability equals usage",
+    "causes": [],
+    "trigger_cues": [
+     "women",
+     "literacy",
+     "print",
+     "education",
+     "social reform"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "id": "m5",
+    "node": "n4",
+    "statement": "Woodblock printing was first developed in Europe and then spread to China.",
+    "why": "Students associate printing mainly with Europe because Gutenberg dominates the chapter, so they assume all printing began there.",
+    "fix": "Woodblock printing began in China, Japan and Korea. Marco Polo brought the technique and woodblock books to Italy in the late 1200s, and from there it spread across Europe.",
+    "probe": {
+     "question": "Where did woodblock printing originate, and how did it reach Europe?",
+     "wrong_answer": "It began in Europe and was carried to China by European traders."
+    },
+    "error_type": "confuses_people_or_places",
+    "root_belief": "Europe invented every major printing technology first",
+    "causes": [],
+    "trigger_cues": [
+     "woodblock",
+     "origin",
+     "europe",
+     "china",
+     "marco polo",
+     "first"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 10 History, Chapter 5",
+    "key": "m5"
+   },
+   {
+    "id": "m6",
+    "node": "n4",
+    "statement": "Woodblock books in China were printed mainly for ordinary readers and were widely read by common people from the start.",
+    "why": "Students assume that printing meant mass readership immediately, ignoring that early Chinese printing was controlled by the state.",
+    "fix": "In China the imperial state was the major producer of printed material. Textbooks for the civil service examinations were printed in large numbers. Reading for pleasure among the wider public grew later, in the 17th century, as urban culture developed.",
+    "probe": {
+     "question": "Who were the main producers and users of printed books in early imperial China?",
+     "wrong_answer": "Ordinary villagers and common people, who read printed books for entertainment."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "New technology immediately reaches and serves ordinary people",
+    "causes": [],
+    "trigger_cues": [
+     "china",
+     "imperial state",
+     "civil service",
+     "examination",
+     "books",
+     "readers",
+     "common people"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 10 History, Chapter 5",
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n5",
+    "statement": "Gutenberg's press was based on a completely new machine that had no earlier model.",
+    "why": "Students think an invention appears from nothing and overlook what it was adapted from.",
+    "fix": "Gutenberg adapted the olive press and the wine press for his printing machine. He also developed metal moulds for casting letters of the alphabet. The first book he printed was the Bible, around 1448.",
+    "probe": {
+     "question": "What earlier machines did Gutenberg adapt to build his printing press?",
+     "wrong_answer": "None, because he designed an entirely new machine with no earlier model."
+    },
+    "error_type": "other",
+    "root_belief": "Inventions arise suddenly without building on earlier technology",
+    "causes": [],
+    "trigger_cues": [
+     "gutenberg",
+     "olive press",
+     "wine press",
+     "machine",
+     "invented",
+     "adapted",
+     "bible"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 10 History, Chapter 5",
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n5",
+    "statement": "Printing with Gutenberg's press made books so cheap and fast that thousands of copies were printed within the first few years.",
+    "why": "Students picture modern printing speeds and ignore the real figures given in the chapter.",
+    "fix": "Gutenberg's press could print about 250 sheets on one side per hour. By 1550 the press had produced about 20 million copies in Europe. The 1450 start was slow and gradual, and the output grew only over time.",
+    "probe": {
+     "question": "About how many sheets could Gutenberg's press print per hour, and was the output huge from the start?",
+     "wrong_answer": "Thousands of sheets per hour, so output was huge right from the beginning."
+    },
+    "error_type": "numerical_misreading",
+    "root_belief": "Early machines worked at modern speeds",
+    "causes": [],
+    "trigger_cues": [
+     "gutenberg",
+     "250 sheets",
+     "per hour",
+     "speed",
+     "copies",
+     "millions",
+     "fast"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 10 History, Chapter 5",
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n6",
+    "statement": "After print arrived, everyone in Europe could read, so even the poor and illiterate gained access to books easily.",
+    "why": "Students think availability of print equals the ability to read, forgetting widespread illiteracy in the 16th century.",
+    "fix": "Many people could not read, so books reached them indirectly. Printers adopted oral methods: books were read aloud at village gatherings and in taverns, which let illiterate people listen. Literacy spread gradually, and by the 18th century it was high in some parts of Europe.",
+    "probe": {
+     "question": "How did illiterate people in 16th-century Europe come into contact with printed ideas?",
+     "wrong_answer": "They did not, because only literate people could be reached by print."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Printing automatically made everyone able to read",
+    "causes": [],
+    "trigger_cues": [
+     "print",
+     "illiterate",
+     "read aloud",
+     "tavern",
+     "popular literature",
+     "europe",
+     "literacy"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "History education research on textbook-based learning; NCERT Class 10 History, Chapter 5",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n7",
+    "statement": "The British government allowed free press in India throughout and never tried to control printed material.",
+    "why": "Students link colonial rule with modern administration and assume it gave free speech, ignoring censorship laws.",
+    "fix": "The British tried to control the press. Warren Hastings's period saw early newspapers, but later the Press Regulations and 1878's Vernacular Press Act were used to censor nationalist writing, while Governor-General Bentinck's 1835 reforms eased controls for a while. Control and relaxation alternated.",
+    "probe": {
+     "question": "Did the colonial government place controls on Indian newspapers?",
+     "wrong_answer": "No, newspapers were completely free under British rule."
+    },
+    "error_type": "presentism",
+    "root_belief": "Colonial governments respected press freedom like modern states",
+    "causes": [],
+    "trigger_cues": [
+     "british",
+     "press",
+     "censorship",
+     "control",
+     "newspapers",
+     "colonial",
+     "freedom"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 10 History, Chapter 5",
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n8",
+    "statement": "Religious debates in India through print were only between Hindus and Muslims.",
+    "why": "Students reduce all religious controversy to two communities and miss the internal reform debates and other groups.",
+    "fix": "Print fuelled debates inside communities too. Reformers such as Rammohan Roy criticised practices like sati, and orthodox groups opposed them, with Samvad Kaumudi and Sambad Kaumudi publications. Hindu groups, Muslim ulama, and others debated reform, with Deoband seminary issuing fatwas in print.",
+    "probe": {
+     "question": "Who took part in the religious debates carried on through print in 19th-century India?",
+     "wrong_answer": "Only Hindus against Muslims, with no debate within a community."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Religious debates were only between two communities",
+    "causes": [],
+    "trigger_cues": [
+     "religious debates",
+     "print",
+     "rammohan roy",
+     "sati",
+     "ulama",
+     "reform",
+     "orthodox"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 10 History, Chapter 5",
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n13",
+    "statement": "The public sphere created by print meant that only the government and elite could take part in public discussion.",
+    "why": "Students think printed material belonged to the powerful and miss the idea of open, critical debate among ordinary readers.",
+    "fix": "Print created a public sphere where ideas were debated openly by ordinary readers, spread through newspapers, pamphlets and reading societies. Print encouraged people to question traditions, authority and the Church, and it helped spread ideas of the Enlightenment that challenged absolute authority.",
+    "probe": {
+     "question": "What does the idea of a 'public sphere' created by print mean?",
+     "wrong_answer": "Discussion and decisions remained limited to the king, government and nobles."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Print served rulers rather than public debate",
+    "causes": [],
+    "trigger_cues": [
+     "public sphere",
+     "print",
+     "debate",
+     "enlightenment",
+     "newspapers",
+     "reading",
+     "authority"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 10 History, Chapter 5",
+    "key": "m12"
+   }
+  ]
+ },
+ "problems": [
+  "n12: dropped cyclic prereq n7",
+  "n13: dropped cyclic prereq n6",
+  "n14: dropped cyclic prereq n7",
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

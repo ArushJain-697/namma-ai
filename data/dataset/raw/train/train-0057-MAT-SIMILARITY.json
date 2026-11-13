@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0057-MAT-SIMILARITY",
+  "topic_id": "MAT-SIMILARITY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a passage that shows a common wrong method and corrects it",
+  "seed": 57
+ },
+ "model": "gemini-3.1-flash-lite/key3",
+ "usage": {
+  "promptTokenCount": 1210,
+  "candidatesTokenCount": 1220,
+  "totalTokenCount": 2430,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1210
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-SIMILARITY-K24-M16",
+  "MAT-SIMILARITY-K28-M22",
+  "MAT-SIMILARITY-K19-M10",
+  "MAT-SIMILARITY-K24-M17",
+  "MAT-SIMILARITY-K20-M11",
+  "MAT-SIMILARITY-K27-M21",
+  "MAT-SIMILARITY-K15-M4",
+  "MAT-SIMILARITY-K16-M6",
+  "MAT-SIMILARITY-K14-M3",
+  "MAT-SIMILARITY-K26-M20",
+  "MAT-SIMILARITY-K23-M14",
+  "MAT-SIMILARITY-K25-M18",
+  "MAT-SIMILARITY-K18-M8",
+  "MAT-SIMILARITY-K16-M5"
+ ],
+ "response": {
+  "passage": "In geometry, students often make mistakes when identifying similar triangles. For instance, consider two triangles where two sides are proportional and one angle is equal. A common error is assuming that any angle works, but the SAS similarity criterion strictly requires the equal angle to be the included angle between the proportional sides. Another frequent misconception involves the ratio of areas. If two triangles are similar, the ratio of their areas is equal to the square of the ratio of their corresponding sides, not just the ratio itself. Students often incorrectly assume that doubling the side lengths of a triangle will only double its area, whereas the area actually increases by a factor of four. Furthermore, when applying the Basic Proportionality Theorem, students sometimes mistakenly believe that any line drawn inside a triangle that meets two sides creates parallel segments. However, the theorem only applies when the line is parallel to the third side, dividing the other two sides proportionally. Finally, remember that similarity is not about adding a fixed length to sides. Similar figures maintain a constant ratio between corresponding sides, meaning they are scaled versions of each other, not just shapes with added dimensions. By focusing on these specific rules, you can avoid common pitfalls in your geometry exams.",
+  "summary": "Similar triangles require specific criteria like the included angle for SAS and squared ratios for areas. Understanding that scaling sides changes area quadratically and that BPT requires parallel lines is essential for accuracy.",
+  "items": [
+   {
+    "evidence": "the SAS similarity criterion strictly requires the equal angle to be the included angle between the proportional sides.",
+    "answer": "the included angle",
+    "stem": "Which angle must be equal for two triangles to be similar by the SAS criterion?",
+    "options": [
+     {
+      "belief_id": "MAT-SIMILARITY-K24-M16",
+      "why": "Student thinks any angle works with proportional sides.",
+      "text": "any equal angle"
+     },
+     {
+      "belief_id": "MAT-SIMILARITY-K24-M17",
+      "why": "Student confuses SAS with SSA criteria.",
+      "text": "any side or angle"
+     },
+     {
+      "belief_id": "MAT-SIMILARITY-K23-M14",
+      "why": "Student thinks only two ratios are needed.",
+      "text": "two equal sides"
+     }
+    ]
+   },
+   {
+    "evidence": "the ratio of their areas is equal to the square of the ratio of their corresponding sides, not just the ratio itself.",
+    "answer": "square of the ratio",
+    "stem": "How is the ratio of areas of similar triangles calculated?",
+    "options": [
+     {
+      "belief_id": "MAT-SIMILARITY-K27-M21",
+      "why": "Student thinks area ratio equals side ratio.",
+      "text": "ratio of sides"
+     },
+     {
+      "belief_id": "MAT-SIMILARITY-K28-M22",
+      "why": "Student incorrectly squares only one part.",
+      "text": "ratio of 4:3"
+     },
+     {
+      "belief_id": "MAT-SIMILARITY-K26-M20",
+      "why": "Student thinks area scales linearly.",
+      "text": "doubled side ratio"
+     }
+    ]
+   },
+   {
+    "evidence": "the theorem only applies when the line is parallel to the third side, dividing the other two sides proportionally.",
+    "answer": "parallel to the third side",
+    "stem": "Under what condition does the Basic Proportionality Theorem apply to a line inside a triangle?",
+    "options": [
+     {
+      "belief_id": "MAT-SIMILARITY-K19-M10",
+      "why": "Student thinks any line works.",
+      "text": "any line meeting two sides"
+     },
+     {
+      "belief_id": "MAT-SIMILARITY-K20-M11",
+      "why": "Student thinks it requires midpoints.",
+      "text": "when connecting midpoints"
+     },
+     {
+      "belief_id": "MAT-SIMILARITY-K18-M8",
+      "why": "Student confuses part-to-part with part-to-whole.",
+      "text": "when comparing part to whole"
+     }
+    ]
+   },
+   {
+    "evidence": "Similar figures maintain a constant ratio between corresponding sides, meaning they are scaled versions of each other, not just shapes with added dimensions.",
+    "answer": "constant ratio",
+    "stem": "What is the relationship between the sides of similar figures?",
+    "options": [
+     {
+      "belief_id": "MAT-SIMILARITY-K15-M4",
+      "why": "Student thinks they differ by added length.",
+      "text": "fixed added length"
+     },
+     {
+      "belief_id": "MAT-SIMILARITY-K16-M6",
+      "why": "Student thinks position determines correspondence.",
+      "text": "same page position"
+     },
+     {
+      "belief_id": "MAT-SIMILARITY-K14-M3",
+      "why": "Student ignores angle equality.",
+      "text": "equal sides only"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 5.8
+}

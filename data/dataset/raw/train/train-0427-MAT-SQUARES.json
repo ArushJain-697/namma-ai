@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0427-MAT-SQUARES",
+  "topic_id": "MAT-SQUARES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a step-by-step worked example",
+  "seed": 427
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 1091,
+  "candidatesTokenCount": 1248,
+  "totalTokenCount": 2339,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1091
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-SQUARES-K20-M14",
+  "MAT-SQUARES-K14-M7",
+  "MAT-SQUARES-K25-M21",
+  "MAT-SQUARES-K19-M13",
+  "MAT-SQUARES-K28-M24",
+  "MAT-SQUARES-K12-M5",
+  "MAT-SQUARES-K11-M4",
+  "MAT-SQUARES-K23-M19",
+  "MAT-SQUARES-K20-M15",
+  "MAT-SQUARES-K24-M20",
+  "MAT-SQUARES-K14-M8",
+  "MAT-SQUARES-K15-M9",
+  "MAT-SQUARES-K10-M1",
+  "MAT-SQUARES-K29-M25"
+ ],
+ "response": {
+  "passage": "Understanding squares and cubes requires careful attention to how we multiply numbers. When you calculate the square of a negative number, such as (-5)², you multiply -5 by -5, which results in a positive 25. This is because the product of two negative numbers is always positive. Similarly, when finding the square root of a number like 64, you are looking for a number that, when multiplied by itself, equals 64. Since 8 × 8 is 64, the square root is 8, not 32. Moving to cubes, a perfect cube is identified by grouping its prime factors into sets of three. For example, 27 is 3 × 3 × 3, so its cube root is 3, not 9. Finally, when working with large numbers, remember that the number of zeros in a square is doubled. If you square 200, you multiply 200 by 200, which gives 40,000. This result has four zeros, not two. Always check your work by verifying the multiplication rather than using shortcuts or assuming the root is simply a fraction of the original number.",
+  "summary": "This passage explains how to correctly calculate squares and cubes by focusing on multiplication rules. It clarifies common errors regarding negative numbers, roots, and the number of zeros in squares.",
+  "items": [
+   {
+    "evidence": "When you calculate the square of a negative number, such as (-5)², you multiply -5 by -5, which results in a positive 25.",
+    "answer": "positive 25",
+    "stem": "What is the correct result of squaring negative five?",
+    "options": [
+     {
+      "belief_id": "MAT-SQUARES-K14-M7",
+      "why": "Student thinks squaring a negative number results in a negative.",
+      "text": "-25"
+     },
+     {
+      "belief_id": "MAT-SQUARES-K10-M1",
+      "why": "Student multiplies the base by the exponent instead of squaring.",
+      "text": "-10"
+     },
+     {
+      "belief_id": "MAT-SQUARES-K14-M8",
+      "why": "Student confuses the square root of a negative with a square.",
+      "text": "-5"
+     }
+    ]
+   },
+   {
+    "evidence": "Since 8 × 8 is 64, the square root is 8, not 32.",
+    "answer": "8",
+    "stem": "What is the square root of sixty-four?",
+    "options": [
+     {
+      "belief_id": "MAT-SQUARES-K19-M13",
+      "why": "Student assumes the root is half of the original number.",
+      "text": "32"
+     },
+     {
+      "belief_id": "MAT-SQUARES-K28-M24",
+      "why": "Student guesses the nearest integer root incorrectly.",
+      "text": "7"
+     },
+     {
+      "belief_id": "MAT-SQUARES-K10-M1",
+      "why": "Student divides the number by two instead of finding the root.",
+      "text": "16"
+     }
+    ]
+   },
+   {
+    "evidence": "For example, 27 is 3 × 3 × 3, so its cube root is 3, not 9.",
+    "answer": "3",
+    "stem": "What is the cube root of twenty-seven?",
+    "options": [
+     {
+      "belief_id": "MAT-SQUARES-K25-M21",
+      "why": "Student assumes the cube root is one third of the number.",
+      "text": "9"
+     },
+     {
+      "belief_id": "MAT-SQUARES-K24-M20",
+      "why": "Student incorrectly groups factors in pairs for a cube.",
+      "text": "6"
+     },
+     {
+      "belief_id": "MAT-SQUARES-K23-M19",
+      "why": "Student believes the root must be a non-perfect cube ending.",
+      "text": "27"
+     }
+    ]
+   },
+   {
+    "evidence": "If you square 200, you multiply 200 by 200, which gives 40,000.",
+    "answer": "40,000",
+    "stem": "What is the square of two hundred?",
+    "options": [
+     {
+      "belief_id": "MAT-SQUARES-K12-M5",
+      "why": "Student believes the number of zeros remains the same.",
+      "text": "4,200"
+     },
+     {
+      "belief_id": "MAT-SQUARES-K10-M1",
+      "why": "Student multiplies the number by the exponent two.",
+      "text": "400"
+     },
+     {
+      "belief_id": "MAT-SQUARES-K11-M4",
+      "why": "Student incorrectly assumes any number with zeros is a square.",
+      "text": "20,000"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.0
+}

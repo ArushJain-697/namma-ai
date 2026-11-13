@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0668-GENERIC-a_street_food_stall",
+  "topic_id": null,
+  "split": "train",
+  "generic": true,
+  "theme": "a street food stall",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a cause-and-effect explanation",
+  "seed": 668
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 712,
+  "candidatesTokenCount": 1110,
+  "totalTokenCount": 1822,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 712
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "At the corner of MG Road, Uncle Ramesh runs a popular stall selling spicy bhel puri. He started this business in 2012, serving office workers who rush out during their lunch break. The stall remains crowded because the aroma of his special tamarind chutney attracts hungry passersby from three blocks away. Last Tuesday, a local food blogger named Priya visited the stall to film a video. She noticed that the crowd size increases significantly whenever Ramesh adds extra roasted peanuts to the mixture. Because the peanuts provide a satisfying crunch, customers are willing to wait in long queues for their snack. Ramesh insists that the secret to his success is not just the ingredients, but the speed at which he serves each plate. He can prepare 45 plates in just one hour, ensuring that no one stays hungry for too long. While some nearby shopkeepers complain about the noise, the stall remains a staple of the neighborhood. Ramesh plans to expand his menu next year, hoping to serve even more people in the bustling city.",
+  "summary": "Uncle Ramesh operates a successful bhel puri stall on MG Road that has been popular since 2012. His business thrives because his unique chutney and crunchy peanuts attract many hungry customers.",
+  "items": [
+   {
+    "evidence": "He started this business in 2012, serving office workers who rush out during their lunch break.",
+    "answer": "2012",
+    "stem": "In what year did the bhel puri stall begin its operations?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Mistakes a different number in the text for the answer.",
+      "text": "45"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects a named entity near the question words.",
+      "text": "MG Road"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Provides a true fact that does not answer the question.",
+      "text": "Lunch break"
+     }
+    ]
+   },
+   {
+    "evidence": "The stall remains crowded because the aroma of his special tamarind chutney attracts hungry passersby from three blocks away.",
+    "answer": "aroma of his special tamarind chutney",
+    "stem": "What is the primary reason the stall stays crowded?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Reverses the cause and effect relationship.",
+      "text": "The stall being crowded"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects a person mentioned in the sentence.",
+      "text": "Uncle Ramesh"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a true detail that is not the cause.",
+      "text": "Three blocks away"
+     }
+    ]
+   },
+   {
+    "evidence": "Because the peanuts provide a satisfying crunch, customers are willing to wait in long queues for their snack.",
+    "answer": "satisfying crunch",
+    "stem": "Why do customers wait in long lines at the stall?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Interprets the word 'crunch' as a physical sound only.",
+      "text": "Loud noise"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects a person mentioned in the passage.",
+      "text": "Priya"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Mentions a true fact that is not the reason.",
+      "text": "Roasted peanuts"
+     }
+    ]
+   },
+   {
+    "evidence": "He can prepare 45 plates in just one hour, ensuring that no one stays hungry for too long.",
+    "answer": "45 plates",
+    "stem": "How much food is Ramesh able to make within sixty minutes?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Selects a number from the text incorrectly.",
+      "text": "Three blocks"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Assumes a specific rate applies to all stalls.",
+      "text": "Every food stall"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects a person mentioned in the text.",
+      "text": "Uncle Ramesh"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.4
+}

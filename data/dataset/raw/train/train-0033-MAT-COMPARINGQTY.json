@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0033-MAT-COMPARINGQTY",
+  "topic_id": "MAT-COMPARINGQTY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a conversation between a teacher and two students",
+  "seed": 33
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 1080,
+  "candidatesTokenCount": 1290,
+  "totalTokenCount": 2370,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1080
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-COMPARINGQTY-K9-M5",
+  "MAT-COMPARINGQTY-K9-M4",
+  "MAT-COMPARINGQTY-K8-M2",
+  "MAT-COMPARINGQTY-K10-M7",
+  "MAT-COMPARINGQTY-K7-M1",
+  "MAT-COMPARINGQTY-K15-M12",
+  "MAT-COMPARINGQTY-K8-M3",
+  "MAT-COMPARINGQTY-K16-M14",
+  "MAT-COMPARINGQTY-K23-M21",
+  "MAT-COMPARINGQTY-K15-M13",
+  "MAT-COMPARINGQTY-K17-M16",
+  "MAT-COMPARINGQTY-K22-M19",
+  "MAT-COMPARINGQTY-K25-M24",
+  "MAT-COMPARINGQTY-K12-M10"
+ ],
+ "response": {
+  "passage": "Teacher: Today, let’s discuss how percentages work in real life. Rohan, if a shopkeeper offers a 10% discount on a shirt marked at ₹500, how do we calculate the final price? Rohan: I think we just take 10% of the selling price, so it would be ₹50. Teacher: Actually, discount is always calculated on the marked price, not the selling price. Now, Priya, if an item’s price increases by 20% and then decreases by 20%, is the final price the same as the original? Priya: Yes, it returns to the original price because the percentages are equal. Teacher: That is a common mistake. The second 20% decrease applies to the new, higher price, so you lose more than you gained. Also, remember that percentages can represent values larger than 100%, such as a 150% increase in production. Finally, when calculating simple interest, always ensure the time is in years. If the rate is yearly, you cannot simply plug in months; you must convert them to years first. For instance, six months is 0.5 years. If you use months directly, your interest calculation will be completely wrong. Always be careful with your base values, as they determine the accuracy of your entire calculation.",
+  "summary": "This passage explains that discounts are calculated on marked prices and that percentage changes are not reversible. It also clarifies that percentages can exceed 100% and that time must be converted to years for interest calculations.",
+  "items": [
+   {
+    "evidence": "Actually, discount is always calculated on the marked price, not the selling price.",
+    "answer": "marked price",
+    "stem": "On which value should a shopkeeper calculate the discount percentage?",
+    "options": [
+     {
+      "belief_id": "MAT-COMPARINGQTY-K17-M16",
+      "why": "Student incorrectly believes discount is based on the selling price.",
+      "text": "selling price"
+     },
+     {
+      "belief_id": "MAT-COMPARINGQTY-K8-M2",
+      "why": "Student assumes the percentage amount is constant regardless of base.",
+      "text": "10% of any quantity"
+     },
+     {
+      "belief_id": "MAT-COMPARINGQTY-K15-M12",
+      "why": "Student confuses profit base with discount base.",
+      "text": "profit margin"
+     }
+    ]
+   },
+   {
+    "evidence": "The second 20% decrease applies to the new, higher price, so you lose more than you gained.",
+    "answer": "lose more than you gained",
+    "stem": "What happens to the final price after a 20% increase followed by a 20% decrease?",
+    "options": [
+     {
+      "belief_id": "MAT-COMPARINGQTY-K12-M10",
+      "why": "Student believes percentage changes cancel out perfectly.",
+      "text": "returns to the original price"
+     },
+     {
+      "belief_id": "MAT-COMPARINGQTY-K15-M13",
+      "why": "Student assumes percentage gains and losses always cancel.",
+      "text": "no profit, no loss"
+     },
+     {
+      "belief_id": "MAT-COMPARINGQTY-K16-M14",
+      "why": "Student assumes profit is just the total amount sold.",
+      "text": "a larger profit"
+     }
+    ]
+   },
+   {
+    "evidence": "Also, remember that percentages can represent values larger than 100%, such as a 150% increase in production.",
+    "answer": "larger than 100%",
+    "stem": "What is true about the range of possible percentage values?",
+    "options": [
+     {
+      "belief_id": "MAT-COMPARINGQTY-K10-M7",
+      "why": "Student believes percentages are capped at 100.",
+      "text": "cannot exceed 100%"
+     },
+     {
+      "belief_id": "MAT-COMPARINGQTY-K7-M1",
+      "why": "Student thinks percent means the number itself.",
+      "text": "must be 100 items"
+     },
+     {
+      "belief_id": "MAT-COMPARINGQTY-K8-M3",
+      "why": "Student confuses percentage magnitude with quantity size.",
+      "text": "always the largest quantity"
+     }
+    ]
+   },
+   {
+    "evidence": "If the rate is yearly, you cannot simply plug in months; you must convert them to years first.",
+    "answer": "convert them to years",
+    "stem": "How should you handle time when calculating simple interest with a yearly rate?",
+    "options": [
+     {
+      "belief_id": "MAT-COMPARINGQTY-K22-M19",
+      "why": "Student thinks months can be used directly in the formula.",
+      "text": "use months directly"
+     },
+     {
+      "belief_id": "MAT-COMPARINGQTY-K25-M24",
+      "why": "Student incorrectly halves the rate for all time periods.",
+      "text": "halve the rate"
+     },
+     {
+      "belief_id": "MAT-COMPARINGQTY-K23-M21",
+      "why": "Student confuses interest with the total amount.",
+      "text": "calculate the total amount"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.2
+}

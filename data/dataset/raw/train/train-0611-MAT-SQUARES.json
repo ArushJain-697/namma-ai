@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0611-MAT-SQUARES",
+  "topic_id": "MAT-SQUARES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a short story where children solve a real problem",
+  "seed": 611
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1085,
+  "candidatesTokenCount": 1233,
+  "totalTokenCount": 2318,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1085
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-SQUARES-K13-M6",
+  "MAT-SQUARES-K29-M25",
+  "MAT-SQUARES-K20-M14",
+  "MAT-SQUARES-K10-M1",
+  "MAT-SQUARES-K23-M19",
+  "MAT-SQUARES-K26-M22",
+  "MAT-SQUARES-K14-M7",
+  "MAT-SQUARES-K23-M18",
+  "MAT-SQUARES-K22-M3",
+  "MAT-SQUARES-K16-M10",
+  "MAT-SQUARES-K25-M21",
+  "MAT-SQUARES-K19-M13",
+  "MAT-SQUARES-K15-M9",
+  "MAT-SQUARES-K14-M8"
+ ],
+ "response": {
+  "passage": "Rohan and Meera were decorating their classroom for the Math Fair. They wanted to arrange 64 square tiles to form a large square on the floor. Meera argued that the side of this square would be 32 tiles long because the square root is half the number. Rohan disagreed, explaining that a square with side length 8 has an area of 8 multiplied by 8, which is 64. They then looked at a pattern of odd numbers. Rohan noted that the sum of the first three odd numbers is 1, 3, and 5, which equals 9, or 3 squared. He realized that the sum of the first n odd numbers is always n squared. Next, they calculated the volume of a cube-shaped box. Meera thought 3 cubed meant 3 times 3, which is 9, but Rohan corrected her, saying it is 3 times 3 times 3, which is 27. Finally, they checked a number ending in 8. Meera wondered if it could be a perfect cube. Rohan confirmed that perfect cubes can indeed end in 8, such as 2 cubed being 8, and that the cube root of 27 is 3, not 9.",
+  "summary": "Rohan and Meera learn about squares and cubes while decorating for a Math Fair. They clarify common mistakes regarding square roots, sums of odd numbers, and cube calculations.",
+  "items": [
+   {
+    "evidence": "Meera argued that the side of this square would be 32 tiles long because the square root is half the number.",
+    "answer": "8",
+    "stem": "What is the actual side length of a square formed by 64 tiles?",
+    "options": [
+     {
+      "belief_id": "MAT-SQUARES-K19-M13",
+      "why": "Student incorrectly assumes the root is half the number.",
+      "text": "32"
+     },
+     {
+      "belief_id": "MAT-SQUARES-K16-M10",
+      "why": "Student confuses prime factors with square root calculation.",
+      "text": "2"
+     },
+     {
+      "belief_id": "MAT-SQUARES-K15-M9",
+      "why": "Student subtracts numbers instead of finding the root.",
+      "text": "56"
+     }
+    ]
+   },
+   {
+    "evidence": "He realized that the sum of the first n odd numbers is always n squared.",
+    "answer": "n squared",
+    "stem": "What is the correct formula for the sum of the first n odd numbers?",
+    "options": [
+     {
+      "belief_id": "MAT-SQUARES-K13-M6",
+      "why": "Student incorrectly doubles the number instead of squaring it.",
+      "text": "2n"
+     },
+     {
+      "belief_id": "MAT-SQUARES-K10-M1",
+      "why": "Student confuses squaring with multiplying by two.",
+      "text": "2n squared"
+     },
+     {
+      "belief_id": "MAT-SQUARES-K22-M3",
+      "why": "Student treats the power as a multiplication factor.",
+      "text": "n times 2"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan corrected her, saying it is 3 times 3 times 3, which is 27.",
+    "answer": "27",
+    "stem": "What is the value of 3 cubed?",
+    "options": [
+     {
+      "belief_id": "MAT-SQUARES-K22-M3",
+      "why": "Student multiplies the base by the exponent.",
+      "text": "9"
+     },
+     {
+      "belief_id": "MAT-SQUARES-K23-M18",
+      "why": "Student misapplies sign rules to a positive cube.",
+      "text": "-27"
+     },
+     {
+      "belief_id": "MAT-SQUARES-K25-M21",
+      "why": "Student divides the number by three instead of rooting.",
+      "text": "1"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan confirmed that perfect cubes can indeed end in 8, such as 2 cubed being 8, and that the cube root of 27 is 3, not 9.",
+    "answer": "3",
+    "stem": "What is the cube root of 27?",
+    "options": [
+     {
+      "belief_id": "MAT-SQUARES-K25-M21",
+      "why": "Student divides the number by three.",
+      "text": "9"
+     },
+     {
+      "belief_id": "MAT-SQUARES-K23-M19",
+      "why": "Student incorrectly believes cubes cannot end in 8.",
+      "text": "8"
+     },
+     {
+      "belief_id": "MAT-SQUARES-K19-M13",
+      "why": "Student halves the number to find the root.",
+      "text": "13.5"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 3.5
+}

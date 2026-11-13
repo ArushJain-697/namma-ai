@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0747-GENERIC-What_is_government",
+  "topic_id": "SOC-CIV-GOVERNMENT",
+  "split": "train",
+  "generic": true,
+  "theme": "What is government",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a comparison of two related ideas",
+  "seed": 747
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 709,
+  "candidatesTokenCount": 1155,
+  "totalTokenCount": 1864,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 709
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "In the village of Rampur, the local Panchayat manages the water supply, while the distant state government in Jaipur sets the rules for how much water each household can use. Think of the Panchayat as a small committee of five members who meet under the banyan tree to solve local disputes, much like a captain steering a small boat. In contrast, the state government acts like a massive lighthouse, guiding thousands of ships across the entire state. In 2012, the Panchayat decided to dig a new well because the summer heat had dried up the old one. This caused the village to have enough water for the first time in years. However, the state government officials, led by Mr. Sharma, often visit to ensure that the rules are followed. While the Panchayat focuses on the immediate needs of the 450 residents, the state government ensures that resources are shared fairly across all districts. If the Panchayat fails to maintain the well, the state government steps in to provide support. The Panchayat is essential for daily life, but the state government provides the structure that keeps the entire region stable and organized.",
+  "summary": "The passage compares the local Panchayat and the state government, explaining their different roles in managing resources. While the Panchayat handles immediate village needs, the state government provides broader oversight and support.",
+  "items": [
+   {
+    "evidence": "Think of the Panchayat as a small committee of five members who meet under the banyan tree to solve local disputes, much like a captain steering a small boat.",
+    "answer": "five members",
+    "stem": "How many people make up the local committee in Rampur?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses a number from the text that is not the answer.",
+      "text": "450 residents"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks a name mentioned near the question words.",
+      "text": "Mr. Sharma"
+     },
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Interprets the committee as a literal boat captain.",
+      "text": "a boat captain"
+     }
+    ]
+   },
+   {
+    "evidence": "In 2012, the Panchayat decided to dig a new well because the summer heat had dried up the old one.",
+    "answer": "summer heat",
+    "stem": "What was the primary reason for the village to dig a new well?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Confuses the cause with the effect of the action.",
+      "text": "enough water"
+     },
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses the date instead of the reason.",
+      "text": "in 2012"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects a person mentioned in the same context.",
+      "text": "Mr. Sharma"
+     }
+    ]
+   },
+   {
+    "evidence": "While the Panchayat focuses on the immediate needs of the 450 residents, the state government ensures that resources are shared fairly across all districts.",
+    "answer": "shared fairly",
+    "stem": "What is the main goal of the state government regarding resources?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Provides a true statement that is not the answer.",
+      "text": "focuses on immediate needs"
+     },
+     {
+      "belief_id": "GEN-READ-M5",
+      "why": "Confuses state government with local Panchayat roles.",
+      "text": "solve local disputes"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Uses 'all' to incorrectly generalize the government's scope.",
+      "text": "all village wells"
+     }
+    ]
+   },
+   {
+    "evidence": "If the Panchayat fails to maintain the well, the state government steps in to provide support.",
+    "answer": "provide support",
+    "stem": "What action does the state government take if the local well is not maintained?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Takes 'steps in' as a literal physical movement.",
+      "text": "walks into village"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Uses a location mentioned near the action.",
+      "text": "in Rampur"
+     },
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Reverses the cause and effect relationship.",
+      "text": "fails to maintain"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.4
+}

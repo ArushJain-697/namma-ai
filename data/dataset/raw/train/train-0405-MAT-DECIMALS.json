@@ -1,0 +1,133 @@
+{
+ "job": {
+  "job": "train-0405-MAT-DECIMALS",
+  "topic_id": "MAT-DECIMALS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a passage that shows a common wrong method and corrects it",
+  "seed": 405
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 1019,
+  "candidatesTokenCount": 1273,
+  "totalTokenCount": 2292,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1019
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-DECIMALS-K8-M10",
+  "MAT-DECIMALS-K10-M7",
+  "MAT-DECIMALS-K7-M12",
+  "MAT-DECIMALS-K11-M11",
+  "MAT-DECIMALS-K6-M5",
+  "MAT-DECIMALS-K8-M4",
+  "MAT-DECIMALS-K6-M6",
+  "MAT-DECIMALS-K9-M9",
+  "MAT-DECIMALS-K6-M2",
+  "MAT-DECIMALS-K9-M8",
+  "MAT-DECIMALS-K7-M3",
+  "MAT-DECIMALS-K4-M1"
+ ],
+ "response": {
+  "passage": "Rohan and Priya were comparing the lengths of two ribbons. Rohan said that 0.40 meters is longer than 0.4 meters because it has more digits. Priya corrected him, explaining that 0.4 is exactly the same as 0.40 because adding a zero at the end does not change the value. Next, they tried to subtract 1.7 from 5.2. Rohan tried to subtract the smaller digit from the larger one in each column, getting 4.5, but Priya showed him that we must regroup, resulting in 3.5. They then looked at 0.07 and 0.5. Rohan thought 0.07 was larger because it had more digits, but Priya reminded him that the first place after the decimal is the tenths place, which is much larger than the hundredths place. Finally, they added 5 to 0.3. Rohan initially thought the answer was 0.8 by just adding the digits, but Priya placed the 5 as 5.0 to align the decimal points correctly, giving a sum of 5.3. By lining up the decimal points, they ensured that every digit was in its correct place value, preventing common errors in calculation and comparison.",
+  "summary": "This passage explains how to correctly compare decimals by understanding place value and how to perform operations by aligning decimal points. It highlights that adding extra zeros or ignoring decimal placement leads to common mathematical errors.",
+  "items": [
+   {
+    "evidence": "Priya corrected him, explaining that 0.4 is exactly the same as 0.40 because adding a zero at the end does not change the value.",
+    "answer": "0.4 is exactly the same",
+    "stem": "What is the relationship between 0.4 and 0.40?",
+    "options": [
+     {
+      "belief_id": "MAT-DECIMALS-K10-M7",
+      "why": "Believes more digits or trailing zeros make a number larger.",
+      "text": "0.40 is greater"
+     },
+     {
+      "belief_id": "MAT-DECIMALS-K6-M2",
+      "why": "Believes a decimal with more digits is always larger.",
+      "text": "0.40 is larger"
+     },
+     {
+      "belief_id": "MAT-DECIMALS-K6-M6",
+      "why": "Believes fewer digits means the number is larger.",
+      "text": "0.4 is larger"
+     }
+    ]
+   },
+   {
+    "evidence": "Priya showed him that we must regroup, resulting in 3.5.",
+    "answer": "3.5",
+    "stem": "What is the correct result of subtracting 1.7 from 5.2?",
+    "options": [
+     {
+      "belief_id": "MAT-DECIMALS-K7-M12",
+      "why": "Subtracts smaller digit from larger digit in each column.",
+      "text": "4.5"
+     },
+     {
+      "belief_id": "MAT-DECIMALS-K7-M3",
+      "why": "Aligns digits on the right instead of by decimal.",
+      "text": "1.54"
+     },
+     {
+      "belief_id": "MAT-DECIMALS-K4-M1",
+      "why": "Treats decimal as separator of two independent whole numbers.",
+      "text": "Four and five"
+     }
+    ]
+   },
+   {
+    "evidence": "the first place after the decimal is the tenths place, which is much larger than the hundredths place.",
+    "answer": "tenths place",
+    "stem": "Which place value is immediately to the right of the decimal point?",
+    "options": [
+     {
+      "belief_id": "MAT-DECIMALS-K8-M4",
+      "why": "Mistakenly identifies tenths as the smallest value.",
+      "text": "0.1"
+     },
+     {
+      "belief_id": "MAT-DECIMALS-K8-M10",
+      "why": "Confuses the hundredths place with the tenths place.",
+      "text": "7 tenths"
+     },
+     {
+      "belief_id": "MAT-DECIMALS-K6-M5",
+      "why": "Believes extra zeros make a decimal larger.",
+      "text": "0.05"
+     }
+    ]
+   },
+   {
+    "evidence": "Priya placed the 5 as 5.0 to align the decimal points correctly, giving a sum of 5.3.",
+    "answer": "5.3",
+    "stem": "What is the correct sum of 5 and 0.3?",
+    "options": [
+     {
+      "belief_id": "MAT-DECIMALS-K11-M11",
+      "why": "Adds digits without considering decimal place value alignment.",
+      "text": "0.8"
+     },
+     {
+      "belief_id": "MAT-DECIMALS-K9-M9",
+      "why": "Confuses decimal values with simple fraction digits.",
+      "text": "1/3"
+     },
+     {
+      "belief_id": "MAT-DECIMALS-K9-M8",
+      "why": "Incorrectly converts decimals to fractions by moving digits.",
+      "text": "1/25"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 6.0
+}

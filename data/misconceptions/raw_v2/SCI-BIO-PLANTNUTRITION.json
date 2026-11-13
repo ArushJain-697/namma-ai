@@ -1,0 +1,453 @@
+{
+ "topic": {
+  "id": "SCI-BIO-PLANTNUTRITION",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   7
+  ],
+  "title": "Nutrition in plants",
+  "scope": "photosynthesis, chlorophyll, stomata, autotrophs and heterotrophs, parasitic, insectivorous and saprotrophic plants, nitrogen fixation"
+ },
+ "model": "gemini-3-flash-preview/key2",
+ "usage": {
+  "promptTokenCount": 843,
+  "candidatesTokenCount": 3589,
+  "totalTokenCount": 6096,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 843
+   }
+  ],
+  "thoughtsTokenCount": 1664,
+  "serviceTier": "standard"
+ },
+ "seconds": 20.0,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Autotrophic Nutrition",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "basic needs of living things",
+     "difference between plants and animals"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Heterotrophic Nutrition in Plants",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "concept of a parasite"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Nutrient Replenishment",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "soil components"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Photosynthesis Process",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "sunlight as energy"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Raw Materials for Photosynthesis",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "states of matter"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Role of Chlorophyll",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Stomatal Gas Exchange",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "air composition"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Products of Photosynthesis",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [
+     "n5",
+     "n6"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Parasitic Plants",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Insectivorous Plants",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Saprotrophic Nutrition",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Symbiotic Relationships",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Nitrogen Fixation",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n12"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Rhizobium Function",
+    "level": 3,
+    "parent": "n13",
+    "prereqs": [],
+    "external_prereqs": [
+     "bacteria concept"
+    ]
+   },
+   {
+    "key": "n15",
+    "name": "Soluble Nutrients",
+    "level": 3,
+    "parent": "n13",
+    "prereqs": [],
+    "external_prereqs": [
+     "solubility"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n5",
+    "statement": "Plants get their food from the soil through their roots.",
+    "why": "Students observe roots in soil and fertilizers being added, leading to an analogy with animals eating.",
+    "fix": "Plants make their own food (glucose) using sunlight, CO2, and water; soil only provides minerals and water.",
+    "probe": {
+     "question": "If a plant is grown in a pot of soil, where does the bulk of its new weight come from?",
+     "wrong_answer": "From the soil particles absorbed by the roots."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "food must be taken in from outside",
+    "causes": [],
+    "trigger_cues": [
+     "soil",
+     "roots",
+     "water",
+     "minerals",
+     "absorption"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m2",
+    "node": "n6",
+    "statement": "Leaves that are not green do not have chlorophyll and cannot do photosynthesis.",
+    "why": "The green color of chlorophyll is masked by other pigments like red or brown.",
+    "fix": "Large amounts of other pigments can hide the green color, but chlorophyll is still present for photosynthesis.",
+    "probe": {
+     "question": "Can a plant with dark red leaves perform photosynthesis?",
+     "wrong_answer": "No, because it doesn't have the green color needed."
+    },
+    "error_type": "visible_only",
+    "root_belief": "visible traits define internal composition",
+    "causes": [],
+    "trigger_cues": [
+     "red",
+     "brown",
+     "pigment",
+     "color",
+     "mask"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research"
+   },
+   {
+    "key": "m3",
+    "node": "n7",
+    "statement": "Plants only take in carbon dioxide and never use oxygen.",
+    "why": "Students confuse the net gas exchange of photosynthesis with the process of respiration.",
+    "fix": "Plants use oxygen for respiration all the time (day and night), just like animals.",
+    "probe": {
+     "question": "Do plants use oxygen at night?",
+     "wrong_answer": "No, they only use carbon dioxide."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "opposite processes are mutually exclusive",
+    "causes": [],
+    "trigger_cues": [
+     "oxygen",
+     "carbon dioxide",
+     "breathing",
+     "night"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver"
+   },
+   {
+    "key": "m4",
+    "node": "n10",
+    "statement": "Insectivorous plants eat insects because they cannot make their own food.",
+    "why": "Students assume that if an organism eats something, it must be a heterotroph like an animal.",
+    "fix": "These plants are green and do photosynthesis; they eat insects only to get nitrogen which is missing in their soil.",
+    "probe": {
+     "question": "Why does a pitcher plant trap an insect?",
+     "wrong_answer": "Because it cannot make glucose from sunlight."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "one trait excludes another",
+    "causes": [],
+    "trigger_cues": [
+     "pitcher plant",
+     "insects",
+     "nitrogen",
+     "soil",
+     "trap"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT Exemplar"
+   },
+   {
+    "key": "m5",
+    "node": "n11",
+    "statement": "Fungi are a type of plant because they grow in the ground and don't move.",
+    "why": "Superficial similarities in lifestyle lead to incorrect biological classification.",
+    "fix": "Fungi have a different mode of nutrition (saprotrophic) and do not have chlorophyll, so they are not plants.",
+    "probe": {
+     "question": "Is a mushroom a plant?",
+     "wrong_answer": "Yes, because it grows in the soil and stays in one place."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "immobile organisms are all plants",
+    "causes": [],
+    "trigger_cues": [
+     "mushroom",
+     "fungi",
+     "decaying",
+     "bread mould"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Concept Inventories"
+   },
+   {
+    "key": "m6",
+    "node": "n5",
+    "statement": "Sunlight is a material ingredient that turns into food.",
+    "why": "Students struggle to distinguish between energy (light) and matter (CO2/water).",
+    "fix": "Sunlight provides the energy to drive the chemical reaction; it does not have mass or turn into atoms of food.",
+    "probe": {
+     "question": "Is sunlight a substance that plants 'eat'?",
+     "wrong_answer": "Yes, it is a material that makes up the body of the plant."
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "energy is a substance",
+    "causes": [],
+    "trigger_cues": [
+     "sunlight",
+     "energy",
+     "ingredient",
+     "source"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n13",
+    "statement": "Plants can take nitrogen directly from the air through their leaves.",
+    "why": "Since CO2 is taken from the air, students assume the 78% nitrogen in air is also directly accessible.",
+    "fix": "Gaseous nitrogen cannot be used by plants; it must be converted into soluble forms by bacteria in the soil.",
+    "probe": {
+     "question": "How does nitrogen enter a plant?",
+     "wrong_answer": "Through the stomata in the leaves from the atmosphere."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "gases enter through any opening",
+    "causes": [],
+    "trigger_cues": [
+     "nitrogen",
+     "atmosphere",
+     "rhizobium",
+     "soluble"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT Textbook"
+   },
+   {
+    "key": "m8",
+    "node": "n11",
+    "statement": "Saprotrophs eat dead matter by swallowing it.",
+    "why": "Students apply the human model of 'eating' to all organisms.",
+    "fix": "Saprotrophs secrete digestive juices onto the dead matter outside their bodies and then absorb the nutrients.",
+    "probe": {
+     "question": "How does a fungus get nutrients from a piece of bread?",
+     "wrong_answer": "It takes pieces of bread inside its body to digest them."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "digestion must happen inside a body",
+    "causes": [],
+    "trigger_cues": [
+     "digestive juices",
+     "absorption",
+     "external",
+     "decaying"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m9",
+    "node": "n9",
+    "statement": "Parasitic plants like Cuscuta help the host plant by sharing nutrients.",
+    "why": "A misunderstanding of biological interactions as always being cooperative.",
+    "fix": "Parasites take valuable nutrients from the host plant, depriving it of food and potentially harming it.",
+    "probe": {
+     "question": "What happens to a tree when Cuscuta grows on it?",
+     "wrong_answer": "The tree grows better because they share food."
+    },
+    "error_type": "other",
+    "root_belief": "biological interactions are always helpful",
+    "causes": [],
+    "trigger_cues": [
+     "cuscuta",
+     "host",
+     "deprive",
+     "parasite"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m10",
+    "node": "n7",
+    "statement": "Stomata are only found on the upper surface of leaves to catch sunlight.",
+    "why": "Students associate the top of the leaf with 'activity' because it faces the sun.",
+    "fix": "Stomata are usually more numerous on the lower surface to reduce water loss while allowing gas exchange.",
+    "probe": {
+     "question": "Where are most of the tiny pores (stomata) located on a leaf?",
+     "wrong_answer": "Only on the top side where the sun hits."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "exposure to sun is necessary for all parts",
+    "causes": [],
+    "trigger_cues": [
+     "stomata",
+     "surface",
+     "pores",
+     "leaf"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research"
+   },
+   {
+    "key": "m11",
+    "node": "n14",
+    "statement": "Rhizobium bacteria are harmful pests for the plants they live on.",
+    "why": "General belief that all 'bacteria' or 'germs' cause disease.",
+    "fix": "Rhizobium has a symbiotic relationship where it provides nitrogen to the plant in exchange for food and shelter.",
+    "probe": {
+     "question": "Are the bacteria in the root nodules of a pea plant bad for the plant?",
+     "wrong_answer": "Yes, they are infecting the plant and making it sick."
+    },
+    "error_type": "everyday_language",
+    "root_belief": "all bacteria are harmful",
+    "causes": [],
+    "trigger_cues": [
+     "rhizobium",
+     "nodules",
+     "legumes",
+     "bacteria"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m12",
+    "node": "n8",
+    "statement": "Plants produce food only for humans and animals.",
+    "why": "An anthropocentric view of nature where plants exist to serve consumers.",
+    "fix": "Plants produce food primarily for their own growth, survival, and reproduction.",
+    "probe": {
+     "question": "Why does a plant make starch?",
+     "wrong_answer": "So that humans have something to eat."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "nature exists to serve humans",
+    "causes": [],
+    "trigger_cues": [
+     "starch",
+     "storage",
+     "growth",
+     "purpose"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver"
+   }
+  ]
+ },
+ "problems": []
+}

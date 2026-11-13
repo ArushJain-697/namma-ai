@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0726-GENERIC-a_monsoon_trek_in_the_Western_",
+  "topic_id": null,
+  "split": "train",
+  "generic": true,
+  "theme": "a monsoon trek in the Western Ghats",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a conversation between a teacher and two students",
+  "seed": 726
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 723,
+  "candidatesTokenCount": 1099,
+  "totalTokenCount": 1822,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 723
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "Teacher: 'Welcome back, Rohan and Meera. Did you enjoy the monsoon trek to Kalsubai peak last July?' Rohan: 'It was incredible, sir! We started at 5 AM to beat the heat, though the rain made the rocks slippery.' Meera: 'Exactly. Because the heavy mist reduced visibility to under ten meters, we had to move very slowly near the ridge.' Teacher: 'That is standard for the Western Ghats. Did you see the local guide, Arjun, who usually leads the group?' Rohan: 'We missed him, but we met a local farmer named Vitthal near the base. He told us that the soil erosion is increasing because the forest cover is thinning.' Meera: 'Vitthal also mentioned that the village council meets every 12th of the month to discuss conservation.' Teacher: 'It is vital to understand that the thinning forest is the primary cause of the erosion, not the other way around. Did you manage to reach the summit?' Rohan: 'Yes, we reached the top by noon, exhausted but happy.'",
+  "summary": "A teacher discusses a monsoon trek to Kalsubai peak with two students. They reflect on the challenges of the trek, including mist and soil erosion, and the importance of forest conservation.",
+  "items": [
+   {
+    "evidence": "We started at 5 AM to beat the heat, though the rain made the rocks slippery.",
+    "answer": "5 AM",
+    "stem": "At what time did the students begin their journey?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses a number from the text incorrectly.",
+      "text": "12th"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects a person mentioned nearby.",
+      "text": "Arjun"
+     },
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Interprets the time as a temperature.",
+      "text": "The heat"
+     }
+    ]
+   },
+   {
+    "evidence": "Because the heavy mist reduced visibility to under ten meters, we had to move very slowly near the ridge.",
+    "answer": "heavy mist",
+    "stem": "What was the primary reason for the students' slow movement?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Reverses the cause and effect relationship.",
+      "text": "Moving slowly"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects a place mentioned in the same sentence.",
+      "text": "The ridge"
+     },
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses a number from the sentence as the cause.",
+      "text": "Ten meters"
+     }
+    ]
+   },
+   {
+    "evidence": "He told us that the soil erosion is increasing because the forest cover is thinning.",
+    "answer": "thinning forest cover",
+    "stem": "What is the main factor contributing to the rise in soil erosion?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects the person mentioned in the sentence.",
+      "text": "Vitthal"
+     },
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Confuses the effect with the cause.",
+      "text": "Soil erosion"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Provides a true fact that is not the cause.",
+      "text": "Village council meetings"
+     }
+    ]
+   },
+   {
+    "evidence": "Meera: 'Vitthal also mentioned that the village council meets every 12th of the month to discuss conservation.'",
+    "answer": "12th of the month",
+    "stem": "When does the village council gather for their discussions?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses a different number from the text.",
+      "text": "5 AM"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects the person mentioned in the sentence.",
+      "text": "Vitthal"
+     },
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Interprets the meeting as a physical location.",
+      "text": "The base"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.1
+}

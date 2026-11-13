@@ -1,0 +1,455 @@
+{
+ "topic": {
+  "id": "MAT-WHOLE",
+  "subject": "maths",
+  "strand": "maths",
+  "grades": [
+   6
+  ],
+  "title": "Whole numbers",
+  "scope": "natural vs whole numbers, number line, properties of operations, identity elements, patterns"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 835,
+  "candidatesTokenCount": 1562,
+  "totalTokenCount": 2397,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 835
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.9,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Natural vs Whole Numbers",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "counting numbers"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Number Line Representation",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "basic geometry",
+     "measurement"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Properties of Operations",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "four basic operations"
+    ]
+   },
+   {
+    "key": "n1.1",
+    "name": "Defining Natural Numbers",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "counting"
+    ]
+   },
+   {
+    "key": "n1.2",
+    "name": "Defining Whole Numbers",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n1.1"
+    ],
+    "external_prereqs": [
+     "concept of zero"
+    ]
+   },
+   {
+    "key": "n2.1",
+    "name": "Ordering on Number Line",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n1.2"
+    ],
+    "external_prereqs": [
+     "left-right orientation"
+    ]
+   },
+   {
+    "key": "n3.1",
+    "name": "Closure and Commutativity",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n1.2"
+    ],
+    "external_prereqs": [
+     "arithmetic operations"
+    ]
+   },
+   {
+    "key": "n3.2",
+    "name": "Identity Elements",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n3.1"
+    ],
+    "external_prereqs": [
+     "multiplication",
+     "addition"
+    ]
+   },
+   {
+    "key": "n1.1.1",
+    "name": "Smallest natural number is 1",
+    "level": 3,
+    "parent": "n1.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.2.1",
+    "name": "Zero is a natural number",
+    "level": 3,
+    "parent": "n1.2",
+    "prereqs": [
+     "n1.1.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.1.1",
+    "name": "Right side is always greater",
+    "level": 3,
+    "parent": "n2.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.1.1",
+    "name": "Subtraction is commutative",
+    "level": 3,
+    "parent": "n3.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.2.1",
+    "name": "Identity for subtraction is 0",
+    "level": 3,
+    "parent": "n3.2",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n1.2.1",
+    "statement": "Zero is a natural number because it is a number.",
+    "why": "Students conflate the set of all numbers with the specific set of counting numbers.",
+    "fix": "Natural numbers are counting numbers starting from 1. Whole numbers include 0 and all natural numbers.",
+    "probe": {
+     "question": "Which of these is the smallest natural number: 0 or 1?",
+     "wrong_answer": "0"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "All numbers belong to the same category",
+    "causes": [],
+    "trigger_cues": [
+     "natural",
+     "whole",
+     "counting",
+     "zero",
+     "start"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's children's ideas in science"
+   },
+   {
+    "key": "m2",
+    "node": "n3.1.1",
+    "statement": "a - b is the same as b - a.",
+    "why": "Students overgeneralize the commutative property of addition to all operations.",
+    "fix": "Subtraction is not commutative; changing the order of numbers changes the result.",
+    "probe": {
+     "question": "Is 5 - 3 equal to 3 - 5?",
+     "wrong_answer": "Yes"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "A rule from one operation works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "commutative",
+     "subtraction",
+     "order",
+     "property",
+     "change"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on arithmetic properties"
+   },
+   {
+    "key": "m3",
+    "node": "n3.2.1",
+    "statement": "The identity element for subtraction is 0.",
+    "why": "Students confuse the additive identity (0) with the identity property itself.",
+    "fix": "There is no identity element for subtraction because subtracting 0 from a number keeps it the same, but subtracting a number from 0 does not.",
+    "probe": {
+     "question": "What number can be subtracted from 7 to keep it 7?",
+     "wrong_answer": "0"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "One property applies to all operations",
+    "causes": [],
+    "trigger_cues": [
+     "identity",
+     "subtraction",
+     "zero",
+     "result",
+     "unchanged"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "id": "m4",
+    "node": "n1.1",
+    "statement": "Natural numbers are the numbers that come after zero and stop at some big number like 100 or 1000.",
+    "why": "Students meet only small counting numbers in practice and think 'counting numbers' must end somewhere.",
+    "fix": "Natural numbers 1, 2, 3, ... go on forever; there is no largest natural number, because adding 1 always gives a bigger one.",
+    "probe": {
+     "question": "What is the greatest natural number?",
+     "wrong_answer": "1000 (or some very big number like a crore)"
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "Counting numbers must end at some largest number",
+    "causes": [],
+    "trigger_cues": [
+     "largest",
+     "greatest",
+     "natural number",
+     "ends",
+     "biggest number"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation",
+    "key": "m4"
+   },
+   {
+    "id": "m5",
+    "node": "n1.1.1",
+    "statement": "The smallest natural number is 0 because nothing is less than zero when counting.",
+    "why": "Students use 0 as the starting point of counting and mix 'starting count' with 'counting numbers'.",
+    "fix": "Natural numbers are the counting numbers starting from 1, so the smallest natural number is 1; 0 is the smallest whole number.",
+    "probe": {
+     "question": "Write the smallest natural number and the smallest whole number.",
+     "wrong_answer": "Both are 0"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Smallest number in any list must be zero",
+    "causes": [],
+    "trigger_cues": [
+     "smallest",
+     "natural number",
+     "whole number",
+     "start counting",
+     "first number"
+    ],
+    "confidence": "plausible",
+    "source_hint": "textbook error analysis",
+    "key": "m5"
+   },
+   {
+    "id": "m6",
+    "node": "n1.2",
+    "statement": "Whole numbers include negative numbers like -1 and -2 as well.",
+    "why": "Students think 'whole' means all numbers of the number line, and negatives look like whole numbers with a sign.",
+    "fix": "Whole numbers are 0, 1, 2, 3, ... only; negative numbers are not whole numbers (they come later as integers).",
+    "probe": {
+     "question": "Is -5 a whole number? Say yes or no.",
+     "wrong_answer": "Yes, because it is a complete number without a fraction"
+    },
+    "error_type": "language_confusion",
+    "root_belief": "Whole means any complete number, including negatives",
+    "causes": [],
+    "trigger_cues": [
+     "whole number",
+     "negative",
+     "minus sign",
+     "is it whole",
+     "integers"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on number-set confusion",
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n1.2.1",
+    "statement": "Whole numbers are just natural numbers, so there is no difference between the two sets.",
+    "why": "Both sets look alike in everyday use and 0 seems unimportant, so students treat the names as synonyms.",
+    "fix": "Whole numbers = natural numbers together with 0; every natural number is whole but 0 is whole and not natural.",
+    "probe": {
+     "question": "Which whole number is not a natural number?",
+     "wrong_answer": "None, all whole numbers are natural numbers"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Different names for number sets mean the same set",
+    "causes": [],
+    "trigger_cues": [
+     "difference",
+     "whole",
+     "natural",
+     "which is not",
+     "same set"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher reports",
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n2.1",
+    "statement": "Numbers with more digits-in-zeros or a bigger-looking first digit are always to the right, so 9 is to the right of 10.",
+    "why": "Students compare by the first digit seen and ignore the number of digits and place value.",
+    "fix": "On the number line a number with more digits is greater than one with fewer digits (for whole numbers), so 10 lies to the right of 9.",
+    "probe": {
+     "question": "Which is greater and lies to the right on the number line: 9 or 10?",
+     "wrong_answer": "9, because 9 is greater than 1"
+    },
+    "error_type": "place_value",
+    "root_belief": "Compare numbers by their first digit only",
+    "causes": [],
+    "trigger_cues": [
+     "compare",
+     "which is greater",
+     "first digit",
+     "right of",
+     "digits"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on comparing multi-digit numbers",
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n2.1.1",
+    "statement": "The number line starts at 0 and the arrow shows it ends, so numbers cannot continue to the right.",
+    "why": "Textbook drawings show a finite segment with ticks up to 10 or 20, taken as the whole line.",
+    "fix": "The arrow on the right means the number line continues forever; we can always mark bigger whole numbers further right.",
+    "probe": {
+     "question": "Can we mark 100 on a number line that was drawn from 0 to 10?",
+     "wrong_answer": "No, the line ends at 10 so 100 cannot be shown"
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "A drawn number line is finite as shown",
+    "causes": [],
+    "trigger_cues": [
+     "number line",
+     "drawn",
+     "arrow",
+     "mark",
+     "ends at"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n3.1",
+    "statement": "Whole numbers are closed under subtraction, since subtracting two whole numbers always gives a whole number.",
+    "why": "Students try only examples like 8 - 3 and overgeneralise without testing a smaller number minus a bigger one.",
+    "fix": "Whole numbers are closed under addition and multiplication but not subtraction; for example 3 - 8 is not a whole number.",
+    "probe": {
+     "question": "Is 4 - 9 a whole number? Is the set closed under subtraction?",
+     "wrong_answer": "Yes, 4 - 9 = 5 so it is a whole number and the set is closed"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "A rule that works in some examples works always",
+    "causes": [],
+    "trigger_cues": [
+     "closed",
+     "subtraction",
+     "whole number result",
+     "always",
+     "4 - 9"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on negative number and subtraction errors",
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n3.2",
+    "statement": "The identity element for multiplication is 0, because multiplying by 0 leaves the number unchanged.",
+    "why": "Students carry over 'add 0 changes nothing' to multiplication without checking what 0 does.",
+    "fix": "The multiplicative identity is 1, since a x 1 = a; multiplying by 0 always gives 0.",
+    "probe": {
+     "question": "Fill in the blank: 7 x __ = 7",
+     "wrong_answer": "0"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "Identity is always zero for every operation",
+    "causes": [],
+    "trigger_cues": [
+     "identity",
+     "multiplication",
+     "leaves unchanged",
+     "7 x",
+     "fill blank"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher reports",
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n3.1",
+    "statement": "Division of whole numbers is commutative, so 12 ÷ 4 is the same as 4 ÷ 12.",
+    "why": "Students see that addition and multiplication can be swapped and assume every operation can be swapped.",
+    "fix": "Only addition and multiplication are commutative; 12 ÷ 4 = 3 but 4 ÷ 12 is not even a whole number.",
+    "probe": {
+     "question": "Is 12 ÷ 4 equal to 4 ÷ 12?",
+     "wrong_answer": "Yes, both are 3"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "Commutativity holds for every operation",
+    "causes": [],
+    "trigger_cues": [
+     "commutative",
+     "division",
+     "swap",
+     "12 ÷ 4",
+     "order"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on properties of operations",
+    "key": "m12"
+   }
+  ]
+ },
+ "problems": [
+  "only 3 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

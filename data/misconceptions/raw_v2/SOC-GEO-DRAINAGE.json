@@ -1,0 +1,440 @@
+{
+ "topic": {
+  "id": "SOC-GEO-DRAINAGE",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   9
+  ],
+  "title": "Drainage: rivers of India",
+  "scope": "Himalayan and peninsular rivers, drainage basins, Ganga and Brahmaputra systems, lakes, river pollution"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 832,
+  "candidatesTokenCount": 1412,
+  "totalTokenCount": 2244,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 832
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 5.2,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Drainage Systems",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "topography and relief features"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Himalayan Rivers",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "glaciers and snowmelt"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Peninsular Rivers",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "plateau geography"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Drainage Patterns",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "slope and gradient"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Ganga River System",
+    "level": 3,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "river tributaries"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Brahmaputra River System",
+    "level": 3,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "international borders"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "West-flowing Rivers",
+    "level": 3,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "rift valleys"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "East-flowing Rivers",
+    "level": 3,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "coastal plains"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "River Pollution",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "human impact on environment"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Lakes",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "water bodies"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Drainage Basin",
+    "level": 3,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "catchment area"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Water Divide",
+    "level": 3,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "highland and elevation"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n2",
+    "statement": "Himalayan rivers are perennial only because of heavy rainfall.",
+    "why": "Students confuse the source of water with seasonal monsoon patterns.",
+    "fix": "Himalayan rivers are perennial because they are fed by both melting glaciers and seasonal rainfall.",
+    "probe": {
+     "question": "Why do Himalayan rivers flow even in the dry season?",
+     "wrong_answer": "Because it rains heavily throughout the year in the mountains."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "one event has one single cause",
+    "causes": [],
+    "trigger_cues": [
+     "perennial",
+     "glaciers",
+     "snowmelt",
+     "himalayan",
+     "rivers"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n3",
+    "statement": "All rivers in India flow from North to South.",
+    "why": "Students generalize the flow of the Ganga to the entire country.",
+    "fix": "Peninsular rivers flow according to the slope of the plateau; many flow from West to East, and some like Narmada flow West.",
+    "probe": {
+     "question": "In which direction does the Narmada river flow?",
+     "wrong_answer": "Southwards towards the Bay of Bengal."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "a rule from one example works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "peninsular",
+     "narmada",
+     "tapi",
+     "west-flowing",
+     "slope"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic studies"
+   },
+   {
+    "key": "m3",
+    "node": "n11",
+    "statement": "A drainage basin is just the river channel itself.",
+    "why": "Students confuse the river path with the entire area that drains into it.",
+    "fix": "A drainage basin is the entire area of land where water collects and drains into a common outlet like a river or lake.",
+    "probe": {
+     "question": "What constitutes a drainage basin?",
+     "wrong_answer": "The main river channel and its immediate banks."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "drainage",
+     "basin",
+     "catchment",
+     "area",
+     "tributaries"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n9",
+    "statement": "River pollution is only caused by industrial waste.",
+    "why": "Media focus on industrial dumping overshadows domestic and agricultural sources.",
+    "fix": "Pollution is caused by industrial waste, untreated domestic sewage, and agricultural runoff containing fertilizers.",
+    "probe": {
+     "question": "What are the primary causes of river pollution?",
+     "wrong_answer": "Only factories dumping chemicals into the water."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "one event has one single cause",
+    "causes": [],
+    "trigger_cues": [
+     "pollution",
+     "sewage",
+     "industrial",
+     "waste",
+     "cleanliness"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n2",
+    "statement": "Himalayan rivers like the Ganga and Indus start in the plains and flow upward into the mountains.",
+    "why": "Students see the large, wide river in the plains and assume that is where the river begins.",
+    "fix": "Himalayan rivers originate in the mountains (e.g. Gangotri glacier, Mansarovar region), cut gorges and carry water and sediments down to the plains.",
+    "probe": {
+     "question": "Where does the River Ganga (as Bhagirathi) originate?",
+     "wrong_answer": "In the Ganga plains near Allahabad, then it flows towards the mountains."
+    },
+    "error_type": "confuses_people_or_places",
+    "root_belief": "Rivers begin where they are largest",
+    "causes": [],
+    "trigger_cues": [
+     "origin",
+     "source",
+     "glacier",
+     "gangotri",
+     "start",
+     "mountains"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom map-work observations"
+   },
+   {
+    "key": "m6",
+    "node": "n3",
+    "statement": "Peninsular rivers are older and carry more water than Himalayan rivers because they are in the oldest part of India.",
+    "why": "Students link age of landmass with size and volume of rivers.",
+    "fix": "Peninsular rivers are seasonal, depend on rainfall, and have smaller basins and less water; they are older and have graded, shallow valleys, but Himalayan rivers are larger and perennial.",
+    "probe": {
+     "question": "Which has more water throughout the year: the Krishna or the Ganga?",
+     "wrong_answer": "The Krishna, because Peninsular rivers are older and bigger."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Older landforms have bigger rivers",
+    "causes": [],
+    "trigger_cues": [
+     "peninsular",
+     "older",
+     "seasonal",
+     "volume",
+     "compare",
+     "himalayan rivers"
+    ],
+    "confidence": "plausible",
+    "source_hint": "textbook comparison tables"
+   },
+   {
+    "key": "m7",
+    "node": "n5",
+    "statement": "The Ganga is formed only by the Alaknanda river.",
+    "why": "Students remember one headstream and ignore the Bhagirathi and the confluence at Devprayag.",
+    "fix": "The Ganga is formed at Devprayag where the Alaknanda and the Bhagirathi meet; it is then joined by Yamuna, Ghaghara, Gandak, Kosi and others.",
+    "probe": {
+     "question": "Name the two streams that join at Devprayag to form the Ganga.",
+     "wrong_answer": "Yamuna and Alaknanda."
+    },
+    "error_type": "confuses_people_or_places",
+    "root_belief": "A river has one single source stream",
+    "causes": [],
+    "trigger_cues": [
+     "devprayag",
+     "bhagirathi",
+     "alaknanda",
+     "confluence",
+     "ganga",
+     "headstreams"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 9 Geography chapter 3 error analysis"
+   },
+   {
+    "key": "m8",
+    "node": "n6",
+    "statement": "The Brahmaputra is called by the same name and carries little water throughout its entire course in India.",
+    "why": "Students think a river keeps one name and one nature from source to mouth.",
+    "fix": "The Brahmaputra rises in Tibet as the Tsangpo, is called Dihang in Arunachal Pradesh and Brahmaputra in Assam, and carries huge water volume and silt, often causing floods in Assam.",
+    "probe": {
+     "question": "What is the Brahmaputra called in Tibet?",
+     "wrong_answer": "Brahmaputra, the same name throughout."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Rivers keep one name everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "tsangpo",
+     "dihang",
+     "tibet",
+     "name",
+     "assam",
+     "floods"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT text and map exercises"
+   },
+   {
+    "key": "m9",
+    "node": "n7",
+    "statement": "The Narmada and Tapi flow east into the Bay of Bengal like most Peninsular rivers.",
+    "why": "Students overgeneralise that most Peninsular rivers are east-flowing and forget the rift valleys.",
+    "fix": "Narmada and Tapi flow west through rift valleys and drain into the Arabian Sea, forming estuaries instead of deltas.",
+    "probe": {
+     "question": "Into which water body does the Narmada drain?",
+     "wrong_answer": "The Bay of Bengal."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "All Peninsular rivers drain eastward",
+    "causes": [],
+    "trigger_cues": [
+     "narmada",
+     "tapi",
+     "west-flowing",
+     "estuary",
+     "arabian sea",
+     "rift valley"
+    ],
+    "confidence": "plausible",
+    "source_hint": "map-based classroom assessment"
+   },
+   {
+    "key": "m10",
+    "node": "n8",
+    "statement": "East-flowing rivers like the Mahanadi and Krishna form estuaries, not deltas.",
+    "why": "Students mix up which coast gets deltas and which gets estuaries.",
+    "fix": "East-flowing rivers form large deltas on the east coast (Mahanadi, Godavari, Krishna, Kaveri); west-flowing rivers form estuaries.",
+    "probe": {
+     "question": "What landform does the Godavari form at its mouth?",
+     "wrong_answer": "An estuary."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Delta and estuary are interchangeable",
+    "causes": [],
+    "trigger_cues": [
+     "delta",
+     "estuary",
+     "godavari",
+     "mahanadi",
+     "east coast",
+     "mouth"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "student answer scripts / diagnostic tests"
+   },
+   {
+    "key": "m11",
+    "node": "n10",
+    "statement": "All lakes in India are freshwater lakes formed by rivers.",
+    "why": "Students think lakes are always freshwater and river-made.",
+    "fix": "Lakes may be freshwater or salt water (Sambhar is salt; Chilika is a lagoon), and form by glaciers, tectonic activity, wind, rivers or humans (Dal, Wular, ox-bow).",
+    "probe": {
+     "question": "Is Sambhar Lake a freshwater lake?",
+     "wrong_answer": "Yes, all lakes in India are freshwater."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Lakes are always freshwater",
+    "causes": [],
+    "trigger_cues": [
+     "lake",
+     "salt water",
+     "sambhar",
+     "lagoon",
+     "chilika",
+     "freshwater"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT lakes section"
+   },
+   {
+    "key": "m12",
+    "node": "n12",
+    "statement": "A water divide is a dam or wall built to separate river waters.",
+    "why": "Students link 'divide' with a human-made barrier.",
+    "fix": "A water divide is a natural upland, such as a mountain or ridge, that separates two neighbouring drainage basins.",
+    "probe": {
+     "question": "What is a water divide?",
+     "wrong_answer": "A dam built across a river to divide its water."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Natural separations are human-made structures",
+    "causes": [],
+    "trigger_cues": [
+     "water divide",
+     "upland",
+     "ridge",
+     "dam",
+     "separates basins",
+     "mountain"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom discussion and exam answers"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

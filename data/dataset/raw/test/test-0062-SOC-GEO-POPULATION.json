@@ -1,0 +1,85 @@
+{
+ "job": {
+  "job": "test-0062-SOC-GEO-POPULATION",
+  "topic_id": "SOC-GEO-POPULATION",
+  "split": "test",
+  "test_only_topic": true,
+  "grade": 9,
+  "style": "a passage rich in numbers, dates or measurements",
+  "seed": 62
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 638,
+  "candidatesTokenCount": 848,
+  "totalTokenCount": 1486,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 638
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "SOC-GEO-POPULATION-K8-M4",
+  "SOC-GEO-POPULATION-K7-M3",
+  "SOC-GEO-POPULATION-K5-M1",
+  "SOC-GEO-POPULATION-K6-M2"
+ ],
+ "response": {
+  "passage": "India conducts a comprehensive census every ten years to record data on all persons residing within its borders, regardless of their citizenship status. According to the 2011 Census, India's population reached 1,210 million people. While a large nation like India has a massive total population, density is measured by the number of persons per unit area. For instance, a small country with a high number of residents can have a much higher density than a vast country with a larger total population. Population growth is not solely dependent on birth rates; it is also significantly influenced by death rates and migration. Migration acts as a vital component of population change, occurring when people move across borders or within the country. This movement is not restricted to rural-to-urban shifts, as it also includes urban-to-urban, urban-to-rural, and rural-to-rural relocations. Furthermore, the net change in population is calculated by subtracting the number of deaths from the number of births, then adjusting for the net migration rate. Understanding these dynamics is essential for effective national planning and resource allocation for every individual living in the country.",
+  "summary": "The census records all residents regardless of citizenship, while population density depends on area size rather than just total numbers. Population growth is determined by births, deaths, and various forms of migration, not just rural-to-urban movement.",
+  "items": [
+   {
+    "evidence": "India conducts a comprehensive census every ten years to record data on all persons residing within its borders, regardless of their citizenship status.",
+    "answer": "all persons residing within its borders",
+    "stem": "Who is included in the official Indian census count?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-POPULATION-K8-M4",
+      "why": "Student incorrectly assumes only citizens are counted.",
+      "text": "only citizens of India"
+     }
+    ]
+   },
+   {
+    "evidence": "For instance, a small country with a high number of residents can have a much higher density than a vast country with a larger total population.",
+    "answer": "a small country",
+    "stem": "Which type of country can have a higher population density despite having fewer people?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-POPULATION-K5-M1",
+      "why": "Student assumes high total population equals high density.",
+      "text": "a vast country with more people"
+     }
+    ]
+   },
+   {
+    "evidence": "Population growth is not solely dependent on birth rates; it is also significantly influenced by death rates and migration.",
+    "answer": "death rates and migration",
+    "stem": "Besides birth rates, what other factors determine the growth of a population?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-POPULATION-K6-M2",
+      "why": "Student ignores deaths and migration as growth factors.",
+      "text": "only the number of babies born"
+     }
+    ]
+   },
+   {
+    "evidence": "This movement is not restricted to rural-to-urban shifts, as it also includes urban-to-urban, urban-to-rural, and rural-to-rural relocations.",
+    "answer": "urban-to-urban, urban-to-rural, and rural-to-rural",
+    "stem": "What types of migration occur besides the common movement to cities?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-POPULATION-K7-M3",
+      "why": "Student believes migration only involves moving to cities.",
+      "text": "only movement from villages to cities"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 24.4
+}

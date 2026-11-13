@@ -1,0 +1,459 @@
+{
+ "topic": {
+  "id": "SOC-CIV-EQUALITY",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   7
+  ],
+  "title": "Equality in Indian democracy",
+  "scope": "equal right to vote, constitutional equality, mid-day meal, dignity, civil rights"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 828,
+  "candidatesTokenCount": 1482,
+  "totalTokenCount": 2310,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 828
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 7.6,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Universal Adult Franchise",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "concept of democracy"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Constitutional Equality",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "basic rights"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Dignity and Social Justice",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "social stratification"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Right to Vote",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "what is an election"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Equality before Law",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "rule of law"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Mid-day Meal Scheme",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "role of government"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Every adult has one vote",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Value of vote is equal",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Article 15 prohibits discrimination",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Public places are for all",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n9"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Dignity is a fundamental right",
+    "level": 3,
+    "parent": "n3",
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Mid-day meal reduces caste bias",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n8",
+    "statement": "Rich people's votes count more than poor people's votes.",
+    "why": "Students observe that wealth influences political outcomes in reality, confusing influence with the legal value of a vote.",
+    "fix": "In a democracy, every citizen's vote has the exact same value regardless of their wealth, education, or social status.",
+    "probe": {
+     "question": "Whose vote counts more in an election: a billionaire or a daily wage worker?",
+     "wrong_answer": "The billionaire's vote counts more."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Wealth determines power and value.",
+    "causes": [],
+    "trigger_cues": [
+     "value",
+     "equal",
+     "vote",
+     "election",
+     "wealth",
+     "status"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic studies"
+   },
+   {
+    "key": "m2",
+    "node": "n10",
+    "statement": "Private shops can refuse entry to people based on their caste.",
+    "why": "Students confuse private property rights with the constitutional mandate of equality in public spaces.",
+    "fix": "The Constitution prohibits discrimination in all public places, including shops, hotels, and restaurants, regardless of ownership.",
+    "probe": {
+     "question": "Can a shopkeeper refuse to sell goods to someone because of their caste?",
+     "wrong_answer": "Yes, it is their private shop."
+    },
+    "error_type": "confusing_institutions",
+    "root_belief": "Private ownership overrides public laws.",
+    "causes": [],
+    "trigger_cues": [
+     "public",
+     "shops",
+     "discrimination",
+     "caste",
+     "constitution",
+     "access"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n12",
+    "statement": "The mid-day meal is only to provide food to hungry children.",
+    "why": "Students focus on the immediate physical outcome (food) rather than the social objective (equality).",
+    "fix": "The mid-day meal aims to improve attendance and reduce social inequality by having children of all castes eat together.",
+    "probe": {
+     "question": "Why did the government start the mid-day meal scheme?",
+     "wrong_answer": "To stop children from being hungry."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "One event has one single cause.",
+    "causes": [],
+    "trigger_cues": [
+     "mid-day meal",
+     "food",
+     "hunger",
+     "caste",
+     "equality",
+     "school"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT pedagogy research"
+   },
+   {
+    "key": "m4",
+    "node": "n11",
+    "statement": "Dignity is something you earn through good behavior.",
+    "why": "Students conflate the moral concept of 'respect' with the legal/human rights concept of 'dignity'.",
+    "fix": "Dignity is an inherent right of every human being, not something that needs to be earned or deserved.",
+    "probe": {
+     "question": "Who deserves to be treated with dignity?",
+     "wrong_answer": "Only those who behave well and follow rules."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Rights are rewards for good behavior.",
+    "causes": [],
+    "trigger_cues": [
+     "dignity",
+     "respect",
+     "human rights",
+     "behavior",
+     "inherent"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "id": "m5",
+    "node": "n4",
+    "statement": "Only people who can read and write have the right to vote.",
+    "why": "Students link voting with reading ballots and assume literacy is needed, as with old restricted franchises.",
+    "fix": "In India every citizen aged 18 or above can vote, whether literate or not. Symbols on the ballot help those who cannot read.",
+    "probe": {
+     "question": "Can an 18-year-old citizen who has never been to school vote in India?",
+     "wrong_answer": "No, because voters must be able to read and write."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Voting needs education or literacy",
+    "causes": [],
+    "trigger_cues": [
+     "literate",
+     "read",
+     "write",
+     "vote",
+     "illiterate",
+     "educated",
+     "ballot"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 7 Civics, Chapter 1",
+    "key": "m5"
+   },
+   {
+    "id": "m6",
+    "node": "n4",
+    "statement": "Only men from landowning families have the right to vote.",
+    "why": "Students carry over history lessons about old kingdoms and colonial rule where only some people could vote.",
+    "fix": "Under universal adult franchise every adult citizen, women and men, rich or poor, of any caste or religion, can vote.",
+    "probe": {
+     "question": "Can a woman from a poor, landless family vote in elections in India?",
+     "wrong_answer": "No, voting is only for men who own land."
+    },
+    "error_type": "presentism",
+    "root_belief": "Voting is limited to property-owning men",
+    "causes": [],
+    "trigger_cues": [
+     "women",
+     "vote",
+     "land",
+     "property",
+     "men",
+     "poor",
+     "owners"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 7 Civics, Chapter 1",
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n7",
+    "statement": "A person gets more votes if they belong to more groups, like a caste and a village committee.",
+    "why": "Students confuse membership in several groups with the number of votes an individual casts.",
+    "fix": "Every adult has exactly one vote in an election, no matter how many groups they belong to.",
+    "probe": {
+     "question": "A man is a farmer, a village elder and a temple trustee. How many votes does he have in the Lok Sabha election?",
+     "wrong_answer": "Three votes, one for each role."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Social roles add up to extra votes",
+    "causes": [],
+    "trigger_cues": [
+     "one",
+     "vote",
+     "each",
+     "person",
+     "elder",
+     "extra",
+     "many votes"
+    ],
+    "confidence": "plausible",
+    "source_hint": null,
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n5",
+    "statement": "Equality before law means all people must be given exactly the same punishment or benefits.",
+    "why": "Students read equality as identical treatment, which ignores that law applies the same rules, not the same outcomes.",
+    "fix": "Equality before law means everyone, including the highest officials, is subject to the same laws and no one is above the law. Punishment depends on the crime, not on who the person is.",
+    "probe": {
+     "question": "What does equality before law mean for a minister who breaks a law?",
+     "wrong_answer": "The minister gets exactly the same punishment as every other person for every crime, whatever the crime was."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Equality means identical treatment for everyone",
+    "causes": [],
+    "trigger_cues": [
+     "equal",
+     "law",
+     "same",
+     "punishment",
+     "minister",
+     "everyone",
+     "court"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 7 Civics, Chapter 1",
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n5",
+    "statement": "Government officers and ministers are above the law while in office.",
+    "why": "Students see the power and security of officials and assume they cannot be taken to court.",
+    "fix": "Equality before law applies to all, so ministers and officers can be tried in court like any other citizen.",
+    "probe": {
+     "question": "Can a police officer be taken to court if they break the law?",
+     "wrong_answer": "No, officers are above the law while they hold their post."
+    },
+    "error_type": "stereotype",
+    "root_belief": "Power gives immunity from the law",
+    "causes": [],
+    "trigger_cues": [
+     "police",
+     "minister",
+     "court",
+     "officer",
+     "above",
+     "law",
+     "power"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 7 Civics, Chapter 1",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n9",
+    "statement": "Article 15 bans discrimination only on the basis of caste.",
+    "why": "Caste is the most discussed example in the chapter, so students take it as the only ground.",
+    "fix": "Article 15 prohibits discrimination on grounds of religion, race, caste, sex or place of birth.",
+    "probe": {
+     "question": "Can a government school refuse a child admission because of her religion or because she is a girl, under Article 15?",
+     "wrong_answer": "Yes, Article 15 only protects against caste discrimination."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Anti-discrimination law covers only caste",
+    "causes": [],
+    "trigger_cues": [
+     "article 15",
+     "discrimination",
+     "caste",
+     "religion",
+     "sex",
+     "place of birth",
+     "only"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 7 Civics; Constitution of India",
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n10",
+    "statement": "Public places like wells, temples and hotels can be kept separate for some castes if the community agrees.",
+    "why": "Local customs and community pressure make students think social agreement can override the Constitution.",
+    "fix": "Public places such as wells, roads, shops and hotels are open to all; no community can deny entry on grounds such as caste.",
+    "probe": {
+     "question": "If the whole village agrees, can a village well be reserved only for upper-caste families?",
+     "wrong_answer": "Yes, if everyone in the village agrees, the well can be reserved."
+    },
+    "error_type": "other",
+    "root_belief": "Community custom overrides constitutional equality",
+    "causes": [],
+    "trigger_cues": [
+     "well",
+     "village",
+     "agree",
+     "custom",
+     "temple",
+     "caste",
+     "public"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 7 Civics, Chapter 1",
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n12",
+    "statement": "Because children eat the mid-day meal, caste discrimination has ended in all schools.",
+    "why": "Students overgeneralise the positive effect of shared meals into a complete solution.",
+    "fix": "The mid-day meal helps children of different castes eat together and reduces bias, but discrimination can still occur and must be actively checked and stopped.",
+    "probe": {
+     "question": "If a school runs the mid-day meal, can caste discrimination still occur there?",
+     "wrong_answer": "No, the mid-day meal has already ended all caste discrimination."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "One scheme fully solves a social problem",
+    "causes": [],
+    "trigger_cues": [
+     "mid-day meal",
+     "caste",
+     "discrimination",
+     "ended",
+     "school",
+     "cook",
+     "eat together"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 7 Civics, Chapter 1 (Tamil Nadu cook example)",
+    "key": "m12"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

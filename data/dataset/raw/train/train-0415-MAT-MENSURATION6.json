@@ -1,0 +1,123 @@
+{
+ "job": {
+  "job": "train-0415-MAT-MENSURATION6",
+  "topic_id": "MAT-MENSURATION6",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a passage that shows a common wrong method and corrects it",
+  "seed": 415
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 596,
+  "candidatesTokenCount": 1287,
+  "totalTokenCount": 1883,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 596
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-MENSURATION6-K7-M2",
+  "MAT-MENSURATION6-K15-M3"
+ ],
+ "response": {
+  "passage": "Rohan and Priya were designing garden plots for their school project. Rohan built a square plot with a side of 4 meters, while Priya built a rectangular plot with a length of 6 meters and a width of 2 meters. Rohan calculated that both plots have a perimeter of 16 meters, so he assumed they must also have the same area. However, when they calculated the actual space inside, Rohan’s square had an area of 16 square meters, while Priya’s rectangle had an area of only 12 square meters. This proved that shapes with identical perimeters do not necessarily enclose the same amount of area. Next, they decided to cover their plots with soil. Rohan needed to convert his measurement of 1 square meter into square centimeters to buy the right amount of fertilizer. He initially thought it was 100 square centimeters, but he realized that since 1 meter equals 100 centimeters, 1 square meter is actually 10,000 square centimeters. By multiplying 100 by 100, he corrected his mistake and bought the correct quantity. They learned that perimeter and area are independent properties, and unit conversions for area require squaring the conversion factor of the length.",
+  "summary": "The passage explains that shapes with equal perimeters can have different areas. It also clarifies that converting square meters to square centimeters requires multiplying by 10,000 instead of 100.",
+  "items": [
+   {
+    "evidence": "This proved that shapes with identical perimeters do not necessarily enclose the same amount of area.",
+    "answer": "do not necessarily enclose",
+    "stem": "What is the relationship between the perimeter of two different shapes and their total area?",
+    "options": [
+     {
+      "belief_id": "MAT-MENSURATION6-K7-M2",
+      "why": "Student assumes equal perimeters always result in equal areas.",
+      "text": "must always enclose"
+     },
+     {
+      "belief_id": "MAT-MENSURATION6-K15-M3",
+      "why": "Student confuses area units with linear conversion factors.",
+      "text": "enclose exactly 100 units"
+     },
+     {
+      "belief_id": "MAT-MENSURATION6-K7-M2",
+      "why": "Student believes perimeter dictates area size directly.",
+      "text": "always enclose identical"
+     }
+    ]
+   },
+   {
+    "evidence": "1 square meter is actually 10,000 square centimeters.",
+    "answer": "10,000 square centimeters",
+    "stem": "What is the correct conversion of one square meter into square centimeters?",
+    "options": [
+     {
+      "belief_id": "MAT-MENSURATION6-K15-M3",
+      "why": "Student applies linear conversion to area without squaring.",
+      "text": "100 square centimeters"
+     },
+     {
+      "belief_id": "MAT-MENSURATION6-K7-M2",
+      "why": "Student incorrectly relates perimeter logic to area units.",
+      "text": "16 square centimeters"
+     },
+     {
+      "belief_id": "MAT-MENSURATION6-K15-M3",
+      "why": "Student guesses a value based on perimeter misconceptions.",
+      "text": "1,000 square centimeters"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan’s square had an area of 16 square meters, while Priya’s rectangle had an area of only 12 square meters.",
+    "answer": "16 square meters",
+    "stem": "What was the total area of the square plot Rohan designed?",
+    "options": [
+     {
+      "belief_id": "MAT-MENSURATION6-K7-M2",
+      "why": "Student assumes area matches the other shape's area.",
+      "text": "12 square meters"
+     },
+     {
+      "belief_id": "MAT-MENSURATION6-K15-M3",
+      "why": "Student confuses area with linear perimeter units.",
+      "text": "100 square meters"
+     },
+     {
+      "belief_id": "MAT-MENSURATION6-K7-M2",
+      "why": "Student confuses perimeter value with area value.",
+      "text": "16 square centimeters"
+     }
+    ]
+   },
+   {
+    "evidence": "By multiplying 100 by 100, he corrected his mistake and bought the correct quantity.",
+    "answer": "multiplying 100 by 100",
+    "stem": "How should one calculate the conversion of square meters to square centimeters?",
+    "options": [
+     {
+      "belief_id": "MAT-MENSURATION6-K15-M3",
+      "why": "Student believes 1 square meter is 100 square centimeters.",
+      "text": "using 100 only"
+     },
+     {
+      "belief_id": "MAT-MENSURATION6-K7-M2",
+      "why": "Student incorrectly applies perimeter logic to area conversion.",
+      "text": "adding 100 plus 100"
+     },
+     {
+      "belief_id": "MAT-MENSURATION6-K7-M2",
+      "why": "Student guesses based on perimeter equality misconceptions.",
+      "text": "dividing 100 by 100"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.3
+}

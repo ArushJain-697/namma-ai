@@ -1,0 +1,133 @@
+{
+ "job": {
+  "job": "train-0012-GEN-INTEREST",
+  "topic_id": "GEN-INTEREST",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a diary entry or letter by a student",
+  "seed": 12
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 1057,
+  "candidatesTokenCount": 1260,
+  "totalTokenCount": 2317,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1057
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-INTEREST-K22-M10",
+  "GEN-INTEREST-K23-M11",
+  "GEN-INTEREST-K8-M2",
+  "GEN-INTEREST-K12-M7",
+  "GEN-INTEREST-K28-M12",
+  "GEN-INTEREST-K7-M1",
+  "GEN-INTEREST-K10-M4",
+  "GEN-INTEREST-K5-M3",
+  "GEN-INTEREST-K13-M6",
+  "GEN-INTEREST-K20-M9",
+  "GEN-INTEREST-K11-M5",
+  "GEN-INTEREST-K15-M8"
+ ],
+ "response": {
+  "passage": "Dear Diary, today my father explained why we must be careful with money. He showed me two loan offers for a new bike. One bank uses a flat rate of 8%, while the other uses a reducing-balance rate of 8%. He warned that the flat rate is actually much more expensive because you pay interest on the full amount even as you pay it back. He also checked a credit card statement, noting that the interest-free period only applies if you pay the full bill, not just a part of it. We then calculated interest for a six-month loan. Since the formula uses time in years, we had to use 0.5 years, not 6, to get the correct amount. Finally, he explained that while a 10-year loan has a smaller monthly EMI, you end up paying much more in total interest than with a 2-year loan. I realized that borrowing is not just about the interest rate or the monthly payment; it is about the total cost over time. I must always check the fine print before agreeing to any loan or using a credit card.",
+  "summary": "The passage explains that loan costs depend on how interest is calculated and the duration of the loan. It highlights that flat rates and long tenures often lead to higher total payments. It also clarifies that credit card benefits require full payment of the bill.",
+  "items": [
+   {
+    "evidence": "He warned that the flat rate is actually much more expensive because you pay interest on the full amount even as you pay it back.",
+    "answer": "much more expensive",
+    "stem": "How does the cost of a flat rate loan compare to a reducing-balance loan at the same rate?",
+    "options": [
+     {
+      "belief_id": "GEN-INTEREST-K22-M10",
+      "why": "Student assumes same rate means same cost.",
+      "text": "the same cost"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K10-M4",
+      "why": "Student assumes compound interest is always higher.",
+      "text": "cheaper than compound interest"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K5-M3",
+      "why": "Student thinks interest rate increases every year.",
+      "text": "increasing every year"
+     }
+    ]
+   },
+   {
+    "evidence": "He also checked a credit card statement, noting that the interest-free period only applies if you pay the full bill, not just a part of it.",
+    "answer": "pay the full bill",
+    "stem": "What must you do to benefit from a credit card's interest-free period?",
+    "options": [
+     {
+      "belief_id": "GEN-INTEREST-K28-M12",
+      "why": "Student believes partial payment triggers the benefit.",
+      "text": "pay only part of the bill"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K23-M11",
+      "why": "Student ignores conditions and focuses on low rates.",
+      "text": "ensure the interest rate is low"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K15-M8",
+      "why": "Student thinks EMI rules apply to credit cards.",
+      "text": "divide the bill into equal parts"
+     }
+    ]
+   },
+   {
+    "evidence": "Since the formula uses time in years, we had to use 0.5 years, not 6, to get the correct amount.",
+    "answer": "0.5 years",
+    "stem": "What value should be used for time when calculating interest for a six-month period?",
+    "options": [
+     {
+      "belief_id": "GEN-INTEREST-K13-M6",
+      "why": "Student uses the number of months directly.",
+      "text": "6"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K12-M7",
+      "why": "Student assumes the rate is monthly.",
+      "text": "12"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K11-M5",
+      "why": "Student incorrectly halves the time period.",
+      "text": "3"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, he explained that while a 10-year loan has a smaller monthly EMI, you end up paying much more in total interest than with a 2-year loan.",
+    "answer": "much more in total interest",
+    "stem": "What is the consequence of choosing a 10-year loan tenure instead of a 2-year tenure?",
+    "options": [
+     {
+      "belief_id": "GEN-INTEREST-K20-M9",
+      "why": "Student focuses only on the smaller EMI amount.",
+      "text": "pay less in total"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K7-M1",
+      "why": "Student ignores the impact of time on interest.",
+      "text": "the same total interest"
+     },
+     {
+      "belief_id": "GEN-INTEREST-K8-M2",
+      "why": "Student confuses interest with total repayment.",
+      "text": "the same total money"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.4
+}

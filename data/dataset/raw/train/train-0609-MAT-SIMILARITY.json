@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0609-MAT-SIMILARITY",
+  "topic_id": "MAT-SIMILARITY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a puzzle or game that uses the idea",
+  "seed": 609
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1192,
+  "candidatesTokenCount": 1296,
+  "totalTokenCount": 2488,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1192
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-SIMILARITY-K26-M20",
+  "MAT-SIMILARITY-K18-M9",
+  "MAT-SIMILARITY-K28-M22",
+  "MAT-SIMILARITY-K23-M14",
+  "MAT-SIMILARITY-K25-M18",
+  "MAT-SIMILARITY-K24-M16",
+  "MAT-SIMILARITY-K24-M17",
+  "MAT-SIMILARITY-K26-M19",
+  "MAT-SIMILARITY-K19-M10",
+  "MAT-SIMILARITY-K21-M12",
+  "MAT-SIMILARITY-K12-M1",
+  "MAT-SIMILARITY-K22-M13",
+  "MAT-SIMILARITY-K16-M5",
+  "MAT-SIMILARITY-K14-M3"
+ ],
+ "response": {
+  "passage": "In the Land of Geometry, architects design two triangular parks, Park A and Park B, which are similar. Park A has sides of 3m, 4m, and 5m, while Park B is a scaled-up version with sides of 6m, 8m, and 10m. The architects know that for triangles to be similar, all three corresponding sides must be in the same ratio, which is 1:2. They also know that if the ratio of the sides is 1:2, the ratio of the areas must be the square of the side ratio, which is 1:4. When placing a fence inside Park A, they draw a line parallel to one side, which divides the other two sides proportionally according to the Basic Proportionality Theorem. This theorem only applies when the line is strictly parallel to the third side. Furthermore, the architects ensure that all corresponding angles are equal, as having sides in proportion alone is not enough to guarantee similarity for shapes like quadrilaterals. They always label their triangles carefully, such as triangle ABC and triangle PQR, to ensure that vertex A corresponds to vertex P, B to Q, and C to R, maintaining the correct order of sides and angles.",
+  "summary": "Similar triangles must have proportional sides and equal corresponding angles. When sides are scaled by a factor, the area changes by the square of that factor. The Basic Proportionality Theorem requires a parallel line to function correctly.",
+  "items": [
+   {
+    "evidence": "They also know that if the ratio of the sides is 1:2, the ratio of the areas must be the square of the side ratio, which is 1:4.",
+    "answer": "1:4",
+    "stem": "If the side ratio of two similar triangles is 1:2, what is the ratio of their areas?",
+    "options": [
+     {
+      "belief_id": "MAT-SIMILARITY-K26-M19",
+      "why": "Student assumes area ratio equals side ratio.",
+      "text": "1:2"
+     },
+     {
+      "belief_id": "MAT-SIMILARITY-K26-M20",
+      "why": "Student assumes doubling sides doubles the area.",
+      "text": "2:4"
+     },
+     {
+      "belief_id": "MAT-SIMILARITY-K28-M22",
+      "why": "Student incorrectly calculates square of ratios.",
+      "text": "1:8"
+     }
+    ]
+   },
+   {
+    "evidence": "This theorem only applies when the line is strictly parallel to the third side.",
+    "answer": "strictly parallel",
+    "stem": "Under what condition does the Basic Proportionality Theorem apply to a line drawn inside a triangle?",
+    "options": [
+     {
+      "belief_id": "MAT-SIMILARITY-K19-M10",
+      "why": "Student ignores the parallel requirement for BPT.",
+      "text": "any line"
+     },
+     {
+      "belief_id": "MAT-SIMILARITY-K21-M12",
+      "why": "Student believes any proportional segments work.",
+      "text": "any proportional segments"
+     },
+     {
+      "belief_id": "MAT-SIMILARITY-K18-M9",
+      "why": "Student confuses the ratio segments of BPT.",
+      "text": "matching upper and lower parts"
+     }
+    ]
+   },
+   {
+    "evidence": "They also know that for triangles to be similar, all three corresponding sides must be in the same ratio, which is 1:2.",
+    "answer": "all three corresponding sides",
+    "stem": "What is required for two triangles to be considered similar based on their sides?",
+    "options": [
+     {
+      "belief_id": "MAT-SIMILARITY-K23-M14",
+      "why": "Student thinks two pairs of sides are enough.",
+      "text": "two pairs of sides"
+     },
+     {
+      "belief_id": "MAT-SIMILARITY-K25-M18",
+      "why": "Student ignores the order of sides.",
+      "text": "any sides in ratio"
+     },
+     {
+      "belief_id": "MAT-SIMILARITY-K24-M17",
+      "why": "Student incorrectly includes SSA as a test.",
+      "text": "two sides and one angle"
+     }
+    ]
+   },
+   {
+    "evidence": "They always label their triangles carefully, such as triangle ABC and triangle PQR, to ensure that vertex A corresponds to vertex P, B to Q, and C to R, maintaining the correct order of sides and angles.",
+    "answer": "maintaining the correct order",
+    "stem": "Why must architects label the vertices of similar triangles in a specific sequence?",
+    "options": [
+     {
+      "belief_id": "MAT-SIMILARITY-K16-M5",
+      "why": "Student thinks order of vertices does not matter.",
+      "text": "to look aesthetically pleasing"
+     },
+     {
+      "belief_id": "MAT-SIMILARITY-K12-M1",
+      "why": "Student thinks similarity requires same size.",
+      "text": "to ensure same size"
+     },
+     {
+      "belief_id": "MAT-SIMILARITY-K14-M3",
+      "why": "Student thinks angles don't matter for similarity.",
+      "text": "to ignore angle equality"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.3
+}

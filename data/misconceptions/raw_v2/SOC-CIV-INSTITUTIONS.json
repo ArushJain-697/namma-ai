@@ -1,0 +1,459 @@
+{
+ "topic": {
+  "id": "SOC-CIV-INSTITUTIONS",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   9
+  ],
+  "title": "Working of institutions",
+  "scope": "President, Prime Minister and Council of Ministers, Parliament, Supreme Court, bureaucracy"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 825,
+  "candidatesTokenCount": 1502,
+  "totalTokenCount": 2327,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 825
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 4.8,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Legislature: Parliament",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "concept of democracy",
+     "representative government"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Executive: Political and Permanent",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "separation of powers"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Judiciary: Supreme Court",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "rule of law"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Parliamentary Structure",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "bicameralism"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Legislative Process",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "law-making"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Political Executive",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "elections"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Permanent Executive",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "civil services"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Judicial Independence",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "checks and balances"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Lok Sabha vs Rajya Sabha",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Money Bill powers",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n9"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Role of Prime Minister",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Bureaucracy function",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Judicial Review",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n9",
+    "statement": "The Rajya Sabha is more powerful than the Lok Sabha because it is the Upper House.",
+    "why": "Students confuse the term 'Upper' with 'higher authority' or 'greater power'.",
+    "fix": "The Lok Sabha is more powerful because its members are directly elected and it controls the budget and the government's survival.",
+    "probe": {
+     "question": "If the Lok Sabha and Rajya Sabha disagree on a normal bill, whose decision prevails?",
+     "wrong_answer": "The Rajya Sabha's decision prevails."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Hierarchy implies power.",
+    "causes": [],
+    "trigger_cues": [
+     "upper house",
+     "rajya sabha",
+     "lok sabha",
+     "power",
+     "authority"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on civics misconceptions"
+   },
+   {
+    "key": "m2",
+    "node": "n11",
+    "statement": "The Prime Minister is the head of the country.",
+    "why": "Media focus on the PM as the face of the government leads to conflating the head of government with the head of state.",
+    "fix": "The President is the head of state, while the Prime Minister is the head of government.",
+    "probe": {
+     "question": "Who is the official Head of State in India?",
+     "wrong_answer": "The Prime Minister."
+    },
+    "error_type": "confuses_people_or_places",
+    "root_belief": "The most visible person is the most powerful.",
+    "causes": [],
+    "trigger_cues": [
+     "prime minister",
+     "head of state",
+     "government",
+     "president"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n12",
+    "statement": "Civil servants make the final decisions on government policy.",
+    "why": "Students see bureaucrats implementing laws and assume they are the ones who created them.",
+    "fix": "Civil servants assist in policy implementation, but the final decision-making power rests with the elected political executive.",
+    "probe": {
+     "question": "Who takes the final decision on a policy proposal?",
+     "wrong_answer": "The civil servant or bureaucrat."
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "Those who do the work have the authority.",
+    "causes": [],
+    "trigger_cues": [
+     "bureaucracy",
+     "civil servants",
+     "policy",
+     "decision",
+     "implementation"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver children's ideas in social studies"
+   },
+   {
+    "key": "m4",
+    "node": "n13",
+    "statement": "The Supreme Court can change any law passed by Parliament at any time.",
+    "why": "Students overgeneralize the concept of judicial review, ignoring the constitutional limitations.",
+    "fix": "The Supreme Court can only declare a law invalid if it violates the basic structure or provisions of the Constitution.",
+    "probe": {
+     "question": "Can the Supreme Court strike down any law it dislikes?",
+     "wrong_answer": "Yes, it has the power to change any law."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "One institution has absolute power.",
+    "causes": [],
+    "trigger_cues": [
+     "supreme court",
+     "judicial review",
+     "parliament",
+     "constitution",
+     "invalid"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "id": "m5",
+    "node": "n4",
+    "statement": "Members of Parliament are chosen by the people for both the Lok Sabha and the Rajya Sabha in the same way.",
+    "why": "Students know that Parliament is 'elected by the people' and assume both Houses are filled by the same direct voting.",
+    "fix": "Lok Sabha members are directly elected by the people from constituencies. Rajya Sabha members are indirectly elected by the elected members (MLAs) of State Legislative Assemblies.",
+    "probe": {
+     "question": "Who elects the members of the Rajya Sabha?",
+     "wrong_answer": "All the voting citizens of India elect them directly, as they elect Lok Sabha members."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Both Houses are filled by identical direct elections",
+    "causes": [],
+    "trigger_cues": [
+     "rajya sabha",
+     "members",
+     "elected",
+     "directly",
+     "indirectly",
+     "mla",
+     "voters"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation; NCERT Class 9 Civics",
+    "key": "m5"
+   },
+   {
+    "id": "m6",
+    "node": "n4",
+    "statement": "The President is not a part of Parliament; Parliament means only the Lok Sabha and the Rajya Sabha.",
+    "why": "Students picture Parliament as the two Houses with seats and debates, and see the President as a separate ceremonial office.",
+    "fix": "Parliament consists of the President and the two Houses, Lok Sabha and Rajya Sabha. A bill becomes a law only after the President gives assent.",
+    "probe": {
+     "question": "Name the parts that together make up the Indian Parliament.",
+     "wrong_answer": "Lok Sabha and Rajya Sabha only."
+    },
+    "error_type": "confusing_institutions",
+    "root_belief": "Parliament equals only the houses where debates happen",
+    "causes": [],
+    "trigger_cues": [
+     "parliament",
+     "consists",
+     "president",
+     "two houses",
+     "part of",
+     "assent"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher reports; NCERT Class 9 Civics",
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n5",
+    "statement": "A bill passed by both Houses of Parliament becomes a law automatically.",
+    "why": "Students focus on voting in Parliament as the end of the law-making process and ignore the final step.",
+    "fix": "After both Houses pass a bill, it goes to the President. It becomes a law only when the President gives assent.",
+    "probe": {
+     "question": "What must happen after both Houses pass a bill before it becomes a law?",
+     "wrong_answer": "Nothing more is needed; it becomes a law as soon as both Houses vote for it."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Voting in the legislature alone completes law-making",
+    "causes": [],
+    "trigger_cues": [
+     "bill",
+     "passed",
+     "both houses",
+     "becomes law",
+     "assent",
+     "president",
+     "automatically"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation",
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n10",
+    "statement": "The Rajya Sabha can reject a Money Bill passed by the Lok Sabha.",
+    "why": "Students generalise that each House has an equal veto over bills, so the second House can stop any bill.",
+    "fix": "A Money Bill is introduced only in the Lok Sabha. The Rajya Sabha can only give recommendations, which the Lok Sabha may accept or ignore, and it cannot block the bill.",
+    "probe": {
+     "question": "If the Rajya Sabha disagrees with a Money Bill passed by the Lok Sabha, what can it do?",
+     "wrong_answer": "It can reject the bill and stop it from becoming a law."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Both Houses have equal veto over every bill",
+    "causes": [],
+    "trigger_cues": [
+     "money bill",
+     "rajya sabha",
+     "reject",
+     "veto",
+     "lok sabha",
+     "disagree",
+     "recommendations"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 9 Civics; teacher reports",
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n9",
+    "statement": "Lok Sabha members are elected by the people, so the Lok Sabha can be dissolved but the Rajya Sabha can also be dissolved.",
+    "why": "Students think every legislative body is dissolved and re-elected together after five years.",
+    "fix": "The Rajya Sabha is a permanent House and is never dissolved as a whole. One-third of its members retire every two years. The Lok Sabha is elected for five years and can be dissolved.",
+    "probe": {
+     "question": "What happens to the Rajya Sabha when a new Lok Sabha is elected after five years?",
+     "wrong_answer": "It is dissolved too and all its members are elected afresh."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "All legislative bodies share the same fixed term",
+    "causes": [],
+    "trigger_cues": [
+     "rajya sabha",
+     "dissolved",
+     "term",
+     "five years",
+     "retire",
+     "permanent house",
+     "one-third"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 9 Civics; classroom observation",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n11",
+    "statement": "The Prime Minister is appointed by the President by personal choice, so the President can pick anyone.",
+    "why": "Students read 'the President appoints the Prime Minister' literally and miss the role of the Lok Sabha majority.",
+    "fix": "The President appoints the leader of the majority party or coalition in the Lok Sabha as Prime Minister. The President cannot choose freely.",
+    "probe": {
+     "question": "On what basis does the President appoint the Prime Minister?",
+     "wrong_answer": "The President selects whichever person they think is best."
+    },
+    "error_type": "confusing_people_or_places",
+    "root_belief": "Formal appointment means free personal choice by appointer",
+    "causes": [],
+    "trigger_cues": [
+     "prime minister",
+     "appointed",
+     "president",
+     "majority",
+     "lok sabha",
+     "coalition",
+     "choose"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 9 Civics; teacher reports",
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n7",
+    "statement": "Ministers are permanent executive and stay in office even after elections are lost.",
+    "why": "Students see ministers and civil servants both running departments and assume both hold their posts for a fixed long period.",
+    "fix": "Ministers are the political executive, elected for a term and removed when their party loses. Civil servants are the permanent executive, appointed on merit, and stay in office even when the government changes.",
+    "probe": {
+     "question": "Who continues to work in the ministry after a new party forms the government?",
+     "wrong_answer": "The old ministers, because ministers are the permanent executive."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "All people running government departments have equal tenure",
+    "causes": [],
+    "trigger_cues": [
+     "permanent executive",
+     "political executive",
+     "minister",
+     "civil servant",
+     "new government",
+     "elections",
+     "tenure"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 9 Civics; classroom observation",
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n8",
+    "statement": "Judges are appointed and can be removed by the government whenever it wants.",
+    "why": "Students assume that those who appoint can also dismiss, and that the government controls all institutions.",
+    "fix": "Judges are appointed by the President in consultation with the Chief Justice, and a judge can be removed only by an impeachment process in Parliament. This keeps the judiciary independent.",
+    "probe": {
+     "question": "If the government is unhappy with a judge's verdict, can it remove the judge?",
+     "wrong_answer": "Yes, the government can dismiss the judge at any time."
+    },
+    "error_type": "confusing_institutions",
+    "root_belief": "Appointing authority has unlimited power to dismiss",
+    "causes": [],
+    "trigger_cues": [
+     "judges",
+     "removed",
+     "government",
+     "independent",
+     "impeachment",
+     "appointed",
+     "verdict"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 9 Civics; teacher reports",
+    "key": "m12"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0731-GENERIC-Reading_food_labels",
+  "topic_id": "GEN-FOODLABELS",
+  "split": "train",
+  "generic": true,
+  "theme": "Reading food labels",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a clear textbook explanation",
+  "seed": 731
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 707,
+  "candidatesTokenCount": 1133,
+  "totalTokenCount": 1840,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 707
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "In the bustling markets of Delhi, Mr. Sharma often buys packaged snacks for his family. He recently learned that reading food labels is essential for health. A label lists ingredients in descending order by weight, meaning the first item is the most abundant. For instance, if a biscuit packet lists sugar before flour, it contains more sugar than flour. Nutritionist Dr. Anjali Gupta explains that high sodium levels, often exceeding 400 milligrams per serving, can lead to increased blood pressure. Because excessive salt causes hypertension, many health-conscious parents now check the 'Sodium' line carefully. Some labels use the term 'Natural Flavors,' which does not always mean the ingredients are organic or healthy. In 2022, a survey in Mumbai showed that only 15 percent of shoppers read these labels thoroughly. Understanding these details helps consumers like Mr. Sharma make better choices. By ignoring marketing claims on the front of the pack and focusing on the back, shoppers can avoid hidden additives. It is a simple habit that protects long-term well-being for everyone in India.",
+  "summary": "Reading food labels helps consumers identify the main ingredients and sodium content in packaged snacks. By checking the back of the pack instead of marketing claims, shoppers can make healthier food choices.",
+  "items": [
+   {
+    "evidence": "A label lists ingredients in descending order by weight, meaning the first item is the most abundant.",
+    "answer": "the first item",
+    "stem": "Which part of the ingredient list represents the largest portion of the food?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Uses the name Mr. Sharma found near the question.",
+      "text": "Mr. Sharma"
+     },
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Interprets descending order as a physical staircase.",
+      "text": "the bottom item"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a true fact that is not the answer.",
+      "text": "the sugar content"
+     }
+    ]
+   },
+   {
+    "evidence": "Because excessive salt causes hypertension, many health-conscious parents now check the 'Sodium' line carefully.",
+    "answer": "excessive salt",
+    "stem": "What is the primary reason for the rise in hypertension mentioned in the text?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Reverses the cause and effect relationship.",
+      "text": "hypertension"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Uses the name Dr. Anjali Gupta from the sentence.",
+      "text": "Dr. Anjali Gupta"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a true fact about parents checking labels.",
+      "text": "health-conscious parents"
+     }
+    ]
+   },
+   {
+    "evidence": "In 2022, a survey in Mumbai showed that only 15 percent of shoppers read these labels thoroughly.",
+    "answer": "15 percent",
+    "stem": "What portion of the surveyed shoppers in Mumbai examined the labels with care?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Picks the year instead of the percentage.",
+      "text": "2022"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Uses the city name mentioned in the sentence.",
+      "text": "Mumbai"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Assumes all shoppers read labels based on the survey.",
+      "text": "all shoppers"
+     }
+    ]
+   },
+   {
+    "evidence": "Some labels use the term 'Natural Flavors,' which does not always mean the ingredients are organic or healthy.",
+    "answer": "not always organic",
+    "stem": "What is the actual implication of the phrase 'Natural Flavors' on a food label?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Interprets natural as literally coming from nature.",
+      "text": "purely from nature"
+     },
+     {
+      "belief_id": "GEN-READ-M5",
+      "why": "Confuses natural flavors with healthy additives.",
+      "text": "healthy ingredients"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a true fact about labels being confusing.",
+      "text": "some labels use it"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.1
+}

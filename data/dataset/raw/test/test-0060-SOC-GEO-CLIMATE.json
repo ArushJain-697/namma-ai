@@ -1,0 +1,125 @@
+{
+ "job": {
+  "job": "test-0060-SOC-GEO-CLIMATE",
+  "topic_id": "SOC-GEO-CLIMATE",
+  "split": "test",
+  "test_only_topic": true,
+  "grade": 9,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 60
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 669,
+  "candidatesTokenCount": 1264,
+  "totalTokenCount": 1933,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 669
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "SOC-GEO-CLIMATE-K13-M4",
+  "SOC-GEO-CLIMATE-K11-M1",
+  "SOC-GEO-CLIMATE-K12-M2",
+  "SOC-GEO-CLIMATE-K15-M3"
+ ],
+ "response": {
+  "passage": "Many students often assume that the climate of a region is simply the weather experienced on a single day, but this is incorrect. Climate refers to the sum total of weather conditions and variations over a large area for a long period, usually thirty years or more. Furthermore, people frequently believe that because the Tropic of Cancer passes through the middle of India, the entire country must be tropical. In reality, while this latitude influences our heat, the Himalayas in the north act as a barrier, preventing cold winds from Central Asia and keeping the climate diverse. Another common misunderstanding is that winds move in a straight line from high to low pressure. Due to the Earth's rotation, the Coriolis force deflects these winds, causing them to curve rather than travel directly. Finally, some think that rain shadow areas receive absolutely no rainfall. This is not true; these regions are simply areas on the leeward side of mountains that receive significantly less precipitation than the windward side, rather than being completely dry. Understanding these complex mechanisms helps us appreciate why India experiences such varied seasonal patterns across its vast geography.",
+  "summary": "Climate is a long-term average of weather conditions, not a single day's event. India's climate is shaped by its unique geography, the Coriolis effect on winds, and mountain barriers, rather than just its latitude.",
+  "items": [
+   {
+    "evidence": "Climate refers to the sum total of weather conditions and variations over a large area for a long period, usually thirty years or more.",
+    "answer": "thirty years or more",
+    "stem": "How long of a duration is typically required to define the climate of a specific region?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-CLIMATE-K11-M1",
+      "why": "Student thinks climate is just the weather of one day.",
+      "text": "a single day"
+     },
+     {
+      "belief_id": "SOC-GEO-CLIMATE-K12-M2",
+      "why": "Student confuses time scale with the tropical zone definition.",
+      "text": "the tropical zone"
+     },
+     {
+      "belief_id": "SOC-GEO-CLIMATE-K15-M3",
+      "why": "Student guesses a duration related to rain shadow patterns.",
+      "text": "the leeward side"
+     }
+    ]
+   },
+   {
+    "evidence": "In reality, while this latitude influences our heat, the Himalayas in the north act as a barrier, preventing cold winds from Central Asia and keeping the climate diverse.",
+    "answer": "the Himalayas",
+    "stem": "What geographical feature prevents India from having a uniform climate despite the Tropic of Cancer?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-CLIMATE-K12-M2",
+      "why": "Student believes the Tropic of Cancer dictates all climate.",
+      "text": "the Tropic of Cancer"
+     },
+     {
+      "belief_id": "SOC-GEO-CLIMATE-K13-M4",
+      "why": "Student thinks wind direction is the primary climate factor.",
+      "text": "straight winds"
+     },
+     {
+      "belief_id": "SOC-GEO-CLIMATE-K11-M1",
+      "why": "Student confuses daily weather with long-term climate barriers.",
+      "text": "a single day"
+     }
+    ]
+   },
+   {
+    "evidence": "Due to the Earth's rotation, the Coriolis force deflects these winds, causing them to curve rather than travel directly.",
+    "answer": "the Coriolis force",
+    "stem": "What causes winds to curve instead of moving in a straight line from high to low pressure?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-CLIMATE-K13-M4",
+      "why": "Student believes winds move straight from high to low.",
+      "text": "high pressure"
+     },
+     {
+      "belief_id": "SOC-GEO-CLIMATE-K12-M2",
+      "why": "Student incorrectly links tropical latitude to wind movement.",
+      "text": "the tropical zone"
+     },
+     {
+      "belief_id": "SOC-GEO-CLIMATE-K15-M3",
+      "why": "Student confuses wind deflection with rain shadow effects.",
+      "text": "the leeward side"
+     }
+    ]
+   },
+   {
+    "evidence": "This is not true; these regions are simply areas on the leeward side of mountains that receive significantly less precipitation than the windward side, rather than being completely dry.",
+    "answer": "significantly less precipitation",
+    "stem": "What actually happens to rainfall in a rain shadow area?",
+    "options": [
+     {
+      "belief_id": "SOC-GEO-CLIMATE-K15-M3",
+      "why": "Student believes rain shadow areas receive no rain.",
+      "text": "no rainfall at all"
+     },
+     {
+      "belief_id": "SOC-GEO-CLIMATE-K13-M4",
+      "why": "Student thinks pressure differences stop all rain.",
+      "text": "straight wind blockage"
+     },
+     {
+      "belief_id": "SOC-GEO-CLIMATE-K11-M1",
+      "why": "Student thinks climate averages make rain impossible there.",
+      "text": "a single day's weather"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 24.5
+}

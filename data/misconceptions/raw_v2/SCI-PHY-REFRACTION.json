@@ -1,0 +1,566 @@
+{
+ "topic": {
+  "id": "SCI-PHY-REFRACTION",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   10
+  ],
+  "title": "Light: reflection and refraction",
+  "scope": "spherical mirrors, mirror formula, refraction, refractive index, lenses, lens formula, power of a lens"
+ },
+ "model": "gemini-3-flash-preview",
+ "usage": {
+  "promptTokenCount": 839,
+  "candidatesTokenCount": 4818,
+  "totalTokenCount": 8650,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 839
+   }
+  ],
+  "thoughtsTokenCount": 2993,
+  "serviceTier": "standard"
+ },
+ "seconds": 33.9,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Reflection of Light",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "rectilinear propagation of light"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Refraction of Light",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "speed of light in vacuum"
+    ]
+   },
+   {
+    "key": "n1.1",
+    "name": "Spherical Mirrors",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "basic geometry of circles"
+    ]
+   },
+   {
+    "key": "n1.2",
+    "name": "Mirror Mathematics",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n1.1"
+    ],
+    "external_prereqs": [
+     "algebraic equations",
+     "coordinate geometry"
+    ]
+   },
+   {
+    "key": "n2.1",
+    "name": "Refractive Index",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "ratio and proportion"
+    ]
+   },
+   {
+    "key": "n2.2",
+    "name": "Spherical Lenses",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n2.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.3",
+    "name": "Lens Mathematics and Power",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n2.2",
+     "n1.2"
+    ],
+    "external_prereqs": [
+     "algebraic equations"
+    ]
+   },
+   {
+    "key": "n1.1.1",
+    "name": "Concave Mirror Convergence",
+    "level": 3,
+    "parent": "n1.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.1.2",
+    "name": "Convex Mirror Divergence",
+    "level": 3,
+    "parent": "n1.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.1.3",
+    "name": "Focal Length and Radius",
+    "level": 3,
+    "parent": "n1.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.2.1",
+    "name": "Cartesian Sign Convention",
+    "level": 3,
+    "parent": "n1.2",
+    "prereqs": [],
+    "external_prereqs": [
+     "number lines"
+    ]
+   },
+   {
+    "key": "n1.2.2",
+    "name": "Mirror Formula Application",
+    "level": 3,
+    "parent": "n1.2",
+    "prereqs": [
+     "n1.2.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.2.3",
+    "name": "Magnification in Mirrors",
+    "level": 3,
+    "parent": "n1.2",
+    "prereqs": [
+     "n1.2.2"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.1.1",
+    "name": "Bending at Interface",
+    "level": 3,
+    "parent": "n2.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.1.2",
+    "name": "Snell's Law",
+    "level": 3,
+    "parent": "n2.1",
+    "prereqs": [
+     "n2.1.1"
+    ],
+    "external_prereqs": [
+     "trigonometric ratios"
+    ]
+   },
+   {
+    "key": "n2.2.1",
+    "name": "Convex Lens Convergence",
+    "level": 3,
+    "parent": "n2.2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.2.2",
+    "name": "Concave Lens Divergence",
+    "level": 3,
+    "parent": "n2.2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.3.1",
+    "name": "Lens Formula Application",
+    "level": 3,
+    "parent": "n2.3",
+    "prereqs": [
+     "n1.2.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.3.2",
+    "name": "Magnification in Lenses",
+    "level": 3,
+    "parent": "n2.3",
+    "prereqs": [
+     "n2.3.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.3.3",
+    "name": "Power of Lens Calculation",
+    "level": 3,
+    "parent": "n2.3",
+    "prereqs": [
+     "n2.3.1"
+    ],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n1.1.1",
+    "statement": "The image formed by a mirror is located on the surface of the mirror.",
+    "why": "Students see the reflection 'on' the glass and do not perceive the depth of the virtual or real image.",
+    "fix": "The image is located at the point where reflected rays actually meet or appear to meet, which is usually behind or in front of the mirror.",
+    "probe": {
+     "question": "If you move closer to a plane mirror, where does your image move?",
+     "wrong_answer": "It stays on the glass surface."
+    },
+    "error_type": "visible_only",
+    "root_belief": "what you see is where it is",
+    "causes": [],
+    "trigger_cues": [
+     "image",
+     "position",
+     "surface",
+     "mirror"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's research on children's ideas"
+   },
+   {
+    "key": "m2",
+    "node": "n1.1.1",
+    "statement": "Virtual images cannot be seen because they are not real.",
+    "why": "The word 'virtual' in everyday language implies something that doesn't exist or is fake.",
+    "fix": "Virtual images can be seen by the eye because the eye's lens converges the diverging rays onto the retina.",
+    "probe": {
+     "question": "Can you see your own reflection in a mirror? Is it real or virtual?",
+     "wrong_answer": "I can see it, so it must be a real image."
+    },
+    "error_type": "everyday_language",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "virtual",
+     "real",
+     "screen",
+     "seen"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on optics"
+   },
+   {
+    "key": "m3",
+    "node": "n1.2.1",
+    "statement": "The object distance 'u' is always positive because the object is a real physical thing.",
+    "why": "Students confuse physical existence with the mathematical sign convention.",
+    "fix": "According to the Cartesian sign convention, the object is placed to the left of the mirror, making 'u' always negative.",
+    "probe": {
+     "question": "An object is 10cm from a mirror. What value of 'u' do you use in the formula?",
+     "wrong_answer": "+10 cm"
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "positive numbers represent real physical presence",
+    "causes": [
+     "m11"
+    ],
+    "trigger_cues": [
+     "object distance",
+     "u",
+     "sign",
+     "convention"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n1.2.3",
+    "statement": "A negative magnification means the image is smaller than the object.",
+    "why": "In mathematics, negative numbers are smaller than positive numbers.",
+    "fix": "In optics, the negative sign indicates the image is inverted; the numerical value indicates the size.",
+    "probe": {
+     "question": "If magnification is -2, is the image enlarged or diminished?",
+     "wrong_answer": "Diminished because -2 is less than 1."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "mathematical signs indicate magnitude only",
+    "causes": [],
+    "trigger_cues": [
+     "magnification",
+     "negative",
+     "inverted",
+     "size"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m5",
+    "node": "n2.1.1",
+    "statement": "Light bends inside the second medium, not at the boundary.",
+    "why": "Students often draw curved paths or delayed bending in ray diagrams.",
+    "fix": "Refraction is the change in direction that occurs exactly at the interface of two media with different optical densities.",
+    "probe": {
+     "question": "Where does light change its path when entering water from air?",
+     "wrong_answer": "After it has traveled a few centimeters into the water."
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "processes happen over space not instantly",
+    "causes": [],
+    "trigger_cues": [
+     "refraction",
+     "interface",
+     "boundary",
+     "bending"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic questions"
+   },
+   {
+    "key": "m6",
+    "node": "n2.1.3",
+    "statement": "A higher refractive index means light travels faster in that medium.",
+    "why": "Students associate 'higher' or 'more' with 'faster' or 'better'.",
+    "fix": "Refractive index is inversely proportional to the speed of light; higher index means slower speed.",
+    "probe": {
+     "question": "Medium A has n=1.5 and Medium B has n=1.3. In which medium is light faster?",
+     "wrong_answer": "Medium A"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "more means more",
+    "causes": [],
+    "trigger_cues": [
+     "refractive index",
+     "speed",
+     "optical density",
+     "faster"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n2.2.1",
+    "statement": "If you cover the top half of a lens, you will only see the bottom half of the image.",
+    "why": "Students believe each part of the lens is responsible for a specific part of the object.",
+    "fix": "Every part of the lens forms the whole image; covering half only reduces the brightness of the full image.",
+    "probe": {
+     "question": "What happens to the image of a tree if you block the upper half of the lens with black paper?",
+     "wrong_answer": "The top of the tree disappears from the image."
+    },
+    "error_type": "part_whole",
+    "root_belief": "parts of cause create parts of effect",
+    "causes": [],
+    "trigger_cues": [
+     "lens",
+     "covered",
+     "half",
+     "brightness"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's research"
+   },
+   {
+    "key": "m8",
+    "node": "n2.2.1",
+    "statement": "Light rays stop at the point where the image is formed.",
+    "why": "Ray diagrams usually end at the image point, leading to the belief that light is 'consumed'.",
+    "fix": "Light rays continue to travel past the image point unless blocked by a screen.",
+    "probe": {
+     "question": "If you place your eye exactly at the image position of a real image, what do you see?",
+     "wrong_answer": "Nothing, because the light has stopped there."
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "the end of a diagram is the end of the process",
+    "causes": [],
+    "trigger_cues": [
+     "rays",
+     "image",
+     "converge",
+     "travel"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Optics Concept Inventory"
+   },
+   {
+    "key": "m9",
+    "node": "n2.3.3",
+    "statement": "A lens with a higher power has a longer focal length.",
+    "why": "The word 'power' suggests 'bigger' or 'longer' dimensions.",
+    "fix": "Power is the reciprocal of focal length (P=1/f); a powerful lens bends light more and has a short focal length.",
+    "probe": {
+     "question": "Which lens is more powerful: one with f=10cm or f=20cm?",
+     "wrong_answer": "The lens with f=20cm."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "more of A means more of B",
+    "causes": [],
+    "trigger_cues": [
+     "power",
+     "focal length",
+     "dioptre",
+     "converging"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m10",
+    "node": "n2.3.1",
+    "statement": "The lens formula is exactly the same as the mirror formula.",
+    "why": "The formulas look very similar and students fail to distinguish the sign between terms.",
+    "fix": "The mirror formula uses addition (1/v + 1/u) while the lens formula uses subtraction (1/v - 1/u).",
+    "probe": {
+     "question": "Write the relationship between u, v, and f for a thin convex lens.",
+     "wrong_answer": "1/v + 1/u = 1/f"
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "a rule from one context works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "formula",
+     "lens",
+     "mirror",
+     "calculation"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n1.1.3",
+    "statement": "Focal length is the distance from the object to the mirror's focus.",
+    "why": "Students confuse the 'focus' as a point relative to the object rather than the mirror.",
+    "fix": "Focal length is the fixed distance between the Pole of the mirror and its Principal Focus.",
+    "probe": {
+     "question": "If you move the object further away, what happens to the focal length of the mirror?",
+     "wrong_answer": "The focal length increases."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "properties of objects depend on their surroundings",
+    "causes": [],
+    "trigger_cues": [
+     "focal length",
+     "pole",
+     "focus",
+     "distance"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m12",
+    "node": "n2.1.1",
+    "statement": "Light only refracts when it enters a liquid like water.",
+    "why": "Common classroom examples often use water or glass blocks, and air is seen as 'nothing'.",
+    "fix": "Refraction occurs whenever light passes between any two media of different optical densities, including air to glass or air to oil.",
+    "probe": {
+     "question": "Does light bend when it passes from air into a solid diamond?",
+     "wrong_answer": "No, refraction only happens in liquids."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "only specific materials have specific properties",
+    "causes": [],
+    "trigger_cues": [
+     "refraction",
+     "medium",
+     "water",
+     "liquid"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m13",
+    "node": "n2.2.2",
+    "statement": "Concave lenses can form real images if the object is placed very far away.",
+    "why": "Students overgeneralize the behavior of concave mirrors to concave lenses.",
+    "fix": "A concave lens always produces a virtual, erect, and diminished image regardless of the object's position.",
+    "probe": {
+     "question": "Where should you place an object to get a real image from a concave lens?",
+     "wrong_answer": "At infinity or beyond 2F."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar names imply similar functions",
+    "causes": [],
+    "trigger_cues": [
+     "concave lens",
+     "real image",
+     "position",
+     "nature"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m14",
+    "node": "n1.1.2",
+    "statement": "Convex mirrors are used in solar furnaces to concentrate sunlight.",
+    "why": "Confusion between the terms 'convex' and 'concave' and their converging/diverging properties.",
+    "fix": "Concave mirrors are converging and used in solar furnaces; convex mirrors are diverging.",
+    "probe": {
+     "question": "Which mirror would you use to start a fire using sunlight?",
+     "wrong_answer": "A convex mirror because it is curved outwards."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "words that sound similar are interchangeable",
+    "causes": [],
+    "trigger_cues": [
+     "convex",
+     "concave",
+     "solar",
+     "converge"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m15",
+    "node": "n2.1.1",
+    "statement": "Light slows down in glass because it has to weave through the atoms.",
+    "why": "Students apply macroscopic mechanical intuition (like walking through a crowd) to light.",
+    "fix": "Light slows down due to the interaction of the electromagnetic wave with the electrons of the medium, not by physical 'weaving'.",
+    "probe": {
+     "question": "Why is the speed of light less in glass than in vacuum?",
+     "wrong_answer": "Because the atoms in glass block the straight path of light."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "macroscopic mechanics apply to subatomic particles",
+    "causes": [],
+    "trigger_cues": [
+     "speed",
+     "medium",
+     "atoms",
+     "slower"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   }
+  ]
+ },
+ "problems": [
+  "misconception dropped: 'A higher refractive index means light travels fast'"
+ ]
+}

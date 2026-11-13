@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0722-GENERIC-a_cricket_match_between_two_sc",
+  "topic_id": null,
+  "split": "train",
+  "generic": true,
+  "theme": "a cricket match between two schools",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a cause-and-effect explanation",
+  "seed": 722
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 716,
+  "candidatesTokenCount": 1132,
+  "totalTokenCount": 1848,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 716
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "The annual cricket match between Green Valley School and St. Jude’s Academy took place on 15th March at the City Stadium. The weather was perfect, but the pitch was unusually dry and dusty. Because the pitch was so dry, the ball spun sharply, making it very difficult for the batsmen to score runs. Rohan, the captain of Green Valley, decided to bowl his spinners early in the game. This strategy worked well as St. Jude’s lost four wickets in the first ten overs. However, the game changed when Rahul, the star batsman for St. Jude’s, entered the field. He played carefully and hit the ball along the ground to avoid the spin. By the end of the match, St. Jude’s reached a total of 120 runs. Green Valley chased the target easily, winning the match by five wickets. The crowd cheered loudly for both teams, celebrating the spirit of the game. The principal of Green Valley, Mrs. Sharma, praised the players for their discipline. Everyone agreed that the dry pitch was the main reason for the low scoring rate in the first half of the match.",
+  "summary": "Green Valley School played a cricket match against St. Jude’s Academy at the City Stadium. The dry pitch made batting difficult, but Green Valley eventually won the game by five wickets.",
+  "items": [
+   {
+    "evidence": "Because the pitch was so dry, the ball spun sharply, making it very difficult for the batsmen to score runs.",
+    "answer": "the ball spun sharply",
+    "stem": "What was the direct result of the dry condition of the pitch?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Confuses cause and effect by picking the reason.",
+      "text": "the pitch was so dry"
+     },
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Uses the everyday meaning of dry instead of the context.",
+      "text": "the batsmen felt thirsty"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Picks a true fact that is not the result.",
+      "text": "the match took place"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan, the captain of Green Valley, decided to bowl his spinners early in the game.",
+    "answer": "Rohan",
+    "stem": "Who made the decision to use spin bowlers at the start?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks a name mentioned in the same sentence.",
+      "text": "Green Valley"
+     },
+     {
+      "belief_id": "GEN-READ-M5",
+      "why": "Confuses the captain with another player mentioned later.",
+      "text": "Rahul"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Picks a person mentioned in the passage who is not the captain.",
+      "text": "Mrs. Sharma"
+     }
+    ]
+   },
+   {
+    "evidence": "St. Jude’s lost four wickets in the first ten overs.",
+    "answer": "four",
+    "stem": "How many players were out during the initial ten overs?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Picks a random number from the passage.",
+      "text": "120"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Assumes all overs result in the same number of wickets.",
+      "text": "ten"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Picks a number related to the result of the match.",
+      "text": "five"
+     }
+    ]
+   },
+   {
+    "evidence": "Everyone agreed that the dry pitch was the main reason for the low scoring rate in the first half of the match.",
+    "answer": "the dry pitch",
+    "stem": "What caused the low number of runs during the first half?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks a noun phrase near the end of the sentence.",
+      "text": "the first half"
+     },
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Confuses the effect with the cause.",
+      "text": "low scoring rate"
+     },
+     {
+      "belief_id": "GEN-READ-M5",
+      "why": "Confuses the pitch with the stadium.",
+      "text": "the City Stadium"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 3.7
+}

@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0236-MAT-QUADRATIC",
+  "topic_id": "MAT-QUADRATIC",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a market or shop situation that uses the idea",
+  "seed": 236
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1190,
+  "candidatesTokenCount": 1399,
+  "totalTokenCount": 2589,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1190
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-QUADRATIC-K7-M2",
+  "MAT-QUADRATIC-K17-M12",
+  "MAT-QUADRATIC-K7-M1",
+  "MAT-QUADRATIC-K9-M4",
+  "MAT-QUADRATIC-K17-M14",
+  "MAT-QUADRATIC-K14-M8",
+  "MAT-QUADRATIC-K15-M11",
+  "MAT-QUADRATIC-K11-M7",
+  "MAT-QUADRATIC-K21-M18",
+  "MAT-QUADRATIC-K22-M22",
+  "MAT-QUADRATIC-K24-M21",
+  "MAT-QUADRATIC-K19-M17",
+  "MAT-QUADRATIC-K27-M24",
+  "MAT-QUADRATIC-K17-M13"
+ ],
+ "response": {
+  "passage": "Rohan runs a small stationery shop in his neighborhood. He decides to stock a new type of premium notebook. He calculates that if he sells each notebook for x rupees, the total number of notebooks sold in a day is represented by the expression (40 - x). To find his daily revenue, he multiplies the price by the quantity, resulting in the equation x(40 - x) = 300. Rohan wants to determine the price x that will yield this revenue. He expands the equation to get 40x - x² = 300, which he then rearranges into the standard form -x² + 40x - 300 = 0. To solve this, he uses the quadratic formula where the coefficient of x, known as b, is 40. He carefully calculates the discriminant, b² - 4ac, using the value of b as 40 and a as -1. He knows that if the discriminant is less than zero, the equation has no real roots, meaning he cannot achieve that specific revenue. After solving, he finds two possible prices for the notebooks. He realizes that if a factor of his equation is (x - 10), the corresponding root is x = 10. He is careful not to confuse the sign of the root with the sign inside the factor.",
+  "summary": "Rohan uses a quadratic equation to model the daily revenue of his stationery shop based on notebook prices. By rearranging the equation into standard form, he applies the quadratic formula to find the viable selling prices.",
+  "items": [
+   {
+    "evidence": "He expands the equation to get 40x - x² = 300, which he then rearranges into the standard form -x² + 40x - 300 = 0.",
+    "answer": "-x² + 40x - 300 = 0",
+    "stem": "Which expression represents the correct standard form of the revenue equation?",
+    "options": [
+     {
+      "belief_id": "MAT-QUADRATIC-K9-M4",
+      "why": "Student assumes the original equation is already in standard form.",
+      "text": "x(40 - x) = 300"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K7-M2",
+      "why": "Student ignores the rearrangement and focuses only on the squared term.",
+      "text": "40x - x² = 300"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K7-M1",
+      "why": "Student incorrectly identifies higher power requirements for standard form.",
+      "text": "x³ - x² + 40x - 300 = 0"
+     }
+    ]
+   },
+   {
+    "evidence": "He knows that if the discriminant is less than zero, the equation has no real roots, meaning he cannot achieve that specific revenue.",
+    "answer": "no real roots",
+    "stem": "What is the mathematical consequence if the calculated discriminant is negative?",
+    "options": [
+     {
+      "belief_id": "MAT-QUADRATIC-K24-M21",
+      "why": "Student believes negative discriminant implies no solution exists at all.",
+      "text": "the equation is invalid"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K21-M18",
+      "why": "Student assumes a negative b value forces the discriminant to be negative.",
+      "text": "the revenue is negative"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K22-M22",
+      "why": "Student confuses discriminant sign with the sign of the roots.",
+      "text": "the roots are negative"
+     }
+    ]
+   },
+   {
+    "evidence": "He is careful not to confuse the sign of the root with the sign inside the factor.",
+    "answer": "x = 10",
+    "stem": "If a factor of the equation is (x - 10), what is the correct root?",
+    "options": [
+     {
+      "belief_id": "MAT-QUADRATIC-K15-M11",
+      "why": "Student incorrectly flips the sign of the root based on the factor.",
+      "text": "x = -10"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K11-M7",
+      "why": "Student assumes there must be two different roots for every factor.",
+      "text": "x = 10 and x = -10"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K14-M8",
+      "why": "Student attempts to solve by setting factors equal to the revenue constant.",
+      "text": "x = 310"
+     }
+    ]
+   },
+   {
+    "evidence": "He carefully calculates the discriminant, b² - 4ac, using the value of b as 40 and a as -1.",
+    "answer": "b² - 4ac",
+    "stem": "Which formula does Rohan use to determine the nature of the roots?",
+    "options": [
+     {
+      "belief_id": "MAT-QUADRATIC-K17-M13",
+      "why": "Student incorrectly squares a negative b value as a negative number.",
+      "text": "b - 4ac"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K17-M14",
+      "why": "Student incorrectly simplifies the square root of the discriminant expression.",
+      "text": "b - 2√(ac)"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K17-M12",
+      "why": "Student assumes -b is always a negative number regardless of b.",
+      "text": "-b² - 4ac"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.8
+}

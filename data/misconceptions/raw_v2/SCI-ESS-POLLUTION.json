@@ -1,0 +1,465 @@
+{
+ "topic": {
+  "id": "SCI-ESS-POLLUTION",
+  "subject": "science",
+  "strand": "earth_space",
+  "grades": [
+   8
+  ],
+  "title": "Pollution of air and water",
+  "scope": "air pollutants, smog, acid rain, greenhouse effect and global warming, water pollution, potable water, Ganga action plan"
+ },
+ "model": "gemini-3-flash-preview/key3",
+ "usage": {
+  "promptTokenCount": 842,
+  "candidatesTokenCount": 4071,
+  "totalTokenCount": 7662,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 842
+   }
+  ],
+  "thoughtsTokenCount": 2749,
+  "serviceTier": "standard"
+ },
+ "seconds": 26.8,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Air Pollution and its Impacts",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "composition of air",
+     "chemical reactions"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Greenhouse Effect and Global Warming",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "heat transfer",
+     "radiation"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Water Pollution and Management",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "states of matter",
+     "microorganisms"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Pollutants and Smog",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Acid Rain and Marble Cancer",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "acids and bases"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "The Greenhouse Mechanism",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Global Warming Impacts",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Water Pollutants and Ganga Action Plan",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Potable Water and Purification",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Smog is smoke plus fog",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "CFCs damage the ozone layer",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "SO2 and NO2 cause acid rain",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "CO2 traps heat in the atmosphere",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Global warming melts glaciers",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Sewage and chemicals pollute water",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n16",
+    "name": "Potable water is safe for drinking",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n17",
+    "name": "Chlorination kills water bacteria",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n4",
+    "statement": "If air is clear and has no smell, it is not polluted.",
+    "why": "Students rely on their primary senses to detect environmental changes.",
+    "fix": "Many harmful pollutants like carbon monoxide are colorless and odorless. Air can look clean but still contain dangerous gases or microscopic particles.",
+    "probe": {
+     "question": "Is air that looks perfectly clear always safe to breathe?",
+     "wrong_answer": "Yes, because pollutants are always visible as smoke or dust."
+    },
+    "error_type": "visible_only",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "clear",
+     "smell",
+     "pure",
+     "odorless",
+     "invisible"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m2",
+    "node": "n11",
+    "statement": "The ozone hole is the main cause of global warming.",
+    "why": "Students conflate different atmospheric environmental issues into one general 'pollution' problem.",
+    "fix": "The ozone hole allows more UV radiation to reach Earth, but global warming is caused by greenhouse gases trapping infrared heat. They are two distinct environmental issues.",
+    "probe": {
+     "question": "How does the ozone hole relate to global warming?",
+     "wrong_answer": "The hole lets in more heat from the sun, causing warming."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "all environmental problems are the same thing",
+    "causes": [],
+    "trigger_cues": [
+     "ozone",
+     "hole",
+     "uv rays",
+     "sunlight",
+     "warming"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's research"
+   },
+   {
+    "key": "m3",
+    "node": "n12",
+    "statement": "Acid rain is as strong as the acids found in car batteries.",
+    "why": "Students associate the word 'acid' with immediate corrosive danger seen in labs or media.",
+    "fix": "Acid rain is only slightly more acidic than normal rain. It corrodes marble and harms plants over many years, but it does not burn skin instantly.",
+    "probe": {
+     "question": "What would happen if acid rain fell on your hand?",
+     "wrong_answer": "It would immediately burn a hole through my skin."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "all acids are equally dangerous",
+    "causes": [],
+    "trigger_cues": [
+     "acid",
+     "burn",
+     "corrosive",
+     "battery",
+     "strong"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n6",
+    "statement": "The greenhouse effect is a purely harmful phenomenon caused by humans.",
+    "why": "Media and textbooks often only discuss the 'enhanced' greenhouse effect in a negative context.",
+    "fix": "The natural greenhouse effect is essential for life; without it, Earth would be too cold to survive. It only becomes harmful when human activities increase gas levels too much.",
+    "probe": {
+     "question": "Would Earth be better off if we completely removed the greenhouse effect?",
+     "wrong_answer": "Yes, because it is a type of pollution that causes warming."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "natural is good and human-made is bad",
+    "causes": [],
+    "trigger_cues": [
+     "harmful",
+     "natural",
+     "essential",
+     "life",
+     "temperature"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research"
+   },
+   {
+    "key": "m5",
+    "node": "n13",
+    "statement": "Oxygen and Nitrogen are the main greenhouse gases.",
+    "why": "Students know these are the most abundant gases in the air and assume they must do the most work.",
+    "fix": "Oxygen and Nitrogen do not trap heat. Only trace gases like CO2, methane, and water vapor act as greenhouse gases.",
+    "probe": {
+     "question": "Which gas in the air is most responsible for trapping heat?",
+     "wrong_answer": "Nitrogen, because it makes up 78% of the air."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "more of something means more effect",
+    "causes": [],
+    "trigger_cues": [
+     "nitrogen",
+     "oxygen",
+     "abundance",
+     "trapping",
+     "heat"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m6",
+    "node": "n16",
+    "statement": "Water that is clear and transparent is always safe to drink.",
+    "why": "Students believe that 'clean' appearance is the same as 'safe' biological/chemical status.",
+    "fix": "Clear water can still contain invisible disease-causing bacteria or dissolved poisonous chemicals like arsenic or nitrates.",
+    "probe": {
+     "question": "If you find a crystal-clear stream in a forest, is it definitely safe to drink?",
+     "wrong_answer": "Yes, because you can see right through it and there is no dirt."
+    },
+    "error_type": "visible_only",
+    "root_belief": "appearance indicates safety",
+    "causes": [],
+    "trigger_cues": [
+     "clear",
+     "transparent",
+     "safe",
+     "drinking",
+     "mountain"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m7",
+    "node": "n17",
+    "statement": "Chlorination removes all types of pollution from water.",
+    "why": "Students hear that chlorine 'purifies' water and assume it is a universal fix.",
+    "fix": "Chlorination only kills bacteria and germs; it does not remove dissolved salts, heavy metals, or physical dirt.",
+    "probe": {
+     "question": "Does adding chlorine to water make it safe from industrial chemical waste?",
+     "wrong_answer": "Yes, chlorine purifies the water and removes all pollutants."
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "one treatment fixes all problems",
+    "causes": [],
+    "trigger_cues": [
+     "chlorine",
+     "purify",
+     "bacteria",
+     "chemicals",
+     "safe"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m8",
+    "node": "n9",
+    "statement": "Boiling water removes chemical pollutants like lead or pesticides.",
+    "why": "Boiling is taught as the gold standard for making water safe at home.",
+    "fix": "Boiling kills microorganisms but can actually increase the concentration of chemical pollutants as some water evaporates.",
+    "probe": {
+     "question": "If water is contaminated with lead, will boiling it make it safe?",
+     "wrong_answer": "Yes, boiling removes all harmful things from water."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "heat destroys all harmful substances",
+    "causes": [],
+    "trigger_cues": [
+     "boiling",
+     "lead",
+     "pesticides",
+     "safe",
+     "evaporation"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic studies"
+   },
+   {
+    "key": "m9",
+    "node": "n14",
+    "statement": "Global warming will cause the Earth to catch fire or boil.",
+    "why": "Students use 'intuitive physics' where 'warming' is extrapolated to extreme heat they experience daily.",
+    "fix": "Global warming refers to a small increase in average temperature (1-2 degrees) which is enough to melt ice and change weather, but not to cause fires or boiling.",
+    "probe": {
+     "question": "What is the most likely result of a 2-degree rise in global temperature?",
+     "wrong_answer": "The oceans will start boiling and trees will catch fire."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "extreme consequences happen immediately",
+    "causes": [],
+    "trigger_cues": [
+     "boil",
+     "fire",
+     "temperature",
+     "rise",
+     "extreme"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m10",
+    "node": "n15",
+    "statement": "The Ganga river cannot be polluted because it is a holy river.",
+    "why": "Cultural and religious beliefs often override scientific observations in the Indian context.",
+    "fix": "While the Ganga has spiritual significance, scientifically it is heavily polluted by sewage and industrial waste, making it unsafe for bathing or drinking in many parts.",
+    "probe": {
+     "question": "Can a sacred river like the Ganga become biologically polluted?",
+     "wrong_answer": "No, it has self-purifying powers that prevent it from being dirty."
+    },
+    "error_type": "other",
+    "root_belief": "spiritual purity equals physical purity",
+    "causes": [],
+    "trigger_cues": [
+     "ganga",
+     "holy",
+     "sacred",
+     "purifying",
+     "river"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Indian education case studies"
+   },
+   {
+    "key": "m11",
+    "node": "n6",
+    "statement": "Greenhouse gases act like a solid glass shell around the Earth.",
+    "why": "The 'greenhouse' analogy is taken too literally as a physical barrier.",
+    "fix": "There is no solid shell; greenhouse gases are mixed throughout the air and they absorb and re-emit heat energy in all directions.",
+    "probe": {
+     "question": "Is there a physical layer of gas at the top of the atmosphere that reflects heat?",
+     "wrong_answer": "Yes, it is like a glass roof that bounces heat back down."
+    },
+    "error_type": "everyday_language",
+    "root_belief": "atmospheric processes work like physical objects",
+    "causes": [],
+    "trigger_cues": [
+     "glass",
+     "shell",
+     "roof",
+     "barrier",
+     "layer"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m12",
+    "node": "n10",
+    "statement": "Smog is just a very thick version of natural winter fog.",
+    "why": "Smog and fog look similar, and students use the same word for both in local languages.",
+    "fix": "Fog is made of water droplets, but smog contains harmful pollutants like nitrogen oxides and smoke particles that react in sunlight.",
+    "probe": {
+     "question": "Is the 'fog' seen in polluted cities the same as the fog in a forest?",
+     "wrong_answer": "Yes, it is just thicker because there are more trees or buildings."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "things that look similar are the same",
+    "causes": [],
+    "trigger_cues": [
+     "smog",
+     "fog",
+     "winter",
+     "smoke",
+     "thick"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}

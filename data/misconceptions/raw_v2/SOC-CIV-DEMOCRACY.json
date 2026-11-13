@@ -1,0 +1,475 @@
+{
+ "topic": {
+  "id": "SOC-CIV-DEMOCRACY",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   9
+  ],
+  "title": "What is democracy",
+  "scope": "features of democracy, free and fair elections, rule of law, arguments for and against democracy"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 828,
+  "candidatesTokenCount": 1613,
+  "totalTokenCount": 2441,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 828
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 5.6,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Core Features of Democracy",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "concept of government"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Elections and Rule of Law",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "types of government"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Arguments for and against Democracy",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1",
+     "n2"
+    ],
+    "external_prereqs": [
+     "critical thinking"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Decision-making power",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "sovereignty"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Political equality",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "universal adult franchise"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Free and fair elections",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "electoral process"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Rule of law and rights",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "fundamental rights"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Democracy improves quality of decision making",
+    "level": 3,
+    "parent": "n3",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "consultation"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Democracy provides method to deal with differences",
+    "level": 3,
+    "parent": "n3",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "social diversity"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Democracy enhances dignity of citizens",
+    "level": 3,
+    "parent": "n3",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "human rights"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Elected leaders hold final power",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "One person, one vote, one value",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Regular competition for power",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Respect for constitutional law",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n4",
+    "statement": "Any country with a parliament is a democracy.",
+    "why": "Students confuse the existence of a building or institution with the actual practice of democratic power.",
+    "fix": "A democracy requires that the final decision-making power rests with those elected by the people, not just the existence of a legislative body.",
+    "probe": {
+     "question": "If a country has a parliament but the military makes all the laws, is it a democracy?",
+     "wrong_answer": "Yes, because it has a parliament."
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "parliament",
+     "legislature",
+     "elected",
+     "power",
+     "military"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n12",
+    "statement": "Democracy means everyone gets exactly what they want.",
+    "why": "Students equate democracy with the fulfillment of personal desires rather than a process of collective decision-making.",
+    "fix": "Democracy is a system of government where people have a say in choosing their leaders and laws, but it does not guarantee that every individual's specific wish will be granted.",
+    "probe": {
+     "question": "If the government passes a law you dislike, is the country still a democracy?",
+     "wrong_answer": "No, because democracy means everyone gets what they want."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "equality",
+     "vote",
+     "value",
+     "citizens",
+     "rights"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on political concepts"
+   },
+   {
+    "key": "m3",
+    "node": "n6",
+    "statement": "Elections are free and fair if everyone is allowed to vote.",
+    "why": "Students focus only on the act of voting and ignore the conditions required for a genuine choice.",
+    "fix": "Free and fair elections require that the ruling party has a fair chance of losing and that there is a genuine choice between alternatives.",
+    "probe": {
+     "question": "If there is only one party on the ballot, is it a fair election?",
+     "wrong_answer": "Yes, because everyone is allowed to vote."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "one event has one single cause",
+    "causes": [],
+    "trigger_cues": [
+     "elections",
+     "fair",
+     "choice",
+     "ballot",
+     "ruling party"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n7",
+    "statement": "In a democracy, the government can do whatever the majority wants.",
+    "why": "Students confuse democracy with 'majority rule' without considering constitutional limits.",
+    "fix": "Democracy requires the government to respect the rights of minorities and operate within the limits set by the constitution.",
+    "probe": {
+     "question": "Can a majority vote to take away the rights of a minority group in a democracy?",
+     "wrong_answer": "Yes, because the majority decision is always democratic."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "bigger or more means more effect",
+    "causes": [],
+    "trigger_cues": [
+     "majority",
+     "rule of law",
+     "rights",
+     "constitution",
+     "limits"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's children's ideas"
+   },
+   {
+    "id": "m5",
+    "node": "n4",
+    "statement": "In a democracy, the people themselves make every decision directly.",
+    "why": "Students equate democracy with its ancient direct form and miss that modern democracies work through representatives.",
+    "fix": "In modern democracies people elect representatives, and these elected representatives take decisions on their behalf.",
+    "probe": {
+     "question": "Who takes the decisions about laws in India's democracy?",
+     "wrong_answer": "All citizens vote directly on every law and decision."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Democracy means direct rule by all people",
+    "causes": [],
+    "trigger_cues": [
+     "people",
+     "decide",
+     "directly",
+     "every",
+     "law",
+     "vote"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom discussion; textbook",
+    "key": "m5"
+   },
+   {
+    "id": "m6",
+    "node": "n11",
+    "statement": "Army officers or unelected officials can hold the final power in a democracy if they are skilled.",
+    "why": "Students value expertise and efficiency over accountability and think any capable ruler works.",
+    "fix": "In a democracy the final decision-making power rests with elected representatives, not with unelected officers or the military.",
+    "probe": {
+     "question": "In a democracy, who should have the final say over the government's decisions: elected leaders or the army chief?",
+     "wrong_answer": "The army chief, since they are more experienced and trained."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Competence matters more than being elected",
+    "causes": [],
+    "trigger_cues": [
+     "final",
+     "power",
+     "army",
+     "officers",
+     "experienced",
+     "elected"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Pakistan example; teacher observation",
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n12",
+    "statement": "One person, one vote, one value means every voter gets the same result as the winner.",
+    "why": "Students confuse equal value of votes with equal outcomes.",
+    "fix": "It means each adult citizen has one vote and every vote counts equally, whatever the person's wealth, religion, caste or gender; it does not guarantee the voter's choice wins.",
+    "probe": {
+     "question": "What does 'one person, one vote, one value' mean?",
+     "wrong_answer": "Everyone who votes gets their chosen candidate to win."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Equal vote means equal outcome",
+    "causes": [],
+    "trigger_cues": [
+     "one vote",
+     "one value",
+     "equal",
+     "winner",
+     "result",
+     "count"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom questioning",
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n5",
+    "statement": "Political equality means all citizens must have equal wealth and property.",
+    "why": "Students mix political equality with economic equality.",
+    "fix": "Political equality means every citizen has equal right to vote and be elected; economic inequalities may still exist.",
+    "probe": {
+     "question": "A rich businessman and a poor labourer both have one vote. Is this political equality?",
+     "wrong_answer": "No, because they do not have equal money."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Political equality equals economic equality",
+    "causes": [],
+    "trigger_cues": [
+     "equality",
+     "equal",
+     "rich",
+     "poor",
+     "wealth",
+     "vote"
+    ],
+    "confidence": "plausible",
+    "source_hint": "textbook discussion",
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n13",
+    "statement": "Regular competition for power is harmful because it only causes quarrels and instability.",
+    "why": "Students see rival parties' fights and think a stable government needs no competition.",
+    "fix": "Regular competition gives voters choice, keeps leaders answerable and lets them remove those who perform badly.",
+    "probe": {
+     "question": "Why do democracies hold regular elections with many parties competing?",
+     "wrong_answer": "It is wasteful and just creates quarrels; one party ruling would be better."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Competition is conflict without benefit",
+    "causes": [],
+    "trigger_cues": [
+     "competition",
+     "parties",
+     "quarrel",
+     "instability",
+     "regular",
+     "elections"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom debate",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n7",
+    "statement": "Rule of law means the law applies to ordinary people but top leaders are above it.",
+    "why": "Students observe powerful people escaping punishment and generalise this as how law works.",
+    "fix": "In a democracy everyone, including the Prime Minister and ministers, is equally subject to the law and its rights.",
+    "probe": {
+     "question": "Can a Minister who breaks the law be tried in court like any citizen?",
+     "wrong_answer": "No, ministers are above the law because they are elected."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Elected power exempts leaders from law",
+    "causes": [],
+    "trigger_cues": [
+     "minister",
+     "above",
+     "law",
+     "court",
+     "punish",
+     "elected"
+    ],
+    "confidence": "plausible",
+    "source_hint": "news-based observation",
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n6",
+    "statement": "Elections in a democracy only need to be held once, after which leaders can rule as long as they like.",
+    "why": "Students think elections are a one-time event for choosing rulers.",
+    "fix": "Elections must be held regularly after a fixed term so the people can change their rulers.",
+    "probe": {
+     "question": "How often must elections be held in a democracy?",
+     "wrong_answer": "Once is enough; the elected leader can continue for life."
+    },
+    "error_type": "chronology_slip",
+    "root_belief": "Elections are one-time, not periodic",
+    "causes": [],
+    "trigger_cues": [
+     "elections",
+     "once",
+     "regular",
+     "term",
+     "rule",
+     "life"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher observation; Zimbabwe/Pakistan examples",
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n9",
+    "statement": "Democracy removes all conflicts between people, so a country with disputes cannot be democratic.",
+    "why": "Students think peaceful agreement is the sign of democracy and see conflicts as failure.",
+    "fix": "Democracy gives a peaceful method to handle differences and conflicts through discussion and negotiation; it does not remove them.",
+    "probe": {
+     "question": "There are disputes over sharing river water between states in India. Does this show India is not a democracy?",
+     "wrong_answer": "Yes, a real democracy would have no disputes."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Democracy means absence of conflict",
+    "causes": [],
+    "trigger_cues": [
+     "conflict",
+     "dispute",
+     "differences",
+     "peace",
+     "disagree",
+     "democracy"
+    ],
+    "confidence": "plausible",
+    "source_hint": "textbook discussion",
+    "key": "m12"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

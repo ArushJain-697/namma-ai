@@ -1,0 +1,131 @@
+{
+ "job": {
+  "job": "train-0438-SCI-BIO-CONTROL",
+  "topic_id": "SCI-BIO-CONTROL",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a passage rich in numbers, dates or measurements",
+  "seed": 438
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 880,
+  "candidatesTokenCount": 1273,
+  "totalTokenCount": 2153,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 880
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "SCI-BIO-CONTROL-K15-M8",
+  "SCI-BIO-CONTROL-K12-M7",
+  "SCI-BIO-CONTROL-K13-M1",
+  "SCI-BIO-CONTROL-K8-M11",
+  "SCI-BIO-CONTROL-K19-M5",
+  "SCI-BIO-CONTROL-K7-M3",
+  "SCI-BIO-CONTROL-K20-M6",
+  "SCI-BIO-CONTROL-K14-M2",
+  "SCI-BIO-CONTROL-K18-M9",
+  "SCI-BIO-CONTROL-K17-M4"
+ ],
+ "response": {
+  "passage": "The human nervous system relies on specialized cells called neurons, which transmit information strictly in one direction, from the dendrite towards the axon terminal. When a signal reaches the end of an axon, it cannot jump as an electrical spark; instead, the neuron releases chemical messengers that diffuse across the tiny synaptic gap to trigger a new impulse in the next cell. While the brain is the primary control center, reflex actions are unique because they bypass the brain's conscious processing to ensure rapid survival. For instance, if you touch a hot object, the spinal cord coordinates the muscle response before the brain even registers pain. Meanwhile, plants lack a nervous system and nerves entirely. Instead, they rely on chemical signals like auxins to regulate growth. When light hits one side of a plant shoot, auxins do not get destroyed; rather, they redistribute to the shaded side, causing cells there to grow longer. This differential growth causes the shoot to bend toward the light source, a process that is purely chemical and mechanical rather than a conscious desire for food. Finally, the endocrine system uses a feedback mechanism where the level of a hormone in the blood itself regulates further production, requiring no direct permission from the brain to stop or start secretion.",
+  "summary": "The nervous system uses one-way chemical signaling at synapses, while reflex actions are managed by the spinal cord. Plants use auxins for growth responses rather than nerves, and endocrine glands operate through automatic feedback loops.",
+  "items": [
+   {
+    "evidence": "The human nervous system relies on specialized cells called neurons, which transmit information strictly in one direction, from the dendrite towards the axon terminal.",
+    "answer": "strictly in one direction",
+    "stem": "How does information travel along a single neuron?",
+    "options": [
+     {
+      "belief_id": "SCI-BIO-CONTROL-K12-M7",
+      "why": "Student incorrectly assumes signals move in both directions.",
+      "text": "in both directions"
+     },
+     {
+      "belief_id": "SCI-BIO-CONTROL-K7-M3",
+      "why": "Student confuses animal nervous systems with plant signaling.",
+      "text": "through a network of nerves"
+     },
+     {
+      "belief_id": "SCI-BIO-CONTROL-K13-M1",
+      "why": "Student confuses chemical transmission with electrical sparks.",
+      "text": "as an electrical spark"
+     }
+    ]
+   },
+   {
+    "evidence": "When a signal reaches the end of an axon, it cannot jump as an electrical spark; instead, the neuron releases chemical messengers that diffuse across the tiny synaptic gap to trigger a new impulse in the next cell.",
+    "answer": "releases chemical messengers",
+    "stem": "What occurs when a nerve impulse reaches the synaptic gap?",
+    "options": [
+     {
+      "belief_id": "SCI-BIO-CONTROL-K13-M1",
+      "why": "Student thinks the signal jumps as an electric current.",
+      "text": "jumps as an electric current"
+     },
+     {
+      "belief_id": "SCI-BIO-CONTROL-K12-M7",
+      "why": "Student believes signals can reverse direction at the synapse.",
+      "text": "sends the signal back"
+     },
+     {
+      "belief_id": "SCI-BIO-CONTROL-K19-M5",
+      "why": "Student thinks signals stay within the same cell.",
+      "text": "stays in the neuron"
+     }
+    ]
+   },
+   {
+    "evidence": "For instance, if you touch a hot object, the spinal cord coordinates the muscle response before the brain even registers pain.",
+    "answer": "the spinal cord",
+    "stem": "Which part of the body coordinates the immediate muscle response during a reflex action?",
+    "options": [
+     {
+      "belief_id": "SCI-BIO-CONTROL-K14-M2",
+      "why": "Student incorrectly believes the brain executes reflex actions.",
+      "text": "the cerebrum"
+     },
+     {
+      "belief_id": "SCI-BIO-CONTROL-K15-M8",
+      "why": "Student incorrectly thinks the cerebellum controls reflexes.",
+      "text": "the cerebellum"
+     },
+     {
+      "belief_id": "SCI-BIO-CONTROL-K7-M3",
+      "why": "Student thinks a nerve network manages the reflex.",
+      "text": "a network of nerves"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, the endocrine system uses a feedback mechanism where the level of a hormone in the blood itself regulates further production, requiring no direct permission from the brain to stop or start secretion.",
+    "answer": "level of a hormone",
+    "stem": "What determines when an endocrine gland should stop producing a hormone?",
+    "options": [
+     {
+      "belief_id": "SCI-BIO-CONTROL-K20-M6",
+      "why": "Student thinks the brain must authorize stopping hormone production.",
+      "text": "permission from the brain"
+     },
+     {
+      "belief_id": "SCI-BIO-CONTROL-K19-M5",
+      "why": "Student thinks hormones only affect the gland itself.",
+      "text": "the gland's own signal"
+     },
+     {
+      "belief_id": "SCI-BIO-CONTROL-K18-M9",
+      "why": "Student confuses feedback with growth stimulation.",
+      "text": "the need for more growth"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.6
+}

@@ -1,0 +1,434 @@
+{
+ "topic": {
+  "id": "SCI-CHM-MATERIALS",
+  "subject": "science",
+  "strand": "chemistry",
+  "grades": [
+   6
+  ],
+  "title": "Sorting materials into groups",
+  "scope": "properties of materials, lustre, hardness, solubility, floating and sinking, transparency"
+ },
+ "model": "gemini-3-flash-preview/key2",
+ "usage": {
+  "promptTokenCount": 831,
+  "candidatesTokenCount": 3493,
+  "totalTokenCount": 5724,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 831
+   }
+  ],
+  "thoughtsTokenCount": 1400,
+  "serviceTier": "standard"
+ },
+ "seconds": 18.9,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Classification and Appearance",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2",
+    "name": "Solubility and Mixing",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3",
+    "name": "Physical Behavior and Light",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n4",
+    "name": "Grouping Materials",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Lustre and Hardness",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "Solubility in Water",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Floating and Sinking",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "concept of weight"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Transparency",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Object vs Material",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Lustre as a Property",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Hardness vs Softness",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Soluble vs Insoluble",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Miscibility of Liquids",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n12"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Gases in Water",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n12"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Material Density in Water",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n16",
+    "name": "Transparent, Opaque, Translucent",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n9",
+    "statement": "A chair is a material, not an object.",
+    "why": "Students often use the name of the object and the material interchangeably in daily speech.",
+    "fix": "An object is the thing itself (like a chair), while the material is what it is made of (like wood or plastic).",
+    "probe": {
+     "question": "If a spoon is made of steel, which one is the material?",
+     "wrong_answer": "Spoon"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "an object and its substance are the same thing",
+    "causes": [],
+    "trigger_cues": [
+     "object",
+     "material",
+     "made of",
+     "grouping"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic research"
+   },
+   {
+    "key": "m2",
+    "node": "n10",
+    "statement": "Only metals can be shiny.",
+    "why": "Metals are the most common examples of lustrous materials shown in textbooks.",
+    "fix": "While most metals have lustre, some non-metals like diamond or polished granite also show shine.",
+    "probe": {
+     "question": "Is a polished diamond a metal because it shines?",
+     "wrong_answer": "Yes"
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "a property defines a category",
+    "causes": [],
+    "trigger_cues": [
+     "lustre",
+     "shiny",
+     "metal",
+     "appearance"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n11",
+    "statement": "Hard materials cannot be broken easily.",
+    "why": "Students confuse scientific hardness (resistance to scratching) with strength or toughness.",
+    "fix": "Hardness refers to how difficult it is to scratch a material; a glass sheet is hard but breaks easily.",
+    "probe": {
+     "question": "Is glass a soft material because it breaks when dropped?",
+     "wrong_answer": "Yes"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "hard",
+     "soft",
+     "scratch",
+     "compressed"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m4",
+    "node": "n12",
+    "statement": "Sugar disappears completely when it dissolves in water.",
+    "why": "Since the sugar is no longer visible, students think it has ceased to exist.",
+    "fix": "Sugar breaks into tiny particles that are too small to see, but they are still present in the water.",
+    "probe": {
+     "question": "If you dissolve sugar in water, why does the water taste sweet?",
+     "wrong_answer": "Because the sugar turned into water"
+    },
+    "error_type": "visible_only",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "dissolve",
+     "soluble",
+     "disappear",
+     "sugar"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas in Science"
+   },
+   {
+    "key": "m5",
+    "node": "n12",
+    "statement": "Dissolving is the same thing as melting.",
+    "why": "In both processes, a solid seems to turn into a liquid state.",
+    "fix": "Melting requires heat to change state, while dissolving involves a substance mixing into a solvent.",
+    "probe": {
+     "question": "When you put salt in water, is the salt melting?",
+     "wrong_answer": "Yes"
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "similar visual outcomes imply same process",
+    "causes": [],
+    "trigger_cues": [
+     "melting",
+     "dissolving",
+     "heat",
+     "liquid"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m6",
+    "node": "n14",
+    "statement": "Gases cannot dissolve in liquids.",
+    "why": "Students usually only see solids like salt or sugar dissolving.",
+    "fix": "Some gases, like oxygen and carbon dioxide, can dissolve in water and are vital for aquatic life.",
+    "probe": {
+     "question": "How do fish breathe underwater if there is no air in the water?",
+     "wrong_answer": "They breathe the water itself"
+    },
+    "error_type": "visible_only",
+    "root_belief": "matter in different states cannot mix",
+    "causes": [],
+    "trigger_cues": [
+     "gas",
+     "oxygen",
+     "dissolved",
+     "aquatic"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n15",
+    "statement": "Heavy objects always sink and light objects always float.",
+    "why": "Students observe heavy stones sinking and light feathers floating, ignoring the role of material type.",
+    "fix": "Floating depends on the material's density relative to water, not just its total weight.",
+    "probe": {
+     "question": "Will a tiny iron nail float because it is very light?",
+     "wrong_answer": "Yes"
+    },
+    "error_type": "single_cause",
+    "root_belief": "bigger or more means more effect",
+    "causes": [],
+    "trigger_cues": [
+     "float",
+     "sink",
+     "heavy",
+     "weight"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Mumbai"
+   },
+   {
+    "key": "m8",
+    "node": "n15",
+    "statement": "A large piece of wood will sink while a small chip of wood will float.",
+    "why": "Students believe that increasing the amount of a material changes its ability to float.",
+    "fix": "If a material floats, any size of that same material will float because the property remains the same.",
+    "probe": {
+     "question": "If a small wooden stick floats, what will a huge wooden log do?",
+     "wrong_answer": "Sink"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "properties change with the amount of substance",
+    "causes": [],
+    "trigger_cues": [
+     "wood",
+     "size",
+     "float",
+     "sink"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m9",
+    "node": "n16",
+    "statement": "Transparent objects like glass do not block any light at all.",
+    "why": "Because we can see through them clearly, students assume light passes through 100% unaffected.",
+    "fix": "Even transparent objects reflect or absorb a tiny amount of light, which is why we can still see the glass itself.",
+    "probe": {
+     "question": "If glass blocked no light, would you be able to see the glass surface?",
+     "wrong_answer": "No"
+    },
+    "error_type": "visible_only",
+    "root_belief": "idealized properties exist in reality",
+    "causes": [],
+    "trigger_cues": [
+     "transparent",
+     "glass",
+     "light",
+     "pass"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m10",
+    "node": "n16",
+    "statement": "Opaque objects are always dark in color.",
+    "why": "Students associate 'opaque' with shadows and lack of light, leading to a color bias.",
+    "fix": "Opaque simply means light cannot pass through; a bright white wall or a yellow book is opaque.",
+    "probe": {
+     "question": "Is a bright white plastic sheet opaque or transparent?",
+     "wrong_answer": "Transparent because it is bright"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "visual brightness equals light transmission",
+    "causes": [],
+    "trigger_cues": [
+     "opaque",
+     "color",
+     "light",
+     "shadow"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n13",
+    "statement": "All liquids mix with each other because they are all fluids.",
+    "why": "Students observe water and milk mixing easily and generalize this to all liquids.",
+    "fix": "Some liquids, like oil and water, do not mix and are called immiscible.",
+    "probe": {
+     "question": "What happens when you stir mustard oil into a glass of water?",
+     "wrong_answer": "It dissolves completely"
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "things in the same state must behave identically",
+    "causes": [],
+    "trigger_cues": [
+     "miscible",
+     "oil",
+     "water",
+     "mix"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT textbook exercises"
+   },
+   {
+    "key": "m12",
+    "node": "n10",
+    "statement": "Lustre is a coating applied to the surface of an object.",
+    "why": "Students are familiar with paint or polish making things look shiny.",
+    "fix": "Lustre is an inherent property of the material itself, often seen when it is freshly cut.",
+    "probe": {
+     "question": "If you cut a shiny metal rod in half, will the inside surface be shiny?",
+     "wrong_answer": "No, only the outside is shiny"
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "surface features are external additions",
+    "causes": [],
+    "trigger_cues": [
+     "lustre",
+     "freshly cut",
+     "surface",
+     "shine"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}

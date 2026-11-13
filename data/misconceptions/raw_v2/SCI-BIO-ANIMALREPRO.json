@@ -1,0 +1,452 @@
+{
+ "topic": {
+  "id": "SCI-BIO-ANIMALREPRO",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   8
+  ],
+  "title": "Reproduction in animals",
+  "scope": "sexual and asexual reproduction, fertilisation, internal and external, development of embryo, metamorphosis, budding in hydra"
+ },
+ "model": "gemini-3-flash-preview/key3",
+ "usage": {
+  "promptTokenCount": 837,
+  "candidatesTokenCount": 3709,
+  "totalTokenCount": 5719,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 837
+   }
+  ],
+  "thoughtsTokenCount": 1173,
+  "serviceTier": "standard"
+ },
+ "seconds": 19.1,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Modes of Reproduction",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "living vs non-living",
+     "cell structure"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Sexual Reproduction",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3",
+    "name": "Asexual Reproduction",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n4",
+    "name": "Male Reproductive Organs",
+    "level": 3,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Female Reproductive Organs",
+    "level": 3,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "Gametes: Sperm and Egg",
+    "level": 3,
+    "parent": "n2",
+    "prereqs": [
+     "n4",
+     "n5"
+    ],
+    "external_prereqs": [
+     "cell as a unit of life"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Budding in Hydra",
+    "level": 3,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Binary Fission in Amoeba",
+    "level": 3,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "unicellular organisms"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Fertilisation and Development",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Process of Fertilisation",
+    "level": 2,
+    "parent": "n9",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Internal vs External Fertilisation",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Zygote Formation",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Embryo Development",
+    "level": 2,
+    "parent": "n9",
+    "prereqs": [
+     "n12"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Foetus Stage",
+    "level": 3,
+    "parent": "n13",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Oviparous and Viviparous",
+    "level": 3,
+    "parent": "n13",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n16",
+    "name": "Life Cycles and Metamorphosis",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n9"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n17",
+    "name": "Metamorphosis in Frogs/Insects",
+    "level": 3,
+    "parent": "n16",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n2",
+    "statement": "Reproduction is necessary for an individual animal to stay alive.",
+    "why": "Students confuse the needs of a species with the physiological needs of an individual like breathing or eating.",
+    "fix": "Reproduction is essential for the continuation of a species, but an individual can survive its full lifespan without reproducing.",
+    "probe": {
+     "question": "If a cat is unable to have kittens, will it die immediately?",
+     "wrong_answer": "Yes, because reproduction is a life process like digestion."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "all biological processes are for individual survival",
+    "causes": [],
+    "trigger_cues": [
+     "essential",
+     "survival",
+     "life process",
+     "continuation"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m2",
+    "node": "n6",
+    "statement": "Sperm and eggs are not actually cells because they are too small or liquid.",
+    "why": "Students often associate 'cells' with the rectangular plant cells or skin cells they see in diagrams.",
+    "fix": "Both sperm and eggs are single, specialized cells containing genetic material.",
+    "probe": {
+     "question": "Is a human sperm considered a cell?",
+     "wrong_answer": "No, it is just a part of a fluid."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "cells must be box-shaped or visible",
+    "causes": [],
+    "trigger_cues": [
+     "sperm",
+     "ovum",
+     "single cell",
+     "gamete"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research"
+   },
+   {
+    "key": "m3",
+    "node": "n12",
+    "statement": "The zygote is a large multicellular structure that already looks like the parent.",
+    "why": "Students struggle to conceptualize how a single microscopic cell can be the start of a complex organism.",
+    "fix": "A zygote is the single cell formed by the fusion of a sperm and an egg.",
+    "probe": {
+     "question": "How many cells make up a zygote immediately after fertilisation?",
+     "wrong_answer": "Hundreds of cells."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "complex things must start large",
+    "causes": [],
+    "trigger_cues": [
+     "zygote",
+     "fusion",
+     "fertilised egg",
+     "single"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver"
+   },
+   {
+    "key": "m4",
+    "node": "n11",
+    "statement": "External fertilisation is just a random accident and does not require both parents.",
+    "why": "Because it happens in water, students think it is less 'organized' than internal fertilisation.",
+    "fix": "External fertilisation is a coordinated process where both male and female release gametes at the same time and place.",
+    "probe": {
+     "question": "In frogs, does the male need to be present when the female lays eggs in water?",
+     "wrong_answer": "No, the eggs just find sperm later by chance."
+    },
+    "error_type": "single_cause",
+    "root_belief": "nature outside the body is random",
+    "causes": [],
+    "trigger_cues": [
+     "external",
+     "water",
+     "frogs",
+     "fish"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n14",
+    "statement": "A foetus and an embryo are exactly the same thing.",
+    "why": "The terms are often used interchangeably in everyday conversation about pregnancy.",
+    "fix": "An embryo is the early stage of development; it is called a foetus only when all body parts can be identified.",
+    "probe": {
+     "question": "When do we start calling a developing baby a foetus?",
+     "wrong_answer": "Right after the egg is fertilised."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "related terms mean the same thing",
+    "causes": [],
+    "trigger_cues": [
+     "foetus",
+     "embryo",
+     "development",
+     "body parts"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT textbook distinction"
+   },
+   {
+    "key": "m6",
+    "node": "n15",
+    "statement": "All animals that live in water are oviparous (lay eggs).",
+    "why": "Students overgeneralize from fish and frogs to all aquatic life.",
+    "fix": "While many aquatic animals lay eggs, some like whales and dolphins are viviparous and give birth to young ones.",
+    "probe": {
+     "question": "Do all animals in the ocean lay eggs?",
+     "wrong_answer": "Yes, because they live in water."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "environment dictates all biological traits",
+    "causes": [],
+    "trigger_cues": [
+     "oviparous",
+     "viviparous",
+     "water",
+     "birth"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n17",
+    "statement": "Metamorphosis is just another word for an animal growing bigger.",
+    "why": "Students often view all growth as a simple increase in size (linear growth).",
+    "fix": "Metamorphosis involves a drastic change in form and structure from the larva to the adult stage.",
+    "probe": {
+     "question": "Is a caterpillar becoming a butterfly just 'growing up'?",
+     "wrong_answer": "Yes, it is just getting bigger and older."
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "growth is always linear",
+    "causes": [],
+    "trigger_cues": [
+     "metamorphosis",
+     "larva",
+     "adult",
+     "drastic"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m8",
+    "node": "n8",
+    "statement": "In binary fission, the parent Amoeba dies after the two daughters are born.",
+    "why": "Students apply the human concept of 'parents' and 'children' where the parent is a separate, aging entity.",
+    "fix": "In binary fission, the parent cell itself divides to become the two daughter cells; it doesn't die but becomes the offspring.",
+    "probe": {
+     "question": "What happens to the body of the parent Amoeba after it divides?",
+     "wrong_answer": "It dies and disappears."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "parents and offspring must be separate entities",
+    "causes": [],
+    "trigger_cues": [
+     "binary fission",
+     "amoeba",
+     "daughter cells",
+     "divide"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research"
+   },
+   {
+    "key": "m9",
+    "node": "n7",
+    "statement": "Budding is a type of sexual reproduction because a 'baby' grows from the parent.",
+    "why": "Students think any process that produces a small version of an organism must be sexual.",
+    "fix": "Budding is asexual because it involves only one parent and no fusion of gametes.",
+    "probe": {
+     "question": "Does Hydra need a partner to produce a bud?",
+     "wrong_answer": "Yes, because it is making a baby."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "offspring implies sexual reproduction",
+    "causes": [],
+    "trigger_cues": [
+     "budding",
+     "hydra",
+     "asexual",
+     "outgrowth"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m10",
+    "node": "n15",
+    "statement": "Humans are the only animals that are viviparous.",
+    "why": "Limited exposure to the diversity of the animal kingdom and mammal classification.",
+    "fix": "Many animals, including most mammals like cows, dogs, and lions, are viviparous.",
+    "probe": {
+     "question": "Are dogs oviparous or viviparous?",
+     "wrong_answer": "Neither, only humans give birth like that."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "humans are biologically unique from all animals",
+    "causes": [],
+    "trigger_cues": [
+     "viviparous",
+     "birth",
+     "mammals",
+     "young ones"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n11",
+    "statement": "Internal fertilisation only occurs in animals that live on land.",
+    "why": "Students associate water with external fertilisation and land with internal fertilisation.",
+    "fix": "Some aquatic animals, like sharks and whales, use internal fertilisation.",
+    "probe": {
+     "question": "Can internal fertilisation happen in the ocean?",
+     "wrong_answer": "No, it only happens on land so the sperm doesn't wash away."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "environment dictates all biological traits",
+    "causes": [],
+    "trigger_cues": [
+     "internal",
+     "external",
+     "land",
+     "aquatic"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m12",
+    "node": "n13",
+    "statement": "The embryo gets all its food from the father's sperm.",
+    "why": "Misunderstanding of the role of gametes; sometimes attributing 'strength' or 'food' to the male side.",
+    "fix": "The egg usually provides the initial nutrients (yolk), and in many animals, the mother provides nourishment during development.",
+    "probe": {
+     "question": "Where does a developing chick inside an egg get its food?",
+     "wrong_answer": "From the sperm that fertilised it."
+    },
+    "error_type": "single_cause",
+    "root_belief": "one source provides everything",
+    "causes": [],
+    "trigger_cues": [
+     "embryo",
+     "nourishment",
+     "yolk",
+     "egg"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver"
+   }
+  ]
+ },
+ "problems": []
+}

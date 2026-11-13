@@ -1,0 +1,479 @@
+{
+ "topic": {
+  "id": "SOC-ECO-CONSUMER",
+  "subject": "social",
+  "strand": "economics",
+  "grades": [
+   10
+  ],
+  "title": "Consumer rights",
+  "scope": "consumer exploitation, right to safety, information, choice, redressal, consumer courts, ISI and Agmark"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 831,
+  "candidatesTokenCount": 1533,
+  "totalTokenCount": 2364,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 831
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 9.5,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Need for Consumer Protection",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "market exchange",
+     "role of government"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Consumer Rights",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "fundamental rights"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Consumer Redressal and Standards",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "judicial system"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Forms of Exploitation",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "profit motive"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Consumer Movement",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "social movements"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Right to Safety and Information",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "public health"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Right to Choice and Redressal",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "contract law"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Consumer Courts (COPRA)",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": [
+     "hierarchy of courts"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Certification Marks",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": [
+     "quality control"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Adulteration and Under-weighing",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "measurement units"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Misleading Advertisements",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "persuasion techniques"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Right to be Informed",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": [
+     "labeling"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "Three-tier Judicial Machinery",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": [
+     "jurisdiction"
+    ]
+   },
+   {
+    "key": "n14",
+    "name": "ISI and Agmark usage",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": [
+     "standardization"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n4",
+    "statement": "Only poor or uneducated people get exploited by sellers.",
+    "why": "Students assume exploitation is a result of personal ignorance rather than systemic market power.",
+    "fix": "Exploitation can happen to anyone regardless of education level when there is an information asymmetry or lack of competition.",
+    "probe": {
+     "question": "Can a highly educated person be exploited by a seller?",
+     "wrong_answer": "No, because they are smart enough to avoid it."
+    },
+    "error_type": "stereotype",
+    "root_belief": "Personal traits determine systemic outcomes.",
+    "causes": [],
+    "trigger_cues": [
+     "consumer",
+     "exploitation",
+     "market",
+     "seller",
+     "unfair"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n10",
+    "statement": "If a product is sold in a branded shop, it cannot be adulterated.",
+    "why": "Students equate brand reputation with absolute product safety.",
+    "fix": "Adulteration can occur at any stage of the supply chain, regardless of the retail outlet's brand name.",
+    "probe": {
+     "question": "Is it possible for a branded packet of spices to be adulterated?",
+     "wrong_answer": "No, brands guarantee purity."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "A label guarantees the quality of the contents.",
+    "causes": [],
+    "trigger_cues": [
+     "adulteration",
+     "branded",
+     "quality",
+     "purity",
+     "shop"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n13",
+    "statement": "You must go to the Supreme Court for all consumer complaints.",
+    "why": "Students confuse the general judicial hierarchy with the specific three-tier consumer redressal system.",
+    "fix": "Consumer disputes are handled by District, State, and National commissions based on the value of the claim.",
+    "probe": {
+     "question": "Where should a consumer file a complaint for a claim of 10 lakhs?",
+     "wrong_answer": "Supreme Court"
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "The highest authority handles all cases.",
+    "causes": [],
+    "trigger_cues": [
+     "district",
+     "state",
+     "national",
+     "court",
+     "redressal"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic studies"
+   },
+   {
+    "key": "m4",
+    "node": "n14",
+    "statement": "ISI mark is only for food items.",
+    "why": "Students confuse the scope of ISI (industrial) with Agmark (agricultural).",
+    "fix": "ISI mark is for industrial products like electrical appliances, while Agmark is for agricultural products.",
+    "probe": {
+     "question": "Which mark should you look for on an electric iron?",
+     "wrong_answer": "Agmark"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "One rule or category applies to everything.",
+    "causes": [],
+    "trigger_cues": [
+     "isi",
+     "agmark",
+     "certification",
+     "standard",
+     "quality"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT classroom observations"
+   },
+   {
+    "id": "m5",
+    "node": "n6",
+    "statement": "The right to safety only means safe food, not safety of other goods like electrical items or cooking gas cylinders.",
+    "why": "Students link safety mostly with eating and medicines, which are the common examples, and forget that appliances and services can also be hazardous.",
+    "fix": "The right to safety protects consumers against goods and services hazardous to life and property, such as faulty pressure cookers, LPG cylinders and electrical goods, not only food.",
+    "probe": {
+     "question": "A pressure cooker bursts because of a faulty valve. Is the right to safety involved?",
+     "wrong_answer": "No, the right to safety applies only to food and medicines."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Safety means food safety only",
+    "causes": [],
+    "trigger_cues": [
+     "right to safety",
+     "hazardous",
+     "pressure cooker",
+     "gas cylinder",
+     "electrical goods",
+     "food only"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom discussion and NCERT exercises",
+    "key": "m5"
+   },
+   {
+    "id": "m6",
+    "node": "n12",
+    "statement": "The right to be informed means the shopkeeper must tell you whatever he likes about the product.",
+    "why": "Students read 'informed' as general talk by the seller and miss that specific details are legally required on the pack.",
+    "fix": "The right to be informed means the consumer is entitled to specific facts about goods, such as ingredients, price, batch number, date of manufacture, expiry date and manufacturer's address, so that they can decide and complain if cheated.",
+    "probe": {
+     "question": "Which details must be given on a packaged product under the right to be informed?",
+     "wrong_answer": "Only the brand name and attractive slogans, whatever the seller chooses to say."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Information means seller's free talk",
+    "causes": [],
+    "trigger_cues": [
+     "right to be informed",
+     "packet",
+     "expiry date",
+     "ingredients",
+     "batch number",
+     "mrp"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT text and textbook exercises",
+    "key": "m6"
+   },
+   {
+    "id": "m7",
+    "node": "n10",
+    "statement": "Under-weighing means the shopkeeper sells you a different, cheaper product instead of the one you asked for.",
+    "why": "Students mix up under-weighing with adulteration or substitution because both are dishonest practices by sellers.",
+    "fix": "Under-weighing means giving less quantity than the weight paid for, for example by faulty or tampered weights or scales; mixing in cheaper or harmful material is adulteration.",
+    "probe": {
+     "question": "A shopkeeper's scale shows 1 kg but gives only 900 g. What is this practice called?",
+     "wrong_answer": "Adulteration, because the shopkeeper cheated by changing the product."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "All shop cheating is the same thing",
+    "causes": [],
+    "trigger_cues": [
+     "under-weighing",
+     "adulteration",
+     "faulty weights",
+     "less quantity",
+     "scale",
+     "tampered"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom discussion",
+    "key": "m7"
+   },
+   {
+    "id": "m8",
+    "node": "n11",
+    "statement": "If an advertisement is shown on television or in a newspaper, it must be true and cannot be misleading.",
+    "why": "Students trust famous media and think anything publicly advertised has already been checked.",
+    "fix": "Advertisements can exaggerate or give false claims. Misleading ads are a form of exploitation, and consumers should check claims and can complain to consumer forums.",
+    "probe": {
+     "question": "A cream advertised on TV claims to make skin fair in 7 days but does not work. Can the consumer complain?",
+     "wrong_answer": "No, because it was on television, so the claim must be true."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Publicly advertised means verified and true",
+    "causes": [],
+    "trigger_cues": [
+     "advertisement",
+     "television",
+     "claims",
+     "misleading",
+     "newspaper",
+     "false promise"
+    ],
+    "confidence": "plausible",
+    "source_hint": "media literacy studies and classroom observation",
+    "key": "m8"
+   },
+   {
+    "id": "m9",
+    "node": "n8",
+    "statement": "A consumer must hire a lawyer and pay a heavy fee to file a case in a consumer court.",
+    "why": "Students equate all courts with long, costly civil trials.",
+    "fix": "Consumer courts under COPRA are designed to be simple, quick and inexpensive. A consumer can file a complaint with a small fee and can often present their own case without a lawyer.",
+    "probe": {
+     "question": "Can an ordinary consumer file a complaint in a District Consumer Forum on their own?",
+     "wrong_answer": "No, only a lawyer can file it and the fee is very high."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "All courts are costly and need lawyers",
+    "causes": [],
+    "trigger_cues": [
+     "consumer court",
+     "lawyer",
+     "fee",
+     "file complaint",
+     "copra",
+     "district forum"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom discussion",
+    "key": "m9"
+   },
+   {
+    "id": "m10",
+    "node": "n13",
+    "statement": "The three-tier machinery is District, State and Supreme Court, and a case starts at the District Consumer Forum only if the claim is very small.",
+    "why": "Students confuse the National Commission with the Supreme Court and think the three tiers are the same as the general court hierarchy.",
+    "fix": "The three tiers are the District Forum, State Commission and National Commission. A complaint goes first to the District level, and a dissatisfied party can appeal to State and then National Commission, by the NCERT text, up to claim limits.",
+    "probe": {
+     "question": "Name the three levels of consumer courts.",
+     "wrong_answer": "District Court, High Court and Supreme Court."
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "Consumer courts equal ordinary court hierarchy",
+    "causes": [],
+    "trigger_cues": [
+     "three-tier",
+     "district forum",
+     "state commission",
+     "national commission",
+     "supreme court",
+     "high court"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT chapter and exam answer analysis",
+    "key": "m10"
+   },
+   {
+    "id": "m11",
+    "node": "n14",
+    "statement": "Agmark certifies the quality of electrical and industrial goods, while ISI certifies farm produce.",
+    "why": "Students remember both marks as quality marks but swap which kind of goods each covers.",
+    "fix": "Agmark certifies agricultural products such as grains, pulses, spices, honey and ghee, while ISI (BIS) certifies industrial and consumer goods such as electrical appliances, cement and helmets.",
+    "probe": {
+     "question": "Which certification mark would you look for on a packet of pulses?",
+     "wrong_answer": "ISI mark, because it is the main quality mark for food grains."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Quality marks are interchangeable",
+    "causes": [],
+    "trigger_cues": [
+     "agmark",
+     "isi",
+     "pulses",
+     "electrical",
+     "farm produce",
+     "certification"
+    ],
+    "confidence": "plausible",
+    "source_hint": "exam answer analysis",
+    "key": "m11"
+   },
+   {
+    "id": "m12",
+    "node": "n5",
+    "statement": "The consumer movement in India began only after the Consumer Protection Act 1986 was passed.",
+    "why": "Students see the law as the start of everything and miss the earlier social pressure that led to it.",
+    "fix": "The consumer movement grew out of consumers' dissatisfaction with unfair market practices and the lack of legal protection; organised public pressure and consumer groups preceded and led to COPRA 1986, after which the movement strengthened further.",
+    "probe": {
+     "question": "Did the consumer movement exist before COPRA 1986?",
+     "wrong_answer": "No, it started only after the 1986 Act was passed."
+    },
+    "error_type": "chronology_slip",
+    "root_belief": "Laws come first, movements follow",
+    "causes": [],
+    "trigger_cues": [
+     "consumer movement",
+     "1986",
+     "copra",
+     "began",
+     "consumer groups",
+     "pressure"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT text and history of the movement",
+    "key": "m12"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

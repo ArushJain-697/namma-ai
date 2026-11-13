@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0239-MAT-RATIONAL",
+  "topic_id": "MAT-RATIONAL",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a conversation between a teacher and two students",
+  "seed": 239
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1156,
+  "candidatesTokenCount": 1304,
+  "totalTokenCount": 2460,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1156
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-RATIONAL-K10-M10",
+  "MAT-RATIONAL-K24-M20",
+  "MAT-RATIONAL-K25-M22",
+  "MAT-RATIONAL-K29-M26",
+  "MAT-RATIONAL-K7-M6",
+  "MAT-RATIONAL-K8-M9",
+  "MAT-RATIONAL-K11-M11",
+  "MAT-RATIONAL-K21-M17",
+  "MAT-RATIONAL-K4-M3",
+  "MAT-RATIONAL-K14-M13",
+  "MAT-RATIONAL-K17-M15",
+  "MAT-RATIONAL-K27-M24",
+  "MAT-RATIONAL-K22-M19",
+  "MAT-RATIONAL-K21-M18"
+ ],
+ "response": {
+  "passage": "Teacher: Today, let us clarify some common doubts about rational numbers. Remember, a rational number is any number that can be expressed as p/q, where p and q are integers and q is not zero. For instance, zero is a rational number because it can be written as 0/1. Now, consider the fraction 12/18. To find its standard form, we must divide both the numerator and denominator by their greatest common divisor, which is 6, resulting in 2/3. Some students mistakenly think 6/9 is the standard form, but it can be simplified further. Also, remember that the position of the negative sign does not change the value; -3/4 is exactly the same as 3/(-4). When adding fractions like 1/2 and 1/3, we must find a common denominator of 6, making the sum 3/6 + 2/6, which equals 5/6. Adding the denominators directly to get 2/5 is a common error. Finally, when multiplying, 1/2 times 1/3 equals 1/6. Notice that 1/6 is smaller than 1/2, proving that multiplying two proper fractions does not always result in a larger number. Always check your steps carefully.",
+  "summary": "This passage explains the definition of rational numbers, how to simplify them to standard form, and the correct methods for addition and multiplication. It highlights common errors to avoid when performing these operations.",
+  "items": [
+   {
+    "evidence": "For instance, zero is a rational number because it can be written as 0/1.",
+    "answer": "0/1",
+    "stem": "How can we represent zero as a rational number?",
+    "options": [
+     {
+      "belief_id": "MAT-RATIONAL-K4-M3",
+      "why": "Student believes zero is nothing and cannot be a rational number.",
+      "text": "It is not a rational number"
+     },
+     {
+      "belief_id": "MAT-RATIONAL-K11-M11",
+      "why": "Student thinks all rational numbers must be between 0 and 1.",
+      "text": "0.5"
+     },
+     {
+      "belief_id": "MAT-RATIONAL-K27-M24",
+      "why": "Student incorrectly assumes rational numbers must be non-zero.",
+      "text": "1/0"
+     }
+    ]
+   },
+   {
+    "evidence": "To find its standard form, we must divide both the numerator and denominator by their greatest common divisor, which is 6, resulting in 2/3.",
+    "answer": "2/3",
+    "stem": "What is the standard form of 12/18?",
+    "options": [
+     {
+      "belief_id": "MAT-RATIONAL-K8-M9",
+      "why": "Student stops simplifying after dividing by a common factor.",
+      "text": "6/9"
+     },
+     {
+      "belief_id": "MAT-RATIONAL-K7-M6",
+      "why": "Student thinks adding the same value simplifies the fraction.",
+      "text": "15/21"
+     },
+     {
+      "belief_id": "MAT-RATIONAL-K14-M13",
+      "why": "Student compares numerators and assumes it is the simplest form.",
+      "text": "12/18"
+     }
+    ]
+   },
+   {
+    "evidence": "When adding fractions like 1/2 and 1/3, we must find a common denominator of 6, making the sum 3/6 + 2/6, which equals 5/6.",
+    "answer": "5/6",
+    "stem": "What is the correct sum of 1/2 and 1/3?",
+    "options": [
+     {
+      "belief_id": "MAT-RATIONAL-K21-M17",
+      "why": "Student adds numerators and denominators separately.",
+      "text": "2/5"
+     },
+     {
+      "belief_id": "MAT-RATIONAL-K21-M18",
+      "why": "Student adds the denominators after making them equal.",
+      "text": "5/12"
+     },
+     {
+      "belief_id": "MAT-RATIONAL-K22-M19",
+      "why": "Student incorrectly applies subtraction logic to addition.",
+      "text": "1/6"
+     }
+    ]
+   },
+   {
+    "evidence": "Notice that 1/6 is smaller than 1/2, proving that multiplying two proper fractions does not always result in a larger number.",
+    "answer": "smaller than 1/2",
+    "stem": "What is the result of multiplying 1/2 by 1/3?",
+    "options": [
+     {
+      "belief_id": "MAT-RATIONAL-K24-M20",
+      "why": "Student believes multiplication always increases the value.",
+      "text": "greater than 1/2"
+     },
+     {
+      "belief_id": "MAT-RATIONAL-K25-M22",
+      "why": "Student confuses multiplication results with division logic.",
+      "text": "smaller than 1/6"
+     },
+     {
+      "belief_id": "MAT-RATIONAL-K27-M24",
+      "why": "Student thinks the result must be a whole number.",
+      "text": "1"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 5.2
+}

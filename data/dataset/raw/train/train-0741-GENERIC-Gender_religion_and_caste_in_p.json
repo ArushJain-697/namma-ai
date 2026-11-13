@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0741-GENERIC-Gender_religion_and_caste_in_p",
+  "topic_id": "SOC-CIV-SOCIALDIV",
+  "split": "train",
+  "generic": true,
+  "theme": "Gender, religion and caste in politics",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a news-style report about a real-world situation",
+  "seed": 741
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 722,
+  "candidatesTokenCount": 1199,
+  "totalTokenCount": 1921,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 722
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "In the small town of Rampur, the upcoming municipal elections have sparked intense debate. Last Tuesday, 45 candidates filed their nomination papers to represent the local ward. Among them, Mrs. Sunita Devi, a social worker, has gained popularity for her focus on clean water projects. However, a local political group, the Unity Front, recently held a rally in the town square. During the rally, their leader, Mr. Rajesh Kumar, argued that voters should support candidates based on their religious identity rather than their development plans. This statement caused a sharp decline in public support for the Unity Front, as many residents felt that religion should not influence local governance. Meanwhile, in the neighboring village of Gopalganj, 12 community leaders have signed a petition demanding that caste-based campaigning be banned entirely. They believe that focusing on caste prevents the community from choosing the most capable leaders. As the election date approaches, the tension between traditional identity politics and modern development goals remains high. The local police have increased patrols to ensure that the voting process remains peaceful for all 5,000 registered voters in the district.",
+  "summary": "Rampur is facing a heated election where candidates are divided between focusing on development or identity politics. Local leaders and residents are actively debating the role of religion and caste in these upcoming municipal elections.",
+  "items": [
+   {
+    "evidence": "Last Tuesday, 45 candidates filed their nomination papers to represent the local ward.",
+    "answer": "45",
+    "stem": "How many individuals submitted their paperwork to run for the local election?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses a number from the passage that is not the answer.",
+      "text": "5,000"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects a person mentioned in the same sentence context.",
+      "text": "Sunita Devi"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Assumes all candidates are always from the same town.",
+      "text": "All residents"
+     }
+    ]
+   },
+   {
+    "evidence": "This statement caused a sharp decline in public support for the Unity Front, as many residents felt that religion should not influence local governance.",
+    "answer": "religion should not influence local governance",
+    "stem": "Why did the Unity Front lose popularity among the townspeople?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Reverses the cause and effect relationship.",
+      "text": "Because the Unity Front held a rally"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Provides a true fact that does not explain the decline.",
+      "text": "Because they are a local political group"
+     },
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Interprets 'decline' as a physical slope or movement.",
+      "text": "Because the rally was held downhill"
+     }
+    ]
+   },
+   {
+    "evidence": "In the neighboring village of Gopalganj, 12 community leaders have signed a petition demanding that caste-based campaigning be banned entirely.",
+    "answer": "Gopalganj",
+    "stem": "Where are the leaders located who want to stop caste-based campaigning?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks a location mentioned in the opening sentence.",
+      "text": "Rampur"
+     },
+     {
+      "belief_id": "GEN-READ-M5",
+      "why": "Confuses 'community leaders' with 'caste leaders'.",
+      "text": "Caste leaders"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Assumes all villages in the region signed the petition.",
+      "text": "All neighboring villages"
+     }
+    ]
+   },
+   {
+    "evidence": "The local police have increased patrols to ensure that the voting process remains peaceful for all 5,000 registered voters in the district.",
+    "answer": "ensure the voting process remains peaceful",
+    "stem": "What is the primary reason for the increased police presence?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a true fact that is not the reason.",
+      "text": "To count the 5,000 registered voters"
+     },
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Interprets 'patrols' as a literal walk in the park.",
+      "text": "To go for a walk in town"
+     },
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Mistakes the result for the cause of the patrols.",
+      "text": "Because the voting process is peaceful"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 8.8
+}

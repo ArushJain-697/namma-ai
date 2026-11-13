@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0667-GENERIC-Direct_and_inverse_proportion",
+  "topic_id": "MAT-PROPORTION",
+  "split": "train",
+  "generic": true,
+  "theme": "Direct and inverse proportion",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a news-style report about a real-world situation",
+  "seed": 667
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 716,
+  "candidatesTokenCount": 1154,
+  "totalTokenCount": 1870,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 716
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "In the bustling town of Kolar, the local community center recently organized a 'Community Kitchen Day' to feed the village. Mr. Sharma, the lead coordinator, noted that the time taken to prepare meals changes based on the number of volunteers helping in the kitchen. On Sunday, 12 volunteers managed to cook a massive feast in exactly 4 hours. However, when the team size dropped to 6 volunteers the following day, the task took 8 hours to complete. Mr. Sharma explained that this happens because the workload is shared; as the number of workers decreases, the time required for each person to finish their share increases. This is a classic example of inverse proportion. Meanwhile, across town at the Kolar Library, Mrs. Gupta observed that buying more packets of rice leads to a higher total cost, which is a direct proportion. She bought 5 packets for 500 rupees, noting that the price per unit remains constant. The event was a success, proving that understanding these mathematical relationships helps in planning daily tasks efficiently. Whether it is cooking for a crowd or shopping for supplies, these proportions guide our work.",
+  "summary": "The passage explains the difference between direct and inverse proportions using examples from a community kitchen and a library. It highlights how the number of workers affects time and how the quantity of goods affects total cost.",
+  "items": [
+   {
+    "evidence": "On Sunday, 12 volunteers managed to cook a massive feast in exactly 4 hours.",
+    "answer": "12 volunteers",
+    "stem": "How many people were working on the first day of the event?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses a number from the text that is not the answer.",
+      "text": "4 hours"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects a name mentioned nearby instead of the quantity.",
+      "text": "Mr. Sharma"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Assumes all days have the same number of workers.",
+      "text": "6 volunteers"
+     }
+    ]
+   },
+   {
+    "evidence": "However, when the team size dropped to 6 volunteers the following day, the task took 8 hours to complete.",
+    "answer": "8 hours",
+    "stem": "What was the duration of the cooking task on Monday?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses the number of volunteers instead of the time.",
+      "text": "6 volunteers"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects the name of the coordinator mentioned in the passage.",
+      "text": "Mr. Sharma"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Assumes the time is always the same as Sunday.",
+      "text": "4 hours"
+     }
+    ]
+   },
+   {
+    "evidence": "Mr. Sharma explained that this happens because the workload is shared; as the number of workers decreases, the time required for each person to finish their share increases.",
+    "answer": "workload is shared",
+    "stem": "Why does the time taken change when the number of volunteers decreases?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Reverses the cause and effect relationship.",
+      "text": "time increases the workers"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a true fact that does not explain the cause.",
+      "text": "inverse proportion"
+     },
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Uses the everyday meaning of shared instead of the context.",
+      "text": "volunteers are friends"
+     }
+    ]
+   },
+   {
+    "evidence": "She bought 5 packets for 500 rupees, noting that the price per unit remains constant.",
+    "answer": "500 rupees",
+    "stem": "What was the total cost for the rice packets purchased by Mrs. Gupta?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses the number of packets instead of the cost.",
+      "text": "5 packets"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects the person mentioned in the sentence.",
+      "text": "Mrs. Gupta"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Assumes all costs are always the same.",
+      "text": "100 rupees"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 6.1
+}

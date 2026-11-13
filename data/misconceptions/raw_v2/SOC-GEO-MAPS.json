@@ -1,0 +1,473 @@
+{
+ "topic": {
+  "id": "SOC-GEO-MAPS",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   6
+  ],
+  "title": "Maps",
+  "scope": "physical, political and thematic maps, scale, directions, symbols, sketch and plan"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 824,
+  "candidatesTokenCount": 1593,
+  "totalTokenCount": 2417,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 824
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 10.9,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Types of Maps",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "concept of a globe"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Components of a Map",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "basic geometry"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Representations of Space",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "spatial awareness"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Physical vs Political",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "natural vs man-made features"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Thematic Maps",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "data representation"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Distance and Scale",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "ratios and measurement"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Direction and Symbols",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "cardinal directions"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Sketch",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "drawing skills"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Plan",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "measurement"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Physical features show nature",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Political maps show boundaries",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Scale is a ratio",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": [
+     "fractions"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "Cardinal directions",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Conventional symbols",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Sketch is memory-based",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n16",
+    "name": "Plan is scale-based",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n4",
+    "statement": "Political maps show the physical height of mountains.",
+    "why": "Students confuse the colorful regions on political maps with elevation shading.",
+    "fix": "Political maps show administrative boundaries like states and countries, while physical maps show natural features like mountains and rivers.",
+    "probe": {
+     "question": "Which map would you use to find the height of the Himalayas?",
+     "wrong_answer": "A political map of India."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "political",
+     "boundary",
+     "state",
+     "country",
+     "map"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n6",
+    "statement": "A small scale map shows small areas in great detail.",
+    "why": "Students associate the word 'small' with the size of the area depicted rather than the ratio.",
+    "fix": "A small scale map covers a large area with less detail, while a large scale map covers a small area with high detail.",
+    "probe": {
+     "question": "If a map has a scale of 1:1000000, is it a large or small scale map?",
+     "wrong_answer": "Large scale."
+    },
+    "error_type": "numerical_misreading",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "scale",
+     "ratio",
+     "distance",
+     "large",
+     "small"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on map literacy"
+   },
+   {
+    "key": "m3",
+    "node": "n7",
+    "statement": "North is always at the top of every map.",
+    "why": "Textbooks almost exclusively orient maps with North at the top.",
+    "fix": "North is only at the top if the map has a North arrow pointing up; maps can be oriented in any direction.",
+    "probe": {
+     "question": "If a map has an arrow pointing towards the bottom labeled 'N', where is South?",
+     "wrong_answer": "At the bottom."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "a rule from whole numbers works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "north",
+     "arrow",
+     "direction",
+     "top",
+     "bottom"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver children's ideas"
+   },
+   {
+    "key": "m4",
+    "node": "n8",
+    "statement": "A sketch is just a messy or bad map.",
+    "why": "Students equate 'sketch' with 'lack of precision' rather than 'lack of scale'.",
+    "fix": "A sketch is a drawing primarily based on memory and spot observation, not drawn to a specific scale.",
+    "probe": {
+     "question": "Why is a sketch not a map?",
+     "wrong_answer": "Because it is not drawn neatly."
+    },
+    "error_type": "other",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "sketch",
+     "memory",
+     "observation",
+     "drawing"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n4",
+    "statement": "Physical maps and political maps are the same thing, just with different colours.",
+    "why": "Students see both in the atlas with similar land outlines and assume only the colouring differs.",
+    "fix": "A physical map shows natural features like mountains, plateaus, plains, rivers and oceans. A political map shows man-made divisions like countries, states, capitals and boundaries.",
+    "probe": {
+     "question": "Which kind of map would you use to find the capital of Rajasthan and which to find the Deccan Plateau?",
+     "wrong_answer": "Either map works for both, because they show the same things."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Different map types differ only in appearance",
+    "causes": [],
+    "trigger_cues": [
+     "physical",
+     "political",
+     "map",
+     "same",
+     "colour",
+     "atlas"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation"
+   },
+   {
+    "key": "m6",
+    "node": "n5",
+    "statement": "Thematic maps show everything about a place, like physical and political features together.",
+    "why": "The word 'thematic' is unfamiliar, and students think a special map must contain more information.",
+    "fix": "A thematic map shows one particular theme only, such as rainfall, roads, population or crops.",
+    "probe": {
+     "question": "What does a map showing only the rainfall of India show?",
+     "wrong_answer": "It shows all features of India including states, mountains, rivers and rainfall."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Special maps contain more information than ordinary ones",
+    "causes": [],
+    "trigger_cues": [
+     "thematic",
+     "map",
+     "rainfall",
+     "roads",
+     "one",
+     "theme",
+     "all"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher reports"
+   },
+   {
+    "key": "m7",
+    "node": "n12",
+    "statement": "On a map with scale 1 cm = 10 km, the real distance equals the number of centimetres on the map.",
+    "why": "Students read the number on the map and ignore the multiplication by the scale.",
+    "fix": "Real distance = map distance x scale value. So 3 cm on the map is 3 x 10 = 30 km on the ground.",
+    "probe": {
+     "question": "Scale is 1 cm = 10 km. Two towns are 4 cm apart on the map. What is the real distance?",
+     "wrong_answer": "4 km"
+    },
+    "error_type": "numerical_misreading",
+    "root_belief": "Map measurements equal real measurements",
+    "causes": [],
+    "trigger_cues": [
+     "scale",
+     "1 cm",
+     "km",
+     "distance",
+     "measure",
+     "ruler",
+     "real"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on scale and proportional reasoning in geography education"
+   },
+   {
+    "key": "m8",
+    "node": "n6",
+    "statement": "The shortest-looking path on a map is always the path you will actually travel.",
+    "why": "Students treat the straight line between two points as the road distance.",
+    "fix": "Straight-line distance on a map is the shortest distance between places. Actual travel distance depends on roads, rivers and hills and is usually longer.",
+    "probe": {
+     "question": "Two villages are 5 cm apart on a map. Will a bus journey be exactly the scaled straight-line distance?",
+     "wrong_answer": "Yes, the bus travels the straight line so the distance is the same."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Straight-line map distance equals travel distance",
+    "causes": [],
+    "trigger_cues": [
+     "distance",
+     "straight",
+     "line",
+     "road",
+     "travel",
+     "map",
+     "bus"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m9",
+    "node": "n13",
+    "statement": "The four cardinal directions are north, south, east and northeast.",
+    "why": "Students mix up cardinal directions with intermediate ones or learn them as a loose list.",
+    "fix": "The four cardinal directions are north, south, east and west. Northeast, northwest, southeast and southwest lie between them and are intermediate directions.",
+    "probe": {
+     "question": "Name the four cardinal directions.",
+     "wrong_answer": "North, south, northeast and southwest."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Intermediate directions are cardinal directions",
+    "causes": [],
+    "trigger_cues": [
+     "cardinal",
+     "direction",
+     "northeast",
+     "southwest",
+     "four",
+     "intermediate"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation"
+   },
+   {
+    "key": "m10",
+    "node": "n14",
+    "statement": "Map symbols can be anything the map maker likes, so they never need a key.",
+    "why": "Students think symbols are obvious pictures, so they don't realise meanings must be given.",
+    "fix": "Maps use conventional symbols that are widely agreed upon, and the legend or key explains what each symbol means.",
+    "probe": {
+     "question": "A map shows a small blue line and a green patch. Why does the map give a key?",
+     "wrong_answer": "No key is needed, because everyone knows what symbols mean."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Symbols are self-explanatory without a key",
+    "causes": [],
+    "trigger_cues": [
+     "symbol",
+     "key",
+     "legend",
+     "colour",
+     "meaning",
+     "blue",
+     "green"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation"
+   },
+   {
+    "key": "m11",
+    "node": "n15",
+    "statement": "A sketch must be drawn to exact scale like a proper map.",
+    "why": "Students think all drawings of places must be accurate and measured.",
+    "fix": "A sketch is drawn from memory and observation, without an accurate scale, so distances may not be exact.",
+    "probe": {
+     "question": "You draw a sketch of the route from home to school from memory. Do you need to measure the distances with a scale?",
+     "wrong_answer": "Yes, a sketch must be measured and drawn to scale."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "All place drawings must be drawn to scale",
+    "causes": [],
+    "trigger_cues": [
+     "sketch",
+     "memory",
+     "scale",
+     "draw",
+     "measure",
+     "route",
+     "school"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher reports"
+   },
+   {
+    "key": "m12",
+    "node": "n16",
+    "statement": "A plan is a map of a large area such as a state or country.",
+    "why": "Students link plans with maps and assume anything scale-based must cover big regions.",
+    "fix": "A plan is a large-scale drawing of a small area, like a room, house or school, drawn to scale with accurate measurements.",
+    "probe": {
+     "question": "Which would be shown as a plan: the whole of India or your classroom?",
+     "wrong_answer": "The whole of India, because a plan is for large areas."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Plans represent large regions",
+    "causes": [],
+    "trigger_cues": [
+     "plan",
+     "large",
+     "area",
+     "classroom",
+     "house",
+     "country",
+     "scale"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

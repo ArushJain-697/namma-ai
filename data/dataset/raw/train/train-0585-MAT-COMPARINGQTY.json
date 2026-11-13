@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0585-MAT-COMPARINGQTY",
+  "topic_id": "MAT-COMPARINGQTY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a conversation between a teacher and two students",
+  "seed": 585
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1093,
+  "candidatesTokenCount": 1374,
+  "totalTokenCount": 2467,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1093
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-COMPARINGQTY-K10-M6",
+  "MAT-COMPARINGQTY-K24-M23",
+  "MAT-COMPARINGQTY-K15-M13",
+  "MAT-COMPARINGQTY-K12-M10",
+  "MAT-COMPARINGQTY-K11-M9",
+  "MAT-COMPARINGQTY-K12-M11",
+  "MAT-COMPARINGQTY-K23-M21",
+  "MAT-COMPARINGQTY-K25-M24",
+  "MAT-COMPARINGQTY-K16-M14",
+  "MAT-COMPARINGQTY-K22-M19",
+  "MAT-COMPARINGQTY-K11-M8",
+  "MAT-COMPARINGQTY-K9-M5",
+  "MAT-COMPARINGQTY-K7-M1",
+  "MAT-COMPARINGQTY-K9-M4"
+ ],
+ "response": {
+  "passage": "Teacher: Today, let us discuss how percentages work in real life. Rohan, if you have 200 rupees and you earn 10% profit, then lose 10% on the next deal, do you break even? Rohan: Yes, teacher, the gains and losses cancel out. Teacher: Not quite, because the second 10% is calculated on the new, higher amount. If you have 100 rupees and it increases by 20%, it becomes 120 rupees; a 20% decrease from that is 24 rupees, leaving you with 96 rupees. Priya: I see. What about interest? If I invest 1000 rupees at 10% per annum for 2 years, is the interest 200 rupees? Teacher: That is simple interest, but compound interest is different. You must raise the growth factor to the power of the time period, so you calculate 1000 multiplied by 1.1 squared. Also, remember that 5% is 0.05, not 0.5, because percent means per hundred. Finally, when calculating interest, always convert months into years by dividing by 12, as the rate is yearly. If you have a fraction like 3/5, convert it to a decimal first, which is 0.6, then multiply by 100 to get 60%. Never just add a percent sign to the numerator.",
+  "summary": "The teacher explains that percentages are calculated based on the current value rather than the original. The passage clarifies that compound interest uses exponents and that percentages must be converted correctly to decimals.",
+  "items": [
+   {
+    "evidence": "Rohan, if you have 200 rupees and you earn 10% profit, then lose 10% on the next deal, do you break even?",
+    "answer": "Not quite",
+    "stem": "If you gain 10% and then lose 10% on the same amount, is the final result the same as the starting amount?",
+    "options": [
+     {
+      "belief_id": "MAT-COMPARINGQTY-K15-M13",
+      "why": "Student thinks profit and loss percentages cancel out perfectly.",
+      "text": "Yes, no profit no loss"
+     },
+     {
+      "belief_id": "MAT-COMPARINGQTY-K16-M14",
+      "why": "Student confuses profit with the total selling price.",
+      "text": "Yes, 200 rupees"
+     },
+     {
+      "belief_id": "MAT-COMPARINGQTY-K12-M10",
+      "why": "Student believes equal percentage change returns to the original.",
+      "text": "Yes, 100 percent"
+     }
+    ]
+   },
+   {
+    "evidence": "You must raise the growth factor to the power of the time period, so you calculate 1000 multiplied by 1.1 squared.",
+    "answer": "power of the time period",
+    "stem": "When calculating compound interest for two years, what must you do with the time factor?",
+    "options": [
+     {
+      "belief_id": "MAT-COMPARINGQTY-K24-M23",
+      "why": "Student multiplies by time instead of using it as an exponent.",
+      "text": "Multiply by 2"
+     },
+     {
+      "belief_id": "MAT-COMPARINGQTY-K25-M24",
+      "why": "Student incorrectly assumes time remains the same for compounding.",
+      "text": "Keep time as 1"
+     },
+     {
+      "belief_id": "MAT-COMPARINGQTY-K23-M21",
+      "why": "Student confuses interest with the total amount.",
+      "text": "The final amount"
+     }
+    ]
+   },
+   {
+    "evidence": "Also, remember that 5% is 0.05, not 0.5, because percent means per hundred.",
+    "answer": "0.05",
+    "stem": "What is the correct decimal representation of 5%?",
+    "options": [
+     {
+      "belief_id": "MAT-COMPARINGQTY-K9-M4",
+      "why": "Student places the decimal point directly in front of the digit.",
+      "text": "0.5"
+     },
+     {
+      "belief_id": "MAT-COMPARINGQTY-K9-M5",
+      "why": "Student confuses half a percent with 50 percent.",
+      "text": "0.50"
+     },
+     {
+      "belief_id": "MAT-COMPARINGQTY-K11-M8",
+      "why": "Student incorrectly divides the number by the percentage value.",
+      "text": "5"
+     }
+    ]
+   },
+   {
+    "evidence": "If you have a fraction like 3/5, convert it to a decimal first, which is 0.6, then multiply by 100 to get 60%.",
+    "answer": "60%",
+    "stem": "What is the correct way to express the fraction 3/5 as a percentage?",
+    "options": [
+     {
+      "belief_id": "MAT-COMPARINGQTY-K10-M6",
+      "why": "Student just adds a percent sign to the numerator.",
+      "text": "3%"
+     },
+     {
+      "belief_id": "MAT-COMPARINGQTY-K7-M1",
+      "why": "Student thinks the percentage is the numerator itself.",
+      "text": "25%"
+     },
+     {
+      "belief_id": "MAT-COMPARINGQTY-K11-M9",
+      "why": "Student assumes the result must be smaller than the fraction.",
+      "text": "40%"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 17.6
+}

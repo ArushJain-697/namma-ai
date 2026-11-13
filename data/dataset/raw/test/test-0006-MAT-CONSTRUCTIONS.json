@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "test-0006-MAT-CONSTRUCTIONS",
+  "topic_id": "MAT-CONSTRUCTIONS",
+  "split": "test",
+  "test_only_topic": true,
+  "grade": 6,
+  "style": "a clear textbook explanation with one worked example",
+  "seed": 6
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 1073,
+  "candidatesTokenCount": 1254,
+  "totalTokenCount": 2327,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1073
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-CONSTRUCTIONS-K14-M5",
+  "MAT-CONSTRUCTIONS-K21-M13",
+  "MAT-CONSTRUCTIONS-K16-M7",
+  "MAT-CONSTRUCTIONS-K25-M17",
+  "MAT-CONSTRUCTIONS-K25-M18",
+  "MAT-CONSTRUCTIONS-K15-M4",
+  "MAT-CONSTRUCTIONS-K23-M14",
+  "MAT-CONSTRUCTIONS-K26-M15",
+  "MAT-CONSTRUCTIONS-K21-M12",
+  "MAT-CONSTRUCTIONS-K14-M6",
+  "MAT-CONSTRUCTIONS-K19-M8",
+  "MAT-CONSTRUCTIONS-K17-M10",
+  "MAT-CONSTRUCTIONS-K27-M11",
+  "MAT-CONSTRUCTIONS-K4-M20"
+ ],
+ "response": {
+  "passage": "In geometry, constructing shapes requires precision. To draw a perpendicular bisector of a line segment AB, you must open your compass to a radius greater than half the length of AB. Place the needle at A and draw arcs above and below the line. Without changing the compass width, repeat this from point B. The line connecting these two intersection points is the perpendicular bisector; it is the unique line that is both perpendicular to the segment and passes exactly through its midpoint. For triangles, the Triangle Inequality Theorem states that the sum of the lengths of any two sides must be strictly greater than the third side. For example, if you have sides of 3 cm, 4 cm, and 8 cm, they cannot form a triangle because 3 + 4 is only 7, which is not greater than 8. Finally, when constructing a triangle using the SAS rule, the given angle must be located precisely between the two given sides. If you are given two sides of 5 cm and 6 cm, the angle must be measured at the vertex where these two specific sides meet to ensure the triangle is constructed correctly.",
+  "summary": "Geometric constructions require specific compass settings and logical rules. You must follow the Triangle Inequality Theorem and ensure angles are placed correctly between sides for SAS constructions.",
+  "items": [
+   {
+    "evidence": "To draw a perpendicular bisector of a line segment AB, you must open your compass to a radius greater than half the length of AB.",
+    "answer": "greater than half",
+    "stem": "What is the required compass setting to construct a perpendicular bisector?",
+    "options": [
+     {
+      "belief_id": "MAT-CONSTRUCTIONS-K15-M4",
+      "why": "Student thinks any radius works for the arcs.",
+      "text": "any radius"
+     },
+     {
+      "belief_id": "MAT-CONSTRUCTIONS-K14-M5",
+      "why": "Student thinks only the perpendicularity matters, not the radius.",
+      "text": "a right angle"
+     },
+     {
+      "belief_id": "MAT-CONSTRUCTIONS-K14-M6",
+      "why": "Student thinks only the midpoint matters, not the radius.",
+      "text": "the midpoint"
+     }
+    ]
+   },
+   {
+    "evidence": "The line connecting these two intersection points is the perpendicular bisector; it is the unique line that is both perpendicular to the segment and passes exactly through its midpoint.",
+    "answer": "both perpendicular and midpoint",
+    "stem": "What defines the position of a perpendicular bisector?",
+    "options": [
+     {
+      "belief_id": "MAT-CONSTRUCTIONS-K14-M5",
+      "why": "Student ignores the midpoint requirement.",
+      "text": "only at right angles"
+     },
+     {
+      "belief_id": "MAT-CONSTRUCTIONS-K14-M6",
+      "why": "Student ignores the perpendicularity requirement.",
+      "text": "only through the midpoint"
+     },
+     {
+      "belief_id": "MAT-CONSTRUCTIONS-K16-M7",
+      "why": "Student thinks points on the line are not equidistant.",
+      "text": "closer to one end"
+     }
+    ]
+   },
+   {
+    "evidence": "For example, if you have sides of 3 cm, 4 cm, and 8 cm, they cannot form a triangle because 3 + 4 is only 7, which is not greater than 8.",
+    "answer": "not greater than 8",
+    "stem": "Why can sides of 3 cm, 4 cm, and 8 cm not form a triangle?",
+    "options": [
+     {
+      "belief_id": "MAT-CONSTRUCTIONS-K21-M13",
+      "why": "Student thinks sum equal to the third side works.",
+      "text": "because 3 + 4 = 7"
+     },
+     {
+      "belief_id": "MAT-CONSTRUCTIONS-K21-M12",
+      "why": "Student thinks any three lengths form a triangle.",
+      "text": "any three lengths work"
+     },
+     {
+      "belief_id": "MAT-CONSTRUCTIONS-K16-M7",
+      "why": "Student is confused by the comparison to 7 cm.",
+      "text": "different from 7 cm"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, when constructing a triangle using the SAS rule, the given angle must be located precisely between the two given sides.",
+    "answer": "between the two given sides",
+    "stem": "Where must the angle be located for an SAS construction?",
+    "options": [
+     {
+      "belief_id": "MAT-CONSTRUCTIONS-K23-M14",
+      "why": "Student thinks the angle can be anywhere.",
+      "text": "at any vertex"
+     },
+     {
+      "belief_id": "MAT-CONSTRUCTIONS-K25-M18",
+      "why": "Student thinks the angle is at the hypotenuse end.",
+      "text": "at the hypotenuse end"
+     },
+     {
+      "belief_id": "MAT-CONSTRUCTIONS-K19-M8",
+      "why": "Student thinks it joins the midpoints of arms.",
+      "text": "joining the midpoints"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.6
+}

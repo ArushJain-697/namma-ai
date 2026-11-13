@@ -1,0 +1,490 @@
+{
+ "topic": {
+  "id": "SCI-BIO-CONTROL",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   10
+  ],
+  "title": "Control and coordination",
+  "scope": "neurons, reflex arc, brain, plant hormones and tropisms, animal hormones, feedback"
+ },
+ "model": "gemini-3-flash-preview/key3",
+ "usage": {
+  "promptTokenCount": 834,
+  "candidatesTokenCount": 4031,
+  "totalTokenCount": 6067,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 834
+   }
+  ],
+  "thoughtsTokenCount": 1202,
+  "serviceTier": "standard"
+ },
+ "seconds": 20.7,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Animal Nervous System",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "cell structure",
+     "tissues"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Coordination in Plants",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "photosynthesis",
+     "plant growth"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Chemical Coordination in Animals",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "circulatory system"
+    ]
+   },
+   {
+    "key": "n1.1",
+    "name": "Neuron and Nerve Impulse",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.2",
+    "name": "Reflex Action and Arc",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n1.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.3",
+    "name": "Human Brain",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n1.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.1",
+    "name": "Nastic Movements",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.2",
+    "name": "Tropic Movements",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.3",
+    "name": "Plant Hormones",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n2.2"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.1",
+    "name": "Endocrine Glands",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.2",
+    "name": "Feedback Mechanism",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n3.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.1.1",
+    "name": "Unidirectional Impulse",
+    "level": 3,
+    "parent": "n1.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.1.2",
+    "name": "Synaptic Transmission",
+    "level": 3,
+    "parent": "n1.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.2.1",
+    "name": "Spinal Cord Role",
+    "level": 3,
+    "parent": "n1.2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.3.1",
+    "name": "Cerebellum and Posture",
+    "level": 3,
+    "parent": "n1.3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.3.2",
+    "name": "Medulla and Involuntary Actions",
+    "level": 3,
+    "parent": "n1.3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.2.1",
+    "name": "Auxin in Phototropism",
+    "level": 3,
+    "parent": "n2.2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.3.1",
+    "name": "Growth Inhibitors",
+    "level": 3,
+    "parent": "n2.3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.1.1",
+    "name": "Adrenaline Action",
+    "level": 3,
+    "parent": "n3.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.2.1",
+    "name": "Blood Sugar Regulation",
+    "level": 3,
+    "parent": "n3.2",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n1.1.2",
+    "statement": "Nerve impulses travel across the synapse as electrical sparks.",
+    "why": "Students often think of the nervous system as a continuous electrical circuit like house wiring.",
+    "fix": "At the synapse, the electrical signal is converted into a chemical signal (neurotransmitter) to cross the gap.",
+    "probe": {
+     "question": "How does a signal cross the gap between two neurons?",
+     "wrong_answer": "It jumps across as an electric current."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "biological systems work exactly like man-made machines",
+    "causes": [],
+    "trigger_cues": [
+     "synapse",
+     "gap",
+     "impulse",
+     "chemical",
+     "electrical"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic studies on nervous system"
+   },
+   {
+    "key": "m2",
+    "node": "n1.2.1",
+    "statement": "The brain is directly involved in the immediate execution of a reflex action.",
+    "why": "The brain is commonly taught as the 'control center' for all body actions.",
+    "fix": "Reflex arcs are formed in the spinal cord for quick responses, though information is sent to the brain later.",
+    "probe": {
+     "question": "Which part of the nervous system primarily processes the quick withdrawal of a hand from a hot object?",
+     "wrong_answer": "The cerebrum of the brain."
+    },
+    "error_type": "part_whole",
+    "root_belief": "one central controller manages every single action",
+    "causes": [],
+    "trigger_cues": [
+     "reflex",
+     "spinal cord",
+     "quick",
+     "response",
+     "brain"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m3",
+    "node": "n2.1",
+    "statement": "Plants have a nervous system similar to animals to sense touch.",
+    "why": "Students observe fast movements in plants like Mimosa and assume the mechanism must be the same as in animals.",
+    "fix": "Plants use electrochemical means and changes in water amount (turgor pressure) in cells, not specialized nerve cells.",
+    "probe": {
+     "question": "How does the 'touch-me-not' plant move its leaves so quickly?",
+     "wrong_answer": "It uses a network of nerves to send signals."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "similar behaviors imply identical internal mechanisms",
+    "causes": [],
+    "trigger_cues": [
+     "mimosa",
+     "sensitive",
+     "touch",
+     "nerves",
+     "movement"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas in Science"
+   },
+   {
+    "key": "m4",
+    "node": "n2.2.1",
+    "statement": "Light destroys auxin, which is why the plant bends.",
+    "why": "Students know auxin is absent on the sunny side and assume it was destroyed by light.",
+    "fix": "Auxin diffuses away from the light towards the shady side of the shoot.",
+    "probe": {
+     "question": "What happens to auxin when light falls on one side of a shoot?",
+     "wrong_answer": "The light burns or destroys the auxin on that side."
+    },
+    "error_type": "single_cause",
+    "root_belief": "disappearance is always caused by destruction",
+    "causes": [],
+    "trigger_cues": [
+     "auxin",
+     "phototropism",
+     "shady",
+     "diffusion",
+     "light"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n3.1.1",
+    "statement": "Hormones only affect the specific organ they are produced in.",
+    "why": "Students confuse the site of production with the site of action.",
+    "fix": "Hormones are secreted into the blood and travel to distant target organs to exert their effect.",
+    "probe": {
+     "question": "How does adrenaline reach the heart if it is made in the adrenal glands?",
+     "wrong_answer": "It stays in the gland and sends a signal."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "action must happen where the cause is located",
+    "causes": [],
+    "trigger_cues": [
+     "endocrine",
+     "target",
+     "blood",
+     "secretion",
+     "gland"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Concept Inventory of Biology"
+   },
+   {
+    "key": "m6",
+    "node": "n3.2.1",
+    "statement": "Feedback mechanism means the body asks the brain for permission to stop a hormone.",
+    "why": "The everyday use of 'feedback' implies a conscious report or opinion.",
+    "fix": "Feedback is an automatic process where the level of a substance (like sugar) itself triggers the start or stop of hormone secretion.",
+    "probe": {
+     "question": "How does the pancreas know when to stop producing insulin?",
+     "wrong_answer": "The brain sends a message saying there is enough insulin."
+    },
+    "error_type": "everyday_language",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "feedback",
+     "insulin",
+     "sugar",
+     "pancreas",
+     "regulation"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n1.1.1",
+    "statement": "Information can travel in both directions along a single neuron.",
+    "why": "Students compare neurons to two-way streets or simple wires.",
+    "fix": "Nerve impulses travel only in one direction: from dendrite to cell body to axon.",
+    "probe": {
+     "question": "Can a single nerve fiber carry a signal back from the axon to the dendrite?",
+     "wrong_answer": "Yes, signals can flow both ways."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "conduits always allow flow in both directions",
+    "causes": [],
+    "trigger_cues": [
+     "dendrite",
+     "axon",
+     "direction",
+     "unidirectional",
+     "impulse"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Biology Education Research"
+   },
+   {
+    "key": "m8",
+    "node": "n1.3.1",
+    "statement": "The cerebellum is the part of the brain used for thinking and memory.",
+    "why": "Students often use 'brain' and 'cerebrum' or 'cerebellum' interchangeably without distinguishing functions.",
+    "fix": "The cerebrum is for thinking and memory; the cerebellum maintains posture and balance.",
+    "probe": {
+     "question": "Which part of the brain helps you remember a poem?",
+     "wrong_answer": "Cerebellum."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar sounding names have the same function",
+    "causes": [],
+    "trigger_cues": [
+     "cerebellum",
+     "cerebrum",
+     "posture",
+     "thinking",
+     "memory"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m9",
+    "node": "n2.3.1",
+    "statement": "All plant hormones are meant to increase growth.",
+    "why": "The word 'hormone' is associated with growth and 'boosters' in popular culture.",
+    "fix": "Some hormones, like Abscisic acid, act as growth inhibitors and cause wilting of leaves.",
+    "probe": {
+     "question": "What is the function of Abscisic acid in plants?",
+     "wrong_answer": "It helps the plant grow taller."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "biological regulators only act as activators",
+    "causes": [],
+    "trigger_cues": [
+     "abscisic",
+     "inhibitor",
+     "wilting",
+     "growth",
+     "hormone"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT Exemplar Problems"
+   },
+   {
+    "key": "m10",
+    "node": "n1.3.2",
+    "statement": "Involuntary actions like heartbeat are controlled by our will if we concentrate.",
+    "why": "Students believe the mind has total control over the body.",
+    "fix": "Involuntary actions are controlled by the midbrain and hindbrain (medulla) and cannot be consciously controlled.",
+    "probe": {
+     "question": "Can you stop your heartbeat by thinking about it?",
+     "wrong_answer": "Yes, if I concentrate hard enough."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "the conscious mind controls all bodily processes",
+    "causes": [],
+    "trigger_cues": [
+     "medulla",
+     "involuntary",
+     "heartbeat",
+     "blood pressure",
+     "control"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n2.2",
+    "statement": "Plants move towards light because they 'want' to get more food.",
+    "why": "Students assign human-like intentions and desires to plants.",
+    "fix": "Plant movement is a mechanical growth response triggered by chemical gradients (auxin), not a conscious choice.",
+    "probe": {
+     "question": "Why does a plant stem bend towards a window?",
+     "wrong_answer": "Because it knows the light is there and wants to reach it."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "all living things act with conscious intent",
+    "causes": [],
+    "trigger_cues": [
+     "phototropism",
+     "bending",
+     "light",
+     "stimulus",
+     "response"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas in Science"
+   },
+   {
+    "key": "m12",
+    "node": "n3.1.2",
+    "statement": "Adrenaline only speeds up the heart and has no other effects.",
+    "why": "Students focus on the most visible or felt symptom of an adrenaline rush.",
+    "fix": "Adrenaline affects multiple targets: it increases heart rate, diverts blood to muscles, and increases breathing rate.",
+    "probe": {
+     "question": "What happens to the digestive system during a 'fight or flight' response?",
+     "wrong_answer": "Nothing, only the heart is affected."
+    },
+    "error_type": "single_cause",
+    "root_belief": "one hormone has only one specific effect",
+    "causes": [],
+    "trigger_cues": [
+     "adrenaline",
+     "emergency",
+     "heart",
+     "muscles",
+     "digestive"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": [
+  "misconception dropped: 'Adrenaline only speeds up the heart and has no oth'"
+ ]
+}

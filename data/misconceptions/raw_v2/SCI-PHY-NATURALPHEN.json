@@ -1,0 +1,499 @@
+{
+ "topic": {
+  "id": "SCI-PHY-NATURALPHEN",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   8
+  ],
+  "title": "Lightning and earthquakes",
+  "scope": "static charges, charging by rubbing, lightning and safety, earthquakes, plates, seismograph"
+ },
+ "model": "gemini-3-flash-preview",
+ "usage": {
+  "promptTokenCount": 832,
+  "candidatesTokenCount": 4179,
+  "totalTokenCount": 6283,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 832
+   }
+  ],
+  "thoughtsTokenCount": 1272,
+  "serviceTier": "standard"
+ },
+ "seconds": 22.8,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Static Electricity and Charging",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "atomic structure",
+     "concept of force"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Lightning and Atmospheric Discharge",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "clouds and rain",
+     "conductors and insulators"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Earthquakes and Plate Tectonics",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "layers of the earth"
+    ]
+   },
+   {
+    "key": "n1.1",
+    "name": "Nature of Electric Charges",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.2",
+    "name": "Charging by Rubbing",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n1.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.3",
+    "name": "Interaction between Charges",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n1.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.1",
+    "name": "Mechanism of Lightning",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n1.2",
+     "n1.3"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.2",
+    "name": "Lightning Safety and Protection",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n2.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.1",
+    "name": "Structure and Plate Movement",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.2",
+    "name": "Measurement and Effects",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n3.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.1.1",
+    "name": "Two types of charges",
+    "level": 3,
+    "parent": "n1.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.2.1",
+    "name": "Charging by friction transfers electrons",
+    "level": 3,
+    "parent": "n1.2",
+    "prereqs": [
+     "n1.1.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.3.1",
+    "name": "Like charges repel; unlike attract",
+    "level": 3,
+    "parent": "n1.3",
+    "prereqs": [
+     "n1.1.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.3.2",
+    "name": "Charged objects attract uncharged ones",
+    "level": 3,
+    "parent": "n1.3",
+    "prereqs": [
+     "n1.3.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.1.1",
+    "name": "Lightning is electric discharge",
+    "level": 3,
+    "parent": "n2.1",
+    "prereqs": [
+     "n1.3.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.2.1",
+    "name": "Lightning conductors protect buildings",
+    "level": 3,
+    "parent": "n2.2",
+    "prereqs": [
+     "n2.1.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.1.1",
+    "name": "Crust is made of tectonic plates",
+    "level": 3,
+    "parent": "n3.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.1.2",
+    "name": "Earthquakes occur at plate boundaries",
+    "level": 3,
+    "parent": "n3.1",
+    "prereqs": [
+     "n3.1.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.2.1",
+    "name": "Seismograph records seismic waves",
+    "level": 3,
+    "parent": "n3.2",
+    "prereqs": [
+     "n3.1.2"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.2.2",
+    "name": "Richter scale measures magnitude",
+    "level": 3,
+    "parent": "n3.2",
+    "prereqs": [
+     "n3.2.1"
+    ],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n1.2.1",
+    "statement": "Rubbing creates new charges inside an object that were not there before.",
+    "why": "Students often think friction 'generates' electricity like a factory rather than moving existing particles.",
+    "fix": "Rubbing only transfers existing electrons from one object to another; no new charge is created.",
+    "probe": {
+     "question": "If you rub a glass rod with silk, where does the positive charge on the rod come from?",
+     "wrong_answer": "The friction creates the positive charge inside the rod."
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "matter can be created through physical action",
+    "causes": [],
+    "trigger_cues": [
+     "rubbing",
+     "friction",
+     "glass rod",
+     "silk",
+     "generation"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic studies on electrostatics"
+   },
+   {
+    "key": "m2",
+    "node": "n1.3.1",
+    "statement": "Charged objects only attract other things; they do not repel.",
+    "why": "In everyday life, students see static 'cling' (attraction) more often than active repulsion.",
+    "fix": "Objects with the same type of charge will push away or repel each other.",
+    "probe": {
+     "question": "What happens if two balloons are both rubbed with the same woolen cloth and brought near each other?",
+     "wrong_answer": "They will stick together because they are both charged."
+    },
+    "error_type": "everyday_language",
+    "root_belief": "electricity is a force of attraction only",
+    "causes": [],
+    "trigger_cues": [
+     "repel",
+     "attract",
+     "balloons",
+     "interaction"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m3",
+    "node": "n2.1.1",
+    "statement": "Lightning is a form of fire or burning gas in the sky.",
+    "why": "Lightning is bright and hot, leading to a visual association with fire.",
+    "fix": "Lightning is a massive flow of electric charge (discharge) between clouds or cloud and ground.",
+    "probe": {
+     "question": "What is lightning made of?",
+     "wrong_answer": "It is a streak of fire caused by clouds catching flame."
+    },
+    "error_type": "visible_only",
+    "root_belief": "bright hot things must be fire",
+    "causes": [],
+    "trigger_cues": [
+     "lightning",
+     "clouds",
+     "spark",
+     "discharge"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n2.2.1",
+    "statement": "A lightning conductor attracts lightning to the building to stop it from hitting other places.",
+    "why": "The word 'conductor' and its position on top of buildings suggest it acts like a magnet for lightning.",
+    "fix": "A lightning conductor provides a safe, low-resistance path for the charge to flow into the ground, protecting the structure.",
+    "probe": {
+     "question": "Does a lightning rod increase the chance of your house being hit?",
+     "wrong_answer": "Yes, because it pulls lightning toward the house."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "safety devices work by attracting the danger",
+    "causes": [],
+    "trigger_cues": [
+     "conductor",
+     "copper rod",
+     "earthing",
+     "building"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m5",
+    "node": "n3.1.1",
+    "statement": "The Earth's tectonic plates float on a continuous ocean of liquid lava.",
+    "why": "Diagrams in textbooks often show a bright red mantle, which students interpret as liquid water-like magma.",
+    "fix": "The mantle is mostly solid rock that can flow very slowly over millions of years; it is not a liquid ocean.",
+    "probe": {
+     "question": "What is directly underneath the tectonic plates?",
+     "wrong_answer": "A sea of liquid melted fire or lava."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "solid things must float on liquid to move",
+    "causes": [],
+    "trigger_cues": [
+     "plates",
+     "mantle",
+     "magma",
+     "floating"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's children's ideas in science"
+   },
+   {
+    "key": "m6",
+    "node": "n3.1.3",
+    "statement": "Earthquakes only happen in hot weather or during specific weather changes.",
+    "why": "Historical myths and the term 'earthquake weather' persist in many cultures, including India.",
+    "fix": "Earthquakes are caused by internal plate movements and are completely independent of atmospheric weather.",
+    "probe": {
+     "question": "Can a heavy rainstorm or a heatwave cause an earthquake?",
+     "wrong_answer": "Yes, earthquakes usually happen when the air is very still and hot."
+    },
+    "error_type": "single_cause",
+    "root_belief": "all natural disasters are linked to weather",
+    "causes": [],
+    "trigger_cues": [
+     "weather",
+     "climate",
+     "occurrence",
+     "cause"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "USGS Education / HBCSE"
+   },
+   {
+    "key": "m7",
+    "node": "n3.2.2",
+    "statement": "An earthquake of magnitude 7 is only slightly stronger than one of magnitude 6.",
+    "why": "Students assume the Richter scale is linear, like a ruler or a marksheet.",
+    "fix": "The Richter scale is logarithmic; an increase of 2 in magnitude means 1000 times more destructive energy.",
+    "probe": {
+     "question": "How much more powerful is a magnitude 8 earthquake compared to a magnitude 6?",
+     "wrong_answer": "It is about 2 units or 20% stronger."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "all scales increase linearly",
+    "causes": [],
+    "trigger_cues": [
+     "richter scale",
+     "magnitude",
+     "energy",
+     "measurement"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Geoscience concept inventory"
+   },
+   {
+    "key": "m8",
+    "node": "n1.3.2",
+    "statement": "A charged object cannot attract a neutral (uncharged) object.",
+    "why": "Students believe that for an electrical force to exist, both objects must already have their own charge.",
+    "fix": "A charged object can attract an uncharged object by inducing a temporary separation of charges in it.",
+    "probe": {
+     "question": "Why does a charged comb pick up tiny bits of uncharged paper?",
+     "wrong_answer": "The paper must have been secretly charged before the comb touched it."
+    },
+    "error_type": "single_cause",
+    "root_belief": "interactions require both parties to have the same property",
+    "causes": [],
+    "trigger_cues": [
+     "neutral",
+     "paper",
+     "comb",
+     "attraction"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Physics Education"
+   },
+   {
+    "key": "m9",
+    "node": "n3.1.1",
+    "statement": "Tectonic plates are the same thing as the continents.",
+    "why": "Maps often show plates and continents together, and students only see the land above water.",
+    "fix": "Tectonic plates are huge slabs of the crust that carry both continents and the ocean floor.",
+    "probe": {
+     "question": "Do tectonic plates exist under the Atlantic Ocean?",
+     "wrong_answer": "No, plates are just the land masses like Asia and Africa."
+    },
+    "error_type": "part_whole",
+    "root_belief": "only visible parts of a system exist",
+    "causes": [],
+    "trigger_cues": [
+     "continents",
+     "ocean floor",
+     "crust",
+     "plates"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m10",
+    "node": "n3.2.1",
+    "statement": "Seismographs are used to predict exactly when an earthquake will happen in the future.",
+    "why": "Confusion between 'recording' an event and 'predicting' an event, similar to weather forecasts.",
+    "fix": "Seismographs only record the waves of an earthquake that is already happening; we cannot yet predict earthquakes.",
+    "probe": {
+     "question": "What is the main purpose of a seismograph?",
+     "wrong_answer": "To give a warning several days before an earthquake starts."
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "scientific instruments are for prediction",
+    "causes": [],
+    "trigger_cues": [
+     "seismograph",
+     "prediction",
+     "warning",
+     "record"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n2.2.2",
+    "statement": "Wearing rubber shoes makes you completely safe from lightning strikes outdoors.",
+    "why": "Overgeneralisation of the fact that rubber is an insulator for small household voltages.",
+    "fix": "Lightning has millions of volts; a thin layer of rubber on shoes cannot stop such a massive discharge.",
+    "probe": {
+     "question": "If you are in an open field during a storm, are you safe if you wear sneakers with rubber soles?",
+     "wrong_answer": "Yes, because rubber is an insulator and will block the lightning."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "properties at small scale apply at infinite scale",
+    "causes": [],
+    "trigger_cues": [
+     "rubber",
+     "shoes",
+     "insulator",
+     "safety"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "National Weather Service (US) safety education"
+   },
+   {
+    "key": "m12",
+    "node": "n1.1.1",
+    "statement": "Static electricity is a 'different' kind of electricity than the one in our wires.",
+    "why": "The different names ('static' vs 'current') and different sources (rubbing vs batteries) suggest two different substances.",
+    "fix": "All electricity involves the same electric charges; 'static' just means the charges are not flowing in a continuous circuit.",
+    "probe": {
+     "question": "Is the charge on a rubbed balloon the same as the charge moving through a bulb's wire?",
+     "wrong_answer": "No, static electricity is a different natural force."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "different names mean different substances",
+    "causes": [],
+    "trigger_cues": [
+     "static",
+     "current",
+     "electricity",
+     "wires"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic studies"
+   }
+  ]
+ },
+ "problems": [
+  "misconception dropped: 'Earthquakes only happen in hot weather or during s'",
+  "misconception dropped: 'Wearing rubber shoes makes you completely safe fro'"
+ ]
+}

@@ -1,0 +1,125 @@
+{
+ "job": {
+  "job": "train-0614-MAT-SYMMETRY",
+  "topic_id": "MAT-SYMMETRY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a passage that shows a common wrong method and corrects it",
+  "seed": 614
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 633,
+  "candidatesTokenCount": 1248,
+  "totalTokenCount": 1881,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 633
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-SYMMETRY-K6-M2",
+  "MAT-SYMMETRY-K5-M4",
+  "MAT-SYMMETRY-K4-M1",
+  "MAT-SYMMETRY-K11-M3"
+ ],
+ "response": {
+  "passage": "Rohan was studying symmetry for his Class 7 exam. He looked at a regular pentagon and claimed it only had one line of symmetry, drawn vertically from the top vertex. His teacher explained that a regular pentagon actually has five lines of symmetry because all its sides and angles are equal. Next, Rohan looked at the letter 'b' in a mirror and thought its reflection would look exactly like the letter 'b' itself. He was surprised to see it looked like a 'd' instead, showing that mirror reflections often reverse the orientation of objects. Then, Rohan examined a square and rotated it. He initially believed that a shape only possesses rotational symmetry if it completes a full 360-degree turn to look the same. His teacher corrected him, showing that the square looks identical after a 90-degree turn, meaning it has rotational symmetry of order four. Finally, Rohan looked at a rectangle and assumed it only had a vertical line of symmetry. He was wrong, as the rectangle also has a horizontal line of symmetry passing through the midpoints of its opposite sides. By understanding these properties, Rohan realized that symmetry is not just about vertical lines, but about how shapes behave under rotation and reflection.",
+  "summary": "This passage explains that regular polygons have multiple lines of symmetry and that rotational symmetry can occur in turns smaller than 360 degrees. It also clarifies that mirror images are reversed and that lines of symmetry can be horizontal as well as vertical.",
+  "items": [
+   {
+    "evidence": "His teacher explained that a regular pentagon actually has five lines of symmetry because all its sides and angles are equal.",
+    "answer": "five lines of symmetry",
+    "stem": "How many lines of symmetry does a regular pentagon possess?",
+    "options": [
+     {
+      "belief_id": "MAT-SYMMETRY-K5-M4",
+      "why": "Student incorrectly assumes regular polygons have only one line.",
+      "text": "1"
+     },
+     {
+      "belief_id": "MAT-SYMMETRY-K4-M1",
+      "why": "Student thinks symmetry is restricted to vertical lines only.",
+      "text": "only vertical lines"
+     },
+     {
+      "belief_id": "MAT-SYMMETRY-K6-M2",
+      "why": "Student confuses line symmetry with full rotational turns.",
+      "text": "a full circle"
+     }
+    ]
+   },
+   {
+    "evidence": "He was surprised to see it looked like a 'd' instead, showing that mirror reflections often reverse the orientation of objects.",
+    "answer": "reverse the orientation",
+    "stem": "What effect does a mirror reflection have on an object's appearance?",
+    "options": [
+     {
+      "belief_id": "MAT-SYMMETRY-K11-M3",
+      "why": "Student believes the reflection is identical to the original.",
+      "text": "remains exactly the same"
+     },
+     {
+      "belief_id": "MAT-SYMMETRY-K5-M4",
+      "why": "Student incorrectly applies polygon line counts to reflections.",
+      "text": "creates one line"
+     },
+     {
+      "belief_id": "MAT-SYMMETRY-K4-M1",
+      "why": "Student assumes reflections only happen vertically.",
+      "text": "flips it vertically"
+     }
+    ]
+   },
+   {
+    "evidence": "His teacher corrected him, showing that the square looks identical after a 90-degree turn, meaning it has rotational symmetry of order four.",
+    "answer": "90-degree turn",
+    "stem": "At what angle does a square first appear identical during rotation?",
+    "options": [
+     {
+      "belief_id": "MAT-SYMMETRY-K6-M2",
+      "why": "Student believes symmetry only exists at a full rotation.",
+      "text": "360 degrees"
+     },
+     {
+      "belief_id": "MAT-SYMMETRY-K5-M4",
+      "why": "Student incorrectly applies polygon line counts to rotation.",
+      "text": "1 degree"
+     },
+     {
+      "belief_id": "MAT-SYMMETRY-K4-M1",
+      "why": "Student assumes symmetry is tied to vertical orientation.",
+      "text": "180 degrees vertically"
+     }
+    ]
+   },
+   {
+    "evidence": "He was wrong, as the rectangle also has a horizontal line of symmetry passing through the midpoints of its opposite sides.",
+    "answer": "horizontal line of symmetry",
+    "stem": "Besides a vertical line, what other symmetry does a rectangle possess?",
+    "options": [
+     {
+      "belief_id": "MAT-SYMMETRY-K4-M1",
+      "why": "Student believes symmetry is only vertical.",
+      "text": "no other lines"
+     },
+     {
+      "belief_id": "MAT-SYMMETRY-K5-M4",
+      "why": "Student assumes only one line exists total.",
+      "text": "only one line"
+     },
+     {
+      "belief_id": "MAT-SYMMETRY-K11-M3",
+      "why": "Student confuses reflection with identical copying.",
+      "text": "a mirror copy"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.0
+}

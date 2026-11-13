@@ -96,6 +96,22 @@ def api_key() -> str:
     return key
 
 
+def api_keys() -> list[str]:
+    """All configured keys in order: GEMINI_API_KEY, then GEMINI_API_KEY_2, _3 ... (environment or .env)."""
+    found: dict[str, str] = {}
+    env = os.path.join(ROOT, ".env")
+    if os.path.exists(env):
+        for line in open(env, encoding="utf-8"):
+            m = re.match(r"\s*(GEMINI_API_KEY(?:_\d+)?|GOOGLE_API_KEY)\s*=\s*['\"]?([^'\"\s]+)", line)
+            if m:
+                found[m.group(1)] = m.group(2)
+    for k, v in os.environ.items():
+        if re.fullmatch(r"GEMINI_API_KEY(_\d+)?|GOOGLE_API_KEY", k) and v:
+            found[k] = v
+    order = sorted(found, key=lambda k: (k == "GOOGLE_API_KEY", int(k.rsplit("_", 1)[1]) if k[-1].isdigit() else 1))
+    return list(dict.fromkeys(found[k] for k in order))
+
+
 def _request(url: str, body: dict | None, key: str, timeout: float = 180) -> dict:
     data = json.dumps(body).encode() if body is not None else None
     req = urllib.request.Request(url, data=data, method="POST" if body is not None else "GET",
@@ -127,6 +143,110 @@ def generate(key: str, model: str, prompt: str, retries: int = 4) -> tuple[str, 
             last = f"{type(e).__name__}: {e}"
         time.sleep(min(60, 4 * 2 ** attempt))
     raise RuntimeError(last)
+
+
+def claude_generate(prompt: str, model: str, timeout: float = 600) -> tuple[str, dict]:
+    """Last-resort teacher: Claude through the local Claude Code CLI in headless mode (`claude -p`), which uses
+    the user's existing Claude login (no API key in this project). Tools are disabled; the reply is plain text."""
+    import subprocess
+    import tempfile
+    cmd = ["claude", "-p", "--model", model, "--output-format", "json",
+           "--disallowedTools", "Bash", "Edit", "Write", "Read", "WebFetch", "WebSearch", "Glob", "Grep", "Task"]
+    with tempfile.TemporaryDirectory() as tmp:  # run outside the repo so no project context is loaded
+        p = subprocess.run(cmd, input=prompt + "\n\nReply with the JSON only.", capture_output=True, text=True,
+                           timeout=timeout, cwd=tmp)
+    try:
+        d = json.loads(p.stdout)
+    except json.JSONDecodeError:
+        raise RuntimeError(f"claude cli: {(p.stderr or p.stdout)[:200]}")
+    if d.get("is_error") or not d.get("result"):
+        msg = str(d.get("result") or p.stderr)[:200]
+        low = msg.lower()
+        if any(w in low for w in ("authenticate", "login", "hit your", "usage limit", "rate limit", "limit ·")) \
+                or "unrecognized_model" in (p.stderr + p.stdout):
+            raise RuntimeError(f"429 quota (claude unavailable: {msg})")  # marks this teacher dead for the run
+        raise RuntimeError(f"claude cli error: {msg}")
+    return d["result"], {"candidatesTokenCount": (d.get("usage") or {}).get("output_tokens", 0),
+                         "promptTokenCount": (d.get("usage") or {}).get("input_tokens", 0)}
+
+
+def loads_lenient(text: str) -> dict:
+    """json.loads, then common repairs: code fences, trailing commas, and output cut off mid-list
+    (keep everything up to the last complete object and close the brackets)."""
+    t = re.sub(r"^```(?:json)?\s*|\s*```$", "", text.strip())
+    for cand in (t, re.sub(r",\s*([}\]])", r"\1", t)):
+        try:
+            return json.loads(cand)
+        except json.JSONDecodeError:
+            pass
+    t = re.sub(r",\s*([}\]])", r"\1", t)
+    for cut in range(len(t) - 1, 0, -1):
+        if t[cut] != "}":
+            continue
+        head = t[: cut + 1]
+        opens = []
+        in_str = esc = False
+        for ch in head:
+            if in_str:
+                esc, in_str = (False, in_str) if esc else (ch == "\\", ch != '"')
+            elif ch == '"':
+                in_str = True
+            elif ch in "[{":
+                opens.append(ch)
+            elif ch in "]}" and opens:
+                opens.pop()
+        try:
+            return json.loads(head + "".join("]" if o == "[" else "}" for o in reversed(opens)))
+        except json.JSONDecodeError:
+            continue
+    raise json.JSONDecodeError("could not repair JSON", t, 0)
+
+
+class Teacher:
+    """Rotates through (key, model) pairs: the strong models on every key first, then the light ones.
+    A pair that answers 429 with a quota error is skipped for the rest of the run. Thread-safe."""
+
+    def __init__(self, models: list[str], keys: list[str] | None = None):
+        import threading
+        self.keys = keys or api_keys()
+        if not self.keys:
+            sys.exit("No Gemini key in .env")
+        # Gemini models on every key, in order; "claude:<model>" entries run once each via the Claude Code CLI.
+        self.pairs = []
+        for m in models:  # keep the given order; Gemini models expand to one entry per key
+            self.pairs += [("claude", m)] if m.startswith("claude:") else [(k, m) for k in self.keys]
+        self.dead: set[int] = set()
+        self.lock = threading.Lock()
+
+    def _name(self, k: str, m: str) -> str:
+        return m if k == "claude" else f"{m}/key{self.keys.index(k) + 1}"
+
+    def describe(self) -> str:
+        return ", ".join(self._name(k, m) for k, m in self.pairs)
+
+    def generate(self, prompt: str) -> tuple[str, dict, str]:
+        while True:
+            with self.lock:
+                live = [i for i in range(len(self.pairs)) if i not in self.dead]
+            if not live:
+                raise RuntimeError("all teacher keys and models are out of quota for today")
+            i = live[0]
+            key, model = self.pairs[i]
+            try:
+                if key == "claude":
+                    text, usage = claude_generate(prompt, model.split(":", 1)[1])
+                else:
+                    text, usage = generate(key, model, prompt, retries=2)
+                return text, usage, self._name(key, model)
+            except RuntimeError as e:
+                msg = str(e)
+                if "429" in msg and "quota" in msg.lower() or "404" in msg:
+                    with self.lock:
+                        if i not in self.dead:
+                            self.dead.add(i)
+                            print(f"  -- {self._name(key, model)} unavailable ({msg[:40]}), next", flush=True)
+                    continue
+                raise
 
 
 # ---- validation -----------------------------------------------------------------------------------------

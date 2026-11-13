@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0426-MAT-SOLIDS",
+  "topic_id": "MAT-SOLIDS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a rule explained with two contrasting examples",
+  "seed": 426
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 1013,
+  "candidatesTokenCount": 1289,
+  "totalTokenCount": 2302,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1013
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-SOLIDS-K25-M17",
+  "MAT-SOLIDS-K24-M16",
+  "MAT-SOLIDS-K13-M2",
+  "MAT-SOLIDS-K25-M18",
+  "MAT-SOLIDS-K23-M14",
+  "MAT-SOLIDS-K26-M20",
+  "MAT-SOLIDS-K27-M21",
+  "MAT-SOLIDS-K16-M5",
+  "MAT-SOLIDS-K26-M19",
+  "MAT-SOLIDS-K13-M1",
+  "MAT-SOLIDS-K28-M23",
+  "MAT-SOLIDS-K19-M13",
+  "MAT-SOLIDS-K18-M9",
+  "MAT-SOLIDS-K29-M22"
+ ],
+ "response": {
+  "passage": "In geometry, we classify solids based on their surfaces. A polyhedron is a solid made entirely of flat polygonal faces, such as a cube or a triangular prism. Because a cylinder has a curved surface, it is not a polyhedron. When we look at a solid, we must account for hidden parts. For example, a stack of four cubes might only show three cubes from the front, but the total count includes the hidden ones. Similarly, a vertical slice of a cylinder does not always produce a circle; if you slice it vertically, you get a rectangle, whereas a horizontal slice creates a circle. We use Euler's formula, F + V - E = 2, to relate the number of faces (F), vertices (V), and edges (E) of a polyhedron. For a cube, which has 6 faces, 8 vertices, and 12 edges, the formula works because 6 + 8 - 12 equals 2. Remember that edges are line segments where two faces meet; since a cylinder has a curved surface rather than flat faces meeting at a line, it does not have edges in the same way a prism does. Always look beyond the surface to identify the true properties of a 3D shape.",
+  "summary": "Solids are classified by their faces, with polyhedra consisting only of flat surfaces. Euler's formula helps relate the components of polyhedra, while slices and views reveal hidden properties of 3D shapes.",
+  "items": [
+   {
+    "evidence": "Because a cylinder has a curved surface, it is not a polyhedron.",
+    "answer": "not a polyhedron",
+    "stem": "Why is a cylinder classified differently than a cube or a prism?",
+    "options": [
+     {
+      "belief_id": "MAT-SOLIDS-K29-M22",
+      "why": "Student incorrectly thinks flat circular faces make it a polyhedron.",
+      "text": "it is a polyhedron"
+     },
+     {
+      "belief_id": "MAT-SOLIDS-K13-M1",
+      "why": "Student focuses on the number of faces rather than curvature.",
+      "text": "it has three faces"
+     },
+     {
+      "belief_id": "MAT-SOLIDS-K28-M23",
+      "why": "Student assumes any solid with a flat face is a prism.",
+      "text": "it is a prism"
+     }
+    ]
+   },
+   {
+    "evidence": "For example, a stack of four cubes might only show three cubes from the front, but the total count includes the hidden ones.",
+    "answer": "includes the hidden ones",
+    "stem": "What must you consider when counting the total number of cubes in a stack?",
+    "options": [
+     {
+      "belief_id": "MAT-SOLIDS-K13-M2",
+      "why": "Student ignores parts of the solid that are not visible.",
+      "text": "only the visible cubes"
+     },
+     {
+      "belief_id": "MAT-SOLIDS-K24-M16",
+      "why": "Student assumes the visible count is the total count.",
+      "text": "the number shown"
+     },
+     {
+      "belief_id": "MAT-SOLIDS-K23-M14",
+      "why": "Student assumes all views reveal the same information.",
+      "text": "the front view only"
+     }
+    ]
+   },
+   {
+    "evidence": "if you slice it vertically, you get a rectangle, whereas a horizontal slice creates a circle.",
+    "answer": "you get a rectangle",
+    "stem": "What is the result of taking a vertical slice of a cylinder?",
+    "options": [
+     {
+      "belief_id": "MAT-SOLIDS-K25-M17",
+      "why": "Student assumes all slices of a cylinder are circular.",
+      "text": "a circle"
+     },
+     {
+      "belief_id": "MAT-SOLIDS-K25-M18",
+      "why": "Student confuses the slice shape with the shadow shape.",
+      "text": "a sphere"
+     },
+     {
+      "belief_id": "MAT-SOLIDS-K19-M13",
+      "why": "Student thinks the slice is a perspective drawing.",
+      "text": "a net"
+     }
+    ]
+   },
+   {
+    "evidence": "For a cube, which has 6 faces, 8 vertices, and 12 edges, the formula works because 6 + 8 - 12 equals 2.",
+    "answer": "6 + 8 - 12 equals 2",
+    "stem": "How is Euler's formula correctly applied to a cube?",
+    "options": [
+     {
+      "belief_id": "MAT-SOLIDS-K26-M20",
+      "why": "Student adds instead of subtracting to find edges.",
+      "text": "6 + 8 + 2 equals 16"
+     },
+     {
+      "belief_id": "MAT-SOLIDS-K26-M19",
+      "why": "Student adds all components together instead of using the formula.",
+      "text": "6 + 8 + 12 equals 26"
+     },
+     {
+      "belief_id": "MAT-SOLIDS-K27-M21",
+      "why": "Student incorrectly applies the formula to non-polyhedra.",
+      "text": "2 + 1 - 1 equals 2"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.2
+}

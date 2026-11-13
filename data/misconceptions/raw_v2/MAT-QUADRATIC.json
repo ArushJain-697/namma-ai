@@ -1,0 +1,947 @@
+{
+ "topic": {
+  "id": "MAT-QUADRATIC",
+  "subject": "maths",
+  "strand": "maths",
+  "grades": [
+   10
+  ],
+  "title": "Quadratic equations",
+  "scope": "standard form, solving by factorisation and formula, discriminant and nature of roots, word problems"
+ },
+ "model": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 8592,
+  "promptTokenCount": 2
+ },
+ "seconds": 60.3,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Quadratic equation and its standard form",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "polynomials and degree",
+     "algebraic expressions"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Solving quadratic equations",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "factorisation of polynomials",
+     "square roots"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Nature of roots and discriminant",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "square roots of negative numbers are not real numbers"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Word problems on quadratic equations",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1",
+     "n2"
+    ],
+    "external_prereqs": [
+     "forming linear equations from statements",
+     "speed distance time",
+     "area of rectangle",
+     "Pythagoras theorem"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Identifying a quadratic equation",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "degree of a polynomial"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Writing in standard form ax²+bx+c=0",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "expanding brackets",
+     "transposing terms"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Degree must be exactly 2",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": [
+     "degree of a polynomial"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Coefficient a must be non-zero",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": [
+     "meaning of coefficient"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Bring all terms to one side, other side zero",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": [
+     "changing sign when transposing"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Root is a value that satisfies the equation",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "substitution in expressions"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Number of roots of a quadratic is at most two",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Solving by factorisation",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n6",
+     "n10"
+    ],
+    "external_prereqs": [
+     "splitting the middle term"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "Splitting middle term using product ac and sum b",
+    "level": 3,
+    "parent": "n12",
+    "prereqs": [],
+    "external_prereqs": [
+     "multiplication of integers with signs"
+    ]
+   },
+   {
+    "key": "n14",
+    "name": "Zero product rule: if pq=0 then p=0 or q=0",
+    "level": 3,
+    "parent": "n12",
+    "prereqs": [],
+    "external_prereqs": [
+     "property of zero in multiplication"
+    ]
+   },
+   {
+    "key": "n15",
+    "name": "Root from a factor (x−k) is x=k",
+    "level": 3,
+    "parent": "n12",
+    "prereqs": [
+     "n14"
+    ],
+    "external_prereqs": [
+     "solving linear equations"
+    ]
+   },
+   {
+    "key": "n16",
+    "name": "Solving by quadratic formula",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": [
+     "order of operations",
+     "square roots"
+    ]
+   },
+   {
+    "key": "n17",
+    "name": "Formula x=(−b±√(b²−4ac))/2a with signed a,b,c",
+    "level": 3,
+    "parent": "n16",
+    "prereqs": [],
+    "external_prereqs": [
+     "operations on negative numbers"
+    ]
+   },
+   {
+    "key": "n18",
+    "name": "Division by 2a applies to the whole numerator",
+    "level": 3,
+    "parent": "n16",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": [
+     "fraction with sum in numerator"
+    ]
+   },
+   {
+    "key": "n19",
+    "name": "Solving by completing the square",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": [
+     "algebraic identity (a+b)²",
+     "square roots"
+    ]
+   },
+   {
+    "key": "n20",
+    "name": "Square root of a number gives both ± values",
+    "level": 3,
+    "parent": "n19",
+    "prereqs": [],
+    "external_prereqs": [
+     "square roots"
+    ]
+   },
+   {
+    "key": "n21",
+    "name": "Discriminant D=b²−4ac",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": [
+     "squaring negative numbers"
+    ]
+   },
+   {
+    "key": "n22",
+    "name": "D>0 gives two distinct real roots",
+    "level": 3,
+    "parent": "n21",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n23",
+    "name": "D=0 gives two equal real roots",
+    "level": 3,
+    "parent": "n21",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n24",
+    "name": "D<0 means no real roots",
+    "level": 3,
+    "parent": "n21",
+    "prereqs": [],
+    "external_prereqs": [
+     "real numbers"
+    ]
+   },
+   {
+    "key": "n25",
+    "name": "Forming the equation from the story",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "defining a variable",
+     "consecutive integers"
+    ]
+   },
+   {
+    "key": "n26",
+    "name": "Rejecting roots that do not suit the context",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [
+     "n25"
+    ],
+    "external_prereqs": [
+     "negative length or time is impossible"
+    ]
+   },
+   {
+    "key": "n27",
+    "name": "Speed-time and area relations in problems",
+    "level": 3,
+    "parent": "n25",
+    "prereqs": [],
+    "external_prereqs": [
+     "time = distance/speed",
+     "area = length × breadth"
+    ]
+   },
+   {
+    "key": "n28",
+    "name": "Verify answer in the original statement",
+    "level": 3,
+    "parent": "n26",
+    "prereqs": [],
+    "external_prereqs": [
+     "substitution"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n7",
+    "statement": "An equation with x³ or any higher power in it is still a quadratic equation.",
+    "why": "Students notice that x² is present and ignore the extra higher term.",
+    "fix": "A quadratic equation has highest power exactly 2. An equation like x³+x²=0 is cubic.",
+    "probe": {
+     "question": "Is x³ + 2x² − 1 = 0 a quadratic equation?",
+     "wrong_answer": "Yes, because it contains x²."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "presence of a feature is enough to qualify",
+    "causes": [],
+    "trigger_cues": [
+     "degree",
+     "highest power",
+     "quadratic",
+     "cubic",
+     "exponent"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n7",
+    "statement": "(x+1)²=x²+2x+1 is a quadratic equation because it has a square.",
+    "why": "Students see a squared bracket and do not simplify to check whether the x² terms survive on both sides.",
+    "fix": "Expand and simplify first. For example x²+3 = (x+1)² simplifies to 2x−2=0, which is linear, so it is not quadratic.",
+    "probe": {
+     "question": "Is x² + 3x = x² + 5 a quadratic equation?",
+     "wrong_answer": "Yes, it has x² in it."
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "judge by appearance without simplifying first",
+    "causes": [
+     "m1"
+    ],
+    "trigger_cues": [
+     "simplify",
+     "expand",
+     "square",
+     "bracket",
+     "linear",
+     "degree"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "classroom studies of algebra errors in recognising equation type after expansion"
+   },
+   {
+    "key": "m3",
+    "node": "n8",
+    "statement": "ax²+bx+c=0 is quadratic even when a=0.",
+    "why": "Students treat a, b, c as any numbers and forget the condition on a.",
+    "fix": "If a=0 the x² term disappears and the equation becomes linear. So a must not be zero.",
+    "probe": {
+     "question": "If a=0 in ax²+bx+c=0, is it still quadratic?",
+     "wrong_answer": "Yes, the general form is still ax²+bx+c."
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a formula holds for all values of its letters",
+    "causes": [],
+    "trigger_cues": [
+     "a not equal to zero",
+     "coefficient",
+     "standard form",
+     "linear",
+     "general form"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n9",
+    "statement": "x²=3x+4 is already in standard form, so a=1, b=3, c=4.",
+    "why": "Students read the numbers off the equation as written and ignore which side they are on.",
+    "fix": "Move all terms to one side: x²−3x−4=0. Then a=1, b=−3, c=−4.",
+    "probe": {
+     "question": "Write x² = 3x + 4 in standard form and give b.",
+     "wrong_answer": "b = 3"
+    },
+    "error_type": "sign_error_belief",
+    "root_belief": "read numbers as they appear, ignoring position or sign",
+    "causes": [
+     "m10"
+    ],
+    "trigger_cues": [
+     "transpose",
+     "standard form",
+     "other side",
+     "sign changes",
+     "coefficient"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of student errors in transposing terms and sign handling in algebra"
+   },
+   {
+    "key": "m5",
+    "node": "n9",
+    "statement": "The side that must be zero does not matter, so x²−5x=−6 can be solved by factorising the left side as it is.",
+    "why": "Students remember factorising but forget that the zero product rule needs zero on one side.",
+    "fix": "First write x²−5x+6=0. Factorising is only useful when the other side is zero.",
+    "probe": {
+     "question": "Solve x² − 5x = −6 by factorising x(x−5) = −6.",
+     "wrong_answer": "x=−6 or x−5=−6, so x=−6 or x=−1"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "a rule works without its required condition",
+    "causes": [
+     "m8"
+    ],
+    "trigger_cues": [
+     "zero on one side",
+     "factorise",
+     "standard form",
+     "product",
+     "equal to"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on students applying the zero product property when the product is not zero"
+   },
+   {
+    "key": "m6",
+    "node": "n10",
+    "statement": "A root of the equation is the square root of the number on the right side.",
+    "why": "The everyday word 'root' and the earlier 'square root' blur together.",
+    "fix": "A root is any value of x that makes the equation true when substituted. It is not about square roots.",
+    "probe": {
+     "question": "What is a root of x²−5x+6=0?",
+     "wrong_answer": "The square root of 6."
+    },
+    "error_type": "language_confusion",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "root",
+     "zero of polynomial",
+     "satisfies",
+     "solution",
+     "substitute"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n11",
+    "statement": "Every quadratic equation has exactly two different roots.",
+    "why": "Examples from the textbook mostly show two distinct answers.",
+    "fix": "A quadratic can have two distinct real roots, two equal roots, or no real roots. It never has more than two.",
+    "probe": {
+     "question": "How many real roots does x²−6x+9=0 have?",
+     "wrong_answer": "Two different roots."
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "the common case is the only case",
+    "causes": [],
+    "trigger_cues": [
+     "number of roots",
+     "equal roots",
+     "distinct",
+     "at most two",
+     "repeated"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of students' ideas about number of solutions of polynomial equations"
+   },
+   {
+    "key": "m8",
+    "node": "n14",
+    "statement": "If (x−2)(x−3)=6 then x−2=6 or x−3=6 hmm, or x−2=2 and x−3=3.",
+    "why": "Zero product rule is stretched to any product value.",
+    "fix": "Only when the product is zero can we say one factor is zero. For other values we must rearrange to get zero first.",
+    "probe": {
+     "question": "Solve (x−1)(x−4)=10 by setting each factor equal to 10.",
+     "wrong_answer": "x=11 or x=14"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a rule for zero works for any number",
+    "causes": [],
+    "trigger_cues": [
+     "zero product",
+     "factors",
+     "equal to zero",
+     "either",
+     "or"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "mathematics education research on the null factor law misuse"
+   },
+   {
+    "key": "m9",
+    "node": "n14",
+    "statement": "If a quadratic is x(x−4)=0, dividing both sides by x is fine and gives x=4 only.",
+    "why": "Students treat cancelling a common factor as always allowed, as in arithmetic.",
+    "fix": "x could be 0, so dividing by x loses a root. Use the zero product rule: x=0 or x=4.",
+    "probe": {
+     "question": "Solve x² = 4x.",
+     "wrong_answer": "x = 4 only"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "cancelling common terms is always safe",
+    "causes": [],
+    "trigger_cues": [
+     "cancel",
+     "divide both sides",
+     "common factor",
+     "lost root",
+     "x squared equals"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on lost solutions when dividing by a variable in equations"
+   },
+   {
+    "key": "m10",
+    "node": "n13",
+    "statement": "For x²−5x+6 we split −5x into two numbers that multiply to 6 and add to 5.",
+    "why": "Students lose track of signs when finding numbers for the product and sum.",
+    "fix": "The two numbers must multiply to ac=6 and add to b=−5, so they are −2 and −3.",
+    "probe": {
+     "question": "Factorise x² − 5x + 6.",
+     "wrong_answer": "(x+2)(x+3)"
+    },
+    "error_type": "sign_error_belief",
+    "root_belief": "signs can be ignored when finding numbers",
+    "causes": [
+     "m11"
+    ],
+    "trigger_cues": [
+     "split the middle term",
+     "product",
+     "sum",
+     "signs",
+     "factors of"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of sign errors in factorising trinomials"
+   },
+   {
+    "key": "m11",
+    "node": "n15",
+    "statement": "If a factor is (x−3), the root is x=−3.",
+    "why": "Students copy the sign in the bracket instead of solving the factor equal to zero.",
+    "fix": "x−3=0 gives x=3. The root has the opposite sign to the number in the bracket.",
+    "probe": {
+     "question": "What are the roots of (x−2)(x+5)=0?",
+     "wrong_answer": "x=−2 and x=5"
+    },
+    "error_type": "sign_error_belief",
+    "root_belief": "copy the visible sign instead of solving",
+    "causes": [],
+    "trigger_cues": [
+     "factor",
+     "root",
+     "x minus",
+     "x plus",
+     "equal to zero"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on errors reading roots from factorised form"
+   },
+   {
+    "key": "m12",
+    "node": "n17",
+    "statement": "In the quadratic formula, −b is the same as b, or −b means a negative number always.",
+    "why": "Students think the minus sign makes the number negative regardless of b's own sign.",
+    "fix": "−b is the opposite of b. If b=−5 then −b=+5.",
+    "probe": {
+     "question": "For x²−5x+6=0, what is −b in the formula?",
+     "wrong_answer": "−5"
+    },
+    "error_type": "notation_misread",
+    "root_belief": "a minus sign always means a negative number",
+    "causes": [
+     "m13"
+    ],
+    "trigger_cues": [
+     "minus b",
+     "formula",
+     "opposite",
+     "negative coefficient",
+     "substitute"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on students interpreting the minus sign as a negative number"
+   },
+   {
+    "key": "m13",
+    "node": "n17",
+    "statement": "b² for b=−4 is −16.",
+    "why": "Students apply the minus after squaring, or square only the digit.",
+    "fix": "(−4)² = 16 because a negative times a negative is positive. Use brackets when substituting.",
+    "probe": {
+     "question": "For b=−4, find b²−4ac with a=1, c=3.",
+     "wrong_answer": "−16−12=−28"
+    },
+    "error_type": "sign_error_belief",
+    "root_belief": "the sign stays outside when squaring",
+    "causes": [
+     "m18"
+    ],
+    "trigger_cues": [
+     "square",
+     "negative",
+     "bracket",
+     "b squared",
+     "substitute"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of errors in squaring negative numbers with calculators and by hand"
+   },
+   {
+    "key": "m14",
+    "node": "n17",
+    "statement": "√(b²−4ac) can be simplified to b − √(4ac) or to b − 2√(ac).",
+    "why": "Students treat the square root as spreading across subtraction like multiplication.",
+    "fix": "A square root does not split over subtraction. Compute b²−4ac first, then take its root.",
+    "probe": {
+     "question": "Simplify √(25−16).",
+     "wrong_answer": "5−4=1"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "an operation spreads over each term inside",
+    "causes": [],
+    "trigger_cues": [
+     "square root",
+     "discriminant",
+     "under root",
+     "simplify",
+     "subtraction"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of the freshman dream with square roots of sums and differences"
+   },
+   {
+    "key": "m15",
+    "node": "n18",
+    "statement": "In x=(−b±√D)/2a, only the square root is divided by 2a.",
+    "why": "Students read the fraction bar as attached to the nearest term, as in 3 + 6/3.",
+    "fix": "2a divides the whole of −b ± √D. Write it as (−b±√D)/2a with the whole numerator under one bar.",
+    "probe": {
+     "question": "Compute (4+6)/2.",
+     "wrong_answer": "4+3=7"
+    },
+    "error_type": "notation_misread",
+    "root_belief": "an operation applies to the nearest term only",
+    "causes": [],
+    "trigger_cues": [
+     "fraction",
+     "numerator",
+     "divide",
+     "2a",
+     "whole expression"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on errors cancelling terms in algebraic fractions"
+   },
+   {
+    "key": "m16",
+    "node": "n20",
+    "statement": "The equation x²=9 has only one root, x=3.",
+    "why": "Students think of 'the' square root as the positive value from arithmetic.",
+    "fix": "Both 3 and −3 satisfy x²=9. When solving, take x=±3.",
+    "probe": {
+     "question": "Solve x² = 25.",
+     "wrong_answer": "x = 5"
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "a rule from whole numbers works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "square root",
+     "plus or minus",
+     "x squared",
+     "both values",
+     "completing the square"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on losing the negative root when solving x² = k"
+   },
+   {
+    "key": "m17",
+    "node": "n19",
+    "statement": "To complete the square for x²+6x, add 6 to make (x+6)²... or add (6)² without balancing the other side.",
+    "why": "Students memorise the form without understanding that the added term must be half of b, and the equation must stay balanced.",
+    "fix": "Add (b/2)²=9 on both sides to get (x+3)². Whatever is added to one side must be added to the other.",
+    "probe": {
+     "question": "Complete the square for x²+6x=7.",
+     "wrong_answer": "x²+6x+36=7, so (x+6)²=7"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "memorised steps replace reasons",
+    "causes": [],
+    "trigger_cues": [
+     "complete the square",
+     "half of coefficient",
+     "balance",
+     "add both sides",
+     "perfect square"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of procedural errors in completing the square"
+   },
+   {
+    "key": "m18",
+    "node": "n21",
+    "statement": "The discriminant is b²−4ac, so if b is negative then D is always negative.",
+    "why": "Students see the negative sign of b and expect the whole quantity to turn negative.",
+    "fix": "b² is never negative. D depends on whether b² is bigger than 4ac, not on the sign of b.",
+    "probe": {
+     "question": "For x²−6x+5=0, is D positive or negative?",
+     "wrong_answer": "Negative, since b=−6."
+    },
+    "error_type": "sign_error_belief",
+    "root_belief": "one negative sign makes the whole result negative",
+    "causes": [],
+    "trigger_cues": [
+     "discriminant",
+     "b squared",
+     "negative b",
+     "sign of D",
+     "4ac"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m19",
+    "node": "n21",
+    "statement": "The discriminant is the value of the roots.",
+    "why": "Students mix up the discriminant with the answer of the equation.",
+    "fix": "The discriminant only tells the nature of the roots. The roots come from the formula using D.",
+    "probe": {
+     "question": "If D=16, what are the roots?",
+     "wrong_answer": "16 and −16."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a test value is the answer itself",
+    "causes": [],
+    "trigger_cues": [
+     "discriminant",
+     "nature of roots",
+     "value",
+     "formula",
+     "root"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m20",
+    "node": "n23",
+    "statement": "If D=0 the equation has no roots.",
+    "why": "Students link zero with nothing, so zero discriminant means nothing exists.",
+    "fix": "If D=0 the roots exist and both are equal, x=−b/2a. There is one repeated real root.",
+    "probe": {
+     "question": "How many roots does x²−4x+4=0 have?",
+     "wrong_answer": "No roots because D=0."
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "zero always means nothing is there",
+    "causes": [],
+    "trigger_cues": [
+     "D equals zero",
+     "equal roots",
+     "repeated root",
+     "one root",
+     "discriminant"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of students' meaning of zero as 'nothing' in algebra"
+   },
+   {
+    "key": "m21",
+    "node": "n24",
+    "statement": "If D<0 the equation has no solution at all, even an imaginary one in the context of a real graph.",
+    "why": "Students confuse 'no real roots' with 'the equation is wrong or cannot be solved'.",
+    "fix": "D<0 means no real number satisfies the equation. The graph of the quadratic does not touch the x-axis.",
+    "probe": {
+     "question": "For x²+x+1=0, D=−3. What does it mean?",
+     "wrong_answer": "I made a mistake and must redo it."
+    },
+    "error_type": "other",
+    "root_belief": "every problem must have an answer I can find",
+    "causes": [],
+    "trigger_cues": [
+     "no real roots",
+     "negative discriminant",
+     "not touch x-axis",
+     "real numbers",
+     "square root of negative"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on students' reactions to equations with no real solution"
+   },
+   {
+    "key": "m22",
+    "node": "n22",
+    "statement": "D>0 means the two roots are both positive.",
+    "why": "Students link 'positive discriminant' with positive roots.",
+    "fix": "D>0 only means two different real roots. Their signs can be positive, negative or mixed.",
+    "probe": {
+     "question": "x²+3x+2=0 has D=1>0. Are the roots positive?",
+     "wrong_answer": "Yes, both roots are positive."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a positive indicator means positive results",
+    "causes": [],
+    "trigger_cues": [
+     "D greater than zero",
+     "distinct roots",
+     "positive",
+     "negative",
+     "signs of roots"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m23",
+    "node": "n26",
+    "statement": "Both roots of a quadratic from a word problem must be accepted as answers.",
+    "why": "Students solve the equation and forget to check against the story.",
+    "fix": "A root that gives a negative length, age, time or a non-whole number of people must be rejected.",
+    "probe": {
+     "question": "A rectangle's width x satisfies x²−x−6=0. Give the width.",
+     "wrong_answer": "x=3 or x=−2"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "the mathematics answer always fits the real situation",
+    "causes": [],
+    "trigger_cues": [
+     "reject",
+     "negative",
+     "length",
+     "age",
+     "not possible",
+     "context"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on students' neglect of context in interpreting solutions to word problems"
+   },
+   {
+    "key": "m24",
+    "node": "n27",
+    "statement": "If a train goes 360 km at speed x, the time is 360×x hours.",
+    "why": "Students confuse which quantities multiply and which divide in speed-distance-time.",
+    "fix": "Time = distance ÷ speed, so the time is 360/x hours.",
+    "probe": {
+     "question": "A bus travels 120 km at x km/h. Write the time taken.",
+     "wrong_answer": "120x hours"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "quantities are always combined by multiplying",
+    "causes": [],
+    "trigger_cues": [
+     "distance",
+     "speed",
+     "time",
+     "km per hour",
+     "divide"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on errors in forming rate equations in algebra word problems"
+   },
+   {
+    "key": "m25",
+    "node": "n25",
+    "statement": "If the sum of two numbers is 10, the numbers can be written as x and x+10.",
+    "why": "Students mix the sum condition into the numbers themselves.",
+    "fix": "If one number is x and the sum is 10, the other is 10−x.",
+    "probe": {
+     "question": "Two numbers add to 27. Write them using x.",
+     "wrong_answer": "x and x+27"
+    },
+    "error_type": "language_confusion",
+    "root_belief": "a number mentioned in the text goes straight in the expression",
+    "causes": [],
+    "trigger_cues": [
+     "sum",
+     "two numbers",
+     "product",
+     "let the number be",
+     "consecutive"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of translating verbal statements into algebraic expressions"
+   },
+   {
+    "key": "m26",
+    "node": "n28",
+    "statement": "An answer is correct if it satisfies the quadratic equation we formed.",
+    "why": "Students trust the equation they wrote and do not check the original story.",
+    "fix": "Check the answer in the problem statement. A mistake in forming the equation will not be caught by substituting in it.",
+    "probe": {
+     "question": "You wrote x²−5x=0 for a problem and got x=5. Is it checked?",
+     "wrong_answer": "Yes, 25−25=0, so it is right."
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "checking my own working proves the answer",
+    "causes": [],
+    "trigger_cues": [
+     "verify",
+     "check",
+     "original problem",
+     "substitute",
+     "statement"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}

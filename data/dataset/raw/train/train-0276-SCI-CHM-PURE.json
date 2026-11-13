@@ -1,0 +1,134 @@
+{
+ "job": {
+  "job": "train-0276-SCI-CHM-PURE",
+  "topic_id": "SCI-CHM-PURE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a passage rich in numbers, dates or measurements",
+  "seed": 276
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 1059,
+  "candidatesTokenCount": 1258,
+  "totalTokenCount": 2317,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1059
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "SCI-CHM-PURE-K15-M4",
+  "SCI-CHM-PURE-K19-M9",
+  "SCI-CHM-PURE-K25-M10",
+  "SCI-CHM-PURE-K6-M12",
+  "SCI-CHM-PURE-K20-M14",
+  "SCI-CHM-PURE-K21-M13",
+  "SCI-CHM-PURE-K7-M2",
+  "SCI-CHM-PURE-K14-M11",
+  "SCI-CHM-PURE-K18-M7",
+  "SCI-CHM-PURE-K7-M15",
+  "SCI-CHM-PURE-K11-M5",
+  "SCI-CHM-PURE-K10-M3",
+  "SCI-CHM-PURE-K24-M8"
+ ],
+ "response": {
+  "passage": "In our laboratory, we analyzed several substances to understand their nature. We first examined a sample of brass, an alloy containing 70% copper and 30% zinc. Although brass appears uniform, it is a mixture, not a compound, because its components retain their individual properties and can be separated. Next, we took 50 grams of salt and dissolved it in 200 grams of water to create a solution. When we heated this mixture to 100 degrees Celsius, the water evaporated, but the salt remained behind, proving that the solute does not disappear. We then observed a milk sample, which contains fat globules suspended in liquid. While it looks clear, a beam of light passing through it scatters, demonstrating the Tyndall effect caused by these particles, not the liquid itself. Finally, we attempted to separate water into hydrogen and oxygen using physical filtration, but it failed. This confirms that water is a compound, and its elements can only be separated through chemical processes, not physical ones. Unlike mixtures, which have variable boiling points, pure compounds like water have a fixed boiling point of 100 degrees Celsius at standard atmospheric pressure. These experiments highlight the fundamental differences between pure substances and various types of mixtures.",
+  "summary": "This passage explains the differences between pure substances like compounds and mixtures like alloys or solutions. It clarifies that physical methods cannot separate compounds and that solutes remain after evaporation.",
+  "items": [
+   {
+    "evidence": "Although brass appears uniform, it is a mixture, not a compound, because its components retain their individual properties and can be separated.",
+    "answer": "a mixture",
+    "stem": "Why is brass classified as it is, rather than as a compound?",
+    "options": [
+     {
+      "belief_id": "SCI-CHM-PURE-K7-M15",
+      "why": "Student thinks uniform appearance implies a compound.",
+      "text": "a compound"
+     },
+     {
+      "belief_id": "SCI-CHM-PURE-K7-M2",
+      "why": "Student thinks uniform appearance implies a pure substance.",
+      "text": "a pure substance"
+     },
+     {
+      "belief_id": "SCI-CHM-PURE-K15-M4",
+      "why": "Student confuses mixture types with homogeneous substances.",
+      "text": "a homogeneous colloid"
+     }
+    ]
+   },
+   {
+    "evidence": "When we heated this mixture to 100 degrees Celsius, the water evaporated, but the salt remained behind, proving that the solute does not disappear.",
+    "answer": "the salt remained behind",
+    "stem": "What happens to the dissolved salt when the water is heated to evaporation?",
+    "options": [
+     {
+      "belief_id": "SCI-CHM-PURE-K18-M7",
+      "why": "Student believes solute turns into gas with solvent.",
+      "text": "the salt turns into gas"
+     },
+     {
+      "belief_id": "SCI-CHM-PURE-K10-M3",
+      "why": "Student thinks solute must be a solid in liquid.",
+      "text": "the salt disappears completely"
+     },
+     {
+      "belief_id": "SCI-CHM-PURE-K6-M12",
+      "why": "Student thinks mixtures have fixed boiling points.",
+      "text": "the salt boils with water"
+     }
+    ]
+   },
+   {
+    "evidence": "While it looks clear, a beam of light passing through it scatters, demonstrating the Tyndall effect caused by these particles, not the liquid itself.",
+    "answer": "these particles",
+    "stem": "What is the primary cause of the Tyndall effect observed in the milk sample?",
+    "options": [
+     {
+      "belief_id": "SCI-CHM-PURE-K14-M11",
+      "why": "Student thinks the liquid medium reflects the light.",
+      "text": "the liquid itself"
+     },
+     {
+      "belief_id": "SCI-CHM-PURE-K15-M4",
+      "why": "Student thinks lack of settling implies homogeneity.",
+      "text": "the homogeneous mixture"
+     },
+     {
+      "belief_id": "SCI-CHM-PURE-K21-M13",
+      "why": "Student thinks particles become weightless and float.",
+      "text": "the weightless cream"
+     }
+    ]
+   },
+   {
+    "evidence": "This confirms that water is a compound, and its elements can only be separated through chemical processes, not physical ones.",
+    "answer": "chemical processes",
+    "stem": "Which method is required to separate the elements within a compound like water?",
+    "options": [
+     {
+      "belief_id": "SCI-CHM-PURE-K25-M10",
+      "why": "Student thinks physical methods can separate compounds.",
+      "text": "physical filtration"
+     },
+     {
+      "belief_id": "SCI-CHM-PURE-K19-M9",
+      "why": "Student equates distillation with boiling.",
+      "text": "simple distillation"
+     },
+     {
+      "belief_id": "SCI-CHM-PURE-K20-M14",
+      "why": "Student thinks chromatography is the only separation method.",
+      "text": "paper chromatography"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.0
+}

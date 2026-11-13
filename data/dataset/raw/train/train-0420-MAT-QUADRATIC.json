@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0420-MAT-QUADRATIC",
+  "topic_id": "MAT-QUADRATIC",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a rule explained with two contrasting examples",
+  "seed": 420
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 1164,
+  "candidatesTokenCount": 1355,
+  "totalTokenCount": 2519,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1164
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-QUADRATIC-K14-M8",
+  "MAT-QUADRATIC-K10-M6",
+  "MAT-QUADRATIC-K7-M2",
+  "MAT-QUADRATIC-K22-M22",
+  "MAT-QUADRATIC-K25-M25",
+  "MAT-QUADRATIC-K21-M18",
+  "MAT-QUADRATIC-K23-M20",
+  "MAT-QUADRATIC-K19-M17",
+  "MAT-QUADRATIC-K8-M3",
+  "MAT-QUADRATIC-K17-M13",
+  "MAT-QUADRATIC-K21-M19",
+  "MAT-QUADRATIC-K17-M14",
+  "MAT-QUADRATIC-K15-M11",
+  "MAT-QUADRATIC-K11-M7"
+ ],
+ "response": {
+  "passage": "A quadratic equation is defined by the standard form ax² + bx + c = 0, where 'a' must not be zero, because if a = 0, the equation becomes linear. To solve equations like (x - 2)(x - 3) = 6, you must first expand the brackets and rearrange the terms into the standard form before solving, rather than setting each factor equal to the constant. For example, in (x - 2)(x - 3) = 6, expanding gives x² - 5x + 6 = 6, which simplifies to x² - 5x = 0, leading to roots x = 0 and x = 5. Conversely, a common error is assuming (x - 2) = 6 or (x - 3) = 6, which is incorrect. Furthermore, the nature of the roots depends on the discriminant D = b² - 4ac. If D = 0, the equation has two equal real roots, not zero roots. When calculating D, remember that squaring a negative coefficient 'b' always results in a positive value. For instance, if b = -4, then b² is 16, not -16. Finally, if a factor is (x - k), the corresponding root is x = k, because setting the factor to zero gives x - k = 0, which means x = k. Always verify your roots by substituting them back into the original equation to ensure they satisfy the condition.",
+  "summary": "Quadratic equations must be in the form ax² + bx + c = 0 with a non-zero 'a'. Solving requires expanding terms correctly and using the discriminant to understand the nature of the roots.",
+  "items": [
+   {
+    "evidence": "A quadratic equation is defined by the standard form ax² + bx + c = 0, where 'a' must not be zero, because if a = 0, the equation becomes linear.",
+    "answer": "a must not be zero",
+    "stem": "What is the essential requirement for the coefficient of the squared term in a quadratic equation?",
+    "options": [
+     {
+      "belief_id": "MAT-QUADRATIC-K8-M3",
+      "why": "Student incorrectly believes a can be zero.",
+      "text": "a can be any number"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K7-M2",
+      "why": "Student thinks any equation with a square is quadratic.",
+      "text": "the equation must have a square"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K11-M7",
+      "why": "Student confuses the definition with the number of roots.",
+      "text": "it must have two different roots"
+     }
+    ]
+   },
+   {
+    "evidence": "Conversely, a common error is assuming (x - 2) = 6 or (x - 3) = 6, which is incorrect.",
+    "answer": "incorrect",
+    "stem": "Why is setting individual factors equal to the constant on the right side of the equation considered a mistake?",
+    "options": [
+     {
+      "belief_id": "MAT-QUADRATIC-K14-M8",
+      "why": "Student believes factors can be equated to the constant.",
+      "text": "a valid algebraic step"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K10-M6",
+      "why": "Student thinks roots are just square roots of constants.",
+      "text": "the square root of six"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K15-M11",
+      "why": "Student confuses factor signs with root values.",
+      "text": "the only way to find roots"
+     }
+    ]
+   },
+   {
+    "evidence": "If D = 0, the equation has two equal real roots, not zero roots.",
+    "answer": "two equal real roots",
+    "stem": "What is the correct interpretation when the discriminant D equals zero?",
+    "options": [
+     {
+      "belief_id": "MAT-QUADRATIC-K23-M20",
+      "why": "Student believes D=0 means no solutions exist.",
+      "text": "there are no roots"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K22-M22",
+      "why": "Student assumes D>0 implies positive roots.",
+      "text": "two positive real roots"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K21-M19",
+      "why": "Student confuses discriminant value with root values.",
+      "text": "the roots are zero"
+     }
+    ]
+   },
+   {
+    "evidence": "For instance, if b = -4, then b² is 16, not -16.",
+    "answer": "16",
+    "stem": "What is the result of squaring a negative coefficient b in the discriminant formula?",
+    "options": [
+     {
+      "belief_id": "MAT-QUADRATIC-K17-M13",
+      "why": "Student incorrectly squares negative numbers to get negatives.",
+      "text": "-16"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K21-M18",
+      "why": "Student thinks negative b makes the whole D negative.",
+      "text": "a negative value"
+     },
+     {
+      "belief_id": "MAT-QUADRATIC-K17-M14",
+      "why": "Student tries to simplify the square root incorrectly.",
+      "text": "b minus 2 root ac"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.6
+}

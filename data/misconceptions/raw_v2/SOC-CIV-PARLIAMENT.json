@@ -1,0 +1,447 @@
+{
+ "topic": {
+  "id": "SOC-CIV-PARLIAMENT",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   8
+  ],
+  "title": "Parliament and the making of laws",
+  "scope": "Lok Sabha and Rajya Sabha, elections, how a bill becomes law, role of the opposition, unpopular laws"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 834,
+  "candidatesTokenCount": 1700,
+  "totalTokenCount": 2534,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 834
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 7.0,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Parliamentary Structure",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "concept of representative democracy"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Legislative Process",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "what is a law"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Role of Opposition and Public",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "fundamental rights"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Houses of Parliament",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "central vs state government"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Election of Representatives",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "universal adult franchise"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Stages of a Bill",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Presidential Assent",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Opposition Function",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Lok Sabha composition",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "constituency"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Rajya Sabha composition",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Introduction of Bill",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Passing in both houses",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Public Protest",
+    "level": 3,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "freedom of speech"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n4",
+    "statement": "The Rajya Sabha is more powerful than the Lok Sabha because it is the 'Upper House'.",
+    "why": "Students equate the word 'upper' with higher authority or power in a hierarchy.",
+    "fix": "The Lok Sabha is more powerful because its members are directly elected by the people, and it controls the executive.",
+    "probe": {
+     "question": "If the Lok Sabha and Rajya Sabha disagree on a money bill, who prevails?",
+     "wrong_answer": "The Rajya Sabha because it is the Upper House."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Words have their literal everyday meaning.",
+    "causes": [],
+    "trigger_cues": [
+     "upper house",
+     "lower house",
+     "rajya sabha",
+     "lok sabha",
+     "power"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on civics terminology"
+   },
+   {
+    "key": "m2",
+    "node": "n5",
+    "statement": "The Prime Minister is directly elected by the citizens of India.",
+    "why": "Students confuse the election of local MPs with the direct election of the head of government.",
+    "fix": "Citizens elect MPs to the Lok Sabha; the party with the majority then selects their leader to be the Prime Minister.",
+    "probe": {
+     "question": "Who do you vote for in a general election?",
+     "wrong_answer": "I vote for the Prime Minister."
+    },
+    "error_type": "confusing_institutions",
+    "root_belief": "One event has one single cause.",
+    "causes": [],
+    "trigger_cues": [
+     "prime minister",
+     "election",
+     "vote",
+     "general election",
+     "constituency"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m3",
+    "node": "n7",
+    "statement": "The President can reject any law passed by Parliament if they do not like it.",
+    "why": "Students assume the President acts like a monarch or a supreme ruler with absolute veto power.",
+    "fix": "The President is a constitutional head and must sign a bill once it is passed by both houses of Parliament.",
+    "probe": {
+     "question": "Can the President stop a bill from becoming law?",
+     "wrong_answer": "Yes, if they disagree with the law."
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "Authority figures have absolute personal power.",
+    "causes": [],
+    "trigger_cues": [
+     "president",
+     "assent",
+     "bill",
+     "law",
+     "parliament"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n8",
+    "statement": "The role of the opposition is to stop all government work.",
+    "why": "Students see opposition in media as mere fighting and assume the goal is obstructionism.",
+    "fix": "The opposition highlights flaws in policies and ensures the government remains accountable to the public.",
+    "probe": {
+     "question": "What is the main job of the opposition party?",
+     "wrong_answer": "To block every law the government proposes."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Conflict is inherently destructive.",
+    "causes": [],
+    "trigger_cues": [
+     "opposition",
+     "government",
+     "accountability",
+     "debate",
+     "criticism"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n13",
+    "statement": "Laws are only changed when the government decides to change them.",
+    "why": "Students ignore the role of civil society and public pressure in the legislative process.",
+    "fix": "Citizens can influence the law-making process through protests, media campaigns, and public opinion.",
+    "probe": {
+     "question": "How can a law be changed if it is unpopular?",
+     "wrong_answer": "Only the government can decide to change it."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Power flows only from the top down.",
+    "causes": [],
+    "trigger_cues": [
+     "unpopular law",
+     "protest",
+     "public opinion",
+     "change",
+     "government"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT pedagogy studies"
+   },
+   {
+    "key": "m6",
+    "node": "n9",
+    "statement": "All members of the Lok Sabha are chosen by the President.",
+    "why": "Students confuse the nominated members of the Rajya Sabha with the Lok Sabha, and think top officials appoint the 'main' house.",
+    "fix": "Lok Sabha members are elected directly by adult citizens (18+) from constituencies through general elections, usually every five years.",
+    "probe": {
+     "question": "How does a person become a Member of the Lok Sabha?",
+     "wrong_answer": "The President selects them."
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "Top officials appoint legislators rather than voters electing them",
+    "causes": [],
+    "trigger_cues": [
+     "lok sabha",
+     "members",
+     "chosen",
+     "appointed",
+     "president",
+     "constituency"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom discussion / NCERT Social and Political Life"
+   },
+   {
+    "key": "m7",
+    "node": "n10",
+    "statement": "Citizens vote directly to choose the members of the Rajya Sabha.",
+    "why": "Students assume every house of Parliament is elected the same way as the Lok Sabha.",
+    "fix": "Rajya Sabha members are elected indirectly by the elected members of State Legislative Assemblies (and a few are nominated by the President for their work in arts, science, etc.).",
+    "probe": {
+     "question": "Who votes to elect Rajya Sabha members?",
+     "wrong_answer": "All adult citizens vote for them in the general election."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "All legislative houses are elected the same way",
+    "causes": [],
+    "trigger_cues": [
+     "rajya sabha",
+     "elected",
+     "vote",
+     "citizens",
+     "indirect",
+     "state assembly"
+    ],
+    "confidence": "plausible",
+    "source_hint": "textbook-based misconception"
+   },
+   {
+    "key": "m8",
+    "node": "n11",
+    "statement": "Only the Prime Minister can introduce a bill in Parliament.",
+    "why": "Students link lawmaking only with the most visible leader of the government.",
+    "fix": "A bill can be introduced by a minister (government bill) or by any other member of Parliament (private member's bill), in either house (money bills only in the Lok Sabha).",
+    "probe": {
+     "question": "Who can bring a new bill before Parliament?",
+     "wrong_answer": "Only the Prime Minister."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Only the top leader can start lawmaking",
+    "causes": [],
+    "trigger_cues": [
+     "introduce",
+     "bill",
+     "who can",
+     "prime minister",
+     "member",
+     "parliament"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom discussion"
+   },
+   {
+    "key": "m9",
+    "node": "n12",
+    "statement": "A bill becomes a law as soon as the Lok Sabha passes it.",
+    "why": "Students treat the Lok Sabha as the whole Parliament because it is the more prominent house.",
+    "fix": "An ordinary bill must be passed by both Lok Sabha and Rajya Sabha (in the same form) and then get the President's assent before it becomes law.",
+    "probe": {
+     "question": "A bill has just been passed by the Lok Sabha. Is it now a law?",
+     "wrong_answer": "Yes, the Lok Sabha passing it is enough to make it a law."
+    },
+    "error_type": "confuses_institutions",
+    "root_belief": "One house alone is the whole Parliament",
+    "causes": [],
+    "trigger_cues": [
+     "lok sabha",
+     "passed",
+     "bill",
+     "law",
+     "both houses",
+     "enough"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher-reported"
+   },
+   {
+    "key": "m10",
+    "node": "n6",
+    "statement": "A bill is voted on immediately after it is introduced, without any discussion.",
+    "why": "Students imagine lawmaking as a single vote instead of a series of stages.",
+    "fix": "A bill goes through stages: introduction (first reading), detailed discussion and debate, often examination by a committee, amendments, and then voting.",
+    "probe": {
+     "question": "What happens right after a bill is introduced in the House?",
+     "wrong_answer": "Members vote on it straight away with no debate."
+    },
+    "error_type": "chronology_slip",
+    "root_belief": "Lawmaking is one quick vote",
+    "causes": [],
+    "trigger_cues": [
+     "bill",
+     "introduced",
+     "after",
+     "vote",
+     "debate",
+     "stages",
+     "committee"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom discussion"
+   },
+   {
+    "key": "m11",
+    "node": "n13",
+    "statement": "Public protests and media have no role in the making of laws in a democracy.",
+    "why": "Students think only elected members and the government matter once elections are over.",
+    "fix": "Citizens can express opinions through peaceful protests, petitions, the media and meetings with representatives; this public pressure can lead Parliament to debate, amend or make laws (e.g., the Right to Information Act).",
+    "probe": {
+     "question": "Can a citizens' campaign influence what law Parliament makes?",
+     "wrong_answer": "No, only MPs decide laws and the public cannot affect them."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Citizens' voice ends after voting",
+    "causes": [],
+    "trigger_cues": [
+     "public",
+     "protest",
+     "media",
+     "influence",
+     "law",
+     "citizens",
+     "petition"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT chapter discussion"
+   },
+   {
+    "key": "m12",
+    "node": "n5",
+    "statement": "A person from the party that gets the most votes in a constituency becomes the MP only if they get more than half of all votes.",
+    "why": "Students carry over the idea of 'majority' as more than 50% to constituency results.",
+    "fix": "In a constituency the candidate who gets the highest number of votes wins, even if that is less than half of the total votes cast.",
+    "probe": {
+     "question": "In a constituency, A gets 40 votes, B gets 35 and C gets 25. Who wins?",
+     "wrong_answer": "No one wins because nobody has more than 50 votes."
+    },
+    "error_type": "numerical_misreading",
+    "root_belief": "Winning always requires more than half the votes",
+    "causes": [],
+    "trigger_cues": [
+     "majority",
+     "votes",
+     "constituency",
+     "wins",
+     "highest",
+     "more than half"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher-reported"
+   }
+  ]
+ },
+ "problems": [
+  "only 5 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

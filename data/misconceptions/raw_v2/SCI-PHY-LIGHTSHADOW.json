@@ -1,0 +1,478 @@
+{
+ "topic": {
+  "id": "SCI-PHY-LIGHTSHADOW",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   6
+  ],
+  "title": "Light, shadows and reflections",
+  "scope": "luminous and non-luminous objects, transparent/translucent/opaque, how shadows form, light travels in straight lines, pinhole camera"
+ },
+ "model": "gemini-3-flash-preview",
+ "usage": {
+  "promptTokenCount": 845,
+  "candidatesTokenCount": 3812,
+  "totalTokenCount": 6823,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 845
+   }
+  ],
+  "thoughtsTokenCount": 2166,
+  "serviceTier": "standard"
+ },
+ "seconds": 23.3,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Light Sources and Materials",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2",
+    "name": "Shadows and Straight Line Travel",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3",
+    "name": "Reflection and Pinhole Images",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n4",
+    "name": "Luminous and Non-luminous",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Classification of Materials",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "states of matter"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Rectilinear Propagation",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Shadow Formation",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n5",
+     "n6"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Pinhole Camera Principles",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Mirrors and Reflection",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Luminous objects emit light",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Seeing non-luminous objects",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [
+     "n10"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Transparent vs Opaque",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Translucent property",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n12"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Light travels in straight lines",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Shadows need source and screen",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n12"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n16",
+    "name": "Shadow shape matches object",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n14"
+    ],
+    "external_prereqs": [
+     "shapes"
+    ]
+   },
+   {
+    "key": "n17",
+    "name": "Pinhole image is inverted",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n14"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n18",
+    "name": "Mirrors change light direction",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [
+     "n14"
+    ],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n11",
+    "statement": "We see objects because our eyes send out rays of light to touch them.",
+    "why": "Students feel that vision is an active process directed by the observer.",
+    "fix": "We see objects only when light from a source falls on them and then travels to our eyes.",
+    "probe": {
+     "question": "Can you see a book in a room that is completely dark?",
+     "wrong_answer": "Yes, if I open my eyes wide enough."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "perception is an active outward process",
+    "causes": [],
+    "trigger_cues": [
+     "vision",
+     "seeing",
+     "eye",
+     "rays",
+     "darkness"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's research on children's ideas"
+   },
+   {
+    "key": "m2",
+    "node": "n10",
+    "statement": "The Moon is a luminous object because it glows brightly at night.",
+    "why": "The Moon appears to be a source of light in the night sky.",
+    "fix": "The Moon is non-luminous; it only reflects the light of the Sun that falls on it.",
+    "probe": {
+     "question": "Why does the Moon shine?",
+     "wrong_answer": "Because it produces its own light like a bulb."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "bright things are sources",
+    "causes": [],
+    "trigger_cues": [
+     "moon",
+     "luminous",
+     "shining",
+     "night",
+     "sunlight"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m3",
+    "node": "n12",
+    "statement": "Transparent objects like clear glass do not reflect any light and are invisible.",
+    "why": "Because light passes through them, students think they have no interaction with light.",
+    "fix": "Even transparent objects reflect a small amount of light, which is why we can see the surface of glass.",
+    "probe": {
+     "question": "Why can you see a glass window even though it is clear?",
+     "wrong_answer": "You can't see the glass, you only see the frame."
+    },
+    "error_type": "visible_only",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "glass",
+     "transparent",
+     "invisible",
+     "reflection"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n14",
+    "statement": "Light can bend around corners to reach the other side of a wall.",
+    "why": "Students observe that a room gets bright even if the bulb is in the hallway.",
+    "fix": "Light only travels in straight lines; it reaches other areas by reflecting off walls and floors.",
+    "probe": {
+     "question": "If you look through a bent pipe at a candle, will you see the flame?",
+     "wrong_answer": "Yes, because light flows through the pipe."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "light behaves like a fluid",
+    "causes": [],
+    "trigger_cues": [
+     "straight",
+     "bend",
+     "pipe",
+     "corner",
+     "travel"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic studies"
+   },
+   {
+    "key": "m5",
+    "node": "n15",
+    "statement": "A shadow is a physical thing or a reflection that exists on its own.",
+    "why": "Shadows move with the person, making them seem like an attached property or object.",
+    "fix": "A shadow is simply the absence of light in a region where an opaque object blocked it.",
+    "probe": {
+     "question": "What is a shadow made of?",
+     "wrong_answer": "It is made of black air or a dark reflection."
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "shadow is an independent object",
+    "causes": [],
+    "trigger_cues": [
+     "shadow",
+     "darkness",
+     "opaque",
+     "object"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Guesne's research on light"
+   },
+   {
+    "key": "m6",
+    "node": "n15",
+    "statement": "Shadows can be seen even if there is no screen or surface behind the object.",
+    "why": "Students think the shadow is 'cast' into the air.",
+    "fix": "A shadow can only be seen when it falls on a surface like the ground, a wall, or a screen.",
+    "probe": {
+     "question": "If you hold a bird in the high sky, will you see its shadow on the ground?",
+     "wrong_answer": "Yes, the shadow stays right under the bird in the air."
+    },
+    "error_type": "single_cause",
+    "root_belief": "effects exist without a medium",
+    "causes": [],
+    "trigger_cues": [
+     "screen",
+     "surface",
+     "ground",
+     "wall"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n17",
+    "statement": "The image in a pinhole camera is upright because light goes straight through the hole.",
+    "why": "Students assume the image must look exactly like the object in orientation.",
+    "fix": "Light from the top of the object travels in a straight line through the pinhole to the bottom of the screen, creating an inverted image.",
+    "probe": {
+     "question": "What happens to the image of a candle in a pinhole camera?",
+     "wrong_answer": "It stays upright because the hole is too small to flip it."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "images must look like the object",
+    "causes": [],
+    "trigger_cues": [
+     "pinhole",
+     "inverted",
+     "upright",
+     "camera",
+     "image"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT textbook common errors"
+   },
+   {
+    "key": "m8",
+    "node": "n18",
+    "statement": "Only mirrors and very shiny metals reflect light.",
+    "why": "Students associate 'reflection' only with seeing a clear image of themselves.",
+    "fix": "All objects we see reflect light; mirrors reflect it in a way that forms an image, while others scatter it.",
+    "probe": {
+     "question": "Does a piece of white paper reflect light?",
+     "wrong_answer": "No, because you cannot see your face in it."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "only perfect effects are real",
+    "causes": [],
+    "trigger_cues": [
+     "mirror",
+     "reflection",
+     "shiny",
+     "surface",
+     "paper"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Osborne's research on light"
+   },
+   {
+    "key": "m9",
+    "node": "n16",
+    "statement": "The shadow of an object is always the same size as the object itself.",
+    "why": "Students often see their own shadows on the ground and assume a 1:1 size ratio.",
+    "fix": "The size of a shadow changes depending on the distance between the light source, the object, and the screen.",
+    "probe": {
+     "question": "What happens to a shadow's size if you move the object closer to the torch?",
+     "wrong_answer": "It stays the same size as the object."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "size is an intrinsic fixed property",
+    "causes": [],
+    "trigger_cues": [
+     "size",
+     "distance",
+     "larger",
+     "smaller",
+     "torch"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m10",
+    "node": "n13",
+    "statement": "Translucent materials block all light but are just 'weak' opaque objects.",
+    "why": "Difficulty in distinguishing between 'partial' passage and 'no' passage of light.",
+    "fix": "Translucent materials allow light to pass through them partially, but we cannot see clearly through them.",
+    "probe": {
+     "question": "Can light pass through a sheet of oiled paper?",
+     "wrong_answer": "No, it is blocked because the paper is thick."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "categories are binary",
+    "causes": [],
+    "trigger_cues": [
+     "translucent",
+     "partial",
+     "blurred",
+     "oiled paper"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n18",
+    "statement": "A mirror image is just a person standing behind a transparent glass.",
+    "why": "The depth perception in a mirror makes it look like there is space behind the glass.",
+    "fix": "A mirror is an opaque object with a polished surface that reflects light back into the same room.",
+    "probe": {
+     "question": "Is a mirror transparent, translucent, or opaque?",
+     "wrong_answer": "Transparent, because you can see 'into' it."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "what is seen is physically there",
+    "causes": [],
+    "trigger_cues": [
+     "mirror",
+     "image",
+     "behind",
+     "opaque"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Eedi diagnostic questions"
+   },
+   {
+    "key": "m12",
+    "node": "n14",
+    "statement": "Light travels further at night than during the day.",
+    "why": "Beams of light (like car headlights) are much more visible at night.",
+    "fix": "Light travels the same way regardless of the time; it is just easier to see the contrast against a dark background.",
+    "probe": {
+     "question": "Does a torch beam go a longer distance at night?",
+     "wrong_answer": "Yes, because the sun isn't there to stop it."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "visibility distance equals travel distance",
+    "causes": [],
+    "trigger_cues": [
+     "travel",
+     "night",
+     "distance",
+     "torch",
+     "beam"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Concept Inventory"
+   }
+  ]
+ },
+ "problems": []
+}

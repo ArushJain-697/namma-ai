@@ -1,0 +1,131 @@
+{
+ "job": {
+  "job": "train-0070-SCI-BIO-CONTROL",
+  "topic_id": "SCI-BIO-CONTROL",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a diary entry or letter by a student",
+  "seed": 70
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 879,
+  "candidatesTokenCount": 1207,
+  "totalTokenCount": 2086,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 879
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "SCI-BIO-CONTROL-K20-M6",
+  "SCI-BIO-CONTROL-K18-M9",
+  "SCI-BIO-CONTROL-K12-M7",
+  "SCI-BIO-CONTROL-K13-M1",
+  "SCI-BIO-CONTROL-K7-M3",
+  "SCI-BIO-CONTROL-K8-M11",
+  "SCI-BIO-CONTROL-K17-M4",
+  "SCI-BIO-CONTROL-K15-M8",
+  "SCI-BIO-CONTROL-K19-M5",
+  "SCI-BIO-CONTROL-K14-M2"
+ ],
+ "response": {
+  "passage": "Dear Diary, today in biology class, we learned how our bodies and plants manage their activities. I was surprised to learn that nerve impulses do not jump across the synapse as electrical sparks; instead, they are converted into chemical signals to cross the gap. My teacher also explained that the brain is not directly involved in the immediate execution of a reflex action, as these signals are processed in the spinal cord to save time. We also discussed how plants respond to their environment. Unlike animals, plants do not have a nervous system to sense touch; they rely on changes in cell water content to move. I also learned that not all plant hormones are meant to increase growth. For instance, abscisic acid is a hormone that actually inhibits growth, helping the plant survive during stress. Finally, we looked at the endocrine system. Hormones are secreted directly into the blood and travel throughout the body to reach target organs, rather than just affecting the gland where they were produced. It is fascinating how these systems maintain balance without us even thinking about it!",
+  "summary": "This entry explains that nerve impulses use chemicals to cross synapses and reflex actions bypass the brain. It also clarifies that plants use water pressure rather than nerves for movement, and hormones travel through the blood to distant target organs.",
+  "items": [
+   {
+    "evidence": "I was surprised to learn that nerve impulses do not jump across the synapse as electrical sparks; instead, they are converted into chemical signals to cross the gap.",
+    "answer": "chemical signals",
+    "stem": "How do nerve impulses travel across the synaptic gap?",
+    "options": [
+     {
+      "belief_id": "SCI-BIO-CONTROL-K13-M1",
+      "why": "Student thinks impulses jump as electrical sparks.",
+      "text": "as electrical sparks"
+     },
+     {
+      "belief_id": "SCI-BIO-CONTROL-K12-M7",
+      "why": "Student believes signals flow both ways in neurons.",
+      "text": "in both directions"
+     },
+     {
+      "belief_id": "SCI-BIO-CONTROL-K14-M2",
+      "why": "Student confuses reflex arc with brain processing.",
+      "text": "via the cerebrum"
+     }
+    ]
+   },
+   {
+    "evidence": "My teacher also explained that the brain is not directly involved in the immediate execution of a reflex action, as these signals are processed in the spinal cord to save time.",
+    "answer": "the spinal cord",
+    "stem": "Where are the signals for a reflex action primarily processed?",
+    "options": [
+     {
+      "belief_id": "SCI-BIO-CONTROL-K14-M2",
+      "why": "Student believes the brain executes reflex actions.",
+      "text": "the cerebrum"
+     },
+     {
+      "belief_id": "SCI-BIO-CONTROL-K15-M8",
+      "why": "Student thinks cerebellum handles thinking and memory.",
+      "text": "the cerebellum"
+     },
+     {
+      "belief_id": "SCI-BIO-CONTROL-K20-M6",
+      "why": "Student thinks brain controls all body feedback.",
+      "text": "the endocrine gland"
+     }
+    ]
+   },
+   {
+    "evidence": "Unlike animals, plants do not have a nervous system to sense touch; they rely on changes in cell water content to move.",
+    "answer": "changes in cell water content",
+    "stem": "What mechanism do plants use to respond to touch?",
+    "options": [
+     {
+      "belief_id": "SCI-BIO-CONTROL-K7-M3",
+      "why": "Student believes plants use a nervous system.",
+      "text": "a network of nerves"
+     },
+     {
+      "belief_id": "SCI-BIO-CONTROL-K8-M11",
+      "why": "Student thinks plants move based on desire.",
+      "text": "their desire for food"
+     },
+     {
+      "belief_id": "SCI-BIO-CONTROL-K17-M4",
+      "why": "Student thinks light destroys auxin to cause movement.",
+      "text": "the destruction of auxin"
+     }
+    ]
+   },
+   {
+    "evidence": "Hormones are secreted directly into the blood and travel throughout the body to reach target organs, rather than just affecting the gland where they were produced.",
+    "answer": "travel throughout the body",
+    "stem": "How do hormones reach their target organs after being secreted?",
+    "options": [
+     {
+      "belief_id": "SCI-BIO-CONTROL-K19-M5",
+      "why": "Student thinks hormones only affect the production gland.",
+      "text": "they stay in the gland"
+     },
+     {
+      "belief_id": "SCI-BIO-CONTROL-K18-M9",
+      "why": "Student thinks all hormones are for growth.",
+      "text": "they increase organ size"
+     },
+     {
+      "belief_id": "SCI-BIO-CONTROL-K20-M6",
+      "why": "Student thinks brain gives permission for hormone release.",
+      "text": "the brain sends permission"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 5.0
+}

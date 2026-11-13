@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0782-GENERIC-a_cricket_match_between_two_sc",
+  "topic_id": null,
+  "split": "train",
+  "generic": true,
+  "theme": "a cricket match between two schools",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a clear textbook explanation",
+  "seed": 782
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 713,
+  "candidatesTokenCount": 1164,
+  "totalTokenCount": 1877,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 713
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "The annual inter-school cricket final between St. Xavier’s and City High was held on 15th March at the Nehru Stadium. The atmosphere was electric as the captain of St. Xavier’s, Rohan, won the toss and elected to bat first. The team struggled initially against the spin bowling of Vikram, who took 4 wickets in his opening spell. However, a steady partnership between Arjun and Kabir stabilized the innings. Because the pitch was dry and cracked, the ball began to turn sharply, making it difficult for the batsmen to score runs freely. By the end of the first innings, St. Xavier’s had posted a total of 142 runs. In response, City High started aggressively, but the pressure of the final match caused them to lose wickets in quick succession. The match concluded when the umpire, Mr. Sharma, signaled the final out, securing a narrow victory for St. Xavier’s. The spectators cheered wildly as the trophy was handed over to Rohan, marking a memorable end to the tournament.",
+  "summary": "St. Xavier’s and City High competed in a tense cricket final at Nehru Stadium. After a challenging first innings, St. Xavier’s managed to secure a victory. The match ended with the trophy being awarded to the winning captain.",
+  "items": [
+   {
+    "evidence": "The annual inter-school cricket final between St. Xavier’s and City High was held on 15th March at the Nehru Stadium.",
+    "answer": "Nehru Stadium",
+    "stem": "Where did the cricket match between the two schools take place?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Mistakenly picks the school name mentioned near the location.",
+      "text": "St. Xavier’s"
+     },
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Mistakenly picks the date instead of the location.",
+      "text": "15th March"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Picks a true fact that does not answer the question.",
+      "text": "City High"
+     }
+    ]
+   },
+   {
+    "evidence": "The team struggled initially against the spin bowling of Vikram, who took 4 wickets in his opening spell.",
+    "answer": "4 wickets",
+    "stem": "How many dismissals did the spin bowler achieve during his first spell?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Picks the other number mentioned in the passage.",
+      "text": "142 runs"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks the person mentioned in the same sentence.",
+      "text": "Vikram"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Picks a true fact about the team's performance.",
+      "text": "St. Xavier’s"
+     }
+    ]
+   },
+   {
+    "evidence": "Because the pitch was dry and cracked, the ball began to turn sharply, making it difficult for the batsmen to score runs freely.",
+    "answer": "dry and cracked",
+    "stem": "What was the physical condition of the pitch that caused the ball to turn?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Confuses the cause with the effect.",
+      "text": "turn sharply"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks a person mentioned later in the text.",
+      "text": "Mr. Sharma"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Picks a true fact about the batsmen's struggle.",
+      "text": "score runs freely"
+     }
+    ]
+   },
+   {
+    "evidence": "The match concluded when the umpire, Mr. Sharma, signaled the final out, securing a narrow victory for St. Xavier’s.",
+    "answer": "Mr. Sharma",
+    "stem": "Who was responsible for signaling the end of the match?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks the winning captain mentioned later in the sentence.",
+      "text": "Rohan"
+     },
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Uses the everyday meaning of the word 'umpire'.",
+      "text": "A judge"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Picks the result of the match instead of the person.",
+      "text": "St. Xavier’s"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 126.0
+}

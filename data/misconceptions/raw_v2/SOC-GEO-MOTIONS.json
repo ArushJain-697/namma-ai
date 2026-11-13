@@ -1,0 +1,461 @@
+{
+ "topic": {
+  "id": "SOC-GEO-MOTIONS",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   6
+  ],
+  "title": "Motions of the Earth",
+  "scope": "rotation, revolution, axis tilt, seasons, solstices and equinoxes, leap year"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 830,
+  "candidatesTokenCount": 1498,
+  "totalTokenCount": 2328,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 830
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 11.4,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Rotation and Day/Night",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "spherical shape of earth",
+     "light travels in straight lines"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Revolution and Seasons",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "elliptical orbits",
+     "angles"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Orbital Geometry",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1",
+     "n2"
+    ],
+    "external_prereqs": [
+     "geometry of circles and ellipses"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Rotation Mechanics",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "rotation vs revolution"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Day and Night Cycle",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "shadow formation"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Earth's Axis",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "concept of a line"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Revolution and Tilt",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": [
+     "cause and effect"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Solstices and Equinoxes",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": [
+     "hemispheres"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Earth rotates West to East",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "cardinal directions"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Sun rises in the East",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n9"
+    ],
+    "external_prereqs": [
+     "relative motion"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Axis is tilted at 23.5 degrees",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": [
+     "measurement of angles"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Direct rays cause summer",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": [
+     "heat intensity"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "Leap year adjustment",
+    "level": 3,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "fractions"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n5",
+    "statement": "The Sun moves around the Earth every day.",
+    "why": "Students rely on their daily observation of the Sun's path across the sky.",
+    "fix": "The Earth rotates on its axis, making the Sun only appear to move across the sky.",
+    "probe": {
+     "question": "Why does the Sun set in the evening?",
+     "wrong_answer": "Because the Sun travels behind the Earth."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "what you see is the absolute truth",
+    "causes": [],
+    "trigger_cues": [
+     "sun rises",
+     "sun sets",
+     "daily motion",
+     "east to west"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's children's ideas in science"
+   },
+   {
+    "key": "m2",
+    "node": "n7",
+    "statement": "Summer happens because the Earth is closer to the Sun during its orbit.",
+    "why": "Students incorrectly apply the idea that proximity equals more heat.",
+    "fix": "Seasons are caused by the tilt of the Earth's axis, not the distance from the Sun.",
+    "probe": {
+     "question": "Why is it summer in India?",
+     "wrong_answer": "Because the Earth is closest to the Sun."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "bigger or more means more effect",
+    "causes": [],
+    "trigger_cues": [
+     "distance",
+     "closer",
+     "orbit",
+     "summer heat"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE concept inventories"
+   },
+   {
+    "key": "m3",
+    "node": "n11",
+    "statement": "The Earth's axis is a physical line passing through the planet.",
+    "why": "Diagrams in textbooks show a line, and students interpret it literally.",
+    "fix": "The axis is an imaginary line used to describe the Earth's rotation.",
+    "probe": {
+     "question": "If we traveled to the North Pole, would we see the axis?",
+     "wrong_answer": "Yes, it is a giant pole."
+    },
+    "error_type": "other",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "axis",
+     "tilted",
+     "north pole",
+     "imaginary line"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n13",
+    "statement": "A leap year happens every three years.",
+    "why": "Students often misremember the 4-year cycle or confuse it with other patterns.",
+    "fix": "A leap year occurs every four years to account for the extra quarter day in a solar year.",
+    "probe": {
+     "question": "How often does February have 29 days?",
+     "wrong_answer": "Every three years."
+    },
+    "error_type": "numerical_misreading",
+    "root_belief": "a rule from whole numbers works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "leap year",
+     "february",
+     "366 days",
+     "four years"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n9",
+    "statement": "The Earth rotates from East to West.",
+    "why": "Students see the Sun appear to move East to West across the sky and assume the Earth spins the same way.",
+    "fix": "The Earth rotates from West to East (anticlockwise seen from above the North Pole). The Sun only appears to move from East to West.",
+    "probe": {
+     "question": "In which direction does the Earth spin on its axis?",
+     "wrong_answer": "From East to West, the same way the Sun seems to move."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Apparent motion of Sun equals direction of Earth's motion",
+    "causes": [],
+    "trigger_cues": [
+     "earth",
+     "rotates",
+     "direction",
+     "east to west",
+     "spin",
+     "sun moves"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation; NCERT Class 6 Social Science"
+   },
+   {
+    "key": "m6",
+    "node": "n10",
+    "statement": "The Sun rises in the East only because the Sun itself stays fixed there.",
+    "why": "Students think the East is a place where the Sun is always located and it comes up from there.",
+    "fix": "The Sun appears to rise in the East because the Earth rotates West to East, so places turn towards the Sun from the eastern side.",
+    "probe": {
+     "question": "Why does the Sun rise in the East every morning?",
+     "wrong_answer": "Because the Sun lives in the East and comes up from there."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Sunrise is the Sun's own movement, not Earth's",
+    "causes": [],
+    "trigger_cues": [
+     "sun",
+     "rises",
+     "east",
+     "why",
+     "morning",
+     "sunrise"
+    ],
+    "confidence": "plausible",
+    "source_hint": "studies on children's ideas about day and night"
+   },
+   {
+    "key": "m7",
+    "node": "n5",
+    "statement": "Night happens because the Moon covers the Sun.",
+    "why": "Students link the Moon's appearance with the Sun's disappearance and confuse night with an eclipse.",
+    "fix": "Night occurs on the half of the Earth facing away from the Sun because of rotation. The Moon does not block the Sun at night.",
+    "probe": {
+     "question": "What causes night on Earth?",
+     "wrong_answer": "The Moon comes in front of the Sun and blocks its light."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Night is caused by something blocking the Sun",
+    "causes": [],
+    "trigger_cues": [
+     "night",
+     "caused",
+     "moon",
+     "covers",
+     "sun",
+     "dark"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on children's models of day and night (Vosniadou & Brewer; Baxter)"
+   },
+   {
+    "key": "m8",
+    "node": "n5",
+    "statement": "When it is day in India, it is also day everywhere else on Earth.",
+    "why": "Students assume the Sun lights the whole Earth at once, as their own experience is local.",
+    "fix": "At any time only half the Earth faces the Sun and has day while the other half has night, so countries like the USA have night when India has day.",
+    "probe": {
+     "question": "It is noon in India. What time of day is it in the USA?",
+     "wrong_answer": "It is also daytime there, since the Sun shines on everyone."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Whole Earth is lit at the same time",
+    "causes": [],
+    "trigger_cues": [
+     "day",
+     "india",
+     "usa",
+     "same time",
+     "everywhere",
+     "night"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "science education research on day-night cycle"
+   },
+   {
+    "key": "m9",
+    "node": "n4",
+    "statement": "The Earth takes 24 hours to go around the Sun once.",
+    "why": "Students mix up the 24-hour rotation period with the revolution period.",
+    "fix": "Rotation on its axis takes about 24 hours (one day); revolution around the Sun takes about 365¼ days (one year).",
+    "probe": {
+     "question": "How long does the Earth take to complete one revolution around the Sun?",
+     "wrong_answer": "24 hours, which is one day."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Rotation and revolution take the same time",
+    "causes": [],
+    "trigger_cues": [
+     "revolution",
+     "rotation",
+     "how long",
+     "24 hours",
+     "one year",
+     "365 days"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 6 student answer analysis"
+   },
+   {
+    "key": "m10",
+    "node": "n11",
+    "statement": "The Earth's axis is straight up and down, not tilted.",
+    "why": "Textbook diagrams and globes are seen upright, and the tilt is of the axis relative to the orbital plane, which is hard to visualise.",
+    "fix": "The Earth's axis is tilted at 23.5° from the vertical, i.e. makes an angle of 66.5° with its orbital plane.",
+    "probe": {
+     "question": "At what angle is the Earth's axis tilted?",
+     "wrong_answer": "It is not tilted; it is perfectly vertical, at 0°."
+    },
+    "error_type": "numerical_misreading",
+    "root_belief": "Earth's axis is vertical to its orbit",
+    "causes": [],
+    "trigger_cues": [
+     "axis",
+     "tilted",
+     "angle",
+     "23.5",
+     "vertical",
+     "globe"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 6 globe diagrams"
+   },
+   {
+    "key": "m11",
+    "node": "n8",
+    "statement": "Equinox means the Sun is overhead at the North Pole.",
+    "why": "Students mix up equinox and solstice and think a special position of the Sun happens at the poles.",
+    "fix": "On equinoxes (21 March, 23 September) the Sun's rays fall directly on the equator and day and night are equal everywhere. Overhead Sun at the Tropic of Cancer is on 21 June.",
+    "probe": {
+     "question": "On 21 March and 23 September, where do the Sun's rays fall directly?",
+     "wrong_answer": "On the North Pole."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Equinox and solstice mean same Sun position",
+    "causes": [],
+    "trigger_cues": [
+     "equinox",
+     "march",
+     "september",
+     "equator",
+     "direct rays",
+     "equal"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT Class 6 lesson on solstices and equinoxes"
+   },
+   {
+    "key": "m12",
+    "node": "n13",
+    "statement": "A leap year has 365 days and an extra day is dropped.",
+    "why": "Students remember that a leap year is 'special' but confuse the adjustment with removing a day.",
+    "fix": "Earth takes about 365¼ days to revolve, so every fourth year gets an extra day, 29 February, making 366 days.",
+    "probe": {
+     "question": "How many days does a leap year have, and which month changes?",
+     "wrong_answer": "365 days, February loses a day to have 28."
+    },
+    "error_type": "numerical_misreading",
+    "root_belief": "Calendar corrections remove days rather than add",
+    "causes": [],
+    "trigger_cues": [
+     "leap year",
+     "366",
+     "29 february",
+     "extra day",
+     "how many days",
+     "365"
+    ],
+    "confidence": "plausible",
+    "source_hint": "teacher observations of Class 6 calendar answers"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

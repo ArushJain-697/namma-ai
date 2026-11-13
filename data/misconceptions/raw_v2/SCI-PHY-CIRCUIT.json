@@ -1,0 +1,485 @@
+{
+ "topic": {
+  "id": "SCI-PHY-CIRCUIT",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   6,
+   7
+  ],
+  "title": "Electric circuits",
+  "scope": "cell, bulb, switch, closed and open circuits, conductors and insulators, series connection of cells"
+ },
+ "model": "gemini-3-flash-preview",
+ "usage": {
+  "promptTokenCount": 837,
+  "candidatesTokenCount": 4230,
+  "totalTokenCount": 7345,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 837
+   }
+  ],
+  "thoughtsTokenCount": 2278,
+  "serviceTier": "standard"
+ },
+ "seconds": 24.4,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Circuit Components",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "concept of energy",
+     "states of matter"
+    ]
+   },
+   {
+    "key": "n1.1",
+    "name": "The Electric Cell",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.1.1",
+    "name": "Cell Terminals",
+    "level": 3,
+    "parent": "n1.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.1.2",
+    "name": "Chemical Energy Source",
+    "level": 3,
+    "parent": "n1.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.2",
+    "name": "The Electric Bulb",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.2.1",
+    "name": "Filament Function",
+    "level": 3,
+    "parent": "n1.2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n1.2.2",
+    "name": "Bulb Terminals",
+    "level": 3,
+    "parent": "n1.2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2",
+    "name": "Circuit Logic and Flow",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.1",
+    "name": "Circuit Continuity",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.1.1",
+    "name": "Closed Loop Requirement",
+    "level": 3,
+    "parent": "n2.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.1.2",
+    "name": "Switch Mechanism",
+    "level": 3,
+    "parent": "n2.1",
+    "prereqs": [
+     "n2.1.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.2",
+    "name": "Current Direction",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n2.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2.2.1",
+    "name": "Positive to Negative Flow",
+    "level": 3,
+    "parent": "n2.2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3",
+    "name": "Materials and Connections",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1",
+     "n2"
+    ],
+    "external_prereqs": [
+     "properties of metals"
+    ]
+   },
+   {
+    "key": "n3.1",
+    "name": "Conductors and Insulators",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.1.1",
+    "name": "Material Conductivity",
+    "level": 3,
+    "parent": "n3.1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.1.2",
+    "name": "Circuit Testing",
+    "level": 3,
+    "parent": "n3.1",
+    "prereqs": [
+     "n3.1.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.2",
+    "name": "Battery (Series Cells)",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n1.1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3.2.1",
+    "name": "Correct Cell Orientation",
+    "level": 3,
+    "parent": "n3.2",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n2.1.1",
+    "statement": "Electricity flows from the battery to the bulb through a single wire and stops there.",
+    "why": "Students see a single wire in some diagrams or think of electricity like water from a tap.",
+    "fix": "Electricity must return to the source; it requires a complete, unbroken loop from one terminal to the other.",
+    "probe": {
+     "question": "If you connect one wire from the positive terminal of a cell to the tip of a bulb, will it glow?",
+     "wrong_answer": "Yes, because the electricity reaches the bulb."
+    },
+    "error_type": "single_cause",
+    "root_belief": "only one connection is needed for effect",
+    "causes": [
+     "m4"
+    ],
+    "trigger_cues": [
+     "wire",
+     "bulb",
+     "connection",
+     "flow",
+     "single"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's research on children's ideas"
+   },
+   {
+    "key": "m2",
+    "node": "n2.1.1",
+    "statement": "The bulb consumes electricity, so less current returns to the battery than what left it.",
+    "why": "Students confuse energy (which is transformed) with current (which is conserved).",
+    "fix": "The amount of current flowing into the bulb is exactly equal to the amount flowing out of it.",
+    "probe": {
+     "question": "Compare the current in the wire before the bulb and the wire after the bulb.",
+     "wrong_answer": "The current after the bulb is less because the bulb used it."
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "electricity is a substance that gets used up",
+    "causes": [],
+    "trigger_cues": [
+     "consume",
+     "use up",
+     "return",
+     "current",
+     "battery"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Shipstone's studies on circuit models"
+   },
+   {
+    "key": "m3",
+    "node": "n2.2.1",
+    "statement": "Electricity travels from both terminals of the battery and meets at the bulb to make it light up.",
+    "why": "The symmetrical appearance of circuits leads students to believe in a 'clashing' model.",
+    "fix": "Current flows in one continuous direction around the loop, from positive to negative.",
+    "probe": {
+     "question": "How does electricity move from a cell to a bulb?",
+     "wrong_answer": "It comes from both sides and crashes in the bulb."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "two opposing forces meet to create an effect",
+    "causes": [],
+    "trigger_cues": [
+     "meet",
+     "clash",
+     "both sides",
+     "direction",
+     "middle"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Osborne's research on electric current"
+   },
+   {
+    "key": "m4",
+    "node": "n1.2.2",
+    "statement": "The bulb only has one terminal at the bottom tip.",
+    "why": "The metal casing of the bulb is often mistaken for a holder rather than a functional terminal.",
+    "fix": "An electric bulb has two terminals: the metal tip at the base and the metal casing around the base.",
+    "probe": {
+     "question": "Where should the two wires from a cell be connected to a bulb?",
+     "wrong_answer": "Both wires should touch the bottom tip of the bulb."
+    },
+    "error_type": "visible_only",
+    "root_belief": "only the most prominent part is functional",
+    "causes": [],
+    "trigger_cues": [
+     "tip",
+     "base",
+     "casing",
+     "terminal",
+     "bulb"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n3.1.1",
+    "statement": "All non-metal materials are perfect insulators and can never conduct electricity.",
+    "why": "Textbooks emphasize metals as conductors, leading to overgeneralization about non-metals like graphite or impure water.",
+    "fix": "While most non-metals are insulators, some like graphite (pencil lead) and certain liquids can conduct electricity.",
+    "probe": {
+     "question": "Will a circuit work if you use a pencil lead (graphite) to bridge a gap?",
+     "wrong_answer": "No, because it is not a metal."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "a category property applies to every member",
+    "causes": [],
+    "trigger_cues": [
+     "metal",
+     "insulator",
+     "graphite",
+     "pencil",
+     "wood"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE diagnostic studies"
+   },
+   {
+    "key": "m6",
+    "node": "n2.1.2",
+    "statement": "A switch stores electricity when it is in the OFF position.",
+    "why": "Students use everyday language like 'storing' or 'stopping' and imagine the switch as a dam.",
+    "fix": "A switch simply creates a gap in the circuit; it does not store any electricity.",
+    "probe": {
+     "question": "What happens to the electricity when the switch is turned off?",
+     "wrong_answer": "It stays inside the switch waiting to be released."
+    },
+    "error_type": "everyday_language",
+    "root_belief": "stopping flow means accumulation at the barrier",
+    "causes": [],
+    "trigger_cues": [
+     "switch",
+     "off",
+     "store",
+     "gap",
+     "break"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n3.2.1",
+    "statement": "Two cells in a torch will work regardless of which way their ends are facing.",
+    "why": "Students may not realize that the orientation of terminals determines the direction of potential.",
+    "fix": "Cells must be connected in series with the positive terminal of one touching the negative terminal of the next.",
+    "probe": {
+     "question": "If you put two cells in a torch with both positive ends facing each other, will it light up?",
+     "wrong_answer": "Yes, as long as there are two cells, it will work."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "quantity of components matters more than arrangement",
+    "causes": [],
+    "trigger_cues": [
+     "torch",
+     "cells",
+     "positive",
+     "negative",
+     "direction"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m8",
+    "node": "n1.2.1",
+    "statement": "The glass of the bulb is what produces the light.",
+    "why": "The glass is the largest and most visible part of the bulb that appears to glow.",
+    "fix": "The light is produced by the thin wire inside called the filament when it becomes hot.",
+    "probe": {
+     "question": "Which part of the bulb actually glows?",
+     "wrong_answer": "The glass outer cover."
+    },
+    "error_type": "visible_only",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "glass",
+     "glow",
+     "filament",
+     "light",
+     "inside"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m9",
+    "node": "n3.1.1",
+    "statement": "Air is a good conductor because electricity travels through it during lightning.",
+    "why": "Students observe lightning and conclude that air must always allow electricity to pass.",
+    "fix": "Air is generally an insulator; lightning only occurs when the electrical pressure is extremely high.",
+    "probe": {
+     "question": "If there is a small gap between two wires in a circuit, will the bulb glow?",
+     "wrong_answer": "Yes, because electricity can travel through the air."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "extreme cases represent the normal state",
+    "causes": [],
+    "trigger_cues": [
+     "air",
+     "lightning",
+     "gap",
+     "conductor",
+     "insulator"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m10",
+    "node": "n1.1.2",
+    "statement": "A battery is like a reservoir full of electricity that flows out like water.",
+    "why": "The water-pipe analogy is often taken too literally by students.",
+    "fix": "A battery is a source of energy that pushes charges already present in the wires.",
+    "probe": {
+     "question": "Where does the electricity come from when a circuit is closed?",
+     "wrong_answer": "It is stored inside the battery and flows out into the wires."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "objects are containers for substances",
+    "causes": [
+     "m2"
+    ],
+    "trigger_cues": [
+     "battery",
+     "reservoir",
+     "flow",
+     "inside",
+     "source"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Concept Inventory"
+   },
+   {
+    "key": "m11",
+    "node": "n3.1.2",
+    "statement": "A thicker wire will always make a bulb glow brighter than a thinner wire.",
+    "why": "Students associate 'bigger' or 'thicker' with 'more power' or 'easier flow'.",
+    "fix": "In simple Class 6 circuits, the thickness of short connecting wires does not visibly change the bulb's brightness.",
+    "probe": {
+     "question": "If you replace a thin copper wire with a very thick one, what happens to the bulb?",
+     "wrong_answer": "It will glow much brighter because more electricity can fit."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "bigger or more means more effect",
+    "causes": [],
+    "trigger_cues": [
+     "thick",
+     "thin",
+     "wire",
+     "brightness",
+     "glow"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m12",
+    "node": "n2.1.1",
+    "statement": "A circuit is closed as long as the wires are touching the bulb anywhere on its surface.",
+    "why": "Students do not realize that specific internal paths exist within the bulb.",
+    "fix": "A circuit is only closed if the wires are connected to the two specific terminals of the bulb.",
+    "probe": {
+     "question": "If you touch both wires to the glass part of the bulb, will it glow?",
+     "wrong_answer": "Yes, because the wires are touching the bulb."
+    },
+    "error_type": "part_whole",
+    "root_belief": "contact with the whole is contact with the part",
+    "causes": [],
+    "trigger_cues": [
+     "touch",
+     "surface",
+     "anywhere",
+     "connection",
+     "bulb"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}

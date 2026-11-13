@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0662-GENERIC-a_cricket_match_between_two_sc",
+  "topic_id": null,
+  "split": "train",
+  "generic": true,
+  "theme": "a cricket match between two schools",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a passage rich in numbers, dates or measurements",
+  "seed": 662
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 718,
+  "candidatesTokenCount": 1131,
+  "totalTokenCount": 1849,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 718
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "On 14th February, the annual cricket match between St. Jude’s Academy and City High School took place at the Nehru Stadium. The atmosphere was electric as 450 students gathered to cheer for their teams. St. Jude’s batted first, scoring 182 runs in their allotted 20 overs. Their captain, Rohan, played a brilliant innings of 85 runs. City High School struggled early because the pitch was damp from the previous night's heavy rain. Consequently, their batting order collapsed, and they managed only 130 runs. The match ended with a victory for St. Jude’s by 52 runs. Coach Mehta praised the winning team for their discipline, while the City High principal noted that the damp surface made the ball behave unpredictably. Despite the loss, the City High captain, Vikram, shook hands with Rohan, showing great sportsmanship. The event concluded by 5:00 PM, leaving everyone excited for next year’s rematch.",
+  "summary": "St. Jude’s Academy defeated City High School in a cricket match held at Nehru Stadium. The damp pitch contributed to City High's low score, leading to a 52-run victory for St. Jude’s.",
+  "items": [
+   {
+    "evidence": "St. Jude’s batted first, scoring 182 runs in their allotted 20 overs.",
+    "answer": "182 runs",
+    "stem": "How many runs did the St. Jude’s team achieve during their time at the crease?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Mistakenly selects the number of spectators mentioned nearby.",
+      "text": "450 runs"
+     },
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Mistakenly selects the number of overs played.",
+      "text": "20 runs"
+     },
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Mistakenly selects the winning margin.",
+      "text": "52 runs"
+     }
+    ]
+   },
+   {
+    "evidence": "City High School struggled early because the pitch was damp from the previous night's heavy rain.",
+    "answer": "damp pitch",
+    "stem": "What was the primary reason for the poor performance of the City High School batting lineup?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Reverses the cause and effect relationship.",
+      "text": "heavy rain"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects a person mentioned in the same sentence.",
+      "text": "Coach Mehta"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Provides a true fact that does not explain the struggle.",
+      "text": "130 runs"
+     }
+    ]
+   },
+   {
+    "evidence": "The match ended with a victory for St. Jude’s by 52 runs.",
+    "answer": "St. Jude’s",
+    "stem": "Which school emerged as the winner of the cricket match?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects the school mentioned immediately after the winner.",
+      "text": "City High School"
+     },
+     {
+      "belief_id": "GEN-READ-M5",
+      "why": "Confuses the winning team with the losing team's name.",
+      "text": "City High Academy"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States the location, which is true but not the winner.",
+      "text": "Nehru Stadium"
+     }
+    ]
+   },
+   {
+    "evidence": "The event concluded by 5:00 PM, leaving everyone excited for next year’s rematch.",
+    "answer": "5:00 PM",
+    "stem": "At what time did the cricket match finish?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses the date instead of the time.",
+      "text": "14th February"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects the number of runs scored by the captain.",
+      "text": "85"
+     },
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Selects the number of students present.",
+      "text": "450"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.0
+}

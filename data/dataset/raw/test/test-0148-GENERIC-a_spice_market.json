@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "test-0148-GENERIC-a_spice_market",
+  "topic_id": null,
+  "split": "test",
+  "generic": true,
+  "theme": "a spice market",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a passage rich in numbers, dates or measurements",
+  "seed": 148
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 712,
+  "candidatesTokenCount": 1190,
+  "totalTokenCount": 1902,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 712
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "The Khari Baoli spice market in Delhi is a sensory explosion that has operated since 1650. On a humid Tuesday, I met Mr. Gupta, a veteran trader who manages 45 distinct varieties of dried chilies. The air is thick with pungent dust, which causes many visitors to sneeze uncontrollably as they walk through the narrow lanes. Mr. Gupta explained that the high demand for Kashmiri saffron, priced at 300 rupees per gram, keeps the market bustling even during the off-season. Nearby, a tourist named Sarah was busy photographing sacks of turmeric, while a local porter named Arjun hauled a heavy load of cardamom. Because the market is located near the historic Fatehpuri Masjid, it attracts thousands of pilgrims who often stop to buy spices after their prayers. The market remains open from 10 AM until 8 PM daily, serving as a vital hub for culinary experts. While some believe the market is only for wholesale buyers, it is actually a retail paradise for anyone seeking authentic ingredients. The sheer volume of trade here is staggering, with over 200 shops operating within a single square kilometer, ensuring that the legacy of this ancient trade route continues to thrive in modern India.",
+  "summary": "Khari Baoli is a historic and busy spice market in Delhi that has been operating since 1650. It attracts many visitors and traders due to its wide variety of spices and proximity to religious sites.",
+  "items": [
+   {
+    "evidence": "The air is thick with pungent dust, which causes many visitors to sneeze uncontrollably as they walk through the narrow lanes.",
+    "answer": "pungent dust",
+    "stem": "What is responsible for the sneezing experienced by visitors in the market lanes?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Mistakes the result (sneezing) for the cause (dust).",
+      "text": "uncontrollable sneezing"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Selects a person named in the same sentence.",
+      "text": "Mr. Gupta"
+     },
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Uses everyday meaning of narrow lanes as a cause.",
+      "text": "the narrow lanes"
+     }
+    ]
+   },
+   {
+    "evidence": "Because the market is located near the historic Fatehpuri Masjid, it attracts thousands of pilgrims who often stop to buy spices after their prayers.",
+    "answer": "Fatehpuri Masjid",
+    "stem": "What location draws many pilgrims to the spice market?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks a person mentioned in the same sentence.",
+      "text": "Arjun"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Selects a true fact that is not the cause.",
+      "text": "spices"
+     },
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses a number from the passage as a location.",
+      "text": "1650"
+     }
+    ]
+   },
+   {
+    "evidence": "Mr. Gupta explained that the high demand for Kashmiri saffron, priced at 300 rupees per gram, keeps the market bustling even during the off-season.",
+    "answer": "300 rupees",
+    "stem": "What is the cost of one gram of the saffron mentioned?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses a different number found in the passage.",
+      "text": "45 rupees"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Uses the name of the person in the sentence.",
+      "text": "Mr. Gupta"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Assumes all spices cost the same amount.",
+      "text": "all spices"
+     }
+    ]
+   },
+   {
+    "evidence": "The market remains open from 10 AM until 8 PM daily, serving as a vital hub for culinary experts.",
+    "answer": "10 AM until 8 PM",
+    "stem": "During which hours is the spice market accessible to the public?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses a different number from the text.",
+      "text": "200 hours"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Uses a person's name as a time reference.",
+      "text": "Mr. Gupta"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Assumes it is open at all times.",
+      "text": "always open"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.7
+}

@@ -1,0 +1,422 @@
+{
+ "topic": {
+  "id": "SOC-CIV-LIVELIHOODS",
+  "subject": "social",
+  "strand": "civics",
+  "grades": [
+   6
+  ],
+  "title": "Rural and urban livelihoods",
+  "scope": "farm and non-farm work, landless labourers, street vendors, permanent and casual work"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 829,
+  "candidatesTokenCount": 1314,
+  "totalTokenCount": 2143,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 829
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 5.2,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Rural Livelihoods",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "geography of village life"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Urban Livelihoods",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "geography of city life"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Farm Work",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n4",
+    "name": "Non-farm Rural Work",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Street Vending",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "Formal/Permanent Employment",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Landless Labourers",
+    "level": 3,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Seasonal Nature of Farming",
+    "level": 3,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Self-employment in Villages",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Casual Labour in Cities",
+    "level": 3,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Job Security and Benefits",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n7",
+    "statement": "All farmers in India own the land they cultivate.",
+    "why": "Students often generalize from stories of wealthy landowners in media.",
+    "fix": "Many rural workers are landless labourers who work on others' fields for daily wages.",
+    "probe": {
+     "question": "Who does a landless labourer work for?",
+     "wrong_answer": "They work on their own small plot of land."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "everyone has the same status",
+    "causes": [],
+    "trigger_cues": [
+     "landless",
+     "labourer",
+     "wages",
+     "fields",
+     "cultivate"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n8",
+    "statement": "Farmers have work throughout the entire year.",
+    "why": "Students assume work is a continuous process like school or office jobs.",
+    "fix": "Farming is seasonal; labourers often face unemployment during the months between sowing and harvesting.",
+    "probe": {
+     "question": "What do farm labourers do during the off-season?",
+     "wrong_answer": "They continue working on the same farm every day."
+    },
+    "error_type": "presentism",
+    "root_belief": "work is always a continuous activity",
+    "causes": [],
+    "trigger_cues": [
+     "seasonal",
+     "sowing",
+     "harvesting",
+     "unemployment",
+     "months"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver children's ideas in social science"
+   },
+   {
+    "key": "m3",
+    "node": "n5",
+    "statement": "Street vendors are always poor because they are lazy.",
+    "why": "Students confuse economic status with personal character traits.",
+    "fix": "Street vendors work very hard but lack permanent shops and face daily uncertainty.",
+    "probe": {
+     "question": "Why do street vendors work on the sidewalk?",
+     "wrong_answer": "Because they do not want to work hard in a shop."
+    },
+    "error_type": "stereotype",
+    "root_belief": "poverty is a result of personal failure",
+    "causes": [],
+    "trigger_cues": [
+     "street",
+     "vendor",
+     "sidewalk",
+     "uncertainty",
+     "hard work"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n11",
+    "statement": "All city jobs provide medical leave and pensions.",
+    "why": "Students project the benefits of their parents' or teachers' jobs onto all urban work.",
+    "fix": "Only permanent, formal jobs offer benefits; casual workers have no such security.",
+    "probe": {
+     "question": "Does a daily wage worker get paid sick leave?",
+     "wrong_answer": "Yes, all city workers get paid leave."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "my experience is the universal experience",
+    "causes": [],
+    "trigger_cues": [
+     "permanent",
+     "benefits",
+     "pension",
+     "medical",
+     "casual"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "id": "m5",
+    "key": "m5",
+    "node": "n3",
+    "statement": "Farm work is only done by men.",
+    "why": "Students see men ploughing and selling in images and stories, and overlook women's daily field labour.",
+    "fix": "Women and men both do farm work: sowing, transplanting, weeding and harvesting. Women do a large share of it, often without recognition or equal pay.",
+    "probe": {
+     "question": "Who does the work of transplanting paddy and harvesting in a village?",
+     "wrong_answer": "Only men do it; women stay at home."
+    },
+    "error_type": "stereotype",
+    "root_belief": "Gender roles strictly divide who does productive work",
+    "causes": [],
+    "trigger_cues": [
+     "women",
+     "farm",
+     "men only",
+     "harvesting",
+     "transplanting",
+     "field work"
+    ],
+    "confidence": "plausible",
+    "source_hint": "textbook illustrations and gender-role studies"
+   },
+   {
+    "id": "m6",
+    "key": "m6",
+    "node": "n4",
+    "statement": "Everyone in a village works in farming.",
+    "why": "Villages are strongly linked with fields and crops, so students assume no other work exists there.",
+    "fix": "Villages also have non-farm work such as weaving, pottery, shopkeeping, teaching, carpentry, tailoring and running small shops.",
+    "probe": {
+     "question": "Name a person in a village who does not work on a farm. What do they do?",
+     "wrong_answer": "There is no such person; everyone in a village is a farmer."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Rural means only agriculture",
+    "causes": [],
+    "trigger_cues": [
+     "village",
+     "everyone",
+     "farming",
+     "other work",
+     "potter",
+     "weaver",
+     "shopkeeper"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on children's conceptions of rural life"
+   },
+   {
+    "id": "m7",
+    "key": "m7",
+    "node": "n5",
+    "statement": "Street vendors do not need to work hard or buy anything because they sell for free on the road.",
+    "why": "Students see vendors on open pavements with no shop, so they think there is no cost or effort.",
+    "fix": "Street vendors buy goods from wholesale markets, carry or arrange them, stand for long hours and sell in all weather. They may also pay fees or face being moved away.",
+    "probe": {
+     "question": "Where does a fruit seller on the street get the fruit he sells?",
+     "wrong_answer": "He gets it free from nowhere, so he has no cost."
+    },
+    "error_type": "other",
+    "root_belief": "No shop means no investment or effort",
+    "causes": [],
+    "trigger_cues": [
+     "street vendor",
+     "no shop",
+     "goods",
+     "buy",
+     "cost",
+     "pavement"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom observation"
+   },
+   {
+    "id": "m8",
+    "key": "m8",
+    "node": "n6",
+    "statement": "Formal jobs mean only government jobs.",
+    "why": "Students link permanent salaried work only with government offices, police and schools.",
+    "fix": "Formal jobs have fixed pay, fixed hours and written terms. They exist in government offices and also in many private companies and factories.",
+    "probe": {
+     "question": "Does a worker in a big private company with a fixed salary and contract have a formal job?",
+     "wrong_answer": "No, only government workers have formal jobs."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Formal employment equals government service",
+    "causes": [],
+    "trigger_cues": [
+     "formal job",
+     "permanent",
+     "private company",
+     "government job",
+     "salary",
+     "contract"
+    ],
+    "confidence": "plausible",
+    "source_hint": "textbook-based reasoning"
+   },
+   {
+    "id": "m9",
+    "key": "m9",
+    "node": "n7",
+    "statement": "Landless labourers are people who do not work.",
+    "why": "The word 'landless' is read as having nothing to do, since they have no farm of their own.",
+    "fix": "Landless labourers work on other people's fields for daily or seasonal wages. They do the hard farm work but do not own the land.",
+    "probe": {
+     "question": "What do landless labourers do for a living?",
+     "wrong_answer": "Nothing, because they have no land to farm."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "No ownership means no work",
+    "causes": [],
+    "trigger_cues": [
+     "landless",
+     "labourers",
+     "no land",
+     "wages",
+     "work on others' fields",
+     "daily wage"
+    ],
+    "confidence": "plausible",
+    "source_hint": "vocabulary misreading in classroom"
+   },
+   {
+    "id": "m10",
+    "key": "m10",
+    "node": "n8",
+    "statement": "Farming work is the same amount in every month, so farmers earn the same all year.",
+    "why": "Students do not link crop cycles like sowing and harvesting to periods of heavy and light work.",
+    "fix": "Farm work is heavy during sowing and harvest and light in between. Many farm families earn mainly after harvest and look for other work in the slack months.",
+    "probe": {
+     "question": "Why do many farm families look for other work or migrate in some months?",
+     "wrong_answer": "Farming gives the same work every month, so they leave only for fun."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Work and income are constant across seasons",
+    "causes": [],
+    "trigger_cues": [
+     "sowing",
+     "harvest",
+     "slack season",
+     "months",
+     "income",
+     "migrate"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT-aligned classroom discussion"
+   },
+   {
+    "id": "m11",
+    "key": "m11",
+    "node": "n9",
+    "statement": "Self-employed people in villages always have an employer who pays them a salary.",
+    "why": "Students think everyone who works is paid a monthly wage by some boss.",
+    "fix": "Self-employed people such as potters, tailors and shopkeepers run their own work. They buy materials, sell goods or services, and their earnings depend on customers.",
+    "probe": {
+     "question": "Who pays a village potter for the pots he makes and sells?",
+     "wrong_answer": "His employer pays him a fixed monthly salary."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "All workers are paid salaries by employers",
+    "causes": [],
+    "trigger_cues": [
+     "self-employed",
+     "potter",
+     "tailor",
+     "own work",
+     "salary",
+     "customers",
+     "boss"
+    ],
+    "confidence": "plausible",
+    "source_hint": "textbook-based reasoning"
+   },
+   {
+    "id": "m12",
+    "key": "m12",
+    "node": "n10",
+    "statement": "Casual labourers in cities have a regular job with a fixed monthly salary.",
+    "why": "Students think anyone doing city work, like construction, has the same steady pay as an office worker.",
+    "fix": "Casual labourers, such as construction workers, are hired for a day or a short job and paid daily wages. They have no fixed pay, no long-term contract and may wait at labour chowks for work.",
+    "probe": {
+     "question": "How is a construction worker who stands at a labour chowk paid?",
+     "wrong_answer": "He gets a fixed monthly salary and is sure of work every day."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "All city work is steady salaried work",
+    "causes": [],
+    "trigger_cues": [
+     "casual labour",
+     "daily wage",
+     "construction",
+     "labour chowk",
+     "city",
+     "fixed salary"
+    ],
+    "confidence": "plausible",
+    "source_hint": "textbook-based reasoning"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

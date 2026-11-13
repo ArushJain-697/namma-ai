@@ -1,0 +1,506 @@
+{
+ "topic": {
+  "id": "SCI-PHY-CURRENTEFFECTS",
+  "subject": "science",
+  "strand": "physics",
+  "grades": [
+   7
+  ],
+  "title": "Electric current and its effects",
+  "scope": "heating effect, fuse, magnetic effect, electromagnet, electric bell, circuit symbols"
+ },
+ "model": "gemini-3-flash-preview",
+ "usage": {
+  "promptTokenCount": 832,
+  "candidatesTokenCount": 3948,
+  "totalTokenCount": 6180,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 832
+   }
+  ],
+  "thoughtsTokenCount": 1400,
+  "serviceTier": "standard"
+ },
+ "seconds": 20.4,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Electric Circuit and Components",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "conductors and insulators",
+     "basic circuit components"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Heating Effect of Current",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "concept of heat",
+     "temperature"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Magnetic Effect of Current",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "properties of magnets",
+     "magnetic poles"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Circuit Symbols",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Battery and Cells",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "Closed and Open Circuits",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Heat Generation in Wires",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Electric Fuse",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Magnetic Field of Current",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Electromagnets",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n9"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Electric Bell Mechanism",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n10"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Long line is positive terminal",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Battery is series of cells",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n12"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Current flows only in closed path",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Wire material affects heating",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n16",
+    "name": "Fuse wire has low melting point",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n15"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n17",
+    "name": "Compass needle deflects near current",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n18",
+    "name": "Coil turns iron into magnet",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n19",
+    "name": "Electromagnet loses magnetism when off",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [
+     "n18"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n20",
+    "name": "Hammer hits gong due to magnetism",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [
+     "n19"
+    ],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n14",
+    "statement": "Electric current is consumed or used up by the bulb in a circuit.",
+    "why": "Students observe the bulb glowing and think it 'eats' the energy like food.",
+    "fix": "Current is the flow of electrons; the same amount of current that enters the bulb leaves it and returns to the battery.",
+    "probe": {
+     "question": "If 1 Ampere of current enters a bulb, how much current leaves it?",
+     "wrong_answer": "Less than 1 Ampere"
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "substances are consumed to produce effects",
+    "causes": [],
+    "trigger_cues": [
+     "bulb",
+     "glow",
+     "flow",
+     "return",
+     "current"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's Children's Ideas in Science"
+   },
+   {
+    "key": "m2",
+    "node": "n14",
+    "statement": "In an open circuit, current travels from the battery to the switch and stops there.",
+    "why": "Students view electricity as a fluid that moves through pipes until it hits a dead end.",
+    "fix": "In an open circuit, there is no flow of current anywhere in the circuit because the loop is not continuous.",
+    "probe": {
+     "question": "Where is the current located in a circuit when the switch is OFF?",
+     "wrong_answer": "It is waiting at the switch"
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "current is a substance that travels like water",
+    "causes": [],
+    "trigger_cues": [
+     "open",
+     "switch",
+     "gap",
+     "flow",
+     "stop"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m3",
+    "node": "n12",
+    "statement": "The short, thick line in a cell symbol represents the positive terminal.",
+    "why": "Students often associate 'thickness' or 'heaviness' with 'positive' or 'more'.",
+    "fix": "In a circuit symbol, the longer, thinner vertical line represents the positive terminal, and the shorter, thicker line is the negative terminal.",
+    "probe": {
+     "question": "Which line in a cell symbol do you connect to the positive wire?",
+     "wrong_answer": "The short thick one"
+    },
+    "error_type": "visual_only",
+    "root_belief": "bigger or thicker means more or positive",
+    "causes": [],
+    "trigger_cues": [
+     "symbol",
+     "long line",
+     "short line",
+     "terminal",
+     "positive"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n13",
+    "statement": "A battery is just another name for a single electric cell.",
+    "why": "In everyday language, people call a single AA cell a 'battery'.",
+    "fix": "A battery is a combination of two or more cells connected together, usually in series.",
+    "probe": {
+     "question": "What do you call a combination of four cells?",
+     "wrong_answer": "A cell"
+    },
+    "error_type": "everyday_language",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "cell",
+     "battery",
+     "combination",
+     "terminals"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "NCERT Textbook terminology"
+   },
+   {
+    "key": "m5",
+    "node": "n15",
+    "statement": "All wires get equally hot when the same current flows through them.",
+    "why": "Students ignore the material properties and focus only on the source of electricity.",
+    "fix": "The amount of heat produced depends on the material, length, and thickness of the wire.",
+    "probe": {
+     "question": "Will a copper wire and a nichrome wire of same size get equally hot?",
+     "wrong_answer": "Yes, because current is same"
+    },
+    "error_type": "single_cause",
+    "root_belief": "one event has one single cause",
+    "causes": [],
+    "trigger_cues": [
+     "heat",
+     "material",
+     "nichrome",
+     "copper",
+     "wire"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m6",
+    "node": "n16",
+    "statement": "A fuse is a safety device that 'slows down' the current to prevent fire.",
+    "why": "Students think safety involves moderation rather than breaking the circuit.",
+    "fix": "A fuse works by melting and breaking the circuit completely when current exceeds a safe limit.",
+    "probe": {
+     "question": "What happens to the wire inside a fuse when too much current flows?",
+     "wrong_answer": "It resists the current to slow it down"
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "safety devices work by resisting or slowing",
+    "causes": [],
+    "trigger_cues": [
+     "fuse",
+     "melt",
+     "break",
+     "safety",
+     "limit"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE Diagnostic Studies"
+   },
+   {
+    "key": "m7",
+    "node": "n16",
+    "statement": "A thicker fuse wire is always safer than a thin one.",
+    "why": "Students associate 'thick' with 'strong' and 'safe'.",
+    "fix": "A fuse wire must be of a specific thickness to melt at the right current; a wire that is too thick may not melt, causing a fire.",
+    "probe": {
+     "question": "Why shouldn't we use a thick copper wire as a fuse?",
+     "wrong_answer": "Because it will break too easily"
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "stronger or thicker is always better",
+    "causes": [],
+    "trigger_cues": [
+     "fuse",
+     "thick",
+     "thin",
+     "melt",
+     "safety"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m8",
+    "node": "n17",
+    "statement": "The magnetic effect of current only works if the wire is touching the compass.",
+    "why": "Students often believe forces require direct physical contact.",
+    "fix": "Electric current creates a magnetic field around the wire that can deflect a compass needle from a distance.",
+    "probe": {
+     "question": "Will a compass move if it is placed 1cm away from a current-carrying wire?",
+     "wrong_answer": "No, it must touch the wire"
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "forces require direct physical contact",
+    "causes": [],
+    "trigger_cues": [
+     "compass",
+     "deflection",
+     "distance",
+     "needle",
+     "wire"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Driver's Children's Ideas in Science"
+   },
+   {
+    "key": "m9",
+    "node": "n18",
+    "statement": "An electromagnet is just a permanent magnet that uses electricity to start.",
+    "why": "Students confuse the temporary nature of electromagnets with permanent magnets.",
+    "fix": "An electromagnet only acts as a magnet as long as the electric current is flowing through its coil.",
+    "probe": {
+     "question": "What happens to the iron nail's magnetism when you disconnect the battery?",
+     "wrong_answer": "It stays magnetic"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "properties of objects are permanent",
+    "causes": [],
+    "trigger_cues": [
+     "electromagnet",
+     "coil",
+     "iron",
+     "current",
+     "temporary"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m10",
+    "node": "n20",
+    "statement": "In an electric bell, the hammer hits the gong because the electricity flows into the hammer.",
+    "why": "Students focus on the visible movement and assume electricity acts as a physical push.",
+    "fix": "The hammer moves because the electromagnet attracts the iron strip attached to it.",
+    "probe": {
+     "question": "What pulls the hammer toward the gong in an electric bell?",
+     "wrong_answer": "The flow of electricity into the hammer"
+    },
+    "error_type": "visible_only",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "bell",
+     "hammer",
+     "gong",
+     "electromagnet",
+     "attract"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n19",
+    "statement": "Increasing the number of turns in a coil makes the electromagnet weaker because the electricity has to travel further.",
+    "why": "Students apply the idea of 'tiredness' or 'distance' to electricity.",
+    "fix": "Increasing the number of turns in the coil actually increases the strength of the electromagnet.",
+    "probe": {
+     "question": "Will a coil with 100 turns be stronger or weaker than one with 10 turns?",
+     "wrong_answer": "Weaker"
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "longer distance reduces the effect",
+    "causes": [],
+    "trigger_cues": [
+     "turns",
+     "coil",
+     "strength",
+     "electromagnet",
+     "wire"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Concept Inventories in Physics"
+   },
+   {
+    "key": "m12",
+    "node": "n17",
+    "statement": "Electricity and magnetism are the same thing because they both involve 'attraction'.",
+    "why": "Students see both static electricity and magnets picking up things and equate them.",
+    "fix": "Electricity and magnetism are related but distinct; current produces a magnetic effect, but they are not the same entity.",
+    "probe": {
+     "question": "Is the force between two charged balloons the same as the force between two magnets?",
+     "wrong_answer": "Yes, both are electricity"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar effects imply identical causes",
+    "causes": [],
+    "trigger_cues": [
+     "magnetism",
+     "electricity",
+     "attract",
+     "force",
+     "effect"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   }
+  ]
+ },
+ "problems": []
+}

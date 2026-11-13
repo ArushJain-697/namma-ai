@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0049-MAT-POLYNOMIALS",
+  "topic_id": "MAT-POLYNOMIALS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a passage that shows a common wrong method and corrects it",
+  "seed": 49
+ },
+ "model": "gemini-3.1-flash-lite/key3",
+ "usage": {
+  "promptTokenCount": 1110,
+  "candidatesTokenCount": 1296,
+  "totalTokenCount": 2406,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1110
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-POLYNOMIALS-K14-M13",
+  "MAT-POLYNOMIALS-K29-M25",
+  "MAT-POLYNOMIALS-K14-M14",
+  "MAT-POLYNOMIALS-K23-M20",
+  "MAT-POLYNOMIALS-K13-M11",
+  "MAT-POLYNOMIALS-K22-M19",
+  "MAT-POLYNOMIALS-K11-M8",
+  "MAT-POLYNOMIALS-K29-M26",
+  "MAT-POLYNOMIALS-K13-M12",
+  "MAT-POLYNOMIALS-K30-M28",
+  "MAT-POLYNOMIALS-K10-M6",
+  "MAT-POLYNOMIALS-K30-M27",
+  "MAT-POLYNOMIALS-K17-M17",
+  "MAT-POLYNOMIALS-K8-M1"
+ ],
+ "response": {
+  "passage": "When studying quadratic polynomials like p(x) = x^2 - 5x + 6, students often make errors in finding zeroes and evaluating expressions. A common mistake is assuming the coefficient of x is 5, but the standard form is ax^2 + bx + c, meaning the coefficient of x is actually -5. Another frequent error occurs when evaluating p(x) for a specific value, such as p(-2). Students often incorrectly calculate (-2)^2 as -4, leading to a wrong result, whereas the square of a negative number is always positive, making (-2)^2 equal to 4. Furthermore, some students mistakenly believe that if x - 3 is a factor, then p(-3) must be zero. According to the factor theorem, if x - a is a factor, then p(a) must be zero, so for x - 3, we must check p(3). Finally, many students confuse the degree of a polynomial. A constant polynomial like 7 is written as 7x^0, which means its degree is 0, not 1. Mastering these basics ensures you avoid common pitfalls in algebra and correctly identify the properties of various polynomials.",
+  "summary": "This passage clarifies the correct identification of coefficients, the evaluation of negative numbers in polynomials, the application of the factor theorem, and the determination of polynomial degrees. It corrects common algebraic misconceptions to help students improve their accuracy.",
+  "items": [
+   {
+    "evidence": "the standard form is ax^2 + bx + c, meaning the coefficient of x is actually -5.",
+    "answer": "-5",
+    "stem": "In the polynomial x^2 - 5x + 6, what is the correct value of the coefficient of x?",
+    "options": [
+     {
+      "belief_id": "MAT-POLYNOMIALS-K10-M6",
+      "why": "Student ignores the negative sign in the standard form.",
+      "text": "5"
+     },
+     {
+      "belief_id": "MAT-POLYNOMIALS-K30-M28",
+      "why": "Student confuses the middle coefficient with the product of zeroes.",
+      "text": "6"
+     },
+     {
+      "belief_id": "MAT-POLYNOMIALS-K14-M13",
+      "why": "Student assumes the coefficient must be zero if x is zero.",
+      "text": "0"
+     }
+    ]
+   },
+   {
+    "evidence": "the square of a negative number is always positive, making (-2)^2 equal to 4.",
+    "answer": "4",
+    "stem": "What is the result of evaluating the term x^2 when x is -2?",
+    "options": [
+     {
+      "belief_id": "MAT-POLYNOMIALS-K13-M11",
+      "why": "Student incorrectly squares a negative number as a negative.",
+      "text": "-4"
+     },
+     {
+      "belief_id": "MAT-POLYNOMIALS-K13-M12",
+      "why": "Student multiplies the variable by the exponent instead of squaring.",
+      "text": "-2"
+     },
+     {
+      "belief_id": "MAT-POLYNOMIALS-K22-M19",
+      "why": "Student confuses squaring with multiplying by the exponent.",
+      "text": "-8"
+     }
+    ]
+   },
+   {
+    "evidence": "According to the factor theorem, if x - a is a factor, then p(a) must be zero, so for x - 3, we must check p(3).",
+    "answer": "p(3)",
+    "stem": "If x - 3 is a factor of a polynomial p(x), which value must equal zero?",
+    "options": [
+     {
+      "belief_id": "MAT-POLYNOMIALS-K29-M25",
+      "why": "Student applies the wrong sign when using the factor theorem.",
+      "text": "p(-3)"
+     },
+     {
+      "belief_id": "MAT-POLYNOMIALS-K29-M26",
+      "why": "Student believes a factor exists if it divides most terms.",
+      "text": "p(0)"
+     },
+     {
+      "belief_id": "MAT-POLYNOMIALS-K14-M14",
+      "why": "Student incorrectly identifies the zero of the factor.",
+      "text": "p(1)"
+     }
+    ]
+   },
+   {
+    "evidence": "A constant polynomial like 7 is written as 7x^0, which means its degree is 0, not 1.",
+    "answer": "0",
+    "stem": "What is the degree of a constant polynomial such as 7?",
+    "options": [
+     {
+      "belief_id": "MAT-POLYNOMIALS-K11-M8",
+      "why": "Student incorrectly assigns a degree of 1 to constants.",
+      "text": "1"
+     },
+     {
+      "belief_id": "MAT-POLYNOMIALS-K8-M1",
+      "why": "Student confuses the constant value with the polynomial degree.",
+      "text": "7"
+     },
+     {
+      "belief_id": "MAT-POLYNOMIALS-K14-M13",
+      "why": "Student assumes the degree is zero only if x is zero.",
+      "text": "2"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 5.8
+}

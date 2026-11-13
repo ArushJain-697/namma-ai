@@ -1,0 +1,558 @@
+{
+ "topic": {
+  "id": "SCI-BIO-FORESTS",
+  "subject": "science",
+  "strand": "biology",
+  "grades": [
+   7
+  ],
+  "title": "Forests: our lifeline",
+  "scope": "forest layers, food chains in forests, decomposers, interdependence, forest products, forests and rainfall"
+ },
+ "model": "gemini-3-flash-preview/key3",
+ "usage": {
+  "promptTokenCount": 836,
+  "candidatesTokenCount": 4517,
+  "totalTokenCount": 9117,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 836
+   }
+  ],
+  "thoughtsTokenCount": 3764,
+  "serviceTier": "standard"
+ },
+ "seconds": 31.2,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Structure of a Forest",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "living vs non-living"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Energy and Nutrients",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "photosynthesis"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Ecological Services",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "water cycle"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Vertical Layers",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Canopy",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n6",
+    "name": "Understorey",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n7",
+    "name": "Forest Floor",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Food Chains",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n9"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Producers and Consumers",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": [
+     "photosynthesis"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Decomposers",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Humus Formation",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [
+     "n9"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Water Cycle and Rainfall",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "water cycle"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "Transpiration and Rain",
+    "level": 3,
+    "parent": "n12",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Soil Protection",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "soil profile"
+    ]
+   },
+   {
+    "key": "n15",
+    "name": "Oxygen-CO2 Balance",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n9"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n16",
+    "name": "Forest Products",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n17",
+    "name": "Interdependence",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n18",
+    "name": "Seed Dispersal",
+    "level": 3,
+    "parent": "n17",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n19",
+    "name": "Pollination",
+    "level": 3,
+    "parent": "n17",
+    "prereqs": [],
+    "external_prereqs": [
+     "parts of a flower"
+    ]
+   },
+   {
+    "key": "n20",
+    "name": "Dynamic Living Entity",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n11",
+     "n17"
+    ],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n7",
+    "statement": "The forest floor is just bare ground with nothing happening on it.",
+    "why": "Students only notice large, moving animals and ignore small organisms or decaying matter.",
+    "fix": "The forest floor is dark and covered with dead leaves, fruits, and seeds where decomposers actively work.",
+    "probe": {
+     "question": "If you look at the ground in a deep forest, why is it usually dark and moist?",
+     "wrong_answer": "Because it is just dirt and there is no sunlight."
+    },
+    "error_type": "visible_only",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [
+     "m2"
+    ],
+    "trigger_cues": [
+     "floor",
+     "ground",
+     "dark",
+     "leaves",
+     "decaying"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n11",
+    "statement": "Decomposers turn dead leaves into nothingness so they disappear.",
+    "why": "Students see matter vanishing over time and do not understand the conservation of mass in ecosystems.",
+    "fix": "Decomposers break down dead matter into humus, which returns essential nutrients back to the soil.",
+    "probe": {
+     "question": "Where do the materials from a rotting log go after a few years?",
+     "wrong_answer": "They just disappear into the air and vanish."
+    },
+    "error_type": "process_vs_product",
+    "root_belief": "matter can disappear completely",
+    "causes": [],
+    "trigger_cues": [
+     "humus",
+     "decomposers",
+     "rotting",
+     "dead",
+     "nutrients"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m3",
+    "node": "n13",
+    "statement": "Rainfall is entirely independent of the number of trees in an area.",
+    "why": "Students believe rain only comes from the sea or large water bodies via clouds.",
+    "fix": "Trees release huge amounts of water vapor through transpiration, which contributes significantly to cloud formation and rain.",
+    "probe": {
+     "question": "Why does cutting down a large forest often lead to less rain in that area?",
+     "wrong_answer": "It doesn't; rain only depends on the wind and the ocean."
+    },
+    "error_type": "single_cause",
+    "root_belief": "one event has one single cause",
+    "causes": [],
+    "trigger_cues": [
+     "transpiration",
+     "rainfall",
+     "clouds",
+     "water vapor"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n9",
+    "statement": "Plants exist mainly to provide food for animals and humans.",
+    "why": "Students view the natural world through a human-centered lens of utility.",
+    "fix": "Plants are autotrophs that produce food for their own growth; animals simply utilize this energy.",
+    "probe": {
+     "question": "What is the primary reason a plant makes sugar in its leaves?",
+     "wrong_answer": "To make sure animals have something to eat so they don't die."
+    },
+    "error_type": "living_thing_reasoning",
+    "root_belief": "nature exists to serve human needs",
+    "causes": [],
+    "trigger_cues": [
+     "producers",
+     "food",
+     "purpose",
+     "animals"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver"
+   },
+   {
+    "key": "m5",
+    "node": "n15",
+    "statement": "Plants only perform photosynthesis and do not breathe (respire).",
+    "why": "Textbooks emphasize oxygen production so much that students think it's the only gas exchange plants do.",
+    "fix": "Like all living things, plants respire all the time, taking in oxygen and releasing carbon dioxide to get energy.",
+    "probe": {
+     "question": "Do plants use oxygen from the air at night?",
+     "wrong_answer": "No, plants only produce oxygen; they never use it."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "one organism performs only one major gas exchange",
+    "causes": [],
+    "trigger_cues": [
+     "oxygen",
+     "carbon dioxide",
+     "breathing",
+     "respiration"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver"
+   },
+   {
+    "key": "m6",
+    "node": "n5",
+    "statement": "The canopy is a solid, continuous layer like a ceiling.",
+    "why": "The word 'roof' or 'ceiling' used in textbooks is taken literally by students.",
+    "fix": "The canopy is made of individual tree crowns that overlap but have gaps through which light and rain pass.",
+    "probe": {
+     "question": "If you are standing under the canopy, can you ever see the sky?",
+     "wrong_answer": "No, because the canopy is a solid roof made of leaves."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "large scale structures are solid and uniform",
+    "causes": [],
+    "trigger_cues": [
+     "canopy",
+     "roof",
+     "ceiling",
+     "layer"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n10",
+    "statement": "Scavengers and decomposers are the exact same thing.",
+    "why": "Both deal with dead animals, leading students to ignore the difference in scale and process.",
+    "fix": "Scavengers eat dead animals, while decomposers (microorganisms) break down organic matter into nutrients.",
+    "probe": {
+     "question": "Is a vulture a decomposer?",
+     "wrong_answer": "Yes, because it eats dead things and cleans the forest."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar functions mean identical identities",
+    "causes": [],
+    "trigger_cues": [
+     "scavenger",
+     "decomposer",
+     "vulture",
+     "bacteria",
+     "fungi"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m8",
+    "node": "n14",
+    "statement": "Tree roots prevent erosion by physically grabbing every grain of soil.",
+    "why": "Students use an intuitive 'holding' analogy rather than understanding water flow mechanics.",
+    "fix": "Roots bind the soil and the canopy breaks the force of rain, preventing water from washing soil away.",
+    "probe": {
+     "question": "How do trees stop soil from flowing away during heavy rain?",
+     "wrong_answer": "The roots wrap around the dirt and hold it like a hand."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "mechanical force is the only way to hold things",
+    "causes": [],
+    "trigger_cues": [
+     "erosion",
+     "roots",
+     "soil",
+     "binding"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m9",
+    "node": "n8",
+    "statement": "In a food chain, a change in one population only affects the one directly above it.",
+    "why": "Students see food chains as linear paths rather than interconnected webs.",
+    "fix": "A change in any population affects all other organisms in the chain through a ripple effect.",
+    "probe": {
+     "question": "If all the lions in a forest die, what happens to the grass?",
+     "wrong_answer": "Nothing, because lions do not eat grass."
+    },
+    "error_type": "single_cause",
+    "root_belief": "effects only travel in one linear direction",
+    "causes": [],
+    "trigger_cues": [
+     "food chain",
+     "population",
+     "interdependence",
+     "affect"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m10",
+    "node": "n11",
+    "statement": "Humus is just another name for dark-colored sand.",
+    "why": "Students classify soil components by color and texture rather than origin.",
+    "fix": "Humus is organic matter formed from decayed plants and animals, not weathered rock like sand.",
+    "probe": {
+     "question": "What is humus made of?",
+     "wrong_answer": "It is just very fine, dark-colored rocks and sand."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a word means its everyday appearance",
+    "causes": [],
+    "trigger_cues": [
+     "humus",
+     "soil",
+     "organic",
+     "decay"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n15",
+    "statement": "Forests are called 'green lungs' because they breathe exactly like human lungs.",
+    "why": "Students take the biological metaphor literally.",
+    "fix": "They are called lungs because they exchange gases (CO2 for O2), but the mechanism is photosynthesis, not muscular breathing.",
+    "probe": {
+     "question": "In what way is a forest like a lung?",
+     "wrong_answer": "It expands and contracts to pull in air for the earth."
+    },
+    "error_type": "everyday_language",
+    "root_belief": "metaphors are literal biological descriptions",
+    "causes": [],
+    "trigger_cues": [
+     "green lungs",
+     "oxygen",
+     "atmosphere",
+     "balance"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m12",
+    "node": "n16",
+    "statement": "Forest products like wood are only available if we destroy the whole forest.",
+    "why": "Students lack the concept of sustainable harvesting or forest management.",
+    "fix": "Forests can provide products continuously if we harvest them sustainably and allow for natural regeneration.",
+    "probe": {
+     "question": "Can we get wood from a forest without destroying it forever?",
+     "wrong_answer": "No, once you take wood, the forest is gone."
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "resource use always equals total destruction",
+    "causes": [],
+    "trigger_cues": [
+     "products",
+     "timber",
+     "wood",
+     "resources"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m13",
+    "node": "n18",
+    "statement": "Animals only eat fruits and do not help the plant in any way.",
+    "why": "Students see the animal as a 'taker' and the plant as a 'giver' only.",
+    "fix": "Animals help plants by dispersing their seeds to different places through their droppings.",
+    "probe": {
+     "question": "How does a monkey eating a mango help the mango tree?",
+     "wrong_answer": "It doesn't help the tree; it just steals the fruit."
+    },
+    "error_type": "part_whole",
+    "root_belief": "interactions are one-way benefits",
+    "causes": [],
+    "trigger_cues": [
+     "seeds",
+     "dispersal",
+     "fruits",
+     "animals"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m14",
+    "node": "n20",
+    "statement": "A forest is just a collection of trees, not a complex system.",
+    "why": "Students focus on the most prominent individual objects rather than the relationships between them.",
+    "fix": "A forest is a dynamic living entity where plants, animals, and decomposers depend on each other to survive and grow.",
+    "probe": {
+     "question": "If you plant 100 trees in a parking lot, is it a forest?",
+     "wrong_answer": "Yes, because a forest is just many trees in one place."
+    },
+    "error_type": "part_whole",
+    "root_belief": "the whole is just the sum of parts",
+    "causes": [],
+    "trigger_cues": [
+     "dynamic",
+     "entity",
+     "system",
+     "collection"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m15",
+    "node": "n13",
+    "statement": "Trees 'attract' rain clouds like magnets.",
+    "why": "Students use a physical attraction model to explain the correlation between forests and rain.",
+    "fix": "Trees don't pull clouds; they add moisture to the air which cools down and forms rain clouds locally.",
+    "probe": {
+     "question": "How do trees 'bring' rain?",
+     "wrong_answer": "They have a force that pulls the clouds toward them from the sky."
+    },
+    "error_type": "intuitive_physics",
+    "root_belief": "biological entities have magical physical powers",
+    "causes": [],
+    "trigger_cues": [
+     "attract",
+     "clouds",
+     "rain",
+     "moisture"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}

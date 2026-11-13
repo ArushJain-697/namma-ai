@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0560-GEN-FOODLABELS",
+  "topic_id": "GEN-FOODLABELS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a passage rich in numbers, dates or measurements",
+  "seed": 560
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1039,
+  "candidatesTokenCount": 1292,
+  "totalTokenCount": 2331,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1039
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-FOODLABELS-K26-M21",
+  "GEN-FOODLABELS-K18-M9",
+  "GEN-FOODLABELS-K15-M4",
+  "GEN-FOODLABELS-K23-M18",
+  "GEN-FOODLABELS-K22-M16",
+  "GEN-FOODLABELS-K20-M12",
+  "GEN-FOODLABELS-K20-M13",
+  "GEN-FOODLABELS-K21-M14",
+  "GEN-FOODLABELS-K22-M15",
+  "GEN-FOODLABELS-K19-M11",
+  "GEN-FOODLABELS-K29-M25",
+  "GEN-FOODLABELS-K27-M22",
+  "GEN-FOODLABELS-K16-M6",
+  "GEN-FOODLABELS-K19-M10"
+ ],
+ "response": {
+  "passage": "When you pick up a packet of biscuits, look closely at the label to understand what you are eating. The ingredient list is ordered by weight, meaning the first item is present in the highest quantity. You might see names like 'sucrose' or 'high fructose corn syrup', which are just different ways of listing sugar. If you see a green dot inside a square, it confirms the product is vegetarian, but the absence of this mark does not automatically mean a product is non-vegetarian. Always check the 'Best Before' date, which indicates the period during which the food maintains its peak quality, whereas an 'Expiry Date' marks when the food is no longer safe to consume. A packet might contain five servings, and the nutrition table shows values for just one serving, not the entire pack. Furthermore, the FSSAI logo indicates the manufacturer has a valid licence, but it does not act as a health certificate for the product. Finally, remember that 'percent daily value' is based on a general reference diet and does not represent the exact nutritional needs of every individual. Always store your food in a cool, dry place, as the shelf life depends heavily on proper storage conditions.",
+  "summary": "Reading food labels requires checking ingredients, understanding serving sizes, and distinguishing between quality dates and safety dates. The FSSAI logo confirms licensing, while nutritional values are based on general standards rather than individual needs.",
+  "items": [
+   {
+    "evidence": "The ingredient list is ordered by weight, meaning the first item is present in the highest quantity.",
+    "answer": "ordered by weight",
+    "stem": "How are the ingredients listed on a food packet arranged?",
+    "options": [
+     {
+      "belief_id": "GEN-FOODLABELS-K15-M4",
+      "why": "Believes only the word sugar matters, ignoring ingredient order rules.",
+      "text": "by sugar content only"
+     },
+     {
+      "belief_id": "GEN-FOODLABELS-K20-M12",
+      "why": "Confuses ingredient order with percent daily value weight calculations.",
+      "text": "by percent daily value"
+     },
+     {
+      "belief_id": "GEN-FOODLABELS-K19-M10",
+      "why": "Confuses ingredient order with calorie or fat content.",
+      "text": "by calorie density"
+     }
+    ]
+   },
+   {
+    "evidence": "Always check the 'Best Before' date, which indicates the period during which the food maintains its peak quality, whereas an 'Expiry Date' marks when the food is no longer safe to consume.",
+    "answer": "no longer safe to consume",
+    "stem": "What does an expiry date specifically tell a consumer about a food product?",
+    "options": [
+     {
+      "belief_id": "GEN-FOODLABELS-K26-M21",
+      "why": "Believes both dates mean the food is unsafe after that time.",
+      "text": "unsafe after that date"
+     },
+     {
+      "belief_id": "GEN-FOODLABELS-K27-M22",
+      "why": "Believes the date is fixed regardless of how it is kept.",
+      "text": "valid regardless of storage"
+     },
+     {
+      "belief_id": "GEN-FOODLABELS-K22-M15",
+      "why": "Confuses safety dates with health quality or approval status.",
+      "text": "approved for healthy eating"
+     }
+    ]
+   },
+   {
+    "evidence": "A packet might contain five servings, and the nutrition table shows values for just one serving, not the entire pack.",
+    "answer": "just one serving",
+    "stem": "What does the nutrition table on a food packet typically display?",
+    "options": [
+     {
+      "belief_id": "GEN-FOODLABELS-K18-M9",
+      "why": "Believes the whole packet values are shown in the table.",
+      "text": "the entire pack"
+     },
+     {
+      "belief_id": "GEN-FOODLABELS-K20-M13",
+      "why": "Confuses serving size with individual daily calorie requirements.",
+      "text": "exact daily needs"
+     },
+     {
+      "belief_id": "GEN-FOODLABELS-K19-M11",
+      "why": "Confuses serving size with fat-free or calorie-free claims.",
+      "text": "zero fat content"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, the FSSAI logo indicates the manufacturer has a valid licence, but it does not act as a health certificate for the product.",
+    "answer": "has a valid licence",
+    "stem": "What is the primary purpose of the FSSAI logo on a food package?",
+    "options": [
+     {
+      "belief_id": "GEN-FOODLABELS-K22-M15",
+      "why": "Believes the logo is a guarantee of healthiness.",
+      "text": "certifies it is healthy"
+     },
+     {
+      "belief_id": "GEN-FOODLABELS-K22-M16",
+      "why": "Believes the logo implies a universal standard number.",
+      "text": "shows a universal number"
+     },
+     {
+      "belief_id": "GEN-FOODLABELS-K29-M25",
+      "why": "Confuses the logo with natural or whole grain claims.",
+      "text": "confirms it is natural"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.8
+}

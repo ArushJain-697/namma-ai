@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0215-MAT-CIRCLEAREAS",
+  "topic_id": "MAT-CIRCLEAREAS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a rule explained with two contrasting examples",
+  "seed": 215
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1036,
+  "candidatesTokenCount": 1350,
+  "totalTokenCount": 2386,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1036
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-CIRCLEAREAS-K18-M16",
+  "MAT-CIRCLEAREAS-K14-M8",
+  "MAT-CIRCLEAREAS-K6-M18",
+  "MAT-CIRCLEAREAS-K22-M23",
+  "MAT-CIRCLEAREAS-K13-M7",
+  "MAT-CIRCLEAREAS-K24-M25",
+  "MAT-CIRCLEAREAS-K15-M10",
+  "MAT-CIRCLEAREAS-K17-M13",
+  "MAT-CIRCLEAREAS-K13-M6",
+  "MAT-CIRCLEAREAS-K21-M22",
+  "MAT-CIRCLEAREAS-K20-M19",
+  "MAT-CIRCLEAREAS-K20-M21",
+  "MAT-CIRCLEAREAS-K20-M20",
+  "MAT-CIRCLEAREAS-K11-M2"
+ ],
+ "response": {
+  "passage": "Understanding the geometry of circles requires distinguishing between linear measures and spatial regions. The circumference of a circle, which is the boundary length, is calculated using the formula 2πr, whereas the area, representing the space enclosed, is calculated as πr². For instance, a circle with a radius of 7 cm has a circumference of 44 cm, but its area is 154 cm². It is vital to note that area is always expressed in square units, such as cm², because it measures two-dimensional coverage. Furthermore, the relationship between dimensions is non-linear; if you double the radius of a circle from 7 cm to 14 cm, the area does not simply double. Instead, the area increases by a factor of four, growing from 154 cm² to 616 cm². Another common error involves confusing sectors and segments. A sector is a pie-shaped slice formed by two radii and an arc, while a segment is the region bounded by a chord and an arc. To find the area of a minor segment, one must subtract the area of the triangle formed by the radii and the chord from the area of the corresponding sector. Adding these areas together would be incorrect, as the segment is only a portion of the sector.",
+  "summary": "This passage explains the fundamental formulas for circle measurements and highlights the difference between linear and area units. It also clarifies the non-linear relationship between radius and area, and distinguishes between sectors and segments.",
+  "items": [
+   {
+    "evidence": "The circumference of a circle, which is the boundary length, is calculated using the formula 2πr, whereas the area, representing the space enclosed, is calculated as πr².",
+    "answer": "2πr",
+    "stem": "Which formula represents the total length of the boundary of a circle?",
+    "options": [
+     {
+      "belief_id": "MAT-CIRCLEAREAS-K11-M2",
+      "why": "Confuses the formula for circumference with the formula for area.",
+      "text": "πr²"
+     },
+     {
+      "belief_id": "MAT-CIRCLEAREAS-K15-M10",
+      "why": "Assumes area and circumference share the same unit type.",
+      "text": "πr² cm"
+     },
+     {
+      "belief_id": "MAT-CIRCLEAREAS-K13-M7",
+      "why": "Incorrectly applies a fixed fraction to all radius values.",
+      "text": "22/7 × r"
+     }
+    ]
+   },
+   {
+    "evidence": "If you double the radius of a circle from 7 cm to 14 cm, the area does not simply double.",
+    "answer": "does not simply double",
+    "stem": "What happens to the total enclosed space when the radius of a circle is increased by a factor of two?",
+    "options": [
+     {
+      "belief_id": "MAT-CIRCLEAREAS-K14-M8",
+      "why": "Assumes a linear relationship between radius and area.",
+      "text": "it becomes 2 times larger"
+     },
+     {
+      "belief_id": "MAT-CIRCLEAREAS-K18-M16",
+      "why": "Confuses area growth with arc length calculation.",
+      "text": "it increases by 360 cm²"
+     },
+     {
+      "belief_id": "MAT-CIRCLEAREAS-K13-M6",
+      "why": "Uses the constant 22/7 as a substitute for the growth factor.",
+      "text": "it increases by 22 cm²"
+     }
+    ]
+   },
+   {
+    "evidence": "A sector is a pie-shaped slice formed by two radii and an arc, while a segment is the region bounded by a chord and an arc.",
+    "answer": "region bounded by a chord and an arc",
+    "stem": "How is a segment of a circle defined in relation to its boundary?",
+    "options": [
+     {
+      "belief_id": "MAT-CIRCLEAREAS-K20-M20",
+      "why": "Fails to distinguish between a sector and a segment.",
+      "text": "a pie-shaped slice formed by two radii"
+     },
+     {
+      "belief_id": "MAT-CIRCLEAREAS-K21-M22",
+      "why": "Assumes the segment area is defined by the chord length.",
+      "text": "a region of 20 cm²"
+     },
+     {
+      "belief_id": "MAT-CIRCLEAREAS-K6-M18",
+      "why": "Incorrectly links the shape definition to the angle size.",
+      "text": "the 90° slice"
+     }
+    ]
+   },
+   {
+    "evidence": "Adding these areas together would be incorrect, as the segment is only a portion of the sector.",
+    "answer": "Adding these areas together",
+    "stem": "Which calculation method is incorrect when determining the area of a segment?",
+    "options": [
+     {
+      "belief_id": "MAT-CIRCLEAREAS-K22-M23",
+      "why": "Believes the total area is the sum of parts.",
+      "text": "summing the sector and triangle areas"
+     },
+     {
+      "belief_id": "MAT-CIRCLEAREAS-K20-M19",
+      "why": "Confuses the subtraction rule with an addition rule.",
+      "text": "the sector area plus triangle area"
+     },
+     {
+      "belief_id": "MAT-CIRCLEAREAS-K20-M21",
+      "why": "Assumes a fixed formula for the triangle part.",
+      "text": "using ½ × r × r"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 6.6
+}

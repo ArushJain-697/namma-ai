@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0035-MAT-COORDGEOM",
+  "topic_id": "MAT-COORDGEOM",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a rule explained with two contrasting examples",
+  "seed": 35
+ },
+ "model": "gemini-3.1-flash-lite/key3",
+ "usage": {
+  "promptTokenCount": 902,
+  "candidatesTokenCount": 1374,
+  "totalTokenCount": 2276,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 902
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-COORDGEOM-K13-M3",
+  "MAT-COORDGEOM-K19-M7",
+  "MAT-COORDGEOM-K17-M6",
+  "MAT-COORDGEOM-K20-M10",
+  "MAT-COORDGEOM-K6-M5",
+  "MAT-COORDGEOM-K14-M4",
+  "MAT-COORDGEOM-K16-M9",
+  "MAT-COORDGEOM-K15-M8",
+  "MAT-COORDGEOM-K21-M11"
+ ],
+ "response": {
+  "passage": "In the Cartesian plane, we locate points using an ordered pair (x, y), where the first number x represents the horizontal distance from the y-axis, and the second number y represents the vertical distance from the x-axis. For example, the point (2, 5) is distinct from (5, 2) because the order of coordinates defines the specific position. The origin, where the two axes intersect, is always denoted as (0, 0). Points lying exactly on the x-axis have a y-coordinate of 0, such as (3, 0), while points on the y-axis have an x-coordinate of 0, such as (0, 4). To calculate the distance between two points (x1, y1) and (x2, y2), we must use the formula involving the square root of the sum of squared differences: the square root of (x2 - x1)² + (y2 - y1)². This squaring process ensures the distance is always positive, regardless of the order of subtraction. For instance, the distance between (1, 2) and (4, 6) is 5 units. Conversely, if a student incorrectly calculates distance by simply adding differences like (x2 - x1) + (y2 - y1), they will arrive at an incorrect value. Always remember that the x and y axes must share a consistent scale to represent geometric shapes accurately.",
+  "summary": "The Cartesian plane uses ordered pairs to define positions relative to the origin and axes. Distance is calculated using a specific formula involving squares to ensure positive results. Consistent scaling is essential for accurate geometric representation.",
+  "items": [
+   {
+    "evidence": "For example, the point (2, 5) is distinct from (5, 2) because the order of coordinates defines the specific position.",
+    "answer": "distinct",
+    "stem": "How are the points (2, 5) and (5, 2) related in the Cartesian plane?",
+    "options": [
+     {
+      "belief_id": "MAT-COORDGEOM-K15-M8",
+      "why": "Student ignores coordinate order and focuses only on the numbers.",
+      "text": "the same point"
+     },
+     {
+      "belief_id": "MAT-COORDGEOM-K14-M4",
+      "why": "Student confuses the order of horizontal and vertical distances.",
+      "text": "4 units up and 1 unit right"
+     },
+     {
+      "belief_id": "MAT-COORDGEOM-K6-M5",
+      "why": "Student assumes coordinates start counting from 1.",
+      "text": "both are (1, 1)"
+     }
+    ]
+   },
+   {
+    "evidence": "Points lying exactly on the x-axis have a y-coordinate of 0, such as (3, 0), while points on the y-axis have an x-coordinate of 0, such as (0, 4).",
+    "answer": "y-coordinate of 0",
+    "stem": "What is true about the coordinates of any point located on the x-axis?",
+    "options": [
+     {
+      "belief_id": "MAT-COORDGEOM-K17-M6",
+      "why": "Student thinks x must be 0 if it is on the x-axis.",
+      "text": "x-coordinate of 0"
+     },
+     {
+      "belief_id": "MAT-COORDGEOM-K19-M7",
+      "why": "Student thinks positive numbers must be in the first quadrant.",
+      "text": "it is in the first quadrant"
+     },
+     {
+      "belief_id": "MAT-COORDGEOM-K13-M3",
+      "why": "Student assumes negative coordinates always mean third quadrant.",
+      "text": "it is in the third quadrant"
+     }
+    ]
+   },
+   {
+    "evidence": "This squaring process ensures the distance is always positive, regardless of the order of subtraction.",
+    "answer": "always positive",
+    "stem": "What is the result of the squaring process in the distance formula?",
+    "options": [
+     {
+      "belief_id": "MAT-COORDGEOM-K21-M11",
+      "why": "Student believes the result can be negative if subtraction order changes.",
+      "text": "can be negative"
+     },
+     {
+      "belief_id": "MAT-COORDGEOM-K20-M10",
+      "why": "Student ignores squaring and just adds the differences.",
+      "text": "the sum of differences"
+     },
+     {
+      "belief_id": "MAT-COORDGEOM-K16-M9",
+      "why": "Student thinks scale changes affect the distance result.",
+      "text": "dependent on the scale"
+     }
+    ]
+   },
+   {
+    "evidence": "Always remember that the x and y axes must share a consistent scale to represent geometric shapes accurately.",
+    "answer": "share a consistent scale",
+    "stem": "What is required for the x and y axes when representing geometric shapes?",
+    "options": [
+     {
+      "belief_id": "MAT-COORDGEOM-K16-M9",
+      "why": "Student believes axes can have different, inconsistent scales.",
+      "text": "can have any spacing"
+     },
+     {
+      "belief_id": "MAT-COORDGEOM-K6-M5",
+      "why": "Student believes the origin is (1, 1) instead of (0, 0).",
+      "text": "must start at (1, 1)"
+     },
+     {
+      "belief_id": "MAT-COORDGEOM-K20-M10",
+      "why": "Student focuses on simple addition instead of geometric accuracy.",
+      "text": "must use simple addition"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 36.6
+}

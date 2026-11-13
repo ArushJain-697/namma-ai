@@ -1,0 +1,479 @@
+{
+ "topic": {
+  "id": "SOC-GEO-OCEANS",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   7
+  ],
+  "title": "Water and oceans",
+  "scope": "distribution of water, water cycle, waves, tides, ocean currents"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 823,
+  "candidatesTokenCount": 1577,
+  "totalTokenCount": 2400,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 823
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 5.2,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Distribution of Water",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "states of matter"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Water Cycle",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "evaporation and condensation"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Ocean Movements",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "gravity"
+    ],
+    "external_prereqs": [
+     "basic forces"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Freshwater vs Saline",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "solubility"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Ocean Reservoirs",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "map reading"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Evaporation and Precipitation",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "solar energy"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Waves",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "energy transfer"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Tides",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "moon phases",
+     "gravity"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Ocean Currents",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "temperature differences"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Salinity of Oceans",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "dissolved solids"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Glaciers and Ice Caps",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": [
+     "freezing point"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Water Cycle Continuity",
+    "level": 3,
+    "parent": "n2",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": [
+     "conservation of mass"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "Wind as Wave Driver",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [],
+    "external_prereqs": [
+     "friction"
+    ]
+   },
+   {
+    "key": "n14",
+    "name": "Moon's Gravitational Pull",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": [
+     "gravity"
+    ]
+   },
+   {
+    "key": "n15",
+    "name": "Warm and Cold Currents",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": [
+     "density"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n10",
+    "statement": "Ocean water is salty because it contains dissolved sea creatures.",
+    "why": "Students confuse biological matter with chemical salts.",
+    "fix": "Ocean water is salty due to dissolved minerals like sodium chloride washed from rocks and soil by rivers.",
+    "probe": {
+     "question": "Why is the ocean salty?",
+     "wrong_answer": "Because of all the fish and seaweed decaying in it."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Biological processes explain all natural characteristics.",
+    "causes": [],
+    "trigger_cues": [
+     "salinity",
+     "dissolved",
+     "minerals",
+     "sodium",
+     "chloride"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n14",
+    "statement": "Tides are caused by the sun pushing the water.",
+    "why": "Students overemphasize the sun's size and visibility.",
+    "fix": "Tides are primarily caused by the gravitational pull of the moon on Earth's water.",
+    "probe": {
+     "question": "What is the main cause of tides?",
+     "wrong_answer": "The sun's heat pushing the water away."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Bigger things always have more influence.",
+    "causes": [],
+    "trigger_cues": [
+     "gravity",
+     "moon",
+     "pull",
+     "high tide",
+     "low tide"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on gravity"
+   },
+   {
+    "key": "m3",
+    "node": "n7",
+    "statement": "Waves move water from the middle of the ocean to the shore.",
+    "why": "Students observe water hitting the beach and assume the same water traveled the whole distance.",
+    "fix": "Waves transfer energy through water, but the water particles themselves move in a circular motion and stay in roughly the same place.",
+    "probe": {
+     "question": "Does a water molecule in the middle of the ocean reach the beach during a wave?",
+     "wrong_answer": "Yes, it travels with the wave to the shore."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Movement of energy is the movement of matter.",
+    "causes": [],
+    "trigger_cues": [
+     "waves",
+     "energy",
+     "motion",
+     "shore",
+     "surface"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "Rosalind Driver's children's ideas"
+   },
+   {
+    "key": "m4",
+    "node": "n12",
+    "statement": "Rain is water that comes from the clouds creating it.",
+    "why": "Students do not realize the water is recycled from the Earth's surface.",
+    "fix": "Rain is part of the water cycle; it is water that evaporated from oceans and land, condensed into clouds, and then fell back down.",
+    "probe": {
+     "question": "Where does the water in rain come from?",
+     "wrong_answer": "Clouds create new water."
+    },
+    "error_type": "other",
+    "root_belief": "What you cannot see does not exist.",
+    "causes": [],
+    "trigger_cues": [
+     "evaporation",
+     "condensation",
+     "cycle",
+     "precipitation",
+     "clouds"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "AAAS Project 2061"
+   },
+   {
+    "key": "m5",
+    "node": "n4",
+    "statement": "All the water in oceans, rivers, lakes and glaciers is equally salty.",
+    "why": "Students hear 'sea water is salty' and extend it to every water body, ignoring that rivers, lakes and glaciers hold fresh water.",
+    "fix": "Only about 2.5% of Earth's water is fresh (rivers, lakes, glaciers, groundwater). Ocean water is saline, so water bodies differ in salt content.",
+    "probe": {
+     "question": "Which of these has water that is not salty: Pacific Ocean, a glacier or the Dead Sea?",
+     "wrong_answer": "All three are equally salty."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "All water bodies share the sea's salty nature",
+    "causes": [],
+    "trigger_cues": [
+     "salty",
+     "river",
+     "lake",
+     "glacier",
+     "fresh water",
+     "all water"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom questioning"
+   },
+   {
+    "key": "m6",
+    "node": "n5",
+    "statement": "Most of the Earth's water is found in rivers and lakes.",
+    "why": "Students see rivers and lakes daily and assume these hold the bulk of water, underestimating the oceans.",
+    "fix": "About 97% of Earth's water is in the oceans. Rivers and lakes together hold a tiny fraction of the total.",
+    "probe": {
+     "question": "Where is most of the Earth's water stored?",
+     "wrong_answer": "In rivers and lakes."
+    },
+    "error_type": "numerical_misreading",
+    "root_belief": "Familiar visible water bodies hold most water",
+    "causes": [],
+    "trigger_cues": [
+     "most water",
+     "stored",
+     "reservoir",
+     "rivers",
+     "lakes",
+     "ocean share",
+     "percentage"
+    ],
+    "confidence": "plausible",
+    "source_hint": "textbook diagram reading"
+   },
+   {
+    "key": "m7",
+    "node": "n6",
+    "statement": "Evaporation happens only when water boils or when it is very hot.",
+    "why": "Students link evaporation with visible steam from boiling, so they miss slow evaporation from puddles, oceans and wet clothes.",
+    "fix": "Evaporation is the slow change of liquid water into vapour at any temperature from the surface, faster when warm, dry and windy. Boiling is different.",
+    "probe": {
+     "question": "Does water from a puddle evaporate on a cool day?",
+     "wrong_answer": "No, water evaporates only when it boils or is very hot."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Evaporation requires boiling-level heat",
+    "causes": [],
+    "trigger_cues": [
+     "evaporation",
+     "boiling",
+     "puddle",
+     "steam",
+     "hot",
+     "cool day",
+     "vapour"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on children's ideas about evaporation"
+   },
+   {
+    "key": "m8",
+    "node": "n7",
+    "statement": "Strong waves are caused by earthquakes and not by wind.",
+    "why": "Students conflate ordinary waves with tsunamis, which they know from news, and assume all big waves have seismic origin.",
+    "fix": "Most ocean waves are made by wind blowing over the surface. Tsunamis are special huge waves caused by earthquakes or volcanic eruptions under the sea.",
+    "probe": {
+     "question": "What causes the large waves we see crashing on a beach during a storm?",
+     "wrong_answer": "Earthquakes under the sea."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Big waves always come from earthquakes",
+    "causes": [],
+    "trigger_cues": [
+     "big waves",
+     "storm",
+     "tsunami",
+     "earthquake",
+     "beach",
+     "crashing"
+    ],
+    "confidence": "plausible",
+    "source_hint": "news-media influence"
+   },
+   {
+    "key": "m9",
+    "node": "n9",
+    "statement": "Ocean currents are just rivers of fresh water flowing inside the sea.",
+    "why": "The word 'river-like' flow and the term 'current' lead students to imagine a separate freshwater stream within the ocean.",
+    "fix": "Ocean currents are large streams of ocean water, salty like the rest, flowing in a definite direction, warm or cold, over long distances.",
+    "probe": {
+     "question": "What is an ocean current made of?",
+     "wrong_answer": "Fresh water flowing like a river inside the sea."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Currents are different water from the ocean",
+    "causes": [],
+    "trigger_cues": [
+     "ocean current",
+     "river in sea",
+     "fresh water",
+     "stream",
+     "flow",
+     "made of"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom discussion"
+   },
+   {
+    "key": "m10",
+    "node": "n10",
+    "statement": "Salinity is the same everywhere in all the oceans and seas.",
+    "why": "Students learn that sea water is salty and assume a fixed saltiness, not noticing the effects of evaporation, rainfall and river inflow.",
+    "fix": "Salinity varies by place: it is higher where evaporation is high and fresh water inflow is low (Dead Sea, Red Sea) and lower near river mouths and polar melt areas.",
+    "probe": {
+     "question": "Would sea water near a big river mouth be as salty as in a hot dry sea like the Red Sea?",
+     "wrong_answer": "Yes, salinity is exactly the same everywhere."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Natural properties are uniform across places",
+    "causes": [],
+    "trigger_cues": [
+     "salinity",
+     "same everywhere",
+     "Dead Sea",
+     "Red Sea",
+     "river mouth",
+     "grams per litre"
+    ],
+    "confidence": "plausible",
+    "source_hint": "NCERT-based classroom error analysis"
+   },
+   {
+    "key": "m11",
+    "node": "n12",
+    "statement": "Water used up by people and plants is gone from the Earth forever.",
+    "why": "Students see water disappear when drunk, boiled or absorbed and think it is destroyed, missing that the cycle returns it.",
+    "fix": "Water is never lost; it keeps circulating through evaporation, transpiration, condensation and precipitation, so the total amount stays the same.",
+    "probe": {
+     "question": "After clothes dry in the sun, where has the water gone?",
+     "wrong_answer": "It has vanished and is no longer anywhere."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "Disappearing water is destroyed, not recycled",
+    "causes": [],
+    "trigger_cues": [
+     "water disappears",
+     "dry clothes",
+     "used up",
+     "gone forever",
+     "vanish",
+     "recycle"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on conservation in the water cycle"
+   },
+   {
+    "key": "m12",
+    "node": "n15",
+    "statement": "Warm ocean currents flow only near the poles and cold currents only near the equator.",
+    "why": "Students reverse the pattern or assume currents carry the temperature of the place they end up in, not where they begin.",
+    "fix": "Warm currents generally flow from the equator towards the poles, and cold currents flow from polar regions towards the equator, affecting the temperature of coasts they pass.",
+    "probe": {
+     "question": "Where do warm ocean currents originate and flow towards?",
+     "wrong_answer": "They start near the poles and flow towards the equator."
+    },
+    "error_type": "confuses_people_or_places",
+    "root_belief": "Current temperature matches the destination region",
+    "causes": [],
+    "trigger_cues": [
+     "warm current",
+     "cold current",
+     "poles",
+     "equator",
+     "direction",
+     "origin"
+    ],
+    "confidence": "plausible",
+    "source_hint": "geography teacher observation"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

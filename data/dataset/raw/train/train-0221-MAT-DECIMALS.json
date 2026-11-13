@@ -1,0 +1,133 @@
+{
+ "job": {
+  "job": "train-0221-MAT-DECIMALS",
+  "topic_id": "MAT-DECIMALS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a conversation between a teacher and two students",
+  "seed": 221
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 1016,
+  "candidatesTokenCount": 1312,
+  "totalTokenCount": 2328,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1016
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-DECIMALS-K6-M6",
+  "MAT-DECIMALS-K4-M1",
+  "MAT-DECIMALS-K11-M11",
+  "MAT-DECIMALS-K7-M12",
+  "MAT-DECIMALS-K7-M3",
+  "MAT-DECIMALS-K8-M10",
+  "MAT-DECIMALS-K9-M9",
+  "MAT-DECIMALS-K6-M5",
+  "MAT-DECIMALS-K9-M8",
+  "MAT-DECIMALS-K6-M2",
+  "MAT-DECIMALS-K10-M7",
+  "MAT-DECIMALS-K8-M4"
+ ],
+ "response": {
+  "passage": "Teacher: Today, let us look at decimals. Rahul, if you add 5 and 0.3, what do you get? Rahul: I think it is 0.8 because I just line up the digits. Teacher: Not quite. Remember, 5 is the same as 5.0. When adding, you must align the decimal points, not the last digits. Priya, how about comparing 0.8 and 0.83? Priya: I think 0.8 is larger because it has fewer digits. Teacher: That is a common mistake. Think of them as fractions: 0.8 is 80/100 and 0.83 is 83/100. Since 83 is more than 80, 0.83 is actually greater. Rahul: What about 0.4 and 0.40? Are they different? Teacher: No, they are equal. Adding a zero at the end does not change the value. Finally, remember that the first place after the decimal is the tenths place, which is larger than the hundredths place. If you have 0.5, that is five tenths, while 0.05 is five hundredths. Priya: So, 0.5 is definitely larger than 0.05? Teacher: Exactly. Always look at the place value of the digits rather than just counting how many digits are written. By lining up the decimal points and comparing place values, you will never be confused again.",
+  "summary": "This passage explains how to correctly add decimals by aligning decimal points and how to compare decimal values by looking at place value. It clarifies that adding zeros to the end of a decimal does not change its value.",
+  "items": [
+   {
+    "evidence": "When adding, you must align the decimal points, not the last digits.",
+    "answer": "align the decimal points",
+    "stem": "What is the correct method to follow when adding two decimal numbers?",
+    "options": [
+     {
+      "belief_id": "MAT-DECIMALS-K7-M3",
+      "why": "Student believes in aligning by the last digit instead.",
+      "text": "align the last digits"
+     },
+     {
+      "belief_id": "MAT-DECIMALS-K11-M11",
+      "why": "Student ignores the decimal point when adding whole numbers.",
+      "text": "line up the digits"
+     },
+     {
+      "belief_id": "MAT-DECIMALS-K7-M12",
+      "why": "Student assumes subtraction logic applies to addition.",
+      "text": "subtract smaller from larger"
+     }
+    ]
+   },
+   {
+    "evidence": "Since 83 is more than 80, 0.83 is actually greater.",
+    "answer": "0.83 is actually greater",
+    "stem": "Between 0.8 and 0.83, which number represents a larger value?",
+    "options": [
+     {
+      "belief_id": "MAT-DECIMALS-K6-M6",
+      "why": "Student thinks fewer digits means a larger number.",
+      "text": "0.8 is larger"
+     },
+     {
+      "belief_id": "MAT-DECIMALS-K6-M2",
+      "why": "Student thinks more digits always means a larger number.",
+      "text": "0.15 is larger"
+     },
+     {
+      "belief_id": "MAT-DECIMALS-K4-M1",
+      "why": "Student treats the decimal as two separate whole numbers.",
+      "text": "Two and five"
+     }
+    ]
+   },
+   {
+    "evidence": "Adding a zero at the end does not change the value.",
+    "answer": "does not change the value",
+    "stem": "How does appending a zero to the end of 0.4 affect its numerical value?",
+    "options": [
+     {
+      "belief_id": "MAT-DECIMALS-K10-M7",
+      "why": "Student believes adding a zero makes the number larger.",
+      "text": "0.40 is greater"
+     },
+     {
+      "belief_id": "MAT-DECIMALS-K9-M9",
+      "why": "Student confuses decimal digits with fraction denominators.",
+      "text": "it becomes 1/40"
+     },
+     {
+      "belief_id": "MAT-DECIMALS-K9-M8",
+      "why": "Student incorrectly converts decimals to fractions.",
+      "text": "it becomes 4/100"
+     }
+    ]
+   },
+   {
+    "evidence": "If you have 0.5, that is five tenths, while 0.05 is five hundredths.",
+    "answer": "0.5 is larger",
+    "stem": "Which of these two numbers is greater in value?",
+    "options": [
+     {
+      "belief_id": "MAT-DECIMALS-K6-M5",
+      "why": "Student thinks extra zeros make a number bigger.",
+      "text": "0.05 is larger"
+     },
+     {
+      "belief_id": "MAT-DECIMALS-K8-M4",
+      "why": "Student thinks the tenths place is the smallest.",
+      "text": "0.1 is larger"
+     },
+     {
+      "belief_id": "MAT-DECIMALS-K8-M10",
+      "why": "Student confuses place value names with values.",
+      "text": "7 tenths"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 8.9
+}

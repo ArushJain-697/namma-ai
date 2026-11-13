@@ -1,0 +1,450 @@
+{
+ "topic": {
+  "id": "SOC-GEO-RESOURCES",
+  "subject": "social",
+  "strand": "geography",
+  "grades": [
+   8,
+   10
+  ],
+  "title": "Resources and land use",
+  "scope": "types of resources, sustainable development, land use, land degradation, conservation"
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 831,
+  "candidatesTokenCount": 1399,
+  "totalTokenCount": 2230,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 831
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "seconds": 5.4,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Classification of Resources",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "definition of utility"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Land Use and Degradation",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "basic geography map reading"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Sustainable Development",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "environmental awareness"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Resource Origin",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "biological vs non-biological"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Resource Renewability",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "geological time scales"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Land Use Patterns",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "economic activities"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Land Degradation Factors",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": [
+     "soil erosion"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Biotic vs Abiotic",
+    "level": 3,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n9",
+    "name": "Renewable vs Non-renewable",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Human-made Resources",
+    "level": 3,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n11",
+    "name": "Net Sown Area",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Conservation Methods",
+    "level": 3,
+    "parent": "n3",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n8",
+    "statement": "Anything that moves or is alive is a resource, but rocks are not.",
+    "why": "Students associate 'resource' with living things they see in daily life.",
+    "fix": "Resources are defined by their utility and value to humans, regardless of whether they are living or non-living.",
+    "probe": {
+     "question": "Is a mountain a resource?",
+     "wrong_answer": "No, because it is not alive."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "what you cannot see or move is not useful",
+    "causes": [],
+    "trigger_cues": [
+     "biotic",
+     "abiotic",
+     "living",
+     "non-living",
+     "utility"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n9",
+    "statement": "Renewable resources will never run out no matter how much we use them.",
+    "why": "Students confuse 'renewable' with 'infinite'.",
+    "fix": "Renewable resources can be depleted if their rate of consumption exceeds their natural rate of replenishment.",
+    "probe": {
+     "question": "Can groundwater run out?",
+     "wrong_answer": "No, it is renewable and always replenishes."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "a label implies an absolute property",
+    "causes": [],
+    "trigger_cues": [
+     "renewable",
+     "replenishment",
+     "depletion",
+     "sustainable",
+     "stock"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "HBCSE research on resource concepts"
+   },
+   {
+    "key": "m3",
+    "node": "n7",
+    "statement": "Land degradation is caused only by natural disasters like floods.",
+    "why": "Students focus on dramatic events rather than cumulative human activities.",
+    "fix": "Human activities like overgrazing, deforestation, and excessive chemical use are the primary drivers of land degradation.",
+    "probe": {
+     "question": "What is the main cause of land degradation in India?",
+     "wrong_answer": "Natural disasters like floods and earthquakes."
+    },
+    "error_type": "single_cause_explanation",
+    "root_belief": "one event has one single cause",
+    "causes": [],
+    "trigger_cues": [
+     "degradation",
+     "overgrazing",
+     "deforestation",
+     "human activity",
+     "erosion"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n10",
+    "statement": "Human-made resources are not 'real' resources compared to natural ones.",
+    "why": "Students believe nature is the only source of value.",
+    "fix": "Human-made resources are created by using technology and knowledge to transform natural materials into useful products.",
+    "probe": {
+     "question": "Is a bridge a resource?",
+     "wrong_answer": "No, it is man-made, not a natural resource."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "natural is inherently better than artificial",
+    "causes": [],
+    "trigger_cues": [
+     "human-made",
+     "technology",
+     "natural",
+     "transformation",
+     "value"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "id": "m5",
+    "key": "m5",
+    "node": "n4",
+    "statement": "Resources are classified by origin only as natural or man-made, so anything found in nature is a natural resource only if it is used.",
+    "why": "Students merge the origin classification with the idea of utility and think only used items count as resources.",
+    "fix": "By origin, resources are biotic or abiotic. Origin tells where a resource comes from, not whether it is being used. NCERT also separates resources by development stage as potential, developed, stock and reserves.",
+    "probe": {
+     "question": "Rich mineral deposits lie under a remote forest and nobody has mined them yet. Are they a resource?",
+     "wrong_answer": "No, they are not a resource until people actually use them."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Only resources in use count as resources",
+    "causes": [],
+    "trigger_cues": [
+     "origin",
+     "used",
+     "potential",
+     "unused",
+     "natural",
+     "resource",
+     "deposit"
+    ],
+    "confidence": "plausible",
+    "source_hint": "classroom questioning"
+   },
+   {
+    "id": "m6",
+    "key": "m6",
+    "node": "n5",
+    "statement": "Resources that take a long time to form, like forests, are non-renewable.",
+    "why": "Students equate slow replenishment with non-renewability and ignore that forests regrow within human timescales.",
+    "fix": "Renewable resources can be replenished by physical, chemical or mechanical processes, such as forests, water and wind. Non-renewable resources like coal and petroleum take millions of years to form, so they cannot be replaced within a human lifetime.",
+    "probe": {
+     "question": "Are forests renewable or non-renewable, and why?",
+     "wrong_answer": "Non-renewable, because a forest takes many years to grow back."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Slow replacement means a resource is non-renewable",
+    "causes": [],
+    "trigger_cues": [
+     "forest",
+     "renewable",
+     "slow",
+     "takes years",
+     "grow back",
+     "replenish"
+    ],
+    "confidence": "plausible",
+    "source_hint": "textbook-based classroom errors"
+   },
+   {
+    "id": "m7",
+    "key": "m7",
+    "node": "n6",
+    "statement": "Net sown area is all the land in a village that is under crops and farming.",
+    "why": "Students treat net sown area as total agricultural land and miss that it excludes fallow land and land sown more than once.",
+    "fix": "Net sown area is the area sown with crops counted only once. Land sown more than once is counted again in the gross cropped area. Fallow land is not part of net sown area.",
+    "probe": {
+     "question": "A farmer sows 2 hectares of land twice in a year. What is the net sown area?",
+     "wrong_answer": "4 hectares, because the land was sown two times."
+    },
+    "error_type": "numerical_misreading",
+    "root_belief": "Counting repeats gives the true area",
+    "causes": [],
+    "trigger_cues": [
+     "net sown area",
+     "sown twice",
+     "cropped",
+     "hectares",
+     "gross",
+     "fallow"
+    ],
+    "confidence": "plausible",
+    "source_hint": "Class 10 exam answer analysis"
+   },
+   {
+    "id": "m8",
+    "key": "m8",
+    "node": "n7",
+    "statement": "Mining and overgrazing affect only the place where they happen and do not degrade land elsewhere.",
+    "why": "Students see degradation as local damage and miss the spread of effects through wind, water and waste.",
+    "fix": "Mining leaves deep pits and waste that pollute water and soil nearby. Overgrazing strips vegetation and causes erosion, which carries soil and silt to other areas.",
+    "probe": {
+     "question": "Can mining in one district damage farmland in a nearby district?",
+     "wrong_answer": "No, mining only harms the mine site itself."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Environmental damage stays where it starts",
+    "causes": [],
+    "trigger_cues": [
+     "mining",
+     "overgrazing",
+     "nearby",
+     "spread",
+     "erosion",
+     "pollution",
+     "farmland"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "id": "m9",
+    "key": "m9",
+    "node": "n8",
+    "statement": "Biotic resources are only plants and animals, so wood and leather are abiotic once they are made into products.",
+    "why": "Students think that processing changes the origin category of a resource.",
+    "fix": "Biotic resources come from living things, including forests, animals, fisheries and also materials like wood, leather and fossil fuels such as coal, which formed from dead organisms. Processing changes the form of a resource, not its origin.",
+    "probe": {
+     "question": "Is coal a biotic or an abiotic resource?",
+     "wrong_answer": "Abiotic, because it is a hard black rock and not alive."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Only living things count as biotic",
+    "causes": [],
+    "trigger_cues": [
+     "biotic",
+     "coal",
+     "leather",
+     "wood",
+     "living",
+     "abiotic",
+     "fossil"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of student ideas about living and non-living"
+   },
+   {
+    "id": "m10",
+    "key": "m10",
+    "node": "n9",
+    "statement": "Water and soil are non-renewable because once they are used up or polluted they cannot come back.",
+    "why": "Students confuse renewability with the effect of misuse and pollution.",
+    "fix": "Water and soil are renewable. Water is replenished through the water cycle, and soil forms naturally. If they are polluted or eroded faster than they renew, they become scarce.",
+    "probe": {
+     "question": "Is groundwater a renewable resource?",
+     "wrong_answer": "No, it is non-renewable because it gets used up and polluted."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Misuse turns renewable resources non-renewable",
+    "causes": [],
+    "trigger_cues": [
+     "groundwater",
+     "soil",
+     "renewable",
+     "polluted",
+     "used up",
+     "water cycle"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "id": "m11",
+    "key": "m11",
+    "node": "n11",
+    "statement": "Net sown area is highest in hilly and desert regions because farmers there use every bit of land.",
+    "why": "Students think that scarce good land leads to more intensive use and ignore physical limits on farming.",
+    "fix": "Net sown area is high on plains and in fertile river valleys such as Punjab, Haryana and Uttar Pradesh. It is low in hills, deserts and forests, where relief, climate and soil limit farming.",
+    "probe": {
+     "question": "Which has a higher share of net sown area: the Ganga plains or the Thar desert?",
+     "wrong_answer": "The Thar desert, because people there cultivate every bit of available land."
+    },
+    "error_type": "overgeneralisation",
+    "root_belief": "Scarcity of land forces full cultivation",
+    "causes": [],
+    "trigger_cues": [
+     "net sown area",
+     "plains",
+     "desert",
+     "hills",
+     "highest",
+     "fertile",
+     "state"
+    ],
+    "confidence": "plausible",
+    "source_hint": "geography exam answer analysis"
+   },
+   {
+    "id": "m12",
+    "key": "m12",
+    "node": "n12",
+    "statement": "Conservation means not using a resource at all, so that it is left untouched.",
+    "why": "Students equate conservation with preservation and think any use is harmful.",
+    "fix": "Conservation means using resources wisely so they last, through methods like afforestation, contour ploughing, terrace farming, shelter belts and the 3Rs: reduce, reuse and recycle. It meets present needs while leaving enough for the future.",
+    "probe": {
+     "question": "Does conserving forests mean no tree can ever be cut?",
+     "wrong_answer": "Yes, conservation means leaving the forest completely untouched with no use."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "Conservation equals complete non-use",
+    "causes": [],
+    "trigger_cues": [
+     "conservation",
+     "preserve",
+     "untouched",
+     "no use",
+     "forest",
+     "3Rs",
+     "wise use"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "environmental education research on conservation vs preservation"
+   }
+  ]
+ },
+ "problems": [
+  "only 4 misconceptions"
+ ],
+ "deepened_by": "claude:claude-sonnet-5-5"
+}

@@ -1,0 +1,135 @@
+{
+ "job": {
+  "job": "train-0028-MAT-ALGEXPR",
+  "topic_id": "MAT-ALGEXPR",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a clear textbook explanation with one worked example",
+  "seed": 28
+ },
+ "model": "gemini-3.1-flash-lite/key2",
+ "usage": {
+  "promptTokenCount": 1173,
+  "candidatesTokenCount": 1265,
+  "totalTokenCount": 2438,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 1173
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-ALGEXPR-K19-M14",
+  "MAT-ALGEXPR-K18-M12",
+  "MAT-ALGEXPR-K13-M1",
+  "MAT-ALGEXPR-K24-M22",
+  "MAT-ALGEXPR-K25-M23",
+  "MAT-ALGEXPR-K21-M17",
+  "MAT-ALGEXPR-K12-M2",
+  "MAT-ALGEXPR-K20-M16",
+  "MAT-ALGEXPR-K22-M19",
+  "MAT-ALGEXPR-K22-M18",
+  "MAT-ALGEXPR-K26-M24",
+  "MAT-ALGEXPR-K17-M10",
+  "MAT-ALGEXPR-K23-M20",
+  "MAT-ALGEXPR-K20-M15"
+ ],
+ "response": {
+  "passage": "Algebraic expressions are formed by combining variables and constants using arithmetic operations. A term is a product of factors, and the numerical factor is called the coefficient. For example, in the expression 5x, the number 5 is the coefficient of x. When we multiply terms, we add the exponents of the same variable; thus, x multiplied by x equals x squared. Distributive property is essential when multiplying expressions; for instance, 3(x + 2) means 3 must multiply both x and 2, resulting in 3x + 6. Algebraic identities are equalities that hold true for all values of the variables involved. A common identity is (a + b) squared, which equals a squared plus 2ab plus b squared. This is different from a squared plus b squared, as the middle term 2ab is necessary to represent the full area of the square. When subtracting one expression from another, we must subtract the entire expression, changing the signs of all terms inside the second bracket. Always remember that x plus x equals 2x, not x squared, because addition involves counting like terms, while multiplication involves changing the power of the variable.",
+  "summary": "Algebraic expressions use variables and constants combined through specific rules of arithmetic. Understanding coefficients, distributive multiplication, and the structure of identities is key to solving these problems accurately.",
+  "items": [
+   {
+    "evidence": "For example, in the expression 5x, the number 5 is the coefficient of x.",
+    "answer": "5",
+    "stem": "What is the coefficient in the expression 5x?",
+    "options": [
+     {
+      "belief_id": "MAT-ALGEXPR-K12-M2",
+      "why": "Student believes the coefficient is missing or zero.",
+      "text": "0"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K13-M1",
+      "why": "Student thinks 5x is a two-digit number like 54.",
+      "text": "54"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K20-M16",
+      "why": "Student confuses the coefficient with the variable.",
+      "text": "x"
+     }
+    ]
+   },
+   {
+    "evidence": "Distributive property is essential when multiplying expressions; for instance, 3(x + 2) means 3 must multiply both x and 2, resulting in 3x + 6.",
+    "answer": "3x + 6",
+    "stem": "What is the correct result of multiplying 3 by the expression (x + 2)?",
+    "options": [
+     {
+      "belief_id": "MAT-ALGEXPR-K20-M16",
+      "why": "Student only multiplies the first term in the bracket.",
+      "text": "3x + 2"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K20-M15",
+      "why": "Student fails to distribute the multiplier to both terms.",
+      "text": "3x + 5"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K13-M1",
+      "why": "Student treats the expression as a multi-digit number.",
+      "text": "32"
+     }
+    ]
+   },
+   {
+    "evidence": "A common identity is (a + b) squared, which equals a squared plus 2ab plus b squared.",
+    "answer": "a squared plus 2ab plus b squared",
+    "stem": "What is the expanded form of the identity (a + b) squared?",
+    "options": [
+     {
+      "belief_id": "MAT-ALGEXPR-K22-M18",
+      "why": "Student ignores the middle term of the identity.",
+      "text": "a squared plus b squared"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K24-M22",
+      "why": "Student incorrectly applies signs for a sum identity.",
+      "text": "a squared minus 2ab minus b squared"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K22-M19",
+      "why": "Student thinks the area is just two separate squares.",
+      "text": "a squared plus 4"
+     }
+    ]
+   },
+   {
+    "evidence": "Always remember that x plus x equals 2x, not x squared, because addition involves counting like terms, while multiplication involves changing the power of the variable.",
+    "answer": "2x",
+    "stem": "What is the sum of x and x?",
+    "options": [
+     {
+      "belief_id": "MAT-ALGEXPR-K17-M10",
+      "why": "Student confuses addition with multiplication of powers.",
+      "text": "x squared"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K14-M19",
+      "why": "Student incorrectly adds the exponents during addition.",
+      "text": "x to the power of 2"
+     },
+     {
+      "belief_id": "MAT-ALGEXPR-K12-M2",
+      "why": "Student assumes the coefficient is zero.",
+      "text": "0"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 3.8
+}

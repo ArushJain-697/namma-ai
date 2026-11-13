@@ -1,0 +1,130 @@
+{
+ "job": {
+  "job": "train-0698-GENERIC-a_street_food_stall",
+  "topic_id": null,
+  "split": "train",
+  "generic": true,
+  "theme": "a street food stall",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a question-and-answer (FAQ) style passage",
+  "seed": 698
+ },
+ "model": "gemini-3.1-flash-lite/key1",
+ "usage": {
+  "promptTokenCount": 716,
+  "candidatesTokenCount": 1118,
+  "totalTokenCount": 1834,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 716
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "GEN-READ-M1",
+  "GEN-READ-M2",
+  "GEN-READ-M3",
+  "GEN-READ-M4",
+  "GEN-READ-M5",
+  "GEN-READ-M6",
+  "GEN-READ-M7"
+ ],
+ "response": {
+  "passage": "Welcome to 'Chacha’s Chat Corner', located near the bustling Gandhi Market. Since 1998, Chacha has been serving spicy aloo-tikkis to hungry commuters. Our stall opens at 4:00 PM daily. Many customers ask why our tikkis are so crispy. The secret is the double-frying technique; because we fry them twice in hot mustard oil, the outer layer becomes exceptionally crunchy. Last Tuesday, a visitor named Mr. Sharma visited from Delhi and asked if we use frozen ingredients. We clarified that we only use fresh potatoes sourced from local farmers. Some people confuse our 'double-fry' method with 'deep-frying', but they are not the same. Our stall is managed by Chacha and his assistant, Ravi. While Ravi handles the payments, Chacha focuses on the frying process to ensure quality. We have served over 500 customers this week alone. Please note that we do not accept digital payments, as we prefer cash to keep the queue moving quickly. We look forward to seeing you at the stall soon!",
+  "summary": "Chacha’s Chat Corner is a popular street food stall near Gandhi Market known for its crispy aloo-tikkis. The stall uses a double-frying technique with fresh potatoes and operates on a cash-only basis.",
+  "items": [
+   {
+    "evidence": "Since 1998, Chacha has been serving spicy aloo-tikkis to hungry commuters.",
+    "answer": "1998",
+    "stem": "In which year did the stall begin its operations?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M6",
+      "why": "Uses a different number found later in the passage.",
+      "text": "500"
+     },
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Mistakes a person's name for the date.",
+      "text": "Chacha"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Provides a true fact that does not answer the question.",
+      "text": "Gandhi Market"
+     }
+    ]
+   },
+   {
+    "evidence": "because we fry them twice in hot mustard oil, the outer layer becomes exceptionally crunchy.",
+    "answer": "double-frying",
+    "stem": "What is the primary reason the aloo-tikkis have a crunchy texture?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M2",
+      "why": "Confuses the cause with the effect.",
+      "text": "Exceptionally crunchy"
+     },
+     {
+      "belief_id": "GEN-READ-M5",
+      "why": "Confuses similar-sounding terms mentioned in the text.",
+      "text": "Deep-frying"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a true fact that is not the cause.",
+      "text": "Hot mustard oil"
+     }
+    ]
+   },
+   {
+    "evidence": "Last Tuesday, a visitor named Mr. Sharma visited from Delhi and asked if we use frozen ingredients.",
+    "answer": "Mr. Sharma",
+    "stem": "Who inquired about the nature of the ingredients used at the stall?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks a location mentioned in the same sentence.",
+      "text": "Delhi"
+     },
+     {
+      "belief_id": "GEN-READ-M4",
+      "why": "Uses the everyday meaning of a visitor.",
+      "text": "A hungry commuter"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "Provides a true fact about the day.",
+      "text": "Last Tuesday"
+     }
+    ]
+   },
+   {
+    "evidence": "While Ravi handles the payments, Chacha focuses on the frying process to ensure quality.",
+    "answer": "Ravi",
+    "stem": "Which individual is responsible for managing the cash transactions?",
+    "options": [
+     {
+      "belief_id": "GEN-READ-M1",
+      "why": "Picks the person mentioned closest to the task.",
+      "text": "Chacha"
+     },
+     {
+      "belief_id": "GEN-READ-M3",
+      "why": "Assumes everyone at the stall handles payments.",
+      "text": "All staff members"
+     },
+     {
+      "belief_id": "GEN-READ-M7",
+      "why": "States a true fact about the frying process.",
+      "text": "The frying process"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.3
+}

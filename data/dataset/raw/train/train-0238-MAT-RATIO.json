@@ -1,0 +1,124 @@
+{
+ "job": {
+  "job": "train-0238-MAT-RATIO",
+  "topic_id": "MAT-RATIO",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a market or shop situation that uses the idea",
+  "seed": 238
+ },
+ "model": "gemini-3.1-flash-lite/key4",
+ "usage": {
+  "promptTokenCount": 630,
+  "candidatesTokenCount": 1234,
+  "totalTokenCount": 1864,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 630
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "menu_ids": [
+  "MAT-RATIO-K11-M4",
+  "MAT-RATIO-K5-M1",
+  "MAT-RATIO-K14-M3"
+ ],
+ "response": {
+  "passage": "Rohan visited the local stationery market to buy supplies for his school project. At the first shop, he noticed that a pack of 3 identical gel pens costs 15 rupees. He needed 5 pens for his group, so he calculated the price by finding the cost of one pen first. He divided 15 by 3 to find that one pen costs 5 rupees, and then multiplied by 5 to get 25 rupees. Next, he looked at two types of notebooks. The shopkeeper explained that the ratio of the number of blue notebooks to red notebooks is 2:3. This means for every 2 blue notebooks, there are 3 red ones. Rohan realized that the blue notebooks make up 2 parts out of the total 5 parts, which is 2/5 of the entire collection. Finally, Rohan compared the prices of two brands of glue sticks. Brand A and Brand B are sold in a ratio of 4:1. He noted that the order matters, as Brand A is much more expensive than Brand B. If he swapped the ratio to 1:4, it would imply that Brand B is the more expensive one, which is incorrect. Rohan carefully checked his math to ensure he had enough money for all his items.",
+  "summary": "Rohan uses the unitary method to calculate the cost of pens for his project. He also correctly interprets ratios by understanding parts of a whole and the importance of order in a ratio.",
+  "items": [
+   {
+    "evidence": "He divided 15 by 3 to find that one pen costs 5 rupees, and then multiplied by 5 to get 25 rupees.",
+    "answer": "25 rupees",
+    "stem": "What is the total cost for 5 pens if 3 pens cost 15 rupees?",
+    "options": [
+     {
+      "belief_id": "MAT-RATIO-K11-M4",
+      "why": "Student incorrectly adds the number of pens to the cost.",
+      "text": "20 rupees"
+     },
+     {
+      "belief_id": "MAT-RATIO-K5-M1",
+      "why": "Student confuses the ratio values with the final price.",
+      "text": "15 rupees"
+     },
+     {
+      "belief_id": "MAT-RATIO-K14-M3",
+      "why": "Student guesses a fraction based on the pen count.",
+      "text": "5/3 rupees"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan realized that the blue notebooks make up 2 parts out of the total 5 parts, which is 2/5 of the entire collection.",
+    "answer": "2/5",
+    "stem": "What fraction of the total collection do the blue notebooks represent?",
+    "options": [
+     {
+      "belief_id": "MAT-RATIO-K14-M3",
+      "why": "Student ignores the total parts and uses only the ratio.",
+      "text": "2/3"
+     },
+     {
+      "belief_id": "MAT-RATIO-K11-M4",
+      "why": "Student adds the ratio numbers instead of using fractions.",
+      "text": "5"
+     },
+     {
+      "belief_id": "MAT-RATIO-K5-M1",
+      "why": "Student reverses the ratio parts incorrectly.",
+      "text": "3/5"
+     }
+    ]
+   },
+   {
+    "evidence": "The shopkeeper explained that the ratio of the number of blue notebooks to red notebooks is 2:3.",
+    "answer": "2:3",
+    "stem": "Which ratio correctly represents the blue notebooks to red notebooks?",
+    "options": [
+     {
+      "belief_id": "MAT-RATIO-K5-M1",
+      "why": "Student believes the order in a ratio does not matter.",
+      "text": "3:2"
+     },
+     {
+      "belief_id": "MAT-RATIO-K11-M4",
+      "why": "Student adds the numbers instead of writing a ratio.",
+      "text": "5"
+     },
+     {
+      "belief_id": "MAT-RATIO-K14-M3",
+      "why": "Student interprets the ratio as a simple fraction.",
+      "text": "2/3"
+     }
+    ]
+   },
+   {
+    "evidence": "Brand A and Brand B are sold in a ratio of 4:1.",
+    "answer": "4:1",
+    "stem": "What is the ratio of Brand A to Brand B?",
+    "options": [
+     {
+      "belief_id": "MAT-RATIO-K5-M1",
+      "why": "Student thinks the order of the ratio is interchangeable.",
+      "text": "1:4"
+     },
+     {
+      "belief_id": "MAT-RATIO-K11-M4",
+      "why": "Student adds the ratio terms together.",
+      "text": "5"
+     },
+     {
+      "belief_id": "MAT-RATIO-K14-M3",
+      "why": "Student expresses the ratio as a part-to-whole fraction.",
+      "text": "4/5"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 4.0
+}
