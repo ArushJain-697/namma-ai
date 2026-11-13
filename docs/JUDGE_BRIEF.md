@@ -82,6 +82,10 @@ holds, from a graph of student misconceptions, and it all runs on a Raspberry Pi
 - Bayesian Knowledge Tracing per concept + Bayesian diagnosis from which wrong option was picked + prerequisite
   graph + FSRS revision scheduling. Research: deep knowledge-tracing models perform near chance (AUC ~0.5) for brand
   new students and are too heavy for a Pi; BKT works from the first answer and costs microseconds.
+- Two kinds of questions, two jobs (decided 13 Nov): **recall questions** ("What is...?") feed spaced revision,
+  because retrieval practice of facts is what spacing helps (practice testing g ~ 0.5 in classrooms, Adesope et
+  al. 2017); **why/how questions with misconception options** are for the first check of understanding and for
+  diagnosis. The fine-tuned model's recall questions are therefore not wasted: they become the revision deck.
 - FSRS (the Anki scheduler) predicts recall honestly: with default settings a 7-day-stable memory is still ~77% at
   day 30, so we do not show exaggerated forgetting curves.
 
