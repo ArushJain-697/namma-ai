@@ -63,7 +63,7 @@ def template_questions(lib, cid: str, rng: random.Random, n: int = 2) -> list[di
             break
         opts = [(right["fix"], True, None)] + [(w["statement"], False, w["id"]) for w in wrongs]
         rng.shuffle(opts)
-        out.append({"id": f"{cid}-t{k}", "concept": cid, "type": "recall" if k == 0 else "application",
+        out.append({"id": f"{cid}-t{k}", "concept": cid, "type": "recall",
                     "stem": f"Which statement about '{c['name'] if c else cid}' is true?",
                     "options": [{"key": "ABCD"[j], "text": t, "correct": ok, "misconception": mid}
                                 for j, (t, ok, mid) in enumerate(opts)],
@@ -71,45 +71,80 @@ def template_questions(lib, cid: str, rng: random.Random, n: int = 2) -> list[di
     return out
 
 
-def build_bank(mapper, passage: str, summary: str, questions: list[dict], title: str = "passage",
-               seed: int = 0) -> tuple[dict, list[dict]]:
-    """questions: GURU output [{q, options, answer (letter), evidence}]. Returns (bank dict, link log)."""
-    lib, linker, rng = mapper.lib, Linker(mapper), random.Random(seed)
-    topics = mapper.topics(passage)
-    cand = linker.candidates(topics)
-    bq, log = [], []
-    for i, q in enumerate(questions):
-        key = q["answer"] if isinstance(q["answer"], int) else "ABCD".index(q["answer"])
-        anchor, _ = linker.tag(f"{q['q']} {q['options'][key]} {q.get('evidence', '')}", cand)
-        cid = anchor["concept_id"] if anchor else None
-        opts, used = [], set()
-        for j, o in enumerate(q["options"]):
-            if j == key:
-                opts.append({"key": "ABCD"[j], "text": o, "correct": True, "misconception": None})
-                continue
-            m, s = linker.tag(option_text(q["q"], o), cand, used)  # one belief per option within a question
-            if m:
-                used.add(m["id"])
-            opts.append({"key": "ABCD"[j], "text": o, "correct": False, "misconception": m["id"] if m else None})
-            log.append({"q": i + 1, "option": o, "misconception": m["statement"] if m else None,
-                        "id": m["id"] if m else None, "cos": round(s, 3)})
-            if m and cid is None:
-                cid = m["concept_id"]
-        cid = cid or next(iter(lib.concepts))
-        bq.append({"id": f"g{i + 1}", "concept": cid, "type": "recall", "stem": q["q"], "options": opts,
-                   "explanation": q.get("evidence", "")})
-    # concepts: the questions' concepts, the tagged misconceptions' concepts, and their graph prerequisites
+def probe_question(lib, mid: str, rng: random.Random, qid: str | None = None) -> dict | None:
+    """An application question for one belief, from the graph's ready-made probe (a situation question).
+    Options are all statements, so their shape gives nothing away: the belief's fix (right), the belief's own
+    statement (picking it = evidence for the belief) and two neighbouring beliefs' statements."""
+    m = lib.by_id.get(mid)
+    if not m or not m.get("fix") or not (m.get("probe") or {}).get("question"):
+        return None
+    pool = [x for x in lib.items if x["concept_id"] == m["concept_id"] and x["id"] != mid]
+    if len(pool) < 2:
+        pool += [x for x in lib.items if x["topic_id"] == m["topic_id"] and x["concept_id"] != m["concept_id"]]
+    pool = [x for x in pool if x["id"] != mid]
+    rng.shuffle(pool)
+    others = pool[:2]
+    opts = [(m["fix"], True, None), (m["statement"], False, mid)] + [(x["statement"], False, x["id"]) for x in others]
+    rng.shuffle(opts)
+    return {"id": qid or f"{mid}-probe", "concept": m["concept_id"], "type": "application", "stem": m["probe"]["question"],
+            "options": [{"key": "ABCD"[j], "text": t, "correct": ok, "misconception": x} for j, (t, ok, x) in enumerate(opts)],
+            "explanation": m["fix"], "targets": mid}
+
+
+def link_question(linker, cand: list[int], q: dict, i: int) -> tuple[dict, list[dict]]:
+    """One GURU question -> a bank question (concept + a misconception per wrong option, or none). Done the moment
+    the question is written, so questions can stream to the child one by one."""
+    lib = linker.lib
+    key = q["answer"] if isinstance(q["answer"], int) else "ABCD".index(q["answer"])
+    anchor, _ = linker.tag(f"{q['q']} {q['options'][key]} {q.get('evidence', '')}", cand)
+    cid = anchor["concept_id"] if anchor else None
+    opts, used, log = [], set(), []
+    for j, o in enumerate(q["options"]):
+        if j == key:
+            opts.append({"key": "ABCD"[j], "text": o, "correct": True, "misconception": None})
+            continue
+        m, s = linker.tag(option_text(q["q"], o), cand, used)  # one belief per option within a question
+        if m:
+            used.add(m["id"])
+        opts.append({"key": "ABCD"[j], "text": o, "correct": False, "misconception": m["id"] if m else None})
+        log.append({"q": i + 1, "option": o, "misconception": m["statement"] if m else None,
+                    "id": m["id"] if m else None, "cos": round(s, 3)})
+        if m and cid is None:
+            cid = m["concept_id"]
+    cid = cid or next(iter(lib.concepts))
+    return ({"id": f"g{i + 1}", "concept": cid, "type": "recall", "stem": q["q"], "options": opts,
+             "explanation": q.get("evidence", "")}, log)
+
+
+def assemble_bank(lib, linked: list[dict], passage: str, summary: str, title: str = "passage") -> dict:
+    """Bank JSON from the linked GURU questions so far + graph prerequisites + graph questions. Cheap (no model),
+    so it is rebuilt each time a new question arrives. Graph questions are seeded per concept, so a question id
+    always has the same content however many GURU questions have arrived."""
+    import copy
+    import zlib
+    bq = copy.deepcopy(linked)
     tagged = {o["misconception"] for q in bq for o in q["options"] if o["misconception"]}
     cids = list(dict.fromkeys([q["concept"] for q in bq] + [lib.by_id[m]["concept_id"] for m in tagged]))
     for cid in list(cids):
         for p in lib.concepts.get(cid, {}).get("prereqs", [])[:2]:
             if p in lib.concepts and p not in cids:
                 cids.append(p)
-    for cid in cids:  # a second question per concept (diagnosis + climb-up need one), and prereq questions
-        have = sum(q["concept"] == cid for q in bq)
-        for t in template_questions(lib, cid, rng, n=max(0, 2 - have)):
-            bq.append(t)
-            tagged |= {o["misconception"] for o in t["options"] if o["misconception"]}
+    for cid in cids:
+        rng = random.Random(zlib.crc32(cid.encode()))
+        # every concept: a recall question (GURU's, else a graph template) for the way down ...
+        if not any(q["concept"] == cid for q in bq):
+            for t in template_questions(lib, cid, rng, n=1):
+                bq.append(t)
+                tagged |= {o["misconception"] for o in t["options"] if o["misconception"]}
+        # ... and two application questions (graph probes) for the climb back up and its one retry
+        ids = [x if isinstance(x, str) else x.get("id") for x in lib.concepts.get(cid, {}).get("misconceptions", [])]
+        for k, mid in enumerate(ids):
+            if sum(q["concept"] == cid and q["type"] == "application" for q in bq) >= 2:
+                break
+            pq = probe_question(lib, mid, rng, f"{cid}-a{k}")
+            if pq:
+                bq.append(pq)
+                tagged |= {o["misconception"] for o in pq["options"] if o["misconception"]}
     home: dict[str, str] = {}
     for q in bq:
         for o in q["options"]:
@@ -126,6 +161,18 @@ def build_bank(mapper, passage: str, summary: str, questions: list[dict], title:
                          "prereqs": [p for p in c.get("prereqs", []) if p in cids],
                          "misconceptions": [{"id": m, "text": lib.by_id[m]["statement"], "fix": lib.by_id[m].get("fix", "")}
                                             for m in sorted(home) if home[m] == cid]})
-    bank = {"title": title, "source": "GURU-0.6B + misconception graph", "passage": passage, "summary": summary,
+    return {"title": title, "source": "GURU-0.6B + misconception graph", "passage": passage, "summary": summary,
             "concepts": concepts, "questions": [q for q in bq if q["concept"] in cids]}
-    return bank, log
+
+
+def build_bank(mapper, passage: str, summary: str, questions: list[dict], title: str = "passage",
+               seed: int = 0) -> tuple[dict, list[dict]]:
+    """All at once (questions: GURU output [{q, options, answer, evidence}]). Returns (bank dict, link log)."""
+    linker = Linker(mapper)
+    cand = linker.candidates(mapper.topics(passage))
+    linked, log = [], []
+    for i, q in enumerate(questions):
+        item, rows = link_question(linker, cand, q, i)
+        linked.append(item)
+        log += rows
+    return assemble_bank(mapper.lib, linked, passage, summary, title), log

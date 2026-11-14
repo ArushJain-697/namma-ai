@@ -33,6 +33,7 @@ class LearnerState:
     misconceptions: dict[str, MisconceptionState] = field(default_factory=dict)
     attempts: list[dict] = field(default_factory=list)
     sessions: int = 0
+    blocked: dict[str, list[str]] = field(default_factory=dict)  # concept -> shaky prerequisites stopping the climb
 
     def ensure(self, concept_ids, p_init: float) -> None:
         for cid in concept_ids:
@@ -46,7 +47,8 @@ class LearnerState:
         return cls(d.get("bank_title", ""),
                    {k: ConceptState(**v) for k, v in d.get("concepts", {}).items()},
                    {k: MisconceptionState(**v) for k, v in d.get("misconceptions", {}).items()},
-                   list(d.get("attempts", [])), int(d.get("sessions", 0)))
+                   list(d.get("attempts", [])), int(d.get("sessions", 0)),
+                   {k: list(v) for k, v in d.get("blocked", {}).items()})
 
     def save(self, path: str) -> None:
         os.makedirs(os.path.dirname(os.path.abspath(path)), exist_ok=True)

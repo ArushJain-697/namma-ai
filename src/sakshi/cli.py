@@ -241,6 +241,28 @@ def cmd_learn(args) -> int:
     return 0
 
 
+def cmd_review(args) -> int:
+    """A later day: re-check held beliefs, follow the misconception graph, resume blocked climbs, due concepts."""
+    _retention()
+    from .misconceptions import Library
+    from .retention.io import ModelStudent, ScriptedIO, TerminalIO
+    from .retention.review import ReviewConfig, ReviewSession
+    from .retention.state import LearnerState
+    state = LearnerState.load(args.state)
+    if not state.concepts:
+        sys.exit(f"No learner state in {args.state}: run `learn` first.")
+    if args.student is not None:
+        io = ModelStudent(holds={x for x in args.student.split(",") if x}, echo=True, verbose=args.verbose, guess_seed=0)
+    elif args.answers:
+        io = ScriptedIO(args.answers.split(","), echo=True, verbose=args.verbose)
+    else:
+        io = TerminalIO(verbose=args.verbose)
+    ReviewSession(state, Library.load(), io, _parse_now(args.now), ReviewConfig(max_questions=args.max_questions)).run()
+    state.save(args.state)
+    print(f"\nSaved learner state to {args.state}")
+    return 0
+
+
 def cmd_plan(args) -> int:
     _retention()
     from .retention.bank import load_bank
@@ -363,6 +385,15 @@ def main(argv: list[str] | None = None) -> int:
     ln.add_argument("--no-summary", action="store_true")
     ln.add_argument("--now", help="pretend the session happens at this ISO time (demos and tests)")
     ln.set_defaults(fn=cmd_learn)
+
+    rv = sub.add_parser("review", help="a later day: re-check misconceptions, follow the graph, finish blocked climbs")
+    rv.add_argument("--state", default="state/learner.json")
+    rv.add_argument("--verbose", action="store_true")
+    rv.add_argument("--student", help="pretend student: misconception ids held, e.g. SCI-...-M3")
+    rv.add_argument("--answers", help="fixed answers instead of the keyboard, e.g. B,D,A")
+    rv.add_argument("--max-questions", type=int, default=10)
+    rv.add_argument("--now", help="pretend the review happens at this ISO time")
+    rv.set_defaults(fn=cmd_review)
 
     pl = sub.add_parser("plan", help="the revision plan from the saved learner state")
     pl.add_argument("bank")

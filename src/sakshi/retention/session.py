@@ -34,6 +34,8 @@ class SessionConfig:
     max_depth: int = 2          # how many levels down the walk may go
     max_questions: int = 12     # question budget for one session
     max_diagnostic: int = 2     # extra questions spent pinning down a misconception
+    climb_threshold: float = 0.6  # BKT P(learned) a concept needs before we climb back to what is built on it
+    climb_retries: int = 1        # after a wrong application answer: re-teach, then this many more tries
     desired_retention: float = 0.9
     application_outcome: str = "easy"  # FSRS rating for a first-time correct application answer
     show_summary: bool = True
@@ -147,12 +149,28 @@ class AdaptiveSession:
             self.io.show(f"   Remember: {last.explanation}")
         self.io.taught(cid)
 
-    def _explore(self, cid: str, depth: int) -> bool:
+    def extend(self, bank: Bank) -> None:
+        """A bigger bank (a new question arrived while the student was answering): keep everything learned so far."""
+        self.bank, self.graph = bank, ConceptGraph(bank)
+        self.state.ensure(bank.concepts, self.cfg.bkt.p_init)
+
+    def explore_question(self, qid: str) -> None:
+        """Streaming mode: start from THIS question (the one just written). If its concept is already settled
+        this session, the question is still asked as extra evidence, without another walk."""
+        q = self.bank.questions[qid]
+        if len(self.asked) >= self.cfg.max_questions or qid in self.asked:
+            return
+        if q.concept in self.outcome:
+            self._ask(q)
+            return
+        self._explore(q.concept, 0, first=q)
+
+    def _explore(self, cid: str, depth: int, first: Question | None = None) -> bool:
         """Does the student understand `cid` by the end? Walks down on a wrong answer, back up after."""
         if cid in self.outcome:
             return self.outcome[cid] != "again"
         name = self.bank.concepts[cid].name
-        q = self._pick(cid, "recall")
+        q = first or self._pick(cid, "recall")
         if q is None:
             return self.state.concepts[cid].p_mastery >= 0.5
         if self._ask(q):
@@ -164,23 +182,48 @@ class AdaptiveSession:
         self._diagnose(cid)
         self._explain(cid)
         prereqs = [p for p in self.graph.prereqs(cid) if p not in self.outcome]
+        shaky: list[str] = []
         if prereqs and depth < self.cfg.max_depth:
             names = ", ".join(f'"{self.bank.concepts[p].name}"' for p in prereqs)
             self.io.show(f"\nLet's go back to the idea{'s' if len(prereqs) > 1 else ''} this builds on: {names}.")
             self.io.log(f"walk DOWN from {cid} to {', '.join(prereqs)} (depth {depth + 1})")
             for p in prereqs:
-                self._explore(p, depth + 1)
-            self.io.log(f"climb UP back to {cid}")
-        self.io.show(f"\nNow let's use \"{name}\".")
-        check = self._pick(cid, "application")
-        if check is None:
+                if not self._explore(p, depth + 1) and self.bank.questions_for(p):
+                    shaky.append(p)  # a prerequisite with no questions cannot be checked, so it cannot block
+        if shaky:  # do not build on a base the student has not got yet: stop the climb here
+            names = ", ".join(f'"{self.bank.concepts[p].name}"' for p in shaky)
+            self.io.show(f"\nWe'll come back to \"{name}\" once {names} is solid. It's first in your next revision.")
+            self.io.log(f"climb STOPPED at {cid}: prerequisite(s) below threshold: {', '.join(shaky)}")
             self.outcome[cid] = "again"
+            self.state.blocked[cid] = shaky
             return False
-        ok = self._ask(check)
-        self.outcome[cid] = "hard" if ok else "again"
-        if not ok:
-            self._explain(cid)
-        return ok
+        if prereqs:
+            self.io.log(f"climb UP back to {cid}")
+        return self._climb(cid)
+
+    def _climb(self, cid: str) -> bool:
+        """Application question(s) on a concept the student got wrong, after re-teaching (and after its base is
+        solid). Climb on only when BKT says the concept is learned: P(L) >= climb_threshold."""
+        name = self.bank.concepts[cid].name
+        cs = self.state.concepts[cid]
+        for attempt in range(1 + self.cfg.climb_retries):
+            self.io.show(f"\nNow let's use \"{name}\"." if attempt == 0 else "\nLet's try using it once more.")
+            check = self._pick(cid, "application")  # falls back to an unasked recall question
+            if check is None:
+                break
+            ok = self._ask(check)
+            if ok and cs.p_mastery >= self.cfg.climb_threshold:
+                self.io.log(f"{cid}: P(L) {cs.p_mastery:.2f} >= {self.cfg.climb_threshold}: climb on")
+                self.outcome[cid] = "hard"
+                self.state.blocked.pop(cid, None)
+                return True
+            if not ok and cid in self.diag:
+                self._explain(cid)
+            elif not ok:
+                self.io.taught(cid)
+        self.io.log(f"{cid}: P(L) {cs.p_mastery:.2f} < {self.cfg.climb_threshold} after re-teaching: stop here")
+        self.outcome[cid] = "again"
+        return False
 
     def _credit_below(self, cid: str) -> None:
         for p in self.graph.below(cid):
@@ -192,6 +235,17 @@ class AdaptiveSession:
             self.io.log(f"{p}: implicit credit from applying {cid} (mastery now {cs.p_mastery:.2f})")
 
     # ---- the whole session ----------------------------------------------------------------------------
+
+    def finish_stream(self) -> SessionResult:
+        """Streaming mode, after the last question: concepts nobody reached, then FSRS + report (as in run)."""
+        try:
+            rest = sorted((c for c in self.bank.concepts if c not in self.outcome and c not in self.implicit),
+                          key=lambda c: -self.graph.level(c))
+            for cid in rest:
+                self._explore(cid, 0)
+        except _Stop:
+            self.stopped = True
+        return self._finish()
 
     def run(self) -> SessionResult:
         if self.cfg.show_summary and self.bank.summary:

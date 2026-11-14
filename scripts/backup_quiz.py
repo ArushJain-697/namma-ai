@@ -884,10 +884,12 @@ def parse_wrong(text: str) -> list[str]:
     return out
 
 
-def quiz_2job(mq: "Model", mw: "Model", passage: str, n: int = 4, seed: int = 0, w_runs: int = 2,
-              self_check_on: bool = True, checker: "Model | None" = None) -> dict:
+def quiz_2job(mq: "Model", mw: "Model", passage: str, n: int = 4, seed: int = 0, w_runs: int = 1,
+              self_check_on: bool = True, checker: "Model | None" = None, on_kept=None, should_stop=None) -> dict:
     """checker = the model that answers each question as a last check. GURU was trained to WRITE questions and
-    answers "A" almost always when asked to answer one (measured 14 Nov), so pass the plain model here."""
+    answers "A" almost always when asked to answer one (measured 14 Nov), so pass the plain model here.
+    w_runs = 1: decoding is greedy, so a second wrong-answer run returned the identical text in 38 of 38 calls
+    (6 test passages, 14 Nov); it cost ~16 s per kept question on the Pi for nothing."""
     sys.path.insert(0, str(ROOT / "scripts"))
     from make_mcq_dataset import user_turn
     from make_two_job_dataset import Q_SYSTEM, W_SYSTEM
@@ -896,7 +898,7 @@ def quiz_2job(mq: "Model", mw: "Model", passage: str, n: int = 4, seed: int = 0,
     start_q, start_w = len(mq.calls), len(mw.calls)
     kept, rejected = [], []
     for i in pick_sentences(passage):
-        if len(kept) == n:
+        if len(kept) == n or (should_stop and should_stop()):
             break
         user = user_turn(sents, i)
         raw = mq.run(Q_SYSTEM, user, 70, kind="question", prefix="Question:", stop=r"Answer:[^\n]*\S[^\n]*\n")
@@ -959,6 +961,8 @@ def quiz_2job(mq: "Model", mw: "Model", passage: str, n: int = 4, seed: int = 0,
                 rejected.append({**rec, "reason": f"self-check failed (picked {said})"})
                 continue
         kept.append(rec)
+        if on_kept:  # stream: the app can show/link this question while the next one is being written
+            on_kept(rec)
     calls = mq.calls[start_q:] + (mw.calls[start_w:] if mw is not mq else [])
     return {"kept": kept, "rejected": rejected, "calls": calls}
 

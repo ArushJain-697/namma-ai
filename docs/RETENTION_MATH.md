@@ -72,6 +72,18 @@ For each top concept: recall question → right: done. Wrong: diagnose (≤ 2 EI
 show the belief and its fix, walk **down** to prerequisites (≤ 2 levels), climb back **up** with an application
 question: right → FSRS "Hard" (learned with help), wrong → "Again". Right first time on application → "Easy".
 
+### 5b. Climbing back up is gated by BKT (added 14 Nov)
+After walking down, the climb back up happens one level at a time, and only on a solid base:
+- a prerequisite answered wrong (and still below the gate after re-teaching) **stops the climb**: the concept above
+  is rated Again and saved in `state.blocked` (concept → shaky prerequisites), first in line for the review day;
+- otherwise the concept gets an **application question** (graph probe; guess rate 0.15). Climb on only if right
+  **and** `P(L) ≥ 0.6`. If not: show the fix, one more application question, then stop (Again).
+- 0.6 is "ready to build on", not mastery (the classic BKT mastery line is 0.95, Corbett & Anderson 1995).
+  One right application answer from 0.24 gives `0.24·0.9 / (0.216 + 0.76·0.15) = 0.655`, then `+ (1−0.655)·0.2 = 0.72`.
+- A prerequisite with no questions in the bank cannot be checked, so it does not block.
+- Application questions come from each misconception's **probe** (a situation question in the graph). Options are
+  all statements: the belief's fix (right), the belief itself, two neighbouring beliefs.
+
 ## 6. When will they forget? (FSRS-6, py-fsrs 6.3.2, 21 weights w₀…w₂₀)
 
 Memory state per concept: stability `S` (days until recall falls to 90%), difficulty `D ∈ [1, 10]`.
@@ -92,6 +104,27 @@ From the Mac run: a concept rated Again is due tomorrow (15 Nov); its R falls 1.
 
 `priority(C, t) = 1 − P_mastery(C) · R_fsrs(C, t)`. High if probably never learned (low BKT) **or** probably
 forgotten (low FSRS recall). Untested concepts have R = 0 ⇒ priority 1.
+
+## 8. Review day (`sakshi review`, `src/sakshi/retention/review.py`)
+1. **Forgetting:** `P(L)_today = P(L)_saved × R(t, S)` (FSRS recall since the last review, floor 0.05).
+2. **Held beliefs** (confirmed, suspected or still held), riskiest concept first: a NEW question aimed at the
+   belief, then Bayes with two hypotheses, holds `h` or not `¬h`, using the likelihoods of section 3:
+   `P(h | o) = P(h)·P(o|h) / (P(h)·P(o|h) + (1−P(h))·P(o|¬h))`. Right but still ≥ 0.5 → one more question.
+   - still ≥ 0.5: show the fix again, FSRS Again (due sooner);
+   - below 0.5: cleared, FSRS Good, then **follow the graph**: a belief this one `causes` (288 edges), else
+     the nearest belief (bge-small cosine) with the **same root belief** (120 roots), other concepts first. Prior
+     0.3; picking it gives `0.3·0.7 / (0.21 + 0.7·0.5/3) ≈ 0.64` → a new suspected belief, "same root as …".
+3. **Blocked climbs:** the prerequisite's application question first, then the concept; same 0.6 gate.
+4. **Other due concepts** (FSRS due ≤ today): one application question each.
+5. One FSRS review per concept touched, then save.
+
+Multi-day check (`scripts/retention_days.py`, pretend students guess at random when they do not know):
+- learns from feedback: climbs up on day 0 (P(L) 0.73 ≥ 0.6); review days clear beliefs and leave nothing blocked;
+- never learns: climbs stop at shaky bases; a belief that only looked held from one random guess on day 0 (55%)
+  is cleared on day 1 (36%); the root belief is followed into another topic; "Aquatic life" stays blocked until
+  day 7, when its base is finally solid and it climbs back up.
+Tests: `tests/test_review.py` (blocked/unblocked climb, untestable prerequisite, state saved, belief still held,
+cleared → related belief found, forgetting).
 
 ## Honest limits
 - Linking is right about half the time at top-1 (81% in top 3); abstaining keeps weak links out of the Bayes step.

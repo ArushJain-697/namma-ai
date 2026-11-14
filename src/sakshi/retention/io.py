@@ -99,20 +99,28 @@ class ModelStudent(ScriptedIO):
     """
 
     def __init__(self, knows: set[str] = frozenset(), holds: set[str] = frozenset(), echo: bool = False,
-                 verbose: bool = False, learns_after_feedback: bool = True):
+                 verbose: bool = False, learns_after_feedback: bool = True, guess_seed: int | None = None):
         super().__init__([], echo, verbose)
         self.knows, self.holds = set(knows), set(holds)
         self.learns = learns_after_feedback
+        import random
+        self.rng = random.Random(guess_seed) if guess_seed is not None else None  # None: first wrong option
 
     def answer(self, q: Question) -> str | None:
         if q.concept in self.knows:
             a = q.correct_key
         else:
             held = [o for o in q.options if o.misconception in self.holds]
-            a = held[0].key if held else next(o.key for o in q.options if not o.correct)
+            if held:
+                a = held[0].key
+            elif self.rng is not None:  # no idea: a random guess among all options
+                a = self.rng.choice(q.options).key
+            else:
+                a = next(o.key for o in q.options if not o.correct)
         self._out(f"Your answer: {a}")
         return a
 
     def taught(self, concept_id: str) -> None:
         if self.learns:  # this student understands once the fix is shown: the demo's happy path
             self.knows.add(concept_id)
+            self.holds = {m for m in self.holds if not m.startswith(concept_id + "-") and not m.startswith(concept_id + "M")}

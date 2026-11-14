@@ -212,6 +212,67 @@ holds, from a graph of student misconceptions, and it all runs on a Raspberry Pi
 - FSRS (the Anki scheduler) predicts recall honestly: with default settings a 7-day-stable memory is still ~77% at
   day 30, so we do not show exaggerated forgetting curves.
 
+### 9. The retention engine: every design decision and why (14 Nov)
+Who decided: **team** = the user's call; **build** = decided while building, from a measurement or a failure seen
+in a run. Full maths: `docs/RETENTION_MATH.md`.
+
+**Connecting the quiz to the graph**
+| Decision | Why (evidence) | Who |
+|---|---|---|
+| Every wrong option is linked to a named misconception, so a wrong answer says *what the child believes* | The diagnosis idea of the whole project; a score alone tells a teacher nothing | team |
+| Linking = retrieve (embeddings) → rerank (NLI cross-encoder) → **abstain** | Standard design for this task. Measured on 3,647 labelled pairs: right belief first 53%, in top 3 81% | team (method), build (abstain) |
+| Search only inside the passage's topics, not all 4,073 beliefs | Narrows ~4,000 candidates to ~16-50; fewer chances to link to a belief from an unrelated subject | build |
+| **Abstain** below similarity 0.76: the option stays a plain wrong answer | A wrong link would make Bayes "detect" a belief the child never had. Abstaining keeps ~75% of options at higher precision (57% vs 53%) | build |
+| NLI rerank kept although it adds only ~1 point (46 → 47%) | Cheap, and we report the small gain honestly instead of claiming more | build |
+| One belief per option within a question | First run linked all 3 wrong options of one question to the same belief: no way to tell them apart | build (bug seen in a run) |
+| A belief is shown with its **text and fix**, never its ID | First run showed "SCI-CHM-AIR-K19-M9 ... Fix: See the explanation" to the child | build (bug seen in a run) |
+
+**Questions the engine can ask without calling the model again**
+| Decision | Why | Who |
+|---|---|---|
+| Prerequisite concepts get questions built from the graph itself | The walk down needs something to ask; a second model call costs ~20 s on the Pi | build |
+| **Application questions come from each belief's probe** (a situation question already in the graph) | Earlier "application" questions were just "which statement is true?", i.e. recall with a new label | build (found while reviewing the code with the team) |
+| All options are statements: the fix (right), the belief itself, two neighbouring beliefs | Same shape for every option, so the answer cannot be spotted by length or style (same rule as the quiz checks) | build |
+| Picking the belief's own statement counts as evidence for that belief | Turns every probe question into a diagnostic one | build |
+
+**Walking down and climbing back up (BKT)**
+| Decision | Why | Who |
+|---|---|---|
+| Wrong answer → find the belief, show the fix, walk **down** to prerequisites | A child who fails a concept often lacks what it builds on | team |
+| Climb back **up step by step**, re-asking only the concepts that went wrong, with **application** questions | The idea the team asked for: prove understanding on the way back, not just recall | team |
+| Climb only if right **and** BKT P(learned) ≥ 0.6 | One right answer can be a guess (1 in 4). BKT separates guesses from learning; one right application answer from 0.24 gives 0.72, so the gate is reachable but not free | build |
+| 0.6 = "ready to build on", not mastery | Classic BKT mastery is 0.95 (Corbett & Anderson 1995); demanding that in one session would block almost everyone | build |
+| Application questions use a lower guess rate (0.15 vs 0.25) | Situation questions are harder to guess, so a right answer is stronger evidence | build |
+| Wrong on the way up → re-teach, one more try, then stop | One mistake should not end the climb; three would wear the child out | build |
+| Shaky base → **stop the climb** and save the concept as *blocked* | Never build on a base the child has not got; the blocked concept is first in the next review | team (idea), build (saving it) |
+| A prerequisite with no questions cannot block | Found in a 7-day run: "Nitrogen Fixation" stayed blocked all week because "Symbiotic Relationships" has no misconceptions to ask about | build (bug seen in a run) |
+
+**Diagnosis (Bayes)**
+| Decision | Why | Who |
+|---|---|---|
+| A "no specific belief" hypothesis next to the real beliefs | Without it, any random wrong answer would look like proof of some belief | build |
+| Next question = the one with the highest expected information gain | Fewest questions to pin the belief down; children's time is the budget | build |
+| "Detected" at 75%, "possible" at 50% | We say how sure we are instead of labelling a child from one answer | build |
+
+**Review days (`sakshi review`)**
+| Decision | Why | Who |
+|---|---|---|
+| The child comes back on later days; old beliefs are re-checked with a **new** question | Asking the same question again tests memory of that question, not the belief | team (idea), build (new question) |
+| Mastery today = saved mastery × FSRS chance of remembering | Connects BKT (did they learn it?) with FSRS (will they still remember?): partly forgotten is not mastered | build |
+| Right but still unsure → one more question before clearing | Measured: from 80% sure, one right answer only drops to 55%; clearing on that would be wrong | build (caught by a test) |
+| Cleared belief → **follow the graph** to a related belief (a "causes" link, else the same root belief, other topics first) | Tests whether the *root idea* is fixed or only one example of it; e.g. "properties get used up" in air and then in atoms | team (idea), build (causes first, other topics first) |
+| A related belief the child picks becomes "suspected, same root as ..." | One answer is not proof; it is re-checked next review | build |
+| One FSRS rating per concept per day | FSRS models memory across days, not within one session | build |
+| Order: held beliefs → blocked climbs → other due concepts, riskiest first (risk = 1 − mastery × recall) | Fix wrong beliefs before polishing weak memories | build |
+
+**Checking it honestly**
+| Decision | Why | Who |
+|---|---|---|
+| Pretend students over days 0, 1, 3, 7: one learns from feedback, one never does | Can show the engine behaving correctly without real children | build |
+| Pretend students guess at random when they do not know | Earlier they always picked the first wrong option, which made the engine "find" beliefs that were only option A | build (found in a run) |
+| Results: learner climbs up on day 0; non-learner stops at shaky bases, a false 55% belief is cleared on day 1 (36%), the root belief is followed into another topic, a blocked concept climbs back up on day 7 | | measured |
+| Settings (0.6, 0.75, 0.15, ...) are hand-set and said so | No student data yet; fitting them needs a pilot | build |
+
 ## Numbers safe to show (with sources)
 | Number | What | Source |
 |---|---|---|
@@ -245,3 +306,54 @@ holds, from a graph of student misconceptions, and it all runs on a Raspberry Pi
 - Photosynthesis run: 10 concepts, 12 questions (3 GURU), belief named with its fix, BKT 0.30 → 0.24 (wrong) / 0.63-0.73
   (after walk-down), FSRS due next day, recall 1.00 → 0.66 (3 d) → 0.55 (10 d). Maths: `docs/RETENTION_MATH.md`.
 - Mac only; not on the Pi. Parameters are hand-set (no student data yet).
+
+## BKT-gated climb-up + review day (14 Nov)
+- Climb back up only on a solid base: application question (graph probe) and BKT P(L) ≥ 0.6, one re-teach + retry;
+  shaky prerequisite → stop, save as blocked, first in the next review. Untestable prerequisites never block.
+- `sakshi review` (new): forgetting `P(L)·R(t)`, re-check held beliefs with a new question (2-hypothesis Bayes),
+  cleared → follow the graph (`causes` edge or same root belief, other concepts first), resume blocked climbs, due concepts.
+- Checked over days 0/1/3/7 with two pretend students (`scripts/retention_days.py`); 224 tests pass (7 new).
+- Not yet: Pi, real students; thresholds hand-set.
+
+## One program, and latency per question (14 Nov)
+- `scripts/sakshi_app.py` = the whole system in ONE process and ONE Python environment (the Pi's): load GURU once →
+  summary → quiz (questions streamed as they pass the checks) → wrong options linked to misconceptions with the
+  ExecuTorch helper models (no PyTorch models needed) → adaptive session → learner saved. `review` and `plan` reuse
+  the saved learner. Mac run on a friction passage: load 6.3 s, summary 2.4 s, first question at 2.9 s,
+  3.0 s per kept question, linking 1.2 s; session found "friction only acts on moving objects" at 96%; review 2 days
+  later re-found it at 91%.
+- **The metric that matters is time per question** (more questions is fine; the same number faster wins).
+  Measured on 6 test passages (pretend Pi time = prompt tokens / 122 + new tokens / 12.1, our Pi speeds):
+  | Setting | Kept | Mac s/question | Pi estimate s/question |
+  |---|---|---|---|
+  | 2 wrong-answer runs + self-check (old) | 11 | 6.7 | 47.8 |
+  | **1 wrong-answer run + self-check (new default)** | 11 | 4.6 | 31.4 |
+  | 1 run, no self-check | 22 | 2.1 | 14.3 |
+- Decision: **one wrong-answer run.** Decoding is greedy, so the second run was identical in 38/38 calls: pure waste
+  (~16 s per question on the Pi). Same questions kept, 1.5x faster.
+- Decision: **keep the self-check** although it halves the kept questions: of the 11 it rejected, ~9 were truly bad
+  (wrong key, e.g. a box that "stops sliding and turns around"; two right answers). It costs ~3 s per question on the Pi.
+- Where the remaining time goes on the Pi: rejected attempts (about half of all attempts), then generating tokens
+  (12 tokens/s). Next levers, not built yet: write the next question while the child answers the current one (the
+  child then waits only for the first question); reuse the passage's processed prompt between the question and
+  wrong-answer calls; reject bad questions before asking for wrong answers.
+- Pi note: needs `fsrs` (pure Python) added to `~/sakshi-venv`; Pi was offline, so this is Mac-only so far.
+  Mac peak memory with both models + helpers: 3.5 GB (Pi has 8 GB; earlier Pi run with both models: 2.7 GB).
+
+## Questions stream to the child: write the next one while the child answers (14 Nov)
+- Decision (team): do not write all questions first. The child sees question 1 as soon as it passes the checks;
+  a background thread writes, checks and links the next question while the child reads and answers. The session
+  grows as questions arrive (bank rebuilt per question, no model needed; graph questions seeded per concept so an
+  id never changes content). The writer stops as soon as the child quits.
+- Mac, friction passage, pretend child taking 4 s per answer: child waited **3.4 s, 0 s, 0 s** (summary is read
+  while question 1 is written). A real child takes ~20-40 s per question, longer than the Pi needs to write one
+  (Pi estimate ~15-30 s), so on the Pi the child should also wait only for question 1 (to measure on the Pi).
+- This does not change compute time per question (what we report for judging); it removes waiting for the child.
+- Bug found and fixed while building it (build): the ExecuTorch backend collects model text by redirecting the
+  program's output channel. With a background writer, the child's screen vanished into that capture and leaked
+  into the model's text (one question lost, different wrong answers). Proved by elimination: the model is
+  deterministic with threads, CPU load, helper models in between; only the shared output channel differed. Fix:
+  the app prints to its own copy of the terminal. After the fix streaming keeps exactly the same 3 questions as
+  writing them all at once.
+- Limit: one 150-300 word passage gives ~3-6 usable key sentences, so "50 questions" from one passage is not
+  possible with one question per sentence; the session adds graph questions (walk down / climb up) on top.
