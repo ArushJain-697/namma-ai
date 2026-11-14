@@ -1,0 +1,868 @@
+{
+ "topic": {
+  "id": "MAT-WORKTANKS",
+  "subject": "maths",
+  "strand": "maths",
+  "grades": [
+   7,
+   8,
+   9,
+   10
+  ],
+  "title": "Time and work, pipes and cisterns",
+  "scope": "rate of work per day, adding rates not times, more workers means less time, inlet and outlet pipes, combined work, wages shared by work done"
+ },
+ "model": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 7801,
+  "promptTokenCount": 2
+ },
+ "seconds": 52.7,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Rate of work",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n2",
+    "name": "Workers, time and work relations",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n3",
+    "name": "Combined work and pipes and cisterns",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1",
+     "n2"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n4",
+    "name": "Sharing wages by work done",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Work as a whole unit",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "meaning of a fraction as part of a whole"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "One day's work",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "fractions and reciprocals"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Whole work is taken as 1",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": [
+     "meaning of a fraction as part of a whole"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Rate = 1 divided by days taken",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": [
+     "reciprocal of a number"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Days taken = 1 divided by rate",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": [
+     "reciprocal of a number"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Work done in some days = rate x days",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": [
+     "multiplication of fractions"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Men, days and work (proportion)",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "direct and inverse proportion"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "More workers means fewer days",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [],
+    "external_prereqs": [
+     "inverse proportion"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "More work means more days",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [],
+    "external_prereqs": [
+     "direct proportion"
+    ]
+   },
+   {
+    "key": "n14",
+    "name": "Man-days stay constant for the same work",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [
+     "n12"
+    ],
+    "external_prereqs": [
+     "multiplication of whole numbers"
+    ]
+   },
+   {
+    "key": "n15",
+    "name": "Workers of different efficiency",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": [
+     "ratio and comparison"
+    ]
+   },
+   {
+    "key": "n16",
+    "name": "Faster worker takes fewer days",
+    "level": 3,
+    "parent": "n15",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": [
+     "comparing fractions"
+    ]
+   },
+   {
+    "key": "n17",
+    "name": "Efficiency ratio is inverse of days ratio",
+    "level": 3,
+    "parent": "n15",
+    "prereqs": [
+     "n16"
+    ],
+    "external_prereqs": [
+     "ratio and comparison"
+    ]
+   },
+   {
+    "key": "n18",
+    "name": "Working together",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "adding fractions with unlike denominators"
+    ]
+   },
+   {
+    "key": "n19",
+    "name": "Add rates, not days",
+    "level": 3,
+    "parent": "n18",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": [
+     "adding fractions with unlike denominators"
+    ]
+   },
+   {
+    "key": "n20",
+    "name": "Combined time is reciprocal of combined rate",
+    "level": 3,
+    "parent": "n18",
+    "prereqs": [
+     "n19",
+     "n9"
+    ],
+    "external_prereqs": [
+     "reciprocal of a number"
+    ]
+   },
+   {
+    "key": "n21",
+    "name": "Work done in parts by different people",
+    "level": 3,
+    "parent": "n18",
+    "prereqs": [
+     "n10",
+     "n19"
+    ],
+    "external_prereqs": [
+     "subtracting fractions"
+    ]
+   },
+   {
+    "key": "n22",
+    "name": "Inlet and outlet pipes",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n18"
+    ],
+    "external_prereqs": [
+     "positive and negative quantities"
+    ]
+   },
+   {
+    "key": "n23",
+    "name": "Inlet fills, outlet empties (opposite signs)",
+    "level": 3,
+    "parent": "n22",
+    "prereqs": [
+     "n19"
+    ],
+    "external_prereqs": [
+     "adding and subtracting integers"
+    ]
+   },
+   {
+    "key": "n24",
+    "name": "Net rate decides filling or emptying",
+    "level": 3,
+    "parent": "n22",
+    "prereqs": [
+     "n23"
+    ],
+    "external_prereqs": [
+     "comparing fractions"
+    ]
+   },
+   {
+    "key": "n25",
+    "name": "Wages in proportion to work done",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [
+     "n10"
+    ],
+    "external_prereqs": [
+     "ratio and proportion",
+     "dividing a quantity in a ratio"
+    ]
+   },
+   {
+    "key": "n26",
+    "name": "Share in the ratio of work, not days alone",
+    "level": 3,
+    "parent": "n25",
+    "prereqs": [
+     "n21"
+    ],
+    "external_prereqs": [
+     "dividing a quantity in a ratio"
+    ]
+   },
+   {
+    "key": "n27",
+    "name": "Equal time with unequal rates gives unequal wages",
+    "level": 3,
+    "parent": "n25",
+    "prereqs": [
+     "n26",
+     "n16"
+    ],
+    "external_prereqs": [
+     "ratio and comparison"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n19",
+    "statement": "If A takes 10 days and B takes 15 days, together they take 25 days.",
+    "why": "Students add the numbers they see, as in whole-number addition, without asking what the numbers mean.",
+    "fix": "Days cannot be added; the daily work is added. A does 1/10 and B does 1/15 per day, so together 1/6 per day, which means 6 days.",
+    "probe": {
+     "question": "A can do a job in 10 days and B in 15 days. In how many days will they finish it together?",
+     "wrong_answer": "25 days"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "just add the numbers given in the problem",
+    "causes": [
+     "m2"
+    ],
+    "trigger_cues": [
+     "together",
+     "days",
+     "combined",
+     "add",
+     "one day's work"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of proportional reasoning errors in rate problems"
+   },
+   {
+    "key": "m2",
+    "node": "n19",
+    "statement": "Working together, two people take the average of their individual times.",
+    "why": "Students feel the combined time must lie between the two times, so they average them.",
+    "fix": "Two workers together are faster than either alone, so the time is less than the smaller of the two times. Add the daily rates to find it.",
+    "probe": {
+     "question": "A takes 12 days and B takes 6 days alone. How long together?",
+     "wrong_answer": "9 days"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a combined result lies between the parts",
+    "causes": [],
+    "trigger_cues": [
+     "together",
+     "average",
+     "between",
+     "faster",
+     "combined time"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n20",
+    "statement": "A and B together take 1/10 + 1/15 days.",
+    "why": "Students stop after adding the rates and forget that the sum is work per day, not days.",
+    "fix": "1/10 + 1/15 = 1/6 is the work done in one day. The time is the reciprocal, 6 days.",
+    "probe": {
+     "question": "A does a job in 10 days, B in 15 days. State the days they need together.",
+     "wrong_answer": "1/6 days"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "the last number computed is the final answer",
+    "causes": [],
+    "trigger_cues": [
+     "reciprocal",
+     "one day's work",
+     "total days",
+     "fraction of work",
+     "together"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n7",
+    "statement": "The whole work has to be given as a number like 100 or the number of workers.",
+    "why": "Word problems often mention numbers of units, so students think the work needs a count.",
+    "fix": "When the amount of work is not given, take the whole job as 1 (or any convenient number such as the LCM of days) and work consistently.",
+    "probe": {
+     "question": "A can paint a wall in 8 days. What fraction does A paint in one day?",
+     "wrong_answer": "Cannot be found, since the amount of work is not given"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "a quantity must be given a number to be used",
+    "causes": [],
+    "trigger_cues": [
+     "whole work",
+     "unit",
+     "complete job",
+     "fraction of work",
+     "assume"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n8",
+    "statement": "If a person takes 8 days, the work done in one day is 8.",
+    "why": "Students confuse the number of days with the amount of work per day.",
+    "fix": "The whole work done in 8 days means one day's share is 1/8 of the work.",
+    "probe": {
+     "question": "A finishes a task in 5 days. How much of the task does A finish in 1 day?",
+     "wrong_answer": "5 (units of work)"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "the number in the problem is the rate itself",
+    "causes": [],
+    "trigger_cues": [
+     "one day's work",
+     "per day",
+     "rate",
+     "fraction",
+     "days taken"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on rate and ratio reasoning showing confusion of time and rate"
+   },
+   {
+    "key": "m6",
+    "node": "n8",
+    "statement": "The person who takes more days does more work each day.",
+    "why": "Students link bigger numbers with bigger effect.",
+    "fix": "More days for the same job means less work each day. 1/12 per day is less than 1/8 per day.",
+    "probe": {
+     "question": "A takes 12 days and B takes 8 days for the same job. Who does more work in a day?",
+     "wrong_answer": "A, because 12 is more"
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "bigger number means bigger effect",
+    "causes": [],
+    "trigger_cues": [
+     "more days",
+     "faster",
+     "slower",
+     "per day",
+     "efficient"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of inverse relationships in rate problems"
+   },
+   {
+    "key": "m7",
+    "node": "n9",
+    "statement": "If a person does 1/4 of the work in a day, the job takes 1/4 days.",
+    "why": "Students carry the fraction directly into the answer without inverting.",
+    "fix": "If one day gives 1/4 of the job, the whole job needs 4 days, the reciprocal of 1/4.",
+    "probe": {
+     "question": "A does 1/6 of a job every day. How many days for the whole job?",
+     "wrong_answer": "1/6 days"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "the number given is the number asked",
+    "causes": [],
+    "trigger_cues": [
+     "reciprocal",
+     "per day",
+     "whole job",
+     "invert",
+     "fraction of work"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m8",
+    "node": "n10",
+    "statement": "If A does 1/10 of the work per day, in 4 days A has done 1/10 + 4 of the work.",
+    "why": "Students don't connect repeated daily work with multiplication of fractions.",
+    "fix": "Work done = daily rate times days = 4 × 1/10 = 2/5 of the work.",
+    "probe": {
+     "question": "A can complete a job in 10 days. How much is done in 4 days?",
+     "wrong_answer": "4 and 1/10 (or 1/10 + 4)"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "combine the numbers with any operation that looks right",
+    "causes": [],
+    "trigger_cues": [
+     "in 4 days",
+     "part of work",
+     "completed",
+     "fraction done",
+     "multiply"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m9",
+    "node": "n12",
+    "statement": "If 5 workers take 12 days, then 10 workers will take 24 days.",
+    "why": "Students think more workers and more days go up together because both numbers are doubled in other direct-proportion problems.",
+    "fix": "More workers finish the same work in fewer days; doubling workers halves the days, so 6 days.",
+    "probe": {
+     "question": "5 workers finish a job in 12 days. How many days will 10 workers take?",
+     "wrong_answer": "24 days"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "more of one thing always means more of another",
+    "causes": [],
+    "trigger_cues": [
+     "more workers",
+     "fewer days",
+     "inverse proportion",
+     "doubling",
+     "same work"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on direct vs inverse proportion confusion in school students"
+   },
+   {
+    "key": "m10",
+    "node": "n12",
+    "statement": "If 6 workers take 10 days, then 3 workers take 5 days, since fewer workers need fewer days.",
+    "why": "Students halve both quantities because of the idea that less of one means less of the other.",
+    "fix": "Half the workers take twice as long: 20 days. Workers and days change in opposite directions for fixed work.",
+    "probe": {
+     "question": "6 workers complete a job in 10 days. How many days will 3 workers need?",
+     "wrong_answer": "5 days"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a rule that worked before works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "fewer workers",
+     "more days",
+     "half",
+     "same job",
+     "inverse"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on proportional reasoning showing additive and direct-proportion overuse"
+   },
+   {
+    "key": "m11",
+    "node": "n13",
+    "statement": "Doubling the work with the same workers does not change the time.",
+    "why": "Students focus on the number of workers staying same and ignore the amount of work.",
+    "fix": "With the same workers, twice the work takes twice the time, since work and time are directly proportional.",
+    "probe": {
+     "question": "4 men build a wall in 6 days. How long will the same 4 men take for a wall twice as long?",
+     "wrong_answer": "6 days"
+    },
+    "error_type": "other",
+    "root_belief": "only the changed-looking quantity matters",
+    "causes": [],
+    "trigger_cues": [
+     "twice the work",
+     "same men",
+     "longer wall",
+     "direct proportion",
+     "more work"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m12",
+    "node": "n14",
+    "statement": "If 3 men take 8 days, then 4 men take 8 - 1 = 7 days.",
+    "why": "Students use additive thinking: one more worker means one day less.",
+    "fix": "Total man-days is 3 × 8 = 24, so 4 men take 24 ÷ 4 = 6 days. The change is multiplicative, not additive.",
+    "probe": {
+     "question": "3 men finish a job in 8 days. How many days will 4 men take?",
+     "wrong_answer": "7 days"
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "changes are always by adding or subtracting the same amount",
+    "causes": [],
+    "trigger_cues": [
+     "man-days",
+     "one more worker",
+     "constant",
+     "product",
+     "same work"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on additive vs multiplicative reasoning in proportion tasks"
+   },
+   {
+    "key": "m13",
+    "node": "n14",
+    "statement": "If 4 men work 5 days and then 2 days are left to finish, extra men are not needed since man-days is not important.",
+    "why": "Students treat each day separately and do not see work as men times days.",
+    "fix": "Work is measured as men × days. The same total man-days is needed however the men are arranged over the days.",
+    "probe": {
+     "question": "A job needs 40 man-days. 5 men have worked 4 days. How many man-days are left?",
+     "wrong_answer": "Cannot say; only days matter"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "only the time counts, not the amount of effort",
+    "causes": [],
+    "trigger_cues": [
+     "man-days",
+     "workers",
+     "days",
+     "total work",
+     "remaining"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m14",
+    "node": "n16",
+    "statement": "A worker who is twice as efficient takes twice as many days.",
+    "why": "Students link 'twice' to the days directly, ignoring that efficiency and time are opposite.",
+    "fix": "A worker twice as efficient does the same job in half the time.",
+    "probe": {
+     "question": "B is twice as efficient as A. A takes 20 days. How long does B take?",
+     "wrong_answer": "40 days"
+    },
+    "error_type": "language_confusion",
+    "root_belief": "twice as much means twice the number",
+    "causes": [],
+    "trigger_cues": [
+     "twice as efficient",
+     "faster",
+     "half the time",
+     "efficiency",
+     "times as good"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of misreading comparative language in ratio problems"
+   },
+   {
+    "key": "m15",
+    "node": "n17",
+    "statement": "If A takes 6 days and B takes 9 days, A's and B's efficiencies are in ratio 6:9.",
+    "why": "Students write the ratio of the numbers given without checking what is being compared.",
+    "fix": "Efficiency is in the inverse ratio of days, so A:B = 1/6 : 1/9 = 3:2.",
+    "probe": {
+     "question": "A takes 6 days, B takes 9 days for a job. What is the ratio of their efficiencies A:B?",
+     "wrong_answer": "2:3"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "ratio of given numbers is the ratio asked",
+    "causes": [
+     "m18"
+    ],
+    "trigger_cues": [
+     "ratio of efficiency",
+     "days ratio",
+     "inverse",
+     "work ratio",
+     "faster"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on inverse proportion errors in ratio problems"
+   },
+   {
+    "key": "m16",
+    "node": "n21",
+    "statement": "If A and B work together for 2 days and then A leaves, the remaining work is found by taking away 2 days from the total days.",
+    "why": "Students subtract days instead of subtracting fractions of work.",
+    "fix": "Find work done as 2 × (combined rate), subtract from 1, and then divide by the remaining worker's rate.",
+    "probe": {
+     "question": "A and B together do 1/6 of a job daily. After 2 days, how much work is left?",
+     "wrong_answer": "6 - 2 = 4 days of work"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "days can be used as the amount of work",
+    "causes": [],
+    "trigger_cues": [
+     "left",
+     "remaining",
+     "leaves",
+     "after",
+     "work done"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m17",
+    "node": "n23",
+    "statement": "An outlet pipe also adds to the filling, so all pipes' rates are added.",
+    "why": "Students apply the rule 'add rates' from combined work and ignore the opposite effect of a leak.",
+    "fix": "A pipe that empties works against filling, so its rate is subtracted: net rate = inlet rate − outlet rate.",
+    "probe": {
+     "question": "A pipe fills a tank in 6 h and a drain empties it in 12 h. What fraction fills in 1 hour when both are open?",
+     "wrong_answer": "1/6 + 1/12 = 1/4"
+    },
+    "error_type": "sign_error_belief",
+    "root_belief": "a rule from one case works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "outlet",
+     "leak",
+     "empties",
+     "inlet",
+     "both open"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on negative quantities in rate word problems"
+   },
+   {
+    "key": "m18",
+    "node": "n23",
+    "statement": "A tank has a pipe that fills it in 4 hours and a leak that empties it in 4 hours, so it fills in 8 hours.",
+    "why": "Students think the two effects add up because both take the same time.",
+    "fix": "Equal rates cancel: net rate is 0, so the tank never fills.",
+    "probe": {
+     "question": "An inlet fills a tank in 4 h and an outlet empties it in 4 h. How long to fill with both open?",
+     "wrong_answer": "8 hours"
+    },
+    "error_type": "sign_error_belief",
+    "root_belief": "opposing effects still add up",
+    "causes": [],
+    "trigger_cues": [
+     "equal",
+     "leak",
+     "both open",
+     "cancel",
+     "never fills"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m19",
+    "node": "n24",
+    "statement": "With both pipes open, the tank always gets filled, whatever the outlet's speed.",
+    "why": "Students expect the inlet to win since the problem asks about filling.",
+    "fix": "If the outlet empties faster than the inlet fills, the net rate is negative and the tank empties instead.",
+    "probe": {
+     "question": "An inlet fills a tank in 10 h and an outlet empties it in 5 h. What happens when both are opened?",
+     "wrong_answer": "Tank fills in some time"
+    },
+    "error_type": "other",
+    "root_belief": "the expected outcome in the question always happens",
+    "causes": [],
+    "trigger_cues": [
+     "faster outlet",
+     "net rate",
+     "emptied",
+     "negative",
+     "both open"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m20",
+    "node": "n24",
+    "statement": "If an inlet takes 6 h and outlet takes 10 h, the tank fills in 6 − 10 hours.",
+    "why": "Students subtract the time values instead of the rates.",
+    "fix": "Subtract the rates, 1/6 − 1/10 = 1/15, so the tank fills in 15 hours.",
+    "probe": {
+     "question": "Inlet fills a tank in 6 h and outlet empties it in 10 h. Time to fill with both open?",
+     "wrong_answer": "-4 hours (or 4 hours)"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "just combine the numbers given in the problem",
+    "causes": [],
+    "trigger_cues": [
+     "inlet",
+     "outlet",
+     "net",
+     "hours",
+     "subtract"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m21",
+    "node": "n26",
+    "statement": "If two people work together on a job, the money is always shared equally.",
+    "why": "Students think teamwork means equal reward regardless of each person's contribution.",
+    "fix": "Wages are divided in the ratio of work each did, which depends on rate and days worked.",
+    "probe": {
+     "question": "A and B finish a job together. A did 3/5 of the work and B did 2/5. They get Rs 500. What is A's share?",
+     "wrong_answer": "Rs 250"
+    },
+    "error_type": "other",
+    "root_belief": "fair means everyone gets the same",
+    "causes": [],
+    "trigger_cues": [
+     "wages",
+     "share",
+     "ratio of work",
+     "paid",
+     "contribution"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m22",
+    "node": "n26",
+    "statement": "Wages are shared in the ratio of the days each person takes alone.",
+    "why": "Students use the numbers given directly as the ratio, without noting that more days alone means slower work.",
+    "fix": "Wages follow the work done, which is the inverse ratio of days alone when they work together for the same time. If A takes 10 days and B 15, the ratio is 3:2.",
+    "probe": {
+     "question": "A alone takes 10 days and B alone 15 days. They work together and earn Rs 500. A's share?",
+     "wrong_answer": "Rs 200 (ratio 10:15)"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "ratio of given numbers is the ratio asked",
+    "causes": [],
+    "trigger_cues": [
+     "wages",
+     "ratio",
+     "days alone",
+     "paid",
+     "share"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on inverse proportion errors in ratio problems"
+   },
+   {
+    "key": "m23",
+    "node": "n27",
+    "statement": "If two people work the same number of days, they must get the same wage.",
+    "why": "Students equate time spent with work done, ignoring the speed difference.",
+    "fix": "The faster worker does more work in the same days, so earns more when paid by work done.",
+    "probe": {
+     "question": "A does 1/10 of a job and B does 1/15 per day, both work 5 days and are paid by work done. Do they get equal wages?",
+     "wrong_answer": "Yes, both worked 5 days"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "time spent equals amount achieved",
+    "causes": [],
+    "trigger_cues": [
+     "same days",
+     "wages",
+     "faster",
+     "work done",
+     "paid equally"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}

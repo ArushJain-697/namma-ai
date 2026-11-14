@@ -1,0 +1,864 @@
+{
+ "topic": {
+  "id": "MAT-PRIMEFACTOR",
+  "subject": "maths",
+  "strand": "maths",
+  "grades": [
+   6,
+   7,
+   8
+  ],
+  "title": "Prime factorisation and factor trees",
+  "scope": "factor trees give a unique prime factorisation, 1 not prime, 2 the only even prime, factors vs multiples, perfect numbers, co-primes and twin primes, using prime factors to find square roots"
+ },
+ "model": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 7038,
+  "promptTokenCount": 2
+ },
+ "seconds": 75.0,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Primes, composites and special numbers",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "multiplication of whole numbers",
+     "division of whole numbers"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Factors, multiples and co-primes",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "multiplication tables",
+     "divisibility tests"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Prime factorisation and factor trees",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "multiplication of whole numbers",
+     "exponent notation"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Using prime factors",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n3"
+    ],
+    "external_prereqs": [
+     "squares of numbers",
+     "square root as inverse of squaring"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Defining prime and composite",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "division of whole numbers"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Special primes: 1, 2 and twin primes",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "even and odd numbers"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Perfect numbers",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n10"
+    ],
+    "external_prereqs": [
+     "addition of whole numbers"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Factors and multiples",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "multiplication tables"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Co-prime numbers",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n8",
+     "n5"
+    ],
+    "external_prereqs": [
+     "common factors"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Finding all factors of a number",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": [
+     "division of whole numbers"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "A prime has exactly two factors: 1 and itself",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": [
+     "what a factor is"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "A composite has more than two factors",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "1 is neither prime nor composite",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "2 is the only even prime",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": [
+     "even and odd numbers"
+    ]
+   },
+   {
+    "key": "n15",
+    "name": "Twin primes differ by 2",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": [
+     "subtraction of whole numbers"
+    ]
+   },
+   {
+    "key": "n16",
+    "name": "Factors are less than or equal to the number; multiples are greater or equal",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [],
+    "external_prereqs": [
+     "comparison of numbers"
+    ]
+   },
+   {
+    "key": "n17",
+    "name": "Co-primes need not be prime themselves",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n18",
+    "name": "Perfect number equals the sum of its proper factors",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n10"
+    ],
+    "external_prereqs": [
+     "addition of whole numbers"
+    ]
+   },
+   {
+    "key": "n19",
+    "name": "Building a factor tree by splitting into factor pairs",
+    "level": 3,
+    "parent": "n20",
+    "prereqs": [
+     "n10"
+    ],
+    "external_prereqs": [
+     "multiplication tables"
+    ]
+   },
+   {
+    "key": "n20",
+    "name": "Factor tree method",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n12"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n21",
+    "name": "Stop a branch only when it reaches a prime",
+    "level": 3,
+    "parent": "n20",
+    "prereqs": [
+     "n19",
+     "n11"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n22",
+    "name": "Unique prime factorisation",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n20"
+    ],
+    "external_prereqs": [
+     "commutativity of multiplication"
+    ]
+   },
+   {
+    "key": "n23",
+    "name": "Any starting split gives the same primes",
+    "level": 3,
+    "parent": "n22",
+    "prereqs": [
+     "n21"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n24",
+    "name": "Writing the factorisation with exponents",
+    "level": 3,
+    "parent": "n22",
+    "prereqs": [
+     "n21"
+    ],
+    "external_prereqs": [
+     "exponent notation"
+    ]
+   },
+   {
+    "key": "n25",
+    "name": "Square root by pairing prime factors",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [
+     "n24"
+    ],
+    "external_prereqs": [
+     "square root as inverse of squaring"
+    ]
+   },
+   {
+    "key": "n26",
+    "name": "Pair equal primes and take one from each pair",
+    "level": 3,
+    "parent": "n25",
+    "prereqs": [
+     "n24"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n27",
+    "name": "Perfect square has every prime in an even power",
+    "level": 3,
+    "parent": "n25",
+    "prereqs": [
+     "n24"
+    ],
+    "external_prereqs": [
+     "even and odd numbers"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n11",
+    "statement": "All odd numbers are prime.",
+    "why": "Students see 3, 5, 7 are odd primes and generalise from a few examples.",
+    "fix": "Many odd numbers like 9, 15 and 21 have more than two factors, so they are not prime.",
+    "probe": {
+     "question": "Is 21 a prime number?",
+     "wrong_answer": "Yes, because it is odd."
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a pattern seen in few examples always holds",
+    "causes": [],
+    "trigger_cues": [
+     "odd",
+     "prime",
+     "factors",
+     "divisible",
+     "21",
+     "9"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of student errors in elementary number theory"
+   },
+   {
+    "key": "m2",
+    "node": "n11",
+    "statement": "A number is prime if it is not in the 2, 3 or 5 times tables.",
+    "why": "Teachers show quick tests with small numbers and students stop checking at 5.",
+    "fix": "A number is prime only if its sole factors are 1 and itself; check division by all primes up to its square root, such as 7 for 49.",
+    "probe": {
+     "question": "Is 49 a prime number?",
+     "wrong_answer": "Yes, because 2, 3 and 5 do not divide it."
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "a shortcut test works without understanding why",
+    "causes": [],
+    "trigger_cues": [
+     "divisible",
+     "tests",
+     "prime",
+     "49",
+     "7",
+     "factors"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n13",
+    "statement": "1 is a prime number.",
+    "why": "1 is divisible by 1 and itself, so it looks like it fits the definition.",
+    "fix": "A prime has exactly two different factors. 1 has only one factor, so it is neither prime nor composite.",
+    "probe": {
+     "question": "Is 1 a prime number?",
+     "wrong_answer": "Yes, it can only be divided by 1 and itself."
+    },
+    "error_type": "language_confusion",
+    "root_belief": "a definition's wording is enough without its conditions",
+    "causes": [
+     "m4"
+    ],
+    "trigger_cues": [
+     "1",
+     "prime",
+     "neither",
+     "exactly two factors",
+     "composite"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on students' concept definitions of prime numbers"
+   },
+   {
+    "key": "m4",
+    "node": "n13",
+    "statement": "Every number other than 1 that is not prime is composite, and 1 must be one of the two types.",
+    "why": "Students think numbers must be sorted into only two boxes.",
+    "fix": "Numbers are prime, composite, or 1, which is neither.",
+    "probe": {
+     "question": "Is 1 composite?",
+     "wrong_answer": "Yes, because it is not prime."
+    },
+    "error_type": "other",
+    "root_belief": "everything must fit one of two categories",
+    "causes": [],
+    "trigger_cues": [
+     "neither",
+     "prime",
+     "composite",
+     "1",
+     "classification"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n14",
+    "statement": "No even number is prime, so 2 is not prime.",
+    "why": "Students hear that even numbers are divisible by 2 and apply it to 2 itself.",
+    "fix": "2 has only the factors 1 and 2, so it is prime. It is the only even prime.",
+    "probe": {
+     "question": "Is 2 a prime number?",
+     "wrong_answer": "No, it is even so it is divisible by 2."
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a general rule has no exceptions",
+    "causes": [],
+    "trigger_cues": [
+     "even",
+     "prime",
+     "2",
+     "only even prime",
+     "divisible"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on student reasoning about primes"
+   },
+   {
+    "key": "m6",
+    "node": "n14",
+    "statement": "Big primes are all odd, and there are many even primes.",
+    "why": "Students remember only that primes are odd after the first one.",
+    "fix": "Only 2 is an even prime. Every other even number has 2 as an extra factor.",
+    "probe": {
+     "question": "Name an even prime other than 2.",
+     "wrong_answer": "14 is an even prime."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a few examples make a rule for all",
+    "causes": [],
+    "trigger_cues": [
+     "even",
+     "prime",
+     "2",
+     "factor",
+     "divisible"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n15",
+    "statement": "Twin primes are any two primes that are next to each other in the list of primes.",
+    "why": "The word twin is read as neighbouring rather than differing by 2.",
+    "fix": "Twin primes are primes that differ by 2, like 11 and 13. 7 and 11 are not twins.",
+    "probe": {
+     "question": "Are 7 and 11 twin primes?",
+     "wrong_answer": "Yes, they are neighbouring primes."
+    },
+    "error_type": "language_confusion",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "twin",
+     "primes",
+     "differ",
+     "difference",
+     "11",
+     "13"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m8",
+    "node": "n16",
+    "statement": "A multiple of a number can be smaller than the number.",
+    "why": "Students mix up factor and multiple and think of dividing.",
+    "fix": "Multiples are got by multiplying by 1, 2, 3, ... so they are at least as big as the number. Factors are at most the number.",
+    "probe": {
+     "question": "Is 3 a multiple of 12?",
+     "wrong_answer": "Yes, because 12 divided by 4 is 3."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar sounding terms mean the same thing",
+    "causes": [],
+    "trigger_cues": [
+     "multiple",
+     "factor",
+     "divides",
+     "times",
+     "larger",
+     "smaller"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of factor and multiple confusion in school students"
+   },
+   {
+    "key": "m9",
+    "node": "n16",
+    "statement": "A factor of a number can be larger than the number.",
+    "why": "Students treat factor and multiple as interchangeable.",
+    "fix": "A factor divides the number exactly, so it can't be greater than the number.",
+    "probe": {
+     "question": "Is 24 a factor of 8?",
+     "wrong_answer": "Yes, because 8 times 3 is 24."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar sounding terms mean the same thing",
+    "causes": [],
+    "trigger_cues": [
+     "factor",
+     "multiple",
+     "divides",
+     "exactly",
+     "greater"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of factor and multiple confusion in school students"
+   },
+   {
+    "key": "m10",
+    "node": "n10",
+    "statement": "The factors of a number are only the ones in its multiplication table, so 1 and the number itself are not factors.",
+    "why": "Students list only the interesting pairs and skip the trivial ones.",
+    "fix": "Every number has 1 and itself as factors. List all pairs.",
+    "probe": {
+     "question": "List all factors of 12.",
+     "wrong_answer": "2, 3, 4, 6."
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "trivial cases do not count",
+    "causes": [],
+    "trigger_cues": [
+     "factors",
+     "list",
+     "all",
+     "1",
+     "itself",
+     "pairs"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on student concept images of factor"
+   },
+   {
+    "key": "m11",
+    "node": "n18",
+    "statement": "A perfect number is one whose sum of all factors, including itself, equals the number.",
+    "why": "Students add every factor without excluding the number itself.",
+    "fix": "A perfect number equals the sum of its factors other than itself. For 6, 1+2+3=6.",
+    "probe": {
+     "question": "Is 6 a perfect number? Add all its factors including 6.",
+     "wrong_answer": "No, because 1+2+3+6=12, not 6."
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "include everything listed without checking the condition",
+    "causes": [],
+    "trigger_cues": [
+     "perfect",
+     "sum",
+     "factors",
+     "proper",
+     "6",
+     "28"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m12",
+    "node": "n18",
+    "statement": "Any number with many factors is a perfect number.",
+    "why": "The name perfect suggests something very complete or special.",
+    "fix": "A number is perfect only if the factors other than itself add to exactly the number. 12 has many factors but its sum is 16.",
+    "probe": {
+     "question": "Is 12 a perfect number?",
+     "wrong_answer": "Yes, because it has so many factors."
+    },
+    "error_type": "language_confusion",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "perfect",
+     "many",
+     "factors",
+     "sum",
+     "12"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m13",
+    "node": "n17",
+    "statement": "Co-prime numbers must both be prime.",
+    "why": "The word co-prime contains prime, so students assume both numbers are prime.",
+    "fix": "Co-primes only need to have no common factor except 1. 8 and 9 are co-prime although neither is prime.",
+    "probe": {
+     "question": "Are 8 and 9 co-prime?",
+     "wrong_answer": "No, because neither is prime."
+    },
+    "error_type": "language_confusion",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [
+     "m14"
+    ],
+    "trigger_cues": [
+     "co-prime",
+     "common factor",
+     "1",
+     "prime",
+     "8",
+     "9"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of student confusion about co-prime and prime"
+   },
+   {
+    "key": "m14",
+    "node": "n9",
+    "statement": "Two even numbers or two composite numbers can be co-prime if they look different.",
+    "why": "Students don't check the common factor and only compare the numbers superficially.",
+    "fix": "Two even numbers share 2, so they are never co-prime.",
+    "probe": {
+     "question": "Are 4 and 9 co-prime? Are 6 and 8?",
+     "wrong_answer": "6 and 8 are co-prime because they are different."
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "looking different means being unrelated",
+    "causes": [],
+    "trigger_cues": [
+     "co-prime",
+     "common factor",
+     "even",
+     "different"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m15",
+    "node": "n9",
+    "statement": "Co-prime numbers must be consecutive.",
+    "why": "Examples like 8 and 9 are used so students link co-primes with neighbours.",
+    "fix": "Co-primes need only have 1 as their only common factor, like 4 and 15.",
+    "probe": {
+     "question": "Are 4 and 15 co-prime?",
+     "wrong_answer": "No, because they are not consecutive."
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a few examples make a rule for all",
+    "causes": [],
+    "trigger_cues": [
+     "co-prime",
+     "consecutive",
+     "common factor",
+     "1"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m16",
+    "node": "n21",
+    "statement": "A factor tree can stop at any factors, even composite ones, like 4 x 6 for 24.",
+    "why": "Students think they are finished once the number is split once.",
+    "fix": "Keep splitting every branch until each end is a prime.",
+    "probe": {
+     "question": "Write the prime factorisation of 24.",
+     "wrong_answer": "4 x 6."
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "first answer found is the final answer",
+    "causes": [],
+    "trigger_cues": [
+     "factor tree",
+     "prime factors",
+     "branches",
+     "stop",
+     "composite"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on student errors in prime factorisation"
+   },
+   {
+    "key": "m17",
+    "node": "n21",
+    "statement": "1 should be included as a prime factor in the prime factorisation.",
+    "why": "1 divides everything and appears in factor lists, so students add it to the end.",
+    "fix": "Because 1 is not prime, it is not written in prime factorisation.",
+    "probe": {
+     "question": "Write 12 as a product of primes.",
+     "wrong_answer": "1 x 2 x 2 x 3."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a number in one list belongs in related lists",
+    "causes": [],
+    "trigger_cues": [
+     "prime factorisation",
+     "1",
+     "product of primes",
+     "factor tree"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m18",
+    "node": "n23",
+    "statement": "Different factor trees for the same number give different prime factorisations.",
+    "why": "The trees look different, so students expect different answers.",
+    "fix": "Whatever pair you start with, the primes at the end are the same, though the order may change.",
+    "probe": {
+     "question": "Tree A for 36 starts 4 x 9 and Tree B starts 6 x 6. Do they give the same primes?",
+     "wrong_answer": "No, they look different so the primes are different."
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "a different process gives a different result",
+    "causes": [],
+    "trigger_cues": [
+     "factor tree",
+     "same",
+     "unique",
+     "prime factors",
+     "order"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "classroom studies on uniqueness of prime factorisation"
+   },
+   {
+    "key": "m19",
+    "node": "n24",
+    "statement": "2^3 means 2 x 3.",
+    "why": "Students read the exponent as a multiplier.",
+    "fix": "2^3 means 2 x 2 x 2, which is 8.",
+    "probe": {
+     "question": "Write 72 = 2 x 2 x 2 x 3 x 3 using exponents, then check 2^3.",
+     "wrong_answer": "2^3 = 6."
+    },
+    "error_type": "notation_misread",
+    "root_belief": "a symbol means the operation I know best",
+    "causes": [],
+    "trigger_cues": [
+     "power",
+     "exponent",
+     "base",
+     "2^3",
+     "repeated multiplication"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on exponent misconceptions in school algebra"
+   },
+   {
+    "key": "m20",
+    "node": "n24",
+    "statement": "In 2^3 x 3^2 the exponents mean the number of different primes.",
+    "why": "Students think the exponent counts something other than repeats.",
+    "fix": "The exponent says how many times that prime is multiplied.",
+    "probe": {
+     "question": "How many times does 3 appear as a factor in 2^3 x 3^2?",
+     "wrong_answer": "Once."
+    },
+    "error_type": "notation_misread",
+    "root_belief": "a symbol means the operation I know best",
+    "causes": [],
+    "trigger_cues": [
+     "exponent",
+     "power",
+     "times",
+     "prime factor"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m21",
+    "node": "n26",
+    "statement": "To find a square root, halve the number's prime factors.",
+    "why": "Students confuse square root with dividing by 2.",
+    "fix": "Take one prime from each pair of equal primes and multiply them.",
+    "probe": {
+     "question": "Find the square root of 144 = 2x2x2x2x3x3.",
+     "wrong_answer": "144 divided by 2 is 72."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "a new operation is the one I already know",
+    "causes": [],
+    "trigger_cues": [
+     "square root",
+     "pair",
+     "prime factors",
+     "half",
+     "divide"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on student understanding of square root"
+   },
+   {
+    "key": "m22",
+    "node": "n26",
+    "statement": "When finding a square root, multiply all primes from the pairs, not just one from each.",
+    "why": "Students multiply everything and get the number back.",
+    "fix": "For each pair like 2 x 2, take only one 2 into the root.",
+    "probe": {
+     "question": "Use pairing to find the square root of 36 = 2x2x3x3.",
+     "wrong_answer": "2 x 2 x 3 x 3 = 36."
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "do the familiar step and ignore the new rule",
+    "causes": [],
+    "trigger_cues": [
+     "pairs",
+     "square root",
+     "prime",
+     "one from each"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m23",
+    "node": "n27",
+    "statement": "A number is a perfect square if it has an even number of prime factors in total.",
+    "why": "Students count all prime factors rather than each prime's exponent.",
+    "fix": "Every different prime must appear an even number of times. 6 = 2 x 3 has two prime factors but is not a perfect square.",
+    "probe": {
+     "question": "Is 6 a perfect square? It has 2 prime factors.",
+     "wrong_answer": "Yes, 6=2x3 has an even number of primes."
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "counting totals is enough without checking each part",
+    "causes": [],
+    "trigger_cues": [
+     "perfect square",
+     "pairs",
+     "prime factors",
+     "even",
+     "exponent"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}

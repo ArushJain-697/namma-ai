@@ -1,0 +1,907 @@
+{
+ "topic": {
+  "id": "MAT-SETSVENN",
+  "subject": "maths",
+  "strand": "maths",
+  "grades": [
+   9,
+   10
+  ],
+  "title": "Sets and Venn diagrams",
+  "scope": "roster and set-builder forms, empty set vs. {0}, subsets and equal sets, union, intersection and complement, counting overlaps with Venn diagrams"
+ },
+ "model": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 12209,
+  "promptTokenCount": 2
+ },
+ "seconds": 86.1,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Describing sets",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "idea of a collection of objects",
+     "natural numbers and integers"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Roster (listing) form",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "natural numbers and integers"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Each element is listed once and order does not matter",
+    "level": 3,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": [
+     "counting objects"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Symbols ∈ and ∉ mean 'belongs to' and 'does not belong to'",
+    "level": 3,
+    "parent": "n2",
+    "prereqs": [
+     "n3"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n5",
+    "name": "Set-builder form",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "inequalities such as x < 5",
+     "even and odd numbers"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "{x : condition} is read 'x such that condition'",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": [
+     "meaning of 'less than' and 'at most'",
+     "solving simple equations"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "The empty set",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "the number zero"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "The empty set has no elements, while {0} has one element",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n3"
+    ],
+    "external_prereqs": [
+     "the number zero as a number, not as 'nothing'"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Relations between sets",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n10",
+    "name": "Subsets",
+    "level": 2,
+    "parent": "n9",
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "idea of 'part of'"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Every set is a subset of itself, and the empty set is a subset of every set",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": [
+     "reading 'if-then' statements"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "⊂ links a set to a set, ∈ links an element to a set",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Equal sets",
+    "level": 2,
+    "parent": "n9",
+    "prereqs": [
+     "n10"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n14",
+    "name": "Sets are equal when they have exactly the same elements",
+    "level": 3,
+    "parent": "n13",
+    "prereqs": [
+     "n3"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "Universal set",
+    "level": 2,
+    "parent": "n9",
+    "prereqs": [
+     "n10"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n16",
+    "name": "The universal set is the fixed set containing everything under discussion in a problem",
+    "level": 3,
+    "parent": "n15",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": [
+     "meaning of 'context' or 'domain' of a problem"
+    ]
+   },
+   {
+    "key": "n17",
+    "name": "Set operations and Venn diagrams",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n9"
+    ],
+    "external_prereqs": [
+     "logical words and, or, not"
+    ]
+   },
+   {
+    "key": "n18",
+    "name": "Union",
+    "level": 2,
+    "parent": "n17",
+    "prereqs": [
+     "n3"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n19",
+    "name": "A∪B holds elements in A or B or both, common ones written once",
+    "level": 3,
+    "parent": "n18",
+    "prereqs": [
+     "n3",
+     "n4"
+    ],
+    "external_prereqs": [
+     "inclusive 'or' in mathematics"
+    ]
+   },
+   {
+    "key": "n20",
+    "name": "Intersection",
+    "level": 2,
+    "parent": "n17",
+    "prereqs": [
+     "n4"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n21",
+    "name": "A∩B holds only the common elements; disjoint sets give the empty set",
+    "level": 3,
+    "parent": "n20",
+    "prereqs": [
+     "n8"
+    ],
+    "external_prereqs": [
+     "meaning of 'and' as both at once"
+    ]
+   },
+   {
+    "key": "n22",
+    "name": "Complement and difference",
+    "level": 2,
+    "parent": "n17",
+    "prereqs": [
+     "n15"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n23",
+    "name": "A' is the elements of U that are not in A",
+    "level": 3,
+    "parent": "n22",
+    "prereqs": [
+     "n16"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n24",
+    "name": "A−B keeps the elements of A that are not in B, and order matters",
+    "level": 3,
+    "parent": "n22",
+    "prereqs": [
+     "n21"
+    ],
+    "external_prereqs": [
+     "subtraction is not commutative"
+    ]
+   },
+   {
+    "key": "n25",
+    "name": "Counting with Venn diagrams",
+    "level": 2,
+    "parent": "n17",
+    "prereqs": [
+     "n18",
+     "n20"
+    ],
+    "external_prereqs": [
+     "addition and subtraction of whole numbers",
+     "word problems"
+    ]
+   },
+   {
+    "key": "n26",
+    "name": "Rectangle shows U, circles show sets, and every region means something",
+    "level": 3,
+    "parent": "n25",
+    "prereqs": [
+     "n16"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n27",
+    "name": "The 'only A' region is n(A) minus the overlap",
+    "level": 3,
+    "parent": "n25",
+    "prereqs": [
+     "n26",
+     "n21"
+    ],
+    "external_prereqs": [
+     "subtraction of whole numbers"
+    ]
+   },
+   {
+    "key": "n28",
+    "name": "n(A∪B) = n(A) + n(B) − n(A∩B)",
+    "level": 3,
+    "parent": "n25",
+    "prereqs": [
+     "n19",
+     "n21",
+     "n27"
+    ],
+    "external_prereqs": [
+     "addition and subtraction of whole numbers"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n8",
+    "statement": "The set {0} is the empty set because zero means nothing.",
+    "why": "Students treat the number zero and the idea of 'nothing' as the same thing.",
+    "fix": "{0} has one element, the number 0, so it is not empty. The empty set ∅ has no elements at all.",
+    "probe": {
+     "question": "How many elements does the set {0} have?",
+     "wrong_answer": "Zero elements, because it is the empty set."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "zero and nothing are the same",
+    "causes": [
+     "m15"
+    ],
+    "trigger_cues": [
+     "empty set",
+     "null set",
+     "zero",
+     "{0}",
+     "no elements",
+     "phi"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on students' understanding of the empty set in school and early university mathematics"
+   },
+   {
+    "key": "m2",
+    "node": "n7",
+    "statement": "The empty set is not really a set because it has nothing in it.",
+    "why": "A 'collection' in daily life needs objects, so students refuse to call an empty one a collection.",
+    "fix": "A set is defined by its membership rule, and a set can have zero members. The empty set is a genuine set, like an empty bag still being a bag.",
+    "probe": {
+     "question": "Is ∅ a set?",
+     "wrong_answer": "No, since there is nothing in it to make a set."
+    },
+    "error_type": "language_confusion",
+    "root_belief": "nothing is not a thing",
+    "causes": [
+     "m8"
+    ],
+    "trigger_cues": [
+     "empty set",
+     "null set",
+     "no elements",
+     "collection",
+     "void set",
+     "does not exist"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of students' difficulty accepting the empty set as a set"
+   },
+   {
+    "key": "m3",
+    "node": "n3",
+    "statement": "The set {1, 2, 2, 3} has 4 elements.",
+    "why": "Students count every written symbol, as they do when counting objects in a list.",
+    "fix": "A repeated element is the same element, so {1, 2, 2, 3} equals {1, 2, 3} and has 3 elements.",
+    "probe": {
+     "question": "Find the number of elements in {a, b, b, c, c}.",
+     "wrong_answer": "5"
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "each mention counts as one more",
+    "causes": [
+     "m13"
+    ],
+    "trigger_cues": [
+     "repeated",
+     "distinct",
+     "element",
+     "listed once",
+     "roster",
+     "count"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies on novice understanding of set notation and distinct elements"
+   },
+   {
+    "key": "m4",
+    "node": "n3",
+    "statement": "{1, 2, 3} and {3, 2, 1} are different sets because the order is different.",
+    "why": "Lists, numbers and words in daily life depend on order, so students carry this over to sets.",
+    "fix": "A set only records which elements belong, not their order. {1, 2, 3} and {3, 2, 1} are the same set.",
+    "probe": {
+     "question": "Is {1, 2, 3} = {3, 1, 2}?",
+     "wrong_answer": "No, the elements are in a different order."
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "order always matters",
+    "causes": [],
+    "trigger_cues": [
+     "order",
+     "roster",
+     "same set",
+     "equal",
+     "arrangement",
+     "list"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n6",
+    "statement": "In {x : x is a natural number less than 5}, the number 5 is included.",
+    "why": "Everyday 'up to' and 'less than' are used loosely, so the strict meaning is missed.",
+    "fix": "'Less than 5' excludes 5. The set is {1, 2, 3, 4}.",
+    "probe": {
+     "question": "Write {x : x is a natural number less than 5} in roster form.",
+     "wrong_answer": "{1, 2, 3, 4, 5}"
+    },
+    "error_type": "language_confusion",
+    "root_belief": "everyday wording is loosely inclusive",
+    "causes": [],
+    "trigger_cues": [
+     "less than",
+     "greater than",
+     "set-builder",
+     "such that",
+     "natural number",
+     "at most"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m6",
+    "node": "n6",
+    "statement": "The set {x : x is an integer and x² = 4} is just {2}.",
+    "why": "Students solve x² = 4 as they do in arithmetic and take only the positive answer.",
+    "fix": "Both 2 and −2 satisfy x² = 4 and are integers, so the set is {−2, 2}.",
+    "probe": {
+     "question": "Write {x : x is an integer, x² = 9} in roster form.",
+     "wrong_answer": "{3}"
+    },
+    "error_type": "sign_error_belief",
+    "root_belief": "only the positive answer counts",
+    "causes": [],
+    "trigger_cues": [
+     "x squared",
+     "integer",
+     "roster form",
+     "solution set",
+     "negative",
+     "set-builder"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n11",
+    "statement": "A set cannot be a subset of itself, because a subset must be smaller.",
+    "why": "The word 'sub' suggests a smaller part, so students think the whole cannot be its own part.",
+    "fix": "A ⊆ A is always true because every element of A is in A. Only a proper subset must be smaller.",
+    "probe": {
+     "question": "Is A = {1, 2} a subset of A?",
+     "wrong_answer": "No, a subset must have fewer elements than A."
+    },
+    "error_type": "language_confusion",
+    "root_belief": "a part must be smaller than the whole",
+    "causes": [],
+    "trigger_cues": [
+     "subset",
+     "proper subset",
+     "itself",
+     "every element",
+     "⊆",
+     "part of"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies on students' reading of subset versus proper subset"
+   },
+   {
+    "key": "m8",
+    "node": "n11",
+    "statement": "The empty set is not a subset of {1, 2, 3} because it shares no element with it.",
+    "why": "Students think a subset must 'have something in common', and they find 'vacuously true' hard to accept.",
+    "fix": "A subset needs every element of it to be in the bigger set. ∅ has no elements that could fail, so ∅ is a subset of every set.",
+    "probe": {
+     "question": "Is ∅ ⊂ {1, 2, 3}?",
+     "wrong_answer": "No, ∅ has nothing in common with it."
+    },
+    "error_type": "other",
+    "root_belief": "nothing is not a thing",
+    "causes": [],
+    "trigger_cues": [
+     "empty set",
+     "subset",
+     "every set",
+     "no element",
+     "vacuous",
+     "∅"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of how learners handle vacuous truth in set inclusion"
+   },
+   {
+    "key": "m9",
+    "node": "n12",
+    "statement": "If A = {1, 2, 3}, then {2} ∈ A is true.",
+    "why": "Students mix up 'belongs to' with 'is contained in', as both feel like 'inside'.",
+    "fix": "{2} is a set, not an element of A, so {2} ⊂ A is correct and 2 ∈ A is correct.",
+    "probe": {
+     "question": "Which is correct for A = {1, 2, 3}: {2} ∈ A or {2} ⊂ A?",
+     "wrong_answer": "{2} ∈ A"
+    },
+    "error_type": "notation_misread",
+    "root_belief": "similar symbols mean the same thing",
+    "causes": [],
+    "trigger_cues": [
+     "belongs to",
+     "subset",
+     "∈",
+     "⊂",
+     "element",
+     "symbol"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies on student confusion between membership and inclusion"
+   },
+   {
+    "key": "m10",
+    "node": "n12",
+    "statement": "For A = {1, 2, 3}, writing 2 ⊂ A is correct.",
+    "why": "Students see the number 2 as 'inside' the set and pick the subset sign.",
+    "fix": "2 is an element, so write 2 ∈ A. The sign ⊂ is only used between two sets, like {2} ⊂ A.",
+    "probe": {
+     "question": "Write the correct symbol: 2 __ {1, 2, 3}.",
+     "wrong_answer": "⊂"
+    },
+    "error_type": "notation_misread",
+    "root_belief": "similar symbols mean the same thing",
+    "causes": [],
+    "trigger_cues": [
+     "element",
+     "subset",
+     "symbol",
+     "⊂",
+     "∈",
+     "member"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies on student confusion between membership and inclusion"
+   },
+   {
+    "key": "m11",
+    "node": "n14",
+    "statement": "{1, 2, 3} = {a, b, c} because both sets have three elements.",
+    "why": "Students compare the size of sets and ignore which elements they hold.",
+    "fix": "Equal sets must have exactly the same elements. Sets with the same number of elements are only equivalent, not equal.",
+    "probe": {
+     "question": "Is {1, 2, 3} = {4, 5, 6}?",
+     "wrong_answer": "Yes, both have 3 elements."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "same count means same thing",
+    "causes": [],
+    "trigger_cues": [
+     "equal sets",
+     "equivalent sets",
+     "same elements",
+     "number of elements",
+     "cardinal"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on equal versus equivalent sets in school classrooms"
+   },
+   {
+    "key": "m12",
+    "node": "n16",
+    "statement": "The universal set is always the set of everything in the universe.",
+    "why": "The word 'universal' is taken at its everyday meaning.",
+    "fix": "U is chosen to suit the problem. It may be just the natural numbers or the students of a class, and it can change between problems.",
+    "probe": {
+     "question": "For finding the complement of the set of even numbers among the natural numbers, what is a suitable U?",
+     "wrong_answer": "Everything that exists, including all things in the world."
+    },
+    "error_type": "language_confusion",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [
+     "m17"
+    ],
+    "trigger_cues": [
+     "universal set",
+     "universe",
+     "complement",
+     "context",
+     "given set",
+     "U"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m13",
+    "node": "n19",
+    "statement": "{1, 2, 3} ∪ {3, 4} = {1, 2, 3, 3, 4}.",
+    "why": "Students join the two lists as they would join two sentences.",
+    "fix": "A union lists each element once, so the answer is {1, 2, 3, 4}.",
+    "probe": {
+     "question": "Find {1, 2, 3} ∪ {3, 4}.",
+     "wrong_answer": "{1, 2, 3, 3, 4}"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "each mention counts as one more",
+    "causes": [
+     "m22"
+    ],
+    "trigger_cues": [
+     "union",
+     "combine",
+     "common element",
+     "repeated",
+     "∪",
+     "distinct"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of errors in set operations among school students"
+   },
+   {
+    "key": "m14",
+    "node": "n19",
+    "statement": "A∪B contains only elements that are in A or in B but not in both.",
+    "why": "In daily speech 'or' usually means one choice only.",
+    "fix": "In maths, 'or' also allows both. Elements in A, in B, or in both are in A∪B.",
+    "probe": {
+     "question": "Is 3 in {1, 2, 3} ∪ {3, 4}?",
+     "wrong_answer": "No, 3 is in both sets, so it is left out."
+    },
+    "error_type": "language_confusion",
+    "root_belief": "everyday or means choose one",
+    "causes": [],
+    "trigger_cues": [
+     "union",
+     "or",
+     "both",
+     "either",
+     "∪",
+     "belongs"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of inclusive versus exclusive 'or' among learners"
+   },
+   {
+    "key": "m15",
+    "node": "n21",
+    "statement": "If A and B have nothing in common, then A∩B = 0.",
+    "why": "Students write the number 0 for 'no answer' or 'nothing'.",
+    "fix": "A∩B is a set, so when there is no common element it is the empty set ∅, not the number 0.",
+    "probe": {
+     "question": "Find {1, 2} ∩ {3, 4}.",
+     "wrong_answer": "0"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "no answer is written as zero",
+    "causes": [],
+    "trigger_cues": [
+     "intersection",
+     "disjoint",
+     "no common",
+     "empty set",
+     "∩",
+     "zero"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m16",
+    "node": "n21",
+    "statement": "A∩B means putting all the elements of A and of B together.",
+    "why": "Students read 'and' as 'add them together', which is the union idea.",
+    "fix": "A∩B only has elements that are in A and also in B at the same time. Putting everything together is the union.",
+    "probe": {
+     "question": "Find {1, 2, 3} ∩ {2, 3, 4}.",
+     "wrong_answer": "{1, 2, 3, 4}"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "combining always means putting everything together",
+    "causes": [],
+    "trigger_cues": [
+     "intersection",
+     "common",
+     "and",
+     "both",
+     "∩",
+     "union"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of union and intersection mix-ups in school set theory"
+   },
+   {
+    "key": "m17",
+    "node": "n23",
+    "statement": "The complement of the set of even natural numbers includes negative numbers and fractions.",
+    "why": "Students read 'not in A' as everything else anywhere, forgetting U.",
+    "fix": "A' only has elements of U that are not in A. If U is the natural numbers, A' is the odd natural numbers.",
+    "probe": {
+     "question": "U = {1, 2, 3, 4, 5, 6}, A = {2, 4, 6}. Find A'.",
+     "wrong_answer": "{1, 3, 5, 7, 9, ...} including numbers outside U"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "not means all else everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "complement",
+     "A'",
+     "not in A",
+     "universal set",
+     "U",
+     "outside"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of school students' errors with complements"
+   },
+   {
+    "key": "m18",
+    "node": "n23",
+    "statement": "The complement of A is the other set B drawn in the question.",
+    "why": "Students think 'opposite of A' must be the other set in view.",
+    "fix": "A' is everything in U outside A. It is a different idea from B, which may overlap A.",
+    "probe": {
+     "question": "U = {1, 2, 3, 4, 5}, A = {1, 2}, B = {2, 3}. Find A'.",
+     "wrong_answer": "{2, 3}"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "opposite means the other one shown",
+    "causes": [],
+    "trigger_cues": [
+     "complement",
+     "A'",
+     "opposite",
+     "not in",
+     "other set",
+     "U"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m19",
+    "node": "n24",
+    "statement": "A−B and B−A are always the same set.",
+    "why": "Students expect symmetry as they do with union and intersection.",
+    "fix": "A−B keeps elements of A not in B, and B−A keeps elements of B not in A. They are usually different.",
+    "probe": {
+     "question": "A = {1, 2, 3}, B = {3, 4}. Find A−B.",
+     "wrong_answer": "{1, 2, 4}, the same as B−A"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "order does not matter in any operation",
+    "causes": [],
+    "trigger_cues": [
+     "difference",
+     "A−B",
+     "B−A",
+     "remove",
+     "commutative",
+     "order"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m20",
+    "node": "n26",
+    "statement": "In a Venn diagram, two circles must always overlap.",
+    "why": "Most textbook figures show overlapping circles, which become the prototype.",
+    "fix": "If two sets share no elements, their circles are drawn apart. Overlap shows only that there is a common element.",
+    "probe": {
+     "question": "Draw A = {1, 2} and B = {3, 4} in a Venn diagram.",
+     "wrong_answer": "Two overlapping circles with the overlap marked."
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "one familiar picture shows every case",
+    "causes": [],
+    "trigger_cues": [
+     "venn diagram",
+     "overlap",
+     "disjoint",
+     "circles",
+     "rectangle",
+     "region"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of student use of Venn diagrams and prototype pictures"
+   },
+   {
+    "key": "m21",
+    "node": "n27",
+    "statement": "The number written for A in a Venn diagram goes in the part of circle A that is outside the overlap.",
+    "why": "Students treat the label 'A' as a label for only the non-shared part of the circle.",
+    "fix": "n(A) counts the whole circle A, including the overlap. The 'only A' part is n(A) − n(A∩B).",
+    "probe": {
+     "question": "n(A) = 30 and n(A∩B) = 10. How many are in A only?",
+     "wrong_answer": "30"
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "a label covers the whole shape",
+    "causes": [
+     "m22"
+    ],
+    "trigger_cues": [
+     "only A",
+     "region",
+     "venn",
+     "n(A)",
+     "overlap",
+     "circle"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m22",
+    "node": "n28",
+    "statement": "The number of students in A∪B is always n(A) + n(B).",
+    "why": "Whole-number addition is applied without noticing that the overlap is counted twice.",
+    "fix": "People in both sets are counted twice, so subtract once: n(A∪B) = n(A) + n(B) − n(A∩B).",
+    "probe": {
+     "question": "30 students like tea, 25 like coffee, and 10 like both. How many like at least one?",
+     "wrong_answer": "55"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "a total is the sum of the given parts",
+    "causes": [],
+    "trigger_cues": [
+     "n(A∪B)",
+     "total",
+     "both",
+     "like",
+     "survey",
+     "subtract",
+     "overlap"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of inclusion–exclusion errors in school word problems"
+   },
+   {
+    "key": "m23",
+    "node": "n28",
+    "statement": "Every student in a class survey must be inside one of the circles, so nobody is outside the circles.",
+    "why": "Students ignore the area outside the circles because it is not highlighted.",
+    "fix": "The rectangle U is the whole group, and some elements can lie outside both circles. They are counted as n(U) − n(A∪B).",
+    "probe": {
+     "question": "In a class of 50, 30 like tea, 25 like coffee, and 10 like both. How many like neither?",
+     "wrong_answer": "0, as all 50 are in the circles."
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "what you cannot see does not exist",
+    "causes": [],
+    "trigger_cues": [
+     "neither",
+     "outside the circles",
+     "rectangle",
+     "universal set",
+     "survey",
+     "n(U)"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of student errors with the region outside circles in Venn diagrams"
+   }
+  ]
+ },
+ "problems": []
+}

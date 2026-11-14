@@ -1,0 +1,901 @@
+{
+ "topic": {
+  "id": "MAT-TIMECLOCKCAL",
+  "subject": "maths",
+  "strand": "maths",
+  "grades": [
+   6,
+   7,
+   8
+  ],
+  "title": "Time, clocks and calendars",
+  "scope": "24-hour clock, elapsed time across noon and midnight, base-60 subtraction, leap years, days between dates, angle between clock hands, time zones"
+ },
+ "model": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 9021,
+  "promptTokenCount": 2
+ },
+ "seconds": 58.8,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Reading and writing time",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "reading an analogue clock",
+     "place value of whole numbers"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Calculating durations",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "addition and subtraction of whole numbers with borrowing",
+     "number line"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Calendars",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "division and divisibility rules",
+     "counting in whole numbers"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Clock angles and time zones",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "angle measure in degrees",
+     "full turn is 360 degrees"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "12-hour and 24-hour clock",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "addition of whole numbers"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "Units of time",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "decimal place value"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Elapsed time",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n5",
+     "n8"
+    ],
+    "external_prereqs": [
+     "number line"
+    ]
+   },
+   {
+    "key": "n8",
+    "name": "Base-60 arithmetic",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": [
+     "subtraction with borrowing",
+     "addition with carrying"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Leap years",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "divisibility rules"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Days between dates",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [
+     "n9"
+    ],
+    "external_prereqs": [
+     "addition of whole numbers"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Angle between clock hands",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [
+     "n6"
+    ],
+    "external_prereqs": [
+     "multiplication of whole numbers",
+     "fractions of a circle"
+    ]
+   },
+   {
+    "key": "n12",
+    "name": "Time zones",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "rotation of the Earth",
+     "longitude and directions east-west"
+    ]
+   },
+   {
+    "key": "n13",
+    "name": "Afternoon hours in 24-hour clock are 12 more",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": [
+     "addition of whole numbers"
+    ]
+   },
+   {
+    "key": "n14",
+    "name": "Noon is 12:00 and midnight is 00:00 or 24:00",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n13"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n15",
+    "name": "1 hour is 60 minutes and 1 minute is 60 seconds",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [],
+    "external_prereqs": [
+     "decimal place value"
+    ]
+   },
+   {
+    "key": "n16",
+    "name": "Borrow 1 hour as 60 minutes when subtracting",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n15"
+    ],
+    "external_prereqs": [
+     "subtraction with borrowing"
+    ]
+   },
+   {
+    "key": "n17",
+    "name": "Carry 1 hour when minutes reach 60",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n15"
+    ],
+    "external_prereqs": [
+     "addition with carrying"
+    ]
+   },
+   {
+    "key": "n18",
+    "name": "Elapsed time across midnight",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n14",
+     "n16"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n19",
+    "name": "Elapsed time across noon using am and pm",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n14",
+     "n16"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n20",
+    "name": "A year divisible by 4 is usually a leap year",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [],
+    "external_prereqs": [
+     "divisibility rule of 4"
+    ]
+   },
+   {
+    "key": "n21",
+    "name": "Century years are leap only if divisible by 400",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [
+     "n20"
+    ],
+    "external_prereqs": [
+     "divisibility by 400"
+    ]
+   },
+   {
+    "key": "n22",
+    "name": "Counting days from one date to another",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [],
+    "external_prereqs": [
+     "subtraction of whole numbers"
+    ]
+   },
+   {
+    "key": "n23",
+    "name": "Months have 28/29, 30 or 31 days",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [
+     "n20"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n24",
+    "name": "Minute hand turns 6 degrees per minute",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [
+     "n15"
+    ],
+    "external_prereqs": [
+     "360 divided by 60"
+    ]
+   },
+   {
+    "key": "n25",
+    "name": "Hour hand turns 30 degrees per hour and 0.5 per minute",
+    "level": 3,
+    "parent": "n11",
+    "prereqs": [
+     "n24"
+    ],
+    "external_prereqs": [
+     "360 divided by 12"
+    ]
+   },
+   {
+    "key": "n26",
+    "name": "Earth turns 15 degrees per hour",
+    "level": 3,
+    "parent": "n12",
+    "prereqs": [],
+    "external_prereqs": [
+     "rotation of the Earth",
+     "360 divided by 24"
+    ]
+   },
+   {
+    "key": "n27",
+    "name": "Places east are ahead in time",
+    "level": 3,
+    "parent": "n12",
+    "prereqs": [
+     "n26"
+    ],
+    "external_prereqs": [
+     "directions east and west"
+    ]
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n13",
+    "statement": "To convert any pm time to 24-hour time, add 12 to the hour, so 12:30 pm is 24:30.",
+    "why": "The add-12 rule is learnt for 1 pm to 11 pm and applied blindly to 12 pm.",
+    "fix": "12 pm (noon) stays 12:xx. Add 12 only for hours from 1 pm to 11 pm.",
+    "probe": {
+     "question": "Write 12:30 pm in 24-hour time.",
+     "wrong_answer": "24:30"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a rule works for every case without exceptions",
+    "causes": [],
+    "trigger_cues": [
+     "24-hour",
+     "pm",
+     "add 12",
+     "afternoon",
+     "convert",
+     "noon"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m2",
+    "node": "n13",
+    "statement": "In the 24-hour clock, 1 am is written 13:00 and 1 pm is written 01:00.",
+    "why": "Students remember that 13 relates to 1 but mix up which half of the day is which.",
+    "fix": "Morning hours stay the same (1 am = 01:00). Afternoon hours are 12 more (1 pm = 13:00).",
+    "probe": {
+     "question": "Write 1 pm in 24-hour time.",
+     "wrong_answer": "01:00"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar looking labels mean the same thing",
+    "causes": [],
+    "trigger_cues": [
+     "am",
+     "pm",
+     "13:00",
+     "01:00",
+     "24-hour clock",
+     "morning"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n14",
+    "statement": "12 am is noon and 12 pm is midnight.",
+    "why": "am sounds like 'morning' and 12 feels like the middle of the day, and the labels ante/post meridiem are not understood.",
+    "fix": "12 pm is noon, 12 am is midnight, the start of a new day (00:00).",
+    "probe": {
+     "question": "A shop opens at 12 am. Is it open in the afternoon or in the middle of the night?",
+     "wrong_answer": "It opens at noon in the afternoon."
+    },
+    "error_type": "language_confusion",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [
+     "m11"
+    ],
+    "trigger_cues": [
+     "12 am",
+     "12 pm",
+     "noon",
+     "midnight",
+     "ante meridiem",
+     "post meridiem"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "classroom studies of children's difficulties with am/pm and 12-hour clock conventions",
+    "node_note": null
+   },
+   {
+    "key": "m4",
+    "node": "n14",
+    "statement": "Midnight belongs to the day that is ending, so 00:00 of Tuesday is the same moment as the end of Tuesday.",
+    "why": "Night feels like a continuation of the evening, so students attach midnight to the previous day.",
+    "fix": "00:00 is the start of the new day. The end of Tuesday is 24:00, which is the same moment as 00:00 on Wednesday.",
+    "probe": {
+     "question": "A train leaves at 23:30 on Monday and the journey takes 1 hour. Which day does it arrive?",
+     "wrong_answer": "Monday"
+    },
+    "error_type": "other",
+    "root_belief": "events stay in the same group until something visible changes",
+    "causes": [],
+    "trigger_cues": [
+     "midnight",
+     "00:00",
+     "new day",
+     "date changes",
+     "24:00",
+     "next day"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n6",
+    "statement": "1 hour is 100 minutes, so 2 hours 30 minutes is 2.30 hours and 2.5 hours means 2 hours 5 minutes.",
+    "why": "Decimal place value is applied to a base-60 system.",
+    "fix": "1 hour is 60 minutes. 2.5 hours is 2 hours 30 minutes, and 2 hours 30 minutes is 2.5 hours, not 2.30.",
+    "probe": {
+     "question": "How many minutes are in 2.5 hours?",
+     "wrong_answer": "250 minutes"
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "a rule from whole numbers works everywhere",
+    "causes": [
+     "m6",
+     "m7"
+    ],
+    "trigger_cues": [
+     "60 minutes",
+     "hour",
+     "decimal",
+     "convert",
+     "hours and minutes",
+     "base 60"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on children's difficulties with non-decimal (sexagesimal) units of time",
+    "node_note": null
+   },
+   {
+    "key": "m6",
+    "node": "n16",
+    "statement": "When subtracting times, borrowing 1 hour gives 10 extra minutes, like borrowing in ordinary subtraction.",
+    "why": "The borrowing procedure from decimal subtraction is repeated mechanically.",
+    "fix": "Borrowing 1 hour gives 60 minutes, so 3:20 - 1:45 is 2 hours 80 minutes - 1 hour 45 minutes = 1 hour 35 minutes.",
+    "probe": {
+     "question": "Find 3 h 20 min - 1 h 45 min.",
+     "wrong_answer": "1 h 35 min computed as 2 h 30 min - 1 h 45 min = 0 h 45 min"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "a rule from whole numbers works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "subtract",
+     "borrow",
+     "hours and minutes",
+     "regroup",
+     "difference of times"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of errors in time subtraction and regrouping in non-decimal units",
+    "node_note": null
+   },
+   {
+    "key": "m7",
+    "node": "n17",
+    "statement": "2 h 45 min + 1 h 30 min = 3 h 75 min, and that is the final answer.",
+    "why": "Students add columns separately and do not realise minutes cannot exceed 59 in standard form.",
+    "fix": "75 minutes is 1 hour 15 minutes, so the sum is 4 h 15 min.",
+    "probe": {
+     "question": "Add 2 h 45 min and 1 h 30 min.",
+     "wrong_answer": "3 h 75 min"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "digits in separate columns can be treated independently",
+    "causes": [],
+    "trigger_cues": [
+     "add",
+     "hours and minutes",
+     "carry",
+     "total time",
+     "minutes exceed 60"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on children's errors with time addition",
+    "node_note": null
+   },
+   {
+    "key": "m8",
+    "node": "n17",
+    "statement": "Adding 50 minutes to 4:30 gives 4:80.",
+    "why": "The clock face is thought of as a number line that continues past 60.",
+    "fix": "After 4:59 the clock goes to 5:00. 4:30 + 50 minutes = 5:20.",
+    "probe": {
+     "question": "What time is it 50 minutes after 4:30?",
+     "wrong_answer": "4:80"
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "numbers keep counting up with no limit",
+    "causes": [],
+    "trigger_cues": [
+     "minutes after",
+     "later",
+     "time after",
+     "clock",
+     "next hour"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m9",
+    "node": "n7",
+    "statement": "Elapsed time is found by subtracting the smaller number from the larger one, whichever time is first.",
+    "why": "Students treat times as plain numbers and subtract the clock digits in the easiest direction.",
+    "fix": "Elapsed time is finish time minus start time. When the clock passes 12 or midnight, count in parts or use the 24-hour clock.",
+    "probe": {
+     "question": "A film starts at 9:40 and ends at 11:15. How long is it?",
+     "wrong_answer": "2 hours 35 minutes (11-9 hours and 40-15 minutes added)"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "smaller from larger always gives the answer",
+    "causes": [],
+    "trigger_cues": [
+     "elapsed time",
+     "start",
+     "end",
+     "duration",
+     "how long",
+     "difference"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of children's elapsed-time reasoning errors",
+    "node_note": null
+   },
+   {
+    "key": "m10",
+    "node": "n18",
+    "statement": "A journey from 10 pm to 4 am takes 4 - 10 = 6 hours.",
+    "why": "Students subtract the hour numbers ignoring the passing of midnight.",
+    "fix": "From 10 pm to midnight is 2 hours and midnight to 4 am is 4 hours, so the total is 6 hours; students must count through midnight, not just subtract numbers and always get the right answer by luck.",
+    "probe": {
+     "question": "A train leaves at 9 pm and arrives at 3 am. How long is the journey?",
+     "wrong_answer": "6 hours is wrong since 3 - 9 = -6, so 6 hours gone the other way, i.e. 18 hours"
+    },
+    "error_type": "sign_error_belief",
+    "root_belief": "a rule from whole numbers works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "midnight",
+     "overnight",
+     "train",
+     "journey",
+     "pm to am",
+     "duration"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m11",
+    "node": "n19",
+    "statement": "Time from 11 am to 2 pm is 9 hours because 11 - 2 = 9.",
+    "why": "The am/pm change is ignored and the hour digits are subtracted in the 12-hour clock.",
+    "fix": "11 am to 12 noon is 1 hour, and 12 noon to 2 pm is 2 hours, so the total is 3 hours. Converting to 14:00 - 11:00 also gives 3 hours.",
+    "probe": {
+     "question": "How long is it from 11 am to 2 pm?",
+     "wrong_answer": "9 hours"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "digits can be subtracted without checking what they mean",
+    "causes": [],
+    "trigger_cues": [
+     "am",
+     "pm",
+     "noon",
+     "hours between",
+     "school timings",
+     "duration"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of children's errors when time intervals cross noon",
+    "node_note": null
+   },
+   {
+    "key": "m12",
+    "node": "n20",
+    "statement": "Every 4th year is a leap year, so 1900 and 2100 are leap years.",
+    "why": "The divisible-by-4 rule is taught first and the century exception is forgotten.",
+    "fix": "A century year (like 1900 or 2100) is a leap year only if divisible by 400. So 1900 and 2100 are not leap years, but 2000 is.",
+    "probe": {
+     "question": "Is 2100 a leap year?",
+     "wrong_answer": "Yes, because 2100 is divisible by 4."
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a simple rule has no exceptions",
+    "causes": [],
+    "trigger_cues": [
+     "leap year",
+     "divisible by 4",
+     "century",
+     "1900",
+     "2100",
+     "february 29"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "teacher reports and textbook error analyses on leap year rule",
+    "node_note": null
+   },
+   {
+    "key": "m13",
+    "node": "n21",
+    "statement": "A century year is a leap year only if it is divisible by 100.",
+    "why": "Students mix the numbers 4, 100 and 400 from the rule.",
+    "fix": "Century years are divisible by 100 by definition. They are leap years only when divisible by 400. So 1600 and 2000 are leap, 1700 is not.",
+    "probe": {
+     "question": "Is 1700 a leap year?",
+     "wrong_answer": "Yes, it is divisible by 100."
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "similar numbers in a rule are interchangeable",
+    "causes": [],
+    "trigger_cues": [
+     "century year",
+     "divisible by 400",
+     "divisible by 100",
+     "leap",
+     "1600",
+     "1700"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m14",
+    "node": "n20",
+    "statement": "A leap year has an extra day in every month of February and the year has 366 days because every month gets longer.",
+    "why": "The idea of an extra day is blurred with the idea of a longer year.",
+    "fix": "Only February gets an extra day (29 days) in a leap year. The year has 366 days.",
+    "probe": {
+     "question": "How many days are in March of a leap year?",
+     "wrong_answer": "32 days"
+    },
+    "error_type": "other",
+    "root_belief": "a change affects everything nearby",
+    "causes": [],
+    "trigger_cues": [
+     "leap year",
+     "366 days",
+     "february",
+     "29 days",
+     "extra day"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m15",
+    "node": "n22",
+    "statement": "The number of days from 5 March to 20 March is 16 because you count both the first and last day.",
+    "why": "Counting objects in a list includes both ends, and students apply this to date differences.",
+    "fix": "Days from 5 March to 20 March is 20 - 5 = 15. Count both ends only if the question says 'including both days'.",
+    "probe": {
+     "question": "How many days from 5 March to 20 March?",
+     "wrong_answer": "16 days"
+    },
+    "error_type": "other",
+    "root_belief": "counting endpoints always includes both ends",
+    "causes": [],
+    "trigger_cues": [
+     "days between",
+     "from date to date",
+     "including",
+     "number of days",
+     "count days"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "fence-post / off-by-one error research in interval counting",
+    "node_note": null
+   },
+   {
+    "key": "m16",
+    "node": "n22",
+    "statement": "Days between two dates in different months are found by just subtracting the day numbers, so 25 January to 5 February is 20 days.",
+    "why": "Students subtract 25 from 5 and flip it to 20 ignoring the month length.",
+    "fix": "Count the days left in January (31 - 25 = 6) and add 5, giving 11 days.",
+    "probe": {
+     "question": "How many days from 25 January to 5 February?",
+     "wrong_answer": "20 days"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "smaller from larger always gives the answer",
+    "causes": [],
+    "trigger_cues": [
+     "days between",
+     "across months",
+     "january",
+     "february",
+     "date difference"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m17",
+    "node": "n23",
+    "statement": "Months with 30 days and 31 days alternate all year, so August has 30 days.",
+    "why": "The alternate pattern works from January to July and is overextended.",
+    "fix": "July and August both have 31 days. February has 28 or 29, and April, June, September, November have 30.",
+    "probe": {
+     "question": "How many days does August have?",
+     "wrong_answer": "30 days"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a pattern continues forever once it starts",
+    "causes": [
+     "m16"
+    ],
+    "trigger_cues": [
+     "months",
+     "30 days",
+     "31 days",
+     "alternate",
+     "july",
+     "august",
+     "knuckle"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m18",
+    "node": "n24",
+    "statement": "The minute hand turns 1 degree for each minute, so at 20 minutes it is 20 degrees from 12.",
+    "why": "Minute marks are confused with degree marks.",
+    "fix": "The minute hand makes 360 degrees in 60 minutes, so 6 degrees per minute. At 20 minutes it is 120 degrees from 12.",
+    "probe": {
+     "question": "How many degrees does the minute hand turn in 20 minutes?",
+     "wrong_answer": "20 degrees"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "one unit of a scale equals one unit of another",
+    "causes": [],
+    "trigger_cues": [
+     "minute hand",
+     "degrees",
+     "6 degrees",
+     "angle",
+     "360 degrees",
+     "per minute"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies on students' angle concept and clock-angle problems",
+    "node_note": null
+   },
+   {
+    "key": "m19",
+    "node": "n25",
+    "statement": "The hour hand stays exactly on the hour mark until the next hour starts, so at 3:30 the angle between hands is 180 - 90 = 90 degrees.",
+    "why": "Students think the hour hand jumps rather than moves continuously.",
+    "fix": "The hour hand moves 0.5 degrees per minute. At 3:30 it is at 105 degrees and the minute hand at 180, so the angle is 75 degrees.",
+    "probe": {
+     "question": "What is the angle between the hands at 3:30?",
+     "wrong_answer": "90 degrees"
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "what moves slowly does not move",
+    "causes": [],
+    "trigger_cues": [
+     "hour hand",
+     "moves",
+     "angle",
+     "3:30",
+     "half past",
+     "between the hands"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of students' reasoning on clock-hand angle problems",
+    "node_note": null
+   },
+   {
+    "key": "m20",
+    "node": "n25",
+    "statement": "At 6 o'clock the angle between the hands is 90 degrees, as 6 is a quarter-turn.",
+    "why": "Students link 3 and 9 with right angles and are unsure which clock positions give which angles.",
+    "fix": "At 6 o'clock the hands point opposite, 6 x 30 = 180 degrees. The angle is 90 degrees at 3 o'clock and 9 o'clock.",
+    "probe": {
+     "question": "What is the angle between the hands at 6 o'clock?",
+     "wrong_answer": "90 degrees"
+    },
+    "error_type": "visual_prototype",
+    "root_belief": "the first example you learnt is the general case",
+    "causes": [],
+    "trigger_cues": [
+     "o'clock",
+     "angle",
+     "right angle",
+     "straight angle",
+     "180 degrees",
+     "hands"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m21",
+    "node": "n26",
+    "statement": "Time zones differ because places are of different heights or distances from the Sun, so there is no pattern in hours.",
+    "why": "Time difference is linked to weather or sunlight instead of the Earth's rotation.",
+    "fix": "The Earth turns 360 degrees in 24 hours, 15 degrees an hour, so each 15 degrees of longitude changes local time by 1 hour.",
+    "probe": {
+     "question": "Two cities are 30 degrees of longitude apart. What is the time difference?",
+     "wrong_answer": "It cannot be found, it depends on their distance from the Sun."
+    },
+    "error_type": "other",
+    "root_belief": "nearby visible things cause effects directly",
+    "causes": [],
+    "trigger_cues": [
+     "time zone",
+     "longitude",
+     "15 degrees",
+     "rotation",
+     "local time",
+     "standard time"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on children's ideas about day, night and time around the Earth",
+    "node_note": null
+   },
+   {
+    "key": "m22",
+    "node": "n27",
+    "statement": "Places to the west of India are ahead of Indian time, so London is 5 hours 30 minutes ahead.",
+    "why": "Students confuse the direction of the Sun's apparent motion with the direction of time.",
+    "fix": "The Sun rises first in the east, so places east are ahead. London is 5 h 30 min behind India.",
+    "probe": {
+     "question": "It is 3 pm in India. What time is it in London (no daylight saving)?",
+     "wrong_answer": "8:30 pm"
+    },
+    "error_type": "sign_error_belief",
+    "root_belief": "adding is the natural direction to change a quantity",
+    "causes": [],
+    "trigger_cues": [
+     "london",
+     "ahead",
+     "behind",
+     "east",
+     "west",
+     "greenwich",
+     "time difference"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of misconceptions in time-zone calculations and sign of the time difference",
+    "node_note": null
+   },
+   {
+    "key": "m23",
+    "node": "n27",
+    "statement": "All of India's neighbours and the whole world show the same time because the clock is one global system.",
+    "why": "Everyday life uses one clock locally, so students assume one time is shared everywhere.",
+    "fix": "Local time depends on longitude. India uses one standard time (IST), but other countries are ahead or behind.",
+    "probe": {
+     "question": "It is noon in India. Is it also noon in Japan?",
+     "wrong_answer": "Yes, noon everywhere at the same instant."
+    },
+    "error_type": "other",
+    "root_belief": "what I experience is the same for everyone",
+    "causes": [],
+    "trigger_cues": [
+     "same time",
+     "everywhere",
+     "world",
+     "japan",
+     "standard time",
+     "ist"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}

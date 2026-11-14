@@ -1,0 +1,814 @@
+{
+ "topic": {
+  "id": "MAT-SIMPCOMPINT",
+  "subject": "maths",
+  "strand": "maths",
+  "grades": [
+   7,
+   8
+  ],
+  "title": "Simple vs compound interest calculations",
+  "scope": "SI = PRT, compound interest grows on interest too, amount vs interest, half-yearly and quarterly compounding, rate per period, depreciation and population growth, confusing amount with interest earned"
+ },
+ "model": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 6814,
+  "promptTokenCount": 2
+ },
+ "seconds": 45.2,
+ "response": {
+  "nodes": [
+   {
+    "key": "n1",
+    "name": "Simple interest",
+    "level": 1,
+    "parent": null,
+    "prereqs": [],
+    "external_prereqs": [
+     "percentage as per hundred",
+     "multiplication of whole numbers and decimals"
+    ]
+   },
+   {
+    "key": "n2",
+    "name": "Compound interest",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n1"
+    ],
+    "external_prereqs": [
+     "percentage increase",
+     "powers and repeated multiplication"
+    ]
+   },
+   {
+    "key": "n3",
+    "name": "Compounding periods",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "fractions of a year",
+     "units of time"
+    ]
+   },
+   {
+    "key": "n4",
+    "name": "Growth and depreciation applications",
+    "level": 1,
+    "parent": null,
+    "prereqs": [
+     "n2"
+    ],
+    "external_prereqs": [
+     "percentage decrease"
+    ]
+   },
+   {
+    "key": "n5",
+    "name": "Terms: principal, interest, amount",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [],
+    "external_prereqs": [
+     "meaning of borrowing and lending"
+    ]
+   },
+   {
+    "key": "n6",
+    "name": "SI formula and use",
+    "level": 2,
+    "parent": "n1",
+    "prereqs": [
+     "n5"
+    ],
+    "external_prereqs": [
+     "substituting values in a formula"
+    ]
+   },
+   {
+    "key": "n7",
+    "name": "Meaning of CI",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n8",
+    "name": "Computing CI by formula",
+    "level": 2,
+    "parent": "n2",
+    "prereqs": [
+     "n7"
+    ],
+    "external_prereqs": [
+     "exponents"
+    ]
+   },
+   {
+    "key": "n9",
+    "name": "Half-yearly and quarterly compounding",
+    "level": 2,
+    "parent": "n3",
+    "prereqs": [],
+    "external_prereqs": [
+     "months in a year"
+    ]
+   },
+   {
+    "key": "n10",
+    "name": "Depreciation and population growth",
+    "level": 2,
+    "parent": "n4",
+    "prereqs": [],
+    "external_prereqs": [
+     "percentage change"
+    ]
+   },
+   {
+    "key": "n11",
+    "name": "Principal is the money borrowed or deposited at the start",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [],
+    "external_prereqs": []
+   },
+   {
+    "key": "n12",
+    "name": "Interest is only the extra money paid for use of principal",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n13",
+    "name": "Amount = Principal + Interest",
+    "level": 3,
+    "parent": "n5",
+    "prereqs": [
+     "n11",
+     "n12"
+    ],
+    "external_prereqs": [
+     "addition"
+    ]
+   },
+   {
+    "key": "n14",
+    "name": "Rate of 8% p.a. means Rs 8 per Rs 100 each year",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n11"
+    ],
+    "external_prereqs": [
+     "percentage as per hundred"
+    ]
+   },
+   {
+    "key": "n15",
+    "name": "SI = P x R x T / 100 with T in years",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n14"
+    ],
+    "external_prereqs": [
+     "multiplication and division of numbers"
+    ]
+   },
+   {
+    "key": "n16",
+    "name": "In SI the interest is the same every year",
+    "level": 3,
+    "parent": "n6",
+    "prereqs": [
+     "n15"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n17",
+    "name": "In CI, interest is also earned on earlier interest",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n16"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n18",
+    "name": "CI is greater than SI for more than one period",
+    "level": 3,
+    "parent": "n7",
+    "prereqs": [
+     "n17"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n19",
+    "name": "Amount after the first year becomes principal for the next year",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n17",
+     "n13"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n20",
+    "name": "A = P(1 + R/100)^n",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n19"
+    ],
+    "external_prereqs": [
+     "exponents as repeated multiplication"
+    ]
+   },
+   {
+    "key": "n21",
+    "name": "CI = A - P",
+    "level": 3,
+    "parent": "n8",
+    "prereqs": [
+     "n20",
+     "n12"
+    ],
+    "external_prereqs": [
+     "subtraction"
+    ]
+   },
+   {
+    "key": "n22",
+    "name": "Compounding half-yearly: rate is halved and periods doubled",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [
+     "n20"
+    ],
+    "external_prereqs": [
+     "half of a number"
+    ]
+   },
+   {
+    "key": "n23",
+    "name": "Compounding quarterly: rate divided by 4, periods multiplied by 4",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [
+     "n22"
+    ],
+    "external_prereqs": [
+     "division by 4"
+    ]
+   },
+   {
+    "key": "n24",
+    "name": "Time with a fraction of year, e.g. 2 1/2 years, needs period conversion",
+    "level": 3,
+    "parent": "n9",
+    "prereqs": [
+     "n22"
+    ],
+    "external_prereqs": [
+     "mixed fractions"
+    ]
+   },
+   {
+    "key": "n25",
+    "name": "Depreciation: value falls by a percent of the current value each year",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [
+     "n20"
+    ],
+    "external_prereqs": [
+     "percentage decrease"
+    ]
+   },
+   {
+    "key": "n26",
+    "name": "Population growth: A = P(1 + R/100)^n",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [
+     "n20"
+    ],
+    "external_prereqs": []
+   },
+   {
+    "key": "n27",
+    "name": "Depreciation uses (1 - R/100)^n",
+    "level": 3,
+    "parent": "n10",
+    "prereqs": [
+     "n25"
+    ],
+    "external_prereqs": []
+   }
+  ],
+  "misconceptions": [
+   {
+    "key": "m1",
+    "node": "n12",
+    "statement": "The amount is the interest, so the total money returned is the interest.",
+    "why": "Both words refer to money at the end, and the question says 'find the amount' loosely.",
+    "fix": "Interest is only the extra money. Amount is the principal plus the interest.",
+    "probe": {
+     "question": "Rs 1000 is lent for 1 year and the interest is Rs 80. What is the interest?",
+     "wrong_answer": "Rs 1080"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "related words mean the same thing",
+    "causes": [
+     "m3"
+    ],
+    "trigger_cues": [
+     "amount",
+     "interest",
+     "total",
+     "paid back",
+     "principal"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of student errors in percentage and financial mathematics",
+    "node_ref": "n12"
+   },
+   {
+    "key": "m2",
+    "node": "n13",
+    "statement": "Amount means the money you first put in.",
+    "why": "In everyday speech 'amount of money' means any sum, such as the starting sum.",
+    "fix": "Amount is what you get at the end: principal plus interest. The money you put in at the start is the principal.",
+    "probe": {
+     "question": "Rs 500 is deposited and earns Rs 50 interest. What is the amount?",
+     "wrong_answer": "Rs 500"
+    },
+    "error_type": "language_confusion",
+    "root_belief": "a word means its everyday meaning",
+    "causes": [],
+    "trigger_cues": [
+     "amount",
+     "principal",
+     "deposited",
+     "sum",
+     "final"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m3",
+    "node": "n13",
+    "statement": "After finding SI, the answer to 'find the amount' is just the SI.",
+    "why": "Students stop after the formula step and forget the last addition.",
+    "fix": "The formula gives only interest. Add the principal to get the amount.",
+    "probe": {
+     "question": "P = Rs 2000, SI = Rs 300. Find the amount.",
+     "wrong_answer": "Rs 300"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "the last computed number is the answer",
+    "causes": [],
+    "trigger_cues": [
+     "find the amount",
+     "add principal",
+     "simple interest",
+     "total",
+     "final answer"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m4",
+    "node": "n14",
+    "statement": "A rate of 8% means the interest is Rs 8 on any principal.",
+    "why": "Students read 8% as the number 8 without the 'per hundred' meaning.",
+    "fix": "8% per year means Rs 8 on every Rs 100 each year, so Rs 800 earns Rs 64 in a year.",
+    "probe": {
+     "question": "How much interest does Rs 2000 earn in 1 year at 5% p.a.?",
+     "wrong_answer": "Rs 5"
+    },
+    "error_type": "notation_misread",
+    "root_belief": "a symbol means just its face number",
+    "causes": [],
+    "trigger_cues": [
+     "per cent",
+     "rate",
+     "per annum",
+     "per hundred",
+     "percent"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m5",
+    "node": "n15",
+    "statement": "In SI = PRT/100, time can be put in months directly.",
+    "why": "The question gives the time in months and students plug in the number without converting.",
+    "fix": "Rate is per year, so time must be in years. 6 months is 1/2 year.",
+    "probe": {
+     "question": "Find SI on Rs 1000 at 10% p.a. for 6 months.",
+     "wrong_answer": "Rs 600"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "units do not matter, only the numbers",
+    "causes": [],
+    "trigger_cues": [
+     "months",
+     "years",
+     "time",
+     "per annum",
+     "convert"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "classroom studies of unit errors in ratio and rate problems"
+   },
+   {
+    "key": "m6",
+    "node": "n15",
+    "statement": "The SI formula is P x R x T without dividing by 100.",
+    "why": "Students remember the product and forget that the rate is a percentage.",
+    "fix": "Divide by 100 because the rate is per hundred: SI = PRT/100.",
+    "probe": {
+     "question": "Find SI on Rs 500 at 4% for 2 years.",
+     "wrong_answer": "Rs 4000"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "a rule is remembered as a pattern without its meaning",
+    "causes": [],
+    "trigger_cues": [
+     "formula",
+     "PRT",
+     "divide by 100",
+     "rate",
+     "interest"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m7",
+    "node": "n16",
+    "statement": "Simple interest grows bigger each year.",
+    "why": "Students carry over the idea from compound interest or from money growing in general.",
+    "fix": "In SI, interest is always computed on the original principal, so it is the same every year.",
+    "probe": {
+     "question": "Rs 1000 at 10% SI. How much interest is earned in the 2nd year alone?",
+     "wrong_answer": "Rs 110"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "growth always speeds up over time",
+    "causes": [],
+    "trigger_cues": [
+     "simple interest",
+     "each year",
+     "same",
+     "original principal",
+     "constant"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m8",
+    "node": "n17",
+    "statement": "Compound interest is just the SI repeated, so it equals SI x number of years.",
+    "why": "Students see the same word 'interest' and the same rate and apply the SI rule again.",
+    "fix": "In CI, each year's interest is calculated on the new, larger amount, so it grows every year.",
+    "probe": {
+     "question": "Rs 1000 at 10% CI for 2 years: what is the interest?",
+     "wrong_answer": "Rs 200"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a rule from one case works everywhere",
+    "causes": [
+     "m10"
+    ],
+    "trigger_cues": [
+     "compound interest",
+     "interest on interest",
+     "each year",
+     "new principal",
+     "amount"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on student confusion between linear and exponential growth"
+   },
+   {
+    "key": "m9",
+    "node": "n18",
+    "statement": "CI is greater than SI even for the first year.",
+    "why": "Students assume compounding always gives more.",
+    "fix": "For one period, CI and SI are equal. CI becomes larger only from the second period.",
+    "probe": {
+     "question": "Rs 2000 at 5% for 1 year: is CI more than SI?",
+     "wrong_answer": "Yes, CI is more"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a special case holds in every case",
+    "causes": [],
+    "trigger_cues": [
+     "compound interest",
+     "simple interest",
+     "first year",
+     "greater",
+     "equal"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m10",
+    "node": "n19",
+    "statement": "In CI, the interest of every year is calculated on the original principal.",
+    "why": "Students keep using P in each step because the formula starts with P.",
+    "fix": "Each year's interest is found on the amount at the end of the previous year.",
+    "probe": {
+     "question": "Rs 1000 at 10% CI: what is the interest for the 2nd year?",
+     "wrong_answer": "Rs 100"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "the starting value stays the base forever",
+    "causes": [],
+    "trigger_cues": [
+     "new principal",
+     "previous year",
+     "amount",
+     "second year",
+     "interest on interest"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of student reasoning on compound growth"
+   },
+   {
+    "key": "m11",
+    "node": "n20",
+    "statement": "A = P(1 + R/100)^n means multiply P(1 + R/100) by n.",
+    "why": "Students read the exponent as multiplication.",
+    "fix": "The power n means multiplying (1 + R/100) by itself n times, not by n.",
+    "probe": {
+     "question": "Rs 1000 at 10% CI for 2 years: find A using the formula.",
+     "wrong_answer": "1000 x 1.1 x 2 = Rs 2200"
+    },
+    "error_type": "notation_misread",
+    "root_belief": "a power means multiply by the exponent",
+    "causes": [],
+    "trigger_cues": [
+     "power",
+     "exponent",
+     "squared",
+     "(1 + R/100)",
+     "formula"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on exponent misconceptions in school algebra"
+   },
+   {
+    "key": "m12",
+    "node": "n20",
+    "statement": "The bracket is (R/100), without adding 1.",
+    "why": "Students forget that the amount includes the principal, not only the growth.",
+    "fix": "The factor is 1 + R/100 because the principal stays and the interest is added.",
+    "probe": {
+     "question": "Find A for Rs 1000 at 10% for 1 year using the formula.",
+     "wrong_answer": "1000 x 0.1 = Rs 100"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "the last computed number is the answer",
+    "causes": [],
+    "trigger_cues": [
+     "1 + R/100",
+     "factor",
+     "amount",
+     "formula",
+     "multiplier"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m13",
+    "node": "n21",
+    "statement": "The compound amount formula gives the compound interest directly.",
+    "why": "Students treat the result of the formula as the final answer.",
+    "fix": "The formula gives the amount. Subtract the principal to get the CI.",
+    "probe": {
+     "question": "Rs 1000 becomes Rs 1210 by the formula. What is the CI?",
+     "wrong_answer": "Rs 1210"
+    },
+    "error_type": "confusing_related_terms",
+    "root_belief": "related words mean the same thing",
+    "causes": [],
+    "trigger_cues": [
+     "compound interest",
+     "amount",
+     "subtract principal",
+     "A - P",
+     "formula"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "studies of student errors in financial mathematics"
+   },
+   {
+    "key": "m14",
+    "node": "n22",
+    "statement": "Half-yearly compounding means the rate stays the same and only the time is doubled.",
+    "why": "Students change one quantity and forget the rate is per year.",
+    "fix": "For half-yearly, halve the rate and double the number of periods.",
+    "probe": {
+     "question": "Rs 1000 at 10% p.a. compounded half-yearly for 1 year: what are R and n?",
+     "wrong_answer": "R = 10%, n = 2"
+    },
+    "error_type": "procedure_without_meaning",
+    "root_belief": "change one thing and the rest stays",
+    "causes": [],
+    "trigger_cues": [
+     "half-yearly",
+     "rate",
+     "periods",
+     "compounded",
+     "six months"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m15",
+    "node": "n22",
+    "statement": "Half-yearly compounding gives the same amount as yearly compounding.",
+    "why": "Students think the total time and annual rate are all that matter.",
+    "fix": "More frequent compounding gives interest on interest earlier, so the amount is slightly larger.",
+    "probe": {
+     "question": "Is the amount at 10% p.a. for 1 year the same, compounded yearly or half-yearly?",
+     "wrong_answer": "Yes, the same"
+    },
+    "error_type": "scale_or_quantity",
+    "root_belief": "only the total quantity matters, not how it is split",
+    "causes": [],
+    "trigger_cues": [
+     "half-yearly",
+     "yearly",
+     "compounded",
+     "more often",
+     "amount"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m16",
+    "node": "n23",
+    "statement": "Quarterly compounding means the rate is halved and periods are doubled.",
+    "why": "Students copy the half-yearly steps without noticing a quarter is 3 months.",
+    "fix": "A year has 4 quarters, so divide the rate by 4 and multiply the years by 4.",
+    "probe": {
+     "question": "For 8% p.a. compounded quarterly for 1 year, what are the rate per period and the number of periods?",
+     "wrong_answer": "4% and 2 periods"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "a rule from one case works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "quarterly",
+     "quarter",
+     "three months",
+     "periods",
+     "rate per period"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m17",
+    "node": "n24",
+    "statement": "For 2 1/2 years compounded yearly, the formula can be used with n = 2.5 directly.",
+    "why": "Students put the fraction into the exponent because it looks like any number.",
+    "fix": "At class level, apply the formula for the 2 whole years and then SI for the half-year on that amount. Or compound half-yearly with n = 5.",
+    "probe": {
+     "question": "How do you find CI on Rs 1000 for 2 1/2 years at 10% p.a. compounded yearly?",
+     "wrong_answer": "Use A = 1000(1.1)^2.5"
+    },
+    "error_type": "whole_number_thinking",
+    "root_belief": "a rule from whole numbers works everywhere",
+    "causes": [],
+    "trigger_cues": [
+     "fraction of a year",
+     "2 1/2 years",
+     "half year",
+     "mixed",
+     "period"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m18",
+    "node": "n25",
+    "statement": "If a machine loses 10% of its value each year, it loses 10% of the original value every year.",
+    "why": "Students link the percent to the original price, as in SI.",
+    "fix": "Each year the loss is 10% of the value at the start of that year, so the loss gets smaller.",
+    "probe": {
+     "question": "A Rs 1000 machine depreciates 10% a year. What is its value after 2 years?",
+     "wrong_answer": "Rs 800"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "the starting value stays the base forever",
+    "causes": [],
+    "trigger_cues": [
+     "depreciation",
+     "value decreases",
+     "each year",
+     "machine",
+     "current value"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on successive percentage change errors"
+   },
+   {
+    "key": "m19",
+    "node": "n27",
+    "statement": "Depreciation uses the same formula as growth, with (1 + R/100)^n.",
+    "why": "Students memorise one formula and ignore the direction of change.",
+    "fix": "For a decrease, the factor is (1 - R/100), so A = P(1 - R/100)^n.",
+    "probe": {
+     "question": "A Rs 1000 scooter depreciates 10% for 1 year. What is its value?",
+     "wrong_answer": "Rs 1100"
+    },
+    "error_type": "sign_error_belief",
+    "root_belief": "one formula fits all situations",
+    "causes": [],
+    "trigger_cues": [
+     "depreciation",
+     "decrease",
+     "1 - R/100",
+     "value falls",
+     "formula"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   },
+   {
+    "key": "m20",
+    "node": "n26",
+    "statement": "Population growth of 5% a year adds the same number of people each year.",
+    "why": "Students treat growth like a fixed addition, as in SI.",
+    "fix": "Each year's increase is 5% of that year's population, so the number added grows.",
+    "probe": {
+     "question": "A town of 10000 grows 5% yearly. What is the population after 2 years?",
+     "wrong_answer": "11000"
+    },
+    "error_type": "overgeneralised_rule",
+    "root_belief": "growth always adds a fixed amount",
+    "causes": [],
+    "trigger_cues": [
+     "population",
+     "growth rate",
+     "each year",
+     "increase",
+     "town"
+    ],
+    "confidence": "lit_supported",
+    "source_hint": "research on linear vs exponential thinking in percentage growth"
+   },
+   {
+    "key": "m21",
+    "node": "n7",
+    "statement": "Compound interest is a different, special kind of money, not related to the SI idea.",
+    "why": "The two names and two formulas look unrelated.",
+    "fix": "Both are interest on money. They differ only in whether earlier interest is added to the base for the next period.",
+    "probe": {
+     "question": "How does CI differ from SI?",
+     "wrong_answer": "They use totally different rates"
+    },
+    "error_type": "other",
+    "root_belief": "different names mean different things",
+    "causes": [],
+    "trigger_cues": [
+     "compound",
+     "simple",
+     "difference",
+     "interest",
+     "base"
+    ],
+    "confidence": "plausible",
+    "source_hint": null
+   }
+  ]
+ },
+ "problems": []
+}
