@@ -236,3 +236,12 @@ holds, from a graph of student misconceptions, and it all runs on a Raspberry Pi
 - Pi 5 timing and memory (TBD on the day).
 - Possible add-ons, only if questions are good: show the misconception's fix after a wrong answer (refutation
   text, g ~ 0.41); camera page reader; read-aloud.
+
+## Retention engine connected to GURU on the Mac (14 Nov)
+- `src/sakshi/link.py` + `scripts/retention_demo.py`: GURU's 3 questions → each wrong option linked to a graph
+  misconception (retrieve bge-small within the passage's topics → NLI rerank → abstain below cos 0.76) → bank with
+  graph prerequisites and template questions → adaptive session (Bayes + EIG, BKT, walk-down/climb-up, FSRS-6) → revision plan.
+- Linking measured on 3,647 teacher-labelled pairs: recall@1 53%, recall@3 81%; NLI rerank +1 point (46→47% on 400).
+- Photosynthesis run: 10 concepts, 12 questions (3 GURU), belief named with its fix, BKT 0.30 → 0.24 (wrong) / 0.63-0.73
+  (after walk-down), FSRS due next day, recall 1.00 → 0.66 (3 d) → 0.55 (10 d). Maths: `docs/RETENTION_MATH.md`.
+- Mac only; not on the Pi. Parameters are hand-set (no student data yet).
