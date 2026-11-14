@@ -357,3 +357,22 @@ in a run. Full maths: `docs/RETENTION_MATH.md`.
   writing them all at once.
 - Limit: one 150-300 word passage gives ~3-6 usable key sentences, so "50 questions" from one passage is not
   possible with one question per sentence; the session adds graph questions (walk down / climb up) on top.
+
+## The device: screen + buttons connected to the whole system (14 Nov, on the Pi)
+- Two processes: the **UI** (`~/Sakshi/sakshi.py`, copy in `pi/ui/`, Python env with display, GPIO buttons 17/27/22,
+  camera, RapidOCR) and the **engine** (`scripts/sakshi_engine.py`, ExecuTorch env: GURU + helpers + retention
+  engine), started by the UI and loaded once. They exchange JSON lines. Start: `~/start_sakshi.sh`.
+- Every screen is real: New Study = camera photo → OCR on the Pi → summary → questions streamed one by one →
+  adaptive session (diagnosis, step down, step up) → learner saved; Saved page = the same from `~/passage.txt`
+  (the organiser's passage); Mentor Study = re-check mix-ups + follow the graph; Revision = blocked climbs + due
+  ideas with real mastery bars; Diagnostics = real counts, where the child is stuck, what to do next.
+  All placeholder content, fake numbers and fake progress timing removed. The judges' run card prints to the terminal,
+  not on the child's screen.
+- Measured on the Pi (friction passage, 227 words): summary 14-18 s, first question 18-22 s after it,
+  **15.7 s per question**, peak memory 3.2 GB, model 469 MB, load 5.9 s. Pi reached 81 °C: use the fan.
+- Bugs found on the Pi: the ExecuTorch runtime used by the helper models needed `ruamel.yaml` and `tabulate`
+  (installed; added to `pi/install.sh`). Screen-layout fixes from screenshots: summary overflowing the buttons,
+  questions and options cut off (now the selected option is shown in full, Next reads the others), map labels off
+  screen.
+- Camera + OCR: works on the device (frame captured, OCR ran); in our test the camera was not pointed at a page, so
+  OCR found no words and the screen asked for a clearer photo. Still to try: a real textbook page.

@@ -42,6 +42,10 @@ step "3/7 Install ExecuTorch, torch (CPU) and helpers, offline"
 "$PY" -m pip install -q --no-index --find-links "$WHEELS" --no-deps "torch==2.14.1+cpu" || bad "torch install"
 "$PY" -m pip install -q --no-index --find-links "$WHEELS" numpy tqdm typing_extensions pytest pyyaml packaging \
   flatbuffers pytorch-tokenizers tokenizers fsrs filelock sympy networkx jinja2 fsspec setuptools || bad "other packages"
+# the general ExecuTorch runtime (used by the two helper models that link wrong answers to misconceptions)
+# imports these two small pure-Python packages; missing on the Pi on 14 Nov until installed
+"$PY" -m pip install -q --no-index --find-links "$WHEELS" ruamel.yaml tabulate 2>/dev/null \
+  || "$PY" -m pip install -q ruamel.yaml tabulate || bad "ruamel.yaml / tabulate"
 ok "installed ($(du -sh "$VENV" | cut -f1))"
 
 step "4/7 Can ExecuTorch's LLM runner load?"

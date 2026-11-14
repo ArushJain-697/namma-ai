@@ -29,6 +29,7 @@ from .bank import Option, Question
 from .bayes import BayesParams
 from .fsrs_sched import make_scheduler, retrievability, review
 from .io import IO
+from .session import _Stop
 from .state import LearnerState, MisconceptionState
 
 MIS_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "..", "data", "misconceptions")
@@ -135,7 +136,9 @@ class ReviewSession:
     def _ask(self, q: Question) -> tuple[bool, str]:
         self.state.ensure([q.concept], self.cfg.bkt.p_init)
         self.io.show_question(q, len(self.asked) + 1)
-        picked = self.io.answer(q) or ""
+        picked = self.io.answer(q)
+        if picked is None:
+            raise _Stop()
         opt = q.option(picked) if picked else None
         ok = bool(opt and opt.correct)
         cs = self.state.concepts[q.concept]
@@ -148,6 +151,8 @@ class ReviewSession:
                                     "ts": self.now.isoformat(), "review": True})
         self.io.log(f"{q.concept} mastery {before:.2f} -> {cs.p_mastery:.2f}")
         right = next(o for o in q.options if o.correct)
+        self.io.event("result", qid=q.id, ok=ok, picked=picked, correct=right.key, correct_text=right.text,
+                      explanation=q.explanation)
         self.io.show("Correct! " + q.explanation if ok else f"Not quite. The answer is {right.key}) {right.text}.")
         return ok, (opt.misconception if opt else None) or ""
 
@@ -187,6 +192,7 @@ class ReviewSession:
         if q is None:
             return
         self.io.show(f"\nLast time you seemed to think: \"{ms.text}\". Let's check.")
+        self.io.event("recheck", concept=self.name(q.concept), text=ms.text)
         ok, picked = self._ask(q)
         p = self._holds_update(ms.p_holds, q, mid, picked, ok)
         if ok and p >= self.cfg.bayes.suspect and self._budget():  # right, but not yet convincing: one more check
@@ -200,11 +206,13 @@ class ReviewSession:
         if p >= self.cfg.bayes.suspect:
             ms.status, ms.p_holds = "still held", round(p, 4)
             self.io.show(f">> Still there ({p:.0%}). Remember: {fix}")
+            self.io.event("still", concept=self.name(cid), text=ms.text, fix=fix, sure=round(p, 2))
             self.io.taught(cid)
             self.outcome[cid] = "again"
         else:
             ms.status, ms.p_holds = "cleared", round(p, 4)
             self.io.show(f">> Cleared (now {p:.0%}).")
+            self.io.event("cleared", concept=self.name(cid), text=ms.text)
             self.outcome.setdefault(cid, "good")
             self._follow(mid)
         ms.last_checked = self.now.isoformat()
@@ -222,6 +230,8 @@ class ReviewSession:
                 continue
             why = f'the same root idea: "{self.rel.root_name.get(root, root)}"' if self.rel.root.get(r) == root else "a belief this one leads to"
             self.io.show(f"\nNext, a related idea (from {why}).")
+            self.io.event("related", root=self.rel.root_name.get(root, ""), same_root=self.rel.root.get(r) == root,
+                          concept=self.name(self.lib.by_id[r]["concept_id"]))
             self.io.log(f"follow graph: {mid} -> {r}")
             ok, picked = self._ask(q)
             p = self._holds_update(0.3, q, r, picked, ok)
@@ -230,6 +240,8 @@ class ReviewSession:
                 self.state.misconceptions[r] = MisconceptionState(m["concept_id"], m["statement"], round(p, 4),
                                                                   f"suspected (same root as {mid})", self.now.isoformat())
                 self.io.show(f">> This one may be there too ({p:.0%}): \"{m['statement']}\"\n   Fix: {m.get('fix', '')}")
+                self.io.event("related_found", concept=self.name(m["concept_id"]), text=m["statement"],
+                              fix=m.get("fix", ""), sure=round(p, 2))
                 self.io.taught(m["concept_id"])
                 self.outcome[m["concept_id"]] = "again"
             else:
@@ -240,10 +252,12 @@ class ReviewSession:
         for p in prereqs:
             if self._apply(p) is False:
                 self.io.show(f"\"{self.name(cid)}\" waits until \"{self.name(p)}\" is solid.")
+                self.io.event("blocked", concept=self.name(cid), waits=[self.name(p)])
                 return
         if self._apply(cid) is not False:
             self.state.blocked.pop(cid, None)
             self.io.show(f">> Climbed back up to \"{self.name(cid)}\".")
+            self.io.event("climbed", concept=self.name(cid))
 
     def _apply(self, cid: str) -> bool | None:
         """Application question on a concept; solid = right answer and BKT P(L) >= threshold.
@@ -263,30 +277,40 @@ class ReviewSession:
             self.io.taught(cid)
         return solid
 
-    def run(self) -> dict:
+    def run(self, mode: str = "all") -> dict:
+        """mode: "mentor" = held beliefs + the graph walk from them; "revision" = blocked climbs + concepts due
+        (if nothing is due yet, the riskiest concepts, so practice is never empty); "all" = both, in that order."""
         self.io.show(f"Review on {self.now:%a %d %b}.")
         self._forget()
-        held = [(m, s) for m, s in self.state.misconceptions.items()
-                if s.status.startswith(("confirmed", "suspected", "still held"))]
-        held.sort(key=lambda x: -self._priority(x[1].concept))
-        for mid, ms in held:
-            if self._budget() and mid in self.lib.by_id:
-                self._recheck(mid, ms)
-        for cid, prereqs in list(self.state.blocked.items()):
-            if self._budget():
-                self._unblock(cid, prereqs)
-        due = [c for c, cs in self.state.concepts.items() if cs.fsrs_card and c not in self.outcome
-               and datetime.fromisoformat(cs.fsrs_card["due"]) <= self.now]
-        for cid in sorted(due, key=lambda c: -self._priority(c)):
-            if self._budget():
-                self._apply(cid)
+        stopped = False
+        try:
+            if mode in ("all", "mentor"):
+                held = [(m, s) for m, s in self.state.misconceptions.items()
+                        if s.status.startswith(("confirmed", "suspected", "still held"))]
+                held.sort(key=lambda x: -self._priority(x[1].concept))
+                for mid, ms in held:
+                    if self._budget() and mid in self.lib.by_id:
+                        self._recheck(mid, ms)
+            if mode in ("all", "revision"):
+                for cid, prereqs in list(self.state.blocked.items()):
+                    if self._budget():
+                        self._unblock(cid, prereqs)
+                tested = [c for c, cs in self.state.concepts.items() if cs.fsrs_card and c not in self.outcome]
+                due = [c for c in tested if datetime.fromisoformat(self.state.concepts[c].fsrs_card["due"]) <= self.now]
+                if mode == "revision" and not due:
+                    due = tested
+                for cid in sorted(due, key=lambda c: -self._priority(c)):
+                    if self._budget():
+                        self._apply(cid)
+        except _Stop:
+            stopped = True
         for cid, out in self.outcome.items():
             cs = self.state.concepts[cid]
             cs.fsrs_card = review(self.sched, cs.fsrs_card, out, self.now)
             cs.last_outcome = out
         self.state.sessions += 1
         self._report()
-        return {"asked": list(self.asked), "outcomes": dict(self.outcome)}
+        return {"asked": list(self.asked), "outcomes": dict(self.outcome), "stopped": stopped}
 
     def _report(self) -> None:
         self.io.show("\n" + "=" * 60 + "\nREVIEW REPORT\n" + "=" * 60)

@@ -24,6 +24,11 @@ class IO:
     def taught(self, concept_id: str) -> None:
         """Called after the student has been shown the fix for a concept. Only pretend students use it."""
 
+    def event(self, kind: str, **data) -> None:
+        """The same moments as show(), as structured data, for a screen that draws its own layout (the device UI).
+        Kinds: result, diagnosis, rebuild, walk_down, climb_stop, climb_up, again, recheck, still, cleared,
+        related, related_found, blocked, climbed. Text-only IOs ignore it."""
+
 
 class TerminalIO(IO):
     def __init__(self, verbose: bool = False):

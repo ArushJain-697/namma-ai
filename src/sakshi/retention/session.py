@@ -110,10 +110,12 @@ class AdaptiveSession:
             top = sorted(d.posterior.items(), key=lambda kv: -kv[1])[:3]
             self.io.log(f"{q.concept} misconception odds: " + ", ".join(f"{h} {p:.2f}" for h, p in top))
 
+        right = next(o for o in q.options if o.correct)
+        self.io.event("result", qid=q.id, ok=correct, picked=picked, correct=right.key, correct_text=right.text,
+                      explanation=q.explanation)
         if correct:
             self.io.show("Correct! " + q.explanation)
         else:
-            right = next(o for o in q.options if o.correct)
             self.io.show(f"Not quite. The answer is {right.key}) {right.text}.")
         return correct
 
@@ -131,7 +133,12 @@ class AdaptiveSession:
             q = d.best_question(pool)
             self.io.log(f"{cid}: asking {q.id} next (expected information gain {d.expected_gain(q):.2f} bits)")
             self.io.show("Let me ask that another way.")
+            self.io.event("again", concept=self.bank.concepts[cid].name)
             self._ask(q)
+
+    def _last_on(self, cid: str):
+        return next((self.bank.questions[q] for q in reversed(self.asked)
+                     if q in self.bank.questions and self.bank.questions[q].concept == cid), None)
 
     def _explain(self, cid: str) -> None:
         d = self.diag[cid]
@@ -140,9 +147,13 @@ class AdaptiveSession:
         if m:
             mis = self.bank.misconceptions[m]
             label = "Misconception detected" if d.confirmed() else "Possible misconception"
+            self.io.event("diagnosis", concept=name, confirmed=bool(d.confirmed()), text=mis.text, fix=mis.fix,
+                          sure=round(d.posterior[m], 2),
+                          remember=(last.explanation if (last := self._last_on(cid)) else ""))
             self.io.show(f"\n>> {label}: \"{mis.text}\" ({d.posterior[m]:.0%} sure)")
             self.io.show(f"   Fix: {mis.fix or 'See the explanation.'}")
         else:
+            self.io.event("rebuild", concept=name, remember=(last.explanation if (last := self._last_on(cid)) else ""))
             self.io.show(f"\n>> No single misconception stands out for \"{name}\". Let's rebuild it from the basics.")
         last = next((self.bank.questions[q] for q in reversed(self.asked) if self.bank.questions[q].concept == cid), None)
         if last and last.explanation:
@@ -186,6 +197,7 @@ class AdaptiveSession:
         if prereqs and depth < self.cfg.max_depth:
             names = ", ".join(f'"{self.bank.concepts[p].name}"' for p in prereqs)
             self.io.show(f"\nLet's go back to the idea{'s' if len(prereqs) > 1 else ''} this builds on: {names}.")
+            self.io.event("walk_down", concept=name, to=[self.bank.concepts[p].name for p in prereqs])
             self.io.log(f"walk DOWN from {cid} to {', '.join(prereqs)} (depth {depth + 1})")
             for p in prereqs:
                 if not self._explore(p, depth + 1) and self.bank.questions_for(p):
@@ -193,6 +205,7 @@ class AdaptiveSession:
         if shaky:  # do not build on a base the student has not got yet: stop the climb here
             names = ", ".join(f'"{self.bank.concepts[p].name}"' for p in shaky)
             self.io.show(f"\nWe'll come back to \"{name}\" once {names} is solid. It's first in your next revision.")
+            self.io.event("climb_stop", concept=name, waits=[self.bank.concepts[p].name for p in shaky])
             self.io.log(f"climb STOPPED at {cid}: prerequisite(s) below threshold: {', '.join(shaky)}")
             self.outcome[cid] = "again"
             self.state.blocked[cid] = shaky
@@ -208,6 +221,7 @@ class AdaptiveSession:
         cs = self.state.concepts[cid]
         for attempt in range(1 + self.cfg.climb_retries):
             self.io.show(f"\nNow let's use \"{name}\"." if attempt == 0 else "\nLet's try using it once more.")
+            self.io.event("climb_up", concept=name, retry=attempt > 0)
             check = self._pick(cid, "application")  # falls back to an unasked recall question
             if check is None:
                 break
