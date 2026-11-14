@@ -81,7 +81,9 @@ holds, from a graph of student misconceptions, and it all runs on a Raspberry Pi
 - **We caught and fixed our own bug:** a re-link run during a usage limit silently dropped links (1,955 -> 843) and
   erased root-belief names. Fix: incremental re-linking that keeps every earlier checked decision and refuses to
   write a worse file. Repaired result: **2,657 links (2,391 Sonnet-checked), 120 named roots**.
-- Topic matching: the right topic for **39/40** test passages; off-syllabus passages are detected **12/12 with 0
+- Topic matching: the right topic for **39/40** test passages (37/40 after the graph grew to 258 topics on 14 Nov:
+  heart and vaccine passages now match the NEW, more specific topics Heart/circulation and Vaccines/immunity, with the
+  old expected topics still in the top 3; 39/40 in the top 3); off-syllabus passages are detected **12/12 with 0
   false alarms** and fall back to reading-skill mistakes.
 
 ### 6. Question quality: the hardest problem, attacked with measurement
