@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""LoRA fine-tune of Qwen3-0.6B on an Apple-silicon Mac (MPS), no trl needed. Same recipe as finetune_qwen3_lora.py
+"""LoRA fine-tune of Qwen3-0.6B on an NVIDIA GPU (CUDA) or an Apple-silicon Mac (MPS), no trl needed. Same recipe as finetune_qwen3_lora.py
 (LoRA on all linear layers, cosine lr 2e-4, loss on the answer only) and the SAME prompt text the device uses
 (sakshi.backends.base.chat_prompt, Qwen3 format with thinking off). Merges the adapter at the end so the result
 exports to ExecuTorch exactly like the base model.
@@ -46,17 +46,30 @@ def main():
     ap.add_argument("--smoke", type=int, default=0, help="run only N steps and print the time per step")
     ap.add_argument("--dtype", default="bfloat16", choices=["bfloat16", "float32"])
     ap.add_argument("--accum", type=int, default=1, help="gradient accumulation steps")
+    ap.add_argument("--eval-every", type=int, default=100, help="held-out check every N steps; the best is kept")
+    ap.add_argument("--start-adapter", default=None,
+                    help="LoRA adapter merged into --model BEFORE training (continue from an earlier fine-tune)")
     a = ap.parse_args()
 
     import torch
     from peft import LoraConfig, get_peft_model
     from transformers import AutoModelForCausalLM, AutoTokenizer
 
-    dev = "mps" if torch.backends.mps.is_available() else "cpu"
+    dev = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
+    print("device:", dev, torch.cuda.get_device_name(0) if dev == "cuda" else "")
     torch.manual_seed(3407)
     random.seed(3407)
     tok = AutoTokenizer.from_pretrained(a.model)
-    model = AutoModelForCausalLM.from_pretrained(a.model, dtype=getattr(torch, a.dtype)).to(dev)
+    from peft import PeftModel
+
+    def load_start(dtype):
+        m = AutoModelForCausalLM.from_pretrained(a.model, dtype=dtype)
+        if a.start_adapter:  # e.g. version 1's adapter: recreate version 1, then train a new adapter on top
+            m = PeftModel.from_pretrained(m, a.start_adapter).merge_and_unload()
+            print(f"started from {a.model} + merged {a.start_adapter}")
+        return m
+
+    model = load_start(getattr(torch, a.dtype)).to(dev)
     model.config.use_cache = False
     model.gradient_checkpointing_enable(gradient_checkpointing_kwargs={"use_reentrant": False})
     model.enable_input_require_grads()
@@ -137,7 +150,7 @@ def main():
                 el = time.time() - t0
                 print(f"step {step}/{total} loss {loss.item():.3f} lr {sched.get_last_lr()[0]:.2e} "
                       f"{el / step:.2f} s/step, ~{(total - step) * el / step / 60:.0f} min left", flush=True)
-            if not a.smoke and (step % 200 == 0 or step == total):
+            if not a.smoke and (step % a.eval_every == 0 or step == total):
                 v = val_loss()
                 print(f"  val loss {v:.3f}", flush=True)
                 if v < best:
@@ -149,8 +162,7 @@ def main():
         print("smoke test done")
         return
     print(f"best val loss {best:.3f}; merging the best adapter")
-    from peft import PeftModel
-    base = AutoModelForCausalLM.from_pretrained(a.model, dtype=torch.float32)
+    base = load_start(torch.float32)
     merged = PeftModel.from_pretrained(base, os.path.join(a.out, "adapter")).merge_and_unload().to(torch.bfloat16)
     mdir = os.path.join(a.out, "merged")
     merged.save_pretrained(mdir, safe_serialization=True)

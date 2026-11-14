@@ -42,7 +42,7 @@ from sakshi.text import split_sentences, tokens, STOPWORDS  # noqa: E402
 
 OUT = ROOT / "results" / "backup_quiz"
 MODEL = ROOT / "models" / "qwen3-0.6b-8da4w"
-VARIANTS = ("window", "passage", "hybrid", "hybrid_mis", "v3", "v4", "ft", "ft2")
+VARIANTS = ("window", "passage", "hybrid", "hybrid_mis", "v3", "v4", "ft", "ft2", "2job")
 
 SYSTEM = (
     "You write one multiple-choice question for a Class 6-10 student about the key sentence of a text.\n"
@@ -122,6 +122,9 @@ def code_check(item: dict) -> str | None:
         return "banned phrase (blank / all-none of the above)"
     if len({o.lower().strip(" .") for o in opts}) < len(opts) or len(opts) < 3:
         return "repeated option"
+    ws = [set(re.findall(r"\w+", o.lower())) for o in opts]  # near-duplicates: >= 80% the same words
+    if any(len(ws[i] & ws[j]) / max(1, len(ws[i] | ws[j])) >= 0.8 for i in range(len(ws)) for j in range(i + 1, len(ws))):
+        return "near-duplicate options"
     if len(tokens(q)) > 30 or any(len(tokens(o)) > 14 for o in opts):
         return "too long"
     if any(len(tokens(o)) == 0 for o in opts):
@@ -142,10 +145,12 @@ class Model:
         self.chat = chat_prompt
         self.calls: list[dict] = []
 
-    def run(self, system: str, user: str, max_new: int, examples=(), kind: str = "", prefix: str = "") -> str:
+    def run(self, system: str, user: str, max_new: int, examples=(), kind: str = "", prefix: str = "",
+            stop: str | None = None) -> str:
         """`prefix` is written for the model as the start of its answer, which it must continue (the
         incremental-completion trick from Generate-Then-Validate: steer the stem instead of hoping)."""
-        r = self.b.generate(self.chat("qwen3", system, user, examples=examples) + prefix, max_new_tokens=max_new)
+        kw = {"stop_regex": stop} if stop else {}
+        r = self.b.generate(self.chat("qwen3", system, user, examples=examples) + prefix, max_new_tokens=max_new, **kw)
         self.calls.append({"kind": kind, "in": r.prompt_tokens, "out": r.new_tokens, "s": round(r.wall_s, 2)})
         return prefix + r.text
 
@@ -202,6 +207,7 @@ def cmd_generate(a) -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     passages = [json.loads(l) for l in open(ROOT / "data/passages/eval/passages.jsonl")][: a.limit]
     m = Model(Path(a.model))
+    mw = Model(Path(a.w_model)) if getattr(a, "w_model", None) else m  # two specialists, or one combined model
     from sakshi.misconceptions import Library
     lib = Library.load()
     beliefs = Beliefs(lib) if {"v3", "v4"} & set(a.variants) else None
@@ -209,7 +215,9 @@ def cmd_generate(a) -> None:
         with open(OUT / f"{v}.jsonl", "w") as f:
             for p in passages:
                 t = time.time()
-                if v in ("ft", "ft2"):
+                if v == "2job":
+                    r = quiz_2job(m, mw, p["text"])
+                elif v in ("ft", "ft2"):
                     r = quiz_ft(m, p["text"])
                 elif v == "v3":
                     r = quiz_v3(m, p["text"], beliefs, lib)
@@ -348,9 +356,10 @@ def cmd_demo(a) -> None:
     t0 = time.time()
     mdir = Path(a.model)
     m, lib = Model(mdir), Library.load()
+    sm = Model(Path(a.summary_model)) if a.summary_model else m  # summary from the plain model (GURU = quiz only)
     load = time.time() - t0
     t1 = time.time()
-    summ = make_whole_summary(m.b, passage, retries=1)
+    summ = make_whole_summary(sm.b, passage, retries=0)  # one call: a retry cost ~15 s on the Pi
     n_sum_calls = len(summ.get("attempts", []))
     for at in summ.get("attempts", []):  # count summary calls in the run card too
         m.calls.append({"kind": "summary", "in": getattr(at, "prompt_tokens", 0) or 0,
@@ -358,7 +367,7 @@ def cmd_demo(a) -> None:
     t_sum = time.time() - t1
     print("SUMMARY\n" + (summ.get("text") or "(no summary passed the checks)"))
     t2 = time.time()
-    r = quiz_hybrid(m, passage, lib=lib)
+    r = quiz_2job(m, m, passage, n=a.questions, checker=sm) if a.quiz == "2job" else quiz_hybrid(m, passage, lib=lib)
     t_quiz = time.time() - t2
     print("\nQUIZ")
     for n, q in enumerate(r["kept"], 1):
@@ -366,16 +375,18 @@ def cmd_demo(a) -> None:
         for i, o in enumerate(q["options"]):
             print(f"   {'ABCD'[i]}) {o}")
         print(f"   Answer: {'ABCD'[q['answer']]}   (from the passage: \"{q['evidence']}\")")
-    c = m.calls
+    c = m.calls + (sm.calls if sm is not m else [])
     rss = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / (2**20 if sys.platform == "darwin" else 2**10)
     size = os.path.getsize(mdir / "model.pte") / 2**20
     print(f"\nRUN CARD (model ran on this device through ExecuTorch; no cloud call)\n"
-          f"Model:   Qwen3-0.6B, ExecuTorch 8da4w ({mdir.name}), {size:.0f} MB on disk\n"
+          f"Model:   {'GURU-0.6B (fine-tuned Qwen3-0.6B)' if a.quiz == '2job' else 'Qwen3-0.6B'}, ExecuTorch "
+          f"({mdir.name}), {size:.0f} MB on disk"
+          f"{'; summary: ' + Path(a.summary_model).name if a.summary_model else ''}\n"
           f"Memory:  peak {rss:.0f} MB (whole process)\n"
           f"Time:    {time.time() - t0:.1f} s total (load {load:.1f} s, summary {t_sum:.1f} s, quiz {t_quiz:.1f} s)\n"
           f"Calls:   {len(c)} model calls ({n_sum_calls} summary), {sum(x['in'] for x in c)} tokens in, "
           f"{sum(x['out'] for x in c)} out\n"
-          f"Quiz:    {len(r['kept'])} questions (backup method v2, plain model)")
+          f"Quiz:    {len(r['kept'])} questions ({'two-call GURU: question+answer, then wrong answers x2' if a.quiz == '2job' else 'backup method v2, plain model'})")
 
 
 def main() -> None:
@@ -385,6 +396,7 @@ def main() -> None:
     g.add_argument("--limit", type=int, default=None)
     g.add_argument("--variants", nargs="+", default=list(VARIANTS))
     g.add_argument("--model", default=str(MODEL), help="model folder (model.pte + tokenizer.json)")
+    g.add_argument("--w-model", default=None, help="2job only: separate wrong-answer model (specialist); default = --model")
     j = sub.add_parser("judge")
     j.add_argument("--judge-model", default="sonnet")
     sub.add_parser("report")
@@ -392,6 +404,9 @@ def main() -> None:
     d.add_argument("passage")
     d.add_argument("--model", default=str(MODEL), help="model folder with model.pte + tokenizer.json "
                    "(UNO Q / Pi 4: the portable model)")
+    d.add_argument("--quiz", choices=["v2", "2job"], default="v2", help="2job = GURU two-call quiz")
+    d.add_argument("--questions", type=int, default=3, help="how many questions (the brief needs at least 3)")
+    d.add_argument("--summary-model", default=None, help="separate model folder for the summary (plain Qwen3)")
     a = ap.parse_args()
     {"generate": cmd_generate, "judge": cmd_judge, "report": cmd_report, "demo": cmd_demo}[a.cmd](a)
 
@@ -820,6 +835,132 @@ def quiz_ft(m: "Model", passage: str, n: int = 4, seed: int = 0, self_check_on: 
                 continue
         kept.append(rec)
     return {"kept": kept, "rejected": rejected, "calls": m.calls[start:]}
+
+
+
+# ---- 2job: GURU-0.6B two-call quiz (Job Q: question + answer; Job W: wrong answers), 14 Nov --------------------
+# One combined model (prompt picks the job) or two specialist models (guru-q, guru-w). Prompts are the training ones
+# (scripts/make_two_job_dataset.py). The correct answer must not stand out: Job W sees the key and was trained on
+# "no giveaway" items; code checks length gap, shape and passage-word overlap; Job W runs twice and the 3 options
+# closest to the key in length/form that pass the checks are kept.
+def _opening(s: str) -> str:
+    t = tokens(s)
+    if not t:
+        return ""
+    w = t[0].lower()
+    return "num" if re.match(r"^[\d.,%-]+$", w) else w
+
+
+def option_shape_ok(key: str, wrong: list[str], passage: str) -> str | None:
+    """None if the 4 options look alike, else the reason the key stands out."""
+    kl, wl = len(tokens(key)), [len(tokens(w)) for w in wrong]
+    if kl > max(wl) + 3 or kl < min(wl) - 3:
+        return "key length stands out"
+    pw = content(passage)
+    ov = lambda o: len(content(o) & pw) / max(1, len(content(o)))  # noqa: E731
+    if ov(key) - max(ov(w) for w in wrong) >= 0.6:
+        return "key copies the passage, wrong options do not (word-spotting)"
+    ko = _opening(key)
+    if ko in ("because", "to", "by", "so") and sum(_opening(w) == ko for w in wrong) < 2:
+        return "key has a different opening/shape"
+    return None
+
+
+def _norm_option(o: str, like: str) -> str:
+    o = o.strip().strip('"').rstrip(".").strip()
+    if not o:
+        return o
+    o = o[0].upper() + o[1:] if like[:1].isupper() else o[0].lower() + o[1:]
+    return o
+
+
+def parse_wrong(text: str) -> list[str]:
+    body = text.split("Wrong answers:", 1)[-1]
+    out = []
+    for m in re.finditer(r"^\s*\d[).:]\s*(.+)$", body, re.M):
+        out.append(m.group(1).strip())
+        if len(out) == 3:
+            break
+    return out
+
+
+def quiz_2job(mq: "Model", mw: "Model", passage: str, n: int = 4, seed: int = 0, w_runs: int = 2,
+              self_check_on: bool = True, checker: "Model | None" = None) -> dict:
+    """checker = the model that answers each question as a last check. GURU was trained to WRITE questions and
+    answers "A" almost always when asked to answer one (measured 14 Nov), so pass the plain model here."""
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from make_mcq_dataset import user_turn
+    from make_two_job_dataset import Q_SYSTEM, W_SYSTEM
+    rng = random.Random(seed)
+    sents = split_sentences(passage)
+    start_q, start_w = len(mq.calls), len(mw.calls)
+    kept, rejected = [], []
+    for i in pick_sentences(passage):
+        if len(kept) == n:
+            break
+        user = user_turn(sents, i)
+        raw = mq.run(Q_SYSTEM, user, 70, kind="question", prefix="Question:", stop=r"Answer:[^\n]*\S[^\n]*\n")
+        rec = {"evidence": sents[i], "raw": raw, "source": "2job"}
+        qm = re.search(r"Question:\s*(.+)", raw)
+        am = re.search(r"Answer:\s*(.+)", raw)
+        if not (qm and am):
+            rejected.append({**rec, "reason": "could not parse question/answer"})
+            continue
+        q, key = qm.group(1).strip(), am.group(1).strip().rstrip(".")
+        cands, seen = [], {key.lower()}
+        for r in range(w_runs):  # overgenerate wrong answers
+            wraw = mw.run(W_SYSTEM, f"{user}\nQuestion: {q}\nCorrect answer: {key}", 60, kind="distractor",
+                          prefix="Wrong answers:\n1)", stop=r"\n\s*3\)[^\n]*\S[^\n]*\n")
+            for w in parse_wrong(wraw):
+                w = _norm_option(w, key)
+                if w and w.lower() not in seen and not BANNED.search(w) and len(tokens(w)) <= 14:
+                    seen.add(w.lower())
+                    cands.append(w)
+        if len(cands) < 2:
+            rejected.append({**rec, "q": q, "reason": "not enough wrong answers"})
+            continue
+        kl, pw = len(tokens(key)), content(passage)
+        ov = lambda o: len(content(o) & pw) / max(1, len(content(o)))  # noqa: E731
+        # closest to the key in length, opening AND passage-word overlap (a trap that reuses the passage's words,
+        # e.g. "sound travels faster than light", beats one that does not)
+        cands.sort(key=lambda w: abs(len(tokens(w)) - kl) / max(1, kl) + (_opening(w) != _opening(key)) * 0.5
+                   + abs(ov(w) - ov(key)))
+        jac = lambda x, y: len(set(re.findall(r"\w+", x.lower())) & set(re.findall(r"\w+", y.lower()))) / max(  # noqa: E731
+            1, len(set(re.findall(r"\w+", x.lower())) | set(re.findall(r"\w+", y.lower()))))
+        diverse = []  # closest to the key first, but never two wrong options that are near-copies of each other
+        for w in cands:
+            if all(jac(w, d) < 0.8 for d in diverse) and jac(w, key) < 0.8:
+                diverse.append(w)
+        cands = diverse
+        if len(cands) < 2:
+            rejected.append({**rec, "q": q, "reason": "not enough distinct wrong answers"})
+            continue
+        wrong = cands[:3]
+        why = option_shape_ok(key, wrong, passage)
+        if why:  # try the next-best candidates before giving up
+            for alt in (cands[1:4], cands[2:5]):
+                if len(alt) >= 2 and not option_shape_ok(key, alt, passage):
+                    wrong, why = alt, None
+                    break
+        if why:
+            rejected.append({**rec, "q": q, "reason": why})
+            continue
+        opts = [key] + wrong
+        rng.shuffle(opts)
+        item = {"q": q, "options": opts, "answer": opts.index(key), "explain": sents[i]}
+        rec.update(item)
+        bad = code_check(item)
+        if bad:
+            rejected.append({**rec, "reason": bad})
+            continue
+        if self_check_on:
+            ok, said = self_check(checker or mq, window(sents, i), item, rng)
+            if not ok:
+                rejected.append({**rec, "reason": f"self-check failed (picked {said})"})
+                continue
+        kept.append(rec)
+    calls = mq.calls[start_q:] + (mw.calls[start_w:] if mw is not mq else [])
+    return {"kept": kept, "rejected": rejected, "calls": calls}
 
 
 if __name__ == "__main__":

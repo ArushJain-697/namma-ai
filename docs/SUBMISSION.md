@@ -54,7 +54,7 @@ sentence that proves it), then the run card. `python -m sakshi study RUN` replay
 
 | Device | Model file | Total time | Reading (prefill) | Writing (decode) | Peak memory | Notes |
 |---|---|---|---|---|---|---|
-| **Raspberry Pi 5, 8 GB** | 469 MB | TO MEASURE | TO MEASURE | TO MEASURE | TO MEASURE | the judged device |
+| **Raspberry Pi 5, 8 GB** (Debian 13, Python 3.13, ExecuTorch 1.5.1) | 469 MB (GURU-0.6B, 4-bit) + 469 MB (Qwen3-0.6B for the summary) | **57.9 s** for summary + 3 questions (load 3.0 s, summary 14.2 s, quiz 40.7 s); 86 s for 4 questions; 147 s before stopping each call when its answer is complete | 122 tok/s | 12.1 tok/s | 1.48 GB one model; 2.7 GB with both models loaded | 14 Nov, Wi-Fi on for SSH (offline proof to be run at the venue with Wi-Fi off); hit 84 C and throttled (0xe0008): use a fan |
 | Arduino UNO Q (Cortex-A53, 4 GB) | 470 MB (portable, 1k) | 3347 s (56 min) | 9.8 tok/s | 0.37 tok/s | 1.7 GB | network OFF; 21 calls; no custom kernels on this chip, so writing is very slow; same questions word for word as on the Mac |
 | Apple M4 Mac (development) | 469 MB | 20.4 s | 826 tok/s | 95 tok/s | 1.7 GB | 32 model calls, 4817 tokens in, 1376 out; 1,024-token export (the 2,048 default peaked at 2.5 GB) |
 

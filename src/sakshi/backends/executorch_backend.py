@@ -161,7 +161,8 @@ class ExecuTorchBackend(Backend):
                 "model_bytes": os.path.getsize(self.model_path), "sha256": self.sha256, "load_s": self.load_s,
                 "chat_format": self.chat_format, "bos_in_prompt": self.bos_in_prompt, "num_bos": self.num_bos}
 
-    def generate(self, prompt, max_new_tokens=64, temperature=0.0, seed=None, task=None, payload=None) -> GenResult:
+    def generate(self, prompt, max_new_tokens=64, temperature=0.0, seed=None, task=None, payload=None,
+                 stop_regex: str | None = None) -> GenResult:
         # `seed`, `task` and `payload` are ignored on purpose: the runner has no seed, and the model must not be
         # told anything beyond the prompt.
         self._runner.reset()  # independent prompts: no KV-cache carry-over between questions
@@ -175,7 +176,25 @@ class ExecuTorchBackend(Backend):
                 "num_prompt_tokens", "num_generated_tokens")})
 
         t0 = time.perf_counter()
-        raw = self._capture(lambda: self._runner.generate(prompt, cfg, None, on_stats))
+        if stop_regex:
+            # The fine-tuned model never writes its end-of-turn token, so it would write until max_new_tokens. Watch
+            # the text as it is generated and stop the runner once the answer is complete (saves ~half the decode time
+            # on the Pi). If a token cannot be decoded on its own (split UTF-8, e.g. "π"), fall back to a plain run.
+            import re as _re
+            pat, seen = _re.compile(stop_regex, _re.S), []
+
+            def on_token(piece: str) -> None:
+                seen.append(piece)
+                if pat.search("".join(seen)):
+                    self._runner.stop()
+            try:
+                raw = self._capture(lambda: self._runner.generate(prompt, cfg, on_token, on_stats))
+            except Exception:  # noqa: BLE001
+                self._runner.reset()
+                box.clear()
+                raw = self._capture(lambda: self._runner.generate(prompt, cfg, None, on_stats))
+        else:
+            raw = self._capture(lambda: self._runner.generate(prompt, cfg, None, on_stats))
         wall = time.perf_counter() - t0
         text = clean_output(raw)
 
