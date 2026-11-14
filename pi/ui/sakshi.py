@@ -33,7 +33,9 @@ import time
 
 from PIL import Image, ImageDraw, ImageFont
 
-W, H = 176, 220
+PW, PH = 176, 220            # the ILI9225 panel is physically portrait
+ROTATE = int(os.environ.get("SAKSHI_ROTATE", "90"))   # 90 or 270: landscape UI; 0: portrait. Flip 90<->270 if upside down
+W, H = (PH, PW) if ROTATE in (90, 270) else (PW, PH)  # the canvas every screen is drawn on (220 x 176 landscape)
 SPI_HZ = 8_000_000          # lower to 4_000_000 if the picture is unstable
 
 
@@ -99,10 +101,12 @@ class ILI9225:
 
     def show(self, img):
         np = self.np
+        if ROTATE:
+            img = img.rotate(ROTATE, expand=True)       # landscape canvas -> portrait panel
         a = np.asarray(img.convert("RGB"), dtype=np.uint16)
         p = ((a[:, :, 0] & 0xF8) << 8) | ((a[:, :, 1] & 0xFC) << 3) | (a[:, :, 2] >> 3)
-        self._reg(0x36, W - 1); self._reg(0x37, 0)
-        self._reg(0x38, H - 1); self._reg(0x39, 0)
+        self._reg(0x36, PW - 1); self._reg(0x37, 0)
+        self._reg(0x38, PH - 1); self._reg(0x39, 0)
         self._reg(0x20, 0); self._reg(0x21, 0)
         self._cmd(0x22)
         self._data(p.astype(">u2").tobytes())
@@ -854,21 +858,20 @@ class UI:
     def draw_menu(self):
         img, d = canvas()
         status_bar(img, d, "", f"{self.sel + 1} / 3", brand=True)
-        tw, gap = 48, 8
+        tw, th, gap = 60, 40, 10
         x0 = (W - (3 * tw + 2 * gap)) // 2
         for i, (_, ic, _) in enumerate(APPS):
             x = x0 + i * (tw + gap)
             on = i == self.sel
             if on:
-                rrect(img, (x, 34, x + tw, 82), 6, fill=SURF2)
-                d.rectangle((x + 10, 80, x + tw - 11, 81), fill=ACC)
+                rrect(img, (x, 28, x + tw, 28 + th), 6, fill=SURF2)
+                d.rectangle((x + 12, 28 + th - 2, x + tw - 13, 28 + th - 1), fill=ACC)
             else:
-                rrect(img, (x, 34, x + tw, 82), 6, outline=LINE)
-            icon(img, ic, x + (tw - 26) // 2, 45, 26, ACC if on else FAINT)
+                rrect(img, (x, 28, x + tw, 28 + th), 6, outline=LINE)
+            icon(img, ic, x + (tw - 24) // 2, 36, 24, ACC if on else FAINT)
         name, _, sub = APPS[self.sel]
-        text(d, MX, 102, name, F(18, True), TEXT)
-        for j, ln in enumerate(sub.split("\n")):
-            text(d, MX, 122 + j * 14, ln, F(11), DIM)
+        text(d, MX, 84, name, F(16, True), TEXT)
+        text(d, MX, 100, sub.replace("\n", " "), F(10), DIM)
         s = self.st
         if self.sel == 0:
             rows = [("Mix-ups to fix", f"{len(s['held'])} waiting", ACC if s["held"] else TEXT),
@@ -878,7 +881,7 @@ class UI:
         else:
             rows = [("Solved", str(s["solved"]), TEXT), ("Accuracy", f"{self.accuracy()}%" if s["solved"] else "-", TEXT)]
         for j, (k, v, c) in enumerate(rows):
-            kv(d, 150 + j * 24, k, v, c)
+            kv(d, 110 + j * 22, k, v, c)
         hint_bar(img, d, "Prev", "Open", "Next")
         return img
 
@@ -886,28 +889,26 @@ class UI:
         img, d = canvas()
         status_bar(img, d, "Study")
         for i, (name, ic, sub) in enumerate(STUDY_OPTS):
-            y = 28 + i * 50
+            y = 26 + i * 42
             on = i == self.sel
             if on:
-                rrect(img, (6, y, W - 6, y + 46), 4, fill=SURF2)
-                d.rectangle((6, y + 8, 8, y + 37), fill=ACC)
-            icon(img, ic, 18, y + 11, 22, ACC if on else FAINT)
+                rrect(img, (6, y, W - 6, y + 38), 4, fill=SURF2)
+                d.rectangle((6, y + 7, 8, y + 31), fill=ACC)
+            icon(img, ic, 18, y + 8, 22, ACC if on else FAINT)
             text(d, 50, y + 12, name, F(12, True), TEXT if on else BODY)
-            for j, ln in enumerate(sub.split("\n")):
-                text(d, 50, y + 26 + j * 10, ln, F(9), DIM)
+            text(d, 50, y + 27, fit(d, sub.replace("\n", " "), F(9), W - 50 - (40 if i == 2 else 12)), F(9), DIM)
             if i == 2 and self.st["held"]:
-                rrect(img, (W - 34, y + 5, W - 12, y + 21), 8, fill=ACC)
-                text(d, W - 23, y + 13, str(len(self.st["held"])), F(10, True), INK, "c")
-        kv(d, 182, "Mix-ups to fix", f"{len(self.st['held'])} waiting", ACC if self.st["held"] else TEXT)
+                rrect(img, (W - 34, y + 11, W - 12, y + 27), 8, fill=ACC)
+                text(d, W - 23, y + 19, str(len(self.st["held"])), F(10, True), INK, "c")
         hint_bar(img, d, "Back", "Open", "Next")
         return img
 
     def draw_nocam(self):
         img, d = canvas()
         status_bar(img, d, "New Study", "Camera")
-        text(d, MX, 60, "Camera not found", F(14, True), TEXT)
-        para(d, MX, 80, "Check the camera cable, or use Saved page to study the page on this device.",
-             F(11), BODY, W - 2 * MX, 15)
+        text(d, MX, 46, "Camera not found", F(14, True), TEXT)
+        para(d, MX, 64, "Check the camera cable, or use Saved page to study the page on this device.",
+             F(11), BODY, W - 2 * MX, 15, 5)
         hint_bar(img, d, "Back", "OK", "")
         return img
 
@@ -917,8 +918,8 @@ class UI:
         if self.cam.frame is not None:
             img.paste(frame_to_area(self.cam.frame, W, HB_Y - SB_H), (0, SB_H))
         d = ImageDraw.Draw(img)
-        d.rectangle((0, HB_Y - 22, W, HB_Y - 1), fill=(10, 11, 14))
-        text(d, W // 2, HB_Y - 11, "Fit the whole page in the frame", F(10), BODY, "c")
+        d.rectangle((0, HB_Y - 20, W, HB_Y - 1), fill=(10, 11, 14))
+        text(d, W // 2, HB_Y - 10, "Fit the whole page in the frame", F(10), BODY, "c")
         hint_bar(img, d, "Back", "Capture", "")
         return img
 
@@ -928,32 +929,32 @@ class UI:
         if self.photo is not None:
             img.paste(frame_to_area(self.photo, W, HB_Y - SB_H), (0, SB_H))
         d = ImageDraw.Draw(img)
-        d.rectangle((0, HB_Y - 40, W, HB_Y - 1), fill=(10, 11, 14))
-        icon(img, "check", MX, HB_Y - 32, 14, GOOD, 2.4)
-        text(d, MX + 20, HB_Y - 25, "Photo taken", F(12, True), TEXT)
-        text(d, MX, HB_Y - 10, "Is the text sharp and readable?", F(10), DIM)
+        d.rectangle((0, HB_Y - 36, W, HB_Y - 1), fill=(10, 11, 14))
+        icon(img, "check", MX, HB_Y - 30, 14, GOOD, 2.4)
+        text(d, MX + 20, HB_Y - 23, "Photo taken", F(12, True), TEXT)
+        text(d, MX, HB_Y - 9, "Is the text sharp and readable?", F(10), DIM)
         hint_bar(img, d, "Retake", "Use photo", "")
         return img
 
     def _stages(self, img, d, stage, title, sub):
         el = time.time() - self.t0
-        text(d, MX, 44, title, F(14, True), TEXT)
-        text(d, MX, 62, sub, F(9), DIM)
+        text(d, MX, 36, title, F(13, True), TEXT)
+        text(d, W - MX, 36, f"{int(el)} s", F(9, True), DIM, "r")
+        text(d, MX, 52, sub, F(9), DIM)
         for i, name in enumerate(STAGES):
-            cy = 98 + i * 30
+            cy = 78 + i * 25
             done, act = i < stage - 1, i == stage - 1
             if done:
-                icon(img, "check", MX, cy - 9, 18, GOOD, 2.6)
+                icon(img, "check", MX, cy - 8, 16, GOOD, 2.6)
             else:
-                icon(img, "circle", MX, cy - 9, 18, LINE, 2.2)
+                icon(img, "circle", MX, cy - 8, 16, LINE, 2.2)
                 if act:
-                    spinner(img, MX + 9, cy, 8, (el * 360) % 360, ACC)
-            text(d, MX + 28, cy, name, F(12, act), TEXT if (done or act) else FAINT)
+                    spinner(img, MX + 8, cy, 7, (el * 360) % 360, ACC)
+            text(d, MX + 26, cy, name, F(12, act), TEXT if (done or act) else FAINT)
             if done:
                 text(d, W - MX, cy, "done", F(9), FAINT, "r")
             if i < 2:
-                d.line((MX + 28, cy + 15, W - MX, cy + 15), fill=LINE)
-        text(d, W - MX, 184, f"{int(el)} s", F(9, True), DIM, "r")
+                d.line((MX + 26, cy + 12, W - MX, cy + 12), fill=LINE)
 
     def draw_reading(self):
         img, d = canvas()
@@ -965,7 +966,7 @@ class UI:
     def draw_ocr(self):
         img, d = canvas()
         status_bar(img, d, "New Study", "Working")
-        sub = "Loading the model, first time only." if self.stage <= 1 else "Runs on this device. No internet."
+        sub = "Getting ready, first time only." if self.stage <= 1 else "Runs on this device. No internet."
         self._stages(img, d, max(self.stage, 2), "Analysing your page", sub)
         hint_bar(img, d, "Cancel", "", "")
         return img
@@ -976,10 +977,10 @@ class UI:
         status_bar(img, d, "Summary", f"{self.sel + 1} / {n}")
         if self.summary:
             tag, title, body = self.summary[self.sel]
-            label(d, MX, 40, tag, ACC)
-            text(d, MX, 60, title, F(15, True), TEXT)
-            para(d, MX, 78, body, F(12), BODY, W - 2 * MX, 17, 6)
-        pager(img, d, n, self.sel, 186)
+            label(d, MX, 32, tag, ACC)
+            text(d, MX, 48, title, F(14, True), TEXT)
+            para(d, MX, 62, body, F(12), BODY, W - 2 * MX, 16, 5)
+        pager(img, d, n, self.sel, HB_Y - 6)
         ready = any(e["type"] == "question" for e in self.queue)
         hint_bar(img, d, "Back", "Start quiz" if ready else "Start", "More")
         return img
@@ -988,10 +989,10 @@ class UI:
         img, d = canvas()
         status_bar(img, d, {"study": "New Study", "mentor": "Mentor Study", "revision": "Revision"}.get(self.mode, "Sakshi"))
         el = time.time() - self.t0
-        spinner(img, W // 2, 92, 16, (el * 360) % 360, ACC)
+        spinner(img, W // 2, 70, 16, (el * 360) % 360, ACC)
         msg = "Writing your next question" if self.mode == "study" else "Thinking"
-        text(d, W // 2, 128, msg, F(12, True), TEXT, "c")
-        text(d, W // 2, 146, "on this device, no internet", F(9), DIM, "c")
+        text(d, W // 2, 106, msg, F(12, True), TEXT, "c")
+        text(d, W // 2, 122, "on this device, no internet", F(9), DIM, "c")
         hint_bar(img, d, "Stop", "", "")
         return img
 
@@ -1001,30 +1002,30 @@ class UI:
         status_bar(img, d, e["tag"], f"Q {e['n']}")
         n, ow = len(e["options"]), W - 38 - 10
         full = wrap(d, e["options"][self.sel], F(10, True), ow)
-        for font, lh in ((F(13, True), 16), (F(11, True), 13)):   # shrink the question before cutting anything
+        for font, lh in ((F(12, True), 15), (F(11, True), 13), (F(10, True), 12)):  # shrink before cutting
             stem_lines = len(wrap(d, e["stem"], font, W - 2 * MX))
-            room = (HB_Y - 4 - (34 + min(stem_lines, 6) * lh)) - (n - 1) * 17
-            if stem_lines <= 4 and (room - 6) // 11 >= len(full):
+            room = (HB_Y - 4 - (30 + min(stem_lines, 5) * lh)) - (n - 1) * 14
+            if stem_lines <= 3 and (room - 6) // 11 >= len(full):
                 break
-        y = para(d, MX, 30, e["stem"], font, TEXT, W - 2 * MX, lh, 6)
-        top = y + 4
-        room = (HB_Y - 4 - top) - (n - 1) * 17         # height left for the selected option
-        sel_lines = full[:max(1, min(len(full), (room - 6) // 11))]
+        y = para(d, MX, 28, e["stem"], font, TEXT, W - 2 * MX, lh, 5)
+        top = y + 2
+        room = (HB_Y - 2 - top) - (n - 1) * 14          # height left for the selected option
+        sel_lines = full[:max(1, min(len(full), (room - 5) // 11))]
         if len(sel_lines) < len(full):
             sel_lines[-1] = fit(d, sel_lines[-1] + " " + full[len(sel_lines)], F(10, True), ow)
         yy = top
         for i, txt in enumerate(e["options"]):
             on = i == self.sel
             lines = sel_lines if on else [fit(d, txt, F(10), ow)]
-            h = max(15, len(lines) * 11 + 4)
+            h = max(12, len(lines) * 11 + 2)
             if on:
                 rrect(img, (6, yy, W - 6, yy + h), 4, fill=SURF2)
                 d.rectangle((6, yy + 3, 8, yy + h - 3), fill=ACC)
-            box = (14, yy + 1, 28, yy + 14)
+            box = (14, yy + 0, 27, yy + 12)
             rrect(img, box, 3, fill=ACC) if on else rrect(img, box, 3, outline=LINE)
-            text(d, 21, yy + 7.5, e["keys"][i], F(9, True), INK if on else DIM, "c")
+            text(d, 20.5, yy + 6, e["keys"][i], F(9, True), INK if on else DIM, "c")
             for k, ln in enumerate(lines):
-                text(d, 34, yy + 8 + k * 11, ln, F(10, on), TEXT if on else BODY)
+                text(d, 34, yy + 6.5 + k * 11, ln, F(10, on), TEXT if on else BODY)
             yy += h + 2
         hint_bar(img, d, "Stop", "Answer", "Next")
         return img
@@ -1035,14 +1036,15 @@ class UI:
         status_bar(img, d, q["tag"], f"Q {q['n']}")
         ok = e["ok"]
         col = GOOD if ok else BAD
-        d.rectangle((6, 30, 8, 50), fill=col)
-        icon(img, "check" if ok else "cross", 16, 31, 18, col, 2.6)
-        text(d, 40, 40, "Correct" if ok else "Not quite", F(15, True), col)
-        label(d, MX, 64, "Answer", GOOD)
-        y = para(d, MX, 72, f"{e['correct']}) {e['correct_text']}", F(11, True), TEXT, W - 2 * MX, 14, 3)
-        if e.get("explanation"):
-            label(d, MX, y + 10, "Why", ACC)
-            para(d, MX, y + 18, e["explanation"], F(10), BODY, W - 2 * MX, 13, 6)
+        d.rectangle((6, 28, 8, 46), fill=col)
+        icon(img, "check" if ok else "cross", 16, 29, 16, col, 2.6)
+        text(d, 38, 37, "Correct" if ok else "Not quite", F(14, True), col)
+        label(d, MX, 56, "Answer", GOOD)
+        y = para(d, MX, 63, f"{e['correct']}) {e['correct_text']}", F(11, True), TEXT, W - 2 * MX, 13, 4)
+        why = e.get("explanation") or ""
+        if why and why.strip(" .").lower() != e["correct_text"].strip(" .").lower() and y < HB_Y - 30:
+            label(d, MX, y + 8, "Why", ACC)
+            para(d, MX, y + 15, why, F(10), BODY, W - 2 * MX, 12, max(1, (HB_Y - y - 19) // 12))
         hint_bar(img, d, "Stop", "Next", "")
         return img
 
@@ -1050,22 +1052,22 @@ class UI:
         img, d = canvas()
         lab, col, title, body, nodes, active = note_view(self.note)
         status_bar(img, d, {"study": "New Study", "mentor": "Mentor Study", "revision": "Revision"}.get(self.mode, "Sakshi"))
-        y = 34
+        y = 32
         if nodes:                                   # where we are in the idea map
-            xs = [24 + i * ((W - 48) // max(1, len(nodes) - 1)) for i in range(len(nodes))]
-            d.line((xs[0], 40, xs[-1], 40), fill=LINE, width=2)
+            xs = [30 + i * ((W - 60) // max(1, len(nodes) - 1)) for i in range(len(nodes))]
+            d.line((xs[0], 34, xs[-1], 34), fill=LINE, width=2)
             for i, (x, nm) in enumerate(zip(xs, nodes)):
                 on = i == active
                 r = 5 if on else 4
-                d.ellipse((x - r, 40 - r, x + r, 40 + r), fill=ACC if on else FAINT)
+                d.ellipse((x - r, 34 - r, x + r, 34 + r), fill=ACC if on else FAINT)
                 al = "l" if i == 0 else "r" if i == len(nodes) - 1 else "c"
                 lx = MX if al == "l" else W - MX if al == "r" else x
-                text(d, lx, 55, fit(d, nm, F(8, on), 52), F(8, on), TEXT if on else DIM, al)
-            d.line((MX, 66, W - MX, 66), fill=LINE)
-            y = 76
+                text(d, lx, 48, fit(d, nm, F(8, on), 66), F(8, on), TEXT if on else DIM, al)
+            d.line((MX, 57, W - MX, 57), fill=LINE)
+            y = 66
         label(d, MX, y, lab, col)
-        y = para(d, MX, y + 10, title, F(13, True), TEXT, W - 2 * MX, 16, 2)
-        para(d, MX, y + 6, body, F(11), BODY, W - 2 * MX, 14, 8)
+        y = para(d, MX, y + 8, title, F(12, True), TEXT, W - 2 * MX, 15, 2)
+        para(d, MX, y + 4, body, F(11), BODY, W - 2 * MX, 13, max(1, (HB_Y - y - 8) // 13))
         hint_bar(img, d, "Stop", "Continue", "")
         return img
 
@@ -1075,50 +1077,55 @@ class UI:
         name = {"study": "New Study", "mentor": "Mentor Study", "revision": "Revision"}.get(e.get("mode"), "Done")
         status_bar(img, d, name, "Complete")
         if e.get("message") and not e.get("asked"):
-            text(d, W // 2, 90, e["message"], F(13, True), TEXT, "c")
+            text(d, W // 2, 80, e["message"], F(13, True), TEXT, "c")
             hint_bar(img, d, "Back", "Done", "")
             return img
         total = self.asked or e.get("asked", 0)
         right = self.right if self.asked else e.get("right", 0)
         frac = right / total if total else 0
-        ring(img, W // 2, 60, 34, 6, frac, GOOD if frac >= .6 else ACC)
-        text(d, W // 2, 58, f"{right}/{total}", F(20, True), TEXT, "c")
-        text(d, W // 2, 73, "correct", F(9), DIM, "c")
+        ring(img, 48, 68, 32, 6, frac, GOOD if frac >= .6 else ACC)
+        text(d, 48, 66, f"{right}/{total}", F(17, True), TEXT, "c")
+        text(d, 48, 80, "correct", F(8), DIM, "c")
         found = e.get("found") or []
-        kv(d, 106, "Mix-ups found", str(len(found)), ACC if found else GOOD)
-        kv(d, 128, "Next revision", e.get("next_review") or "-")
+        x0 = 96
+        for j, (k, v, c) in enumerate((("Mix-ups", str(len(found)), ACC if found else GOOD),
+                                       ("Revise on", e.get("next_review") or "-", TEXT))):
+            y = 40 + j * 26
+            d.line((x0, y - 11, W - MX, y - 11), fill=LINE)
+            text(d, x0, y, k, F(10), DIM)
+            text(d, W - MX, y, v, F(11, True), c, "r")
         if found:
-            label(d, MX, 158, "Work on", ACC)
-            para(d, MX, 166, "“" + found[0] + "”", F(9), DIM, W - 2 * MX, 11, 2)
+            label(d, MX, 114, "Work on", ACC)
+            para(d, MX, 122, "“" + found[0] + "”", F(9), DIM, W - 2 * MX, 11, 2)
         hint_bar(img, d, "Back", "Done", "")
         return img
 
     def draw_error(self):
         img, d = canvas()
         status_bar(img, d, "Sakshi")
-        icon(img, "cross", MX, 40, 18, BAD, 2.6)
-        text(d, MX + 26, 49, "Let's try again", F(12, True), TEXT)
-        para(d, MX, 72, self.err, F(11), BODY, W - 2 * MX, 15, 8)
+        icon(img, "cross", MX, 34, 16, BAD, 2.6)
+        text(d, MX + 24, 42, "Let's try again", F(12, True), TEXT)
+        para(d, MX, 62, self.err, F(11), BODY, W - 2 * MX, 14, 6)
         hint_bar(img, d, "Back", "OK", "")
         return img
 
     def draw_rev_home(self):
         img, d = canvas()
         status_bar(img, d, "Revision")
-        icon(img, "revision", MX, 34, 24, ACC)
-        text(d, MX + 34, 40, "Practise", F(13, True), TEXT)
+        icon(img, "revision", MX, 28, 22, ACC)
+        text(d, MX + 32, 34, "Practise to remember", F(12, True), TEXT)
         due = self.st["due"]
-        text(d, MX + 34, 55, f"{due} due today" if due else "Nothing due today", F(10), ACC if due else DIM)
+        text(d, MX + 32, 48, f"{due} due today" if due else "Nothing due today", F(10), ACC if due else DIM)
         topics = self.st["topics"]
-        label(d, MX, 80, "How well you know it")
+        label(d, MX, 66, "How well you know it")
         if not topics:
-            para(d, MX, 96, "Study a page first. Ideas you learn appear here.", F(11), DIM, W - 2 * MX, 15)
+            para(d, MX, 80, "Study a page first. Ideas you learn appear here.", F(11), DIM, W - 2 * MX, 15, 4)
         for i, tp in enumerate(topics[:4]):
-            y = 90 + i * 24
+            y = 74 + i * 19
             d.line((MX, y, W - MX, y), fill=LINE)
-            text(d, MX, y + 12, fit(d, tp["name"], F(10), 74), F(10), TEXT)
-            bar(d, 88, y + 10, W - 40, 3, tp["mastery"], ACC)
-            text(d, W - MX, y + 12, f"{round(tp['mastery'] * 100)}%", F(9, True), DIM, "r")
+            text(d, MX, y + 10, fit(d, tp["name"], F(10), 110), F(10), TEXT)
+            bar(d, 126, y + 8, W - 44, 3, tp["mastery"], ACC)
+            text(d, W - MX, y + 10, f"{round(tp['mastery'] * 100)}%", F(9, True), DIM, "r")
         hint_bar(img, d, "Back", "Start" if topics else "", "")
         return img
 
@@ -1128,40 +1135,42 @@ class UI:
         s = self.st
         acc = self.accuracy()
         if self.sel == 0:
-            label(d, MX, 38, "Questions solved")
-            text(d, MX, 62, str(s["solved"]), F(30, True), TEXT)
+            label(d, MX, 32, "Questions solved")
+            text(d, MX, 52, str(s["solved"]), F(26, True), TEXT)
             if s["solved"]:
-                text(d, W - MX, 54, f"{acc}%", F(18, True), GOOD if acc >= 60 else ACC, "r")
-                label(d, W - MX, 70, "accuracy", DIM, "r")
+                text(d, W - MX, 46, f"{acc}%", F(17, True), GOOD if acc >= 60 else ACC, "r")
+                label(d, W - MX, 61, "accuracy", DIM, "r")
                 gw = (W - 2 * MX) * s["correct"] / max(s["solved"], 1)
-                d.rectangle((MX, 90, W - MX - 1, 95), fill=BAD)
+                d.rectangle((MX, 74, W - MX - 1, 78), fill=BAD)
                 if gw >= 1:
-                    d.rectangle((MX, 90, MX + int(gw) - 1, 95), fill=GOOD)
+                    d.rectangle((MX, 74, MX + int(gw) - 1, 78), fill=GOOD)
             for j, (lab, v, c) in enumerate((("Correct", s["correct"], GOOD), ("Incorrect", s["solved"] - s["correct"], BAD))):
-                y = 108 + j * 22
+                y = 86 + j * 18
                 d.line((MX, y, W - MX, y), fill=LINE)
-                d.rectangle((MX, y + 8, MX + 5, y + 13), fill=c)
-                text(d, MX + 14, y + 11, lab, F(11), BODY)
-                text(d, W - MX, y + 11, str(v), F(12, True), TEXT, "r")
-            kv(d, 152, "Mix-ups to fix", str(len(s["held"])), ACC if s["held"] else TEXT)
+                d.rectangle((MX, y + 6, MX + 5, y + 11), fill=c)
+                text(d, MX + 14, y + 9, lab, F(11), BODY)
+                text(d, W - MX, y + 9, str(v), F(12, True), TEXT, "r")
+            kv(d, 122, "Mix-ups to fix", str(len(s["held"])), ACC if s["held"] else TEXT)
         elif self.sel == 1:
-            label(d, MX, 38, "Where you are stuck", ACC)
+            label(d, MX, 32, "Where you are stuck", ACC)
             if s["held"]:
-                y = 50
+                y = 40
                 for h in s["held"][:3]:
+                    if y > HB_Y - 34:
+                        break
                     text(d, MX, y + 6, fit(d, h["concept"], F(10, True), W - 2 * MX), F(10, True), TEXT)
-                    y = para(d, MX, y + 14, "“" + h["text"] + "”", F(9), DIM, W - 2 * MX, 11, 2) + 6
+                    y = para(d, MX, y + 13, "“" + h["text"] + "”", F(9), DIM, W - 2 * MX, 11, 2) + 4
             elif s["weak"]:
                 top = s["weak"][0][1]
-                for i, (name, cnt) in enumerate(s["weak"][:5]):
-                    y = 52 + i * 26
+                for i, (name, cnt) in enumerate(s["weak"][:4]):
+                    y = 42 + i * 24
                     text(d, MX, y + 6, fit(d, name, F(10), W - 2 * MX - 24), F(10), TEXT)
                     text(d, W - MX, y + 6, f"{cnt}×", F(10, True), ACC, "r")
-                    bar(d, MX, y + 15, W - MX, 3, cnt / top, ACC)
+                    bar(d, MX, y + 14, W - MX, 3, cnt / top, ACC)
             else:
-                text(d, MX, 70, "Nothing yet. Keep going!", F(11), DIM)
+                text(d, MX, 60, "Nothing yet. Keep going!", F(11), DIM)
         else:
-            label(d, MX, 38, "What to do next", ACC)
+            label(d, MX, 32, "What to do next", ACC)
             tips = []
             if s["held"]:
                 n = len(s["held"])
@@ -1175,16 +1184,18 @@ class UI:
             if s["solved"]:
                 tips.append("Short daily practice beats one long session." if acc >= 60
                             else "Read every option slowly before answering.")
-            y = 52
+            y = 42
             for i, t in enumerate(tips[:3]):
+                if y > HB_Y - 24:
+                    break
                 text(d, MX, y + 7, str(i + 1), F(11, True), ACC)
-                y = para(d, MX + 16, y, t, F(11), BODY, W - 2 * MX - 16, 14, 3) + 10
-        pager(img, d, 3, self.sel, 188)
+                y = para(d, MX + 16, y, t, F(11), BODY, W - 2 * MX - 16, 14, 2) + 6
+        pager(img, d, 3, self.sel, HB_Y - 6)
         hint_bar(img, d, "Back", "", "Next")
         return img
 
 
-def summary_cards(summary, max_lines=6):
+def summary_cards(summary, max_lines=5):
     """The generated summary as cards, each holding whole sentences that fit on the screen (no cut-off text)."""
     sents = [x.strip() for x in re.split(r"(?<=[.!?])\s+", summary.strip()) if x.strip()]
     if not sents:
