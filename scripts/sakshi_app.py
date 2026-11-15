@@ -81,7 +81,7 @@ def cmd_study(a) -> None:
     clock.mark("load")
     print(f"[loaded GURU + helpers in {clock.marks['load']} s]", flush=True)
 
-    summ = make_whole_summary(sm.b, passage, retries=0)
+    summ = bq.summary_in_parts(sm, passage)
     clock.mark("summary")
     print(f"\nSUMMARY ({clock.marks['summary']} s)\n{summ.get('text', '')}\n", flush=True)
 

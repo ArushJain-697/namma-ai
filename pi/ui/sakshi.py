@@ -426,6 +426,27 @@ HOME = os.path.expanduser("~")
 ENGINE_PY = os.environ.get("SAKSHI_PY", os.path.join(HOME, "sakshi-venv", "bin", "python"))
 ENGINE_REPO = os.environ.get("SAKSHI_REPO", os.path.join(HOME, "namma-ai"))
 PASSAGE_FILE = os.environ.get("SAKSHI_PASSAGE", os.path.join(HOME, "passage.txt"))
+PASSAGE_DIR = os.environ.get("SAKSHI_PASSAGES", os.path.join(HOME, "passages"))   # put .txt passages here over SSH
+
+
+def list_passages():
+    """Every .txt in ~/passages (newest first), plus ~/passage.txt if it exists. Each: path, name, words, text."""
+    paths = []
+    if os.path.isdir(PASSAGE_DIR):
+        paths = [os.path.join(PASSAGE_DIR, f) for f in os.listdir(PASSAGE_DIR) if f.lower().endswith(".txt")]
+        paths.sort(key=lambda q: -os.path.getmtime(q))
+    if os.path.exists(PASSAGE_FILE) and PASSAGE_FILE not in paths:
+        paths.append(PASSAGE_FILE)
+    out = []
+    for q in paths:
+        try:
+            t = " ".join(open(q, encoding="utf-8", errors="replace").read().split())
+        except OSError:
+            continue
+        if t:
+            name = os.path.splitext(os.path.basename(q))[0].replace("_", " ").replace("-", " ")
+            out.append({"path": q, "name": name, "words": len(t.split()), "text": t})
+    return out
 STAGES = ["Reading text", "Writing summary", "Building questions"]
 
 
@@ -482,8 +503,12 @@ class Camera:
             cap = cv2.VideoCapture(int(os.environ.get("SAKSHI_CAM", "0")))
             if not cap.isOpened():
                 raise RuntimeError("no camera found")
-            cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
-            cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 960)
+            # This USB camera gives full HD only in its MJPG mode; without asking for MJPG OpenCV falls back to
+            # raw YUYV at 640x360 (measured 14 Nov), far too few pixels for textbook print.
+            cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*"MJPG"))
+            cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
+            cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
+            cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)  # the photo is the latest frame, not a stale buffered one
             self.cap, self.error = cap, None
             return True
         except Exception as e:  # noqa: BLE001
@@ -591,7 +616,7 @@ APPS = [("Study", "study", "Learn from a photo of\nyour textbook page"),
         ("Revision", "revision", "Practise what you\nalready know well"),
         ("Diagnostics", "diag", "See where you are\nstuck, and why")]
 STUDY_OPTS = [("New Study", "camera", "Photograph a page, get\na summary and quiz"),
-              ("Saved page", "study", "Study the page saved\non this device"),
+              ("Saved pages", "study", "Pick a passage stored\non this device"),
               ("Mentor Study", "mentor", "Fix mix-ups from\nearlier sessions")]
 
 
@@ -614,6 +639,10 @@ class UI:
 
     # ---- navigation
     def go(self, screen, sel=0):
+        if screen == "pick_back":                 # back to the passage list, re-read, same item selected
+            self.passages = list_passages() or getattr(self, "passages", [])
+            screen, sel = ("pick", min(getattr(self, "pick_sel", 0), max(0, len(self.passages) - 1))) \
+                if self.passages else ("study_home", 1)
         self.screen, self.sel, self.t0 = screen, sel, time.time()
 
     def press(self, k):
@@ -747,13 +776,28 @@ class UI:
             if self.sel == 0:
                 self.go("camera" if self.cam.open() else "nocam")
             elif self.sel == 1:
-                if os.path.exists(PASSAGE_FILE):
-                    self.start("study", "study_home", open(PASSAGE_FILE, encoding="utf-8").read())
+                self.passages = list_passages()   # read fresh each time: new files appear without a restart
+                if self.passages:
+                    self.go("pick", min(getattr(self, "pick_sel", 0), len(self.passages) - 1))
                 else:
-                    self.err = "No saved page. Put the text in passage.txt."
+                    self.home = "study_home"
+                    self.err = f"No passages yet. Put .txt files in {PASSAGE_DIR} on this device."
                     self.go("error")
             else:
                 self.start("mentor", "study_home")
+
+    def on_pick(self, k):
+        if k == "L":
+            self.go("study_home", 1)
+        elif k == "R":
+            self.sel = (self.sel + 1) % len(self.passages)
+        elif k == "M":
+            self.pick_sel = self.sel
+            p = self.passages[self.sel]
+            self.start("study", "pick_back", p["text"])
+
+    def on_pick_back(self, k):  # not a real screen: Back from a study session returns to the list
+        pass
 
     def on_nocam(self, k):
         if k in ("L", "M"):
@@ -903,6 +947,26 @@ class UI:
         hint_bar(img, d, "Back", "Open", "Next")
         return img
 
+    def draw_pick(self):
+        img, d = canvas()
+        ps, n = self.passages, len(self.passages)
+        status_bar(img, d, "Saved pages", f"{self.sel + 1} / {n}")
+        rows = 4
+        first = max(0, min(self.sel - 1, n - rows))   # keep the selection in view, one row of context above
+        for r, i in enumerate(range(first, min(n, first + rows))):
+            y = 26 + r * 19
+            on = i == self.sel
+            if on:
+                rrect(img, (6, y, W - 6, y + 17), 3, fill=SURF2)
+                d.rectangle((6, y + 3, 8, y + 14), fill=ACC)
+            words = f"{ps[i]['words']} w"
+            text(d, MX + 4, y + 9, fit(d, ps[i]["name"], F(11, on), W - 2 * MX - 50), F(11, on), TEXT if on else BODY)
+            text(d, W - MX - 2, y + 9, words, F(9), DIM, "r")
+        d.line((MX, 104, W - MX, 104), fill=LINE)
+        para(d, MX, 110, ps[self.sel]["text"], F(10), DIM, W - 2 * MX, 13, 3)
+        hint_bar(img, d, "Back", "Study this", "Next")
+        return img
+
     def draw_nocam(self):
         img, d = canvas()
         status_bar(img, d, "New Study", "Camera")
@@ -1023,7 +1087,7 @@ class UI:
                 d.rectangle((6, yy + 3, 8, yy + h - 3), fill=ACC)
             box = (14, yy + 0, 27, yy + 12)
             rrect(img, box, 3, fill=ACC) if on else rrect(img, box, 3, outline=LINE)
-            text(d, 20.5, yy + 6, e["keys"][i], F(9, True), INK if on else DIM, "c")
+            text(d, 20.5, yy + 6, (e.get("labels") or e["keys"])[i], F(9, True), INK if on else DIM, "c")
             for k, ln in enumerate(lines):
                 text(d, 34, yy + 6.5 + k * 11, ln, F(10, on), TEXT if on else BODY)
             yy += h + 2

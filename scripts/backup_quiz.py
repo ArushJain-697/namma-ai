@@ -359,7 +359,7 @@ def cmd_demo(a) -> None:
     sm = Model(Path(a.summary_model)) if a.summary_model else m  # summary from the plain model (GURU = quiz only)
     load = time.time() - t0
     t1 = time.time()
-    summ = make_whole_summary(sm.b, passage, retries=0)  # one call: a retry cost ~15 s on the Pi
+    summ = summary_in_parts(sm, passage)
     n_sum_calls = len(summ.get("attempts", []))
     for at in summ.get("attempts", []):  # count summary calls in the run card too
         m.calls.append({"kind": "summary", "in": getattr(at, "prompt_tokens", 0) or 0,
@@ -851,6 +851,49 @@ def _opening(s: str) -> str:
     return "num" if re.match(r"^[\d.,%-]+$", w) else w
 
 
+_REASON = re.compile(r"(?:,\s*|\s+)(?:because|since|as|so that|due to)\s+\S.*$", re.I)
+
+
+def strip_reasons(key: str, wrong: list[str]) -> tuple[str, list[str]]:
+    """GURU often writes the answer with its justification ("The rougher one, since it has more bumps"), which gives
+    the key away. Cut a trailing "because / since / as / due to ..." clause from every option, so all options keep
+    the same shape. Kept as written when an option starts with the reason ("Because ...", a why-question answer) or
+    when cutting would make two options the same (then the reason is what the question tests)."""
+    opts = [key] + list(wrong)
+    if any(re.match(r"\s*(because|since|due to)\b", o, re.I) for o in opts):
+        return key, wrong
+    cut = [_REASON.sub("", o).strip(" ,.") for o in opts]
+    if any(len(c.split()) < 1 for c in cut) or len({c.lower() for c in cut}) < len(opts):
+        return key, wrong
+    return cut[0], cut[1:]
+
+
+SUM_PART_SYSTEM = ("You rewrite a part of a school passage as ONE short sentence for a Class 6-10 student, under 15 "
+                   "words, in your own simple words. Do not copy the passage. Keep numbers and names as written. "
+                   "Do not add facts.")
+SUM_PART_EXAMPLES = (("Part: The heart has four chambers. The right side sends blood to the lungs to pick up oxygen, and "
+                      "the left side pumps this oxygen-rich blood to the rest of the body.\nWrite one sentence.",
+                      "The heart's right side sends blood to the lungs, and the left side sends it to the body."),)
+
+
+def summary_in_parts(m: "Model", passage: str) -> dict:
+    """The summary: the passage cut into thirds at sentence ends, one short own-words sentence per third.
+    Measured 14 Nov on 7 passages against the old one-call summary (asked for 2-3 sentences): old 86 words on average,
+    44% of its words copied in 6+ word runs (87% on one passage) and it often covered only the start; this version
+    44 words, 26% copied, covers the whole passage by construction, ~10 s on the Pi instead of ~14 s."""
+    sents = split_sentences(passage)
+    k = max(1, round(len(sents) / 3))
+    parts = [" ".join(c) for c in (sents[:k], sents[k:2 * k], sents[2 * k:]) if c] if len(sents) >= 3 else [passage]
+    out = []
+    for part in parts:
+        t = m.run(SUM_PART_SYSTEM, f"Part: {part}\nWrite one sentence.", 40, examples=SUM_PART_EXAMPLES,
+                  kind="summary", stop=r"[.!?](\s|$)").strip()
+        t = re.split(r"(?<=[.!?])\s", t)[0].strip()
+        if t and t.lower() not in (o.lower() for o in out):
+            out.append(t)
+    return {"text": " ".join(out)}
+
+
 def option_shape_ok(key: str, wrong: list[str], passage: str) -> str | None:
     """None if the 4 options look alike, else the reason the key stands out."""
     kl, wl = len(tokens(key)), [len(tokens(w)) for w in wrong]
@@ -884,7 +927,7 @@ def parse_wrong(text: str) -> list[str]:
     return out
 
 
-def quiz_2job(mq: "Model", mw: "Model", passage: str, n: int = 4, seed: int = 0, w_runs: int = 1,
+def quiz_2job(mq: "Model", mw: "Model", passage: str, n: int = 4, seed: int | None = None, w_runs: int = 1,
               self_check_on: bool = True, checker: "Model | None" = None, on_kept=None, should_stop=None) -> dict:
     """checker = the model that answers each question as a last check. GURU was trained to WRITE questions and
     answers "A" almost always when asked to answer one (measured 14 Nov), so pass the plain model here.
@@ -947,8 +990,11 @@ def quiz_2job(mq: "Model", mw: "Model", passage: str, n: int = 4, seed: int = 0,
         if why:
             rejected.append({**rec, "q": q, "reason": why})
             continue
+        k2, w2 = strip_reasons(key, wrong)
+        if (k2, w2) != (key, wrong) and not option_shape_ok(k2, w2, passage):
+            key, wrong = k2, w2  # reasons cut only if the shorter options still pass the giveaway checks
         opts = [key] + wrong
-        rng.shuffle(opts)
+        rng.shuffle(opts)  # seed None (the device): a fresh random order every run, so the key is not always A
         item = {"q": q, "options": opts, "answer": opts.index(key), "explain": sents[i]}
         rec.update(item)
         bad = code_check(item)

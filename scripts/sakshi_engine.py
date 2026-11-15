@@ -22,6 +22,7 @@ import argparse
 import json
 import os
 import queue
+import random
 import resource
 import sys
 import threading
@@ -48,6 +49,11 @@ def emit(kind: str, **data) -> None:
         _OUT.flush()
 
 
+def log(text: str) -> None:
+    """Readable record of what the child saw, in /tmp/sakshi_engine.log (the UI sends our stderr there)."""
+    print(f"[{time.strftime('%H:%M:%S')}] {text}", file=sys.stderr, flush=True)
+
+
 def now() -> datetime:
     return datetime.now(timezone.utc)
 
@@ -63,6 +69,8 @@ class DeviceIO:
     def __init__(self, answers: queue.Queue):
         self.answers = answers
         self.n = 0
+        self.rng = random.Random()   # a fresh option order every time a question is shown
+        self.to_screen: dict[str, str] = {}   # bank key -> letter shown on screen, for the current question
 
     def show(self, text):  # the UI draws from events instead of sentences
         pass
@@ -77,14 +85,24 @@ class DeviceIO:
         self.n += 1
         tag = ("From your page" if q.id.startswith("g") else
                "Use it" if q.type == "application" else "Basics")
+        order = list(q.options)
+        self.rng.shuffle(order)  # the correct option lands on any letter, never always A
+        self.to_screen = {o.key: "ABCDEFG"[i] for i, o in enumerate(order)}
+        log(f"Q{self.n} [{tag}] {q.stem}\n" + "\n".join(
+            f"   {'*' if o.correct else ' '} {'ABCDEFG'[i]}) {o.text}" for i, o in enumerate(order)))
         emit("question", qid=q.id, n=self.n, tag=tag, stem=q.stem,
-             options=[o.text for o in q.options], keys=[o.key for o in q.options])
+             options=[o.text for o in order], keys=[o.key for o in order],
+             labels=["ABCDEFG"[i] for i in range(len(order))])
 
     def answer(self, q):
         a = self.answers.get()
         return a  # None = the child left
 
     def event(self, kind, **data):
+        if kind == "result":  # report letters as the child saw them
+            for f in ("picked", "correct"):
+                if data.get(f) in self.to_screen:
+                    data[f] = self.to_screen[data[f]]
         emit(kind, **data)
 
 
@@ -164,10 +182,11 @@ class Engine:
             return
         t0 = time.time()
         emit("stage", n=2)
-        summ = make_whole_summary(self.sm.b, passage, retries=0)
+        summ = self.bq.summary_in_parts(self.sm, passage)
         summary = summ.get("text") or ""
         t_sum = round(time.time() - t0, 1)
         emit("summary", text=summary, seconds=t_sum)
+        log(f"PASSAGE ({len(passage.split())} words): {passage}\nSUMMARY ({t_sum} s): {summary}")
         emit("stage", n=3)
 
         cand = self.linker.candidates(self.mp.topics(passage))
@@ -185,7 +204,7 @@ class Engine:
 
         def writer():
             try:
-                out["r"] = self.bq.quiz_2job(self.m, self.m, passage, n=10, checker=self.sm, on_kept=on_kept,
+                out["r"] = self.bq.quiz_2job(self.m, self.m, passage, n=10, checker=self.sm, on_kept=on_kept, seed=1,
                                              should_stop=self.stop.is_set)
             except Exception as e:  # noqa: BLE001
                 out["error"] = f"{type(e).__name__}: {e}"

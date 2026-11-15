@@ -46,7 +46,7 @@ def main() -> None:
         m, sm = bq.Model(quiz_dir), bq.Model(sum_dir)
         say("STAGE 1")
         t1 = time.time()
-        summ = make_whole_summary(sm.b, passage, retries=0)
+        summ = bq.summary_in_parts(sm, passage)
         say("STAGE 2")
         t2 = time.time()
         r = bq.quiz_2job(m, m, passage, n=a.questions, checker=sm)
