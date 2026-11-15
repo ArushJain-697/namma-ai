@@ -1,0 +1,143 @@
+{
+ "source": "train-0058-MAT-SOLIDS.json",
+ "job": {
+  "job": "train-0058-MAT-SOLIDS",
+  "topic_id": "MAT-SOLIDS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a market or shop situation that uses the idea",
+  "seed": 58
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3040,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan visited a packaging factory to see how boxes are made for shipping goods. The manager showed him a flat cardboard sheet cut into a specific pattern, known as a net, which folds perfectly into a cube. Rohan noticed that a cylinder's net is different; it consists of two circular bases and a rectangular sheet whose length must exactly match the circumference of the circles to fit perfectly. The manager explained that a triangular prism has five faces: two triangular ends and three rectangular sides. He also pointed out a cone, noting that its curved surface meets at a single point called the apex or vertex. Finally, they looked at a solid block where the manager used Euler's formula, F + V - E = 2, to verify the count of faces, vertices, and edges. He reminded Rohan that a cylinder has two curved edges where the flat circular faces meet the curved surface, proving that edges can exist on round objects.",
+ "menu_ids": [
+  "MAT-SOLIDS-K13-M1",
+  "MAT-SOLIDS-K13-M2",
+  "MAT-SOLIDS-K14-M3",
+  "MAT-SOLIDS-K15-M4",
+  "MAT-SOLIDS-K16-M5",
+  "MAT-SOLIDS-K16-M6",
+  "MAT-SOLIDS-K17-M7",
+  "MAT-SOLIDS-K17-M8",
+  "MAT-SOLIDS-K18-M9",
+  "MAT-SOLIDS-K21-M10",
+  "MAT-SOLIDS-K20-M11",
+  "MAT-SOLIDS-K22-M12",
+  "MAT-SOLIDS-K19-M13",
+  "MAT-SOLIDS-K23-M14"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Rohan noticed that a cylinder's net is different; it consists of two circular bases and a rectangular sheet whose length must exactly match the circumference of the circles to fit perfectly.",
+    "kind": "what_if",
+    "q": "A worker cuts a cylinder net's rectangle shorter than the circles' circumference. What happens?",
+    "options": [
+     "The sheet cannot wrap fully around the circles",
+     "The sheet still fits, as any length works",
+     "The sheet fits if the circles are made larger",
+     "The sheet fits if one circle is left out"
+    ],
+    "explain": "The rectangle's length must exactly match the circles' circumference, so a shorter sheet cannot close.",
+    "wrong": [
+     {
+      "misconception": "MAT-SOLIDS-K22-M12",
+      "why": "thinks the rectangle can be any length"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the size link; bigger circles need a longer sheet"
+     },
+     {
+      "misconception": null,
+      "why": "misreads the net as needing only one base"
+     }
+    ]
+   },
+   {
+    "evidence": "The manager explained that a triangular prism has five faces: two triangular ends and three rectangular sides.",
+    "kind": "what_if",
+    "q": "A chocolate box is a triangular prism. How many flat pieces make up its faces?",
+    "options": [
+     "Five: two triangles and three rectangles",
+     "Three: one for each side of the triangle",
+     "Six: like every box-shaped solid",
+     "Four: only the faces you can see"
+    ],
+    "explain": "A triangular prism has two triangular ends and three rectangular sides, making five faces.",
+    "wrong": [
+     {
+      "misconception": "MAT-SOLIDS-K16-M5",
+      "why": "counts faces from the triangle's sides"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises from a cube-shaped box"
+     },
+     {
+      "misconception": "MAT-SOLIDS-K13-M2",
+      "why": "counts only faces visible in a picture"
+     }
+    ]
+   },
+   {
+    "evidence": "He also pointed out a cone, noting that its curved surface meets at a single point called the apex or vertex.",
+    "kind": "which_explains",
+    "q": "Priya says a cone has no vertex because its top is curved. Which fact shows she is wrong?",
+    "options": [
+     "Its curved surface comes together at one tip",
+     "Its curved surface has a vertex everywhere",
+     "Its curved surface counts as a flat face",
+     "Its curved surface has a straight edge"
+    ],
+    "explain": "A cone's curved surface meets at a single point, the apex, which is its vertex.",
+    "wrong": [
+     {
+      "misconception": "MAT-SOLIDS-K15-M4",
+      "why": "thinks any point on a solid is a vertex"
+     },
+     {
+      "misconception": "MAT-SOLIDS-K13-M1",
+      "why": "treats curved surfaces as faces"
+     },
+     {
+      "misconception": "MAT-SOLIDS-K14-M3",
+      "why": "thinks edges are straight lines drawn on solids"
+     }
+    ]
+   },
+   {
+    "evidence": "He reminded Rohan that a cylinder has two curved edges where the flat circular faces meet the curved surface, proving that edges can exist on round objects.",
+    "kind": "how",
+    "q": "Amit thinks round objects cannot have edges. How many edges does a cylinder really have?",
+    "options": [
+     "Two, where the circles meet the curved side",
+     "None, because a cylinder is round",
+     "Three, one for each of its surfaces",
+     "One, the straight line down its side"
+    ],
+    "explain": "A cylinder has two curved edges where its flat circular faces meet the curved surface.",
+    "wrong": [
+     {
+      "misconception": "MAT-SOLIDS-K18-M9",
+      "why": "thinks round solids have no edges"
+     },
+     {
+      "misconception": "MAT-SOLIDS-K13-M1",
+      "why": "confuses surfaces with edges"
+     },
+     {
+      "misconception": "MAT-SOLIDS-K14-M3",
+      "why": "thinks only straight lines count as edges"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 34.6
+}

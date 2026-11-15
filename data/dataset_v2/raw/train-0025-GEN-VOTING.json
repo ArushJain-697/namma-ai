@@ -1,0 +1,167 @@
+{
+ "source": "train-0025-GEN-VOTING.json",
+ "job": {
+  "job": "train-0025-GEN-VOTING",
+  "topic_id": "GEN-VOTING",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a comparison of two related ideas",
+  "seed": 25
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4070,
+  "promptTokenCount": 2
+ },
+ "passage": "In India, the democratic process relies on the active participation of all adult citizens, regardless of their education or property ownership. Every eligible citizen has the right to vote, and this act is a voluntary exercise of their democratic duty, not a legal obligation punishable by law. When a voter enters the polling station, they use an Electronic Voting Machine (EVM) to cast their ballot. Contrary to popular myths, EVMs are standalone machines that are not connected to the internet or any external network, ensuring they cannot be hacked remotely. After pressing the button for their chosen candidate, a VVPAT machine prints a slip showing the name and symbol of the candidate selected. This slip is visible to the voter for seven seconds behind a glass window before it drops into a sealed box, serving as a record for the Election Commission, not as a receipt for the voter to take home. Furthermore, the Election Commission functions as an independent constitutional body, completely separate from the ruling government or the Prime Minister's office. Finally, voters must remember that they are electing a representative for their local constituency, not directly voting for the Prime Minister. The system is designed to ensure that the process remains transparent, secure, and accessible to every citizen.",
+ "menu_ids": [
+  "GEN-VOTING-K4-M1",
+  "GEN-VOTING-K9-M2",
+  "GEN-VOTING-K14-M3",
+  "GEN-VOTING-K13-M4",
+  "GEN-VOTING-K15-M5",
+  "GEN-VOTING-K17-M6",
+  "GEN-VOTING-K18-M7",
+  "GEN-VOTING-K21-M8",
+  "GEN-VOTING-K24-M10",
+  "GEN-VOTING-K26-M11",
+  "GEN-VOTING-K29-M12",
+  "GEN-VOTING-K28-M13"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "In India, the democratic process relies on the active participation of all adult citizens, regardless of their education or property ownership.",
+    "kind": "what_if",
+    "q": "Meena is an adult citizen who never went to school and owns no land. What is true about her vote?",
+    "options": [
+     "She can vote, just like every adult citizen",
+     "She can vote only after she learns to read",
+     "She can vote only if her family owns land",
+     "She can vote, but is fined if she skips"
+    ],
+    "explain": "All adult citizens take part in voting, whatever their education or property.",
+    "wrong": [
+     {
+      "misconception": "GEN-VOTING-K4-M1",
+      "why": "thinks only educated people can vote"
+     },
+     {
+      "misconception": null,
+      "why": "links the right to vote with owning property"
+     },
+     {
+      "misconception": "GEN-VOTING-K28-M13",
+      "why": "thinks voting is compulsory and punished"
+     }
+    ]
+   },
+   {
+    "evidence": "Every eligible citizen has the right to vote, and this act is a voluntary exercise of their democratic duty, not a legal obligation punishable by law.",
+    "kind": "what_if",
+    "q": "Raju is eligible but stays at home on polling day. What happens to him under the law?",
+    "options": [
+     "He faces no penalty, since it is his choice",
+     "He must pay a fine for not voting",
+     "He loses his right to vote next time",
+     "He is jailed under the Code of Conduct"
+    ],
+    "explain": "Voting is voluntary, not a legal obligation, so not voting is not punished by law.",
+    "wrong": [
+     {
+      "misconception": "GEN-VOTING-K28-M13",
+      "why": "thinks voting is compulsory and fined"
+     },
+     {
+      "misconception": null,
+      "why": "thinks missing a vote takes the right away"
+     },
+     {
+      "misconception": "GEN-VOTING-K24-M10",
+      "why": "thinks the Code of Conduct sends people to jail"
+     }
+    ]
+   },
+   {
+    "evidence": "Contrary to popular myths, EVMs are standalone machines that are not connected to the internet or any external network, ensuring they cannot be hacked remotely.",
+    "kind": "which_explains",
+    "q": "Why can't a hacker in another city change the votes stored in an EVM?",
+    "options": [
+     "It works alone with no network connection",
+     "It uses a secret, protected Wi-Fi password",
+     "Its VVPAT slip blocks changes from outside",
+     "Its commission is independent of the government"
+    ],
+    "explain": "EVMs are standalone and not linked to the internet or any network, so remote hacking is impossible.",
+    "wrong": [
+     {
+      "misconception": "GEN-VOTING-K14-M3",
+      "why": "thinks EVMs are on Wi-Fi"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby detail that is not the reason"
+     },
+     {
+      "misconception": null,
+      "why": "picks a true fact that does not explain security"
+     }
+    ]
+   },
+   {
+    "evidence": "This slip is visible to the voter for seven seconds behind a glass window before it drops into a sealed box, serving as a record for the Election Commission, not as a receipt for the voter to take home.",
+    "kind": "what_if",
+    "q": "Asha wants to keep her VVPAT slip as proof of her vote. What happens to the slip?",
+    "options": [
+     "The slip shows briefly, then falls into a sealed box",
+     "The slip is handed to her to take home",
+     "The slip goes to an officer to note her choice",
+     "The slip is not printed; only the EVM records"
+    ],
+    "explain": "The slip shows for seven seconds, then drops into a sealed box as the Commission's record.",
+    "wrong": [
+     {
+      "misconception": "GEN-VOTING-K15-M5",
+      "why": "thinks the slip is a receipt to take home"
+     },
+     {
+      "misconception": "GEN-VOTING-K9-M2",
+      "why": "thinks officials see each person's vote"
+     },
+     {
+      "misconception": "GEN-VOTING-K13-M4",
+      "why": "thinks the EVM is one box with no slip"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, voters must remember that they are electing a representative for their local constituency, not directly voting for the Prime Minister.",
+    "kind": "how",
+    "q": "When Priya presses a button on the EVM, whom is she actually choosing?",
+    "options": [
+     "A representative for her local constituency",
+     "The Prime Minister directly, for the country",
+     "An officer of the Election Commission",
+     "The ruling party's leader for her state"
+    ],
+    "explain": "Voters elect a representative for their local constituency, not the Prime Minister directly.",
+    "wrong": [
+     {
+      "misconception": "GEN-VOTING-K29-M12",
+      "why": "thinks voters directly elect the Prime Minister"
+     },
+     {
+      "misconception": null,
+      "why": "picks another body named in the passage"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the vote is for a party leader"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 42.7
+}

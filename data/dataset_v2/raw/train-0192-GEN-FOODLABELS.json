@@ -1,0 +1,143 @@
+{
+ "source": "train-0192-GEN-FOODLABELS.json",
+ "job": {
+  "job": "train-0192-GEN-FOODLABELS",
+  "topic_id": "GEN-FOODLABELS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a comparison of two related ideas",
+  "seed": 192
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3133,
+  "promptTokenCount": 2
+ },
+ "passage": "When buying packaged snacks, students often get confused by the information printed on the labels. First, look at the ingredient list, which is always arranged by weight. The ingredient listed first is present in the largest quantity, not the smallest. Many people assume that if sugar is not the first ingredient, the food is low in sugar, but manufacturers often use multiple names for sugar like syrup or dextrose to hide the total amount. Second, check the nutrition facts table carefully. The values provided are usually per serving, not for the entire packet. If you eat the whole bag, you are consuming multiple servings and thus more calories than the label suggests. Third, understand the symbols. A green dot indicates the product is vegetarian, but it does not mean the food is free from chemicals or additives. Finally, pay attention to dates. An expiry date indicates when a product is no longer safe to consume, whereas a 'best before' date refers to the peak quality of the food. Always store products as instructed, because the date is only valid if the packaging remains sealed and stored in a cool, dry place as recommended by the manufacturer.",
+ "menu_ids": [
+  "GEN-FOODLABELS-K13-M1",
+  "GEN-FOODLABELS-K14-M3",
+  "GEN-FOODLABELS-K15-M4",
+  "GEN-FOODLABELS-K16-M6",
+  "GEN-FOODLABELS-K18-M9",
+  "GEN-FOODLABELS-K19-M10",
+  "GEN-FOODLABELS-K19-M11",
+  "GEN-FOODLABELS-K20-M12",
+  "GEN-FOODLABELS-K20-M13",
+  "GEN-FOODLABELS-K21-M14",
+  "GEN-FOODLABELS-K22-M15",
+  "GEN-FOODLABELS-K22-M16",
+  "GEN-FOODLABELS-K23-M17",
+  "GEN-FOODLABELS-K23-M18"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "The ingredient listed first is present in the largest quantity, not the smallest.",
+    "kind": "what_if",
+    "q": "A biscuit label lists wheat flour first and salt last. What does this order tell you?",
+    "options": [
+     "It has more flour than salt",
+     "It has more salt than flour",
+     "It has equal flour and salt",
+     "It had flour mixed in before salt"
+    ],
+    "explain": "Ingredients are listed by weight, so the first one, flour, is present in the largest amount.",
+    "wrong": [
+     {
+      "misconception": "GEN-FOODLABELS-K13-M1",
+      "why": "thinks the first ingredient is the smallest amount"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the list order means nothing about amount"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the order shows the order of mixing"
+     }
+    ]
+   },
+   {
+    "evidence": "Many people assume that if sugar is not the first ingredient, the food is low in sugar, but manufacturers often use multiple names for sugar like syrup or dextrose to hide the total amount.",
+    "kind": "which_explains",
+    "q": "A cereal lists rice first, then glucose syrup, dextrose and sugar. What can you conclude about its sugar?",
+    "options": [
+     "Its sugar may be high under several names",
+     "It is low in sugar, as rice is first",
+     "Its only sugar is the one named sugar",
+     "Its sugar is highest because sugar comes last"
+    ],
+    "explain": "Syrup and dextrose are other names for sugar, so the total sugar can be high.",
+    "wrong": [
+     {
+      "misconception": "GEN-FOODLABELS-K14-M3",
+      "why": "thinks sugar not being first means little sugar"
+     },
+     {
+      "misconception": "GEN-FOODLABELS-K15-M4",
+      "why": "thinks only the word 'sugar' means sugar"
+     },
+     {
+      "misconception": "GEN-FOODLABELS-K13-M1",
+      "why": "thinks the last ingredient is the largest amount"
+     }
+    ]
+   },
+   {
+    "evidence": "If you eat the whole bag, you are consuming multiple servings and thus more calories than the label suggests.",
+    "kind": "what_if",
+    "q": "A chips packet has 3 servings of 150 calories each. Riya eats the whole packet. How many calories?",
+    "options": [
+     "450 calories",
+     "150 calories",
+     "50 calories",
+     "153 calories"
+    ],
+    "explain": "The label value is per serving; eating three servings gives three times 150, which is 450 calories.",
+    "wrong": [
+     {
+      "misconception": "GEN-FOODLABELS-K18-M9",
+      "why": "thinks the whole packet equals one serving"
+     },
+     {
+      "misconception": null,
+      "why": "divides by the servings instead of multiplying"
+     },
+     {
+      "misconception": null,
+      "why": "adds the number of servings to the calories"
+     }
+    ]
+   },
+   {
+    "evidence": "A green dot indicates the product is vegetarian, but it does not mean the food is free from chemicals or additives.",
+    "kind": "which_explains",
+    "q": "Meena's snack packet has a green dot on it. What does the dot tell her?",
+    "options": [
+     "It is a vegetarian product",
+     "It has no chemicals or additives",
+     "It is healthy to eat every day",
+     "It is still before its expiry date"
+    ],
+    "explain": "A green dot only shows the food is vegetarian; it may still contain chemicals or additives.",
+    "wrong": [
+     {
+      "misconception": "GEN-FOODLABELS-K23-M17",
+      "why": "thinks a green dot means no additives"
+     },
+     {
+      "misconception": null,
+      "why": "thinks any mark on a label means healthy food"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the symbol with the date information"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 33.2
+}

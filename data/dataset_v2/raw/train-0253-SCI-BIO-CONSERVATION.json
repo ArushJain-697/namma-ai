@@ -1,0 +1,168 @@
+{
+ "source": "train-0253-SCI-BIO-CONSERVATION.json",
+ "job": {
+  "job": "train-0253-SCI-BIO-CONSERVATION",
+  "topic_id": "SCI-BIO-CONSERVATION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a cause-and-effect explanation",
+  "seed": 253
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1581,
+  "promptTokenCount": 2
+ },
+ "passage": "Forests act as the Earth's lungs, playing a vital role in maintaining our climate. When trees are removed through deforestation, the amount of carbon dioxide in the atmosphere rises significantly, which traps heat and contributes to global warming. Beyond climate impact, trees are essential for the water cycle; they release water vapor through transpiration, which helps form clouds and leads to rainfall. Therefore, cutting down trees reduces local rainfall, making the land dry and prone to desertification, where fertile soil loses its nutrients and becomes barren. To combat this, we practice reforestation, which involves planting native tree species to restore the original ecosystem. This is different from simply planting any random trees, as native species are adapted to the local environment. Furthermore, we must protect specific areas like wildlife sanctuaries, which are designated zones where animals live in their natural habitats without human interference. Unlike zoos, these sanctuaries provide vast spaces for diverse wildlife, not just birds, to thrive. By recycling paper, we reduce the demand for wood, which indirectly saves trees, but it is not a substitute for the active process of planting new forests. Protecting these habitats ensures that endemic species, which are naturally found only in specific geographic locations, do not face the threat of extinction.",
+ "menu_ids": [
+  "SCI-BIO-CONSERVATION-K8-M1",
+  "SCI-BIO-CONSERVATION-K9-M2",
+  "SCI-BIO-CONSERVATION-K13-M3",
+  "SCI-BIO-CONSERVATION-K20-M5",
+  "SCI-BIO-CONSERVATION-K22-M6",
+  "SCI-BIO-CONSERVATION-K6-M7",
+  "SCI-BIO-CONSERVATION-K14-M8",
+  "SCI-BIO-CONSERVATION-K21-M9",
+  "SCI-BIO-CONSERVATION-K10-M10",
+  "SCI-BIO-CONSERVATION-K13-M11",
+  "SCI-BIO-CONSERVATION-K19-M12",
+  "SCI-BIO-CONSERVATION-K8-M13",
+  "SCI-BIO-CONSERVATION-K22-M14"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Therefore, cutting down trees reduces local rainfall, making the land dry and prone to desertification, where fertile soil loses its nutrients and becomes barren.",
+    "kind": "what_if",
+    "q": "A hill's trees are all cut down. What is likely to happen to its nearby rainfall?",
+    "options": [
+     "It falls, so the land turns dry",
+     "It stays the same, since rain comes from the sky",
+     "It rises, so the soil becomes richer",
+     "It falls, but the soil stays fertile"
+    ],
+    "explain": "Fewer trees mean less water vapour and less rain, so the land becomes dry and barren.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CONSERVATION-K10-M10",
+      "why": "thinks trees do not affect rainfall"
+     },
+     {
+      "misconception": null,
+      "why": "reverses cause and effect"
+     },
+     {
+      "misconception": "SCI-BIO-CONSERVATION-K9-M2",
+      "why": "ignores the link between dryness and barren soil"
+     }
+    ]
+   },
+   {
+    "evidence": "Beyond climate impact, trees are essential for the water cycle; they release water vapor through transpiration, which helps form clouds and leads to rainfall.",
+    "kind": "how",
+    "q": "How do trees help bring rain to an area?",
+    "options": [
+     "They give out water vapour that forms clouds",
+     "They pull rain down from the sky",
+     "They take in carbon dioxide to make clouds",
+     "They cool the soil so clouds gather"
+    ],
+    "explain": "Trees release water vapour by transpiration, which helps form clouds and then rainfall.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CONSERVATION-K10-M10",
+      "why": "thinks rain simply comes from the sky"
+     },
+     {
+      "misconception": "SCI-BIO-CONSERVATION-K8-M1",
+      "why": "mixes up carbon dioxide intake with cloud making"
+     },
+     {
+      "misconception": null,
+      "why": "guesses a cooling effect not in the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "This is different from simply planting any random trees, as native species are adapted to the local environment.",
+    "kind": "why",
+    "q": "Why is planting native trees better than planting random trees to restore a forest?",
+    "options": [
+     "They suit the local surroundings well",
+     "They grow faster than all other trees",
+     "They are cheaper to buy and plant",
+     "They need no water after planting"
+    ],
+    "explain": "Native species are adapted to the local environment, so they can restore the original ecosystem.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CONSERVATION-K22-M6",
+      "why": "thinks any tree works equally well"
+     },
+     {
+      "misconception": null,
+      "why": "assumes a benefit not given in the passage"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises about native trees"
+     }
+    ]
+   },
+   {
+    "evidence": "Unlike zoos, these sanctuaries provide vast spaces for diverse wildlife, not just birds, to thrive.",
+    "kind": "difference",
+    "q": "How is a wildlife sanctuary different from a zoo, according to its purpose?",
+    "options": [
+     "It gives many kinds of animals wide natural space",
+     "It keeps only birds in large cages",
+     "It lets visitors farm on the animals' land",
+     "It shelters animals only after they go extinct"
+    ],
+    "explain": "Sanctuaries give vast natural spaces for diverse wildlife, not just birds, to live freely.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CONSERVATION-K19-M12",
+      "why": "thinks sanctuaries protect only birds"
+     },
+     {
+      "misconception": "SCI-BIO-CONSERVATION-K20-M5",
+      "why": "thinks people can farm inside protected areas"
+     },
+     {
+      "misconception": "SCI-BIO-CONSERVATION-K14-M8",
+      "why": "confuses endangered with extinct species"
+     }
+    ]
+   },
+   {
+    "evidence": "Protecting these habitats ensures that endemic species, which are naturally found only in specific geographic locations, do not face the threat of extinction.",
+    "kind": "which_example",
+    "q": "Which animal is endemic to one region?",
+    "options": [
+     "One living naturally in only one area",
+     "One found in forests all around the world",
+     "One that is moved to a zoo",
+     "One that has already died out"
+    ],
+    "explain": "Endemic species live naturally only in specific places, so protecting their habitat protects them.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CONSERVATION-K13-M3",
+      "why": "thinks endemic means found everywhere"
+     },
+     {
+      "misconception": "SCI-BIO-CONSERVATION-K13-M11",
+      "why": "thinks a zoo makes a species endemic"
+     },
+     {
+      "misconception": "SCI-BIO-CONSERVATION-K14-M8",
+      "why": "confuses endemic and extinct species"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 13.8
+}

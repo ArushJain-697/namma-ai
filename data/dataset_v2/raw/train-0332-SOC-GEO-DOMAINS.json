@@ -1,0 +1,141 @@
+{
+ "source": "train-0332-SOC-GEO-DOMAINS.json",
+ "job": {
+  "job": "train-0332-SOC-GEO-DOMAINS",
+  "topic_id": "SOC-GEO-DOMAINS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a conversation between a teacher and two students",
+  "seed": 332
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1282,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today, let us explore the four major domains of our Earth. Rohan, do you think continents are just islands floating on the ocean? Rohan: Yes, teacher, they look like big islands drifting on the water. Teacher: Actually, continents are massive landmasses resting on solid tectonic plates, not floating on water. Priya, where do you think life exists? Priya: I believe the biosphere is limited to the surface of the land. Teacher: That is a common thought, but the biosphere is the narrow zone where land, water, and air interact to support life, including deep oceans and high skies. Rohan: Is the air everywhere the same? Teacher: Not exactly. Our atmosphere is a mixture of gases, primarily nitrogen, which makes up 78 percent, while oxygen is only about 21 percent. Priya: And what about the oceans? Are they all the same? Teacher: No, the salinity of ocean water varies across different regions due to evaporation and freshwater inflow. The oceans are vast, interconnected basins, not just containers of identical salty water. Understanding these domains helps us see how our planet functions as a complex, integrated system where every part depends on the others for survival.",
+ "menu_ids": [
+  "SOC-GEO-DOMAINS-K5-M1",
+  "SOC-GEO-DOMAINS-K8-M2",
+  "SOC-GEO-DOMAINS-K10-M3",
+  "SOC-GEO-DOMAINS-K11-M4",
+  "SOC-GEO-DOMAINS-K5-M5",
+  "SOC-GEO-DOMAINS-K5-M6",
+  "SOC-GEO-DOMAINS-K6-M7",
+  "SOC-GEO-DOMAINS-K6-M8",
+  "SOC-GEO-DOMAINS-K7-M9",
+  "SOC-GEO-DOMAINS-K7-M10",
+  "SOC-GEO-DOMAINS-K9-M11",
+  "SOC-GEO-DOMAINS-K11-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Actually, continents are massive landmasses resting on solid tectonic plates, not floating on water.",
+    "kind": "which_explains",
+    "q": "Rohan says a continent is like a big island drifting on water. What is wrong with this?",
+    "options": [
+     "A continent rests on solid plates below it",
+     "A continent is much smaller than an island",
+     "A continent floats only near the poles",
+     "A continent sinks a little every year"
+    ],
+    "explain": "Continents are massive landmasses resting on solid tectonic plates, so they do not float on water.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "mixes up the size of islands and continents"
+     },
+     {
+      "misconception": "SOC-GEO-DOMAINS-K5-M1",
+      "why": "still thinks continents float on water somewhere"
+     },
+     {
+      "misconception": null,
+      "why": "guesses a nearby-sounding idea about movement"
+     }
+    ]
+   },
+   {
+    "evidence": "That is a common thought, but the biosphere is the narrow zone where land, water, and air interact to support life, including deep oceans and high skies.",
+    "kind": "what_if",
+    "q": "A scientist finds living creatures in the deep ocean. Where is this life part of?",
+    "options": [
+     "The biosphere, which reaches into water and air",
+     "The biosphere, which covers only the land surface",
+     "The lithosphere, which is the solid land only",
+     "The atmosphere, which is only the air above"
+    ],
+    "explain": "The biosphere is where land, water and air meet to support life, including deep oceans and high skies.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-DOMAINS-K11-M4",
+      "why": "thinks the biosphere is only on land"
+     },
+     {
+      "misconception": "SOC-GEO-DOMAINS-K9-M11",
+      "why": "thinks life belongs only to solid Earth"
+     },
+     {
+      "misconception": "SOC-GEO-DOMAINS-K7-M9",
+      "why": "mixes up the biosphere with the air layer"
+     }
+    ]
+   },
+   {
+    "evidence": "Our atmosphere is a mixture of gases, primarily nitrogen, which makes up 78 percent, while oxygen is only about 21 percent.",
+    "kind": "which_explains",
+    "q": "Priya says air is mostly oxygen because we breathe it. Which fact shows she is wrong?",
+    "options": [
+     "Nitrogen is the largest part of air",
+     "Oxygen is about 78 percent of air",
+     "Air is a single gas, not a mixture",
+     "Oxygen and nitrogen are equal in air"
+    ],
+    "explain": "Air is mostly nitrogen at 78 percent, while oxygen is only about 21 percent.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-DOMAINS-K8-M2",
+      "why": "swaps the two gas figures around"
+     },
+     {
+      "misconception": null,
+      "why": "forgets that air is a mixture of gases"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the two main gases are shared equally"
+     }
+    ]
+   },
+   {
+    "evidence": "No, the salinity of ocean water varies across different regions due to evaporation and freshwater inflow.",
+    "kind": "why",
+    "q": "Why might ocean water taste saltier in one region than in another?",
+    "options": [
+     "Evaporation and freshwater inflow differ by region",
+     "Each ocean is a separate closed container",
+     "Salt is added only near the coastlines",
+     "Deeper basins always hold more salt than shallow ones"
+    ],
+    "explain": "Salinity varies by region because evaporation and freshwater inflow are different in different places.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-DOMAINS-K11-M12",
+      "why": "thinks oceans are separate and do not connect"
+     },
+     {
+      "misconception": null,
+      "why": "guesses salt comes only from the shore"
+     },
+     {
+      "misconception": "SOC-GEO-DOMAINS-K10-M3",
+      "why": "thinks all ocean water is equally salty, so seeks a fixed cause"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 12.9
+}

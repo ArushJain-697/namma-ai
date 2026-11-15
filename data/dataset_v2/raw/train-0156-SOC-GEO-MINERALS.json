@@ -1,0 +1,164 @@
+{
+ "source": "train-0156-SOC-GEO-MINERALS.json",
+ "job": {
+  "job": "train-0156-SOC-GEO-MINERALS",
+  "topic_id": "SOC-GEO-MINERALS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a passage rich in numbers, dates or measurements",
+  "seed": 156
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4561,
+  "promptTokenCount": 2
+ },
+ "passage": "India possesses a diverse range of mineral resources essential for industrial growth. Minerals are broadly classified into metallic and non-metallic categories. Metallic minerals are further divided into ferrous and non-ferrous types. Ferrous minerals, like iron ore, account for about three-fourths of the total value of metallic mineral production in India. In contrast, non-ferrous minerals, such as copper and lead, are vital but relatively scarce. Extraction methods vary significantly based on depth. While some minerals are found in surface deposits, others require deep-seated mining. Shaft mining involves digging deep vertical tunnels to reach minerals, but it is not the only method; open-cast mining is used for shallow deposits. Energy resources are equally critical for development. Conventional sources like coal and petroleum currently provide the bulk of India's power, contributing over 80% of the total energy supply. These are finite and exhaustible. Conversely, non-conventional sources like solar and wind energy are gaining momentum due to their sustainability. However, it is a common error to assume that non-conventional sources are inherently more efficient than conventional ones; currently, conventional sources remain the primary drivers of industrial output due to their high energy density and established infrastructure. Conservation of these resources is mandatory to ensure that future generations can meet their own needs while we maintain our current industrial pace.",
+ "menu_ids": [
+  "SOC-GEO-MINERALS-K4-M1",
+  "SOC-GEO-MINERALS-K6-M2",
+  "SOC-GEO-MINERALS-K8-M4",
+  "SOC-GEO-MINERALS-K5-M5",
+  "SOC-GEO-MINERALS-K4-M6",
+  "SOC-GEO-MINERALS-K6-M8",
+  "SOC-GEO-MINERALS-K14-M9",
+  "SOC-GEO-MINERALS-K13-M10",
+  "SOC-GEO-MINERALS-K7-M11"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Shaft mining involves digging deep vertical tunnels to reach minerals, but it is not the only method; open-cast mining is used for shallow deposits.",
+    "kind": "what_if",
+    "q": "A copper deposit lies just below the ground surface. Which mining method fits it best?",
+    "options": [
+     "Open-cast mining, because the deposit is shallow",
+     "Shaft mining, because mining always needs deep tunnels",
+     "Shaft mining, because copper is a scarce mineral",
+     "Open-cast mining, because copper is non-ferrous"
+    ],
+    "explain": "Open-cast mining is used for shallow deposits; shaft mining with deep tunnels is not the only method.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-MINERALS-K6-M2",
+      "why": "thinks all mining means digging deep shafts"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby detail about copper being scarce"
+     },
+     {
+      "misconception": "SOC-GEO-MINERALS-K6-M8",
+      "why": "thinks the mineral type, not depth, decides the method"
+     }
+    ]
+   },
+   {
+    "evidence": "However, it is a common error to assume that non-conventional sources are inherently more efficient than conventional ones; currently, conventional sources remain the primary drivers of industrial output due to their high energy density and established infrastructure.",
+    "kind": "why",
+    "q": "Why do coal and petroleum still power most of India's industries today?",
+    "options": [
+     "They store lots of energy and have systems ready",
+     "They are the newest and most modern sources",
+     "They can never run out, unlike solar power",
+     "They are more sustainable than solar and wind"
+    ],
+    "explain": "Conventional sources lead because of their high energy density and established infrastructure, not because they are new or endless.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-MINERALS-K7-M11",
+      "why": "thinks conventional means new and modern"
+     },
+     {
+      "misconception": null,
+      "why": "reverses which sources are finite"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up which sources are sustainable"
+     }
+    ]
+   },
+   {
+    "evidence": "These are finite and exhaustible.",
+    "kind": "what_if",
+    "q": "What will happen if India keeps burning coal and petroleum without saving them?",
+    "options": [
+     "They will get used up one day",
+     "They will form again in a few years",
+     "They will renew themselves like wind energy",
+     "They will always supply over 80% of power"
+    ],
+    "explain": "Coal and petroleum are finite and exhaustible, so continued use will one day use them up.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks fossil fuels refill quickly"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up conventional and renewable sources"
+     },
+     {
+      "misconception": null,
+      "why": "grabs the 80% figure and treats it as permanent"
+     }
+    ]
+   },
+   {
+    "evidence": "In contrast, non-ferrous minerals, such as copper and lead, are vital but relatively scarce.",
+    "kind": "what_if",
+    "q": "Sunil finds copper ore on a field trip. How should he classify it?",
+    "options": [
+     "As a metallic, non-ferrous mineral",
+     "As a ferrous mineral, like all metals",
+     "As a ferrous mineral, if it has rust",
+     "As a non-metallic mineral, since it is soft"
+    ],
+    "explain": "Copper is a metallic mineral, and the passage names it as non-ferrous, like lead.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-MINERALS-K4-M1",
+      "why": "thinks all metallic minerals are ferrous"
+     },
+     {
+      "misconception": "SOC-GEO-MINERALS-K4-M6",
+      "why": "thinks ferrous means containing rust"
+     },
+     {
+      "misconception": "SOC-GEO-MINERALS-K5-M5",
+      "why": "links softness with non-metallic minerals"
+     }
+    ]
+   },
+   {
+    "evidence": "Ferrous minerals, like iron ore, account for about three-fourths of the total value of metallic mineral production in India.",
+    "kind": "why",
+    "q": "Why is iron ore so important to India's metallic mineral production?",
+    "options": [
+     "It makes up most of their total value",
+     "It is scarce, so each tonne costs more",
+     "It is the only metal found in India",
+     "It is non-ferrous, like copper and lead"
+    ],
+    "explain": "Ferrous minerals like iron ore give about three-fourths of the value of India's metallic mineral production.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "mixes up iron ore with scarce non-ferrous minerals"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises from one important example"
+     },
+     {
+      "misconception": null,
+      "why": "confuses the ferrous and non-ferrous groups"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 47.6
+}

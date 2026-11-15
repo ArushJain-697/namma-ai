@@ -1,0 +1,166 @@
+{
+ "source": "train-0272-SCI-CHM-COALPETROL.json",
+ "job": {
+  "job": "train-0272-SCI-CHM-COALPETROL",
+  "topic_id": "SCI-CHM-COALPETROL",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 272
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1640,
+  "promptTokenCount": 2
+ },
+ "passage": "Many people mistakenly believe that fossil fuels like coal and petroleum are formed from the remains of dinosaurs, but they actually originate from the remains of dead vegetation and tiny marine organisms buried under the earth millions of years ago. Because this natural process of transformation takes millions of years under extreme heat and pressure, these fuels cannot be recreated in a laboratory in a few days. Once we consume these limited reserves, they will not be replaced within our lifetime, making them exhaustible resources. Petroleum, or crude oil, is a dark, oily liquid found trapped between non-porous rock layers, not in large underground lakes or hollow caves. When this crude oil is extracted, it undergoes a complex process called refining, which is not merely filtering out dirt or sand, but separating it into various useful components like petrol, diesel, and paraffin wax. Many people assume all petroleum products are liquids, yet substances like paraffin wax are solid at room temperature. Furthermore, coal tar is not just for surfacing roads; it is a vital raw material used in manufacturing synthetic dyes, drugs, perfumes, and plastics. Understanding that these resources are finite and complex is essential for their conservation, as we cannot simply manufacture more when they run out.",
+ "menu_ids": [
+  "SCI-CHM-COALPETROL-K3-M1",
+  "SCI-CHM-COALPETROL-K5-M2",
+  "SCI-CHM-COALPETROL-K6-M3",
+  "SCI-CHM-COALPETROL-K13-M5",
+  "SCI-CHM-COALPETROL-K14-M6",
+  "SCI-CHM-COALPETROL-K15-M7",
+  "SCI-CHM-COALPETROL-K17-M8",
+  "SCI-CHM-COALPETROL-K4-M9",
+  "SCI-CHM-COALPETROL-K20-M10",
+  "SCI-CHM-COALPETROL-K10-M11",
+  "SCI-CHM-COALPETROL-K13-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Because this natural process of transformation takes millions of years under extreme heat and pressure, these fuels cannot be recreated in a laboratory in a few days.",
+    "kind": "what_if",
+    "q": "A scientist heats and presses plant matter in a lab for a week. Will it become coal?",
+    "options": [
+     "No, real coal needs millions of years to form",
+     "Yes, if the heat is strong enough",
+     "Yes, but only if sea animals are added",
+     "No, coal forms only from dinosaur remains"
+    ],
+    "explain": "Coal forms over millions of years under heat and pressure, so a lab cannot recreate it in days.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-COALPETROL-K6-M3",
+      "why": "thinks right heat and pressure can make coal in days"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the raw material with the time needed"
+     },
+     {
+      "misconception": "SCI-CHM-COALPETROL-K5-M2",
+      "why": "thinks coal comes from dead dinosaurs"
+     }
+    ]
+   },
+   {
+    "evidence": "Once we consume these limited reserves, they will not be replaced within our lifetime, making them exhaustible resources.",
+    "kind": "why",
+    "q": "Why are coal and petroleum called exhaustible resources?",
+    "options": [
+     "They will not be replaced in our lifetime",
+     "They are formed again every single day",
+     "They can be remade quickly from plants",
+     "They are found only in a few caves"
+    ],
+    "explain": "Once used, these limited reserves are not replaced within our lifetime, so they are exhaustible.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-COALPETROL-K20-M10",
+      "why": "thinks new fossil fuels form every day"
+     },
+     {
+      "misconception": "SCI-CHM-COALPETROL-K6-M3",
+      "why": "thinks fossil fuels can be remade quickly"
+     },
+     {
+      "misconception": "SCI-CHM-COALPETROL-K4-M9",
+      "why": "thinks petroleum sits in caves, so supply is small"
+     }
+    ]
+   },
+   {
+    "evidence": "Petroleum, or crude oil, is a dark, oily liquid found trapped between non-porous rock layers, not in large underground lakes or hollow caves.",
+    "kind": "which_explains",
+    "q": "A driller reaches crude oil deep below ground. What does he most likely find there?",
+    "options": [
+     "Oil held between layers of solid rock",
+     "Oil floating in a huge hollow cave",
+     "Oil resting in a wide underground lake",
+     "Oil mixed freely with loose sandy soil"
+    ],
+    "explain": "Crude oil is trapped between non-porous rock layers, not in caves or underground lakes.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-COALPETROL-K4-M9",
+      "why": "thinks oil fills hollow caves"
+     },
+     {
+      "misconception": "SCI-CHM-COALPETROL-K4-M9",
+      "why": "thinks oil forms underground lakes"
+     },
+     {
+      "misconception": null,
+      "why": "guesses oil sits in loose soil from everyday ideas"
+     }
+    ]
+   },
+   {
+    "evidence": "Many people assume all petroleum products are liquids, yet substances like paraffin wax are solid at room temperature.",
+    "kind": "which_example",
+    "q": "Which petroleum product shows that not every product of petroleum is a liquid?",
+    "options": [
+     "Paraffin wax",
+     "Diesel",
+     "Petrol",
+     "Crude oil"
+    ],
+    "explain": "Paraffin wax is solid at room temperature, while petrol and diesel are liquids.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-COALPETROL-K13-M12",
+      "why": "thinks all petroleum products are liquids"
+     },
+     {
+      "misconception": "SCI-CHM-COALPETROL-K13-M5",
+      "why": "mixes up petrol with petroleum"
+     },
+     {
+      "misconception": null,
+      "why": "picks the raw liquid from the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, coal tar is not just for surfacing roads; it is a vital raw material used in manufacturing synthetic dyes, drugs, perfumes, and plastics.",
+    "kind": "what_if",
+    "q": "A factory stops getting coal tar. Which of its products would be affected?",
+    "options": [
+     "Its synthetic dyes and perfumes",
+     "Its paraffin wax candles",
+     "Its petrol and diesel fuels",
+     "Its cotton and woollen cloth"
+    ],
+    "explain": "Coal tar is a raw material for synthetic dyes, drugs, perfumes and plastics, not only for roads.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-COALPETROL-K15-M7",
+      "why": "mixes coal tar with petroleum products like wax"
+     },
+     {
+      "misconception": "SCI-CHM-COALPETROL-K13-M5",
+      "why": "mixes coal tar with petroleum fuels"
+     },
+     {
+      "misconception": null,
+      "why": "picks a natural material unrelated to the passage"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 13.6
+}

@@ -1,0 +1,141 @@
+{
+ "source": "train-0071-SCI-BIO-CROPS.json",
+ "job": {
+  "job": "train-0071-SCI-BIO-CROPS",
+  "topic_id": "SCI-BIO-CROPS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a diary entry or letter by a student",
+  "seed": 71
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3784,
+  "promptTokenCount": 2
+ },
+ "passage": "Dear Diary, today I visited my uncle’s farm, and I learned so much about agriculture. I saw him preparing the soil by ploughing, which loosens the earth to allow roots to breathe deeply and improves nutrient circulation. He explained that we must add manure, which is organic matter from decomposed waste, to enrich the soil naturally rather than relying solely on chemical fertilizers. I also watched him sort seeds by placing them in water; the healthy, heavy seeds sank, while the hollow, damaged ones floated. He told me that we must never store grains while they are moist, as moisture encourages fungal growth and spoilage. Instead, grains must be dried thoroughly in the sun before storage. We also talked about weeds, which are unwanted plants that compete with crops for water, nutrients, and sunlight, potentially reducing our yield significantly. Finally, he showed me the drip irrigation system. Unlike flooding the whole field, which wastes water, drip irrigation delivers water directly to the base of the roots, ensuring the plant gets exactly what it needs without unnecessary loss. It is fascinating how much science goes into growing our food properly!",
+ "menu_ids": [
+  "SCI-BIO-CROPS-K3-M1",
+  "SCI-BIO-CROPS-K9-M2",
+  "SCI-BIO-CROPS-K12-M3",
+  "SCI-BIO-CROPS-K15-M4",
+  "SCI-BIO-CROPS-K15-M5",
+  "SCI-BIO-CROPS-K18-M6",
+  "SCI-BIO-CROPS-K20-M7",
+  "SCI-BIO-CROPS-K25-M8",
+  "SCI-BIO-CROPS-K4-M9",
+  "SCI-BIO-CROPS-K9-M10",
+  "SCI-BIO-CROPS-K16-M11",
+  "SCI-BIO-CROPS-K23-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "I saw him preparing the soil by ploughing, which loosens the earth to allow roots to breathe deeply and improves nutrient circulation.",
+    "kind": "how",
+    "q": "How does ploughing help the soil itself before seeds are sown?",
+    "options": [
+     "It loosens soil so roots get air and nutrients",
+     "It only kills weeds and leaves soil unchanged",
+     "It adds fresh minerals that never run out",
+     "It presses soil hard so seeds stay firm"
+    ],
+    "explain": "Ploughing loosens the earth, so roots can breathe and nutrients move better through the soil.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CROPS-K9-M2",
+      "why": "thinks ploughing only kills weeds"
+     },
+     {
+      "misconception": "SCI-BIO-CROPS-K16-M11",
+      "why": "thinks soil minerals never run out"
+     },
+     {
+      "misconception": null,
+      "why": "reverses loosening into pressing down"
+     }
+    ]
+   },
+   {
+    "evidence": "I also watched him sort seeds by placing them in water; the healthy, heavy seeds sank, while the hollow, damaged ones floated.",
+    "kind": "what_if",
+    "q": "Meena puts wheat seeds in a bucket of water. Some float, some sink. Which should she sow?",
+    "options": [
+     "The seeds that sank to the bottom",
+     "The seeds that floated, being light",
+     "The seeds that floated, being dry and clean",
+     "The seeds that floated after a long soak"
+    ],
+    "explain": "Healthy seeds are heavy and sink; floating seeds are hollow and damaged.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CROPS-K12-M3",
+      "why": "thinks light, floating seeds are healthy"
+     },
+     {
+      "misconception": null,
+      "why": "thinks floating means the seed is dry and good"
+     },
+     {
+      "misconception": null,
+      "why": "thinks soaking time decides seed quality"
+     }
+    ]
+   },
+   {
+    "evidence": "He told me that we must never store grains while they are moist, as moisture encourages fungal growth and spoilage.",
+    "kind": "what_if",
+    "q": "A farmer stores freshly harvested wheat while it is still damp. What will most likely happen?",
+    "options": [
+     "The grains rot as fungus grows on them",
+     "The grains stay fresh for a longer time",
+     "The grains sprout into new wheat plants",
+     "The grains dry safely inside the store"
+    ],
+    "explain": "Moisture encourages fungus, so damp grains spoil; they must be sun-dried first.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CROPS-K25-M8",
+      "why": "thinks moist grains stay fresh"
+     },
+     {
+      "misconception": null,
+      "why": "guesses wet seeds will sprout"
+     },
+     {
+      "misconception": null,
+      "why": "thinks grains dry on their own in storage"
+     }
+    ]
+   },
+   {
+    "evidence": "We also talked about weeds, which are unwanted plants that compete with crops for water, nutrients, and sunlight, potentially reducing our yield significantly.",
+    "kind": "why",
+    "q": "Why does a farmer pull out weeds from the field, even though they are only plants?",
+    "options": [
+     "They take water, nutrients and light from crops",
+     "They look untidy but do no real harm",
+     "They spread fungus that spoils the crops",
+     "They block the drip pipes near the roots"
+    ],
+    "explain": "Weeds compete with crops for water, nutrients and sunlight, which can greatly lower the yield.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CROPS-K20-M7",
+      "why": "thinks weeds are harmless plants"
+     },
+     {
+      "misconception": null,
+      "why": "mixes in the fungus detail about stored grain"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby detail about drip irrigation"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 37.7
+}

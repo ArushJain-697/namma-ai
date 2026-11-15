@@ -1,0 +1,137 @@
+{
+ "source": "train-0147-SOC-GEO-ATMOSPHERE.json",
+ "job": {
+  "job": "train-0147-SOC-GEO-ATMOSPHERE",
+  "topic_id": "SOC-GEO-ATMOSPHERE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a step-by-step explanation of a process",
+  "seed": 147
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3384,
+  "promptTokenCount": 2
+ },
+ "passage": "The Earth is surrounded by a vast blanket of air called the atmosphere, which extends hundreds of kilometers above the surface. While we often see clouds floating in the lower parts, the atmosphere continues far beyond them into space. This air is a mixture of many gases. Nitrogen is the most abundant gas, making up about 78 percent of the air we breathe, while oxygen accounts for only 21 percent. Even though oxygen is vital for human survival, its lower percentage compared to nitrogen is a scientific fact. Air also contains invisible water vapor, which is the gaseous form of water. This amount of water vapor in the air is known as humidity. It is important to understand that humidity is always present in the air, even on clear, sunny days when it is not raining. Rain only occurs when this water vapor cools down and condenses into droplets. Therefore, humidity is simply the presence of moisture in the air, whereas rain is a specific event where that moisture falls to the ground.",
+ "menu_ids": [
+  "SOC-GEO-ATMOSPHERE-K9-M1",
+  "SOC-GEO-ATMOSPHERE-K13-M3",
+  "SOC-GEO-ATMOSPHERE-K11-M4",
+  "SOC-GEO-ATMOSPHERE-K5-M5",
+  "SOC-GEO-ATMOSPHERE-K10-M6",
+  "SOC-GEO-ATMOSPHERE-K9-M7",
+  "SOC-GEO-ATMOSPHERE-K11-M9",
+  "SOC-GEO-ATMOSPHERE-K7-M10"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "While we often see clouds floating in the lower parts, the atmosphere continues far beyond them into space.",
+    "kind": "what_if",
+    "q": "A plane flies higher than all the clouds. Where is the plane now?",
+    "options": [
+     "Still well inside the atmosphere",
+     "Outside the atmosphere, out in space",
+     "At the top edge of the atmosphere",
+     "Only a few kilometres below space"
+    ],
+    "explain": "The atmosphere goes far beyond the clouds, hundreds of kilometres up, so the plane is still in it.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-ATMOSPHERE-K11-M4",
+      "why": "thinks the atmosphere ends where clouds end"
+     },
+     {
+      "misconception": null,
+      "why": "thinks clouds mark the outer edge of the air"
+     },
+     {
+      "misconception": null,
+      "why": "ignores that air extends hundreds of kilometres up"
+     }
+    ]
+   },
+   {
+    "evidence": "Nitrogen is the most abundant gas, making up about 78 percent of the air we breathe, while oxygen accounts for only 21 percent.",
+    "kind": "what_if",
+    "q": "Imagine 100 litres of air. Which gas would fill most of it?",
+    "options": [
+     "Nitrogen, about 78 litres",
+     "Oxygen, about 78 litres",
+     "Oxygen and carbon dioxide, equally",
+     "Nitrogen, about 21 litres"
+    ],
+    "explain": "Nitrogen makes up about 78 percent of air; oxygen is only 21 percent.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-ATMOSPHERE-K9-M1",
+      "why": "thinks the most important gas must be the most abundant"
+     },
+     {
+      "misconception": "SOC-GEO-ATMOSPHERE-K9-M7",
+      "why": "thinks air is only oxygen and carbon dioxide"
+     },
+     {
+      "misconception": null,
+      "why": "picks the nearby number meant for oxygen"
+     }
+    ]
+   },
+   {
+    "evidence": "It is important to understand that humidity is always present in the air, even on clear, sunny days when it is not raining.",
+    "kind": "what_if",
+    "q": "It has not rained for a week and the sky is clear. What about water in the air?",
+    "options": [
+     "There is still invisible water vapour",
+     "There is none, since no rain fell",
+     "There is some, but only inside clouds",
+     "There is none, as sunshine dried it"
+    ],
+    "explain": "Humidity is always in the air, even on clear, sunny days with no rain.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-ATMOSPHERE-K13-M3",
+      "why": "thinks humidity is the same as rain"
+     },
+     {
+      "misconception": null,
+      "why": "thinks water in air exists only as visible clouds"
+     },
+     {
+      "misconception": null,
+      "why": "guesses that sunny weather removes all moisture"
+     }
+    ]
+   },
+   {
+    "evidence": "Therefore, humidity is simply the presence of moisture in the air, whereas rain is a specific event where that moisture falls to the ground.",
+    "kind": "difference",
+    "q": "How is humidity different from rain?",
+    "options": [
+     "Humidity is vapour in air; rain is falling drops",
+     "Humidity is light rain; rain is heavy rain",
+     "Humidity comes after rain; rain comes first",
+     "Humidity is a liquid; rain is a gas"
+    ],
+    "explain": "Humidity is water vapour present in air; rain is when that moisture falls to the ground.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-ATMOSPHERE-K13-M3",
+      "why": "thinks humidity is just a kind of rain"
+     },
+     {
+      "misconception": null,
+      "why": "reverses cause and effect between vapour and rain"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the gas and liquid forms of water"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 35.4
+}

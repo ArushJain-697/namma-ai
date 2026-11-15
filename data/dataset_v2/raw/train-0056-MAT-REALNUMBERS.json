@@ -1,0 +1,169 @@
+{
+ "source": "train-0056-MAT-REALNUMBERS.json",
+ "job": {
+  "job": "train-0056-MAT-REALNUMBERS",
+  "topic_id": "MAT-REALNUMBERS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a clear textbook explanation with one worked example",
+  "seed": 56
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3848,
+  "promptTokenCount": 2
+ },
+ "passage": "The Fundamental Theorem of Arithmetic states that every composite number can be expressed as a product of primes, and this representation is unique, apart from the order in which the prime factors occur. For example, to find the prime factorisation of 36, we must break it down until only primes remain: 36 = 2 × 2 × 3 × 3 = 2² × 3². Stopping at 4 × 9 is incorrect because 4 and 9 are composite numbers. When finding the Highest Common Factor (HCF) of two numbers, we identify the smallest power of each common prime factor present in both numbers. If two numbers share no common prime factors, their HCF is 1, as 1 is a factor of every integer. Furthermore, a number ends in the digit zero if and only if its prime factorisation contains both the prime numbers 2 and 5. For instance, 6ⁿ = (2 × 3)ⁿ = 2ⁿ × 3ⁿ; since it lacks the factor 5, it can never end in zero for any natural number n. Finally, remember that the relationship HCF(a, b) × LCM(a, b) = a × b is strictly valid only for two positive integers and does not extend to three or more numbers.",
+ "menu_ids": [
+  "MAT-REALNUMBERS-K13-M2",
+  "MAT-REALNUMBERS-K15-M3",
+  "MAT-REALNUMBERS-K16-M5",
+  "MAT-REALNUMBERS-K17-M6",
+  "MAT-REALNUMBERS-K18-M7",
+  "MAT-REALNUMBERS-K19-M8",
+  "MAT-REALNUMBERS-K20-M9",
+  "MAT-REALNUMBERS-K20-M10",
+  "MAT-REALNUMBERS-K21-M11",
+  "MAT-REALNUMBERS-K22-M12",
+  "MAT-REALNUMBERS-K22-M13",
+  "MAT-REALNUMBERS-K23-M14",
+  "MAT-REALNUMBERS-K24-M15",
+  "MAT-REALNUMBERS-K25-M16"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "The Fundamental Theorem of Arithmetic states that every composite number can be expressed as a product of primes, and this representation is unique, apart from the order in which the prime factors occur.",
+    "kind": "which_explains",
+    "q": "Asha writes 30 = 2 × 3 × 5 and Ben writes 30 = 5 × 3 × 2. What does this show?",
+    "options": [
+     "Both are the same factorisation of 30",
+     "They are two different factorisations of 30",
+     "Only Asha's is right, as smallest goes first",
+     "Both are wrong, as powers must be used"
+    ],
+    "explain": "Prime factorisation is unique apart from order, so changing the order gives the same factorisation.",
+    "wrong": [
+     {
+      "misconception": "MAT-REALNUMBERS-K16-M5",
+      "why": "thinks a new order gives a new factorisation"
+     },
+     {
+      "misconception": null,
+      "why": "thinks primes must be written in increasing order"
+     },
+     {
+      "misconception": null,
+      "why": "thinks index notation is required"
+     }
+    ]
+   },
+   {
+    "evidence": "Stopping at 4 × 9 is incorrect because 4 and 9 are composite numbers.",
+    "kind": "what_if",
+    "q": "Meena's factor tree for 36 stops at 4 × 9. What should she do next?",
+    "options": [
+     "Split both 4 and 9 into primes",
+     "Leave it, as 4 and 9 are small",
+     "Swap it to 9 × 4 for another answer",
+     "Split only 4, as odd 9 is prime"
+    ],
+    "explain": "4 and 9 are composite, so both must be broken down until only primes remain.",
+    "wrong": [
+     {
+      "misconception": "MAT-REALNUMBERS-K15-M3",
+      "why": "thinks a factor tree can stop at small numbers"
+     },
+     {
+      "misconception": "MAT-REALNUMBERS-K16-M5",
+      "why": "thinks reordering gives a different factorisation"
+     },
+     {
+      "misconception": "MAT-REALNUMBERS-K13-M2",
+      "why": "thinks all odd numbers are prime"
+     }
+    ]
+   },
+   {
+    "evidence": "When finding the Highest Common Factor (HCF) of two numbers, we identify the smallest power of each common prime factor present in both numbers.",
+    "kind": "how",
+    "q": "a = 2³ × 3 and b = 2² × 3². What is HCF(a, b)?",
+    "options": [
+     "12",
+     "72",
+     "864",
+     "6"
+    ],
+    "explain": "Take the smallest power of each common prime: 2² × 3 = 12.",
+    "wrong": [
+     {
+      "misconception": "MAT-REALNUMBERS-K20-M10",
+      "why": "takes the greatest power of each prime"
+     },
+     {
+      "misconception": "MAT-REALNUMBERS-K20-M9",
+      "why": "multiplies all prime factors of both numbers"
+     },
+     {
+      "misconception": null,
+      "why": "ignores the powers and multiplies common primes once"
+     }
+    ]
+   },
+   {
+    "evidence": "If two numbers share no common prime factors, their HCF is 1, as 1 is a factor of every integer.",
+    "kind": "what_if",
+    "q": "8 = 2³ and 15 = 3 × 5 have no common prime. What is their HCF?",
+    "options": [
+     "1, because 1 divides every whole number",
+     "None, because no prime is shared",
+     "0, because nothing common is left over",
+     "120, by multiplying all their prime factors"
+    ],
+    "explain": "With no common prime factor, the HCF is 1, since 1 is a factor of every integer.",
+    "wrong": [
+     {
+      "misconception": "MAT-REALNUMBERS-K21-M11",
+      "why": "thinks such numbers have no HCF"
+     },
+     {
+      "misconception": null,
+      "why": "thinks sharing nothing means the HCF is zero"
+     },
+     {
+      "misconception": "MAT-REALNUMBERS-K20-M9",
+      "why": "multiplies all prime factors to get HCF"
+     }
+    ]
+   },
+   {
+    "evidence": "For instance, 6ⁿ = (2 × 3)ⁿ = 2ⁿ × 3ⁿ; since it lacks the factor 5, it can never end in zero for any natural number n.",
+    "kind": "what_if",
+    "q": "Can 6ⁿ end in the digit zero for some natural number n?",
+    "options": [
+     "No, because 6ⁿ never has 5 as a factor",
+     "Yes, because 6ⁿ has 2 as a factor",
+     "Yes, because 6ⁿ grows to very large values",
+     "No, because its first few powers do not"
+    ],
+    "explain": "6ⁿ = 2ⁿ × 3ⁿ has no factor 5, so it can never end in zero.",
+    "wrong": [
+     {
+      "misconception": "MAT-REALNUMBERS-K18-M7",
+      "why": "thinks a factor 2 alone gives a zero ending"
+     },
+     {
+      "misconception": null,
+      "why": "thinks a big enough number must end in zero"
+     },
+     {
+      "misconception": "MAT-REALNUMBERS-K19-M8",
+      "why": "thinks checking a few values proves it"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 40.6
+}

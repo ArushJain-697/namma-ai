@@ -1,0 +1,139 @@
+{
+ "source": "train-0070-SCI-BIO-CONTROL.json",
+ "job": {
+  "job": "train-0070-SCI-BIO-CONTROL",
+  "topic_id": "SCI-BIO-CONTROL",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a diary entry or letter by a student",
+  "seed": 70
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2857,
+  "promptTokenCount": 2
+ },
+ "passage": "Dear Diary, today in biology class, we learned how our bodies and plants manage their activities. I was surprised to learn that nerve impulses do not jump across the synapse as electrical sparks; instead, they are converted into chemical signals to cross the gap. My teacher also explained that the brain is not directly involved in the immediate execution of a reflex action, as these signals are processed in the spinal cord to save time. We also discussed how plants respond to their environment. Unlike animals, plants do not have a nervous system to sense touch; they rely on changes in cell water content to move. I also learned that not all plant hormones are meant to increase growth. For instance, abscisic acid is a hormone that actually inhibits growth, helping the plant survive during stress. Finally, we looked at the endocrine system. Hormones are secreted directly into the blood and travel throughout the body to reach target organs, rather than just affecting the gland where they were produced. It is fascinating how these systems maintain balance without us even thinking about it!",
+ "menu_ids": [
+  "SCI-BIO-CONTROL-K13-M1",
+  "SCI-BIO-CONTROL-K14-M2",
+  "SCI-BIO-CONTROL-K7-M3",
+  "SCI-BIO-CONTROL-K17-M4",
+  "SCI-BIO-CONTROL-K19-M5",
+  "SCI-BIO-CONTROL-K20-M6",
+  "SCI-BIO-CONTROL-K12-M7",
+  "SCI-BIO-CONTROL-K15-M8",
+  "SCI-BIO-CONTROL-K18-M9",
+  "SCI-BIO-CONTROL-K8-M11"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "I was surprised to learn that nerve impulses do not jump across the synapse as electrical sparks; instead, they are converted into chemical signals to cross the gap.",
+    "kind": "how",
+    "q": "How does a nerve message cross the tiny gap between two neurons?",
+    "options": [
+     "It changes into a chemical signal",
+     "It jumps across as an electric spark",
+     "It travels through blood as a hormone",
+     "It waits for the brain to pass it"
+    ],
+    "explain": "At the synapse, nerve impulses are converted into chemical signals to cross the gap, not sparks.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CONTROL-K13-M1",
+      "why": "thinks impulses jump the synapse as sparks"
+     },
+     {
+      "misconception": "SCI-BIO-CONTROL-K19-M5",
+      "why": "mixes up nerve signals with hormones in blood"
+     },
+     {
+      "misconception": "SCI-BIO-CONTROL-K20-M6",
+      "why": "thinks the brain must give permission"
+     }
+    ]
+   },
+   {
+    "evidence": "My teacher also explained that the brain is not directly involved in the immediate execution of a reflex action, as these signals are processed in the spinal cord to save time.",
+    "kind": "why",
+    "q": "Why do you pull your hand away from a hot pan so quickly?",
+    "options": [
+     "The spinal cord handles it, skipping the brain",
+     "The brain thinks about it very fast",
+     "The signal jumps across as electric sparks",
+     "Hormones in the blood carry the message"
+    ],
+    "explain": "Reflex signals are processed in the spinal cord, not the brain, which saves time.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CONTROL-K14-M2",
+      "why": "thinks the brain directly runs reflexes"
+     },
+     {
+      "misconception": "SCI-BIO-CONTROL-K13-M1",
+      "why": "thinks speed comes from electric sparks"
+     },
+     {
+      "misconception": null,
+      "why": "confuses nervous control with hormones"
+     }
+    ]
+   },
+   {
+    "evidence": "For instance, abscisic acid is a hormone that actually inhibits growth, helping the plant survive during stress.",
+    "kind": "what_if",
+    "q": "During a long dry spell, a plant makes more abscisic acid. What happens to its growth?",
+    "options": [
+     "Its growth slows down to help it survive",
+     "Its growth speeds up, like every plant hormone",
+     "Its growth turns towards light for more food",
+     "Its growth changes only where the hormone formed"
+    ],
+    "explain": "Abscisic acid inhibits growth, which helps the plant survive stress like a dry spell.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CONTROL-K18-M9",
+      "why": "thinks all plant hormones increase growth"
+     },
+     {
+      "misconception": "SCI-BIO-CONTROL-K8-M11",
+      "why": "thinks plants grow towards light to want food"
+     },
+     {
+      "misconception": "SCI-BIO-CONTROL-K19-M5",
+      "why": "thinks hormones act only where made"
+     }
+    ]
+   },
+   {
+    "evidence": "Hormones are secreted directly into the blood and travel throughout the body to reach target organs, rather than just affecting the gland where they were produced.",
+    "kind": "what_if",
+    "q": "A hormone is released by a gland in the neck. Where in the body can it act?",
+    "options": [
+     "In target organs reached through the blood",
+     "In the same place where it was made",
+     "In organs joined to it by nerves",
+     "In the spinal cord, where signals are processed"
+    ],
+    "explain": "Hormones go straight into the blood and travel through the body to reach target organs.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CONTROL-K19-M5",
+      "why": "thinks hormones affect only their own gland"
+     },
+     {
+      "misconception": null,
+      "why": "confuses hormones with nerve signals"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby detail about reflexes"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 28.1
+}

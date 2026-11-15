@@ -1,0 +1,164 @@
+{
+ "source": "train-0073-SCI-BIO-FOOD.json",
+ "job": {
+  "job": "train-0073-SCI-BIO-FOOD",
+  "topic_id": "SCI-BIO-FOOD",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a conversation between a teacher and two students",
+  "seed": 73
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4832,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today, let us discuss why we need different nutrients. Rohan, do you think fats are bad for us? Rohan: Yes, I think we should remove all fats from our diet to stay thin. Teacher: Actually, fats provide us with more energy than carbohydrates, though we should eat them in moderation. Meera, what about protein? Meera: I think only bodybuilders need protein to grow big muscles. Teacher: That is a common mistake! Proteins are essential for every person to repair body tissues and support growth, not just for building muscles. Meera: What about vitamins? I heard they give us energy to run. Teacher: Vitamins are protective nutrients that keep us healthy and prevent deficiency diseases, but they do not provide energy. Also, remember that deficiency diseases like scurvy occur due to a lack of nutrients in our diet, not by catching germs from others. Finally, always wash vegetables before cutting them. If you cut them first, you lose important vitamins that wash away in the water. Rohan: I see! So, a balanced diet is about eating the right proportions of nutrients, not just equal amounts of everything. Teacher: Exactly, Rohan. A balanced diet provides the right amount of each nutrient for your body's specific needs.",
+ "menu_ids": [
+  "SCI-BIO-FOOD-K10-M1",
+  "SCI-BIO-FOOD-K8-M2",
+  "SCI-BIO-FOOD-K16-M4",
+  "SCI-BIO-FOOD-K21-M5",
+  "SCI-BIO-FOOD-K17-M6",
+  "SCI-BIO-FOOD-K11-M7",
+  "SCI-BIO-FOOD-K8-M10",
+  "SCI-BIO-FOOD-K9-M11",
+  "SCI-BIO-FOOD-K21-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Actually, fats provide us with more energy than carbohydrates, though we should eat them in moderation.",
+    "kind": "what_if",
+    "q": "Rohan wants to cut all fats to stay thin. What would the teacher advise?",
+    "options": [
+     "Keep some fats, as they give much energy",
+     "Cut all fats, as they always harm us",
+     "Eat fats freely, as more energy is better",
+     "Cut all fats, as vitamins give energy instead"
+    ],
+    "explain": "Fats give more energy than carbohydrates, so we need them, but only in moderation.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-FOOD-K8-M2",
+      "why": "thinks fats are always harmful"
+     },
+     {
+      "misconception": null,
+      "why": "ignores the advice to eat fats in moderation"
+     },
+     {
+      "misconception": "SCI-BIO-FOOD-K10-M1",
+      "why": "thinks vitamins provide energy"
+     }
+    ]
+   },
+   {
+    "evidence": "Proteins are essential for every person to repair body tissues and support growth, not just for building muscles.",
+    "kind": "what_if",
+    "q": "Meera's grandmother has a cut that must heal. Which nutrient helps her body most?",
+    "options": [
+     "Protein, which mends damaged body parts",
+     "Vitamins, which give the body energy",
+     "Fats, which give more energy than carbohydrates",
+     "Vitamin A, taken in a very large amount"
+    ],
+    "explain": "Proteins repair body tissues for every person, not only for bodybuilders.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-FOOD-K10-M1",
+      "why": "thinks vitamins provide energy"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby fact about energy, not repair"
+     },
+     {
+      "misconception": "SCI-BIO-FOOD-K21-M12",
+      "why": "thinks huge doses of Vitamin A heal injuries"
+     }
+    ]
+   },
+   {
+    "evidence": "Vitamins are protective nutrients that keep us healthy and prevent deficiency diseases, but they do not provide energy.",
+    "kind": "what_if",
+    "q": "Meera takes vitamin tablets before a race. What will they actually do for her?",
+    "options": [
+     "Keep her healthy, but not give energy",
+     "Give her extra energy to run faster",
+     "Build big muscles for the race",
+     "Give more energy than fats would"
+    ],
+    "explain": "Vitamins protect us and prevent deficiency diseases, but they do not provide energy.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-FOOD-K10-M1",
+      "why": "thinks vitamins give energy for running"
+     },
+     {
+      "misconception": "SCI-BIO-FOOD-K9-M11",
+      "why": "links nutrients only to building muscles"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up which nutrient gives the most energy"
+     }
+    ]
+   },
+   {
+    "evidence": "Also, remember that deficiency diseases like scurvy occur due to a lack of nutrients in our diet, not by catching germs from others.",
+    "kind": "how",
+    "q": "Ravi's classmate has scurvy. How can Ravi best avoid getting it?",
+    "options": [
+     "Eat foods with the nutrients he needs",
+     "Stay away so he does not catch it",
+     "Wash vegetables only after cutting them",
+     "Cut all fats out of his meals"
+    ],
+    "explain": "Scurvy comes from a lack of nutrients in the diet, not from germs passed between people.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-FOOD-K21-M5",
+      "why": "thinks deficiency diseases spread like germs"
+     },
+     {
+      "misconception": "SCI-BIO-FOOD-K17-M6",
+      "why": "thinks washing after cutting is healthier"
+     },
+     {
+      "misconception": "SCI-BIO-FOOD-K8-M2",
+      "why": "thinks removing fats makes the diet healthy"
+     }
+    ]
+   },
+   {
+    "evidence": "If you cut them first, you lose important vitamins that wash away in the water.",
+    "kind": "what_if",
+    "q": "Priya chops spinach first and then washes it. What happens to the spinach?",
+    "options": [
+     "Its vitamins drain away with the water",
+     "It becomes cleaner and so healthier",
+     "It soaks up extra vitamins from the water",
+     "It loses germs that cause scurvy"
+    ],
+    "explain": "Washing after cutting lets important vitamins wash away, so wash vegetables before cutting.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-FOOD-K17-M6",
+      "why": "thinks washing after cutting is healthier"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the direction of vitamin loss"
+     },
+     {
+      "misconception": "SCI-BIO-FOOD-K21-M5",
+      "why": "thinks scurvy is caused by germs"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 46.8
+}

@@ -1,0 +1,167 @@
+{
+ "source": "train-0393-GEN-VOTING.json",
+ "job": {
+  "job": "train-0393-GEN-VOTING",
+  "topic_id": "GEN-VOTING",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a passage rich in numbers, dates or measurements",
+  "seed": 393
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1549,
+  "promptTokenCount": 2
+ },
+ "passage": "India’s democratic process is governed by the Election Commission, an independent body that functions without interference from the ruling government or the Prime Minister. During elections, the Model Code of Conduct serves as a set of guidelines for political parties to ensure fair play, though it is not a criminal law that leads to immediate imprisonment. Every Indian citizen aged 18 or older, regardless of their education or property ownership, has the right to vote. When a voter arrives at the polling station, they use an Electronic Voting Machine (EVM) consisting of two units: a ballot unit for the voter and a control unit managed by the election official. After pressing the button, a VVPAT machine displays a slip for seven seconds behind a glass window, which the voter cannot take home, ensuring the secrecy of the ballot. The EVM is a standalone machine that never connects to the internet or Wi-Fi, preventing remote hacking. While voters choose their local representative, they do not vote directly for the Prime Minister. Furthermore, voting is a voluntary right, not a legal obligation, meaning no citizen is fined for abstaining. Finally, the NOTA option allows voters to reject all candidates, but it does not trigger a re-election even if it receives the highest number of votes.",
+ "menu_ids": [
+  "GEN-VOTING-K4-M1",
+  "GEN-VOTING-K9-M2",
+  "GEN-VOTING-K14-M3",
+  "GEN-VOTING-K13-M4",
+  "GEN-VOTING-K15-M5",
+  "GEN-VOTING-K17-M6",
+  "GEN-VOTING-K18-M7",
+  "GEN-VOTING-K21-M8",
+  "GEN-VOTING-K24-M10",
+  "GEN-VOTING-K26-M11",
+  "GEN-VOTING-K29-M12",
+  "GEN-VOTING-K28-M13"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "India’s democratic process is governed by the Election Commission, an independent body that functions without interference from the ruling government or the Prime Minister.",
+    "kind": "what_if",
+    "q": "The ruling party wants the Election Commission to delay a vote. What can the Commission do?",
+    "options": [
+     "Refuse, as it works without government interference",
+     "Obey, as it follows the Prime Minister's orders",
+     "Obey, as it is a ministry of the government",
+     "Refuse, as only courts can order elections"
+    ],
+    "explain": "The Election Commission is independent and works without interference from the ruling government or Prime Minister.",
+    "wrong": [
+     {
+      "misconception": "GEN-VOTING-K21-M8",
+      "why": "thinks the Commission takes orders from the Prime Minister"
+     },
+     {
+      "misconception": "GEN-VOTING-K21-M8",
+      "why": "thinks the Commission is part of the government"
+     },
+     {
+      "misconception": null,
+      "why": "invents a role for courts not in the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "When a voter arrives at the polling station, they use an Electronic Voting Machine (EVM) consisting of two units: a ballot unit for the voter and a control unit managed by the election official.",
+    "kind": "how",
+    "q": "How is the work of an EVM divided between the voter and the official?",
+    "options": [
+     "Voter uses one unit; official manages another",
+     "Voter presses a button; same box counts it",
+     "Voter uses the control unit; official uses ballot",
+     "Voter and official share one single unit"
+    ],
+    "explain": "The EVM has two units: a ballot unit for the voter and a control unit managed by the official.",
+    "wrong": [
+     {
+      "misconception": "GEN-VOTING-K13-M4",
+      "why": "thinks the EVM is one single unit"
+     },
+     {
+      "misconception": null,
+      "why": "swaps the two units between voter and official"
+     },
+     {
+      "misconception": "GEN-VOTING-K9-M2",
+      "why": "thinks officials share the voter's machine and see votes"
+     }
+    ]
+   },
+   {
+    "evidence": "The EVM is a standalone machine that never connects to the internet or Wi-Fi, preventing remote hacking.",
+    "kind": "why",
+    "q": "Why is it hard to hack an EVM from a faraway place?",
+    "options": [
+     "It is never linked to any network",
+     "It is guarded by the Election Commission",
+     "It is locked inside the polling station",
+     "It is switched on only for seven seconds"
+    ],
+    "explain": "The EVM is standalone and never connects to the internet or Wi-Fi, so remote hacking is prevented.",
+    "wrong": [
+     {
+      "misconception": "GEN-VOTING-K14-M3",
+      "why": "thinks safety comes from guards, not from having no network"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby detail about the polling station"
+     },
+     {
+      "misconception": null,
+      "why": "grabs the seven seconds from the VVPAT sentence"
+     }
+    ]
+   },
+   {
+    "evidence": "While voters choose their local representative, they do not vote directly for the Prime Minister.",
+    "kind": "which_example",
+    "q": "Which shows how a voter in a Class 10 mock election chooses leaders?",
+    "options": [
+     "Voting for a local candidate in the area",
+     "Pressing a button to select the Prime Minister",
+     "Choosing the Prime Minister on the control unit",
+     "Voting for the Election Commission head"
+    ],
+    "explain": "Voters choose their local representative; they do not vote directly for the Prime Minister.",
+    "wrong": [
+     {
+      "misconception": "GEN-VOTING-K29-M12",
+      "why": "thinks voters directly pick the Prime Minister"
+     },
+     {
+      "misconception": "GEN-VOTING-K29-M12",
+      "why": "thinks the Prime Minister is chosen on the EVM"
+     },
+     {
+      "misconception": null,
+      "why": "invents a vote for the Commission head"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, the NOTA option allows voters to reject all candidates, but it does not trigger a re-election even if it receives the highest number of votes.",
+    "kind": "what_if",
+    "q": "In a seat, NOTA gets the most votes. What happens next?",
+    "options": [
+     "The best candidate among the rest wins",
+     "The election is cancelled and held again",
+     "All the NOTA votes are treated as invalid",
+     "The seat stays empty for five years"
+    ],
+    "explain": "NOTA does not trigger a re-election even with the highest votes, so the contest goes on among candidates.",
+    "wrong": [
+     {
+      "misconception": "GEN-VOTING-K18-M7",
+      "why": "thinks NOTA winning cancels the election"
+     },
+     {
+      "misconception": "GEN-VOTING-K17-M6",
+      "why": "thinks a NOTA vote is wasted or invalid"
+     },
+     {
+      "misconception": null,
+      "why": "invents a long vacancy not in the passage"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 14.2
+}

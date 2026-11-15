@@ -1,0 +1,139 @@
+{
+ "source": "train-0220-MAT-DATAHANDLING.json",
+ "job": {
+  "job": "train-0220-MAT-DATAHANDLING",
+  "topic_id": "MAT-DATAHANDLING",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a step-by-step worked example",
+  "seed": 220
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2628,
+  "promptTokenCount": 2
+ },
+ "passage": "In our class, we collected data on how many hours students spent reading books last week. The data set is: 0, 5, 5, 5, 8, 10. To find the mean, we must include the zero because it represents a student who read for no hours, so we add all six numbers to get 33 and divide by the total count of six, resulting in 5.5. Next, we look at the median, which is the middle value. Since there are six numbers, we take the two middle values, 5 and 5, add them, and divide by two to get 5. The mode is the value that appears most frequently, which is 5 because it appears three times. Finally, we draw a bar graph to show this. On our graph, each gap between marks on the scale represents 2 units, not 1, so we must be careful when reading the height of the bars. Remember, the width of the bars does not change the value they represent; only the height matters. By organizing data this way, we can clearly see the reading habits of our classmates without being misled by common mistakes.",
+ "menu_ids": [
+  "MAT-DATAHANDLING-K5-M1",
+  "MAT-DATAHANDLING-K7-M2",
+  "MAT-DATAHANDLING-K6-M4",
+  "MAT-DATAHANDLING-K6-M6",
+  "MAT-DATAHANDLING-K7-M7",
+  "MAT-DATAHANDLING-K10-M8",
+  "MAT-DATAHANDLING-K8-M9",
+  "MAT-DATAHANDLING-K8-M10",
+  "MAT-DATAHANDLING-K11-M11",
+  "MAT-DATAHANDLING-K12-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "To find the mean, we must include the zero because it represents a student who read for no hours, so we add all six numbers to get 33 and divide by the total count of six, resulting in 5.5.",
+    "kind": "how",
+    "q": "How many hours is the mean reading time for this class?",
+    "options": [
+     "5.5 hours",
+     "6.6 hours",
+     "8.25 hours",
+     "5 hours"
+    ],
+    "explain": "The zero counts as a student, so the total 33 is divided by six, giving 5.5.",
+    "wrong": [
+     {
+      "misconception": "MAT-DATAHANDLING-K10-M8",
+      "why": "leaves out the zero and divides 33 by five"
+     },
+     {
+      "misconception": "MAT-DATAHANDLING-K7-M7",
+      "why": "divides by the four different values instead of six"
+     },
+     {
+      "misconception": "MAT-DATAHANDLING-K7-M2",
+      "why": "thinks the mean must be a number in the data"
+     }
+    ]
+   },
+   {
+    "evidence": "Since there are six numbers, we take the two middle values, 5 and 5, add them, and divide by two to get 5.",
+    "kind": "what_if",
+    "q": "Using the class's method, what would be the median of 2, 4, 6, 8?",
+    "options": [
+     "5, halfway between 4 and 6",
+     "6, the larger of 4 and 6",
+     "4, the smaller of 4 and 6",
+     "10, the sum of 4 and 6"
+    ],
+    "explain": "With an even count, add the two middle values and divide by two: (4 + 6) ÷ 2 = 5.",
+    "wrong": [
+     {
+      "misconception": "MAT-DATAHANDLING-K8-M10",
+      "why": "thinks the median is the larger middle value"
+     },
+     {
+      "misconception": null,
+      "why": "just picks the first middle value"
+     },
+     {
+      "misconception": null,
+      "why": "adds the middle values but forgets to divide by two"
+     }
+    ]
+   },
+   {
+    "evidence": "The mode is the value that appears most frequently, which is 5 because it appears three times.",
+    "kind": "which_explains",
+    "q": "Which answer gives the correct mode of the reading data, with the right reason?",
+    "options": [
+     "5, as it occurs most often",
+     "10, as it is the largest value",
+     "3, as 5 occurs three times",
+     "5.5, as it is the average"
+    ],
+    "explain": "The mode is the value that appears most often; 5 appears three times.",
+    "wrong": [
+     {
+      "misconception": "MAT-DATAHANDLING-K11-M11",
+      "why": "thinks the mode is the highest value"
+     },
+     {
+      "misconception": null,
+      "why": "gives how many times the value occurs instead of the value"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the mode with the mean"
+     }
+    ]
+   },
+   {
+    "evidence": "On our graph, each gap between marks on the scale represents 2 units, not 1, so we must be careful when reading the height of the bars.",
+    "kind": "what_if",
+    "q": "On this graph, a wide bar reaches the fourth mark above zero. What does it show?",
+    "options": [
+     "8 hours, read from its height",
+     "4 hours, counting one per gap",
+     "Over 8 hours, since it is wide",
+     "2 hours, the size of one gap"
+    ],
+    "explain": "Each gap stands for 2 units, so four gaps make 8; the width makes no difference.",
+    "wrong": [
+     {
+      "misconception": "MAT-DATAHANDLING-K6-M6",
+      "why": "thinks each gap on the scale is 1 unit"
+     },
+     {
+      "misconception": "MAT-DATAHANDLING-K6-M4",
+      "why": "thinks a wider bar shows a bigger value"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the value of one gap with the bar's value"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 27.0
+}

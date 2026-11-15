@@ -1,0 +1,139 @@
+{
+ "source": "train-0014-GEN-JUNKSUGAR.json",
+ "job": {
+  "job": "train-0014-GEN-JUNKSUGAR",
+  "topic_id": "GEN-JUNKSUGAR",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a clear textbook explanation",
+  "seed": 14
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2914,
+  "promptTokenCount": 2
+ },
+ "passage": "Modern diets often include hidden risks that we must understand to stay healthy. Many people believe that only sweet-tasting snacks contain sugar, but processed foods often hide sugar in savory items like sauces and bread. Similarly, while whole fruits provide essential fiber, fruit juice lacks this fiber and concentrates sugar, making it less healthy than eating the fruit itself. We must also be careful with packaged snacks fried in vegetable oil; even though the oil comes from plants, deep-frying significantly increases unhealthy fat content and calories. Furthermore, many students mistakenly think that energy drinks are perfect for recovery after sports, but these drinks are often loaded with sugar and do not replace the nutrients found in real food. Finally, it is a dangerous myth that health issues like diabetes or high blood pressure only affect the elderly. In reality, poor dietary habits can lead to chronic health problems at any age. We must also remember that sodium is a key component of salt, so foods labeled 'low-sodium' still contain salt and should be consumed in moderation. By choosing whole foods over processed alternatives, we can better manage our sugar and salt intake for a healthier future.",
+ "menu_ids": [
+  "GEN-JUNKSUGAR-K13-M1",
+  "GEN-JUNKSUGAR-K14-M2",
+  "GEN-JUNKSUGAR-K9-M3",
+  "GEN-JUNKSUGAR-K10-M4",
+  "GEN-JUNKSUGAR-K29-M6",
+  "GEN-JUNKSUGAR-K18-M7",
+  "GEN-JUNKSUGAR-K19-M8",
+  "GEN-JUNKSUGAR-K20-M9",
+  "GEN-JUNKSUGAR-K27-M11",
+  "GEN-JUNKSUGAR-K16-M13"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Many people believe that only sweet-tasting snacks contain sugar, but processed foods often hide sugar in savory items like sauces and bread.",
+    "kind": "what_if",
+    "q": "Meena never eats sweets, but she eats packaged bread and tomato sauce daily. Is she still eating sugar?",
+    "options": [
+     "Yes, processed savory foods often have hidden sugar",
+     "No, sugar is found only in sweet-tasting foods",
+     "No, as long as she adds no sugar to tea",
+     "No, bread and sauce come from plants only"
+    ],
+    "explain": "Processed foods often hide sugar in savory items like sauces and bread, so food need not taste sweet to contain sugar.",
+    "wrong": [
+     {
+      "misconception": "GEN-JUNKSUGAR-K14-M2",
+      "why": "thinks only sweet-tasting foods contain sugar"
+     },
+     {
+      "misconception": "GEN-JUNKSUGAR-K16-M13",
+      "why": "thinks sugar only counts when added to tea"
+     },
+     {
+      "misconception": null,
+      "why": "thinks plant-based food cannot contain added sugar"
+     }
+    ]
+   },
+   {
+    "evidence": "Similarly, while whole fruits provide essential fiber, fruit juice lacks this fiber and concentrates sugar, making it less healthy than eating the fruit itself.",
+    "kind": "difference",
+    "q": "Aman drinks a glass of orange juice instead of eating an orange. How is this different for his health?",
+    "options": [
+     "He misses the fibre and gets concentrated sugar",
+     "Nothing, because juice is as healthy as fruit",
+     "He misses vitamins, because juice has more fibre",
+     "Nothing, as long as no sugar is added"
+    ],
+    "explain": "Juice lacks the fibre of whole fruit and concentrates its sugar, so it is less healthy than eating the fruit.",
+    "wrong": [
+     {
+      "misconception": "GEN-JUNKSUGAR-K9-M3",
+      "why": "thinks juice is just as healthy as whole fruit"
+     },
+     {
+      "misconception": null,
+      "why": "reverses which one has the fibre"
+     },
+     {
+      "misconception": null,
+      "why": "thinks only added sugar matters, not the fruit's own sugar"
+     }
+    ]
+   },
+   {
+    "evidence": "We must also be careful with packaged snacks fried in vegetable oil; even though the oil comes from plants, deep-frying significantly increases unhealthy fat content and calories.",
+    "kind": "which_explains",
+    "q": "A chips packet says 'fried in pure vegetable oil'. What should a careful buyer understand from this?",
+    "options": [
+     "Deep-frying still adds unhealthy fat and calories",
+     "The chips are healthy because the oil is from plants",
+     "The chips are fine if no salt is added at the table",
+     "The chips are healthy because they do not taste sweet"
+    ],
+    "explain": "Even though the oil comes from plants, deep-frying greatly increases unhealthy fat and calories in the snack.",
+    "wrong": [
+     {
+      "misconception": "GEN-JUNKSUGAR-K20-M9",
+      "why": "thinks plant oil makes fried food healthy"
+     },
+     {
+      "misconception": "GEN-JUNKSUGAR-K18-M7",
+      "why": "thinks only table salt counts"
+     },
+     {
+      "misconception": "GEN-JUNKSUGAR-K14-M2",
+      "why": "thinks unhealthy snacks are only sweet ones"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, many students mistakenly think that energy drinks are perfect for recovery after sports, but these drinks are often loaded with sugar and do not replace the nutrients found in real food.",
+    "kind": "why",
+    "q": "After a football match, Kabir plans to have only an energy drink instead of lunch. Why is this a poor plan?",
+    "options": [
+     "It is sugary and lacks the nutrients of a meal",
+     "It is poor only because energy drinks give too much energy",
+     "It is poor only because it should be drunk before playing",
+     "It is fine, since it is mostly water with little sugar"
+    ],
+    "explain": "Energy drinks are often loaded with sugar and do not replace the nutrients found in real food.",
+    "wrong": [
+     {
+      "misconception": "GEN-JUNKSUGAR-K10-M4",
+      "why": "believes energy drinks give real energy like food"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the only problem is the timing of the drink"
+     },
+     {
+      "misconception": "GEN-JUNKSUGAR-K13-M1",
+      "why": "thinks such drinks are flavoured water with little sugar"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 30.2
+}

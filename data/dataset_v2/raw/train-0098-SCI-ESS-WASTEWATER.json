@@ -1,0 +1,140 @@
+{
+ "source": "train-0098-SCI-ESS-WASTEWATER.json",
+ "job": {
+  "job": "train-0098-SCI-ESS-WASTEWATER",
+  "topic_id": "SCI-ESS-WASTEWATER",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a cause-and-effect explanation",
+  "seed": 98
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2909,
+  "promptTokenCount": 2
+ },
+ "passage": "Wastewater management is essential for maintaining public health and protecting our environment. When we use water in our homes, it becomes contaminated with various impurities. Many people mistakenly believe that only factory chemicals are pollutants, but organic waste like fruit and vegetable peels also degrade water quality. Similarly, pouring cooking oil down the sink is dangerous because it hardens in pipes, causing blockages, while flushing old medicines introduces harmful chemicals into the water supply. To treat this, wastewater first passes through bar screens, which physically remove large solid objects like plastic bags and sticks, not germs or chemicals. After screening, the water enters a tank where heavy solids settle at the bottom to form sludge. This sludge is not just useless trash; it is processed to produce biogas and manure. Finally, the water undergoes biological treatment where beneficial bacteria consume organic waste. While some bacteria are harmful, many are essential for cleaning water. It is a common myth that clear-looking river water is always safe; even transparent water can contain invisible pathogens that cause water-borne diseases. Therefore, we must treat wastewater carefully before it is released back into nature to ensure our water sources remain safe for everyone.",
+ "menu_ids": [
+  "SCI-ESS-WASTEWATER-K8-M2",
+  "SCI-ESS-WASTEWATER-K10-M3",
+  "SCI-ESS-WASTEWATER-K14-M4",
+  "SCI-ESS-WASTEWATER-K17-M5",
+  "SCI-ESS-WASTEWATER-K21-M6",
+  "SCI-ESS-WASTEWATER-K13-M7",
+  "SCI-ESS-WASTEWATER-K6-M8",
+  "SCI-ESS-WASTEWATER-K15-M9",
+  "SCI-ESS-WASTEWATER-K20-M10",
+  "SCI-ESS-WASTEWATER-K18-M11",
+  "SCI-ESS-WASTEWATER-K21-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Similarly, pouring cooking oil down the sink is dangerous because it hardens in pipes, causing blockages, while flushing old medicines introduces harmful chemicals into the water supply.",
+    "kind": "what_if",
+    "q": "Meena pours leftover cooking oil into the kitchen sink. What will most likely happen?",
+    "options": [
+     "It turns solid in the pipes and clogs them",
+     "It flows away easily because it is liquid",
+     "It is caught later by the bar screens",
+     "It is harmless, like flushing old medicines"
+    ],
+    "explain": "Cooking oil hardens inside pipes and causes blockages, so it should never go down the sink.",
+    "wrong": [
+     {
+      "misconception": "SCI-ESS-WASTEWATER-K17-M5",
+      "why": "thinks any liquid is safe to pour down the sink"
+     },
+     {
+      "misconception": null,
+      "why": "thinks bar screens catch everything, not only large solids"
+     },
+     {
+      "misconception": "SCI-ESS-WASTEWATER-K18-M11",
+      "why": "thinks flushing medicines is safe"
+     }
+    ]
+   },
+   {
+    "evidence": "To treat this, wastewater first passes through bar screens, which physically remove large solid objects like plastic bags and sticks, not germs or chemicals.",
+    "kind": "how",
+    "q": "What does wastewater still contain right after it passes through the bar screens?",
+    "options": [
+     "Germs and chemicals the screens cannot catch",
+     "Only harmless water, since screens kill germs",
+     "Plastic bags and sticks the screens let through",
+     "Sludge already turned into biogas and manure"
+    ],
+    "explain": "Bar screens only remove big objects like bags and sticks; germs and chemicals pass through.",
+    "wrong": [
+     {
+      "misconception": "SCI-ESS-WASTEWATER-K10-M3",
+      "why": "thinks bar screens remove germs and chemicals"
+     },
+     {
+      "misconception": null,
+      "why": "reverses what the screens actually remove"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the order of treatment steps"
+     }
+    ]
+   },
+   {
+    "evidence": "This sludge is not just useless trash; it is processed to produce biogas and manure.",
+    "kind": "what_if",
+    "q": "What happens to the heavy solids that settle at the bottom of the tank?",
+    "options": [
+     "They are turned into fuel gas and fertiliser",
+     "They are thrown away as useless mud",
+     "They are eaten by bacteria in the tank",
+     "They are removed again by the bar screens"
+    ],
+    "explain": "The settled sludge is processed to make biogas and manure, so it is useful, not trash.",
+    "wrong": [
+     {
+      "misconception": "SCI-ESS-WASTEWATER-K13-M7",
+      "why": "thinks sludge is useless mud"
+     },
+     {
+      "misconception": null,
+      "why": "picks the nearby detail about bacteria eating waste"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the screening and settling steps"
+     }
+    ]
+   },
+   {
+    "evidence": "It is a common myth that clear-looking river water is always safe; even transparent water can contain invisible pathogens that cause water-borne diseases.",
+    "kind": "which_explains",
+    "q": "Sunil's well water looks crystal clear. What should he understand before drinking it?",
+    "options": [
+     "It may still carry germs too small to see",
+     "It is safe because it looks so clear",
+     "It is unsafe only if factories are near",
+     "It is unsafe because all bacteria are harmful"
+    ],
+    "explain": "Even transparent water can hold invisible germs that cause water-borne diseases.",
+    "wrong": [
+     {
+      "misconception": "SCI-ESS-WASTEWATER-K21-M6",
+      "why": "thinks clear water is always safe"
+     },
+     {
+      "misconception": null,
+      "why": "thinks only factory chemicals pollute water"
+     },
+     {
+      "misconception": "SCI-ESS-WASTEWATER-K14-M4",
+      "why": "thinks every bacterium is harmful"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 33.5
+}

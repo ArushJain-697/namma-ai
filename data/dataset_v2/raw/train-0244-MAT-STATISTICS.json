@@ -1,0 +1,169 @@
+{
+ "source": "train-0244-MAT-STATISTICS.json",
+ "job": {
+  "job": "train-0244-MAT-STATISTICS",
+  "topic_id": "MAT-STATISTICS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a short story where children solve a real problem",
+  "seed": 244
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1499,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and his friends were tasked with analyzing the heights of students in their school for a sports project. They collected raw data from the school's official health register, which was compiled by the physical education department last month. Rohan noted that since they did not measure the students themselves, this was secondary data. To visualize the distribution, they grouped the heights into class intervals like 140-150 cm and 150-160 cm. When drawing a histogram, they ensured the bars touched because the data was continuous, unlike a bar graph which requires gaps. For the frequency polygon, they plotted the class marks at the midpoint of each interval. They carefully extended the polygon to touch the horizontal axis at the midpoints of the preceding and succeeding imaginary classes to close the shape. Finally, they calculated the mean height by multiplying each class mark by its frequency, summing these products, and dividing by the total number of students. They realized that the modal class is determined by the highest frequency, not the highest class mark. By following these steps, they avoided common errors and created an accurate representation of the student body's physical growth, ensuring their report was statistically sound for the principal.",
+ "menu_ids": [
+  "MAT-STATISTICS-K6-M2",
+  "MAT-STATISTICS-K9-M4",
+  "MAT-STATISTICS-K9-M5",
+  "MAT-STATISTICS-K10-M6",
+  "MAT-STATISTICS-K11-M7",
+  "MAT-STATISTICS-K13-M8",
+  "MAT-STATISTICS-K15-M9",
+  "MAT-STATISTICS-K14-M10",
+  "MAT-STATISTICS-K17-M11",
+  "MAT-STATISTICS-K18-M12",
+  "MAT-STATISTICS-K21-M14",
+  "MAT-STATISTICS-K22-M15",
+  "MAT-STATISTICS-K19-M16",
+  "MAT-STATISTICS-K24-M17"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Rohan noted that since they did not measure the students themselves, this was secondary data.",
+    "kind": "why",
+    "q": "Why did Rohan call the health register data secondary data?",
+    "options": [
+     "Others had collected it before the group used it",
+     "The register was an official government record",
+     "It was collected last month, not today",
+     "Any student who reads a report gets primary data"
+    ],
+    "explain": "Secondary data is collected by someone else; the group did not measure the students themselves.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks an official source makes data secondary"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby detail about the date"
+     },
+     {
+      "misconception": "MAT-STATISTICS-K6-M2",
+      "why": "thinks using a report makes it primary data"
+     }
+    ]
+   },
+   {
+    "evidence": "When drawing a histogram, they ensured the bars touched because the data was continuous, unlike a bar graph which requires gaps.",
+    "kind": "why",
+    "q": "Why were there no gaps between the bars of their histogram?",
+    "options": [
+     "Heights are continuous, so intervals join each other",
+     "A histogram is the same as a bar graph",
+     "Gaps would hide the class marks of intervals",
+     "The frequencies of all classes were equal"
+    ],
+    "explain": "Continuous data has no breaks between intervals, so histogram bars touch, unlike bars in a bar graph.",
+    "wrong": [
+     {
+      "misconception": "MAT-STATISTICS-K13-M8",
+      "why": "thinks histograms and bar graphs are the same"
+     },
+     {
+      "misconception": null,
+      "why": "invents a link between gaps and class marks"
+     },
+     {
+      "misconception": "MAT-STATISTICS-K15-M9",
+      "why": "links bar shape to frequencies wrongly"
+     }
+    ]
+   },
+   {
+    "evidence": "They carefully extended the polygon to touch the horizontal axis at the midpoints of the preceding and succeeding imaginary classes to close the shape.",
+    "kind": "what_if",
+    "q": "The polygon is drawn only through the first and last real class marks. What is wrong?",
+    "options": [
+     "The shape is not closed on the axis",
+     "The class marks should be the lower limits",
+     "The polygon should join the bar corners instead",
+     "The imaginary classes should have large frequencies"
+    ],
+    "explain": "The polygon must reach the axis at the midpoints of imaginary classes before and after, closing the shape.",
+    "wrong": [
+     {
+      "misconception": "MAT-STATISTICS-K18-M12",
+      "why": "thinks the polygon should end at the first and last points"
+     },
+     {
+      "misconception": "MAT-STATISTICS-K10-M6",
+      "why": "thinks class mark is the lower limit"
+     },
+     {
+      "misconception": "MAT-STATISTICS-K17-M11",
+      "why": "thinks polygon joins bar corners at class limits"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, they calculated the mean height by multiplying each class mark by its frequency, summing these products, and dividing by the total number of students.",
+    "kind": "how",
+    "q": "How did the group find the mean height from grouped data?",
+    "options": [
+     "Added class mark times frequency, then divided by students",
+     "Added all the class marks, then divided by classes",
+     "Added each product, then divided by the number of classes",
+     "Picked the one class mark with the highest frequency"
+    ],
+    "explain": "The mean is the sum of class mark times frequency, divided by the total number of students.",
+    "wrong": [
+     {
+      "misconception": "MAT-STATISTICS-K21-M14",
+      "why": "thinks mean is class marks divided by number of classes"
+     },
+     {
+      "misconception": "MAT-STATISTICS-K22-M15",
+      "why": "divides the sum of fx by number of classes"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the mean with the modal class"
+     }
+    ]
+   },
+   {
+    "evidence": "They realized that the modal class is determined by the highest frequency, not the highest class mark.",
+    "kind": "which_example",
+    "q": "Class 150-160 has 12 students and 160-170 has 5. Which is the modal class?",
+    "options": [
+     "150-160, since it has more students",
+     "160-170, since its class mark is higher",
+     "160-170, since it comes last in order",
+     "150-160, since its lower limit is smaller"
+    ],
+    "explain": "The modal class has the highest frequency, so 150-160 with 12 students is modal, not the higher class.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "picks the class with the highest class mark"
+     },
+     {
+      "misconception": null,
+      "why": "picks the last class by position"
+     },
+     {
+      "misconception": "MAT-STATISTICS-K10-M6",
+      "why": "focuses on the lower limit instead of frequency"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 14.4
+}

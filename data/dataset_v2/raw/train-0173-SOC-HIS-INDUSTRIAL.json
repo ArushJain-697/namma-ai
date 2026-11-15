@@ -1,0 +1,136 @@
+{
+ "source": "train-0173-SOC-HIS-INDUSTRIAL.json",
+ "job": {
+  "job": "train-0173-SOC-HIS-INDUSTRIAL",
+  "topic_id": "SOC-HIS-INDUSTRIAL",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a diary entry or letter by a student",
+  "seed": 173
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3542,
+  "promptTokenCount": 2
+ },
+ "passage": "Dear Diary, today in history class, we discussed why the Industrial Revolution didn't instantly erase manual work. My teacher explained that many Victorian industrialists actually preferred hand labour over machines. This wasn't because machines were low quality, but because machines couldn't produce the intricate, irregular designs that wealthy aristocrats demanded. Furthermore, the steam engine was expensive and prone to breaking down, so it didn't immediately replace all human workers as some might assume. We also looked at why Indian textiles declined. It wasn't because Indian weavers lacked skill or refused to use new technology. Instead, the British government imposed heavy import duties on Indian cloth while flooding our markets with cheap, mass-produced British goods. This systematic policy crippled our local weavers, who were actually world-renowned for their superior quality. It is a common myth that our textiles vanished because they were inferior; in reality, they were victims of unfair colonial trade policies that prioritized British factory profits over our centuries-old craft traditions.",
+ "menu_ids": [
+  "SOC-HIS-INDUSTRIAL-K8-M2",
+  "SOC-HIS-INDUSTRIAL-K10-M3",
+  "SOC-HIS-INDUSTRIAL-K11-M4",
+  "SOC-HIS-INDUSTRIAL-K6-M7",
+  "SOC-HIS-INDUSTRIAL-K7-M8",
+  "SOC-HIS-INDUSTRIAL-K8-M10",
+  "SOC-HIS-INDUSTRIAL-K9-M11"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "This wasn't because machines were low quality, but because machines couldn't produce the intricate, irregular designs that wealthy aristocrats demanded.",
+    "kind": "why",
+    "q": "Why did many Victorian industrialists prefer hand labour?",
+    "options": [
+     "Machines could not make detailed, irregular designs",
+     "Machine-made goods were always of low quality",
+     "Rich buyers wanted cheap, mass-produced cloth",
+     "Workers refused to learn new technology"
+    ],
+    "explain": "Rich aristocrats wanted intricate, irregular designs, and machines could not produce them.",
+    "wrong": [
+     {
+      "misconception": "SOC-HIS-INDUSTRIAL-K10-M3",
+      "why": "thinks handmade was preferred because machine goods were poor"
+     },
+     {
+      "misconception": null,
+      "why": "reverses what the aristocrats demanded"
+     },
+     {
+      "misconception": null,
+      "why": "grabs a nearby phrase about Indian weavers"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, the steam engine was expensive and prone to breaking down, so it didn't immediately replace all human workers as some might assume.",
+    "kind": "what_if",
+    "q": "A Victorian factory owner buys a steam engine. What most likely happens to his workers?",
+    "options": [
+     "Most still work, as engines were costly and unreliable",
+     "Most lose their jobs at once to the engine",
+     "Most lose jobs, as engines were in every factory",
+     "Most still work, as machines made poor goods"
+    ],
+    "explain": "Steam engines were expensive and often broke down, so they did not replace all workers at once.",
+    "wrong": [
+     {
+      "misconception": "SOC-HIS-INDUSTRIAL-K8-M2",
+      "why": "thinks steam engines instantly replaced all human labour"
+     },
+     {
+      "misconception": "SOC-HIS-INDUSTRIAL-K8-M10",
+      "why": "thinks steam engines were already used everywhere"
+     },
+     {
+      "misconception": "SOC-HIS-INDUSTRIAL-K10-M3",
+      "why": "thinks machine goods were low quality"
+     }
+    ]
+   },
+   {
+    "evidence": "Instead, the British government imposed heavy import duties on Indian cloth while flooding our markets with cheap, mass-produced British goods.",
+    "kind": "how",
+    "q": "How did British government policy hurt Indian weavers?",
+    "options": [
+     "By taxing Indian cloth and selling cheap British cloth",
+     "By showing Indian cloth was poorer in quality",
+     "By banning weavers from using new technology",
+     "By forcing weavers to work in English factories"
+    ],
+    "explain": "Britain put heavy duties on Indian cloth and filled Indian markets with cheap British goods.",
+    "wrong": [
+     {
+      "misconception": "SOC-HIS-INDUSTRIAL-K11-M4",
+      "why": "thinks Indian textiles were inferior"
+     },
+     {
+      "misconception": null,
+      "why": "misreads the line about weavers and new technology"
+     },
+     {
+      "misconception": null,
+      "why": "guesses a harsh policy not in the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "This systematic policy crippled our local weavers, who were actually world-renowned for their superior quality.",
+    "kind": "which_explains",
+    "q": "Meena says Indian textiles vanished because they were badly made. Which fact shows she is wrong?",
+    "options": [
+     "Indian weavers were famous worldwide for fine cloth",
+     "British goods were cheap and mass-produced",
+     "Indian weavers refused to use new technology",
+     "Machine-made cloth was always better than handmade"
+    ],
+    "explain": "Indian weavers were world-renowned for superior quality, so their cloth was not badly made.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "picks a true detail that does not answer the question"
+     },
+     {
+      "misconception": null,
+      "why": "believes a claim the passage denies"
+     },
+     {
+      "misconception": "SOC-HIS-INDUSTRIAL-K11-M4",
+      "why": "thinks British machine goods were superior"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 130.8
+}

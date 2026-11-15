@@ -1,0 +1,141 @@
+{
+ "source": "train-0330-SOC-GEO-AGRICULTURE.json",
+ "job": {
+  "job": "train-0330-SOC-GEO-AGRICULTURE",
+  "topic_id": "SOC-GEO-AGRICULTURE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a news-style report about a real-world situation",
+  "seed": 330
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1466,
+  "promptTokenCount": 2
+ },
+ "passage": "In the village of Rampur, farmers are shifting their practices to improve food security. Ramesh, a small-scale farmer, recently learned that primitive subsistence farming is not limited to remote tribes but is practiced by many small landholders using simple tools. He previously believed that adding excessive chemical fertilizers would increase his yield indefinitely, but agricultural experts warned him that soil health degrades if nutrients are not balanced. To manage his finances, Ramesh now relies on the Minimum Support Price (MSP), which is the guaranteed rate at which the government purchases crops from farmers to protect them from market fluctuations. This is distinct from the subsidized prices offered at ration shops for the poor. Furthermore, Ramesh has adjusted his planting schedule to match the seasons. He now sows wheat during the winter months, as it is a Rabi crop that requires cooler weather for germination, rather than planting it in the scorching summer heat. By understanding these scientific and institutional frameworks, the farmers of Rampur are ensuring a more sustainable future for their community. They are moving away from traditional myths and adopting methods that align with modern agricultural guidelines, ensuring that their land remains productive for generations to come.",
+ "menu_ids": [
+  "SOC-GEO-AGRICULTURE-K4-M1",
+  "SOC-GEO-AGRICULTURE-K7-M2",
+  "SOC-GEO-AGRICULTURE-K12-M3",
+  "SOC-GEO-AGRICULTURE-K11-M4",
+  "SOC-GEO-AGRICULTURE-K5-M5",
+  "SOC-GEO-AGRICULTURE-K6-M6",
+  "SOC-GEO-AGRICULTURE-K7-M7",
+  "SOC-GEO-AGRICULTURE-K8-M8",
+  "SOC-GEO-AGRICULTURE-K9-M9",
+  "SOC-GEO-AGRICULTURE-K10-M10",
+  "SOC-GEO-AGRICULTURE-K11-M11",
+  "SOC-GEO-AGRICULTURE-K13-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "He previously believed that adding excessive chemical fertilizers would increase his yield indefinitely, but agricultural experts warned him that soil health degrades if nutrients are not balanced.",
+    "kind": "what_if",
+    "q": "Ramesh keeps adding more and more fertilizer to his field. What will most likely happen to the soil?",
+    "options": [
+     "Its health will fall as nutrients get unbalanced",
+     "Its yield will keep rising every single year",
+     "Its nutrients will stay balanced by themselves",
+     "Its crops will grow better without any water"
+    ],
+    "explain": "Experts warned that soil health degrades when nutrients are not balanced, so excess fertilizer does not raise yield forever.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-AGRICULTURE-K11-M4",
+      "why": "thinks more fertilizer always means higher yield"
+     },
+     {
+      "misconception": null,
+      "why": "assumes soil fixes its own nutrient balance"
+     },
+     {
+      "misconception": "SOC-GEO-AGRICULTURE-K11-M11",
+      "why": "thinks inputs like irrigation are not needed"
+     }
+    ]
+   },
+   {
+    "evidence": "To manage his finances, Ramesh now relies on the Minimum Support Price (MSP), which is the guaranteed rate at which the government purchases crops from farmers to protect them from market fluctuations.",
+    "kind": "which_explains",
+    "q": "Why does the MSP help Ramesh when market prices suddenly fall?",
+    "options": [
+     "The government still buys his crop at a fixed rate",
+     "The government sells him cheap food at ration shops",
+     "The government gives him free land to grow more",
+     "The government takes his crop and pays him later"
+    ],
+    "explain": "MSP is a guaranteed rate at which the government buys crops, protecting farmers from market price changes.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-AGRICULTURE-K12-M3",
+      "why": "thinks MSP is the price for selling food to the poor"
+     },
+     {
+      "misconception": "SOC-GEO-AGRICULTURE-K13-M12",
+      "why": "thinks the government takes or gives land"
+     },
+     {
+      "misconception": null,
+      "why": "invents a delayed payment not in the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "Ramesh, a small-scale farmer, recently learned that primitive subsistence farming is not limited to remote tribes but is practiced by many small landholders using simple tools.",
+    "kind": "which_example",
+    "q": "Which person shows that primitive subsistence farming is not limited to remote tribes?",
+    "options": [
+     "A small landholder farming with simple tools",
+     "A tribal farmer burning a forest patch",
+     "A rich owner farming with many machines",
+     "A trader buying crops to sell abroad"
+    ],
+    "explain": "Many small landholders using simple tools also practise primitive subsistence farming, not only remote tribes.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-AGRICULTURE-K9-M9",
+      "why": "links primitive farming only to slash and burn by tribes"
+     },
+     {
+      "misconception": "SOC-GEO-AGRICULTURE-K5-M5",
+      "why": "confuses subsistence farming with machine-based commercial farming"
+     },
+     {
+      "misconception": "SOC-GEO-AGRICULTURE-K6-M6",
+      "why": "mixes it up with commercial farming for sale"
+     }
+    ]
+   },
+   {
+    "evidence": "He now sows wheat during the winter months, as it is a Rabi crop that requires cooler weather for germination, rather than planting it in the scorching summer heat.",
+    "kind": "why",
+    "q": "Why does Ramesh sow wheat in winter rather than in summer?",
+    "options": [
+     "Wheat needs cool weather to sprout well",
+     "Wheat needs strong heat to sprout well",
+     "Wheat needs monsoon rain to sprout well",
+     "Wheat needs ration shops to sprout well"
+    ],
+    "explain": "Wheat is a Rabi crop that needs cooler weather for germination, so winter suits it better than summer.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-AGRICULTURE-K7-M2",
+      "why": "thinks Rabi crops need a lot of heat"
+     },
+     {
+      "misconception": "SOC-GEO-AGRICULTURE-K7-M7",
+      "why": "mixes Rabi with the monsoon Kharif season"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby unrelated detail from the passage"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 13.3
+}

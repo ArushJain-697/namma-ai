@@ -1,0 +1,140 @@
+{
+ "source": "train-0045-MAT-INTEGERS.json",
+ "job": {
+  "job": "train-0045-MAT-INTEGERS",
+  "topic_id": "MAT-INTEGERS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a rule explained with two contrasting examples",
+  "seed": 45
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3662,
+  "promptTokenCount": 2
+ },
+ "passage": "Integers are a set of numbers that include positive whole numbers, zero, and negative whole numbers. A negative number is a value less than zero, often used to represent depths below sea level or temperatures below freezing. When we compare two negative numbers, the one closer to zero is greater. For example, -2 is greater than -8 because -2 is further to the right on the number line. Adding a negative number is the same as moving to the left on the number line, which decreases the total. For instance, adding -3 to 5 results in 2, which is smaller than 5. Conversely, subtracting a negative number is equivalent to adding its positive counterpart. If you subtract -4 from 10, you are actually adding 4, resulting in 14. When multiplying two negative numbers, the result is always a positive integer. For example, multiplying -3 by -4 gives 12. This rule exists because the product of two negatives represents the removal of a debt or a negative quantity, which effectively increases the total value. Always remember that the minus sign attached to a number identifies it as a negative value, not just an instruction to subtract.",
+ "menu_ids": [
+  "MAT-INTEGERS-K11-M1",
+  "MAT-INTEGERS-K12-M2",
+  "MAT-INTEGERS-K14-M3",
+  "MAT-INTEGERS-K13-M4",
+  "MAT-INTEGERS-K6-M6",
+  "MAT-INTEGERS-K7-M7",
+  "MAT-INTEGERS-K5-M8",
+  "MAT-INTEGERS-K4-M9",
+  "MAT-INTEGERS-K8-M10",
+  "MAT-INTEGERS-K9-M11",
+  "MAT-INTEGERS-K10-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "When we compare two negative numbers, the one closer to zero is greater.",
+    "kind": "what_if",
+    "q": "Meena must pick the bigger number from -5 and -10. Which should she pick?",
+    "options": [
+     "-5, as it lies nearer to zero",
+     "-10, as 10 is more than 5",
+     "-10, as it lies further from zero",
+     "-10, as it lies further to the left"
+    ],
+    "explain": "Between two negative numbers, the one closer to zero is greater, so -5 is bigger.",
+    "wrong": [
+     {
+      "misconception": "MAT-INTEGERS-K11-M1",
+      "why": "compares only the digits and ignores the minus sign"
+     },
+     {
+      "misconception": null,
+      "why": "turns the rule around and thinks further from zero is greater"
+     },
+     {
+      "misconception": null,
+      "why": "thinks numbers get bigger to the left on the number line"
+     }
+    ]
+   },
+   {
+    "evidence": "Adding a negative number is the same as moving to the left on the number line, which decreases the total.",
+    "kind": "what_if",
+    "q": "Ravi starts at 7 on the number line and adds -2. Where does he end up?",
+    "options": [
+     "At 5, after moving two steps left",
+     "At 9, after moving two steps right",
+     "At 2, after moving five steps left",
+     "At -5, after the total turns negative"
+    ],
+    "explain": "Adding a negative number means moving left, so 7 plus -2 moves two steps left to 5.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks adding always means moving right and ignores the sign"
+     },
+     {
+      "misconception": null,
+      "why": "copies the answer 2 from the passage's example"
+     },
+     {
+      "misconception": null,
+      "why": "thinks adding a negative number makes the answer negative"
+     }
+    ]
+   },
+   {
+    "evidence": "If you subtract -4 from 10, you are actually adding 4, resulting in 14.",
+    "kind": "how",
+    "q": "Using the same idea as 10 minus -4, what is 6 minus -3?",
+    "options": [
+     "9, because it means adding 3",
+     "3, because it means taking away 3",
+     "-9, because the order can be swapped",
+     "-3, because the answer must be negative"
+    ],
+    "explain": "Subtracting a negative is the same as adding its positive, so 6 minus -3 equals 6 + 3 = 9.",
+    "wrong": [
+     {
+      "misconception": "MAT-INTEGERS-K13-M4",
+      "why": "treats subtracting -3 as subtracting 3"
+     },
+     {
+      "misconception": "MAT-INTEGERS-K7-M7",
+      "why": "swaps the order, working out -3 - 6 instead"
+     },
+     {
+      "misconception": null,
+      "why": "thinks any sum with a minus sign gives a negative answer"
+     }
+    ]
+   },
+   {
+    "evidence": "This rule exists because the product of two negatives represents the removal of a debt or a negative quantity, which effectively increases the total value.",
+    "kind": "which_explains",
+    "q": "Why does multiplying two negative numbers give a positive answer?",
+    "options": [
+     "It is like removing a debt, so value rises",
+     "It is like adding two debts, so value falls",
+     "It is like moving left twice on the line",
+     "It is like cancelling, so signs simply disappear"
+    ],
+    "explain": "Multiplying two negatives is like removing a debt, which raises the total, so the answer is positive.",
+    "wrong": [
+     {
+      "misconception": "MAT-INTEGERS-K14-M3",
+      "why": "thinks the product of two negatives is negative"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up multiplying negatives with adding a negative"
+     },
+     {
+      "misconception": "MAT-INTEGERS-K6-M6",
+      "why": "thinks two negatives just cancel each other out"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 40.4
+}

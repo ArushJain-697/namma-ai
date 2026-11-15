@@ -1,0 +1,139 @@
+{
+ "source": "train-0047-MAT-MENSURATION6.json",
+ "job": {
+  "job": "train-0047-MAT-MENSURATION6",
+  "topic_id": "MAT-MENSURATION6",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a rule explained with two contrasting examples",
+  "seed": 47
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4073,
+  "promptTokenCount": 2
+ },
+ "passage": "In geometry, perimeter is the total distance around the boundary of a shape, while area measures the space enclosed inside that boundary. A common mistake is assuming that if two shapes have the same perimeter, they must have the same area. Consider a rectangle with sides 6 cm and 4 cm; its perimeter is 20 cm and its area is 24 square cm. Now, consider a square with sides 5 cm; its perimeter is also 20 cm, but its area is 25 square cm. Even though their perimeters are identical, their areas differ because the internal space depends on the shape's dimensions. Furthermore, when converting units, we must be careful. Since 1 meter equals 100 centimeters, a square meter is a square with sides of 100 cm by 100 cm. Therefore, 1 square meter is equal to 10,000 square centimeters. If you have a square with sides of 1 meter, its area is 10,000 square centimeters, not 100 square centimeters. Understanding these distinctions is vital for solving mensuration problems accurately. Always calculate area and perimeter separately using their specific formulas rather than assuming they share a fixed relationship based on one another.",
+ "menu_ids": [
+  "MAT-MENSURATION6-K7-M2",
+  "MAT-MENSURATION6-K15-M3",
+  "MAT-MENSURATION6-K7-M5",
+  "MAT-MENSURATION6-K6-M6",
+  "MAT-MENSURATION6-K8-M7",
+  "MAT-MENSURATION6-K8-M8",
+  "MAT-MENSURATION6-K9-M9",
+  "MAT-MENSURATION6-K10-M10",
+  "MAT-MENSURATION6-K15-M11",
+  "MAT-MENSURATION6-K14-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Even though their perimeters are identical, their areas differ because the internal space depends on the shape's dimensions.",
+    "kind": "why",
+    "q": "A rectangle and a square both have a perimeter of 20 cm. Why are their areas different?",
+    "options": [
+     "Their side lengths enclose different amounts of space",
+     "One area must be wrong, as perimeters match",
+     "Their perimeters are not really the same",
+     "The square uses bigger units than the rectangle"
+    ],
+    "explain": "The space inside depends on side lengths, so 6 by 4 gives 24 and 5 by 5 gives 25.",
+    "wrong": [
+     {
+      "misconception": "MAT-MENSURATION6-K7-M2",
+      "why": "thinks the same perimeter must mean the same area"
+     },
+     {
+      "misconception": null,
+      "why": "misreads the passage, which says the perimeters are the same"
+     },
+     {
+      "misconception": null,
+      "why": "thinks a different unit explains the gap, but both are in cm"
+     }
+    ]
+   },
+   {
+    "evidence": "Therefore, 1 square meter is equal to 10,000 square centimeters.",
+    "kind": "what_if",
+    "q": "A floor mat has an area of 3 square metres. How many square centimetres is that?",
+    "options": [
+     "30,000 square cm",
+     "300 square cm",
+     "3,000 square cm",
+     "30 square cm"
+    ],
+    "explain": "1 square metre is 10,000 square cm, so 3 square metres is 30,000 square cm.",
+    "wrong": [
+     {
+      "misconception": "MAT-MENSURATION6-K15-M3",
+      "why": "thinks 1 square metre is 100 square cm"
+     },
+     {
+      "misconception": null,
+      "why": "multiplies by 1,000, mixing up the zeros"
+     },
+     {
+      "misconception": null,
+      "why": "divides instead of multiplying when converting"
+     }
+    ]
+   },
+   {
+    "evidence": "Since 1 meter equals 100 centimeters, a square meter is a square with sides of 100 cm by 100 cm.",
+    "kind": "how",
+    "q": "How do we find how many square centimetres make one square metre?",
+    "options": [
+     "Its 100 cm length times its 100 cm width",
+     "Its 100 cm length plus its 100 cm width",
+     "Its four 100 cm sides added together",
+     "Its 1 m length times 100 cm per metre"
+    ],
+    "explain": "A square metre is 100 cm by 100 cm, so its area is 100 × 100 square cm.",
+    "wrong": [
+     {
+      "misconception": "MAT-MENSURATION6-K7-M5",
+      "why": "thinks area is length plus width"
+     },
+     {
+      "misconception": null,
+      "why": "confuses area with perimeter"
+     },
+     {
+      "misconception": "MAT-MENSURATION6-K15-M11",
+      "why": "thinks converting area needs multiplying by 100 only once"
+     }
+    ]
+   },
+   {
+    "evidence": "Always calculate area and perimeter separately using their specific formulas rather than assuming they share a fixed relationship based on one another.",
+    "kind": "what_if",
+    "q": "Two gardens both need 40 m of fencing. What can you say about their areas?",
+    "options": [
+     "They depend on each garden's length and width",
+     "They are equal because the fencing is equal",
+     "They are both 40 square metres, like the fence",
+     "They are larger for the longer, thinner garden"
+    ],
+    "explain": "Area does not follow from perimeter; work it out separately from each garden's own sides.",
+    "wrong": [
+     {
+      "misconception": "MAT-MENSURATION6-K7-M2",
+      "why": "thinks the same perimeter means the same area"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the area number is the same as the perimeter number"
+     },
+     {
+      "misconception": null,
+      "why": "gets the example backwards: the 6 by 4 rectangle had less area than the square"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 43.6
+}

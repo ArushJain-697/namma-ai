@@ -1,0 +1,169 @@
+{
+ "source": "train-0190-GEN-EXERCISE.json",
+ "job": {
+  "job": "train-0190-GEN-EXERCISE",
+  "topic_id": "GEN-EXERCISE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a conversation between a teacher and two students",
+  "seed": 190
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3354,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today, let’s talk about how our bodies change with exercise. Rahul, why do you think your legs ache the day after a long run? Rahul: I think it is because lactic acid has built up and stayed in my legs. Teacher: Actually, that is a common myth. Soreness happens because of tiny tears in muscle fibers that occur during exercise, which then repair and grow stronger while you rest. Priya: So, does that mean my muscles grow while I am lifting weights at the gym? Teacher: Not exactly. Muscles actually grow during the recovery period after your workout, not while you are pushing the weights. Priya: My brother says he only does sit-ups to lose his belly fat. Is that how it works? Teacher: No, Priya. You cannot choose to burn fat from just one specific area of your body. When you exercise, your body burns fat from all over. Also, remember that sweating is just your body’s way of cooling down, not a measure of how much fat you have burned. Finally, always remember to cool down by walking slowly after a run instead of sitting down immediately, as this helps your heart rate return to normal safely.",
+ "menu_ids": [
+  "GEN-EXERCISE-K3-M1",
+  "GEN-EXERCISE-K3-M2",
+  "GEN-EXERCISE-K6-M4",
+  "GEN-EXERCISE-K6-M5",
+  "GEN-EXERCISE-K7-M6",
+  "GEN-EXERCISE-K7-M7",
+  "GEN-EXERCISE-K10-M8",
+  "GEN-EXERCISE-K13-M10",
+  "GEN-EXERCISE-K14-M11",
+  "GEN-EXERCISE-K17-M13",
+  "GEN-EXERCISE-K17-M14",
+  "GEN-EXERCISE-K18-M15",
+  "GEN-EXERCISE-K19-M16",
+  "GEN-EXERCISE-K22-M17"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Soreness happens because of tiny tears in muscle fibers that occur during exercise, which then repair and grow stronger while you rest.",
+    "kind": "which_explains",
+    "q": "Rahul's legs ache the day after a long run. What really causes this ache?",
+    "options": [
+     "Small tears in his leg muscle fibres",
+     "Lactic acid that stayed in his legs",
+     "Leg muscle slowly turning into fat",
+     "Sweat that cooled his legs too fast"
+    ],
+    "explain": "Soreness comes from tiny tears in muscle fibres made during exercise, not from lactic acid.",
+    "wrong": [
+     {
+      "misconception": "GEN-EXERCISE-K14-M11",
+      "why": "believes soreness is lactic acid build-up"
+     },
+     {
+      "misconception": "GEN-EXERCISE-K19-M16",
+      "why": "thinks muscle can change into fat"
+     },
+     {
+      "misconception": null,
+      "why": "links the ache to sweating, a nearby detail"
+     }
+    ]
+   },
+   {
+    "evidence": "Muscles actually grow during the recovery period after your workout, not while you are pushing the weights.",
+    "kind": "how",
+    "q": "Priya lifts weights at the gym on Monday. When do her muscles actually get bigger?",
+    "options": [
+     "While she rests after the workout",
+     "While she is pushing the weights",
+     "While she trains again the next day",
+     "While she is sweating at the gym"
+    ],
+    "explain": "Muscles grow during the recovery period after a workout, not while lifting the weights.",
+    "wrong": [
+     {
+      "misconception": "GEN-EXERCISE-K17-M13",
+      "why": "thinks muscles grow during the lifting itself"
+     },
+     {
+      "misconception": "GEN-EXERCISE-K17-M14",
+      "why": "thinks training every day, not rest, builds muscle"
+     },
+     {
+      "misconception": null,
+      "why": "links growth to sweating, a nearby detail"
+     }
+    ]
+   },
+   {
+    "evidence": "When you exercise, your body burns fat from all over.",
+    "kind": "what_if",
+    "q": "Priya's brother does only sit-ups every day. Where will his body burn fat from?",
+    "options": [
+     "From his whole body, not one spot",
+     "From his belly, where he exercises",
+     "From the parts that sweat the most",
+     "From the belly first, then elsewhere"
+    ],
+    "explain": "You cannot choose one area; exercise makes the body burn fat from all over.",
+    "wrong": [
+     {
+      "misconception": "GEN-EXERCISE-K22-M17",
+      "why": "believes sit-ups burn only stomach fat"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up sweating with burning fat"
+     },
+     {
+      "misconception": null,
+      "why": "partly keeps the idea of spot fat-burning"
+     }
+    ]
+   },
+   {
+    "evidence": "Also, remember that sweating is just your body’s way of cooling down, not a measure of how much fat you have burned.",
+    "kind": "which_explains",
+    "q": "Amit sweats much more than Sita in the same game. What does his sweating show?",
+    "options": [
+     "His body is trying to cool itself down",
+     "His body has burned more fat than Sita's",
+     "His muscles are growing bigger during the game",
+     "His body is pushing out lactic acid"
+    ],
+    "explain": "Sweating is only the body's way of cooling down, not a measure of fat burned.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks more sweat means more fat burned"
+     },
+     {
+      "misconception": "GEN-EXERCISE-K17-M13",
+      "why": "thinks muscles grow during exercise itself"
+     },
+     {
+      "misconception": "GEN-EXERCISE-K14-M11",
+      "why": "links body changes to lactic acid"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, always remember to cool down by walking slowly after a run instead of sitting down immediately, as this helps your heart rate return to normal safely.",
+    "kind": "what_if",
+    "q": "Neha has just finished a long run. What should she do next, and why?",
+    "options": [
+     "Walk slowly so her heart rate settles safely",
+     "Sit down at once so her body rests",
+     "Keep running so her muscles grow right away",
+     "Do sit-ups so she burns her belly fat"
+    ],
+    "explain": "Walking slowly after a run, not sitting at once, helps the heart rate return to normal safely.",
+    "wrong": [
+     {
+      "misconception": "GEN-EXERCISE-K13-M10",
+      "why": "thinks you should stop suddenly and sit"
+     },
+     {
+      "misconception": "GEN-EXERCISE-K17-M14",
+      "why": "thinks more training without rest grows muscle faster"
+     },
+     {
+      "misconception": "GEN-EXERCISE-K22-M17",
+      "why": "believes sit-ups burn only belly fat"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 37.7
+}

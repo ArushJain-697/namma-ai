@@ -1,0 +1,137 @@
+{
+ "source": "train-0062-MAT-SYMMETRY.json",
+ "job": {
+  "job": "train-0062-MAT-SYMMETRY",
+  "topic_id": "MAT-SYMMETRY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a conversation between a teacher and two students",
+  "seed": 62
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3555,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today we are exploring symmetry. Look at this regular pentagon. How many lines of symmetry does it have? Rohan: I think it only has one vertical line of symmetry because that is how we usually draw it. Teacher: Actually, a regular pentagon has five lines of symmetry, one through each vertex. Symmetry isn't just about vertical lines; it can be horizontal or diagonal too. Priya: Does that mean a mirror image is always identical to the original object? Teacher: Not quite. If you look at the letter 'P' in a mirror, it flips horizontally, so it looks different from the original. Symmetry means the shape remains unchanged after an operation. Rohan: What about rotational symmetry? Does a shape only have it if we rotate it a full 360 degrees? Teacher: No, that would be trivial because everything looks the same after a full circle. Rotational symmetry means the shape looks identical after a rotation of less than 360 degrees. For example, a square looks the same after a 90-degree turn. Priya: So, symmetry is about how shapes behave when we flip or turn them, not just how they look when standing still.",
+ "menu_ids": [
+  "MAT-SYMMETRY-K4-M1",
+  "MAT-SYMMETRY-K6-M2",
+  "MAT-SYMMETRY-K11-M3",
+  "MAT-SYMMETRY-K5-M4",
+  "MAT-SYMMETRY-K6-M7",
+  "MAT-SYMMETRY-K9-M8",
+  "MAT-SYMMETRY-K10-M10",
+  "MAT-SYMMETRY-K8-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Actually, a regular pentagon has five lines of symmetry, one through each vertex.",
+    "kind": "what_if",
+    "q": "Rohan folds a paper regular pentagon so both halves match. How many such folds are possible?",
+    "options": [
+     "Five, one through each corner",
+     "One, the upright fold only",
+     "Two, one upright and one flat",
+     "Ten, one per side and corner"
+    ],
+    "explain": "A regular pentagon has five lines of symmetry, one through each vertex, not just one.",
+    "wrong": [
+     {
+      "misconception": "MAT-SYMMETRY-K5-M4",
+      "why": "thinks a regular polygon has only one line of symmetry"
+     },
+     {
+      "misconception": "MAT-SYMMETRY-K8-M12",
+      "why": "thinks a horizontal line must come with a vertical one"
+     },
+     {
+      "misconception": null,
+      "why": "counts sides and corners separately"
+     }
+    ]
+   },
+   {
+    "evidence": "Symmetry isn't just about vertical lines; it can be horizontal or diagonal too.",
+    "kind": "which_explains",
+    "q": "A shape's only line of symmetry is slanted, from corner to corner. What can we say about it?",
+    "options": [
+     "It still counts as a symmetrical shape",
+     "It is not symmetrical, as the line is slanted",
+     "It is symmetrical only if a vertical line exists",
+     "It is symmetrical only when redrawn standing upright"
+    ],
+    "explain": "Lines of symmetry can be vertical, horizontal or diagonal, so a slanted line still counts.",
+    "wrong": [
+     {
+      "misconception": "MAT-SYMMETRY-K4-M1",
+      "why": "thinks only vertical lines count as symmetry"
+     },
+     {
+      "misconception": "MAT-SYMMETRY-K8-M12",
+      "why": "thinks other lines need a vertical line too"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the drawing's position decides symmetry"
+     }
+    ]
+   },
+   {
+    "evidence": "If you look at the letter 'P' in a mirror, it flips horizontally, so it looks different from the original.",
+    "kind": "what_if",
+    "q": "Priya holds a card with the letter 'P' up to a mirror. What will she see?",
+    "options": [
+     "A reversed P that looks different",
+     "An exact copy of the original P",
+     "A P turned upside down",
+     "A P unchanged, since P is symmetrical"
+    ],
+    "explain": "In a mirror, P flips horizontally, so its image looks different from the original.",
+    "wrong": [
+     {
+      "misconception": "MAT-SYMMETRY-K11-M3",
+      "why": "thinks a mirror image is identical to the object"
+     },
+     {
+      "misconception": null,
+      "why": "confuses a horizontal flip with an upside-down flip"
+     },
+     {
+      "misconception": null,
+      "why": "assumes every letter is symmetrical"
+     }
+    ]
+   },
+   {
+    "evidence": "No, that would be trivial because everything looks the same after a full circle.",
+    "kind": "why",
+    "q": "Why is a full 360-degree turn not used to test for rotational symmetry?",
+    "options": [
+     "Because every shape looks the same after it",
+     "Because only squares look the same after it",
+     "Because shapes change their look after a full turn",
+     "Because a full turn flips the shape over"
+    ],
+    "explain": "Every shape looks the same after a full circle, so that turn proves nothing.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "picks the square example named nearby"
+     },
+     {
+      "misconception": "MAT-SYMMETRY-K6-M2",
+      "why": "reverses the idea about the full turn"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up turning with flipping"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 37.6
+}

@@ -1,0 +1,169 @@
+{
+ "source": "train-0051-MAT-PROPORTION.json",
+ "job": {
+  "job": "train-0051-MAT-PROPORTION",
+  "topic_id": "MAT-PROPORTION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a passage that shows a common wrong method and corrects it",
+  "seed": 51
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3570,
+  "promptTokenCount": 2
+ },
+ "passage": "In our school garden, we often observe how quantities change together. Suppose 4 workers take 12 days to complete a wall. Some students think that if we double the workers to 8, the days should decrease by 2, resulting in 10 days. This is incorrect because inverse proportion relies on a constant product, not a constant difference. Here, 4 times 12 equals 48, so 8 workers take 48 divided by 8, which is 6 days. Similarly, consider buying notebooks where 5 notebooks cost 100 rupees. A student might argue that if the price of 5 notebooks is 100, then 10 notebooks must cost 105 because they added 5 to the quantity and added 5 to the price. This is a mistake because direct proportion requires a constant ratio, not a constant difference. The ratio 100 divided by 5 is 20, meaning each notebook is 20 rupees. Thus, 10 notebooks cost 10 times 20, which is 200 rupees. Finally, remember that units must be consistent. If you are calculating speed, you cannot mix minutes and hours directly without converting them first. Always check if the relationship is direct or inverse by testing if the ratio or the product remains constant before performing your calculation.",
+ "menu_ids": [
+  "MAT-PROPORTION-K12-M1",
+  "MAT-PROPORTION-K12-M2",
+  "MAT-PROPORTION-K13-M3",
+  "MAT-PROPORTION-K14-M4",
+  "MAT-PROPORTION-K11-M5",
+  "MAT-PROPORTION-K15-M6",
+  "MAT-PROPORTION-K16-M7",
+  "MAT-PROPORTION-K17-M8",
+  "MAT-PROPORTION-K17-M9",
+  "MAT-PROPORTION-K18-M10",
+  "MAT-PROPORTION-K19-M11",
+  "MAT-PROPORTION-K20-M12",
+  "MAT-PROPORTION-K21-M13",
+  "MAT-PROPORTION-K22-M14"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Here, 4 times 12 equals 48, so 8 workers take 48 divided by 8, which is 6 days.",
+    "kind": "what_if",
+    "q": "If 4 workers take 12 days to build the wall, how many days will 8 workers take?",
+    "options": [
+     "6 days",
+     "10 days",
+     "24 days",
+     "1.5 days"
+    ],
+    "explain": "4 × 12 = 48 worker-days, so 8 workers need 48 ÷ 8 = 6 days.",
+    "wrong": [
+     {
+      "misconception": "MAT-PROPORTION-K18-M10",
+      "why": "thinks doubling workers takes 2 off the days"
+     },
+     {
+      "misconception": "MAT-PROPORTION-K12-M1",
+      "why": "treats it as direct: more workers, more days"
+     },
+     {
+      "misconception": "MAT-PROPORTION-K20-M12",
+      "why": "divides the given 12 days by the new 8 workers"
+     }
+    ]
+   },
+   {
+    "evidence": "This is incorrect because inverse proportion relies on a constant product, not a constant difference.",
+    "kind": "which_explains",
+    "q": "Why is it wrong to say 8 workers finish the wall in 10 days?",
+    "options": [
+     "Workers times days must stay the same",
+     "Workers plus days must stay the same",
+     "Workers divided by days must stay the same",
+     "Workers minus days must stay the same"
+    ],
+    "explain": "In inverse proportion the product stays constant; 8 × 10 = 80, not 48.",
+    "wrong": [
+     {
+      "misconception": "MAT-PROPORTION-K17-M8",
+      "why": "thinks the sum stays constant in inverse proportion"
+     },
+     {
+      "misconception": "MAT-PROPORTION-K17-M9",
+      "why": "thinks the ratio stays constant in inverse proportion"
+     },
+     {
+      "misconception": "MAT-PROPORTION-K12-M2",
+      "why": "thinks a constant difference is what matters"
+     }
+    ]
+   },
+   {
+    "evidence": "Thus, 10 notebooks cost 10 times 20, which is 200 rupees.",
+    "kind": "what_if",
+    "q": "If 5 notebooks cost 100 rupees, what will 10 notebooks cost?",
+    "options": [
+     "200 rupees",
+     "105 rupees",
+     "102 rupees",
+     "50 rupees"
+    ],
+    "explain": "Each notebook costs 100 ÷ 5 = 20 rupees, so 10 notebooks cost 200 rupees.",
+    "wrong": [
+     {
+      "misconception": "MAT-PROPORTION-K12-M2",
+      "why": "adds 5 to price because 5 was added to quantity"
+     },
+     {
+      "misconception": "MAT-PROPORTION-K14-M4",
+      "why": "thinks doubling one quantity adds 2 to the other"
+     },
+     {
+      "misconception": "MAT-PROPORTION-K16-M7",
+      "why": "treats the relationship as inverse"
+     }
+    ]
+   },
+   {
+    "evidence": "This is a mistake because direct proportion requires a constant ratio, not a constant difference.",
+    "kind": "which_explains",
+    "q": "Price rises as more notebooks are bought. What shows they are in direct proportion?",
+    "options": [
+     "Price divided by notebooks stays the same",
+     "Price and notebooks both keep going up",
+     "Price minus notebooks stays the same",
+     "Price times notebooks stays the same"
+    ],
+    "explain": "Direct proportion needs a constant ratio, like 100 ÷ 5 = 200 ÷ 10 = 20.",
+    "wrong": [
+     {
+      "misconception": "MAT-PROPORTION-K11-M5",
+      "why": "thinks both rising is enough without checking the ratio"
+     },
+     {
+      "misconception": "MAT-PROPORTION-K13-M3",
+      "why": "thinks the difference stays constant in direct proportion"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the direct rule with the inverse product rule"
+     }
+    ]
+   },
+   {
+    "evidence": "If you are calculating speed, you cannot mix minutes and hours directly without converting them first.",
+    "kind": "how",
+    "q": "Asha has a time in minutes but needs speed in km per hour. What must she do first?",
+    "options": [
+     "Change the time from minutes to hours",
+     "Use the minutes directly, without changing them",
+     "Mix the minutes and hours together directly",
+     "Just divide the distance by the minutes"
+    ],
+    "explain": "Units must match, so minutes must be changed into hours before finding speed in km per hour.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks units do not matter in the calculation"
+     },
+     {
+      "misconception": null,
+      "why": "picks passage words without noticing the warning"
+     },
+     {
+      "misconception": "MAT-PROPORTION-K19-M11",
+      "why": "thinks the unitary method is always just dividing the given numbers"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 35.9
+}

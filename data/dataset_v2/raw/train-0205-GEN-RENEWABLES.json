@@ -1,0 +1,169 @@
+{
+ "source": "train-0205-GEN-RENEWABLES.json",
+ "job": {
+  "job": "train-0205-GEN-RENEWABLES",
+  "topic_id": "GEN-RENEWABLES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a diary entry or letter by a student",
+  "seed": 205
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4537,
+  "promptTokenCount": 2
+ },
+ "passage": "Dear Diary, today our science teacher explained why India is pushing so hard for renewable energy. I used to think that solar panels worked by trapping heat to boil water, but I learned they actually convert sunlight directly into electricity using special materials. We also discussed how solar and wind energy are 'intermittent,' meaning they don't produce power constantly—like at night or when the wind stops. Because of this, we cannot simply rely on the total capacity installed; we need batteries and grid balancing to store energy for when the sun isn't shining. My friend thought that because India has a huge 500 GW target for non-fossil fuel capacity, it must be only for solar panels. Actually, this target includes wind, hydro, and other clean sources, not just solar. I also realized that while renewables are much cleaner than coal, they still require land and resources, so we must plan their placement carefully to protect our ecosystems. It is fascinating to see how India is balancing its growing electricity needs with the reality that no energy source is completely free of environmental impact. We have a long way to go, but understanding these challenges is the first step toward a greener future.",
+ "menu_ids": [
+  "GEN-RENEWABLES-K3-M1",
+  "GEN-RENEWABLES-K3-M2",
+  "GEN-RENEWABLES-K4-M3",
+  "GEN-RENEWABLES-K5-M4",
+  "GEN-RENEWABLES-K5-M5",
+  "GEN-RENEWABLES-K8-M7",
+  "GEN-RENEWABLES-K10-M9",
+  "GEN-RENEWABLES-K11-M10",
+  "GEN-RENEWABLES-K14-M12",
+  "GEN-RENEWABLES-K15-M13",
+  "GEN-RENEWABLES-K20-M14",
+  "GEN-RENEWABLES-K17-M15",
+  "GEN-RENEWABLES-K19-M16",
+  "GEN-RENEWABLES-K23-M17"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "I used to think that solar panels worked by trapping heat to boil water, but I learned they actually convert sunlight directly into electricity using special materials.",
+    "kind": "how",
+    "q": "How does a solar panel on a school roof produce power?",
+    "options": [
+     "Special materials change light straight into electricity",
+     "Trapped heat boils water to turn turbines",
+     "Hot weather warms the panel to make electricity",
+     "Stored sunlight inside it makes electricity at night"
+    ],
+    "explain": "Solar panels use special materials to turn sunlight directly into electricity, not heat to boil water.",
+    "wrong": [
+     {
+      "misconception": "GEN-RENEWABLES-K3-M1",
+      "why": "thinks panels trap heat to boil water"
+     },
+     {
+      "misconception": "GEN-RENEWABLES-K3-M2",
+      "why": "thinks panels need hot weather"
+     },
+     {
+      "misconception": "GEN-RENEWABLES-K5-M5",
+      "why": "thinks good panels give power at night"
+     }
+    ]
+   },
+   {
+    "evidence": "We also discussed how solar and wind energy are 'intermittent,' meaning they don't produce power constantly—like at night or when the wind stops.",
+    "kind": "what_if",
+    "q": "A village uses only solar power with no batteries. What happens to its supply after sunset?",
+    "options": [
+     "It stops, since panels need sunlight to work",
+     "It continues, since good panels work at night",
+     "It continues, since full capacity flows all day",
+     "It stops, since cool evening air blocks panels"
+    ],
+    "explain": "Solar energy is intermittent; panels do not produce power at night when there is no sunlight.",
+    "wrong": [
+     {
+      "misconception": "GEN-RENEWABLES-K5-M5",
+      "why": "thinks a good panel gives power at night"
+     },
+     {
+      "misconception": "GEN-RENEWABLES-K15-M13",
+      "why": "thinks installed capacity flows day and night"
+     },
+     {
+      "misconception": "GEN-RENEWABLES-K3-M2",
+      "why": "thinks cool weather, not darkness, stops panels"
+     }
+    ]
+   },
+   {
+    "evidence": "Because of this, we cannot simply rely on the total capacity installed; we need batteries and grid balancing to store energy for when the sun isn't shining.",
+    "kind": "why",
+    "q": "Why does India need batteries even with a large installed solar capacity?",
+    "options": [
+     "Because panels give no power when it is dark",
+     "Because batteries help panels boil water for turbines",
+     "Because batteries make the panels produce extra power",
+     "Because batteries keep the panels cool in summer"
+    ],
+    "explain": "Panels stop at night, so batteries store energy for times when the sun isn't shining.",
+    "wrong": [
+     {
+      "misconception": "GEN-RENEWABLES-K3-M1",
+      "why": "thinks panels work by boiling water"
+     },
+     {
+      "misconception": null,
+      "why": "confuses storing energy with producing it"
+     },
+     {
+      "misconception": "GEN-RENEWABLES-K3-M2",
+      "why": "thinks panel output depends on temperature"
+     }
+    ]
+   },
+   {
+    "evidence": "Actually, this target includes wind, hydro, and other clean sources, not just solar.",
+    "kind": "what_if",
+    "q": "A new dam starts making clean power in India. Does it count toward the 500 GW target?",
+    "options": [
+     "Yes, the target covers all non-fossil sources",
+     "No, the target is for solar panels only",
+     "No, hydropower is too new to be counted",
+     "Yes, but only if it replaces solar panels"
+    ],
+    "explain": "The 500 GW target includes wind, hydro and other clean sources, not just solar.",
+    "wrong": [
+     {
+      "misconception": "GEN-RENEWABLES-K14-M12",
+      "why": "thinks the target means solar panels only"
+     },
+     {
+      "misconception": "GEN-RENEWABLES-K19-M16",
+      "why": "thinks hydropower is a new kind of energy"
+     },
+     {
+      "misconception": null,
+      "why": "still treats solar as the only real target"
+     }
+    ]
+   },
+   {
+    "evidence": "I also realized that while renewables are much cleaner than coal, they still require land and resources, so we must plan their placement carefully to protect our ecosystems.",
+    "kind": "which_explains",
+    "q": "Meera says solar parks are clean, so any place will do. What does the diary writer believe?",
+    "options": [
+     "They still use land, so sites need planning",
+     "They cause no damage, so any site works",
+     "They always ruin forests, so never build them",
+     "They harm nature even more than coal does"
+    ],
+    "explain": "Renewables are cleaner than coal but still need land, so their placement must be planned carefully.",
+    "wrong": [
+     {
+      "misconception": "GEN-RENEWABLES-K11-M10",
+      "why": "thinks renewables cause no damage at all"
+     },
+     {
+      "misconception": "GEN-RENEWABLES-K4-M3",
+      "why": "thinks solar parks are always harmful to forests"
+     },
+     {
+      "misconception": null,
+      "why": "over-reacts to the impact and reverses the coal comparison"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 46.9
+}

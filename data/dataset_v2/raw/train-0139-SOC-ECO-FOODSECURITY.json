@@ -1,0 +1,164 @@
+{
+ "source": "train-0139-SOC-ECO-FOODSECURITY.json",
+ "job": {
+  "job": "train-0139-SOC-ECO-FOODSECURITY",
+  "topic_id": "SOC-ECO-FOODSECURITY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a cause-and-effect explanation",
+  "seed": 139
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4001,
+  "promptTokenCount": 2
+ },
+ "passage": "Food security is not just about the total amount of food available in a country. It is a complex state achieved only when all people at all times have physical, social, and economic access to sufficient, safe, and nutritious food. Even if a country produces enough grain to fill its warehouses, many citizens may still face hunger if they lack the money to purchase it. This economic barrier is a primary cause of food insecurity for the poorest families. Furthermore, the government maintains a buffer stock of food grains to ensure supply during emergencies or crop failures. Through the Public Distribution System, the government distributes this food at lower prices to vulnerable sections of society. These ration shops act as a safety net, ensuring that food reaches those who cannot afford market prices. However, if the distribution network fails or if families live in remote areas without access to these shops, they remain vulnerable despite the national surplus. Therefore, food security depends on the combination of availability, accessibility, and affordability. A country can have a massive food surplus, yet still suffer from widespread malnutrition if the distribution system is inefficient or if the poorest citizens are excluded from the market economy.",
+ "menu_ids": [
+  "SOC-ECO-FOODSECURITY-K5-M2",
+  "SOC-ECO-FOODSECURITY-K9-M5",
+  "SOC-ECO-FOODSECURITY-K10-M6",
+  "SOC-ECO-FOODSECURITY-K11-M7",
+  "SOC-ECO-FOODSECURITY-K12-M8",
+  "SOC-ECO-FOODSECURITY-K12-M9",
+  "SOC-ECO-FOODSECURITY-K13-M10",
+  "SOC-ECO-FOODSECURITY-K14-M11",
+  "SOC-ECO-FOODSECURITY-K8-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Even if a country produces enough grain to fill its warehouses, many citizens may still face hunger if they lack the money to purchase it.",
+    "kind": "why",
+    "q": "A country's warehouses are full of grain. Why might a poor family there still go hungry?",
+    "options": [
+     "They cannot afford to buy the grain",
+     "They live in a country short of grain",
+     "They must wait for grain to be imported",
+     "They lost their own crops to drought"
+    ],
+    "explain": "Even with full warehouses, people go hungry if they lack money to buy food.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-FOODSECURITY-K11-M7",
+      "why": "thinks hunger only means the country lacks food"
+     },
+     {
+      "misconception": "SOC-ECO-FOODSECURITY-K10-M6",
+      "why": "thinks India depends on imported grain"
+     },
+     {
+      "misconception": "SOC-ECO-FOODSECURITY-K8-M12",
+      "why": "thinks hunger comes only from crop failure"
+     }
+    ]
+   },
+   {
+    "evidence": "It is a complex state achieved only when all people at all times have physical, social, and economic access to sufficient, safe, and nutritious food.",
+    "kind": "which_explains",
+    "q": "A town's market has plenty of food, but some people cannot reach or buy it. Is the town food secure?",
+    "options": [
+     "No, because not everyone can get food",
+     "Yes, because the market has plenty of food",
+     "Yes, because the country grows enough food",
+     "No, because its food must be imported first"
+    ],
+    "explain": "Food security needs all people to have access to food, not just food in markets.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-FOODSECURITY-K5-M2",
+      "why": "thinks food in the market means everyone is secure"
+     },
+     {
+      "misconception": "SOC-ECO-FOODSECURITY-K9-M5",
+      "why": "thinks national production means no one is insecure"
+     },
+     {
+      "misconception": "SOC-ECO-FOODSECURITY-K10-M6",
+      "why": "thinks India depends on imported food"
+     }
+    ]
+   },
+   {
+    "evidence": "Through the Public Distribution System, the government distributes this food at lower prices to vulnerable sections of society.",
+    "kind": "how",
+    "q": "How does the Public Distribution System help poor families get food?",
+    "options": [
+     "It sells grain cheaply through ration shops",
+     "It sells grain to all at one price",
+     "It imports grain from abroad for them",
+     "It delivers grain directly to every home"
+    ],
+    "explain": "The PDS gives food at lower prices to vulnerable people through ration shops.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-FOODSECURITY-K13-M10",
+      "why": "thinks everyone with a ration card pays the same"
+     },
+     {
+      "misconception": "SOC-ECO-FOODSECURITY-K10-M6",
+      "why": "thinks India feeds people with imported grain"
+     },
+     {
+      "misconception": "SOC-ECO-FOODSECURITY-K12-M8",
+      "why": "thinks the FCI hands out ration directly to people"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, the government maintains a buffer stock of food grains to ensure supply during emergencies or crop failures.",
+    "kind": "why",
+    "q": "Why does the government keep a buffer stock of food grains?",
+    "options": [
+     "To supply food if harvests fail",
+     "To sell grain abroad for profit",
+     "To push down farm prices after harvest",
+     "To give every family free grain daily"
+    ],
+    "explain": "The buffer stock keeps food available during emergencies or when crops fail.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "guesses stored grain is meant for selling abroad"
+     },
+     {
+      "misconception": "SOC-ECO-FOODSECURITY-K12-M9",
+      "why": "thinks the government lowers prices after a surplus harvest"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises cheap ration into free food for all"
+     }
+    ]
+   },
+   {
+    "evidence": "However, if the distribution network fails or if families live in remote areas without access to these shops, they remain vulnerable despite the national surplus.",
+    "kind": "what_if",
+    "q": "A family lives far from any ration shop, though India has surplus grain. What happens to them?",
+    "options": [
+     "They stay at risk of going hungry",
+     "They are safe due to the national surplus",
+     "They are safe as markets have food",
+     "They get FCI grain delivered at home"
+    ],
+    "explain": "Families without access to ration shops remain vulnerable, even when the country has a surplus.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-FOODSECURITY-K9-M5",
+      "why": "thinks a national surplus protects everyone"
+     },
+     {
+      "misconception": "SOC-ECO-FOODSECURITY-K5-M2",
+      "why": "thinks food in markets means everyone is secure"
+     },
+     {
+      "misconception": "SOC-ECO-FOODSECURITY-K12-M8",
+      "why": "thinks the FCI supplies villages directly"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 74.0
+}

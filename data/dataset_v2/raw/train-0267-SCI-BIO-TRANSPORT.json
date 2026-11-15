@@ -1,0 +1,164 @@
+{
+ "source": "train-0267-SCI-BIO-TRANSPORT.json",
+ "job": {
+  "job": "train-0267-SCI-BIO-TRANSPORT",
+  "topic_id": "SCI-BIO-TRANSPORT",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 267
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1634,
+  "promptTokenCount": 2
+ },
+ "passage": "Many students often think that our body creates blood inside the heart, or that the kidneys simply turn the food we eat into urine. However, the truth is much more complex. The heart acts as a pump to circulate blood, not a factory to manufacture it. Similarly, the kidneys act as a filtration system, cleaning the blood by removing waste products that have already been processed by the body’s cells, rather than processing food directly from the digestive tract. In the plant world, a common misunderstanding is that transpiration is just a wasteful process of losing water. In reality, transpiration creates a suction force that pulls water and minerals from the roots to the highest leaves, which is essential for survival. Furthermore, while we might think of roots as having a brain to search for water, they actually grow towards moisture due to simple biological responses to their environment, not intentional searching. Finally, it is a mistake to believe that all arteries carry oxygen-rich blood. The pulmonary artery is a special vessel that carries carbon dioxide-rich blood from the heart to the lungs for purification. Understanding these systems helps us appreciate how our bodies and plants maintain balance through constant movement and filtration.",
+ "menu_ids": [
+  "SCI-BIO-TRANSPORT-K11-M2",
+  "SCI-BIO-TRANSPORT-K12-M3",
+  "SCI-BIO-TRANSPORT-K13-M4",
+  "SCI-BIO-TRANSPORT-K15-M6",
+  "SCI-BIO-TRANSPORT-K16-M7",
+  "SCI-BIO-TRANSPORT-K17-M8",
+  "SCI-BIO-TRANSPORT-K14-M9",
+  "SCI-BIO-TRANSPORT-K17-M11",
+  "SCI-BIO-TRANSPORT-K10-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "The heart acts as a pump to circulate blood, not a factory to manufacture it.",
+    "kind": "which_explains",
+    "q": "Meena says her heart makes new blood all day. What does the heart really do?",
+    "options": [
+     "It pushes blood around the body",
+     "It cleans waste out of the blood",
+     "It stores blood until it is needed",
+     "It pulls water up from the roots"
+    ],
+    "explain": "The heart is a pump that circulates blood; it does not manufacture blood.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "mixes up the heart with the kidneys' filtering job"
+     },
+     {
+      "misconception": "SCI-BIO-TRANSPORT-K10-M12",
+      "why": "thinks the heart is just a blood tank"
+     },
+     {
+      "misconception": "SCI-BIO-TRANSPORT-K15-M6",
+      "why": "mixes animal transport with plant water movement"
+     }
+    ]
+   },
+   {
+    "evidence": "Similarly, the kidneys act as a filtration system, cleaning the blood by removing waste products that have already been processed by the body’s cells, rather than processing food directly from the digestive tract.",
+    "kind": "how",
+    "q": "How do the kidneys make urine?",
+    "options": [
+     "They remove waste from the blood",
+     "They turn food from the stomach into urine",
+     "They make fresh blood from body waste",
+     "They pump blood to the lungs"
+    ],
+    "explain": "Kidneys filter the blood and remove waste already made by body cells, not food directly.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-TRANSPORT-K14-M9",
+      "why": "thinks urine comes straight from food"
+     },
+     {
+      "misconception": "SCI-BIO-TRANSPORT-K12-M3",
+      "why": "thinks blood is made inside the organs"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the kidneys with the heart's pumping role"
+     }
+    ]
+   },
+   {
+    "evidence": "In reality, transpiration creates a suction force that pulls water and minerals from the roots to the highest leaves, which is essential for survival.",
+    "kind": "why",
+    "q": "Why is losing water through leaves useful to a tall plant?",
+    "options": [
+     "It pulls water up to the top leaves",
+     "It stops food from moving to the roots",
+     "It helps roots grow towards wet soil",
+     "It saves water inside the plant stem"
+    ],
+    "explain": "Water loss from leaves creates a pull that lifts water and minerals from roots to the highest leaves.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-TRANSPORT-K16-M7",
+      "why": "confuses water movement with the direction of food"
+     },
+     {
+      "misconception": "SCI-BIO-TRANSPORT-K17-M11",
+      "why": "mixes it up with roots growing towards water"
+     },
+     {
+      "misconception": "SCI-BIO-TRANSPORT-K17-M8",
+      "why": "thinks water loss only wastes water, so saving it seems the aim"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, while we might think of roots as having a brain to search for water, they actually grow towards moisture due to simple biological responses to their environment, not intentional searching.",
+    "kind": "which_explains",
+    "q": "A root bends towards a wet patch of soil. Which explains this best?",
+    "options": [
+     "It responds to moisture in a simple way",
+     "It decides to search for water on purpose",
+     "It is pulled there by the leaves above",
+     "It follows the path the xylem took"
+    ],
+    "explain": "Roots grow towards moisture through simple biological responses, not by intentional searching.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-TRANSPORT-K17-M11",
+      "why": "thinks roots search with a brain-like plan"
+     },
+     {
+      "misconception": "SCI-BIO-TRANSPORT-K15-M6",
+      "why": "thinks leaves suck on the root like a straw"
+     },
+     {
+      "misconception": null,
+      "why": "grabs a plant word from the passage that does not explain growth"
+     }
+    ]
+   },
+   {
+    "evidence": "The pulmonary artery is a special vessel that carries carbon dioxide-rich blood from the heart to the lungs for purification.",
+    "kind": "which_example",
+    "q": "Which vessel shows that not every artery carries oxygen-rich blood?",
+    "options": [
+     "The one that takes blood to the lungs",
+     "The one that takes blood to the kidneys",
+     "The one that takes blood to the leaves",
+     "The one that takes blood to the brain"
+    ],
+    "explain": "The pulmonary artery carries carbon dioxide-rich blood from the heart to the lungs.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-TRANSPORT-K11-M2",
+      "why": "thinks all arteries carry oxygen-rich blood, so picks a body organ"
+     },
+     {
+      "misconception": null,
+      "why": "picks the kidneys, an organ named nearby in the passage"
+     },
+     {
+      "misconception": "SCI-BIO-TRANSPORT-K16-M7",
+      "why": "mixes up animal vessels with plant leaves"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 15.4
+}

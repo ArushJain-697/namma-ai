@@ -1,0 +1,141 @@
+{
+ "source": "train-0261-SCI-BIO-MICROBES.json",
+ "job": {
+  "job": "train-0261-SCI-BIO-MICROBES",
+  "topic_id": "SCI-BIO-MICROBES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a news-style report about a real-world situation",
+  "seed": 261
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1347,
+  "promptTokenCount": 2
+ },
+ "passage": "In a recent community health drive, local experts clarified several myths about microorganisms. While many people fear that all microbes are harmful, most are actually essential for life. For instance, decomposers break down dead leaves into nutrients that enrich the soil, ensuring matter is recycled rather than lost. In the medical field, doctors emphasized that antibiotics are specifically designed to fight bacterial infections, not viral illnesses like the common cold or flu. Furthermore, vaccines act as a preventative measure to train our immune system before we get sick, rather than serving as a cure for someone already showing symptoms. Experts also addressed food safety, noting that pasteurization heats milk to kill harmful pathogens, yet some harmless microbes still remain. Finally, they explained that plants cannot absorb nitrogen directly from the air; instead, they rely on specialized bacteria in the soil to fix nitrogen into a usable form. Understanding these roles helps us appreciate that microbes are not just germs, but vital partners in our ecosystem and health.",
+ "menu_ids": [
+  "SCI-BIO-MICROBES-K1-M1",
+  "SCI-BIO-MICROBES-K4-M2",
+  "SCI-BIO-MICROBES-K12-M3",
+  "SCI-BIO-MICROBES-K13-M4",
+  "SCI-BIO-MICROBES-K16-M5",
+  "SCI-BIO-MICROBES-K22-M6",
+  "SCI-BIO-MICROBES-K3-M7",
+  "SCI-BIO-MICROBES-K19-M9",
+  "SCI-BIO-MICROBES-K23-M10",
+  "SCI-BIO-MICROBES-K6-M11",
+  "SCI-BIO-MICROBES-K12-M12",
+  "SCI-BIO-MICROBES-K21-M13"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "For instance, decomposers break down dead leaves into nutrients that enrich the soil, ensuring matter is recycled rather than lost.",
+    "kind": "what_if",
+    "q": "A dead leaf rots away on the ground. Where does its matter go?",
+    "options": [
+     "It becomes nutrients that enrich the soil",
+     "It turns into nothing and vanishes",
+     "It becomes gas that rises into the air",
+     "It stays in the leaf but turns black"
+    ],
+    "explain": "Decomposers break dead leaves into nutrients for the soil, so the matter is recycled, not lost.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-MICROBES-K23-M10",
+      "why": "thinks decomposed matter just disappears"
+     },
+     {
+      "misconception": null,
+      "why": "thinks all rotting matter leaves as gas"
+     },
+     {
+      "misconception": null,
+      "why": "thinks rotting only changes colour, not matter"
+     }
+    ]
+   },
+   {
+    "evidence": "In the medical field, doctors emphasized that antibiotics are specifically designed to fight bacterial infections, not viral illnesses like the common cold or flu.",
+    "kind": "what_if",
+    "q": "Meena has a cold caused by a virus. What would antibiotics do for her?",
+    "options": [
+     "They would not help against the virus",
+     "They would cure it within a day",
+     "They would train her body against it",
+     "They would kill the virus but not bacteria"
+    ],
+    "explain": "Antibiotics fight bacterial infections, not viral illnesses like the common cold, so they would not help.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-MICROBES-K12-M3",
+      "why": "thinks antibiotics treat colds and flu"
+     },
+     {
+      "misconception": "SCI-BIO-MICROBES-K12-M12",
+      "why": "thinks antibiotics strengthen the immune system"
+     },
+     {
+      "misconception": "SCI-BIO-MICROBES-K4-M2",
+      "why": "thinks viruses are a type of bacteria"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, vaccines act as a preventative measure to train our immune system before we get sick, rather than serving as a cure for someone already showing symptoms.",
+    "kind": "which_explains",
+    "q": "Why is a vaccine given to a healthy child?",
+    "options": [
+     "It prepares the body before illness begins",
+     "It removes the illness the child already has",
+     "It kills bacteria that are already inside",
+     "It makes the child sick for a short time"
+    ],
+    "explain": "Vaccines prevent disease by training the immune system before sickness, not by curing people already ill.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-MICROBES-K13-M4",
+      "why": "thinks vaccines are a cure for current disease"
+     },
+     {
+      "misconception": "SCI-BIO-MICROBES-K12-M3",
+      "why": "mixes vaccines up with antibiotics that kill bacteria"
+     },
+     {
+      "misconception": null,
+      "why": "thinks vaccines work by causing illness first"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, they explained that plants cannot absorb nitrogen directly from the air; instead, they rely on specialized bacteria in the soil to fix nitrogen into a usable form.",
+    "kind": "how",
+    "q": "How does a bean plant get the nitrogen it needs to grow?",
+    "options": [
+     "Soil bacteria change nitrogen into a usable form",
+     "Its leaves take nitrogen gas from the air",
+     "Its roots pull nitrogen gas straight from the soil",
+     "Rainwater carries nitrogen directly into its stem"
+    ],
+    "explain": "Plants cannot use nitrogen from air; bacteria in the soil change it into a form plants can use.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-MICROBES-K22-M6",
+      "why": "thinks leaves absorb nitrogen gas from air"
+     },
+     {
+      "misconception": "SCI-BIO-MICROBES-K21-M13",
+      "why": "thinks nitrogen only works near roots without bacteria"
+     },
+     {
+      "misconception": null,
+      "why": "guesses rain delivers nitrogen to the plant"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 12.6
+}

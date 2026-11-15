@@ -1,0 +1,143 @@
+{
+ "source": "train-0234-MAT-PROBABILITY.json",
+ "job": {
+  "job": "train-0234-MAT-PROBABILITY",
+  "topic_id": "MAT-PROBABILITY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a step-by-step worked example",
+  "seed": 234
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2805,
+  "promptTokenCount": 2
+ },
+ "passage": "Probability helps us predict the likelihood of events occurring. When we toss a fair coin, there are two possible outcomes: heads or tails. Because the coin is fair, these outcomes are equally likely, meaning each has a probability of 1/2. However, if we toss the coin 10 times, we might get 7 heads and 3 tails. This result is our experimental probability, which is based on actual trials. It is important to understand that experimental probability rarely equals theoretical probability in small samples. As we increase the number of trials to 1000 or more, the experimental probability gets closer to the theoretical value. Furthermore, the probability of an event occurring plus the probability of it not occurring must always equal 1. For example, if the probability of winning a game is 0.4, the probability of not winning is 1 minus 0.4, which equals 0.6. Finally, remember that every coin toss is an independent event. If you have tossed heads five times in a row, the chance of getting heads on the next toss remains exactly 1/2, because the coin has no memory of previous results.",
+ "menu_ids": [
+  "MAT-PROBABILITY-K6-M1",
+  "MAT-PROBABILITY-K6-M2",
+  "MAT-PROBABILITY-K7-M3",
+  "MAT-PROBABILITY-K7-M4",
+  "MAT-PROBABILITY-K8-M5",
+  "MAT-PROBABILITY-K9-M7",
+  "MAT-PROBABILITY-K9-M8",
+  "MAT-PROBABILITY-K10-M9",
+  "MAT-PROBABILITY-K14-M10",
+  "MAT-PROBABILITY-K15-M12",
+  "MAT-PROBABILITY-K16-M13",
+  "MAT-PROBABILITY-K16-M14",
+  "MAT-PROBABILITY-K17-M15",
+  "MAT-PROBABILITY-K18-M17"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "If you have tossed heads five times in a row, the chance of getting heads on the next toss remains exactly 1/2, because the coin has no memory of previous results.",
+    "kind": "what_if",
+    "q": "Meena gets heads five times in a row with a fair coin. What is the chance of heads next?",
+    "options": [
+     "Exactly 1/2, same as every other toss",
+     "Less than 1/2, since tails is now due",
+     "More than 1/2, since heads is on a streak",
+     "Exactly 0, since six heads cannot happen"
+    ],
+    "explain": "Each toss is independent; the coin has no memory, so heads stays exactly 1/2.",
+    "wrong": [
+     {
+      "misconception": "MAT-PROBABILITY-K6-M1",
+      "why": "thinks tails becomes more likely after a streak of heads"
+     },
+     {
+      "misconception": "MAT-PROBABILITY-K6-M2",
+      "why": "thinks the coin is 'hot' after many heads"
+     },
+     {
+      "misconception": null,
+      "why": "thinks a long streak of heads is impossible"
+     }
+    ]
+   },
+   {
+    "evidence": "It is important to understand that experimental probability rarely equals theoretical probability in small samples.",
+    "kind": "which_explains",
+    "q": "Aman tosses a fair coin 10 times and gets 7 heads. What does this result show?",
+    "options": [
+     "Few trials often give results far from 1/2",
+     "The coin is unfair, as 5 heads must come",
+     "Experimental probability of heads here is 7/3",
+     "Theoretical probability of heads is now 7/10"
+    ],
+    "explain": "In small samples, experimental probability rarely equals the theoretical 1/2, even for a fair coin.",
+    "wrong": [
+     {
+      "misconception": "MAT-PROBABILITY-K7-M3",
+      "why": "thinks 10 tosses must give exactly 5 heads"
+     },
+     {
+      "misconception": "MAT-PROBABILITY-K8-M5",
+      "why": "divides successes by failures instead of total trials"
+     },
+     {
+      "misconception": "MAT-PROBABILITY-K9-M8",
+      "why": "thinks experimental and theoretical values must be equal"
+     }
+    ]
+   },
+   {
+    "evidence": "As we increase the number of trials to 1000 or more, the experimental probability gets closer to the theoretical value.",
+    "kind": "what_if",
+    "q": "Sita tosses a coin 10 times; Ravi tosses it 1000 times. Whose result is likely closer to 1/2?",
+    "options": [
+     "Ravi's, because he made many more tosses",
+     "Sita's, because fewer tosses mean fewer mistakes",
+     "Both equally, because any number of tosses works",
+     "Neither, because results always equal exactly 1/2"
+    ],
+    "explain": "With more trials, like 1000, experimental probability gets closer to the theoretical value of 1/2.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks fewer trials are more accurate"
+     },
+     {
+      "misconception": "MAT-PROBABILITY-K9-M7",
+      "why": "thinks 10 trials are as reliable as 1000"
+     },
+     {
+      "misconception": "MAT-PROBABILITY-K9-M8",
+      "why": "thinks experimental results always match theory exactly"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, the probability of an event occurring plus the probability of it not occurring must always equal 1.",
+    "kind": "what_if",
+    "q": "The chance of rain tomorrow is 0.7. What is the chance that it will not rain?",
+    "options": [
+     "0.3, because the two must add to 1",
+     "0, because 0.7 means rain is certain",
+     "0.5, because there are only two outcomes",
+     "1.7, because 1 is added to 0.7"
+    ],
+    "explain": "An event and its 'not happening' always add to 1, so 1 − 0.7 = 0.3.",
+    "wrong": [
+     {
+      "misconception": "MAT-PROBABILITY-K7-M4",
+      "why": "thinks a probability of 0.7 means it will definitely rain"
+     },
+     {
+      "misconception": "MAT-PROBABILITY-K15-M12",
+      "why": "thinks any two-outcome event has probability 1/2"
+     },
+     {
+      "misconception": "MAT-PROBABILITY-K18-M17",
+      "why": "accepts a probability greater than 1"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 29.8
+}

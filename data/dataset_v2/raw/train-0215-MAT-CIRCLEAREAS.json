@@ -1,0 +1,169 @@
+{
+ "source": "train-0215-MAT-CIRCLEAREAS.json",
+ "job": {
+  "job": "train-0215-MAT-CIRCLEAREAS",
+  "topic_id": "MAT-CIRCLEAREAS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a rule explained with two contrasting examples",
+  "seed": 215
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3542,
+  "promptTokenCount": 2
+ },
+ "passage": "Understanding the geometry of circles requires distinguishing between linear measures and spatial regions. The circumference of a circle, which is the boundary length, is calculated using the formula 2πr, whereas the area, representing the space enclosed, is calculated as πr². For instance, a circle with a radius of 7 cm has a circumference of 44 cm, but its area is 154 cm². It is vital to note that area is always expressed in square units, such as cm², because it measures two-dimensional coverage. Furthermore, the relationship between dimensions is non-linear; if you double the radius of a circle from 7 cm to 14 cm, the area does not simply double. Instead, the area increases by a factor of four, growing from 154 cm² to 616 cm². Another common error involves confusing sectors and segments. A sector is a pie-shaped slice formed by two radii and an arc, while a segment is the region bounded by a chord and an arc. To find the area of a minor segment, one must subtract the area of the triangle formed by the radii and the chord from the area of the corresponding sector. Adding these areas together would be incorrect, as the segment is only a portion of the sector.",
+ "menu_ids": [
+  "MAT-CIRCLEAREAS-K11-M2",
+  "MAT-CIRCLEAREAS-K11-M3",
+  "MAT-CIRCLEAREAS-K12-M4",
+  "MAT-CIRCLEAREAS-K12-M5",
+  "MAT-CIRCLEAREAS-K13-M6",
+  "MAT-CIRCLEAREAS-K13-M7",
+  "MAT-CIRCLEAREAS-K14-M8",
+  "MAT-CIRCLEAREAS-K14-M9",
+  "MAT-CIRCLEAREAS-K15-M10",
+  "MAT-CIRCLEAREAS-K15-M11",
+  "MAT-CIRCLEAREAS-K16-M12",
+  "MAT-CIRCLEAREAS-K17-M13",
+  "MAT-CIRCLEAREAS-K18-M15",
+  "MAT-CIRCLEAREAS-K18-M16"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "The circumference of a circle, which is the boundary length, is calculated using the formula 2πr, whereas the area, representing the space enclosed, is calculated as πr².",
+    "kind": "which_explains",
+    "q": "A fence must go around a round garden of radius r. Which formula gives the fence's length?",
+    "options": [
+     "2πr, as it measures the edge",
+     "πr², as it measures the garden",
+     "2r, as it measures straight across",
+     "πr, as it measures half the way"
+    ],
+    "explain": "The fence follows the boundary, and the boundary length (circumference) is 2πr; πr² is the enclosed space.",
+    "wrong": [
+     {
+      "misconception": "MAT-CIRCLEAREAS-K11-M2",
+      "why": "thinks circumference is πr²"
+     },
+     {
+      "misconception": "MAT-CIRCLEAREAS-K11-M3",
+      "why": "thinks circumference is the distance across, like a diameter"
+     },
+     {
+      "misconception": "MAT-CIRCLEAREAS-K16-M12",
+      "why": "mixes up full and half circumference"
+     }
+    ]
+   },
+   {
+    "evidence": "It is vital to note that area is always expressed in square units, such as cm², because it measures two-dimensional coverage.",
+    "kind": "what_if",
+    "q": "Meena writes the area of a 7 cm radius circle as 154 cm. Is she right?",
+    "options": [
+     "No, area needs square units like cm²",
+     "Yes, area uses cm like circumference",
+     "Yes, since the number 154 is right",
+     "No, the area should be 44 cm"
+    ],
+    "explain": "Area measures flat, two-dimensional coverage, so it must be in square units: 154 cm².",
+    "wrong": [
+     {
+      "misconception": "MAT-CIRCLEAREAS-K15-M10",
+      "why": "thinks area can be written in cm like circumference"
+     },
+     {
+      "misconception": null,
+      "why": "checks only the number and ignores the unit"
+     },
+     {
+      "misconception": null,
+      "why": "picks the circumference value from the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "Instead, the area increases by a factor of four, growing from 154 cm² to 616 cm².",
+    "kind": "what_if",
+    "q": "A circle's radius grows from 7 cm to 14 cm. What happens to its area?",
+    "options": [
+     "It becomes four times as large",
+     "It becomes two times as large",
+     "It becomes seven times as large",
+     "It becomes eight times as large"
+    ],
+    "explain": "Doubling the radius makes the area four times bigger: from 154 cm² to 616 cm².",
+    "wrong": [
+     {
+      "misconception": "MAT-CIRCLEAREAS-K14-M8",
+      "why": "thinks doubling the radius doubles the area"
+     },
+     {
+      "misconception": null,
+      "why": "grabs the number 7 from the radius"
+     },
+     {
+      "misconception": null,
+      "why": "cubes the factor instead of squaring it"
+     }
+    ]
+   },
+   {
+    "evidence": "A sector is a pie-shaped slice formed by two radii and an arc, while a segment is the region bounded by a chord and an arc.",
+    "kind": "difference",
+    "q": "How is a segment of a circle different from a sector?",
+    "options": [
+     "A chord, not two radii, closes it",
+     "Two radii, not a chord, close it",
+     "It has no arc along its edge",
+     "It always covers half the circle"
+    ],
+    "explain": "A segment is bounded by a chord and an arc; a sector uses two radii and an arc.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "swaps the definitions of sector and segment"
+     },
+     {
+      "misconception": null,
+      "why": "forgets both shapes have an arc"
+     },
+     {
+      "misconception": null,
+      "why": "confuses a segment with a semicircle"
+     }
+    ]
+   },
+   {
+    "evidence": "To find the area of a minor segment, one must subtract the area of the triangle formed by the radii and the chord from the area of the corresponding sector.",
+    "kind": "how",
+    "q": "A sector has area 77 cm² and its triangle has area 49 cm². What is the minor segment's area?",
+    "options": [
+     "28 cm²",
+     "126 cm²",
+     "77 cm²",
+     "49 cm²"
+    ],
+    "explain": "Segment area = sector area minus triangle area, so 77 − 49 = 28 cm².",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "adds the sector and triangle areas"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the segment is the whole sector"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the segment is the triangle"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 35.7
+}

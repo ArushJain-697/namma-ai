@@ -1,0 +1,139 @@
+{
+ "source": "train-0048-MAT-NUMBERS6.json",
+ "job": {
+  "job": "train-0048-MAT-NUMBERS6",
+  "topic_id": "MAT-NUMBERS6",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a step-by-step worked example",
+  "seed": 48
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4298,
+  "promptTokenCount": 2
+ },
+ "passage": "In our daily lives, we use two main systems to write large numbers: the Indian system and the International system. In the Indian system, we place the first comma after three digits from the right, and then after every two digits. For example, the number 1,234,567 in the International system is written as 12,34,567 in the Indian system. When comparing two numbers, always count the total digits first. A number with more digits is always greater than a number with fewer digits, regardless of the leading zeros. If the number of digits is the same, compare the digits from the leftmost place value. Furthermore, we use Roman numerals for numbering. A key rule is that symbols like I, X, C, and M can be repeated for addition, but never more than three times in a row. For instance, to write 40, we do not write XXXX, but rather XL, which means 50 minus 10. Understanding these rules helps us avoid mistakes when reading large values or writing dates in Roman format. Always check the system you are using before placing your commas or calculating values.",
+ "menu_ids": [
+  "MAT-NUMBERS6-K8-M2",
+  "MAT-NUMBERS6-K12-M3",
+  "MAT-NUMBERS6-K14-M5",
+  "MAT-NUMBERS6-K5-M6",
+  "MAT-NUMBERS6-K6-M7",
+  "MAT-NUMBERS6-K9-M8",
+  "MAT-NUMBERS6-K10-M9",
+  "MAT-NUMBERS6-K13-M10",
+  "MAT-NUMBERS6-K14-M11",
+  "MAT-NUMBERS6-K11-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "In the Indian system, we place the first comma after three digits from the right, and then after every two digits.",
+    "kind": "what_if",
+    "q": "How would the number 5432109 be written with commas in the Indian system?",
+    "options": [
+     "54,32,109",
+     "5,432,109",
+     "5,43,21,09",
+     "543,21,09"
+    ],
+    "explain": "Indian system: first comma after three digits from the right, then after every two, giving 54,32,109.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "uses the International system instead of the Indian one"
+     },
+     {
+      "misconception": "MAT-NUMBERS6-K8-M2",
+      "why": "puts commas after every two digits from the start"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the rule, putting two digits first, then three"
+     }
+    ]
+   },
+   {
+    "evidence": "If the number of digits is the same, compare the digits from the leftmost place value.",
+    "kind": "which_explains",
+    "q": "Which is greater, 6,214 or 5,987, and why?",
+    "options": [
+     "6,214, because its first digit is bigger",
+     "5,987, because its last digit is bigger",
+     "5,987, because its middle digits are bigger",
+     "5,987, because its digits add up to more"
+    ],
+    "explain": "Both have four digits, so compare from the left: 6 is bigger than 5.",
+    "wrong": [
+     {
+      "misconception": "MAT-NUMBERS6-K9-M8",
+      "why": "thinks the bigger last digit decides"
+     },
+     {
+      "misconception": null,
+      "why": "starts comparing from the middle, not the left"
+     },
+     {
+      "misconception": null,
+      "why": "compares the sum of the digits instead of place value"
+     }
+    ]
+   },
+   {
+    "evidence": "A key rule is that symbols like I, X, C, and M can be repeated for addition, but never more than three times in a row.",
+    "kind": "which_explains",
+    "q": "Asha writes 400 as CCCC. Which rule shows her answer is wrong?",
+    "options": [
+     "No symbol repeats more than three times in a row",
+     "Only I and X may ever be repeated",
+     "C may be repeated only for subtraction",
+     "No symbol may be repeated even twice"
+    ],
+    "explain": "I, X, C and M can repeat to add, but never more than three times in a row.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "misses that C is also in the list of repeatable symbols"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up repeating for addition with subtraction"
+     },
+     {
+      "misconception": null,
+      "why": "over-corrects and thinks symbols can never repeat"
+     }
+    ]
+   },
+   {
+    "evidence": "For instance, to write 40, we do not write XXXX, but rather XL, which means 50 minus 10.",
+    "kind": "how",
+    "q": "How does the Roman numeral XL show the number 40?",
+    "options": [
+     "X written before L is subtracted from 50",
+     "X written before L is added to 50",
+     "X written before L means four tens",
+     "L written after X is subtracted from 10"
+    ],
+    "explain": "XL means 50 minus 10: the smaller X placed before L is taken away, giving 40.",
+    "wrong": [
+     {
+      "misconception": "MAT-NUMBERS6-K14-M11",
+      "why": "thinks a smaller symbol before a bigger one is added"
+     },
+     {
+      "misconception": "MAT-NUMBERS6-K14-M5",
+      "why": "thinks XL is just a short form of XXXX"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the order of the subtraction"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 50.2
+}

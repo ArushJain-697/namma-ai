@@ -1,0 +1,140 @@
+{
+ "source": "train-0285-SCI-PHY-CIRCUIT.json",
+ "job": {
+  "job": "train-0285-SCI-PHY-CIRCUIT",
+  "topic_id": "SCI-PHY-CIRCUIT",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a news-style report about a real-world situation",
+  "seed": 285
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 3116,
+  "promptTokenCount": 2
+ },
+ "passage": "In the bustling city of Vidyut Nagar, engineers recently repaired the town’s main street lighting system. During the inspection, they explained how a simple circuit works to keep the streets bright. A bulb glows only when a complete, unbroken path exists from one terminal of the electric cell to the other. Specifically, one wire must connect to the metal tip at the base of the bulb, while the second wire must touch the metal casing surrounding the base. Contrary to popular belief, electricity does not get 'used up' by the bulb; the same amount of current that enters the filament returns to the cell. The engineers also clarified that while metals are excellent conductors, some materials like damp wood or salty water can also allow current to pass, proving that not all non-metals are perfect insulators. Finally, they demonstrated that for two cells to power a torch, the positive terminal of one must touch the negative terminal of the other. If they are placed facing the same direction, the circuit remains incomplete, and the bulb will not glow. The light is produced by the glowing filament inside, not the glass cover itself.",
+ "menu_ids": [
+  "SCI-PHY-CIRCUIT-K10-M1",
+  "SCI-PHY-CIRCUIT-K10-M2",
+  "SCI-PHY-CIRCUIT-K7-M4",
+  "SCI-PHY-CIRCUIT-K16-M5",
+  "SCI-PHY-CIRCUIT-K11-M6",
+  "SCI-PHY-CIRCUIT-K19-M7",
+  "SCI-PHY-CIRCUIT-K6-M8",
+  "SCI-PHY-CIRCUIT-K16-M9",
+  "SCI-PHY-CIRCUIT-K4-M10",
+  "SCI-PHY-CIRCUIT-K17-M11",
+  "SCI-PHY-CIRCUIT-K10-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Contrary to popular belief, electricity does not get 'used up' by the bulb; the same amount of current that enters the filament returns to the cell.",
+    "kind": "how",
+    "q": "A bulb is glowing in a circuit. How does the returning current compare with the current leaving the cell?",
+    "options": [
+     "Equal current comes back, as nothing is used up",
+     "Less current comes back, as the bulb uses some",
+     "No current comes back, as it stops there",
+     "More current comes back, as the cell refills it"
+    ],
+    "explain": "The bulb does not use up current; the same amount that enters the filament returns to the cell.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-CIRCUIT-K10-M2",
+      "why": "thinks the bulb consumes some current"
+     },
+     {
+      "misconception": "SCI-PHY-CIRCUIT-K10-M1",
+      "why": "thinks current flows to the bulb and stops"
+     },
+     {
+      "misconception": "SCI-PHY-CIRCUIT-K4-M10",
+      "why": "thinks the cell is a store that refills itself"
+     }
+    ]
+   },
+   {
+    "evidence": "Specifically, one wire must connect to the metal tip at the base of the bulb, while the second wire must touch the metal casing surrounding the base.",
+    "kind": "how",
+    "q": "How must two wires touch a bulb's base to complete the circuit?",
+    "options": [
+     "One wire on the tip, one on the casing",
+     "Both wires on the tip at the bottom",
+     "Both wires on the metal casing",
+     "One wire on the glass, one on the tip"
+    ],
+    "explain": "The circuit needs one wire on the metal tip and the other on the metal casing.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-CIRCUIT-K7-M4",
+      "why": "thinks the bulb has only one terminal, the tip"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the casing alone can take both wires"
+     },
+     {
+      "misconception": "SCI-PHY-CIRCUIT-K10-M12",
+      "why": "thinks touching anywhere on the bulb surface works"
+     }
+    ]
+   },
+   {
+    "evidence": "The engineers also clarified that while metals are excellent conductors, some materials like damp wood or salty water can also allow current to pass, proving that not all non-metals are perfect insulators.",
+    "kind": "which_explains",
+    "q": "A circuit with salty water in the gap makes the bulb glow. What does this show?",
+    "options": [
+     "Some non-metals can let current pass",
+     "All non-metals are perfect insulators",
+     "Only metals can carry current across a gap",
+     "Salt turns the water into a metal"
+    ],
+    "explain": "Salty water lets current pass, so not every non-metal is a perfect insulator.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-CIRCUIT-K16-M5",
+      "why": "thinks non-metals never conduct"
+     },
+     {
+      "misconception": null,
+      "why": "thinks only metals can ever conduct"
+     },
+     {
+      "misconception": null,
+      "why": "invents a reason to keep the metal-only idea"
+     }
+    ]
+   },
+   {
+    "evidence": "If they are placed facing the same direction, the circuit remains incomplete, and the bulb will not glow.",
+    "kind": "what_if",
+    "q": "Two cells are placed facing the same way in a torch. What happens to the bulb?",
+    "options": [
+     "It stays off, as the path is broken",
+     "It glows, as direction does not matter",
+     "It glows dimly, as one cell works alone",
+     "It glows brighter, as there are two cells"
+    ],
+    "explain": "Cells facing the same way leave the circuit incomplete, so the bulb does not glow.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-CIRCUIT-K19-M7",
+      "why": "thinks cells work whichever way they face"
+     },
+     {
+      "misconception": null,
+      "why": "thinks one cell still works by itself"
+     },
+     {
+      "misconception": null,
+      "why": "thinks more cells always mean more light"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 26.7
+}

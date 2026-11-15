@@ -1,0 +1,140 @@
+{
+ "source": "train-0282-SCI-ESS-WASTEWATER.json",
+ "job": {
+  "job": "train-0282-SCI-ESS-WASTEWATER",
+  "topic_id": "SCI-ESS-WASTEWATER",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 282
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 3720,
+  "promptTokenCount": 2
+ },
+ "passage": "Many people believe that clear, sparkling water from a river or well is always safe to drink, but this is a dangerous myth. Even if water looks clean, it can contain invisible germs that cause serious diseases. Similarly, some think that pouring cooking oil down the sink is harmless because it remains a liquid. In reality, oil hardens in pipes, blocking them and causing major drainage issues. We must also be careful about what we flush. Some people believe that flushing old medicines is safe because they are meant to heal, but these chemicals actually disrupt the biological treatment processes in wastewater plants. Furthermore, many students confuse the terms sewage and sewerage. Sewage refers to the actual wastewater containing organic and inorganic impurities, while sewerage is the vast network of pipes that transports this waste to treatment facilities. Finally, we must stop viewing sludge as useless trash. During the treatment process, sludge is collected and processed to produce biogas or organic manure, which is highly beneficial for soil. By understanding these facts, we can practice better housekeeping and protect our environment from unnecessary pollution.",
+ "menu_ids": [
+  "SCI-ESS-WASTEWATER-K8-M2",
+  "SCI-ESS-WASTEWATER-K10-M3",
+  "SCI-ESS-WASTEWATER-K14-M4",
+  "SCI-ESS-WASTEWATER-K17-M5",
+  "SCI-ESS-WASTEWATER-K21-M6",
+  "SCI-ESS-WASTEWATER-K13-M7",
+  "SCI-ESS-WASTEWATER-K6-M8",
+  "SCI-ESS-WASTEWATER-K15-M9",
+  "SCI-ESS-WASTEWATER-K20-M10",
+  "SCI-ESS-WASTEWATER-K18-M11",
+  "SCI-ESS-WASTEWATER-K21-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "In reality, oil hardens in pipes, blocking them and causing major drainage issues.",
+    "kind": "why",
+    "q": "Why does pouring leftover cooking oil into a sink cause drainage problems?",
+    "options": [
+     "It sets hard inside the pipes",
+     "It stays liquid and flows away easily",
+     "It kills the germs inside the pipes",
+     "It mixes with sewage and turns to sludge"
+    ],
+    "explain": "Oil hardens in the pipes and blocks them, which causes major drainage issues.",
+    "wrong": [
+     {
+      "misconception": "SCI-ESS-WASTEWATER-K17-M5",
+      "why": "thinks oil is harmless because it is a liquid"
+     },
+     {
+      "misconception": null,
+      "why": "invents an effect that is not in the passage"
+     },
+     {
+      "misconception": "SCI-ESS-WASTEWATER-K13-M7",
+      "why": "mixes up oil with sludge"
+     }
+    ]
+   },
+   {
+    "evidence": "Some people believe that flushing old medicines is safe because they are meant to heal, but these chemicals actually disrupt the biological treatment processes in wastewater plants.",
+    "kind": "what_if",
+    "q": "Meena flushes her old tablets down the toilet. What problem can this cause?",
+    "options": [
+     "They upset the plant's treatment process",
+     "They cure the water and help treatment",
+     "They harden and block the sewer pipes",
+     "They turn the sludge into useless mud"
+    ],
+    "explain": "Medicine chemicals disrupt the biological treatment processes in wastewater plants, even though they are meant to heal.",
+    "wrong": [
+     {
+      "misconception": "SCI-ESS-WASTEWATER-K18-M11",
+      "why": "thinks medicines are safe because they heal"
+     },
+     {
+      "misconception": null,
+      "why": "picks the oil problem from a nearby sentence"
+     },
+     {
+      "misconception": "SCI-ESS-WASTEWATER-K13-M7",
+      "why": "thinks sludge is useless mud"
+     }
+    ]
+   },
+   {
+    "evidence": "Sewage refers to the actual wastewater containing organic and inorganic impurities, while sewerage is the vast network of pipes that transports this waste to treatment facilities.",
+    "kind": "which_example",
+    "q": "A town lays new underground lines to move dirty water to a plant. What is it improving?",
+    "options": [
+     "The sewerage, a network of pipes",
+     "The sewage, a network of pipes",
+     "The sludge, a store of solid waste",
+     "The sewerage, the impurities in the water"
+    ],
+    "explain": "Sewerage is the network of pipes that carries waste; sewage is the wastewater itself.",
+    "wrong": [
+     {
+      "misconception": "SCI-ESS-WASTEWATER-K8-M2",
+      "why": "thinks sewage and sewerage mean the same"
+     },
+     {
+      "misconception": null,
+      "why": "picks another waste term from the passage"
+     },
+     {
+      "misconception": null,
+      "why": "swaps the two meanings around"
+     }
+    ]
+   },
+   {
+    "evidence": "During the treatment process, sludge is collected and processed to produce biogas or organic manure, which is highly beneficial for soil.",
+    "kind": "how",
+    "q": "A town plant collects sludge. What is the best way to use it?",
+    "options": [
+     "Process it into gas and manure for soil",
+     "Dump it away as useless mud",
+     "Add it to water to make it clear",
+     "Pour it into wells to make water safe"
+    ],
+    "explain": "Sludge is processed into biogas or organic manure, which is highly beneficial for soil.",
+    "wrong": [
+     {
+      "misconception": "SCI-ESS-WASTEWATER-K13-M7",
+      "why": "thinks sludge is useless mud"
+     },
+     {
+      "misconception": "SCI-ESS-WASTEWATER-K15-M9",
+      "why": "thinks added substances make water clear"
+     },
+     {
+      "misconception": "SCI-ESS-WASTEWATER-K21-M6",
+      "why": "thinks clear water is always safe"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 28.6
+}

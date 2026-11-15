@@ -1,0 +1,136 @@
+{
+ "source": "train-0089-SCI-CHM-COMBUSTION.json",
+ "job": {
+  "job": "train-0089-SCI-CHM-COMBUSTION",
+  "topic_id": "SCI-CHM-COMBUSTION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 89
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3324,
+  "promptTokenCount": 2
+ },
+ "passage": "Many people believe that blowing on a candle flame extinguishes it simply by removing oxygen, but this is incorrect. When you blow on a candle, you are actually cooling the wax vapor below its ignition temperature, which stops the combustion process. Similarly, some students think that water is the universal solution for all fires, including electrical ones. However, water conducts electricity and can cause dangerous shocks, so it should never be used on electrical fires. Another common myth is that metals are non-combustible materials that only melt. In reality, finely powdered metals like magnesium can burn brilliantly in air, proving that combustion depends on specific conditions. Furthermore, while a fuel with a high calorific value provides more energy, it is not always the best choice for every situation. Factors like cost, availability, and safety are equally important. Finally, remember that incomplete combustion is dangerous not just because of smoke, but because it releases carbon monoxide, a poisonous gas that can be fatal. Understanding these principles helps us handle fire safely and efficiently in our daily lives.",
+ "menu_ids": [
+  "SCI-CHM-COMBUSTION-K18-M4",
+  "SCI-CHM-COMBUSTION-K21-M5",
+  "SCI-CHM-COMBUSTION-K12-M6",
+  "SCI-CHM-COMBUSTION-K24-M7",
+  "SCI-CHM-COMBUSTION-K22-M9",
+  "SCI-CHM-COMBUSTION-K8-M10",
+  "SCI-CHM-COMBUSTION-K16-M11"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "When you blow on a candle, you are actually cooling the wax vapor below its ignition temperature, which stops the combustion process.",
+    "kind": "why",
+    "q": "Meena blows gently on a candle and it goes out. Why does the flame stop?",
+    "options": [
+     "Her breath makes the wax vapour too cool",
+     "Her breath takes away all the oxygen",
+     "Her breath pushes extra wax into the flame",
+     "Her breath wets the wick with moisture"
+    ],
+    "explain": "Blowing cools the wax vapour below its ignition temperature, so burning stops.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-COMBUSTION-K16-M11",
+      "why": "thinks blowing works by removing oxygen"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the effect, thinking blowing adds fuel"
+     },
+     {
+      "misconception": null,
+      "why": "guesses from everyday idea that wet things stop burning"
+     }
+    ]
+   },
+   {
+    "evidence": "However, water conducts electricity and can cause dangerous shocks, so it should never be used on electrical fires.",
+    "kind": "what_if",
+    "q": "A TV catches fire. What could happen if Raju throws a bucket of water on it?",
+    "options": [
+     "The water could carry current and shock him",
+     "The water would safely put out the fire",
+     "The water would release poisonous carbon monoxide",
+     "The water would make the metal parts burn"
+    ],
+    "explain": "Water conducts electricity, so using it on an electrical fire can cause dangerous shocks.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-COMBUSTION-K18-M4",
+      "why": "thinks water is best for every fire"
+     },
+     {
+      "misconception": "SCI-CHM-COMBUSTION-K22-M9",
+      "why": "mixes up the danger of incomplete combustion"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby idea about metals burning"
+     }
+    ]
+   },
+   {
+    "evidence": "In reality, finely powdered metals like magnesium can burn brilliantly in air, proving that combustion depends on specific conditions.",
+    "kind": "which_example",
+    "q": "Asha says metals can only melt and never burn. Which example from the lesson proves her wrong?",
+    "options": [
+     "Powdered magnesium burning brightly in air",
+     "Wax vapour burning above a candle wick",
+     "A metal pot getting hot on a stove",
+     "Carbon monoxide rising from a smoky fire"
+    ],
+    "explain": "Finely powdered magnesium burns brilliantly in air, so some metals can burn.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "picks a burning example that is not a metal"
+     },
+     {
+      "misconception": "SCI-CHM-COMBUSTION-K8-M10",
+      "why": "thinks metals only heat up, never burn"
+     },
+     {
+      "misconception": "SCI-CHM-COMBUSTION-K22-M9",
+      "why": "grabs a nearby detail about incomplete combustion"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, while a fuel with a high calorific value provides more energy, it is not always the best choice for every situation.",
+    "kind": "which_explains",
+    "q": "Fuel X has the highest calorific value but is costly and unsafe. What should a family conclude?",
+    "options": [
+     "Its energy alone does not make it best",
+     "Its high energy alone makes it the best",
+     "Its high price shows it gives little energy",
+     "Its high energy means it burns without danger"
+    ],
+    "explain": "High calorific value gives more energy, but cost, availability and safety matter equally.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-COMBUSTION-K24-M7",
+      "why": "thinks highest calorific value is always best"
+     },
+     {
+      "misconception": null,
+      "why": "wrongly links price to energy given"
+     },
+     {
+      "misconception": null,
+      "why": "assumes high-energy fuels are automatically safe"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 33.2
+}

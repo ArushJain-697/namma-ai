@@ -1,0 +1,138 @@
+{
+ "source": "train-0264-SCI-BIO-PLANTREPRO.json",
+ "job": {
+  "job": "train-0264-SCI-BIO-PLANTREPRO",
+  "topic_id": "SCI-BIO-PLANTREPRO",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a news-style report about a real-world situation",
+  "seed": 264
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1417,
+  "promptTokenCount": 2
+ },
+ "passage": "In a recent botanical study, researchers observed how various plants reproduce in the wild. They noted that while many plants produce seeds, others use different methods. For instance, a potato tuber can sprout new shoots, proving that plants do not rely solely on seeds to grow. The team also examined the tomato plant, which is botanically classified as a fruit because it develops from a flower and contains seeds inside. During their field observations, the scientists watched bees visiting flowers. They clarified that bees visit flowers to collect nectar for food, not out of a conscious desire to help the plant reproduce. Furthermore, the study highlighted the difference between pollination and fertilisation. Pollination is merely the transfer of pollen grains to the stigma, whereas fertilisation is the fusion of male and female gametes that occurs deep inside the ovary, not on the surface of the stigma. Finally, the researchers studied fungi like bread mould, which reproduce through spores. Unlike seeds, which are complex structures, spores are tiny, single-celled reproductive units that can grow into new individuals without needing two parents to fuse together.",
+ "menu_ids": [
+  "SCI-BIO-PLANTREPRO-K2-M1",
+  "SCI-BIO-PLANTREPRO-K9-M3",
+  "SCI-BIO-PLANTREPRO-K13-M4",
+  "SCI-BIO-PLANTREPRO-K14-M5",
+  "SCI-BIO-PLANTREPRO-K16-M6",
+  "SCI-BIO-PLANTREPRO-K18-M7",
+  "SCI-BIO-PLANTREPRO-K21-M8",
+  "SCI-BIO-PLANTREPRO-K14-M10",
+  "SCI-BIO-PLANTREPRO-K7-M11"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "For instance, a potato tuber can sprout new shoots, proving that plants do not rely solely on seeds to grow.",
+    "kind": "which_example",
+    "q": "Which example from the study shows that a plant can grow without a seed?",
+    "options": [
+     "A potato piece putting out new shoots",
+     "A tomato forming from a flower",
+     "A bee carrying pollen to a flower",
+     "A mould releasing tiny spores"
+    ],
+    "explain": "A potato tuber sprouts new shoots, so plants do not depend only on seeds to grow.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-PLANTREPRO-K21-M8",
+      "why": "picks the tomato, a nearby plant example about fruit"
+     },
+     {
+      "misconception": "SCI-BIO-PLANTREPRO-K16-M6",
+      "why": "picks the bee detail, which is about pollination"
+     },
+     {
+      "misconception": "SCI-BIO-PLANTREPRO-K9-M3",
+      "why": "thinks spores are seeds, so counts mould as growing from seed"
+     }
+    ]
+   },
+   {
+    "evidence": "They clarified that bees visit flowers to collect nectar for food, not out of a conscious desire to help the plant reproduce.",
+    "kind": "why",
+    "q": "Why do bees land on flowers, and so end up helping the plant?",
+    "options": [
+     "They are looking for nectar to eat",
+     "They are trying to help the plant",
+     "They are carrying pollen to the stigma",
+     "They are collecting seeds for their nest"
+    ],
+    "explain": "Bees visit flowers for nectar as food; helping the plant is only a side effect, not their aim.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-PLANTREPRO-K16-M6",
+      "why": "thinks bees visit on purpose to help the plant"
+     },
+     {
+      "misconception": "SCI-BIO-PLANTREPRO-K14-M10",
+      "why": "thinks bees go for pollen as the flower's seed"
+     },
+     {
+      "misconception": null,
+      "why": "thinks bees gather seeds, mixing up pollen and seeds"
+     }
+    ]
+   },
+   {
+    "evidence": "Pollination is merely the transfer of pollen grains to the stigma, whereas fertilisation is the fusion of male and female gametes that occurs deep inside the ovary, not on the surface of the stigma.",
+    "kind": "difference",
+    "q": "A pollen grain has just landed on a stigma. Which step has happened so far?",
+    "options": [
+     "Only pollination, as fertilisation comes later",
+     "Fertilisation, as the stigma is where it occurs",
+     "Both steps, as they are really the same",
+     "Neither step, as pollen must reach seeds"
+    ],
+    "explain": "Landing of pollen on the stigma is pollination; fertilisation happens later, deep inside the ovary.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-PLANTREPRO-K18-M7",
+      "why": "thinks fertilisation occurs on the stigma surface"
+     },
+     {
+      "misconception": "SCI-BIO-PLANTREPRO-K14-M5",
+      "why": "thinks pollination and fertilisation are the same"
+     },
+     {
+      "misconception": "SCI-BIO-PLANTREPRO-K14-M10",
+      "why": "thinks pollen is a seed that must reach something"
+     }
+    ]
+   },
+   {
+    "evidence": "Unlike seeds, which are complex structures, spores are tiny, single-celled reproductive units that can grow into new individuals without needing two parents to fuse together.",
+    "kind": "how",
+    "q": "How is a spore different from a seed in the way it forms a new plant?",
+    "options": [
+     "It is a simple cell needing no second parent",
+     "It is a smaller seed needing two parents",
+     "It is a complex structure with a tiny coat",
+     "It is a seed that only grows on bread"
+    ],
+    "explain": "Spores are tiny single cells that grow into new individuals without two parents fusing, unlike complex seeds.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-PLANTREPRO-K9-M3",
+      "why": "thinks spores are just tiny seeds"
+     },
+     {
+      "misconception": null,
+      "why": "swaps the seed's complexity onto the spore"
+     },
+     {
+      "misconception": "SCI-BIO-PLANTREPRO-K2-M1",
+      "why": "thinks everything grows from seeds, even mould"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 13.4
+}

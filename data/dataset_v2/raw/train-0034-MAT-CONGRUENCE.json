@@ -1,0 +1,143 @@
+{
+ "source": "train-0034-MAT-CONGRUENCE.json",
+ "job": {
+  "job": "train-0034-MAT-CONGRUENCE",
+  "topic_id": "MAT-CONGRUENCE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a short story where children solve a real problem",
+  "seed": 34
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4449,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and Meera were tasked with creating identical triangular wooden frames for a school project. Rohan cut two triangles, ABC and PQR, where side AB equals PQ, side BC equals QR, and side AC equals PR. Meera noticed that even though Rohan flipped triangle PQR over to fit it onto triangle ABC, the sides matched perfectly, confirming they were congruent by the SSS criterion. Next, they looked at two other triangles, DEF and GHI. They measured angle D equal to angle G, side DE equal to side GH, and angle E equal to angle H. Meera explained that because the equal side DE is located exactly between the two equal angles, the triangles are congruent by the ASA criterion. Rohan then checked two right-angled triangles, JKL and MNO. He noted that the hypotenuse and one leg of JKL were equal to the corresponding parts of MNO, proving congruence by RHS. Finally, they discussed why two triangles with equal areas are not necessarily congruent, as shapes can differ. They concluded that congruence requires both shape and size to be identical, and that the order of vertices matters significantly when writing the congruence statement to ensure corresponding parts are correctly matched.",
+ "menu_ids": [
+  "MAT-CONGRUENCE-K10-M1",
+  "MAT-CONGRUENCE-K10-M2",
+  "MAT-CONGRUENCE-K11-M3",
+  "MAT-CONGRUENCE-K12-M4",
+  "MAT-CONGRUENCE-K13-M5",
+  "MAT-CONGRUENCE-K14-M6",
+  "MAT-CONGRUENCE-K15-M7",
+  "MAT-CONGRUENCE-K16-M8",
+  "MAT-CONGRUENCE-K17-M10",
+  "MAT-CONGRUENCE-K18-M11",
+  "MAT-CONGRUENCE-K19-M12",
+  "MAT-CONGRUENCE-K21-M14",
+  "MAT-CONGRUENCE-K22-M16",
+  "MAT-CONGRUENCE-K23-M17"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Meera noticed that even though Rohan flipped triangle PQR over to fit it onto triangle ABC, the sides matched perfectly, confirming they were congruent by the SSS criterion.",
+    "kind": "why",
+    "q": "Rohan had to flip triangle PQR over to fit ABC. Why were they still congruent?",
+    "options": [
+     "All three pairs of sides still matched exactly",
+     "Both triangles had the same shape only",
+     "Both triangles had the same area",
+     "All three angles still matched exactly"
+    ],
+    "explain": "Flipping does not change a triangle; all three sides matched, so they were congruent by SSS.",
+    "wrong": [
+     {
+      "misconception": "MAT-CONGRUENCE-K10-M1",
+      "why": "thinks same shape is enough for congruence"
+     },
+     {
+      "misconception": "MAT-CONGRUENCE-K10-M2",
+      "why": "thinks equal area means congruent"
+     },
+     {
+      "misconception": "MAT-CONGRUENCE-K12-M4",
+      "why": "thinks equal angles prove congruence"
+     }
+    ]
+   },
+   {
+    "evidence": "Meera explained that because the equal side DE is located exactly between the two equal angles, the triangles are congruent by the ASA criterion.",
+    "kind": "why",
+    "q": "Why could Meera use the ASA rule for triangles DEF and GHI?",
+    "options": [
+     "The equal side sat between the two equal angles",
+     "Any one side and two angles were equal",
+     "All three angles of both were equal",
+     "Two sides and the angle between were equal"
+    ],
+    "explain": "ASA works because the equal side DE lies exactly between the equal angles D and E.",
+    "wrong": [
+     {
+      "misconception": "MAT-CONGRUENCE-K17-M10",
+      "why": "thinks the equal side in ASA can be any side"
+     },
+     {
+      "misconception": "MAT-CONGRUENCE-K19-M12",
+      "why": "thinks three equal angles prove congruence"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up ASA with SAS"
+     }
+    ]
+   },
+   {
+    "evidence": "He noted that the hypotenuse and one leg of JKL were equal to the corresponding parts of MNO, proving congruence by RHS.",
+    "kind": "recall",
+    "q": "Which equal parts let Rohan prove JKL and MNO congruent by RHS?",
+    "options": [
+     "The right angle, hypotenuse and one leg",
+     "The right angle and both shorter legs",
+     "The right angle and the other two angles",
+     "The right angle and equal areas"
+    ],
+    "explain": "RHS needs the right angle, the hypotenuse and one leg equal, as in JKL and MNO.",
+    "wrong": [
+     {
+      "misconception": "MAT-CONGRUENCE-K21-M14",
+      "why": "thinks RHS works without the hypotenuse"
+     },
+     {
+      "misconception": "MAT-CONGRUENCE-K19-M12",
+      "why": "thinks equal angles are enough"
+     },
+     {
+      "misconception": "MAT-CONGRUENCE-K10-M2",
+      "why": "thinks equal area means congruent"
+     }
+    ]
+   },
+   {
+    "evidence": "They concluded that congruence requires both shape and size to be identical, and that the order of vertices matters significantly when writing the congruence statement to ensure corresponding parts are correctly matched.",
+    "kind": "what_if",
+    "q": "Meera writes triangle XYZ is congruent to triangle LMN. Which side must equal side YZ?",
+    "options": [
+     "Side MN",
+     "Side LN",
+     "Side LM",
+     "Any side of LMN"
+    ],
+    "explain": "Vertex order matches parts: Y goes with M and Z with N, so YZ equals MN.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "matches the wrong pair of letters"
+     },
+     {
+      "misconception": "MAT-CONGRUENCE-K14-M6",
+      "why": "picks a side by how it looks"
+     },
+     {
+      "misconception": "MAT-CONGRUENCE-K13-M5",
+      "why": "thinks vertices can match in any order"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 47.0
+}

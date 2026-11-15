@@ -1,0 +1,164 @@
+{
+ "source": "train-0083-SCI-BIO-TRANSPORT.json",
+ "job": {
+  "job": "train-0083-SCI-BIO-TRANSPORT",
+  "topic_id": "SCI-BIO-TRANSPORT",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 83
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3480,
+  "promptTokenCount": 2
+ },
+ "passage": "Many people mistakenly believe that plants act like humans, actively 'sucking' water from the soil using energy, or that food in the phloem only travels downwards from leaves to roots. In reality, plants rely on physical processes to survive. Water transport occurs through xylem vessels, driven primarily by transpiration, which is the evaporation of water from leaves. This process is not a waste; it is essential because it creates a suction force that pulls water and minerals upwards from the roots to the highest branches. Similarly, the movement of food, known as translocation, is not restricted to a downward path. Phloem tissue transports sugars to all parts of the plant, including upward to developing buds or fruits, depending on where the plant needs energy most. Furthermore, while we often think of blood as just red cells, it is actually a complex fluid tissue consisting of plasma, which makes up more than half its volume. This plasma carries nutrients and waste products, while the heart acts as a pump to circulate this fluid throughout the body. The heart does not create blood; instead, it ensures continuous flow, while the kidneys filter the blood to remove waste, rather than processing food directly from the digestive tract.",
+ "menu_ids": [
+  "SCI-BIO-TRANSPORT-K11-M2",
+  "SCI-BIO-TRANSPORT-K12-M3",
+  "SCI-BIO-TRANSPORT-K13-M4",
+  "SCI-BIO-TRANSPORT-K15-M6",
+  "SCI-BIO-TRANSPORT-K16-M7",
+  "SCI-BIO-TRANSPORT-K17-M8",
+  "SCI-BIO-TRANSPORT-K14-M9",
+  "SCI-BIO-TRANSPORT-K17-M11",
+  "SCI-BIO-TRANSPORT-K10-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Water transport occurs through xylem vessels, driven primarily by transpiration, which is the evaporation of water from leaves.",
+    "kind": "what_if",
+    "q": "If leaves stopped losing water by evaporation, what would happen to water moving up the xylem?",
+    "options": [
+     "It would slow down, losing its main pull",
+     "It would carry on, as roots suck it up",
+     "It would speed up, as less water is wasted",
+     "It would carry on, as roots seek out water"
+    ],
+    "explain": "Transpiration, the evaporation of water from leaves, mainly drives water up the xylem, so flow would slow.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-TRANSPORT-K15-M6",
+      "why": "thinks roots actively suck water up like a straw"
+     },
+     {
+      "misconception": "SCI-BIO-TRANSPORT-K17-M8",
+      "why": "thinks transpiration only wastes water"
+     },
+     {
+      "misconception": "SCI-BIO-TRANSPORT-K17-M11",
+      "why": "thinks roots deliberately search for water"
+     }
+    ]
+   },
+   {
+    "evidence": "This process is not a waste; it is essential because it creates a suction force that pulls water and minerals upwards from the roots to the highest branches.",
+    "kind": "why",
+    "q": "Why is transpiration useful to a plant instead of being a waste?",
+    "options": [
+     "It creates a pull that lifts water upward",
+     "It gives roots energy to suck water up",
+     "It carries sugars down from leaves to roots",
+     "It guides roots to grow toward wet soil"
+    ],
+    "explain": "Transpiration creates a suction force that pulls water and minerals from roots to the highest branches.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-TRANSPORT-K15-M6",
+      "why": "thinks plants use energy to suck water"
+     },
+     {
+      "misconception": "SCI-BIO-TRANSPORT-K16-M7",
+      "why": "mixes up water transport with food moving down"
+     },
+     {
+      "misconception": "SCI-BIO-TRANSPORT-K17-M11",
+      "why": "thinks roots grow toward water on purpose"
+     }
+    ]
+   },
+   {
+    "evidence": "Phloem tissue transports sugars to all parts of the plant, including upward to developing buds or fruits, depending on where the plant needs energy most.",
+    "kind": "what_if",
+    "q": "A mango tree is growing new fruits near its top. How does food reach them?",
+    "options": [
+     "Sugars travel up to them through phloem",
+     "Sugars reach them only after going to roots",
+     "Sugars travel up to them through xylem",
+     "Sugars are sucked up from the soil by roots"
+    ],
+    "explain": "Phloem carries sugars to all parts of the plant, including upward to developing fruits.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-TRANSPORT-K16-M7",
+      "why": "thinks food only moves downward"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up xylem and phloem"
+     },
+     {
+      "misconception": "SCI-BIO-TRANSPORT-K15-M6",
+      "why": "thinks plants suck food from soil like a straw"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, while we often think of blood as just red cells, it is actually a complex fluid tissue consisting of plasma, which makes up more than half its volume.",
+    "kind": "recall",
+    "q": "If a blood sample were separated into its parts, which part would be the largest?",
+    "options": [
+     "The liquid plasma",
+     "The red blood cells",
+     "The nutrients from digested food",
+     "The waste products in it"
+    ],
+    "explain": "Plasma, the liquid part of blood, makes up more than half of its volume.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-TRANSPORT-K10-M12",
+      "why": "thinks blood is mostly red cells"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby detail that plasma carries"
+     },
+     {
+      "misconception": "SCI-BIO-TRANSPORT-K14-M9",
+      "why": "picks waste, a nearby word about kidneys"
+     }
+    ]
+   },
+   {
+    "evidence": "The heart does not create blood; instead, it ensures continuous flow, while the kidneys filter the blood to remove waste, rather than processing food directly from the digestive tract.",
+    "kind": "difference",
+    "q": "How is the job of the heart different from the job of the kidneys?",
+    "options": [
+     "Heart keeps blood flowing; kidneys clean it",
+     "Heart creates blood; kidneys clean it",
+     "Heart keeps blood flowing; kidneys process food",
+     "Heart cleans blood; kidneys keep it flowing"
+    ],
+    "explain": "The heart pumps blood in a continuous flow; the kidneys filter blood to remove waste.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-TRANSPORT-K12-M3",
+      "why": "thinks the heart makes blood"
+     },
+     {
+      "misconception": "SCI-BIO-TRANSPORT-K14-M9",
+      "why": "thinks kidneys make urine directly from food"
+     },
+     {
+      "misconception": null,
+      "why": "swaps the two organs' jobs"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 31.1
+}

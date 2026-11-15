@@ -1,0 +1,139 @@
+{
+ "source": "train-0102-SCI-PHY-CURRENTEFFECTS.json",
+ "job": {
+  "job": "train-0102-SCI-PHY-CURRENTEFFECTS",
+  "topic_id": "SCI-PHY-CURRENTEFFECTS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a news-style report about a real-world situation",
+  "seed": 102
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2916,
+  "promptTokenCount": 2
+ },
+ "passage": "In the bustling city of Vidyut Nagar, local electrician Mr. Sharma was inspecting a household circuit after a minor power surge. He explained to his young apprentice that a battery is actually a combination of two or more cells connected together, rather than just a single cell. He pointed to the circuit diagram, noting that the long, thin line in the cell symbol represents the positive terminal. While inspecting the wiring, he highlighted the importance of the electric fuse. He clarified that a fuse is a safety device designed to melt and break the circuit when current exceeds a safe limit, rather than slowing down the flow of electricity. He also demonstrated how an electromagnet works by wrapping a wire around an iron nail. He explained that an electromagnet is a temporary magnet that only functions when electricity flows through the coil. To increase the magnetic strength, he added more turns of wire to the coil, explaining that more turns create a stronger magnetic field. Finally, he reminded his apprentice that current is not consumed by the bulb; instead, the same amount of current that enters the bulb leaves it, having simply converted electrical energy into light and heat.",
+ "menu_ids": [
+  "SCI-PHY-CURRENTEFFECTS-K14-M1",
+  "SCI-PHY-CURRENTEFFECTS-K14-M2",
+  "SCI-PHY-CURRENTEFFECTS-K12-M3",
+  "SCI-PHY-CURRENTEFFECTS-K13-M4",
+  "SCI-PHY-CURRENTEFFECTS-K16-M6",
+  "SCI-PHY-CURRENTEFFECTS-K16-M7",
+  "SCI-PHY-CURRENTEFFECTS-K17-M8",
+  "SCI-PHY-CURRENTEFFECTS-K18-M9",
+  "SCI-PHY-CURRENTEFFECTS-K19-M11",
+  "SCI-PHY-CURRENTEFFECTS-K17-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "He clarified that a fuse is a safety device designed to melt and break the circuit when current exceeds a safe limit, rather than slowing down the flow of electricity.",
+    "kind": "what_if",
+    "q": "Too much current suddenly flows in a house circuit. What does the fuse do?",
+    "options": [
+     "Its wire melts and cuts off the current",
+     "It slows the current down to a safe level",
+     "It sends the extra current back to the cell",
+     "Its wire gets thicker to carry more current"
+    ],
+    "explain": "A fuse melts and breaks the circuit when current is too high; it does not slow current.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-CURRENTEFFECTS-K16-M6",
+      "why": "thinks a fuse slows down the current"
+     },
+     {
+      "misconception": null,
+      "why": "imagines extra current is stored or returned"
+     },
+     {
+      "misconception": "SCI-PHY-CURRENTEFFECTS-K16-M7",
+      "why": "thinks a thicker fuse wire is safer"
+     }
+    ]
+   },
+   {
+    "evidence": "He explained that an electromagnet is a temporary magnet that only functions when electricity flows through the coil.",
+    "kind": "what_if",
+    "q": "Mr. Sharma switches off the current to his coiled iron nail. What happens to the nail?",
+    "options": [
+     "It stops behaving like a magnet",
+     "It stays a magnet, since it was started",
+     "It gets stronger as the wire cools down",
+     "It attracts only things touching the wire"
+    ],
+    "explain": "An electromagnet is temporary; it works only while electricity flows through the coil.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-CURRENTEFFECTS-K18-M9",
+      "why": "thinks electricity only starts a permanent magnet"
+     },
+     {
+      "misconception": null,
+      "why": "guesses switching off adds strength"
+     },
+     {
+      "misconception": "SCI-PHY-CURRENTEFFECTS-K17-M8",
+      "why": "thinks magnetic effect needs touching the wire"
+     }
+    ]
+   },
+   {
+    "evidence": "To increase the magnetic strength, he added more turns of wire to the coil, explaining that more turns create a stronger magnetic field.",
+    "kind": "which_explains",
+    "q": "Coil A has 20 turns and coil B has 50 turns on the same nail. Which is stronger?",
+    "options": [
+     "Coil B, as extra turns add strength",
+     "Coil A, as electricity travels a shorter path",
+     "Coil A, as fewer turns use less current",
+     "Coil B, but only after the current stops"
+    ],
+    "explain": "More turns of wire make a stronger magnetic field, so the 50-turn coil is stronger.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-CURRENTEFFECTS-K19-M11",
+      "why": "thinks a longer path makes the magnet weaker"
+     },
+     {
+      "misconception": "SCI-PHY-CURRENTEFFECTS-K14-M1",
+      "why": "thinks the coil uses up current"
+     },
+     {
+      "misconception": "SCI-PHY-CURRENTEFFECTS-K18-M9",
+      "why": "thinks an electromagnet works without current"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, he reminded his apprentice that current is not consumed by the bulb; instead, the same amount of current that enters the bulb leaves it, having simply converted electrical energy into light and heat.",
+    "kind": "how",
+    "q": "Some current flows into a glowing bulb. How much current comes out of the other side?",
+    "options": [
+     "The same amount that went in",
+     "Less, as the bulb uses some up",
+     "More, as light and heat are added",
+     "None, as it all turns into light"
+    ],
+    "explain": "The bulb does not use up current; the same current leaves it, only energy changes form.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-CURRENTEFFECTS-K14-M1",
+      "why": "thinks the bulb consumes some current"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the idea, thinks light adds current"
+     },
+     {
+      "misconception": null,
+      "why": "confuses current with energy turned into light"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 30.9
+}

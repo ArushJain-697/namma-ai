@@ -1,0 +1,169 @@
+{
+ "source": "train-0197-GEN-INTERNET.json",
+ "job": {
+  "job": "train-0197-GEN-INTERNET",
+  "topic_id": "GEN-INTERNET",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a news-style report about a real-world situation",
+  "seed": 197
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3404,
+  "promptTokenCount": 2
+ },
+ "passage": "In a recent digital infrastructure update, engineers highlighted how our global connectivity functions. While we often use Wi-Fi to connect our devices at home, this is merely a local wireless link to a router, which then connects to an Internet Service Provider (ISP) through physical cables. Many people mistakenly believe the internet is entirely wireless, but the vast majority of global data travels through massive fiber-optic cables laid deep under the ocean. These cables use pulses of light, not electricity, to carry data across continents at incredible speeds. When you send a photo to a friend, it is not transmitted as one single block. Instead, the file is broken down into tiny, manageable pieces called packets. These packets travel independently across various paths through the network and are reassembled by the receiving device. Furthermore, every device connected to this network, including your smart refrigerator or CCTV camera, is assigned a unique IP address to ensure data reaches the correct destination. Finally, when you upload files to the cloud, they are not stored in a magical space in the sky. They are actually saved on physical, high-performance servers located in secure data centers on the ground, which require constant maintenance and electricity to operate.",
+ "menu_ids": [
+  "GEN-INTERNET-K15-M1",
+  "GEN-INTERNET-K15-M2",
+  "GEN-INTERNET-K16-M3",
+  "GEN-INTERNET-K18-M4",
+  "GEN-INTERNET-K17-M5",
+  "GEN-INTERNET-K19-M6",
+  "GEN-INTERNET-K20-M7",
+  "GEN-INTERNET-K21-M8",
+  "GEN-INTERNET-K22-M9",
+  "GEN-INTERNET-K23-M10",
+  "GEN-INTERNET-K24-M11",
+  "GEN-INTERNET-K26-M13",
+  "GEN-INTERNET-K27-M14",
+  "GEN-INTERNET-K12-M15"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "While we often use Wi-Fi to connect our devices at home, this is merely a local wireless link to a router, which then connects to an Internet Service Provider (ISP) through physical cables.",
+    "kind": "which_explains",
+    "q": "When your phone uses home Wi-Fi, what is it directly linked to?",
+    "options": [
+     "The router, which then links to the ISP",
+     "The whole internet, straight through the air",
+     "The one giant computer that is the internet",
+     "The satellite that carries all internet data"
+    ],
+    "explain": "Wi-Fi is only a local wireless link to the router; the router reaches the ISP by cables.",
+    "wrong": [
+     {
+      "misconception": "GEN-INTERNET-K18-M4",
+      "why": "thinks Wi-Fi and the internet are the same"
+     },
+     {
+      "misconception": "GEN-INTERNET-K15-M2",
+      "why": "thinks the internet is one giant computer"
+     },
+     {
+      "misconception": "GEN-INTERNET-K27-M14",
+      "why": "thinks devices connect straight to satellites"
+     }
+    ]
+   },
+   {
+    "evidence": "Many people mistakenly believe the internet is entirely wireless, but the vast majority of global data travels through massive fiber-optic cables laid deep under the ocean.",
+    "kind": "what_if",
+    "q": "Priya video-calls her cousin in the USA. How does most of the call data cross the ocean?",
+    "options": [
+     "Through cables laid on the ocean floor",
+     "Through the air as long-range Wi-Fi",
+     "Through satellites, with no cables at all",
+     "Through her router, which creates the internet"
+    ],
+    "explain": "Most global data travels through huge fiber-optic cables deep under the ocean, not through the air.",
+    "wrong": [
+     {
+      "misconception": "GEN-INTERNET-K12-M15",
+      "why": "thinks the whole path is wireless"
+     },
+     {
+      "misconception": "GEN-INTERNET-K27-M14",
+      "why": "thinks satellites do the job without cables"
+     },
+     {
+      "misconception": "GEN-INTERNET-K16-M3",
+      "why": "thinks the router makes the internet"
+     }
+    ]
+   },
+   {
+    "evidence": "These cables use pulses of light, not electricity, to carry data across continents at incredible speeds.",
+    "kind": "recall",
+    "q": "What carries the data inside undersea fiber-optic cables?",
+    "options": [
+     "Flashes of light moving along the fibers",
+     "Electric current flowing through copper wires",
+     "Radio waves travelling through the seawater",
+     "Wi-Fi signals passed along from the shore"
+    ],
+    "explain": "Undersea fiber-optic cables carry data as pulses of light, not electricity.",
+    "wrong": [
+     {
+      "misconception": "GEN-INTERNET-K26-M13",
+      "why": "thinks the cables carry electricity in copper"
+     },
+     {
+      "misconception": null,
+      "why": "thinks signals travel through water as radio waves"
+     },
+     {
+      "misconception": "GEN-INTERNET-K18-M4",
+      "why": "thinks all internet data is Wi-Fi"
+     }
+    ]
+   },
+   {
+    "evidence": "These packets travel independently across various paths through the network and are reassembled by the receiving device.",
+    "kind": "how",
+    "q": "Asha sends a photo to a friend. How do the pieces of the photo reach the friend?",
+    "options": [
+     "By different routes, then rejoined by the receiver",
+     "By one shared route, arriving in order",
+     "By being joined into one block first",
+     "By one central computer that forwards them"
+    ],
+    "explain": "Packets travel independently on various paths and the receiving device puts them back together.",
+    "wrong": [
+     {
+      "misconception": "GEN-INTERNET-K24-M11",
+      "why": "thinks all packets take the same path in order"
+     },
+     {
+      "misconception": "GEN-INTERNET-K23-M10",
+      "why": "thinks a photo travels as one single block"
+     },
+     {
+      "misconception": "GEN-INTERNET-K15-M2",
+      "why": "thinks one giant computer runs the internet"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, every device connected to this network, including your smart refrigerator or CCTV camera, is assigned a unique IP address to ensure data reaches the correct destination.",
+    "kind": "what_if",
+    "q": "Arun's family connects a new CCTV camera to their network. Will it get an IP address?",
+    "options": [
+     "Yes, every connected device gets its own",
+     "No, only computers and phones get one",
+     "No, it just uses the router's address",
+     "Yes, but only to show their house location"
+    ],
+    "explain": "Every connected device, even a CCTV camera, gets a unique IP address so data reaches it.",
+    "wrong": [
+     {
+      "misconception": "GEN-INTERNET-K20-M7",
+      "why": "thinks only computers and phones have IP addresses"
+     },
+     {
+      "misconception": null,
+      "why": "thinks devices share one address, ignoring 'unique'"
+     },
+     {
+      "misconception": "GEN-INTERNET-K21-M8",
+      "why": "thinks an IP address shows exactly where someone lives"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 35.6
+}

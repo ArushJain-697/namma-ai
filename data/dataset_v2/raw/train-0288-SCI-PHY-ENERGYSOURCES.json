@@ -1,0 +1,165 @@
+{
+ "source": "train-0288-SCI-PHY-ENERGYSOURCES.json",
+ "job": {
+  "job": "train-0288-SCI-PHY-ENERGYSOURCES",
+  "topic_id": "SCI-PHY-ENERGYSOURCES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a passage rich in numbers, dates or measurements",
+  "seed": 288
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1588,
+  "promptTokenCount": 2
+ },
+ "passage": "Energy production methods vary significantly in their impact and operation. Solar photovoltaic panels convert sunlight directly into electricity using the photoelectric effect, which relies on light intensity rather than high ambient temperatures. In contrast, wind turbines function by capturing the kinetic energy of moving air to rotate blades, which then drive a generator to produce electricity. Hydroelectric power plants utilize the potential energy of water stored at a height in a reservoir; as water flows downward, it gains kinetic energy to spin turbines, demonstrating that energy is transformed rather than created from nothing. Furthermore, nuclear power plants generate electricity through controlled fission reactions in a reactor core, producing steam that turns turbines. The white plumes often seen rising from these plants are merely water vapor released from cooling towers, not radioactive gases. While some energy sources like solar and wind are renewable, they are not infinite; their long-term availability depends on sustainable management and infrastructure. Conversely, non-renewable sources like fossil fuels are finite because they take millions of years to form, meaning they cannot be replenished on a human timescale. Understanding these distinctions is vital for managing our global energy consumption, which currently exceeds 160,000 terawatt-hours annually, to ensure a stable future for the planet.",
+ "menu_ids": [
+  "SCI-PHY-ENERGYSOURCES-K11-M2",
+  "SCI-PHY-ENERGYSOURCES-K12-M3",
+  "SCI-PHY-ENERGYSOURCES-K17-M4",
+  "SCI-PHY-ENERGYSOURCES-K15-M5",
+  "SCI-PHY-ENERGYSOURCES-K19-M6",
+  "SCI-PHY-ENERGYSOURCES-K9-M7",
+  "SCI-PHY-ENERGYSOURCES-K14-M8",
+  "SCI-PHY-ENERGYSOURCES-K18-M9",
+  "SCI-PHY-ENERGYSOURCES-K8-M11",
+  "SCI-PHY-ENERGYSOURCES-K16-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Solar photovoltaic panels convert sunlight directly into electricity using the photoelectric effect, which relies on light intensity rather than high ambient temperatures.",
+    "kind": "what_if",
+    "q": "Two identical solar panels get equal sunlight. One is in a hot desert, one in a cool hill. What happens?",
+    "options": [
+     "Both give about the same electricity",
+     "The hot desert panel gives much more",
+     "The cool hill panel gives much more",
+     "Neither works without extra heat from the sun"
+    ],
+    "explain": "Panels depend on light intensity, not on how hot the air is, so equal light gives similar output.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-ENERGYSOURCES-K11-M2",
+      "why": "thinks solar panels work better in hot weather"
+     },
+     {
+      "misconception": null,
+      "why": "thinks cold weather helps the panel more"
+     },
+     {
+      "misconception": null,
+      "why": "thinks panels need heat, not light"
+     }
+    ]
+   },
+   {
+    "evidence": "In contrast, wind turbines function by capturing the kinetic energy of moving air to rotate blades, which then drive a generator to produce electricity.",
+    "kind": "which_explains",
+    "q": "A windmill's blades spin fast on a breezy day. What is the cause of the spinning?",
+    "options": [
+     "Moving air pushes the blades round",
+     "The generator makes the air move",
+     "The blades first create the wind",
+     "Electricity inside turns the blades"
+    ],
+    "explain": "Moving air has kinetic energy that rotates the blades, which then drive the generator.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "reverses cause and effect between generator and air"
+     },
+     {
+      "misconception": "SCI-PHY-ENERGYSOURCES-K12-M3",
+      "why": "thinks spinning blades create the wind"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the order of electricity and rotation"
+     }
+    ]
+   },
+   {
+    "evidence": "Hydroelectric power plants utilize the potential energy of water stored at a height in a reservoir; as water flows downward, it gains kinetic energy to spin turbines, demonstrating that energy is transformed rather than created from nothing.",
+    "kind": "how",
+    "q": "How does a dam's stored water end up spinning the turbines?",
+    "options": [
+     "Its height energy changes into motion energy",
+     "It makes new energy from nothing at all",
+     "It is pumped upward to push the blades",
+     "Its heat energy turns into steam power"
+    ],
+    "explain": "Water stored high has potential energy, which turns into kinetic energy as it falls and spins turbines.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-ENERGYSOURCES-K9-M7",
+      "why": "thinks dams create energy from nothing"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the direction the water flows"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up with nuclear plants that use steam"
+     }
+    ]
+   },
+   {
+    "evidence": "The white plumes often seen rising from these plants are merely water vapor released from cooling towers, not radioactive gases.",
+    "kind": "which_example",
+    "q": "A child sees white clouds above a nuclear plant tower. What are they?",
+    "options": [
+     "Water vapour from the cooling towers",
+     "Radioactive gas escaping from the reactor",
+     "Smoke from burning fossil fuels inside",
+     "Steam that has turned into poisonous dust"
+    ],
+    "explain": "The white plumes are only water vapour from cooling towers, not radioactive gases.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-ENERGYSOURCES-K18-M9",
+      "why": "thinks white smoke is radioactive"
+     },
+     {
+      "misconception": null,
+      "why": "thinks all plants burn fuel and make smoke"
+     },
+     {
+      "misconception": null,
+      "why": "thinks steam becomes harmful dust"
+     }
+    ]
+   },
+   {
+    "evidence": "While some energy sources like solar and wind are renewable, they are not infinite; their long-term availability depends on sustainable management and infrastructure.",
+    "kind": "why",
+    "q": "Why can a renewable source still run short if people use it carelessly?",
+    "options": [
+     "It is not infinite and needs good management",
+     "It can never run out whatever we do",
+     "It is finite because it takes millions of years",
+     "It is used up once, like fossil fuels"
+    ],
+    "explain": "Renewable sources are not infinite; lasting supply depends on sustainable management and infrastructure.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-ENERGYSOURCES-K17-M4",
+      "why": "thinks renewable sources can never be exhausted"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up renewable with fossil fuel formation"
+     },
+     {
+      "misconception": "SCI-PHY-ENERGYSOURCES-K16-M12",
+      "why": "thinks renewable sources are used up like non-renewable ones"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 15.3
+}

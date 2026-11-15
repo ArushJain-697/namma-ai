@@ -1,0 +1,164 @@
+{
+ "source": "train-0035-MAT-COORDGEOM.json",
+ "job": {
+  "job": "train-0035-MAT-COORDGEOM",
+  "topic_id": "MAT-COORDGEOM",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a rule explained with two contrasting examples",
+  "seed": 35
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3826,
+  "promptTokenCount": 2
+ },
+ "passage": "In the Cartesian plane, we locate points using an ordered pair (x, y), where the first number x represents the horizontal distance from the y-axis, and the second number y represents the vertical distance from the x-axis. For example, the point (2, 5) is distinct from (5, 2) because the order of coordinates defines the specific position. The origin, where the two axes intersect, is always denoted as (0, 0). Points lying exactly on the x-axis have a y-coordinate of 0, such as (3, 0), while points on the y-axis have an x-coordinate of 0, such as (0, 4). To calculate the distance between two points (x1, y1) and (x2, y2), we must use the formula involving the square root of the sum of squared differences: the square root of (x2 - x1)² + (y2 - y1)². This squaring process ensures the distance is always positive, regardless of the order of subtraction. For instance, the distance between (1, 2) and (4, 6) is 5 units. Conversely, if a student incorrectly calculates distance by simply adding differences like (x2 - x1) + (y2 - y1), they will arrive at an incorrect value. Always remember that the x and y axes must share a consistent scale to represent geometric shapes accurately.",
+ "menu_ids": [
+  "MAT-COORDGEOM-K13-M3",
+  "MAT-COORDGEOM-K14-M4",
+  "MAT-COORDGEOM-K6-M5",
+  "MAT-COORDGEOM-K17-M6",
+  "MAT-COORDGEOM-K19-M7",
+  "MAT-COORDGEOM-K15-M8",
+  "MAT-COORDGEOM-K16-M9",
+  "MAT-COORDGEOM-K20-M10",
+  "MAT-COORDGEOM-K21-M11"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "In the Cartesian plane, we locate points using an ordered pair (x, y), where the first number x represents the horizontal distance from the y-axis, and the second number y represents the vertical distance from the x-axis.",
+    "kind": "how",
+    "q": "The point (3, 7) is plotted. How far is it from the y-axis?",
+    "options": [
+     "3 units, from the first number",
+     "7 units, from the second number",
+     "10 units, from adding both numbers",
+     "4 units, from subtracting the two numbers"
+    ],
+    "explain": "The first number, x, gives the horizontal distance from the y-axis, so it is 3 units.",
+    "wrong": [
+     {
+      "misconception": "MAT-COORDGEOM-K14-M4",
+      "why": "swaps which number is horizontal and which is vertical"
+     },
+     {
+      "misconception": null,
+      "why": "thinks both numbers combine into one distance"
+     },
+     {
+      "misconception": null,
+      "why": "does an operation on the numbers instead of reading x"
+     }
+    ]
+   },
+   {
+    "evidence": "For example, the point (2, 5) is distinct from (5, 2) because the order of coordinates defines the specific position.",
+    "kind": "which_explains",
+    "q": "Meena plots (2, 5) and Kabir plots (5, 2). What is true about their points?",
+    "options": [
+     "They are different, because order fixes the position",
+     "They are the same, because the numbers match",
+     "They are the same, because both numbers are positive",
+     "They are different, because 5 is larger than 2"
+    ],
+    "explain": "The order of coordinates decides the position, so (2, 5) and (5, 2) are different points.",
+    "wrong": [
+     {
+      "misconception": "MAT-COORDGEOM-K15-M8",
+      "why": "thinks the same numbers give the same point"
+     },
+     {
+      "misconception": null,
+      "why": "thinks points with positive numbers are all alike"
+     },
+     {
+      "misconception": null,
+      "why": "gets the conclusion right but gives the wrong reason"
+     }
+    ]
+   },
+   {
+    "evidence": "Points lying exactly on the x-axis have a y-coordinate of 0, such as (3, 0), while points on the y-axis have an x-coordinate of 0, such as (0, 4).",
+    "kind": "what_if",
+    "q": "Where will the point (6, 0) be found on the graph?",
+    "options": [
+     "On the x-axis, since its second number is 0",
+     "On the y-axis, since one number is 0",
+     "In the first quadrant, since 6 is positive",
+     "At the origin, since it contains a zero"
+    ],
+    "explain": "A point with y-coordinate 0 lies on the x-axis, like (3, 0) in the passage.",
+    "wrong": [
+     {
+      "misconception": "MAT-COORDGEOM-K17-M6",
+      "why": "thinks points on the x-axis have x = 0"
+     },
+     {
+      "misconception": "MAT-COORDGEOM-K19-M7",
+      "why": "thinks a positive number puts it in the first quadrant"
+     },
+     {
+      "misconception": null,
+      "why": "thinks any zero means the origin"
+     }
+    ]
+   },
+   {
+    "evidence": "This squaring process ensures the distance is always positive, regardless of the order of subtraction.",
+    "kind": "what_if",
+    "q": "Asha finds the distance from A to B; Ravi finds it from B to A. How do their answers compare?",
+    "options": [
+     "They are equal, because squaring removes negative signs",
+     "They are different, because subtraction order changes it",
+     "They are opposite, because one difference becomes negative",
+     "They are equal, but only for first-quadrant points"
+    ],
+    "explain": "Squaring the differences makes the distance positive, whichever order you subtract in, so both answers match.",
+    "wrong": [
+     {
+      "misconception": "MAT-COORDGEOM-K21-M11",
+      "why": "thinks the order of subtraction changes the distance"
+     },
+     {
+      "misconception": null,
+      "why": "forgets that squaring removes the negative sign"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the rule works only for positive coordinates"
+     }
+    ]
+   },
+   {
+    "evidence": "Conversely, if a student incorrectly calculates distance by simply adding differences like (x2 - x1) + (y2 - y1), they will arrive at an incorrect value.",
+    "kind": "which_explains",
+    "q": "Sohan finds the distance between (1, 2) and (4, 6) as 3 + 4 = 7. What went wrong?",
+    "options": [
+     "He added the differences without squaring them",
+     "He subtracted the coordinates in the wrong order",
+     "He swapped the x and y values",
+     "He used unequal scales on the two axes"
+    ],
+    "explain": "Square the differences, add them, then take the square root: 9 + 16 = 25, so the distance is 5.",
+    "wrong": [
+     {
+      "misconception": "MAT-COORDGEOM-K21-M11",
+      "why": "blames the order of subtraction for the error"
+     },
+     {
+      "misconception": "MAT-COORDGEOM-K14-M4",
+      "why": "thinks mixing up x and y caused it"
+     },
+     {
+      "misconception": "MAT-COORDGEOM-K16-M9",
+      "why": "mixes up drawing scale with the formula"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 43.4
+}

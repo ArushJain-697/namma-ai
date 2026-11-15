@@ -1,0 +1,162 @@
+{
+ "source": "train-0307-SOC-CIV-INSTITUTIONS.json",
+ "job": {
+  "job": "train-0307-SOC-CIV-INSTITUTIONS",
+  "topic_id": "SOC-CIV-INSTITUTIONS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a clear textbook explanation",
+  "seed": 307
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 4328,
+  "promptTokenCount": 2
+ },
+ "passage": "In the Indian democratic system, the Parliament functions as the supreme legislative authority. It consists of two houses: the Lok Sabha and the Rajya Sabha. While the Rajya Sabha is called the Upper House, the Lok Sabha holds greater power in financial and executive matters, as its members are directly elected by the people. The executive branch is divided into two parts: the political executive and the permanent executive. The political executive, led by the Prime Minister and the Council of Ministers, is elected by citizens to make major policy decisions. In contrast, the permanent executive consists of civil servants who assist the ministers in implementing these policies but do not make final political decisions themselves. It is important to note that the President is the formal head of the state, while the Prime Minister serves as the head of the government. The judiciary, including the Supreme Court, operates independently to interpret laws and resolve disputes. This structure ensures that no single body holds absolute power, maintaining the balance of our democracy. By separating the roles of policy-making and policy-implementation, the system ensures accountability and efficiency in governance, allowing the elected representatives to remain answerable to the public for all major decisions taken by the government.",
+ "menu_ids": [
+  "SOC-CIV-INSTITUTIONS-K9-M1",
+  "SOC-CIV-INSTITUTIONS-K11-M2",
+  "SOC-CIV-INSTITUTIONS-K12-M3",
+  "SOC-CIV-INSTITUTIONS-K4-M6",
+  "SOC-CIV-INSTITUTIONS-K5-M7",
+  "SOC-CIV-INSTITUTIONS-K10-M8",
+  "SOC-CIV-INSTITUTIONS-K11-M10"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "While the Rajya Sabha is called the Upper House, the Lok Sabha holds greater power in financial and executive matters, as its members are directly elected by the people.",
+    "kind": "why",
+    "q": "Why does the Lok Sabha have more power than the Rajya Sabha?",
+    "options": [
+     "Its members are chosen by voters directly",
+     "Its House is called the Upper House",
+     "Its members are named by the President",
+     "Its House was set up before the other"
+    ],
+    "explain": "Lok Sabha members are directly elected by the people, so it holds greater power, not the Upper House.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-INSTITUTIONS-K9-M1",
+      "why": "thinks 'Upper House' means more powerful"
+     },
+     {
+      "misconception": "SOC-CIV-INSTITUTIONS-K11-M10",
+      "why": "thinks the President picks people by personal choice"
+     },
+     {
+      "misconception": null,
+      "why": "thinks older bodies hold more power"
+     }
+    ]
+   },
+   {
+    "evidence": "In contrast, the permanent executive consists of civil servants who assist the ministers in implementing these policies but do not make final political decisions themselves.",
+    "kind": "what_if",
+    "q": "A new policy must be finally decided. Who takes that political decision?",
+    "options": [
+     "The ministers elected by the people",
+     "The civil servants who carry it out",
+     "The members of the Rajya Sabha",
+     "The judges of the Supreme Court"
+    ],
+    "explain": "Civil servants only help implement policy; the elected political executive makes the final political decisions.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-INSTITUTIONS-K12-M3",
+      "why": "thinks civil servants make final policy decisions"
+     },
+     {
+      "misconception": "SOC-CIV-INSTITUTIONS-K9-M1",
+      "why": "thinks the Upper House decides everything"
+     },
+     {
+      "misconception": null,
+      "why": "thinks judges make government policy"
+     }
+    ]
+   },
+   {
+    "evidence": "It is important to note that the President is the formal head of the state, while the Prime Minister serves as the head of the government.",
+    "kind": "recall",
+    "q": "Who is the formal head of the state in India?",
+    "options": [
+     "The President, who is not head of government",
+     "The Prime Minister, who leads the whole country",
+     "The Council of Ministers, who make policy",
+     "The Supreme Court, which interprets all laws"
+    ],
+    "explain": "The President is the formal head of the state; the Prime Minister heads only the government.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-INSTITUTIONS-K11-M2",
+      "why": "thinks the Prime Minister is head of the country"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up ministers with the head of state"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the judiciary with the head of state"
+     }
+    ]
+   },
+   {
+    "evidence": "The judiciary, including the Supreme Court, operates independently to interpret laws and resolve disputes.",
+    "kind": "what_if",
+    "q": "A citizen and a minister disagree about what a law means. Who settles it?",
+    "options": [
+     "The Supreme Court, acting independently",
+     "The Prime Minister, as head of government",
+     "The Lok Sabha, as the greater House",
+     "The civil servants, who carry out policy"
+    ],
+    "explain": "The independent judiciary, including the Supreme Court, interprets laws and resolves disputes.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-INSTITUTIONS-K11-M2",
+      "why": "thinks the Prime Minister has the final word"
+     },
+     {
+      "misconception": "SOC-CIV-INSTITUTIONS-K9-M1",
+      "why": "thinks the more powerful House settles everything"
+     },
+     {
+      "misconception": "SOC-CIV-INSTITUTIONS-K12-M3",
+      "why": "thinks civil servants make final decisions"
+     }
+    ]
+   },
+   {
+    "evidence": "This structure ensures that no single body holds absolute power, maintaining the balance of our democracy.",
+    "kind": "why",
+    "q": "Why is government work shared among Parliament, the executive and the judiciary?",
+    "options": [
+     "So that one body cannot hold all the power",
+     "So that the Rajya Sabha can overrule the Lok Sabha",
+     "So that the President can choose any Prime Minister",
+     "So that each body can work without any limits"
+    ],
+    "explain": "Sharing work means no single body gets absolute power, which keeps democracy balanced.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-INSTITUTIONS-K9-M1",
+      "why": "thinks the Upper House should outrank the Lok Sabha"
+     },
+     {
+      "misconception": "SOC-CIV-INSTITUTIONS-K11-M10",
+      "why": "thinks the President can pick anyone"
+     },
+     {
+      "misconception": null,
+      "why": "thinks separation means freedom from all checks"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 35.1
+}

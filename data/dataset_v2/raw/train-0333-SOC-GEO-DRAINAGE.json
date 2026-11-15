@@ -1,0 +1,141 @@
+{
+ "source": "train-0333-SOC-GEO-DRAINAGE.json",
+ "job": {
+  "job": "train-0333-SOC-GEO-DRAINAGE",
+  "topic_id": "SOC-GEO-DRAINAGE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a conversation between a teacher and two students",
+  "seed": 333
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1301,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today, let's discuss Indian rivers. Rohan, why do Himalayan rivers flow all year? Rohan: I think it is because of the heavy rainfall in the mountains. Teacher: Actually, that is a common error. They are perennial because they receive water from both melting snow and seasonal rain. Priya, what about the Narmada and Tapi? Priya: They flow south like the Ganga, right? Teacher: Not quite. Unlike most rivers flowing into the Bay of Bengal, these two flow westwards into the Arabian Sea. Now, consider a drainage basin. It is not just the river channel; it includes the entire area drained by a single river system, including all its tributaries. Finally, regarding pollution, we must realize it is not just industrial waste. Urban sewage, agricultural runoff, and religious offerings also significantly degrade our water quality. We must look at the entire system to understand these rivers properly.",
+ "menu_ids": [
+  "SOC-GEO-DRAINAGE-K2-M1",
+  "SOC-GEO-DRAINAGE-K3-M2",
+  "SOC-GEO-DRAINAGE-K11-M3",
+  "SOC-GEO-DRAINAGE-K9-M4",
+  "SOC-GEO-DRAINAGE-K2-M5",
+  "SOC-GEO-DRAINAGE-K3-M6",
+  "SOC-GEO-DRAINAGE-K5-M7",
+  "SOC-GEO-DRAINAGE-K6-M8",
+  "SOC-GEO-DRAINAGE-K7-M9",
+  "SOC-GEO-DRAINAGE-K8-M10",
+  "SOC-GEO-DRAINAGE-K10-M11",
+  "SOC-GEO-DRAINAGE-K12-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "They are perennial because they receive water from both melting snow and seasonal rain.",
+    "kind": "why",
+    "q": "Why do Himalayan rivers keep flowing even in the dry months?",
+    "options": [
+     "Snowmelt adds water when the rains stop",
+     "Heavy mountain rain falls through the whole year",
+     "They begin in plains and flow uphill",
+     "They are older and bigger than other rivers"
+    ],
+    "explain": "Himalayan rivers get water from melting snow as well as seasonal rain, so they flow all year.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-DRAINAGE-K2-M1",
+      "why": "thinks rainfall alone keeps them flowing"
+     },
+     {
+      "misconception": "SOC-GEO-DRAINAGE-K2-M5",
+      "why": "thinks the rivers start in plains and flow upward"
+     },
+     {
+      "misconception": "SOC-GEO-DRAINAGE-K3-M6",
+      "why": "thinks age and size explain constant flow"
+     }
+    ]
+   },
+   {
+    "evidence": "Unlike most rivers flowing into the Bay of Bengal, these two flow westwards into the Arabian Sea.",
+    "kind": "what_if",
+    "q": "A boat is dropped into the Narmada river. Which sea will it finally reach?",
+    "options": [
+     "The Arabian Sea, in the west",
+     "The Bay of Bengal, in the east",
+     "The Arabian Sea, after turning south",
+     "The Bay of Bengal, like the Ganga"
+    ],
+    "explain": "The Narmada and Tapi flow westwards and drain into the Arabian Sea, unlike most Peninsular rivers.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-DRAINAGE-K7-M9",
+      "why": "thinks Narmada flows east like most Peninsular rivers"
+     },
+     {
+      "misconception": "SOC-GEO-DRAINAGE-K3-M2",
+      "why": "thinks all rivers flow north to south"
+     },
+     {
+      "misconception": null,
+      "why": "copies the Ganga's route onto the Narmada"
+     }
+    ]
+   },
+   {
+    "evidence": "It is not just the river channel; it includes the entire area drained by a single river system, including all its tributaries.",
+    "kind": "which_example",
+    "q": "Rain falls on a hill far from the Ganga's channel. When is it part of its basin?",
+    "options": [
+     "When its water drains into the Ganga system",
+     "When the hill lies right beside the channel",
+     "When the rain falls directly into the channel",
+     "When the hill is higher than the channel"
+    ],
+    "explain": "A drainage basin is the whole area drained by a river system and its tributaries, not only the channel.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-DRAINAGE-K11-M3",
+      "why": "thinks the basin is only the channel and its edge"
+     },
+     {
+      "misconception": "SOC-GEO-DRAINAGE-K11-M3",
+      "why": "thinks only water falling in the channel counts"
+     },
+     {
+      "misconception": null,
+      "why": "thinks height decides basin membership"
+     }
+    ]
+   },
+   {
+    "evidence": "Urban sewage, agricultural runoff, and religious offerings also significantly degrade our water quality.",
+    "kind": "what_if",
+    "q": "A factory near a river is closed down. Will the river become fully clean?",
+    "options": [
+     "No, sewage and farm runoff still pollute it",
+     "Yes, factories are the only source of pollution",
+     "Yes, because rivers clean themselves quickly",
+     "No, because religious offerings are the only cause"
+    ],
+    "explain": "Pollution also comes from urban sewage, agricultural runoff and religious offerings, not just industrial waste.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-DRAINAGE-K9-M4",
+      "why": "thinks pollution is only industrial waste"
+     },
+     {
+      "misconception": null,
+      "why": "thinks rivers clean themselves automatically"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises one named source as the only cause"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 12.8
+}

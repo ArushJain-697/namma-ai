@@ -1,0 +1,139 @@
+{
+ "source": "train-0250-SCI-BIO-ANIMALNUTRITION.json",
+ "job": {
+  "job": "train-0250-SCI-BIO-ANIMALNUTRITION",
+  "topic_id": "SCI-BIO-ANIMALNUTRITION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a comparison of two related ideas",
+  "seed": 250
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1415,
+  "promptTokenCount": 2
+ },
+ "passage": "Digestion is a complex process that transforms food into usable energy, but it does not happen in a single step or organ. Many students mistakenly believe the stomach melts food into liquid or creates energy, but the stomach actually uses acid to kill bacteria and break down proteins, not to liquefy everything or produce energy. Energy production occurs later in the cells after nutrients are absorbed. Furthermore, humans cannot digest grass like ruminants because we lack the specific bacteria needed to break down cellulose, not because our teeth are too weak. While cows have a specialized four-chambered organ system to process tough plant matter, they do not have four separate stomachs. Another common confusion involves the large intestine; it is primarily responsible for absorbing water and salts from undigested food, whereas the small intestine is where the most important nutrients are absorbed into the bloodstream. Finally, it is important to distinguish between egestion and excretion. Egestion is the removal of undigested solid waste from the body, while excretion is the process of removing metabolic waste products like urea from the blood. Understanding these differences helps clarify how our bodies maintain health and process the fuel we consume daily.",
+ "menu_ids": [
+  "SCI-BIO-ANIMALNUTRITION-K7-M2",
+  "SCI-BIO-ANIMALNUTRITION-K9-M3",
+  "SCI-BIO-ANIMALNUTRITION-K6-M4",
+  "SCI-BIO-ANIMALNUTRITION-K17-M6",
+  "SCI-BIO-ANIMALNUTRITION-K19-M7",
+  "SCI-BIO-ANIMALNUTRITION-K10-M8",
+  "SCI-BIO-ANIMALNUTRITION-K6-M9",
+  "SCI-BIO-ANIMALNUTRITION-K15-M10",
+  "SCI-BIO-ANIMALNUTRITION-K8-M11",
+  "SCI-BIO-ANIMALNUTRITION-K16-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Many students mistakenly believe the stomach melts food into liquid or creates energy, but the stomach actually uses acid to kill bacteria and break down proteins, not to liquefy everything or produce energy.",
+    "kind": "which_explains",
+    "q": "Sita says the stomach acid turns all food into liquid. What does the passage show about the acid?",
+    "options": [
+     "It kills germs and helps break down proteins",
+     "It dissolves every kind of food into a thick soup",
+     "It makes the energy that the body needs",
+     "It makes food soft enough to swallow easily"
+    ],
+    "explain": "Stomach acid kills bacteria and breaks down proteins; it does not liquefy everything or make energy.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-ANIMALNUTRITION-K9-M3",
+      "why": "thinks acid melts all food"
+     },
+     {
+      "misconception": "SCI-BIO-ANIMALNUTRITION-K15-M10",
+      "why": "thinks energy is made in the stomach"
+     },
+     {
+      "misconception": "SCI-BIO-ANIMALNUTRITION-K7-M2",
+      "why": "thinks food is only made slippery to swallow"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, humans cannot digest grass like ruminants because we lack the specific bacteria needed to break down cellulose, not because our teeth are too weak.",
+    "kind": "why",
+    "q": "Why can a cow digest grass while a person who chews it for hours cannot?",
+    "options": [
+     "People lack the bacteria that break down cellulose",
+     "People have teeth that are too weak for grass",
+     "People swallow grass too fast to digest it",
+     "People have a stomach that is too small"
+    ],
+    "explain": "Humans lack the specific bacteria that break down cellulose; chewing power is not the reason.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-ANIMALNUTRITION-K17-M6",
+      "why": "thinks more chewing would fix it"
+     },
+     {
+      "misconception": null,
+      "why": "thinks speed of swallowing matters"
+     },
+     {
+      "misconception": "SCI-BIO-ANIMALNUTRITION-K16-M12",
+      "why": "thinks the number or size of stomachs matters"
+     }
+    ]
+   },
+   {
+    "evidence": "Another common confusion involves the large intestine; it is primarily responsible for absorbing water and salts from undigested food, whereas the small intestine is where the most important nutrients are absorbed into the bloodstream.",
+    "kind": "what_if",
+    "q": "A doctor removes a patient's large intestine. Which job would the body most likely lose?",
+    "options": [
+     "Taking back water and salts from leftovers",
+     "Taking in the most important nutrients from food",
+     "Making bile to break down fats",
+     "Killing bacteria that enter with food"
+    ],
+    "explain": "The large intestine mainly absorbs water and salts from undigested food; nutrients are absorbed in the small intestine.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-ANIMALNUTRITION-K6-M4",
+      "why": "thinks the large intestine absorbs key nutrients"
+     },
+     {
+      "misconception": "SCI-BIO-ANIMALNUTRITION-K10-M8",
+      "why": "thinks bile is made in the digestive tract's later parts"
+     },
+     {
+      "misconception": null,
+      "why": "mixes it up with the job of stomach acid"
+     }
+    ]
+   },
+   {
+    "evidence": "Egestion is the removal of undigested solid waste from the body, while excretion is the process of removing metabolic waste products like urea from the blood.",
+    "kind": "difference",
+    "q": "Which example shows egestion and not excretion?",
+    "options": [
+     "Passing out food leftovers that were never digested",
+     "Removing urea made by the body's cells",
+     "Clearing waste products out of the blood",
+     "Getting rid of any waste the body makes"
+    ],
+    "explain": "Egestion removes undigested solid waste; removing urea from the blood is excretion.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-ANIMALNUTRITION-K6-M9",
+      "why": "thinks excretion and egestion are the same"
+     },
+     {
+      "misconception": null,
+      "why": "picks the example of excretion"
+     },
+     {
+      "misconception": "SCI-BIO-ANIMALNUTRITION-K6-M9",
+      "why": "treats both words as one general process"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 14.1
+}

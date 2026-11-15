@@ -1,0 +1,168 @@
+{
+ "source": "train-0092-SCI-CHM-PURE.json",
+ "job": {
+  "job": "train-0092-SCI-CHM-PURE",
+  "topic_id": "SCI-CHM-PURE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a conversation between a teacher and two students",
+  "seed": 92
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4609,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today, let us discuss the nature of matter. Rohan, if you mix salt and water, is the resulting solution a pure substance? Rohan: Yes, because I cannot see any different parts in it, so it must be pure. Teacher: Not quite, Rohan. A mixture like salt water looks uniform, but it is not a pure substance because it can be separated by physical methods. Priya: What about alloys like brass? Since I cannot see the zinc and copper separately, is brass a compound? Teacher: That is a common confusion, Priya. Alloys are mixtures because they retain the properties of their components and can be separated, unlike compounds. Priya: I see. So, if I have a compound like water, can I use filtration to separate it into hydrogen and oxygen? Teacher: No, compounds are chemically bonded. You cannot use physical methods like filtration to separate a compound into its constituent elements. Finally, remember that solutions are not always liquid. Air is a solution of gases, and it remains a mixture even if it looks clear. When we evaporate a salt solution, the water turns to gas, but the salt remains behind as a solid residue. The salt does not disappear or turn into gas during the process.",
+ "menu_ids": [
+  "SCI-CHM-PURE-K7-M2",
+  "SCI-CHM-PURE-K10-M3",
+  "SCI-CHM-PURE-K15-M4",
+  "SCI-CHM-PURE-K11-M5",
+  "SCI-CHM-PURE-K18-M7",
+  "SCI-CHM-PURE-K24-M8",
+  "SCI-CHM-PURE-K19-M9",
+  "SCI-CHM-PURE-K25-M10",
+  "SCI-CHM-PURE-K14-M11",
+  "SCI-CHM-PURE-K6-M12",
+  "SCI-CHM-PURE-K21-M13",
+  "SCI-CHM-PURE-K20-M14",
+  "SCI-CHM-PURE-K7-M15"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "A mixture like salt water looks uniform, but it is not a pure substance because it can be separated by physical methods.",
+    "kind": "why",
+    "q": "Salt water looks the same all through. Why is it still not a pure substance?",
+    "options": [
+     "Its salt and water can be split apart physically",
+     "Its salt has vanished completely into the water",
+     "Its salt and water are bonded into a compound",
+     "Its salt grains can be seen if we look closely"
+    ],
+    "explain": "Salt water looks uniform, but physical methods can separate it, so it is a mixture.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-PURE-K18-M7",
+      "why": "thinks the dissolved solute disappears"
+     },
+     {
+      "misconception": null,
+      "why": "thinks dissolving makes a new compound"
+     },
+     {
+      "misconception": null,
+      "why": "ignores that the passage says it looks uniform"
+     }
+    ]
+   },
+   {
+    "evidence": "Alloys are mixtures because they retain the properties of their components and can be separated, unlike compounds.",
+    "kind": "which_explains",
+    "q": "Priya cannot see zinc and copper separately in brass. What kind of substance is brass?",
+    "options": [
+     "A mixture, as its metals keep their properties",
+     "A compound, as its metals cannot be seen",
+     "A pure element, as it looks fully uniform",
+     "A pure substance, as it melts at one temperature"
+    ],
+    "explain": "Brass is an alloy, and alloys are mixtures because zinc and copper keep their own properties.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-PURE-K7-M15",
+      "why": "thinks alloys are compounds"
+     },
+     {
+      "misconception": "SCI-CHM-PURE-K7-M2",
+      "why": "thinks a uniform look means pure"
+     },
+     {
+      "misconception": "SCI-CHM-PURE-K6-M12",
+      "why": "thinks mixtures have a fixed melting point"
+     }
+    ]
+   },
+   {
+    "evidence": "You cannot use physical methods like filtration to separate a compound into its constituent elements.",
+    "kind": "what_if",
+    "q": "Priya pours water through filter paper. What happens to the hydrogen and oxygen in it?",
+    "options": [
+     "They stay joined, as filtering cannot break bonds",
+     "They separate, as filtering can split compounds",
+     "They separate, as water is only a mixture",
+     "They stay joined, but boiling would split them"
+    ],
+    "explain": "Water is a compound; its elements are chemically bonded, so filtration cannot separate them.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-PURE-K25-M10",
+      "why": "thinks filtration can split compounds"
+     },
+     {
+      "misconception": null,
+      "why": "thinks water is a mixture of two gases"
+     },
+     {
+      "misconception": "SCI-CHM-PURE-K19-M9",
+      "why": "thinks boiling or distilling can split a compound"
+     }
+    ]
+   },
+   {
+    "evidence": "Air is a solution of gases, and it remains a mixture even if it looks clear.",
+    "kind": "which_explains",
+    "q": "Air looks clear to us. What kind of matter is it really?",
+    "options": [
+     "A solution made of several gases",
+     "A pure substance, since it looks uniform",
+     "A compound of gases bonded together",
+     "A gas mixture, but not a solution"
+    ],
+    "explain": "Air is a solution of gases. It stays a mixture even though it looks clear.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-PURE-K7-M2",
+      "why": "thinks a uniform look means pure"
+     },
+     {
+      "misconception": null,
+      "why": "thinks mixed gases form a compound"
+     },
+     {
+      "misconception": "SCI-CHM-PURE-K10-M3",
+      "why": "thinks solutions must be liquids"
+     }
+    ]
+   },
+   {
+    "evidence": "When we evaporate a salt solution, the water turns to gas, but the salt remains behind as a solid residue.",
+    "kind": "what_if",
+    "q": "Salt water is heated until all its water evaporates. What is left behind?",
+    "options": [
+     "Solid salt, left behind as a residue",
+     "Nothing, as the salt also turns to gas",
+     "Pure water, as the salt escapes first",
+     "A new compound of salt and water"
+    ],
+    "explain": "Only the water turns to gas; the salt stays behind as a solid residue.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-PURE-K18-M7",
+      "why": "thinks the solute turns into gas too"
+     },
+     {
+      "misconception": null,
+      "why": "reverses which part turns to gas"
+     },
+     {
+      "misconception": "SCI-CHM-PURE-K24-M8",
+      "why": "thinks salt and water formed a compound"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 48.2
+}

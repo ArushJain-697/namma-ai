@@ -1,0 +1,164 @@
+{
+ "source": "train-0328-SOC-ECO-POVERTY.json",
+ "job": {
+  "job": "train-0328-SOC-ECO-POVERTY",
+  "topic_id": "SOC-ECO-POVERTY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 328
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1626,
+  "promptTokenCount": 2
+ },
+ "passage": "Many people mistakenly believe that poverty is simply a result of personal laziness or a lack of hard work. However, poverty is a complex social phenomenon rooted in historical factors like the low economic development under British colonial administration and the lack of job opportunities. To measure poverty, the government uses the 'poverty line' as a common method, but it is not a uniform fixed amount for everyone. The poverty line varies significantly between rural and urban areas because the cost of essential goods and services differs based on location and nutritional requirements. For instance, a person living in a city needs more income to afford basic necessities compared to someone in a village. To combat this, the government introduced various anti-poverty measures. One prominent initiative is the Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA). It is important to understand that MGNREGA does not provide permanent, lifelong employment. Instead, it provides a legal guarantee of at least one hundred days of wage employment in a financial year to rural households who volunteer to do unskilled manual work. This scheme acts as a safety net rather than a lifetime career, helping vulnerable groups survive during lean agricultural seasons. By understanding these structural causes and specific government interventions, we can better address the reality of poverty in India.",
+ "menu_ids": [
+  "SOC-ECO-POVERTY-K10-M1",
+  "SOC-ECO-POVERTY-K12-M3",
+  "SOC-ECO-POVERTY-K13-M4",
+  "SOC-ECO-POVERTY-K4-M6",
+  "SOC-ECO-POVERTY-K4-M7",
+  "SOC-ECO-POVERTY-K6-M8",
+  "SOC-ECO-POVERTY-K7-M9",
+  "SOC-ECO-POVERTY-K8-M10",
+  "SOC-ECO-POVERTY-K8-M11"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Many people mistakenly believe that poverty is simply a result of personal laziness or a lack of hard work.",
+    "kind": "which_explains",
+    "q": "A neighbour says poor families are poor because they are lazy. Which fact shows this is too simple?",
+    "options": [
+     "Poverty has roots in history and scarce jobs",
+     "Poor people often choose not to work",
+     "Poverty comes only from rapid population growth",
+     "Poverty affects every caste and home equally"
+    ],
+    "explain": "Poverty is a complex social problem rooted in colonial-era low development and lack of job opportunities, not laziness.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-POVERTY-K12-M3",
+      "why": "thinks poor people do not want to work"
+     },
+     {
+      "misconception": "SOC-ECO-POVERTY-K7-M9",
+      "why": "thinks population growth is the only cause"
+     },
+     {
+      "misconception": "SOC-ECO-POVERTY-K8-M10",
+      "why": "thinks poverty hits all groups equally"
+     }
+    ]
+   },
+   {
+    "evidence": "However, poverty is a complex social phenomenon rooted in historical factors like the low economic development under British colonial administration and the lack of job opportunities.",
+    "kind": "why",
+    "q": "Why is it wrong to say poverty in India began only after independence?",
+    "options": [
+     "Its roots include low growth under colonial rule",
+     "Its roots lie in rapid population growth alone",
+     "Its roots are in poor workers' lack of effort",
+     "Its roots are in cities having too many jobs"
+    ],
+    "explain": "Poverty is rooted partly in low economic development under British colonial administration, so it existed before independence.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-POVERTY-K7-M9",
+      "why": "thinks population growth is the only cause"
+     },
+     {
+      "misconception": "SOC-ECO-POVERTY-K12-M3",
+      "why": "blames personal laziness"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the passage's lack of job opportunities"
+     }
+    ]
+   },
+   {
+    "evidence": "For instance, a person living in a city needs more income to afford basic necessities compared to someone in a village.",
+    "kind": "what_if",
+    "q": "Two people have the same income, one in a city and one in a village. Who is likelier to be poor?",
+    "options": [
+     "The city dweller, as essentials cost more",
+     "The villager, as villages have no poor line",
+     "Neither, as one line applies to everyone",
+     "Neither, as each family sets its own line"
+    ],
+    "explain": "Basic necessities cost more in a city, so a city person needs more income to stay above the poverty line.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks villages are always poorer than cities"
+     },
+     {
+      "misconception": "SOC-ECO-POVERTY-K10-M1",
+      "why": "thinks one fixed line applies to everyone"
+     },
+     {
+      "misconception": "SOC-ECO-POVERTY-K4-M6",
+      "why": "thinks each family decides its own line"
+     }
+    ]
+   },
+   {
+    "evidence": "Instead, it provides a legal guarantee of at least one hundred days of wage employment in a financial year to rural households who volunteer to do unskilled manual work.",
+    "kind": "what_if",
+    "q": "A village family finishes its MGNREGA work for the year. What can it expect from the scheme?",
+    "options": [
+     "A legal right to 100 days of paid work yearly",
+     "A permanent job for all its members",
+     "Skilled office work in the nearest city",
+     "Work only during the lean farming season"
+    ],
+    "explain": "MGNREGA guarantees at least one hundred days of wage work each financial year, not a permanent job.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-POVERTY-K13-M4",
+      "why": "thinks MGNREGA gives a lifelong job"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the scheme gives skilled urban jobs"
+     },
+     {
+      "misconception": null,
+      "why": "mixes the scheme's purpose with its legal guarantee"
+     }
+    ]
+   },
+   {
+    "evidence": "This scheme acts as a safety net rather than a lifetime career, helping vulnerable groups survive during lean agricultural seasons.",
+    "kind": "which_explains",
+    "q": "Why do we call MGNREGA a safety net for rural families?",
+    "options": [
+     "It helps them get by when farm work is scarce",
+     "It gives them a career for their whole life",
+     "It lets them avoid doing any manual work",
+     "It raises the poverty line in every village"
+    ],
+    "explain": "It helps vulnerable groups survive lean agricultural seasons; it is not a lifetime career.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-POVERTY-K13-M4",
+      "why": "thinks the scheme is a permanent lifelong job"
+     },
+     {
+      "misconception": null,
+      "why": "misreads 'safety net' as free money without work"
+     },
+     {
+      "misconception": "SOC-ECO-POVERTY-K4-M6",
+      "why": "thinks villages set their own poverty line"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 15.1
+}

@@ -1,0 +1,140 @@
+{
+ "source": "train-0295-SCI-PHY-MAGNETIC10.json",
+ "job": {
+  "job": "train-0295-SCI-PHY-MAGNETIC10",
+  "topic_id": "SCI-PHY-MAGNETIC10",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a diary entry or letter by a student",
+  "seed": 295
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1322,
+  "promptTokenCount": 2
+ },
+ "passage": "Dear Diary, today in physics class, we learned why our home appliances are safe. My teacher explained that magnetic field lines are just imaginary paths used to visualize the invisible force, not physical threads. We also discussed how a solenoid creates a magnetic field even without an iron core, though the core makes it much stronger. I was surprised to learn that a magnetic field only exerts force on a moving charge; if a charge is standing still, it feels nothing. We also looked at domestic circuits. A short circuit happens when live and neutral wires touch directly, causing a massive current surge, which is totally different from overloading, where too many appliances draw excessive power from one socket. Finally, I learned that the earth wire is purely a safety feature to carry leakage current to the ground, not a path to complete the circuit for the appliance to function. It is fascinating how these rules keep our homes running safely every single day.",
+ "menu_ids": [
+  "SCI-PHY-MAGNETIC10-K5-M1",
+  "SCI-PHY-MAGNETIC10-K6-M2",
+  "SCI-PHY-MAGNETIC10-K9-M3",
+  "SCI-PHY-MAGNETIC10-K13-M5",
+  "SCI-PHY-MAGNETIC10-K15-M6",
+  "SCI-PHY-MAGNETIC10-K16-M7",
+  "SCI-PHY-MAGNETIC10-K17-M8",
+  "SCI-PHY-MAGNETIC10-K12-M9",
+  "SCI-PHY-MAGNETIC10-K7-M10",
+  "SCI-PHY-MAGNETIC10-K10-M11",
+  "SCI-PHY-MAGNETIC10-K16-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "We also discussed how a solenoid creates a magnetic field even without an iron core, though the core makes it much stronger.",
+    "kind": "what_if",
+    "q": "A coil carries current but has no iron inside. What will it do?",
+    "options": [
+     "It still makes a magnetic field, only weaker",
+     "It makes no field until iron is added",
+     "It makes a field only if the wire is long",
+     "It makes a field as strong as with iron"
+    ],
+    "explain": "A solenoid makes a magnetic field even without an iron core; the core only makes it stronger.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-MAGNETIC10-K10-M10",
+      "why": "thinks a solenoid needs an iron core to have a field"
+     },
+     {
+      "misconception": "SCI-PHY-MAGNETIC10-K16-M7",
+      "why": "links wire length to how the circuit behaves"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the iron core makes no difference to strength"
+     }
+    ]
+   },
+   {
+    "evidence": "I was surprised to learn that a magnetic field only exerts force on a moving charge; if a charge is standing still, it feels nothing.",
+    "kind": "what_if",
+    "q": "A charged particle rests in a magnetic field. What force does it feel?",
+    "options": [
+     "None, since it is not moving",
+     "A small force, since it is charged",
+     "A force that pushes it along the field",
+     "A force that grows the longer it rests"
+    ],
+    "explain": "A magnetic field exerts force only on a moving charge; a charge at rest feels nothing.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-MAGNETIC10-K12-M9",
+      "why": "thinks a field acts on any charge, even at rest"
+     },
+     {
+      "misconception": null,
+      "why": "thinks force follows the field direction"
+     },
+     {
+      "misconception": null,
+      "why": "thinks force builds up with time"
+     }
+    ]
+   },
+   {
+    "evidence": "A short circuit happens when live and neutral wires touch directly, causing a massive current surge, which is totally different from overloading, where too many appliances draw excessive power from one socket.",
+    "kind": "difference",
+    "q": "Many heaters are plugged into one socket and the wires get hot. Which is this?",
+    "options": [
+     "Overloading, because too much power is drawn",
+     "Short circuit, because the wires are too short",
+     "Short circuit, because live and neutral touch",
+     "Overloading, because the earth wire is missing"
+    ],
+    "explain": "Too many appliances drawing excessive power from one socket is overloading; a short circuit needs live and neutral to touch.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-MAGNETIC10-K16-M7",
+      "why": "thinks short circuit means the wire is too short"
+     },
+     {
+      "misconception": "SCI-PHY-MAGNETIC10-K16-M12",
+      "why": "thinks overloading and short circuit are the same"
+     },
+     {
+      "misconception": "SCI-PHY-MAGNETIC10-K15-M6",
+      "why": "links the earth wire to the circuit working"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, I learned that the earth wire is purely a safety feature to carry leakage current to the ground, not a path to complete the circuit for the appliance to function.",
+    "kind": "what_if",
+    "q": "An appliance's earth wire is cut but nothing else is damaged. What happens when it is switched on?",
+    "options": [
+     "It works, but is unsafe if current leaks",
+     "It does not work, as the circuit is broken",
+     "It works, and a fuse makes up the power",
+     "It works, but only at half its power"
+    ],
+    "explain": "The earth wire only carries leakage current to the ground; it is not needed to complete the circuit.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-MAGNETIC10-K15-M6",
+      "why": "thinks the earth wire completes the circuit"
+     },
+     {
+      "misconception": "SCI-PHY-MAGNETIC10-K17-M8",
+      "why": "thinks a fuse creates extra power"
+     },
+     {
+      "misconception": null,
+      "why": "guesses the appliance loses power without it"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 13.1
+}

@@ -1,0 +1,138 @@
+{
+ "source": "train-0340-SOC-GEO-MINERALS.json",
+ "job": {
+  "job": "train-0340-SOC-GEO-MINERALS",
+  "topic_id": "SOC-GEO-MINERALS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 340
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1373,
+  "promptTokenCount": 2
+ },
+ "passage": "Many people mistakenly believe that all metallic minerals contain iron, but this is not true. Metallic minerals are divided into ferrous and non-ferrous groups based on their iron content. While iron ore and manganese are ferrous, minerals like copper and bauxite are non-ferrous because they lack iron. Furthermore, there is a common myth that mining only involves digging deep vertical shafts. In reality, extraction methods vary significantly; while shaft mining is used for deep deposits, open-cast mining is used for minerals found near the surface. Finally, some students assume that non-conventional energy sources are always more efficient than conventional ones. This is incorrect, as efficiency depends on the specific technology and application rather than the source type. Conventional sources like coal remain highly reliable for large-scale industrial power, whereas non-conventional sources like solar or wind are valued for being renewable and sustainable, not necessarily for being more efficient in every scenario. Understanding these distinctions is crucial for managing our limited natural resources effectively and planning for a sustainable future.",
+ "menu_ids": [
+  "SOC-GEO-MINERALS-K4-M1",
+  "SOC-GEO-MINERALS-K6-M2",
+  "SOC-GEO-MINERALS-K8-M4",
+  "SOC-GEO-MINERALS-K5-M5",
+  "SOC-GEO-MINERALS-K4-M6",
+  "SOC-GEO-MINERALS-K6-M8",
+  "SOC-GEO-MINERALS-K14-M9",
+  "SOC-GEO-MINERALS-K13-M10",
+  "SOC-GEO-MINERALS-K7-M11"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Metallic minerals are divided into ferrous and non-ferrous groups based on their iron content.",
+    "kind": "which_explains",
+    "q": "Copper is a metallic mineral but is called non-ferrous. What explains this?",
+    "options": [
+     "It has no iron in it",
+     "It is too soft to be a metal",
+     "It contains a lot of rust",
+     "It is always mined near the surface"
+    ],
+    "explain": "Metallic minerals are grouped as ferrous or non-ferrous by iron content; copper lacks iron, so it is non-ferrous.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-MINERALS-K5-M5",
+      "why": "thinks metallic means hard and non-metallic means soft"
+     },
+     {
+      "misconception": "SOC-GEO-MINERALS-K4-M6",
+      "why": "thinks ferrous means containing rust"
+     },
+     {
+      "misconception": "SOC-GEO-MINERALS-K6-M8",
+      "why": "thinks mining method decides the mineral group"
+     }
+    ]
+   },
+   {
+    "evidence": "In reality, extraction methods vary significantly; while shaft mining is used for deep deposits, open-cast mining is used for minerals found near the surface.",
+    "kind": "what_if",
+    "q": "A mineral deposit lies just below the surface. Which mining method suits it best?",
+    "options": [
+     "Open-cast mining, from the surface",
+     "Shaft mining, with deep vertical tunnels",
+     "Shaft mining, as all mining needs shafts",
+     "Open-cast mining, only for iron ore"
+    ],
+    "explain": "Open-cast mining is used for minerals near the surface, while shaft mining is for deep deposits.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-MINERALS-K6-M8",
+      "why": "picks the method by mineral type, not depth"
+     },
+     {
+      "misconception": "SOC-GEO-MINERALS-K6-M2",
+      "why": "thinks mining is only digging deep shafts"
+     },
+     {
+      "misconception": "SOC-GEO-MINERALS-K4-M1",
+      "why": "thinks open-cast is only for iron, a ferrous mineral"
+     }
+    ]
+   },
+   {
+    "evidence": "This is incorrect, as efficiency depends on the specific technology and application rather than the source type.",
+    "kind": "which_explains",
+    "q": "A student says solar power must be more efficient than coal. Why is this claim wrong?",
+    "options": [
+     "Efficiency depends on the technology and its use",
+     "Efficiency depends only on how old the source is",
+     "Efficiency is always higher for conventional sources",
+     "Efficiency is the same for every energy source"
+    ],
+    "explain": "Efficiency depends on the specific technology and application, not on whether a source is conventional or non-conventional.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-MINERALS-K7-M11",
+      "why": "links the type of source to how new it is"
+     },
+     {
+      "misconception": "SOC-GEO-MINERALS-K8-M4",
+      "why": "reverses the belief and favours conventional sources"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises that all sources are equal"
+     }
+    ]
+   },
+   {
+    "evidence": "Conventional sources like coal remain highly reliable for large-scale industrial power, whereas non-conventional sources like solar or wind are valued for being renewable and sustainable, not necessarily for being more efficient in every scenario.",
+    "kind": "difference",
+    "q": "Why are solar and wind energy valued, according to the lesson's main point?",
+    "options": [
+     "They are renewable and sustainable",
+     "They are more efficient in every case",
+     "They work equally well day and night",
+     "They are newer than all other sources"
+    ],
+    "explain": "Solar and wind are valued for being renewable and sustainable, not for being more efficient in every scenario.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-MINERALS-K8-M4",
+      "why": "thinks non-conventional is always more efficient"
+     },
+     {
+      "misconception": "SOC-GEO-MINERALS-K14-M9",
+      "why": "thinks solar works equally well in all conditions"
+     },
+     {
+      "misconception": "SOC-GEO-MINERALS-K7-M11",
+      "why": "thinks non-conventional means new and modern"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 13.3
+}

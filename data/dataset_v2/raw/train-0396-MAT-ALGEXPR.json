@@ -1,0 +1,169 @@
+{
+ "source": "train-0396-MAT-ALGEXPR.json",
+ "job": {
+  "job": "train-0396-MAT-ALGEXPR",
+  "topic_id": "MAT-ALGEXPR",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a clear textbook explanation with one worked example",
+  "seed": 396
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 3357,
+  "promptTokenCount": 2
+ },
+ "passage": "In algebra, we use letters to represent unknown values. A term is a product of factors, such as 3x, where 3 is the numerical coefficient and x is the variable. When we multiply terms, we add the exponents of the same base, so x² multiplied by x³ equals x⁵. When a number is placed outside a bracket, like 2x(3x + 4), it must be distributed to every term inside, resulting in 6x² + 8x. This is different from addition; for example, x + x equals 2x, not x². Another common error occurs when squaring a binomial. The identity (a + b)² equals a² + 2ab + b². This means the square of a sum includes an extra middle term, 2ab, which represents the combined area of two rectangles. For instance, (x + 3)² becomes x² + 6x + 9. Finally, when subtracting one expression from another, such as subtracting (2x - 3) from (5x + 4), we must change the signs of every term in the expression being subtracted. This gives us (5x + 4) - 2x + 3, which simplifies to 3x + 7. Always remember that algebraic identities are universal tools that work for both variables and numbers, allowing us to calculate values like 102² by treating it as (100 + 2)².",
+ "menu_ids": [
+  "MAT-ALGEXPR-K13-M1",
+  "MAT-ALGEXPR-K12-M2",
+  "MAT-ALGEXPR-K11-M4",
+  "MAT-ALGEXPR-K14-M5",
+  "MAT-ALGEXPR-K15-M6",
+  "MAT-ALGEXPR-K17-M9",
+  "MAT-ALGEXPR-K17-M10",
+  "MAT-ALGEXPR-K18-M11",
+  "MAT-ALGEXPR-K18-M12",
+  "MAT-ALGEXPR-K19-M14",
+  "MAT-ALGEXPR-K20-M15",
+  "MAT-ALGEXPR-K20-M16",
+  "MAT-ALGEXPR-K21-M17",
+  "MAT-ALGEXPR-K22-M18"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "When we multiply terms, we add the exponents of the same base, so x² multiplied by x³ equals x⁵.",
+    "kind": "what_if",
+    "q": "Meena multiplies y⁴ by y². What does she get?",
+    "options": [
+     "y⁶",
+     "y⁸",
+     "y²",
+     "2y⁶"
+    ],
+    "explain": "When multiplying the same base, we add the powers: 4 + 2 = 6, so y⁶.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEXPR-K19-M14",
+      "why": "multiplies the powers instead of adding them"
+     },
+     {
+      "misconception": null,
+      "why": "subtracts the powers"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up adding coefficients with multiplying powers"
+     }
+    ]
+   },
+   {
+    "evidence": "When a number is placed outside a bracket, like 2x(3x + 4), it must be distributed to every term inside, resulting in 6x² + 8x.",
+    "kind": "which_explains",
+    "q": "Raj writes 2x(3x + 4) = 6x² + 4. What mistake did he make?",
+    "options": [
+     "He multiplied only the first term by 2x",
+     "He added 2x to each term inside",
+     "He squared the bracket before multiplying",
+     "He changed the sign of the 4"
+    ],
+    "explain": "2x must multiply every term inside the bracket, so the 4 also becomes 8x.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEXPR-K20-M15",
+      "why": "thinks only the first term is multiplied"
+     },
+     {
+      "misconception": null,
+      "why": "confuses distributing with adding"
+     },
+     {
+      "misconception": "MAT-ALGEXPR-K22-M18",
+      "why": "mixes this up with squaring a bracket"
+     }
+    ]
+   },
+   {
+    "evidence": "This is different from addition; for example, x + x equals 2x, not x².",
+    "kind": "which_explains",
+    "q": "Sita says x + x = x². Which idea shows she is wrong?",
+    "options": [
+     "Adding x twice gives two x, not a new power",
+     "Adding two terms always squares the variable",
+     "Adding terms changes both the coefficient and the power",
+     "Adding x and x is the same as multiplying"
+    ],
+    "explain": "Addition counts how many x there are, giving 2x; it does not change the power.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEXPR-K17-M10",
+      "why": "thinks adding x twice squares it"
+     },
+     {
+      "misconception": "MAT-ALGEXPR-K17-M9",
+      "why": "thinks powers are added along with coefficients"
+     },
+     {
+      "misconception": null,
+      "why": "confuses addition with multiplication"
+     }
+    ]
+   },
+   {
+    "evidence": "This means the square of a sum includes an extra middle term, 2ab, which represents the combined area of two rectangles.",
+    "kind": "which_explains",
+    "q": "Neha says (x + 3)² = x² + 9. What is missing from her answer?",
+    "options": [
+     "A middle term, 6x",
+     "A last term, 6",
+     "A first term, 2x",
+     "A middle term, 3x"
+    ],
+    "explain": "The square of a sum has a middle term 2ab, which here is 2 × x × 3 = 6x.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEXPR-K21-M17",
+      "why": "thinks only first and last terms matter, giving a plain 6"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the first term with the 2 in 2ab"
+     },
+     {
+      "misconception": null,
+      "why": "forgets the 2 in 2ab"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, when subtracting one expression from another, such as subtracting (2x - 3) from (5x + 4), we must change the signs of every term in the expression being subtracted.",
+    "kind": "how",
+    "q": "What is (5x + 4) − (2x − 3) when simplified?",
+    "options": [
+     "3x + 7",
+     "3x + 1",
+     "−3x − 7",
+     "7x + 1"
+    ],
+    "explain": "The minus sign changes both signs in the bracket: 5x + 4 − 2x + 3 = 3x + 7.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEXPR-K18-M11",
+      "why": "changes only the first term's sign"
+     },
+     {
+      "misconception": "MAT-ALGEXPR-K18-M12",
+      "why": "subtracts in the wrong order"
+     },
+     {
+      "misconception": null,
+      "why": "adds the two brackets instead of subtracting"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 28.3
+}

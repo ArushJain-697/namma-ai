@@ -1,0 +1,169 @@
+{
+ "source": "train-0194-GEN-HYDRATION.json",
+ "job": {
+  "job": "train-0194-GEN-HYDRATION",
+  "topic_id": "GEN-HYDRATION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a description of a classroom activity or experiment and what it shows",
+  "seed": 194
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3872,
+  "promptTokenCount": 2
+ },
+ "passage": "In our biology lab today, we conducted an experiment to understand how the human body manages heat and hydration. We observed that sweating is not just the loss of pure water; it is a complex process where the body releases water along with essential salts and electrolytes to maintain internal balance. When sweat evaporates from the skin, it absorbs heat from the body, which is the primary mechanism for cooling. However, on highly humid days, sweat does not evaporate efficiently, meaning that simply sweating more does not necessarily lead to more cooling. We also discussed that hydration is not solely about drinking plain water; foods like fruits and vegetables contribute significantly to our daily fluid intake. Regarding health emergencies, we learned that during bouts of diarrhoea, the body loses vital fluids and salts rapidly, making it essential to continue fluid intake, such as Oral Rehydration Solution (ORS), even at home to prevent severe dehydration. Finally, we clarified that heatstroke is a life-threatening condition where the body's temperature regulation fails, often resulting in dry, hot skin rather than heavy sweating. Unlike simple heat exhaustion, heatstroke requires immediate medical intervention rather than just resting or drinking large amounts of water at once.",
+ "menu_ids": [
+  "GEN-HYDRATION-K20-M1",
+  "GEN-HYDRATION-K20-M2",
+  "GEN-HYDRATION-K18-M3",
+  "GEN-HYDRATION-K19-M4",
+  "GEN-HYDRATION-K23-M7",
+  "GEN-HYDRATION-K22-M8",
+  "GEN-HYDRATION-K15-M9",
+  "GEN-HYDRATION-K16-M10",
+  "GEN-HYDRATION-K17-M11",
+  "GEN-HYDRATION-K14-M12",
+  "GEN-HYDRATION-K10-M14",
+  "GEN-HYDRATION-K26-M16",
+  "GEN-HYDRATION-K27-M18",
+  "GEN-HYDRATION-K27-M19"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "We observed that sweating is not just the loss of pure water; it is a complex process where the body releases water along with essential salts and electrolytes to maintain internal balance.",
+    "kind": "what_if",
+    "q": "Kabir played football in the sun for two hours. What should he replace afterwards?",
+    "options": [
+     "Water along with the salts lost in sweat",
+     "Water alone, since sweat is pure water",
+     "Salts alone, since no water is lost",
+     "Sugar alone, from a cold fizzy drink"
+    ],
+    "explain": "Sweat carries away water and also essential salts, so both must be replaced.",
+    "wrong": [
+     {
+      "misconception": "GEN-HYDRATION-K14-M12",
+      "why": "thinks sweat is pure water"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the idea and forgets water loss"
+     },
+     {
+      "misconception": "GEN-HYDRATION-K23-M7",
+      "why": "thinks cold fizzy drinks hydrate best"
+     }
+    ]
+   },
+   {
+    "evidence": "However, on highly humid days, sweat does not evaporate efficiently, meaning that simply sweating more does not necessarily lead to more cooling.",
+    "kind": "why",
+    "q": "On a very humid day, Meena sweats a lot but still feels hot. Why?",
+    "options": [
+     "Her sweat cannot dry off in moist air",
+     "Her sweat is too little to cool her",
+     "Her sweat is not cold enough to cool her",
+     "Her sweat stops forming in humid air"
+    ],
+    "explain": "In humid air sweat does not evaporate well, so more sweating does not mean more cooling.",
+    "wrong": [
+     {
+      "misconception": "GEN-HYDRATION-K17-M11",
+      "why": "thinks more sweat always means more cooling"
+     },
+     {
+      "misconception": "GEN-HYDRATION-K16-M10",
+      "why": "thinks sweat cools because it is cold"
+     },
+     {
+      "misconception": null,
+      "why": "ignores that she is sweating a lot"
+     }
+    ]
+   },
+   {
+    "evidence": "We also discussed that hydration is not solely about drinking plain water; foods like fruits and vegetables contribute significantly to our daily fluid intake.",
+    "kind": "which_explains",
+    "q": "Asha drinks little plain water but eats plenty of watermelon and cucumber. What does this mean?",
+    "options": [
+     "Her food is adding to her fluid intake",
+     "Her food adds nothing; only water counts",
+     "Her food takes water away from her body",
+     "Her food counts only if made into juice"
+    ],
+    "explain": "Fruits and vegetables contribute a lot to daily fluid intake, not just plain water.",
+    "wrong": [
+     {
+      "misconception": "GEN-HYDRATION-K19-M4",
+      "why": "thinks only plain water counts"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the effect of food on fluids"
+     },
+     {
+      "misconception": null,
+      "why": "over-narrows which foods count as fluid"
+     }
+    ]
+   },
+   {
+    "evidence": "Regarding health emergencies, we learned that during bouts of diarrhoea, the body loses vital fluids and salts rapidly, making it essential to continue fluid intake, such as Oral Rehydration Solution (ORS), even at home to prevent severe dehydration.",
+    "kind": "what_if",
+    "q": "Dev's younger brother gets diarrhoea at home. What should the family do?",
+    "options": [
+     "Keep giving him fluids such as ORS",
+     "Stop his drinks so the motions stop",
+     "Save ORS until he reaches a hospital",
+     "Give plain water only, as no salts go"
+    ],
+    "explain": "Diarrhoea drains fluids and salts fast, so keep giving fluids like ORS, even at home.",
+    "wrong": [
+     {
+      "misconception": "GEN-HYDRATION-K27-M19",
+      "why": "thinks stopping fluids stops diarrhoea"
+     },
+     {
+      "misconception": "GEN-HYDRATION-K27-M18",
+      "why": "thinks ORS is only for hospitals"
+     },
+     {
+      "misconception": null,
+      "why": "forgets that salts are also lost"
+     }
+    ]
+   },
+   {
+    "evidence": "Unlike simple heat exhaustion, heatstroke requires immediate medical intervention rather than just resting or drinking large amounts of water at once.",
+    "kind": "how",
+    "q": "A worker in the heat has hot, dry skin, a sign of heatstroke. How should others help?",
+    "options": [
+     "Get medical help for him immediately",
+     "Let him rest in shade until better",
+     "Make him drink lots of water quickly",
+     "Wait, since dry skin means no water loss"
+    ],
+    "explain": "Heatstroke is life-threatening and needs immediate medical help, not just rest or gulping water.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "treats heatstroke like simple heat exhaustion"
+     },
+     {
+      "misconception": null,
+      "why": "thinks lots of water at once is enough"
+     },
+     {
+      "misconception": "GEN-HYDRATION-K15-M9",
+      "why": "thinks no sweating means no water loss"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 87.9
+}

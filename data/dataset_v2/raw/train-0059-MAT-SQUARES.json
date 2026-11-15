@@ -1,0 +1,143 @@
+{
+ "source": "train-0059-MAT-SQUARES.json",
+ "job": {
+  "job": "train-0059-MAT-SQUARES",
+  "topic_id": "MAT-SQUARES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a short story where children solve a real problem",
+  "seed": 59
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2602,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and Meera were decorating their classroom for the Math Fair. They wanted to place square tiles on the floor. Meera noticed that the number of non-square numbers between 8 squared and 9 squared is exactly 16, calculated by doubling the smaller base, 8. Rohan then tested a small tile with a side length of 0.5 meters. He realized that the square of this number is 0.25, which is actually smaller than the original number. Next, they looked at a box labeled with the number 54. To make it a perfect cube, they needed to find the prime factors, which are 2, 3, 3, and 3. Since the factor 2 is missing two more partners to form a triplet, they decided to multiply 54 by 4. Finally, they checked a decorative star with a side length of -5 units. When they calculated its area by squaring the length, they correctly found it to be 25 square units, confirming that squaring a negative number always results in a positive value. They felt confident that their calculations were accurate and ready for the display.",
+ "menu_ids": [
+  "MAT-SQUARES-K10-M1",
+  "MAT-SQUARES-K10-M2",
+  "MAT-SQUARES-K22-M3",
+  "MAT-SQUARES-K11-M4",
+  "MAT-SQUARES-K12-M5",
+  "MAT-SQUARES-K13-M6",
+  "MAT-SQUARES-K14-M7",
+  "MAT-SQUARES-K14-M8",
+  "MAT-SQUARES-K15-M9",
+  "MAT-SQUARES-K16-M10",
+  "MAT-SQUARES-K17-M11",
+  "MAT-SQUARES-K18-M12",
+  "MAT-SQUARES-K19-M13",
+  "MAT-SQUARES-K20-M14"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Meera noticed that the number of non-square numbers between 8 squared and 9 squared is exactly 16, calculated by doubling the smaller base, 8.",
+    "kind": "what_if",
+    "q": "Using Meera's method, how many non-square numbers lie between 9 squared and 10 squared?",
+    "options": [
+     "18 numbers",
+     "19 numbers",
+     "20 numbers",
+     "9 numbers"
+    ],
+    "explain": "Double the smaller base: 2 × 9 = 18 non-square numbers lie between 81 and 100.",
+    "wrong": [
+     {
+      "misconception": "MAT-SQUARES-K15-M9",
+      "why": "subtracts the squares, 100 − 81 = 19"
+     },
+     {
+      "misconception": null,
+      "why": "doubles the larger base, 10, instead of the smaller"
+     },
+     {
+      "misconception": null,
+      "why": "just picks the smaller base without doubling"
+     }
+    ]
+   },
+   {
+    "evidence": "He realized that the square of this number is 0.25, which is actually smaller than the original number.",
+    "kind": "which_explains",
+    "q": "What does Rohan's 0.5 meter tile show about squaring numbers?",
+    "options": [
+     "Squaring a number below 1 makes it smaller",
+     "Squaring a number always makes it bigger",
+     "Squaring a number means doubling it",
+     "Squaring a number works only for whole numbers"
+    ],
+    "explain": "0.5 squared is 0.25, which is smaller than 0.5, so squares are not always bigger.",
+    "wrong": [
+     {
+      "misconception": "MAT-SQUARES-K10-M2",
+      "why": "thinks a square is always bigger than the number"
+     },
+     {
+      "misconception": "MAT-SQUARES-K10-M1",
+      "why": "thinks squaring means multiplying by 2"
+     },
+     {
+      "misconception": null,
+      "why": "thinks decimals cannot be squared"
+     }
+    ]
+   },
+   {
+    "evidence": "Since the factor 2 is missing two more partners to form a triplet, they decided to multiply 54 by 4.",
+    "kind": "why",
+    "q": "Why did Rohan and Meera multiply 54 by 4 to make it a perfect cube?",
+    "options": [
+     "Because two more 2s were needed for a triplet",
+     "Because one more 3 was needed for a triplet",
+     "Because a number must be multiplied by itself",
+     "Because 2 × 2 makes 54 a perfect square"
+    ],
+    "explain": "54 = 2 × 3 × 3 × 3; the lone 2 needs two more 2s, so multiply by 4.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "picks the wrong factor; the 3s already form a triplet"
+     },
+     {
+      "misconception": "MAT-SQUARES-K18-M12",
+      "why": "thinks you multiply a number by itself to complete it"
+     },
+     {
+      "misconception": null,
+      "why": "confuses making a perfect cube with a perfect square"
+     }
+    ]
+   },
+   {
+    "evidence": "When they calculated its area by squaring the length, they correctly found it to be 25 square units, confirming that squaring a negative number always results in a positive value.",
+    "kind": "what_if",
+    "q": "Using the same idea as the star, what is (-7) squared?",
+    "options": [
+     "49",
+     "-49",
+     "14",
+     "-14"
+    ],
+    "explain": "Squaring a negative number always gives a positive value, so (-7) × (-7) = 49.",
+    "wrong": [
+     {
+      "misconception": "MAT-SQUARES-K14-M7",
+      "why": "thinks the square of a negative number stays negative"
+     },
+     {
+      "misconception": "MAT-SQUARES-K10-M1",
+      "why": "thinks squaring means multiplying by 2"
+     },
+     {
+      "misconception": null,
+      "why": "multiplies by 2 and keeps the minus sign"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 27.5
+}

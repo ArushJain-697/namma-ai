@@ -1,0 +1,167 @@
+{
+ "source": "train-0279-SCI-ESS-POLLUTION.json",
+ "job": {
+  "job": "train-0279-SCI-ESS-POLLUTION",
+  "topic_id": "SCI-ESS-POLLUTION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a question-and-answer (FAQ) style passage",
+  "seed": 279
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1621,
+  "promptTokenCount": 2
+ },
+ "passage": "Q: Is clear, odorless air always safe to breathe? A: No. Many dangerous pollutants, such as carbon monoxide, are invisible and odorless. Q: Does boiling water make it safe to drink? A: Boiling kills germs, but it cannot remove dissolved chemical pollutants like pesticides or lead. For that, we need advanced filtration. Q: Is the greenhouse effect always bad for Earth? A: No, it is a natural process that keeps our planet warm enough to support life. However, human activities have increased greenhouse gases, leading to harmful global warming. Q: Does the ozone hole cause global warming? A: No, the ozone layer protects us from harmful ultraviolet rays, while global warming is caused by the trapping of heat by greenhouse gases. Q: Is smog just natural fog? A: No, smog is a mixture of smoke and fog, often containing harmful particles from vehicle exhaust and industrial emissions. Q: Does the holy nature of a river protect it from pollution? A: No, even rivers considered sacred can be heavily polluted by industrial waste and sewage. Pollution is a physical reality, not a spiritual one. Q: Is acid rain as strong as battery acid? A: No, while acid rain can damage buildings and plants, it is much weaker than the concentrated acid found in car batteries.",
+ "menu_ids": [
+  "SCI-ESS-POLLUTION-K4-M1",
+  "SCI-ESS-POLLUTION-K11-M2",
+  "SCI-ESS-POLLUTION-K12-M3",
+  "SCI-ESS-POLLUTION-K6-M4",
+  "SCI-ESS-POLLUTION-K13-M5",
+  "SCI-ESS-POLLUTION-K16-M6",
+  "SCI-ESS-POLLUTION-K17-M7",
+  "SCI-ESS-POLLUTION-K9-M8",
+  "SCI-ESS-POLLUTION-K14-M9",
+  "SCI-ESS-POLLUTION-K15-M10",
+  "SCI-ESS-POLLUTION-K6-M11",
+  "SCI-ESS-POLLUTION-K10-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Boiling kills germs, but it cannot remove dissolved chemical pollutants like pesticides or lead.",
+    "kind": "what_if",
+    "q": "A village well has pesticide in it. Will boiling the water make it safe?",
+    "options": [
+     "No, boiling leaves dissolved chemicals in it",
+     "Yes, heat breaks chemicals down into gases",
+     "Yes, if it is boiled for a long time",
+     "No, boiling cannot even kill the germs"
+    ],
+    "explain": "Boiling kills germs but cannot remove dissolved chemicals like pesticides or lead.",
+    "wrong": [
+     {
+      "misconception": "SCI-ESS-POLLUTION-K9-M8",
+      "why": "thinks boiling removes chemical pollutants"
+     },
+     {
+      "misconception": "SCI-ESS-POLLUTION-K9-M8",
+      "why": "thinks longer boiling removes chemicals"
+     },
+     {
+      "misconception": null,
+      "why": "reverses what boiling does to germs"
+     }
+    ]
+   },
+   {
+    "evidence": "Many dangerous pollutants, such as carbon monoxide, are invisible and odorless.",
+    "kind": "which_explains",
+    "q": "A room's air looks clear and smells fresh. Why can it still be harmful?",
+    "options": [
+     "Some harmful gases cannot be seen or smelled",
+     "Clear air always holds a thick hidden fog",
+     "Fresh smell hides only the germs in air",
+     "Harmful gases always make a strong smell"
+    ],
+    "explain": "Pollutants like carbon monoxide are invisible and odorless, so clear fresh-smelling air can still be polluted.",
+    "wrong": [
+     {
+      "misconception": "SCI-ESS-POLLUTION-K10-M12",
+      "why": "links polluted air to thick fog"
+     },
+     {
+      "misconception": null,
+      "why": "mixes air pollutants with germs"
+     },
+     {
+      "misconception": "SCI-ESS-POLLUTION-K4-M1",
+      "why": "thinks pollution always has a smell"
+     }
+    ]
+   },
+   {
+    "evidence": "No, it is a natural process that keeps our planet warm enough to support life.",
+    "kind": "what_if",
+    "q": "If the natural greenhouse effect did not exist, what would happen to Earth?",
+    "options": [
+     "It would be too cold for life",
+     "It would be safe from global warming only",
+     "It would be hit by more ultraviolet rays",
+     "It would be covered by a glass shell"
+    ],
+    "explain": "The natural greenhouse effect keeps Earth warm enough for life, so without it Earth would be too cold.",
+    "wrong": [
+     {
+      "misconception": "SCI-ESS-POLLUTION-K6-M4",
+      "why": "thinks the greenhouse effect is only harmful"
+     },
+     {
+      "misconception": "SCI-ESS-POLLUTION-K11-M2",
+      "why": "mixes up the ozone layer with greenhouse effect"
+     },
+     {
+      "misconception": "SCI-ESS-POLLUTION-K6-M11",
+      "why": "thinks greenhouse gases form a solid shell"
+     }
+    ]
+   },
+   {
+    "evidence": "No, even rivers considered sacred can be heavily polluted by industrial waste and sewage.",
+    "kind": "which_explains",
+    "q": "A sacred river has dirty water and foam. Which reason best explains this?",
+    "options": [
+     "Factories and sewage can pollute any river",
+     "Only rivers that are not holy get polluted",
+     "Holy rivers clean themselves of all waste",
+     "Its dirt comes from the ozone hole"
+    ],
+    "explain": "Even sacred rivers can be heavily polluted by industrial waste and sewage; pollution is physical, not spiritual.",
+    "wrong": [
+     {
+      "misconception": "SCI-ESS-POLLUTION-K15-M10",
+      "why": "thinks holy rivers cannot be polluted"
+     },
+     {
+      "misconception": "SCI-ESS-POLLUTION-K15-M10",
+      "why": "thinks holy rivers clean themselves"
+     },
+     {
+      "misconception": "SCI-ESS-POLLUTION-K11-M2",
+      "why": "links the ozone hole to unrelated problems"
+     }
+    ]
+   },
+   {
+    "evidence": "No, while acid rain can damage buildings and plants, it is much weaker than the concentrated acid found in car batteries.",
+    "kind": "difference",
+    "q": "How does acid rain compare with the acid in a car battery?",
+    "options": [
+     "It is much weaker but still harmful",
+     "It is equally strong and just as harmful",
+     "It is stronger but falls over wide areas",
+     "It is weaker and so causes no damage"
+    ],
+    "explain": "Acid rain damages buildings and plants but is much weaker than concentrated battery acid.",
+    "wrong": [
+     {
+      "misconception": "SCI-ESS-POLLUTION-K12-M3",
+      "why": "thinks acid rain is as strong as battery acid"
+     },
+     {
+      "misconception": null,
+      "why": "reverses which acid is stronger"
+     },
+     {
+      "misconception": null,
+      "why": "thinks weak acid cannot damage anything"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 14.5
+}

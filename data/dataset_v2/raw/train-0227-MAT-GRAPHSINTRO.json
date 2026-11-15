@@ -1,0 +1,143 @@
+{
+ "source": "train-0227-MAT-GRAPHSINTRO.json",
+ "job": {
+  "job": "train-0227-MAT-GRAPHSINTRO",
+  "topic_id": "MAT-GRAPHSINTRO",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a passage that shows a common wrong method and corrects it",
+  "seed": 227
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3184,
+  "promptTokenCount": 2
+ },
+ "passage": "When plotting a linear relation on a Cartesian plane, students often make mistakes by misunderstanding the axes. Some think the origin is simply the bottom-left corner of the grid, but it is actually the intersection where the x-axis and y-axis meet at (0,0). Another common error occurs when plotting coordinates like (1, 4). A student might mistakenly count 4 units up and 1 unit across, forgetting that the first number represents the x-coordinate, which dictates horizontal movement from the origin. Furthermore, when drawing a linear graph, some students incorrectly believe the line should stop exactly at the last plotted point. In reality, a linear relation represents a continuous pattern, so the line must extend beyond the plotted points to show it continues infinitely. Finally, when connecting points, some students try to draw a wavy curve through them. This is incorrect; because the relation is linear, you must use a straight edge to draw a single straight line that passes through all the points. By following these rules—starting from the origin, correctly identifying coordinates, and extending straight lines—you can accurately represent mathematical relationships on a graph.",
+ "menu_ids": [
+  "MAT-GRAPHSINTRO-K6-M1",
+  "MAT-GRAPHSINTRO-K7-M2",
+  "MAT-GRAPHSINTRO-K7-M3",
+  "MAT-GRAPHSINTRO-K8-M4",
+  "MAT-GRAPHSINTRO-K9-M6",
+  "MAT-GRAPHSINTRO-K10-M7",
+  "MAT-GRAPHSINTRO-K11-M9",
+  "MAT-GRAPHSINTRO-K11-M10",
+  "MAT-GRAPHSINTRO-K14-M11",
+  "MAT-GRAPHSINTRO-K15-M13",
+  "MAT-GRAPHSINTRO-K16-M15",
+  "MAT-GRAPHSINTRO-K17-M16",
+  "MAT-GRAPHSINTRO-K18-M17",
+  "MAT-GRAPHSINTRO-K18-M18"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Some think the origin is simply the bottom-left corner of the grid, but it is actually the intersection where the x-axis and y-axis meet at (0,0).",
+    "kind": "what_if",
+    "q": "On Meena's graph, the x-axis and y-axis meet near the page centre. Where is the origin?",
+    "options": [
+     "At the crossing point of both axes",
+     "At the bottom-left corner of the page",
+     "At the top-right corner of the page",
+     "At the point where the x-axis ends"
+    ],
+    "explain": "The origin is where the x-axis and y-axis meet at (0,0), not a page corner.",
+    "wrong": [
+     {
+      "misconception": "MAT-GRAPHSINTRO-K14-M11",
+      "why": "thinks the origin is always the bottom-left corner"
+     },
+     {
+      "misconception": "MAT-GRAPHSINTRO-K15-M13",
+      "why": "thinks counting starts from the top right"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the origin is where an axis ends"
+     }
+    ]
+   },
+   {
+    "evidence": "A student might mistakenly count 4 units up and 1 unit across, forgetting that the first number represents the x-coordinate, which dictates horizontal movement from the origin.",
+    "kind": "how",
+    "q": "How should you move to plot the point (1, 4)?",
+    "options": [
+     "Move 1 right and 4 up from (0,0)",
+     "Move 1 up and 4 right from (0,0)",
+     "Move 1 right and 4 up from page corner",
+     "Move 1 right and 4 up from last point"
+    ],
+    "explain": "The first number is the x-coordinate, so move 1 across from the origin, then 4 up.",
+    "wrong": [
+     {
+      "misconception": "MAT-GRAPHSINTRO-K16-M15",
+      "why": "thinks the first number tells how far up"
+     },
+     {
+      "misconception": "MAT-GRAPHSINTRO-K14-M11",
+      "why": "thinks the origin is the bottom-left corner"
+     },
+     {
+      "misconception": "MAT-GRAPHSINTRO-K18-M18",
+      "why": "counts from where the pencil is, not the origin"
+     }
+    ]
+   },
+   {
+    "evidence": "In reality, a linear relation represents a continuous pattern, so the line must extend beyond the plotted points to show it continues infinitely.",
+    "kind": "why",
+    "q": "Why does the line of a linear graph not stop at the last plotted point?",
+    "options": [
+     "Because the pattern continues past the points",
+     "Because longer lines are easier to read",
+     "Because the last point may be plotted wrong",
+     "Because every line must reach the origin"
+    ],
+    "explain": "A linear relation is a continuous pattern, so the line extends to show it goes on forever.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks extending is only for neatness"
+     },
+     {
+      "misconception": null,
+      "why": "invents a reason about plotting errors"
+     },
+     {
+      "misconception": "MAT-GRAPHSINTRO-K14-M11",
+      "why": "mixes up extending the line with starting from the origin"
+     }
+    ]
+   },
+   {
+    "evidence": "This is incorrect; because the relation is linear, you must use a straight edge to draw a single straight line that passes through all the points.",
+    "kind": "what_if",
+    "q": "Asha has plotted three points of a linear relation. How should she join them?",
+    "options": [
+     "With one straight line drawn using a ruler",
+     "With a smooth wavy curve through each point",
+     "With short separate lines between each pair",
+     "With a straight line through only two points"
+    ],
+    "explain": "A linear relation needs one straight line, drawn with a straight edge, through all the points.",
+    "wrong": [
+     {
+      "misconception": "MAT-GRAPHSINTRO-K10-M7",
+      "why": "thinks the graph should rise and fall like a hill"
+     },
+     {
+      "misconception": null,
+      "why": "thinks each pair of points is joined separately"
+     },
+     {
+      "misconception": null,
+      "why": "forgets the line must pass through all points"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 32.8
+}

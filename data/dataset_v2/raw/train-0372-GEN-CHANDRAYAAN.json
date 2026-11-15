@@ -1,0 +1,166 @@
+{
+ "source": "train-0372-GEN-CHANDRAYAAN.json",
+ "job": {
+  "job": "train-0372-GEN-CHANDRAYAAN",
+  "topic_id": "GEN-CHANDRAYAAN",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a passage rich in numbers, dates or measurements",
+  "seed": 372
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 4994,
+  "promptTokenCount": 2
+ },
+ "passage": "India’s journey to the Moon began with Chandrayaan-1, which launched in 2008. It carried the Moon Impact Probe, which was designed to crash into the lunar surface to study the atmosphere, not to land softly or operate for months. This mission used the M3 instrument, provided by NASA, to detect traces of water molecules trapped in lunar soil, rather than finding large liquid lakes. Later, Chandrayaan-2 was launched in 2019. While the Vikram lander unfortunately crashed during its descent, the orbiter remained in space and continues to function perfectly today, collecting valuable data. Learning from this, Chandrayaan-3 was launched to achieve a successful soft landing near the lunar south pole on 23 August 2023. Unlike Earth, the Moon has no atmosphere, meaning parachutes cannot be used to slow down a spacecraft. Instead, the lander must use powerful thrusters to reduce its speed. Once landed, the Pragyan rover was deployed to explore the surface for one lunar day, which is equivalent to about 14 Earth days, before its mission concluded. This mission proved that India could land safely on the side of the Moon that faces Earth, rather than the far side. By understanding these missions, we learn how ISRO overcomes the unique challenges of space exploration through precise engineering and scientific innovation.",
+ "menu_ids": [
+  "GEN-CHANDRAYAAN-K6-M1",
+  "GEN-CHANDRAYAAN-K12-M2",
+  "GEN-CHANDRAYAAN-K8-M3",
+  "GEN-CHANDRAYAAN-K9-M4",
+  "GEN-CHANDRAYAAN-K10-M5",
+  "GEN-CHANDRAYAAN-K11-M6",
+  "GEN-CHANDRAYAAN-K14-M7",
+  "GEN-CHANDRAYAAN-K17-M9",
+  "GEN-CHANDRAYAAN-K18-M10",
+  "GEN-CHANDRAYAAN-K21-M11",
+  "GEN-CHANDRAYAAN-K24-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "It carried the Moon Impact Probe, which was designed to crash into the lunar surface to study the atmosphere, not to land softly or operate for months.",
+    "kind": "recall",
+    "q": "What was the Moon Impact Probe of Chandrayaan-1 built to do?",
+    "options": [
+     "Strike the surface to study the atmosphere",
+     "Land softly and work for months",
+     "Drive around the Moon as a rover",
+     "Circle the Moon for many years"
+    ],
+    "explain": "It was designed to crash into the surface to study the atmosphere, not land softly.",
+    "wrong": [
+     {
+      "misconception": "GEN-CHANDRAYAAN-K9-M4",
+      "why": "thinks the probe landed softly and kept working"
+     },
+     {
+      "misconception": "GEN-CHANDRAYAAN-K8-M3",
+      "why": "thinks Chandrayaan-1 carried a rover"
+     },
+     {
+      "misconception": null,
+      "why": "mixes the probe up with an orbiter"
+     }
+    ]
+   },
+   {
+    "evidence": "This mission used the M3 instrument, provided by NASA, to detect traces of water molecules trapped in lunar soil, rather than finding large liquid lakes.",
+    "kind": "which_explains",
+    "q": "Which result did Chandrayaan-1's M3 instrument give about water on the Moon?",
+    "options": [
+     "Tiny amounts of water were stuck in the soil",
+     "Big lakes of water were seen on the surface",
+     "Drinkable water was found for astronauts to use",
+     "Water was found only in the Moon's air"
+    ],
+    "explain": "M3 detected traces of water molecules trapped in lunar soil, not large liquid lakes.",
+    "wrong": [
+     {
+      "misconception": "GEN-CHANDRAYAAN-K6-M1",
+      "why": "thinks big oceans and lakes were found"
+     },
+     {
+      "misconception": "GEN-CHANDRAYAAN-K11-M6",
+      "why": "thinks the water could be drunk straight away"
+     },
+     {
+      "misconception": null,
+      "why": "forgets the Moon has no atmosphere"
+     }
+    ]
+   },
+   {
+    "evidence": "While the Vikram lander unfortunately crashed during its descent, the orbiter remained in space and continues to function perfectly today, collecting valuable data.",
+    "kind": "what_if",
+    "q": "Vikram crashed during Chandrayaan-2. What does this tell us about the orbiter?",
+    "options": [
+     "Only the lander was lost; the orbiter kept working",
+     "The whole mission failed along with the lander",
+     "Only the orbiter was lost; the lander kept working",
+     "The orbiter worked for just one lunar day"
+    ],
+    "explain": "The orbiter stayed in space and still works, so only the lander was lost.",
+    "wrong": [
+     {
+      "misconception": "GEN-CHANDRAYAAN-K14-M7",
+      "why": "thinks the orbiter crashed too"
+     },
+     {
+      "misconception": null,
+      "why": "reverses which part was lost"
+     },
+     {
+      "misconception": "GEN-CHANDRAYAAN-K24-M12",
+      "why": "thinks the craft worked only briefly like Pragyan"
+     }
+    ]
+   },
+   {
+    "evidence": "Unlike Earth, the Moon has no atmosphere, meaning parachutes cannot be used to slow down a spacecraft.",
+    "kind": "why",
+    "q": "Why can a lander not use a parachute to slow down near the Moon?",
+    "options": [
+     "There is no air to hold the parachute open",
+     "The Moon's thick air would tear the parachute",
+     "Parachutes work there, but thrusters are cheaper",
+     "Thrusters and parachutes cannot work at once"
+    ],
+    "explain": "The Moon has no atmosphere, so a parachute has no air to push against.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "believes the Moon has thick air"
+     },
+     {
+      "misconception": "GEN-CHANDRAYAAN-K17-M9",
+      "why": "thinks parachutes can be used on the Moon"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby detail about thrusters"
+     }
+    ]
+   },
+   {
+    "evidence": "Once landed, the Pragyan rover was deployed to explore the surface for one lunar day, which is equivalent to about 14 Earth days, before its mission concluded.",
+    "kind": "how",
+    "q": "If Pragyan worked for exactly one lunar day, about how long was that on Earth?",
+    "options": [
+     "Roughly two Earth weeks",
+     "Roughly fourteen lunar days",
+     "Roughly one Earth day",
+     "Roughly two Earth years"
+    ],
+    "explain": "One lunar day equals about 14 Earth days, which is about two weeks, before the mission ended.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "swaps the Earth days and lunar days"
+     },
+     {
+      "misconception": null,
+      "why": "thinks a lunar day equals an Earth day"
+     },
+     {
+      "misconception": "GEN-CHANDRAYAAN-K24-M12",
+      "why": "thinks Pragyan kept working for years"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 38.3
+}

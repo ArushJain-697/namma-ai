@@ -1,0 +1,141 @@
+{
+ "source": "train-0182-SOC-HIS-SULTANATE.json",
+ "job": {
+  "job": "train-0182-SOC-HIS-SULTANATE",
+  "topic_id": "SOC-HIS-SULTANATE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a question-and-answer (FAQ) style passage",
+  "seed": 182
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3443,
+  "promptTokenCount": 2
+ },
+ "passage": "The Delhi Sultanate was a complex period of history with many unique administrative systems. One key feature was the Iqta system, where the Sultan assigned tracts of land called Iqtas to military commanders known as Muqtis. These Muqtis were responsible for maintaining troops and collecting revenue, but they did not own the land; their positions were transferable and not hereditary. Another important group were the Bandagan, who were special slaves purchased for military service. Unlike common laborers, these individuals were trained to hold high political offices and positions of trust, often becoming more reliable than the Sultan's own nobles. Regarding the economy, Alauddin Khalji implemented strict market controls. He fixed the prices of all goods, from food grains to horses, primarily to maintain a large standing army at a low cost, rather than for social welfare. Finally, the authors of Tawarikh were learned men like secretaries and courtiers who lived in cities. They wrote histories to gain rich rewards from Sultans and rarely focused on the lives of ordinary peasants or villagers, whose struggles remained largely unrecorded in these official accounts.",
+ "menu_ids": [
+  "SOC-HIS-SULTANATE-K6-M1",
+  "SOC-HIS-SULTANATE-K7-M2",
+  "SOC-HIS-SULTANATE-K9-M3",
+  "SOC-HIS-SULTANATE-K11-M4",
+  "SOC-HIS-SULTANATE-K12-M5",
+  "SOC-HIS-SULTANATE-K14-M6",
+  "SOC-HIS-SULTANATE-K16-M7",
+  "SOC-HIS-SULTANATE-K17-M8",
+  "SOC-HIS-SULTANATE-K19-M9",
+  "SOC-HIS-SULTANATE-K4-M10",
+  "SOC-HIS-SULTANATE-K15-M11",
+  "SOC-HIS-SULTANATE-K10-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "These Muqtis were responsible for maintaining troops and collecting revenue, but they did not own the land; their positions were transferable and not hereditary.",
+    "kind": "what_if",
+    "q": "A Muqti's son hopes to take over his father's Iqta. Can he claim it?",
+    "options": [
+     "He cannot, because the post was not passed down",
+     "He can, because Iqta posts always passed to sons",
+     "He can, because his father owned the Iqta land",
+     "He cannot, because Iqta was only a religious tax"
+    ],
+    "explain": "Muqtis did not own the land, and their posts were transferable, not passed from father to son.",
+    "wrong": [
+     {
+      "misconception": "SOC-HIS-SULTANATE-K12-M5",
+      "why": "thinks the Muqti's post was hereditary"
+     },
+     {
+      "misconception": "SOC-HIS-SULTANATE-K11-M4",
+      "why": "thinks Muqtis owned the Iqta land"
+     },
+     {
+      "misconception": "SOC-HIS-SULTANATE-K10-M12",
+      "why": "thinks Iqta was a religious tax, not land"
+     }
+    ]
+   },
+   {
+    "evidence": "Unlike common laborers, these individuals were trained to hold high political offices and positions of trust, often becoming more reliable than the Sultan's own nobles.",
+    "kind": "why",
+    "q": "Why might a Sultan depend on his Bandagan more than on his nobles?",
+    "options": [
+     "They were trained for top posts and stayed loyal",
+     "They did his household chores without complaining",
+     "They were born into the Sultan's noble families",
+     "They paid him the Iqta tax on time"
+    ],
+    "explain": "Bandagan were trained for high offices and positions of trust, often proving more reliable than nobles.",
+    "wrong": [
+     {
+      "misconception": "SOC-HIS-SULTANATE-K6-M1",
+      "why": "thinks Bandagan were household servants"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up purchased slaves with nobles by birth"
+     },
+     {
+      "misconception": "SOC-HIS-SULTANATE-K10-M12",
+      "why": "thinks Iqta was a tax people paid"
+     }
+    ]
+   },
+   {
+    "evidence": "He fixed the prices of all goods, from food grains to horses, primarily to maintain a large standing army at a low cost, rather than for social welfare.",
+    "kind": "why",
+    "q": "Why did Alauddin Khalji fix the prices of goods in the markets?",
+    "options": [
+     "To keep a big army without spending much",
+     "To help the poor buy cheap food grains",
+     "To stop horse traders becoming too powerful",
+     "To raise money for shifting his capital"
+    ],
+    "explain": "Alauddin fixed prices mainly to keep a large army at low cost, not for social welfare.",
+    "wrong": [
+     {
+      "misconception": "SOC-HIS-SULTANATE-K14-M6",
+      "why": "thinks price control was to help the poor"
+     },
+     {
+      "misconception": null,
+      "why": "grabs the nearby detail about horses"
+     },
+     {
+      "misconception": "SOC-HIS-SULTANATE-K16-M7",
+      "why": "mixes Alauddin up with Tughluq's capital shift"
+     }
+    ]
+   },
+   {
+    "evidence": "They wrote histories to gain rich rewards from Sultans and rarely focused on the lives of ordinary peasants or villagers, whose struggles remained largely unrecorded in these official accounts.",
+    "kind": "what_if",
+    "q": "A student wants to learn how peasants lived under the Sultans. How useful are the Tawarikh?",
+    "options": [
+     "Not very, as writers mostly wrote for Sultans' rewards",
+     "Very, as they describe village life in detail",
+     "Very, as their authors lived among the villagers",
+     "Not very, as Sultans wrote them all themselves"
+    ],
+    "explain": "Tawarikh writers wanted rewards from Sultans and rarely wrote about peasants, so village struggles went unrecorded.",
+    "wrong": [
+     {
+      "misconception": "SOC-HIS-SULTANATE-K19-M9",
+      "why": "thinks Tawarikh describe ordinary villagers' lives"
+     },
+     {
+      "misconception": null,
+      "why": "misses that the authors lived in cities"
+     },
+     {
+      "misconception": null,
+      "why": "misses that secretaries and courtiers wrote them"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 127.6
+}

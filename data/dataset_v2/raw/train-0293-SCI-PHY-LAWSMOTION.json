@@ -1,0 +1,166 @@
+{
+ "source": "train-0293-SCI-PHY-LAWSMOTION.json",
+ "job": {
+  "job": "train-0293-SCI-PHY-LAWSMOTION",
+  "topic_id": "SCI-PHY-LAWSMOTION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a short story with Indian characters in everyday life",
+  "seed": 293
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1639,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and his grandfather were watching a heavy truck collide with a small car at a local intersection. The car was pushed backward, and Rohan wondered if the truck hit it harder because of its massive size. His grandfather explained that according to Newton’s third law, the force exerted by the truck on the car is exactly equal in magnitude to the force the car exerts on the truck, regardless of their masses. Rohan then noticed a ball rolling on the smooth floor of their veranda. It kept moving at a constant speed for a long time. He thought it needed a constant push to keep going, but his grandfather clarified that no force is required to maintain a constant velocity; the ball only stops because of friction. They then looked at a heavy wooden table sitting still in the room. Rohan asked if it was truly at rest, and his grandfather confirmed that while no net force acts on it, the floor is actively exerting an upward normal force to balance gravity. Finally, they discussed a cricket match. When a bat hits a ball, the force is not a 'stored' property that the ball carries; it is an interaction that exists only during the brief moment of contact between the two objects.",
+ "menu_ids": [
+  "SCI-PHY-LAWSMOTION-K3-M1",
+  "SCI-PHY-LAWSMOTION-K5-M2",
+  "SCI-PHY-LAWSMOTION-K8-M3",
+  "SCI-PHY-LAWSMOTION-K13-M5",
+  "SCI-PHY-LAWSMOTION-K15-M6",
+  "SCI-PHY-LAWSMOTION-K18-M7",
+  "SCI-PHY-LAWSMOTION-K20-M8",
+  "SCI-PHY-LAWSMOTION-K20-M9",
+  "SCI-PHY-LAWSMOTION-K22-M10",
+  "SCI-PHY-LAWSMOTION-K5-M11",
+  "SCI-PHY-LAWSMOTION-K18-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "His grandfather explained that according to Newton’s third law, the force exerted by the truck on the car is exactly equal in magnitude to the force the car exerts on the truck, regardless of their masses.",
+    "kind": "what_if",
+    "q": "A truck hits a small car. How do the two forces of the crash compare?",
+    "options": [
+     "They are equal, whatever the masses are",
+     "The truck's force is larger, as it is heavier",
+     "The car's force is larger, as it moves back",
+     "They differ, but only by a small amount"
+    ],
+    "explain": "Newton's third law says the truck and the car push on each other with equal force.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-LAWSMOTION-K18-M7",
+      "why": "thinks the heavier truck exerts a larger force"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the one that is pushed back felt more force"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the forces are almost equal but not exactly"
+     }
+    ]
+   },
+   {
+    "evidence": "He thought it needed a constant push to keep going, but his grandfather clarified that no force is required to maintain a constant velocity; the ball only stops because of friction.",
+    "kind": "why",
+    "q": "Why does a ball rolling on a veranda floor finally stop?",
+    "options": [
+     "Friction acts against its motion",
+     "Its push has been slowly used up",
+     "A steady force is needed to move it",
+     "A rolling ball always slows down by itself"
+    ],
+    "explain": "No force is needed to keep a ball moving; friction is what slows it and stops it.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-LAWSMOTION-K5-M11",
+      "why": "thinks the force is carried and used up"
+     },
+     {
+      "misconception": "SCI-PHY-LAWSMOTION-K5-M2",
+      "why": "thinks motion needs a continuous force"
+     },
+     {
+      "misconception": null,
+      "why": "treats stopping as natural, ignoring friction"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan asked if it was truly at rest, and his grandfather confirmed that while no net force acts on it, the floor is actively exerting an upward normal force to balance gravity.",
+    "kind": "which_explains",
+    "q": "A heavy table sits still. Which statement best explains why it stays at rest?",
+    "options": [
+     "The floor pushes up as hard as gravity pulls down",
+     "No force of any kind acts on the table",
+     "Only gravity acts, and the floor cannot push",
+     "The table's weight is too large to move it"
+    ],
+    "explain": "The floor pushes up with a normal force that balances gravity, so the net force is zero.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-LAWSMOTION-K3-M1",
+      "why": "thinks rest means no forces act"
+     },
+     {
+      "misconception": "SCI-PHY-LAWSMOTION-K20-M9",
+      "why": "thinks a floor cannot exert a force"
+     },
+     {
+      "misconception": null,
+      "why": "thinks heavy things stay still by their weight alone"
+     }
+    ]
+   },
+   {
+    "evidence": "When a bat hits a ball, the force is not a 'stored' property that the ball carries; it is an interaction that exists only during the brief moment of contact between the two objects.",
+    "kind": "which_explains",
+    "q": "A ball leaves the bat after being hit. What happens to the bat's force on it?",
+    "options": [
+     "It ends once the contact ends",
+     "It stays inside the ball and slowly fades",
+     "It grows stronger as the ball speeds up",
+     "It is carried until the ball hits something"
+    ],
+    "explain": "Force is an interaction that exists only during contact, so it stops when the bat and ball separate.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-LAWSMOTION-K5-M11",
+      "why": "thinks the ball carries and uses up the force"
+     },
+     {
+      "misconception": "SCI-PHY-LAWSMOTION-K15-M6",
+      "why": "thinks force keeps acting as the ball speeds up"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the ball stores force until the next hit"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan then noticed a ball rolling on the smooth floor of their veranda. It kept moving at a constant speed for a long time.",
+    "kind": "recall",
+    "q": "On the smooth veranda floor, how did the ball keep moving?",
+    "options": [
+     "At a constant speed for a long time",
+     "At a speed that kept rising steadily",
+     "At a speed that fell very quickly",
+     "In short bursts after each fresh push"
+    ],
+    "explain": "The ball rolled at a constant speed for a long time on the smooth floor.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-LAWSMOTION-K15-M6",
+      "why": "thinks motion with no force keeps speeding up"
+     },
+     {
+      "misconception": null,
+      "why": "thinks friction stops the ball almost immediately"
+     },
+     {
+      "misconception": "SCI-PHY-LAWSMOTION-K5-M2",
+      "why": "thinks it needs repeated pushes to keep going"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 15.3
+}

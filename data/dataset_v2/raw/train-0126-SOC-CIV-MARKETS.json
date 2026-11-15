@@ -1,0 +1,140 @@
+{
+ "source": "train-0126-SOC-CIV-MARKETS.json",
+ "job": {
+  "job": "train-0126-SOC-CIV-MARKETS",
+  "topic_id": "SOC-CIV-MARKETS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a question-and-answer (FAQ) style passage",
+  "seed": 126
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3586,
+  "promptTokenCount": 2
+ },
+ "passage": "Welcome to our FAQ on how goods reach your home. Many students ask, do wholesale markets actually manufacture the products they sell? No, wholesale markets act as large storage hubs where traders buy goods in bulk from factories and sell them to smaller shopkeepers. Another common question is whether weekly markets are only for low-income families. In reality, weekly markets are popular because they offer a wide variety of goods at affordable prices for everyone, regardless of their income level. People also wonder if items in malls are always superior to those in local shops. While malls provide a comfortable shopping experience, the quality of basic goods like vegetables or pulses is often identical to what you find in your neighborhood market. Finally, why do prices change as products move through the chain? As goods travel from the producer to the wholesaler, and then to the retailer, each person adds their own costs for transport, storage, and profit, which is why the final price increases by the time it reaches your hands.",
+ "menu_ids": [
+  "SOC-CIV-MARKETS-K4-M1",
+  "SOC-CIV-MARKETS-K5-M2",
+  "SOC-CIV-MARKETS-K6-M3",
+  "SOC-CIV-MARKETS-K7-M4",
+  "SOC-CIV-MARKETS-K4-M5",
+  "SOC-CIV-MARKETS-K5-M7",
+  "SOC-CIV-MARKETS-K5-M8",
+  "SOC-CIV-MARKETS-K6-M9",
+  "SOC-CIV-MARKETS-K7-M10",
+  "SOC-CIV-MARKETS-K11-M11",
+  "SOC-CIV-MARKETS-K13-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "No, wholesale markets act as large storage hubs where traders buy goods in bulk from factories and sell them to smaller shopkeepers.",
+    "kind": "how",
+    "q": "A shopkeeper restocks rice from a wholesale market. What does that market do?",
+    "options": [
+     "It buys from factories in bulk and resells",
+     "It makes the rice and packs it for sale",
+     "It sells only to families buying for home",
+     "It keeps one price that never changes later"
+    ],
+    "explain": "Wholesale markets store goods bought in bulk from factories and sell them to smaller shopkeepers.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-MARKETS-K6-M3",
+      "why": "thinks wholesale markets make the goods"
+     },
+     {
+      "misconception": "SOC-CIV-MARKETS-K11-M11",
+      "why": "thinks bulk buyers for home use are wholesale customers"
+     },
+     {
+      "misconception": "SOC-CIV-MARKETS-K7-M4",
+      "why": "thinks the price stays the same along the chain"
+     }
+    ]
+   },
+   {
+    "evidence": "In reality, weekly markets are popular because they offer a wide variety of goods at affordable prices for everyone, regardless of their income level.",
+    "kind": "why",
+    "q": "Mr. Mehta earns a high salary. Why might he still shop at a weekly market?",
+    "options": [
+     "It has many kinds of goods at low prices",
+     "It is meant mainly for low-income families",
+     "Its goods are always better than mall goods",
+     "It sells goods only to small shopkeepers"
+    ],
+    "explain": "Weekly markets offer many goods at affordable prices for everyone, whatever their income.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-MARKETS-K4-M1",
+      "why": "thinks weekly markets are only for poor people"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the point about mall quality"
+     },
+     {
+      "misconception": "SOC-CIV-MARKETS-K6-M9",
+      "why": "mixes up weekly markets with wholesale markets"
+     }
+    ]
+   },
+   {
+    "evidence": "While malls provide a comfortable shopping experience, the quality of basic goods like vegetables or pulses is often identical to what you find in your neighborhood market.",
+    "kind": "what_if",
+    "q": "Priya buys the same dal at a mall and at a local shop. How will quality most likely compare?",
+    "options": [
+     "Likely the same in both places",
+     "Likely better at the mall",
+     "Likely better at the local shop",
+     "Likely better wherever it costs more"
+    ],
+    "explain": "Malls are more comfortable, but basic goods like pulses are often the same quality as local ones.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-MARKETS-K5-M2",
+      "why": "thinks everything in a mall is better quality"
+     },
+     {
+      "misconception": null,
+      "why": "over-corrects and favours local shops instead"
+     },
+     {
+      "misconception": null,
+      "why": "thinks a higher price means better quality"
+     }
+    ]
+   },
+   {
+    "evidence": "As goods travel from the producer to the wholesaler, and then to the retailer, each person adds their own costs for transport, storage, and profit, which is why the final price increases by the time it reaches your hands.",
+    "kind": "why",
+    "q": "A farmer sells tomatoes cheaply, but you pay much more at the shop. Why?",
+    "options": [
+     "Each seller in the chain adds their own costs",
+     "The shopkeeper alone raises it for no reason",
+     "The farmer charges the shop a higher price",
+     "The wholesaler turned them into a better product"
+    ],
+    "explain": "Wholesaler and retailer each add transport, storage and profit costs, so the price rises.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-MARKETS-K7-M10",
+      "why": "thinks middlemen raise prices for no reason"
+     },
+     {
+      "misconception": null,
+      "why": "puts the cause at the wrong end of the chain"
+     },
+     {
+      "misconception": "SOC-CIV-MARKETS-K6-M3",
+      "why": "thinks wholesalers make or change the goods"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 40.5
+}

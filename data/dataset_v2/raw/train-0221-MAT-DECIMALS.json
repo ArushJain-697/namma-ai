@@ -1,0 +1,167 @@
+{
+ "source": "train-0221-MAT-DECIMALS.json",
+ "job": {
+  "job": "train-0221-MAT-DECIMALS",
+  "topic_id": "MAT-DECIMALS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a conversation between a teacher and two students",
+  "seed": 221
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4186,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today, let us look at decimals. Rahul, if you add 5 and 0.3, what do you get? Rahul: I think it is 0.8 because I just line up the digits. Teacher: Not quite. Remember, 5 is the same as 5.0. When adding, you must align the decimal points, not the last digits. Priya, how about comparing 0.8 and 0.83? Priya: I think 0.8 is larger because it has fewer digits. Teacher: That is a common mistake. Think of them as fractions: 0.8 is 80/100 and 0.83 is 83/100. Since 83 is more than 80, 0.83 is actually greater. Rahul: What about 0.4 and 0.40? Are they different? Teacher: No, they are equal. Adding a zero at the end does not change the value. Finally, remember that the first place after the decimal is the tenths place, which is larger than the hundredths place. If you have 0.5, that is five tenths, while 0.05 is five hundredths. Priya: So, 0.5 is definitely larger than 0.05? Teacher: Exactly. Always look at the place value of the digits rather than just counting how many digits are written. By lining up the decimal points and comparing place values, you will never be confused again.",
+ "menu_ids": [
+  "MAT-DECIMALS-K4-M1",
+  "MAT-DECIMALS-K6-M2",
+  "MAT-DECIMALS-K7-M3",
+  "MAT-DECIMALS-K8-M4",
+  "MAT-DECIMALS-K6-M5",
+  "MAT-DECIMALS-K6-M6",
+  "MAT-DECIMALS-K10-M7",
+  "MAT-DECIMALS-K9-M8",
+  "MAT-DECIMALS-K9-M9",
+  "MAT-DECIMALS-K8-M10",
+  "MAT-DECIMALS-K11-M11",
+  "MAT-DECIMALS-K7-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "When adding, you must align the decimal points, not the last digits.",
+    "kind": "what_if",
+    "q": "Meena adds 5 and 0.3 by lining up the decimal points. What answer does she get?",
+    "options": [
+     "5.3",
+     "0.8",
+     "8.0",
+     "5.03"
+    ],
+    "explain": "5 is 5.0, so aligning decimal points gives 5.0 + 0.3 = 5.3.",
+    "wrong": [
+     {
+      "misconception": "MAT-DECIMALS-K11-M11",
+      "why": "lines up last digits, treating 5 like 0.5"
+     },
+     {
+      "misconception": "MAT-DECIMALS-K4-M1",
+      "why": "adds 5 and 3 as whole numbers"
+     },
+     {
+      "misconception": "MAT-DECIMALS-K7-M3",
+      "why": "puts the 3 in the wrong place when aligning"
+     }
+    ]
+   },
+   {
+    "evidence": "Since 83 is more than 80, 0.83 is actually greater.",
+    "kind": "why",
+    "q": "Priya compares 0.8 and 0.83. Which choice gives the right number and the right reason?",
+    "options": [
+     "0.83, since 83 hundredths beat 80 hundredths",
+     "0.83, since it has more digits",
+     "0.8, since it has fewer digits",
+     "0.8, since 8 tenths beat 3 hundredths"
+    ],
+    "explain": "0.8 is 80/100 and 0.83 is 83/100, so 0.83 is greater.",
+    "wrong": [
+     {
+      "misconception": "MAT-DECIMALS-K6-M2",
+      "why": "right number, but thinks more digits means larger"
+     },
+     {
+      "misconception": "MAT-DECIMALS-K6-M6",
+      "why": "thinks fewer digits means larger"
+     },
+     {
+      "misconception": null,
+      "why": "compares the wrong digits and ignores 0.83 has 8 tenths too"
+     }
+    ]
+   },
+   {
+    "evidence": "Adding a zero at the end does not change the value.",
+    "kind": "what_if",
+    "q": "Rahul writes 0.40 instead of 0.4. What happens to the value of the number?",
+    "options": [
+     "It stays exactly the same",
+     "It becomes ten times larger",
+     "It becomes a little greater",
+     "It becomes a little smaller"
+    ],
+    "explain": "A zero added at the end of a decimal does not change its value.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks adding a zero multiplies by ten, like whole numbers"
+     },
+     {
+      "misconception": "MAT-DECIMALS-K10-M7",
+      "why": "thinks 0.40 is greater than 0.4"
+     },
+     {
+      "misconception": "MAT-DECIMALS-K6-M6",
+      "why": "thinks more digits makes it smaller"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, remember that the first place after the decimal is the tenths place, which is larger than the hundredths place.",
+    "kind": "which_explains",
+    "q": "Which number is greater, 0.5 or 0.05, and for what reason?",
+    "options": [
+     "0.5, because 5 tenths beat 5 hundredths",
+     "0.05, because its extra zero makes it bigger",
+     "0.05, because hundredths are larger than tenths",
+     "0.5, because it has fewer digits"
+    ],
+    "explain": "In 0.5 the 5 is in the tenths place, which is larger than hundredths.",
+    "wrong": [
+     {
+      "misconception": "MAT-DECIMALS-K6-M5",
+      "why": "thinks the extra zero makes 0.05 bigger"
+     },
+     {
+      "misconception": "MAT-DECIMALS-K8-M4",
+      "why": "thinks tenths is the smallest place"
+     },
+     {
+      "misconception": "MAT-DECIMALS-K6-M6",
+      "why": "right number, but counts digits instead of place value"
+     }
+    ]
+   },
+   {
+    "evidence": "Always look at the place value of the digits rather than just counting how many digits are written.",
+    "kind": "how",
+    "q": "Asha thinks 0.125 is bigger than 0.3. How should she compare them correctly?",
+    "options": [
+     "Compare the tenths digits, 1 and 3",
+     "Count which number has more digits",
+     "Compare 125 and 3 as whole numbers",
+     "Line up the last digits on the right"
+    ],
+    "explain": "Compare place values: 3 tenths is more than 1 tenth, so 0.3 is bigger.",
+    "wrong": [
+     {
+      "misconception": "MAT-DECIMALS-K6-M2",
+      "why": "thinks more digits means a larger decimal"
+     },
+     {
+      "misconception": "MAT-DECIMALS-K4-M1",
+      "why": "treats digits after the point as a whole number"
+     },
+     {
+      "misconception": "MAT-DECIMALS-K7-M3",
+      "why": "aligns last digits instead of decimal points"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 42.0
+}

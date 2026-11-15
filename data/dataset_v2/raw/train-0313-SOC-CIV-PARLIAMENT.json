@@ -1,0 +1,167 @@
+{
+ "source": "train-0313-SOC-CIV-PARLIAMENT.json",
+ "job": {
+  "job": "train-0313-SOC-CIV-PARLIAMENT",
+  "topic_id": "SOC-CIV-PARLIAMENT",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a news-style report about a real-world situation",
+  "seed": 313
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 3863,
+  "promptTokenCount": 2
+ },
+ "passage": "In the heart of New Delhi, the Indian Parliament serves as the supreme legislative body. It consists of two houses: the Lok Sabha and the Rajya Sabha. While the Rajya Sabha is called the Upper House, the Lok Sabha holds greater power in financial matters and the formation of the government. Citizens do not vote directly for the Prime Minister; instead, they elect Members of Parliament, and the leader of the majority party in the Lok Sabha is appointed as the Prime Minister. When a new law is proposed, it must pass through both houses. Once both houses agree, the bill is sent to the President for their assent. The President acts on the advice of the Council of Ministers and cannot simply reject a bill based on personal disagreement. The opposition plays a vital role by questioning government policies and highlighting public concerns, rather than just blocking all work. Furthermore, the process of changing laws is not limited to the government; citizens and civil society groups often initiate change by raising awareness and demanding new legislation. This ensures that the laws of our country reflect the needs and voices of the people, rather than just the decisions of those in power.",
+ "menu_ids": [
+  "SOC-CIV-PARLIAMENT-K4-M1",
+  "SOC-CIV-PARLIAMENT-K5-M2",
+  "SOC-CIV-PARLIAMENT-K7-M3",
+  "SOC-CIV-PARLIAMENT-K8-M4",
+  "SOC-CIV-PARLIAMENT-K13-M5",
+  "SOC-CIV-PARLIAMENT-K9-M6",
+  "SOC-CIV-PARLIAMENT-K10-M7",
+  "SOC-CIV-PARLIAMENT-K11-M8",
+  "SOC-CIV-PARLIAMENT-K12-M9",
+  "SOC-CIV-PARLIAMENT-K6-M10",
+  "SOC-CIV-PARLIAMENT-K13-M11",
+  "SOC-CIV-PARLIAMENT-K5-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Citizens do not vote directly for the Prime Minister; instead, they elect Members of Parliament, and the leader of the majority party in the Lok Sabha is appointed as the Prime Minister.",
+    "kind": "how",
+    "q": "How does a person become Prime Minister of India?",
+    "options": [
+     "By leading the party with most Lok Sabha seats",
+     "By winning the most votes from citizens nationwide",
+     "By being picked by the President alone",
+     "By winning a vote among Rajya Sabha members"
+    ],
+    "explain": "Citizens elect MPs, and the leader of the majority party in the Lok Sabha becomes Prime Minister.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-PARLIAMENT-K5-M2",
+      "why": "thinks citizens directly elect the Prime Minister"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the President chooses the Prime Minister freely"
+     },
+     {
+      "misconception": "SOC-CIV-PARLIAMENT-K4-M1",
+      "why": "thinks the 'Upper House' picks the leader"
+     }
+    ]
+   },
+   {
+    "evidence": "While the Rajya Sabha is called the Upper House, the Lok Sabha holds greater power in financial matters and the formation of the government.",
+    "kind": "which_explains",
+    "q": "Which house has more say over taxes and spending?",
+    "options": [
+     "The Lok Sabha, the house that forms the government",
+     "The Rajya Sabha, since it is called Upper House",
+     "Both equally, since every law passes both houses",
+     "Neither, since the Council of Ministers decides alone"
+    ],
+    "explain": "The Lok Sabha holds greater power in financial matters; the name 'Upper House' does not make the Rajya Sabha stronger.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-PARLIAMENT-K4-M1",
+      "why": "thinks 'Upper House' means more powerful"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises that both houses are equal in everything"
+     },
+     {
+      "misconception": null,
+      "why": "thinks ministers alone control money matters"
+     }
+    ]
+   },
+   {
+    "evidence": "The President acts on the advice of the Council of Ministers and cannot simply reject a bill based on personal disagreement.",
+    "kind": "what_if",
+    "q": "Both houses pass a bill the President personally dislikes. What will most likely happen?",
+    "options": [
+     "The President gives assent on the ministers' advice",
+     "The President rejects it, as the choice is personal",
+     "The bill becomes law at once, skipping assent",
+     "The Prime Minister decides if it becomes law"
+    ],
+    "explain": "The President acts on the Council of Ministers' advice and cannot reject a bill just from personal disagreement.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-PARLIAMENT-K7-M3",
+      "why": "thinks the President can reject any law"
+     },
+     {
+      "misconception": "SOC-CIV-PARLIAMENT-K12-M9",
+      "why": "thinks a bill becomes law as soon as it passes"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the Prime Minister alone gives final approval"
+     }
+    ]
+   },
+   {
+    "evidence": "The opposition plays a vital role by questioning government policies and highlighting public concerns, rather than just blocking all work.",
+    "kind": "which_example",
+    "q": "An opposition MP asks tough questions about a new policy. What is this MP doing?",
+    "options": [
+     "Helping Parliament check the government's work",
+     "Trying to stop all government work",
+     "Breaking the rules to delay the House",
+     "Taking over the ministers' duties"
+    ],
+    "explain": "The opposition questions policies and raises public concerns; this is a vital role, not just blocking work.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-PARLIAMENT-K8-M4",
+      "why": "thinks the opposition only blocks government work"
+     },
+     {
+      "misconception": null,
+      "why": "thinks tough questions mean misusing the rules"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the opposition with the government"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, the process of changing laws is not limited to the government; citizens and civil society groups often initiate change by raising awareness and demanding new legislation.",
+    "kind": "what_if",
+    "q": "Villagers campaign for a new law and the media reports it. How can this help?",
+    "options": [
+     "It can push lawmakers to take up the issue",
+     "It does nothing, as only ministers can change laws",
+     "It lets villagers vote on the bill in Parliament",
+     "It forces the Rajya Sabha to overrule the Lok Sabha"
+    ],
+    "explain": "Citizens and groups often start change by raising awareness and demanding new legislation, so lawmakers take notice.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-PARLIAMENT-K13-M5",
+      "why": "thinks only the government changes laws"
+     },
+     {
+      "misconception": null,
+      "why": "thinks citizens vote directly inside Parliament"
+     },
+     {
+      "misconception": null,
+      "why": "thinks pressure lets one house overrule the other"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 31.0
+}

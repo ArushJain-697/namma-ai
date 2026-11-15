@@ -1,0 +1,137 @@
+{
+ "source": "train-0263-SCI-BIO-PLANTPARTS.json",
+ "job": {
+  "job": "train-0263-SCI-BIO-PLANTPARTS",
+  "topic_id": "SCI-BIO-PLANTPARTS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a description of a classroom activity or experiment and what it shows",
+  "seed": 263
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1172,
+  "promptTokenCount": 2
+ },
+ "passage": "Today in our science lab, we examined various plants to understand their hidden functions. First, we carefully pulled up a grass plant and a carrot. We observed that the grass has many thin, branching roots, while the carrot has one thick, central root. This shows that root systems vary significantly between different species. Next, we looked at a hibiscus flower. We removed the colorful petals and discovered the stamens and pistil inside, which are essential reproductive organs. A flower remains a flower even without its showy petals. We then placed a leafy twig in a beaker of water under sunlight. We noticed tiny water droplets forming inside a plastic bag tied over the leaves. This process, called transpiration, is how plants release excess water vapor into the air, not a way to cool down like human sweating. Finally, we dug up a potato and found it growing underground, yet it is actually a stem, not a root, because it has buds that can grow into new shoots. These observations prove that plant parts have specific roles beyond just holding the plant or looking pretty. Understanding these structures helps us see how plants survive and grow in their environments.",
+ "menu_ids": [
+  "SCI-BIO-PLANTPARTS-K5-M1",
+  "SCI-BIO-PLANTPARTS-K13-M4",
+  "SCI-BIO-PLANTPARTS-K9-M5",
+  "SCI-BIO-PLANTPARTS-K16-M7",
+  "SCI-BIO-PLANTPARTS-K12-M8",
+  "SCI-BIO-PLANTPARTS-K20-M9",
+  "SCI-BIO-PLANTPARTS-K14-M10",
+  "SCI-BIO-PLANTPARTS-K17-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "We noticed tiny water droplets forming inside a plastic bag tied over the leaves.",
+    "kind": "which_explains",
+    "q": "Droplets collect inside a bag tied over leaves. What do they show the leaves did?",
+    "options": [
+     "Let out extra water as vapour",
+     "Took in water from the air",
+     "Made water from sunlight",
+     "Cooled themselves by sweating"
+    ],
+    "explain": "The droplets come from water vapour the leaves released, which is transpiration.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "reverses the direction of water movement"
+     },
+     {
+      "misconception": "SCI-BIO-PLANTPARTS-K14-M10",
+      "why": "thinks sunlight is a material plants use"
+     },
+     {
+      "misconception": "SCI-BIO-PLANTPARTS-K13-M4",
+      "why": "thinks transpiration is sweating to cool down"
+     }
+    ]
+   },
+   {
+    "evidence": "This process, called transpiration, is how plants release excess water vapor into the air, not a way to cool down like human sweating.",
+    "kind": "difference",
+    "q": "How is transpiration in plants different from sweating in humans?",
+    "options": [
+     "It removes extra water, not heat",
+     "It removes extra heat, not water",
+     "It happens only when roots are cut",
+     "It happens only in the dark"
+    ],
+    "explain": "Transpiration releases excess water vapor; it is not a way to cool down like sweating.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-PLANTPARTS-K13-M4",
+      "why": "thinks plants sweat to stay cool"
+     },
+     {
+      "misconception": null,
+      "why": "invents a condition not in the passage"
+     },
+     {
+      "misconception": null,
+      "why": "invents a condition not in the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, we dug up a potato and found it growing underground, yet it is actually a stem, not a root, because it has buds that can grow into new shoots.",
+    "kind": "why",
+    "q": "A potato grows underground. Why is it still called a stem?",
+    "options": [
+     "Its buds can grow into new shoots",
+     "Its skin is thick and brown",
+     "It stores food for the plant",
+     "It holds the plant in the soil"
+    ],
+    "explain": "A potato has buds that can grow into new shoots, so it is a stem even underground.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "picks a true-sounding detail not in the passage"
+     },
+     {
+      "misconception": "SCI-BIO-PLANTPARTS-K9-M5",
+      "why": "thinks underground parts are roots"
+     },
+     {
+      "misconception": "SCI-BIO-PLANTPARTS-K17-M12",
+      "why": "thinks holding the plant is the main job"
+     }
+    ]
+   },
+   {
+    "evidence": "We removed the colorful petals and discovered the stamens and pistil inside, which are essential reproductive organs.",
+    "kind": "what_if",
+    "q": "Hibiscus petals are plucked off. What is true of the remaining flower?",
+    "options": [
+     "It is still a flower with stamens",
+     "It is no longer a flower at all",
+     "It is only a baby tree now",
+     "It has turned into a bare stem"
+    ],
+    "explain": "The stamens and pistil are essential flower parts, so it stays a flower without petals.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-PLANTPARTS-K20-M9",
+      "why": "thinks only petals make a flower"
+     },
+     {
+      "misconception": "SCI-BIO-PLANTPARTS-K5-M1",
+      "why": "thinks small green plants are baby trees"
+     },
+     {
+      "misconception": null,
+      "why": "confuses flower parts with the stem"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 12.6
+}

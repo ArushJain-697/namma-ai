@@ -1,0 +1,143 @@
+{
+ "source": "train-0207-GEN-SCAMS.json",
+ "job": {
+  "job": "train-0207-GEN-SCAMS",
+  "topic_id": "GEN-SCAMS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a question-and-answer (FAQ) style passage",
+  "seed": 207
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4038,
+  "promptTokenCount": 2
+ },
+ "passage": "Digital safety is essential in today's world. Many people believe that a website is safe just because it displays a padlock icon or starts with 'https', but this only means the connection is encrypted, not that the site owner is honest. Scammers often use these signs to build false trust. Furthermore, phishing is not limited to emails; it frequently occurs through SMS, WhatsApp messages, and phone calls. A common trick involves a caller claiming to be a bank official who knows your name, asking for an OTP to 'update your KYC'. Remember, bank employees will never ask for your OTP, PIN, or CVV. Another dangerous trap is the 'refund' scam, where a fraudster asks you to enter your UPI PIN to receive money. In reality, you only need a PIN to send money, never to receive it. Finally, if you are ever cheated, do not feel ashamed or hide it. Reporting the incident immediately to the cybercrime portal or your bank is crucial, as early action significantly increases the chances of recovering your funds. Never trust schemes that demand secrecy or promise unrealistic, guaranteed high returns, as these are often signs of fraudulent activity designed to steal your savings.",
+ "menu_ids": [
+  "GEN-SCAMS-K4-M3",
+  "GEN-SCAMS-K5-M4",
+  "GEN-SCAMS-K5-M5",
+  "GEN-SCAMS-K6-M6",
+  "GEN-SCAMS-K6-M7",
+  "GEN-SCAMS-K7-M8",
+  "GEN-SCAMS-K7-M9",
+  "GEN-SCAMS-K8-M10",
+  "GEN-SCAMS-K10-M11",
+  "GEN-SCAMS-K10-M12",
+  "GEN-SCAMS-K11-M14",
+  "GEN-SCAMS-K12-M15",
+  "GEN-SCAMS-K15-M16",
+  "GEN-SCAMS-K15-M17"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Many people believe that a website is safe just because it displays a padlock icon or starts with 'https', but this only means the connection is encrypted, not that the site owner is honest.",
+    "kind": "which_explains",
+    "q": "A shopping site shows a padlock and 'https'. What does this tell you about it?",
+    "options": [
+     "Its connection is secure, but its owner may lie",
+     "Its owner is honest and fully trustworthy",
+     "Its pages harm you only if you type passwords",
+     "Its offers with written guarantees are safe"
+    ],
+    "explain": "A padlock or 'https' only means the connection is encrypted, not that the owner is honest.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks the padlock proves the site is honest"
+     },
+     {
+      "misconception": "GEN-SCAMS-K6-M7",
+      "why": "thinks a fake page harms only if a password is typed"
+     },
+     {
+      "misconception": "GEN-SCAMS-K10-M11",
+      "why": "thinks a written guarantee makes an offer safe"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, phishing is not limited to emails; it frequently occurs through SMS, WhatsApp messages, and phone calls.",
+    "kind": "which_explains",
+    "q": "Ravi says a bank caller asking for details cannot be phishing, since it is not email. Is he right?",
+    "options": [
+     "He is wrong; phishing also happens through calls",
+     "He is right; phishing happens only through emails",
+     "He is right if the caller knows your name",
+     "He is wrong; only SMS messages can be phishing"
+    ],
+    "explain": "Phishing is not limited to emails; it often happens through SMS, WhatsApp and phone calls.",
+    "wrong": [
+     {
+      "misconception": "GEN-SCAMS-K6-M6",
+      "why": "thinks phishing happens only by email"
+     },
+     {
+      "misconception": "GEN-SCAMS-K5-M4",
+      "why": "trusts a caller who knows their name"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises one channel named in the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "In reality, you only need a PIN to send money, never to receive it.",
+    "kind": "what_if",
+    "q": "A stranger asks Kabir to enter his UPI PIN to get a refund. What would happen?",
+    "options": [
+     "Money would leave his account, not come in",
+     "The refund would arrive in his account safely",
+     "Nothing would happen, since he typed no OTP",
+     "The bank would close his account for KYC"
+    ],
+    "explain": "A UPI PIN is needed only to send money, so entering it pays the scammer.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "believes the refund trick"
+     },
+     {
+      "misconception": "GEN-SCAMS-K15-M16",
+      "why": "thinks only the OTP is dangerous to share"
+     },
+     {
+      "misconception": "GEN-SCAMS-K5-M5",
+      "why": "mixes this up with the KYC scare"
+     }
+    ]
+   },
+   {
+    "evidence": "Reporting the incident immediately to the cybercrime portal or your bank is crucial, as early action significantly increases the chances of recovering your funds.",
+    "kind": "how",
+    "q": "Asha was cheated in an online payment scam. What should she do next?",
+    "options": [
+     "Report it quickly to improve chances of a refund",
+     "Keep it secret so nobody makes her ashamed",
+     "Reply to the scammer to check what happened",
+     "Wait a while, since lost money never returns"
+    ],
+    "explain": "Reporting at once to the cybercrime portal or bank greatly raises the chance of getting money back.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "feels shame and hides the fraud"
+     },
+     {
+      "misconception": "GEN-SCAMS-K4-M3",
+      "why": "thinks replying to check cannot cause harm"
+     },
+     {
+      "misconception": null,
+      "why": "thinks reporting is useless, so delay is fine"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 43.9
+}

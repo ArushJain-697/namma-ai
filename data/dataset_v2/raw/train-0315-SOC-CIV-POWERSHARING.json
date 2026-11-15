@@ -1,0 +1,141 @@
+{
+ "source": "train-0315-SOC-CIV-POWERSHARING.json",
+ "job": {
+  "job": "train-0315-SOC-CIV-POWERSHARING",
+  "topic_id": "SOC-CIV-POWERSHARING",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a news-style report about a real-world situation",
+  "seed": 315
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1342,
+  "promptTokenCount": 2
+ },
+ "passage": "In the diverse nation of Republica, the government recently faced a constitutional debate regarding the distribution of authority. To ensure stability, the constitution mandates that the legislature, executive, and judiciary operate independently, each holding specific powers to check the others. This horizontal arrangement prevents any single organ from dominating the state. Furthermore, the constitution clearly defines the jurisdiction of the national and regional governments. The Union List contains subjects of national importance, while the State List includes matters of local concern, ensuring that the central government cannot unilaterally legislate on regional affairs. Recently, the government introduced a third tier of administration, granting significant autonomy to village councils. This decentralisation does not strip the state government of its authority; instead, it empowers local bodies to manage grassroots issues while the state maintains its constitutional responsibilities. Finally, the national policy explicitly protects the rights of minority groups, ensuring that the majority community cannot impose its will on others. This approach reflects the moral necessity of power sharing, where every citizen's voice is respected regardless of their numerical strength in the population.",
+ "menu_ids": [
+  "SOC-CIV-POWERSHARING-K10-M1",
+  "SOC-CIV-POWERSHARING-K6-M2",
+  "SOC-CIV-POWERSHARING-K8-M3",
+  "SOC-CIV-POWERSHARING-K9-M4",
+  "SOC-CIV-POWERSHARING-K4-M5",
+  "SOC-CIV-POWERSHARING-K5-M6",
+  "SOC-CIV-POWERSHARING-K6-M7",
+  "SOC-CIV-POWERSHARING-K7-M8",
+  "SOC-CIV-POWERSHARING-K8-M9",
+  "SOC-CIV-POWERSHARING-K9-M10",
+  "SOC-CIV-POWERSHARING-K13-M11",
+  "SOC-CIV-POWERSHARING-K14-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "To ensure stability, the constitution mandates that the legislature, executive, and judiciary operate independently, each holding specific powers to check the others.",
+    "kind": "why",
+    "q": "Why does Republica let the legislature, executive and judiciary hold separate powers?",
+    "options": [
+     "So no single organ can dominate the others",
+     "So the state is split into central and regional levels",
+     "So the majority community can decide every matter",
+     "So the legislature can make laws on every subject"
+    ],
+    "explain": "Each organ checks the others, which prevents any single organ from dominating the state.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-POWERSHARING-K6-M2",
+      "why": "confuses horizontal sharing with levels of government"
+     },
+     {
+      "misconception": "SOC-CIV-POWERSHARING-K10-M1",
+      "why": "thinks democracy means majority decides everything"
+     },
+     {
+      "misconception": "SOC-CIV-POWERSHARING-K8-M3",
+      "why": "thinks lawmakers can legislate on any subject"
+     }
+    ]
+   },
+   {
+    "evidence": "The Union List contains subjects of national importance, while the State List includes matters of local concern, ensuring that the central government cannot unilaterally legislate on regional affairs.",
+    "kind": "what_if",
+    "q": "Republica's central government wants a law on a purely local matter. What can it do?",
+    "options": [
+     "It cannot pass the law on its own",
+     "It can pass it by adding it to the Union List",
+     "It can pass it since it is the national government",
+     "It can pass it if the villages agree"
+    ],
+    "explain": "The constitution lists regional matters under the State List, so the centre cannot legislate on them alone.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-POWERSHARING-K8-M9",
+      "why": "thinks the Union List can absorb any subject"
+     },
+     {
+      "misconception": "SOC-CIV-POWERSHARING-K8-M3",
+      "why": "thinks the Centre can make laws on any subject"
+     },
+     {
+      "misconception": null,
+      "why": "thinks village approval gives the centre power"
+     }
+    ]
+   },
+   {
+    "evidence": "This decentralisation does not strip the state government of its authority; instead, it empowers local bodies to manage grassroots issues while the state maintains its constitutional responsibilities.",
+    "kind": "which_explains",
+    "q": "Village councils now have more autonomy. What does this mean for the state government?",
+    "options": [
+     "It keeps its own constitutional duties",
+     "It hands all its power to the councils",
+     "It must now follow the national government",
+     "It loses its place as a tier of government"
+    ],
+    "explain": "Decentralisation empowers local bodies, but the state still keeps its constitutional responsibilities and authority.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-POWERSHARING-K9-M4",
+      "why": "thinks the state loses all power to local bodies"
+     },
+     {
+      "misconception": "SOC-CIV-POWERSHARING-K7-M8",
+      "why": "mixes up vertical sharing with central control"
+     },
+     {
+      "misconception": null,
+      "why": "thinks a new tier removes an older one"
+     }
+    ]
+   },
+   {
+    "evidence": "This approach reflects the moral necessity of power sharing, where every citizen's voice is respected regardless of their numerical strength in the population.",
+    "kind": "which_explains",
+    "q": "Besides keeping peace, why is power sharing considered valuable in Republica?",
+    "options": [
+     "It respects every citizen's voice, however few they are",
+     "It lets the largest group lead without limits",
+     "It gives each region the same number of laws",
+     "It makes only the village councils powerful"
+    ],
+    "explain": "Power sharing respects every citizen's voice whatever their numbers, so it has moral value beyond reducing conflict.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-POWERSHARING-K10-M1",
+      "why": "thinks the majority should decide everything"
+     },
+     {
+      "misconception": "SOC-CIV-POWERSHARING-K5-M6",
+      "why": "thinks sharing power is only about quieting conflict"
+     },
+     {
+      "misconception": null,
+      "why": "thinks sharing means equal splitting of laws"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 14.1
+}

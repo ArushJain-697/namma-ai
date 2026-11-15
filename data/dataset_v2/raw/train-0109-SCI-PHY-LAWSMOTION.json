@@ -1,0 +1,166 @@
+{
+ "source": "train-0109-SCI-PHY-LAWSMOTION.json",
+ "job": {
+  "job": "train-0109-SCI-PHY-LAWSMOTION",
+  "topic_id": "SCI-PHY-LAWSMOTION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a step-by-step explanation of a process",
+  "seed": 109
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2888,
+  "promptTokenCount": 2
+ },
+ "passage": "When you kick a football, you apply a force to it, but the ball does not contain any force within itself. Once your foot loses contact, the ball continues to move because of its inertia, not because of a force pushing it forward. If the ball is resting on the grass, it is not free of forces; gravity pulls it down, and the ground exerts an equal upward normal force, keeping it stationary. When the ball hits a wall, the wall exerts a force on the ball, and simultaneously, the ball exerts an equal and opposite force on the wall. These two forces act on different objects, so they do not cancel each other out. Even if a heavy truck hits a small car, the force exerted by the truck on the car is exactly equal in magnitude to the force exerted by the car on the truck. Momentum is a measure of motion, defined as the product of mass and velocity, and it remains conserved in all collisions, even when objects stick together after impact. An object in motion will maintain its velocity unless acted upon by an unbalanced external force, meaning a constant force is not required to keep an object moving at a constant speed.",
+ "menu_ids": [
+  "SCI-PHY-LAWSMOTION-K3-M1",
+  "SCI-PHY-LAWSMOTION-K5-M2",
+  "SCI-PHY-LAWSMOTION-K8-M3",
+  "SCI-PHY-LAWSMOTION-K13-M5",
+  "SCI-PHY-LAWSMOTION-K15-M6",
+  "SCI-PHY-LAWSMOTION-K18-M7",
+  "SCI-PHY-LAWSMOTION-K20-M8",
+  "SCI-PHY-LAWSMOTION-K20-M9",
+  "SCI-PHY-LAWSMOTION-K22-M10",
+  "SCI-PHY-LAWSMOTION-K5-M11",
+  "SCI-PHY-LAWSMOTION-K18-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Once your foot loses contact, the ball continues to move because of its inertia, not because of a force pushing it forward.",
+    "kind": "why",
+    "q": "After the ball leaves your foot, why does it keep moving forward?",
+    "options": [
+     "Because of its inertia, with no forward push",
+     "Because the kick's force is stored inside it",
+     "Because inertia is a force pushing it ahead",
+     "Because a force must keep pushing it along"
+    ],
+    "explain": "Once the foot leaves, inertia keeps the ball moving; no force pushes it forward.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-LAWSMOTION-K5-M11",
+      "why": "thinks force is carried inside the object"
+     },
+     {
+      "misconception": "SCI-PHY-LAWSMOTION-K8-M3",
+      "why": "thinks inertia is a force"
+     },
+     {
+      "misconception": "SCI-PHY-LAWSMOTION-K5-M2",
+      "why": "thinks motion needs a continuous force"
+     }
+    ]
+   },
+   {
+    "evidence": "If the ball is resting on the grass, it is not free of forces; gravity pulls it down, and the ground exerts an equal upward normal force, keeping it stationary.",
+    "kind": "which_explains",
+    "q": "A football lies still on the grass. Which forces are acting on it?",
+    "options": [
+     "Gravity down and the ground pushing up",
+     "No forces, because it is not moving",
+     "Only gravity, since grass cannot push",
+     "Only the force left from the last kick"
+    ],
+    "explain": "Gravity pulls the resting ball down and the ground pushes up equally, so it stays still.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-LAWSMOTION-K3-M1",
+      "why": "thinks resting objects have no forces"
+     },
+     {
+      "misconception": "SCI-PHY-LAWSMOTION-K20-M9",
+      "why": "thinks the ground cannot exert a force"
+     },
+     {
+      "misconception": "SCI-PHY-LAWSMOTION-K5-M11",
+      "why": "thinks force stays stored in the ball"
+     }
+    ]
+   },
+   {
+    "evidence": "These two forces act on different objects, so they do not cancel each other out.",
+    "kind": "why",
+    "q": "A ball and a wall push each other equally. Why don't these two forces cancel out?",
+    "options": [
+     "They act on two different objects",
+     "The wall's force comes slightly later",
+     "The ball pushes harder than the wall",
+     "They both act together on the ball"
+    ],
+    "explain": "One force acts on the ball and the other on the wall, so they cannot cancel.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-LAWSMOTION-K18-M12",
+      "why": "thinks reaction comes after action"
+     },
+     {
+      "misconception": null,
+      "why": "misses that the forces are equal"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the passage: thinks both act on one object"
+     }
+    ]
+   },
+   {
+    "evidence": "Even if a heavy truck hits a small car, the force exerted by the truck on the car is exactly equal in magnitude to the force exerted by the car on the truck.",
+    "kind": "what_if",
+    "q": "A heavy truck crashes into a small car. How do their forces on each other compare?",
+    "options": [
+     "The forces are exactly equal in size",
+     "The truck's force is larger, being heavier",
+     "The car's force is larger, being smaller",
+     "The truck's force is larger, having more momentum"
+    ],
+    "explain": "The truck's force on the car exactly equals the car's force on the truck.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-LAWSMOTION-K18-M7",
+      "why": "thinks the heavier object pushes harder"
+     },
+     {
+      "misconception": null,
+      "why": "over-corrects and thinks the smaller object pushes harder"
+     },
+     {
+      "misconception": "SCI-PHY-LAWSMOTION-K13-M5",
+      "why": "confuses momentum with force"
+     }
+    ]
+   },
+   {
+    "evidence": "Momentum is a measure of motion, defined as the product of mass and velocity, and it remains conserved in all collisions, even when objects stick together after impact.",
+    "kind": "what_if",
+    "q": "Two trolleys collide and stick together. What happens to their total momentum?",
+    "options": [
+     "It stays the same as before the collision",
+     "It is lost because they stuck together",
+     "It is used up as force in the crash",
+     "It doubles because their masses combine"
+    ],
+    "explain": "Momentum is conserved in all collisions, even when objects stick together.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-LAWSMOTION-K22-M10",
+      "why": "thinks sticking together breaks conservation"
+     },
+     {
+      "misconception": "SCI-PHY-LAWSMOTION-K5-M11",
+      "why": "thinks force or motion gets used up"
+     },
+     {
+      "misconception": null,
+      "why": "adds masses but forgets velocity changes"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 33.3
+}

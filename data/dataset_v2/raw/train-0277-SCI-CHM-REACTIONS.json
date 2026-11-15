@@ -1,0 +1,140 @@
+{
+ "source": "train-0277-SCI-CHM-REACTIONS.json",
+ "job": {
+  "job": "train-0277-SCI-CHM-REACTIONS",
+  "topic_id": "SCI-CHM-REACTIONS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a conversation between a teacher and two students",
+  "seed": 277
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1256,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today, let’s clarify some common doubts about chemical reactions. Rohan, you mentioned that balancing equations involves changing subscripts like H2O2. That is incorrect because changing subscripts alters the identity of the substance itself. Instead, we adjust the coefficients in front of formulas to ensure the number of atoms of each element remains equal on both sides, following the law of conservation of mass. Priya, you asked if rancidity is caused by bacteria. Actually, rancidity is the oxidation of fats and oils in food, which happens even without bacteria, leading to unpleasant smells. Speaking of oxidation, it is not limited to reactions where oxygen is a reactant; it also includes the loss of electrons or the removal of hydrogen. Finally, let’s look at displacement. Some students think any metal can displace another, but a metal can only displace a less reactive metal from its salt solution. For example, zinc can displace copper, but copper cannot displace zinc. Remember, these rules help us predict chemical behavior accurately without guessing.",
+ "menu_ids": [
+  "SCI-CHM-REACTIONS-K3-M1",
+  "SCI-CHM-REACTIONS-K4-M2",
+  "SCI-CHM-REACTIONS-K6-M3",
+  "SCI-CHM-REACTIONS-K11-M4",
+  "SCI-CHM-REACTIONS-K13-M5",
+  "SCI-CHM-REACTIONS-K17-M6",
+  "SCI-CHM-REACTIONS-K21-M7",
+  "SCI-CHM-REACTIONS-K7-M9",
+  "SCI-CHM-REACTIONS-K15-M10",
+  "SCI-CHM-REACTIONS-K24-M11",
+  "SCI-CHM-REACTIONS-K18-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "That is incorrect because changing subscripts alters the identity of the substance itself.",
+    "kind": "why",
+    "q": "Why can't we balance an equation by changing a subscript in a formula?",
+    "options": [
+     "It turns the substance into a different one",
+     "It breaks the law of conservation of mass",
+     "It changes the state of the substance",
+     "It adds extra molecules to one side only"
+    ],
+    "explain": "Changing a subscript changes which substance the formula stands for, so balancing must use coefficients.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "mixes up the law with the reason for coefficients"
+     },
+     {
+      "misconception": "SCI-CHM-REACTIONS-K4-M2",
+      "why": "confuses formula changes with state symbols"
+     },
+     {
+      "misconception": "SCI-CHM-REACTIONS-K7-M9",
+      "why": "thinks balancing is about counting molecules"
+     }
+    ]
+   },
+   {
+    "evidence": "Actually, rancidity is the oxidation of fats and oils in food, which happens even without bacteria, leading to unpleasant smells.",
+    "kind": "which_explains",
+    "q": "Chips kept in a sealed, germ-free bag still smell bad after months. What explains this?",
+    "options": [
+     "Their oils slowly react with oxygen",
+     "Tiny germs inside are eating the oils",
+     "Heat from the bag keeps the reaction going",
+     "The chips lose electrons to the plastic"
+    ],
+    "explain": "Rancidity is oxidation of fats and oils, which can happen even without bacteria.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-REACTIONS-K24-M11",
+      "why": "thinks bacteria cause rancidity"
+     },
+     {
+      "misconception": "SCI-CHM-REACTIONS-K17-M6",
+      "why": "thinks reactions need constant heating"
+     },
+     {
+      "misconception": null,
+      "why": "grabs the electron idea from the passage wrongly"
+     }
+    ]
+   },
+   {
+    "evidence": "Speaking of oxidation, it is not limited to reactions where oxygen is a reactant; it also includes the loss of electrons or the removal of hydrogen.",
+    "kind": "what_if",
+    "q": "A substance loses hydrogen in a reaction with no oxygen present. What has happened to it?",
+    "options": [
+     "It has been oxidised",
+     "It has been reduced",
+     "It has been balanced",
+     "Nothing, as oxygen is missing"
+    ],
+    "explain": "Oxidation also includes removal of hydrogen or loss of electrons, so oxygen is not always needed.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "mixes up oxidation and reduction"
+     },
+     {
+      "misconception": "SCI-CHM-REACTIONS-K7-M9",
+      "why": "confuses oxidation with balancing an equation"
+     },
+     {
+      "misconception": "SCI-CHM-REACTIONS-K21-M7",
+      "why": "thinks oxidation needs oxygen"
+     }
+    ]
+   },
+   {
+    "evidence": "For example, zinc can displace copper, but copper cannot displace zinc.",
+    "kind": "what_if",
+    "q": "A copper rod is placed in zinc sulphate solution. What will most likely happen?",
+    "options": [
+     "No reaction, as copper is less reactive",
+     "Copper displaces zinc from the solution",
+     "Zinc forms a precipitate on the rod",
+     "Copper and zinc swap places in turn"
+    ],
+    "explain": "Copper is less reactive than zinc, so it cannot displace zinc from its salt solution.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-REACTIONS-K13-M5",
+      "why": "thinks any metal can displace another"
+     },
+     {
+      "misconception": "SCI-CHM-REACTIONS-K15-M10",
+      "why": "misunderstands what a precipitate is"
+     },
+     {
+      "misconception": null,
+      "why": "thinks displacement works both ways"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 12.8
+}

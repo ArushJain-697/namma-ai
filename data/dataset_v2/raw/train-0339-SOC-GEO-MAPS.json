@@ -1,0 +1,141 @@
+{
+ "source": "train-0339-SOC-GEO-MAPS.json",
+ "job": {
+  "job": "train-0339-SOC-GEO-MAPS",
+  "topic_id": "SOC-GEO-MAPS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a news-style report about a real-world situation",
+  "seed": 339
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1318,
+  "promptTokenCount": 2
+ },
+ "passage": "In the bustling city of Bengaluru, urban planners recently released a new guide for local residents. The city administration published a political map showing the boundaries of various administrative wards, which helps citizens identify their local representatives rather than natural land features. To help tourists navigate the historic Lalbagh Botanical Garden, the garden authorities provided a rough, hand-drawn sketch that highlights key landmarks without using a strict mathematical scale. Meanwhile, a team of geographers released a large-scale map of the garden, which provides immense detail of every path and tree, unlike small-scale maps that cover vast regions like entire countries. Interestingly, the map of the garden is oriented with South at the top to align with the main entrance gate, reminding visitors that North is not always at the top of every map. These different tools serve unique purposes: political maps define governance, sketches offer quick guidance, and large-scale maps provide intricate local details. By understanding these differences, residents can better navigate their environment and participate in city planning. Whether using a digital tool or a paper document, knowing how to interpret symbols and directions is essential for every student and citizen in our growing urban landscape.",
+ "menu_ids": [
+  "SOC-GEO-MAPS-K4-M1",
+  "SOC-GEO-MAPS-K6-M2",
+  "SOC-GEO-MAPS-K7-M3",
+  "SOC-GEO-MAPS-K8-M4",
+  "SOC-GEO-MAPS-K4-M5",
+  "SOC-GEO-MAPS-K5-M6",
+  "SOC-GEO-MAPS-K12-M7",
+  "SOC-GEO-MAPS-K6-M8",
+  "SOC-GEO-MAPS-K13-M9",
+  "SOC-GEO-MAPS-K14-M10",
+  "SOC-GEO-MAPS-K15-M11",
+  "SOC-GEO-MAPS-K16-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "The city administration published a political map showing the boundaries of various administrative wards, which helps citizens identify their local representatives rather than natural land features.",
+    "kind": "which_example",
+    "q": "Which use of the ward map shows why a political map is helpful?",
+    "options": [
+     "Finding who represents your own neighbourhood",
+     "Checking how high a nearby hill rises",
+     "Seeing the same land with different colours",
+     "Showing rivers, forests and hills together"
+    ],
+    "explain": "A political map shows boundaries, so it helps people find their local representatives, not natural features.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-MAPS-K4-M1",
+      "why": "thinks political maps show heights of land"
+     },
+     {
+      "misconception": "SOC-GEO-MAPS-K4-M5",
+      "why": "thinks political and physical maps differ only in colour"
+     },
+     {
+      "misconception": "SOC-GEO-MAPS-K5-M6",
+      "why": "thinks one map shows every kind of feature"
+     }
+    ]
+   },
+   {
+    "evidence": "To help tourists navigate the historic Lalbagh Botanical Garden, the garden authorities provided a rough, hand-drawn sketch that highlights key landmarks without using a strict mathematical scale.",
+    "kind": "why",
+    "q": "Why is it fine that the Lalbagh sketch is not drawn to exact scale?",
+    "options": [
+     "It only needs to guide tourists to landmarks",
+     "It is a poor map made in a hurry",
+     "A sketch must still match the real distances",
+     "It shows a whole state in little detail"
+    ],
+    "explain": "A sketch quickly guides people to key landmarks, so it does not need a strict mathematical scale.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-MAPS-K8-M4",
+      "why": "thinks a sketch is just a bad map"
+     },
+     {
+      "misconception": "SOC-GEO-MAPS-K15-M11",
+      "why": "thinks a sketch needs exact scale"
+     },
+     {
+      "misconception": "SOC-GEO-MAPS-K16-M12",
+      "why": "thinks such drawings cover large areas"
+     }
+    ]
+   },
+   {
+    "evidence": "Meanwhile, a team of geographers released a large-scale map of the garden, which provides immense detail of every path and tree, unlike small-scale maps that cover vast regions like entire countries.",
+    "kind": "what_if",
+    "q": "A student wants to find every path in the garden. Which map should she pick?",
+    "options": [
+     "A large-scale map of the garden",
+     "A small-scale map of the country",
+     "A political map of the city wards",
+     "A small-scale map of the state"
+    ],
+    "explain": "Large-scale maps show a small area in great detail, while small-scale maps cover vast regions with less detail.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-MAPS-K6-M2",
+      "why": "thinks small-scale maps show small areas in detail"
+     },
+     {
+      "misconception": "SOC-GEO-MAPS-K4-M1",
+      "why": "thinks political maps give every local detail"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up small scale with a wide region"
+     }
+    ]
+   },
+   {
+    "evidence": "Interestingly, the map of the garden is oriented with South at the top to align with the main entrance gate, reminding visitors that North is not always at the top of every map.",
+    "kind": "which_explains",
+    "q": "Visitors see South at the top of the garden map. What does this show?",
+    "options": [
+     "Map makers can place any direction at the top",
+     "The map has been printed upside down by mistake",
+     "North is always at the bottom of garden maps",
+     "Only the entrance gate is marked with a direction"
+    ],
+    "explain": "The garden map puts South at the top, so North is not always at the top of a map.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-MAPS-K7-M3",
+      "why": "thinks North must be at the top, so it is a mistake"
+     },
+     {
+      "misconception": null,
+      "why": "turns one example into a rule about North"
+     },
+     {
+      "misconception": null,
+      "why": "grabs the entrance gate detail from the passage"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 13.0
+}

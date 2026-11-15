@@ -1,0 +1,165 @@
+{
+ "source": "train-0041-MAT-FACTORS.json",
+ "job": {
+  "job": "train-0041-MAT-FACTORS",
+  "topic_id": "MAT-FACTORS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a clear textbook explanation with one worked example",
+  "seed": 41
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3939,
+  "promptTokenCount": 2
+ },
+ "passage": "Numbers have special properties that help us understand them better. A factor is a number that divides another number exactly without leaving a remainder. For example, the factors of 12 are 1, 2, 3, 4, 6, and 12. Notice that both 1 and the number itself are always included as factors. Prime numbers are special because they have exactly two factors: 1 and the number itself. The number 2 is the smallest and only even prime number. Conversely, composite numbers have more than two factors. The number 1 is neither prime nor composite because it has only one factor. Multiples are found by multiplying a number by 1, 2, 3, and so on; since this sequence never ends, a number has an infinite amount of multiples. To check if a number is divisible by 3, we add all its digits together; if the sum is divisible by 3, the original number is also divisible by 3. For instance, 123 is divisible by 3 because 1+2+3 equals 6, which is a multiple of 3. Finally, the Highest Common Factor (HCF) is the largest factor shared by two numbers, while the Least Common Multiple (LCM) is the smallest non-zero multiple shared by them. These rules help us classify and organize numbers efficiently.",
+ "menu_ids": [
+  "MAT-FACTORS-K12-M1",
+  "MAT-FACTORS-K15-M2",
+  "MAT-FACTORS-K10-M3",
+  "MAT-FACTORS-K7-M5",
+  "MAT-FACTORS-K5-M6",
+  "MAT-FACTORS-K9-M9",
+  "MAT-FACTORS-K10-M10",
+  "MAT-FACTORS-K11-M11",
+  "MAT-FACTORS-K12-M12",
+  "MAT-FACTORS-K13-M13"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Notice that both 1 and the number itself are always included as factors.",
+    "kind": "which_example",
+    "q": "Which list shows all the factors of 15?",
+    "options": [
+     "1, 3, 5 and 15",
+     "3 and 5 only",
+     "1, 3 and 5 only",
+     "15, 30, 45 and 60"
+    ],
+    "explain": "1 and the number itself are always factors, so 15 has factors 1, 3, 5 and 15.",
+    "wrong": [
+     {
+      "misconception": "MAT-FACTORS-K5-M6",
+      "why": "thinks 1 and the number itself are not factors"
+     },
+     {
+      "misconception": null,
+      "why": "remembers 1 but thinks the number itself does not count"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up factors with multiples"
+     }
+    ]
+   },
+   {
+    "evidence": "The number 2 is the smallest and only even prime number.",
+    "kind": "which_example",
+    "q": "Sonu says even numbers can never be prime. Which number proves him wrong?",
+    "options": [
+     "2",
+     "1",
+     "4",
+     "12"
+    ],
+    "explain": "2 is the smallest prime and the only even prime, so not every even number is non-prime.",
+    "wrong": [
+     {
+      "misconception": "MAT-FACTORS-K12-M1",
+      "why": "thinks 1 is a prime number"
+     },
+     {
+      "misconception": null,
+      "why": "thinks small even numbers are prime"
+     },
+     {
+      "misconception": null,
+      "why": "picks the example number from the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "The number 1 is neither prime nor composite because it has only one factor.",
+    "kind": "why",
+    "q": "Why is the number 1 not called a prime number?",
+    "options": [
+     "It has just one factor, itself",
+     "It has no factors at all",
+     "It has many factors, so it is composite",
+     "It has two equal factors, 1 and 1"
+    ],
+    "explain": "A prime needs exactly two factors, but 1 has only one factor, so it is not prime.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks 1 is too small to have factors"
+     },
+     {
+      "misconception": null,
+      "why": "confuses 1 with composite numbers"
+     },
+     {
+      "misconception": "MAT-FACTORS-K12-M1",
+      "why": "counts 1 twice so it seems to have two factors"
+     }
+    ]
+   },
+   {
+    "evidence": "Multiples are found by multiplying a number by 1, 2, 3, and so on; since this sequence never ends, a number has an infinite amount of multiples.",
+    "kind": "what_if",
+    "q": "Asha keeps writing multiples of 7 after 70. When will she reach the last one?",
+    "options": [
+     "She never will, since they never end",
+     "She already has, since they stop at 70",
+     "She will at 84, since they stop at 7 × 12",
+     "She will at 700, since they stop at 7 × 100"
+    ],
+    "explain": "We can keep multiplying by 1, 2, 3 and so on forever, so multiples never end.",
+    "wrong": [
+     {
+      "misconception": "MAT-FACTORS-K13-M13",
+      "why": "thinks multiples stop at the tenth, like a table"
+     },
+     {
+      "misconception": null,
+      "why": "thinks multiples stop where school tables end"
+     },
+     {
+      "misconception": null,
+      "why": "thinks multiples stop at a big round number"
+     }
+    ]
+   },
+   {
+    "evidence": "To check if a number is divisible by 3, we add all its digits together; if the sum is divisible by 3, the original number is also divisible by 3.",
+    "kind": "how",
+    "q": "How can Raju check whether 471 is divisible by 3?",
+    "options": [
+     "Add its digits 4, 7, 1 and check the sum",
+     "See if its last digit 1 is divisible by 3",
+     "See if its first digit 4 is divisible by 3",
+     "Multiply its digits 4, 7, 1 and check the product"
+    ],
+    "explain": "Add the digits: 4+7+1 = 12, which is divisible by 3, so 471 is too.",
+    "wrong": [
+     {
+      "misconception": "MAT-FACTORS-K15-M2",
+      "why": "checks only the last digit, like the rule for 2"
+     },
+     {
+      "misconception": null,
+      "why": "looks at a single digit instead of all digits"
+     },
+     {
+      "misconception": null,
+      "why": "remembers using all digits but multiplies instead of adding"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 40.0
+}

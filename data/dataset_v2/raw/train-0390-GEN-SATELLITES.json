@@ -1,0 +1,169 @@
+{
+ "source": "train-0390-GEN-SATELLITES.json",
+ "job": {
+  "job": "train-0390-GEN-SATELLITES",
+  "topic_id": "GEN-SATELLITES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a diary entry or letter by a student",
+  "seed": 390
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 3248,
+  "promptTokenCount": 2
+ },
+ "passage": "Dear Diary, today our science teacher explained how satellites are the silent heroes of our modern world. I was surprised to learn that satellites do not need engines running constantly to stay in orbit; they simply move at high speeds, falling around the Earth due to gravity. I used to think they were like airplanes that need fuel to keep moving, but they actually coast in a vacuum. We discussed geostationary satellites, which orbit at about 36,000 km, much higher than the International Space Station. Because they match Earth's rotation, they appear fixed above one spot, allowing our DTH television to work without us constantly adjusting our dishes. I also learned that GPS does not track my phone; instead, my phone receives signals from at least four satellites to calculate its own position. It is fascinating how remote sensing satellites use special sensors to detect crop health by measuring light beyond what our eyes see, proving they do much more than just take simple photographs. Even in the dark, these satellites use radar to monitor cyclones, so they never stop working. It is amazing how these machines, launched by powerful rockets that push against their own exhaust rather than air, keep us connected and safe every single day.",
+ "menu_ids": [
+  "GEN-SATELLITES-K7-M1",
+  "GEN-SATELLITES-K8-M3",
+  "GEN-SATELLITES-K9-M4",
+  "GEN-SATELLITES-K12-M5",
+  "GEN-SATELLITES-K13-M6",
+  "GEN-SATELLITES-K13-M7",
+  "GEN-SATELLITES-K15-M9",
+  "GEN-SATELLITES-K16-M10",
+  "GEN-SATELLITES-K21-M11",
+  "GEN-SATELLITES-K22-M12",
+  "GEN-SATELLITES-K24-M13",
+  "GEN-SATELLITES-K23-M14",
+  "GEN-SATELLITES-K25-M15",
+  "GEN-SATELLITES-K27-M16"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "I was surprised to learn that satellites do not need engines running constantly to stay in orbit; they simply move at high speeds, falling around the Earth due to gravity.",
+    "kind": "why",
+    "q": "Why can a satellite stay in orbit with its engines switched off?",
+    "options": [
+     "Gravity keeps pulling it while it moves fast",
+     "There is no gravity in space to stop it",
+     "It burns fuel slowly in small bursts",
+     "Thin air pushes it forward like wind"
+    ],
+    "explain": "A satellite moves at high speed and falls around Earth due to gravity, so it coasts.",
+    "wrong": [
+     {
+      "misconception": "GEN-SATELLITES-K7-M1",
+      "why": "thinks there is no gravity in space"
+     },
+     {
+      "misconception": "GEN-SATELLITES-K8-M3",
+      "why": "thinks satellites need constant fuel like airplanes"
+     },
+     {
+      "misconception": null,
+      "why": "thinks air pushes satellites, ignoring the vacuum"
+     }
+    ]
+   },
+   {
+    "evidence": "Because they match Earth's rotation, they appear fixed above one spot, allowing our DTH television to work without us constantly adjusting our dishes.",
+    "kind": "which_explains",
+    "q": "A DTH dish is never turned, yet the TV keeps working. Why?",
+    "options": [
+     "The satellite goes round once as Earth turns",
+     "The satellite is not moving at all",
+     "Earth's gravity holds the satellite in place",
+     "The satellite is a few hundred km up"
+    ],
+    "explain": "The satellite matches Earth's rotation, so it appears fixed above one spot and the dish needs no adjusting.",
+    "wrong": [
+     {
+      "misconception": "GEN-SATELLITES-K13-M6",
+      "why": "thinks a geostationary satellite does not move"
+     },
+     {
+      "misconception": "GEN-SATELLITES-K13-M7",
+      "why": "thinks gravity pins it above one place"
+     },
+     {
+      "misconception": "GEN-SATELLITES-K12-M5",
+      "why": "thinks it is as low as the space station"
+     }
+    ]
+   },
+   {
+    "evidence": "I also learned that GPS does not track my phone; instead, my phone receives signals from at least four satellites to calculate its own position.",
+    "kind": "how",
+    "q": "Rina's phone shows her place on a map. How does it find this?",
+    "options": [
+     "The phone calculates it using several satellite signals",
+     "The satellite tracks the phone and sends it back",
+     "The phone needs just one satellite for this",
+     "The phone gets it from the nearest tower"
+    ],
+    "explain": "The phone receives signals from at least four satellites and calculates its own position; GPS does not track it.",
+    "wrong": [
+     {
+      "misconception": "GEN-SATELLITES-K27-M16",
+      "why": "thinks the satellite tracks the phone"
+     },
+     {
+      "misconception": "GEN-SATELLITES-K25-M15",
+      "why": "thinks one satellite gives an exact position"
+     },
+     {
+      "misconception": "GEN-SATELLITES-K22-M12",
+      "why": "thinks only ground towers help phones"
+     }
+    ]
+   },
+   {
+    "evidence": "It is fascinating how remote sensing satellites use special sensors to detect crop health by measuring light beyond what our eyes see, proving they do much more than just take simple photographs.",
+    "kind": "how",
+    "q": "How can a satellite tell a farmer that crops are unhealthy?",
+    "options": [
+     "Its sensors measure light our eyes cannot see",
+     "Its camera takes simple photos of green leaves",
+     "Its engines fly low over each field",
+     "Its signals control rain over the field"
+    ],
+    "explain": "Special sensors measure light beyond what our eyes see, which shows crop health; simple photographs are not enough.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks satellites only take ordinary photographs"
+     },
+     {
+      "misconception": "GEN-SATELLITES-K8-M3",
+      "why": "thinks satellites fly like machines with engines"
+     },
+     {
+      "misconception": "GEN-SATELLITES-K24-M13",
+      "why": "thinks satellites control the weather"
+     }
+    ]
+   },
+   {
+    "evidence": "Even in the dark, these satellites use radar to monitor cyclones, so they never stop working.",
+    "kind": "how",
+    "q": "How do satellites keep watching a cyclone in the dark?",
+    "options": [
+     "They use radar, not ordinary light",
+     "They take normal camera photos at night",
+     "They wait for sunrise before tracking it",
+     "They steer the cyclone away from land"
+    ],
+    "explain": "These satellites use radar, which works even in the dark, so cyclone monitoring never stops.",
+    "wrong": [
+     {
+      "misconception": "GEN-SATELLITES-K23-M14",
+      "why": "thinks a normal camera is used at night"
+     },
+     {
+      "misconception": null,
+      "why": "thinks tracking stops without daylight"
+     },
+     {
+      "misconception": "GEN-SATELLITES-K24-M13",
+      "why": "thinks satellites can control cyclones"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 26.6
+}

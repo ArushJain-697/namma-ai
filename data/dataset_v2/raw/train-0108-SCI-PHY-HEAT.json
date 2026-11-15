@@ -1,0 +1,163 @@
+{
+ "source": "train-0108-SCI-PHY-HEAT.json",
+ "job": {
+  "job": "train-0108-SCI-PHY-HEAT",
+  "topic_id": "SCI-PHY-HEAT",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 108
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3599,
+  "promptTokenCount": 2
+ },
+ "passage": "Many people believe that cold is a physical substance that flows into objects to make them cooler, or that metal objects are naturally colder than wood. However, heat is actually a form of energy, and temperature is just a measure of how hot or cold an object is. When you touch a metal chair, it feels colder than a wooden one because metal is a better conductor of heat, drawing heat away from your hand faster than wood does. Heat transfer happens through conduction, where energy passes from particle to particle without the particles themselves traveling along the material. If you place a metal spoon in hot tea, the heat moves along the handle, but the atoms stay in their places. Furthermore, heat does not only travel upwards; it can move in any direction depending on the temperature difference. For instance, during the night, the land cools faster than the sea, causing a land breeze to blow from the land toward the sea. When choosing clothing, remember that dark surfaces are better at absorbing radiation than light ones, but they do not 'attract' heat like a magnet. Understanding these processes helps us see that heat is energy in motion, not a substance that gets trapped or pulled by colors or materials.",
+ "menu_ids": [
+  "SCI-PHY-HEAT-K7-M1",
+  "SCI-PHY-HEAT-K6-M2",
+  "SCI-PHY-HEAT-K16-M3",
+  "SCI-PHY-HEAT-K17-M6",
+  "SCI-PHY-HEAT-K18-M7",
+  "SCI-PHY-HEAT-K20-M8",
+  "SCI-PHY-HEAT-K15-M9",
+  "SCI-PHY-HEAT-K11-M11"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "When you touch a metal chair, it feels colder than a wooden one because metal is a better conductor of heat, drawing heat away from your hand faster than wood does.",
+    "kind": "why",
+    "q": "A metal chair and a wooden chair are in the same room. Why does the metal one feel colder?",
+    "options": [
+     "Metal takes heat from your hand faster",
+     "Metal is naturally colder than the wood",
+     "Metal lets cold flow into your hand",
+     "Wood takes heat from your hand faster"
+    ],
+    "explain": "Metal conducts heat better, so it draws heat away from your hand faster than wood.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-HEAT-K16-M3",
+      "why": "thinks metal is naturally colder than wood"
+     },
+     {
+      "misconception": "SCI-PHY-HEAT-K6-M2",
+      "why": "thinks cold is a substance that flows in"
+     },
+     {
+      "misconception": null,
+      "why": "reverses which material is the better conductor"
+     }
+    ]
+   },
+   {
+    "evidence": "If you place a metal spoon in hot tea, the heat moves along the handle, but the atoms stay in their places.",
+    "kind": "what_if",
+    "q": "A spoon stands in hot tea and its handle gets warm. What happens to the spoon's atoms?",
+    "options": [
+     "They stay in place and pass energy along",
+     "They travel from the hot end to the handle",
+     "They carry cold from the handle into the tea",
+     "They rise up because heat only moves upward"
+    ],
+    "explain": "In conduction, heat moves along the handle, but the atoms stay in their places.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-HEAT-K15-M9",
+      "why": "thinks particles travel along the rod"
+     },
+     {
+      "misconception": "SCI-PHY-HEAT-K6-M2",
+      "why": "thinks cold is a substance that flows"
+     },
+     {
+      "misconception": "SCI-PHY-HEAT-K17-M6",
+      "why": "thinks heat only travels upward"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, heat does not only travel upwards; it can move in any direction depending on the temperature difference.",
+    "kind": "what_if",
+    "q": "A hot pan is placed on top of a cold metal block. Which way does heat flow?",
+    "options": [
+     "Downward, from the hot pan into the block",
+     "Upward only, from the pan into the air",
+     "Upward, as cold rises from block to pan",
+     "Downward, but only because the block is metal"
+    ],
+    "explain": "Heat can move in any direction, from hotter to colder, so it flows down into the block.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-HEAT-K17-M6",
+      "why": "thinks heat only travels upward"
+     },
+     {
+      "misconception": "SCI-PHY-HEAT-K6-M2",
+      "why": "thinks cold flows like a substance"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the material, not temperature difference, decides direction"
+     }
+    ]
+   },
+   {
+    "evidence": "For instance, during the night, the land cools faster than the sea, causing a land breeze to blow from the land toward the sea.",
+    "kind": "which_explains",
+    "q": "At a beach at night, which way does the breeze blow, and what causes it?",
+    "options": [
+     "Land to sea, as land cools faster",
+     "Land to sea, as land stays hotter",
+     "Sea to land, as sea cools faster",
+     "Sea to land, as cold flows from sea"
+    ],
+    "explain": "At night the land cools faster than the sea, so the land breeze blows toward the sea.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-HEAT-K18-M7",
+      "why": "thinks a land breeze comes from hot land"
+     },
+     {
+      "misconception": null,
+      "why": "reverses which one cools faster"
+     },
+     {
+      "misconception": "SCI-PHY-HEAT-K6-M2",
+      "why": "thinks cold is a substance that flows"
+     }
+    ]
+   },
+   {
+    "evidence": "When choosing clothing, remember that dark surfaces are better at absorbing radiation than light ones, but they do not 'attract' heat like a magnet.",
+    "kind": "why",
+    "q": "Standing outdoors at noon, why does a black shirt get warmer than a white one?",
+    "options": [
+     "It absorbs more of the incoming radiation",
+     "It pulls heat toward it like a magnet",
+     "It is naturally hotter than a white shirt",
+     "It keeps the cold from flowing into it"
+    ],
+    "explain": "Dark surfaces absorb radiation better than light ones; they do not attract heat like a magnet.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-HEAT-K20-M8",
+      "why": "thinks black attracts heat like a magnet"
+     },
+     {
+      "misconception": "SCI-PHY-HEAT-K16-M3",
+      "why": "thinks some materials are naturally hotter or colder"
+     },
+     {
+      "misconception": "SCI-PHY-HEAT-K6-M2",
+      "why": "thinks cold is a substance that flows in"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 37.4
+}

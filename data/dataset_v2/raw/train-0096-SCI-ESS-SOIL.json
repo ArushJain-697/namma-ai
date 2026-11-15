@@ -1,0 +1,140 @@
+{
+ "source": "train-0096-SCI-ESS-SOIL.json",
+ "job": {
+  "job": "train-0096-SCI-ESS-SOIL",
+  "topic_id": "SCI-ESS-SOIL",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 96
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2980,
+  "promptTokenCount": 2
+ },
+ "passage": "Many people mistakenly believe that soil is simply powdered rock, but it is actually a complex mixture of weathered rock particles, decaying organic matter, air, and water. This formation process is incredibly slow, taking hundreds of years to create just a few centimeters of topsoil, rather than happening overnight after a rainstorm. The soil profile consists of distinct layers, and the topsoil is the most fertile because it is rich in humus and nutrients, unlike the deeper layers near the bedrock. Furthermore, soil is not a solid, airless block; it contains tiny spaces between particles that hold both air and water. The rate at which water passes through these spaces, known as percolation, varies by soil type. Sandy soil has large particles and a high percolation rate, meaning water drains through it very quickly, whereas clay has smaller particles that hold water tightly. Finally, plants are vital for the environment because their roots bind the soil together, acting as a natural shield against erosion. Without this protective cover, wind and water can easily wash away the fertile top layer, which is a process that affects both wild landscapes and human-inhabited agricultural fields alike.",
+ "menu_ids": [
+  "SCI-ESS-SOIL-K3-M1",
+  "SCI-ESS-SOIL-K4-M2",
+  "SCI-ESS-SOIL-K6-M3",
+  "SCI-ESS-SOIL-K11-M4",
+  "SCI-ESS-SOIL-K14-M5",
+  "SCI-ESS-SOIL-K17-M6",
+  "SCI-ESS-SOIL-K21-M8",
+  "SCI-ESS-SOIL-K23-M9",
+  "SCI-ESS-SOIL-K24-M10",
+  "SCI-ESS-SOIL-K17-M11",
+  "SCI-ESS-SOIL-K8-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "The soil profile consists of distinct layers, and the topsoil is the most fertile because it is rich in humus and nutrients, unlike the deeper layers near the bedrock.",
+    "kind": "what_if",
+    "q": "Meena wants the most fertile soil for her pot plants. Which layer should she dig out?",
+    "options": [
+     "The top layer, full of humus",
+     "The deepest layer, close to the bedrock",
+     "Any layer, since all layers are alike",
+     "The lowest layer, made of soft mud"
+    ],
+    "explain": "Topsoil is most fertile because it is rich in humus and nutrients, unlike deeper layers.",
+    "wrong": [
+     {
+      "misconception": "SCI-ESS-SOIL-K6-M3",
+      "why": "thinks deeper soil is more fertile"
+     },
+     {
+      "misconception": null,
+      "why": "ignores that the profile has distinct layers"
+     },
+     {
+      "misconception": "SCI-ESS-SOIL-K8-M12",
+      "why": "thinks the lowest layer is soft mud"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, soil is not a solid, airless block; it contains tiny spaces between particles that hold both air and water.",
+    "kind": "which_explains",
+    "q": "A dry lump of soil is dropped into water and bubbles rise. Where do the bubbles come from?",
+    "options": [
+     "Air trapped in tiny spaces between particles",
+     "Rock powder dissolving, since soil is only rock",
+     "The water, since solid soil holds no air",
+     "Roots breaking the rocks inside the soil"
+    ],
+    "explain": "Soil is not an airless block; tiny spaces between its particles hold air.",
+    "wrong": [
+     {
+      "misconception": "SCI-ESS-SOIL-K3-M1",
+      "why": "thinks soil is just powdered rock"
+     },
+     {
+      "misconception": "SCI-ESS-SOIL-K11-M4",
+      "why": "thinks soil is solid with no air"
+     },
+     {
+      "misconception": "SCI-ESS-SOIL-K24-M10",
+      "why": "thinks roots break rocks into soil"
+     }
+    ]
+   },
+   {
+    "evidence": "Sandy soil has large particles and a high percolation rate, meaning water drains through it very quickly, whereas clay has smaller particles that hold water tightly.",
+    "kind": "what_if",
+    "q": "Equal amounts of water are poured on sandy soil and clay soil. What will happen?",
+    "options": [
+     "It drains faster through the sandy soil",
+     "It drains faster through the clay soil",
+     "It drains at the same speed through both",
+     "It stays longest in the sandy soil"
+    ],
+    "explain": "Sand has large particles and high percolation, so water drains through it quickly; clay holds water.",
+    "wrong": [
+     {
+      "misconception": "SCI-ESS-SOIL-K14-M5",
+      "why": "thinks clay particles are larger than sand"
+     },
+     {
+      "misconception": null,
+      "why": "misses that percolation varies by soil type"
+     },
+     {
+      "misconception": "SCI-ESS-SOIL-K17-M11",
+      "why": "thinks high percolation means holding water"
+     }
+    ]
+   },
+   {
+    "evidence": "Without this protective cover, wind and water can easily wash away the fertile top layer, which is a process that affects both wild landscapes and human-inhabited agricultural fields alike.",
+    "kind": "what_if",
+    "q": "A farmer clears every plant from his field. What will most likely happen to its topsoil?",
+    "options": [
+     "It is carried off by wind and water",
+     "It stays safe, since people farm there",
+     "It erodes less, since roots stop breaking it",
+     "It forms again after the next heavy rain"
+    ],
+    "explain": "Roots bind soil; without plant cover, wind and water wash away topsoil, even on farms.",
+    "wrong": [
+     {
+      "misconception": "SCI-ESS-SOIL-K23-M9",
+      "why": "thinks erosion happens only where no people live"
+     },
+     {
+      "misconception": "SCI-ESS-SOIL-K24-M10",
+      "why": "thinks plants cause erosion by breaking soil"
+     },
+     {
+      "misconception": "SCI-ESS-SOIL-K4-M2",
+      "why": "thinks soil forms quickly after rain"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 32.4
+}

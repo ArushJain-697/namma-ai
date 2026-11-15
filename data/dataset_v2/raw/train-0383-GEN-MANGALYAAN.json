@@ -1,0 +1,143 @@
+{
+ "source": "train-0383-GEN-MANGALYAAN.json",
+ "job": {
+  "job": "train-0383-GEN-MANGALYAAN",
+  "topic_id": "GEN-MANGALYAAN",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 383
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1339,
+  "promptTokenCount": 2
+ },
+ "passage": "Many people mistakenly believe that Mangalyaan was a cheap mission because ISRO used low-quality parts, but this is completely false. In reality, Mangalyaan was cost-effective because of clever engineering, such as using the PSLV rocket instead of the more expensive GSLV, and by using gravity to assist its journey. Unlike missions that land on a planet, Mangalyaan was designed as an orbiter to study the Martian atmosphere and surface from space, never touching the ground. Furthermore, it did not reach Mars instantly; it took nearly ten months to travel through space, with signals taking several minutes to reach Earth. Similarly, people often think Aditya-L1 will land on the Sun, but the Sun is a massive ball of hot plasma, not a solid surface. Aditya-L1 is positioned at the L1 point, a special location where the gravitational forces of the Earth and Sun allow the spacecraft to stay in a stable halo orbit. Because Earth’s atmosphere blocks harmful radiation like UV and X-rays, Aditya-L1 must stay in space to observe the Sun clearly. This mission helps us understand solar activity, which is impossible to study from the ground because our atmosphere acts as a shield against these rays.",
+ "menu_ids": [
+  "GEN-MANGALYAAN-K13-M1",
+  "GEN-MANGALYAAN-K14-M2",
+  "GEN-MANGALYAAN-K14-M3",
+  "GEN-MANGALYAAN-K15-M4",
+  "GEN-MANGALYAAN-K15-M5",
+  "GEN-MANGALYAAN-K16-M6",
+  "GEN-MANGALYAAN-K17-M7",
+  "GEN-MANGALYAAN-K18-M8",
+  "GEN-MANGALYAAN-K19-M9",
+  "GEN-MANGALYAAN-K19-M10",
+  "GEN-MANGALYAAN-K20-M11",
+  "GEN-MANGALYAAN-K21-M12",
+  "GEN-MANGALYAAN-K29-M13",
+  "GEN-MANGALYAAN-K22-M14"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "In reality, Mangalyaan was cost-effective because of clever engineering, such as using the PSLV rocket instead of the more expensive GSLV, and by using gravity to assist its journey.",
+    "kind": "why",
+    "q": "Why was Mangalyaan able to cost less than other Mars missions?",
+    "options": [
+     "Smart design choices kept its expenses low",
+     "Cheaper parts were used to save money",
+     "A rover was left out to cut costs",
+     "It was launched on a GSLV Mk III"
+    ],
+    "explain": "The passage says clever engineering, like using the PSLV and gravity assist, made it cost-effective, not poor parts.",
+    "wrong": [
+     {
+      "misconception": "GEN-MANGALYAAN-K17-M7",
+      "why": "thinks low cost means low-quality parts"
+     },
+     {
+      "misconception": "GEN-MANGALYAAN-K15-M4",
+      "why": "thinks a rover was part of the plan"
+     },
+     {
+      "misconception": "GEN-MANGALYAAN-K13-M1",
+      "why": "mixes up the rocket with the costlier GSLV"
+     }
+    ]
+   },
+   {
+    "evidence": "Unlike missions that land on a planet, Mangalyaan was designed as an orbiter to study the Martian atmosphere and surface from space, never touching the ground.",
+    "kind": "what_if",
+    "q": "Scientists want to study Mars with Mangalyaan. Where will its instruments work from?",
+    "options": [
+     "From orbit high above Mars",
+     "From the Martian surface on wheels",
+     "From the surface, after a soft landing",
+     "From the Moon, looking toward Mars"
+    ],
+    "explain": "Mangalyaan was an orbiter that studied Mars from space and never touched the ground.",
+    "wrong": [
+     {
+      "misconception": "GEN-MANGALYAAN-K15-M4",
+      "why": "thinks a rover explored Mars"
+     },
+     {
+      "misconception": "GEN-MANGALYAAN-K14-M3",
+      "why": "thinks Mangalyaan landed on Mars"
+     },
+     {
+      "misconception": "GEN-MANGALYAAN-K14-M2",
+      "why": "thinks it was a Moon mission"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, it did not reach Mars instantly; it took nearly ten months to travel through space, with signals taking several minutes to reach Earth.",
+    "kind": "which_explains",
+    "q": "A scientist sends a command to Mangalyaan. What happens before it is received?",
+    "options": [
+     "Several minutes pass as the signal travels",
+     "No time passes, as signals move instantly",
+     "Ten months pass while the signal travels",
+     "The signal waits until the craft lands"
+    ],
+    "explain": "Signals took several minutes to reach Earth, so a command is not received instantly.",
+    "wrong": [
+     {
+      "misconception": "GEN-MANGALYAAN-K20-M11",
+      "why": "thinks signals travel instantly"
+     },
+     {
+      "misconception": null,
+      "why": "mixes signal time with the journey time"
+     },
+     {
+      "misconception": "GEN-MANGALYAAN-K14-M3",
+      "why": "thinks the craft landed on Mars"
+     }
+    ]
+   },
+   {
+    "evidence": "Because Earth’s atmosphere blocks harmful radiation like UV and X-rays, Aditya-L1 must stay in space to observe the Sun clearly.",
+    "kind": "why",
+    "q": "Why must Aditya-L1 observe the Sun from space and not from the ground?",
+    "options": [
+     "The air blocks UV and X-rays from the Sun",
+     "The Sun is too bright for ground cameras",
+     "There is no gravity to hold things on Earth",
+     "It must land on the Sun to study it"
+    ],
+    "explain": "Earth's atmosphere blocks UV and X-rays, so the Sun must be observed from space.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "picks an everyday reason about brightness"
+     },
+     {
+      "misconception": "GEN-MANGALYAAN-K21-M12",
+      "why": "thinks gravity is absent in space"
+     },
+     {
+      "misconception": null,
+      "why": "thinks Aditya-L1 will land on the Sun"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 12.9
+}

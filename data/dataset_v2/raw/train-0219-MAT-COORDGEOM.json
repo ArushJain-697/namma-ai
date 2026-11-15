@@ -1,0 +1,138 @@
+{
+ "source": "train-0219-MAT-COORDGEOM.json",
+ "job": {
+  "job": "train-0219-MAT-COORDGEOM",
+  "topic_id": "MAT-COORDGEOM",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a step-by-step worked example",
+  "seed": 219
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2572,
+  "promptTokenCount": 2
+ },
+ "passage": "In coordinate geometry, we use a Cartesian plane to locate points using an ordered pair (x, y). The first number, x, represents the horizontal distance from the y-axis, while the second number, y, represents the vertical distance from the x-axis. The intersection of the two axes is called the origin, which is always denoted by the coordinates (0, 0). When plotting points, we must ensure the scale on both axes is identical to maintain geometric accuracy. For example, if we want to find the distance between two points, (x1, y1) and (x2, y2), we use the formula involving the square root of the sum of squared differences: the square root of (x2 - x1)² + (y2 - y1)². This formula works regardless of the order of subtraction because squaring any difference always results in a positive value. Finally, remember that a point like (3, 0) does not belong to any quadrant; it lies exactly on the x-axis because its vertical distance from the x-axis is zero. Similarly, a point like (0, 4) lies on the y-axis. Always check the signs carefully: a point is only in the third quadrant if both its x and y coordinates are negative.",
+ "menu_ids": [
+  "MAT-COORDGEOM-K13-M3",
+  "MAT-COORDGEOM-K14-M4",
+  "MAT-COORDGEOM-K6-M5",
+  "MAT-COORDGEOM-K17-M6",
+  "MAT-COORDGEOM-K19-M7",
+  "MAT-COORDGEOM-K15-M8",
+  "MAT-COORDGEOM-K16-M9",
+  "MAT-COORDGEOM-K20-M10",
+  "MAT-COORDGEOM-K21-M11"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "The first number, x, represents the horizontal distance from the y-axis, while the second number, y, represents the vertical distance from the x-axis.",
+    "kind": "what_if",
+    "q": "Meena plots the point (2, 5). How far is this point from the x-axis?",
+    "options": [
+     "5 units, given by the y-value",
+     "2 units, given by the x-value",
+     "7 units, the sum of both values",
+     "3 units, the gap between both values"
+    ],
+    "explain": "The second number, y, gives the vertical distance from the x-axis, so it is 5 units.",
+    "wrong": [
+     {
+      "misconception": "MAT-COORDGEOM-K14-M4",
+      "why": "swaps the horizontal and vertical roles of x and y"
+     },
+     {
+      "misconception": null,
+      "why": "adds the two coordinates together"
+     },
+     {
+      "misconception": null,
+      "why": "subtracts one coordinate from the other"
+     }
+    ]
+   },
+   {
+    "evidence": "This formula works regardless of the order of subtraction because squaring any difference always results in a positive value.",
+    "kind": "what_if",
+    "q": "Asha finds the distance from A to B, and Ravi finds it from B to A. How do their answers compare?",
+    "options": [
+     "They are equal, because squaring removes negative signs",
+     "They differ, because one difference becomes negative",
+     "They are equal only if all coordinates are positive",
+     "They differ, because A must always come first"
+    ],
+    "explain": "Squaring any difference gives a positive value, so the order of subtraction does not change the distance.",
+    "wrong": [
+     {
+      "misconception": "MAT-COORDGEOM-K21-M11",
+      "why": "thinks a negative difference changes the distance"
+     },
+     {
+      "misconception": null,
+      "why": "thinks negative coordinates break the formula"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the formula needs a fixed order"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, remember that a point like (3, 0) does not belong to any quadrant; it lies exactly on the x-axis because its vertical distance from the x-axis is zero.",
+    "kind": "which_explains",
+    "q": "Where does the point (6, 0) lie on the Cartesian plane?",
+    "options": [
+     "On the x-axis, in no quadrant",
+     "In the first quadrant, as 6 is positive",
+     "On the y-axis, since its y-value is zero",
+     "At the origin, since one value is zero"
+    ],
+    "explain": "Its vertical distance from the x-axis is zero, so it lies on the x-axis, in no quadrant.",
+    "wrong": [
+     {
+      "misconception": "MAT-COORDGEOM-K19-M7",
+      "why": "thinks a positive x puts it in the first quadrant"
+     },
+     {
+      "misconception": "MAT-COORDGEOM-K17-M6",
+      "why": "mixes up which zero puts a point on which axis"
+     },
+     {
+      "misconception": null,
+      "why": "thinks any zero coordinate means the origin"
+     }
+    ]
+   },
+   {
+    "evidence": "Always check the signs carefully: a point is only in the third quadrant if both its x and y coordinates are negative.",
+    "kind": "why",
+    "q": "Rahul says the point (-4, 2) is in the third quadrant. Is he right?",
+    "options": [
+     "No, because its y-value is positive",
+     "Yes, because one coordinate is negative",
+     "Yes, because its first number is negative",
+     "No, because its x-value is negative"
+    ],
+    "explain": "A point is in the third quadrant only if both coordinates are negative; here y is positive.",
+    "wrong": [
+     {
+      "misconception": "MAT-COORDGEOM-K13-M3",
+      "why": "thinks any negative coordinate means third quadrant"
+     },
+     {
+      "misconception": null,
+      "why": "checks only the first coordinate's sign"
+     },
+     {
+      "misconception": null,
+      "why": "gives the right verdict for the wrong reason"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 26.2
+}

@@ -1,0 +1,166 @@
+{
+ "source": "train-0169-SOC-HIS-FRENCHREV.json",
+ "job": {
+  "job": "train-0169-SOC-HIS-FRENCHREV",
+  "topic_id": "SOC-HIS-FRENCHREV",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a clear textbook explanation",
+  "seed": 169
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3252,
+  "promptTokenCount": 2
+ },
+ "passage": "The French society before 1789 was divided into three estates, where the burden of taxation fell entirely on the Third Estate. The First and Second Estates, comprising the clergy and nobility, enjoyed feudal privileges and were exempt from paying taxes to the King. The Third Estate, which included peasants, workers, and the middle class, faced a severe subsistence crisis due to bad harvests and rising bread prices. When the Estates General met, the King insisted on the old system where each estate had only one vote, rather than giving every individual representative a vote. This injustice sparked the formation of the National Assembly. Meanwhile, the storming of the Bastille was driven by rumors of military action, even though the fortress held only seven prisoners at the time. Later, the Jacobins, a political club led by Maximilien Robespierre, emerged as a radical group representing the poorer sections of society, distinct from the wealthy aristocracy. While the Revolution promised liberty, it did not grant voting rights to women, who remained excluded from political participation. Furthermore, Napoleon Bonaparte later rose to power, but he was not a democratic leader; he established a military dictatorship that curtailed many revolutionary freedoms. The struggle for equality was long, and even the abolition of slavery was temporary, as it was reintroduced by Napoleon after being briefly ended by the Convention.",
+ "menu_ids": [
+  "SOC-HIS-FRENCHREV-K11-M1",
+  "SOC-HIS-FRENCHREV-K6-M2",
+  "SOC-HIS-FRENCHREV-K14-M3",
+  "SOC-HIS-FRENCHREV-K8-M5",
+  "SOC-HIS-FRENCHREV-K17-M6",
+  "SOC-HIS-FRENCHREV-K9-M7",
+  "SOC-HIS-FRENCHREV-K18-M8",
+  "SOC-HIS-FRENCHREV-K12-M9",
+  "SOC-HIS-FRENCHREV-K10-M10",
+  "SOC-HIS-FRENCHREV-K13-M11",
+  "SOC-HIS-FRENCHREV-K16-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "The First and Second Estates, comprising the clergy and nobility, enjoyed feudal privileges and were exempt from paying taxes to the King.",
+    "kind": "what_if",
+    "q": "Before 1789, a bishop and a peasant lived in France. Who paid taxes to the King?",
+    "options": [
+     "Only the peasant, as clergy were freed from it",
+     "Both, though the bishop paid a smaller share",
+     "Only the bishop, as clergy were much richer",
+     "Both, as every estate paid an equal share"
+    ],
+    "explain": "The clergy and nobility were exempt from taxes, so the whole burden fell on the Third Estate.",
+    "wrong": [
+     {
+      "misconception": "SOC-HIS-FRENCHREV-K11-M1",
+      "why": "thinks the First and Second Estates paid some taxes"
+     },
+     {
+      "misconception": null,
+      "why": "reverses who carried the tax burden"
+     },
+     {
+      "misconception": null,
+      "why": "assumes taxes were shared fairly among estates"
+     }
+    ]
+   },
+   {
+    "evidence": "When the Estates General met, the King insisted on the old system where each estate had only one vote, rather than giving every individual representative a vote.",
+    "kind": "why",
+    "q": "The Third Estate had the most representatives. Why could it still be outvoted in the Estates General?",
+    "options": [
+     "Each estate had one vote, whatever its size",
+     "Each member voted, but many members were absent",
+     "Each estate's vote was weighted by taxes paid",
+     "Each noble got extra votes for owning land"
+    ],
+    "explain": "Each estate had only one vote, so two privileged estates could outvote the larger Third Estate.",
+    "wrong": [
+     {
+      "misconception": "SOC-HIS-FRENCHREV-K14-M3",
+      "why": "thinks every individual representative had a vote"
+     },
+     {
+      "misconception": null,
+      "why": "links voting power to taxes, a nearby idea"
+     },
+     {
+      "misconception": null,
+      "why": "guesses nobles had more personal votes"
+     }
+    ]
+   },
+   {
+    "evidence": "Meanwhile, the storming of the Bastille was driven by rumors of military action, even though the fortress held only seven prisoners at the time.",
+    "kind": "why",
+    "q": "Only seven prisoners were inside the Bastille. What pushed people to storm it?",
+    "options": [
+     "They feared the army was about to strike",
+     "They wanted to free hundreds of prisoners",
+     "They were angry the King refused fair voting",
+     "They wanted to seize bread stored inside"
+    ],
+    "explain": "Rumours of military action drove the attack; the fortress held only seven prisoners then.",
+    "wrong": [
+     {
+      "misconception": "SOC-HIS-FRENCHREV-K6-M2",
+      "why": "thinks the Bastille was full of prisoners"
+     },
+     {
+      "misconception": null,
+      "why": "picks the cause of a different event, the National Assembly"
+     },
+     {
+      "misconception": "SOC-HIS-FRENCHREV-K13-M11",
+      "why": "links every event to the bread crisis"
+     }
+    ]
+   },
+   {
+    "evidence": "Later, the Jacobins, a political club led by Maximilien Robespierre, emerged as a radical group representing the poorer sections of society, distinct from the wealthy aristocracy.",
+    "kind": "difference",
+    "q": "How were the Jacobins different from the aristocracy of France?",
+    "options": [
+     "They spoke up for the poorer people",
+     "They were rich nobles seeking new laws",
+     "They were rioters with no leader at all",
+     "They were soldiers serving under Napoleon"
+    ],
+    "explain": "The Jacobins were a radical club led by Robespierre, representing the poor, not the wealthy aristocracy.",
+    "wrong": [
+     {
+      "misconception": "SOC-HIS-FRENCHREV-K8-M5",
+      "why": "thinks Jacobins were wealthy nobles"
+     },
+     {
+      "misconception": "SOC-HIS-FRENCHREV-K17-M6",
+      "why": "thinks radicals were lawless rioters"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up Jacobins with a later leader named nearby"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, Napoleon Bonaparte later rose to power, but he was not a democratic leader; he established a military dictatorship that curtailed many revolutionary freedoms.",
+    "kind": "which_explains",
+    "q": "What kind of rule did Napoleon set up after he rose to power?",
+    "options": [
+     "A rule by army strength that cut freedoms",
+     "A democracy that ended rule by kings",
+     "A system that gave women the vote",
+     "A republic that kept slavery banned forever"
+    ],
+    "explain": "Napoleon was not democratic; he set up a military dictatorship that curtailed many revolutionary freedoms.",
+    "wrong": [
+     {
+      "misconception": "SOC-HIS-FRENCHREV-K9-M7",
+      "why": "thinks overthrowing kings made Napoleon democratic"
+     },
+     {
+      "misconception": "SOC-HIS-FRENCHREV-K18-M8",
+      "why": "thinks women won the vote after the Revolution"
+     },
+     {
+      "misconception": "SOC-HIS-FRENCHREV-K10-M10",
+      "why": "thinks slavery was abolished for good"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 246.9
+}

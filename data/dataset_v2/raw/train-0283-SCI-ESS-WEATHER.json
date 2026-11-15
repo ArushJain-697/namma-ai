@@ -1,0 +1,140 @@
+{
+ "source": "train-0283-SCI-ESS-WEATHER.json",
+ "job": {
+  "job": "train-0283-SCI-ESS-WEATHER",
+  "topic_id": "SCI-ESS-WEATHER",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a diary entry or letter by a student",
+  "seed": 283
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1290,
+  "promptTokenCount": 2
+ },
+ "passage": "Dear Diary, today in science class, we learned that weather is the day-to-day state of the atmosphere, while climate is the average pattern over twenty-five years. I used to think they were the same, but they are quite different. We also discussed how air pressure works; winds actually move from high-pressure areas toward low-pressure regions, which is the opposite of what I previously believed. My teacher explained that the eye of a cyclone is actually a calm, clear area, while the most violent winds and heavy rains occur in the surrounding region. It was fascinating to learn about polar bears too. Their white fur is not for trapping heat, but for camouflage against the snow to help them hunt. I also realized that humidity is always present in the air as water vapor, even on days when it is not raining at all. Finally, we looked at a map and confirmed that penguins live in the South Pole, while polar bears are found only in the North Pole. It is amazing how much I misunderstood about our planet's atmosphere and the animals that live in these extreme environments. I feel much more confident about our upcoming test now.",
+ "menu_ids": [
+  "SCI-ESS-WEATHER-K7-M1",
+  "SCI-ESS-WEATHER-K10-M2",
+  "SCI-ESS-WEATHER-K11-M3",
+  "SCI-ESS-WEATHER-K13-M4",
+  "SCI-ESS-WEATHER-K15-M5",
+  "SCI-ESS-WEATHER-K17-M6",
+  "SCI-ESS-WEATHER-K19-M7",
+  "SCI-ESS-WEATHER-K16-M8",
+  "SCI-ESS-WEATHER-K12-M10",
+  "SCI-ESS-WEATHER-K18-M11",
+  "SCI-ESS-WEATHER-K8-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "We also discussed how air pressure works; winds actually move from high-pressure areas toward low-pressure regions, which is the opposite of what I previously believed.",
+    "kind": "what_if",
+    "q": "A region has high air pressure next to a region with low pressure. Which way will wind blow?",
+    "options": [
+     "From the high-pressure area to the low-pressure area",
+     "From the low-pressure area to the high-pressure area",
+     "From the windy area to the calm area",
+     "From the cold area to the warm area"
+    ],
+    "explain": "Winds move from high-pressure areas toward low-pressure regions, so the air flows out of the high-pressure area.",
+    "wrong": [
+     {
+      "misconception": "SCI-ESS-WEATHER-K16-M8",
+      "why": "thinks air moves to fill the low-pressure space the wrong way round"
+     },
+     {
+      "misconception": "SCI-ESS-WEATHER-K17-M6",
+      "why": "links wind speed with pressure instead of pressure difference"
+     },
+     {
+      "misconception": null,
+      "why": "guesses a temperature-based direction not given in the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "My teacher explained that the eye of a cyclone is actually a calm, clear area, while the most violent winds and heavy rains occur in the surrounding region.",
+    "kind": "what_if",
+    "q": "A cyclone's centre passes over a village. What would people most likely notice there?",
+    "options": [
+     "A short spell of calm, clear sky",
+     "The strongest winds of the whole storm",
+     "The heaviest rain of the whole storm",
+     "A sudden thunderstorm with lightning only"
+    ],
+    "explain": "The eye is a calm, clear area; the violent winds and heavy rain are in the surrounding region.",
+    "wrong": [
+     {
+      "misconception": "SCI-ESS-WEATHER-K19-M7",
+      "why": "thinks the eye is the most violent part"
+     },
+     {
+      "misconception": "SCI-ESS-WEATHER-K19-M7",
+      "why": "thinks the heaviest rain falls at the centre"
+     },
+     {
+      "misconception": "SCI-ESS-WEATHER-K18-M11",
+      "why": "mixes up cyclones with thunderstorms"
+     }
+    ]
+   },
+   {
+    "evidence": "Their white fur is not for trapping heat, but for camouflage against the snow to help them hunt.",
+    "kind": "why",
+    "q": "Why is a polar bear's white fur useful when it is hunting?",
+    "options": [
+     "It blends in with the snow around",
+     "It keeps the bear's body warm",
+     "It reflects sunlight into the prey's eyes",
+     "It helps the bear float in water"
+    ],
+    "explain": "The white fur is camouflage against the snow, which helps the bear hunt, not a way to trap heat.",
+    "wrong": [
+     {
+      "misconception": "SCI-ESS-WEATHER-K13-M4",
+      "why": "thinks white fur mainly keeps the bear warm"
+     },
+     {
+      "misconception": null,
+      "why": "invents a hunting trick not in the passage"
+     },
+     {
+      "misconception": null,
+      "why": "guesses another use of fur from everyday ideas"
+     }
+    ]
+   },
+   {
+    "evidence": "I also realized that humidity is always present in the air as water vapor, even on days when it is not raining at all.",
+    "kind": "which_explains",
+    "q": "On a dry, sunny day with no rain, what can we say about humidity?",
+    "options": [
+     "Some water vapour is still in the air",
+     "There is no water vapour in the air",
+     "It appears only just before rain starts",
+     "It is found only near lakes and seas"
+    ],
+    "explain": "Humidity is always present in the air as water vapour, even when it is not raining.",
+    "wrong": [
+     {
+      "misconception": "SCI-ESS-WEATHER-K11-M3",
+      "why": "thinks humidity exists only when it rains"
+     },
+     {
+      "misconception": "SCI-ESS-WEATHER-K11-M3",
+      "why": "thinks humidity appears only with approaching rain"
+     },
+     {
+      "misconception": null,
+      "why": "limits humidity to places near water"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 12.7
+}

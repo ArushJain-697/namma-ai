@@ -1,0 +1,140 @@
+{
+ "source": "train-0229-MAT-INTEGERS.json",
+ "job": {
+  "job": "train-0229-MAT-INTEGERS",
+  "topic_id": "MAT-INTEGERS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a conversation between a teacher and two students",
+  "seed": 229
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2914,
+  "promptTokenCount": 2
+ },
+ "passage": "In a Class 7 mathematics lesson, Mr. Sharma explained how integers work beyond simple counting. 'Think of a thermometer,' he said. 'If the temperature drops from 5 degrees to -5 degrees, the negative sign shows a value below zero, not just an instruction to subtract.' Rohan asked, 'But sir, isn't -10 smaller than -5 because 10 is bigger than 5?' Mr. Sharma smiled and drew a number line. 'On the number line, numbers to the left are always smaller. Since -10 is further left than -5, -10 is actually the smaller value.' Meera then asked about operations. 'If I have 8 and subtract -3, do I just get 5?' Mr. Sharma shook his head. 'Subtracting a negative is like adding a positive, so 8 minus -3 becomes 8 plus 3, which is 11. Also, remember that when multiplying two negative numbers, the result is always positive, like -4 times -3 equals 12.' Meera nodded, 'So, negative numbers are just as real as positive ones, representing things like debts or depths below sea level.' Mr. Sharma agreed, noting that these rules help us navigate real-world problems accurately without confusion.",
+ "menu_ids": [
+  "MAT-INTEGERS-K11-M1",
+  "MAT-INTEGERS-K12-M2",
+  "MAT-INTEGERS-K14-M3",
+  "MAT-INTEGERS-K13-M4",
+  "MAT-INTEGERS-K6-M6",
+  "MAT-INTEGERS-K7-M7",
+  "MAT-INTEGERS-K5-M8",
+  "MAT-INTEGERS-K4-M9",
+  "MAT-INTEGERS-K8-M10",
+  "MAT-INTEGERS-K9-M11",
+  "MAT-INTEGERS-K10-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Since -10 is further left than -5, -10 is actually the smaller value.",
+    "kind": "what_if",
+    "q": "Which is smaller, -12 or -7?",
+    "options": [
+     "-12, as it lies further left",
+     "-7, as 7 is less than 12",
+     "-7, as it lies further right",
+     "-7, as it is nearer to zero"
+    ],
+    "explain": "On the number line, numbers further left are smaller, and -12 is left of -7.",
+    "wrong": [
+     {
+      "misconception": "MAT-INTEGERS-K11-M1",
+      "why": "compares the digits and ignores the minus sign"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the directions on the number line"
+     },
+     {
+      "misconception": null,
+      "why": "thinks being nearer zero makes a number smaller"
+     }
+    ]
+   },
+   {
+    "evidence": "Subtracting a negative is like adding a positive, so 8 minus -3 becomes 8 plus 3, which is 11.",
+    "kind": "how",
+    "q": "Using Mr. Sharma's rule, what is 6 minus -2?",
+    "options": [
+     "8, since it becomes 6 plus 2",
+     "4, since it is just 6 minus 2",
+     "-8, since negatives make totals smaller",
+     "-4, since it equals 2 minus 6"
+    ],
+    "explain": "Subtracting a negative is like adding a positive, so 6 minus -2 equals 6 plus 2.",
+    "wrong": [
+     {
+      "misconception": "MAT-INTEGERS-K13-M4",
+      "why": "treats subtracting a negative like subtracting a positive"
+     },
+     {
+      "misconception": "MAT-INTEGERS-K12-M2",
+      "why": "thinks any negative always makes the answer smaller"
+     },
+     {
+      "misconception": "MAT-INTEGERS-K7-M7",
+      "why": "thinks the order in subtraction does not matter"
+     }
+    ]
+   },
+   {
+    "evidence": "Also, remember that when multiplying two negative numbers, the result is always positive, like -4 times -3 equals 12.",
+    "kind": "what_if",
+    "q": "Priya multiplies -5 by -2. What answer should she get?",
+    "options": [
+     "10, as two negatives make a positive",
+     "-10, as two negatives make a negative",
+     "-7, as the two numbers are added",
+     "-3, as the minus means subtract"
+    ],
+    "explain": "Multiplying two negative numbers always gives a positive, just like -4 times -3 is 12.",
+    "wrong": [
+     {
+      "misconception": "MAT-INTEGERS-K14-M3",
+      "why": "thinks the product of two negatives is negative"
+     },
+     {
+      "misconception": null,
+      "why": "adds the numbers instead of multiplying them"
+     },
+     {
+      "misconception": "MAT-INTEGERS-K4-M9",
+      "why": "reads the minus sign only as an order to subtract"
+     }
+    ]
+   },
+   {
+    "evidence": "If the temperature drops from 5 degrees to -5 degrees, the negative sign shows a value below zero, not just an instruction to subtract.",
+    "kind": "which_explains",
+    "q": "A thermometer reads -5 degrees. What does the minus sign tell us?",
+    "options": [
+     "It shows the value is below zero",
+     "It shows five must be subtracted",
+     "It shows the value is above zero",
+     "It shows no real temperature exists"
+    ],
+    "explain": "The negative sign shows a value below zero, not just an instruction to subtract.",
+    "wrong": [
+     {
+      "misconception": "MAT-INTEGERS-K4-M9",
+      "why": "thinks the minus sign only means subtract"
+     },
+     {
+      "misconception": "MAT-INTEGERS-K5-M8",
+      "why": "thinks negative numbers are not less than zero"
+     },
+     {
+      "misconception": "MAT-INTEGERS-K10-M12",
+      "why": "thinks negatives cannot show real quantities"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 30.1
+}

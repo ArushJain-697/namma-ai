@@ -1,0 +1,169 @@
+{
+ "source": "train-0224-MAT-FACTORISATION.json",
+ "job": {
+  "job": "train-0224-MAT-FACTORISATION",
+  "topic_id": "MAT-FACTORISATION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a step-by-step worked example",
+  "seed": 224
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4583,
+  "promptTokenCount": 2
+ },
+ "passage": "Factorisation is the process of writing an algebraic expression as a product of its factors. When you factorise an expression like 3x + 6, you must identify the greatest common factor for both the number and the variable parts. Here, 3 is the common factor, so we write 3(x + 2). Notice that when you divide 3x by 3, you are left with x, not zero. Next, consider the expression x^2 - 16. This is a difference of two squares, which follows the identity a^2 - b^2 = (a - b)(a + b). Therefore, x^2 - 16 becomes (x - 4)(x + 4). Students often mistakenly factorise x^2 + 16 as (x + 4)(x - 4), but that identity only applies to subtraction. Furthermore, when dividing an expression like (x^2 - 9) / (x - 3), you must factorise the numerator first to get (x - 3)(x + 3) / (x - 3). By cancelling the common factor (x - 3), you are left with (x + 3). It is incorrect to simply cancel the 3s to leave x, as division requires cancelling the entire factor. Always verify your work by multiplying your factors back together to ensure you return to the original expression.",
+ "menu_ids": [
+  "MAT-FACTORISATION-K10-M1",
+  "MAT-FACTORISATION-K5-M2",
+  "MAT-FACTORISATION-K11-M3",
+  "MAT-FACTORISATION-K12-M4",
+  "MAT-FACTORISATION-K13-M5",
+  "MAT-FACTORISATION-K14-M7",
+  "MAT-FACTORISATION-K15-M8",
+  "MAT-FACTORISATION-K16-M9",
+  "MAT-FACTORISATION-K17-M10",
+  "MAT-FACTORISATION-K19-M12",
+  "MAT-FACTORISATION-K20-M13",
+  "MAT-FACTORISATION-K20-M14",
+  "MAT-FACTORISATION-K21-M16",
+  "MAT-FACTORISATION-K22-M18"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "When you factorise an expression like 3x + 6, you must identify the greatest common factor for both the number and the variable parts.",
+    "kind": "what_if",
+    "q": "To factorise 6x^2 + 9x, which common factor should be taken out?",
+    "options": [
+     "3x",
+     "3",
+     "x",
+     "6x^2"
+    ],
+    "explain": "The greatest common factor must cover both the number part (3) and the variable part (x), giving 3x.",
+    "wrong": [
+     {
+      "misconception": "MAT-FACTORISATION-K13-M5",
+      "why": "takes out only the number part"
+     },
+     {
+      "misconception": null,
+      "why": "takes out only the variable part"
+     },
+     {
+      "misconception": "MAT-FACTORISATION-K5-M2",
+      "why": "thinks a term of the expression is its factor"
+     }
+    ]
+   },
+   {
+    "evidence": "Notice that when you divide 3x by 3, you are left with x, not zero.",
+    "kind": "which_explains",
+    "q": "Sita writes 3x + 6 = 3(0 + 2). What mistake has she made?",
+    "options": [
+     "She wrote zero where x should remain",
+     "She took out 3 instead of the bigger 6",
+     "She should have taken out x as well",
+     "She did nothing wrong, as it has a bracket"
+    ],
+    "explain": "Dividing 3x by 3 leaves x, not zero, so the answer is 3(x + 2).",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks the biggest number must be taken out"
+     },
+     {
+      "misconception": "MAT-FACTORISATION-K12-M4",
+      "why": "thinks the variable is always common, removing whole terms"
+     },
+     {
+      "misconception": "MAT-FACTORISATION-K11-M3",
+      "why": "thinks any bracket means it is factorised"
+     }
+    ]
+   },
+   {
+    "evidence": "This is a difference of two squares, which follows the identity a^2 - b^2 = (a - b)(a + b).",
+    "kind": "what_if",
+    "q": "Using the identity from the lesson, how does y^2 - 25 factorise?",
+    "options": [
+     "(y - 5)(y + 5)",
+     "(y - 5)^2",
+     "(y - 25)(y + 25)",
+     "(y + 5)(y + 5)"
+    ],
+    "explain": "y^2 - 25 is y^2 - 5^2, so a^2 - b^2 = (a - b)(a + b) gives (y - 5)(y + 5).",
+    "wrong": [
+     {
+      "misconception": "MAT-FACTORISATION-K20-M13",
+      "why": "thinks a^2 - b^2 is the same as (a - b)^2"
+     },
+     {
+      "misconception": "MAT-FACTORISATION-K21-M16",
+      "why": "does not take the square root correctly"
+     },
+     {
+      "misconception": null,
+      "why": "ignores the minus sign in the identity"
+     }
+    ]
+   },
+   {
+    "evidence": "Students often mistakenly factorise x^2 + 16 as (x + 4)(x - 4), but that identity only applies to subtraction.",
+    "kind": "why",
+    "q": "Why is (x + 4)(x - 4) wrong for x^2 + 16?",
+    "options": [
+     "Because that identity only works for subtraction",
+     "Because the two brackets are in the wrong order",
+     "Because 16 should stay as 16, not become 4",
+     "Because both brackets should have a plus sign"
+    ],
+    "explain": "a^2 - b^2 = (a - b)(a + b) applies only to subtraction, and x^2 + 16 is a sum.",
+    "wrong": [
+     {
+      "misconception": "MAT-FACTORISATION-K20-M14",
+      "why": "thinks the sum form is right, just ordered wrongly"
+     },
+     {
+      "misconception": "MAT-FACTORISATION-K21-M16",
+      "why": "mixes up a number and its square root"
+     },
+     {
+      "misconception": null,
+      "why": "thinks a plus sign means plus in both brackets"
+     }
+    ]
+   },
+   {
+    "evidence": "It is incorrect to simply cancel the 3s to leave x, as division requires cancelling the entire factor.",
+    "kind": "why",
+    "q": "Ravi simplifies (x^2 - 9) / (x - 3) by crossing out the 3s. Why is this wrong?",
+    "options": [
+     "He must cancel the whole factor (x - 3)",
+     "He should cancel the x's, not the 3s",
+     "He should get (x - 3), not x",
+     "He should first write x^2 - 9 as (x - 3)^2"
+    ],
+    "explain": "Division cancels entire factors: (x - 3)(x + 3) / (x - 3) leaves x + 3.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "still cancels single parts, just different ones"
+     },
+     {
+      "misconception": null,
+      "why": "picks the nearby factor instead of what is left"
+     },
+     {
+      "misconception": "MAT-FACTORISATION-K20-M13",
+      "why": "thinks a^2 - b^2 is the same as (a - b)^2"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 48.7
+}

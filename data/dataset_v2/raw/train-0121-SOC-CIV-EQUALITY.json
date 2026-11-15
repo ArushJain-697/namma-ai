@@ -1,0 +1,166 @@
+{
+ "source": "train-0121-SOC-CIV-EQUALITY.json",
+ "job": {
+  "job": "train-0121-SOC-CIV-EQUALITY",
+  "topic_id": "SOC-CIV-EQUALITY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a conversation between a teacher and two students",
+  "seed": 121
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4284,
+  "promptTokenCount": 2
+ },
+ "passage": "In a lively Class 7 social studies discussion, Ms. Sharma explained the core of Indian democracy. 'Students,' she began, 'our Constitution ensures that every adult citizen has an equal right to vote, regardless of their wealth or social status.' Rahul asked, 'But teacher, does a billionaire’s vote carry more weight than a poor person’s vote?' Ms. Sharma smiled and replied, 'No, Rahul. In the eyes of the law, every citizen’s vote is equal.' Priya then raised a concern about social barriers. 'What about private businesses? Can a shopkeeper refuse service to someone based on their caste?' Ms. Sharma shook her head firmly. 'Absolutely not. The Constitution prohibits discrimination in public places, including private shops that serve the public. Equality before the law means no one can be denied access based on their background.' Finally, the class discussed the Mid-day Meal scheme. 'Is this program just to feed hungry children?' asked Rahul. Ms. Sharma clarified, 'While it provides nutrition, its primary goal is to promote social equality by bringing children from all backgrounds together to eat in the same classroom, breaking down deep-seated caste prejudices.' The students realized that democracy is not just about voting, but about ensuring dignity and fairness for everyone in daily life.",
+ "menu_ids": [
+  "SOC-CIV-EQUALITY-K8-M1",
+  "SOC-CIV-EQUALITY-K10-M2",
+  "SOC-CIV-EQUALITY-K12-M3",
+  "SOC-CIV-EQUALITY-K4-M5",
+  "SOC-CIV-EQUALITY-K4-M6",
+  "SOC-CIV-EQUALITY-K7-M7",
+  "SOC-CIV-EQUALITY-K5-M8",
+  "SOC-CIV-EQUALITY-K5-M9",
+  "SOC-CIV-EQUALITY-K9-M10",
+  "SOC-CIV-EQUALITY-K10-M11",
+  "SOC-CIV-EQUALITY-K12-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "'Students,' she began, 'our Constitution ensures that every adult citizen has an equal right to vote, regardless of their wealth or social status.'",
+    "kind": "what_if",
+    "q": "Kamla is a poor adult farmer who cannot read. What is true about her vote?",
+    "options": [
+     "She has the same right to vote as anyone",
+     "She can vote only after learning to read",
+     "She can vote only if her family owns land",
+     "She can vote only in her village council"
+    ],
+    "explain": "Every adult citizen has an equal right to vote, whatever their wealth or social status.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-EQUALITY-K4-M5",
+      "why": "thinks only literate people can vote"
+     },
+     {
+      "misconception": "SOC-CIV-EQUALITY-K4-M6",
+      "why": "thinks only landowning families can vote"
+     },
+     {
+      "misconception": null,
+      "why": "thinks poor people get only a limited vote"
+     }
+    ]
+   },
+   {
+    "evidence": "In the eyes of the law, every citizen’s vote is equal.",
+    "kind": "what_if",
+    "q": "A factory owner and his worker vote for different candidates. How are their votes counted?",
+    "options": [
+     "Both votes count exactly the same",
+     "The owner's vote counts more than the worker's",
+     "The one in more committees gets extra votes",
+     "Only the landowning owner's vote is counted"
+    ],
+    "explain": "In the eyes of the law, every citizen's vote is equal, rich or poor.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-EQUALITY-K8-M1",
+      "why": "thinks rich people's votes count more"
+     },
+     {
+      "misconception": "SOC-CIV-EQUALITY-K7-M7",
+      "why": "thinks belonging to more groups gives more votes"
+     },
+     {
+      "misconception": "SOC-CIV-EQUALITY-K4-M6",
+      "why": "thinks only landowners can vote"
+     }
+    ]
+   },
+   {
+    "evidence": "The Constitution prohibits discrimination in public places, including private shops that serve the public.",
+    "kind": "what_if",
+    "q": "A private sweet shop owner turns away a customer because of her caste. Is this allowed?",
+    "options": [
+     "Not allowed, because the shop serves the public",
+     "Allowed, because the shop is privately owned",
+     "Allowed, if the local community agrees to it",
+     "Not allowed, but only in government buildings"
+    ],
+    "explain": "The ban on discrimination covers private shops too, because they serve the public.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-EQUALITY-K10-M2",
+      "why": "thinks private shops can refuse people by caste"
+     },
+     {
+      "misconception": "SOC-CIV-EQUALITY-K10-M11",
+      "why": "thinks community agreement allows caste separation"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the rule covers only government places"
+     }
+    ]
+   },
+   {
+    "evidence": "Equality before the law means no one can be denied access based on their background.",
+    "kind": "which_example",
+    "q": "Which example at a hotel best shows equality before the law?",
+    "options": [
+     "Guests of every caste may enter and eat",
+     "Every guest gets exactly the same dish and bill",
+     "Ministers' families may enter before other guests",
+     "Guests of some castes eat in a separate room"
+    ],
+    "explain": "Equality before the law means nobody can be denied access because of their background.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-EQUALITY-K5-M8",
+      "why": "thinks equality means identical treatment in everything"
+     },
+     {
+      "misconception": "SOC-CIV-EQUALITY-K5-M9",
+      "why": "thinks officials are above the law"
+     },
+     {
+      "misconception": "SOC-CIV-EQUALITY-K10-M11",
+      "why": "thinks separate spaces for castes are fair"
+     }
+    ]
+   },
+   {
+    "evidence": "Ms. Sharma clarified, 'While it provides nutrition, its primary goal is to promote social equality by bringing children from all backgrounds together to eat in the same classroom, breaking down deep-seated caste prejudices.'",
+    "kind": "why",
+    "q": "Why do children of all castes eat the mid-day meal together in one classroom?",
+    "options": [
+     "To weaken caste prejudice among children",
+     "To feed hungry children, nothing more",
+     "To prove caste discrimination has fully ended",
+     "To give every child exactly equal portions"
+    ],
+    "explain": "Eating together brings children of all backgrounds close and breaks down caste prejudices.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-EQUALITY-K12-M3",
+      "why": "thinks the meal is only about food"
+     },
+     {
+      "misconception": "SOC-CIV-EQUALITY-K12-M12",
+      "why": "thinks the meal means discrimination has ended"
+     },
+     {
+      "misconception": "SOC-CIV-EQUALITY-K5-M8",
+      "why": "thinks equality means identical shares"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 45.2
+}

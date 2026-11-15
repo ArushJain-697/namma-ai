@@ -1,0 +1,138 @@
+{
+ "source": "train-0257-SCI-BIO-FOOD.json",
+ "job": {
+  "job": "train-0257-SCI-BIO-FOOD",
+  "topic_id": "SCI-BIO-FOOD",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a short story with Indian characters in everyday life",
+  "seed": 257
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1244,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and his sister Meera were helping their mother in the kitchen. Meera started washing the chopped spinach, but her mother stopped her. 'Always wash vegetables before cutting them,' she explained, 'otherwise, the vital nutrients wash away with the water.' Rohan asked if he should stop eating the butter on his roti because he wanted to stay fit. His mother smiled and said, 'Fats are essential for our body to function, provided we eat them in moderation, not in excess.' She then served them dal, explaining that proteins are body-building nutrients needed by everyone for growth and repair, not just bodybuilders. Later, they discussed why their grandmother took iron supplements. Rohan thought it was like eating metal nails, but his mother clarified that dietary iron is a mineral our body uses to stay healthy, not a hard metal. She reminded them that a balanced diet is not about eating equal amounts of everything, but eating the right proportion of nutrients based on what our body needs. Finally, she warned them that deficiency diseases like scurvy occur due to a lack of vitamins over time, not because of germs, so they cannot spread from person to person like a cold.",
+ "menu_ids": [
+  "SCI-BIO-FOOD-K10-M1",
+  "SCI-BIO-FOOD-K8-M2",
+  "SCI-BIO-FOOD-K16-M4",
+  "SCI-BIO-FOOD-K21-M5",
+  "SCI-BIO-FOOD-K17-M6",
+  "SCI-BIO-FOOD-K11-M7",
+  "SCI-BIO-FOOD-K8-M10",
+  "SCI-BIO-FOOD-K9-M11",
+  "SCI-BIO-FOOD-K21-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "'Always wash vegetables before cutting them,' she explained, 'otherwise, the vital nutrients wash away with the water.'",
+    "kind": "why",
+    "q": "Why does Meera's mother want vegetables washed before they are chopped?",
+    "options": [
+     "Cut pieces lose nutrients into the water",
+     "Cut pieces become cleaner and healthier",
+     "Cut pieces turn soft and spoil faster",
+     "Cut pieces soak up germs from water"
+    ],
+    "explain": "Washing after cutting lets vital nutrients dissolve and wash away with the water.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-FOOD-K17-M6",
+      "why": "thinks washing after cutting makes veggies healthier"
+     },
+     {
+      "misconception": null,
+      "why": "invents a spoilage reason not in the passage"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the effect of water on cut vegetables"
+     }
+    ]
+   },
+   {
+    "evidence": "His mother smiled and said, 'Fats are essential for our body to function, provided we eat them in moderation, not in excess.'",
+    "kind": "what_if",
+    "q": "Rohan wants to stay fit. What should he do about the butter on his roti?",
+    "options": [
+     "Eat a small amount of it",
+     "Remove it from his diet fully",
+     "Eat as much as he likes",
+     "Eat it only if it leaves marks"
+    ],
+    "explain": "Fats are essential for the body, but only in moderation, so a small amount is right.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-FOOD-K8-M2",
+      "why": "thinks fats are always harmful"
+     },
+     {
+      "misconception": null,
+      "why": "thinks essential means unlimited"
+     },
+     {
+      "misconception": "SCI-BIO-FOOD-K8-M10",
+      "why": "mixes fats with the oily paper test"
+     }
+    ]
+   },
+   {
+    "evidence": "She then served them dal, explaining that proteins are body-building nutrients needed by everyone for growth and repair, not just bodybuilders.",
+    "kind": "which_example",
+    "q": "Which person needs the protein in dal for growth and repair?",
+    "options": [
+     "A child who never lifts weights",
+     "A wrestler who trains every day",
+     "A person trying to build big muscles",
+     "A person who plays sports often"
+    ],
+    "explain": "Proteins are needed by everyone for growth and repair, not only by people who build muscles.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-FOOD-K9-M11",
+      "why": "thinks only bodybuilders need protein"
+     },
+     {
+      "misconception": "SCI-BIO-FOOD-K9-M11",
+      "why": "thinks only strong athletes need protein"
+     },
+     {
+      "misconception": "SCI-BIO-FOOD-K10-M1",
+      "why": "links sports energy with protein need"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, she warned them that deficiency diseases like scurvy occur due to a lack of vitamins over time, not because of germs, so they cannot spread from person to person like a cold.",
+    "kind": "which_explains",
+    "q": "Ravi has scurvy. Why is it safe to sit next to him?",
+    "options": [
+     "It comes from missing vitamins, not germs",
+     "It spreads only through a very loud cough",
+     "It comes from eating too much iron",
+     "It spreads only if people share food"
+    ],
+    "explain": "Scurvy is caused by a lack of vitamins over time, not germs, so it does not spread.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-FOOD-K21-M5",
+      "why": "thinks deficiency diseases spread by coughing"
+     },
+     {
+      "misconception": "SCI-BIO-FOOD-K11-M7",
+      "why": "confuses iron with a harmful metal"
+     },
+     {
+      "misconception": null,
+      "why": "thinks disease spreads through shared food"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 12.4
+}

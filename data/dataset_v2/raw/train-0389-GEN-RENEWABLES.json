@@ -1,0 +1,169 @@
+{
+ "source": "train-0389-GEN-RENEWABLES.json",
+ "job": {
+  "job": "train-0389-GEN-RENEWABLES",
+  "topic_id": "GEN-RENEWABLES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a short story with Indian characters in everyday life",
+  "seed": 389
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 6155,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and his grandfather sat on their balcony in Jaipur, watching the sunset. Rohan pointed at the rooftop solar panels installed last year. 'Grandpa, since the sun is setting, will the panels stop working and start storing power for the night?' he asked. His grandfather smiled, 'Actually, Rohan, solar panels convert sunlight directly into electricity using the photovoltaic effect, not by heating water. When the sun goes down, they stop producing power immediately. We rely on the grid or batteries to bridge that gap because solar energy is intermittent.' Rohan looked at his father’s new electric car charging in the driveway. 'Is that car burning fuel to run?' he asked. His father laughed, 'No, it uses a battery-powered motor, not an engine that burns fuel. However, the true environmental benefit depends on whether the electricity charging it comes from coal or clean sources like wind and solar.' They discussed how India is rapidly expanding its renewable capacity, including wind farms in coastal areas where winds are strong and consistent. 'We cannot just put wind turbines anywhere,' his grandfather explained. 'They need specific locations to be effective. Also, we must remember that fossil fuels like coal take millions of years to form, so they are non-renewable, unlike the constant energy we harness from the sun and wind.'",
+ "menu_ids": [
+  "GEN-RENEWABLES-K3-M1",
+  "GEN-RENEWABLES-K3-M2",
+  "GEN-RENEWABLES-K4-M3",
+  "GEN-RENEWABLES-K5-M4",
+  "GEN-RENEWABLES-K5-M5",
+  "GEN-RENEWABLES-K8-M7",
+  "GEN-RENEWABLES-K10-M9",
+  "GEN-RENEWABLES-K11-M10",
+  "GEN-RENEWABLES-K14-M12",
+  "GEN-RENEWABLES-K15-M13",
+  "GEN-RENEWABLES-K20-M14",
+  "GEN-RENEWABLES-K17-M15",
+  "GEN-RENEWABLES-K19-M16",
+  "GEN-RENEWABLES-K23-M17"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "When the sun goes down, they stop producing power immediately.",
+    "kind": "what_if",
+    "q": "After sunset, a house has solar panels but no grid or battery. What happens to its solar power?",
+    "options": [
+     "It stops, because panels need sunlight to make power",
+     "It continues, because good panels make power at night",
+     "It continues, because stored heat keeps turning turbines",
+     "It stops, because cool evening air blocks the panels"
+    ],
+    "explain": "Panels turn sunlight into electricity, so they stop producing power as soon as the sun goes down.",
+    "wrong": [
+     {
+      "misconception": "GEN-RENEWABLES-K5-M5",
+      "why": "thinks a good panel gives power at night"
+     },
+     {
+      "misconception": "GEN-RENEWABLES-K3-M1",
+      "why": "thinks panels trap heat to run turbines"
+     },
+     {
+      "misconception": "GEN-RENEWABLES-K3-M2",
+      "why": "thinks cool air, not missing sunlight, stops panels"
+     }
+    ]
+   },
+   {
+    "evidence": "We rely on the grid or batteries to bridge that gap because solar energy is intermittent.",
+    "kind": "why",
+    "q": "Why does the family still depend on the grid or batteries?",
+    "options": [
+     "Solar power is not steady, so gaps need cover",
+     "Solar power is only for one house, never the grid",
+     "Solar power fails in cool weather, so backup helps",
+     "Solar power vanishes on cloudy days, so backup helps"
+    ],
+    "explain": "Solar energy is intermittent, so the grid or batteries must fill the gaps when panels stop producing.",
+    "wrong": [
+     {
+      "misconception": "GEN-RENEWABLES-K5-M4",
+      "why": "thinks rooftop power can never reach the grid"
+     },
+     {
+      "misconception": "GEN-RENEWABLES-K3-M2",
+      "why": "thinks panels need hot weather"
+     },
+     {
+      "misconception": "GEN-RENEWABLES-K23-M17",
+      "why": "thinks cloudy days give no power"
+     }
+    ]
+   },
+   {
+    "evidence": "However, the true environmental benefit depends on whether the electricity charging it comes from coal or clean sources like wind and solar.",
+    "kind": "why",
+    "q": "Why might an electric car still harm the environment?",
+    "options": [
+     "Its charging power may come from burning coal",
+     "Its motor still burns some fuel to run",
+     "Its clean power sources always damage nature",
+     "Its battery cannot be charged from solar power"
+    ],
+    "explain": "The car's benefit depends on its electricity source; power made from coal can still pollute.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks an electric car burns fuel like an engine"
+     },
+     {
+      "misconception": "GEN-RENEWABLES-K11-M10",
+      "why": "thinks all clean energy harms nature"
+     },
+     {
+      "misconception": null,
+      "why": "thinks wind and solar cannot charge cars"
+     }
+    ]
+   },
+   {
+    "evidence": "They discussed how India is rapidly expanding its renewable capacity, including wind farms in coastal areas where winds are strong and consistent.",
+    "kind": "why",
+    "q": "Why are wind farms placed at chosen sites instead of everywhere in India?",
+    "options": [
+     "Only some sites have strong, steady winds",
+     "Turbines need hot weather, which coasts always have",
+     "Forests are the only land they may use",
+     "Coasts are cheaper, though any wind gives equal power"
+    ],
+    "explain": "Wind farms go where winds are strong and consistent, so site matters for the power they give.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "mixes up weather needs of solar and wind"
+     },
+     {
+      "misconception": "GEN-RENEWABLES-K4-M3",
+      "why": "thinks energy projects only take forest land"
+     },
+     {
+      "misconception": "GEN-RENEWABLES-K8-M7",
+      "why": "thinks any site gives the same wind power"
+     }
+    ]
+   },
+   {
+    "evidence": "Also, we must remember that fossil fuels like coal take millions of years to form, so they are non-renewable, unlike the constant energy we harness from the sun and wind.",
+    "kind": "which_explains",
+    "q": "Why can't nature replace used coal within a few years?",
+    "options": [
+     "Nature needs millions of years to form more",
+     "Nature renews coal as quickly as it renews wind",
+     "Sunlight and wind slowly change into new coal",
+     "Burning coal slowly returns it to the ground"
+    ],
+    "explain": "Coal takes millions of years to form, so it is non-renewable, unlike sun and wind energy.",
+    "wrong": [
+     {
+      "misconception": "GEN-RENEWABLES-K10-M9",
+      "why": "thinks nature renews coal quickly"
+     },
+     {
+      "misconception": null,
+      "why": "mixes coal's origin with renewable sources"
+     },
+     {
+      "misconception": null,
+      "why": "thinks used coal returns to the ground"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 52.5
+}

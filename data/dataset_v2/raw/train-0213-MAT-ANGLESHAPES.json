@@ -1,0 +1,163 @@
+{
+ "source": "train-0213-MAT-ANGLESHAPES.json",
+ "job": {
+  "job": "train-0213-MAT-ANGLESHAPES",
+  "topic_id": "MAT-ANGLESHAPES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a clear textbook explanation with one worked example",
+  "seed": 213
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3494,
+  "promptTokenCount": 2
+ },
+ "passage": "In geometry, an angle is formed when two rays meet at a common endpoint called the vertex. The size of an angle depends only on the amount of rotation between the two arms, not on the length of the arms themselves. A straight angle measures exactly 180 degrees, forming a straight line, which is indeed a valid angle. When measuring angles, you must always align the protractor’s centre point exactly with the vertex of the angle to get an accurate reading. A reflex angle is specifically defined as an angle greater than 180 degrees but less than 360 degrees. For polygons, a triangle is classified as isosceles if it has at least two equal sides, regardless of its orientation or the length of the third side. For example, if a triangle has sides of 5 cm, 5 cm, and 6 cm, it is isosceles because two sides are equal. Furthermore, a square is a special type of rectangle because it possesses all the properties of a rectangle, such as having four right angles and opposite sides that are equal. Understanding these definitions helps us classify shapes and angles correctly without being misled by how they are drawn or positioned on a page.",
+ "menu_ids": [
+  "MAT-ANGLESHAPES-K13-M3",
+  "MAT-ANGLESHAPES-K14-M4",
+  "MAT-ANGLESHAPES-K4-M5",
+  "MAT-ANGLESHAPES-K5-M6",
+  "MAT-ANGLESHAPES-K5-M7",
+  "MAT-ANGLESHAPES-K11-M8",
+  "MAT-ANGLESHAPES-K7-M10",
+  "MAT-ANGLESHAPES-K15-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "The size of an angle depends only on the amount of rotation between the two arms, not on the length of the arms themselves.",
+    "kind": "what_if",
+    "q": "Meena makes both arms of a 40-degree angle twice as long. What happens to its size?",
+    "options": [
+     "It stays at 40 degrees",
+     "It becomes more than 40 degrees",
+     "It becomes less than 40 degrees",
+     "It doubles to 80 degrees"
+    ],
+    "explain": "An angle's size depends only on the turn between its arms, not on how long the arms are.",
+    "wrong": [
+     {
+      "misconception": "MAT-ANGLESHAPES-K5-M6",
+      "why": "thinks longer arms make the angle bigger"
+     },
+     {
+      "misconception": null,
+      "why": "thinks long arms make the angle look narrower"
+     },
+     {
+      "misconception": null,
+      "why": "thinks doubling arm length doubles the angle"
+     }
+    ]
+   },
+   {
+    "evidence": "A straight angle measures exactly 180 degrees, forming a straight line, which is indeed a valid angle.",
+    "kind": "which_explains",
+    "q": "Two rays from one vertex point in exactly opposite directions. What do they form?",
+    "options": [
+     "A real angle measuring 180 degrees",
+     "A line that has no angle at all",
+     "A reflex angle bigger than 180 degrees",
+     "A right angle measuring 90 degrees"
+    ],
+    "explain": "Opposite rays make a straight angle of exactly 180 degrees, and it is a valid angle.",
+    "wrong": [
+     {
+      "misconception": "MAT-ANGLESHAPES-K5-M7",
+      "why": "thinks a straight line cannot be an angle"
+     },
+     {
+      "misconception": "MAT-ANGLESHAPES-K11-M8",
+      "why": "thinks any large-looking angle is reflex"
+     },
+     {
+      "misconception": null,
+      "why": "confuses opposite directions with perpendicular"
+     }
+    ]
+   },
+   {
+    "evidence": "When measuring angles, you must always align the protractor’s centre point exactly with the vertex of the angle to get an accurate reading.",
+    "kind": "what_if",
+    "q": "Sita puts the protractor's centre a little along one arm, away from the corner. What happens?",
+    "options": [
+     "Her reading will not be accurate",
+     "Her reading will still be correct",
+     "Her reading is correct if arms are long",
+     "Her reading is correct for small angles"
+    ],
+    "explain": "The protractor's centre must sit exactly on the vertex; otherwise the reading is wrong.",
+    "wrong": [
+     {
+      "misconception": "MAT-ANGLESHAPES-K4-M5",
+      "why": "thinks the centre can go anywhere on an arm"
+     },
+     {
+      "misconception": "MAT-ANGLESHAPES-K5-M6",
+      "why": "thinks arm length affects the angle"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the rule matters only for big angles"
+     }
+    ]
+   },
+   {
+    "evidence": "A reflex angle is specifically defined as an angle greater than 180 degrees but less than 360 degrees.",
+    "kind": "which_example",
+    "q": "Which of these angles is a reflex angle?",
+    "options": [
+     "An angle of 250 degrees",
+     "An angle of 150 degrees",
+     "An angle of 180 degrees",
+     "An angle of 360 degrees"
+    ],
+    "explain": "A reflex angle is more than 180 degrees but less than 360 degrees, so 250 fits.",
+    "wrong": [
+     {
+      "misconception": "MAT-ANGLESHAPES-K11-M8",
+      "why": "thinks bigger than a right angle means reflex"
+     },
+     {
+      "misconception": null,
+      "why": "forgets reflex must be greater than 180"
+     },
+     {
+      "misconception": null,
+      "why": "forgets reflex must be less than 360"
+     }
+    ]
+   },
+   {
+    "evidence": "For polygons, a triangle is classified as isosceles if it has at least two equal sides, regardless of its orientation or the length of the third side.",
+    "kind": "what_if",
+    "q": "A triangle with sides 7 cm, 7 cm and 6.8 cm is drawn upside down. What type is it?",
+    "options": [
+     "Isosceles, because two sides are equal",
+     "Scalene, because it points downwards",
+     "Scalene, because 6.8 nearly equals 7",
+     "Equilateral, because all sides look equal"
+    ],
+    "explain": "Two equal sides make it isosceles, whatever its position or the third side's length.",
+    "wrong": [
+     {
+      "misconception": "MAT-ANGLESHAPES-K13-M3",
+      "why": "thinks orientation changes a triangle's type"
+     },
+     {
+      "misconception": "MAT-ANGLESHAPES-K7-M10",
+      "why": "thinks a nearly equal third side spoils isosceles"
+     },
+     {
+      "misconception": null,
+      "why": "judges by how equal the sides look"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 37.0
+}

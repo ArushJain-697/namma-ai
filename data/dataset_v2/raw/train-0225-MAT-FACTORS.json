@@ -1,0 +1,165 @@
+{
+ "source": "train-0225-MAT-FACTORS.json",
+ "job": {
+  "job": "train-0225-MAT-FACTORS",
+  "topic_id": "MAT-FACTORS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a passage that shows a common wrong method and corrects it",
+  "seed": 225
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3866,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan was struggling with his math homework on factors and multiples. He thought that the factors of 12 were only 2, 3, 4, and 6, forgetting that every number is divisible by 1 and itself. His teacher explained that factors are all numbers that divide a given number exactly. Rohan also believed that the multiples of 5 stopped at 50, but his teacher reminded him that multiples are infinite and continue far beyond the standard multiplication table. Next, they looked at prime numbers. Rohan insisted that 1 was a prime number, but the teacher clarified that a prime number must have exactly two distinct factors: 1 and the number itself. Since 1 only has one factor, it is neither prime nor composite. Finally, they discussed divisibility by 3. Rohan incorrectly checked the last digit of 27, thinking it was not divisible by 3 because 7 is odd. The teacher corrected him, stating that for divisibility by 3, we must add the digits together and check if the sum is divisible by 3. Since 2 plus 7 equals 9, and 9 is divisible by 3, then 27 is also divisible by 3. Rohan realized that understanding these rules prevents common mistakes.",
+ "menu_ids": [
+  "MAT-FACTORS-K12-M1",
+  "MAT-FACTORS-K15-M2",
+  "MAT-FACTORS-K10-M3",
+  "MAT-FACTORS-K7-M5",
+  "MAT-FACTORS-K5-M6",
+  "MAT-FACTORS-K9-M9",
+  "MAT-FACTORS-K10-M10",
+  "MAT-FACTORS-K11-M11",
+  "MAT-FACTORS-K12-M12",
+  "MAT-FACTORS-K13-M13"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "He thought that the factors of 12 were only 2, 3, 4, and 6, forgetting that every number is divisible by 1 and itself.",
+    "kind": "why",
+    "q": "Why was Rohan's list of factors of 12, namely 2, 3, 4 and 6, incomplete?",
+    "options": [
+     "It missed 1 and 12 themselves",
+     "It missed 24 and 36, its multiples",
+     "It missed 5, between 4 and 6",
+     "It missed 8, which is less than 12"
+    ],
+    "explain": "Every number divides exactly by 1 and by itself, so 1 and 12 are also factors.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "mixes up factors with multiples"
+     },
+     {
+      "misconception": null,
+      "why": "fills a gap in the list without checking division"
+     },
+     {
+      "misconception": null,
+      "why": "thinks every smaller number is a factor"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan also believed that the multiples of 5 stopped at 50, but his teacher reminded him that multiples are infinite and continue far beyond the standard multiplication table.",
+    "kind": "what_if",
+    "q": "Rohan's table of 5 ends at 50. What can we say about 55, 60 and 65?",
+    "options": [
+     "They are multiples of 5 as well",
+     "They are not multiples, as tables end at 50",
+     "They are factors of 5 instead",
+     "They belong only to the table of 50"
+    ],
+    "explain": "Multiples never end; they continue far beyond the multiplication table, so 55, 60, 65 count.",
+    "wrong": [
+     {
+      "misconception": "MAT-FACTORS-K13-M13",
+      "why": "thinks multiples stop where the table stops"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up factors and multiples"
+     },
+     {
+      "misconception": null,
+      "why": "links numbers past 50 to the number 50"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan insisted that 1 was a prime number, but the teacher clarified that a prime number must have exactly two distinct factors: 1 and the number itself.",
+    "kind": "what_if",
+    "q": "The number 7 can be divided exactly only by 1 and 7. What kind of number is it?",
+    "options": [
+     "Prime, because it has exactly two factors",
+     "Composite, because it has two factors",
+     "Neither, because 1 is one of its factors",
+     "Prime, because it is an odd number"
+    ],
+    "explain": "A prime has exactly two different factors, 1 and itself; 7 has just 1 and 7.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks having two factors makes a number composite"
+     },
+     {
+      "misconception": null,
+      "why": "wrongly links 7 to the special case of 1"
+     },
+     {
+      "misconception": "MAT-FACTORS-K7-M5",
+      "why": "thinks being odd or even decides primes"
+     }
+    ]
+   },
+   {
+    "evidence": "Since 1 only has one factor, it is neither prime nor composite.",
+    "kind": "why",
+    "q": "Why does the teacher say 1 is not a prime number?",
+    "options": [
+     "It has just one factor, not two",
+     "It has many factors, so it is composite",
+     "It cannot divide any other number",
+     "It is odd, and primes must be even"
+    ],
+    "explain": "A prime needs exactly two factors, but 1 has only one, so it is neither prime nor composite.",
+    "wrong": [
+     {
+      "misconception": "MAT-FACTORS-K12-M1",
+      "why": "knows 1 is special but puts it in the wrong group"
+     },
+     {
+      "misconception": null,
+      "why": "gives a made-up reason instead of the factor count"
+     },
+     {
+      "misconception": "MAT-FACTORS-K7-M5",
+      "why": "links prime numbers to being odd or even"
+     }
+    ]
+   },
+   {
+    "evidence": "The teacher corrected him, stating that for divisibility by 3, we must add the digits together and check if the sum is divisible by 3.",
+    "kind": "how",
+    "q": "How should you test whether 51 is divisible by 3?",
+    "options": [
+     "Add 5 and 1, then check 6",
+     "Check whether its last digit, 1, is odd",
+     "Check if 51 comes in the table till 30",
+     "Multiply 5 and 1, then check 5"
+    ],
+    "explain": "For 3, add the digits: 5 plus 1 is 6, and 6 is divisible by 3.",
+    "wrong": [
+     {
+      "misconception": "MAT-FACTORS-K15-M2",
+      "why": "looks only at the last digit"
+     },
+     {
+      "misconception": "MAT-FACTORS-K13-M13",
+      "why": "thinks multiples stop at the times table"
+     },
+     {
+      "misconception": null,
+      "why": "multiplies the digits instead of adding them"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 39.7
+}

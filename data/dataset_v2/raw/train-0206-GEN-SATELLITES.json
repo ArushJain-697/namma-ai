@@ -1,0 +1,143 @@
+{
+ "source": "train-0206-GEN-SATELLITES.json",
+ "job": {
+  "job": "train-0206-GEN-SATELLITES",
+  "topic_id": "GEN-SATELLITES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a cause-and-effect explanation",
+  "seed": 206
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3413,
+  "promptTokenCount": 2
+ },
+ "passage": "Artificial satellites are essential tools that orbit Earth to provide services like communication, navigation, and environmental monitoring. Unlike airplanes, satellites do not require air to push against; they stay in orbit because their high forward speed perfectly balances the pull of Earth's gravity, allowing them to travel indefinitely without burning fuel. Geostationary satellites orbit at a very high altitude of approximately 36,000 kilometers, which allows them to match Earth's rotation and remain positioned above a single point on the equator. These satellites are constantly moving at high speeds, even though they appear stationary from the ground. For navigation, systems like India's NavIC require signals from at least four satellites simultaneously to calculate a precise location on the ground. Satellites also monitor our planet using advanced sensors that detect light beyond the visible spectrum, such as infrared. This technology allows weather satellites to track cyclones and monitor crop health even during the night or through thick cloud cover. These satellites observe and report data to help us prepare for natural disasters, but they cannot physically control or alter weather patterns like rain or storms.",
+ "menu_ids": [
+  "GEN-SATELLITES-K7-M1",
+  "GEN-SATELLITES-K8-M3",
+  "GEN-SATELLITES-K9-M4",
+  "GEN-SATELLITES-K12-M5",
+  "GEN-SATELLITES-K13-M6",
+  "GEN-SATELLITES-K13-M7",
+  "GEN-SATELLITES-K15-M9",
+  "GEN-SATELLITES-K16-M10",
+  "GEN-SATELLITES-K21-M11",
+  "GEN-SATELLITES-K22-M12",
+  "GEN-SATELLITES-K24-M13",
+  "GEN-SATELLITES-K23-M14",
+  "GEN-SATELLITES-K25-M15",
+  "GEN-SATELLITES-K27-M16"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Unlike airplanes, satellites do not require air to push against; they stay in orbit because their high forward speed perfectly balances the pull of Earth's gravity, allowing them to travel indefinitely without burning fuel.",
+    "kind": "what_if",
+    "q": "A satellite stops firing its rockets once it is in orbit. What happens next?",
+    "options": [
+     "It keeps circling, as speed balances gravity",
+     "It falls, as it needs constant engine power",
+     "It floats away, as space has no gravity",
+     "It slows down, as it has no air"
+    ],
+    "explain": "Its high forward speed balances Earth's gravity, so it keeps orbiting without burning fuel.",
+    "wrong": [
+     {
+      "misconception": "GEN-SATELLITES-K8-M3",
+      "why": "thinks engines must run all the time"
+     },
+     {
+      "misconception": "GEN-SATELLITES-K7-M1",
+      "why": "thinks there is no gravity in space"
+     },
+     {
+      "misconception": null,
+      "why": "thinks satellites push against air like airplanes"
+     }
+    ]
+   },
+   {
+    "evidence": "These satellites are constantly moving at high speeds, even though they appear stationary from the ground.",
+    "kind": "which_explains",
+    "q": "A TV dish always points at the same spot in the sky. What is the satellite really doing?",
+    "options": [
+     "Moving fast, keeping pace with Earth's spin",
+     "Standing still, with no motion at all",
+     "Hanging still, held in place by gravity",
+     "Moving slowly, just a few hundred km up"
+    ],
+    "explain": "Geostationary satellites move at high speed, matching Earth's rotation, so they only look still.",
+    "wrong": [
+     {
+      "misconception": "GEN-SATELLITES-K13-M6",
+      "why": "thinks a geostationary satellite does not move"
+     },
+     {
+      "misconception": "GEN-SATELLITES-K13-M7",
+      "why": "thinks gravity holds it fixed in place"
+     },
+     {
+      "misconception": "GEN-SATELLITES-K12-M5",
+      "why": "thinks it orbits low like the space station"
+     }
+    ]
+   },
+   {
+    "evidence": "For navigation, systems like India's NavIC require signals from at least four satellites simultaneously to calculate a precise location on the ground.",
+    "kind": "what_if",
+    "q": "Meena's phone picks up only one NavIC satellite. What happens when it tries to find her location?",
+    "options": [
+     "It fails, as it needs signals from four",
+     "It succeeds, as one satellite is enough",
+     "It succeeds, as the satellite tracks the phone",
+     "It fails, as it needs signals from two"
+    ],
+    "explain": "NavIC needs signals from at least four satellites at once to find a precise location.",
+    "wrong": [
+     {
+      "misconception": "GEN-SATELLITES-K25-M15",
+      "why": "thinks one GPS satellite is enough"
+     },
+     {
+      "misconception": "GEN-SATELLITES-K27-M16",
+      "why": "thinks the satellite tracks the phone"
+     },
+     {
+      "misconception": null,
+      "why": "picks the wrong number of satellites"
+     }
+    ]
+   },
+   {
+    "evidence": "This technology allows weather satellites to track cyclones and monitor crop health even during the night or through thick cloud cover.",
+    "kind": "how",
+    "q": "How can a weather satellite watch a storm at midnight under heavy cloud?",
+    "options": [
+     "By sensing infrared light that eyes cannot see",
+     "By waiting for daylight to take normal photos",
+     "By pushing the clouds aside to see clearly",
+     "By flying down low beneath the clouds"
+    ],
+    "explain": "Infrared sensors detect light beyond the visible, so satellites track cyclones at night and through clouds.",
+    "wrong": [
+     {
+      "misconception": "GEN-SATELLITES-K23-M14",
+      "why": "thinks tracking needs a normal camera in daylight"
+     },
+     {
+      "misconception": "GEN-SATELLITES-K24-M13",
+      "why": "thinks satellites can control the weather"
+     },
+     {
+      "misconception": null,
+      "why": "thinks satellites must get closer to see"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 35.9
+}

@@ -1,0 +1,143 @@
+{
+ "source": "train-0028-MAT-ALGEXPR.json",
+ "job": {
+  "job": "train-0028-MAT-ALGEXPR",
+  "topic_id": "MAT-ALGEXPR",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a clear textbook explanation with one worked example",
+  "seed": 28
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2432,
+  "promptTokenCount": 2
+ },
+ "passage": "Algebraic expressions are formed by combining variables and constants using arithmetic operations. A term is a product of factors, and the numerical factor is called the coefficient. For example, in the expression 5x, the number 5 is the coefficient of x. When we multiply terms, we add the exponents of the same variable; thus, x multiplied by x equals x squared. Distributive property is essential when multiplying expressions; for instance, 3(x + 2) means 3 must multiply both x and 2, resulting in 3x + 6. Algebraic identities are equalities that hold true for all values of the variables involved. A common identity is (a + b) squared, which equals a squared plus 2ab plus b squared. This is different from a squared plus b squared, as the middle term 2ab is necessary to represent the full area of the square. When subtracting one expression from another, we must subtract the entire expression, changing the signs of all terms inside the second bracket. Always remember that x plus x equals 2x, not x squared, because addition involves counting like terms, while multiplication involves changing the power of the variable.",
+ "menu_ids": [
+  "MAT-ALGEXPR-K13-M1",
+  "MAT-ALGEXPR-K12-M2",
+  "MAT-ALGEXPR-K11-M4",
+  "MAT-ALGEXPR-K14-M5",
+  "MAT-ALGEXPR-K15-M6",
+  "MAT-ALGEXPR-K17-M9",
+  "MAT-ALGEXPR-K17-M10",
+  "MAT-ALGEXPR-K18-M11",
+  "MAT-ALGEXPR-K18-M12",
+  "MAT-ALGEXPR-K19-M14",
+  "MAT-ALGEXPR-K20-M15",
+  "MAT-ALGEXPR-K20-M16",
+  "MAT-ALGEXPR-K21-M17",
+  "MAT-ALGEXPR-K22-M18"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Distributive property is essential when multiplying expressions; for instance, 3(x + 2) means 3 must multiply both x and 2, resulting in 3x + 6.",
+    "kind": "what_if",
+    "q": "Meena expands 4(y + 5). What should she get?",
+    "options": [
+     "4y + 20",
+     "4y + 5",
+     "24y",
+     "y + 20"
+    ],
+    "explain": "The 4 must multiply both y and 5, giving 4y + 20.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEXPR-K20-M16",
+      "why": "multiplies only the first term in the bracket"
+     },
+     {
+      "misconception": "MAT-ALGEXPR-K15-M6",
+      "why": "joins unlike terms 4y and 20 into one term"
+     },
+     {
+      "misconception": null,
+      "why": "multiplies only the second term in the bracket"
+     }
+    ]
+   },
+   {
+    "evidence": "This is different from a squared plus b squared, as the middle term 2ab is necessary to represent the full area of the square.",
+    "kind": "which_explains",
+    "q": "Raju writes (a + b)² = a² + b². Which term has he missed?",
+    "options": [
+     "The term 2ab",
+     "No term at all",
+     "The term ab",
+     "The term a + b"
+    ],
+    "explain": "(a + b)² needs the middle term 2ab to show the full area of the square.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEXPR-K22-M18",
+      "why": "believes (a + b)² equals a² + b²"
+     },
+     {
+      "misconception": null,
+      "why": "remembers a middle term but forgets the 2"
+     },
+     {
+      "misconception": "MAT-ALGEXPR-K17-M10",
+      "why": "mixes up adding and multiplying the terms"
+     }
+    ]
+   },
+   {
+    "evidence": "When subtracting one expression from another, we must subtract the entire expression, changing the signs of all terms inside the second bracket.",
+    "kind": "how",
+    "q": "Subtract (2x − 3) from (5x + 4). What is the result?",
+    "options": [
+     "3x + 7",
+     "3x + 1",
+     "−3x − 7",
+     "7x + 1"
+    ],
+    "explain": "Change the signs of both 2x and −3: 5x + 4 − 2x + 3 = 3x + 7.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEXPR-K18-M11",
+      "why": "changes the sign of only the first term"
+     },
+     {
+      "misconception": "MAT-ALGEXPR-K18-M12",
+      "why": "subtracts in the wrong order"
+     },
+     {
+      "misconception": null,
+      "why": "adds the expressions instead of subtracting"
+     }
+    ]
+   },
+   {
+    "evidence": "Always remember that x plus x equals 2x, not x squared, because addition involves counting like terms, while multiplication involves changing the power of the variable.",
+    "kind": "what_if",
+    "q": "Asha adds 3x and 2x. What answer should she get?",
+    "options": [
+     "5x",
+     "5x²",
+     "6x²",
+     "6x"
+    ],
+    "explain": "Addition counts like terms, so 3x + 2x = 5x; the power of x stays the same.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEXPR-K17-M9",
+      "why": "adds the powers as well as the numbers"
+     },
+     {
+      "misconception": null,
+      "why": "multiplies the terms instead of adding them"
+     },
+     {
+      "misconception": null,
+      "why": "multiplies the coefficients instead of adding them"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 27.8
+}

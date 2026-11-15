@@ -1,0 +1,166 @@
+{
+ "source": "train-0154-SOC-GEO-INDUSTRY.json",
+ "job": {
+  "job": "train-0154-SOC-GEO-INDUSTRY",
+  "topic_id": "SOC-GEO-INDUSTRY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a diary entry or letter by a student",
+  "seed": 154
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4206,
+  "promptTokenCount": 2
+ },
+ "passage": "Dear Diary, today our class visited an industrial estate, and my understanding of factories has completely changed. I used to think that steel plants had to be built right on top of iron mines, but our teacher explained that transport costs and market access are just as important as raw material proximity. We also toured a massive IT park. I was surprised to learn that even though they don't have smokestacks, these centers generate significant electronic waste and consume vast amounts of water, proving that 'clean' industries still impact our environment. Later, we discussed how industries are classified. It is fascinating that the iron and steel industry is actually a basic or key industry, not a consumer industry, because its products serve as raw materials for other manufacturing sectors like machine building. Finally, we looked at a chemical plant. I realized that industrial pollution is not just about the visible black smoke from chimneys; it includes the toxic liquid waste dumped into rivers and the noise pollution from heavy machinery that disrupts local ecosystems. This visit taught me that industrialization is a complex web of logistics, environmental responsibility, and economic roles that go far beyond what we see on the surface.",
+ "menu_ids": [
+  "SOC-GEO-INDUSTRY-K7-M1",
+  "SOC-GEO-INDUSTRY-K10-M2",
+  "SOC-GEO-INDUSTRY-K12-M3",
+  "SOC-GEO-INDUSTRY-K11-M4",
+  "SOC-GEO-INDUSTRY-K5-M5",
+  "SOC-GEO-INDUSTRY-K5-M6",
+  "SOC-GEO-INDUSTRY-K7-M7",
+  "SOC-GEO-INDUSTRY-K8-M8",
+  "SOC-GEO-INDUSTRY-K9-M9",
+  "SOC-GEO-INDUSTRY-K9-M10",
+  "SOC-GEO-INDUSTRY-K13-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "I used to think that steel plants had to be built right on top of iron mines, but our teacher explained that transport costs and market access are just as important as raw material proximity.",
+    "kind": "why",
+    "q": "Why might a steel plant be built some distance away from the iron mines?",
+    "options": [
+     "Shipping costs and nearness to buyers also matter",
+     "Cheap land is the only thing that matters",
+     "Plants must go where wages are lowest",
+     "Being near iron ore does not matter at all"
+    ],
+    "explain": "Transport costs and market access are just as important as being close to raw material.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-INDUSTRY-K7-M7",
+      "why": "thinks cheap land alone decides location"
+     },
+     {
+      "misconception": "SOC-GEO-INDUSTRY-K8-M8",
+      "why": "thinks cost saving means lowest wages"
+     },
+     {
+      "misconception": null,
+      "why": "over-corrects and drops raw material entirely"
+     }
+    ]
+   },
+   {
+    "evidence": "I was surprised to learn that even though they don't have smokestacks, these centers generate significant electronic waste and consume vast amounts of water, proving that 'clean' industries still impact our environment.",
+    "kind": "which_explains",
+    "q": "What did the IT park visit show about so-called clean industries?",
+    "options": [
+     "They still harm nature in other ways",
+     "They cause no harm without big factories",
+     "They pollute only when they have chimneys",
+     "They harm nature only by using water"
+    ],
+    "explain": "IT centres have no smokestacks but still create e-waste and use lots of water.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-INDUSTRY-K11-M4",
+      "why": "thinks IT causes no pollution"
+     },
+     {
+      "misconception": "SOC-GEO-INDUSTRY-K12-M3",
+      "why": "thinks pollution means chimney smoke"
+     },
+     {
+      "misconception": null,
+      "why": "notices one detail and misses the e-waste"
+     }
+    ]
+   },
+   {
+    "evidence": "It is fascinating that the iron and steel industry is actually a basic or key industry, not a consumer industry, because its products serve as raw materials for other manufacturing sectors like machine building.",
+    "kind": "why",
+    "q": "Why is iron and steel called a basic industry rather than a consumer industry?",
+    "options": [
+     "Other industries use its products as inputs",
+     "People use steel utensils at home daily",
+     "It uses minerals dug from mines as input",
+     "It is run by the government in big plants"
+    ],
+    "explain": "Its products become raw materials for other industries, like machine building, so it is basic.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-INDUSTRY-K10-M2",
+      "why": "thinks home steel use makes it consumer"
+     },
+     {
+      "misconception": null,
+      "why": "confuses its raw material with its role"
+     },
+     {
+      "misconception": "SOC-GEO-INDUSTRY-K5-M6",
+      "why": "classifies industry by size or ownership"
+     }
+    ]
+   },
+   {
+    "evidence": "I realized that industrial pollution is not just about the visible black smoke from chimneys; it includes the toxic liquid waste dumped into rivers and the noise pollution from heavy machinery that disrupts local ecosystems.",
+    "kind": "what_if",
+    "q": "A factory's chimneys give no smoke, but it drains toxic waste into a river. What does this show?",
+    "options": [
+     "It is still polluting through its waste",
+     "It is not polluting since no smoke rises",
+     "It pollutes only through its machine noise",
+     "Its river waste does not harm living things"
+    ],
+    "explain": "Industrial pollution includes toxic liquid waste in rivers, not just black smoke from chimneys.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-INDUSTRY-K12-M3",
+      "why": "thinks pollution means only smoke"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby detail as the only kind"
+     },
+     {
+      "misconception": null,
+      "why": "ignores that the waste is toxic"
+     }
+    ]
+   },
+   {
+    "evidence": "This visit taught me that industrialization is a complex web of logistics, environmental responsibility, and economic roles that go far beyond what we see on the surface.",
+    "kind": "recall",
+    "q": "What big lesson did the writer take away from the whole visit?",
+    "options": [
+     "Industry links transport, nature care and economic roles",
+     "Industry is mainly about finding raw material",
+     "Industry is mainly about getting cheap land",
+     "Industry harms nature only through visible smoke"
+    ],
+    "explain": "The writer learned industry is a web of logistics, environmental responsibility and economic roles.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-INDUSTRY-K7-M1",
+      "why": "thinks raw material alone decides everything"
+     },
+     {
+      "misconception": "SOC-GEO-INDUSTRY-K7-M7",
+      "why": "thinks cheap land decides everything"
+     },
+     {
+      "misconception": "SOC-GEO-INDUSTRY-K12-M3",
+      "why": "thinks pollution is only what we see"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 42.6
+}

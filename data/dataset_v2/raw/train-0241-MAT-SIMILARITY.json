@@ -1,0 +1,169 @@
+{
+ "source": "train-0241-MAT-SIMILARITY.json",
+ "job": {
+  "job": "train-0241-MAT-SIMILARITY",
+  "topic_id": "MAT-SIMILARITY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a short story where children solve a real problem",
+  "seed": 241
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4077,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and Meera were tasked with creating a scale model of a triangular park for their school project. The original park has sides measuring 12 meters, 16 meters, and 20 meters. They decided to build a smaller version with sides 3 meters, 4 meters, and 5 meters. Rohan noted that since the ratio of all corresponding sides is 1:4, the triangles are similar by the SSS criterion. Meera checked the angles and confirmed they were equal. They then discussed the area of the model. Meera recalled that if the ratio of corresponding sides is 1:4, the ratio of their areas must be the square of that ratio, which is 1:16. Later, they drew a line segment DE inside a larger triangle ABC such that it is parallel to the base BC, intersecting sides AB and AC at D and E respectively. According to the Basic Proportionality Theorem, they correctly identified that AD/DB equals AE/EC. They realized this only works because the line is parallel to the third side, unlike any random line drawn across the triangle. Finally, they compared two rectangles, one 2cm by 4cm and another 3cm by 6cm. Although both have 90-degree angles, they concluded that similarity requires the ratio of all corresponding sides to be equal, not just the angles.",
+ "menu_ids": [
+  "MAT-SIMILARITY-K12-M1",
+  "MAT-SIMILARITY-K13-M2",
+  "MAT-SIMILARITY-K14-M3",
+  "MAT-SIMILARITY-K15-M4",
+  "MAT-SIMILARITY-K16-M5",
+  "MAT-SIMILARITY-K16-M6",
+  "MAT-SIMILARITY-K18-M8",
+  "MAT-SIMILARITY-K18-M9",
+  "MAT-SIMILARITY-K19-M10",
+  "MAT-SIMILARITY-K20-M11",
+  "MAT-SIMILARITY-K21-M12",
+  "MAT-SIMILARITY-K22-M13",
+  "MAT-SIMILARITY-K23-M14",
+  "MAT-SIMILARITY-K24-M16"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Rohan noted that since the ratio of all corresponding sides is 1:4, the triangles are similar by the SSS criterion.",
+    "kind": "which_explains",
+    "q": "Why is the 3-4-5 model similar to the 12-16-20 park?",
+    "options": [
+     "Every park side is four times the model's side",
+     "Every park side is four metres longer than the model's",
+     "Every park side has the same length as the model's",
+     "Every park side is in ratio, though angles differ"
+    ],
+    "explain": "All three park sides are four times the model's sides, so SSS similarity holds.",
+    "wrong": [
+     {
+      "misconception": "MAT-SIMILARITY-K15-M4",
+      "why": "thinks similar sides differ by an added amount"
+     },
+     {
+      "misconception": "MAT-SIMILARITY-K12-M1",
+      "why": "thinks similar figures must be the same size"
+     },
+     {
+      "misconception": "MAT-SIMILARITY-K14-M3",
+      "why": "thinks angles need not be equal in similar figures"
+     }
+    ]
+   },
+   {
+    "evidence": "Meera recalled that if the ratio of corresponding sides is 1:4, the ratio of their areas must be the square of that ratio, which is 1:16.",
+    "kind": "what_if",
+    "q": "The model's area is 6 square metres. What is the area of the real park?",
+    "options": [
+     "96 square metres",
+     "24 square metres",
+     "36 square metres",
+     "6 square metres"
+    ],
+    "explain": "Areas are in ratio 1:16, the square of 1:4, so 6 × 16 = 96.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "uses the side ratio 1:4 for area"
+     },
+     {
+      "misconception": null,
+      "why": "squares the area instead of the ratio"
+     },
+     {
+      "misconception": "MAT-SIMILARITY-K12-M1",
+      "why": "thinks similar figures have the same size"
+     }
+    ]
+   },
+   {
+    "evidence": "According to the Basic Proportionality Theorem, they correctly identified that AD/DB equals AE/EC.",
+    "kind": "how",
+    "q": "In triangle ABC, DE is parallel to BC. Which ratio equals AD/DB?",
+    "options": [
+     "AE/EC",
+     "EC/AE",
+     "AE/AC",
+     "DE/BC"
+    ],
+    "explain": "BPT matches upper part to lower part on both sides, so AD/DB = AE/EC.",
+    "wrong": [
+     {
+      "misconception": "MAT-SIMILARITY-K18-M9",
+      "why": "matches the upper part with the lower part crosswise"
+     },
+     {
+      "misconception": "MAT-SIMILARITY-K18-M8",
+      "why": "compares a part to the whole side"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up BPT with the ratio of parallel lines"
+     }
+    ]
+   },
+   {
+    "evidence": "They realized this only works because the line is parallel to the third side, unlike any random line drawn across the triangle.",
+    "kind": "what_if",
+    "q": "A line meets AB at D and AC at E but is not parallel to BC. What follows?",
+    "options": [
+     "The theorem no longer promises AD/DB equals AE/EC",
+     "The theorem still promises AD/DB equals AE/EC",
+     "The theorem promises equality if DE is half BC",
+     "The theorem promises AD/AB equals AE/AC instead"
+    ],
+    "explain": "BPT works only when the line is parallel to the third side, not for any random line.",
+    "wrong": [
+     {
+      "misconception": "MAT-SIMILARITY-K19-M10",
+      "why": "thinks BPT works for any line meeting two sides"
+     },
+     {
+      "misconception": "MAT-SIMILARITY-K20-M11",
+      "why": "links the rule to the line being half the base"
+     },
+     {
+      "misconception": "MAT-SIMILARITY-K18-M8",
+      "why": "thinks a part-to-whole ratio replaces the rule"
+     }
+    ]
+   },
+   {
+    "evidence": "Although both have 90-degree angles, they concluded that similarity requires the ratio of all corresponding sides to be equal, not just the angles.",
+    "kind": "why",
+    "q": "Why are two rectangles not similar just because all their angles are 90 degrees?",
+    "options": [
+     "Their lengths and widths must share one ratio",
+     "Their lengths and widths must be exactly equal",
+     "Their lengths and widths must differ by one amount",
+     "Their lengths and widths do not matter at all"
+    ],
+    "explain": "Equal angles are not enough; all corresponding sides must also be in the same ratio.",
+    "wrong": [
+     {
+      "misconception": "MAT-SIMILARITY-K12-M1",
+      "why": "thinks similar figures must be the same size"
+     },
+     {
+      "misconception": "MAT-SIMILARITY-K15-M4",
+      "why": "thinks sides are related by adding a fixed length"
+     },
+     {
+      "misconception": "MAT-SIMILARITY-K13-M2",
+      "why": "thinks right angles alone make rectangles similar"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 41.1
+}

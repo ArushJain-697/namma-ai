@@ -1,0 +1,164 @@
+{
+ "source": "train-0186-GEN-BALANCEDDIET.json",
+ "job": {
+  "job": "train-0186-GEN-BALANCEDDIET",
+  "topic_id": "GEN-BALANCEDDIET",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a short story with Indian characters in everyday life",
+  "seed": 186
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4318,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and his grandmother, Dadi, were preparing lunch in their kitchen. Rohan suggested they only eat dal and ghee, as he thought protein was the only thing that mattered for his growth. Dadi smiled and explained that a balanced plate needs variety. She showed him a bowl of brown rice and millet rotis, explaining that whole grains provide essential fibre that keeps our digestion smooth, unlike refined maida which loses its goodness during polishing. Rohan then pointed to a vitamin tablet he took earlier, claiming it replaced his need for a full meal since it provided energy. Dadi shook her head, clarifying that while vitamins and minerals are vital for health, they do not provide the energy calories that carbohydrates and fats do. She added that a growing boy needs a mix of nutrients, not just one type. She also reminded him that his younger sister, who plays sports, needs a different portion size than their grandfather, who is less active. Finally, Dadi served a large portion of green leafy vegetables alongside a small portion of potatoes, noting that while potatoes are energy-rich, they cannot replace the unique micronutrients found in dark green vegetables. Rohan realized that a healthy diet is a thoughtful balance of different food groups tailored to each person's specific needs.",
+ "menu_ids": [
+  "GEN-BALANCEDDIET-K13-M2",
+  "GEN-BALANCEDDIET-K14-M3",
+  "GEN-BALANCEDDIET-K20-M6",
+  "GEN-BALANCEDDIET-K21-M7",
+  "GEN-BALANCEDDIET-K22-M8",
+  "GEN-BALANCEDDIET-K25-M9",
+  "GEN-BALANCEDDIET-K26-M10",
+  "GEN-BALANCEDDIET-K16-M11",
+  "GEN-BALANCEDDIET-K24-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "She added that a growing boy needs a mix of nutrients, not just one type.",
+    "kind": "why",
+    "q": "Rohan wants to eat only dal and ghee for growth. Why does Dadi disagree?",
+    "options": [
+     "His body needs many kinds of nutrients together",
+     "Dal alone gives every nutrient his body needs",
+     "His body cannot get protein from dal at all",
+     "Ghee will make him fat, but rice will not"
+    ],
+    "explain": "Dadi says a growing boy needs a mix of nutrients, not just one type like protein.",
+    "wrong": [
+     {
+      "misconception": "GEN-BALANCEDDIET-K14-M3",
+      "why": "thinks one healthy food is enough"
+     },
+     {
+      "misconception": "GEN-BALANCEDDIET-K22-M8",
+      "why": "thinks vegetarian food lacks protein"
+     },
+     {
+      "misconception": "GEN-BALANCEDDIET-K26-M10",
+      "why": "thinks only oily food adds weight"
+     }
+    ]
+   },
+   {
+    "evidence": "She showed him a bowl of brown rice and millet rotis, explaining that whole grains provide essential fibre that keeps our digestion smooth, unlike refined maida which loses its goodness during polishing.",
+    "kind": "why",
+    "q": "Why does Dadi choose brown rice and millet rotis instead of maida?",
+    "options": [
+     "Their fibre helps the stomach digest food easily",
+     "Their polishing makes them finer and cleaner",
+     "Their energy matters, as fibre is useless",
+     "Their protein is the only thing growth needs"
+    ],
+    "explain": "Whole grains give fibre for smooth digestion; maida loses its goodness when polished.",
+    "wrong": [
+     {
+      "misconception": "GEN-BALANCEDDIET-K25-M9",
+      "why": "thinks polished grains are cleaner and better"
+     },
+     {
+      "misconception": "GEN-BALANCEDDIET-K21-M7",
+      "why": "thinks fibre is useless"
+     },
+     {
+      "misconception": null,
+      "why": "repeats Rohan's earlier wrong idea about protein"
+     }
+    ]
+   },
+   {
+    "evidence": "Dadi shook her head, clarifying that while vitamins and minerals are vital for health, they do not provide the energy calories that carbohydrates and fats do.",
+    "kind": "what_if",
+    "q": "Rohan took a vitamin tablet in the morning. Can he skip lunch?",
+    "options": [
+     "He still needs lunch, as vitamins give no energy",
+     "He can skip lunch, as the tablet gives energy",
+     "He still needs lunch, but only dal for protein",
+     "He can skip lunch, as minerals replace carbohydrates"
+    ],
+    "explain": "Vitamins and minerals keep us healthy but give no energy calories; carbohydrates and fats do.",
+    "wrong": [
+     {
+      "misconception": "GEN-BALANCEDDIET-K20-M6",
+      "why": "thinks vitamins give energy"
+     },
+     {
+      "misconception": null,
+      "why": "thinks protein is the only thing that matters"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up minerals with energy foods"
+     }
+    ]
+   },
+   {
+    "evidence": "She also reminded him that his younger sister, who plays sports, needs a different portion size than their grandfather, who is less active.",
+    "kind": "what_if",
+    "q": "Should Rohan's sister, who plays sports, eat the same portion as Grandfather?",
+    "options": [
+     "No, she uses more energy, so needs more",
+     "Yes, a balanced plate is same for everyone",
+     "No, Grandfather is older, so needs more",
+     "Yes, if both plates have enough protein"
+    ],
+    "explain": "The active sister needs a different portion from the less active grandfather; needs differ by person.",
+    "wrong": [
+     {
+      "misconception": "GEN-BALANCEDDIET-K16-M11",
+      "why": "thinks everyone needs the same diet"
+     },
+     {
+      "misconception": null,
+      "why": "reverses who needs more food"
+     },
+     {
+      "misconception": null,
+      "why": "thinks protein alone makes a plate balanced"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, Dadi served a large portion of green leafy vegetables alongside a small portion of potatoes, noting that while potatoes are energy-rich, they cannot replace the unique micronutrients found in dark green vegetables.",
+    "kind": "what_if",
+    "q": "What would Rohan miss if he ate only potatoes instead of leafy greens?",
+    "options": [
+     "Vitamins and minerals that dark greens give",
+     "No nutrients, as potato is a vegetable too",
+     "Energy, as potatoes give less than greens",
+     "No nutrients, if he eats enough potatoes"
+    ],
+    "explain": "Potatoes give energy but cannot replace the special micronutrients found in dark green vegetables.",
+    "wrong": [
+     {
+      "misconception": "GEN-BALANCEDDIET-K13-M2",
+      "why": "thinks potato counts like leafy greens"
+     },
+     {
+      "misconception": null,
+      "why": "reverses which food is energy-rich"
+     },
+     {
+      "misconception": "GEN-BALANCEDDIET-K14-M3",
+      "why": "thinks plenty of one food is enough"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 45.3
+}

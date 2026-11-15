@@ -1,0 +1,141 @@
+{
+ "source": "train-0012-GEN-INTEREST.json",
+ "job": {
+  "job": "train-0012-GEN-INTEREST",
+  "topic_id": "GEN-INTEREST",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a diary entry or letter by a student",
+  "seed": 12
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2641,
+  "promptTokenCount": 2
+ },
+ "passage": "Dear Diary, today my father explained why we must be careful with money. He showed me two loan offers for a new bike. One bank uses a flat rate of 8%, while the other uses a reducing-balance rate of 8%. He warned that the flat rate is actually much more expensive because you pay interest on the full amount even as you pay it back. He also checked a credit card statement, noting that the interest-free period only applies if you pay the full bill, not just a part of it. We then calculated interest for a six-month loan. Since the formula uses time in years, we had to use 0.5 years, not 6, to get the correct amount. Finally, he explained that while a 10-year loan has a smaller monthly EMI, you end up paying much more in total interest than with a 2-year loan. I realized that borrowing is not just about the interest rate or the monthly payment; it is about the total cost over time. I must always check the fine print before agreeing to any loan or using a credit card.",
+ "menu_ids": [
+  "GEN-INTEREST-K7-M1",
+  "GEN-INTEREST-K8-M2",
+  "GEN-INTEREST-K5-M3",
+  "GEN-INTEREST-K10-M4",
+  "GEN-INTEREST-K11-M5",
+  "GEN-INTEREST-K13-M6",
+  "GEN-INTEREST-K12-M7",
+  "GEN-INTEREST-K15-M8",
+  "GEN-INTEREST-K20-M9",
+  "GEN-INTEREST-K22-M10",
+  "GEN-INTEREST-K23-M11",
+  "GEN-INTEREST-K28-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "He warned that the flat rate is actually much more expensive because you pay interest on the full amount even as you pay it back.",
+    "kind": "difference",
+    "q": "Two banks both offer a bike loan at 8%. How do the flat-rate and reducing-balance offers compare?",
+    "options": [
+     "The flat-rate loan costs much more overall",
+     "Both cost the same, since the rates are equal",
+     "The reducing-balance loan costs much more overall",
+     "Neither has extra costs, since 8% is low"
+    ],
+    "explain": "A flat rate charges interest on the full amount even as you repay, so it costs more than reducing-balance.",
+    "wrong": [
+     {
+      "misconception": "GEN-INTEREST-K22-M10",
+      "why": "thinks the same rate number means the same cost"
+     },
+     {
+      "misconception": null,
+      "why": "reverses which loan is more expensive"
+     },
+     {
+      "misconception": "GEN-INTEREST-K23-M11",
+      "why": "thinks a low rate means no other costs"
+     }
+    ]
+   },
+   {
+    "evidence": "He also checked a credit card statement, noting that the interest-free period only applies if you pay the full bill, not just a part of it.",
+    "kind": "what_if",
+    "q": "Meena pays only half of her credit card bill by the due date. What happens to her interest-free period?",
+    "options": [
+     "She loses it and must pay interest",
+     "It still covers the whole bill",
+     "It still applies, since card rates are low",
+     "It is extended by one more month"
+    ],
+    "explain": "The interest-free period only applies if you pay the full bill, not just part of it.",
+    "wrong": [
+     {
+      "misconception": "GEN-INTEREST-K28-M12",
+      "why": "thinks a part payment keeps the interest-free period"
+     },
+     {
+      "misconception": "GEN-INTEREST-K23-M11",
+      "why": "thinks a low rate means nothing to worry about"
+     },
+     {
+      "misconception": null,
+      "why": "guesses that paying something earns extra time"
+     }
+    ]
+   },
+   {
+    "evidence": "Since the formula uses time in years, we had to use 0.5 years, not 6, to get the correct amount.",
+    "kind": "how",
+    "q": "To find simple interest on a six-month loan, what value of T should go into SI = PRT/100?",
+    "options": [
+     "0.5, because T must be in years",
+     "6, because the loan lasts six months",
+     "1, because the loan length does not matter",
+     "12, because a year has twelve months"
+    ],
+    "explain": "The formula uses time in years, so six months is 0.5 years, not 6.",
+    "wrong": [
+     {
+      "misconception": "GEN-INTEREST-K13-M6",
+      "why": "puts the number of months straight into the formula"
+     },
+     {
+      "misconception": "GEN-INTEREST-K7-M1",
+      "why": "thinks interest does not depend on time"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby number linked to months"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, he explained that while a 10-year loan has a smaller monthly EMI, you end up paying much more in total interest than with a 2-year loan.",
+    "kind": "what_if",
+    "q": "Kabir chooses a 10-year loan over a 2-year loan because its EMI is smaller. What is the result?",
+    "options": [
+     "He pays much more interest in total",
+     "He pays less in total, as EMIs are smaller",
+     "He pays the same interest, as time doesn't matter",
+     "He pays less interest, but a bigger EMI"
+    ],
+    "explain": "A 10-year loan has a smaller EMI, but you pay much more total interest than with a 2-year loan.",
+    "wrong": [
+     {
+      "misconception": "GEN-INTEREST-K20-M9",
+      "why": "thinks smaller EMIs mean a smaller total cost"
+     },
+     {
+      "misconception": "GEN-INTEREST-K7-M1",
+      "why": "thinks interest does not depend on time"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up which loan has the smaller EMI"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 30.8
+}

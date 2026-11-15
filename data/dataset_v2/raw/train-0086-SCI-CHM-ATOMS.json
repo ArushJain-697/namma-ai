@@ -1,0 +1,139 @@
+{
+ "source": "train-0086-SCI-CHM-ATOMS.json",
+ "job": {
+  "job": "train-0086-SCI-CHM-ATOMS",
+  "topic_id": "SCI-CHM-ATOMS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a cause-and-effect explanation",
+  "seed": 86
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2716,
+  "promptTokenCount": 2
+ },
+ "passage": "Matter is composed of tiny, indivisible building blocks called atoms, which are not solid balls but contain vast amounts of empty space. When substances are heated, these atoms do not grow in size; instead, they simply move faster and spread further apart. Atoms combine in fixed, whole-number ratios to form compounds, and this ratio remains constant regardless of whether the substance is found in nature or synthesized in a laboratory. During chemical reactions, the total mass remains unchanged, even if a gas is produced, because atoms are merely rearranged rather than created or destroyed. A molecule is defined as the smallest particle of an element or a compound that can exist independently. While atoms can gain or lose electrons to form ions, they never change their identity by gaining or losing protons in the nucleus. Finally, the molar mass of a substance represents the mass of one mole of particles, which is a specific collection of 6.022 x 10^23 atoms or molecules, rather than the mass of a single atom or molecule in grams. Understanding these principles allows us to calculate chemical quantities accurately by dividing the given mass by the molar mass, rather than multiplying them.",
+ "menu_ids": [
+  "SCI-CHM-ATOMS-K3-M1",
+  "SCI-CHM-ATOMS-K5-M2",
+  "SCI-CHM-ATOMS-K8-M3",
+  "SCI-CHM-ATOMS-K9-M4",
+  "SCI-CHM-ATOMS-K11-M5",
+  "SCI-CHM-ATOMS-K12-M6",
+  "SCI-CHM-ATOMS-K19-M9",
+  "SCI-CHM-ATOMS-K12-M10",
+  "SCI-CHM-ATOMS-K8-M11",
+  "SCI-CHM-ATOMS-K20-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "When substances are heated, these atoms do not grow in size; instead, they simply move faster and spread further apart.",
+    "kind": "what_if",
+    "q": "A copper rod is heated strongly. What happens to the copper atoms inside it?",
+    "options": [
+     "They move quicker and drift further apart",
+     "They grow bigger and push the rod longer",
+     "They gain protons and become new atoms",
+     "They break into smaller pieces of matter"
+    ],
+    "explain": "Heating does not make atoms bigger; atoms just move faster and spread further apart.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-ATOMS-K8-M3",
+      "why": "thinks atoms grow in size when heated"
+     },
+     {
+      "misconception": "SCI-CHM-ATOMS-K12-M6",
+      "why": "thinks atoms can gain protons and change"
+     },
+     {
+      "misconception": null,
+      "why": "forgets that atoms are indivisible"
+     }
+    ]
+   },
+   {
+    "evidence": "During chemical reactions, the total mass remains unchanged, even if a gas is produced, because atoms are merely rearranged rather than created or destroyed.",
+    "kind": "what_if",
+    "q": "Marble reacts with acid in a sealed flask and bubbles of gas form. What happens to the total mass?",
+    "options": [
+     "It stays the same as at the start",
+     "It falls because the gas escapes into bubbles",
+     "It rises because new atoms are created",
+     "It depends on how the acid was made"
+    ],
+    "explain": "Atoms are only rearranged, not created or destroyed, so total mass stays the same even when gas forms.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-ATOMS-K3-M1",
+      "why": "thinks producing a gas means mass is lost"
+     },
+     {
+      "misconception": null,
+      "why": "thinks reactions create new atoms"
+     },
+     {
+      "misconception": "SCI-CHM-ATOMS-K5-M2",
+      "why": "thinks preparation method changes the result"
+     }
+    ]
+   },
+   {
+    "evidence": "Atoms combine in fixed, whole-number ratios to form compounds, and this ratio remains constant regardless of whether the substance is found in nature or synthesized in a laboratory.",
+    "kind": "what_if",
+    "q": "Pure water from a river is compared with pure water made in a lab. How do their atom ratios compare?",
+    "options": [
+     "They are exactly equal in both samples",
+     "They differ because the lab chose its own ratio",
+     "They differ because nature mixes atoms randomly",
+     "They differ because the lab atoms were heated"
+    ],
+    "explain": "A compound always has the same fixed ratio of atoms, whether from nature or a laboratory.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-ATOMS-K5-M2",
+      "why": "thinks preparation method decides the ratio"
+     },
+     {
+      "misconception": null,
+      "why": "thinks natural compounds have no fixed ratio"
+     },
+     {
+      "misconception": "SCI-CHM-ATOMS-K8-M3",
+      "why": "thinks heating changes the atoms themselves"
+     }
+    ]
+   },
+   {
+    "evidence": "Understanding these principles allows us to calculate chemical quantities accurately by dividing the given mass by the molar mass, rather than multiplying them.",
+    "kind": "how",
+    "q": "Water's molar mass is 18 g. How should Asha find the moles in 36 g of water?",
+    "options": [
+     "Divide 36 by 18, giving 2 moles",
+     "Multiply 36 by 18, giving 648 moles",
+     "Divide 36 by 18, giving 2 molecules",
+     "Divide 18 by 36, giving 0.5 moles"
+    ],
+    "explain": "Moles are found by dividing the given mass by the molar mass: 36 ÷ 18 = 2 moles.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-ATOMS-K20-M12",
+      "why": "multiplies mass by molar mass"
+     },
+     {
+      "misconception": "SCI-CHM-ATOMS-K19-M9",
+      "why": "thinks molar mass is one molecule's mass"
+     },
+     {
+      "misconception": null,
+      "why": "divides in the wrong order"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 26.6
+}

@@ -1,0 +1,141 @@
+{
+ "source": "train-0037-MAT-DECIMALS.json",
+ "job": {
+  "job": "train-0037-MAT-DECIMALS",
+  "topic_id": "MAT-DECIMALS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a step-by-step worked example",
+  "seed": 37
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3466,
+  "promptTokenCount": 2
+ },
+ "passage": "To compare decimals like 0.4 and 0.40, we must look at their place values. A decimal point is not a separator for two whole numbers; it marks the boundary between whole units and fractional parts. We can add placeholder zeros to the right of a decimal without changing its value, meaning 0.4 is exactly equal to 0.40. When we perform operations like addition or subtraction, we must align the decimal points vertically to ensure we are adding or subtracting the same place values, such as tenths with tenths and hundredths with hundredths. For example, when adding 5 and 0.3, we write 5 as 5.0 to align the units place, resulting in 5.3. If we compare 0.8 and 0.83, we look at the tenths place first. Since both have 8 in the tenths place, we move to the hundredths place. Because 0.8 has zero hundredths and 0.83 has three hundredths, 0.83 is the larger number. Finally, remember that 0.25 is not 1/25; it is 25 hundredths, which simplifies to the fraction 25/100 or 1/4. Always focus on the place value of each digit rather than the total number of digits present.",
+ "menu_ids": [
+  "MAT-DECIMALS-K4-M1",
+  "MAT-DECIMALS-K6-M2",
+  "MAT-DECIMALS-K7-M3",
+  "MAT-DECIMALS-K8-M4",
+  "MAT-DECIMALS-K6-M5",
+  "MAT-DECIMALS-K6-M6",
+  "MAT-DECIMALS-K10-M7",
+  "MAT-DECIMALS-K9-M8",
+  "MAT-DECIMALS-K9-M9",
+  "MAT-DECIMALS-K8-M10",
+  "MAT-DECIMALS-K11-M11",
+  "MAT-DECIMALS-K7-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "We can add placeholder zeros to the right of a decimal without changing its value, meaning 0.4 is exactly equal to 0.40.",
+    "kind": "what_if",
+    "q": "What happens to the value of 0.4 if we write it as 0.40?",
+    "options": [
+     "It stays exactly the same number",
+     "It becomes larger because of more digits",
+     "It becomes ten times larger, like 40",
+     "It becomes smaller, as zeros reduce it"
+    ],
+    "explain": "Zeros added to the right of a decimal do not change its value, so 0.4 equals 0.40.",
+    "wrong": [
+     {
+      "misconception": "MAT-DECIMALS-K10-M7",
+      "why": "thinks 0.40 is greater than 0.4"
+     },
+     {
+      "misconception": "MAT-DECIMALS-K4-M1",
+      "why": "reads the digits after the point as a whole number 40"
+     },
+     {
+      "misconception": null,
+      "why": "thinks any extra zero lowers a number's value"
+     }
+    ]
+   },
+   {
+    "evidence": "For example, when adding 5 and 0.3, we write 5 as 5.0 to align the units place, resulting in 5.3.",
+    "kind": "how",
+    "q": "What is 5 + 0.3 when the place values are lined up correctly?",
+    "options": [
+     "5.3, since 5 is the same as 5.0",
+     "0.8, since the last digits line up",
+     "8, since the point just separates numbers",
+     "0.53, since 0.3 is written after 5"
+    ],
+    "explain": "Writing 5 as 5.0 lines up units with units and tenths with tenths, giving 5.3.",
+    "wrong": [
+     {
+      "misconception": "MAT-DECIMALS-K11-M11",
+      "why": "lines up the whole number with the tenths digit"
+     },
+     {
+      "misconception": "MAT-DECIMALS-K4-M1",
+      "why": "treats the decimal point as a separator of whole numbers"
+     },
+     {
+      "misconception": null,
+      "why": "joins the digits instead of adding place values"
+     }
+    ]
+   },
+   {
+    "evidence": "Because 0.8 has zero hundredths and 0.83 has three hundredths, 0.83 is the larger number.",
+    "kind": "why",
+    "q": "Why is 0.83 larger than 0.8?",
+    "options": [
+     "Because it has 3 hundredths and 0.8 has none",
+     "Because 83 is a bigger number than 8",
+     "Because it has more digits after the point",
+     "Because its tenths digit is bigger than 0.8's"
+    ],
+    "explain": "Both have 8 tenths, but 0.83 has 3 hundredths while 0.8 has zero hundredths.",
+    "wrong": [
+     {
+      "misconception": "MAT-DECIMALS-K4-M1",
+      "why": "compares the digits after the point as whole numbers"
+     },
+     {
+      "misconception": "MAT-DECIMALS-K6-M2",
+      "why": "thinks more digits always means a larger decimal"
+     },
+     {
+      "misconception": null,
+      "why": "misreads the tenths place, which is 8 in both"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, remember that 0.25 is not 1/25; it is 25 hundredths, which simplifies to the fraction 25/100 or 1/4.",
+    "kind": "which_explains",
+    "q": "Tara writes 0.25 as the fraction 1/25. Which idea shows her mistake?",
+    "options": [
+     "The digits 25 stand for 25 hundredths",
+     "The digits 25 stand for 25 tenths",
+     "The digits 25 stand for 25 whole units",
+     "The digits 25 stand for 25 thousandths"
+    ],
+    "explain": "0.25 means 25 hundredths, which is 25/100 or 1/4, not 1/25.",
+    "wrong": [
+     {
+      "misconception": "MAT-DECIMALS-K8-M10",
+      "why": "confuses the hundredths place with tenths"
+     },
+     {
+      "misconception": "MAT-DECIMALS-K4-M1",
+      "why": "treats digits after the point as a whole number"
+     },
+     {
+      "misconception": null,
+      "why": "miscounts the places after the decimal point"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 36.9
+}

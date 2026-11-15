@@ -1,0 +1,169 @@
+{
+ "source": "train-0378-GEN-HYDRATION.json",
+ "job": {
+  "job": "train-0378-GEN-HYDRATION",
+  "topic_id": "GEN-HYDRATION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a step-by-step explanation of a process",
+  "seed": 378
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 3382,
+  "promptTokenCount": 2
+ },
+ "passage": "Our bodies constantly lose water through breathing, urine, and invisible moisture on our skin, even when we are not visibly sweating. This water loss happens every day, regardless of the temperature, meaning dehydration can occur even in cool weather. To stay hydrated, we do not need to rely solely on plain water; fluids from fruits, vegetables, and other healthy drinks also contribute to our daily water balance. When we exercise or face high heat, our body produces sweat to cool us down. This cooling effect occurs because the sweat evaporates into the air, taking heat away from our skin; simply wiping the sweat away prevents this natural cooling process. If a person suffers from heatstroke, their body loses the ability to regulate temperature, and they may stop sweating entirely. In such a medical emergency, you must move the person to a cool area and provide small sips of water, but never wrap them in blankets or force large amounts of fluid at once. Remember, thirst is a normal signal that your body needs more water, not necessarily a sign of a life-threatening emergency. By listening to your body and drinking fluids regularly, you can maintain your health in any season.",
+ "menu_ids": [
+  "GEN-HYDRATION-K20-M1",
+  "GEN-HYDRATION-K20-M2",
+  "GEN-HYDRATION-K18-M3",
+  "GEN-HYDRATION-K19-M4",
+  "GEN-HYDRATION-K23-M7",
+  "GEN-HYDRATION-K22-M8",
+  "GEN-HYDRATION-K15-M9",
+  "GEN-HYDRATION-K16-M10",
+  "GEN-HYDRATION-K17-M11",
+  "GEN-HYDRATION-K14-M12",
+  "GEN-HYDRATION-K10-M14",
+  "GEN-HYDRATION-K26-M16",
+  "GEN-HYDRATION-K27-M18",
+  "GEN-HYDRATION-K27-M19"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "This water loss happens every day, regardless of the temperature, meaning dehydration can occur even in cool weather.",
+    "kind": "what_if",
+    "q": "Meera sits in a cool room and does not sweat at all. What is happening to her body's water?",
+    "options": [
+     "It keeps losing water through breath and skin",
+     "It loses water only when she sweats",
+     "It loses water only in hot weather",
+     "It loses no water until she feels thirsty"
+    ],
+    "explain": "Water is lost daily through breathing and skin, whatever the temperature, so dehydration can occur even in cool weather.",
+    "wrong": [
+     {
+      "misconception": "GEN-HYDRATION-K15-M9",
+      "why": "thinks no sweat means no water loss"
+     },
+     {
+      "misconception": "GEN-HYDRATION-K10-M14",
+      "why": "thinks dehydration happens only in hot weather"
+     },
+     {
+      "misconception": null,
+      "why": "thinks water loss starts only with thirst"
+     }
+    ]
+   },
+   {
+    "evidence": "To stay hydrated, we do not need to rely solely on plain water; fluids from fruits, vegetables, and other healthy drinks also contribute to our daily water balance.",
+    "kind": "which_explains",
+    "q": "Kabir eats juicy fruits and vegetables every day. How do they help his body?",
+    "options": [
+     "They add to the water his body gets",
+     "They do nothing, since only plain water counts",
+     "They count only after he drinks eight glasses",
+     "They replace water, so he need not drink"
+    ],
+    "explain": "Fruits, vegetables and other healthy drinks also add to our daily water balance, not just plain water.",
+    "wrong": [
+     {
+      "misconception": "GEN-HYDRATION-K19-M4",
+      "why": "thinks only plain water counts"
+     },
+     {
+      "misconception": "GEN-HYDRATION-K18-M3",
+      "why": "thinks a fixed eight glasses is needed first"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises food as a full replacement for drinking"
+     }
+    ]
+   },
+   {
+    "evidence": "This cooling effect occurs because the sweat evaporates into the air, taking heat away from our skin; simply wiping the sweat away prevents this natural cooling process.",
+    "kind": "what_if",
+    "q": "Ravi keeps wiping the sweat off his skin during a hot run. What happens?",
+    "options": [
+     "He cools less because sweat cannot evaporate",
+     "He cools more because sweat is removed faster",
+     "He cools equally because sweat itself is cold",
+     "He cools less because he loses too much salt"
+    ],
+    "explain": "Sweat cools by evaporating and taking heat away; wiping it off stops this cooling.",
+    "wrong": [
+     {
+      "misconception": "GEN-HYDRATION-K17-M11",
+      "why": "thinks more sweat loss always cools more"
+     },
+     {
+      "misconception": "GEN-HYDRATION-K16-M10",
+      "why": "thinks sweat cools because the liquid is cold"
+     },
+     {
+      "misconception": null,
+      "why": "picks a reason that is not in the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "In such a medical emergency, you must move the person to a cool area and provide small sips of water, but never wrap them in blankets or force large amounts of fluid at once.",
+    "kind": "what_if",
+    "q": "A man collapses in the heat and has stopped sweating. What should you do?",
+    "options": [
+     "Move him somewhere cool and give small sips",
+     "Wrap him in blankets to warm him up",
+     "Make him drink a large bottle quickly",
+     "Wait until he feels thirsty to give water"
+    ],
+    "explain": "In heatstroke, move the person to a cool area and give small sips, never blankets or large amounts.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks warming helps a sick person"
+     },
+     {
+      "misconception": null,
+      "why": "thinks more fluid at once is better"
+     },
+     {
+      "misconception": "GEN-HYDRATION-K20-M1",
+      "why": "thinks you drink only when thirsty"
+     }
+    ]
+   },
+   {
+    "evidence": "Remember, thirst is a normal signal that your body needs more water, not necessarily a sign of a life-threatening emergency.",
+    "kind": "which_explains",
+    "q": "Sana feels thirsty on an ordinary school day. What does her thirst most likely show?",
+    "options": [
+     "She simply needs more water, which is normal",
+     "She is already badly dehydrated and in danger",
+     "She should wait and drink only much later",
+     "She needs a cold fizzy drink to hydrate"
+    ],
+    "explain": "Thirst is a normal signal that the body needs more water, not necessarily a life-threatening emergency.",
+    "wrong": [
+     {
+      "misconception": "GEN-HYDRATION-K20-M2",
+      "why": "thinks thirst means serious danger"
+     },
+     {
+      "misconception": "GEN-HYDRATION-K20-M1",
+      "why": "thinks you should delay drinking"
+     },
+     {
+      "misconception": "GEN-HYDRATION-K23-M7",
+      "why": "thinks fizzy drinks hydrate best"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 28.9
+}

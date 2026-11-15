@@ -1,0 +1,139 @@
+{
+ "source": "train-0066-SCI-BIO-ANIMALNUTRITION.json",
+ "job": {
+  "job": "train-0066-SCI-BIO-ANIMALNUTRITION",
+  "topic_id": "SCI-BIO-ANIMALNUTRITION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a clear textbook explanation",
+  "seed": 66
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3414,
+  "promptTokenCount": 2
+ },
+ "passage": "The human digestive system is a complex journey that turns food into fuel. Digestion begins in the mouth, where saliva does more than just lubricate; it contains enzymes that break down complex carbohydrates into simpler sugars. Once swallowed, food enters the stomach. Contrary to popular belief, the stomach does not produce bile, nor does it melt food into a liquid; instead, it secretes acid to kill bacteria and enzymes to begin protein digestion. After the stomach, food moves to the small intestine. This organ is the primary site of nutrient absorption, aided by tiny, finger-like projections called villi that increase the surface area for maximum efficiency. The large intestine, meanwhile, focuses on absorbing water and salts from undigested food, not nutrients. Finally, the body performs egestion, which is the removal of solid waste, a process distinct from excretion, which involves removing liquid metabolic waste from the blood. While ruminants like cows have a specialized four-chambered stomach to ferment cellulose in grass, humans lack this anatomy, meaning we cannot digest grass regardless of how much we chew. Understanding these processes helps us realize that digestion is a highly specialized chemical transformation rather than a simple mechanical breakdown.",
+ "menu_ids": [
+  "SCI-BIO-ANIMALNUTRITION-K7-M2",
+  "SCI-BIO-ANIMALNUTRITION-K9-M3",
+  "SCI-BIO-ANIMALNUTRITION-K6-M4",
+  "SCI-BIO-ANIMALNUTRITION-K17-M6",
+  "SCI-BIO-ANIMALNUTRITION-K19-M7",
+  "SCI-BIO-ANIMALNUTRITION-K10-M8",
+  "SCI-BIO-ANIMALNUTRITION-K6-M9",
+  "SCI-BIO-ANIMALNUTRITION-K15-M10",
+  "SCI-BIO-ANIMALNUTRITION-K8-M11",
+  "SCI-BIO-ANIMALNUTRITION-K16-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Digestion begins in the mouth, where saliva does more than just lubricate; it contains enzymes that break down complex carbohydrates into simpler sugars.",
+    "kind": "why",
+    "q": "Why do we say digestion really begins in the mouth?",
+    "options": [
+     "Saliva's enzymes break carbohydrates into sugars",
+     "Saliva wets food so it slides down easily",
+     "Saliva melts all the food into liquid",
+     "Saliva turns food straight into energy"
+    ],
+    "explain": "Saliva has enzymes that break complex carbohydrates into simpler sugars, so digestion starts in the mouth.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-ANIMALNUTRITION-K7-M2",
+      "why": "thinks saliva only makes food slippery"
+     },
+     {
+      "misconception": "SCI-BIO-ANIMALNUTRITION-K9-M3",
+      "why": "thinks digestion means melting food into liquid"
+     },
+     {
+      "misconception": "SCI-BIO-ANIMALNUTRITION-K15-M10",
+      "why": "thinks food becomes energy during digestion"
+     }
+    ]
+   },
+   {
+    "evidence": "Contrary to popular belief, the stomach does not produce bile, nor does it melt food into a liquid; instead, it secretes acid to kill bacteria and enzymes to begin protein digestion.",
+    "kind": "what_if",
+    "q": "Asha eats a boiled egg. What does her stomach do to the egg's protein?",
+    "options": [
+     "Its enzymes start breaking the protein down",
+     "Its bile breaks the protein down fully",
+     "Its acid melts the protein into liquid",
+     "Its juices turn the protein into energy"
+    ],
+    "explain": "The stomach secretes enzymes that begin protein digestion; it does not make bile or melt food.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-ANIMALNUTRITION-K10-M8",
+      "why": "thinks the stomach makes bile"
+     },
+     {
+      "misconception": "SCI-BIO-ANIMALNUTRITION-K9-M3",
+      "why": "thinks stomach acid melts food"
+     },
+     {
+      "misconception": "SCI-BIO-ANIMALNUTRITION-K15-M10",
+      "why": "thinks food becomes energy in the stomach"
+     }
+    ]
+   },
+   {
+    "evidence": "This organ is the primary site of nutrient absorption, aided by tiny, finger-like projections called villi that increase the surface area for maximum efficiency.",
+    "kind": "what_if",
+    "q": "What would happen if the villi in a person's small intestine became flat?",
+    "options": [
+     "Nutrients would be absorbed much less efficiently",
+     "Water would no longer be absorbed at all",
+     "The large intestine would absorb nutrients instead",
+     "Protein digestion in the stomach would stop"
+    ],
+    "explain": "Villi increase the surface area for absorption; without them, nutrients are absorbed less efficiently.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "mixes up the small intestine's job with the large intestine's"
+     },
+     {
+      "misconception": "SCI-BIO-ANIMALNUTRITION-K6-M4",
+      "why": "thinks the large intestine absorbs main nutrients"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up which organ the villi belong to"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, the body performs egestion, which is the removal of solid waste, a process distinct from excretion, which involves removing liquid metabolic waste from the blood.",
+    "kind": "difference",
+    "q": "How is egestion different from excretion?",
+    "options": [
+     "It removes solid waste, not waste from blood",
+     "It is simply another name for excretion",
+     "It removes liquid waste filtered from blood",
+     "It removes water and salts from food"
+    ],
+    "explain": "Egestion removes solid waste, while excretion removes liquid metabolic waste from the blood.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-ANIMALNUTRITION-K6-M9",
+      "why": "thinks egestion and excretion are the same"
+     },
+     {
+      "misconception": null,
+      "why": "swaps the two processes"
+     },
+     {
+      "misconception": null,
+      "why": "confuses egestion with the large intestine's absorption"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 34.6
+}

@@ -1,0 +1,141 @@
+{
+ "source": "train-0255-SCI-BIO-CROPS.json",
+ "job": {
+  "job": "train-0255-SCI-BIO-CROPS",
+  "topic_id": "SCI-BIO-CROPS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a description of a classroom activity or experiment and what it shows",
+  "seed": 255
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1371,
+  "promptTokenCount": 2
+ },
+ "passage": "In our science lab today, we examined the importance of soil preparation and seed selection. We started by loosening the soil with a small hoe, which helps roots breathe and allows beneficial earthworms to thrive by improving soil aeration. Next, we tested seed quality by placing a handful of wheat seeds into a beaker of water. We observed that damaged, hollow seeds floated on the surface, while healthy, heavy seeds sank to the bottom. This simple test ensures that only viable seeds are sown. We also discussed why farmers add manure to the fields. Unlike chemical fertilizers that provide specific nutrients, manure is organic matter that enriches the soil with humus, improving its texture and water-holding capacity without introducing toxins. Finally, we looked at crop protection. We learned that weeds are unwanted plants that compete with crops for nutrients, water, and sunlight, significantly reducing the final yield. Therefore, removing weeds is essential for healthy crop growth. We concluded that successful farming is not just about watering plants, but about managing the soil environment, selecting the right seeds, and protecting crops from competition to ensure a bountiful harvest.",
+ "menu_ids": [
+  "SCI-BIO-CROPS-K3-M1",
+  "SCI-BIO-CROPS-K9-M2",
+  "SCI-BIO-CROPS-K12-M3",
+  "SCI-BIO-CROPS-K15-M4",
+  "SCI-BIO-CROPS-K15-M5",
+  "SCI-BIO-CROPS-K18-M6",
+  "SCI-BIO-CROPS-K20-M7",
+  "SCI-BIO-CROPS-K25-M8",
+  "SCI-BIO-CROPS-K4-M9",
+  "SCI-BIO-CROPS-K9-M10",
+  "SCI-BIO-CROPS-K16-M11",
+  "SCI-BIO-CROPS-K23-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "We observed that damaged, hollow seeds floated on the surface, while healthy, heavy seeds sank to the bottom.",
+    "kind": "what_if",
+    "q": "A farmer drops seeds in water. Most of them float. What should he conclude?",
+    "options": [
+     "Most of these seeds are damaged and hollow",
+     "Most of these seeds are light and healthy",
+     "Most of these seeds are ready to sprout",
+     "Most of these seeds need more water first"
+    ],
+    "explain": "Damaged, hollow seeds float, while healthy, heavy seeds sink, so floating seeds should not be sown.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CROPS-K12-M3",
+      "why": "thinks floating seeds are healthy because they are light"
+     },
+     {
+      "misconception": null,
+      "why": "thinks floating shows the seeds are ready to sprout"
+     },
+     {
+      "misconception": "SCI-BIO-CROPS-K3-M1",
+      "why": "thinks water alone solves any seed problem"
+     }
+    ]
+   },
+   {
+    "evidence": "We started by loosening the soil with a small hoe, which helps roots breathe and allows beneficial earthworms to thrive by improving soil aeration.",
+    "kind": "why",
+    "q": "Why does a farmer loosen the soil before sowing seeds?",
+    "options": [
+     "It lets air reach roots and helpful worms",
+     "It kills weeds and does nothing else",
+     "It stops earthworms from making holes",
+     "It adds minerals that the soil has lost"
+    ],
+    "explain": "Loosening improves aeration, so roots can breathe and beneficial earthworms can live in the soil.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CROPS-K9-M2",
+      "why": "thinks ploughing only kills weeds and does not affect soil"
+     },
+     {
+      "misconception": "SCI-BIO-CROPS-K9-M10",
+      "why": "thinks earthworms are pests that harm the soil"
+     },
+     {
+      "misconception": "SCI-BIO-CROPS-K16-M11",
+      "why": "mixes up loosening soil with adding minerals"
+     }
+    ]
+   },
+   {
+    "evidence": "Unlike chemical fertilizers that provide specific nutrients, manure is organic matter that enriches the soil with humus, improving its texture and water-holding capacity without introducing toxins.",
+    "kind": "which_explains",
+    "q": "Why is manure good for a field where the soil dries out fast?",
+    "options": [
+     "Its humus helps the soil hold more water",
+     "Its animal waste is food that plants eat",
+     "Its chemicals give the soil specific nutrients",
+     "Its toxins make the soil texture rougher"
+    ],
+    "explain": "Manure adds humus, which improves soil texture and water-holding capacity, and it adds no toxins.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CROPS-K15-M4",
+      "why": "thinks fertilizers or manure are food plants eat"
+     },
+     {
+      "misconception": null,
+      "why": "confuses manure with chemical fertilizers"
+     },
+     {
+      "misconception": "SCI-BIO-CROPS-K15-M5",
+      "why": "thinks manure is harmful because it is animal waste"
+     }
+    ]
+   },
+   {
+    "evidence": "We learned that weeds are unwanted plants that compete with crops for nutrients, water, and sunlight, significantly reducing the final yield.",
+    "kind": "why",
+    "q": "Why do weeds in a wheat field lower the amount of grain harvested?",
+    "options": [
+     "They share the crop's water, nutrients and light",
+     "They are harmless plants in the wrong place",
+     "They stop air from reaching the wheat roots",
+     "They make the soil lose its humus quickly"
+    ],
+    "explain": "Weeds compete with crops for nutrients, water and sunlight, which reduces the final yield.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CROPS-K20-M7",
+      "why": "thinks weeds are harmless plants in the wrong place"
+     },
+     {
+      "misconception": null,
+      "why": "mixes weeds up with the soil aeration idea"
+     },
+     {
+      "misconception": "SCI-BIO-CROPS-K16-M11",
+      "why": "thinks soil nutrients are the only thing that matters"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 12.4
+}

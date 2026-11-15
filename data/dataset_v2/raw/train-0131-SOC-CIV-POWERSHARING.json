@@ -1,0 +1,167 @@
+{
+ "source": "train-0131-SOC-CIV-POWERSHARING.json",
+ "job": {
+  "job": "train-0131-SOC-CIV-POWERSHARING",
+  "topic_id": "SOC-CIV-POWERSHARING",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a short story with Indian characters in everyday life",
+  "seed": 131
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3401,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and his father, Mr. Sharma, were discussing the new village council elections in their town. Mr. Sharma explained that India follows a federal structure where power is shared vertically between the Union, State, and local governments. Rohan asked if the state government now loses all its authority to the local panchayat. His father smiled and clarified that decentralisation actually empowers local bodies to handle specific local issues, while the state retains its constitutional responsibilities. They then discussed the national parliament. Rohan wondered if the central government could simply override state laws on any subject. Mr. Sharma corrected him, explaining that the Constitution clearly defines the Union, State, and Concurrent lists, ensuring the centre cannot interfere in state-exclusive matters. Finally, they talked about the national vision. Rohan suggested that since India is a democracy, the majority community should dictate all national policies. Mr. Sharma firmly disagreed, stating that true democracy requires protecting the rights of minorities and sharing power across different groups to prevent the tyranny of the majority. He added that the judiciary, executive, and legislature operate independently at the same level to ensure checks and balances, which is a horizontal distribution of power, distinct from the vertical levels of federalism.",
+ "menu_ids": [
+  "SOC-CIV-POWERSHARING-K10-M1",
+  "SOC-CIV-POWERSHARING-K6-M2",
+  "SOC-CIV-POWERSHARING-K8-M3",
+  "SOC-CIV-POWERSHARING-K9-M4",
+  "SOC-CIV-POWERSHARING-K4-M5",
+  "SOC-CIV-POWERSHARING-K5-M6",
+  "SOC-CIV-POWERSHARING-K6-M7",
+  "SOC-CIV-POWERSHARING-K7-M8",
+  "SOC-CIV-POWERSHARING-K8-M9",
+  "SOC-CIV-POWERSHARING-K9-M10",
+  "SOC-CIV-POWERSHARING-K13-M11",
+  "SOC-CIV-POWERSHARING-K14-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "His father smiled and clarified that decentralisation actually empowers local bodies to handle specific local issues, while the state retains its constitutional responsibilities.",
+    "kind": "what_if",
+    "q": "After village councils get more power, what happens to the state government?",
+    "options": [
+     "The state still keeps its constitutional duties",
+     "The state gives all its powers to panchayats",
+     "The state now appoints every village sarpanch",
+     "The state passes its powers up to the centre"
+    ],
+    "explain": "Local bodies handle local issues, but the state keeps its own constitutional responsibilities.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-POWERSHARING-K9-M4",
+      "why": "thinks decentralisation takes away all state power"
+     },
+     {
+      "misconception": "SOC-CIV-POWERSHARING-K14-M12",
+      "why": "thinks the state chooses panchayat leaders"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up local and central levels"
+     }
+    ]
+   },
+   {
+    "evidence": "Mr. Sharma corrected him, explaining that the Constitution clearly defines the Union, State, and Concurrent lists, ensuring the centre cannot interfere in state-exclusive matters.",
+    "kind": "how",
+    "q": "What stops the central government from overriding a state law on a state-only subject?",
+    "options": [
+     "The subject lists written in the Constitution",
+     "The centre's own wish to avoid quarrels",
+     "The panchayat's power to block central laws",
+     "The majority community's vote in each state"
+    ],
+    "explain": "The Constitution defines Union, State and Concurrent lists, so the centre cannot interfere in state matters.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-POWERSHARING-K8-M3",
+      "why": "thinks the centre can legislate on anything but chooses not to"
+     },
+     {
+      "misconception": null,
+      "why": "picks the local body mentioned nearby"
+     },
+     {
+      "misconception": "SOC-CIV-POWERSHARING-K10-M1",
+      "why": "thinks the majority decides everything"
+     }
+    ]
+   },
+   {
+    "evidence": "Mr. Sharma firmly disagreed, stating that true democracy requires protecting the rights of minorities and sharing power across different groups to prevent the tyranny of the majority.",
+    "kind": "why",
+    "q": "Why did Mr. Sharma reject the idea that the majority should decide all national policies?",
+    "options": [
+     "Democracy must safeguard smaller groups' rights too",
+     "Democracy must leave all decisions to the courts",
+     "Democracy must let each state's majority rule",
+     "Democracy must keep all power with the centre"
+    ],
+    "explain": "True democracy protects minorities and shares power among groups to prevent tyranny of the majority.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "misreads checks and balances as courts ruling alone"
+     },
+     {
+      "misconception": "SOC-CIV-POWERSHARING-K10-M1",
+      "why": "still believes majority rule is democracy"
+     },
+     {
+      "misconception": "SOC-CIV-POWERSHARING-K8-M3",
+      "why": "thinks the centre should control everything"
+     }
+    ]
+   },
+   {
+    "evidence": "He added that the judiciary, executive, and legislature operate independently at the same level to ensure checks and balances, which is a horizontal distribution of power, distinct from the vertical levels of federalism.",
+    "kind": "which_example",
+    "q": "Which example shows horizontal sharing of power?",
+    "options": [
+     "Courts and lawmakers checking each other's work",
+     "Union and states making laws on separate lists",
+     "Religious groups sharing seats in the cabinet",
+     "Panchayats solving local problems for villages"
+    ],
+    "explain": "Horizontal sharing is among judiciary, executive and legislature at the same level, giving checks and balances.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-POWERSHARING-K6-M2",
+      "why": "thinks horizontal means central and state levels"
+     },
+     {
+      "misconception": "SOC-CIV-POWERSHARING-K6-M7",
+      "why": "thinks horizontal means sharing with social groups"
+     },
+     {
+      "misconception": "SOC-CIV-POWERSHARING-K7-M8",
+      "why": "picks a vertical, local-level example"
+     }
+    ]
+   },
+   {
+    "evidence": "Mr. Sharma explained that India follows a federal structure where power is shared vertically between the Union, State, and local governments.",
+    "kind": "what_if",
+    "q": "Rohan's town elects a new village council. Where does this council fit in India's federal structure?",
+    "options": [
+     "At the local level, below Union and State",
+     "At the Union level, beside Parliament",
+     "At the State level, as a state office",
+     "At the same level as the courts"
+    ],
+    "explain": "Power is shared vertically among Union, State and local governments; a village council is local.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks every elected body is national"
+     },
+     {
+      "misconception": "SOC-CIV-POWERSHARING-K14-M12",
+      "why": "thinks panchayats are part of state government"
+     },
+     {
+      "misconception": "SOC-CIV-POWERSHARING-K6-M2",
+      "why": "mixes up vertical levels with horizontal branches"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 37.2
+}

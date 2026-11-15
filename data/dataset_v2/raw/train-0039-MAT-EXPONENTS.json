@@ -1,0 +1,143 @@
+{
+ "source": "train-0039-MAT-EXPONENTS.json",
+ "job": {
+  "job": "train-0039-MAT-EXPONENTS",
+  "topic_id": "MAT-EXPONENTS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a conversation between a teacher and two students",
+  "seed": 39
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2363,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today, let us clear up some common confusion about exponents. Remember, in an expression like 5^2, the base 5 is multiplied by itself 2 times, giving 25, not 4 times 4. Also, when we have a negative exponent like 2^-3, it does not mean the result is negative; it is actually the reciprocal 1/2^3, which equals 1/8. Another point: when calculating (-3)^2, the entire negative base is squared, resulting in positive 9, whereas -3^2 means the negative of 3 squared, which is -9. Finally, when dividing powers with the same base, like 5^6 / 5^2, we subtract the exponents to get 5^4, not 5^3. Always be careful with these rules, as they define how we handle numbers efficiently in mathematics.",
+ "menu_ids": [
+  "MAT-EXPONENTS-K10-M1",
+  "MAT-EXPONENTS-K8-M2",
+  "MAT-EXPONENTS-K9-M3",
+  "MAT-EXPONENTS-K11-M4",
+  "MAT-EXPONENTS-K12-M5",
+  "MAT-EXPONENTS-K7-M6",
+  "MAT-EXPONENTS-K16-M7",
+  "MAT-EXPONENTS-K16-M8",
+  "MAT-EXPONENTS-K17-M9",
+  "MAT-EXPONENTS-K17-M10",
+  "MAT-EXPONENTS-K18-M11",
+  "MAT-EXPONENTS-K19-M12",
+  "MAT-EXPONENTS-K19-M13",
+  "MAT-EXPONENTS-K20-M14"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Remember, in an expression like 5^2, the base 5 is multiplied by itself 2 times, giving 25, not 4 times 4.",
+    "kind": "what_if",
+    "q": "Using the same rule as 5^2, what is the value of 6^2?",
+    "options": [
+     "36, because 6 is multiplied by 6",
+     "12, because 6 is multiplied by 2",
+     "64, because 2 is multiplied six times",
+     "8, because 6 is added to 2"
+    ],
+    "explain": "In a power, the base is multiplied by itself, so 6^2 is 6 x 6 = 36.",
+    "wrong": [
+     {
+      "misconception": "MAT-EXPONENTS-K10-M1",
+      "why": "multiplies the base by the exponent"
+     },
+     {
+      "misconception": "MAT-EXPONENTS-K8-M2",
+      "why": "thinks the exponent is the number being multiplied"
+     },
+     {
+      "misconception": null,
+      "why": "adds the base and the exponent"
+     }
+    ]
+   },
+   {
+    "evidence": "Also, when we have a negative exponent like 2^-3, it does not mean the result is negative; it is actually the reciprocal 1/2^3, which equals 1/8.",
+    "kind": "what_if",
+    "q": "Following the teacher's rule for 2^-3, what is the value of 4^-2?",
+    "options": [
+     "1/16, the reciprocal of 4^2",
+     "-16, the negative of 4^2",
+     "-8, the product of 4 and -2",
+     "16, since the minus sign is ignored"
+    ],
+    "explain": "A negative exponent gives the reciprocal, not a negative number, so 4^-2 = 1/4^2 = 1/16.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks a negative exponent makes the answer negative"
+     },
+     {
+      "misconception": "MAT-EXPONENTS-K10-M1",
+      "why": "multiplies the base by the exponent"
+     },
+     {
+      "misconception": null,
+      "why": "drops the minus sign of the exponent"
+     }
+    ]
+   },
+   {
+    "evidence": "Another point: when calculating (-3)^2, the entire negative base is squared, resulting in positive 9, whereas -3^2 means the negative of 3 squared, which is -9.",
+    "kind": "difference",
+    "q": "What are the values of (-4)^2 and -4^2?",
+    "options": [
+     "16 and -16",
+     "16 and 16",
+     "-16 and -16",
+     "-8 and 8"
+    ],
+    "explain": "In (-4)^2 the whole -4 is squared to give 16; -4^2 is the negative of 16.",
+    "wrong": [
+     {
+      "misconception": "MAT-EXPONENTS-K12-M5",
+      "why": "thinks the brackets make no difference"
+     },
+     {
+      "misconception": "MAT-EXPONENTS-K11-M4",
+      "why": "thinks a negative base always gives a negative answer"
+     },
+     {
+      "misconception": "MAT-EXPONENTS-K10-M1",
+      "why": "multiplies the base by the exponent"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, when dividing powers with the same base, like 5^6 / 5^2, we subtract the exponents to get 5^4, not 5^3.",
+    "kind": "how",
+    "q": "Sam simplifies 7^8 / 7^2. Which answer is correct, and how is it found?",
+    "options": [
+     "7^6, by taking 2 away from 8",
+     "7^4, by dividing 8 by 2",
+     "1^6, since the same bases cancel",
+     "7^10, by adding 8 and 2"
+    ],
+    "explain": "When dividing powers with the same base, subtract the exponents: 8 - 2 = 6, so 7^6.",
+    "wrong": [
+     {
+      "misconception": "MAT-EXPONENTS-K17-M10",
+      "why": "divides the exponents"
+     },
+     {
+      "misconception": "MAT-EXPONENTS-K17-M9",
+      "why": "thinks dividing the same base gives 1"
+     },
+     {
+      "misconception": null,
+      "why": "uses the multiplication rule for division"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 23.9
+}

@@ -1,0 +1,139 @@
+{
+ "source": "train-0345-SOC-GEO-TRANSPORT.json",
+ "job": {
+  "job": "train-0345-SOC-GEO-TRANSPORT",
+  "topic_id": "SOC-GEO-TRANSPORT",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a conversation between a teacher and two students",
+  "seed": 345
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1284,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today we are discussing India's lifelines. Rohan, what do you think about our transport network? Rohan: I believe the Golden Quadrilateral is the most important, as it connects all major state capitals to boost trade. Teacher: Actually, Rohan, it links major industrial, agricultural, and cultural hubs, not every state capital. Priya, what about pipelines? Priya: I think pipelines are only used to transport water for drinking. Teacher: That is a common mistake; they are essential for transporting crude oil, petroleum, and natural gas from refineries to inland locations. Priya: What about using our rivers for large ships to increase trade? Teacher: Not all rivers are navigable for large ships due to depth and seasonal flow. Regarding trade, a country is considered economically healthy when its exports exceed its imports, creating a favorable balance of trade, rather than just keeping them equal. It is about the value of goods exchanged. Rohan: So, it is not just about moving water or balancing numbers? Teacher: Exactly. It is about strategic connectivity and the value of what we trade globally.",
+ "menu_ids": [
+  "SOC-GEO-TRANSPORT-K8-M1",
+  "SOC-GEO-TRANSPORT-K11-M2",
+  "SOC-GEO-TRANSPORT-K13-M3",
+  "SOC-GEO-TRANSPORT-K10-M4",
+  "SOC-GEO-TRANSPORT-K3-M5",
+  "SOC-GEO-TRANSPORT-K4-M7",
+  "SOC-GEO-TRANSPORT-K8-M9",
+  "SOC-GEO-TRANSPORT-K5-M10",
+  "SOC-GEO-TRANSPORT-K6-M11",
+  "SOC-GEO-TRANSPORT-K7-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Actually, Rohan, it links major industrial, agricultural, and cultural hubs, not every state capital.",
+    "kind": "which_explains",
+    "q": "Rohan says the Golden Quadrilateral joins every state capital. What does the teacher's correction show?",
+    "options": [
+     "It joins major economic hubs, not all capitals",
+     "It joins only the four biggest state capitals",
+     "It joins all capitals but only for trade",
+     "It joins railway stations of the main cities"
+    ],
+    "explain": "The teacher said it links major industrial, agricultural and cultural hubs, not every state capital.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "swaps one wrong limit for another, still thinking it is about capitals"
+     },
+     {
+      "misconception": "SOC-GEO-TRANSPORT-K8-M1",
+      "why": "thinks it connects all state capitals"
+     },
+     {
+      "misconception": "SOC-GEO-TRANSPORT-K8-M9",
+      "why": "thinks it is a railway network"
+     }
+    ]
+   },
+   {
+    "evidence": "That is a common mistake; they are essential for transporting crude oil, petroleum, and natural gas from refineries to inland locations.",
+    "kind": "what_if",
+    "q": "A refinery on the coast must send petroleum to a distant inland city. What would pipelines do here?",
+    "options": [
+     "Carry the petroleum from the refinery inland",
+     "Carry only drinking water to the city",
+     "Carry the petroleum only within the refinery",
+     "Carry the petroleum back from inland cities"
+    ],
+    "explain": "Pipelines carry crude oil, petroleum and natural gas from refineries to inland locations, not only water.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-TRANSPORT-K11-M2",
+      "why": "thinks pipelines carry only water"
+     },
+     {
+      "misconception": null,
+      "why": "thinks pipelines are only used inside the plant"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the direction of the flow"
+     }
+    ]
+   },
+   {
+    "evidence": "Not all rivers are navigable for large ships due to depth and seasonal flow.",
+    "kind": "why",
+    "q": "Why can a trader not send large ships along every river to boost trade?",
+    "options": [
+     "Some rivers are too shallow or seasonal",
+     "Large ships are banned on most rivers",
+     "Rivers only flow near the Golden Quadrilateral",
+     "Rivers are used only for carrying water"
+    ],
+    "explain": "Not all rivers are navigable for large ships because of their depth and seasonal flow.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "invents a rule not in the passage"
+     },
+     {
+      "misconception": "SOC-GEO-TRANSPORT-K8-M9",
+      "why": "mixes up rivers with the Golden Quadrilateral network"
+     },
+     {
+      "misconception": "SOC-GEO-TRANSPORT-K11-M2",
+      "why": "thinks water transport means only carrying water"
+     }
+    ]
+   },
+   {
+    "evidence": "Regarding trade, a country is considered economically healthy when its exports exceed its imports, creating a favorable balance of trade, rather than just keeping them equal.",
+    "kind": "which_example",
+    "q": "Which country is in the healthiest trade position, going by the teacher's idea?",
+    "options": [
+     "One selling goods worth more than it buys",
+     "One buying goods worth the same as it sells",
+     "One buying goods worth more than it sells",
+     "One buying and selling the same goods daily"
+    ],
+    "explain": "A country is healthy when exports exceed imports, giving a favourable balance of trade, not equal trade.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-TRANSPORT-K13-M3",
+      "why": "thinks equal exports and imports is best"
+     },
+     {
+      "misconception": null,
+      "why": "reverses exports and imports"
+     },
+     {
+      "misconception": "SOC-GEO-TRANSPORT-K13-M3",
+      "why": "thinks matching trade of the same goods means health"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 13.4
+}

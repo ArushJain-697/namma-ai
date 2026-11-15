@@ -1,0 +1,169 @@
+{
+ "source": "train-0212-MAT-ALGEXPR.json",
+ "job": {
+  "job": "train-0212-MAT-ALGEXPR",
+  "topic_id": "MAT-ALGEXPR",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a step-by-step worked example",
+  "seed": 212
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2931,
+  "promptTokenCount": 2
+ },
+ "passage": "To simplify algebraic expressions, we must carefully follow the rules of distribution and grouping. First, consider the expression 3(x + 5). When multiplying a number outside a bracket, you must multiply it by every term inside, giving 3x + 15. A common mistake is to multiply only the first term, but the distributive property requires applying the factor to both. Second, when adding terms, we only combine like terms, which are terms with the exact same variables and exponents. For example, 2x and 5x are like terms and add to 7x, but 2x and 5x² are unlike because their powers differ. Adding them would not result in 7x³ or 7x². Third, when subtracting an entire expression like (4x - 2) from (7x + 5), you must change the sign of every term inside the second bracket. This becomes 7x + 5 - 4x + 2, which simplifies to 3x + 7. Finally, remember that identities like (a + b)² = a² + 2ab + b² are universal tools. When calculating 102², we can treat it as (100 + 2)², which equals 100² + 2(100)(2) + 2², resulting in 10404. This shows that identities are not just for letters but are powerful shortcuts for numbers too.",
+ "menu_ids": [
+  "MAT-ALGEXPR-K13-M1",
+  "MAT-ALGEXPR-K12-M2",
+  "MAT-ALGEXPR-K11-M4",
+  "MAT-ALGEXPR-K14-M5",
+  "MAT-ALGEXPR-K15-M6",
+  "MAT-ALGEXPR-K17-M9",
+  "MAT-ALGEXPR-K17-M10",
+  "MAT-ALGEXPR-K18-M11",
+  "MAT-ALGEXPR-K18-M12",
+  "MAT-ALGEXPR-K19-M14",
+  "MAT-ALGEXPR-K20-M15",
+  "MAT-ALGEXPR-K20-M16",
+  "MAT-ALGEXPR-K21-M17",
+  "MAT-ALGEXPR-K22-M18"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "When multiplying a number outside a bracket, you must multiply it by every term inside, giving 3x + 15.",
+    "kind": "what_if",
+    "q": "Meena simplifies 4(y + 6). What answer should she get?",
+    "options": [
+     "4y + 24",
+     "4y + 6",
+     "4y + 10",
+     "24y"
+    ],
+    "explain": "The 4 multiplies every term inside: 4 × y = 4y and 4 × 6 = 24.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEXPR-K20-M16",
+      "why": "multiplies only the first term in the bracket"
+     },
+     {
+      "misconception": null,
+      "why": "adds 4 to 6 instead of multiplying"
+     },
+     {
+      "misconception": "MAT-ALGEXPR-K15-M6",
+      "why": "joins unlike terms into one single term"
+     }
+    ]
+   },
+   {
+    "evidence": "For example, 2x and 5x are like terms and add to 7x, but 2x and 5x² are unlike because their powers differ.",
+    "kind": "what_if",
+    "q": "Sita adds 2x and 5x². What is the simplest form of her answer?",
+    "options": [
+     "2x + 5x²",
+     "7x³",
+     "7x²",
+     "7x"
+    ],
+    "explain": "2x and 5x² have different powers, so they are unlike terms and cannot be combined.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEXPR-K17-M9",
+      "why": "adds the powers as well as the numbers"
+     },
+     {
+      "misconception": "MAT-ALGEXPR-K14-M5",
+      "why": "thinks same variable means like terms"
+     },
+     {
+      "misconception": null,
+      "why": "ignores the power and just adds the numbers"
+     }
+    ]
+   },
+   {
+    "evidence": "Third, when subtracting an entire expression like (4x - 2) from (7x + 5), you must change the sign of every term inside the second bracket.",
+    "kind": "how",
+    "q": "How should you start subtracting (3x - 4) from (9x + 1)?",
+    "options": [
+     "Write 9x + 1 - 3x + 4",
+     "Write 9x + 1 - 3x - 4",
+     "Write 3x - 4 - 9x - 1",
+     "Write 9x + 1 + 3x - 4"
+    ],
+    "explain": "Every sign inside the second bracket changes, so -3x and +4 replace 3x and -4.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEXPR-K18-M11",
+      "why": "changes only the first term's sign"
+     },
+     {
+      "misconception": "MAT-ALGEXPR-K18-M12",
+      "why": "thinks the order of subtraction does not matter"
+     },
+     {
+      "misconception": null,
+      "why": "adds the bracket instead of subtracting it"
+     }
+    ]
+   },
+   {
+    "evidence": "When calculating 102², we can treat it as (100 + 2)², which equals 100² + 2(100)(2) + 2², resulting in 10404.",
+    "kind": "what_if",
+    "q": "Using the same method as for 102², what is 101²?",
+    "options": [
+     "10201",
+     "10001",
+     "10101",
+     "10200"
+    ],
+    "explain": "(100 + 1)² = 10000 + 2(100)(1) + 1 = 10201.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEXPR-K22-M18",
+      "why": "thinks (a + b)² is just a² + b²"
+     },
+     {
+      "misconception": null,
+      "why": "forgets the 2 in the middle term 2ab"
+     },
+     {
+      "misconception": null,
+      "why": "forgets to add the last term b²"
+     }
+    ]
+   },
+   {
+    "evidence": "Second, when adding terms, we only combine like terms, which are terms with the exact same variables and exponents.",
+    "kind": "which_example",
+    "q": "Which pair can be added together to make one single term?",
+    "options": [
+     "4ab and 7ab",
+     "4a and 7b",
+     "4a and 4a²",
+     "4ab and 4a"
+    ],
+    "explain": "4ab and 7ab have exactly the same variables and powers, so they add to 11ab.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEXPR-K15-M6",
+      "why": "thinks any two terms can be joined into one"
+     },
+     {
+      "misconception": "MAT-ALGEXPR-K14-M5",
+      "why": "thinks same variable and coefficient make like terms"
+     },
+     {
+      "misconception": null,
+      "why": "thinks sharing one variable is enough"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 28.9
+}

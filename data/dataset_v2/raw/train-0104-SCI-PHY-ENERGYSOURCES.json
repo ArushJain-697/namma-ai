@@ -1,0 +1,165 @@
+{
+ "source": "train-0104-SCI-PHY-ENERGYSOURCES.json",
+ "job": {
+  "job": "train-0104-SCI-PHY-ENERGYSOURCES",
+  "topic_id": "SCI-PHY-ENERGYSOURCES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a passage rich in numbers, dates or measurements",
+  "seed": 104
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3202,
+  "promptTokenCount": 2
+ },
+ "passage": "Energy production methods vary significantly in their mechanics and environmental impact. In a hydroelectric plant, the potential energy of water stored at a height is converted into kinetic energy as it flows through turbines, which then spin to generate electricity. Unlike fossil fuels, which release carbon dioxide and contribute to the greenhouse effect by trapping heat in the atmosphere, nuclear power plants produce electricity through controlled fission. The white plumes seen rising from nuclear cooling towers are merely water vapor, not radioactive smoke. Solar photovoltaic panels are another clean source, but they rely on light intensity rather than temperature; in fact, they operate more efficiently on cool, sunny days than on hot, hazy ones. Meanwhile, biogas is produced through the anaerobic decomposition of organic waste like animal dung, where bacteria break down matter to release methane gas. It is not simply trapped air. Finally, non-renewable sources like coal are finite because they take millions of years to form, meaning they cannot be replenished on a human timescale, regardless of our ability to recycle waste products. Understanding these distinctions is vital for sustainable energy planning, as we must balance our current consumption of 15 terawatts of global power with the need to protect our climate and natural resources for future generations.",
+ "menu_ids": [
+  "SCI-PHY-ENERGYSOURCES-K11-M2",
+  "SCI-PHY-ENERGYSOURCES-K12-M3",
+  "SCI-PHY-ENERGYSOURCES-K17-M4",
+  "SCI-PHY-ENERGYSOURCES-K15-M5",
+  "SCI-PHY-ENERGYSOURCES-K19-M6",
+  "SCI-PHY-ENERGYSOURCES-K9-M7",
+  "SCI-PHY-ENERGYSOURCES-K14-M8",
+  "SCI-PHY-ENERGYSOURCES-K18-M9",
+  "SCI-PHY-ENERGYSOURCES-K8-M11",
+  "SCI-PHY-ENERGYSOURCES-K16-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "In a hydroelectric plant, the potential energy of water stored at a height is converted into kinetic energy as it flows through turbines, which then spin to generate electricity.",
+    "kind": "which_explains",
+    "q": "A dam powers a whole town. Where does this energy really come from?",
+    "options": [
+     "Water dropping from a height through turbines",
+     "Still water that is just sitting there",
+     "Turbines that spin first and push water",
+     "Heat soaked up by water lying in sunlight"
+    ],
+    "explain": "Water stored high up has potential energy, which becomes motion as it flows down and spins turbines.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-ENERGYSOURCES-K9-M7",
+      "why": "thinks dams make energy from nothing"
+     },
+     {
+      "misconception": null,
+      "why": "reverses cause and effect between water and turbines"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up hydro power with heat energy"
+     }
+    ]
+   },
+   {
+    "evidence": "Unlike fossil fuels, which release carbon dioxide and contribute to the greenhouse effect by trapping heat in the atmosphere, nuclear power plants produce electricity through controlled fission.",
+    "kind": "how",
+    "q": "How does burning coal add to the greenhouse effect?",
+    "options": [
+     "Its carbon dioxide holds heat in the air",
+     "Its gases make a hole in the ozone layer",
+     "Its smoke blocks sunlight from reaching Earth",
+     "Its controlled fission gives off radioactive heat"
+    ],
+    "explain": "Fossil fuels release carbon dioxide, which traps heat in the atmosphere and causes the greenhouse effect.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-ENERGYSOURCES-K19-M6",
+      "why": "thinks the ozone hole causes the greenhouse effect"
+     },
+     {
+      "misconception": null,
+      "why": "thinks smoke cools by blocking sunlight"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up fossil fuels with nuclear fission"
+     }
+    ]
+   },
+   {
+    "evidence": "The white plumes seen rising from nuclear cooling towers are merely water vapor, not radioactive smoke.",
+    "kind": "which_explains",
+    "q": "Neha sees white clouds rising from a nuclear plant's tall towers. What are they?",
+    "options": [
+     "Harmless steam from cooling the plant",
+     "Dangerous radioactive smoke from the reactor",
+     "Carbon dioxide from burning fuel inside",
+     "Gas left after a small nuclear blast"
+    ],
+    "explain": "The white plumes from cooling towers are only water vapour, not radioactive smoke.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-ENERGYSOURCES-K18-M9",
+      "why": "thinks the white plume is radioactive"
+     },
+     {
+      "misconception": null,
+      "why": "mixes nuclear plants up with fossil fuel plants"
+     },
+     {
+      "misconception": "SCI-PHY-ENERGYSOURCES-K15-M5",
+      "why": "thinks nuclear plants explode like bombs"
+     }
+    ]
+   },
+   {
+    "evidence": "Solar photovoltaic panels are another clean source, but they rely on light intensity rather than temperature; in fact, they operate more efficiently on cool, sunny days than on hot, hazy ones.",
+    "kind": "what_if",
+    "q": "On which day would a solar panel most likely work best?",
+    "options": [
+     "A cool day with bright, clear sunshine",
+     "A very hot day with hazy sunshine",
+     "A warm, cloudy day that traps heat",
+     "A cold, dark day with thick fog"
+    ],
+    "explain": "Solar panels depend on light, not heat, so they work best on cool, sunny days.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-ENERGYSOURCES-K11-M2",
+      "why": "thinks panels use the sun's heat"
+     },
+     {
+      "misconception": null,
+      "why": "thinks trapped warmth helps panels"
+     },
+     {
+      "misconception": null,
+      "why": "thinks coolness alone matters, not light"
+     }
+    ]
+   },
+   {
+    "evidence": "Meanwhile, biogas is produced through the anaerobic decomposition of organic waste like animal dung, where bacteria break down matter to release methane gas.",
+    "kind": "how",
+    "q": "How is biogas made from cow dung in a biogas plant?",
+    "options": [
+     "Bacteria break down dung without air, giving methane",
+     "Air trapped inside the dung escapes when pressed",
+     "Fire burns the dung so its smoke becomes methane",
+     "Heat slowly turns the dung into coal and gas"
+    ],
+    "explain": "Without air, bacteria break down the dung and release methane; biogas is not trapped air.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-ENERGYSOURCES-K14-M8",
+      "why": "thinks biogas is air trapped in dung"
+     },
+     {
+      "misconception": null,
+      "why": "thinks biogas comes from burning dung"
+     },
+     {
+      "misconception": null,
+      "why": "mixes biogas up with how coal forms"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 33.3
+}

@@ -1,0 +1,138 @@
+{
+ "source": "train-0002-GEN-BALANCEDDIET.json",
+ "job": {
+  "job": "train-0002-GEN-BALANCEDDIET",
+  "topic_id": "GEN-BALANCEDDIET",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 2
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3294,
+  "promptTokenCount": 2
+ },
+ "passage": "Many people believe that eating only one type of 'superfood' is enough to stay healthy, but this is a dangerous myth. A truly balanced diet requires a variety of food groups to provide all necessary nutrients. For instance, some think that roughage or fibre is useless because our bodies cannot digest it, but fibre is actually essential for smooth digestion and bowel health. Another common mistake is thinking that only oily snacks cause weight gain, while extra portions of rice or roti are harmless. In reality, the body converts any excess energy from carbohydrates into stored fat. Furthermore, many people mistakenly believe that white polished rice or maida are superior because they look cleaner and finer than whole grains. In truth, whole grains like millets and brown rice are far more nutritious as they retain the bran and germ. Finally, some assume that vegetarians cannot get enough protein without meat or eggs. This is incorrect, as pulses, legumes, and dairy are excellent plant-based protein sources that can easily meet our daily requirements. A balanced plate must include a mix of these diverse foods, tailored to your specific age and activity level, rather than following a one-size-fits-all approach.",
+ "menu_ids": [
+  "GEN-BALANCEDDIET-K13-M2",
+  "GEN-BALANCEDDIET-K14-M3",
+  "GEN-BALANCEDDIET-K20-M6",
+  "GEN-BALANCEDDIET-K21-M7",
+  "GEN-BALANCEDDIET-K22-M8",
+  "GEN-BALANCEDDIET-K25-M9",
+  "GEN-BALANCEDDIET-K26-M10",
+  "GEN-BALANCEDDIET-K16-M11",
+  "GEN-BALANCEDDIET-K24-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "In reality, the body converts any excess energy from carbohydrates into stored fat.",
+    "kind": "what_if",
+    "q": "Meena never eats oily snacks, but she eats three extra rotis every day. What will most likely happen?",
+    "options": [
+     "Her body will store the extra energy as fat",
+     "Her weight stays the same, since roti has no oil",
+     "Her body will pass out the extra roti as fibre",
+     "Her weight stays the same, since roti is a healthy grain"
+    ],
+    "explain": "The body turns any extra energy from carbohydrates like roti into stored fat, even without oily food.",
+    "wrong": [
+     {
+      "misconception": "GEN-BALANCEDDIET-K26-M10",
+      "why": "thinks only oily food causes weight gain"
+     },
+     {
+      "misconception": null,
+      "why": "mixes in the nearby idea that fibre is not digested"
+     },
+     {
+      "misconception": "GEN-BALANCEDDIET-K14-M3",
+      "why": "thinks a healthy food can be eaten in any amount"
+     }
+    ]
+   },
+   {
+    "evidence": "For instance, some think that roughage or fibre is useless because our bodies cannot digest it, but fibre is actually essential for smooth digestion and bowel health.",
+    "kind": "which_explains",
+    "q": "Our body cannot digest roughage. Why should we still eat foods rich in it?",
+    "options": [
+     "It helps food move smoothly through the gut",
+     "It gives us more energy than vitamins do",
+     "It is not needed, so peeled foods are better",
+     "It turns into body fat when eaten extra"
+    ],
+    "explain": "Even though it is not digested, fibre is essential for smooth digestion and bowel health.",
+    "wrong": [
+     {
+      "misconception": "GEN-BALANCEDDIET-K20-M6",
+      "why": "thinks food is eaten only for energy, like vitamins"
+     },
+     {
+      "misconception": "GEN-BALANCEDDIET-K21-M7",
+      "why": "thinks undigested fibre is useless"
+     },
+     {
+      "misconception": null,
+      "why": "picks the nearby sentence about carbohydrates and fat"
+     }
+    ]
+   },
+   {
+    "evidence": "In truth, whole grains like millets and brown rice are far more nutritious as they retain the bran and germ.",
+    "kind": "which_explains",
+    "q": "Raju's mother switches from white polished rice to brown rice. Is this a healthier choice?",
+    "options": [
+     "Yes, because brown rice keeps its bran and germ",
+     "No, because white rice is cleaner and finer",
+     "No, because brown rice is a poor people's grain",
+     "Yes, because brown rice alone gives every nutrient"
+    ],
+    "explain": "Whole grains like brown rice are more nutritious because they still have the bran and germ.",
+    "wrong": [
+     {
+      "misconception": "GEN-BALANCEDDIET-K25-M9",
+      "why": "thinks clean-looking polished rice is better"
+     },
+     {
+      "misconception": "GEN-BALANCEDDIET-K24-M12",
+      "why": "thinks whole grains like millets are poor people's food"
+     },
+     {
+      "misconception": "GEN-BALANCEDDIET-K14-M3",
+      "why": "thinks one healthy food is enough"
+     }
+    ]
+   },
+   {
+    "evidence": "This is incorrect, as pulses, legumes, and dairy are excellent plant-based protein sources that can easily meet our daily requirements.",
+    "kind": "how",
+    "q": "Anu is a vegetarian who eats no eggs or meat. How can she get enough protein?",
+    "options": [
+     "By eating dal, beans, milk and paneer",
+     "By adding eggs, since plants give too little",
+     "By taking vitamin tablets in place of meals",
+     "By eating plenty of one superfood daily"
+    ],
+    "explain": "Pulses, legumes and dairy are excellent protein sources that can easily meet a vegetarian's daily needs.",
+    "wrong": [
+     {
+      "misconception": "GEN-BALANCEDDIET-K22-M8",
+      "why": "thinks vegetarians need eggs or meat for protein"
+     },
+     {
+      "misconception": "GEN-BALANCEDDIET-K20-M6",
+      "why": "thinks a vitamin tablet can replace a meal"
+     },
+     {
+      "misconception": "GEN-BALANCEDDIET-K14-M3",
+      "why": "thinks one superfood gives all nutrients"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 36.5
+}

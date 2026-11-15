@@ -1,0 +1,169 @@
+{
+ "source": "train-0202-GEN-ONLINESAFETY.json",
+ "job": {
+  "job": "train-0202-GEN-ONLINESAFETY",
+  "topic_id": "GEN-ONLINESAFETY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a diary entry or letter by a student",
+  "seed": 202
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3708,
+  "promptTokenCount": 2
+ },
+ "passage": "Dear Diary, today in our computer class, our teacher explained how to stay safe online. I learned that a strong password should be long and complex, not just my pet’s name or birthday, because those are easy for others to guess. Even if I use two-step verification with an OTP, I still need a strong password to keep my account secure. My teacher also warned us about phishing scams. Just because a message has a bank’s logo or claims I won a prize, it does not mean it is real; scammers use these tricks to steal information. I was surprised to learn that an OTP is a secret key that should never be shared with anyone, not even a best friend or someone claiming to be from a bank. Also, I realized that Incognito mode is not a shield against viruses or fake websites; it only stops my browsing history from being saved on the computer. Finally, we discussed that if I am ever bullied online, I must not stay silent or reply in anger; instead, I should report the user and talk to an adult immediately. It is important to remember that reporting online fraud is actually useful, as authorities can help track these criminals. I feel much more confident about navigating the internet safely now.",
+ "menu_ids": [
+  "GEN-ONLINESAFETY-K8-M1",
+  "GEN-ONLINESAFETY-K8-M2",
+  "GEN-ONLINESAFETY-K9-M3",
+  "GEN-ONLINESAFETY-K10-M4",
+  "GEN-ONLINESAFETY-K11-M5",
+  "GEN-ONLINESAFETY-K12-M6",
+  "GEN-ONLINESAFETY-K14-M7",
+  "GEN-ONLINESAFETY-K14-M8",
+  "GEN-ONLINESAFETY-K18-M9",
+  "GEN-ONLINESAFETY-K17-M10",
+  "GEN-ONLINESAFETY-K19-M12",
+  "GEN-ONLINESAFETY-K22-M14",
+  "GEN-ONLINESAFETY-K23-M15",
+  "GEN-ONLINESAFETY-K25-M16"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "I learned that a strong password should be long and complex, not just my pet’s name or birthday, because those are easy for others to guess.",
+    "kind": "which_explains",
+    "q": "Meena's password is her dog's name plus her birthday. What is the problem with it?",
+    "options": [
+     "It is easy for others to guess",
+     "It is missing a capital letter and number",
+     "It should swap letters for symbols like @",
+     "It is too long and hard to type"
+    ],
+    "explain": "Pet names and birthdays are easy for others to guess, so they make weak passwords.",
+    "wrong": [
+     {
+      "misconception": "GEN-ONLINESAFETY-K8-M1",
+      "why": "thinks one capital and one number make a password strong"
+     },
+     {
+      "misconception": "GEN-ONLINESAFETY-K8-M2",
+      "why": "thinks symbol swaps make a password strong"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the advice that passwords should be long"
+     }
+    ]
+   },
+   {
+    "evidence": "Even if I use two-step verification with an OTP, I still need a strong password to keep my account secure.",
+    "kind": "what_if",
+    "q": "Sohan turns on two-step verification with an OTP. What should he now do about his password?",
+    "options": [
+     "Keep it long and complex anyway",
+     "Make it short, as the OTP protects him",
+     "Use his pet's name so it is easy",
+     "Remove it, as the OTP is enough"
+    ],
+    "explain": "Even with an OTP, a strong password is still needed to keep the account secure.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks the OTP makes password strength unimportant"
+     },
+     {
+      "misconception": "GEN-ONLINESAFETY-K9-M3",
+      "why": "thinks a pet's name is safe because only he knows it"
+     },
+     {
+      "misconception": null,
+      "why": "thinks two-step verification replaces the password"
+     }
+    ]
+   },
+   {
+    "evidence": "Just because a message has a bank’s logo or claims I won a prize, it does not mean it is real; scammers use these tricks to steal information.",
+    "kind": "which_explains",
+    "q": "A message with a bank's logo says Priya won a prize. What does this prove?",
+    "options": [
+     "It proves nothing; scammers use such tricks",
+     "It proves the bank really sent it",
+     "It proves she won, since they have her number",
+     "It proves the bank wants to reward her"
+    ],
+    "explain": "Logos and prize claims do not make a message real; scammers use them to steal information.",
+    "wrong": [
+     {
+      "misconception": "GEN-ONLINESAFETY-K17-M10",
+      "why": "trusts a message because it has a logo"
+     },
+     {
+      "misconception": "GEN-ONLINESAFETY-K19-M12",
+      "why": "thinks knowing her number makes the prize real"
+     },
+     {
+      "misconception": null,
+      "why": "takes the message's claim at face value"
+     }
+    ]
+   },
+   {
+    "evidence": "I was surprised to learn that an OTP is a secret key that should never be shared with anyone, not even a best friend or someone claiming to be from a bank.",
+    "kind": "what_if",
+    "q": "Who can Kavya safely tell her OTP to?",
+    "options": [
+     "No one, not even a bank caller",
+     "Her best friend, whom she fully trusts",
+     "A bank caller who knows her name",
+     "Anyone, if the OTP is quite short"
+    ],
+    "explain": "An OTP is a secret key that must never be shared, even with friends or bank callers.",
+    "wrong": [
+     {
+      "misconception": "GEN-ONLINESAFETY-K11-M5",
+      "why": "thinks close friends can be trusted with secrets"
+     },
+     {
+      "misconception": "GEN-ONLINESAFETY-K14-M7",
+      "why": "trusts a caller who knows her name"
+     },
+     {
+      "misconception": "GEN-ONLINESAFETY-K14-M8",
+      "why": "thinks only long OTPs are dangerous to share"
+     }
+    ]
+   },
+   {
+    "evidence": "Also, I realized that Incognito mode is not a shield against viruses or fake websites; it only stops my browsing history from being saved on the computer.",
+    "kind": "how",
+    "q": "Aman opens a strange website in Incognito mode. How does this mode help him?",
+    "options": [
+     "Stops his history being saved on that computer",
+     "Protects his computer from any viruses",
+     "Hides his activity from websites and his provider",
+     "Warns him if the website is fake"
+    ],
+    "explain": "Incognito only stops browsing history being saved; it does not block viruses or fake websites.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks Incognito is a shield against viruses"
+     },
+     {
+      "misconception": "GEN-ONLINESAFETY-K25-M16",
+      "why": "thinks Incognito makes him anonymous online"
+     },
+     {
+      "misconception": null,
+      "why": "thinks Incognito detects fake websites"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 39.4
+}

@@ -1,0 +1,165 @@
+{
+ "source": "train-0036-MAT-DATAHANDLING.json",
+ "job": {
+  "job": "train-0036-MAT-DATAHANDLING",
+  "topic_id": "MAT-DATAHANDLING",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a passage that shows a common wrong method and corrects it",
+  "seed": 36
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3999,
+  "promptTokenCount": 2
+ },
+ "passage": "In our class data project, we recorded the number of books read by students: 0, 5, 5, 8, 10, and 12. To find the mean, we must include every observation, even the zero, because it represents a student who read no books. We add these values to get 40 and divide by the total count of 6, resulting in a mean of 6.67. Some students mistakenly think the mean must be one of the original numbers, but it is often a decimal. When finding the median for an even number of observations, we must take the average of the two middle values, which are 5 and 8. Adding them gives 13, and dividing by 2 results in a median of 6.5. A common error is picking the larger middle value, but the correct method requires averaging them. Furthermore, we identified the mode as 5, because it is the value that appears most frequently. Some students incorrectly claim the mode is 3, confusing the frequency of the value with the value itself. Finally, when drawing our bar graph, we noticed the scale intervals were 2 units each, not 1, showing that we must always check the axis labels carefully rather than assuming a standard unit gap.",
+ "menu_ids": [
+  "MAT-DATAHANDLING-K5-M1",
+  "MAT-DATAHANDLING-K7-M2",
+  "MAT-DATAHANDLING-K6-M4",
+  "MAT-DATAHANDLING-K6-M6",
+  "MAT-DATAHANDLING-K7-M7",
+  "MAT-DATAHANDLING-K10-M8",
+  "MAT-DATAHANDLING-K8-M9",
+  "MAT-DATAHANDLING-K8-M10",
+  "MAT-DATAHANDLING-K11-M11",
+  "MAT-DATAHANDLING-K12-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "To find the mean, we must include every observation, even the zero, because it represents a student who read no books.",
+    "kind": "why",
+    "q": "Meena leaves out the 0 when finding the mean number of books. Why is she wrong?",
+    "options": [
+     "The 0 is a real student who read nothing",
+     "The 0 should be counted as one book read",
+     "The 0 makes the total sum much bigger",
+     "The 0 is the most common value in the list"
+    ],
+    "explain": "The zero stands for a student who read no books, so that student must be counted.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks a zero entry means one item"
+     },
+     {
+      "misconception": null,
+      "why": "thinks adding zero changes the sum"
+     },
+     {
+      "misconception": "MAT-DATAHANDLING-K11-M11",
+      "why": "mixes up the mode with other values in the data"
+     }
+    ]
+   },
+   {
+    "evidence": "Some students mistakenly think the mean must be one of the original numbers, but it is often a decimal.",
+    "kind": "which_explains",
+    "q": "Asha gets a mean of 6.67, but 6.67 is not in the data. Is her answer right?",
+    "options": [
+     "It is right; a mean is often a decimal",
+     "It is wrong; a mean must be in the list",
+     "It is wrong; divide by the 5 different values",
+     "It is right, because it equals the median"
+    ],
+    "explain": "The mean need not be one of the numbers; it is often a decimal like 6.67.",
+    "wrong": [
+     {
+      "misconception": "MAT-DATAHANDLING-K7-M2",
+      "why": "thinks the mean must be one of the data values"
+     },
+     {
+      "misconception": "MAT-DATAHANDLING-K7-M7",
+      "why": "divides by the number of different values"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the mean (6.67) with the median (6.5)"
+     }
+    ]
+   },
+   {
+    "evidence": "A common error is picking the larger middle value, but the correct method requires averaging them.",
+    "kind": "which_explains",
+    "q": "Ravi says the median of 0, 5, 5, 8, 10, 12 is 8. What mistake did he make?",
+    "options": [
+     "He took one middle value instead of averaging both",
+     "He used the middle of an unsorted list",
+     "He forgot to count the zero as a value",
+     "He chose the value that appears most often"
+    ],
+    "explain": "With six values, the median is the average of 5 and 8, which is 6.5, not 8.",
+    "wrong": [
+     {
+      "misconception": "MAT-DATAHANDLING-K8-M9",
+      "why": "thinks median is taken in the given order"
+     },
+     {
+      "misconception": "MAT-DATAHANDLING-K10-M8",
+      "why": "thinks the zero is left out of the data"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the median with the mode"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, we identified the mode as 5, because it is the value that appears most frequently.",
+    "kind": "recall",
+    "q": "What makes 5 the mode of the books data?",
+    "options": [
+     "It appears more times than any other value",
+     "It is the highest value in the data",
+     "It is the middle value in the given order",
+     "It is the value closest to the mean"
+    ],
+    "explain": "The mode is the value that occurs most often; 5 appears more than any other value.",
+    "wrong": [
+     {
+      "misconception": "MAT-DATAHANDLING-K11-M11",
+      "why": "thinks the mode is the highest value"
+     },
+     {
+      "misconception": "MAT-DATAHANDLING-K8-M9",
+      "why": "confuses the mode with the median"
+     },
+     {
+      "misconception": null,
+      "why": "confuses the mode with the mean"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, when drawing our bar graph, we noticed the scale intervals were 2 units each, not 1, showing that we must always check the axis labels carefully rather than assuming a standard unit gap.",
+    "kind": "what_if",
+    "q": "On the class bar graph, a bar reaches 5 gaps up the scale. How many books does it show?",
+    "options": [
+     "10 books, since each gap is 2 units",
+     "5 books, since each gap is 1 unit",
+     "7 books, adding the 2 to the 5 gaps",
+     "6 books, counting the zero line as a gap"
+    ],
+    "explain": "Each scale gap stands for 2 units, so 5 gaps show 5 × 2 = 10 books.",
+    "wrong": [
+     {
+      "misconception": "MAT-DATAHANDLING-K6-M6",
+      "why": "assumes each gap is 1 unit"
+     },
+     {
+      "misconception": null,
+      "why": "adds the interval instead of multiplying"
+     },
+     {
+      "misconception": null,
+      "why": "miscounts the gaps on the scale"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 41.6
+}

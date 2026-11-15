@@ -1,0 +1,143 @@
+{
+ "source": "train-0052-MAT-QUADRATIC.json",
+ "job": {
+  "job": "train-0052-MAT-QUADRATIC",
+  "topic_id": "MAT-QUADRATIC",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a puzzle or game that uses the idea",
+  "seed": 52
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2544,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan is designing a rectangular garden game board where the area must be exactly 40 square units. He writes the equation x² - 3x = 40 to represent the dimensions. To solve this, he first rearranges it into the standard form ax² + bx + c = 0, identifying a=1, b=-3, and c=-40. Rohan knows that for any quadratic equation, the discriminant D = b² - 4ac helps determine the nature of the roots. He calculates D = (-3)² - 4(1)(-40), which equals 9 + 160 = 169. Since 169 is greater than zero, he concludes there are two distinct real roots. He then factors the equation into (x - 8)(x + 5) = 0. He realizes that while x = 8 and x = -5 are both mathematical solutions to the equation, a physical length cannot be negative. Therefore, he rejects x = -5 and keeps x = 8 as the only valid dimension for his garden board. He checks his work by substituting 8 back into the original expression, confirming that 8² - 3(8) indeed equals 40. Rohan successfully avoids common traps, ensuring his quadratic model perfectly matches the physical reality of his game design.",
+ "menu_ids": [
+  "MAT-QUADRATIC-K7-M1",
+  "MAT-QUADRATIC-K7-M2",
+  "MAT-QUADRATIC-K8-M3",
+  "MAT-QUADRATIC-K9-M4",
+  "MAT-QUADRATIC-K10-M6",
+  "MAT-QUADRATIC-K11-M7",
+  "MAT-QUADRATIC-K14-M8",
+  "MAT-QUADRATIC-K15-M11",
+  "MAT-QUADRATIC-K17-M12",
+  "MAT-QUADRATIC-K17-M13",
+  "MAT-QUADRATIC-K17-M14",
+  "MAT-QUADRATIC-K18-M15",
+  "MAT-QUADRATIC-K20-M16",
+  "MAT-QUADRATIC-K19-M17"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "To solve this, he first rearranges it into the standard form ax² + bx + c = 0, identifying a=1, b=-3, and c=-40.",
+    "kind": "how",
+    "q": "Rohan rewrites x² − 3x = 40 in standard form. What are a, b and c?",
+    "options": [
+     "a = 1, b = −3, c = −40",
+     "a = 1, b = −3, c = 40",
+     "a = 1, b = 3, c = −40",
+     "a = 2, b = −3, c = −40"
+    ],
+    "explain": "Moving 40 to the left gives x² − 3x − 40 = 0, so c becomes −40.",
+    "wrong": [
+     {
+      "misconception": "MAT-QUADRATIC-K9-M4",
+      "why": "reads c from the right side without moving it"
+     },
+     {
+      "misconception": "MAT-QUADRATIC-K17-M12",
+      "why": "drops the negative sign of b"
+     },
+     {
+      "misconception": null,
+      "why": "takes a as the power 2 of x"
+     }
+    ]
+   },
+   {
+    "evidence": "Since 169 is greater than zero, he concludes there are two distinct real roots.",
+    "kind": "which_explains",
+    "q": "What does a discriminant of 169, greater than zero, tell Rohan?",
+    "options": [
+     "There are two different real roots",
+     "There is one root, equal to 13",
+     "There is only one real root",
+     "There are no real roots at all"
+    ],
+    "explain": "A discriminant greater than zero means the equation has two distinct real roots.",
+    "wrong": [
+     {
+      "misconception": "MAT-QUADRATIC-K10-M6",
+      "why": "thinks the root is the square root of a number"
+     },
+     {
+      "misconception": "MAT-QUADRATIC-K20-M16",
+      "why": "thinks a quadratic gives only one answer"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up positive and negative discriminant"
+     }
+    ]
+   },
+   {
+    "evidence": "He then factors the equation into (x - 8)(x + 5) = 0.",
+    "kind": "how",
+    "q": "Rohan gets (x − 8)(x + 5) = 0. Which values of x solve it?",
+    "options": [
+     "x = 8 and x = −5",
+     "x = −8 and x = 5",
+     "x = 8 and x = 5",
+     "x = 48 and x = 35"
+    ],
+    "explain": "Each factor is set to zero: x − 8 = 0 gives 8, x + 5 = 0 gives −5.",
+    "wrong": [
+     {
+      "misconception": "MAT-QUADRATIC-K15-M11",
+      "why": "flips the sign of each factor's number"
+     },
+     {
+      "misconception": null,
+      "why": "ignores the signs inside the brackets"
+     },
+     {
+      "misconception": "MAT-QUADRATIC-K14-M8",
+      "why": "sets each factor equal to 40 instead of 0"
+     }
+    ]
+   },
+   {
+    "evidence": "He realizes that while x = 8 and x = -5 are both mathematical solutions to the equation, a physical length cannot be negative.",
+    "kind": "why",
+    "q": "Why does Rohan keep only x = 8 for his garden board?",
+    "options": [
+     "A side of a board cannot be negative",
+     "Only x = 8 makes the equation true",
+     "A quadratic can have only one root",
+     "The factor (x + 5) really gives x = 5"
+    ],
+    "explain": "Both 8 and −5 solve the equation, but a real length cannot be negative.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks −5 is not a solution of the equation"
+     },
+     {
+      "misconception": "MAT-QUADRATIC-K20-M16",
+      "why": "thinks a quadratic has only one answer"
+     },
+     {
+      "misconception": "MAT-QUADRATIC-K15-M11",
+      "why": "misreads the root from the factor's sign"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 27.4
+}

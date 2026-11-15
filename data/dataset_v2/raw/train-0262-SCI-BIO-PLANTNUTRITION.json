@@ -1,0 +1,138 @@
+{
+ "source": "train-0262-SCI-BIO-PLANTNUTRITION.json",
+ "job": {
+  "job": "train-0262-SCI-BIO-PLANTNUTRITION",
+  "topic_id": "SCI-BIO-PLANTNUTRITION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a diary entry or letter by a student",
+  "seed": 262
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1365,
+  "promptTokenCount": 2
+ },
+ "passage": "Dear Diary, today I visited my uncle’s farm and learned so much about how plants survive. I saw a beautiful red-leafed plant, and my uncle explained that it still contains chlorophyll, just masked by other pigments, so it can still perform photosynthesis. We also looked at a Venus flytrap; he clarified that it makes its own food through photosynthesis but catches insects specifically to obtain nitrogen, which is often missing in its soil. I was surprised to see a Cuscuta vine wrapped around a hedge. My uncle warned me that it is a parasite, stealing vital nutrients from the host plant and harming it, rather than helping it. Finally, we discussed how legumes grow. He showed me small nodules on their roots containing Rhizobium bacteria. These helpful partners convert atmospheric nitrogen into a form the plant can use, which is essential because plants cannot absorb nitrogen gas directly from the air through their leaves. It is amazing how plants have such unique ways to thrive in different environments!",
+ "menu_ids": [
+  "SCI-BIO-PLANTNUTRITION-K5-M1",
+  "SCI-BIO-PLANTNUTRITION-K6-M2",
+  "SCI-BIO-PLANTNUTRITION-K7-M3",
+  "SCI-BIO-PLANTNUTRITION-K10-M4",
+  "SCI-BIO-PLANTNUTRITION-K11-M5",
+  "SCI-BIO-PLANTNUTRITION-K13-M7",
+  "SCI-BIO-PLANTNUTRITION-K9-M9",
+  "SCI-BIO-PLANTNUTRITION-K7-M10",
+  "SCI-BIO-PLANTNUTRITION-K14-M11"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "I saw a beautiful red-leafed plant, and my uncle explained that it still contains chlorophyll, just masked by other pigments, so it can still perform photosynthesis.",
+    "kind": "which_explains",
+    "q": "A plant has deep red leaves but grows well in sunlight. How does it get food?",
+    "options": [
+     "Hidden chlorophyll lets it make food",
+     "It takes ready food from the soil",
+     "Red pigments make food instead of chlorophyll",
+     "It must catch insects to feed"
+    ],
+    "explain": "Chlorophyll is still present, only masked by other pigments, so red leaves can still do photosynthesis.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-PLANTNUTRITION-K6-M2",
+      "why": "thinks non-green leaves have no chlorophyll, so need another source"
+     },
+     {
+      "misconception": "SCI-BIO-PLANTNUTRITION-K5-M1",
+      "why": "thinks plants get food from soil"
+     },
+     {
+      "misconception": "SCI-BIO-PLANTNUTRITION-K10-M4",
+      "why": "thinks plants without green colour must eat insects"
+     }
+    ]
+   },
+   {
+    "evidence": "We also looked at a Venus flytrap; he clarified that it makes its own food through photosynthesis but catches insects specifically to obtain nitrogen, which is often missing in its soil.",
+    "kind": "why",
+    "q": "Why does a Venus flytrap catch insects even though it does photosynthesis?",
+    "options": [
+     "To get nitrogen the soil lacks",
+     "To get sugar it cannot make",
+     "To get energy from sunlight",
+     "To get water for its leaves"
+    ],
+    "explain": "The flytrap makes its own food but needs insects for nitrogen, which its soil often lacks.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-PLANTNUTRITION-K10-M4",
+      "why": "thinks it cannot make its own food"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up sunlight as an energy source with the insects' role"
+     },
+     {
+      "misconception": null,
+      "why": "picks a plausible need that the passage never gives"
+     }
+    ]
+   },
+   {
+    "evidence": "My uncle warned me that it is a parasite, stealing vital nutrients from the host plant and harming it, rather than helping it.",
+    "kind": "what_if",
+    "q": "A Cuscuta vine grows over a hedge for many months. What happens to the hedge?",
+    "options": [
+     "It gets weaker as nutrients are taken",
+     "It grows stronger from shared nutrients",
+     "It makes extra food for the vine",
+     "It stays the same as before"
+    ],
+    "explain": "Cuscuta is a parasite that steals nutrients from its host and harms it, so the hedge weakens.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-PLANTNUTRITION-K9-M9",
+      "why": "thinks parasitic plants help the host by sharing"
+     },
+     {
+      "misconception": null,
+      "why": "reverses who feeds whom"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the vine has no effect on the host"
+     }
+    ]
+   },
+   {
+    "evidence": "These helpful partners convert atmospheric nitrogen into a form the plant can use, which is essential because plants cannot absorb nitrogen gas directly from the air through their leaves.",
+    "kind": "how",
+    "q": "How do Rhizobium bacteria help a legume plant get nitrogen?",
+    "options": [
+     "They change air nitrogen into a usable form",
+     "They pull nitrogen gas in through leaves",
+     "They harm pests that block the roots",
+     "They make the soil hold more water"
+    ],
+    "explain": "Rhizobium in root nodules convert nitrogen from the air into a form the plant can use.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-PLANTNUTRITION-K13-M7",
+      "why": "thinks leaves take nitrogen gas directly from air"
+     },
+     {
+      "misconception": "SCI-BIO-PLANTNUTRITION-K14-M11",
+      "why": "thinks Rhizobium relates to pests rather than helping"
+     },
+     {
+      "misconception": null,
+      "why": "guesses an unrelated benefit of root bacteria"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 14.0
+}

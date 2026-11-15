@@ -1,0 +1,165 @@
+{
+ "source": "train-0268-SCI-CHM-ACIDSBASES.json",
+ "job": {
+  "job": "train-0268-SCI-CHM-ACIDSBASES",
+  "topic_id": "SCI-CHM-ACIDSBASES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a clear textbook explanation",
+  "seed": 268
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1605,
+  "promptTokenCount": 2
+ },
+ "passage": "Acids and bases are chemical substances that behave differently in nature. While we often associate acids with dangerous liquids, many acids exist in solid forms, such as citric acid found in lemons or oxalic acid in spinach. Similarly, bases are not always harmless; strong bases like sodium hydroxide are highly corrosive and can cause severe skin burns, despite their soapy feel. When an acid reacts with a base, a process called neutralisation occurs. This reaction produces a new substance known as a salt, along with water and heat. It is a common mistake to think that the term 'salt' only refers to the common table salt we use in cooking. In chemistry, a salt is any compound formed from the neutralisation reaction, and these salts can be acidic, basic, or neutral depending on the strength of the reacting substances. During neutralisation, the acid and base do not disappear; their chemical properties are simply modified to form new products. Furthermore, the resulting solution does not always have a pH of exactly 7. If a strong acid reacts with a weak base, the resulting salt solution will be acidic, showing a pH value lower than 7. Understanding these properties helps us identify substances correctly without relying on simple color changes alone.",
+ "menu_ids": [
+  "SCI-CHM-ACIDSBASES-K11-M1",
+  "SCI-CHM-ACIDSBASES-K11-M2",
+  "SCI-CHM-ACIDSBASES-K13-M3",
+  "SCI-CHM-ACIDSBASES-K15-M4",
+  "SCI-CHM-ACIDSBASES-K15-M5",
+  "SCI-CHM-ACIDSBASES-K19-M8",
+  "SCI-CHM-ACIDSBASES-K20-M9",
+  "SCI-CHM-ACIDSBASES-K20-M10",
+  "SCI-CHM-ACIDSBASES-K12-M11",
+  "SCI-CHM-ACIDSBASES-K14-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "While we often associate acids with dangerous liquids, many acids exist in solid forms, such as citric acid found in lemons or oxalic acid in spinach.",
+    "kind": "which_example",
+    "q": "Which example shows that an acid need not be a liquid?",
+    "options": [
+     "Oxalic acid found in spinach",
+     "Sodium hydroxide used in soaps",
+     "Vinegar used in pickles",
+     "Water mixed with lemon juice"
+    ],
+    "explain": "Oxalic acid in spinach is given as an acid that exists in solid form.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-ACIDSBASES-K12-M11",
+      "why": "mixes up a base with an acid"
+     },
+     {
+      "misconception": "SCI-CHM-ACIDSBASES-K11-M2",
+      "why": "picks a familiar liquid acid, thinking acids are liquids"
+     },
+     {
+      "misconception": null,
+      "why": "picks a liquid linked to lemons, a nearby detail"
+     }
+    ]
+   },
+   {
+    "evidence": "Similarly, bases are not always harmless; strong bases like sodium hydroxide are highly corrosive and can cause severe skin burns, despite their soapy feel.",
+    "kind": "what_if",
+    "q": "A student rubs a strong base like sodium hydroxide on bare skin. What happens?",
+    "options": [
+     "It can cause serious burns",
+     "It feels soapy and does no harm",
+     "It only harms skin if it is sour",
+     "It changes the skin's colour only"
+    ],
+    "explain": "Strong bases like sodium hydroxide are highly corrosive and can cause severe skin burns despite feeling soapy.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-ACIDSBASES-K12-M11",
+      "why": "thinks soapy bases are harmless"
+     },
+     {
+      "misconception": "SCI-CHM-ACIDSBASES-K11-M1",
+      "why": "thinks only acids are corrosive"
+     },
+     {
+      "misconception": null,
+      "why": "guesses a mild effect without passage support"
+     }
+    ]
+   },
+   {
+    "evidence": "In chemistry, a salt is any compound formed from the neutralisation reaction, and these salts can be acidic, basic, or neutral depending on the strength of the reacting substances.",
+    "kind": "which_explains",
+    "q": "A neutralisation reaction forms a compound that is not table salt. Why is it still called a salt?",
+    "options": [
+     "Any compound made by neutralisation is a salt",
+     "Every compound that tastes salty is a salt",
+     "Every salt must be neutral in solution",
+     "Only kitchen salt is made by neutralisation"
+    ],
+    "explain": "In chemistry, any compound formed by neutralisation is called a salt, not just table salt.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "judges a salt by its taste"
+     },
+     {
+      "misconception": "SCI-CHM-ACIDSBASES-K20-M10",
+      "why": "thinks all salts are neutral"
+     },
+     {
+      "misconception": "SCI-CHM-ACIDSBASES-K20-M9",
+      "why": "thinks salt means only common salt"
+     }
+    ]
+   },
+   {
+    "evidence": "During neutralisation, the acid and base do not disappear; their chemical properties are simply modified to form new products.",
+    "kind": "how",
+    "q": "What happens to an acid and a base during neutralisation?",
+    "options": [
+     "They change into new products",
+     "They vanish and leave only water",
+     "They stay unchanged in the mixture",
+     "They turn into a stronger acid"
+    ],
+    "explain": "The acid and base do not disappear; their properties are modified to form new products.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-ACIDSBASES-K15-M4",
+      "why": "thinks both disappear completely"
+     },
+     {
+      "misconception": null,
+      "why": "thinks no reaction changes them"
+     },
+     {
+      "misconception": "SCI-CHM-ACIDSBASES-K19-M8",
+      "why": "mixes up reacting with becoming stronger"
+     }
+    ]
+   },
+   {
+    "evidence": "If a strong acid reacts with a weak base, the resulting salt solution will be acidic, showing a pH value lower than 7.",
+    "kind": "what_if",
+    "q": "A strong acid fully reacts with a weak base. What is the pH of the solution?",
+    "options": [
+     "Below 7, so it is acidic",
+     "Exactly 7, so it is neutral",
+     "Above 7, so it is basic",
+     "Exactly 0, so no acid is left"
+    ],
+    "explain": "A strong acid with a weak base gives an acidic salt solution with pH below 7.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-ACIDSBASES-K15-M5",
+      "why": "thinks neutralisation always gives pH 7"
+     },
+     {
+      "misconception": null,
+      "why": "reverses which substance decides the result"
+     },
+     {
+      "misconception": "SCI-CHM-ACIDSBASES-K15-M4",
+      "why": "thinks the acid is totally gone"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 13.7
+}

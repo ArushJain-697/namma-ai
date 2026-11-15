@@ -1,0 +1,169 @@
+{
+ "source": "train-0392-GEN-TRAFFIC.json",
+ "job": {
+  "job": "train-0392-GEN-TRAFFIC",
+  "topic_id": "GEN-TRAFFIC",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a short story with Indian characters in everyday life",
+  "seed": 392
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1539,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and his father were driving to the local market on a sunny Sunday morning. As they approached a busy intersection, the traffic light turned amber. Rohan’s father immediately slowed down to a halt, explaining that amber means prepare to stop, not speed up. Rohan noticed a circular road sign nearby and asked if it was just a suggestion. His father clarified that road signs are mandatory rules, not mere advice. As they drove, Rohan noticed a man on a scooter without a helmet, claiming it was just a short ride to the shop. His father shook his head, noting that safety gear is essential regardless of distance. They soon passed a pedestrian crossing where a group of children waited patiently for the cars to stop before stepping onto the road. Rohan’s father reminded him that even at a crossing, one must always look both ways before walking. Finally, as they reached the market, Rohan’s father buckled his seatbelt and reminded Rohan to do the same, even though they were driving slowly. He explained that seatbelts are vital at any speed to prevent injury during sudden stops. Rohan realized that traffic rules exist to protect everyone, and following them is a responsibility for every driver and passenger, regardless of the distance or the speed of the vehicle.",
+ "menu_ids": [
+  "GEN-TRAFFIC-K8-M1",
+  "GEN-TRAFFIC-K9-M2",
+  "GEN-TRAFFIC-K9-M3",
+  "GEN-TRAFFIC-K10-M4",
+  "GEN-TRAFFIC-K11-M5",
+  "GEN-TRAFFIC-K12-M6",
+  "GEN-TRAFFIC-K13-M7",
+  "GEN-TRAFFIC-K14-M8",
+  "GEN-TRAFFIC-K17-M9",
+  "GEN-TRAFFIC-K17-M10",
+  "GEN-TRAFFIC-K18-M11",
+  "GEN-TRAFFIC-K19-M12",
+  "GEN-TRAFFIC-K19-M13",
+  "GEN-TRAFFIC-K20-M14"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Rohan’s father immediately slowed down to a halt, explaining that amber means prepare to stop, not speed up.",
+    "kind": "what_if",
+    "q": "A light turns amber just as a car nears the junction. What should the driver do?",
+    "options": [
+     "Get ready to stop at the line",
+     "Drive faster to clear the junction",
+     "Carry on as if the light were green",
+     "Stop only if the road looks busy"
+    ],
+    "explain": "Amber means prepare to stop, so the driver should slow down and halt, not speed up.",
+    "wrong": [
+     {
+      "misconception": "GEN-TRAFFIC-K9-M2",
+      "why": "thinks amber means speed up before red"
+     },
+     {
+      "misconception": "GEN-TRAFFIC-K9-M3",
+      "why": "thinks amber means the same as green"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the signal is optional when the road looks clear"
+     }
+    ]
+   },
+   {
+    "evidence": "His father clarified that road signs are mandatory rules, not mere advice.",
+    "kind": "which_explains",
+    "q": "Rohan sees a circular sign and wants to ignore it. Why is that a mistake?",
+    "options": [
+     "Such signs are rules that must be obeyed",
+     "Such signs are advice that is hard to follow",
+     "Such signs matter only on busy highways",
+     "Such signs matter only when a police officer watches"
+    ],
+    "explain": "Road signs are mandatory rules, not mere advice, so ignoring them breaks the rules.",
+    "wrong": [
+     {
+      "misconception": "GEN-TRAFFIC-K11-M5",
+      "why": "thinks signs are only suggestions"
+     },
+     {
+      "misconception": "GEN-TRAFFIC-K10-M4",
+      "why": "thinks signs only count in some places"
+     },
+     {
+      "misconception": null,
+      "why": "thinks rules apply only when someone is watching"
+     }
+    ]
+   },
+   {
+    "evidence": "His father shook his head, noting that safety gear is essential regardless of distance.",
+    "kind": "which_explains",
+    "q": "A man skips his helmet for a short scooter ride. What is wrong with his thinking?",
+    "options": [
+     "Helmets are needed on every ride, near or far",
+     "Helmets are needed only if the rider is fast",
+     "Helmets are needed only on long highway trips",
+     "Helmets are needed only for the passenger behind"
+    ],
+    "explain": "Safety gear is essential regardless of distance, so even a short ride to the shop needs a helmet.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks speed alone decides the need for a helmet"
+     },
+     {
+      "misconception": "GEN-TRAFFIC-K17-M10",
+      "why": "thinks helmets are only for long highway trips"
+     },
+     {
+      "misconception": "GEN-TRAFFIC-K18-M11",
+      "why": "thinks only one person on the bike needs a helmet"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan’s father reminded him that even at a crossing, one must always look both ways before walking.",
+    "kind": "why",
+    "q": "Why should Rohan still look both ways at a pedestrian crossing?",
+    "options": [
+     "Drivers may not stop, so he must check",
+     "Drivers must always stop, so he can walk",
+     "Looking helps the cars stop on time",
+     "Crossings are safe only for running children"
+    ],
+    "explain": "Even at a crossing one must always look both ways before walking; vehicles may not stop.",
+    "wrong": [
+     {
+      "misconception": "GEN-TRAFFIC-K12-M6",
+      "why": "thinks vehicles always stop at crossings"
+     },
+     {
+      "misconception": null,
+      "why": "reverses cause and effect between looking and stopping"
+     },
+     {
+      "misconception": "GEN-TRAFFIC-K13-M7",
+      "why": "thinks speed makes crossing safe"
+     }
+    ]
+   },
+   {
+    "evidence": "He explained that seatbelts are vital at any speed to prevent injury during sudden stops.",
+    "kind": "how",
+    "q": "How does a seatbelt help Rohan when the car moves slowly?",
+    "options": [
+     "It prevents injury if the car stops suddenly",
+     "It is unneeded because slow cars cannot crash",
+     "It matters only if the airbag fails",
+     "It is required only for the front seat"
+    ],
+    "explain": "Seatbelts are vital at any speed because they prevent injury during sudden stops.",
+    "wrong": [
+     {
+      "misconception": "GEN-TRAFFIC-K19-M12",
+      "why": "thinks seatbelts are not needed at slow speed"
+     },
+     {
+      "misconception": "GEN-TRAFFIC-K19-M13",
+      "why": "thinks the airbag replaces the seatbelt"
+     },
+     {
+      "misconception": "GEN-TRAFFIC-K20-M14",
+      "why": "thinks only front-seat passengers need belts"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 14.1
+}

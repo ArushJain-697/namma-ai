@@ -1,0 +1,166 @@
+{
+ "source": "train-0322-SOC-ECO-DEVELOPMENT.json",
+ "job": {
+  "job": "train-0322-SOC-ECO-DEVELOPMENT",
+  "topic_id": "SOC-ECO-DEVELOPMENT",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a conversation between a teacher and two students",
+  "seed": 322
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1546,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today we are discussing development. Rohan, is development just about having a higher salary? Rohan: Yes, because money buys everything we need for a good life. Teacher: Not necessarily, Priya. What do you think? Priya: I disagree. Development includes health, education, and a clean environment, not just income. Teacher: Correct. We often use Per Capita Income to compare countries, but it hides inequalities. If one person earns a million and nine earn nothing, the average is still high, yet most are poor. Rohan: So, a high average means everyone is wealthy? Teacher: No, it masks the reality of distribution. We also look at the Human Development Index, which includes the literacy rate. Priya: Does that just mean people who can sign their names? Teacher: No, it measures the proportion of the population aged seven and above who can read and write with understanding. True development requires sustainable growth that does not deplete our natural resources for future generations. If we only focus on money, we might destroy the very environment we depend on. Development is a complex mix of economic and social progress, ensuring that the benefits reach everyone, not just a few. It is about improving the quality of life, not just the bank balance of a nation.",
+ "menu_ids": [
+  "SOC-ECO-DEVELOPMENT-K7-M1",
+  "SOC-ECO-DEVELOPMENT-K10-M2",
+  "SOC-ECO-DEVELOPMENT-K12-M4",
+  "SOC-ECO-DEVELOPMENT-K7-M5",
+  "SOC-ECO-DEVELOPMENT-K7-M6",
+  "SOC-ECO-DEVELOPMENT-K8-M7",
+  "SOC-ECO-DEVELOPMENT-K8-M8",
+  "SOC-ECO-DEVELOPMENT-K9-M9",
+  "SOC-ECO-DEVELOPMENT-K10-M10",
+  "SOC-ECO-DEVELOPMENT-K11-M11",
+  "SOC-ECO-DEVELOPMENT-K12-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "If one person earns a million and nine earn nothing, the average is still high, yet most are poor.",
+    "kind": "which_explains",
+    "q": "Nine of ten people earn nothing, but the average income is high. What does this show?",
+    "options": [
+     "An average can hide how unequally income is shared",
+     "An average shows that most people are fairly rich",
+     "An average rises only when the population is large",
+     "An average shows the total income of the country"
+    ],
+    "explain": "One person earns a million and nine earn nothing, so the average stays high while most people are poor.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-DEVELOPMENT-K11-M11",
+      "why": "thinks a high average means everyone earns near it"
+     },
+     {
+      "misconception": "SOC-ECO-DEVELOPMENT-K7-M6",
+      "why": "thinks a larger population raises per capita income"
+     },
+     {
+      "misconception": "SOC-ECO-DEVELOPMENT-K7-M5",
+      "why": "confuses the average with the country's total income"
+     }
+    ]
+   },
+   {
+    "evidence": "Priya: I disagree. Development includes health, education, and a clean environment, not just income.",
+    "kind": "which_example",
+    "q": "Which example best supports Priya's view that development is more than earning money?",
+    "options": [
+     "Children in a village get schooling and clean air",
+     "A town where every family has a higher salary",
+     "A city that builds many new shops and malls",
+     "A nation whose total bank balance has doubled"
+    ],
+    "explain": "Priya says development includes health, education and a clean environment, so schooling and clean air show it.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-DEVELOPMENT-K10-M2",
+      "why": "thinks development means only earning more money"
+     },
+     {
+      "misconception": "SOC-ECO-DEVELOPMENT-K10-M10",
+      "why": "thinks wealth automatically brings good social conditions"
+     },
+     {
+      "misconception": null,
+      "why": "treats national wealth as the same as development"
+     }
+    ]
+   },
+   {
+    "evidence": "No, it measures the proportion of the population aged seven and above who can read and write with understanding.",
+    "kind": "difference",
+    "q": "Anil can sign his name but cannot read a newspaper. How is he counted in literacy?",
+    "options": [
+     "He is not counted as literate",
+     "He is counted as literate",
+     "He is counted only if he is over fifteen",
+     "He is counted only if he lives in a city"
+    ],
+    "explain": "Literacy means reading and writing with understanding, so signing a name alone does not make someone literate.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-DEVELOPMENT-K12-M4",
+      "why": "thinks literacy means writing one's name"
+     },
+     {
+      "misconception": null,
+      "why": "changes the age rule from seven and above"
+     },
+     {
+      "misconception": null,
+      "why": "invents a place condition not in the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "True development requires sustainable growth that does not deplete our natural resources for future generations.",
+    "kind": "what_if",
+    "q": "A country grows rich by using up its forests and water quickly. What will future generations face?",
+    "options": [
+     "Fewer resources, so their development is harmed",
+     "More resources, as nature refills itself fast",
+     "Higher incomes, so development is complete",
+     "Equal benefits, as growth reaches everyone"
+    ],
+    "explain": "Growth that depletes natural resources leaves less for future generations, so it is not true development.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-DEVELOPMENT-K9-M9",
+      "why": "thinks natural resources are renewable and never run out"
+     },
+     {
+      "misconception": "SOC-ECO-DEVELOPMENT-K10-M2",
+      "why": "thinks higher income alone means development"
+     },
+     {
+      "misconception": "SOC-ECO-DEVELOPMENT-K7-M1",
+      "why": "thinks growth automatically benefits everyone equally"
+     }
+    ]
+   },
+   {
+    "evidence": "We also look at the Human Development Index, which includes the literacy rate.",
+    "kind": "why",
+    "q": "Why is the Human Development Index a fuller measure of progress than income alone?",
+    "options": [
+     "It also counts social things like literacy",
+     "It counts only wealth and savings of people",
+     "It is prepared by the World Bank",
+     "It ignores how people live and learn"
+    ],
+    "explain": "The Human Development Index includes the literacy rate along with income, so it shows more than money.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-DEVELOPMENT-K8-M7",
+      "why": "thinks HDI uses only income and wealth"
+     },
+     {
+      "misconception": "SOC-ECO-DEVELOPMENT-K8-M8",
+      "why": "thinks the World Bank prepares the HDI"
+     },
+     {
+      "misconception": null,
+      "why": "reverses what the index measures"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 16.1
+}

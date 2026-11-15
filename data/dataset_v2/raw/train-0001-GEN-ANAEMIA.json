@@ -1,0 +1,143 @@
+{
+ "source": "train-0001-GEN-ANAEMIA.json",
+ "job": {
+  "job": "train-0001-GEN-ANAEMIA",
+  "topic_id": "GEN-ANAEMIA",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a description of a classroom activity or experiment and what it shows",
+  "seed": 1
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3464,
+  "promptTokenCount": 2
+ },
+ "passage": "In our biology lab today, we explored how our bodies manage iron. We learned that anaemia is not a contagious disease like a cold, but a condition where the blood lacks enough healthy red blood cells to carry oxygen. While many believe only meat provides iron, our chart showed that green leafy vegetables like spinach and pulses are excellent plant-based sources. However, simply eating iron-rich food is not enough; our bodies need help to absorb it. We discovered that Vitamin C, found in citrus fruits like lemons, acts as a helper to increase iron absorption, whereas drinking tea immediately after a meal can block this process. We also discussed that iron-folic acid tablets are not just for the sick, but are a vital preventive measure for healthy students to maintain energy levels. Finally, we clarified that while milk is nutritious, it is not a primary source of iron, and relying on it alone will not prevent anaemia. Maintaining healthy iron levels requires a balanced diet, not just one 'superfood' or a single pill, and it is essential for both boys and girls to stay aware of their energy levels to prevent deficiency before it becomes severe.",
+ "menu_ids": [
+  "GEN-ANAEMIA-K6-M2",
+  "GEN-ANAEMIA-K8-M4",
+  "GEN-ANAEMIA-K9-M5",
+  "GEN-ANAEMIA-K13-M6",
+  "GEN-ANAEMIA-K13-M7",
+  "GEN-ANAEMIA-K14-M8",
+  "GEN-ANAEMIA-K15-M9",
+  "GEN-ANAEMIA-K15-M10",
+  "GEN-ANAEMIA-K17-M12",
+  "GEN-ANAEMIA-K18-M13",
+  "GEN-ANAEMIA-K23-M15",
+  "GEN-ANAEMIA-K23-M16",
+  "GEN-ANAEMIA-K24-M17",
+  "GEN-ANAEMIA-K25-M18"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "We learned that anaemia is not a contagious disease like a cold, but a condition where the blood lacks enough healthy red blood cells to carry oxygen.",
+    "kind": "recall",
+    "q": "Doctors find that Asha has anaemia. What is actually wrong with her blood?",
+    "options": [
+     "It has too few healthy cells that carry oxygen",
+     "It has too little blood in her whole body",
+     "It has no white blood cells left in it",
+     "It has a germ that spreads like a cold"
+    ],
+    "explain": "Anaemia means the blood lacks enough healthy red blood cells to carry oxygen. It is not catching like a cold.",
+    "wrong": [
+     {
+      "misconception": "GEN-ANAEMIA-K13-M6",
+      "why": "thinks anaemia means too little blood"
+     },
+     {
+      "misconception": "GEN-ANAEMIA-K13-M7",
+      "why": "thinks anaemia means no white blood cells"
+     },
+     {
+      "misconception": "GEN-ANAEMIA-K14-M8",
+      "why": "thinks anaemia spreads like a cold"
+     }
+    ]
+   },
+   {
+    "evidence": "We discovered that Vitamin C, found in citrus fruits like lemons, acts as a helper to increase iron absorption, whereas drinking tea immediately after a meal can block this process.",
+    "kind": "what_if",
+    "q": "Meena eats spinach and dal, then drinks a cup of tea straight away. What happens to the iron from her meal?",
+    "options": [
+     "Her body takes in less of the iron",
+     "Her body takes in more of the iron",
+     "Her body takes in all the iron anyway",
+     "Her body gets extra iron from the tea"
+    ],
+    "explain": "Drinking tea right after a meal blocks iron absorption, so Meena's body takes in less iron from the spinach and dal.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "mixes up the effect of tea with that of Vitamin C"
+     },
+     {
+      "misconception": "GEN-ANAEMIA-K23-M16",
+      "why": "thinks spinach has so much iron that nothing can stop it working"
+     },
+     {
+      "misconception": "GEN-ANAEMIA-K25-M18",
+      "why": "thinks the drink itself supplies the iron, as with Vitamin C"
+     }
+    ]
+   },
+   {
+    "evidence": "We also discussed that iron-folic acid tablets are not just for the sick, but are a vital preventive measure for healthy students to maintain energy levels.",
+    "kind": "why",
+    "q": "Why does the school give iron-folic acid tablets to students who are already healthy?",
+    "options": [
+     "To stop iron levels from falling too low",
+     "To treat students who are sick in bed",
+     "To give girls iron that boys never need",
+     "To give them as much iron as possible"
+    ],
+    "explain": "The tablets are a preventive measure: they keep healthy students' iron and energy levels up, so they are not only for sick people.",
+    "wrong": [
+     {
+      "misconception": "GEN-ANAEMIA-K15-M9",
+      "why": "thinks anaemia matters only when someone is very sick"
+     },
+     {
+      "misconception": "GEN-ANAEMIA-K18-M13",
+      "why": "thinks only girls need extra iron"
+     },
+     {
+      "misconception": "GEN-ANAEMIA-K6-M2",
+      "why": "thinks more iron is always better"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, we clarified that while milk is nutritious, it is not a primary source of iron, and relying on it alone will not prevent anaemia.",
+    "kind": "what_if",
+    "q": "Kavya drinks lots of milk but rarely eats greens or pulses. What will most likely happen to her iron levels?",
+    "options": [
+     "They stay low, as milk gives little iron",
+     "They stay high, as milk is a complete food",
+     "They stay low, as only meat gives iron",
+     "They stay high, as one good food is enough"
+    ],
+    "explain": "Milk is nutritious but not a main source of iron, so living mostly on milk will not prevent anaemia.",
+    "wrong": [
+     {
+      "misconception": "GEN-ANAEMIA-K24-M17",
+      "why": "thinks milk is the best food against anaemia"
+     },
+     {
+      "misconception": "GEN-ANAEMIA-K23-M15",
+      "why": "thinks only meat has iron, ignoring greens and pulses"
+     },
+     {
+      "misconception": null,
+      "why": "believes one 'superfood' can replace a balanced diet"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 36.9
+}

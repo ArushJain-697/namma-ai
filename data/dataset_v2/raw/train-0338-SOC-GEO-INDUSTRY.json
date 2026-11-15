@@ -1,0 +1,140 @@
+{
+ "source": "train-0338-SOC-GEO-INDUSTRY.json",
+ "job": {
+  "job": "train-0338-SOC-GEO-INDUSTRY",
+  "topic_id": "SOC-GEO-INDUSTRY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 338
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1335,
+  "promptTokenCount": 2
+ },
+ "passage": "Many students believe that industrial pollution is strictly limited to the thick black smoke billowing from factory chimneys, but this is a narrow view. In reality, industrial pollution encompasses a wide range of environmental impacts, including hazardous chemical waste dumped into water bodies and noise pollution from heavy machinery. Another common misconception is that the Information Technology (IT) sector is entirely clean and pollution-free because it lacks massive smokestacks. However, the IT industry generates significant electronic waste, or e-waste, which contains toxic substances that pose severe environmental risks. Furthermore, people often mistake the iron and steel industry for a consumer industry simply because we use steel utensils at home. In truth, iron and steel is a basic or key industry, providing the essential raw materials for other manufacturing sectors. Finally, while proximity to raw materials is important, industries are not always located exactly at the source of these materials. Factors like transport costs, availability of power, and access to markets often dictate a plant's location. For instance, steel plants are frequently situated near ports or transport hubs rather than just at the mine site to ensure efficient distribution of finished goods to various regions.",
+ "menu_ids": [
+  "SOC-GEO-INDUSTRY-K7-M1",
+  "SOC-GEO-INDUSTRY-K10-M2",
+  "SOC-GEO-INDUSTRY-K12-M3",
+  "SOC-GEO-INDUSTRY-K11-M4",
+  "SOC-GEO-INDUSTRY-K5-M5",
+  "SOC-GEO-INDUSTRY-K5-M6",
+  "SOC-GEO-INDUSTRY-K7-M7",
+  "SOC-GEO-INDUSTRY-K8-M8",
+  "SOC-GEO-INDUSTRY-K9-M9",
+  "SOC-GEO-INDUSTRY-K9-M10",
+  "SOC-GEO-INDUSTRY-K13-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "However, the IT industry generates significant electronic waste, or e-waste, which contains toxic substances that pose severe environmental risks.",
+    "kind": "which_explains",
+    "q": "A company has no chimneys or big furnaces. Why might it still harm the environment?",
+    "options": [
+     "Its discarded gadgets leave toxic waste",
+     "Its offices use too much farm produce",
+     "Its smoke is too thin to be seen",
+     "Its plant is too small to be checked"
+    ],
+    "explain": "The IT industry produces e-waste with toxic substances, so having no smokestacks does not make it pollution-free.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "picks an unrelated raw-material idea from the passage's industry theme"
+     },
+     {
+      "misconception": "SOC-GEO-INDUSTRY-K12-M3",
+      "why": "thinks pollution must always be visible smoke"
+     },
+     {
+      "misconception": "SOC-GEO-INDUSTRY-K5-M6",
+      "why": "links pollution rules to the size of the factory"
+     }
+    ]
+   },
+   {
+    "evidence": "In truth, iron and steel is a basic or key industry, providing the essential raw materials for other manufacturing sectors.",
+    "kind": "which_explains",
+    "q": "Why is the iron and steel industry called a basic industry?",
+    "options": [
+     "Other factories depend on it for their materials",
+     "Families buy its products directly for daily use",
+     "It was the first industry set up in India",
+     "It is run only by the government sector"
+    ],
+    "explain": "Iron and steel supplies essential raw materials to other manufacturing sectors, so many industries depend on it.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-INDUSTRY-K10-M2",
+      "why": "thinks steel utensils at home make it a consumer industry"
+     },
+     {
+      "misconception": null,
+      "why": "assumes 'basic' means oldest, using outside guesswork"
+     },
+     {
+      "misconception": "SOC-GEO-INDUSTRY-K5-M6",
+      "why": "mixes up sector of ownership with type of industry"
+     }
+    ]
+   },
+   {
+    "evidence": "For instance, steel plants are frequently situated near ports or transport hubs rather than just at the mine site to ensure efficient distribution of finished goods to various regions.",
+    "kind": "what_if",
+    "q": "A new steel plant is planned. Why might it be built far from the mine?",
+    "options": [
+     "To send finished steel easily to buyers",
+     "To find the cheapest land around",
+     "To stay close to the raw material",
+     "To lower wages in every case"
+    ],
+    "explain": "Steel plants are often near ports or transport hubs so finished goods can reach many regions efficiently.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-INDUSTRY-K7-M7",
+      "why": "thinks cheap land alone decides the location"
+     },
+     {
+      "misconception": "SOC-GEO-INDUSTRY-K7-M1",
+      "why": "thinks industries must sit exactly at the raw material"
+     },
+     {
+      "misconception": "SOC-GEO-INDUSTRY-K8-M8",
+      "why": "thinks factories always go where wages are lowest"
+     }
+    ]
+   },
+   {
+    "evidence": "In reality, industrial pollution encompasses a wide range of environmental impacts, including hazardous chemical waste dumped into water bodies and noise pollution from heavy machinery.",
+    "kind": "which_example",
+    "q": "Which situation is an example of industrial pollution, even without smoke?",
+    "options": [
+     "A factory drains chemicals into a river",
+     "A factory plants trees along its wall",
+     "A factory sells steel to other mills",
+     "A factory runs only in the daytime"
+    ],
+    "explain": "Chemical waste dumped into water bodies and noise from machinery are industrial pollution, not just chimney smoke.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-INDUSTRY-K13-M12",
+      "why": "mixes pollution with the idea that trees solve it"
+     },
+     {
+      "misconception": null,
+      "why": "picks an unrelated industry activity"
+     },
+     {
+      "misconception": null,
+      "why": "picks a plausible but harmless factory habit"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 14.1
+}

@@ -1,0 +1,169 @@
+{
+ "source": "train-0398-MAT-AP.json",
+ "job": {
+  "job": "train-0398-MAT-AP",
+  "topic_id": "MAT-AP",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a conversation between a teacher and two students",
+  "seed": 398
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 4720,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today we are looking at Arithmetic Progressions. Remember, an AP is a list of numbers where the difference between any two consecutive terms is constant. Rohan, if I have 10, 7, 4, 1, what is the common difference? Rohan: Since 10 minus 7 is 3, the difference is 3. Teacher: Not quite. You must subtract the earlier term from the later one, so 7 minus 10 gives a common difference of -3. Priya: Does that mean the common difference must always be positive? Teacher: No, it can be negative or zero. Now, consider the sequence 2, 4, 8, 16. Is this an AP? Priya: Yes, because it grows by a rule. Teacher: Actually, no. An AP must have a constant difference between every single pair of consecutive terms. Here, 4-2 is 2, but 8-4 is 4. Since the differences are not the same, it is not an AP. Finally, to find the nth term, we use the formula a_n = a + (n-1)d. If you want to find the 10th term of an AP starting with 3 and a difference of 4, you calculate 3 + (10-1) times 4, which is 39. Do not confuse the term value with the position n; they are distinct concepts.",
+ "menu_ids": [
+  "MAT-AP-K7-M1",
+  "MAT-AP-K8-M2",
+  "MAT-AP-K7-M3",
+  "MAT-AP-K9-M4",
+  "MAT-AP-K10-M5",
+  "MAT-AP-K13-M8",
+  "MAT-AP-K14-M9",
+  "MAT-AP-K12-M10",
+  "MAT-AP-K15-M11",
+  "MAT-AP-K15-M12",
+  "MAT-AP-K16-M13",
+  "MAT-AP-K16-M14",
+  "MAT-AP-K19-M15",
+  "MAT-AP-K19-M16"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "You must subtract the earlier term from the later one, so 7 minus 10 gives a common difference of -3.",
+    "kind": "how",
+    "q": "Meena finds the common difference of 20, 15, 10, 5. Which working is right?",
+    "options": [
+     "15 minus 20, giving -5",
+     "20 minus 15, giving 5",
+     "15 divided by 20, giving 0.75",
+     "20 plus 15, giving 35"
+    ],
+    "explain": "Subtract the earlier term from the later one: 15 - 20 = -5.",
+    "wrong": [
+     {
+      "misconception": "MAT-AP-K9-M4",
+      "why": "subtracts the later term from the earlier one"
+     },
+     {
+      "misconception": "MAT-AP-K16-M13",
+      "why": "divides terms instead of subtracting"
+     },
+     {
+      "misconception": null,
+      "why": "adds terms instead of finding their difference"
+     }
+    ]
+   },
+   {
+    "evidence": "No, it can be negative or zero.",
+    "kind": "which_example",
+    "q": "What is the common difference of the AP 6, 6, 6, 6?",
+    "options": [
+     "Zero, as each term equals the next",
+     "Positive, as a difference cannot be zero",
+     "None, as an AP must keep increasing",
+     "Six, as every term has the value six"
+    ],
+    "explain": "Every term equals the next, so the difference is zero, and a common difference can be zero.",
+    "wrong": [
+     {
+      "misconception": "MAT-AP-K10-M5",
+      "why": "thinks the difference can never be zero"
+     },
+     {
+      "misconception": "MAT-AP-K8-M2",
+      "why": "thinks an AP must keep increasing"
+     },
+     {
+      "misconception": null,
+      "why": "confuses the term value with the difference"
+     }
+    ]
+   },
+   {
+    "evidence": "An AP must have a constant difference between every single pair of consecutive terms.",
+    "kind": "what_if",
+    "q": "A list has gaps 3, 3, 5 between neighbours. A student checks only the first two gaps. What goes wrong?",
+    "options": [
+     "The list fails, since the last gap differs",
+     "The list passes, since the first gaps match",
+     "The list passes, since it grows by a rule",
+     "The list fails, since every gap must be 3"
+    ],
+    "explain": "An AP needs the same difference between every pair of consecutive terms, so the last gap matters too.",
+    "wrong": [
+     {
+      "misconception": "MAT-AP-K7-M3",
+      "why": "thinks two matching gaps are enough"
+     },
+     {
+      "misconception": "MAT-AP-K7-M1",
+      "why": "thinks growing by a rule makes an AP"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the common difference must be 3"
+     }
+    ]
+   },
+   {
+    "evidence": "If you want to find the 10th term of an AP starting with 3 and a difference of 4, you calculate 3 + (10-1) times 4, which is 39.",
+    "kind": "how",
+    "q": "An AP starts at 5 with common difference 2. Which working gives its 8th term?",
+    "options": [
+     "5 + 7 × 2 = 19",
+     "5 + 8 × 2 = 21",
+     "(5 + 7) × 2 = 24",
+     "5 × 7 + 2 = 37"
+    ],
+    "explain": "The nth term is a + (n-1)d, so the 8th term is 5 + 7 × 2 = 19.",
+    "wrong": [
+     {
+      "misconception": "MAT-AP-K14-M9",
+      "why": "uses a + nd instead of a + (n-1)d"
+     },
+     {
+      "misconception": "MAT-AP-K12-M10",
+      "why": "adds a and (n-1) before multiplying"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the order of operations"
+     }
+    ]
+   },
+   {
+    "evidence": "Do not confuse the term value with the position n; they are distinct concepts.",
+    "kind": "which_explains",
+    "q": "In the AP 4, 9, 14, 19, what is a_3?",
+    "options": [
+     "14, because 3 is only the position",
+     "3, because a_n and n are the same",
+     "19, because the term is a + nd",
+     "5, because the common difference is 5"
+    ],
+    "explain": "The 3 is the position; the third term is 14, a different thing from n.",
+    "wrong": [
+     {
+      "misconception": "MAT-AP-K13-M8",
+      "why": "thinks the nth term equals n"
+     },
+     {
+      "misconception": "MAT-AP-K14-M9",
+      "why": "uses a + nd and gets the fourth term"
+     },
+     {
+      "misconception": null,
+      "why": "picks the common difference instead of the term"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 38.1
+}

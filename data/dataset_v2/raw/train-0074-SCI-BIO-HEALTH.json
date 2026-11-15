@@ -1,0 +1,138 @@
+{
+ "source": "train-0074-SCI-BIO-HEALTH.json",
+ "job": {
+  "job": "train-0074-SCI-BIO-HEALTH",
+  "topic_id": "SCI-BIO-HEALTH",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a conversation between a teacher and two students",
+  "seed": 74
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2663,
+  "promptTokenCount": 2
+ },
+ "passage": "In the science lab, Ms. Sharma gathered Rohan and Meera to discuss health. 'Is a person who has no fever or cough always healthy?' she asked. Rohan replied, 'Yes, if they have no disease, they are healthy.' Ms. Sharma shook her head, 'Health is a state of physical, mental, and social well-being, not just the absence of disease. It also depends on our community environment, like clean water and waste disposal.' Meera asked, 'What about germs? Are all bacteria bad?' Ms. Sharma smiled, 'Actually, many bacteria live in our gut and help us digest food. Only some are pathogens. Also, remember that viruses are completely different from bacteria; they are not just tiny bacteria, but unique biological entities.' Rohan then asked if antibiotics could cure his cold. Ms. Sharma explained, 'Antibiotics target specific bacterial pathways. Since the common cold is caused by viruses, antibiotics are ineffective against it. Finally, regarding malaria, we must be precise: the mosquito is merely a vector that carries the Plasmodium parasite. The parasite is the actual cause of the disease, not the insect itself.' Meera nodded, 'So, health is complex and requires understanding the specific cause of an illness rather than making assumptions.'",
+ "menu_ids": [
+  "SCI-BIO-HEALTH-K4-M1",
+  "SCI-BIO-HEALTH-K15-M2",
+  "SCI-BIO-HEALTH-K18-M3",
+  "SCI-BIO-HEALTH-K25-M4",
+  "SCI-BIO-HEALTH-K14-M5",
+  "SCI-BIO-HEALTH-K17-M6",
+  "SCI-BIO-HEALTH-K10-M7",
+  "SCI-BIO-HEALTH-K15-M11",
+  "SCI-BIO-HEALTH-K3-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Ms. Sharma shook her head, 'Health is a state of physical, mental, and social well-being, not just the absence of disease.",
+    "kind": "what_if",
+    "q": "Anil has no fever or cough, but feels lonely and anxious every day. Is he fully healthy?",
+    "options": [
+     "Not fully, as his mind and social life suffer",
+     "Fully, since he has no disease at all",
+     "Fully, since this is only his personal matter",
+     "Not fully, as he must have hidden germs"
+    ],
+    "explain": "Health means physical, mental and social well-being, not just having no disease.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-HEALTH-K4-M1",
+      "why": "thinks no disease means healthy"
+     },
+     {
+      "misconception": "SCI-BIO-HEALTH-K3-M12",
+      "why": "thinks health is purely personal"
+     },
+     {
+      "misconception": "SCI-BIO-HEALTH-K10-M7",
+      "why": "thinks every problem comes from germs"
+     }
+    ]
+   },
+   {
+    "evidence": "Ms. Sharma smiled, 'Actually, many bacteria live in our gut and help us digest food.",
+    "kind": "which_explains",
+    "q": "Bacteria are found in the gut of a perfectly well person. What does this show?",
+    "options": [
+     "The bacteria are helping the body break down meals",
+     "The person is secretly sick with a bacterial disease",
+     "The person must take antibiotics to stay well",
+     "The bacteria are really tiny viruses in the gut"
+    ],
+    "explain": "Many gut bacteria are useful; they help us digest food. Only some bacteria are pathogens.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-HEALTH-K14-M5",
+      "why": "thinks all bacteria cause disease"
+     },
+     {
+      "misconception": null,
+      "why": "thinks all bacteria must be killed with medicine"
+     },
+     {
+      "misconception": "SCI-BIO-HEALTH-K15-M11",
+      "why": "thinks viruses are just small bacteria"
+     }
+    ]
+   },
+   {
+    "evidence": "Since the common cold is caused by viruses, antibiotics are ineffective against it.",
+    "kind": "why",
+    "q": "Why will antibiotics not cure Rohan's cold?",
+    "options": [
+     "Because viruses, not bacteria, cause a cold",
+     "Because cold germs are just very tiny bacteria",
+     "Because his cold is too mild for medicine",
+     "Because antibiotics only kill helpful gut bacteria"
+    ],
+    "explain": "Antibiotics act on bacteria, but a cold is caused by viruses, so they do not work.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-HEALTH-K15-M11",
+      "why": "thinks viruses are tiny bacteria"
+     },
+     {
+      "misconception": null,
+      "why": "invents a reason instead of using the passage"
+     },
+     {
+      "misconception": null,
+      "why": "grabs the nearby gut bacteria detail"
+     }
+    ]
+   },
+   {
+    "evidence": "The parasite is the actual cause of the disease, not the insect itself.",
+    "kind": "what_if",
+    "q": "A mosquito carrying no Plasmodium bites Meera. Can this bite give her malaria?",
+    "options": [
+     "It cannot, since the parasite causes malaria",
+     "It can, since mosquitoes themselves cause malaria",
+     "It can, but only if she touches someone sick",
+     "It cannot, since malaria is caused by bacteria"
+    ],
+    "explain": "The mosquito only carries the Plasmodium parasite; the parasite, not the insect, causes malaria.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-HEALTH-K18-M3",
+      "why": "thinks the mosquito causes malaria"
+     },
+     {
+      "misconception": "SCI-BIO-HEALTH-K17-M6",
+      "why": "thinks disease spreads only by touch"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the parasite with bacteria"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 26.1
+}

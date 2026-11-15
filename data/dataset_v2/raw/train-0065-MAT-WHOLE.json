@@ -1,0 +1,138 @@
+{
+ "source": "train-0065-MAT-WHOLE.json",
+ "job": {
+  "job": "train-0065-MAT-WHOLE",
+  "topic_id": "MAT-WHOLE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a conversation between a teacher and two students",
+  "seed": 65
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3244,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today, let us discuss the properties of whole numbers. Rohan, if we subtract 3 from 7, we get 4. If we subtract 7 from 3, do we get the same result? Rohan: Yes, teacher, subtraction is commutative like addition. Teacher: Actually, that is a common error. 7 minus 3 is 4, but 3 minus 7 is not a whole number at all. Subtraction does not follow the commutative property. Priya: What about the identity element for subtraction? Is it zero, like in addition? Teacher: No, Priya. In addition, adding zero to a number leaves it unchanged, so zero is the additive identity. However, subtracting zero from a number is different from subtracting a number from zero. Therefore, zero is not the identity element for subtraction. Remember, whole numbers start from zero, while natural numbers start from one. On the number line, numbers to the right are always greater than numbers to the left. If you subtract a larger number from a smaller one, you move left past zero, which takes you out of the set of whole numbers. Always check the order of your numbers carefully before performing operations to avoid these mistakes.",
+ "menu_ids": [
+  "MAT-WHOLE-K12-M2",
+  "MAT-WHOLE-K13-M3",
+  "MAT-WHOLE-K4-M4",
+  "MAT-WHOLE-K9-M5",
+  "MAT-WHOLE-K10-M7",
+  "MAT-WHOLE-K11-M9",
+  "MAT-WHOLE-K7-M10",
+  "MAT-WHOLE-K8-M11",
+  "MAT-WHOLE-K7-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "7 minus 3 is 4, but 3 minus 7 is not a whole number at all.",
+    "kind": "what_if",
+    "q": "Meena works out 9 − 5 and then 5 − 9. What does she find?",
+    "options": [
+     "Only 9 − 5 gives a whole number",
+     "Both give 4, since order never matters",
+     "Both give whole numbers, just different ones",
+     "Only 5 − 9 gives a whole number"
+    ],
+    "explain": "Like 7 − 3 and 3 − 7, changing the order changes the answer; 5 − 9 is not whole.",
+    "wrong": [
+     {
+      "misconception": "MAT-WHOLE-K12-M2",
+      "why": "thinks a − b is the same as b − a"
+     },
+     {
+      "misconception": "MAT-WHOLE-K7-M10",
+      "why": "thinks subtracting whole numbers always gives a whole number"
+     },
+     {
+      "misconception": null,
+      "why": "reverses which subtraction leaves the whole numbers"
+     }
+    ]
+   },
+   {
+    "evidence": "However, subtracting zero from a number is different from subtracting a number from zero.",
+    "kind": "which_explains",
+    "q": "Priya checks 8 − 0 and 0 − 8. What do her two answers show about zero?",
+    "options": [
+     "It is the identity for addition, not subtraction",
+     "It is the identity for subtraction as well",
+     "It gives the same answer in either order",
+     "It is the first natural number we count"
+    ],
+    "explain": "8 − 0 is 8 but 0 − 8 is not, so zero is not subtraction's identity.",
+    "wrong": [
+     {
+      "misconception": "MAT-WHOLE-K13-M3",
+      "why": "thinks zero is the identity for subtraction"
+     },
+     {
+      "misconception": "MAT-WHOLE-K12-M2",
+      "why": "thinks subtraction order does not matter"
+     },
+     {
+      "misconception": "MAT-WHOLE-K9-M5",
+      "why": "thinks the smallest natural number is 0"
+     }
+    ]
+   },
+   {
+    "evidence": "Remember, whole numbers start from zero, while natural numbers start from one.",
+    "kind": "difference",
+    "q": "How do the whole numbers differ from the natural numbers?",
+    "options": [
+     "Only the whole numbers contain zero",
+     "Only the natural numbers contain zero",
+     "Both sets contain zero, so they match",
+     "Neither set contains zero at all"
+    ],
+    "explain": "Whole numbers start from zero, but natural numbers start from one, so only whole numbers include zero.",
+    "wrong": [
+     {
+      "misconception": "MAT-WHOLE-K9-M5",
+      "why": "thinks counting starts at 0"
+     },
+     {
+      "misconception": "MAT-WHOLE-K10-M7",
+      "why": "thinks the two sets are the same"
+     },
+     {
+      "misconception": null,
+      "why": "misreads where each set starts"
+     }
+    ]
+   },
+   {
+    "evidence": "If you subtract a larger number from a smaller one, you move left past zero, which takes you out of the set of whole numbers.",
+    "kind": "what_if",
+    "q": "Aman starts at 2 on the number line and subtracts 5. Where does he end up?",
+    "options": [
+     "Left of zero, outside the whole numbers",
+     "At 3, since 5 − 2 is 3",
+     "At zero, since the line ends there",
+     "Right of zero, still a whole number"
+    ],
+    "explain": "Taking a larger number from a smaller one moves you left past zero, out of whole numbers.",
+    "wrong": [
+     {
+      "misconception": "MAT-WHOLE-K12-M2",
+      "why": "swaps the order and does 5 − 2"
+     },
+     {
+      "misconception": "MAT-WHOLE-K11-M9",
+      "why": "thinks the number line stops at 0"
+     },
+     {
+      "misconception": "MAT-WHOLE-K7-M10",
+      "why": "thinks subtraction always stays in whole numbers"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 31.9
+}

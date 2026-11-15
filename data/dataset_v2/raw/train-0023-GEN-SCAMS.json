@@ -1,0 +1,169 @@
+{
+ "source": "train-0023-GEN-SCAMS.json",
+ "job": {
+  "job": "train-0023-GEN-SCAMS",
+  "topic_id": "GEN-SCAMS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a short story with Indian characters in everyday life",
+  "seed": 23
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4547,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan was excited when he received a WhatsApp message from an unknown number promising him a 'special investment opportunity' with high returns. The sender claimed to be from a reputed firm, showing him a digital certificate and a photo of a fancy office. The sender insisted, 'Keep this secret from your family to protect your chance.' Rohan noticed the website link provided had a padlock icon, but he remembered his teacher’s warning. She had explained that scammers often use official-looking documents and secure-looking websites to build false trust. She also taught that no legitimate bank or government official will ever demand a payment or sensitive information over a video call, nor will they ever perform a 'digital arrest.' Rohan realized the message was a trap. He knew that to receive money via UPI, he never needs to enter his PIN. Furthermore, he understood that if he ever fell for a scam, he must immediately report it to the national cybercrime portal and block his bank accounts, rather than waiting or assuming the bank would handle everything automatically. He deleted the message, knowing that a real investment opportunity would never require secrecy or pressure him to act instantly. He felt proud of himself for staying alert and protecting his family’s hard-earned money from such digital fraud.",
+ "menu_ids": [
+  "GEN-SCAMS-K4-M3",
+  "GEN-SCAMS-K5-M4",
+  "GEN-SCAMS-K5-M5",
+  "GEN-SCAMS-K6-M6",
+  "GEN-SCAMS-K6-M7",
+  "GEN-SCAMS-K7-M8",
+  "GEN-SCAMS-K7-M9",
+  "GEN-SCAMS-K8-M10",
+  "GEN-SCAMS-K10-M11",
+  "GEN-SCAMS-K10-M12",
+  "GEN-SCAMS-K11-M14",
+  "GEN-SCAMS-K12-M15",
+  "GEN-SCAMS-K15-M16",
+  "GEN-SCAMS-K15-M17"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "She had explained that scammers often use official-looking documents and secure-looking websites to build false trust.",
+    "kind": "which_explains",
+    "q": "Rohan saw a padlock on the site and a certificate. Why did he still doubt the offer?",
+    "options": [
+     "Scammers fake such things to fool people",
+     "The padlock showed it was not checked",
+     "The certificate had no written guarantee",
+     "The returns offered were far too low"
+    ],
+    "explain": "His teacher said scammers use official-looking papers and secure-looking websites to build false trust.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks a padlock is a real safety check"
+     },
+     {
+      "misconception": "GEN-SCAMS-K10-M11",
+      "why": "thinks a written guarantee would make it safe"
+     },
+     {
+      "misconception": "GEN-SCAMS-K10-M12",
+      "why": "thinks only low returns are suspicious"
+     }
+    ]
+   },
+   {
+    "evidence": "He deleted the message, knowing that a real investment opportunity would never require secrecy or pressure him to act instantly.",
+    "kind": "what_if",
+    "q": "Priya is offered a scheme but told not to tell her parents. What does this suggest?",
+    "options": [
+     "The offer is most likely a trap",
+     "The offer is a rare special chance",
+     "The offer is safe if it paid before",
+     "The offer is safe if friends join too"
+    ],
+    "explain": "A real investment never asks you to keep secrets, so secrecy is a warning sign.",
+    "wrong": [
+     {
+      "misconception": "GEN-SCAMS-K11-M14",
+      "why": "thinks secrecy protects a special chance"
+     },
+     {
+      "misconception": "GEN-SCAMS-K7-M8",
+      "why": "thinks past payouts prove a scheme is genuine"
+     },
+     {
+      "misconception": "GEN-SCAMS-K7-M9",
+      "why": "thinks bringing friends in makes it safe"
+     }
+    ]
+   },
+   {
+    "evidence": "She also taught that no legitimate bank or government official will ever demand a payment or sensitive information over a video call, nor will they ever perform a 'digital arrest.'",
+    "kind": "what_if",
+    "q": "A video caller claiming to be police says Rohan is under 'digital arrest' until he pays. What does this show?",
+    "options": [
+     "The caller is only pretending to be police",
+     "The caller can hold him until he pays",
+     "The caller is real since he knows his name",
+     "The caller is real since police use video calls"
+    ],
+    "explain": "No real official demands payment on a video call or performs a 'digital arrest'.",
+    "wrong": [
+     {
+      "misconception": "GEN-SCAMS-K8-M10",
+      "why": "believes police can do a digital arrest"
+     },
+     {
+      "misconception": "GEN-SCAMS-K5-M4",
+      "why": "trusts a caller who knows his name"
+     },
+     {
+      "misconception": null,
+      "why": "thinks a video call makes it official"
+     }
+    ]
+   },
+   {
+    "evidence": "He knew that to receive money via UPI, he never needs to enter his PIN.",
+    "kind": "what_if",
+    "q": "A stranger asks Rohan to enter his UPI PIN so he can receive ₹500. What should Rohan know?",
+    "options": [
+     "A PIN is never needed to get money",
+     "A PIN is needed to get any money",
+     "A PIN can be shared like a card number",
+     "A PIN is safe to enter if the bank asks"
+    ],
+    "explain": "To receive money through UPI you never enter your PIN, so this request is a trick.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "reverses when the PIN is needed"
+     },
+     {
+      "misconception": "GEN-SCAMS-K15-M17",
+      "why": "thinks PIN is like the card number"
+     },
+     {
+      "misconception": "GEN-SCAMS-K15-M16",
+      "why": "thinks bank-linked codes are safe to share"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, he understood that if he ever fell for a scam, he must immediately report it to the national cybercrime portal and block his bank accounts, rather than waiting or assuming the bank would handle everything automatically.",
+    "kind": "how",
+    "q": "If Rohan had been tricked into paying a scammer, how should he act?",
+    "options": [
+     "Report it at once and block his accounts",
+     "Wait, as the bank will fix it itself",
+     "Reply to the scammer and ask for a refund",
+     "Keep quiet so his family does not worry"
+    ],
+    "explain": "He must report quickly to the cybercrime portal and block accounts, not wait for the bank.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "assumes the bank handles everything automatically"
+     },
+     {
+      "misconception": "GEN-SCAMS-K4-M3",
+      "why": "thinks replying to scammers cannot cause harm"
+     },
+     {
+      "misconception": "GEN-SCAMS-K11-M14",
+      "why": "thinks hiding it from family is right"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 47.2
+}

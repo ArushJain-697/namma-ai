@@ -1,0 +1,165 @@
+{
+ "source": "train-0298-SCI-PHY-REFRACTION.json",
+ "job": {
+  "job": "train-0298-SCI-PHY-REFRACTION",
+  "topic_id": "SCI-PHY-REFRACTION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 298
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1490,
+  "promptTokenCount": 2
+ },
+ "passage": "Many students believe that light only bends when it enters a liquid like water, but refraction is actually a universal phenomenon occurring whenever light travels between any two transparent media of different optical densities. This bending happens precisely at the boundary separating the two media, not after the light has traveled deep inside. When we discuss lenses, it is a common error to confuse them with mirrors. While a mirror uses reflection, a lens relies on refraction. Consequently, the mathematical relationship for lenses is 1/v - 1/u = 1/f, which is distinct from the mirror formula. Furthermore, the power of a lens is defined as the reciprocal of its focal length in meters. This means that a lens with a higher power actually possesses a shorter focal length, as the light is bent more sharply. Finally, remember that virtual images are not 'invisible' just because they are not real; they are perfectly visible to our eyes even though they cannot be captured on a screen. Similarly, light rays do not simply stop at the image position; they continue to travel through the optical system, forming the image through their convergence or apparent divergence. Understanding these distinctions is crucial for mastering the behavior of light in various optical devices.",
+ "menu_ids": [
+  "SCI-PHY-REFRACTION-K8-M1",
+  "SCI-PHY-REFRACTION-K8-M2",
+  "SCI-PHY-REFRACTION-K13-M4",
+  "SCI-PHY-REFRACTION-K14-M5",
+  "SCI-PHY-REFRACTION-K16-M7",
+  "SCI-PHY-REFRACTION-K20-M8",
+  "SCI-PHY-REFRACTION-K18-M9",
+  "SCI-PHY-REFRACTION-K14-M11",
+  "SCI-PHY-REFRACTION-K17-M12",
+  "SCI-PHY-REFRACTION-K9-M13"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "This bending happens precisely at the boundary separating the two media, not after the light has traveled deep inside.",
+    "kind": "which_explains",
+    "q": "A ray enters glass from air. Where does the change in its direction happen?",
+    "options": [
+     "Right at the surface where air meets glass",
+     "A little way inside the glass",
+     "Only after it reaches the far side",
+     "Along the whole path through the glass"
+    ],
+    "explain": "Light bends precisely at the boundary between the two media, not after travelling inside the second one.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-REFRACTION-K14-M5",
+      "why": "thinks light bends inside the second medium"
+     },
+     {
+      "misconception": null,
+      "why": "thinks bending waits for the far side"
+     },
+     {
+      "misconception": null,
+      "why": "thinks bending is gradual along the path"
+     }
+    ]
+   },
+   {
+    "evidence": "Many students believe that light only bends when it enters a liquid like water, but refraction is actually a universal phenomenon occurring whenever light travels between any two transparent media of different optical densities.",
+    "kind": "what_if",
+    "q": "Light passes from air into a glass block. What will happen to it?",
+    "options": [
+     "It refracts, as glass differs in optical density",
+     "It goes straight, as glass is not a liquid",
+     "It refracts only if the glass is wet",
+     "It reflects, as glass is a solid"
+    ],
+    "explain": "Refraction happens between any two transparent media of different optical densities, not only when light enters liquids.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-REFRACTION-K14-M11",
+      "why": "thinks only liquids make light refract"
+     },
+     {
+      "misconception": null,
+      "why": "thinks a liquid film is needed"
+     },
+     {
+      "misconception": null,
+      "why": "confuses refraction with reflection"
+     }
+    ]
+   },
+   {
+    "evidence": "This means that a lens with a higher power actually possesses a shorter focal length, as the light is bent more sharply.",
+    "kind": "why",
+    "q": "Why does a lens of higher power have a shorter focal length?",
+    "options": [
+     "It bends light more sharply",
+     "It bends light more gently",
+     "It reflects light instead of bending it",
+     "It is always made much thinner"
+    ],
+    "explain": "A higher-power lens bends light more sharply, so the rays meet closer to the lens.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-REFRACTION-K20-M8",
+      "why": "thinks higher power means weaker bending and longer focus"
+     },
+     {
+      "misconception": "SCI-PHY-REFRACTION-K18-M9",
+      "why": "confuses lens action with mirror reflection"
+     },
+     {
+      "misconception": null,
+      "why": "guesses a thickness rule not in the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, remember that virtual images are not 'invisible' just because they are not real; they are perfectly visible to our eyes even though they cannot be captured on a screen.",
+    "kind": "which_example",
+    "q": "Which example shows that a virtual image is still visible?",
+    "options": [
+     "You see your face in a plane mirror",
+     "A screen shows your face in a mirror",
+     "You cannot see anything in a mirror",
+     "Your face is seen only on the glass"
+    ],
+    "explain": "Virtual images are perfectly visible to our eyes even though a screen cannot capture them.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks a virtual image can be caught on a screen"
+     },
+     {
+      "misconception": "SCI-PHY-REFRACTION-K8-M2",
+      "why": "thinks virtual images cannot be seen"
+     },
+     {
+      "misconception": "SCI-PHY-REFRACTION-K8-M1",
+      "why": "thinks the image lies on the mirror surface"
+     }
+    ]
+   },
+   {
+    "evidence": "Similarly, light rays do not simply stop at the image position; they continue to travel through the optical system, forming the image through their convergence or apparent divergence.",
+    "kind": "recall",
+    "q": "What do light rays do after they reach the image position?",
+    "options": [
+     "They keep travelling through the optical system",
+     "They stop and disappear at that point",
+     "They turn back to the object",
+     "They bend into the second medium only"
+    ],
+    "explain": "Rays do not stop at the image position; they continue travelling through the optical system.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-REFRACTION-K16-M7",
+      "why": "thinks rays stop at the image"
+     },
+     {
+      "misconception": null,
+      "why": "thinks rays reverse at the image"
+     },
+     {
+      "misconception": "SCI-PHY-REFRACTION-K14-M5",
+      "why": "mixes up with bending inside the second medium"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 14.0
+}

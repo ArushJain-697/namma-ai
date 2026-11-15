@@ -1,0 +1,141 @@
+{
+ "source": "train-0265-SCI-BIO-RESPIRATION.json",
+ "job": {
+  "job": "train-0265-SCI-BIO-RESPIRATION",
+  "topic_id": "SCI-BIO-RESPIRATION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a diary entry or letter by a student",
+  "seed": 265
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1382,
+  "promptTokenCount": 2
+ },
+ "passage": "Dear Diary, today in biology class, we learned that respiration is a cellular process, not just the physical act of breathing. My teacher explained that while we breathe to take in air, our cells use oxygen to break down glucose for energy. It is fascinating that even yeast, which we use to make bread rise, performs this process constantly to survive, not just when baking. We also discussed how fish survive underwater; they do not break down water molecules, but instead extract dissolved oxygen from the water using their gills. I was surprised to learn that plants also respire through tiny pores called stomata, which handle gas exchange for both respiration and transpiration. Finally, we looked at human muscles during exercise. When we run hard, our muscles do not stop respiring; instead, they switch to anaerobic respiration, which produces lactic acid because oxygen supply cannot keep up with the high energy demand. It is clear now that respiration is a fundamental energy-releasing process occurring in all living cells, whether in a tiny yeast cell, a plant leaf, or our own hardworking muscles.",
+ "menu_ids": [
+  "SCI-BIO-RESPIRATION-K2-M1",
+  "SCI-BIO-RESPIRATION-K5-M2",
+  "SCI-BIO-RESPIRATION-K6-M3",
+  "SCI-BIO-RESPIRATION-K3-M4",
+  "SCI-BIO-RESPIRATION-K9-M5",
+  "SCI-BIO-RESPIRATION-K7-M6",
+  "SCI-BIO-RESPIRATION-K14-M9",
+  "SCI-BIO-RESPIRATION-K10-M10",
+  "SCI-BIO-RESPIRATION-K15-M11",
+  "SCI-BIO-RESPIRATION-K17-M13",
+  "SCI-BIO-RESPIRATION-K11-M14",
+  "SCI-BIO-RESPIRATION-K4-M15"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "We also discussed how fish survive underwater; they do not break down water molecules, but instead extract dissolved oxygen from the water using their gills.",
+    "kind": "how",
+    "q": "How does a fish get the oxygen it needs underwater?",
+    "options": [
+     "Its gills take in oxygen dissolved in water",
+     "Its cells split water into hydrogen and oxygen",
+     "Its mouth swallows air from the surface",
+     "Its gills turn carbon dioxide into oxygen"
+    ],
+    "explain": "Fish do not split water; their gills extract the oxygen already dissolved in it.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-RESPIRATION-K15-M11",
+      "why": "thinks fish break down H2O to get oxygen"
+     },
+     {
+      "misconception": "SCI-BIO-RESPIRATION-K14-M9",
+      "why": "thinks animals always breathe through the mouth like humans"
+     },
+     {
+      "misconception": "SCI-BIO-RESPIRATION-K5-M2",
+      "why": "thinks respiration makes oxygen for the body"
+     }
+    ]
+   },
+   {
+    "evidence": "It is fascinating that even yeast, which we use to make bread rise, performs this process constantly to survive, not just when baking.",
+    "kind": "what_if",
+    "q": "A packet of yeast sits unused in a kitchen cupboard, alive. What is its respiration doing?",
+    "options": [
+     "It continues all the time to keep it alive",
+     "It starts only once dough is added",
+     "It stops until the yeast is heated",
+     "It happens only in the yeast's lungs"
+    ],
+    "explain": "Yeast respires constantly to survive, not only when it is used for baking.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-RESPIRATION-K6-M3",
+      "why": "thinks yeast respires only when making bread rise"
+     },
+     {
+      "misconception": "SCI-BIO-RESPIRATION-K2-M1",
+      "why": "thinks respiration needs a breathing action first"
+     },
+     {
+      "misconception": "SCI-BIO-RESPIRATION-K3-M4",
+      "why": "thinks respiration happens only in lungs"
+     }
+    ]
+   },
+   {
+    "evidence": "I was surprised to learn that plants also respire through tiny pores called stomata, which handle gas exchange for both respiration and transpiration.",
+    "kind": "which_explains",
+    "q": "A student says stomata only let water out of a leaf. What is wrong with this?",
+    "options": [
+     "They also exchange gases used in respiration",
+     "They let water out only at night",
+     "They let in water for the roots",
+     "They only open when a plant respires"
+    ],
+    "explain": "Stomata handle gas exchange for respiration as well as transpiration, so water loss is not their only job.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-RESPIRATION-K17-M13",
+      "why": "repeats the idea that stomata only release water"
+     },
+     {
+      "misconception": null,
+      "why": "adds a time rule not given in the passage"
+     },
+     {
+      "misconception": null,
+      "why": "confuses stomata with root water uptake"
+     }
+    ]
+   },
+   {
+    "evidence": "When we run hard, our muscles do not stop respiring; instead, they switch to anaerobic respiration, which produces lactic acid because oxygen supply cannot keep up with the high energy demand.",
+    "kind": "why",
+    "q": "Why do muscles make lactic acid during a hard run?",
+    "options": [
+     "Oxygen supply is too low for the demand",
+     "Their cells stop respiring to rest",
+     "Their cells make extra oxygen for energy",
+     "Anaerobic respiration is as efficient as aerobic"
+    ],
+    "explain": "Oxygen cannot keep up with the energy demand, so muscles switch to anaerobic respiration, which makes lactic acid.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-RESPIRATION-K7-M6",
+      "why": "thinks the body stops respiring during exercise"
+     },
+     {
+      "misconception": "SCI-BIO-RESPIRATION-K5-M2",
+      "why": "thinks respiration makes oxygen for the body"
+     },
+     {
+      "misconception": "SCI-BIO-RESPIRATION-K4-M15",
+      "why": "thinks anaerobic respiration is as efficient as aerobic"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 12.4
+}

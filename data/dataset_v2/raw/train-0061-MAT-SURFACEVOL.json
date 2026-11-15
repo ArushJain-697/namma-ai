@@ -1,0 +1,143 @@
+{
+ "source": "train-0061-MAT-SURFACEVOL.json",
+ "job": {
+  "job": "train-0061-MAT-SURFACEVOL",
+  "topic_id": "MAT-SURFACEVOL",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a passage that shows a common wrong method and corrects it",
+  "seed": 61
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2410,
+  "promptTokenCount": 2
+ },
+ "passage": "When calculating the surface area and volume of combined solids, students often make errors by misapplying formulas. For instance, consider a toy shaped like a cone mounted on a hemisphere. A common mistake is to calculate the total surface area by simply adding the total surface area of a cone and the total surface area of a hemisphere. However, because the base of the cone and the top of the hemisphere are hidden inside the joint, they are not part of the external surface area. The correct approach is to sum only the curved surface areas of the two parts. Another frequent error occurs when students confuse the total surface area of a solid hemisphere with its curved surface area. While the curved surface area is 2πr², the total surface area includes the flat circular base, making it 3πr². Furthermore, students often incorrectly assume that if the radius of a sphere is doubled, its volume also doubles. In reality, since the volume formula is 4/3πr³, doubling the radius increases the volume by a factor of eight. Finally, remember that 1 cubic meter is equivalent to 1,000,000 cubic centimeters, not 100 cubic centimeters, which is a common unit conversion trap.",
+ "menu_ids": [
+  "MAT-SURFACEVOL-K7-M1",
+  "MAT-SURFACEVOL-K8-M2",
+  "MAT-SURFACEVOL-K9-M3",
+  "MAT-SURFACEVOL-K11-M5",
+  "MAT-SURFACEVOL-K12-M6",
+  "MAT-SURFACEVOL-K13-M7",
+  "MAT-SURFACEVOL-K14-M8",
+  "MAT-SURFACEVOL-K15-M9",
+  "MAT-SURFACEVOL-K16-M10",
+  "MAT-SURFACEVOL-K17-M12",
+  "MAT-SURFACEVOL-K20-M14",
+  "MAT-SURFACEVOL-K21-M16",
+  "MAT-SURFACEVOL-K24-M17",
+  "MAT-SURFACEVOL-K24-M18"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "However, because the base of the cone and the top of the hemisphere are hidden inside the joint, they are not part of the external surface area.",
+    "kind": "why",
+    "q": "Why is the cone's base left out of the toy's outer surface area?",
+    "options": [
+     "It is covered where the two parts meet",
+     "It is already part of the cone's curved surface",
+     "It is too small next to the hemisphere",
+     "It is flat, and flat faces never count"
+    ],
+    "explain": "The cone's base is hidden inside the joint with the hemisphere, so it is not on the outside.",
+    "wrong": [
+     {
+      "misconception": "MAT-SURFACEVOL-K7-M1",
+      "why": "mixes up total and curved surface area"
+     },
+     {
+      "misconception": null,
+      "why": "thinks small parts can simply be ignored"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises; the hemisphere's flat base counts when it is exposed"
+     }
+    ]
+   },
+   {
+    "evidence": "While the curved surface area is 2πr², the total surface area includes the flat circular base, making it 3πr².",
+    "kind": "what_if",
+    "q": "A solid hemisphere has a curved surface of 2πr². What is its total surface area?",
+    "options": [
+     "3πr², adding the flat circular base",
+     "2πr², the same as its curved part",
+     "4πr², adding another curved half",
+     "πr², the same as a flat circle"
+    ],
+    "explain": "Total surface area adds the flat circular base πr² to the curved 2πr², giving 3πr².",
+    "wrong": [
+     {
+      "misconception": "MAT-SURFACEVOL-K15-M9",
+      "why": "thinks a solid hemisphere's total area is 2πr²"
+     },
+     {
+      "misconception": null,
+      "why": "mixes it up with a full sphere's surface"
+     },
+     {
+      "misconception": "MAT-SURFACEVOL-K14-M8",
+      "why": "thinks a round surface has the area of a circle"
+     }
+    ]
+   },
+   {
+    "evidence": "In reality, since the volume formula is 4/3πr³, doubling the radius increases the volume by a factor of eight.",
+    "kind": "what_if",
+    "q": "Meena doubles the radius of a ball. How many times larger does its volume become?",
+    "options": [
+     "Eight times, since r is cubed",
+     "Two times, since r is doubled",
+     "Four times, since r is squared",
+     "Three times, since 4/3 is used"
+    ],
+    "explain": "Volume is 4/3πr³, so doubling r multiplies the volume by 2 × 2 × 2 = 8.",
+    "wrong": [
+     {
+      "misconception": "MAT-SURFACEVOL-K21-M16",
+      "why": "thinks volume grows in the same ratio as radius"
+     },
+     {
+      "misconception": null,
+      "why": "uses the squared rule for area instead of volume"
+     },
+     {
+      "misconception": null,
+      "why": "grabs a number from the formula"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, remember that 1 cubic meter is equivalent to 1,000,000 cubic centimeters, not 100 cubic centimeters, which is a common unit conversion trap.",
+    "kind": "what_if",
+    "q": "A water tank holds 2 cubic metres. How much is that in centimetre units?",
+    "options": [
+     "2,000,000 cubic centimetres",
+     "200 cubic centimetres",
+     "2,000 cubic centimetres",
+     "2,000,000 square centimetres"
+    ],
+    "explain": "1 cubic metre is 1,000,000 cubic centimetres, so 2 cubic metres is 2,000,000 cubic centimetres.",
+    "wrong": [
+     {
+      "misconception": "MAT-SURFACEVOL-K24-M17",
+      "why": "thinks 1 m³ equals 100 cm³"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up cubic metres with litres"
+     },
+     {
+      "misconception": "MAT-SURFACEVOL-K16-M10",
+      "why": "measures volume in square units"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 25.1
+}

@@ -1,0 +1,139 @@
+{
+ "source": "train-0054-MAT-RATIO.json",
+ "job": {
+  "job": "train-0054-MAT-RATIO",
+  "topic_id": "MAT-RATIO",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a market or shop situation that uses the idea",
+  "seed": 54
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3238,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan visits the local vegetable market to help his mother buy supplies for the week. At the first stall, he notices that the shopkeeper sells potatoes in a fixed ratio. For every 2 kilograms of potatoes, the price is 30 rupees. Rohan calculates that if he wants 4 kilograms, he must pay 60 rupees because the ratio of weight to price remains constant. Next, he moves to the stationery corner to buy pens for his school project. The shopkeeper explains that a pack of 3 pens costs 15 rupees. Rohan wants to buy 5 pens, so he first finds the cost of a single pen by dividing 15 by 3, which is 5 rupees. He then multiplies 5 by 5 to find that 5 pens cost 25 rupees. Finally, he looks at a display of colorful ribbons. The shopkeeper says the ratio of red ribbons to blue ribbons is 2:3. Rohan understands that the red ribbons represent 2 parts out of the 5 total parts, meaning they are 2/5 of the collection, not 2/3. He carefully notes that the order matters, as 2:3 is different from 3:2, and he successfully completes his shopping list with these clear mathematical steps.",
+ "menu_ids": [
+  "MAT-RATIO-K5-M1",
+  "MAT-RATIO-K14-M3",
+  "MAT-RATIO-K11-M4",
+  "MAT-RATIO-K8-M6",
+  "MAT-RATIO-K9-M7",
+  "MAT-RATIO-K10-M8",
+  "MAT-RATIO-K12-M10",
+  "MAT-RATIO-K13-M11",
+  "MAT-RATIO-K14-M12",
+  "MAT-RATIO-K15-M13"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Rohan calculates that if he wants 4 kilograms, he must pay 60 rupees because the ratio of weight to price remains constant.",
+    "kind": "what_if",
+    "q": "At the same stall, how much would 6 kilograms of potatoes cost?",
+    "options": [
+     "90 rupees",
+     "34 rupees",
+     "36 rupees",
+     "60 rupees"
+    ],
+    "explain": "Weight to price stays constant: 2 kg cost 30, so 6 kg cost three times, 90 rupees.",
+    "wrong": [
+     {
+      "misconception": "MAT-RATIO-K10-M8",
+      "why": "adds the difference 4 kg to 30 rupees"
+     },
+     {
+      "misconception": "MAT-RATIO-K11-M4",
+      "why": "adds 6 kilograms to 30 rupees"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby number from the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "He then multiplies 5 by 5 to find that 5 pens cost 25 rupees.",
+    "kind": "how",
+    "q": "After finding one pen costs 5 rupees, how does Rohan get the cost of 5 pens?",
+    "options": [
+     "He multiplies the one-pen price by five",
+     "He adds five pens to fifteen rupees",
+     "He divides the one-pen price by five",
+     "He adds the one-pen price to fifteen"
+    ],
+    "explain": "Rohan multiplies 5 rupees by 5 pens, so 5 pens cost 25 rupees.",
+    "wrong": [
+     {
+      "misconception": "MAT-RATIO-K11-M4",
+      "why": "adds the number of pens to the cost"
+     },
+     {
+      "misconception": "MAT-RATIO-K12-M10",
+      "why": "divides the unit value by the new number"
+     },
+     {
+      "misconception": null,
+      "why": "adds unit price to pack price instead of scaling"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan understands that the red ribbons represent 2 parts out of the 5 total parts, meaning they are 2/5 of the collection, not 2/3.",
+    "kind": "what_if",
+    "q": "A display has 30 ribbons, red to blue in the ratio 2:3. How many are red?",
+    "options": [
+     "12 red ribbons",
+     "20 red ribbons",
+     "18 red ribbons",
+     "2 red ribbons"
+    ],
+    "explain": "Red is 2 parts out of 5, so red is 2/5 of 30, which is 12.",
+    "wrong": [
+     {
+      "misconception": "MAT-RATIO-K14-M3",
+      "why": "takes red as 2/3 of the total"
+     },
+     {
+      "misconception": "MAT-RATIO-K5-M1",
+      "why": "swaps the order and gives blue's share"
+     },
+     {
+      "misconception": "MAT-RATIO-K14-M12",
+      "why": "thinks 2:3 means exactly 2 red ribbons"
+     }
+    ]
+   },
+   {
+    "evidence": "He carefully notes that the order matters, as 2:3 is different from 3:2, and he successfully completes his shopping list with these clear mathematical steps.",
+    "kind": "what_if",
+    "q": "If the red to blue ratio were 3:2 instead of 2:3, what would change?",
+    "options": [
+     "Red would be the bigger share of ribbons",
+     "Red would stay the same share as before",
+     "Red would be exactly three ribbons in all",
+     "Red would be just one more than blue"
+    ],
+    "explain": "Order matters: 3:2 means red has 3 parts of 5, so red becomes the bigger share.",
+    "wrong": [
+     {
+      "misconception": "MAT-RATIO-K5-M1",
+      "why": "thinks 3:2 is the same as 2:3"
+     },
+     {
+      "misconception": "MAT-RATIO-K14-M12",
+      "why": "reads ratio terms as actual counts"
+     },
+     {
+      "misconception": "MAT-RATIO-K9-M7",
+      "why": "treats a ratio as a fixed difference"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 34.3
+}

@@ -1,0 +1,139 @@
+{
+ "source": "train-0395-MAT-ALGEBRAINTRO.json",
+ "job": {
+  "job": "train-0395-MAT-ALGEBRAINTRO",
+  "topic_id": "MAT-ALGEBRAINTRO",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a rule explained with two contrasting examples",
+  "seed": 395
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1267,
+  "promptTokenCount": 2
+ },
+ "passage": "In algebra, we use letters like 'n' or 'x' as placeholders for numbers that can change or are unknown. A letter is just a symbol, not a specific value like 10, and it can represent any number depending on the situation. For example, if we have a pattern of 4, 8, 12, the rule is 4 multiplied by n, written as 4n, not n + 4. This is because we are scaling the position, not just adding a constant. Another important rule is that letters represent numbers, not objects; so, 5a means 5 times the value of 'a', not 5 apples. Furthermore, an algebraic expression like 'n + 5' is just a phrase describing a relationship, whereas an equation must have an equals sign to show that two expressions are balanced. Finally, remember that different letters can represent the same number, and the same letter can represent different numbers in different problems. For instance, if n + n = 10, then n must be 5, but in a different problem, n could be 2. Always treat letters as flexible numerical placeholders rather than fixed labels or objects.",
+ "menu_ids": [
+  "MAT-ALGEBRAINTRO-K11-M1",
+  "MAT-ALGEBRAINTRO-K12-M2",
+  "MAT-ALGEBRAINTRO-K13-M3",
+  "MAT-ALGEBRAINTRO-K10-M4",
+  "MAT-ALGEBRAINTRO-K4-M5",
+  "MAT-ALGEBRAINTRO-K4-M6",
+  "MAT-ALGEBRAINTRO-K5-M7",
+  "MAT-ALGEBRAINTRO-K6-M8",
+  "MAT-ALGEBRAINTRO-K7-M10",
+  "MAT-ALGEBRAINTRO-K8-M11"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "For example, if we have a pattern of 4, 8, 12, the rule is 4 multiplied by n, written as 4n, not n + 4.",
+    "kind": "which_explains",
+    "q": "A pattern goes 4, 8, 12, 16. Which rule gives the 5th term?",
+    "options": [
+     "Multiply the position by 4",
+     "Add 4 to the position",
+     "Add 4 to the last term only",
+     "Multiply the position by itself"
+    ],
+    "explain": "Each term is 4 times its position, so the rule is 4n and the 5th term is 20.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K5-M7",
+      "why": "thinks the rule is n + 4 from the common difference"
+     },
+     {
+      "misconception": null,
+      "why": "looks only at the step between terms"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up scaling by 4 with squaring"
+     }
+    ]
+   },
+   {
+    "evidence": "Another important rule is that letters represent numbers, not objects; so, 5a means 5 times the value of 'a', not 5 apples.",
+    "kind": "what_if",
+    "q": "If a = 3, what does 5a mean?",
+    "options": [
+     "5 times 3, which is 15",
+     "5 apples and 3 more",
+     "5 added to 3, which is 8",
+     "5 and 3 written together as 53"
+    ],
+    "explain": "5a means 5 times the value of a, so with a = 3 it is 15.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K11-M1",
+      "why": "thinks the letter stands for objects like apples"
+     },
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K6-M8",
+      "why": "treats 5a as an addition"
+     },
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K7-M10",
+      "why": "thinks 5a joins the digits as 53"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, an algebraic expression like 'n + 5' is just a phrase describing a relationship, whereas an equation must have an equals sign to show that two expressions are balanced.",
+    "kind": "difference",
+    "q": "How is the equation n + 5 = 9 different from the expression n + 5?",
+    "options": [
+     "It shows two sides that are balanced",
+     "It has a letter and the other has none",
+     "It always gives the answer n = 5",
+     "It is a phrase and the other is not"
+    ],
+    "explain": "An equation has an equals sign showing two balanced sides; an expression is only a phrase.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks the letter decides what an equation is"
+     },
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K10-M4",
+      "why": "thinks the letter has a fixed value"
+     },
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K13-M3",
+      "why": "thinks the expression is the equation and reverses the two"
+     }
+    ]
+   },
+   {
+    "evidence": "For instance, if n + n = 10, then n must be 5, but in a different problem, n could be 2.",
+    "kind": "why",
+    "q": "Why can n be 5 in one problem and 2 in another?",
+    "options": [
+     "A letter can take different values in different problems",
+     "A letter keeps one value for every problem",
+     "A letter must be 10 in every problem",
+     "A letter equals a different number each time it appears"
+    ],
+    "explain": "A letter is a flexible placeholder, so its value can change from one problem to another.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K4-M5",
+      "why": "thinks a letter has one fixed value throughout"
+     },
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K10-M4",
+      "why": "thinks the letter always stands for 10"
+     },
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K4-M6",
+      "why": "confuses different letters with different values"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 11.6
+}

@@ -1,0 +1,166 @@
+{
+ "source": "train-0068-SCI-BIO-CELL.json",
+ "job": {
+  "job": "train-0068-SCI-BIO-CELL",
+  "topic_id": "SCI-BIO-CELL",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a diary entry or letter by a student",
+  "seed": 68
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4073,
+  "promptTokenCount": 2
+ },
+ "passage": "Dear Diary, today in biology class, I learned that cells are the building blocks of life, but they are not all the same. My friend Rohan thought that an elephant must have giant cells compared to a mouse, but our teacher explained that organisms grow by increasing their number of cells, not by making individual cells larger. We also looked at onion peel cells under a microscope. I was surprised to see that even though plants need sunlight for photosynthesis, their root cells do not contain chloroplasts because they live underground. I used to think the nucleus was like a tiny brain that makes decisions, but the teacher clarified that it is actually a storage unit for genetic information, which acts as a blueprint for cell function. We also discussed bacteria, which are prokaryotic. Even though they lack a defined nucleus, they still possess DNA floating in their cytoplasm to carry out life processes. Finally, we learned that the cell membrane is not a solid, sealed wall; it is a selective, porous boundary that allows essential materials to move in and out. It is amazing how these tiny structures work together to keep us alive, whether we are a single-celled organism or a complex human being.",
+ "menu_ids": [
+  "SCI-BIO-CELL-K13-M2",
+  "SCI-BIO-CELL-K14-M3",
+  "SCI-BIO-CELL-K16-M4",
+  "SCI-BIO-CELL-K17-M5",
+  "SCI-BIO-CELL-K19-M6",
+  "SCI-BIO-CELL-K20-M7",
+  "SCI-BIO-CELL-K18-M8",
+  "SCI-BIO-CELL-K11-M9",
+  "SCI-BIO-CELL-K15-M10",
+  "SCI-BIO-CELL-K12-M11",
+  "SCI-BIO-CELL-K16-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "My friend Rohan thought that an elephant must have giant cells compared to a mouse, but our teacher explained that organisms grow by increasing their number of cells, not by making individual cells larger.",
+    "kind": "which_explains",
+    "q": "An elephant is far bigger than a mouse. What explains this difference?",
+    "options": [
+     "It has many more cells than a mouse",
+     "It has much larger cells than a mouse",
+     "It has cells that never stop stretching",
+     "It has a bigger brain-like nucleus in each cell"
+    ],
+    "explain": "Organisms grow by increasing their number of cells, not by making each cell larger.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CELL-K13-M2",
+      "why": "thinks bigger organisms have bigger cells"
+     },
+     {
+      "misconception": null,
+      "why": "thinks growth means cells keep enlarging"
+     },
+     {
+      "misconception": "SCI-BIO-CELL-K16-M4",
+      "why": "thinks the nucleus is a brain that controls size"
+     }
+    ]
+   },
+   {
+    "evidence": "I was surprised to see that even though plants need sunlight for photosynthesis, their root cells do not contain chloroplasts because they live underground.",
+    "kind": "what_if",
+    "q": "Meena looks at cells from a plant's root under a microscope. What will she find?",
+    "options": [
+     "She will find no chloroplasts in them",
+     "She will find chloroplasts in every cell",
+     "She will find chloroplasts, since plants need sunlight",
+     "She will find chloroplasts only near the nucleus"
+    ],
+    "explain": "Root cells live underground, so they do not contain chloroplasts, even though plants photosynthesise.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CELL-K19-M6",
+      "why": "thinks all plant cells have chloroplasts"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises from plants needing sunlight"
+     },
+     {
+      "misconception": null,
+      "why": "guesses chloroplasts sit beside the nucleus"
+     }
+    ]
+   },
+   {
+    "evidence": "I used to think the nucleus was like a tiny brain that makes decisions, but the teacher clarified that it is actually a storage unit for genetic information, which acts as a blueprint for cell function.",
+    "kind": "which_explains",
+    "q": "Which comparison best describes the job of the nucleus?",
+    "options": [
+     "A library holding the cell's instructions",
+     "A brain that decides what to do",
+     "A solid wall guarding the whole cell",
+     "An empty bubble that stores air"
+    ],
+    "explain": "The nucleus stores genetic information, a blueprint for the cell; it does not make decisions.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CELL-K16-M4",
+      "why": "thinks the nucleus thinks like a brain"
+     },
+     {
+      "misconception": "SCI-BIO-CELL-K14-M3",
+      "why": "mixes the nucleus up with a sealed membrane"
+     },
+     {
+      "misconception": "SCI-BIO-CELL-K18-M8",
+      "why": "thinks cell parts are empty air bubbles"
+     }
+    ]
+   },
+   {
+    "evidence": "Even though they lack a defined nucleus, they still possess DNA floating in their cytoplasm to carry out life processes.",
+    "kind": "why",
+    "q": "Sam says bacteria have no DNA because they lack a nucleus. Why is he wrong?",
+    "options": [
+     "Their DNA lies loose in the cytoplasm",
+     "Their nucleus is just too tiny to see",
+     "Their DNA comes from the food they eat",
+     "Their DNA is stuck to the cell wall"
+    ],
+    "explain": "Bacteria have no defined nucleus, but their DNA floats freely in the cytoplasm.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CELL-K16-M12",
+      "why": "thinks information can only be inside a nucleus"
+     },
+     {
+      "misconception": "SCI-BIO-CELL-K20-M7",
+      "why": "thinks bacteria cannot make their own DNA"
+     },
+     {
+      "misconception": "SCI-BIO-CELL-K15-M10",
+      "why": "mixes up the cell wall with where DNA is kept"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, we learned that the cell membrane is not a solid, sealed wall; it is a selective, porous boundary that allows essential materials to move in and out.",
+    "kind": "what_if",
+    "q": "What would happen to a cell if its membrane let nothing pass through?",
+    "options": [
+     "It would not get the materials it needs",
+     "It would be better protected and healthier",
+     "It would let the cell wall do that job",
+     "It would wait for the nucleus to decide"
+    ],
+    "explain": "The membrane is a porous boundary letting essential materials in and out; sealed, the cell gets nothing.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CELL-K14-M3",
+      "why": "thinks a sealed skin is what a membrane should be"
+     },
+     {
+      "misconception": "SCI-BIO-CELL-K15-M10",
+      "why": "thinks the cell wall and membrane are the same"
+     },
+     {
+      "misconception": "SCI-BIO-CELL-K16-M4",
+      "why": "thinks the nucleus makes decisions for the cell"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 40.4
+}

@@ -1,0 +1,163 @@
+{
+ "source": "train-0029-MAT-ANGLESHAPES.json",
+ "job": {
+  "job": "train-0029-MAT-ANGLESHAPES",
+  "topic_id": "MAT-ANGLESHAPES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a clear textbook explanation with one worked example",
+  "seed": 29
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3758,
+  "promptTokenCount": 2
+ },
+ "passage": "In geometry, an angle is formed by two rays sharing a common endpoint called the vertex. The size of an angle depends entirely on the amount of rotation between its two arms, not on the physical length of those arms. If you extend the arms of an angle, the angle measurement remains unchanged. A straight angle measures exactly 180 degrees and is considered a valid angle, even though it appears as a straight line. When using a protractor, you must place the centre mark exactly on the vertex and align the baseline with one arm to get an accurate reading. Regarding shapes, a triangle is classified as isosceles if at least two of its sides are equal in length, regardless of the length of the third side. Furthermore, all squares are special types of rectangles because they possess four right angles and opposite sides that are parallel. When identifying 3D solids, remember that edges are the straight line segments where two faces meet, and curved boundaries are not considered edges. For example, a cylinder has two circular faces and one curved surface, but it has zero straight edges. Always focus on the properties of the shape rather than its orientation or size to classify it correctly.",
+ "menu_ids": [
+  "MAT-ANGLESHAPES-K13-M3",
+  "MAT-ANGLESHAPES-K14-M4",
+  "MAT-ANGLESHAPES-K4-M5",
+  "MAT-ANGLESHAPES-K5-M6",
+  "MAT-ANGLESHAPES-K5-M7",
+  "MAT-ANGLESHAPES-K11-M8",
+  "MAT-ANGLESHAPES-K7-M10",
+  "MAT-ANGLESHAPES-K15-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "If you extend the arms of an angle, the angle measurement remains unchanged.",
+    "kind": "what_if",
+    "q": "Meena draws a 40 degree angle and then makes both arms longer. What is the angle now?",
+    "options": [
+     "Still exactly 40 degrees",
+     "More than 40 degrees",
+     "Less than 40 degrees",
+     "Exactly 80 degrees"
+    ],
+    "explain": "Extending the arms does not change the turn between them, so it stays 40 degrees.",
+    "wrong": [
+     {
+      "misconception": "MAT-ANGLESHAPES-K5-M6",
+      "why": "thinks longer arms make the angle bigger"
+     },
+     {
+      "misconception": null,
+      "why": "thinks longer arms make the opening narrower"
+     },
+     {
+      "misconception": null,
+      "why": "thinks doubling arm length doubles the angle"
+     }
+    ]
+   },
+   {
+    "evidence": "A straight angle measures exactly 180 degrees and is considered a valid angle, even though it appears as a straight line.",
+    "kind": "what_if",
+    "q": "Two rays start at one vertex and point in opposite directions. What do they make?",
+    "options": [
+     "A straight angle of 180 degrees",
+     "A line, which is not an angle",
+     "A reflex angle, bigger than a right angle",
+     "A right angle of 90 degrees"
+    ],
+    "explain": "Opposite rays form a straight angle of 180 degrees, which is a valid angle.",
+    "wrong": [
+     {
+      "misconception": "MAT-ANGLESHAPES-K5-M7",
+      "why": "thinks a straight line cannot be an angle"
+     },
+     {
+      "misconception": "MAT-ANGLESHAPES-K11-M8",
+      "why": "thinks any angle bigger than a right angle is reflex"
+     },
+     {
+      "misconception": null,
+      "why": "confuses opposite directions with perpendicular"
+     }
+    ]
+   },
+   {
+    "evidence": "When using a protractor, you must place the centre mark exactly on the vertex and align the baseline with one arm to get an accurate reading.",
+    "kind": "what_if",
+    "q": "Rohan puts the protractor's centre mark halfway along one arm. What will happen?",
+    "options": [
+     "His reading will not be accurate at all",
+     "His reading will be accurate on any arm point",
+     "His reading will be accurate if the baseline matches",
+     "His reading will grow with the arm's length"
+    ],
+    "explain": "The centre mark must sit exactly on the vertex; otherwise the reading is not accurate.",
+    "wrong": [
+     {
+      "misconception": "MAT-ANGLESHAPES-K4-M5",
+      "why": "thinks the centre can go anywhere along an arm"
+     },
+     {
+      "misconception": null,
+      "why": "thinks lining up the baseline is enough"
+     },
+     {
+      "misconception": "MAT-ANGLESHAPES-K5-M6",
+      "why": "thinks arm length changes the angle"
+     }
+    ]
+   },
+   {
+    "evidence": "Regarding shapes, a triangle is classified as isosceles if at least two of its sides are equal in length, regardless of the length of the third side.",
+    "kind": "which_example",
+    "q": "A triangle has sides 6 cm, 6 cm and 5.9 cm. Which type is it?",
+    "options": [
+     "Isosceles, because two of its sides match",
+     "Equilateral, because all sides are nearly equal",
+     "Scalene, because its third side is different",
+     "Isosceles, but only if it points upward"
+    ],
+    "explain": "Two sides are equal, so it is isosceles, whatever the third side's length.",
+    "wrong": [
+     {
+      "misconception": "MAT-ANGLESHAPES-K7-M10",
+      "why": "thinks a nearly equal third side stops it being isosceles"
+     },
+     {
+      "misconception": null,
+      "why": "thinks one different side makes it scalene"
+     },
+     {
+      "misconception": null,
+      "why": "thinks orientation decides the triangle's type"
+     }
+    ]
+   },
+   {
+    "evidence": "For example, a cylinder has two circular faces and one curved surface, but it has zero straight edges.",
+    "kind": "how",
+    "q": "How many edges does a cylinder have, and why?",
+    "options": [
+     "Zero, because its boundaries are curved",
+     "Two, one around each circular face",
+     "Three, one for each face or surface",
+     "Four, counting the lines in its drawing"
+    ],
+    "explain": "Edges are straight segments where faces meet; a cylinder's boundaries are curved, so it has none.",
+    "wrong": [
+     {
+      "misconception": "MAT-ANGLESHAPES-K15-M12",
+      "why": "counts curved boundaries as edges"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up faces and edges"
+     },
+     {
+      "misconception": null,
+      "why": "counts every line drawn in a picture"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 38.8
+}

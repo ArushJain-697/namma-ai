@@ -1,0 +1,141 @@
+{
+ "source": "train-0103-SCI-PHY-ELECTRICITY10.json",
+ "job": {
+  "job": "train-0103-SCI-PHY-ELECTRICITY10",
+  "topic_id": "SCI-PHY-ELECTRICITY10",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a short story with Indian characters in everyday life",
+  "seed": 103
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3280,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and his sister Meera were helping their father fix a string of decorative lights for Diwali. Meera noticed that when they added more bulbs in parallel, the brightness remained steady. She asked if the battery would run out faster if they added more branches. Their father explained that the battery does not supply a fixed current; instead, the current depends on the total resistance of the circuit. He showed them that adding more resistors in parallel actually decreases the total resistance, allowing more current to flow from the source. Rohan then picked up a copper wire and wondered if it had any resistance at all. His father clarified that even excellent conductors like copper possess some resistance, which is why wires can heat up when a large current passes through them. He also reminded them that current is not consumed by the bulbs; the same amount of charge that enters a bulb must exit it. Finally, he pointed out that while electrons drift slowly, the electric field that pushes them travels through the circuit almost instantly, ensuring all bulbs light up the moment the switch is closed.",
+ "menu_ids": [
+  "SCI-PHY-ELECTRICITY10-K13-M1",
+  "SCI-PHY-ELECTRICITY10-K15-M2",
+  "SCI-PHY-ELECTRICITY10-K16-M3",
+  "SCI-PHY-ELECTRICITY10-K18-M4",
+  "SCI-PHY-ELECTRICITY10-K19-M5",
+  "SCI-PHY-ELECTRICITY10-K21-M6",
+  "SCI-PHY-ELECTRICITY10-K14-M7",
+  "SCI-PHY-ELECTRICITY10-K6-M8",
+  "SCI-PHY-ELECTRICITY10-K22-M9",
+  "SCI-PHY-ELECTRICITY10-K20-M10",
+  "SCI-PHY-ELECTRICITY10-K5-M11",
+  "SCI-PHY-ELECTRICITY10-K17-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "He showed them that adding more resistors in parallel actually decreases the total resistance, allowing more current to flow from the source.",
+    "kind": "what_if",
+    "q": "Meera adds two more bulbs in parallel to the string. What happens to the total resistance?",
+    "options": [
+     "It goes down, so more current flows",
+     "It goes up, so less current flows",
+     "It stays the same, since current is fixed",
+     "It goes up, as each branch gets less voltage"
+    ],
+    "explain": "Adding resistors in parallel lowers total resistance, so more current flows from the battery.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-ELECTRICITY10-K21-M6",
+      "why": "thinks parallel resistors add up like series ones"
+     },
+     {
+      "misconception": "SCI-PHY-ELECTRICITY10-K15-M2",
+      "why": "thinks a battery always gives the same current"
+     },
+     {
+      "misconception": "SCI-PHY-ELECTRICITY10-K20-M10",
+      "why": "thinks battery voltage is shared among branches"
+     }
+    ]
+   },
+   {
+    "evidence": "His father clarified that even excellent conductors like copper possess some resistance, which is why wires can heat up when a large current passes through them.",
+    "kind": "what_if",
+    "q": "Rohan passes a very large current through a copper wire. What will happen to the wire?",
+    "options": [
+     "It warms up, as copper has some resistance",
+     "It stays cool, as copper has zero resistance",
+     "It stays cool, as low resistance means no heat",
+     "It warms up because the current gets used up"
+    ],
+    "explain": "Even copper has some resistance, so a large current makes the wire heat up.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-ELECTRICITY10-K17-M12",
+      "why": "thinks good conductors have zero resistance"
+     },
+     {
+      "misconception": "SCI-PHY-ELECTRICITY10-K22-M9",
+      "why": "thinks low-resistance wires never get hot"
+     },
+     {
+      "misconception": "SCI-PHY-ELECTRICITY10-K13-M1",
+      "why": "thinks current is consumed along the way"
+     }
+    ]
+   },
+   {
+    "evidence": "He also reminded them that current is not consumed by the bulbs; the same amount of charge that enters a bulb must exit it.",
+    "kind": "what_if",
+    "q": "An ammeter reads 0.5 A in the wire entering a bulb. What will it read in the wire leaving it?",
+    "options": [
+     "0.5 A, since no charge is used up",
+     "0.3 A, since the bulb uses some",
+     "0 A, since the bulb uses it all",
+     "1.0 A, since the bulb adds charge"
+    ],
+    "explain": "Bulbs do not consume current; the same charge that enters a bulb must leave it.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-ELECTRICITY10-K13-M1",
+      "why": "thinks a bulb uses up part of the current"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the bulb uses up all the current"
+     },
+     {
+      "misconception": null,
+      "why": "thinks a glowing bulb adds extra charge"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, he pointed out that while electrons drift slowly, the electric field that pushes them travels through the circuit almost instantly, ensuring all bulbs light up the moment the switch is closed.",
+    "kind": "which_explains",
+    "q": "Electrons move very slowly, yet every bulb glows the moment the switch is closed. Which explains this?",
+    "options": [
+     "The push on charges spreads through wires at once",
+     "Electrons race from the battery to each bulb",
+     "Bulbs near the positive end light first, then others",
+     "Bulbs store charge and release it when switched"
+    ],
+    "explain": "The electric field pushing electrons travels almost instantly, so all bulbs light together.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-ELECTRICITY10-K5-M11",
+      "why": "thinks electrons must travel from battery to bulb"
+     },
+     {
+      "misconception": "SCI-PHY-ELECTRICITY10-K19-M5",
+      "why": "thinks bulbs nearer the positive terminal get current first"
+     },
+     {
+      "misconception": null,
+      "why": "thinks bulbs hold charge like small batteries"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 34.9
+}

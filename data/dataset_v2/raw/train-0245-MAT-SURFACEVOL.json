@@ -1,0 +1,169 @@
+{
+ "source": "train-0245-MAT-SURFACEVOL.json",
+ "job": {
+  "job": "train-0245-MAT-SURFACEVOL",
+  "topic_id": "MAT-SURFACEVOL",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a puzzle or game that uses the idea",
+  "seed": 245
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 4101,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan is helping his grandfather build a water storage tank in their garden. The tank is a large cylinder with a radius of 1 meter and a height of 2 meters. Rohan calculates the space inside the tank to determine how much water it can hold. He remembers that volume is measured in cubic units, so he calculates the volume as 2π cubic meters. His grandfather then asks him to paint the outside of the tank. Rohan knows that the total surface area of a cylinder includes the curved surface area plus the areas of both the top and bottom circular bases, calculated as 2πr(h + r). He carefully measures the surface area to buy enough paint. Later, they decide to melt down a solid metal sphere with a radius of 3 cm to make smaller spheres, each with a radius of 1 cm. Rohan realizes that the number of small spheres is not just the ratio of the radii, but the ratio of their volumes, which is 27. Finally, they check a small container that holds 1000 cubic centimeters of water. Rohan correctly notes that this volume is exactly equivalent to 1 litre, ensuring they have the right capacity for their garden project.",
+ "menu_ids": [
+  "MAT-SURFACEVOL-K7-M1",
+  "MAT-SURFACEVOL-K8-M2",
+  "MAT-SURFACEVOL-K9-M3",
+  "MAT-SURFACEVOL-K11-M5",
+  "MAT-SURFACEVOL-K12-M6",
+  "MAT-SURFACEVOL-K13-M7",
+  "MAT-SURFACEVOL-K14-M8",
+  "MAT-SURFACEVOL-K15-M9",
+  "MAT-SURFACEVOL-K16-M10",
+  "MAT-SURFACEVOL-K17-M12",
+  "MAT-SURFACEVOL-K20-M14",
+  "MAT-SURFACEVOL-K21-M16",
+  "MAT-SURFACEVOL-K24-M17",
+  "MAT-SURFACEVOL-K24-M18"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Rohan calculates the space inside the tank to determine how much water it can hold.",
+    "kind": "which_explains",
+    "q": "Rohan wants to know how much water the tank holds. What should he find?",
+    "options": [
+     "The volume of space inside the tank",
+     "The total surface area of the tank",
+     "The curved surface area of the tank",
+     "The sum of its radius and height"
+    ],
+    "explain": "Water capacity is the space inside the tank, which is its volume, not any surface area.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks area measures how much a tank holds"
+     },
+     {
+      "misconception": "MAT-SURFACEVOL-K7-M1",
+      "why": "mixes up curved surface area with other measures"
+     },
+     {
+      "misconception": "MAT-SURFACEVOL-K17-M12",
+      "why": "thinks volume comes from adding dimensions"
+     }
+    ]
+   },
+   {
+    "evidence": "He remembers that volume is measured in cubic units, so he calculates the volume as 2π cubic meters.",
+    "kind": "which_explains",
+    "q": "Rohan wants the space inside the tank. Which unit fits this, and why?",
+    "options": [
+     "m³, since volume measures three-dimensional space",
+     "m², since the tank's base is a circle",
+     "m, since the height is given in meters",
+     "cm³, since 1 m³ equals 100 cm³"
+    ],
+    "explain": "Volume measures three-dimensional space, so it is written in cubic units like cubic meters.",
+    "wrong": [
+     {
+      "misconception": "MAT-SURFACEVOL-K16-M10",
+      "why": "thinks volume is in square units"
+     },
+     {
+      "misconception": null,
+      "why": "copies the unit of the given length"
+     },
+     {
+      "misconception": "MAT-SURFACEVOL-K24-M17",
+      "why": "thinks 1 m³ equals 100 cm³"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan knows that the total surface area of a cylinder includes the curved surface area plus the areas of both the top and bottom circular bases, calculated as 2πr(h + r).",
+    "kind": "what_if",
+    "q": "If Rohan painted only the curved surface area, what would stay unpainted?",
+    "options": [
+     "The two circular ends of the tank",
+     "The inside wall of the tank",
+     "The curved side near the base",
+     "Nothing, since both areas are the same"
+    ],
+    "explain": "Total surface area adds the top and bottom circles to the curved area, so those ends stay unpainted.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks painting covers the inside, not the ends"
+     },
+     {
+      "misconception": null,
+      "why": "picks a part that curved area already covers"
+     },
+     {
+      "misconception": "MAT-SURFACEVOL-K7-M1",
+      "why": "thinks total and curved surface area are equal"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan realizes that the number of small spheres is not just the ratio of the radii, but the ratio of their volumes, which is 27.",
+    "kind": "why",
+    "q": "The big sphere's radius is 3 times a small one's. Why can it make more than 3 small spheres?",
+    "options": [
+     "Because volume grows with the cube of radius",
+     "Because volume grows in step with the radius",
+     "Because the metal expands when it is melted",
+     "Because the big sphere has more surface to cover"
+    ],
+    "explain": "Volume depends on the cube of the radius, so tripling the radius gives 27 times the volume.",
+    "wrong": [
+     {
+      "misconception": "MAT-SURFACEVOL-K21-M16",
+      "why": "thinks volume scales directly with the radius"
+     },
+     {
+      "misconception": null,
+      "why": "thinks melting adds extra metal"
+     },
+     {
+      "misconception": "MAT-SURFACEVOL-K14-M8",
+      "why": "thinks surface area decides the amount of metal"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan correctly notes that this volume is exactly equivalent to 1 litre, ensuring they have the right capacity for their garden project.",
+    "kind": "what_if",
+    "q": "A jug holds 2000 cubic centimeters of water. How many litres is that?",
+    "options": [
+     "2 litres",
+     "20 litres",
+     "200 litres",
+     "0.2 litre"
+    ],
+    "explain": "1000 cubic centimeters equal 1 litre, so 2000 cubic centimeters equal 2 litres.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "moves the decimal the wrong way by one place"
+     },
+     {
+      "misconception": "MAT-SURFACEVOL-K24-M18",
+      "why": "thinks one litre equals 100 cm³"
+     },
+     {
+      "misconception": null,
+      "why": "divides by 10000 instead of 1000"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 33.5
+}

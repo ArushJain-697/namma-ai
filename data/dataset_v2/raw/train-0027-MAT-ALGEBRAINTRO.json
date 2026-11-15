@@ -1,0 +1,139 @@
+{
+ "source": "train-0027-MAT-ALGEBRAINTRO.json",
+ "job": {
+  "job": "train-0027-MAT-ALGEBRAINTRO",
+  "topic_id": "MAT-ALGEBRAINTRO",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a clear textbook explanation with one worked example",
+  "seed": 27
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2889,
+  "promptTokenCount": 2
+ },
+ "passage": "In mathematics, we often use letters like 'n' or 'x' to represent numbers that are unknown or can change. These letters are called variables. It is important to remember that a variable is just a placeholder for a number; it does not represent a specific object like an apple or a banana. For example, if we write 3n, it means 3 multiplied by n, not the number 3 followed by the digit n. If n is 4, then 3n equals 12. Sometimes, we use different letters in the same problem, such as x and y. These letters can represent the same value or different values depending on the situation. An algebraic expression is a combination of numbers and variables, like n + 5, which represents '5 more than n'. This is different from an equation, which uses an equals sign to show that two sides have the same value. For instance, in the equation 7 + 3 = 4 + 6, the equals sign tells us that both sides represent the same total of 10. We must be careful not to confuse expressions with equations, as expressions do not have an equals sign.",
+ "menu_ids": [
+  "MAT-ALGEBRAINTRO-K11-M1",
+  "MAT-ALGEBRAINTRO-K12-M2",
+  "MAT-ALGEBRAINTRO-K13-M3",
+  "MAT-ALGEBRAINTRO-K10-M4",
+  "MAT-ALGEBRAINTRO-K4-M5",
+  "MAT-ALGEBRAINTRO-K4-M6",
+  "MAT-ALGEBRAINTRO-K5-M7",
+  "MAT-ALGEBRAINTRO-K6-M8",
+  "MAT-ALGEBRAINTRO-K7-M10",
+  "MAT-ALGEBRAINTRO-K8-M11"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "For example, if we write 3n, it means 3 multiplied by n, not the number 3 followed by the digit n.",
+    "kind": "what_if",
+    "q": "Meena puts n = 4 into the expression 3n. What value does she get?",
+    "options": [
+     "12, because 3 times 4 is 12",
+     "34, because 3 is placed before 4",
+     "7, because 3 and 4 are added",
+     "30, because n always stands for 10"
+    ],
+    "explain": "3n means 3 multiplied by n, so with n = 4 it is 3 × 4 = 12.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K7-M10",
+      "why": "reads 3n as the digits 3 and n side by side"
+     },
+     {
+      "misconception": null,
+      "why": "adds the number and the variable instead of multiplying"
+     },
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K10-M4",
+      "why": "thinks a letter always stands for 10"
+     }
+    ]
+   },
+   {
+    "evidence": "These letters can represent the same value or different values depending on the situation.",
+    "kind": "what_if",
+    "q": "In one problem, Sita finds that x is 6. What can we say about y?",
+    "options": [
+     "It could equal 6 or another number",
+     "It could be any number except 6",
+     "It must be 7, the next number after 6",
+     "It must stand for an object, like a banana"
+    ],
+    "explain": "Different letters can have the same value or different values, so y may also be 6.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K4-M6",
+      "why": "thinks different letters can never be equal"
+     },
+     {
+      "misconception": null,
+      "why": "thinks letters follow each other like counting numbers"
+     },
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K11-M1",
+      "why": "thinks a letter stands for an object"
+     }
+    ]
+   },
+   {
+    "evidence": "An algebraic expression is a combination of numbers and variables, like n + 5, which represents '5 more than n'.",
+    "kind": "which_example",
+    "q": "Ravi has n marbles and then gets 5 more. Which shows his total?",
+    "options": [
+     "n + 5",
+     "5n",
+     "n − 5",
+     "n + 5 = 10"
+    ],
+    "explain": "Getting 5 more than n means adding 5 to n, which is written n + 5.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K6-M8",
+      "why": "writes '5 more than n' as 5n"
+     },
+     {
+      "misconception": null,
+      "why": "reverses 'more' into taking away"
+     },
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K13-M3",
+      "why": "thinks an expression needs an equals sign"
+     }
+    ]
+   },
+   {
+    "evidence": "For instance, in the equation 7 + 3 = 4 + 6, the equals sign tells us that both sides represent the same total of 10.",
+    "kind": "how",
+    "q": "In 7 + 3 = 4 + 6, what job does the equals sign do?",
+    "options": [
+     "Shows both sides stand for the same amount",
+     "Shows the answer 10 must be written next",
+     "Shows the right side is larger than the left",
+     "Shows both sides use the very same numbers"
+    ],
+    "explain": "The equals sign tells us both sides have the same value: 7 + 3 and 4 + 6 both make 10.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K8-M11",
+      "why": "thinks the equals sign means 'write the answer'"
+     },
+     {
+      "misconception": null,
+      "why": "thinks 4 + 6 is bigger because it looks different"
+     },
+     {
+      "misconception": null,
+      "why": "thinks equal sides must be written identically"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 31.0
+}

@@ -1,0 +1,167 @@
+{
+ "source": "train-0209-GEN-VOTING.json",
+ "job": {
+  "job": "train-0209-GEN-VOTING",
+  "topic_id": "GEN-VOTING",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a clear textbook explanation",
+  "seed": 209
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3630,
+  "promptTokenCount": 2
+ },
+ "passage": "In India, the right to vote is a fundamental pillar of our democracy, granted to every citizen who is at least 18 years old, regardless of their education, wealth, or social status. Voting is a voluntary exercise of your democratic right, meaning no citizen is legally punished or fined for choosing not to cast a ballot. During an election, you visit a polling station where the process is designed to be completely private. The Electronic Voting Machine (EVM) is a standalone device that is not connected to any internet or Wi-Fi network, ensuring it cannot be hacked remotely. When you press a button for your chosen candidate, a VVPAT machine prints a paper slip that you can view through a glass window for seven seconds to verify your choice before it drops into a sealed box. This slip remains with the election officials as a record and cannot be taken home by the voter. Furthermore, the Election Commission functions as an independent constitutional body that operates separately from the ruling government or the Prime Minister. The Model Code of Conduct serves as a set of guidelines for fair play during elections, and while it is not a criminal law that sends people to jail, it ensures that those in power do not misuse government resources to influence the outcome of the election.",
+ "menu_ids": [
+  "GEN-VOTING-K4-M1",
+  "GEN-VOTING-K9-M2",
+  "GEN-VOTING-K14-M3",
+  "GEN-VOTING-K13-M4",
+  "GEN-VOTING-K15-M5",
+  "GEN-VOTING-K17-M6",
+  "GEN-VOTING-K18-M7",
+  "GEN-VOTING-K21-M8",
+  "GEN-VOTING-K24-M10",
+  "GEN-VOTING-K26-M11",
+  "GEN-VOTING-K29-M12",
+  "GEN-VOTING-K28-M13"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "In India, the right to vote is a fundamental pillar of our democracy, granted to every citizen who is at least 18 years old, regardless of their education, wealth, or social status.",
+    "kind": "what_if",
+    "q": "Meena is 19, never went to school and owns no land. What decides if she can vote?",
+    "options": [
+     "Her age and being an Indian citizen",
+     "How much schooling she has had",
+     "How much land her family owns",
+     "Her family's standing in the village"
+    ],
+    "explain": "Every citizen aged 18 or more can vote, whatever their education, wealth or social status.",
+    "wrong": [
+     {
+      "misconception": "GEN-VOTING-K4-M1",
+      "why": "thinks only educated people can vote"
+     },
+     {
+      "misconception": null,
+      "why": "thinks owning property gives the right to vote"
+     },
+     {
+      "misconception": null,
+      "why": "thinks social status decides who may vote"
+     }
+    ]
+   },
+   {
+    "evidence": "Voting is a voluntary exercise of your democratic right, meaning no citizen is legally punished or fined for choosing not to cast a ballot.",
+    "kind": "what_if",
+    "q": "Raju decided not to vote this year. What will the law do to him?",
+    "options": [
+     "He will face no punishment at all",
+     "He will have to pay a fine",
+     "He will lose his right to vote",
+     "He will be sent to jail briefly"
+    ],
+    "explain": "Voting is voluntary, so no citizen is punished or fined for choosing not to vote.",
+    "wrong": [
+     {
+      "misconception": "GEN-VOTING-K28-M13",
+      "why": "thinks voting is compulsory and skipping it is fined"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the right is taken away if unused"
+     },
+     {
+      "misconception": null,
+      "why": "thinks not voting is a crime"
+     }
+    ]
+   },
+   {
+    "evidence": "The Electronic Voting Machine (EVM) is a standalone device that is not connected to any internet or Wi-Fi network, ensuring it cannot be hacked remotely.",
+    "kind": "why",
+    "q": "Why can no one sitting in another city change the votes inside an EVM?",
+    "options": [
+     "It is not linked to any network",
+     "It uses only a secure online link",
+     "It is kept inside a sealed box",
+     "It is watched by officials at every vote"
+    ],
+    "explain": "The EVM is a standalone device with no internet or Wi-Fi, so it cannot be hacked from far away.",
+    "wrong": [
+     {
+      "misconception": "GEN-VOTING-K14-M3",
+      "why": "thinks EVMs are online but protected"
+     },
+     {
+      "misconception": null,
+      "why": "picks the sealed box detail from the VVPAT sentence"
+     },
+     {
+      "misconception": "GEN-VOTING-K9-M2",
+      "why": "thinks officials see each person's vote"
+     }
+    ]
+   },
+   {
+    "evidence": "This slip remains with the election officials as a record and cannot be taken home by the voter.",
+    "kind": "what_if",
+    "q": "After voting, Asha asks to keep her VVPAT slip as proof. What happens to it?",
+    "options": [
+     "The slip stays sealed with the officials",
+     "The slip is handed to her to take home",
+     "The slip is posted to her house later",
+     "The slip is shown to every candidate"
+    ],
+    "explain": "The VVPAT slip stays with election officials as a record; voters cannot take it home.",
+    "wrong": [
+     {
+      "misconception": "GEN-VOTING-K15-M5",
+      "why": "thinks the slip is the voter's proof to keep"
+     },
+     {
+      "misconception": null,
+      "why": "still believes the voter must receive the slip"
+     },
+     {
+      "misconception": "GEN-VOTING-K9-M2",
+      "why": "thinks others can see who a person voted for"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, the Election Commission functions as an independent constitutional body that operates separately from the ruling government or the Prime Minister.",
+    "kind": "recall",
+    "q": "How is the Election Commission related to the Prime Minister?",
+    "options": [
+     "It works independently of him and his government",
+     "It is a department that follows his orders",
+     "It works for whichever party is in power",
+     "It is run by members of his party"
+    ],
+    "explain": "The Election Commission is an independent constitutional body, separate from the ruling government and the Prime Minister.",
+    "wrong": [
+     {
+      "misconception": "GEN-VOTING-K21-M8",
+      "why": "thinks the Commission takes orders from the Prime Minister"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the Commission serves the ruling party"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the Prime Minister's party controls elections"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 39.1
+}

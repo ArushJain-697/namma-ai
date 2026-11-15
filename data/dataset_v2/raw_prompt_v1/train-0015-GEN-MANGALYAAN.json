@@ -1,0 +1,169 @@
+{
+ "source": "train-0015-GEN-MANGALYAAN.json",
+ "job": {
+  "job": "train-0015-GEN-MANGALYAAN",
+  "topic_id": "GEN-MANGALYAAN",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a diary entry or letter by a student",
+  "seed": 15
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3816,
+  "promptTokenCount": 2
+ },
+ "passage": "Dear Diary, today I learned so much about India's space missions! My teacher explained that Mangalyaan, or the Mars Orbiter Mission, was a brilliant success. Unlike what some think, it did not carry a rover to drive on the surface, nor did it land on Mars. Instead, it was an orbiter designed to study the Martian atmosphere and surface features from space. To reach Mars, it performed complex manoeuvres, firing its engines to slow down so it could be captured by Mars's gravity. It did not just float there; gravity exists everywhere in space, and it is what keeps satellites in their orbits. Later, we discussed Aditya-L1, our mission to study the Sun. It is not going to land on the Sun, which would be impossible due to the heat. Instead, it travels to a special point called L1, where the gravitational forces of the Sun and Earth interact to allow a stable halo orbit. It takes about four months to reach this point, not just a few days. Aditya-L1 carries seven different scientific instruments to observe the Sun's corona and solar winds, proving it is much more than just a simple camera. It is amazing how ISRO achieves these feats with such precision and planning!",
+ "menu_ids": [
+  "GEN-MANGALYAAN-K13-M1",
+  "GEN-MANGALYAAN-K14-M2",
+  "GEN-MANGALYAAN-K14-M3",
+  "GEN-MANGALYAAN-K15-M4",
+  "GEN-MANGALYAAN-K15-M5",
+  "GEN-MANGALYAAN-K16-M6",
+  "GEN-MANGALYAAN-K17-M7",
+  "GEN-MANGALYAAN-K18-M8",
+  "GEN-MANGALYAAN-K19-M9",
+  "GEN-MANGALYAAN-K19-M10",
+  "GEN-MANGALYAAN-K20-M11",
+  "GEN-MANGALYAAN-K21-M12",
+  "GEN-MANGALYAAN-K29-M13",
+  "GEN-MANGALYAAN-K22-M14"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "To reach Mars, it performed complex manoeuvres, firing its engines to slow down so it could be captured by Mars's gravity.",
+    "kind": "why",
+    "q": "Why did Mangalyaan fire its engines as it came near Mars?",
+    "options": [
+     "To slow down so Mars's gravity could capture it",
+     "To speed up so it could reach Mars faster",
+     "To hold its speed until Mars pulled it in",
+     "To aim itself straight at the surface of Mars"
+    ],
+    "explain": "Mangalyaan fired its engines to slow down, so that Mars's gravity could capture it into orbit.",
+    "wrong": [
+     {
+      "misconception": "GEN-MANGALYAAN-K19-M10",
+      "why": "thinks engines can only speed things up"
+     },
+     {
+      "misconception": "GEN-MANGALYAAN-K19-M9",
+      "why": "thinks Mars pulled it in without any engine firing"
+     },
+     {
+      "misconception": "GEN-MANGALYAAN-K18-M8",
+      "why": "thinks a spacecraft is fired straight at Mars"
+     }
+    ]
+   },
+   {
+    "evidence": "It did not just float there; gravity exists everywhere in space, and it is what keeps satellites in their orbits.",
+    "kind": "which_explains",
+    "q": "A satellite circles Earth far above the ground. What keeps it moving around Earth?",
+    "options": [
+     "Earth's gravity, which reaches everywhere in space",
+     "Being so high that gravity cannot reach it",
+     "Floating freely because space has no gravity",
+     "Its engines firing all the time without stopping"
+    ],
+    "explain": "Gravity exists everywhere in space, and it is gravity that keeps satellites in their orbits.",
+    "wrong": [
+     {
+      "misconception": "GEN-MANGALYAAN-K29-M13",
+      "why": "thinks satellites are beyond Earth's gravity"
+     },
+     {
+      "misconception": "GEN-MANGALYAAN-K21-M12",
+      "why": "thinks there is no gravity in space"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up orbiting with Mangalyaan firing its engines"
+     }
+    ]
+   },
+   {
+    "evidence": "Instead, it was an orbiter designed to study the Martian atmosphere and surface features from space.",
+    "kind": "how",
+    "q": "How did Mangalyaan gather information about the planet Mars?",
+    "options": [
+     "By circling Mars and observing it from above",
+     "By sending a rover to drive across it",
+     "By landing briefly to collect soil samples",
+     "By testing machines only, without doing science"
+    ],
+    "explain": "Mangalyaan was an orbiter; it studied Mars's atmosphere and surface features from space, without landing.",
+    "wrong": [
+     {
+      "misconception": "GEN-MANGALYAAN-K15-M4",
+      "why": "thinks Mangalyaan carried a rover"
+     },
+     {
+      "misconception": "GEN-MANGALYAAN-K14-M3",
+      "why": "thinks Mangalyaan landed on Mars"
+     },
+     {
+      "misconception": "GEN-MANGALYAAN-K15-M5",
+      "why": "thinks it only proved technology and did no science"
+     }
+    ]
+   },
+   {
+    "evidence": "Instead, it travels to a special point called L1, where the gravitational forces of the Sun and Earth interact to allow a stable halo orbit.",
+    "kind": "recall",
+    "q": "What makes the point L1 a good place for Aditya-L1 to stay?",
+    "options": [
+     "The Sun's and Earth's pulls allow a stable orbit",
+     "No gravity from the Sun or Earth reaches it",
+     "It gives the best view of the Moon and weather",
+     "The craft can land there on the Sun's surface"
+    ],
+    "explain": "At L1, the gravity of the Sun and Earth work together, so Aditya-L1 can keep a stable halo orbit.",
+    "wrong": [
+     {
+      "misconception": "GEN-MANGALYAAN-K29-M13",
+      "why": "thinks spacecraft stay up by escaping gravity"
+     },
+     {
+      "misconception": "GEN-MANGALYAAN-K22-M14",
+      "why": "thinks Aditya-L1 studies the Moon and weather"
+     },
+     {
+      "misconception": null,
+      "why": "misses that landing on the Sun is impossible"
+     }
+    ]
+   },
+   {
+    "evidence": "Aditya-L1 carries seven different scientific instruments to observe the Sun's corona and solar winds, proving it is much more than just a simple camera.",
+    "kind": "which_explains",
+    "q": "Meena says Aditya-L1 only takes photos of the Sun. Which fact shows she is wrong?",
+    "options": [
+     "It has seven tools to study the corona and winds",
+     "It also studies the Moon and Earth's weather",
+     "It will land on the Sun to collect samples",
+     "It takes about four months to reach its point"
+    ],
+    "explain": "Aditya-L1 carries seven scientific instruments to observe the Sun's corona and solar winds, so it does far more than photograph.",
+    "wrong": [
+     {
+      "misconception": "GEN-MANGALYAAN-K22-M14",
+      "why": "thinks Aditya-L1 studies the Moon and weather"
+     },
+     {
+      "misconception": null,
+      "why": "ignores that the Sun's heat makes landing impossible"
+     },
+     {
+      "misconception": null,
+      "why": "picks a true detail that does not answer the question"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 37.7
+}

@@ -1,0 +1,169 @@
+{
+ "source": "train-0026-GEN-WATERCONSERVE.json",
+ "job": {
+  "job": "train-0026-GEN-WATERCONSERVE",
+  "topic_id": "GEN-WATERCONSERVE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a passage rich in numbers, dates or measurements",
+  "seed": 26
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4084,
+  "promptTokenCount": 2
+ },
+ "passage": "India experiences a highly uneven distribution of rainfall, with regions like Mawsynram receiving over 11,000 mm annually, while parts of Rajasthan receive less than 200 mm. Despite this, many believe that rain will naturally refill all our resources, ignoring that only a fraction of rainfall infiltrates the soil to recharge aquifers. Groundwater is a finite treasure, yet many think a dry borewell simply requires deeper drilling, failing to realize that the water table is dropping globally due to over-extraction. Furthermore, our water footprint extends far beyond the tap; producing a single kilogram of rice requires approximately 2,500 litres of water, far more than the few litres used for daily bathing. We often dismiss greywater from washing clothes as useless waste, yet this water can be safely treated and reused for gardening or flushing. Similarly, drip irrigation is often misunderstood as less effective than flooding, even though it delivers water directly to the roots, significantly reducing evaporation losses. Every individual, regardless of age, must recognize that usable freshwater is a limited resource. By adopting rainwater harvesting to recharge groundwater and fixing minor leaks that waste thousands of litres annually, we can secure our future. Saving water is not just a government responsibility; it is a vital daily habit for every student.",
+ "menu_ids": [
+  "GEN-WATERCONSERVE-K5-M1",
+  "GEN-WATERCONSERVE-K8-M3",
+  "GEN-WATERCONSERVE-K9-M4",
+  "GEN-WATERCONSERVE-K6-M5",
+  "GEN-WATERCONSERVE-K10-M6",
+  "GEN-WATERCONSERVE-K11-M7",
+  "GEN-WATERCONSERVE-K17-M10",
+  "GEN-WATERCONSERVE-K18-M11",
+  "GEN-WATERCONSERVE-K19-M12",
+  "GEN-WATERCONSERVE-K20-M13",
+  "GEN-WATERCONSERVE-K21-M14",
+  "GEN-WATERCONSERVE-K24-M15",
+  "GEN-WATERCONSERVE-K25-M16",
+  "GEN-WATERCONSERVE-K26-M17"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "India experiences a highly uneven distribution of rainfall, with regions like Mawsynram receiving over 11,000 mm annually, while parts of Rajasthan receive less than 200 mm.",
+    "kind": "why",
+    "q": "Why might a school in Rajasthan need to save water more than one in Mawsynram?",
+    "options": [
+     "It gets far less rain every year",
+     "It gets the same rain as all of India",
+     "It gets over 11,000 mm of rain yearly",
+     "It gets more rain, but floods waste it"
+    ],
+    "explain": "Rain in India is uneven: Rajasthan gets under 200 mm, while Mawsynram gets over 11,000 mm.",
+    "wrong": [
+     {
+      "misconception": "GEN-WATERCONSERVE-K10-M6",
+      "why": "thinks every part of India gets similar rain"
+     },
+     {
+      "misconception": null,
+      "why": "picks Mawsynram's number by mistake"
+     },
+     {
+      "misconception": null,
+      "why": "reverses which place gets more rain"
+     }
+    ]
+   },
+   {
+    "evidence": "Despite this, many believe that rain will naturally refill all our resources, ignoring that only a fraction of rainfall infiltrates the soil to recharge aquifers.",
+    "kind": "what_if",
+    "q": "Heavy rain falls on a town. Will all of it refill the town's aquifers?",
+    "options": [
+     "No, only a small part soaks into soil",
+     "Yes, rain naturally refills all our water",
+     "Yes, all of it becomes drinking water",
+     "No, rain only refills rivers and lakes"
+    ],
+    "explain": "Only a fraction of rainfall soaks into the soil to recharge aquifers, so rain cannot refill everything.",
+    "wrong": [
+     {
+      "misconception": "GEN-WATERCONSERVE-K6-M5",
+      "why": "thinks rain refills all our water"
+     },
+     {
+      "misconception": "GEN-WATERCONSERVE-K11-M7",
+      "why": "thinks all rain becomes drinking water"
+     },
+     {
+      "misconception": "GEN-WATERCONSERVE-K8-M3",
+      "why": "thinks rivers and lakes hold most fresh water"
+     }
+    ]
+   },
+   {
+    "evidence": "Groundwater is a finite treasure, yet many think a dry borewell simply requires deeper drilling, failing to realize that the water table is dropping globally due to over-extraction.",
+    "kind": "which_explains",
+    "q": "A family's borewell has dried up. What is the real cause behind it?",
+    "options": [
+     "Overuse is lowering the water table everywhere",
+     "This borewell just needs drilling a bit deeper",
+     "All water below this area is now gone",
+     "It will refill as fast as it was pumped"
+    ],
+    "explain": "The water table is dropping globally because we pump out too much groundwater, so deeper drilling is no fix.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "holds the belief the passage says is mistaken"
+     },
+     {
+      "misconception": "GEN-WATERCONSERVE-K18-M11",
+      "why": "thinks a dry borewell means no water anywhere below"
+     },
+     {
+      "misconception": "GEN-WATERCONSERVE-K17-M10",
+      "why": "thinks groundwater refills as fast as it is pumped"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, our water footprint extends far beyond the tap; producing a single kilogram of rice requires approximately 2,500 litres of water, far more than the few litres used for daily bathing.",
+    "kind": "difference",
+    "q": "How does the water needed for one kilogram of rice compare with daily bathing?",
+    "options": [
+     "Rice needs far more, about 2,500 litres",
+     "Rice needs only a few litres, like bathing",
+     "Bathing needs more, since we use it directly",
+     "Rice needs about 200 litres, a little more"
+    ],
+    "explain": "Producing 1 kg of rice needs about 2,500 litres, far more than the few litres used for bathing.",
+    "wrong": [
+     {
+      "misconception": "GEN-WATERCONSERVE-K24-M15",
+      "why": "thinks growing rice uses only a few litres"
+     },
+     {
+      "misconception": "GEN-WATERCONSERVE-K21-M14",
+      "why": "thinks footprint is only water used at the tap"
+     },
+     {
+      "misconception": null,
+      "why": "grabs a different number from the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "Similarly, drip irrigation is often misunderstood as less effective than flooding, even though it delivers water directly to the roots, significantly reducing evaporation losses.",
+    "kind": "how",
+    "q": "How does drip irrigation save more water than flooding a field?",
+    "options": [
+     "It sends water straight to roots, cutting evaporation",
+     "It uses greywater, so no fresh water is needed",
+     "It catches rain, so it refills the groundwater",
+     "It floods the soil, so the ground stores more"
+    ],
+    "explain": "Drip irrigation gives water directly to the roots, so much less is lost to evaporation.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "mixes it up with reusing greywater"
+     },
+     {
+      "misconception": "GEN-WATERCONSERVE-K20-M13",
+      "why": "mixes it up with rainwater harvesting"
+     },
+     {
+      "misconception": null,
+      "why": "believes flooding is the better method"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 44.8
+}

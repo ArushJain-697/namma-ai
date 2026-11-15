@@ -1,0 +1,143 @@
+{
+ "source": "train-0239-MAT-RATIONAL.json",
+ "job": {
+  "job": "train-0239-MAT-RATIONAL",
+  "topic_id": "MAT-RATIONAL",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a conversation between a teacher and two students",
+  "seed": 239
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2865,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today, let us clarify some common doubts about rational numbers. Remember, a rational number is any number that can be expressed as p/q, where p and q are integers and q is not zero. For instance, zero is a rational number because it can be written as 0/1. Now, consider the fraction 12/18. To find its standard form, we must divide both the numerator and denominator by their greatest common divisor, which is 6, resulting in 2/3. Some students mistakenly think 6/9 is the standard form, but it can be simplified further. Also, remember that the position of the negative sign does not change the value; -3/4 is exactly the same as 3/(-4). When adding fractions like 1/2 and 1/3, we must find a common denominator of 6, making the sum 3/6 + 2/6, which equals 5/6. Adding the denominators directly to get 2/5 is a common error. Finally, when multiplying, 1/2 times 1/3 equals 1/6. Notice that 1/6 is smaller than 1/2, proving that multiplying two proper fractions does not always result in a larger number. Always check your steps carefully.",
+ "menu_ids": [
+  "MAT-RATIONAL-K3-M1",
+  "MAT-RATIONAL-K4-M2",
+  "MAT-RATIONAL-K4-M3",
+  "MAT-RATIONAL-K5-M4",
+  "MAT-RATIONAL-K5-M5",
+  "MAT-RATIONAL-K7-M6",
+  "MAT-RATIONAL-K7-M7",
+  "MAT-RATIONAL-K8-M9",
+  "MAT-RATIONAL-K10-M10",
+  "MAT-RATIONAL-K11-M11",
+  "MAT-RATIONAL-K14-M13",
+  "MAT-RATIONAL-K15-M14",
+  "MAT-RATIONAL-K17-M15",
+  "MAT-RATIONAL-K17-M16"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "For instance, zero is a rational number because it can be written as 0/1.",
+    "kind": "which_example",
+    "q": "Meena says zero is not rational because it means nothing. Which fraction proves her wrong?",
+    "options": [
+     "0/1",
+     "0/0",
+     "5/0",
+     "10/0"
+    ],
+    "explain": "Zero can be written as 0/1, with integers p and q and q not zero, so it is rational.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "forgets that the denominator q cannot be zero"
+     },
+     {
+      "misconception": "MAT-RATIONAL-K5-M4",
+      "why": "thinks 5/0 equals 0"
+     },
+     {
+      "misconception": null,
+      "why": "thinks any fraction with zero in it equals zero"
+     }
+    ]
+   },
+   {
+    "evidence": "Some students mistakenly think 6/9 is the standard form, but it can be simplified further.",
+    "kind": "what_if",
+    "q": "Asha divides 12 and 18 by 2 and gets 6/9. What should she do next?",
+    "options": [
+     "Divide 6 and 9 by 3 to get 2/3",
+     "Stop, because 6/9 is already the standard form",
+     "Add 1 to both to get 7/10",
+     "Divide only 9 by 3 to get 6/3"
+    ],
+    "explain": "6/9 can be simplified further; dividing 12/18 by the GCD 6 gives the standard form 2/3.",
+    "wrong": [
+     {
+      "misconception": "MAT-RATIONAL-K8-M9",
+      "why": "thinks any common factor gives the standard form"
+     },
+     {
+      "misconception": "MAT-RATIONAL-K7-M6",
+      "why": "thinks adding the same number keeps it equivalent"
+     },
+     {
+      "misconception": null,
+      "why": "divides only one part of the fraction"
+     }
+    ]
+   },
+   {
+    "evidence": "Also, remember that the position of the negative sign does not change the value; -3/4 is exactly the same as 3/(-4).",
+    "kind": "what_if",
+    "q": "Raju thinks 3/(-4) is positive because its top is positive. What is its real value?",
+    "options": [
+     "It equals -3/4, a negative number",
+     "It equals 3/4, a positive number",
+     "It is not rational, since -4 is negative",
+     "It equals -4/3 after moving the sign"
+    ],
+    "explain": "Moving the negative sign does not change the value, so 3/(-4) is exactly -3/4.",
+    "wrong": [
+     {
+      "misconception": "MAT-RATIONAL-K10-M10",
+      "why": "thinks 3/(-4) is positive and differs from -3/4"
+     },
+     {
+      "misconception": "MAT-RATIONAL-K3-M1",
+      "why": "thinks a negative denominator is not allowed"
+     },
+     {
+      "misconception": null,
+      "why": "flips the fraction while moving the sign"
+     }
+    ]
+   },
+   {
+    "evidence": "Notice that 1/6 is smaller than 1/2, proving that multiplying two proper fractions does not always result in a larger number.",
+    "kind": "which_explains",
+    "q": "What does 1/2 times 1/3 equal 1/6 teach us about multiplying such fractions?",
+    "options": [
+     "The product is smaller than both fractions",
+     "The product is always larger than both fractions",
+     "The product equals their sum, which is 5/6",
+     "The product lies between 1/3 and 1/2"
+    ],
+    "explain": "1/6 is smaller than 1/2, so multiplying proper fractions does not always give a larger number.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "believes multiplication always makes numbers bigger"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the product with the sum from the passage"
+     },
+     {
+      "misconception": null,
+      "why": "guesses the answer sits between the two fractions"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 30.2
+}

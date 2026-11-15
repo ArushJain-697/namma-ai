@@ -1,0 +1,166 @@
+{
+ "source": "train-0310-SOC-CIV-MARKETS.json",
+ "job": {
+  "job": "train-0310-SOC-CIV-MARKETS",
+  "topic_id": "SOC-CIV-MARKETS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a question-and-answer (FAQ) style passage",
+  "seed": 310
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1793,
+  "promptTokenCount": 2
+ },
+ "passage": "Welcome to our guide on how markets function in our daily lives. Many people wonder if weekly markets are only for those with limited budgets, but in reality, they offer a wide variety of goods for everyone, often at lower prices because shopkeepers have fewer overhead costs like rent or electricity. You might also notice that products move through a chain of markets. Goods are produced in factories or farms, then sold to wholesale traders, who distribute them to retail shops. It is a common mistake to think that wholesale markets are where goods are manufactured; in fact, they are just large-scale storage and distribution hubs. Furthermore, the price of an item changes as it moves along this chain. Each person in the distribution process adds their own profit margin to cover their expenses and labor, which is why the final price in a neighborhood shop is higher than the wholesale cost. Finally, while malls are often seen as selling superior goods, the quality of a branded shirt or vegetable is often identical to what you find in a local market. Malls simply provide a different shopping experience with air conditioning and fancy displays, but they do not inherently change the quality of the product itself.",
+ "menu_ids": [
+  "SOC-CIV-MARKETS-K4-M1",
+  "SOC-CIV-MARKETS-K5-M2",
+  "SOC-CIV-MARKETS-K6-M3",
+  "SOC-CIV-MARKETS-K7-M4",
+  "SOC-CIV-MARKETS-K4-M5",
+  "SOC-CIV-MARKETS-K5-M7",
+  "SOC-CIV-MARKETS-K5-M8",
+  "SOC-CIV-MARKETS-K6-M9",
+  "SOC-CIV-MARKETS-K7-M10",
+  "SOC-CIV-MARKETS-K11-M11",
+  "SOC-CIV-MARKETS-K13-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Each person in the distribution process adds their own profit margin to cover their expenses and labor, which is why the final price in a neighborhood shop is higher than the wholesale cost.",
+    "kind": "why",
+    "q": "Why does a shirt cost more in a neighbourhood shop than at wholesale?",
+    "options": [
+     "Each seller along the chain adds a profit",
+     "The shop owner has to pay the factory twice",
+     "Wholesale traders sell only damaged goods cheaply",
+     "Shops must charge the same price as malls"
+    ],
+    "explain": "Everyone in the chain adds a profit margin to cover expenses and labour, so the price rises step by step.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-MARKETS-K7-M4",
+      "why": "thinks the price stays the same along the chain, so invents another reason"
+     },
+     {
+      "misconception": "SOC-CIV-MARKETS-K5-M2",
+      "why": "thinks lower-priced goods must be poorer quality"
+     },
+     {
+      "misconception": null,
+      "why": "assumes shop prices are copied from malls"
+     }
+    ]
+   },
+   {
+    "evidence": "It is a common mistake to think that wholesale markets are where goods are manufactured; in fact, they are just large-scale storage and distribution hubs.",
+    "kind": "which_example",
+    "q": "A trader keeps thousands of sacks of rice and sends them to many shops. What is this place?",
+    "options": [
+     "A wholesale market that stores and distributes goods",
+     "A farm that grows the rice it sells",
+     "A weekly market that opens on one fixed day",
+     "A mall that sells rice to shoppers directly"
+    ],
+    "explain": "Wholesale markets store goods in large amounts and distribute them to retail shops; they do not make goods.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-MARKETS-K6-M3",
+      "why": "thinks goods are made where they are first sold in bulk"
+     },
+     {
+      "misconception": "SOC-CIV-MARKETS-K4-M5",
+      "why": "thinks every market runs on a fixed weekly day"
+     },
+     {
+      "misconception": "SOC-CIV-MARKETS-K5-M7",
+      "why": "confuses a mall with other kinds of sellers"
+     }
+    ]
+   },
+   {
+    "evidence": "Many people wonder if weekly markets are only for those with limited budgets, but in reality, they offer a wide variety of goods for everyone, often at lower prices because shopkeepers have fewer overhead costs like rent or electricity.",
+    "kind": "why",
+    "q": "Why can weekly market sellers often keep their prices low?",
+    "options": [
+     "They pay less for rent and electricity",
+     "They buy goods only from poor farmers",
+     "They sell goods that are of lower quality",
+     "They skip the wholesale traders completely"
+    ],
+    "explain": "Weekly market shopkeepers have fewer overhead costs such as rent and electricity, so they can charge less.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-MARKETS-K4-M1",
+      "why": "thinks weekly markets are only for poor people and cheap goods"
+     },
+     {
+      "misconception": "SOC-CIV-MARKETS-K5-M2",
+      "why": "thinks low price means low quality"
+     },
+     {
+      "misconception": "SOC-CIV-MARKETS-K7-M10",
+      "why": "thinks the chain is useless and can simply be skipped"
+     }
+    ]
+   },
+   {
+    "evidence": "Malls simply provide a different shopping experience with air conditioning and fancy displays, but they do not inherently change the quality of the product itself.",
+    "kind": "which_explains",
+    "q": "Meena pays more for a branded shirt in a mall than in a local market. Why?",
+    "options": [
+     "She pays for the mall's shopping experience",
+     "The mall shirt is made of better cloth",
+     "The mall buys shirts straight from wholesalers",
+     "Local markets cannot sell branded shirts at all"
+    ],
+    "explain": "Malls offer air conditioning and fancy displays, but the shirt's quality is the same as in a local market.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-MARKETS-K5-M2",
+      "why": "thinks mall goods are always better in quality"
+     },
+     {
+      "misconception": "SOC-CIV-MARKETS-K7-M10",
+      "why": "mixes up who sells to whom in the chain"
+     },
+     {
+      "misconception": "SOC-CIV-MARKETS-K13-M12",
+      "why": "thinks different markets cannot offer the same goods"
+     }
+    ]
+   },
+   {
+    "evidence": "Goods are produced in factories or farms, then sold to wholesale traders, who distribute them to retail shops.",
+    "kind": "recall",
+    "q": "In the chain of markets, who buys goods directly from factories and farms?",
+    "options": [
+     "Wholesale traders who supply the shops",
+     "Retail shops who serve ordinary customers",
+     "Ordinary customers who shop every week",
+     "Mall owners who display branded goods"
+    ],
+    "explain": "Goods go from factories and farms to wholesale traders, who then distribute them to retail shops.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-MARKETS-K6-M9",
+      "why": "mixes up the order of wholesalers and retailers in the chain"
+     },
+     {
+      "misconception": "SOC-CIV-MARKETS-K11-M11",
+      "why": "thinks anyone buying in large quantity is a wholesaler"
+     },
+     {
+      "misconception": "SOC-CIV-MARKETS-K5-M7",
+      "why": "picks a nearby retail place from the passage"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 16.5
+}

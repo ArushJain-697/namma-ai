@@ -1,0 +1,143 @@
+{
+ "source": "train-0055-MAT-RATIONAL.json",
+ "job": {
+  "job": "train-0055-MAT-RATIONAL",
+  "topic_id": "MAT-RATIONAL",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a market or shop situation that uses the idea",
+  "seed": 55
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3348,
+  "promptTokenCount": 2
+ },
+ "passage": "In the bustling local market, Rahul is helping his father manage their fruit stall. They have 5 crates of apples, which can be written as 5/1, showing that every integer is a rational number. A customer asks for a discount, so Rahul decides to reduce the price of a pack of mangoes from 1/2 rupees to 1/3 rupees. He calculates the change by subtracting 1/3 from 1/2, noting that the order matters because subtraction is not commutative. Later, a bulk buyer wants to purchase 3/4 of a kilogram of grapes. Rahul explains that the additive inverse of this weight is -3/4, which balances the scale perfectly. While packing, Rahul takes 1/2 of the remaining 1/3 kilogram of cherries. He knows that multiplying these fractions results in 1/6, which is smaller than the original 1/3, proving that multiplication does not always lead to a larger value. Finally, he divides 3/4 kilogram of berries by 1/2, resulting in 1.5 kilograms, demonstrating that division can actually increase the total amount. Rahul enjoys these daily calculations, as they show how rational numbers help him manage the shop efficiently and accurately throughout the busy day.",
+ "menu_ids": [
+  "MAT-RATIONAL-K3-M1",
+  "MAT-RATIONAL-K4-M2",
+  "MAT-RATIONAL-K4-M3",
+  "MAT-RATIONAL-K5-M4",
+  "MAT-RATIONAL-K5-M5",
+  "MAT-RATIONAL-K7-M6",
+  "MAT-RATIONAL-K7-M7",
+  "MAT-RATIONAL-K8-M9",
+  "MAT-RATIONAL-K10-M10",
+  "MAT-RATIONAL-K11-M11",
+  "MAT-RATIONAL-K14-M13",
+  "MAT-RATIONAL-K15-M14",
+  "MAT-RATIONAL-K17-M15",
+  "MAT-RATIONAL-K17-M16"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "They have 5 crates of apples, which can be written as 5/1, showing that every integer is a rational number.",
+    "kind": "which_explains",
+    "q": "Rahul writes his 5 crates as 5/1. What does this show about the number 5?",
+    "options": [
+     "It is rational, as every integer is",
+     "It is not rational, having no denominator",
+     "It is rational only because it is positive",
+     "It is a fraction less than one whole"
+    ],
+    "explain": "Any integer can be written over 1, like 5/1, so every integer is a rational number.",
+    "wrong": [
+     {
+      "misconception": "MAT-RATIONAL-K4-M2",
+      "why": "thinks an integer has no denominator so is not rational"
+     },
+     {
+      "misconception": "MAT-RATIONAL-K3-M1",
+      "why": "thinks rational numbers must be positive"
+     },
+     {
+      "misconception": "MAT-RATIONAL-K11-M11",
+      "why": "thinks every positive rational lies between 0 and 1"
+     }
+    ]
+   },
+   {
+    "evidence": "He calculates the change by subtracting 1/3 from 1/2, noting that the order matters because subtraction is not commutative.",
+    "kind": "what_if",
+    "q": "What would happen if Rahul subtracted 1/2 from 1/3 instead?",
+    "options": [
+     "He would get -1/6, a different answer",
+     "He would get 1/6, the same answer",
+     "He would get no rational answer at all",
+     "He would get 0, subtracting tops and bottoms"
+    ],
+    "explain": "Subtraction is not commutative, so changing the order gives -1/6 instead of 1/6.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks subtraction can be done in any order"
+     },
+     {
+      "misconception": "MAT-RATIONAL-K3-M1",
+      "why": "thinks a negative answer like -1/6 is not rational"
+     },
+     {
+      "misconception": null,
+      "why": "subtracts numerators and denominators separately"
+     }
+    ]
+   },
+   {
+    "evidence": "Rahul explains that the additive inverse of this weight is -3/4, which balances the scale perfectly.",
+    "kind": "why",
+    "q": "Why does -3/4 balance a weight of 3/4 kg on Rahul's scale?",
+    "options": [
+     "Their sum is exactly zero",
+     "Their product is exactly one",
+     "Their difference is exactly zero",
+     "Their sum is exactly 3/2"
+    ],
+    "explain": "-3/4 is the additive inverse of 3/4, so adding them gives zero and balances.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "confuses additive inverse with reciprocal"
+     },
+     {
+      "misconception": "MAT-RATIONAL-K10-M10",
+      "why": "is confused about signs and treats -3/4 as equal to 3/4"
+     },
+     {
+      "misconception": null,
+      "why": "ignores the minus sign while adding"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, he divides 3/4 kilogram of berries by 1/2, resulting in 1.5 kilograms, demonstrating that division can actually increase the total amount.",
+    "kind": "what_if",
+    "q": "Rahul divides 3/4 kg of berries by 1/2. What happens to the amount?",
+    "options": [
+     "It grows to 1.5 kilograms",
+     "It shrinks to 3/8 kilogram",
+     "It shrinks to 1/6 kilogram",
+     "It stays below one kilogram"
+    ],
+    "explain": "Dividing 3/4 by 1/2 gives 1.5 kg, so division can make the amount bigger.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks division always makes things smaller, so halves it"
+     },
+     {
+      "misconception": null,
+      "why": "picks the nearby number from the cherries"
+     },
+     {
+      "misconception": "MAT-RATIONAL-K11-M11",
+      "why": "thinks positive fractions always stay between 0 and 1"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 34.4
+}

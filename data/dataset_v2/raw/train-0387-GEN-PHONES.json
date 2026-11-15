@@ -1,0 +1,169 @@
+{
+ "source": "train-0387-GEN-PHONES.json",
+ "job": {
+  "job": "train-0387-GEN-PHONES",
+  "topic_id": "GEN-PHONES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a question-and-answer (FAQ) style passage",
+  "seed": 387
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1602,
+  "promptTokenCount": 2
+ },
+ "passage": "Mobile phones are a common part of our lives, but many myths surround them. One common concern is about mobile towers. Mobile towers use radio waves to transmit signals, which are a form of non-ionising radiation. Unlike X-rays, these waves lack the energy to damage human cells or cause illness. Another myth is that phones emit the same amount of radiation constantly. In reality, your phone automatically adjusts its power output based on the signal strength; it uses less power when the signal is strong and more when the signal is weak. People also worry about their phone getting warm. A phone feels warm because of the energy used by the processor or battery during operation, not because it is emitting dangerous radiation. Furthermore, radio waves are electromagnetic waves, not sound waves, so they travel perfectly well through the vacuum of space without needing air. Finally, regarding eye health, while staring at a screen for a long time can cause temporary eye strain, it does not cause permanent blindness. To keep your eyes healthy, follow the 20-20-20 rule: every 20 minutes, look at something 20 feet away for 20 seconds, rather than taking one long break after hours of use.",
+ "menu_ids": [
+  "GEN-PHONES-K13-M2",
+  "GEN-PHONES-K15-M4",
+  "GEN-PHONES-K16-M5",
+  "GEN-PHONES-K17-M6",
+  "GEN-PHONES-K17-M7",
+  "GEN-PHONES-K19-M9",
+  "GEN-PHONES-K20-M10",
+  "GEN-PHONES-K20-M11",
+  "GEN-PHONES-K20-M12",
+  "GEN-PHONES-K21-M13",
+  "GEN-PHONES-K21-M14",
+  "GEN-PHONES-K22-M15",
+  "GEN-PHONES-K23-M16",
+  "GEN-PHONES-K23-M17"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Unlike X-rays, these waves lack the energy to damage human cells or cause illness.",
+    "kind": "which_explains",
+    "q": "A mobile tower sends radio waves all day. Why do they not harm human cells?",
+    "options": [
+     "Their waves carry too little energy to damage cells",
+     "Their waves are weaker than sound, so cells ignore them",
+     "Their waves are absorbed fully by the tower's metal",
+     "Their waves are the same as X-rays but slower"
+    ],
+    "explain": "Radio waves are non-ionising and lack the energy to damage cells, unlike X-rays.",
+    "wrong": [
+     {
+      "misconception": "GEN-PHONES-K13-M2",
+      "why": "thinks radio waves are sound waves"
+     },
+     {
+      "misconception": "GEN-PHONES-K20-M11",
+      "why": "thinks towers still affect people but are blocked by metal"
+     },
+     {
+      "misconception": "GEN-PHONES-K17-M7",
+      "why": "thinks radio waves are X-rays with different strength"
+     }
+    ]
+   },
+   {
+    "evidence": "In reality, your phone automatically adjusts its power output based on the signal strength; it uses less power when the signal is strong and more when the signal is weak.",
+    "kind": "what_if",
+    "q": "Riya moves from a spot with a weak signal to one with a strong signal. What does her phone do?",
+    "options": [
+     "It lowers its power output on its own",
+     "It raises its power output to match",
+     "It keeps the same power output at all times",
+     "It switches off its power output for a while"
+    ],
+    "explain": "The phone adjusts automatically: it uses less power when the signal is strong and more when it is weak.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "reverses cause and effect between signal and power"
+     },
+     {
+      "misconception": "GEN-PHONES-K16-M5",
+      "why": "thinks a phone always sends the same power"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises that a strong signal means no sending"
+     }
+    ]
+   },
+   {
+    "evidence": "A phone feels warm because of the energy used by the processor or battery during operation, not because it is emitting dangerous radiation.",
+    "kind": "which_explains",
+    "q": "Arjun's phone feels warm after a long video call. What is the most likely reason?",
+    "options": [
+     "Its processor and battery are working hard",
+     "It is giving out harmful radiation",
+     "It has made nearby objects radioactive",
+     "Its radio waves are heating the air"
+    ],
+    "explain": "Warmth comes from energy used by the processor or battery, not from dangerous radiation.",
+    "wrong": [
+     {
+      "misconception": "GEN-PHONES-K22-M15",
+      "why": "thinks a warm phone emits dangerous radiation"
+     },
+     {
+      "misconception": "GEN-PHONES-K21-M13",
+      "why": "thinks phones make nearby things radioactive"
+     },
+     {
+      "misconception": null,
+      "why": "invents a heating effect from radio waves"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, radio waves are electromagnetic waves, not sound waves, so they travel perfectly well through the vacuum of space without needing air.",
+    "kind": "what_if",
+    "q": "A phone signal is sent between two spacecraft in empty space. What happens to it?",
+    "options": [
+     "It still travels, as radio waves need no air",
+     "It fades away, as radio waves need air",
+     "It turns into sound, as it does on Earth",
+     "It reaches only if a satellite relays it"
+    ],
+    "explain": "Radio waves are electromagnetic, not sound, so they travel through the vacuum of space without air.",
+    "wrong": [
+     {
+      "misconception": "GEN-PHONES-K13-M2",
+      "why": "thinks radio waves are sound and need air"
+     },
+     {
+      "misconception": null,
+      "why": "thinks radio waves change into sound in air"
+     },
+     {
+      "misconception": "GEN-PHONES-K15-M4",
+      "why": "thinks a satellite is needed for signals"
+     }
+    ]
+   },
+   {
+    "evidence": "To keep your eyes healthy, follow the 20-20-20 rule: every 20 minutes, look at something 20 feet away for 20 seconds, rather than taking one long break after hours of use.",
+    "kind": "which_example",
+    "q": "Which habit best follows the 20-20-20 rule for tired eyes?",
+    "options": [
+     "Glancing at a far wall for a few seconds often",
+     "Resting the eyes once for an hour after study",
+     "Staring at the screen until the eyes hurt",
+     "Wearing spectacles for most of the day"
+    ],
+    "explain": "The rule means short, frequent breaks looking at something far away, not one long break after hours.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "picks the one long break the passage rejects"
+     },
+     {
+      "misconception": "GEN-PHONES-K23-M16",
+      "why": "thinks eye strain is harmless or only blindness matters"
+     },
+     {
+      "misconception": "GEN-PHONES-K23-M17",
+      "why": "thinks spectacles are the fix for screen strain"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 15.0
+}

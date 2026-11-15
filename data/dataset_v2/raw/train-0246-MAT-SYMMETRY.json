@@ -1,0 +1,137 @@
+{
+ "source": "train-0246-MAT-SYMMETRY.json",
+ "job": {
+  "job": "train-0246-MAT-SYMMETRY",
+  "topic_id": "MAT-SYMMETRY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a market or shop situation that uses the idea",
+  "seed": 246
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 3002,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan visited a local craft market to buy decorations for his school project. He noticed a beautiful wooden star, which is a regular pentagon shape. The shopkeeper explained that because it is a regular polygon, it has five distinct lines of symmetry, not just one. Rohan then looked at a square-shaped mirror. He held his notebook with the letter 'P' written on it in front of the mirror. He was surprised to see that the reflection showed the letter flipped horizontally, proving that a mirror image is not exactly the same as the original object. Next, he examined a circular clock face. The shopkeeper rotated the clock by 72 degrees, and it looked identical to its starting position, showing it has rotational symmetry of order five. Rohan realized that symmetry is not limited to vertical lines; a shape can have lines of symmetry in any orientation. Finally, he picked up a triangular sign. He learned that a shape has rotational symmetry if it looks the same after a rotation of less than 360 degrees. This trip helped him understand that symmetry is a complex property involving reflections, rotations, and multiple axes of balance.",
+ "menu_ids": [
+  "MAT-SYMMETRY-K4-M1",
+  "MAT-SYMMETRY-K6-M2",
+  "MAT-SYMMETRY-K11-M3",
+  "MAT-SYMMETRY-K5-M4",
+  "MAT-SYMMETRY-K6-M7",
+  "MAT-SYMMETRY-K9-M8",
+  "MAT-SYMMETRY-K10-M10",
+  "MAT-SYMMETRY-K8-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "The shopkeeper explained that because it is a regular polygon, it has five distinct lines of symmetry, not just one.",
+    "kind": "why",
+    "q": "Rohan's wooden pentagon has five lines of symmetry, not one. What explains this?",
+    "options": [
+     "All its sides and angles are equal",
+     "Five vertical lines can be drawn on it",
+     "It looks the same after a full turn",
+     "Its sides differ, which adds extra symmetry"
+    ],
+    "explain": "Because it is a regular polygon, with equal sides and angles, it has five lines of symmetry.",
+    "wrong": [
+     {
+      "misconception": "MAT-SYMMETRY-K4-M1",
+      "why": "thinks lines of symmetry must be vertical"
+     },
+     {
+      "misconception": "MAT-SYMMETRY-K6-M2",
+      "why": "mixes line symmetry with turning a full 360 degrees"
+     },
+     {
+      "misconception": "MAT-SYMMETRY-K9-M8",
+      "why": "thinks uneven shapes gain more symmetry"
+     }
+    ]
+   },
+   {
+    "evidence": "He was surprised to see that the reflection showed the letter flipped horizontally, proving that a mirror image is not exactly the same as the original object.",
+    "kind": "which_explains",
+    "q": "Rohan sees his letter P flipped in the mirror. What does this show?",
+    "options": [
+     "A reflection can differ from the real object",
+     "A reflection is always an exact copy",
+     "Only square mirrors flip letters sideways",
+     "The letter P has no symmetry at all"
+    ],
+    "explain": "The reflection was flipped, so a mirror image is not exactly the same as the original.",
+    "wrong": [
+     {
+      "misconception": "MAT-SYMMETRY-K11-M3",
+      "why": "thinks a mirror image is identical to the object"
+     },
+     {
+      "misconception": null,
+      "why": "blames the mirror's shape, a nearby detail"
+     },
+     {
+      "misconception": "MAT-SYMMETRY-K9-M8",
+      "why": "thinks an irregular shape has no symmetry"
+     }
+    ]
+   },
+   {
+    "evidence": "The shopkeeper rotated the clock by 72 degrees, and it looked identical to its starting position, showing it has rotational symmetry of order five.",
+    "kind": "why",
+    "q": "Why does the clock face have rotational symmetry of order five?",
+    "options": [
+     "Five turns of 72 degrees fill one full circle",
+     "The clock face has exactly five sides",
+     "It looks the same only after 360 degrees",
+     "It can turn about any point on it"
+    ],
+    "explain": "It looks identical after each 72-degree turn, and five such turns make a full circle.",
+    "wrong": [
+     {
+      "misconception": "MAT-SYMMETRY-K6-M7",
+      "why": "thinks order equals number of sides"
+     },
+     {
+      "misconception": "MAT-SYMMETRY-K6-M2",
+      "why": "thinks only a full 360-degree turn counts"
+     },
+     {
+      "misconception": "MAT-SYMMETRY-K10-M10",
+      "why": "thinks any point can be the centre of rotation"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan realized that symmetry is not limited to vertical lines; a shape can have lines of symmetry in any orientation.",
+    "kind": "what_if",
+    "q": "Rohan draws a horizontal line that splits a shape into matching halves. What follows?",
+    "options": [
+     "The shape has a valid line of symmetry",
+     "Only a vertical line would count as symmetry",
+     "The shape must also have a vertical line",
+     "The shape must be turned upright to count"
+    ],
+    "explain": "Lines of symmetry can have any orientation, so a horizontal line works just as well as a vertical one.",
+    "wrong": [
+     {
+      "misconception": "MAT-SYMMETRY-K4-M1",
+      "why": "thinks only vertical lines count"
+     },
+     {
+      "misconception": "MAT-SYMMETRY-K8-M12",
+      "why": "thinks a horizontal line needs a vertical partner"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the shape must be turned upright first"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 25.8
+}

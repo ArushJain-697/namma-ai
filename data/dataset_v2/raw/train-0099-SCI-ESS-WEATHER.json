@@ -1,0 +1,140 @@
+{
+ "source": "train-0099-SCI-ESS-WEATHER.json",
+ "job": {
+  "job": "train-0099-SCI-ESS-WEATHER",
+  "topic_id": "SCI-ESS-WEATHER",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 99
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2753,
+  "promptTokenCount": 2
+ },
+ "passage": "Many people often confuse weather and climate, thinking they are the same thing, but they are quite different. Weather refers to the day-to-day atmospheric conditions, while climate is the average weather pattern taken over a long period, usually 25 years. For instance, a single cold winter day does not mean the Earth is not warming; it is just a temporary weather event. Similarly, humidity is the amount of water vapour present in the air, and it exists even on dry, sunny days, not just when it is raining. When we look at animal adaptations, we see how specific they are to their environment. Polar bears live exclusively in the Arctic, which is the North Pole, while penguins are found in the Southern Hemisphere. Their white fur is an adaptation for camouflage against the snow, not for trapping extra heat. Furthermore, in a cyclone, the calm, low-pressure centre is called the eye, while the most violent, high-speed winds occur in the region surrounding it. Understanding these distinctions helps us better interpret the natural world around us, moving beyond common myths about how our atmosphere and animal habitats function.",
+ "menu_ids": [
+  "SCI-ESS-WEATHER-K7-M1",
+  "SCI-ESS-WEATHER-K10-M2",
+  "SCI-ESS-WEATHER-K11-M3",
+  "SCI-ESS-WEATHER-K13-M4",
+  "SCI-ESS-WEATHER-K15-M5",
+  "SCI-ESS-WEATHER-K17-M6",
+  "SCI-ESS-WEATHER-K19-M7",
+  "SCI-ESS-WEATHER-K16-M8",
+  "SCI-ESS-WEATHER-K12-M10",
+  "SCI-ESS-WEATHER-K18-M11",
+  "SCI-ESS-WEATHER-K8-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "For instance, a single cold winter day does not mean the Earth is not warming; it is just a temporary weather event.",
+    "kind": "which_explains",
+    "q": "Last January had one freezing day. What does that day tell us about Earth's warming?",
+    "options": [
+     "It is only a short-term weather event",
+     "It proves the Earth is not warming",
+     "It shows the climate has turned colder",
+     "It means warming happens only in summer"
+    ],
+    "explain": "One cold day is just temporary weather; it does not mean the Earth is not warming.",
+    "wrong": [
+     {
+      "misconception": "SCI-ESS-WEATHER-K8-M12",
+      "why": "thinks a cold winter proves warming is fake"
+     },
+     {
+      "misconception": "SCI-ESS-WEATHER-K7-M1",
+      "why": "treats one day's weather as climate"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises from a single cold day"
+     }
+    ]
+   },
+   {
+    "evidence": "Similarly, humidity is the amount of water vapour present in the air, and it exists even on dry, sunny days, not just when it is raining.",
+    "kind": "what_if",
+    "q": "Meena says there is no humidity on a dry, sunny day. What is actually true?",
+    "options": [
+     "The air still holds some water vapour",
+     "The air holds water vapour only when raining",
+     "The air's humidity equals the day's rainfall",
+     "The air is dry, so humidity is zero"
+    ],
+    "explain": "Humidity is water vapour in the air, and it exists even on dry, sunny days.",
+    "wrong": [
+     {
+      "misconception": "SCI-ESS-WEATHER-K11-M3",
+      "why": "thinks humidity exists only during rain"
+     },
+     {
+      "misconception": null,
+      "why": "confuses water vapour with rainfall"
+     },
+     {
+      "misconception": null,
+      "why": "thinks 'dry' means no vapour at all"
+     }
+    ]
+   },
+   {
+    "evidence": "Their white fur is an adaptation for camouflage against the snow, not for trapping extra heat.",
+    "kind": "why",
+    "q": "Why do polar bears have white fur?",
+    "options": [
+     "So they blend in with the snow",
+     "So they trap extra heat in the cold",
+     "So they match penguins living near them",
+     "So they stay cool in warm weather"
+    ],
+    "explain": "White fur is camouflage that hides polar bears against the snow, not a way to trap heat.",
+    "wrong": [
+     {
+      "misconception": "SCI-ESS-WEATHER-K13-M4",
+      "why": "thinks white fur is mainly for warmth"
+     },
+     {
+      "misconception": "SCI-ESS-WEATHER-K12-M10",
+      "why": "thinks polar bears and penguins share a home"
+     },
+     {
+      "misconception": null,
+      "why": "links colour to temperature, not hiding"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, in a cyclone, the calm, low-pressure centre is called the eye, while the most violent, high-speed winds occur in the region surrounding it.",
+    "kind": "what_if",
+    "q": "A ship sails right into the eye of a cyclone. What will the crew find there?",
+    "options": [
+     "Calm winds and low air pressure",
+     "Violent winds at the highest speeds",
+     "Strong winds and high air pressure",
+     "Calm winds and high air pressure"
+    ],
+    "explain": "The eye is the calm, low-pressure centre; the most violent winds are in the ring around it.",
+    "wrong": [
+     {
+      "misconception": "SCI-ESS-WEATHER-K19-M7",
+      "why": "thinks the eye is the most violent part"
+     },
+     {
+      "misconception": "SCI-ESS-WEATHER-K17-M6",
+      "why": "thinks fast winds create high pressure"
+     },
+     {
+      "misconception": null,
+      "why": "remembers calm but mixes up the pressure"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 34.9
+}

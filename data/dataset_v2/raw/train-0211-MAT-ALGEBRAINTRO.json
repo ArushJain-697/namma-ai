@@ -1,0 +1,165 @@
+{
+ "source": "train-0211-MAT-ALGEBRAINTRO.json",
+ "job": {
+  "job": "train-0211-MAT-ALGEBRAINTRO",
+  "topic_id": "MAT-ALGEBRAINTRO",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a short story where children solve a real problem",
+  "seed": 211
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3094,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and Meera were helping their teacher decorate the classroom for the annual math fair. They decided to arrange colorful paper triangles in a row to create a beautiful border. Rohan noticed that for one triangle, they needed 3 sticks. For two triangles, they needed 6 sticks. Meera observed that the number of sticks is always 3 times the number of triangles. She wrote this as 3n, where n is the number of triangles. Rohan asked if n could be 4. Meera nodded, explaining that 3n means 3 multiplied by n, so for 4 triangles, they would need 12 sticks. Rohan then placed 5 blue sticks and 5 red sticks on the table. He said, 'If I call the blue sticks b and the red sticks r, then b plus r equals 10.' Meera agreed, noting that even though b and r are different letters, they could both represent the number 5. They realized that letters are just placeholders for numbers. Later, they saw a sign saying 'x plus 5 equals 10'. Meera explained that because it has an equals sign, it is an equation, unlike just writing x plus 5. They felt proud to use algebra to solve their decoration puzzle.",
+ "menu_ids": [
+  "MAT-ALGEBRAINTRO-K11-M1",
+  "MAT-ALGEBRAINTRO-K12-M2",
+  "MAT-ALGEBRAINTRO-K13-M3",
+  "MAT-ALGEBRAINTRO-K10-M4",
+  "MAT-ALGEBRAINTRO-K4-M5",
+  "MAT-ALGEBRAINTRO-K4-M6",
+  "MAT-ALGEBRAINTRO-K5-M7",
+  "MAT-ALGEBRAINTRO-K6-M8",
+  "MAT-ALGEBRAINTRO-K7-M10",
+  "MAT-ALGEBRAINTRO-K8-M11"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Meera observed that the number of sticks is always 3 times the number of triangles.",
+    "kind": "what_if",
+    "q": "Rohan and Meera want a border of 7 triangles. How many sticks will they need?",
+    "options": [
+     "21 sticks",
+     "10 sticks",
+     "73 sticks",
+     "30 sticks"
+    ],
+    "explain": "The sticks are always 3 times the triangles, so 7 triangles need 3 × 7 = 21 sticks.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K5-M7",
+      "why": "adds the difference 3 instead of multiplying by 3"
+     },
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K7-M10",
+      "why": "writes 3 and 7 side by side as 73"
+     },
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K10-M4",
+      "why": "thinks the letter always stands for 10"
+     }
+    ]
+   },
+   {
+    "evidence": "Meera nodded, explaining that 3n means 3 multiplied by n, so for 4 triangles, they would need 12 sticks.",
+    "kind": "how",
+    "q": "Rohan puts n = 4 into 3n. How should he work out its value?",
+    "options": [
+     "Multiply 3 by 4 to get 12",
+     "Join 3 and 4 to get 34",
+     "Add 3 and 4 to get 7",
+     "Multiply 4 by 4 to get 16"
+    ],
+    "explain": "3n means 3 multiplied by n, so when n is 4, 3n is 3 × 4 = 12.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K7-M10",
+      "why": "puts the digits side by side"
+     },
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K6-M8",
+      "why": "mixes up 3n with 3 more than n"
+     },
+     {
+      "misconception": null,
+      "why": "squares n instead of multiplying by 3"
+     }
+    ]
+   },
+   {
+    "evidence": "Meera agreed, noting that even though b and r are different letters, they could both represent the number 5.",
+    "kind": "which_explains",
+    "q": "Rohan has 5 blue sticks (b) and 5 red sticks (r). What is true about b and r?",
+    "options": [
+     "They can both stand for 5",
+     "They must stand for different numbers",
+     "They stand for colours, not numbers",
+     "They must add up to 5"
+    ],
+    "explain": "Different letters can still stand for the same number, so b and r can both be 5.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K4-M6",
+      "why": "thinks different letters must mean different numbers"
+     },
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K11-M1",
+      "why": "thinks a letter stands for an object, like apples"
+     },
+     {
+      "misconception": null,
+      "why": "misreads the total of 10 as 5"
+     }
+    ]
+   },
+   {
+    "evidence": "Meera explained that because it has an equals sign, it is an equation, unlike just writing x plus 5.",
+    "kind": "difference",
+    "q": "Why is 'x + 5 = 10' called an equation, but 'x + 5' is not?",
+    "options": [
+     "Only the first has an equals sign",
+     "Only the first uses a letter",
+     "Only the first adds a number",
+     "Only the first makes x stand for 10"
+    ],
+    "explain": "An equation must have an equals sign; x + 5 alone has no equals sign, so it is not one.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K13-M3",
+      "why": "thinks any expression with a letter is an equation"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the plus sign makes an equation"
+     },
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K10-M4",
+      "why": "thinks x always stands for 10"
+     }
+    ]
+   },
+   {
+    "evidence": "They realized that letters are just placeholders for numbers.",
+    "kind": "which_explains",
+    "q": "Meera writes 5a. What does the letter a stand for?",
+    "options": [
+     "A number, like a box to fill",
+     "Apples, as in five apples",
+     "A number fixed for every problem",
+     "The same as a times a"
+    ],
+    "explain": "Letters are placeholders for numbers, so a is a box where any number can go.",
+    "wrong": [
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K11-M1",
+      "why": "thinks the letter a stands for apples"
+     },
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K4-M5",
+      "why": "thinks a letter has one fixed value forever"
+     },
+     {
+      "misconception": "MAT-ALGEBRAINTRO-K12-M2",
+      "why": "mixes up repeated adding with squaring"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 32.6
+}

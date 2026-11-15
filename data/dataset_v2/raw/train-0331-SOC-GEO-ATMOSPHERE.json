@@ -1,0 +1,137 @@
+{
+ "source": "train-0331-SOC-GEO-ATMOSPHERE.json",
+ "job": {
+  "job": "train-0331-SOC-GEO-ATMOSPHERE",
+  "topic_id": "SOC-GEO-ATMOSPHERE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a step-by-step explanation of a process",
+  "seed": 331
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1303,
+  "promptTokenCount": 2
+ },
+ "passage": "The Earth is surrounded by a vast blanket of air called the atmosphere, which extends hundreds of kilometers above the surface. While we often see clouds floating in the lower levels, the atmosphere continues far beyond them into space, gradually thinning out. This air is a mixture of many gases, but nitrogen is the most abundant, making up about 78 percent of the total volume. Oxygen, which is essential for our survival, accounts for only 21 percent. Other gases like carbon dioxide and argon make up the remaining small fraction. The atmosphere is not just about these gases; it also holds water vapor, which is the invisible moisture present in the air. Humidity refers to the amount of this water vapor in the atmosphere at any given time. Even on a dry, sunny day when there is no rain at all, the air still contains some level of humidity. This moisture is crucial for regulating temperature and eventually forming clouds, but it is distinct from the actual process of precipitation or rainfall. Understanding these layers and components helps us realize that the atmosphere is a complex, active system that protects life on our planet every single day.",
+ "menu_ids": [
+  "SOC-GEO-ATMOSPHERE-K9-M1",
+  "SOC-GEO-ATMOSPHERE-K13-M3",
+  "SOC-GEO-ATMOSPHERE-K11-M4",
+  "SOC-GEO-ATMOSPHERE-K5-M5",
+  "SOC-GEO-ATMOSPHERE-K10-M6",
+  "SOC-GEO-ATMOSPHERE-K9-M7",
+  "SOC-GEO-ATMOSPHERE-K11-M9",
+  "SOC-GEO-ATMOSPHERE-K7-M10"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Oxygen, which is essential for our survival, accounts for only 21 percent.",
+    "kind": "which_explains",
+    "q": "Oxygen is vital for life. Why is it still not the main gas in air?",
+    "options": [
+     "Nitrogen fills a much larger share of the air",
+     "Living things need nitrogen more than oxygen",
+     "Carbon dioxide fills most of the remaining air",
+     "Oxygen is used up as fast as it forms"
+    ],
+    "explain": "Oxygen is only about 21 percent of air; nitrogen, at about 78 percent, is far more abundant.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-ATMOSPHERE-K9-M1",
+      "why": "thinks importance for life decides how much gas there is"
+     },
+     {
+      "misconception": "SOC-GEO-ATMOSPHERE-K9-M7",
+      "why": "thinks air is only oxygen and carbon dioxide"
+     },
+     {
+      "misconception": null,
+      "why": "invents a cause that the passage never gives"
+     }
+    ]
+   },
+   {
+    "evidence": "Even on a dry, sunny day when there is no rain at all, the air still contains some level of humidity.",
+    "kind": "what_if",
+    "q": "It is a bright, dry afternoon with no rain. What can we say about the air?",
+    "options": [
+     "It still holds some invisible water vapor",
+     "It holds no water vapor at all",
+     "It has no humidity until clouds form",
+     "It must have more oxygen than usual"
+    ],
+    "explain": "Humidity is water vapor in the air, so even a dry sunny day has some without any rain.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-ATMOSPHERE-K13-M3",
+      "why": "thinks humidity exists only when it rains"
+     },
+     {
+      "misconception": "SOC-GEO-ATMOSPHERE-K11-M4",
+      "why": "links moisture only to clouds"
+     },
+     {
+      "misconception": "SOC-GEO-ATMOSPHERE-K5-M5",
+      "why": "links the air only with oxygen"
+     }
+    ]
+   },
+   {
+    "evidence": "While we often see clouds floating in the lower levels, the atmosphere continues far beyond them into space, gradually thinning out.",
+    "kind": "how",
+    "q": "A pilot flies above all the clouds. What is true about the air there?",
+    "options": [
+     "Air is still present but gets thinner",
+     "Air ends and space begins right there",
+     "Air becomes thicker as clouds are left behind",
+     "Air stays equally thick at every height"
+    ],
+    "explain": "The atmosphere continues far beyond the clouds, gradually thinning out as it nears space.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-ATMOSPHERE-K11-M4",
+      "why": "thinks the atmosphere ends where clouds end"
+     },
+     {
+      "misconception": null,
+      "why": "reverses thinning into thickening"
+     },
+     {
+      "misconception": null,
+      "why": "thinks air has the same thickness everywhere"
+     }
+    ]
+   },
+   {
+    "evidence": "This moisture is crucial for regulating temperature and eventually forming clouds, but it is distinct from the actual process of precipitation or rainfall.",
+    "kind": "difference",
+    "q": "How is humidity different from rainfall?",
+    "options": [
+     "Humidity is vapor in air; rainfall is falling water",
+     "Humidity is falling water; rainfall is vapor in air",
+     "Humidity is the same as rainfall, just lighter",
+     "Humidity forms only in the stratosphere; rainfall does not"
+    ],
+    "explain": "Humidity is the water vapor in air; rainfall is the separate process of water falling as precipitation.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "swaps the two meanings"
+     },
+     {
+      "misconception": "SOC-GEO-ATMOSPHERE-K13-M3",
+      "why": "thinks humidity is the same as rain"
+     },
+     {
+      "misconception": "SOC-GEO-ATMOSPHERE-K11-M9",
+      "why": "thinks weather belongs to the stratosphere"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 12.7
+}

@@ -1,0 +1,166 @@
+{
+ "source": "train-0152-SOC-GEO-GLOBE.json",
+ "job": {
+  "job": "train-0152-SOC-GEO-GLOBE",
+  "topic_id": "SOC-GEO-GLOBE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a conversation between a teacher and two students",
+  "seed": 152
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3811,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today, let us explore the globe. Rohan, do you think the lines on the map are real painted lines on the ground? Rohan: Yes, I thought they were painted lines. Teacher: Actually, latitudes and longitudes are imaginary circles drawn by geographers to help us locate places. Priya: Does that mean the Torrid Zone is hot because it is physically closer to the sun? Teacher: Not at all, Priya. The Torrid Zone receives maximum heat because the sun's rays fall vertically on this region, not because of distance. Rohan: If I travel east, will the time be the same as my home? Teacher: No, time changes with longitude. Since the Earth rotates from west to east, places east of Greenwich see the sun earlier. Priya: Is the Indian Standard Time based on the Prime Meridian? Teacher: No, India uses 82.5° E longitude as its standard meridian because it passes through the center of our country. Finally, remember that unlike latitudes, which are parallel circles, all longitudes converge at the poles. This is why they are not parallel to each other. If you look at a globe, you will see that longitudes meet at the North and South Poles, unlike the latitude lines that run horizontally around the sphere.",
+ "menu_ids": [
+  "SOC-GEO-GLOBE-K4-M1",
+  "SOC-GEO-GLOBE-K5-M2",
+  "SOC-GEO-GLOBE-K9-M3",
+  "SOC-GEO-GLOBE-K10-M4",
+  "SOC-GEO-GLOBE-K11-M5",
+  "SOC-GEO-GLOBE-K6-M6",
+  "SOC-GEO-GLOBE-K4-M7",
+  "SOC-GEO-GLOBE-K7-M8",
+  "SOC-GEO-GLOBE-K8-M9",
+  "SOC-GEO-GLOBE-K10-M11",
+  "SOC-GEO-GLOBE-K12-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Actually, latitudes and longitudes are imaginary circles drawn by geographers to help us locate places.",
+    "kind": "recall",
+    "q": "Why do geographers draw latitudes and longitudes on a globe?",
+    "options": [
+     "To help us find where places are",
+     "To copy lines painted on the ground",
+     "To mark places that are nearer the sun",
+     "To show places that share the same time"
+    ],
+    "explain": "Latitudes and longitudes are imaginary circles that geographers draw to help us locate places.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-GLOBE-K4-M1",
+      "why": "thinks the lines are real painted lines"
+     },
+     {
+      "misconception": "SOC-GEO-GLOBE-K9-M3",
+      "why": "links the lines to distance from the sun"
+     },
+     {
+      "misconception": "SOC-GEO-GLOBE-K10-M4",
+      "why": "thinks time is the same everywhere"
+     }
+    ]
+   },
+   {
+    "evidence": "The Torrid Zone receives maximum heat because the sun's rays fall vertically on this region, not because of distance.",
+    "kind": "why",
+    "q": "Why is the Torrid Zone hotter than the other zones of the Earth?",
+    "options": [
+     "It gets the sun's rays straight down",
+     "It is nearer to the sun than others",
+     "It sees the sunrise earlier than others",
+     "It lies along the 82.5° E longitude"
+    ],
+    "explain": "The sun's rays fall vertically on the Torrid Zone; its heat is not because of distance.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-GLOBE-K9-M3",
+      "why": "thinks the zone is closer to the sun"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up heat with the passage's idea about time"
+     },
+     {
+      "misconception": null,
+      "why": "grabs a nearby number from the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "Since the Earth rotates from west to east, places east of Greenwich see the sun earlier.",
+    "kind": "what_if",
+    "q": "A city lies east of Greenwich. How does its sunrise compare with sunrise at Greenwich?",
+    "options": [
+     "It comes earlier than at Greenwich",
+     "It comes later than at Greenwich",
+     "It comes at exactly the same time",
+     "It comes earlier only if nearer the sun"
+    ],
+    "explain": "The Earth spins from west to east, so places east of Greenwich see the sun first.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-GLOBE-K10-M11",
+      "why": "thinks places to the east are behind in time"
+     },
+     {
+      "misconception": "SOC-GEO-GLOBE-K10-M4",
+      "why": "thinks time is the same everywhere"
+     },
+     {
+      "misconception": "SOC-GEO-GLOBE-K9-M3",
+      "why": "links sunrise to distance from the sun"
+     }
+    ]
+   },
+   {
+    "evidence": "No, India uses 82.5° E longitude as its standard meridian because it passes through the center of our country.",
+    "kind": "why",
+    "q": "Why did India choose 82.5° E as the line for its standard time?",
+    "options": [
+     "It runs through the middle of India",
+     "It is the same as the Prime Meridian",
+     "It is the starting line of all longitudes",
+     "It is the hottest line in the Torrid Zone"
+    ],
+    "explain": "India uses 82.5° E because this longitude passes through the centre of the country.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-GLOBE-K11-M5",
+      "why": "thinks IST is based on the Prime Meridian"
+     },
+     {
+      "misconception": "SOC-GEO-GLOBE-K7-M8",
+      "why": "thinks the Prime Meridian passes through India"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the time line with the heat zones"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, remember that unlike latitudes, which are parallel circles, all longitudes converge at the poles.",
+    "kind": "what_if",
+    "q": "What happens to the gap between two longitudes as you move toward a pole?",
+    "options": [
+     "It shrinks until they meet at the pole",
+     "It stays the same, as they are parallel",
+     "It grows wider as they near the pole",
+     "It shrinks until they meet at the Equator"
+    ],
+    "explain": "All longitudes come together at the poles, so the gap between them gets smaller and closes.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-GLOBE-K5-M2",
+      "why": "thinks longitudes are parallel like latitudes"
+     },
+     {
+      "misconception": null,
+      "why": "gets the direction the wrong way round"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the poles with the Equator"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 40.5
+}

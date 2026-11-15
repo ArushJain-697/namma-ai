@@ -1,0 +1,140 @@
+{
+ "source": "train-0335-SOC-GEO-FORESTWILDLIFE.json",
+ "job": {
+  "job": "train-0335-SOC-GEO-FORESTWILDLIFE",
+  "topic_id": "SOC-GEO-FORESTWILDLIFE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a cause-and-effect explanation",
+  "seed": 335
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1334,
+  "promptTokenCount": 2
+ },
+ "passage": "India's forest management system classifies lands into three categories to ensure ecological stability. Reserved forests are the most strictly regulated, where all activities are prohibited unless specifically permitted for local community needs. Unlike the misconception that these are for government officials, they are managed to prevent over-exploitation and maintain forest health. Furthermore, conservation efforts like Project Tiger have evolved significantly. While initially focused on preventing poaching, the program now prioritizes the protection of entire habitats to ensure the survival of the species within their natural ecosystem. This shift recognizes that a tiger cannot survive without a healthy forest environment. Similarly, many local communities protect patches of forest known as sacred groves. These areas are not merely preserved for their medicinal plants, as some believe, but are protected due to deep-rooted cultural and religious beliefs that view the entire forest as a sacred entity. By protecting these groves, communities inadvertently preserve biodiversity, including rare species that might otherwise disappear. These conservation strategies, ranging from strict government regulation to community-led initiatives, are essential for maintaining the delicate balance of India's wildlife resources and ensuring that ecosystems remain resilient against human-induced pressures.",
+ "menu_ids": [
+  "SOC-GEO-FORESTWILDLIFE-K6-M1",
+  "SOC-GEO-FORESTWILDLIFE-K9-M3",
+  "SOC-GEO-FORESTWILDLIFE-K13-M4",
+  "SOC-GEO-FORESTWILDLIFE-K7-M5",
+  "SOC-GEO-FORESTWILDLIFE-K15-M6",
+  "SOC-GEO-FORESTWILDLIFE-K12-M7",
+  "SOC-GEO-FORESTWILDLIFE-K9-M8",
+  "SOC-GEO-FORESTWILDLIFE-K14-M9",
+  "SOC-GEO-FORESTWILDLIFE-K10-M10",
+  "SOC-GEO-FORESTWILDLIFE-K8-M11",
+  "SOC-GEO-FORESTWILDLIFE-K4-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Reserved forests are the most strictly regulated, where all activities are prohibited unless specifically permitted for local community needs.",
+    "kind": "what_if",
+    "q": "A villager wants to graze cattle in a reserved forest. When may this be allowed?",
+    "options": [
+     "Only if permitted for local community needs",
+     "Never, since only officials may enter",
+     "Always, as protected forests allow grazing",
+     "Only if the forest is not yet surveyed"
+    ],
+    "explain": "Reserved forests prohibit all activities unless specifically permitted for local community needs.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-FORESTWILDLIFE-K6-M1",
+      "why": "thinks reserved forests are only for officials"
+     },
+     {
+      "misconception": "SOC-GEO-FORESTWILDLIFE-K7-M5",
+      "why": "mixes up reserved and protected forest rules"
+     },
+     {
+      "misconception": "SOC-GEO-FORESTWILDLIFE-K15-M6",
+      "why": "thinks forest class depends on being surveyed"
+     }
+    ]
+   },
+   {
+    "evidence": "This shift recognizes that a tiger cannot survive without a healthy forest environment.",
+    "kind": "why",
+    "q": "Why did Project Tiger begin to protect whole habitats and not only tigers?",
+    "options": [
+     "Tigers need a healthy forest to survive",
+     "Poachers had stopped hunting tigers",
+     "The forests were meant for officials",
+     "Tigers could be bred outside forests"
+    ],
+    "explain": "A tiger cannot survive without a healthy forest, so protecting the habitat protects the species.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-FORESTWILDLIFE-K9-M3",
+      "why": "thinks the project only fought hunting"
+     },
+     {
+      "misconception": "SOC-GEO-FORESTWILDLIFE-K6-M1",
+      "why": "thinks forests are mainly for officials"
+     },
+     {
+      "misconception": null,
+      "why": "assumes tigers can live without forests"
+     }
+    ]
+   },
+   {
+    "evidence": "These areas are not merely preserved for their medicinal plants, as some believe, but are protected due to deep-rooted cultural and religious beliefs that view the entire forest as a sacred entity.",
+    "kind": "which_explains",
+    "q": "Why does a village protect even the plants in a sacred grove that have no medicinal use?",
+    "options": [
+     "They see the whole forest as sacred",
+     "Only rare herbs there are valued",
+     "The government pays them to guard it",
+     "Only the largest trees are sacred"
+    ],
+    "explain": "Communities protect sacred groves because their beliefs treat the entire forest as sacred, not just medicinal plants.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-FORESTWILDLIFE-K13-M4",
+      "why": "thinks groves are protected only for medicinal plants"
+     },
+     {
+      "misconception": "SOC-GEO-FORESTWILDLIFE-K8-M11",
+      "why": "thinks conservation needs government funding"
+     },
+     {
+      "misconception": null,
+      "why": "thinks only big trees count as sacred"
+     }
+    ]
+   },
+   {
+    "evidence": "By protecting these groves, communities inadvertently preserve biodiversity, including rare species that might otherwise disappear.",
+    "kind": "what_if",
+    "q": "What would likely happen to rare species if a community stopped guarding its grove?",
+    "options": [
+     "They might disappear from that forest",
+     "They would be safe, as hunting is the only danger",
+     "They would move to a reserved forest",
+     "They would stay safe, as forests need no care"
+    ],
+    "explain": "Protected groves preserve rare species that might otherwise disappear, so without protection they could be lost.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-FORESTWILDLIFE-K4-M12",
+      "why": "thinks only hunting threatens biodiversity"
+     },
+     {
+      "misconception": null,
+      "why": "assumes species relocate on their own"
+     },
+     {
+      "misconception": "SOC-GEO-FORESTWILDLIFE-K8-M11",
+      "why": "thinks only government action matters"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 13.7
+}

@@ -1,0 +1,165 @@
+{
+ "source": "train-0382-GEN-JUNKSUGAR.json",
+ "job": {
+  "job": "train-0382-GEN-JUNKSUGAR",
+  "topic_id": "GEN-JUNKSUGAR",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a conversation between a teacher and two students",
+  "seed": 382
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1630,
+  "promptTokenCount": 2
+ },
+ "passage": "In the classroom, Teacher Meera sat with Rohan and Priya to discuss healthy eating. Rohan asked, 'Is it okay to drink energy drinks after football practice since they give me energy?' Meera shook her head, 'Actually, energy drinks are packed with added sugar and cannot replace the hydration you get from water. They are not a substitute for food.' Priya then asked, 'But what about fruit juice? It comes from oranges, so it is just as healthy as eating the whole fruit, right?' Meera explained, 'Not quite. When you juice a fruit, you lose the healthy fibre, and the sugar becomes concentrated, making it less healthy than the whole fruit.' Rohan then mentioned, 'My uncle says he has diabetes because he caught it from his friend.' Meera corrected him, 'Diabetes is a lifestyle-related condition, not a contagious disease that spreads between people.' Finally, Priya asked about fried snacks. 'My mother says fried snacks are healthy because they are cooked in vegetable oil.' Meera replied, 'Even if the oil is plant-based, deep-frying adds excessive fat and calories, which can lead to obesity and heart issues. Always check labels for hidden salt and sugar, even in foods that do not taste sweet.'",
+ "menu_ids": [
+  "GEN-JUNKSUGAR-K13-M1",
+  "GEN-JUNKSUGAR-K14-M2",
+  "GEN-JUNKSUGAR-K9-M3",
+  "GEN-JUNKSUGAR-K10-M4",
+  "GEN-JUNKSUGAR-K29-M6",
+  "GEN-JUNKSUGAR-K18-M7",
+  "GEN-JUNKSUGAR-K19-M8",
+  "GEN-JUNKSUGAR-K20-M9",
+  "GEN-JUNKSUGAR-K27-M11",
+  "GEN-JUNKSUGAR-K16-M13"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Actually, energy drinks are packed with added sugar and cannot replace the hydration you get from water.",
+    "kind": "which_explains",
+    "q": "Rohan wants an energy drink after football. Why is water the better choice?",
+    "options": [
+     "The drink has lots of sugar and cannot hydrate like water",
+     "The drink is mostly flavoured water with little sugar",
+     "The drink gives real energy, so it can replace food",
+     "The drink is only bad for people who are old"
+    ],
+    "explain": "Energy drinks are packed with added sugar and cannot replace the hydration that water gives.",
+    "wrong": [
+     {
+      "misconception": "GEN-JUNKSUGAR-K13-M1",
+      "why": "thinks such drinks have very little sugar"
+     },
+     {
+      "misconception": "GEN-JUNKSUGAR-K10-M4",
+      "why": "thinks energy drinks can replace food"
+     },
+     {
+      "misconception": "GEN-JUNKSUGAR-K29-M6",
+      "why": "thinks the risk only affects old people"
+     }
+    ]
+   },
+   {
+    "evidence": "When you juice a fruit, you lose the healthy fibre, and the sugar becomes concentrated, making it less healthy than the whole fruit.",
+    "kind": "why",
+    "q": "Why is a glass of orange juice less healthy than an orange?",
+    "options": [
+     "Juicing removes fibre and concentrates the sugar",
+     "Juicing adds sugar that the orange did not have",
+     "Juicing removes the sugar but keeps the fibre",
+     "Juicing makes the fruit lose all its taste"
+    ],
+    "explain": "Juicing removes the healthy fibre and concentrates the sugar, so juice is less healthy than the whole fruit.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks sugar is added from outside during juicing"
+     },
+     {
+      "misconception": null,
+      "why": "reverses what is lost and what stays"
+     },
+     {
+      "misconception": "GEN-JUNKSUGAR-K9-M3",
+      "why": "thinks juice and fruit differ only in taste"
+     }
+    ]
+   },
+   {
+    "evidence": "Diabetes is a lifestyle-related condition, not a contagious disease that spreads between people.",
+    "kind": "what_if",
+    "q": "Rohan sits next to his uncle who has diabetes every day. What is his risk?",
+    "options": [
+     "He cannot catch diabetes from his uncle",
+     "He may catch it like a common cold",
+     "He may catch it only through shared food",
+     "He will catch it if he sits too close"
+    ],
+    "explain": "Diabetes is lifestyle-related and not contagious, so it cannot spread from one person to another.",
+    "wrong": [
+     {
+      "misconception": "GEN-JUNKSUGAR-K27-M11",
+      "why": "thinks diabetes spreads like a cold"
+     },
+     {
+      "misconception": null,
+      "why": "thinks it spreads through shared food"
+     },
+     {
+      "misconception": null,
+      "why": "thinks it spreads by close contact"
+     }
+    ]
+   },
+   {
+    "evidence": "Even if the oil is plant-based, deep-frying adds excessive fat and calories, which can lead to obesity and heart issues.",
+    "kind": "which_explains",
+    "q": "Why are fried snacks unhealthy even when made in vegetable oil?",
+    "options": [
+     "Deep-frying adds too much fat and calories",
+     "Plant oil turns into sugar when it is heated",
+     "Vegetable oil carries hidden salt into the food",
+     "Fried snacks have no fat, only plain calories"
+    ],
+    "explain": "Deep-frying adds excessive fat and calories, which can cause obesity and heart problems, whatever the oil.",
+    "wrong": [
+     {
+      "misconception": "GEN-JUNKSUGAR-K20-M9",
+      "why": "thinks plant oil makes fried food healthy, so looks for other faults"
+     },
+     {
+      "misconception": "GEN-JUNKSUGAR-K18-M7",
+      "why": "links the problem only to salt"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up fat and calories"
+     }
+    ]
+   },
+   {
+    "evidence": "Always check labels for hidden salt and sugar, even in foods that do not taste sweet.",
+    "kind": "how",
+    "q": "Priya wants to know if a spicy snack has sugar. What should she do?",
+    "options": [
+     "Read the label, since sugar can hide in it",
+     "Taste it, since only sweet foods have sugar",
+     "Skip the label, since it only lists salt",
+     "Ask if it was fried in plant-based oil"
+    ],
+    "explain": "Sugar and salt can hide in foods that do not taste sweet, so the label is the way to check.",
+    "wrong": [
+     {
+      "misconception": "GEN-JUNKSUGAR-K14-M2",
+      "why": "thinks only sweet-tasting foods contain sugar"
+     },
+     {
+      "misconception": "GEN-JUNKSUGAR-K16-M13",
+      "why": "thinks sugar matters only in certain places"
+     },
+     {
+      "misconception": "GEN-JUNKSUGAR-K20-M9",
+      "why": "thinks the type of oil decides sugar"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 14.8
+}

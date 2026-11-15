@@ -1,0 +1,141 @@
+{
+ "source": "train-0266-SCI-BIO-TISSUES.json",
+ "job": {
+  "job": "train-0266-SCI-BIO-TISSUES",
+  "topic_id": "SCI-BIO-TISSUES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a question-and-answer (FAQ) style passage",
+  "seed": 266
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1306,
+  "promptTokenCount": 2
+ },
+ "passage": "Tissues are groups of cells that work together to perform a specific function, showing a clear division of labour in multicellular organisms. In plants, growth is not uniform; it is restricted to specific regions called meristematic tissues. While some plant tissues like xylem and phloem are essential for transport, others like sclerenchyma provide structural support even though they consist of dead cells. These dead cells are not waste; they are vital for the plant's strength. In animals, tissues are diverse. Epithelial tissue forms protective coverings not just on the skin, but also lines internal organs and cavities. Connective tissues are equally varied. Blood is a fluid connective tissue that transports substances, proving that tissues do not need to be solid to function. Bones are also living connective tissues filled with cells, not dry, inert structures. Furthermore, the body contains involuntary muscles that function automatically without our conscious control. Unlike hollow pipes, nerves are complex structures that transmit electrical impulses to coordinate body activities. Understanding these tissues helps us see how specialized cells maintain life.",
+ "menu_ids": [
+  "SCI-BIO-TISSUES-K3-M1",
+  "SCI-BIO-TISSUES-K5-M2",
+  "SCI-BIO-TISSUES-K10-M3",
+  "SCI-BIO-TISSUES-K11-M4",
+  "SCI-BIO-TISSUES-K17-M5",
+  "SCI-BIO-TISSUES-K15-M6",
+  "SCI-BIO-TISSUES-K18-M7",
+  "SCI-BIO-TISSUES-K22-M8",
+  "SCI-BIO-TISSUES-K6-M9",
+  "SCI-BIO-TISSUES-K20-M10",
+  "SCI-BIO-TISSUES-K18-M11",
+  "SCI-BIO-TISSUES-K12-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "These dead cells are not waste; they are vital for the plant's strength.",
+    "kind": "why",
+    "q": "Why does a plant keep sclerenchyma, even though its cells are dead?",
+    "options": [
+     "The dead cells give the plant strength",
+     "The dead cells store waste for the plant",
+     "The dead cells help the plant grow taller",
+     "The dead cells carry food to the leaves"
+    ],
+    "explain": "Dead sclerenchyma cells are not waste; they give the plant strength and structural support.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-TISSUES-K10-M3",
+      "why": "thinks dead cells are only waste"
+     },
+     {
+      "misconception": "SCI-BIO-TISSUES-K5-M2",
+      "why": "mixes support with growth, which is meristem work"
+     },
+     {
+      "misconception": "SCI-BIO-TISSUES-K12-M12",
+      "why": "mixes sclerenchyma with phloem's food transport"
+     }
+    ]
+   },
+   {
+    "evidence": "In plants, growth is not uniform; it is restricted to specific regions called meristematic tissues.",
+    "kind": "what_if",
+    "q": "A gardener ties a thread around a young stem. Where will new growth mainly happen?",
+    "options": [
+     "In the special growing regions of the stem",
+     "Evenly along the whole length of the stem",
+     "In every cell that touches another cell",
+     "In the dead cells that give strength"
+    ],
+    "explain": "Plant growth is restricted to meristematic regions, so it is not the same everywhere in the body.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-TISSUES-K5-M2",
+      "why": "thinks plants grow evenly like animals"
+     },
+     {
+      "misconception": "SCI-BIO-TISSUES-K3-M1",
+      "why": "thinks any touching cells form a growing tissue"
+     },
+     {
+      "misconception": "SCI-BIO-TISSUES-K10-M3",
+      "why": "thinks dead cells have no role, yet picks them"
+     }
+    ]
+   },
+   {
+    "evidence": "Blood is a fluid connective tissue that transports substances, proving that tissues do not need to be solid to function.",
+    "kind": "which_example",
+    "q": "Which example shows that a tissue can work without being solid?",
+    "options": [
+     "Blood, which carries substances around the body",
+     "Bone, which holds the body upright",
+     "Nerves, which carry signals to the brain",
+     "Skin covering, which protects the body"
+    ],
+    "explain": "Blood is a fluid connective tissue that carries substances, so tissues need not be solid.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-TISSUES-K18-M7",
+      "why": "thinks bone is dry and hard, so picks it as the only tissue type"
+     },
+     {
+      "misconception": "SCI-BIO-TISSUES-K22-M8",
+      "why": "thinks nerves carry liquid in hollow tubes"
+     },
+     {
+      "misconception": "SCI-BIO-TISSUES-K15-M6",
+      "why": "thinks epithelium is only the skin surface"
+     }
+    ]
+   },
+   {
+    "evidence": "Epithelial tissue forms protective coverings not just on the skin, but also lines internal organs and cavities.",
+    "kind": "how",
+    "q": "How does epithelial tissue protect an animal body?",
+    "options": [
+     "It covers the skin and lines inner organs",
+     "It covers only the skin on the outside",
+     "It joins bones to each other inside",
+     "It carries impulses to coordinate the body"
+    ],
+    "explain": "Epithelial tissue covers the skin and also lines internal organs and cavities.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-TISSUES-K15-M6",
+      "why": "thinks epithelium is only on the outer skin"
+     },
+     {
+      "misconception": "SCI-BIO-TISSUES-K18-M11",
+      "why": "mixes epithelium with ligaments joining parts"
+     },
+     {
+      "misconception": "SCI-BIO-TISSUES-K22-M8",
+      "why": "mixes epithelium with nerve tissue"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 14.3
+}

@@ -1,0 +1,165 @@
+{
+ "source": "train-0161-SOC-GEO-TRANSPORT.json",
+ "job": {
+  "job": "train-0161-SOC-GEO-TRANSPORT",
+  "topic_id": "SOC-GEO-TRANSPORT",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a short story with Indian characters in everyday life",
+  "seed": 161
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4789,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and his father, a logistics manager, were traveling by train from Delhi to Chennai. As they crossed the vast plains, Rohan noticed a thick, black pipe running parallel to the tracks. His father explained that it was a pipeline carrying crude oil to a refinery, far more efficient than trucks for liquid fuel. Rohan asked if they could take a ship back home to save time. His father laughed, explaining that while India has a long coastline, many rivers are too shallow or seasonal for large cargo ships, unlike the deep-sea ports. They discussed the Golden Quadrilateral project, which Rohan mistakenly thought linked every state capital. His father clarified that it specifically connects the four major metropolitan cities: Delhi, Mumbai, Chennai, and Kolkata. Later, they looked at the trade data on his father’s tablet. Rohan wondered if balancing exports and imports was the ultimate goal for wealth. His father corrected him, noting that a nation’s prosperity is measured by the value of its international trade, where a healthy surplus or strategic exchange is often more vital than just matching the numbers. They watched the landscape change, realizing how these diverse networks—pipelines, highways, and ports—form the true lifelines of India's growing economy.",
+ "menu_ids": [
+  "SOC-GEO-TRANSPORT-K8-M1",
+  "SOC-GEO-TRANSPORT-K11-M2",
+  "SOC-GEO-TRANSPORT-K13-M3",
+  "SOC-GEO-TRANSPORT-K10-M4",
+  "SOC-GEO-TRANSPORT-K3-M5",
+  "SOC-GEO-TRANSPORT-K4-M7",
+  "SOC-GEO-TRANSPORT-K8-M9",
+  "SOC-GEO-TRANSPORT-K5-M10",
+  "SOC-GEO-TRANSPORT-K6-M11",
+  "SOC-GEO-TRANSPORT-K7-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "His father explained that it was a pipeline carrying crude oil to a refinery, far more efficient than trucks for liquid fuel.",
+    "kind": "why",
+    "q": "Why was the crude oil sent to the refinery by pipe instead of by truck?",
+    "options": [
+     "Pipes move liquid fuel better than trucks do",
+     "Trucks are not allowed to carry crude oil",
+     "Pipes beside the tracks help the trains run",
+     "Trucks cannot cross the vast flat plains"
+    ],
+    "explain": "A pipeline is far more efficient than trucks for moving liquid fuel like crude oil.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "over-reads 'more efficient' as trucks being unable to carry oil"
+     },
+     {
+      "misconception": null,
+      "why": "misreads the pipe running beside the tracks as serving the trains"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby detail about the plains as the reason"
+     }
+    ]
+   },
+   {
+    "evidence": "His father laughed, explaining that while India has a long coastline, many rivers are too shallow or seasonal for large cargo ships, unlike the deep-sea ports.",
+    "kind": "which_explains",
+    "q": "What did Rohan's father mean about using rivers for large cargo ships?",
+    "options": [
+     "Many rivers lack deep water all year round",
+     "Every river can carry large cargo ships easily",
+     "A long coastline makes all rivers deep enough",
+     "Rivers are deeper than the deep-sea ports"
+    ],
+    "explain": "Many rivers are too shallow or seasonal for large ships, unlike deep-sea ports.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-TRANSPORT-K10-M4",
+      "why": "thinks all Indian rivers are navigable for large ships"
+     },
+     {
+      "misconception": null,
+      "why": "links the long coastline to deep rivers"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the contrast between rivers and deep-sea ports"
+     }
+    ]
+   },
+   {
+    "evidence": "His father clarified that it specifically connects the four major metropolitan cities: Delhi, Mumbai, Chennai, and Kolkata.",
+    "kind": "recall",
+    "q": "Rohan thought the Golden Quadrilateral linked every state capital. What correction did his father make?",
+    "options": [
+     "It links the four largest metro cities",
+     "It links every state capital in India",
+     "It links the four main deep-sea ports",
+     "It links the rivers deep enough for ships"
+    ],
+    "explain": "The Golden Quadrilateral connects only the four metros: Delhi, Mumbai, Chennai and Kolkata.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-TRANSPORT-K8-M1",
+      "why": "thinks it connects all state capitals"
+     },
+     {
+      "misconception": null,
+      "why": "mixes it up with the ports mentioned nearby"
+     },
+     {
+      "misconception": null,
+      "why": "mixes it up with the river discussion"
+     }
+    ]
+   },
+   {
+    "evidence": "His father corrected him, noting that a nation’s prosperity is measured by the value of its international trade, where a healthy surplus or strategic exchange is often more vital than just matching the numbers.",
+    "kind": "which_explains",
+    "q": "Rohan thought matching the trade numbers made a country rich. What matters more, says his father?",
+    "options": [
+     "How much its trade is worth overall",
+     "Keeping exports exactly equal to imports",
+     "Trading only by sea and air routes",
+     "Buying far more than it sells abroad"
+    ],
+    "explain": "Prosperity depends on the value of trade; a healthy surplus matters more than equal numbers.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-TRANSPORT-K13-M3",
+      "why": "thinks balanced exports and imports mean wealth"
+     },
+     {
+      "misconception": "SOC-GEO-TRANSPORT-K7-M12",
+      "why": "thinks international trade uses only sea and air"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the idea of a surplus"
+     }
+    ]
+   },
+   {
+    "evidence": "They watched the landscape change, realizing how these diverse networks—pipelines, highways, and ports—form the true lifelines of India's growing economy.",
+    "kind": "why",
+    "q": "Why does the passage call these networks the lifelines of India's economy?",
+    "options": [
+     "Together they keep goods moving across India",
+     "Only ports matter, as trade goes by sea",
+     "Each network alone can carry every good",
+     "They mainly carry water to growing cities"
+    ],
+    "explain": "Pipelines, highways and ports together move goods and fuel, keeping India's economy alive.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-TRANSPORT-K7-M12",
+      "why": "thinks trade happens only by sea"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises one network's role"
+     },
+     {
+      "misconception": "SOC-GEO-TRANSPORT-K11-M2",
+      "why": "thinks pipelines only carry water"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 48.8
+}

@@ -1,0 +1,169 @@
+{
+ "source": "train-0195-GEN-INJURIES.json",
+ "job": {
+  "job": "train-0195-GEN-INJURIES",
+  "topic_id": "GEN-INJURIES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a conversation between a teacher and two students",
+  "seed": 195
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4133,
+  "promptTokenCount": 2
+ },
+ "passage": "During a sports period, Coach Meena gathered Rohan and Priya to discuss injury management. Rohan asked, 'If I twist my ankle but can still walk, it isn't broken, right?' Coach Meena shook her head, 'Not necessarily. A bone can be fractured even if it looks normal, so never assume it is fine just because you can bear weight.' Priya then asked about concussions, 'If a player hits their head but stays conscious, they are safe to keep playing, aren't they?' Coach Meena replied, 'Absolutely not. A concussion is a brain injury that does not require fainting to occur, and symptoms often develop hours later, not just immediately. You must stop play instantly if a head impact occurs.' Rohan then suggested using a hot pack for his swollen knee. Coach Meena corrected him, 'Never apply heat to a fresh injury, as it increases swelling. Instead, use the RICE method: Rest, Ice, Compression, and Elevation. When applying a compression bandage, ensure it is snug but not too tight, as restricting blood flow is dangerous. Finally, remember that RICE is just the first step; if pain persists or the injury seems severe, you must see a doctor immediately rather than waiting for it to heal on its own.'",
+ "menu_ids": [
+  "GEN-INJURIES-K8-M1",
+  "GEN-INJURIES-K9-M2",
+  "GEN-INJURIES-K10-M3",
+  "GEN-INJURIES-K11-M4",
+  "GEN-INJURIES-K12-M5",
+  "GEN-INJURIES-K14-M6",
+  "GEN-INJURIES-K15-M8",
+  "GEN-INJURIES-K16-M9",
+  "GEN-INJURIES-K17-M10",
+  "GEN-INJURIES-K18-M12",
+  "GEN-INJURIES-K21-M13",
+  "GEN-INJURIES-K22-M15",
+  "GEN-INJURIES-K25-M17",
+  "GEN-INJURIES-K25-M18"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "A bone can be fractured even if it looks normal, so never assume it is fine just because you can bear weight.",
+    "kind": "which_explains",
+    "q": "Rohan twists his ankle but can still walk on it. What can he safely conclude?",
+    "options": [
+     "It may still have a cracked bone",
+     "It cannot be broken since he walks",
+     "It is broken only if it looks bent",
+     "It will heal if he keeps walking"
+    ],
+    "explain": "A bone can be fractured even if it looks normal and can bear weight.",
+    "wrong": [
+     {
+      "misconception": "GEN-INJURIES-K10-M3",
+      "why": "thinks bearing weight rules out a serious injury"
+     },
+     {
+      "misconception": "GEN-INJURIES-K11-M4",
+      "why": "thinks a broken bone always looks out of shape"
+     },
+     {
+      "misconception": "GEN-INJURIES-K25-M17",
+      "why": "thinks walking it off cures an injury"
+     }
+    ]
+   },
+   {
+    "evidence": "A concussion is a brain injury that does not require fainting to occur, and symptoms often develop hours later, not just immediately.",
+    "kind": "what_if",
+    "q": "Asha bumps her head in a match, stays awake and feels fine. What should happen next?",
+    "options": [
+     "She stops, as concussion can occur without fainting",
+     "She plays on, since she never fainted",
+     "She stops only if symptoms appear right away",
+     "She plays on through pain to look tough"
+    ],
+    "explain": "Concussion does not need fainting, and symptoms can appear hours later, so she must stop.",
+    "wrong": [
+     {
+      "misconception": "GEN-INJURIES-K21-M13",
+      "why": "thinks concussion needs fainting"
+     },
+     {
+      "misconception": "GEN-INJURIES-K22-M15",
+      "why": "thinks symptoms always appear immediately"
+     },
+     {
+      "misconception": "GEN-INJURIES-K25-M17",
+      "why": "thinks playing through pain shows toughness"
+     }
+    ]
+   },
+   {
+    "evidence": "Coach Meena corrected him, 'Never apply heat to a fresh injury, as it increases swelling.",
+    "kind": "what_if",
+    "q": "Rohan's knee swelled up just now. What would a hot pack do to it?",
+    "options": [
+     "It would make the swelling worse",
+     "It would bring the swelling down",
+     "It would remove the need for rest",
+     "It would help only if he kept walking"
+    ],
+    "explain": "Heat on a fresh injury increases swelling, so ice should be used instead.",
+    "wrong": [
+     {
+      "misconception": "GEN-INJURIES-K15-M8",
+      "why": "thinks heat reduces fresh swelling"
+     },
+     {
+      "misconception": null,
+      "why": "thinks one treatment replaces the RICE steps"
+     },
+     {
+      "misconception": "GEN-INJURIES-K25-M17",
+      "why": "thinks moving on an injury helps it"
+     }
+    ]
+   },
+   {
+    "evidence": "When applying a compression bandage, ensure it is snug but not too tight, as restricting blood flow is dangerous.",
+    "kind": "which_explains",
+    "q": "Priya wraps a compression bandage on a sprain as hard as she can. Is that right?",
+    "options": [
+     "No, it may cut off the blood supply",
+     "Yes, since tighter always works better",
+     "Yes, if the leg is left hanging down",
+     "No, it works only with a hot pack"
+    ],
+    "explain": "The bandage should be snug, not too tight, because restricting blood flow is dangerous.",
+    "wrong": [
+     {
+      "misconception": "GEN-INJURIES-K16-M9",
+      "why": "thinks a tighter bandage works better"
+     },
+     {
+      "misconception": "GEN-INJURIES-K17-M10",
+      "why": "thinks hanging the limb lets blood reach it"
+     },
+     {
+      "misconception": "GEN-INJURIES-K15-M8",
+      "why": "thinks heat helps a fresh injury"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, remember that RICE is just the first step; if pain persists or the injury seems severe, you must see a doctor immediately rather than waiting for it to heal on its own.'",
+    "kind": "what_if",
+    "q": "After using RICE, Priya's ankle still hurts badly. What should she do now?",
+    "options": [
+     "Get it checked by a doctor at once",
+     "Keep using RICE, since it treats everything",
+     "Stay in bed until it heals itself",
+     "Play through the pain to toughen up"
+    ],
+    "explain": "RICE is only the first step; if pain stays, see a doctor immediately.",
+    "wrong": [
+     {
+      "misconception": "GEN-INJURIES-K18-M12",
+      "why": "thinks RICE alone treats any injury"
+     },
+     {
+      "misconception": "GEN-INJURIES-K14-M6",
+      "why": "thinks rest means days in bed and waiting"
+     },
+     {
+      "misconception": "GEN-INJURIES-K25-M17",
+      "why": "thinks playing through pain is right"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 46.1
+}

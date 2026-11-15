@@ -1,0 +1,138 @@
+{
+ "source": "train-0258-SCI-BIO-HEALTH.json",
+ "job": {
+  "job": "train-0258-SCI-BIO-HEALTH",
+  "topic_id": "SCI-BIO-HEALTH",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a news-style report about a real-world situation",
+  "seed": 258
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1294,
+  "promptTokenCount": 2
+ },
+ "passage": "In a recent health awareness drive, local doctors addressed common myths regarding community well-being. Dr. Sharma emphasized that health is not merely the absence of disease, but a state of physical, mental, and social well-being. A person might feel fine but still be unhealthy due to poor social conditions or lack of clean water. Furthermore, the doctor clarified that not all illnesses are caused by external germs. Some, like diabetes or genetic disorders, arise from internal metabolic or hereditary factors. Regarding infections, the team explained that pathogens like viruses are distinct from bacteria, possessing different structures and life cycles. While antibiotics are powerful tools, they specifically target bacterial processes and are ineffective against viral infections like the common cold. Finally, the team highlighted that disease transmission is not limited to direct physical contact. Pathogens can travel through contaminated air, water, or vectors like mosquitoes, which act as carriers rather than the primary cause of the disease. Prevention remains superior to treatment; for instance, vaccines are administered to healthy individuals to build immunity before exposure, rather than curing those already suffering from symptoms. Community hygiene is essential, as individual health is deeply connected to the environment we share with others.",
+ "menu_ids": [
+  "SCI-BIO-HEALTH-K4-M1",
+  "SCI-BIO-HEALTH-K15-M2",
+  "SCI-BIO-HEALTH-K18-M3",
+  "SCI-BIO-HEALTH-K25-M4",
+  "SCI-BIO-HEALTH-K14-M5",
+  "SCI-BIO-HEALTH-K17-M6",
+  "SCI-BIO-HEALTH-K10-M7",
+  "SCI-BIO-HEALTH-K15-M11",
+  "SCI-BIO-HEALTH-K3-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "A person might feel fine but still be unhealthy due to poor social conditions or lack of clean water.",
+    "kind": "what_if",
+    "q": "Meena has no illness and feels fine, but her village has no clean water. Is she healthy?",
+    "options": [
+     "Not fully, as her social conditions are poor",
+     "Yes, as she has no disease at all",
+     "Yes, as health depends only on the body",
+     "Not fully, as she must be hiding an illness"
+    ],
+    "explain": "Health includes social well-being, so poor conditions like no clean water can make a person unhealthy.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-HEALTH-K4-M1",
+      "why": "thinks no disease means healthy"
+     },
+     {
+      "misconception": "SCI-BIO-HEALTH-K3-M12",
+      "why": "thinks health is only a personal, bodily matter"
+     },
+     {
+      "misconception": null,
+      "why": "assumes hidden illness instead of using the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "While antibiotics are powerful tools, they specifically target bacterial processes and are ineffective against viral infections like the common cold.",
+    "kind": "why",
+    "q": "Why will an antibiotic not help a child who has a common cold?",
+    "options": [
+     "The cold germ is not a bacterium",
+     "The cold is too mild for medicines",
+     "The antibiotic is too weak to work",
+     "The cold is not caused by any germ"
+    ],
+    "explain": "Antibiotics target bacterial processes, but the cold is caused by a virus, which is not a bacterium.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-HEALTH-K15-M11",
+      "why": "thinks viruses are just tiny bacteria"
+     },
+     {
+      "misconception": null,
+      "why": "thinks antibiotics are not strong enough"
+     },
+     {
+      "misconception": "SCI-BIO-HEALTH-K10-M7",
+      "why": "confuses this with diseases not caused by germs"
+     }
+    ]
+   },
+   {
+    "evidence": "Pathogens can travel through contaminated air, water, or vectors like mosquitoes, which act as carriers rather than the primary cause of the disease.",
+    "kind": "which_explains",
+    "q": "A mosquito carries malaria to a person. What role does the mosquito play?",
+    "options": [
+     "It carries the pathogen to the person",
+     "It makes the pathogen inside its body",
+     "It is the germ that causes the disease",
+     "It spreads it only by touching people"
+    ],
+    "explain": "Mosquitoes are vectors that carry pathogens; they are carriers, not the primary cause of the disease.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks the vector creates the pathogen"
+     },
+     {
+      "misconception": "SCI-BIO-HEALTH-K18-M3",
+      "why": "thinks the mosquito itself causes malaria"
+     },
+     {
+      "misconception": "SCI-BIO-HEALTH-K17-M6",
+      "why": "thinks spread needs physical touch"
+     }
+    ]
+   },
+   {
+    "evidence": "Prevention remains superior to treatment; for instance, vaccines are administered to healthy individuals to build immunity before exposure, rather than curing those already suffering from symptoms.",
+    "kind": "how",
+    "q": "How does a vaccine protect a healthy child from a disease?",
+    "options": [
+     "It builds immunity before the germ arrives",
+     "It kills the germs already inside the child",
+     "It cures the child once symptoms appear",
+     "It removes germs from the air around them"
+    ],
+    "explain": "Vaccines are given to healthy people to build immunity before exposure, not to cure those already sick.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks vaccines work like antibiotics on existing germs"
+     },
+     {
+      "misconception": "SCI-BIO-HEALTH-K25-M4",
+      "why": "thinks vaccines cure people who are already sick"
+     },
+     {
+      "misconception": "SCI-BIO-HEALTH-K17-M6",
+      "why": "confuses vaccines with cleaning the environment"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 12.6
+}

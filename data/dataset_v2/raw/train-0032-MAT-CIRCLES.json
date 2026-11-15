@@ -1,0 +1,139 @@
+{
+ "source": "train-0032-MAT-CIRCLES.json",
+ "job": {
+  "job": "train-0032-MAT-CIRCLES",
+  "topic_id": "MAT-CIRCLES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a conversation between a teacher and two students",
+  "seed": 32
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2703,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today, let us clarify some common doubts about circles. Rohan, remember that the diameter is the longest chord, not just any chord near the center. Priya, if you draw a line from the center to a chord, it only bisects the chord if it is perpendicular to it. Many students mistakenly think any line from the center works. Also, regarding cyclic quadrilaterals, the sum of opposite angles is always 180 degrees, not that they are equal. If you have four points, they only form a cyclic quadrilateral if they all lie on the same circle; you cannot assume this for every quadrilateral. Finally, consider tangents. Two tangents drawn from an external point to a circle are always equal in length, regardless of the distance to the center. Also, the angle in a semicircle is always 90 degrees, whether the triangle is isosceles or not. Lastly, remember that angles subtended by the same chord in the same segment are equal, even if the chords look different. Always check the arc they stand on before concluding they are equal.",
+ "menu_ids": [
+  "MAT-CIRCLES-K11-M1",
+  "MAT-CIRCLES-K12-M2",
+  "MAT-CIRCLES-K13-M3",
+  "MAT-CIRCLES-K16-M4",
+  "MAT-CIRCLES-K18-M5",
+  "MAT-CIRCLES-K17-M7",
+  "MAT-CIRCLES-K23-M9",
+  "MAT-CIRCLES-K25-M10",
+  "MAT-CIRCLES-K26-M11",
+  "MAT-CIRCLES-K20-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Rohan, remember that the diameter is the longest chord, not just any chord near the center.",
+    "kind": "what_if",
+    "q": "Rohan draws many chords in one circle. Which chord will be the longest?",
+    "options": [
+     "The chord passing through the centre",
+     "Any chord passing near the centre",
+     "Any chord, since all chords are equal",
+     "The line touching the circle at one point"
+    ],
+    "explain": "The diameter passes through the centre and is the longest chord, not just any chord near it.",
+    "wrong": [
+     {
+      "misconception": "MAT-CIRCLES-K11-M1",
+      "why": "thinks any chord near the middle is longest"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises that all chords are the same length"
+     },
+     {
+      "misconception": null,
+      "why": "confuses a tangent with a chord"
+     }
+    ]
+   },
+   {
+    "evidence": "If you have four points, they only form a cyclic quadrilateral if they all lie on the same circle; you cannot assume this for every quadrilateral.",
+    "kind": "how",
+    "q": "Meena marks four corners of a quadrilateral. When can she call it a cyclic quadrilateral?",
+    "options": [
+     "When all four corners lie on one circle",
+     "When the four corners make any closed shape",
+     "When its opposite angles are equal",
+     "When one of its angles is 90 degrees"
+    ],
+    "explain": "Four points form a cyclic quadrilateral only if all of them lie on the same circle.",
+    "wrong": [
+     {
+      "misconception": "MAT-CIRCLES-K20-M12",
+      "why": "thinks every quadrilateral is cyclic"
+     },
+     {
+      "misconception": "MAT-CIRCLES-K18-M5",
+      "why": "thinks opposite angles of a cyclic quadrilateral are equal"
+     },
+     {
+      "misconception": null,
+      "why": "mixes it up with the angle in a semicircle"
+     }
+    ]
+   },
+   {
+    "evidence": "Two tangents drawn from an external point to a circle are always equal in length, regardless of the distance to the center.",
+    "kind": "what_if",
+    "q": "PA and PB are tangents from point P, which is far from the centre. How do their lengths compare?",
+    "options": [
+     "They are equal in length",
+     "They are equal only if P is close",
+     "They differ because P is far away",
+     "They are equal only inside the circle"
+    ],
+    "explain": "Tangents from an external point are always equal, however far the point is from the centre.",
+    "wrong": [
+     {
+      "misconception": "MAT-CIRCLES-K25-M10",
+      "why": "thinks equality depends on the distance to the centre"
+     },
+     {
+      "misconception": null,
+      "why": "thinks a far point makes the lengths unequal"
+     },
+     {
+      "misconception": "MAT-CIRCLES-K26-M11",
+      "why": "thinks tangents can be drawn from inside the circle"
+     }
+    ]
+   },
+   {
+    "evidence": "Always check the arc they stand on before concluding they are equal.",
+    "kind": "how",
+    "q": "Two angles lie in the same segment of a circle. What must you check before calling them equal?",
+    "options": [
+     "That they stand on the same arc",
+     "That they lie in the same segment only",
+     "That their chord passes through the centre",
+     "That the two angles add up to 180"
+    ],
+    "explain": "Angles in the same segment are equal only when they stand on the same chord or arc.",
+    "wrong": [
+     {
+      "misconception": "MAT-CIRCLES-K17-M7",
+      "why": "thinks being in the same segment is enough"
+     },
+     {
+      "misconception": "MAT-CIRCLES-K16-M4",
+      "why": "mixes it up with the angle in a semicircle"
+     },
+     {
+      "misconception": "MAT-CIRCLES-K18-M5",
+      "why": "mixes it up with cyclic quadrilateral angles"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 28.2
+}

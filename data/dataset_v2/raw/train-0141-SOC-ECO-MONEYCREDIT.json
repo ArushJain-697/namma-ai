@@ -1,0 +1,165 @@
+{
+ "source": "train-0141-SOC-ECO-MONEYCREDIT.json",
+ "job": {
+  "job": "train-0141-SOC-ECO-MONEYCREDIT",
+  "topic_id": "SOC-ECO-MONEYCREDIT",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a news-style report about a real-world situation",
+  "seed": 141
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3998,
+  "promptTokenCount": 4
+ },
+ "passage": "In the bustling town of Rampur, local farmers are modernizing their financial habits. Unlike the ancient barter system, where trade required a double coincidence of wants, modern money acts as a medium of exchange that simplifies every transaction. Today, farmers deposit their surplus earnings into commercial banks, which keep these funds safe while paying interest. When these farmers need capital for seeds or equipment, they approach these commercial banks for loans. It is a common misunderstanding that the Reserve Bank of India (RBI) provides these loans directly to individuals; in reality, the RBI only supervises the functioning of commercial banks to ensure they maintain adequate cash balances. To secure a loan, a farmer must provide collateral, such as land or livestock. This collateral acts as a guarantee for the lender and is returned once the loan is fully repaid, rather than being a service fee kept by the bank. While modern currency notes are made of paper and lack intrinsic value like gold, they are accepted as a medium of exchange because they are authorized by the government of the country. By moving away from informal lenders and using formal banking channels, farmers are building a more stable economic future for their families.",
+ "menu_ids": [
+  "SOC-ECO-MONEYCREDIT-K6-M1",
+  "SOC-ECO-MONEYCREDIT-K7-M2",
+  "SOC-ECO-MONEYCREDIT-K10-M3",
+  "SOC-ECO-MONEYCREDIT-K11-M4",
+  "SOC-ECO-MONEYCREDIT-K5-M5",
+  "SOC-ECO-MONEYCREDIT-K7-M6",
+  "SOC-ECO-MONEYCREDIT-K8-M8",
+  "SOC-ECO-MONEYCREDIT-K8-M9",
+  "SOC-ECO-MONEYCREDIT-K9-M10",
+  "SOC-ECO-MONEYCREDIT-K10-M11"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Unlike the ancient barter system, where trade required a double coincidence of wants, modern money acts as a medium of exchange that simplifies every transaction.",
+    "kind": "why",
+    "q": "Ramu has rice and needs cloth, but the weaver only needs shoes. Why can't they trade by barter?",
+    "options": [
+     "Because each must want the other's goods",
+     "Because Ramu does not have enough rice",
+     "Because rice cannot be saved like money",
+     "Because only the government approves trades"
+    ],
+    "explain": "Barter needs a double coincidence of wants; the weaver does not want rice, so no trade happens.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-MONEYCREDIT-K6-M1",
+      "why": "thinks barter works if you have enough goods"
+     },
+     {
+      "misconception": "SOC-ECO-MONEYCREDIT-K5-M5",
+      "why": "thinks value comes only from saving"
+     },
+     {
+      "misconception": "SOC-ECO-MONEYCREDIT-K7-M6",
+      "why": "thinks only the government allows exchange"
+     }
+    ]
+   },
+   {
+    "evidence": "Today, farmers deposit their surplus earnings into commercial banks, which keep these funds safe while paying interest.",
+    "kind": "what_if",
+    "q": "Meena puts her extra harvest money into a commercial bank. What does the bank do for her?",
+    "options": [
+     "Keeps it safe and pays her interest",
+     "Keeps it safe but charges her a fee",
+     "Sends it to the RBI to guard",
+     "Pays interest only after she borrows"
+    ],
+    "explain": "Commercial banks keep deposits safe and also pay interest to the depositor.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-MONEYCREDIT-K10-M3",
+      "why": "mixes deposits up with a fee paid to the bank"
+     },
+     {
+      "misconception": "SOC-ECO-MONEYCREDIT-K11-M4",
+      "why": "thinks the RBI deals directly with people"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up deposit interest with loan interest"
+     }
+    ]
+   },
+   {
+    "evidence": "It is a common misunderstanding that the Reserve Bank of India (RBI) provides these loans directly to individuals; in reality, the RBI only supervises the functioning of commercial banks to ensure they maintain adequate cash balances.",
+    "kind": "difference",
+    "q": "How is the work of the RBI different from that of a commercial bank?",
+    "options": [
+     "It checks that banks keep enough cash",
+     "It gives loans directly to farmers",
+     "It keeps every farmer's savings in vaults",
+     "It sets one interest rate for everyone"
+    ],
+    "explain": "The RBI does not lend to people; it only supervises commercial banks so they keep enough cash.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-MONEYCREDIT-K11-M4",
+      "why": "thinks the RBI lends to farmers directly"
+     },
+     {
+      "misconception": "SOC-ECO-MONEYCREDIT-K8-M8",
+      "why": "thinks deposits sit in a vault"
+     },
+     {
+      "misconception": "SOC-ECO-MONEYCREDIT-K9-M10",
+      "why": "thinks loan terms are the same for all"
+     }
+    ]
+   },
+   {
+    "evidence": "This collateral acts as a guarantee for the lender and is returned once the loan is fully repaid, rather than being a service fee kept by the bank.",
+    "kind": "what_if",
+    "q": "Gopal pledged his land as collateral and has now repaid the whole loan. What happens to his land?",
+    "options": [
+     "It is returned to Gopal",
+     "It is kept by the bank as a fee",
+     "It stays with the bank forever",
+     "It is handed over to the RBI"
+    ],
+    "explain": "Collateral is only a guarantee; it is returned once the loan is fully repaid.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-MONEYCREDIT-K10-M3",
+      "why": "thinks collateral is a fee for the loan"
+     },
+     {
+      "misconception": "SOC-ECO-MONEYCREDIT-K10-M11",
+      "why": "thinks the lender keeps collateral after repayment"
+     },
+     {
+      "misconception": "SOC-ECO-MONEYCREDIT-K11-M4",
+      "why": "thinks the RBI handles individual loans"
+     }
+    ]
+   },
+   {
+    "evidence": "While modern currency notes are made of paper and lack intrinsic value like gold, they are accepted as a medium of exchange because they are authorized by the government of the country.",
+    "kind": "which_explains",
+    "q": "A 100-rupee note is only a piece of paper. Why do shopkeepers still take it?",
+    "options": [
+     "Because the country's government backs it",
+     "Because it has intrinsic value like gold",
+     "Because it can be saved for later",
+     "Because banks pay interest on each note"
+    ],
+    "explain": "Paper notes have no value of their own; people accept them because the government authorizes them.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-MONEYCREDIT-K7-M2",
+      "why": "thinks paper money is valuable like gold"
+     },
+     {
+      "misconception": "SOC-ECO-MONEYCREDIT-K5-M5",
+      "why": "thinks money is valuable only for saving"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby detail about bank interest"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 348.6
+}

@@ -1,0 +1,139 @@
+{
+ "source": "train-0125-SOC-CIV-LIVELIHOODS.json",
+ "job": {
+  "job": "train-0125-SOC-CIV-LIVELIHOODS",
+  "topic_id": "SOC-CIV-LIVELIHOODS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a cause-and-effect explanation",
+  "seed": 125
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2420,
+  "promptTokenCount": 2
+ },
+ "passage": "In rural India, the life of a farmer is dictated by the seasons. Unlike factory workers who have a steady schedule, a farmer only finds work during the sowing and harvesting months, leaving them without income for the rest of the year. To survive, many rural families migrate to cities to find daily wage work. In the city, the reality of employment is quite different. A street vendor, for instance, works long hours setting up stalls and managing stock, yet they often lack the security of a permanent job. Many people mistakenly believe that these vendors are simply lazy, but in truth, they are hardworking individuals who lack the capital to rent a formal shop. Furthermore, city jobs are not uniform. While some employees in large offices enjoy benefits like medical leave and pensions, many others work in informal sectors where such protections do not exist. Therefore, whether in a village or a city, livelihood depends heavily on the nature of the work rather than just the location. Understanding these differences helps us see why some people struggle to find stable income, regardless of how hard they try to earn a living.",
+ "menu_ids": [
+  "SOC-CIV-LIVELIHOODS-K8-M2",
+  "SOC-CIV-LIVELIHOODS-K5-M3",
+  "SOC-CIV-LIVELIHOODS-K11-M4",
+  "SOC-CIV-LIVELIHOODS-K4-M6",
+  "SOC-CIV-LIVELIHOODS-K5-M7",
+  "SOC-CIV-LIVELIHOODS-K6-M8",
+  "SOC-CIV-LIVELIHOODS-K7-M9",
+  "SOC-CIV-LIVELIHOODS-K8-M10",
+  "SOC-CIV-LIVELIHOODS-K9-M11",
+  "SOC-CIV-LIVELIHOODS-K10-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Unlike factory workers who have a steady schedule, a farmer only finds work during the sowing and harvesting months, leaving them without income for the rest of the year.",
+    "kind": "what_if",
+    "q": "It is a month between harvest and the next sowing. What is a farmer's situation then?",
+    "options": [
+     "He has hardly any work and earns nothing",
+     "He works and earns the same as always",
+     "He works a steady schedule like factory workers",
+     "He gets a monthly salary from his employer"
+    ],
+    "explain": "Farmers find work only in sowing and harvesting months, so they have no income at other times.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-LIVELIHOODS-K8-M10",
+      "why": "thinks farm work and earnings are equal every month"
+     },
+     {
+      "misconception": "SOC-CIV-LIVELIHOODS-K8-M2",
+      "why": "thinks farmers have work all year"
+     },
+     {
+      "misconception": "SOC-CIV-LIVELIHOODS-K9-M11",
+      "why": "thinks self-employed farmers are paid a salary"
+     }
+    ]
+   },
+   {
+    "evidence": "To survive, many rural families migrate to cities to find daily wage work.",
+    "kind": "why",
+    "q": "Why do many rural families leave their villages for cities?",
+    "options": [
+     "To earn some money each day and survive",
+     "To get office jobs with pensions",
+     "To rent formal shops in the market",
+     "To get a fixed salary every month"
+    ],
+    "explain": "With no farm income for months, families move to cities to find daily wage work and survive.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-LIVELIHOODS-K11-M4",
+      "why": "thinks all city jobs give pensions"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby detail about vendors' shops"
+     },
+     {
+      "misconception": "SOC-CIV-LIVELIHOODS-K10-M12",
+      "why": "thinks daily wage work has a fixed monthly salary"
+     }
+    ]
+   },
+   {
+    "evidence": "Many people mistakenly believe that these vendors are simply lazy, but in truth, they are hardworking individuals who lack the capital to rent a formal shop.",
+    "kind": "which_explains",
+    "q": "A street vendor works very hard but still sells from the roadside. Which explains this?",
+    "options": [
+     "He lacks the money to rent a proper shop",
+     "He is too lazy to manage a real shop",
+     "He needs no stock or effort on the road",
+     "He prefers the job security of a stall"
+    ],
+    "explain": "Vendors are hardworking but lack the capital to rent a formal shop, so they sell on the road.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-LIVELIHOODS-K5-M3",
+      "why": "thinks vendors are poor because they are lazy"
+     },
+     {
+      "misconception": "SOC-CIV-LIVELIHOODS-K5-M7",
+      "why": "thinks road selling needs no work or buying"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the passage, which says vendors lack security"
+     }
+    ]
+   },
+   {
+    "evidence": "While some employees in large offices enjoy benefits like medical leave and pensions, many others work in informal sectors where such protections do not exist.",
+    "kind": "what_if",
+    "q": "Meena works in the city's informal sector and falls ill. What can she expect?",
+    "options": [
+     "She gets no paid medical leave at all",
+     "She gets paid medical leave like every city worker",
+     "She gets leave only if her boss is government",
+     "She keeps getting a fixed salary while resting"
+    ],
+    "explain": "Informal sector jobs do not have protections like medical leave and pensions, unlike some large offices.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-LIVELIHOODS-K11-M4",
+      "why": "thinks all city jobs give medical leave"
+     },
+     {
+      "misconception": "SOC-CIV-LIVELIHOODS-K6-M8",
+      "why": "thinks formal benefits mean only government jobs"
+     },
+     {
+      "misconception": "SOC-CIV-LIVELIHOODS-K10-M12",
+      "why": "thinks informal workers have a fixed monthly salary"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 25.9
+}

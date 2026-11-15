@@ -1,0 +1,143 @@
+{
+ "source": "train-0019-GEN-PHONES.json",
+ "job": {
+  "job": "train-0019-GEN-PHONES",
+  "topic_id": "GEN-PHONES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a description of a classroom activity or experiment and what it shows",
+  "seed": 19
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2809,
+  "promptTokenCount": 2
+ },
+ "passage": "In our science lab today, we explored how mobile phones communicate. We learned that phones use radio waves, which are a form of non-ionising radiation. Unlike X-rays, these waves lack the energy to damage DNA or make objects radioactive. When your phone shows a full signal, it actually reduces its transmission power to save battery, meaning it works less hard than when the signal is weak. We also discussed why eyes feel tired after long screen time. It is not because the screen emits harmful rays that burn the eyes, but because we blink less often, causing the surface of the eye to dry out. Regarding battery safety, modern smartphones have smart chips that stop charging once the battery reaches capacity, so leaving a phone plugged in overnight does not cause it to explode. Finally, we looked at the warmth of a phone. A phone gets hot due to the energy used by the processor or battery during heavy tasks, not because it is leaking dangerous radiation. Understanding these facts helps us distinguish between technological reality and common myths about our devices.",
+ "menu_ids": [
+  "GEN-PHONES-K13-M2",
+  "GEN-PHONES-K15-M4",
+  "GEN-PHONES-K16-M5",
+  "GEN-PHONES-K17-M6",
+  "GEN-PHONES-K17-M7",
+  "GEN-PHONES-K19-M9",
+  "GEN-PHONES-K20-M10",
+  "GEN-PHONES-K20-M11",
+  "GEN-PHONES-K20-M12",
+  "GEN-PHONES-K21-M13",
+  "GEN-PHONES-K21-M14",
+  "GEN-PHONES-K22-M15",
+  "GEN-PHONES-K23-M16",
+  "GEN-PHONES-K23-M17"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "When your phone shows a full signal, it actually reduces its transmission power to save battery, meaning it works less hard than when the signal is weak.",
+    "kind": "what_if",
+    "q": "Meena walks from a weak-signal area into a full-signal area. What happens to the power her phone sends out?",
+    "options": [
+     "It drops, so the phone works less hard",
+     "It stays the same in every signal area",
+     "It rises, so the phone works much harder",
+     "It rises, giving each wave more energy"
+    ],
+    "explain": "With a full signal, the phone lowers its transmission power to save battery, so it works less hard than with a weak signal.",
+    "wrong": [
+     {
+      "misconception": "GEN-PHONES-K16-M5",
+      "why": "thinks a phone always sends the same power"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the link between signal strength and effort"
+     },
+     {
+      "misconception": "GEN-PHONES-K17-M7",
+      "why": "thinks stronger signals mean higher-energy waves like X-rays"
+     }
+    ]
+   },
+   {
+    "evidence": "Unlike X-rays, these waves lack the energy to damage DNA or make objects radioactive.",
+    "kind": "what_if",
+    "q": "Asha keeps a glass of water next to her phone all night. What happens to the water?",
+    "options": [
+     "It stays unchanged, as radio waves are too weak",
+     "It turns radioactive from the phone's waves",
+     "It is harmed, since all radiation is dangerous",
+     "It is safe only when the signal is weak"
+    ],
+    "explain": "Radio waves, unlike X-rays, lack the energy to make objects radioactive, so the water stays the same.",
+    "wrong": [
+     {
+      "misconception": "GEN-PHONES-K21-M13",
+      "why": "thinks phones make food or water radioactive"
+     },
+     {
+      "misconception": "GEN-PHONES-K17-M6",
+      "why": "thinks all radiation is like nuclear radiation"
+     },
+     {
+      "misconception": "GEN-PHONES-K17-M7",
+      "why": "thinks a strong signal carries X-ray-like energy"
+     }
+    ]
+   },
+   {
+    "evidence": "It is not because the screen emits harmful rays that burn the eyes, but because we blink less often, causing the surface of the eye to dry out.",
+    "kind": "which_explains",
+    "q": "After two hours of phone games, Kabir's eyes feel tired. Which explains why?",
+    "options": [
+     "His eyes dried out because he blinked less",
+     "His eyes were burnt by rays from the screen",
+     "His eyes are slowly going permanently blind",
+     "His eyes took in radiation from the warm phone"
+    ],
+    "explain": "Tired eyes come from blinking less, which dries the eye's surface, not from harmful rays burning the eyes.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "picks the cause the passage rejects"
+     },
+     {
+      "misconception": "GEN-PHONES-K23-M16",
+      "why": "thinks screen time causes permanent blindness"
+     },
+     {
+      "misconception": "GEN-PHONES-K22-M15",
+      "why": "thinks a warm phone gives out dangerous radiation"
+     }
+    ]
+   },
+   {
+    "evidence": "A phone gets hot due to the energy used by the processor or battery during heavy tasks, not because it is leaking dangerous radiation.",
+    "kind": "which_explains",
+    "q": "Sunil's phone gets warm while he plays a big video game. What is the best explanation?",
+    "options": [
+     "It is using a lot of energy for hard work",
+     "It is leaking dangerous radiation into his hands",
+     "It is sending strong signals up to a satellite",
+     "It is overcharging, so its battery may explode"
+    ],
+    "explain": "A phone heats up from energy used by its processor or battery during heavy tasks, not from leaking radiation.",
+    "wrong": [
+     {
+      "misconception": "GEN-PHONES-K22-M15",
+      "why": "thinks warmth means dangerous radiation"
+     },
+     {
+      "misconception": "GEN-PHONES-K15-M4",
+      "why": "thinks phones talk to satellites for normal use"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the battery-charging sentence with heat during use"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 29.7
+}

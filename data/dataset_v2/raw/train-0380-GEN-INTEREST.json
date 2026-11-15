@@ -1,0 +1,141 @@
+{
+ "source": "train-0380-GEN-INTEREST.json",
+ "job": {
+  "job": "train-0380-GEN-INTEREST",
+  "topic_id": "GEN-INTEREST",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a question-and-answer (FAQ) style passage",
+  "seed": 380
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 2771,
+  "promptTokenCount": 2
+ },
+ "passage": "Understanding how loans work is essential for managing personal finances. When you borrow money, you pay back the principal plus interest. Simple interest is calculated only on the original principal, while compound interest is calculated on the principal plus any accumulated interest. For the first year, simple interest and compound interest are identical because no interest has accumulated yet. If a loan is compounded half-yearly, you must divide the annual interest rate by two and double the number of years to find the total periods. When calculating interest for a period shorter than a year, such as six months, you must express the time as a fraction of a year, specifically 0.5, rather than using the number 6. Furthermore, a longer loan tenure reduces your monthly EMI, but it significantly increases the total amount of interest you pay over the life of the loan. Finally, always check for hidden fees, as a loan with a lower interest rate might actually cost more overall if it includes high processing charges or insurance premiums compared to a loan with a slightly higher rate.",
+ "menu_ids": [
+  "GEN-INTEREST-K7-M1",
+  "GEN-INTEREST-K8-M2",
+  "GEN-INTEREST-K5-M3",
+  "GEN-INTEREST-K10-M4",
+  "GEN-INTEREST-K11-M5",
+  "GEN-INTEREST-K13-M6",
+  "GEN-INTEREST-K12-M7",
+  "GEN-INTEREST-K15-M8",
+  "GEN-INTEREST-K20-M9",
+  "GEN-INTEREST-K22-M10",
+  "GEN-INTEREST-K23-M11",
+  "GEN-INTEREST-K28-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "For the first year, simple interest and compound interest are identical because no interest has accumulated yet.",
+    "kind": "what_if",
+    "q": "Meena earns interest on her savings for exactly one year. How do the two interest methods compare?",
+    "options": [
+     "Both give exactly the same interest",
+     "Compound gives more interest from day one",
+     "Both differ because the rate rises yearly",
+     "Simple gives more as it skips interest"
+    ],
+    "explain": "In year one no interest has built up yet, so simple and compound interest are identical.",
+    "wrong": [
+     {
+      "misconception": "GEN-INTEREST-K10-M4",
+      "why": "thinks compound is always larger, even in year one"
+     },
+     {
+      "misconception": "GEN-INTEREST-K5-M3",
+      "why": "thinks compounding raises the rate itself"
+     },
+     {
+      "misconception": null,
+      "why": "thinks simple interest gains from ignoring accumulated interest"
+     }
+    ]
+   },
+   {
+    "evidence": "If a loan is compounded half-yearly, you must divide the annual interest rate by two and double the number of years to find the total periods.",
+    "kind": "what_if",
+    "q": "A loan is compounded half-yearly for 3 years at 10% a year. What values go in the formula?",
+    "options": [
+     "Rate 5% and 6 periods",
+     "Rate 5% and 3 periods",
+     "Rate 10% and 6 periods",
+     "Rate 20% and 6 periods"
+    ],
+    "explain": "Half-yearly means halve the rate to 5% and double the 3 years to 6 periods.",
+    "wrong": [
+     {
+      "misconception": "GEN-INTEREST-K11-M5",
+      "why": "halves the rate but keeps the years the same"
+     },
+     {
+      "misconception": null,
+      "why": "doubles the periods but forgets to halve the rate"
+     },
+     {
+      "misconception": null,
+      "why": "doubles the rate instead of halving it"
+     }
+    ]
+   },
+   {
+    "evidence": "When calculating interest for a period shorter than a year, such as six months, you must express the time as a fraction of a year, specifically 0.5, rather than using the number 6.",
+    "kind": "which_example",
+    "q": "Asha borrows money for six months at 8% a year. Which time value goes into SI = PRT/100?",
+    "options": [
+     "T = 0.5, as time is counted in years",
+     "T = 6, as the loan lasts six months",
+     "T = 8, as the rate is eight percent",
+     "T = 12, as a year has twelve months"
+    ],
+    "explain": "The rate is yearly, so six months is written as the fraction 0.5 of a year, not 6.",
+    "wrong": [
+     {
+      "misconception": "GEN-INTEREST-K13-M6",
+      "why": "puts the number of months straight into the formula"
+     },
+     {
+      "misconception": "GEN-INTEREST-K12-M7",
+      "why": "mixes up the rate with the time"
+     },
+     {
+      "misconception": null,
+      "why": "uses the months in a full year as time"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, a longer loan tenure reduces your monthly EMI, but it significantly increases the total amount of interest you pay over the life of the loan.",
+    "kind": "what_if",
+    "q": "Kiran stretches his loan from 3 years to 5 years. What changes for him?",
+    "options": [
+     "Each EMI falls, but the total cost rises",
+     "Each EMI falls, and the total cost falls too",
+     "Each EMI rises, but the total cost falls",
+     "Each EMI stays equal, but the total cost rises"
+    ],
+    "explain": "Longer tenure makes each EMI smaller but adds interest, so the total paid goes up.",
+    "wrong": [
+     {
+      "misconception": "GEN-INTEREST-K20-M9",
+      "why": "thinks smaller EMIs mean paying less in total"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the effect of a longer tenure on EMI"
+     },
+     {
+      "misconception": "GEN-INTEREST-K15-M8",
+      "why": "thinks EMI is fixed as loan divided by months"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 23.7
+}

@@ -1,0 +1,162 @@
+{
+ "source": "train-0273-SCI-CHM-COMBUSTION.json",
+ "job": {
+  "job": "train-0273-SCI-CHM-COMBUSTION",
+  "topic_id": "SCI-CHM-COMBUSTION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a news-style report about a real-world situation",
+  "seed": 273
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1564,
+  "promptTokenCount": 2
+ },
+ "passage": "In a recent industrial safety seminar, experts highlighted critical fire safety protocols. A major point of discussion was electrical fires, which are common in factories. Experts warned that using water on these fires is dangerous because water conducts electricity, potentially causing fatal shocks. Instead, carbon dioxide extinguishers are preferred as they cut off the oxygen supply without conducting current. The seminar also addressed the dangers of incomplete combustion in poorly ventilated rooms. When fuels like coal burn with insufficient oxygen, they produce carbon monoxide, a deadly, invisible gas that is far more dangerous than visible smoke. Furthermore, the experts debunked the myth that metals are inherently non-combustible. While many metals resist burning, fine powders of metals like magnesium can burn intensely, releasing significant heat. Regarding fuel selection, the speakers cautioned that a high calorific value is not the only factor for choosing a fuel. Factors like cost, availability, and safety are equally vital. Finally, they explained that spontaneous combustion is not a random event; it occurs when a substance reaches its ignition temperature through internal chemical reactions, often due to poor storage of oily rags. Understanding these principles is essential for preventing accidents in both homes and workplaces, ensuring that we handle fuels and fire hazards with the scientific caution they require.",
+ "menu_ids": [
+  "SCI-CHM-COMBUSTION-K18-M4",
+  "SCI-CHM-COMBUSTION-K21-M5",
+  "SCI-CHM-COMBUSTION-K12-M6",
+  "SCI-CHM-COMBUSTION-K24-M7",
+  "SCI-CHM-COMBUSTION-K22-M9",
+  "SCI-CHM-COMBUSTION-K8-M10",
+  "SCI-CHM-COMBUSTION-K16-M11"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Experts warned that using water on these fires is dangerous because water conducts electricity, potentially causing fatal shocks.",
+    "kind": "why",
+    "q": "Why is pouring water on a factory wiring fire a bad idea?",
+    "options": [
+     "The current can travel through the water to people",
+     "The water would make the fire spread wider",
+     "The water would remove oxygen too slowly",
+     "The water would damage the machines inside"
+    ],
+    "explain": "Water conducts electricity, so the current can pass through it and shock the person holding the water.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks water spreads all fires, a common everyday belief"
+     },
+     {
+      "misconception": "SCI-CHM-COMBUSTION-K18-M4",
+      "why": "thinks water works but is only slow"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby worry about machines, not the shock danger"
+     }
+    ]
+   },
+   {
+    "evidence": "When fuels like coal burn with insufficient oxygen, they produce carbon monoxide, a deadly, invisible gas that is far more dangerous than visible smoke.",
+    "kind": "what_if",
+    "q": "A coal stove burns in a closed room with little air. What is the main danger?",
+    "options": [
+     "A hidden poisonous gas builds up in the room",
+     "Only thick smoke fills the room, which is harmless",
+     "The coal burns hotter and the room overheats",
+     "The coal turns into a different fuel"
+    ],
+    "explain": "Coal burning with too little oxygen makes carbon monoxide, an invisible deadly gas, which is worse than smoke.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-COMBUSTION-K22-M9",
+      "why": "thinks incomplete combustion gives only smoke"
+     },
+     {
+      "misconception": null,
+      "why": "thinks less oxygen gives a hotter fire"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up burning with a change of fuel type"
+     }
+    ]
+   },
+   {
+    "evidence": "While many metals resist burning, fine powders of metals like magnesium can burn intensely, releasing significant heat.",
+    "kind": "which_example",
+    "q": "Which situation shows that a metal can catch fire?",
+    "options": [
+     "Magnesium in fine powder form burning with heat",
+     "A solid iron rod melting in a furnace",
+     "A copper wire glowing when current passes",
+     "Aluminium foil becoming warm in sunlight"
+    ],
+    "explain": "Fine magnesium powder burns intensely and releases heat, so metals are not always non-combustible.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-COMBUSTION-K8-M10",
+      "why": "confuses melting with burning"
+     },
+     {
+      "misconception": null,
+      "why": "confuses glowing with burning"
+     },
+     {
+      "misconception": null,
+      "why": "confuses getting warm with burning"
+     }
+    ]
+   },
+   {
+    "evidence": "Regarding fuel selection, the speakers cautioned that a high calorific value is not the only factor for choosing a fuel.",
+    "kind": "what_if",
+    "q": "Fuel X gives the most heat per kg but is costly and unsafe. What should a factory do?",
+    "options": [
+     "Also weigh its cost, safety and availability",
+     "Choose it, since heat is all that matters",
+     "Choose it, since cost and safety never change",
+     "Reject every fuel that gives high heat"
+    ],
+    "explain": "High calorific value is not the only factor; cost, availability and safety are equally important when choosing a fuel.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-COMBUSTION-K24-M7",
+      "why": "thinks highest calorific value is always best"
+     },
+     {
+      "misconception": null,
+      "why": "ignores the passage's other factors"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises the caution into a ban"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, they explained that spontaneous combustion is not a random event; it occurs when a substance reaches its ignition temperature through internal chemical reactions, often due to poor storage of oily rags.",
+    "kind": "which_explains",
+    "q": "A heap of oily rags suddenly catches fire in a shed. What best explains this?",
+    "options": [
+     "Slow reactions inside heated it to ignition temperature",
+     "It happened by chance with no heat involved",
+     "Someone must have lit it with an outside flame",
+     "The shed air alone gave it enough heat"
+    ],
+    "explain": "Internal chemical reactions raised the rags to their ignition temperature, so the fire had a cause.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-COMBUSTION-K12-M6",
+      "why": "thinks spontaneous combustion has no cause"
+     },
+     {
+      "misconception": null,
+      "why": "thinks every fire needs an outside flame"
+     },
+     {
+      "misconception": null,
+      "why": "thinks surrounding air supplies the heat"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 14.6
+}

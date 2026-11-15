@@ -1,0 +1,141 @@
+{
+ "source": "train-0149-SOC-GEO-DRAINAGE.json",
+ "job": {
+  "job": "train-0149-SOC-GEO-DRAINAGE",
+  "topic_id": "SOC-GEO-DRAINAGE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a question-and-answer (FAQ) style passage",
+  "seed": 149
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3332,
+  "promptTokenCount": 2
+ },
+ "passage": "Understanding India's drainage system requires looking beyond just the main river channels. A drainage basin is defined as the entire area of land drained by a single river system, including all its tributaries and smaller streams. In India, rivers follow diverse paths based on the slope of the land. While many flow eastwards into the Bay of Bengal, others like the Narmada and Tapi flow westwards into the Arabian Sea, proving that not all rivers move from north to south. The source of water also varies significantly. Himalayan rivers are perennial, meaning they flow throughout the year, primarily because they are fed by both melting glaciers and seasonal rainfall. In contrast, many peninsular rivers are seasonal, relying solely on rain. Finally, we must recognize that river pollution is a complex issue. While industrial waste is a major contributor, the degradation of water quality is also significantly worsened by urban sewage discharge, agricultural runoff, and the dumping of solid waste by local communities. Protecting our rivers requires addressing these multiple sources of contamination rather than blaming a single cause.",
+ "menu_ids": [
+  "SOC-GEO-DRAINAGE-K2-M1",
+  "SOC-GEO-DRAINAGE-K3-M2",
+  "SOC-GEO-DRAINAGE-K11-M3",
+  "SOC-GEO-DRAINAGE-K9-M4",
+  "SOC-GEO-DRAINAGE-K2-M5",
+  "SOC-GEO-DRAINAGE-K3-M6",
+  "SOC-GEO-DRAINAGE-K5-M7",
+  "SOC-GEO-DRAINAGE-K6-M8",
+  "SOC-GEO-DRAINAGE-K7-M9",
+  "SOC-GEO-DRAINAGE-K8-M10",
+  "SOC-GEO-DRAINAGE-K10-M11",
+  "SOC-GEO-DRAINAGE-K12-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "A drainage basin is defined as the entire area of land drained by a single river system, including all its tributaries and smaller streams.",
+    "kind": "what_if",
+    "q": "A small stream feeds a tributary of the Godavari. Which basin does the stream's land belong to?",
+    "options": [
+     "The Godavari basin, along with its tributaries",
+     "No basin, since a basin is the channel",
+     "No basin, since a wall divides the waters",
+     "Its own basin, since each stream has one"
+    ],
+    "explain": "A drainage basin is all the land drained by one river system, including tributaries and small streams.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-DRAINAGE-K11-M3",
+      "why": "thinks a basin is only the river channel"
+     },
+     {
+      "misconception": "SOC-GEO-DRAINAGE-K12-M12",
+      "why": "thinks a water divide is a built wall"
+     },
+     {
+      "misconception": null,
+      "why": "thinks every small stream forms a separate basin"
+     }
+    ]
+   },
+   {
+    "evidence": "While many flow eastwards into the Bay of Bengal, others like the Narmada and Tapi flow westwards into the Arabian Sea, proving that not all rivers move from north to south.",
+    "kind": "what_if",
+    "q": "A leaf floats down the Narmada until it reaches the sea. Where does it end up?",
+    "options": [
+     "The Arabian Sea, by flowing west",
+     "The Bay of Bengal, by flowing east",
+     "The Indian Ocean, by flowing south",
+     "The Arabian Sea, by flowing south"
+    ],
+    "explain": "The Narmada flows westwards into the Arabian Sea, unlike most rivers that flow east.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-DRAINAGE-K7-M9",
+      "why": "thinks the Narmada flows east like most peninsular rivers"
+     },
+     {
+      "misconception": "SOC-GEO-DRAINAGE-K3-M2",
+      "why": "thinks all Indian rivers flow north to south"
+     },
+     {
+      "misconception": null,
+      "why": "knows the sea but keeps the north-to-south idea"
+     }
+    ]
+   },
+   {
+    "evidence": "Himalayan rivers are perennial, meaning they flow throughout the year, primarily because they are fed by both melting glaciers and seasonal rainfall.",
+    "kind": "why",
+    "q": "Why do Himalayan rivers keep flowing even in the dry months?",
+    "options": [
+     "Melting glaciers feed them as well as rain",
+     "Heavy rainfall alone keeps them full",
+     "Their steep slope keeps the water moving",
+     "Seasonal rivers join them in dry months"
+    ],
+    "explain": "Himalayan rivers get water from melting glaciers and rain, so they flow all year.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-DRAINAGE-K2-M1",
+      "why": "thinks rainfall alone makes them perennial"
+     },
+     {
+      "misconception": null,
+      "why": "picks the slope detail from a nearby sentence"
+     },
+     {
+      "misconception": null,
+      "why": "misreads seasonal rivers as a water source"
+     }
+    ]
+   },
+   {
+    "evidence": "While industrial waste is a major contributor, the degradation of water quality is also significantly worsened by urban sewage discharge, agricultural runoff, and the dumping of solid waste by local communities.",
+    "kind": "which_explains",
+    "q": "A river near a town has no factories, yet its water is dirty. How can this be?",
+    "options": [
+     "Sewage, farm runoff and garbage also pollute it",
+     "Factory waste must be secretly reaching it",
+     "Glacier melt brings dirt from the mountains",
+     "Seasonal rain alone makes the water dirty"
+    ],
+    "explain": "Besides factory waste, city sewage, farm runoff and dumped garbage also pollute rivers.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-DRAINAGE-K9-M4",
+      "why": "thinks only industrial waste pollutes rivers"
+     },
+     {
+      "misconception": null,
+      "why": "picks the glacier detail from an earlier sentence"
+     },
+     {
+      "misconception": null,
+      "why": "blames one single cause instead of many"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 34.4
+}

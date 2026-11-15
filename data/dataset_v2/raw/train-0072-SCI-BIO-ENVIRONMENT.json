@@ -1,0 +1,167 @@
+{
+ "source": "train-0072-SCI-BIO-ENVIRONMENT.json",
+ "job": {
+  "job": "train-0072-SCI-BIO-ENVIRONMENT",
+  "topic_id": "SCI-BIO-ENVIRONMENT",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a step-by-step explanation of a process",
+  "seed": 72
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4428,
+  "promptTokenCount": 2
+ },
+ "passage": "In an ecosystem, energy flows in a single direction, starting from the sun and moving through various trophic levels. Plants capture solar energy through photosynthesis, converting it into chemical energy stored in their tissues. Unlike nutrients, which cycle repeatedly through the environment, energy is lost as heat at each transfer, meaning it cannot be recycled. When organisms die, decomposers break down the organic matter, returning essential nutrients to the soil to be reused by plants. However, some substances like pesticides do not break down easily. These chemicals enter the food chain and increase in concentration at each higher trophic level, a process known as biological magnification. This happens because predators consume many prey organisms, accumulating the toxins stored in their bodies. Meanwhile, high in the atmosphere, the ozone layer acts as a shield by absorbing harmful ultraviolet radiation from the sun. This layer is a region of concentrated ozone gas, not a physical gap or hole where air is missing. Protecting this layer is vital, as it prevents dangerous radiation from reaching the Earth's surface, which is distinct from the greenhouse effect that traps heat. Understanding these dynamics helps us realize that every component, from the smallest decomposer to the largest predator, plays a specific role in maintaining the balance of our natural world.",
+ "menu_ids": [
+  "SCI-BIO-ENVIRONMENT-K3-M1",
+  "SCI-BIO-ENVIRONMENT-K10-M3",
+  "SCI-BIO-ENVIRONMENT-K11-M4",
+  "SCI-BIO-ENVIRONMENT-K13-M5",
+  "SCI-BIO-ENVIRONMENT-K16-M6",
+  "SCI-BIO-ENVIRONMENT-K17-M7",
+  "SCI-BIO-ENVIRONMENT-K19-M8",
+  "SCI-BIO-ENVIRONMENT-K7-M9",
+  "SCI-BIO-ENVIRONMENT-K13-M10",
+  "SCI-BIO-ENVIRONMENT-K10-M12",
+  "SCI-BIO-ENVIRONMENT-K4-M13",
+  "SCI-BIO-ENVIRONMENT-K20-M15"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Unlike nutrients, which cycle repeatedly through the environment, energy is lost as heat at each transfer, meaning it cannot be recycled.",
+    "kind": "what_if",
+    "q": "Energy passes from grass to deer to tiger. What happens to the energy at each step?",
+    "options": [
+     "It is partly given off as heat",
+     "It is recycled fully, like nutrients",
+     "It increases, so tigers get the most",
+     "It sinks into the soil for roots"
+    ],
+    "explain": "At each transfer some energy is lost as heat, so it cannot be recycled like nutrients.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-ENVIRONMENT-K11-M4",
+      "why": "thinks energy cycles like nutrients"
+     },
+     {
+      "misconception": "SCI-BIO-ENVIRONMENT-K10-M3",
+      "why": "thinks top predators have the most energy"
+     },
+     {
+      "misconception": "SCI-BIO-ENVIRONMENT-K10-M12",
+      "why": "thinks plants get energy from soil"
+     }
+    ]
+   },
+   {
+    "evidence": "When organisms die, decomposers break down the organic matter, returning essential nutrients to the soil to be reused by plants.",
+    "kind": "what_if",
+    "q": "What would happen to plants if all decomposers in a forest disappeared?",
+    "options": [
+     "Plants would run short of soil nutrients",
+     "Plants would not change; decomposers eat only dead things",
+     "Plants would not change; only decomposer-eaters suffer",
+     "Plants would lose the energy they get from soil"
+    ],
+    "explain": "Decomposers return nutrients to the soil for plants; without them, nutrients would not be reused.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-ENVIRONMENT-K3-M1",
+      "why": "thinks decomposers are not part of the food chain"
+     },
+     {
+      "misconception": "SCI-BIO-ENVIRONMENT-K7-M9",
+      "why": "thinks only the eater of a removed species is affected"
+     },
+     {
+      "misconception": "SCI-BIO-ENVIRONMENT-K10-M12",
+      "why": "thinks plants get energy from soil"
+     }
+    ]
+   },
+   {
+    "evidence": "This happens because predators consume many prey organisms, accumulating the toxins stored in their bodies.",
+    "kind": "why",
+    "q": "Why does an eagle carry more pesticide than each fish it eats?",
+    "options": [
+     "It eats many fish and keeps their toxins",
+     "It grows bigger, so its body holds more",
+     "It is on top, so it gets most energy",
+     "It eats fewer fish, but each is bigger"
+    ],
+    "explain": "Predators eat many prey, so the toxins stored in all those prey build up in them.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-ENVIRONMENT-K13-M5",
+      "why": "thinks magnification means growing physically larger"
+     },
+     {
+      "misconception": "SCI-BIO-ENVIRONMENT-K10-M3",
+      "why": "mixes up toxin build-up with energy"
+     },
+     {
+      "misconception": null,
+      "why": "ignores that predators eat many prey"
+     }
+    ]
+   },
+   {
+    "evidence": "This layer is a region of concentrated ozone gas, not a physical gap or hole where air is missing.",
+    "kind": "recall",
+    "q": "Meena thinks the ozone layer is a gap in the sky with no air. What is it really?",
+    "options": [
+     "A zone where ozone gas is densely packed",
+     "An empty space where air is missing",
+     "A layer that traps heat to warm Earth",
+     "A cloud made of harmful ultraviolet rays"
+    ],
+    "explain": "The ozone layer is a region of concentrated ozone gas, not a hole without air.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-ENVIRONMENT-K16-M6",
+      "why": "thinks the ozone hole is a place with no air"
+     },
+     {
+      "misconception": "SCI-BIO-ENVIRONMENT-K17-M7",
+      "why": "mixes ozone up with the greenhouse effect"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the shield with what it blocks"
+     }
+    ]
+   },
+   {
+    "evidence": "Protecting this layer is vital, as it prevents dangerous radiation from reaching the Earth's surface, which is distinct from the greenhouse effect that traps heat.",
+    "kind": "difference",
+    "q": "Rahul says ozone damage is what warms the Earth. Which idea from the lesson shows he is wrong?",
+    "options": [
+     "Ozone blocks UV rays; the greenhouse effect traps heat",
+     "Ozone damage lets more heat in, not trap it",
+     "Ozone holes are empty, so no heat passes",
+     "Ozone breaks down pesticides that trap the heat"
+    ],
+    "explain": "Ozone stops dangerous UV radiation; trapping heat is the separate greenhouse effect.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-ENVIRONMENT-K17-M7",
+      "why": "thinks the ozone hole causes warming by letting heat in"
+     },
+     {
+      "misconception": "SCI-BIO-ENVIRONMENT-K16-M6",
+      "why": "thinks the ozone hole is an empty space"
+     },
+     {
+      "misconception": null,
+      "why": "mixes in a nearby detail about pesticides"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 43.4
+}

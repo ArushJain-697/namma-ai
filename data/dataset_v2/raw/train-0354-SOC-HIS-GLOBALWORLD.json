@@ -1,0 +1,167 @@
+{
+ "source": "train-0354-SOC-HIS-GLOBALWORLD.json",
+ "job": {
+  "job": "train-0354-SOC-HIS-GLOBALWORLD",
+  "topic_id": "SOC-HIS-GLOBALWORLD",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a cause-and-effect explanation",
+  "seed": 354
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1763,
+  "promptTokenCount": 2
+ },
+ "passage": "Global connections have existed for centuries, long before the internet or modern computers. The Silk Routes were not just single roads for silk; they were vibrant networks linking Asia, Europe, and Africa, carrying goods like spices, textiles, and precious metals alongside cultural ideas. In the 16th century, the discovery of the Americas transformed global diets. Crops like potatoes, maize, and chilies, which were unknown in Europe and India before this, were introduced by travelers and traders, eventually becoming staple foods. Later, in the 1890s, the arrival of rinderpest in Africa caused a massive cattle plague. This disease killed nearly 90 percent of the continent's livestock, effectively destroying the traditional economy and forcing Africans into the labour market to survive. By the 20th century, the world faced the Great Depression, a period of severe economic collapse. This crisis was not caused by a lack of food, but by a catastrophic failure in the global financial system, leading to mass unemployment and falling prices. To prevent such disasters, the Bretton Woods Conference established the IMF and World Bank. These institutions were designed to manage international financial stability, not specifically to fund the growth of poor developing nations. These historical events show that global integration has always been driven by trade, disease, and complex financial systems rather than simple technological or agricultural shortages.",
+ "menu_ids": [
+  "SOC-HIS-GLOBALWORLD-K13-M1",
+  "SOC-HIS-GLOBALWORLD-K14-M2",
+  "SOC-HIS-GLOBALWORLD-K15-M3",
+  "SOC-HIS-GLOBALWORLD-K17-M4",
+  "SOC-HIS-GLOBALWORLD-K18-M5",
+  "SOC-HIS-GLOBALWORLD-K19-M6",
+  "SOC-HIS-GLOBALWORLD-K20-M7",
+  "SOC-HIS-GLOBALWORLD-K16-M8",
+  "SOC-HIS-GLOBALWORLD-K21-M9",
+  "SOC-HIS-GLOBALWORLD-K13-M10",
+  "SOC-HIS-GLOBALWORLD-K11-M11",
+  "SOC-HIS-GLOBALWORLD-K10-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "The Silk Routes were not just single roads for silk; they were vibrant networks linking Asia, Europe, and Africa, carrying goods like spices, textiles, and precious metals alongside cultural ideas.",
+    "kind": "which_explains",
+    "q": "A trader says the Silk Routes were one road carrying only silk. Why is he wrong?",
+    "options": [
+     "They were linked networks carrying many goods and ideas",
+     "They were short roads between neighbouring kingdoms only",
+     "They were sea lanes used for spices alone",
+     "They were roads built by China for silk only"
+    ],
+    "explain": "The Silk Routes were networks linking three continents, carrying many goods and cultural ideas, not just silk.",
+    "wrong": [
+     {
+      "misconception": "SOC-HIS-GLOBALWORLD-K13-M10",
+      "why": "thinks pre-modern trade was only between neighbours"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the routes were sea lanes for one product"
+     },
+     {
+      "misconception": "SOC-HIS-GLOBALWORLD-K13-M1",
+      "why": "thinks the routes were single silk-only roads"
+     }
+    ]
+   },
+   {
+    "evidence": "Crops like potatoes, maize, and chilies, which were unknown in Europe and India before this, were introduced by travelers and traders, eventually becoming staple foods.",
+    "kind": "what_if",
+    "q": "Imagine going back to India in 1400. Which food would your cook most likely lack?",
+    "options": [
+     "Chilies, which arrived after the Americas were reached",
+     "Chilies, which were brought from Europe long before",
+     "Potatoes, which Indians had grown for centuries",
+     "Maize, which came with the Silk Routes"
+    ],
+    "explain": "Chilies, potatoes and maize were unknown in India until travellers brought them after the Americas were reached.",
+    "wrong": [
+     {
+      "misconception": "SOC-HIS-GLOBALWORLD-K14-M2",
+      "why": "thinks these crops were always eaten in India"
+     },
+     {
+      "misconception": null,
+      "why": "thinks Europeans always had chilies to share"
+     },
+     {
+      "misconception": "SOC-HIS-GLOBALWORLD-K13-M1",
+      "why": "links new crops to the old Silk Routes"
+     }
+    ]
+   },
+   {
+    "evidence": "This disease killed nearly 90 percent of the continent's livestock, effectively destroying the traditional economy and forcing Africans into the labour market to survive.",
+    "kind": "why",
+    "q": "Why did many Africans start working for wages after rinderpest arrived?",
+    "options": [
+     "Losing their cattle left them no other living",
+     "Wages paid more than keeping cattle",
+     "The disease killed most of the people",
+     "Europeans gave them jobs to share wealth"
+    ],
+    "explain": "Rinderpest killed about 90 percent of livestock, destroying the traditional economy, so Africans needed wage work to survive.",
+    "wrong": [
+     {
+      "misconception": "SOC-HIS-GLOBALWORLD-K17-M4",
+      "why": "thinks workers moved voluntarily for better pay"
+     },
+     {
+      "misconception": "SOC-HIS-GLOBALWORLD-K18-M5",
+      "why": "thinks rinderpest killed people, not cattle"
+     },
+     {
+      "misconception": null,
+      "why": "assumes Europeans offered jobs out of kindness"
+     }
+    ]
+   },
+   {
+    "evidence": "This crisis was not caused by a lack of food, but by a catastrophic failure in the global financial system, leading to mass unemployment and falling prices.",
+    "kind": "which_explains",
+    "q": "Shops in a Depression-hit town have food, but people are jobless. What explains this?",
+    "options": [
+     "The financial system failed, so people lacked money",
+     "Farms failed, so shops ran out of food",
+     "Governments stopped printing money to end it",
+     "Prices rose too high for people to pay"
+    ],
+    "explain": "The Depression came from a financial system failure causing unemployment and falling prices, not from a lack of food.",
+    "wrong": [
+     {
+      "misconception": "SOC-HIS-GLOBALWORLD-K19-M6",
+      "why": "thinks the Depression was a shortage of food"
+     },
+     {
+      "misconception": "SOC-HIS-GLOBALWORLD-K10-M12",
+      "why": "thinks stopping money printing mattered here"
+     },
+     {
+      "misconception": null,
+      "why": "reverses falling prices into rising prices"
+     }
+    ]
+   },
+   {
+    "evidence": "These institutions were designed to manage international financial stability, not specifically to fund the growth of poor developing nations.",
+    "kind": "difference",
+    "q": "What was the main job of the IMF and World Bank when set up?",
+    "options": [
+     "Keeping the world's finances steady",
+     "Lending money to help poor nations grow",
+     "Joining the richest countries into a group",
+     "Choosing economists to plan trade rules"
+    ],
+    "explain": "They were designed to manage international financial stability, not mainly to fund growth of poor developing nations.",
+    "wrong": [
+     {
+      "misconception": "SOC-HIS-GLOBALWORLD-K20-M7",
+      "why": "thinks they were made to fund poor countries"
+     },
+     {
+      "misconception": "SOC-HIS-GLOBALWORLD-K21-M9",
+      "why": "thinks they were a club of the richest countries"
+     },
+     {
+      "misconception": "SOC-HIS-GLOBALWORLD-K11-M11",
+      "why": "thinks Bretton Woods was a person who planned it"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 16.4
+}

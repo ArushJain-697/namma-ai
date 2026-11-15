@@ -1,0 +1,167 @@
+{
+ "source": "train-0081-SCI-BIO-RESPIRATION.json",
+ "job": {
+  "job": "train-0081-SCI-BIO-RESPIRATION",
+  "topic_id": "SCI-BIO-RESPIRATION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a question-and-answer (FAQ) style passage",
+  "seed": 81
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 5060,
+  "promptTokenCount": 2
+ },
+ "passage": "Frequently Asked Questions about Respiration: Q: Is breathing the same as respiration? A: No, breathing is the physical act of inhaling and exhaling air, while respiration is the chemical process where cells break down glucose to release energy. Q: Do we only inhale oxygen and exhale carbon dioxide? A: No, we inhale atmospheric air containing a mixture of gases, and our exhaled air also contains a mix, though with more carbon dioxide than the air we took in. Q: Does respiration only occur in the lungs? A: No, cellular respiration happens inside every living cell of an organism to provide energy, regardless of whether it has lungs or not. Q: How do organisms like fish get oxygen? A: Fish use gills to extract dissolved oxygen from water, rather than breaking down water molecules themselves. Q: Do plants only use stomata for transpiration? A: No, while stomata allow water vapor to escape, they are also the primary sites for gas exchange, allowing plants to take in oxygen and release carbon dioxide for respiration. Q: Is anaerobic respiration as efficient as aerobic respiration? A: No, aerobic respiration uses oxygen to fully break down glucose, releasing much more energy than the anaerobic process used during intense exercise.",
+ "menu_ids": [
+  "SCI-BIO-RESPIRATION-K2-M1",
+  "SCI-BIO-RESPIRATION-K5-M2",
+  "SCI-BIO-RESPIRATION-K6-M3",
+  "SCI-BIO-RESPIRATION-K3-M4",
+  "SCI-BIO-RESPIRATION-K9-M5",
+  "SCI-BIO-RESPIRATION-K7-M6",
+  "SCI-BIO-RESPIRATION-K14-M9",
+  "SCI-BIO-RESPIRATION-K10-M10",
+  "SCI-BIO-RESPIRATION-K15-M11",
+  "SCI-BIO-RESPIRATION-K17-M13",
+  "SCI-BIO-RESPIRATION-K11-M14",
+  "SCI-BIO-RESPIRATION-K4-M15"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "A: No, breathing is the physical act of inhaling and exhaling air, while respiration is the chemical process where cells break down glucose to release energy.",
+    "kind": "difference",
+    "q": "How is breathing different from respiration?",
+    "options": [
+     "Breathing moves air; respiration frees energy from glucose",
+     "Breathing moves air; respiration is that same act",
+     "Breathing makes oxygen; respiration sends it to lungs",
+     "Breathing happens in cells; respiration happens in lungs"
+    ],
+    "explain": "Breathing is inhaling and exhaling air; respiration is cells breaking down glucose to release energy.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-RESPIRATION-K2-M1",
+      "why": "thinks respiration is just another word for breathing"
+     },
+     {
+      "misconception": "SCI-BIO-RESPIRATION-K5-M2",
+      "why": "thinks the body makes oxygen"
+     },
+     {
+      "misconception": "SCI-BIO-RESPIRATION-K3-M4",
+      "why": "thinks respiration happens only in the lungs"
+     }
+    ]
+   },
+   {
+    "evidence": "A: No, we inhale atmospheric air containing a mixture of gases, and our exhaled air also contains a mix, though with more carbon dioxide than the air we took in.",
+    "kind": "what_if",
+    "q": "Meena tests the air she breathes out. What will she find in it?",
+    "options": [
+     "Mixed gases, with more carbon dioxide than inhaled",
+     "Pure carbon dioxide, with no other gases at all",
+     "Mixed gases, with less carbon dioxide than inhaled",
+     "Pure carbon dioxide, since lungs turn oxygen into it"
+    ],
+    "explain": "Exhaled air is still a mix of gases, but it has more carbon dioxide than inhaled air.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-RESPIRATION-K9-M5",
+      "why": "thinks we exhale pure carbon dioxide"
+     },
+     {
+      "misconception": null,
+      "why": "reverses which air has more carbon dioxide"
+     },
+     {
+      "misconception": "SCI-BIO-RESPIRATION-K11-M14",
+      "why": "thinks oxygen turns into carbon dioxide in the lungs"
+     }
+    ]
+   },
+   {
+    "evidence": "A: No, cellular respiration happens inside every living cell of an organism to provide energy, regardless of whether it has lungs or not.",
+    "kind": "what_if",
+    "q": "An earthworm has no lungs. Does respiration still take place in its body?",
+    "options": [
+     "Yes, inside every one of its living cells",
+     "No, respiration needs lungs to take place",
+     "Yes, but only in its mouth, like humans",
+     "No, it only breathes and never respires"
+    ],
+    "explain": "Respiration happens inside every living cell to give energy, whether or not the organism has lungs.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-RESPIRATION-K3-M4",
+      "why": "thinks respiration only happens in lungs"
+     },
+     {
+      "misconception": "SCI-BIO-RESPIRATION-K14-M9",
+      "why": "thinks earthworms breathe through their mouths"
+     },
+     {
+      "misconception": "SCI-BIO-RESPIRATION-K2-M1",
+      "why": "mixes up breathing and respiration"
+     }
+    ]
+   },
+   {
+    "evidence": "A: Fish use gills to extract dissolved oxygen from water, rather than breaking down water molecules themselves.",
+    "kind": "how",
+    "q": "How does a fish get the oxygen it needs while underwater?",
+    "options": [
+     "Its gills take in oxygen already dissolved in water",
+     "Its gills split water molecules to free oxygen",
+     "Its gills make fresh oxygen for its body cells",
+     "Its lungs take in air at the water's surface"
+    ],
+    "explain": "Fish gills pull out oxygen dissolved in water; they do not break water molecules apart.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-RESPIRATION-K15-M11",
+      "why": "thinks fish break down H2O to get oxygen"
+     },
+     {
+      "misconception": "SCI-BIO-RESPIRATION-K5-M2",
+      "why": "thinks the body makes its own oxygen"
+     },
+     {
+      "misconception": null,
+      "why": "assumes every animal must breathe with lungs"
+     }
+    ]
+   },
+   {
+    "evidence": "A: No, while stomata allow water vapor to escape, they are also the primary sites for gas exchange, allowing plants to take in oxygen and release carbon dioxide for respiration.",
+    "kind": "why",
+    "q": "Why do plants need stomata even when they are not losing water?",
+    "options": [
+     "To let oxygen in and carbon dioxide out",
+     "To let only water vapour escape from leaves",
+     "To let water split into oxygen inside leaves",
+     "To let the plant breathe instead of respire"
+    ],
+    "explain": "Stomata are also the main sites of gas exchange, taking in oxygen and releasing carbon dioxide for respiration.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-RESPIRATION-K17-M13",
+      "why": "thinks stomata are only for transpiration"
+     },
+     {
+      "misconception": "SCI-BIO-RESPIRATION-K15-M11",
+      "why": "thinks oxygen comes from splitting water molecules"
+     },
+     {
+      "misconception": "SCI-BIO-RESPIRATION-K2-M1",
+      "why": "treats breathing and respiration as separate from gas exchange"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 45.3
+}

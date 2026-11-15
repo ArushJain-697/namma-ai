@@ -1,0 +1,164 @@
+{
+ "source": "train-0323-SOC-ECO-FOODSECURITY.json",
+ "job": {
+  "job": "train-0323-SOC-ECO-FOODSECURITY",
+  "topic_id": "SOC-ECO-FOODSECURITY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 323
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 5692,
+  "promptTokenCount": 2
+ },
+ "passage": "Many people mistakenly believe that if a country produces enough grain to fill its warehouses, every citizen is automatically food secure. However, food security is not just about the total quantity of food available in the market. True food security exists only when all people at all times have access to sufficient, safe, and nutritious food to maintain a healthy life. Even if a local market is overflowing with wheat and rice, a family remains food insecure if they lack the money to purchase it. This highlights that affordability is a critical pillar of food security alongside availability. Furthermore, the government plays a vital role in ensuring this access through the Public Distribution System. By maintaining a buffer stock of grains, the state ensures that food is distributed through ration shops at prices lower than the market rate. This system specifically targets vulnerable populations who might otherwise be excluded from the market due to poverty. Therefore, food security is a complex balance of availability, accessibility, and affordability. It is not merely the presence of food in the country, but the ability of every individual to obtain it, which defines a secure nation. Without these mechanisms, even in times of surplus production, hunger can persist among the poorest sections of society.",
+ "menu_ids": [
+  "SOC-ECO-FOODSECURITY-K5-M2",
+  "SOC-ECO-FOODSECURITY-K9-M5",
+  "SOC-ECO-FOODSECURITY-K10-M6",
+  "SOC-ECO-FOODSECURITY-K11-M7",
+  "SOC-ECO-FOODSECURITY-K12-M8",
+  "SOC-ECO-FOODSECURITY-K12-M9",
+  "SOC-ECO-FOODSECURITY-K13-M10",
+  "SOC-ECO-FOODSECURITY-K14-M11",
+  "SOC-ECO-FOODSECURITY-K8-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Even if a local market is overflowing with wheat and rice, a family remains food insecure if they lack the money to purchase it.",
+    "kind": "why",
+    "q": "A family lives near an overflowing grain market but still goes hungry. Why?",
+    "options": [
+     "Their family income is too low to buy it",
+     "The country does not produce enough grain",
+     "The market grain is mostly imported from abroad",
+     "The shops keep their grain only for the rich"
+    ],
+    "explain": "Food in the market is not enough; a family without money to buy it stays food insecure.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-FOODSECURITY-K11-M7",
+      "why": "thinks hunger only means the country lacks food"
+     },
+     {
+      "misconception": "SOC-ECO-FOODSECURITY-K10-M6",
+      "why": "thinks India's food is mainly imported"
+     },
+     {
+      "misconception": null,
+      "why": "invents a reason not given in the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "True food security exists only when all people at all times have access to sufficient, safe, and nutritious food to maintain a healthy life.",
+    "kind": "which_example",
+    "q": "Which village situation shows true food security?",
+    "options": [
+     "Every villager can always get enough nutritious food",
+     "The village market is full of wheat and rice",
+     "The country had a record harvest this year",
+     "Most food in the village is imported"
+    ],
+    "explain": "Food security means all people can always get enough safe, nutritious food, not just that food exists.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-FOODSECURITY-K5-M2",
+      "why": "thinks food in the market means everyone is secure"
+     },
+     {
+      "misconception": "SOC-ECO-FOODSECURITY-K9-M5",
+      "why": "thinks record production means no one is insecure"
+     },
+     {
+      "misconception": "SOC-ECO-FOODSECURITY-K10-M6",
+      "why": "thinks India relies on imported food"
+     }
+    ]
+   },
+   {
+    "evidence": "By maintaining a buffer stock of grains, the state ensures that food is distributed through ration shops at prices lower than the market rate.",
+    "kind": "how",
+    "q": "How does the Public Distribution System help a poor family buy food?",
+    "options": [
+     "It sells grain at lower prices through ration shops",
+     "It lets the FCI sell grain door to door",
+     "It raises market prices so farmers earn more",
+     "It gives every family free grain each month"
+    ],
+    "explain": "The government keeps a buffer stock and supplies grain through ration shops at below-market prices.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-FOODSECURITY-K12-M8",
+      "why": "thinks FCI sells ration directly in villages"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up help for buyers with help for farmers"
+     },
+     {
+      "misconception": null,
+      "why": "thinks ration means free grain for all"
+     }
+    ]
+   },
+   {
+    "evidence": "Without these mechanisms, even in times of surplus production, hunger can persist among the poorest sections of society.",
+    "kind": "what_if",
+    "q": "If ration shops closed in a year of surplus grain, what happens to the poorest families?",
+    "options": [
+     "They could still go hungry despite plentiful grain",
+     "They would be food secure since grain is plentiful",
+     "They would buy cheaply as surplus lowers market prices",
+     "They would starve only if the harvest failed"
+    ],
+    "explain": "Even with surplus production, hunger can persist among the poorest without systems that make food reachable.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-FOODSECURITY-K9-M5",
+      "why": "thinks surplus means no one is food insecure"
+     },
+     {
+      "misconception": "SOC-ECO-FOODSECURITY-K5-M2",
+      "why": "thinks available food means everyone can get it"
+     },
+     {
+      "misconception": "SOC-ECO-FOODSECURITY-K8-M12",
+      "why": "thinks hunger comes only from crop failure"
+     }
+    ]
+   },
+   {
+    "evidence": "Many people mistakenly believe that if a country produces enough grain to fill its warehouses, every citizen is automatically food secure.",
+    "kind": "which_explains",
+    "q": "Why is it wrong to say full warehouses make every citizen food secure?",
+    "options": [
+     "Stored grain may not reach every person in need",
+     "Most of that stored grain comes from imports",
+     "Hunger arises only when a drought ruins crops",
+     "That grain is held back only for famine years"
+    ],
+    "explain": "Producing and storing grain does not guarantee that every person can obtain it.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-FOODSECURITY-K10-M6",
+      "why": "thinks India's grain is mainly imported"
+     },
+     {
+      "misconception": "SOC-ECO-FOODSECURITY-K8-M12",
+      "why": "thinks hunger is caused only by drought"
+     },
+     {
+      "misconception": null,
+      "why": "thinks stored grain is kept only for emergencies"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 48.9
+}

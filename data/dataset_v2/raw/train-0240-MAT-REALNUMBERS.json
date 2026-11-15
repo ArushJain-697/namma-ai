@@ -1,0 +1,169 @@
+{
+ "source": "train-0240-MAT-REALNUMBERS.json",
+ "job": {
+  "job": "train-0240-MAT-REALNUMBERS",
+  "topic_id": "MAT-REALNUMBERS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a market or shop situation that uses the idea",
+  "seed": 240
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4249,
+  "promptTokenCount": 2
+ },
+ "passage": "In a local market, a shopkeeper organizes his stock of sweets. He has two types of boxes: one containing 12 pieces and another containing 18 pieces. To ensure he has equal stacks of each, he calculates the Least Common Multiple (LCM) of 12 and 18. He writes 12 as 2 squared times 3, and 18 as 2 times 3 squared. By taking the highest power of each prime factor present, he finds the LCM is 36. He also notes that the Highest Common Factor (HCF) is 6, obtained by taking the lowest power of common prime factors. He reminds his assistant that while the product of two numbers equals the product of their HCF and LCM, this rule does not apply to three different types of boxes. Later, a customer asks if the ratio of the box dimensions, which is 22 divided by 7, makes the value irrational. The shopkeeper explains that 22/7 is a rational approximation, but the true value of pi is indeed irrational. Finally, he checks a new batch of 4 raised to the power n sweets, noting that since 4 only contains the prime factor 2, it can never end in the digit 0, regardless of the value of n.",
+ "menu_ids": [
+  "MAT-REALNUMBERS-K13-M2",
+  "MAT-REALNUMBERS-K15-M3",
+  "MAT-REALNUMBERS-K16-M5",
+  "MAT-REALNUMBERS-K17-M6",
+  "MAT-REALNUMBERS-K18-M7",
+  "MAT-REALNUMBERS-K19-M8",
+  "MAT-REALNUMBERS-K20-M9",
+  "MAT-REALNUMBERS-K20-M10",
+  "MAT-REALNUMBERS-K21-M11",
+  "MAT-REALNUMBERS-K22-M12",
+  "MAT-REALNUMBERS-K22-M13",
+  "MAT-REALNUMBERS-K23-M14",
+  "MAT-REALNUMBERS-K24-M15",
+  "MAT-REALNUMBERS-K25-M16"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "By taking the highest power of each prime factor present, he finds the LCM is 36.",
+    "kind": "how",
+    "q": "How does the shopkeeper get 36 as the LCM of 12 and 18?",
+    "options": [
+     "Multiply 2 squared by 3 squared",
+     "Multiply 2 and 3, each at lowest power",
+     "Multiply all prime factors of 12 and 18",
+     "Multiply 12 by 18 straight away"
+    ],
+    "explain": "The LCM takes the highest power of each prime: 2 squared × 3 squared = 36.",
+    "wrong": [
+     {
+      "misconception": "MAT-REALNUMBERS-K22-M12",
+      "why": "thinks LCM uses the smallest powers"
+     },
+     {
+      "misconception": "MAT-REALNUMBERS-K20-M9",
+      "why": "thinks you multiply every prime factor of both numbers"
+     },
+     {
+      "misconception": "MAT-REALNUMBERS-K22-M13",
+      "why": "thinks the LCM must be bigger, so it multiplies the two numbers"
+     }
+    ]
+   },
+   {
+    "evidence": "He also notes that the Highest Common Factor (HCF) is 6, obtained by taking the lowest power of common prime factors.",
+    "kind": "why",
+    "q": "Why is the HCF of 12 and 18 equal to 6 and not 36?",
+    "options": [
+     "It takes the lowest power of shared primes",
+     "It takes the highest power of shared primes",
+     "It multiplies every prime factor of both",
+     "It takes only the primes not shared"
+    ],
+    "explain": "The HCF uses the lowest power of the common primes: 2 × 3 = 6.",
+    "wrong": [
+     {
+      "misconception": "MAT-REALNUMBERS-K20-M10",
+      "why": "thinks HCF uses the greatest power"
+     },
+     {
+      "misconception": "MAT-REALNUMBERS-K20-M9",
+      "why": "thinks HCF multiplies all prime factors"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up common and non-common factors"
+     }
+    ]
+   },
+   {
+    "evidence": "He reminds his assistant that while the product of two numbers equals the product of their HCF and LCM, this rule does not apply to three different types of boxes.",
+    "kind": "which_explains",
+    "q": "What mistake does the shopkeeper warn his assistant against?",
+    "options": [
+     "Using HCF × LCM = product for three numbers",
+     "Using HCF × LCM = sum for two numbers",
+     "Using highest powers when finding the LCM",
+     "Using lowest powers when finding the HCF"
+    ],
+    "explain": "HCF × LCM equals the product only for two numbers, not for three box types.",
+    "wrong": [
+     {
+      "misconception": "MAT-REALNUMBERS-K23-M14",
+      "why": "thinks HCF × LCM is linked to the sum"
+     },
+     {
+      "misconception": "MAT-REALNUMBERS-K22-M12",
+      "why": "thinks the LCM should use smaller powers"
+     },
+     {
+      "misconception": "MAT-REALNUMBERS-K20-M10",
+      "why": "thinks the HCF should use greater powers"
+     }
+    ]
+   },
+   {
+    "evidence": "The shopkeeper explains that 22/7 is a rational approximation, but the true value of pi is indeed irrational.",
+    "kind": "difference",
+    "q": "What is the difference between 22/7 and the true value of pi?",
+    "options": [
+     "22/7 is rational, but pi is irrational",
+     "Both are irrational, as their decimals are long",
+     "22/7 is irrational, but pi is rational",
+     "Both are rational, since 22/7 equals pi"
+    ],
+    "explain": "22/7 is only a rational approximation; the true value of pi is irrational.",
+    "wrong": [
+     {
+      "misconception": "MAT-REALNUMBERS-K25-M16",
+      "why": "thinks any long decimal is irrational"
+     },
+     {
+      "misconception": null,
+      "why": "reverses which number is rational"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the approximation is exactly pi"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, he checks a new batch of 4 raised to the power n sweets, noting that since 4 only contains the prime factor 2, it can never end in the digit 0, regardless of the value of n.",
+    "kind": "why",
+    "q": "Why can 4 raised to the power n never end in the digit 0?",
+    "options": [
+     "Because it has the prime 2 but never 5",
+     "Because he tested many values of n",
+     "Because a factor of 2 alone gives 0",
+     "Because 4 is not a prime number itself"
+    ],
+    "explain": "Ending in 0 needs both 2 and 5; 4 to the power n only has the prime 2.",
+    "wrong": [
+     {
+      "misconception": "MAT-REALNUMBERS-K19-M8",
+      "why": "thinks you must check many values of n"
+     },
+     {
+      "misconception": "MAT-REALNUMBERS-K18-M7",
+      "why": "thinks 2 alone is enough to end in 0"
+     },
+     {
+      "misconception": null,
+      "why": "gives a true fact about 4 that is not the reason"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 42.3
+}

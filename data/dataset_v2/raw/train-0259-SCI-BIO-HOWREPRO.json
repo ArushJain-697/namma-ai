@@ -1,0 +1,166 @@
+{
+ "source": "train-0259-SCI-BIO-HOWREPRO.json",
+ "job": {
+  "job": "train-0259-SCI-BIO-HOWREPRO",
+  "topic_id": "SCI-BIO-HOWREPRO",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 259
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1738,
+  "promptTokenCount": 2
+ },
+ "passage": "Many students mistakenly believe that reproduction is simply about an organism deciding to change or regrow parts to survive. In reality, reproduction is a fundamental biological process ensuring the continuity of life. During asexual reproduction, such as binary fission in Amoeba, the parent cell divides into two daughter cells, meaning the original parent body ceases to exist as a single entity. Unlike the regrowth of a lizard's tail, which is merely repair, true regeneration in organisms like Planaria allows a broken piece to develop into a complete new individual. Furthermore, plants produced through vegetative propagation are clones, meaning they are genetically identical to the parent, not a new variety. In flowering plants, the process is more complex. Pollination is merely the transfer of pollen from the anther to the stigma, while fertilization is the subsequent fusion of male and female gametes to form a zygote. It is a common error to think the pollen grain itself travels down the style; instead, it grows a pollen tube to deliver the male gametes to the ovule. Finally, DNA copying is not a perfect process. Small variations occur naturally during this copying, which are essential for the survival of a species over time, rather than being a conscious choice made by the organism to adapt to its environment.",
+ "menu_ids": [
+  "SCI-BIO-HOWREPRO-K3-M1",
+  "SCI-BIO-HOWREPRO-K4-M2",
+  "SCI-BIO-HOWREPRO-K7-M3",
+  "SCI-BIO-HOWREPRO-K11-M4",
+  "SCI-BIO-HOWREPRO-K10-M5",
+  "SCI-BIO-HOWREPRO-K13-M6",
+  "SCI-BIO-HOWREPRO-K19-M7",
+  "SCI-BIO-HOWREPRO-K20-M8",
+  "SCI-BIO-HOWREPRO-K17-M10",
+  "SCI-BIO-HOWREPRO-K14-M11",
+  "SCI-BIO-HOWREPRO-K4-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "During asexual reproduction, such as binary fission in Amoeba, the parent cell divides into two daughter cells, meaning the original parent body ceases to exist as a single entity.",
+    "kind": "what_if",
+    "q": "An Amoeba has just finished binary fission. What has happened to the original parent Amoeba?",
+    "options": [
+     "It has become the two new daughter cells",
+     "It lives on beside its two daughters",
+     "It stays as the larger of the cells",
+     "It dies and leaves behind only spores"
+    ],
+    "explain": "The parent cell divides into two daughter cells, so the original parent body no longer exists as one.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-HOWREPRO-K7-M3",
+      "why": "thinks the parent still exists after fission"
+     },
+     {
+      "misconception": null,
+      "why": "thinks one daughter is just the old parent"
+     },
+     {
+      "misconception": "SCI-BIO-HOWREPRO-K14-M11",
+      "why": "mixes up fission with spore formation"
+     }
+    ]
+   },
+   {
+    "evidence": "Unlike the regrowth of a lizard's tail, which is merely repair, true regeneration in organisms like Planaria allows a broken piece to develop into a complete new individual.",
+    "kind": "which_example",
+    "q": "Which example shows true regeneration that also makes a new organism?",
+    "options": [
+     "A broken Planaria piece grows into a whole worm",
+     "A lizard grows back its lost tail",
+     "An Amoeba divides into two daughter cells",
+     "A potato piece grows into a new plant"
+    ],
+    "explain": "A broken piece of Planaria develops into a complete new individual, while a lizard's tail is only repaired.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-HOWREPRO-K11-M4",
+      "why": "thinks tail regrowth is reproduction"
+     },
+     {
+      "misconception": "SCI-BIO-HOWREPRO-K10-M5",
+      "why": "confuses regeneration with fission"
+     },
+     {
+      "misconception": null,
+      "why": "confuses regeneration with vegetative propagation"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, plants produced through vegetative propagation are clones, meaning they are genetically identical to the parent, not a new variety.",
+    "kind": "what_if",
+    "q": "A gardener grows ten new rose plants from cuttings of one rose. How will they compare with it?",
+    "options": [
+     "They will be genetically identical to it",
+     "They will each be a new variety",
+     "They will differ because of new gametes",
+     "They will differ in every inherited trait"
+    ],
+    "explain": "Plants from vegetative propagation are clones, genetically identical to the parent and not a new variety.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-HOWREPRO-K13-M6",
+      "why": "thinks propagated plants differ genetically"
+     },
+     {
+      "misconception": "SCI-BIO-HOWREPRO-K19-M7",
+      "why": "thinks gametes fuse in cuttings like in fertilization"
+     },
+     {
+      "misconception": "SCI-BIO-HOWREPRO-K4-M2",
+      "why": "thinks variation always appears for survival"
+     }
+    ]
+   },
+   {
+    "evidence": "It is a common error to think the pollen grain itself travels down the style; instead, it grows a pollen tube to deliver the male gametes to the ovule.",
+    "kind": "how",
+    "q": "After a pollen grain lands on the stigma, how do male gametes reach the ovule?",
+    "options": [
+     "A tube grows from the pollen grain",
+     "The whole pollen grain slides down the style",
+     "Insects carry the gametes down to the ovule",
+     "The petals pass the gametes to the ovule"
+    ],
+    "explain": "The pollen grain grows a pollen tube that delivers the male gametes to the ovule.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-HOWREPRO-K20-M8",
+      "why": "thinks the pollen grain itself travels down"
+     },
+     {
+      "misconception": "SCI-BIO-HOWREPRO-K17-M10",
+      "why": "thinks insects and petals do the whole job"
+     },
+     {
+      "misconception": "SCI-BIO-HOWREPRO-K19-M7",
+      "why": "mixes up pollination with later delivery"
+     }
+    ]
+   },
+   {
+    "evidence": "Small variations occur naturally during this copying, which are essential for the survival of a species over time, rather than being a conscious choice made by the organism to adapt to its environment.",
+    "kind": "which_explains",
+    "q": "Why do small variations appear among offspring of the same species?",
+    "options": [
+     "Small changes happen naturally while DNA is copied",
+     "The organism chooses changes to suit its surroundings",
+     "DNA copying is exact, so changes come from outside",
+     "Variations appear only after a disaster strikes"
+    ],
+    "explain": "Small variations occur naturally during DNA copying, not as a conscious choice made by the organism.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-HOWREPRO-K4-M12",
+      "why": "thinks organisms want to adapt"
+     },
+     {
+      "misconception": "SCI-BIO-HOWREPRO-K3-M1",
+      "why": "thinks DNA copying is perfectly accurate"
+     },
+     {
+      "misconception": "SCI-BIO-HOWREPRO-K4-M2",
+      "why": "thinks variation matters only after disasters"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 14.9
+}

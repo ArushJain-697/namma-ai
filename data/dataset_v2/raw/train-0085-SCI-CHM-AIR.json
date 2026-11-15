@@ -1,0 +1,166 @@
+{
+ "source": "train-0085-SCI-CHM-AIR.json",
+ "job": {
+  "job": "train-0085-SCI-CHM-AIR",
+  "topic_id": "SCI-CHM-AIR",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a comparison of two related ideas",
+  "seed": 85
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3580,
+  "promptTokenCount": 2
+ },
+ "passage": "Air is a mixture of gases that surrounds our planet, yet it is often misunderstood. Many people think an empty glass contains nothing, but it is actually filled with air, which occupies space and has a measurable weight. This air is not just a single gas; it is a complex blend. Nitrogen makes up the largest portion, while oxygen is essential for the survival of both animals and plants. Contrary to the belief that oxygen is the primary component because we need it, it actually makes up only about one-fifth of the atmosphere. Furthermore, air is not just for breathing; it is a vital resource. Plants use carbon dioxide to prepare food, proving that this gas is a necessary part of nature rather than just a waste product. Even soil, which looks like a solid block, contains tiny pockets of air trapped between its particles. This is why bubbles appear when you pour water over dry soil. Additionally, water vapour is always present in the air around us, even on dry days, as it constantly evaporates from oceans and lakes. Air is not a static layer that goes on forever; it becomes thinner as we move away from the Earth's surface, eventually fading into the vacuum of space.",
+ "menu_ids": [
+  "SCI-CHM-AIR-K3-M1",
+  "SCI-CHM-AIR-K4-M2",
+  "SCI-CHM-AIR-K6-M3",
+  "SCI-CHM-AIR-K7-M4",
+  "SCI-CHM-AIR-K10-M5",
+  "SCI-CHM-AIR-K11-M6",
+  "SCI-CHM-AIR-K13-M7",
+  "SCI-CHM-AIR-K14-M8",
+  "SCI-CHM-AIR-K19-M9",
+  "SCI-CHM-AIR-K21-M10",
+  "SCI-CHM-AIR-K22-M13"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Many people think an empty glass contains nothing, but it is actually filled with air, which occupies space and has a measurable weight.",
+    "kind": "which_explains",
+    "q": "Meena says her empty glass holds nothing. What is really inside it?",
+    "options": [
+     "Air, which fills space and can be weighed",
+     "Nothing, since an empty glass holds nothing",
+     "Air, which fills space but weighs nothing",
+     "Only oxygen, the gas we need to breathe"
+    ],
+    "explain": "An 'empty' glass is full of air, which takes up space and has measurable weight.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-AIR-K3-M1",
+      "why": "thinks an empty glass contains nothing at all"
+     },
+     {
+      "misconception": "SCI-CHM-AIR-K4-M2",
+      "why": "thinks air has no weight because it floats"
+     },
+     {
+      "misconception": "SCI-CHM-AIR-K10-M5",
+      "why": "thinks air is just oxygen"
+     }
+    ]
+   },
+   {
+    "evidence": "Contrary to the belief that oxygen is the primary component because we need it, it actually makes up only about one-fifth of the atmosphere.",
+    "kind": "what_if",
+    "q": "A jar holds 500 mL of air. About how much of it is oxygen?",
+    "options": [
+     "About 100 mL",
+     "About 400 mL",
+     "All 500 mL",
+     "About 250 mL"
+    ],
+    "explain": "Oxygen is only about one-fifth of air, and one-fifth of 500 mL is 100 mL.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-AIR-K10-M5",
+      "why": "thinks most of the air is oxygen because we need it"
+     },
+     {
+      "misconception": null,
+      "why": "forgets that air is a mixture, not a single gas"
+     },
+     {
+      "misconception": null,
+      "why": "guesses half without using the one-fifth fact"
+     }
+    ]
+   },
+   {
+    "evidence": "Plants use carbon dioxide to prepare food, proving that this gas is a necessary part of nature rather than just a waste product.",
+    "kind": "which_explains",
+    "q": "Asha calls carbon dioxide a useless waste gas. Which fact shows she is wrong?",
+    "options": [
+     "Plants take it in to make their food",
+     "Animals breathe it in to stay alive",
+     "Plants make it so animals can breathe",
+     "It makes up the largest part of air"
+    ],
+    "explain": "Plants use carbon dioxide to prepare food, so it is needed in nature, not just waste.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "mixes up carbon dioxide with oxygen"
+     },
+     {
+      "misconception": "SCI-CHM-AIR-K21-M10",
+      "why": "thinks plants make gases specially for animals"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby detail that is true of nitrogen"
+     }
+    ]
+   },
+   {
+    "evidence": "This is why bubbles appear when you pour water over dry soil.",
+    "kind": "why",
+    "q": "Why do bubbles rise when water is poured over dry soil?",
+    "options": [
+     "Air hidden between soil particles is pushed out",
+     "Oxygen inside the water molecules escapes as gas",
+     "The solid soil block makes the water fizz",
+     "The water quickly turns into vapour and rises"
+    ],
+    "explain": "Soil has tiny air pockets between its particles; water pushes that air out as bubbles.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-AIR-K7-M4",
+      "why": "thinks the oxygen in H2O comes out as gas"
+     },
+     {
+      "misconception": "SCI-CHM-AIR-K6-M3",
+      "why": "thinks soil is a solid block with no air"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up bubbles with evaporation"
+     }
+    ]
+   },
+   {
+    "evidence": "Air is not a static layer that goes on forever; it becomes thinner as we move away from the Earth's surface, eventually fading into the vacuum of space.",
+    "kind": "what_if",
+    "q": "A climber goes higher and higher up a very tall mountain. What happens to the air?",
+    "options": [
+     "It gets thinner the higher one goes",
+     "It stays equally thick all the way up",
+     "It gets thicker as one nears space",
+     "It turns mostly into oxygen up there"
+    ],
+    "explain": "Air becomes thinner as we move away from Earth's surface, finally fading into space.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-AIR-K22-M13",
+      "why": "thinks the atmosphere is a thick layer that goes on forever"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the direction of the change"
+     },
+     {
+      "misconception": "SCI-CHM-AIR-K10-M5",
+      "why": "thinks air is mainly oxygen"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 35.5
+}

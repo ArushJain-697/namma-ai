@@ -1,0 +1,169 @@
+{
+ "source": "train-0000-GEN-AIBASICS.json",
+ "job": {
+  "job": "train-0000-GEN-AIBASICS",
+  "topic_id": "GEN-AIBASICS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a news-style report about a real-world situation",
+  "seed": 0
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3737,
+  "promptTokenCount": 2
+ },
+ "passage": "In a recent experiment, a new AI system was trained to identify medical images by processing thousands of X-ray scans. Unlike simple computer programs that follow a rigid list of pre-written rules, this AI learned by identifying patterns within the data it was shown. However, the system struggled when it encountered images from a different hospital with slightly different lighting. This revealed that an AI is not a universal genius; a system excellent at medical diagnosis cannot automatically drive a car or write poetry. Furthermore, researchers discovered that because the training data mostly featured patients from one specific demographic, the AI became less accurate for other groups. This bias was not caused by a programmer intentionally writing unfair code, but by the limited variety in the data itself. Even when the AI confidently presented its findings in a professional report, some of its conclusions were factually incorrect. This proves that an AI’s output is not guaranteed to be true just because it sounds authoritative or because it has been trained on a large dataset. Users must remember that AI systems are tools that learn from examples, and their performance depends entirely on the quality and diversity of the information they are given.",
+ "menu_ids": [
+  "GEN-AIBASICS-K4-M1",
+  "GEN-AIBASICS-K5-M2",
+  "GEN-AIBASICS-K5-M3",
+  "GEN-AIBASICS-K8-M4",
+  "GEN-AIBASICS-K10-M6",
+  "GEN-AIBASICS-K12-M7",
+  "GEN-AIBASICS-K16-M9",
+  "GEN-AIBASICS-K18-M11",
+  "GEN-AIBASICS-K20-M13",
+  "GEN-AIBASICS-K21-M14",
+  "GEN-AIBASICS-K24-M15",
+  "GEN-AIBASICS-K25-M18",
+  "GEN-AIBASICS-K27-M19",
+  "GEN-AIBASICS-K28-M20"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Unlike simple computer programs that follow a rigid list of pre-written rules, this AI learned by identifying patterns within the data it was shown.",
+    "kind": "how",
+    "q": "How did this AI learn to identify medical images?",
+    "options": [
+     "By finding patterns in the X-ray scans it saw",
+     "By following a fixed list of pre-written rules",
+     "Programmers typed in the answer for every scan",
+     "By working it out without seeing any scans"
+    ],
+    "explain": "Unlike simple rule-following programs, this AI learned by spotting patterns in the X-ray scans it was shown.",
+    "wrong": [
+     {
+      "misconception": "GEN-AIBASICS-K5-M2",
+      "why": "thinks AI is just any rule-following computer program"
+     },
+     {
+      "misconception": "GEN-AIBASICS-K5-M3",
+      "why": "thinks programmers type in every answer beforehand"
+     },
+     {
+      "misconception": "GEN-AIBASICS-K10-M6",
+      "why": "thinks an AI can learn without being shown examples"
+     }
+    ]
+   },
+   {
+    "evidence": "However, the system struggled when it encountered images from a different hospital with slightly different lighting.",
+    "kind": "what_if",
+    "q": "The AI is shown X-rays from another hospital where the lighting is slightly changed. What happens?",
+    "options": [
+     "It struggles, because they are unlike its training scans",
+     "It stays correct, because it is already fully trained",
+     "It does better, because it has seen thousands of scans",
+     "It works the same, because programmers typed in every answer"
+    ],
+    "explain": "The AI struggled with images from a different hospital because they did not look like the scans it learned from.",
+    "wrong": [
+     {
+      "misconception": "GEN-AIBASICS-K12-M7",
+      "why": "thinks a trained AI is always correct on new inputs"
+     },
+     {
+      "misconception": "GEN-AIBASICS-K8-M4",
+      "why": "thinks many examples of one kind make it good at everything"
+     },
+     {
+      "misconception": "GEN-AIBASICS-K5-M3",
+      "why": "thinks answers are pre-typed, so inputs do not matter"
+     }
+    ]
+   },
+   {
+    "evidence": "This revealed that an AI is not a universal genius; a system excellent at medical diagnosis cannot automatically drive a car or write poetry.",
+    "kind": "what_if",
+    "q": "A hospital wants this X-ray AI to also drive its ambulance. What does the passage suggest?",
+    "options": [
+     "It cannot, since its skill is only medical scans",
+     "It can, since it is excellent at diagnosis",
+     "It can, once it is fitted into a human-like robot",
+     "It can, if programmers type in every road rule"
+    ],
+    "explain": "An AI is not a universal genius; one that is excellent at diagnosis cannot automatically drive a car.",
+    "wrong": [
+     {
+      "misconception": "GEN-AIBASICS-K28-M20",
+      "why": "thinks being great at one task means great at all"
+     },
+     {
+      "misconception": "GEN-AIBASICS-K4-M1",
+      "why": "thinks AI means a human-like robot"
+     },
+     {
+      "misconception": "GEN-AIBASICS-K5-M3",
+      "why": "thinks programmers just type in all the answers"
+     }
+    ]
+   },
+   {
+    "evidence": "This bias was not caused by a programmer intentionally writing unfair code, but by the limited variety in the data itself.",
+    "kind": "why",
+    "q": "Why did the AI become less accurate for patients from some groups?",
+    "options": [
+     "Its training scans came mostly from one group",
+     "A programmer wrote unfair code on purpose",
+     "The doctors were unfair, since computers have no opinions",
+     "The lighting at the other hospital was different"
+    ],
+    "explain": "The bias came from limited variety in the data, mostly one group of patients, not from a programmer's unfair code.",
+    "wrong": [
+     {
+      "misconception": "GEN-AIBASICS-K20-M13",
+      "why": "thinks bias only comes from a programmer meaning to be unfair"
+     },
+     {
+      "misconception": "GEN-AIBASICS-K21-M14",
+      "why": "thinks AI cannot be unfair, so blames people"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby problem from the passage that is not the cause"
+     }
+    ]
+   },
+   {
+    "evidence": "Even when the AI confidently presented its findings in a professional report, some of its conclusions were factually incorrect.",
+    "kind": "which_explains",
+    "q": "The AI produces a neat, confident report. What should a doctor think about it?",
+    "options": [
+     "It needs checking, as some of its findings were false",
+     "It needs no checking, as it sounds so sure",
+     "It needs no checking, as it trained on many scans",
+     "It needs no checking if another AI agrees"
+    ],
+    "explain": "Even confident, professional reports from the AI had some factually incorrect conclusions, so its output must be checked.",
+    "wrong": [
+     {
+      "misconception": "GEN-AIBASICS-K16-M9",
+      "why": "thinks a sure, neat answer must be correct"
+     },
+     {
+      "misconception": "GEN-AIBASICS-K12-M7",
+      "why": "thinks a well-trained AI is always right"
+     },
+     {
+      "misconception": "GEN-AIBASICS-K18-M11",
+      "why": "thinks two AIs agreeing proves the answer is correct"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 37.8
+}

@@ -1,0 +1,165 @@
+{
+ "source": "train-0254-SCI-BIO-CONTROL.json",
+ "job": {
+  "job": "train-0254-SCI-BIO-CONTROL",
+  "topic_id": "SCI-BIO-CONTROL",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a description of a classroom activity or experiment and what it shows",
+  "seed": 254
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1513,
+  "promptTokenCount": 2
+ },
+ "passage": "In our biology lab, we observed how plants and humans react to stimuli. First, we touched a touch-me-not plant. Unlike animals, which use a complex nervous system to process touch, the plant relies on changing the amount of water in its cells to cause movement. This is a nastic movement, not a nervous response. Next, we studied how light affects a seedling. We placed a light source to one side of a plant. We learned that auxin, a growth hormone, does not get destroyed by light; instead, it simply diffuses to the shaded side of the stem. This higher concentration of auxin on the shaded side causes those cells to grow longer, making the plant bend toward the light. Finally, we discussed the human endocrine system. We learned that hormones are chemical messengers released directly into the blood. They travel throughout the body to reach specific target organs, rather than acting only where they are produced. Furthermore, the body regulates hormone levels through a feedback mechanism. For instance, if blood sugar levels rise, the pancreas detects this change and adjusts insulin secretion automatically, without needing the brain to grant permission for every adjustment. This ensures our internal environment remains stable and balanced.",
+ "menu_ids": [
+  "SCI-BIO-CONTROL-K13-M1",
+  "SCI-BIO-CONTROL-K14-M2",
+  "SCI-BIO-CONTROL-K7-M3",
+  "SCI-BIO-CONTROL-K17-M4",
+  "SCI-BIO-CONTROL-K19-M5",
+  "SCI-BIO-CONTROL-K20-M6",
+  "SCI-BIO-CONTROL-K12-M7",
+  "SCI-BIO-CONTROL-K15-M8",
+  "SCI-BIO-CONTROL-K18-M9",
+  "SCI-BIO-CONTROL-K8-M11"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Unlike animals, which use a complex nervous system to process touch, the plant relies on changing the amount of water in its cells to cause movement.",
+    "kind": "how",
+    "q": "How does a touch-me-not plant move its leaves after a touch?",
+    "options": [
+     "Its cells change their water content",
+     "Its nerves carry the touch to a brain",
+     "Its cells send electrical sparks across gaps",
+     "Its leaves grow longer on one side"
+    ],
+    "explain": "The plant has no nervous system; it moves by changing the amount of water in its cells.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CONTROL-K7-M3",
+      "why": "thinks plants have nerves like animals"
+     },
+     {
+      "misconception": "SCI-BIO-CONTROL-K13-M1",
+      "why": "thinks signals move as electrical sparks"
+     },
+     {
+      "misconception": null,
+      "why": "mixes this up with growth bending toward light"
+     }
+    ]
+   },
+   {
+    "evidence": "We learned that auxin, a growth hormone, does not get destroyed by light; instead, it simply diffuses to the shaded side of the stem.",
+    "kind": "which_explains",
+    "q": "A seedling bends towards a lamp on its left. Where is most auxin?",
+    "options": [
+     "On the right side, away from the lamp",
+     "On the left side, near the lamp",
+     "Equally on both sides of the stem",
+     "Gone, because the light broke it down"
+    ],
+    "explain": "Auxin moves to the shaded side, away from the light, so that side grows longer.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks hormone gathers where light falls"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the plant would then not bend"
+     },
+     {
+      "misconception": "SCI-BIO-CONTROL-K17-M4",
+      "why": "thinks light destroys auxin"
+     }
+    ]
+   },
+   {
+    "evidence": "This higher concentration of auxin on the shaded side causes those cells to grow longer, making the plant bend toward the light.",
+    "kind": "why",
+    "q": "Why does a stem bend towards light instead of growing straight up?",
+    "options": [
+     "Shaded cells grow longer than lit cells",
+     "Lit cells grow longer than shaded cells",
+     "The plant wants more food from the light",
+     "All its cells slow down in the light"
+    ],
+    "explain": "More auxin makes shaded cells grow longer, so the stem curves towards the light.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "reverses which side grows more"
+     },
+     {
+      "misconception": "SCI-BIO-CONTROL-K8-M11",
+      "why": "thinks plants move because they want food"
+     },
+     {
+      "misconception": "SCI-BIO-CONTROL-K18-M9",
+      "why": "thinks plant hormones only increase growth"
+     }
+    ]
+   },
+   {
+    "evidence": "They travel throughout the body to reach specific target organs, rather than acting only where they are produced.",
+    "kind": "what_if",
+    "q": "A gland releases a hormone into the blood. Where can it act?",
+    "options": [
+     "On target organs far from the gland",
+     "Only on the gland that made it",
+     "Only on the nearby brain cells",
+     "On every organ in the body equally"
+    ],
+    "explain": "Hormones travel in the blood and act on specific target organs, not just where they are made.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CONTROL-K19-M5",
+      "why": "thinks hormones act only where produced"
+     },
+     {
+      "misconception": "SCI-BIO-CONTROL-K14-M2",
+      "why": "thinks the brain controls all hormone action"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises to every organ"
+     }
+    ]
+   },
+   {
+    "evidence": "For instance, if blood sugar levels rise, the pancreas detects this change and adjusts insulin secretion automatically, without needing the brain to grant permission for every adjustment.",
+    "kind": "which_explains",
+    "q": "After a sweet meal, how does the body adjust insulin?",
+    "options": [
+     "The pancreas senses sugar and adjusts it itself",
+     "The brain approves every change in insulin",
+     "The pancreas waits for a nerve impulse first",
+     "The blood stops carrying insulin to organs"
+    ],
+    "explain": "The pancreas detects rising blood sugar and adjusts insulin automatically, without the brain's permission.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CONTROL-K20-M6",
+      "why": "thinks feedback needs brain permission"
+     },
+     {
+      "misconception": "SCI-BIO-CONTROL-K14-M2",
+      "why": "thinks the brain is always involved"
+     },
+     {
+      "misconception": null,
+      "why": "misreads how hormones travel in blood"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 13.7
+}

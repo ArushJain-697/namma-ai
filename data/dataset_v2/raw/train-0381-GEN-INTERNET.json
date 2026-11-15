@@ -1,0 +1,143 @@
+{
+ "source": "train-0381-GEN-INTERNET.json",
+ "job": {
+  "job": "train-0381-GEN-INTERNET",
+  "topic_id": "GEN-INTERNET",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a comparison of two related ideas",
+  "seed": 381
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1190,
+  "promptTokenCount": 2
+ },
+ "passage": "Many people often confuse the internet with the World Wide Web, but they are actually quite different. The internet is a vast, global network of millions of interconnected computers, servers, and devices linked by physical cables, including massive ones running under the ocean. Think of the internet as the physical road system that allows data to travel. In contrast, the World Wide Web is just one of the services that runs on top of this network, like a library of pages you visit using a browser. When you send a photo to a friend, it is not sent as one single block. Instead, the data is broken into tiny pieces called packets that travel independently across various paths before reassembling at the destination. Furthermore, the internet is not a magical space; every device connected to it, from your laptop to your smart TV, is assigned a unique numerical IP address to identify it. While Wi-Fi provides a wireless link to your local router, it is merely the final step of the connection. The actual internet relies on a complex infrastructure of wires and servers that span the entire globe, managed by many different organizations rather than a single entity.",
+ "menu_ids": [
+  "GEN-INTERNET-K15-M1",
+  "GEN-INTERNET-K15-M2",
+  "GEN-INTERNET-K16-M3",
+  "GEN-INTERNET-K18-M4",
+  "GEN-INTERNET-K17-M5",
+  "GEN-INTERNET-K19-M6",
+  "GEN-INTERNET-K20-M7",
+  "GEN-INTERNET-K21-M8",
+  "GEN-INTERNET-K22-M9",
+  "GEN-INTERNET-K23-M10",
+  "GEN-INTERNET-K24-M11",
+  "GEN-INTERNET-K26-M13",
+  "GEN-INTERNET-K27-M14",
+  "GEN-INTERNET-K12-M15"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Think of the internet as the physical road system that allows data to travel.",
+    "kind": "difference",
+    "q": "How is the World Wide Web different from the internet?",
+    "options": [
+     "It is one service that runs on the network",
+     "It is the cables and devices themselves",
+     "It is the same thing under another name",
+     "It is a single computer that stores all pages"
+    ],
+    "explain": "The internet is the network of cables and devices; the Web is just one service running on top.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "reverses the roles of the Web and the network"
+     },
+     {
+      "misconception": "GEN-INTERNET-K19-M6",
+      "why": "thinks the Web and the internet are the same"
+     },
+     {
+      "misconception": "GEN-INTERNET-K15-M2",
+      "why": "thinks the internet is one giant computer"
+     }
+    ]
+   },
+   {
+    "evidence": "Instead, the data is broken into tiny pieces called packets that travel independently across various paths before reassembling at the destination.",
+    "kind": "what_if",
+    "q": "Meera sends a photo to a friend. How does it travel?",
+    "options": [
+     "Split into small pieces that take different routes",
+     "Sent whole along one fixed path in order",
+     "Sent whole, then cut into pieces on arrival",
+     "Split into pieces that all use one path"
+    ],
+    "explain": "The photo is broken into packets that travel on various paths and are put together at the destination.",
+    "wrong": [
+     {
+      "misconception": "GEN-INTERNET-K23-M10",
+      "why": "thinks a photo travels as one single block"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the order of splitting and travelling"
+     },
+     {
+      "misconception": "GEN-INTERNET-K24-M11",
+      "why": "thinks all packets follow the same path"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, the internet is not a magical space; every device connected to it, from your laptop to your smart TV, is assigned a unique numerical IP address to identify it.",
+    "kind": "which_example",
+    "q": "A school connects a smart TV to the internet. What will the TV get?",
+    "options": [
+     "Its own unique IP address",
+     "No address, as only computers need one",
+     "The same address as the router",
+     "A website name instead of numbers"
+    ],
+    "explain": "Every connected device, even a smart TV, is assigned its own unique numerical IP address.",
+    "wrong": [
+     {
+      "misconception": "GEN-INTERNET-K20-M7",
+      "why": "thinks only computers and phones have IP addresses"
+     },
+     {
+      "misconception": "GEN-INTERNET-K16-M3",
+      "why": "thinks the router is the whole internet"
+     },
+     {
+      "misconception": "GEN-INTERNET-K22-M9",
+      "why": "thinks names are the real address, not numbers"
+     }
+    ]
+   },
+   {
+    "evidence": "While Wi-Fi provides a wireless link to your local router, it is merely the final step of the connection.",
+    "kind": "why",
+    "q": "Why does the internet still work far beyond a home Wi-Fi signal?",
+    "options": [
+     "Wires and servers across the globe carry the data",
+     "Wi-Fi signals travel through the air to every country",
+     "One company runs the whole path wirelessly",
+     "The router is the internet and sends it everywhere"
+    ],
+    "explain": "Wi-Fi is only the last step; the internet relies on wires and servers spanning the globe.",
+    "wrong": [
+     {
+      "misconception": "GEN-INTERNET-K12-M15",
+      "why": "thinks the whole path is through the air"
+     },
+     {
+      "misconception": "GEN-INTERNET-K15-M1",
+      "why": "thinks one company controls the internet"
+     },
+     {
+      "misconception": "GEN-INTERNET-K16-M3",
+      "why": "thinks the router makes the internet"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 12.5
+}

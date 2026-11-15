@@ -1,0 +1,164 @@
+{
+ "source": "train-0274-SCI-CHM-MATTER9.json",
+ "job": {
+  "job": "train-0274-SCI-CHM-MATTER9",
+  "topic_id": "SCI-CHM-MATTER9",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a comparison of two related ideas",
+  "seed": 274
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1602,
+  "promptTokenCount": 2
+ },
+ "passage": "Matter is composed of tiny, discrete particles that are always in motion, rather than being a continuous solid block. When we heat a substance, these individual particles gain kinetic energy and move faster, but the particles themselves do not grow in size. During a phase change, such as ice melting into water, the temperature remains constant because the heat energy is used to overcome the forces of attraction between particles instead of increasing their motion. This explains why a substance does not get hotter while changing state. Furthermore, evaporation is a surface phenomenon that occurs at any temperature below the boiling point. It happens because particles at the surface gain enough energy to escape into the air. This process is influenced by humidity; when the air is already saturated with water vapor, it becomes harder for liquid particles to escape, thus slowing down evaporation. Finally, gases are highly compressible not because the particles are soft, but because there is significant empty space between them. When pressure is applied, these particles are simply pushed closer together, reducing the volume they occupy. Understanding that particles are distinct units with space between them is essential to grasping how matter behaves under different conditions of heat and pressure.",
+ "menu_ids": [
+  "SCI-CHM-MATTER9-K12-M1",
+  "SCI-CHM-MATTER9-K13-M2",
+  "SCI-CHM-MATTER9-K14-M3",
+  "SCI-CHM-MATTER9-K14-M4",
+  "SCI-CHM-MATTER9-K15-M5",
+  "SCI-CHM-MATTER9-K16-M6",
+  "SCI-CHM-MATTER9-K18-M8",
+  "SCI-CHM-MATTER9-K18-M10",
+  "SCI-CHM-MATTER9-K7-M11"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "During a phase change, such as ice melting into water, the temperature remains constant because the heat energy is used to overcome the forces of attraction between particles instead of increasing their motion.",
+    "kind": "why",
+    "q": "Why does the temperature of melting ice stay the same while heat is supplied?",
+    "options": [
+     "Heat is spent loosening particles from each other",
+     "Heat is spent making each particle grow bigger",
+     "Heat is lost to the air around the ice",
+     "Heat only raises temperature in the solid state"
+    ],
+    "explain": "During melting, heat energy overcomes the forces between particles instead of making them move faster.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-MATTER9-K14-M4",
+      "why": "thinks heat makes particles expand"
+     },
+     {
+      "misconception": null,
+      "why": "thinks heat escapes, so nothing changes"
+     },
+     {
+      "misconception": "SCI-CHM-MATTER9-K16-M6",
+      "why": "thinks heat always raises temperature, but only in some states"
+     }
+    ]
+   },
+   {
+    "evidence": "When pressure is applied, these particles are simply pushed closer together, reducing the volume they occupy.",
+    "kind": "how",
+    "q": "A syringe full of air is pressed with the nozzle closed. What happens inside?",
+    "options": [
+     "Air particles are pushed closer together",
+     "Air particles are squeezed into smaller sizes",
+     "Air particles are pushed out through the walls",
+     "Air particles stop moving and stick together"
+    ],
+    "explain": "Pressure pushes gas particles closer together, which reduces the volume they occupy.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-MATTER9-K15-M5",
+      "why": "thinks gas particles are soft and squishy"
+     },
+     {
+      "misconception": null,
+      "why": "thinks particles leave a closed container"
+     },
+     {
+      "misconception": "SCI-CHM-MATTER9-K14-M3",
+      "why": "thinks particles stop moving when pressed"
+     }
+    ]
+   },
+   {
+    "evidence": "This process is influenced by humidity; when the air is already saturated with water vapor, it becomes harder for liquid particles to escape, thus slowing down evaporation.",
+    "kind": "what_if",
+    "q": "Wet clothes are hung out on a very humid day. How will they dry?",
+    "options": [
+     "More slowly than on a dry day",
+     "Faster than on a dry day",
+     "Only once the water starts boiling",
+     "At the same speed as on a dry day"
+    ],
+    "explain": "Humid air is already full of water vapor, so liquid particles escape harder and drying slows down.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-MATTER9-K18-M10",
+      "why": "thinks humidity speeds up evaporation"
+     },
+     {
+      "misconception": "SCI-CHM-MATTER9-K18-M8",
+      "why": "thinks evaporation needs the boiling point"
+     },
+     {
+      "misconception": null,
+      "why": "thinks air moisture makes no difference"
+     }
+    ]
+   },
+   {
+    "evidence": "Matter is composed of tiny, discrete particles that are always in motion, rather than being a continuous solid block.",
+    "kind": "which_explains",
+    "q": "A sugar cube dissolves in water without stirring. Which idea explains this best?",
+    "options": [
+     "Its tiny particles keep moving and spread out",
+     "Its particles are held still until water arrives",
+     "Its particles are filled in with water",
+     "Its single block slowly turns into liquid"
+    ],
+    "explain": "Matter is made of tiny particles always in motion, so sugar particles can spread through the water.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-MATTER9-K14-M3",
+      "why": "thinks particles in a solid never move"
+     },
+     {
+      "misconception": "SCI-CHM-MATTER9-K13-M2",
+      "why": "thinks gaps between particles are filled"
+     },
+     {
+      "misconception": "SCI-CHM-MATTER9-K12-M1",
+      "why": "thinks matter is one continuous block"
+     }
+    ]
+   },
+   {
+    "evidence": "When we heat a substance, these individual particles gain kinetic energy and move faster, but the particles themselves do not grow in size.",
+    "kind": "difference",
+    "q": "A metal rod is heated. How do its particles change?",
+    "options": [
+     "They move faster but stay the same size",
+     "They stay still but grow a little larger",
+     "They move faster and grow a little larger",
+     "They stay the same but move farther apart"
+    ],
+    "explain": "Heating gives particles more energy so they move faster, but the particles themselves do not grow.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-MATTER9-K14-M3",
+      "why": "thinks solid particles do not move"
+     },
+     {
+      "misconception": "SCI-CHM-MATTER9-K14-M4",
+      "why": "thinks particles move and also expand"
+     },
+     {
+      "misconception": "SCI-CHM-MATTER9-K12-M1",
+      "why": "thinks matter is a block with no particle motion"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 15.1
+}

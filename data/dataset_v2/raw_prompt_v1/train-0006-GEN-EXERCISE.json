@@ -1,0 +1,169 @@
+{
+ "source": "train-0006-GEN-EXERCISE.json",
+ "job": {
+  "job": "train-0006-GEN-EXERCISE",
+  "topic_id": "GEN-EXERCISE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 6
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3508,
+  "promptTokenCount": 2
+ },
+ "passage": "Many people believe that muscles grow larger while you are lifting weights at the gym, but this is a common misunderstanding. In reality, exercise creates tiny tears in your muscle fibers, and the actual growth and repair process happens during your rest days, not during the workout itself. To support this growth, your body needs a balanced diet, but simply consuming excess protein powder without proper training will not magically build muscle. Another myth is that you must use expensive gym machines to build strength. You can effectively strengthen your muscles using your own body weight through exercises like push-ups or squats. Furthermore, some people think that if they stop exercising, their muscle tissue will transform into fat. This is biologically impossible; muscle and fat are two completely different types of tissue. If you stop being active, your muscles may shrink from lack of use, and you might gain fat if you continue to eat the same amount of calories, but one does not turn into the other. Finally, remember that sweating is just your body’s way of cooling down, not a direct measurement of how much fat you have burned. Consistent, balanced activity is the key to a healthy body.",
+ "menu_ids": [
+  "GEN-EXERCISE-K3-M1",
+  "GEN-EXERCISE-K3-M2",
+  "GEN-EXERCISE-K6-M4",
+  "GEN-EXERCISE-K6-M5",
+  "GEN-EXERCISE-K7-M6",
+  "GEN-EXERCISE-K7-M7",
+  "GEN-EXERCISE-K10-M8",
+  "GEN-EXERCISE-K13-M10",
+  "GEN-EXERCISE-K14-M11",
+  "GEN-EXERCISE-K17-M13",
+  "GEN-EXERCISE-K17-M14",
+  "GEN-EXERCISE-K18-M15",
+  "GEN-EXERCISE-K19-M16",
+  "GEN-EXERCISE-K22-M17"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "In reality, exercise creates tiny tears in your muscle fibers, and the actual growth and repair process happens during your rest days, not during the workout itself.",
+    "kind": "what_if",
+    "q": "Meena lifts weights on Monday and rests on Tuesday. When do her muscles actually grow?",
+    "options": [
+     "During Tuesday's rest, while they repair",
+     "During Monday's lifting, while she pushes hard",
+     "Only if she lifts again on Tuesday too",
+     "Only after she drinks extra protein powder"
+    ],
+    "explain": "Exercise makes tiny tears in muscle fibres; the growth and repair happen on rest days, not during the workout.",
+    "wrong": [
+     {
+      "misconception": "GEN-EXERCISE-K17-M13",
+      "why": "thinks muscles grow during the lifting itself"
+     },
+     {
+      "misconception": "GEN-EXERCISE-K17-M14",
+      "why": "thinks rest days are bad and daily training is needed"
+     },
+     {
+      "misconception": "GEN-EXERCISE-K18-M15",
+      "why": "thinks extra protein is what builds muscle"
+     }
+    ]
+   },
+   {
+    "evidence": "To support this growth, your body needs a balanced diet, but simply consuming excess protein powder without proper training will not magically build muscle.",
+    "kind": "which_explains",
+    "q": "Kabir drinks lots of protein powder but never exercises. Will his muscles grow big?",
+    "options": [
+     "No, he also needs proper training to grow",
+     "Yes, extra protein is what makes muscles big",
+     "Yes, if he rests every day to let them grow",
+     "No, muscles grow only while lifting heavy weights"
+    ],
+    "explain": "Extra protein powder without proper training will not build muscle; the body needs training plus a balanced diet.",
+    "wrong": [
+     {
+      "misconception": "GEN-EXERCISE-K18-M15",
+      "why": "thinks extra protein alone makes muscles big"
+     },
+     {
+      "misconception": null,
+      "why": "misreads 'rest days' as rest alone building muscle"
+     },
+     {
+      "misconception": "GEN-EXERCISE-K17-M13",
+      "why": "thinks growth happens during the lifting"
+     }
+    ]
+   },
+   {
+    "evidence": "You can effectively strengthen your muscles using your own body weight through exercises like push-ups or squats.",
+    "kind": "what_if",
+    "q": "Asha has no gym or weights at home. How can she make her muscles stronger?",
+    "options": [
+     "By doing push-ups and squats at home",
+     "She cannot, since strength needs gym machines",
+     "Only by drinking protein powder every day",
+     "She cannot, as it stunts children's growth"
+    ],
+    "explain": "You can strengthen muscles using your own body weight, with exercises like push-ups or squats; no machines are needed.",
+    "wrong": [
+     {
+      "misconception": "GEN-EXERCISE-K6-M5",
+      "why": "thinks strength exercise needs gym machines"
+     },
+     {
+      "misconception": "GEN-EXERCISE-K18-M15",
+      "why": "thinks protein alone builds strength"
+     },
+     {
+      "misconception": "GEN-EXERCISE-K7-M7",
+      "why": "thinks children should not do strength exercise"
+     }
+    ]
+   },
+   {
+    "evidence": "If you stop being active, your muscles may shrink from lack of use, and you might gain fat if you continue to eat the same amount of calories, but one does not turn into the other.",
+    "kind": "what_if",
+    "q": "Vikram stopped playing football but still eats the same food. What will most likely happen?",
+    "options": [
+     "His muscles shrink and he gains some fat",
+     "His muscles slowly turn into fat over time",
+     "His muscles keep growing from past training",
+     "Nothing changes, as sweating burned his fat"
+    ],
+    "explain": "Unused muscles shrink, and eating the same calories adds fat, but muscle never turns into fat.",
+    "wrong": [
+     {
+      "misconception": "GEN-EXERCISE-K19-M16",
+      "why": "thinks muscle turns into fat"
+     },
+     {
+      "misconception": "GEN-EXERCISE-K7-M6",
+      "why": "thinks muscles keep growing without new effort"
+     },
+     {
+      "misconception": null,
+      "why": "thinks sweat measures fat burned"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, remember that sweating is just your body’s way of cooling down, not a direct measurement of how much fat you have burned.",
+    "kind": "which_explains",
+    "q": "Neha sweated a lot while walking on a hot day. What does her sweat show?",
+    "options": [
+     "Her body was cooling itself down",
+     "She burned a large amount of fat",
+     "Her muscles grew bigger during the walk",
+     "Her stomach fat was melting away"
+    ],
+    "explain": "Sweating is the body's way of cooling down; it does not measure how much fat was burned.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks more sweat means more fat burned"
+     },
+     {
+      "misconception": "GEN-EXERCISE-K17-M13",
+      "why": "thinks muscles grow during exercise"
+     },
+     {
+      "misconception": "GEN-EXERCISE-K22-M17",
+      "why": "thinks fat melts from one body part"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 34.1
+}

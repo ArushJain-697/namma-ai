@@ -1,0 +1,166 @@
+{
+ "source": "train-0329-SOC-ECO-SECTORS.json",
+ "job": {
+  "job": "train-0329-SOC-ECO-SECTORS",
+  "topic_id": "SOC-ECO-SECTORS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a news-style report about a real-world situation",
+  "seed": 329
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 5631,
+  "promptTokenCount": 2
+ },
+ "passage": "In the village of Rampur, the local economy is undergoing a significant transformation. While agriculture remains the backbone, the primary sector now includes diverse activities like fishing, forestry, and mining, which extract natural resources directly. Many villagers have moved to the nearby town to work in a new textile factory, representing the secondary sector. This factory processes raw cotton into finished cloth, adding value to the primary products. Meanwhile, the tertiary sector is booming as transport, banking, and communication services support these growing industries. To track this progress, the government calculates the Gross Domestic Product, which is the total value of all final goods and services produced within the country during a particular year. To support those struggling with seasonal unemployment, the government implements the MGNREGA scheme. This policy guarantees one hundred days of wage employment in a year specifically for rural households, providing a vital safety net for those who cannot find work in the agricultural off-season. Unlike the organised sector, which offers fixed hours and job security, many workers in the unorganised sector still face irregular wages and lack formal contracts. By balancing these sectors, the nation aims for sustainable development that benefits both rural and urban populations through structured economic growth.",
+ "menu_ids": [
+  "SOC-ECO-SECTORS-K4-M1",
+  "SOC-ECO-SECTORS-K11-M2",
+  "SOC-ECO-SECTORS-K14-M4",
+  "SOC-ECO-SECTORS-K4-M5",
+  "SOC-ECO-SECTORS-K10-M6",
+  "SOC-ECO-SECTORS-K11-M7",
+  "SOC-ECO-SECTORS-K6-M8",
+  "SOC-ECO-SECTORS-K13-M9",
+  "SOC-ECO-SECTORS-K7-M10",
+  "SOC-ECO-SECTORS-K14-M11",
+  "SOC-ECO-SECTORS-K15-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "This factory processes raw cotton into finished cloth, adding value to the primary products.",
+    "kind": "why",
+    "q": "Why is a cotton-to-cloth factory placed in the secondary sector?",
+    "options": [
+     "It turns raw material into goods of higher value",
+     "It takes resources directly from nature",
+     "It gives a service using machines",
+     "It supports industries through transport and banking"
+    ],
+    "explain": "The factory processes raw cotton into finished cloth, adding value, which is the work of the secondary sector.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "mixes up processing with extraction, the primary sector's job"
+     },
+     {
+      "misconception": "SOC-ECO-SECTORS-K4-M5",
+      "why": "thinks any machine use is secondary, even for a service"
+     },
+     {
+      "misconception": null,
+      "why": "picks the tertiary sector's role, mentioned nearby in the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "While agriculture remains the backbone, the primary sector now includes diverse activities like fishing, forestry, and mining, which extract natural resources directly.",
+    "kind": "which_example",
+    "q": "Rampur's miners dig coal out of the ground. Which sector does their work belong to?",
+    "options": [
+     "Primary, since it takes resources straight from nature",
+     "Secondary, since mining uses heavy machines",
+     "Tertiary, since miners supply coal to factories",
+     "None, since only farming is primary"
+    ],
+    "explain": "Mining extracts natural resources directly, so it is in the primary sector, along with fishing and forestry.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-SECTORS-K4-M5",
+      "why": "thinks machine use makes an activity secondary"
+     },
+     {
+      "misconception": null,
+      "why": "thinks supplying goods to others makes it a service"
+     },
+     {
+      "misconception": "SOC-ECO-SECTORS-K4-M1",
+      "why": "thinks the primary sector is only farming"
+     }
+    ]
+   },
+   {
+    "evidence": "To track this progress, the government calculates the Gross Domestic Product, which is the total value of all final goods and services produced within the country during a particular year.",
+    "kind": "what_if",
+    "q": "Flour worth ₹20 is made into bread sold for ₹50. What does GDP count?",
+    "options": [
+     "₹50, the value of the final bread",
+     "₹70, the flour and bread added together",
+     "₹20, the value of the raw flour",
+     "₹0, since a small bakery is not a factory"
+    ],
+    "explain": "GDP counts only final goods and services, so the bread's ₹50 counts and the flour is not added again.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-SECTORS-K11-M7",
+      "why": "adds intermediate goods at every stage"
+     },
+     {
+      "misconception": null,
+      "why": "picks the raw material instead of the final good"
+     },
+     {
+      "misconception": "SOC-ECO-SECTORS-K4-M5",
+      "why": "thinks only large factories count as production"
+     }
+    ]
+   },
+   {
+    "evidence": "This policy guarantees one hundred days of wage employment in a year specifically for rural households, providing a vital safety net for those who cannot find work in the agricultural off-season.",
+    "kind": "how",
+    "q": "A village family has no farm work in the off-season. How does MGNREGA help them?",
+    "options": [
+     "It promises them paid work for 100 days yearly",
+     "It gives jobs to everyone living in cities",
+     "It gives work only to families with farm land",
+     "It gives them free grain until the next harvest"
+    ],
+    "explain": "MGNREGA guarantees one hundred days of wage work a year to rural households, a safety net in the off-season.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-SECTORS-K14-M4",
+      "why": "thinks MGNREGA gives jobs to everyone, including city people"
+     },
+     {
+      "misconception": "SOC-ECO-SECTORS-K14-M11",
+      "why": "thinks a job needs the worker to own farm land"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the scheme gives free goods instead of wage work"
+     }
+    ]
+   },
+   {
+    "evidence": "Unlike the organised sector, which offers fixed hours and job security, many workers in the unorganised sector still face irregular wages and lack formal contracts.",
+    "kind": "which_example",
+    "q": "Ramu gets different pay each month and has no written job terms. Where does he likely work?",
+    "options": [
+     "Unorganised sector, where jobs lack security",
+     "Organised sector, where nobody can lose a job",
+     "Tertiary sector, which adds nothing to GDP",
+     "Public sector, which earns profit for government"
+    ],
+    "explain": "Irregular wages and no formal contract are signs of unorganised sector work, unlike the organised sector's job security.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-SECTORS-K13-M9",
+      "why": "thinks organised jobs are never lost, so misreads the contrast"
+     },
+     {
+      "misconception": "SOC-ECO-SECTORS-K10-M6",
+      "why": "thinks the tertiary sector adds nothing and is a poor-job sector"
+     },
+     {
+      "misconception": "SOC-ECO-SECTORS-K15-M12",
+      "why": "thinks the public sector exists mainly to earn profit"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 46.1
+}

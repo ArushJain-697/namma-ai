@@ -1,0 +1,163 @@
+{
+ "source": "train-0292-SCI-PHY-HEAT.json",
+ "job": {
+  "job": "train-0292-SCI-PHY-HEAT",
+  "topic_id": "SCI-PHY-HEAT",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a conversation between a teacher and two students",
+  "seed": 292
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 4772,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today, let's clear up some common confusion about heat. Rohan, if you touch a metal spoon and a wooden spoon in this room, why does the metal one feel colder? Rohan: I think metal is naturally colder than wood. Teacher: Actually, they are at the same room temperature. Metal just conducts heat away from your hand faster than wood. Priya, what happens when we use a laboratory thermometer? Priya: We should take it out of the liquid quickly to read the temperature before it changes. Teacher: That is a common mistake. You must keep the bulb inside the liquid while reading, or the temperature will drop immediately. Also, remember that heat is energy in transit, not a substance like 'cold' that flows into objects. When you hold a hot cup, heat moves from the cup to your hand. Finally, consider convection in air. Heat does not just travel upwards; it moves in currents wherever fluid can circulate. If you feel warmth near a heater, it is because air molecules are transferring energy through these currents, not because heat has a specific direction it must follow. Understanding these principles helps us see how energy truly behaves in our daily lives.",
+ "menu_ids": [
+  "SCI-PHY-HEAT-K7-M1",
+  "SCI-PHY-HEAT-K6-M2",
+  "SCI-PHY-HEAT-K16-M3",
+  "SCI-PHY-HEAT-K17-M6",
+  "SCI-PHY-HEAT-K18-M7",
+  "SCI-PHY-HEAT-K20-M8",
+  "SCI-PHY-HEAT-K15-M9",
+  "SCI-PHY-HEAT-K11-M11"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Metal just conducts heat away from your hand faster than wood.",
+    "kind": "why",
+    "q": "A metal spoon and a wooden spoon sit in one room. Why does the metal one feel colder?",
+    "options": [
+     "It pulls warmth from your hand more quickly",
+     "It is naturally at a lower temperature than wood",
+     "It sends cold flowing into your hand",
+     "It sends its heat upward, away from you"
+    ],
+    "explain": "Both spoons are at room temperature; metal just carries heat away from your hand faster.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-HEAT-K16-M3",
+      "why": "thinks metal is naturally colder than wood"
+     },
+     {
+      "misconception": "SCI-PHY-HEAT-K6-M2",
+      "why": "thinks cold is a substance that flows into objects"
+     },
+     {
+      "misconception": "SCI-PHY-HEAT-K17-M6",
+      "why": "thinks heat only travels upward"
+     }
+    ]
+   },
+   {
+    "evidence": "You must keep the bulb inside the liquid while reading, or the temperature will drop immediately.",
+    "kind": "what_if",
+    "q": "Priya lifts a thermometer out of hot water to read it. What goes wrong?",
+    "options": [
+     "The reading drops as the bulb leaves the liquid",
+     "The reading becomes more accurate in open air",
+     "The reading rises because the air is warmer",
+     "The reading stays the same after it leaves"
+    ],
+    "explain": "The temperature drops immediately once the bulb is out, so the bulb must stay in the liquid.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-HEAT-K11-M11",
+      "why": "thinks the thermometer must be taken out to read it"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the change that happens"
+     },
+     {
+      "misconception": null,
+      "why": "thinks leaving the liquid changes nothing"
+     }
+    ]
+   },
+   {
+    "evidence": "Also, remember that heat is energy in transit, not a substance like 'cold' that flows into objects.",
+    "kind": "which_explains",
+    "q": "A drink becomes cooler when ice is added. Which explains this?",
+    "options": [
+     "Heat energy moves from the drink to the ice",
+     "Cold flows from the ice into the drink",
+     "Temperature moves from the drink into the ice",
+     "Heat only moves upward, out of the drink"
+    ],
+    "explain": "Heat is energy in transit that leaves the drink; no substance called cold flows into it.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-HEAT-K6-M2",
+      "why": "thinks cold is a substance that flows in"
+     },
+     {
+      "misconception": "SCI-PHY-HEAT-K7-M1",
+      "why": "treats heat and temperature as the same thing"
+     },
+     {
+      "misconception": "SCI-PHY-HEAT-K17-M6",
+      "why": "thinks heat only travels upward"
+     }
+    ]
+   },
+   {
+    "evidence": "If you feel warmth near a heater, it is because air molecules are transferring energy through these currents, not because heat has a specific direction it must follow.",
+    "kind": "how",
+    "q": "You feel warmth beside a heater, not only above it. How is this possible?",
+    "options": [
+     "Air currents carry energy in every direction",
+     "Heat can only travel upward from a heater",
+     "Cold air flows away, leaving warmth behind",
+     "Hot particles travel along the floor to you"
+    ],
+    "explain": "Air molecules transfer energy through currents, and heat has no single direction it must follow.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-HEAT-K17-M6",
+      "why": "thinks heat only travels upward"
+     },
+     {
+      "misconception": null,
+      "why": "treats cold as something that moves away"
+     },
+     {
+      "misconception": "SCI-PHY-HEAT-K15-M9",
+      "why": "thinks particles travel from the hot end to the cold end"
+     }
+    ]
+   },
+   {
+    "evidence": "When you hold a hot cup, heat moves from the cup to your hand.",
+    "kind": "recall",
+    "q": "Why do your fingers feel warm when you hold a hot cup?",
+    "options": [
+     "Heat moves from the cup to your fingers",
+     "Heat moves from your fingers to the cup",
+     "The cup's temperature is poured into your fingers",
+     "The cup is naturally warmer than other objects"
+    ],
+    "explain": "Heat moves from the hot cup into your hand, which makes your fingers feel warm.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "reverses the direction of heat flow"
+     },
+     {
+      "misconception": "SCI-PHY-HEAT-K7-M1",
+      "why": "thinks heat and temperature are the same thing"
+     },
+     {
+      "misconception": null,
+      "why": "blames the cup's material, not heat movement"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 39.2
+}

@@ -1,0 +1,169 @@
+{
+ "source": "train-0010-GEN-HYDRATION.json",
+ "job": {
+  "job": "train-0010-GEN-HYDRATION",
+  "topic_id": "GEN-HYDRATION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a step-by-step explanation of a process",
+  "seed": 10
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3421,
+  "promptTokenCount": 2
+ },
+ "passage": "Our bodies maintain a delicate water balance to function correctly, even when we are not actively exercising. We lose water continuously through invisible evaporation from our skin and through our breath, even on cool days. When we feel hot, our body produces sweat, which cools us down as it evaporates from the skin surface. This cooling effect depends on the sweat turning into vapor; simply wiping it away with a towel prevents this essential process. While plain water is the best source of hydration, our body also absorbs water from other fluids and food, meaning we do not rely solely on plain water to meet our daily needs. Furthermore, hydration is not just about drinking when you feel thirsty, as thirst is often a delayed signal that the body is already becoming dehydrated. If someone suffers from heatstroke, which is a medical emergency, they require immediate cooling and professional help rather than just rest or being wrapped in blankets. For mild dehydration, Oral Rehydration Solution (ORS) is a scientifically balanced mix of salts and sugar that can be safely prepared and used at home to restore the body's electrolyte balance. It is important to understand that adding extra sugar to ORS does not improve its effectiveness and can actually be harmful.",
+ "menu_ids": [
+  "GEN-HYDRATION-K20-M1",
+  "GEN-HYDRATION-K20-M2",
+  "GEN-HYDRATION-K18-M3",
+  "GEN-HYDRATION-K19-M4",
+  "GEN-HYDRATION-K23-M7",
+  "GEN-HYDRATION-K22-M8",
+  "GEN-HYDRATION-K15-M9",
+  "GEN-HYDRATION-K16-M10",
+  "GEN-HYDRATION-K17-M11",
+  "GEN-HYDRATION-K14-M12",
+  "GEN-HYDRATION-K10-M14",
+  "GEN-HYDRATION-K26-M16",
+  "GEN-HYDRATION-K27-M18",
+  "GEN-HYDRATION-K27-M19"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "We lose water continuously through invisible evaporation from our skin and through our breath, even on cool days.",
+    "kind": "what_if",
+    "q": "Meena reads indoors on a cool day and does not sweat. What is happening to her body's water?",
+    "options": [
+     "It escapes unseen from her skin and as she breathes",
+     "It stays the same because she is not sweating",
+     "It stays the same because the day is cool",
+     "It stays the same because she is not exercising"
+    ],
+    "explain": "We keep losing water through invisible evaporation from skin and breath, even on cool days and without sweating.",
+    "wrong": [
+     {
+      "misconception": "GEN-HYDRATION-K15-M9",
+      "why": "thinks no sweat means no water loss"
+     },
+     {
+      "misconception": "GEN-HYDRATION-K10-M14",
+      "why": "thinks water is lost only in hot weather"
+     },
+     {
+      "misconception": null,
+      "why": "misreads the first sentence and links water loss only to exercise"
+     }
+    ]
+   },
+   {
+    "evidence": "This cooling effect depends on the sweat turning into vapor; simply wiping it away with a towel prevents this essential process.",
+    "kind": "why",
+    "q": "Kabir keeps wiping off his sweat with a towel while playing. Why does he not cool down well?",
+    "options": [
+     "The sweat is gone before it can become vapour",
+     "The cold sweat that was cooling him is wiped off",
+     "He needs to sweat even more to cool down",
+     "The towel stops his skin from making more sweat"
+    ],
+    "explain": "Sweat cools only when it turns into vapour; wiping it away with a towel stops this from happening.",
+    "wrong": [
+     {
+      "misconception": "GEN-HYDRATION-K16-M10",
+      "why": "thinks the sweat liquid itself is cold"
+     },
+     {
+      "misconception": "GEN-HYDRATION-K17-M11",
+      "why": "thinks more sweat always means more cooling"
+     },
+     {
+      "misconception": null,
+      "why": "invents a cause instead of using the evaporation idea"
+     }
+    ]
+   },
+   {
+    "evidence": "While plain water is the best source of hydration, our body also absorbs water from other fluids and food, meaning we do not rely solely on plain water to meet our daily needs.",
+    "kind": "what_if",
+    "q": "Asha drinks little plain water but has juicy fruits, milk and soup daily. How does her body get water?",
+    "options": [
+     "Her fruits, milk and soup also give her water",
+     "Only the plain water she drinks gives her water",
+     "Only exactly eight glasses of plain water give water",
+     "Cold fizzy drinks would give her the most water"
+    ],
+    "explain": "The body also takes in water from other drinks and food, so plain water is not the only source.",
+    "wrong": [
+     {
+      "misconception": "GEN-HYDRATION-K19-M4",
+      "why": "thinks only plain water counts"
+     },
+     {
+      "misconception": "GEN-HYDRATION-K18-M3",
+      "why": "thinks everyone needs exactly eight glasses"
+     },
+     {
+      "misconception": "GEN-HYDRATION-K23-M7",
+      "why": "thinks fizzy drinks hydrate best, though plain water is best"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, hydration is not just about drinking when you feel thirsty, as thirst is often a delayed signal that the body is already becoming dehydrated.",
+    "kind": "which_explains",
+    "q": "Rahul drinks only when he feels thirsty. What does his thirst tell him about his body?",
+    "options": [
+     "His body has already started to run short of water",
+     "His body needs water now but never before thirst",
+     "His body is badly dehydrated and in real danger",
+     "His body has lost water only through his sweat"
+    ],
+    "explain": "Thirst is a late signal: by the time you feel it, your body is already becoming dehydrated.",
+    "wrong": [
+     {
+      "misconception": "GEN-HYDRATION-K20-M1",
+      "why": "thinks you should drink only when thirsty"
+     },
+     {
+      "misconception": "GEN-HYDRATION-K20-M2",
+      "why": "thinks thirst means serious danger"
+     },
+     {
+      "misconception": "GEN-HYDRATION-K15-M9",
+      "why": "thinks water is lost only through sweat"
+     }
+    ]
+   },
+   {
+    "evidence": "It is important to understand that adding extra sugar to ORS does not improve its effectiveness and can actually be harmful.",
+    "kind": "what_if",
+    "q": "Sonu's mother adds two extra spoons of sugar to his ORS so it works faster. What will this do?",
+    "options": [
+     "It will not help and may even cause harm",
+     "It will restore his salts much more quickly",
+     "It will work only if he is in hospital",
+     "It will help if he also stops drinking fluids"
+    ],
+    "explain": "ORS is already balanced; extra sugar does not make it work better and can actually be harmful.",
+    "wrong": [
+     {
+      "misconception": "GEN-HYDRATION-K26-M16",
+      "why": "thinks more sugar makes ORS work better"
+     },
+     {
+      "misconception": "GEN-HYDRATION-K27-M18",
+      "why": "thinks ORS is only for hospital use"
+     },
+     {
+      "misconception": "GEN-HYDRATION-K27-M19",
+      "why": "thinks stopping fluids helps during illness"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 37.0
+}

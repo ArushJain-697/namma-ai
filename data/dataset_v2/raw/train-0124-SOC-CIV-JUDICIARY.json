@@ -1,0 +1,166 @@
+{
+ "source": "train-0124-SOC-CIV-JUDICIARY.json",
+ "job": {
+  "job": "train-0124-SOC-CIV-JUDICIARY",
+  "topic_id": "SOC-CIV-JUDICIARY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a passage rich in numbers, dates or measurements",
+  "seed": 124
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3970,
+  "promptTokenCount": 2
+ },
+ "passage": "The Indian judicial system functions as an integrated structure with the Supreme Court at the apex, followed by 25 High Courts and numerous District Courts. To ensure fair justice, the Constitution guarantees judicial independence, meaning judges cannot be removed by the executive branch, such as the Prime Minister or President, simply because of a verdict. The judiciary handles two distinct types of law: civil law, which deals with private disputes like property or rent issues, and criminal law, which addresses conduct defined as offenses, such as theft or murder. While the hierarchy allows for an appellate system where cases move from lower courts to higher courts, the Supreme Court does not directly hear every village-level dispute; cases must follow the established legal ladder. Furthermore, access to justice is democratized through the Public Interest Litigation (PIL) mechanism. Introduced in the early 1980s, a PIL allows any individual or organization to approach the court on behalf of those whose rights are violated, ensuring that justice is not restricted to the government or police. This system ensures that even the most marginalized citizens can seek legal redress without needing to be a direct party to the conflict. By maintaining this separation of powers and providing accessible legal channels, the judiciary protects the fundamental rights of all citizens across the nation.",
+ "menu_ids": [
+  "SOC-CIV-JUDICIARY-K9-M1",
+  "SOC-CIV-JUDICIARY-K12-M2",
+  "SOC-CIV-JUDICIARY-K13-M3",
+  "SOC-CIV-JUDICIARY-K15-M4",
+  "SOC-CIV-JUDICIARY-K4-M5",
+  "SOC-CIV-JUDICIARY-K5-M6",
+  "SOC-CIV-JUDICIARY-K11-M7",
+  "SOC-CIV-JUDICIARY-K6-M8",
+  "SOC-CIV-JUDICIARY-K12-M9",
+  "SOC-CIV-JUDICIARY-K7-M10",
+  "SOC-CIV-JUDICIARY-K10-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "To ensure fair justice, the Constitution guarantees judicial independence, meaning judges cannot be removed by the executive branch, such as the Prime Minister or President, simply because of a verdict.",
+    "kind": "what_if",
+    "q": "The Prime Minister is unhappy with a judge's verdict. What happens to the judge?",
+    "options": [
+     "The judge cannot be removed over that verdict",
+     "The judge can be removed by the Prime Minister",
+     "The judge must rewrite the verdict to please him",
+     "The judge must obey, as courts cannot oppose leaders"
+    ],
+    "explain": "Judicial independence means the Prime Minister or President cannot remove judges just because of a verdict.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-JUDICIARY-K12-M2",
+      "why": "thinks leaders can fire judges over verdicts"
+     },
+     {
+      "misconception": null,
+      "why": "thinks judges must please the executive"
+     },
+     {
+      "misconception": "SOC-CIV-JUDICIARY-K12-M9",
+      "why": "thinks courts cannot stand against those in power"
+     }
+    ]
+   },
+   {
+    "evidence": "The judiciary handles two distinct types of law: civil law, which deals with private disputes like property or rent issues, and criminal law, which addresses conduct defined as offenses, such as theft or murder.",
+    "kind": "which_example",
+    "q": "Which of these cases would come under civil law?",
+    "options": [
+     "Two brothers quarrelling over who owns a house",
+     "A man caught stealing a bicycle from a shop",
+     "A gang charged with robbing a village bank",
+     "A thief whom a police officer declares guilty"
+    ],
+    "explain": "Civil law deals with private disputes like property or rent; theft and robbery are criminal offences.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-JUDICIARY-K13-M3",
+      "why": "thinks civil law punishes crimes like theft"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up civil and criminal cases"
+     },
+     {
+      "misconception": "SOC-CIV-JUDICIARY-K7-M10",
+      "why": "thinks police officers decide who is guilty"
+     }
+    ]
+   },
+   {
+    "evidence": "While the hierarchy allows for an appellate system where cases move from lower courts to higher courts, the Supreme Court does not directly hear every village-level dispute; cases must follow the established legal ladder.",
+    "kind": "how",
+    "q": "A villager wants the Supreme Court to hear a small land dispute. How can this happen?",
+    "options": [
+     "It must begin in lower courts, then go higher",
+     "It can be heard at once by the Supreme Court",
+     "It must be filed again in the same court",
+     "It moves down from High Court to District Court"
+    ],
+    "explain": "Cases follow the legal ladder, moving from lower courts up to higher courts, not straight to the Supreme Court.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-JUDICIARY-K9-M1",
+      "why": "thinks the Supreme Court hears any village case directly"
+     },
+     {
+      "misconception": "SOC-CIV-JUDICIARY-K11-M7",
+      "why": "thinks an appeal means refiling in the same court"
+     },
+     {
+      "misconception": "SOC-CIV-JUDICIARY-K4-M5",
+      "why": "thinks the High Court sits below the District Court"
+     }
+    ]
+   },
+   {
+    "evidence": "Introduced in the early 1980s, a PIL allows any individual or organization to approach the court on behalf of those whose rights are violated, ensuring that justice is not restricted to the government or police.",
+    "kind": "what_if",
+    "q": "Poor slum children are denied schooling and cannot afford a lawyer. Who may file a PIL for them?",
+    "options": [
+     "Any concerned person or group on their behalf",
+     "Only a government department on their behalf",
+     "Only the local police station on their behalf",
+     "Only the children who were harmed directly"
+    ],
+    "explain": "A PIL lets any individual or organisation go to court for people whose rights are violated.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-JUDICIARY-K15-M4",
+      "why": "thinks a PIL is filed only by the government"
+     },
+     {
+      "misconception": null,
+      "why": "thinks justice is restricted to the police"
+     },
+     {
+      "misconception": null,
+      "why": "thinks only a direct party can go to court"
+     }
+    ]
+   },
+   {
+    "evidence": "The Indian judicial system functions as an integrated structure with the Supreme Court at the apex, followed by 25 High Courts and numerous District Courts.",
+    "kind": "recall",
+    "q": "Where do the High Courts stand in India's court system?",
+    "options": [
+     "Below the Supreme Court, above District Courts",
+     "Below the District Courts in each district",
+     "Above the Supreme Court, as the final court",
+     "Equal to the Supreme Court, for all India"
+    ],
+    "explain": "The Supreme Court is at the top, followed by the High Courts, and then the District Courts.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-JUDICIARY-K4-M5",
+      "why": "thinks High Courts sit under District Courts"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the order of the ladder"
+     },
+     {
+      "misconception": "SOC-CIV-JUDICIARY-K10-M12",
+      "why": "thinks a High Court hears cases from all of India"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 43.1
+}

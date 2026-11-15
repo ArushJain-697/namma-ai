@@ -1,0 +1,169 @@
+{
+ "source": "train-0247-MAT-TRIANGLEPROPS.json",
+ "job": {
+  "job": "train-0247-MAT-TRIANGLEPROPS",
+  "topic_id": "MAT-TRIANGLEPROPS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a step-by-step worked example",
+  "seed": 247
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1664,
+  "promptTokenCount": 2
+ },
+ "passage": "To understand triangles, we must look at their properties carefully. First, consider the sides. For any three lengths to form a triangle, the sum of any two sides must be strictly greater than the third side. If the sum equals the third side, the lines will just lie flat on each other, failing to form a triangle. Second, consider the angles. The sum of the interior angles of any triangle is always exactly 180 degrees, regardless of the triangle's size or shape. If you know two angles, you find the third by subtracting their sum from 180. Third, consider the lines inside. An altitude is a line segment from a vertex perpendicular to the opposite side, but it does not necessarily bisect that side. A median, however, connects a vertex to the midpoint of the opposite side, always staying inside the triangle. Finally, look at the exterior angle. When you extend one side of a triangle, the exterior angle formed is equal to the sum of the two opposite interior angles, not the one right next to it. Remember, the Pythagoras property, which relates the sides as a² + b² = c², applies exclusively to right-angled triangles, not to every triangle you encounter.",
+ "menu_ids": [
+  "MAT-TRIANGLEPROPS-K8-M2",
+  "MAT-TRIANGLEPROPS-K9-M3",
+  "MAT-TRIANGLEPROPS-K9-M4",
+  "MAT-TRIANGLEPROPS-K12-M6",
+  "MAT-TRIANGLEPROPS-K12-M7",
+  "MAT-TRIANGLEPROPS-K12-M8",
+  "MAT-TRIANGLEPROPS-K13-M9",
+  "MAT-TRIANGLEPROPS-K15-M10",
+  "MAT-TRIANGLEPROPS-K16-M12",
+  "MAT-TRIANGLEPROPS-K19-M14",
+  "MAT-TRIANGLEPROPS-K19-M15",
+  "MAT-TRIANGLEPROPS-K21-M16",
+  "MAT-TRIANGLEPROPS-K24-M19",
+  "MAT-TRIANGLEPROPS-K24-M20"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "If the sum equals the third side, the lines will just lie flat on each other, failing to form a triangle.",
+    "kind": "what_if",
+    "q": "Three sticks measure 4 cm, 6 cm and 10 cm. What happens when Meera joins them?",
+    "options": [
+     "They lie flat and make no triangle",
+     "They make a very thin triangle",
+     "They make a right-angled triangle",
+     "They make a triangle with a bent side"
+    ],
+    "explain": "The two short sticks add up to exactly the longest, so the sticks lie flat and form no triangle.",
+    "wrong": [
+     {
+      "misconception": "MAT-TRIANGLEPROPS-K19-M14",
+      "why": "thinks equal sum still gives a triangle"
+     },
+     {
+      "misconception": "MAT-TRIANGLEPROPS-K24-M19",
+      "why": "links the sum 4 + 6 = 10 to a right triangle"
+     },
+     {
+      "misconception": null,
+      "why": "imagines the sticks can bend to fit"
+     }
+    ]
+   },
+   {
+    "evidence": "The sum of the interior angles of any triangle is always exactly 180 degrees, regardless of the triangle's size or shape.",
+    "kind": "what_if",
+    "q": "Asha draws a huge triangle and Ravi draws a tiny one. What can we say about their angle sums?",
+    "options": [
+     "Both sums are the same",
+     "Asha's sum is much greater",
+     "Ravi's sum is much greater",
+     "Both sums are the same only if right-angled"
+    ],
+    "explain": "The angle sum of every triangle is 180 degrees, whatever its size or shape.",
+    "wrong": [
+     {
+      "misconception": "MAT-TRIANGLEPROPS-K12-M6",
+      "why": "thinks a bigger triangle has a bigger sum"
+     },
+     {
+      "misconception": null,
+      "why": "thinks a smaller triangle has a bigger sum"
+     },
+     {
+      "misconception": "MAT-TRIANGLEPROPS-K12-M7",
+      "why": "thinks 180 degrees holds only for right triangles"
+     }
+    ]
+   },
+   {
+    "evidence": "An altitude is a line segment from a vertex perpendicular to the opposite side, but it does not necessarily bisect that side.",
+    "kind": "difference",
+    "q": "How is an altitude different from a median of a triangle?",
+    "options": [
+     "It meets the side at a right angle",
+     "It always meets the side at its midpoint",
+     "It is always the slanted side itself",
+     "It can lie outside the triangle"
+    ],
+    "explain": "An altitude is perpendicular to the opposite side, while a median goes to the midpoint of that side.",
+    "wrong": [
+     {
+      "misconception": "MAT-TRIANGLEPROPS-K9-M3",
+      "why": "thinks an altitude must bisect the side"
+     },
+     {
+      "misconception": "MAT-TRIANGLEPROPS-K9-M4",
+      "why": "thinks the altitude is a slanted side"
+     },
+     {
+      "misconception": "MAT-TRIANGLEPROPS-K8-M2",
+      "why": "thinks a median can lie outside"
+     }
+    ]
+   },
+   {
+    "evidence": "When you extend one side of a triangle, the exterior angle formed is equal to the sum of the two opposite interior angles, not the one right next to it.",
+    "kind": "what_if",
+    "q": "In a triangle, two interior angles are 50 and 60 degrees. What is the exterior angle at the third vertex?",
+    "options": [
+     "110 degrees",
+     "70 degrees",
+     "130 degrees",
+     "180 degrees"
+    ],
+    "explain": "The exterior angle equals the sum of the two opposite interior angles, so 50 + 60 = 110 degrees.",
+    "wrong": [
+     {
+      "misconception": "MAT-TRIANGLEPROPS-K13-M9",
+      "why": "subtracts the sum from 180 and stops"
+     },
+     {
+      "misconception": "MAT-TRIANGLEPROPS-K16-M12",
+      "why": "thinks it equals the adjacent angle, 130 + 50"
+     },
+     {
+      "misconception": null,
+      "why": "confuses it with the full angle sum"
+     }
+    ]
+   },
+   {
+    "evidence": "Remember, the Pythagoras property, which relates the sides as a² + b² = c², applies exclusively to right-angled triangles, not to every triangle you encounter.",
+    "kind": "which_example",
+    "q": "Sides of a triangle are 5, 6 and 8 cm. What does a² + b² = c² tell us?",
+    "options": [
+     "It does not hold, so the triangle is not right-angled",
+     "It holds, so the triangle is right-angled",
+     "It holds for every triangle, so it tells nothing",
+     "It fails because 5 + 6 is greater than 8"
+    ],
+    "explain": "25 + 36 = 61, not 64, so the property fails and the triangle is not right-angled.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "assumes the property must work for these sides"
+     },
+     {
+      "misconception": "MAT-TRIANGLEPROPS-K24-M20",
+      "why": "thinks the property holds for every triangle"
+     },
+     {
+      "misconception": "MAT-TRIANGLEPROPS-K21-M16",
+      "why": "mixes it up with the side-sum check"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 14.8
+}

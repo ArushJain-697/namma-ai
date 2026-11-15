@@ -1,0 +1,138 @@
+{
+ "source": "train-0278-SCI-CHM-WATER.json",
+ "job": {
+  "job": "train-0278-SCI-CHM-WATER",
+  "topic_id": "SCI-CHM-WATER",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a conversation between a teacher and two students",
+  "seed": 278
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1234,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today, let us discuss how water moves and changes. Rohan, do you think water vapor only exists when we boil water on a stove? Rohan: Yes, I thought it disappears if it doesn't reach boiling point. Teacher: Actually, water evaporates from oceans and even from plants through transpiration, turning into vapor constantly. Priya: Does that mean the water table stays at the same depth forever? Teacher: Not at all, Priya. The water table rises or falls depending on rainfall and how much we pump out. It is not a fixed line. Priya: I once saw a treatment plant and thought it made water 100% pure, removing every single particle. Teacher: That is a common mistake. Treatment plants remove harmful pollutants and germs, but the water still contains dissolved minerals and is not chemically pure. Also, remember that groundwater is not stored in large open underground caves or swimming pools; it fills the tiny spaces between soil particles and rocks. Finally, we must stop thinking that water scarcity is only caused by household waste. Large-scale agriculture and industrial needs also significantly impact our water availability. We must manage these resources carefully to ensure everyone has enough.",
+ "menu_ids": [
+  "SCI-CHM-WATER-K6-M1",
+  "SCI-CHM-WATER-K10-M2",
+  "SCI-CHM-WATER-K15-M4",
+  "SCI-CHM-WATER-K16-M5",
+  "SCI-CHM-WATER-K19-M7",
+  "SCI-CHM-WATER-K21-M8",
+  "SCI-CHM-WATER-K26-M10",
+  "SCI-CHM-WATER-K13-M11",
+  "SCI-CHM-WATER-K7-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "The water table rises or falls depending on rainfall and how much we pump out.",
+    "kind": "what_if",
+    "q": "A region gets very little rain for years while people keep pumping water. What happens to its water table?",
+    "options": [
+     "It falls lower underground",
+     "It stays at the same depth",
+     "It rises closer to the surface",
+     "It moves only when rivers flood"
+    ],
+    "explain": "The water table rises or falls with rainfall and pumping, so less rain and more pumping lowers it.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-WATER-K16-M5",
+      "why": "thinks the water table never moves"
+     },
+     {
+      "misconception": null,
+      "why": "reverses cause and effect of pumping"
+     },
+     {
+      "misconception": "SCI-CHM-WATER-K15-M4",
+      "why": "thinks groundwater behaves like surface rivers"
+     }
+    ]
+   },
+   {
+    "evidence": "Treatment plants remove harmful pollutants and germs, but the water still contains dissolved minerals and is not chemically pure.",
+    "kind": "which_explains",
+    "q": "Water from a treatment plant is safe to drink. Why is it still not chemically pure?",
+    "options": [
+     "It keeps some dissolved minerals in it",
+     "It keeps the germs the plant found",
+     "It keeps pollutants the plant cannot see",
+     "It keeps small particles of the filter"
+    ],
+    "explain": "Plants remove pollutants and germs, but dissolved minerals remain, so the water is safe but not chemically pure.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks treated water still has germs"
+     },
+     {
+      "misconception": "SCI-CHM-WATER-K26-M10",
+      "why": "thinks treatment gives pure water, so only hidden pollutants remain"
+     },
+     {
+      "misconception": null,
+      "why": "invents a nearby detail not in the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "Also, remember that groundwater is not stored in large open underground caves or swimming pools; it fills the tiny spaces between soil particles and rocks.",
+    "kind": "how",
+    "q": "How is groundwater stored under the ground?",
+    "options": [
+     "It fills tiny gaps in soil and rock",
+     "It collects in huge empty caves",
+     "It flows in large underground rivers",
+     "It sits in open underground pools"
+    ],
+    "explain": "Groundwater fills the tiny spaces between soil particles and rocks, not open caves or pools.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-WATER-K15-M4",
+      "why": "thinks groundwater sits in empty underground caves"
+     },
+     {
+      "misconception": "SCI-CHM-WATER-K15-M4",
+      "why": "thinks groundwater is an underground river"
+     },
+     {
+      "misconception": "SCI-CHM-WATER-K15-M4",
+      "why": "thinks groundwater sits in underground pools"
+     }
+    ]
+   },
+   {
+    "evidence": "Large-scale agriculture and industrial needs also significantly impact our water availability.",
+    "kind": "which_example",
+    "q": "A town's taps run dry though homes waste little water. Which could explain this?",
+    "options": [
+     "Farms and factories use huge amounts of water",
+     "Plants stop releasing water into the air",
+     "Snow and ice are not real water",
+     "The water table is a fixed line"
+    ],
+    "explain": "Large farms and industries also strongly affect water availability, so scarcity is not caused by homes alone.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-WATER-K13-M11",
+      "why": "thinks plants do not release water, a distant cause"
+     },
+     {
+      "misconception": "SCI-CHM-WATER-K7-M12",
+      "why": "thinks ice and snow are different from water"
+     },
+     {
+      "misconception": "SCI-CHM-WATER-K16-M5",
+      "why": "thinks the water table never moves"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 11.7
+}

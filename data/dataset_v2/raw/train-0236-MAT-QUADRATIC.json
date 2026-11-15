@@ -1,0 +1,169 @@
+{
+ "source": "train-0236-MAT-QUADRATIC.json",
+ "job": {
+  "job": "train-0236-MAT-QUADRATIC",
+  "topic_id": "MAT-QUADRATIC",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a market or shop situation that uses the idea",
+  "seed": 236
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2931,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan runs a small stationery shop in his neighborhood. He decides to stock a new type of premium notebook. He calculates that if he sells each notebook for x rupees, the total number of notebooks sold in a day is represented by the expression (40 - x). To find his daily revenue, he multiplies the price by the quantity, resulting in the equation x(40 - x) = 300. Rohan wants to determine the price x that will yield this revenue. He expands the equation to get 40x - x² = 300, which he then rearranges into the standard form -x² + 40x - 300 = 0. To solve this, he uses the quadratic formula where the coefficient of x, known as b, is 40. He carefully calculates the discriminant, b² - 4ac, using the value of b as 40 and a as -1. He knows that if the discriminant is less than zero, the equation has no real roots, meaning he cannot achieve that specific revenue. After solving, he finds two possible prices for the notebooks. He realizes that if a factor of his equation is (x - 10), the corresponding root is x = 10. He is careful not to confuse the sign of the root with the sign inside the factor.",
+ "menu_ids": [
+  "MAT-QUADRATIC-K7-M1",
+  "MAT-QUADRATIC-K7-M2",
+  "MAT-QUADRATIC-K8-M3",
+  "MAT-QUADRATIC-K9-M4",
+  "MAT-QUADRATIC-K10-M6",
+  "MAT-QUADRATIC-K11-M7",
+  "MAT-QUADRATIC-K14-M8",
+  "MAT-QUADRATIC-K15-M11",
+  "MAT-QUADRATIC-K17-M12",
+  "MAT-QUADRATIC-K17-M13",
+  "MAT-QUADRATIC-K17-M14",
+  "MAT-QUADRATIC-K18-M15",
+  "MAT-QUADRATIC-K20-M16",
+  "MAT-QUADRATIC-K19-M17"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "To find his daily revenue, he multiplies the price by the quantity, resulting in the equation x(40 - x) = 300.",
+    "kind": "why",
+    "q": "Why does Rohan multiply x by (40 - x) to get 300?",
+    "options": [
+     "Because price times notebooks sold gives revenue",
+     "Because 40 - x is each notebook's price",
+     "Because x is the number of notebooks sold",
+     "Because revenue is always the price squared"
+    ],
+    "explain": "Revenue is price times quantity; x is the price and 40 - x is the number sold.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "swaps which expression is price and which is quantity"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the price x with the quantity"
+     },
+     {
+      "misconception": "MAT-QUADRATIC-K7-M2",
+      "why": "thinks a square term alone makes the revenue"
+     }
+    ]
+   },
+   {
+    "evidence": "He expands the equation to get 40x - x² = 300, which he then rearranges into the standard form -x² + 40x - 300 = 0.",
+    "kind": "how",
+    "q": "In Rohan's standard form, what is the value of c, and why?",
+    "options": [
+     "-300, because 300 moved to the left side",
+     "300, because it was on the right side",
+     "40, because it is beside x",
+     "0, because the right side becomes zero"
+    ],
+    "explain": "Moving 300 to the left gives -x² + 40x - 300 = 0, so c is -300.",
+    "wrong": [
+     {
+      "misconception": "MAT-QUADRATIC-K9-M4",
+      "why": "reads c before putting the equation in standard form"
+     },
+     {
+      "misconception": null,
+      "why": "picks the nearby coefficient of x"
+     },
+     {
+      "misconception": null,
+      "why": "takes the right-hand zero as the constant"
+     }
+    ]
+   },
+   {
+    "evidence": "He carefully calculates the discriminant, b² - 4ac, using the value of b as 40 and a as -1.",
+    "kind": "how",
+    "q": "With a = -1, b = 40 and c = -300, what discriminant does Rohan get?",
+    "options": [
+     "400",
+     "2800",
+     "-2800",
+     "1600"
+    ],
+    "explain": "b² - 4ac = 1600 - 4(-1)(-300) = 1600 - 1200 = 400.",
+    "wrong": [
+     {
+      "misconception": "MAT-QUADRATIC-K17-M12",
+      "why": "gets the sign of -4ac wrong and adds 1200"
+     },
+     {
+      "misconception": "MAT-QUADRATIC-K17-M13",
+      "why": "thinks b² can be negative"
+     },
+     {
+      "misconception": null,
+      "why": "stops after finding b² and forgets 4ac"
+     }
+    ]
+   },
+   {
+    "evidence": "He knows that if the discriminant is less than zero, the equation has no real roots, meaning he cannot achieve that specific revenue.",
+    "kind": "what_if",
+    "q": "Rohan tries a bigger target revenue and gets a negative discriminant. What does this mean?",
+    "options": [
+     "No price can give him that revenue",
+     "Two different prices give him that revenue",
+     "Exactly one price gives him that revenue",
+     "Only a negative price gives that revenue"
+    ],
+    "explain": "A discriminant below zero means no real roots, so that revenue cannot be achieved.",
+    "wrong": [
+     {
+      "misconception": "MAT-QUADRATIC-K11-M7",
+      "why": "thinks every quadratic has two different roots"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up a negative discriminant with a zero one"
+     },
+     {
+      "misconception": null,
+      "why": "thinks a negative discriminant gives negative roots"
+     }
+    ]
+   },
+   {
+    "evidence": "He realizes that if a factor of his equation is (x - 10), the corresponding root is x = 10.",
+    "kind": "what_if",
+    "q": "Rohan's other factor is (x - 30). What is the second price he finds?",
+    "options": [
+     "x = 30, because x - 30 = 0",
+     "x = -30, matching the minus sign",
+     "x = √300, the root of 300",
+     "x = 40, from the 40 in the equation"
+    ],
+    "explain": "Just as (x - 10) gives x = 10, setting x - 30 = 0 gives x = 30.",
+    "wrong": [
+     {
+      "misconception": "MAT-QUADRATIC-K15-M11",
+      "why": "copies the sign inside the factor"
+     },
+     {
+      "misconception": "MAT-QUADRATIC-K10-M6",
+      "why": "thinks a root is the square root of the right side"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby number from the equation"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 30.4
+}

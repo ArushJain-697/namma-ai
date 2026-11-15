@@ -1,0 +1,169 @@
+{
+ "source": "train-0046-MAT-LINEAREQ2.json",
+ "job": {
+  "job": "train-0046-MAT-LINEAREQ2",
+  "topic_id": "MAT-LINEAREQ2",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a market or shop situation that uses the idea",
+  "seed": 46
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3856,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan visits a stationery shop to buy supplies for his project. He observes that a notebook costs 5 rupees more than a pen. If he represents the price of a pen as 'p' and a notebook as 'n', he correctly writes the relationship as n = p + 5. Rohan decides to buy some items and forms the equation 2n + 3p = 100 to represent his total budget. He realizes that this single equation has infinitely many solutions, as he could buy different combinations of pens and notebooks that satisfy his spending limit. While checking his math, he considers the equation p = 10, which represents a fixed price for a pen. He correctly identifies this as a linear equation in two variables, 1p + 0n = 10, which forms a vertical line on his graph. Later, he tries to solve a pair of equations by eliminating variables. When he subtracts one equation from another, he carefully changes the signs of every term in the second equation to avoid errors. He knows that if he gets a result like 0 = 0, it indicates that the lines are coincident and have infinitely many solutions, not that there is no solution. Finally, he ensures that his final answer is an ordered pair (n, p), where the order matters because the price of a notebook is distinct from the price of a pen.",
+ "menu_ids": [
+  "MAT-LINEAREQ2-K17-M1",
+  "MAT-LINEAREQ2-K18-M2",
+  "MAT-LINEAREQ2-K18-M3",
+  "MAT-LINEAREQ2-K19-M4",
+  "MAT-LINEAREQ2-K19-M5",
+  "MAT-LINEAREQ2-K7-M7",
+  "MAT-LINEAREQ2-K7-M8",
+  "MAT-LINEAREQ2-K23-M9",
+  "MAT-LINEAREQ2-K8-M10",
+  "MAT-LINEAREQ2-K9-M11",
+  "MAT-LINEAREQ2-K25-M13",
+  "MAT-LINEAREQ2-K10-M14",
+  "MAT-LINEAREQ2-K24-M15",
+  "MAT-LINEAREQ2-K26-M16"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "He realizes that this single equation has infinitely many solutions, as he could buy different combinations of pens and notebooks that satisfy his spending limit.",
+    "kind": "what_if",
+    "q": "How many price pairs (n, p) can satisfy 2n + 3p = 100 on its own?",
+    "options": [
+     "An unlimited number of pairs",
+     "Exactly one pair of prices",
+     "Only pairs with whole-number prices",
+     "One value of n, not a pair"
+    ],
+    "explain": "A single equation has infinitely many solutions, since many combinations fit Rohan's spending limit.",
+    "wrong": [
+     {
+      "misconception": "MAT-LINEAREQ2-K19-M4",
+      "why": "thinks one linear equation has only one solution"
+     },
+     {
+      "misconception": "MAT-LINEAREQ2-K19-M5",
+      "why": "thinks only whole-number pairs can be solutions"
+     },
+     {
+      "misconception": "MAT-LINEAREQ2-K18-M3",
+      "why": "thinks a solution is one number, not a pair"
+     }
+    ]
+   },
+   {
+    "evidence": "He correctly identifies this as a linear equation in two variables, 1p + 0n = 10, which forms a vertical line on his graph.",
+    "kind": "what_if",
+    "q": "What does Rohan see when he draws p = 10 on his graph?",
+    "options": [
+     "A vertical line",
+     "A horizontal line",
+     "A single point only",
+     "No line, as n is missing"
+    ],
+    "explain": "p = 10 is 1p + 0n = 10, a two-variable equation whose graph is a vertical line.",
+    "wrong": [
+     {
+      "misconception": "MAT-LINEAREQ2-K25-M13",
+      "why": "thinks a fixed-value equation gives a horizontal line"
+     },
+     {
+      "misconception": "MAT-LINEAREQ2-K8-M10",
+      "why": "thinks the graph is just plotted points"
+     },
+     {
+      "misconception": "MAT-LINEAREQ2-K7-M7",
+      "why": "thinks it is not two-variable because n is missing"
+     }
+    ]
+   },
+   {
+    "evidence": "When he subtracts one equation from another, he carefully changes the signs of every term in the second equation to avoid errors.",
+    "kind": "why",
+    "q": "Why does Rohan flip the sign of each term of the second equation while subtracting?",
+    "options": [
+     "So that no term is subtracted wrongly",
+     "So that the constant c becomes positive",
+     "So that the answer is a whole number",
+     "So that both equations become the same"
+    ],
+    "explain": "Subtracting means every term of the second equation changes sign; doing this carefully avoids errors.",
+    "wrong": [
+     {
+      "misconception": "MAT-LINEAREQ2-K7-M8",
+      "why": "thinks the constant must be positive"
+     },
+     {
+      "misconception": "MAT-LINEAREQ2-K19-M5",
+      "why": "thinks answers must be whole numbers"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up subtracting with coincident lines"
+     }
+    ]
+   },
+   {
+    "evidence": "He knows that if he gets a result like 0 = 0, it indicates that the lines are coincident and have infinitely many solutions, not that there is no solution.",
+    "kind": "what_if",
+    "q": "Solving a pair of equations, Rohan ends up with 0 = 0. What does this tell him?",
+    "options": [
+     "The lines overlap, giving endless solutions",
+     "The pair has no solution at all",
+     "The lines cross at exactly one point",
+     "The lines meet only on the x-axis"
+    ],
+    "explain": "Getting 0 = 0 means the lines are coincident, so there are infinitely many solutions.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "reads 0 = 0 as a failed answer meaning no solution"
+     },
+     {
+      "misconception": "MAT-LINEAREQ2-K10-M14",
+      "why": "thinks two lines always meet at one point"
+     },
+     {
+      "misconception": "MAT-LINEAREQ2-K24-M15",
+      "why": "thinks the solution is where a line meets the x-axis"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, he ensures that his final answer is an ordered pair (n, p), where the order matters because the price of a notebook is distinct from the price of a pen.",
+    "kind": "which_explains",
+    "q": "Rohan writes his answer as (23, 18); a friend writes (18, 23). How do these compare?",
+    "options": [
+     "They mean different notebook and pen prices",
+     "They mean the same, as order does not matter",
+     "They mean the same if one equation holds",
+     "They mean the same, as only n counts"
+    ],
+    "explain": "In the ordered pair (n, p), the first number is the notebook price, so swapping changes the meaning.",
+    "wrong": [
+     {
+      "misconception": "MAT-LINEAREQ2-K17-M1",
+      "why": "thinks order in a pair does not matter"
+     },
+     {
+      "misconception": "MAT-LINEAREQ2-K18-M2",
+      "why": "thinks fitting one equation is enough"
+     },
+     {
+      "misconception": "MAT-LINEAREQ2-K18-M3",
+      "why": "thinks the answer is just one variable's value"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 41.9
+}

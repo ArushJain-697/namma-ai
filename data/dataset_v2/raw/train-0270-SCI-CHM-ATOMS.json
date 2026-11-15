@@ -1,0 +1,139 @@
+{
+ "source": "train-0270-SCI-CHM-ATOMS.json",
+ "job": {
+  "job": "train-0270-SCI-CHM-ATOMS",
+  "topic_id": "SCI-CHM-ATOMS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a clear textbook explanation",
+  "seed": 270
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1262,
+  "promptTokenCount": 2
+ },
+ "passage": "Atoms are the fundamental building blocks of all matter, yet they are mostly empty space rather than solid spheres. When atoms combine to form molecules, they do so in fixed, definite proportions by mass, regardless of the source or method of preparation of the substance. For instance, water molecules always contain hydrogen and oxygen in a constant ratio, whether obtained from a river or a laboratory. During chemical reactions, the total mass of the reactants remains equal to the total mass of the products, even if a gas is released, provided the reaction occurs in a closed system. To quantify these substances, we use the mole concept. One mole of any substance contains 6.022 x 10^23 particles, and its mass in grams is numerically equal to its molar mass. Importantly, molar mass represents the mass of one mole of particles, not the mass of a single atom or molecule. Furthermore, ions are formed when atoms lose or gain electrons, not protons, to achieve stability. Understanding these principles allows us to predict how matter behaves and transforms during various chemical processes.",
+ "menu_ids": [
+  "SCI-CHM-ATOMS-K3-M1",
+  "SCI-CHM-ATOMS-K5-M2",
+  "SCI-CHM-ATOMS-K8-M3",
+  "SCI-CHM-ATOMS-K9-M4",
+  "SCI-CHM-ATOMS-K11-M5",
+  "SCI-CHM-ATOMS-K12-M6",
+  "SCI-CHM-ATOMS-K19-M9",
+  "SCI-CHM-ATOMS-K12-M10",
+  "SCI-CHM-ATOMS-K8-M11",
+  "SCI-CHM-ATOMS-K20-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "For instance, water molecules always contain hydrogen and oxygen in a constant ratio, whether obtained from a river or a laboratory.",
+    "kind": "what_if",
+    "q": "Water is made in a lab by a new method. How will its hydrogen-oxygen ratio compare?",
+    "options": [
+     "It will be the same as river water",
+     "It will differ with the new method",
+     "It will change with the lab's heat",
+     "It will favour whichever gas was added first"
+    ],
+    "explain": "Water has a constant ratio of hydrogen and oxygen, whatever its source or method of preparation.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-ATOMS-K5-M2",
+      "why": "thinks the ratio depends on how it was prepared"
+     },
+     {
+      "misconception": "SCI-CHM-ATOMS-K8-M3",
+      "why": "links heat to changes in matter"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the first ingredient decides the ratio"
+     }
+    ]
+   },
+   {
+    "evidence": "During chemical reactions, the total mass of the reactants remains equal to the total mass of the products, even if a gas is released, provided the reaction occurs in a closed system.",
+    "kind": "which_explains",
+    "q": "A reaction in a sealed flask makes a gas. Why does the flask's total mass stay the same?",
+    "options": [
+     "The gas stays inside, so no mass escapes",
+     "The gas has no mass, so nothing changes",
+     "Mass is lost but the glass gains it back",
+     "The products weigh less than the reactants"
+    ],
+    "explain": "In a closed system, products have the same total mass as reactants, even when a gas forms.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-ATOMS-K3-M1",
+      "why": "thinks gases weigh nothing so mass is lost"
+     },
+     {
+      "misconception": null,
+      "why": "makes up a transfer of mass to the container"
+     },
+     {
+      "misconception": "SCI-CHM-ATOMS-K3-M1",
+      "why": "thinks mass drops when a gas is produced"
+     }
+    ]
+   },
+   {
+    "evidence": "Importantly, molar mass represents the mass of one mole of particles, not the mass of a single atom or molecule.",
+    "kind": "difference",
+    "q": "A student says molar mass of a substance is the mass of one molecule. What is wrong?",
+    "options": [
+     "It is the mass of a whole mole of particles",
+     "It is the mass of one atom in grams",
+     "It is the mass of 6.022 particles only",
+     "It is the mass of one ion of the substance"
+    ],
+    "explain": "Molar mass is the mass of one mole of particles, not of a single atom or molecule.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-ATOMS-K9-M4",
+      "why": "thinks it is the mass of a single atom"
+     },
+     {
+      "misconception": null,
+      "why": "misreads 6.022 x 10^23 as a small number"
+     },
+     {
+      "misconception": "SCI-CHM-ATOMS-K12-M10",
+      "why": "mixes mass with ionic charge ideas"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, ions are formed when atoms lose or gain electrons, not protons, to achieve stability.",
+    "kind": "how",
+    "q": "How does a neutral atom turn into a positive ion?",
+    "options": [
+     "It loses one or more electrons",
+     "It gains one or more protons",
+     "It gains one or more electrons",
+     "It loses one or more protons"
+    ],
+    "explain": "Ions form when atoms lose or gain electrons, not protons; losing electrons leaves a positive charge.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-ATOMS-K12-M6",
+      "why": "thinks a cation forms by gaining protons"
+     },
+     {
+      "misconception": null,
+      "why": "reverses which electron change gives positive charge"
+     },
+     {
+      "misconception": null,
+      "why": "thinks protons are lost instead of electrons"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 12.6
+}

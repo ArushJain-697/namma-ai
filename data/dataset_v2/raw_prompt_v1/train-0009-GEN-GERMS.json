@@ -1,0 +1,143 @@
+{
+ "source": "train-0009-GEN-GERMS.json",
+ "job": {
+  "job": "train-0009-GEN-GERMS",
+  "topic_id": "GEN-GERMS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a cause-and-effect explanation",
+  "seed": 9
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2830,
+  "promptTokenCount": 2
+ },
+ "passage": "Germs are tiny living organisms, like bacteria and viruses, that are invisible to the naked eye. They do not just live on dirty or smelly objects; they are present everywhere, even on surfaces that look perfectly clean. Because you cannot see them, your hands may carry germs even when they appear spotless. Washing your hands with plain soap and water is highly effective because soap molecules break down the oily layer on your skin that traps germs, allowing them to be rinsed away easily. Simply rinsing with water is not enough, as it cannot remove this oily layer. Furthermore, it is a common myth that you only catch a cold from cold weather or rain; in reality, colds are caused by viruses, not the temperature. When you are sick, covering your mouth prevents these germs from spreading to others, which is a practice everyone should follow, not just those who are currently ill. Finally, when a doctor prescribes antibiotics for a bacterial infection, you must finish the entire course. Stopping the medicine early just because you feel better allows the remaining bacteria to survive and potentially become stronger, making the infection harder to treat later.",
+ "menu_ids": [
+  "GEN-GERMS-K13-M3",
+  "GEN-GERMS-K14-M4",
+  "GEN-GERMS-K15-M5",
+  "GEN-GERMS-K15-M6",
+  "GEN-GERMS-K16-M7",
+  "GEN-GERMS-K17-M8",
+  "GEN-GERMS-K17-M9",
+  "GEN-GERMS-K18-M10",
+  "GEN-GERMS-K19-M11",
+  "GEN-GERMS-K20-M12",
+  "GEN-GERMS-K21-M13",
+  "GEN-GERMS-K22-M14",
+  "GEN-GERMS-K22-M15",
+  "GEN-GERMS-K23-M16"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Because you cannot see them, your hands may carry germs even when they appear spotless.",
+    "kind": "what_if",
+    "q": "After playing, Meera's hands look spotless. Can she skip washing them before lunch?",
+    "options": [
+     "No, unseen germs may still be on them",
+     "Yes, spotless hands have no germs on them",
+     "Yes, unless she touched something smelly",
+     "Yes, unless a sick friend touched her"
+    ],
+    "explain": "Germs are invisible, so hands can carry germs even when they look spotless. Meera should still wash.",
+    "wrong": [
+     {
+      "misconception": "GEN-GERMS-K13-M3",
+      "why": "thinks clean-looking hands have no germs"
+     },
+     {
+      "misconception": "GEN-GERMS-K14-M4",
+      "why": "thinks germs come only from dirty or smelly things"
+     },
+     {
+      "misconception": "GEN-GERMS-K15-M5",
+      "why": "thinks germs spread only by a sick person's touch"
+     }
+    ]
+   },
+   {
+    "evidence": "Washing your hands with plain soap and water is highly effective because soap molecules break down the oily layer on your skin that traps germs, allowing them to be rinsed away easily.",
+    "kind": "how",
+    "q": "How does plain soap help clean germs off our hands?",
+    "options": [
+     "It breaks the oily layer so they rinse away",
+     "It kills every germ on the skin instantly",
+     "It works only when it is antibacterial soap",
+     "It covers them with foam so they cannot move"
+    ],
+    "explain": "Soap breaks down the oily layer that traps germs, so water can rinse them away easily.",
+    "wrong": [
+     {
+      "misconception": "GEN-GERMS-K17-M8",
+      "why": "thinks soap kills all germs at once"
+     },
+     {
+      "misconception": "GEN-GERMS-K17-M9",
+      "why": "thinks plain soap does not work"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the foam itself traps germs"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, it is a common myth that you only catch a cold from cold weather or rain; in reality, colds are caused by viruses, not the temperature.",
+    "kind": "which_explains",
+    "q": "Aman got soaked in the rain and had a cold the next day. What really caused his cold?",
+    "options": [
+     "A virus that got into his body",
+     "Getting wet in the cold rain",
+     "The low temperature of the evening air",
+     "Mosquitoes that bit him in the rain"
+    ],
+    "explain": "Colds are caused by viruses, not by rain or cold temperature.",
+    "wrong": [
+     {
+      "misconception": "GEN-GERMS-K15-M6",
+      "why": "thinks getting wet causes a cold"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the temperature itself causes colds"
+     },
+     {
+      "misconception": "GEN-GERMS-K16-M7",
+      "why": "mixes up how colds and mosquito diseases spread"
+     }
+    ]
+   },
+   {
+    "evidence": "Stopping the medicine early just because you feel better allows the remaining bacteria to survive and potentially become stronger, making the infection harder to treat later.",
+    "kind": "what_if",
+    "q": "Sana feels better after two days of antibiotics and stops taking them. What could happen next?",
+    "options": [
+     "Leftover bacteria survive and become stronger",
+     "Nothing, as feeling well means all germs died",
+     "The medicine already taken finishes the job",
+     "Her infection clears faster without the medicine"
+    ],
+    "explain": "Stopping early lets the remaining bacteria survive and grow stronger, so the infection becomes harder to treat.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks feeling better means no germs are left"
+     },
+     {
+      "misconception": null,
+      "why": "thinks a few doses are enough to finish the job"
+     },
+     {
+      "misconception": null,
+      "why": "thinks medicine is not needed once you feel well"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 33.3
+}

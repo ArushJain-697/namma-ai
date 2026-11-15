@@ -1,0 +1,139 @@
+{
+ "source": "train-0232-MAT-NUMBERS6.json",
+ "job": {
+  "job": "train-0232-MAT-NUMBERS6",
+  "topic_id": "MAT-NUMBERS6",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a passage that shows a common wrong method and corrects it",
+  "seed": 232
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2451,
+  "promptTokenCount": 2
+ },
+ "passage": "In our daily life, we often handle large numbers, but we must be careful how we write them. Some students think that adding more digits to the left of a number always makes it bigger, but 005 is just 5. We must also be careful with commas. In the Indian system, we place the first comma after three digits from the right, and then after every two digits. For example, ten lakhs is written as 10,00,000. If you follow the International system, you place commas after every three digits. Another common mistake happens with Roman numerals. Many students believe they can repeat symbols like X as many times as they want to represent any value, but the rule is that no symbol can be repeated more than three times. Therefore, forty is written as XL, not XXXX. By following these specific rules for place value and symbols, we ensure our mathematical communication remains clear and accurate for everyone. Always check your system of notation before placing your commas or calculating your totals.",
+ "menu_ids": [
+  "MAT-NUMBERS6-K8-M2",
+  "MAT-NUMBERS6-K12-M3",
+  "MAT-NUMBERS6-K14-M5",
+  "MAT-NUMBERS6-K5-M6",
+  "MAT-NUMBERS6-K6-M7",
+  "MAT-NUMBERS6-K9-M8",
+  "MAT-NUMBERS6-K10-M9",
+  "MAT-NUMBERS6-K13-M10",
+  "MAT-NUMBERS6-K14-M11",
+  "MAT-NUMBERS6-K11-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Some students think that adding more digits to the left of a number always makes it bigger, but 005 is just 5.",
+    "kind": "what_if",
+    "q": "Meena writes 0045 and Ravi writes 45. Whose number is bigger?",
+    "options": [
+     "Equal: zeros on the left add no value",
+     "Meena's: her number has more digits",
+     "Ravi's: left zeros make a number smaller",
+     "Meena's: left zeros turn it into thousands"
+    ],
+    "explain": "Zeros added on the left change nothing, just as 005 is just 5.",
+    "wrong": [
+     {
+      "misconception": "MAT-NUMBERS6-K12-M3",
+      "why": "thinks more digits always means a bigger number"
+     },
+     {
+      "misconception": null,
+      "why": "thinks left zeros take value away"
+     },
+     {
+      "misconception": null,
+      "why": "thinks each extra digit adds a new place value"
+     }
+    ]
+   },
+   {
+    "evidence": "In the Indian system, we place the first comma after three digits from the right, and then after every two digits.",
+    "kind": "how",
+    "q": "How should 5432100 be written with commas in the Indian system?",
+    "options": [
+     "54,32,100",
+     "5,432,100",
+     "5,43,21,00",
+     "543,2100"
+    ],
+    "explain": "Indian system: first comma after three digits from the right, then after every two digits.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "uses the International system by mistake"
+     },
+     {
+      "misconception": "MAT-NUMBERS6-K8-M2",
+      "why": "puts commas after every two digits from the start"
+     },
+     {
+      "misconception": null,
+      "why": "places only one comma from the left"
+     }
+    ]
+   },
+   {
+    "evidence": "If you follow the International system, you place commas after every three digits.",
+    "kind": "what_if",
+    "q": "Sara uses the International system for one million, 1000000. How should she write it?",
+    "options": [
+     "1,000,000",
+     "10,00,000",
+     "1,00,000",
+     "10,000,00"
+    ],
+    "explain": "The International system puts a comma after every three digits, giving 1,000,000.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "uses Indian comma placement instead"
+     },
+     {
+      "misconception": "MAT-NUMBERS6-K6-M7",
+      "why": "thinks one million equals one lakh"
+     },
+     {
+      "misconception": "MAT-NUMBERS6-K8-M2",
+      "why": "mixes two-digit and three-digit groups"
+     }
+    ]
+   },
+   {
+    "evidence": "Many students believe they can repeat symbols like X as many times as they want to represent any value, but the rule is that no symbol can be repeated more than three times.",
+    "kind": "why",
+    "q": "Why is forty written as XL and not as XXXX?",
+    "options": [
+     "X may not appear more than three times",
+     "XL is shorter, though XXXX is also allowed",
+     "X may not appear more than two times",
+     "XXXX would stand for four hundred"
+    ],
+    "explain": "No Roman symbol can be repeated more than three times, so XXXX is not allowed.",
+    "wrong": [
+     {
+      "misconception": "MAT-NUMBERS6-K14-M5",
+      "why": "thinks symbols can be repeated freely"
+     },
+     {
+      "misconception": null,
+      "why": "misremembers the repeat limit"
+     },
+     {
+      "misconception": null,
+      "why": "confuses repeating with multiplying place value"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 29.9
+}

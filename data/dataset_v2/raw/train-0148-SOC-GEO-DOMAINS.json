@@ -1,0 +1,141 @@
+{
+ "source": "train-0148-SOC-GEO-DOMAINS.json",
+ "job": {
+  "job": "train-0148-SOC-GEO-DOMAINS",
+  "topic_id": "SOC-GEO-DOMAINS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a passage rich in numbers, dates or measurements",
+  "seed": 148
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4453,
+  "promptTokenCount": 2
+ },
+ "passage": "The Earth is a complex system composed of four major domains that interact to sustain life. The lithosphere is the solid portion of the Earth, while the atmosphere is the gaseous layer that surrounds our planet. The atmosphere is composed of 78 percent nitrogen, 21 percent oxygen, and 1 percent other gases like argon and carbon dioxide. The hydrosphere covers 71 percent of the Earth's surface, primarily as oceans. These vast water bodies are not uniform; the salinity of ocean water varies significantly depending on evaporation and freshwater inflow from rivers. The continents are massive landmasses that are part of the Earth's crust, resting on tectonic plates rather than floating on water. Finally, the biosphere is the narrow zone where land, water, and air interact to support life. This zone is not limited to the surface of the land; it extends deep into the oceans and high into the atmosphere, creating a vast space where living organisms thrive. Whether it is deep-sea creatures in the dark trenches or birds flying at high altitudes, life exists far beyond just the ground we walk on.",
+ "menu_ids": [
+  "SOC-GEO-DOMAINS-K5-M1",
+  "SOC-GEO-DOMAINS-K8-M2",
+  "SOC-GEO-DOMAINS-K10-M3",
+  "SOC-GEO-DOMAINS-K11-M4",
+  "SOC-GEO-DOMAINS-K5-M5",
+  "SOC-GEO-DOMAINS-K5-M6",
+  "SOC-GEO-DOMAINS-K6-M7",
+  "SOC-GEO-DOMAINS-K6-M8",
+  "SOC-GEO-DOMAINS-K7-M9",
+  "SOC-GEO-DOMAINS-K7-M10",
+  "SOC-GEO-DOMAINS-K9-M11",
+  "SOC-GEO-DOMAINS-K11-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "The atmosphere is composed of 78 percent nitrogen, 21 percent oxygen, and 1 percent other gases like argon and carbon dioxide.",
+    "kind": "what_if",
+    "q": "If you split air into 100 equal parts, which gas would fill the most parts?",
+    "options": [
+     "Nitrogen, with about 78 parts",
+     "Oxygen, with about 78 parts",
+     "Argon, with about 21 parts",
+     "Carbon dioxide, with about 71 parts"
+    ],
+    "explain": "Air is 78 percent nitrogen and only 21 percent oxygen, so nitrogen fills most parts.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-DOMAINS-K8-M2",
+      "why": "thinks oxygen is the most common gas in air"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the gases with their numbers"
+     },
+     {
+      "misconception": null,
+      "why": "picks the 71 percent figure from the hydrosphere sentence"
+     }
+    ]
+   },
+   {
+    "evidence": "These vast water bodies are not uniform; the salinity of ocean water varies significantly depending on evaporation and freshwater inflow from rivers.",
+    "kind": "what_if",
+    "q": "Sea A gets much river water. Sea B loses much water to evaporation. Which is likely saltier?",
+    "options": [
+     "Sea B, as water leaves but salt stays",
+     "Sea A, as rivers pour salt into it",
+     "Sea A, as more water holds more salt",
+     "Neither, all ocean water is equally salty"
+    ],
+    "explain": "Saltiness depends on evaporation and river inflow. Evaporation takes away water but leaves the salt behind.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "gets the effect of fresh river water backwards"
+     },
+     {
+      "misconception": null,
+      "why": "thinks more water means more salt"
+     },
+     {
+      "misconception": "SOC-GEO-DOMAINS-K10-M3",
+      "why": "thinks all ocean water is equally salty"
+     }
+    ]
+   },
+   {
+    "evidence": "The continents are massive landmasses that are part of the Earth's crust, resting on tectonic plates rather than floating on water.",
+    "kind": "recall",
+    "q": "What do the continents rest on?",
+    "options": [
+     "Tectonic plates, not a layer of water",
+     "Ocean water, like giant floating islands",
+     "The hydrosphere that covers most of Earth",
+     "The biosphere zone where all life thrives"
+    ],
+    "explain": "Continents are part of the Earth's crust and rest on tectonic plates. They do not float on water.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-DOMAINS-K5-M1",
+      "why": "thinks continents float on the ocean like islands"
+     },
+     {
+      "misconception": null,
+      "why": "picks the water domain mentioned just before"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby domain named in the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "This zone is not limited to the surface of the land; it extends deep into the oceans and high into the atmosphere, creating a vast space where living organisms thrive.",
+    "kind": "what_if",
+    "q": "A fish lives in a dark trench deep in the ocean. Is it part of the biosphere?",
+    "options": [
+     "Yes, the biosphere reaches deep into the oceans",
+     "No, the biosphere covers only the land surface",
+     "No, the hydrosphere is separate from the biosphere",
+     "Yes, but only if it swims near the surface"
+    ],
+    "explain": "The biosphere is not only on land. It reaches deep into the oceans, where deep-sea creatures live.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-DOMAINS-K11-M4",
+      "why": "thinks the biosphere is only on land"
+     },
+     {
+      "misconception": "SOC-GEO-DOMAINS-K11-M12",
+      "why": "thinks the domains are separate and do not overlap"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the life zone is only shallow water"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 46.3
+}

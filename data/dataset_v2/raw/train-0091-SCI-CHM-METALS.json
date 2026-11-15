@@ -1,0 +1,141 @@
+{
+ "source": "train-0091-SCI-CHM-METALS.json",
+ "job": {
+  "job": "train-0091-SCI-CHM-METALS",
+  "topic_id": "SCI-CHM-METALS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 91
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3129,
+  "promptTokenCount": 2
+ },
+ "passage": "Many students believe that rusting is simply a layer of dirt or mud that accumulates on iron objects over time. However, rusting is actually a chemical change where iron reacts with oxygen and moisture to form a new substance called iron oxide. Unlike a physical change where the material remains the same, this process permanently alters the chemical composition of the metal. While some people think only iron can corrode, many other metals also react with their environment, though they may form different protective layers. Furthermore, there is a common misconception that all metals are extremely hard solids that cannot be cut. In reality, elements like sodium and potassium are soft enough to be sliced easily with a knife. Another frequent error is assuming that all non-metals are poor conductors of electricity. While most non-metals are insulators, graphite, a form of carbon, is an excellent conductor. Finally, when metals react with acids, they do not simply vanish or turn into liquid; they undergo a chemical reaction to form new compounds and often release hydrogen gas. Understanding these properties helps us distinguish between physical changes and chemical reactions in the world around us.",
+ "menu_ids": [
+  "SCI-CHM-METALS-K5-M1",
+  "SCI-CHM-METALS-K8-M2",
+  "SCI-CHM-METALS-K14-M3",
+  "SCI-CHM-METALS-K11-M4",
+  "SCI-CHM-METALS-K19-M5",
+  "SCI-CHM-METALS-K16-M6",
+  "SCI-CHM-METALS-K19-M7",
+  "SCI-CHM-METALS-K9-M8",
+  "SCI-CHM-METALS-K17-M9",
+  "SCI-CHM-METALS-K14-M10",
+  "SCI-CHM-METALS-K19-M11",
+  "SCI-CHM-METALS-K12-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "However, rusting is actually a chemical change where iron reacts with oxygen and moisture to form a new substance called iron oxide.",
+    "kind": "what_if",
+    "q": "An iron gate turns reddish-brown after the rainy season. What has happened to its surface?",
+    "options": [
+     "Its iron has formed a new substance",
+     "Mud and dirt have stuck onto the iron",
+     "Only its colour changed; it is still iron",
+     "Rain water has melted some of the iron"
+    ],
+    "explain": "Iron reacted with oxygen and moisture, forming a new substance, iron oxide. This is rust.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-METALS-K19-M5",
+      "why": "thinks rust is a layer of dirt or mud"
+     },
+     {
+      "misconception": "SCI-CHM-METALS-K19-M11",
+      "why": "thinks rusting is only a colour change"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the metal turns into liquid"
+     }
+    ]
+   },
+   {
+    "evidence": "In reality, elements like sodium and potassium are soft enough to be sliced easily with a knife.",
+    "kind": "which_explains",
+    "q": "Meena slices a piece of sodium with a kitchen knife. What does this show?",
+    "options": [
+     "Some metals are soft enough to cut easily",
+     "Sodium is a non-metal, since metals are hard",
+     "All metals can be cut with a sharp knife",
+     "Sodium has rusted and become soft like mud"
+    ],
+    "explain": "Sodium is a metal, yet it is soft enough to slice. So not all metals are hard.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-METALS-K5-M1",
+      "why": "thinks all metals are hard, so sodium cannot be one"
+     },
+     {
+      "misconception": null,
+      "why": "turns one example into a rule for all metals"
+     },
+     {
+      "misconception": "SCI-CHM-METALS-K19-M5",
+      "why": "thinks rust is soft mud on the metal"
+     }
+    ]
+   },
+   {
+    "evidence": "While most non-metals are insulators, graphite, a form of carbon, is an excellent conductor.",
+    "kind": "what_if",
+    "q": "Priya puts a graphite rod into a circuit with a bulb. What will happen?",
+    "options": [
+     "The bulb glows, as graphite conducts well",
+     "The bulb stays off, as non-metals never conduct",
+     "The bulb glows, as graphite is a metal",
+     "The bulb stays off, as carbon is an insulator"
+    ],
+    "explain": "Graphite is a form of carbon, a non-metal, but it conducts electricity very well.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-METALS-K8-M2",
+      "why": "thinks no non-metal conducts electricity"
+     },
+     {
+      "misconception": null,
+      "why": "thinks only metals can conduct, so graphite must be one"
+     },
+     {
+      "misconception": null,
+      "why": "applies 'most non-metals are insulators' to all of them"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, when metals react with acids, they do not simply vanish or turn into liquid; they undergo a chemical reaction to form new compounds and often release hydrogen gas.",
+    "kind": "how",
+    "q": "A zinc piece disappears in dilute acid while bubbles form. What happened to the zinc?",
+    "options": [
+     "It changed into new compounds, giving off gas",
+     "It was destroyed and no longer exists",
+     "It melted and simply turned into liquid",
+     "It dissolved without any chemical change"
+    ],
+    "explain": "The zinc reacted with the acid to form new compounds and released hydrogen gas as bubbles.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-METALS-K14-M3",
+      "why": "thinks a metal that disappears has been destroyed"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the metal just turned into liquid"
+     },
+     {
+      "misconception": "SCI-CHM-METALS-K19-M11",
+      "why": "thinks the change is only physical"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 33.7
+}

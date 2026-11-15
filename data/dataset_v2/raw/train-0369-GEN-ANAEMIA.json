@@ -1,0 +1,169 @@
+{
+ "source": "train-0369-GEN-ANAEMIA.json",
+ "job": {
+  "job": "train-0369-GEN-ANAEMIA",
+  "topic_id": "GEN-ANAEMIA",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a description of a classroom activity or experiment and what it shows",
+  "seed": 369
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1550,
+  "promptTokenCount": 2
+ },
+ "passage": "Today in our science lab, we explored how our bodies process iron. We learned that iron is a vital mineral that helps haemoglobin carry oxygen to all our cells. Contrary to what some believe, iron does not exist as rust particles in our blood; it is a complex part of the haemoglobin molecule itself. We also discussed that anaemia is not a contagious disease that spreads through contact, nor does it mean a person has 'less blood' in their body. Instead, anaemia occurs when there is not enough healthy haemoglobin to transport oxygen effectively. During our discussion, we looked at how we absorb iron. Even if we eat iron-rich foods like spinach or lentils, our bodies do not absorb all of it automatically. We discovered that Vitamin C helps our bodies absorb iron, but it does not provide the iron itself. Furthermore, we learned that while milk is nutritious, it is not a complete food for preventing anaemia because it lacks sufficient iron. Finally, we clarified that iron tablets are supplements to be taken alongside a balanced diet, not replacements for iron-rich meals. Maintaining healthy levels of iron is about balance, as consuming excessive amounts of iron supplements without medical advice can be harmful to our health.",
+ "menu_ids": [
+  "GEN-ANAEMIA-K6-M2",
+  "GEN-ANAEMIA-K8-M4",
+  "GEN-ANAEMIA-K9-M5",
+  "GEN-ANAEMIA-K13-M6",
+  "GEN-ANAEMIA-K13-M7",
+  "GEN-ANAEMIA-K14-M8",
+  "GEN-ANAEMIA-K15-M9",
+  "GEN-ANAEMIA-K15-M10",
+  "GEN-ANAEMIA-K17-M12",
+  "GEN-ANAEMIA-K18-M13",
+  "GEN-ANAEMIA-K23-M15",
+  "GEN-ANAEMIA-K23-M16",
+  "GEN-ANAEMIA-K24-M17",
+  "GEN-ANAEMIA-K25-M18"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Instead, anaemia occurs when there is not enough healthy haemoglobin to transport oxygen effectively.",
+    "kind": "which_explains",
+    "q": "Meena has plenty of blood but is often tired. Which could explain anaemia?",
+    "options": [
+     "Her blood lacks enough healthy haemoglobin",
+     "Her body makes too little blood overall",
+     "Her blood has no white blood cells",
+     "She caught it from a classmate"
+    ],
+    "explain": "Anaemia means too little healthy haemoglobin to carry oxygen, not too little blood.",
+    "wrong": [
+     {
+      "misconception": "GEN-ANAEMIA-K13-M6",
+      "why": "thinks anaemia means too little blood"
+     },
+     {
+      "misconception": "GEN-ANAEMIA-K13-M7",
+      "why": "thinks anaemia means no white blood cells"
+     },
+     {
+      "misconception": "GEN-ANAEMIA-K14-M8",
+      "why": "thinks anaemia spreads like a cold"
+     }
+    ]
+   },
+   {
+    "evidence": "We discovered that Vitamin C helps our bodies absorb iron, but it does not provide the iron itself.",
+    "kind": "what_if",
+    "q": "Hari drinks lemon juice with his lentil meal. What does the lemon juice do?",
+    "options": [
+     "It helps his body take in the iron",
+     "It adds extra iron to the meal",
+     "It turns the lentils into haemoglobin",
+     "It gives his body energy to move"
+    ],
+    "explain": "Vitamin C helps the body absorb iron but does not supply iron itself.",
+    "wrong": [
+     {
+      "misconception": "GEN-ANAEMIA-K25-M18",
+      "why": "thinks Vitamin C contains the iron"
+     },
+     {
+      "misconception": null,
+      "why": "thinks food turns straight into haemoglobin"
+     },
+     {
+      "misconception": "GEN-ANAEMIA-K8-M4",
+      "why": "thinks haemoglobin-related things give energy"
+     }
+    ]
+   },
+   {
+    "evidence": "Even if we eat iron-rich foods like spinach or lentils, our bodies do not absorb all of it automatically.",
+    "kind": "which_explains",
+    "q": "Asha eats spinach daily but still has low iron. Which is a likely reason?",
+    "options": [
+     "Her body absorbs only part of the iron",
+     "Spinach has no iron to give her",
+     "One spinach meal should have cured her",
+     "Only meat and eggs can give iron"
+    ],
+    "explain": "Bodies do not absorb all the iron in food, so eating iron-rich food does not guarantee enough iron.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "denies that spinach has iron"
+     },
+     {
+      "misconception": "GEN-ANAEMIA-K23-M16",
+      "why": "thinks spinach cures anaemia at once"
+     },
+     {
+      "misconception": "GEN-ANAEMIA-K23-M15",
+      "why": "thinks only meat and eggs have iron"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, we learned that while milk is nutritious, it is not a complete food for preventing anaemia because it lacks sufficient iron.",
+    "kind": "why",
+    "q": "Why can milk alone not protect a child from anaemia?",
+    "options": [
+     "It does not have enough iron",
+     "It blocks the body from taking in iron",
+     "It has too much iron for the body",
+     "It is not liked by most children"
+    ],
+    "explain": "Milk is nutritious but lacks sufficient iron, so it cannot fully prevent anaemia by itself.",
+    "wrong": [
+     {
+      "misconception": "GEN-ANAEMIA-K24-M17",
+      "why": "thinks milk is a complete food for iron"
+     },
+     {
+      "misconception": "GEN-ANAEMIA-K6-M2",
+      "why": "thinks extra iron is always good"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby idea not given in the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "Maintaining healthy levels of iron is about balance, as consuming excessive amounts of iron supplements without medical advice can be harmful to our health.",
+    "kind": "what_if",
+    "q": "Ravi takes many iron tablets daily, thinking more iron is always better. What is true?",
+    "options": [
+     "Too much iron can harm his health",
+     "He will become healthier each day",
+     "He no longer needs iron-rich meals",
+     "He will be cured of anaemia sooner"
+    ],
+    "explain": "Taking too many iron supplements without medical advice can harm health; balance matters.",
+    "wrong": [
+     {
+      "misconception": "GEN-ANAEMIA-K6-M2",
+      "why": "thinks more iron is always healthier"
+     },
+     {
+      "misconception": null,
+      "why": "thinks tablets replace iron-rich meals"
+     },
+     {
+      "misconception": null,
+      "why": "thinks a larger dose cures faster"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 14.3
+}

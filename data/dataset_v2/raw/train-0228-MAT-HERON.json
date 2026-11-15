@@ -1,0 +1,143 @@
+{
+ "source": "train-0228-MAT-HERON.json",
+ "job": {
+  "job": "train-0228-MAT-HERON",
+  "topic_id": "MAT-HERON",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a puzzle or game that uses the idea",
+  "seed": 228
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2687,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan is designing a triangular garden patch for his school project. He knows the sides of the triangle are in the ratio 3:4:5, but he needs to find the actual lengths to calculate the area. He remembers that the perimeter is 60 cm, so he divides the perimeter by the sum of the ratio parts to find the common multiplier, which is 5. Thus, the sides are 15 cm, 20 cm, and 25 cm. To find the area, Rohan first calculates the semi-perimeter, s, which is half of the total perimeter, giving him 30 cm. He knows that Heron's formula is the square root of s(s-a)(s-b)(s-c). He carefully substitutes his values to get the square root of 30(15)(10)(5), which simplifies to 150 cm². Rohan also realizes that because this is a right-angled triangle, he could have simply used half the product of the two shorter sides. Finally, he considers a rhombus-shaped flower bed nearby. He knows the area of a rhombus is half the product of its diagonals, not just the product of the diagonals themselves. He measures the diagonals as 8 cm and 6 cm, calculating the area as 24 cm².",
+ "menu_ids": [
+  "MAT-HERON-K11-M1",
+  "MAT-HERON-K12-M2",
+  "MAT-HERON-K12-M3",
+  "MAT-HERON-K14-M5",
+  "MAT-HERON-K15-M6",
+  "MAT-HERON-K16-M7",
+  "MAT-HERON-K17-M8",
+  "MAT-HERON-K19-M9",
+  "MAT-HERON-K18-M11",
+  "MAT-HERON-K20-M12",
+  "MAT-HERON-K21-M15",
+  "MAT-HERON-K22-M16",
+  "MAT-HERON-K23-M17",
+  "MAT-HERON-K25-M19"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "He remembers that the perimeter is 60 cm, so he divides the perimeter by the sum of the ratio parts to find the common multiplier, which is 5.",
+    "kind": "what_if",
+    "q": "A triangle's sides are in the ratio 3:4:5 and its perimeter is 24 cm. What are its sides?",
+    "options": [
+     "6 cm, 8 cm and 10 cm",
+     "3 cm, 4 cm and 5 cm",
+     "8 cm, 8 cm and 8 cm",
+     "15 cm, 20 cm and 25 cm"
+    ],
+    "explain": "24 ÷ (3+4+5) = 2, so multiply each ratio part by 2.",
+    "wrong": [
+     {
+      "misconception": "MAT-HERON-K23-M17",
+      "why": "takes the ratio numbers as the actual sides"
+     },
+     {
+      "misconception": null,
+      "why": "splits the perimeter equally among three sides"
+     },
+     {
+      "misconception": null,
+      "why": "copies Rohan's numbers from the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "To find the area, Rohan first calculates the semi-perimeter, s, which is half of the total perimeter, giving him 30 cm.",
+    "kind": "what_if",
+    "q": "A triangle has sides 7 cm, 8 cm and 9 cm. What value of s goes into Heron's formula?",
+    "options": [
+     "12 cm",
+     "24 cm",
+     "8 cm",
+     "48 cm"
+    ],
+    "explain": "s is half the perimeter: (7+8+9) ÷ 2 = 12 cm.",
+    "wrong": [
+     {
+      "misconception": "MAT-HERON-K17-M8",
+      "why": "thinks s means the full perimeter"
+     },
+     {
+      "misconception": null,
+      "why": "takes the middle side as s"
+     },
+     {
+      "misconception": null,
+      "why": "doubles the perimeter instead of halving it"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan also realizes that because this is a right-angled triangle, he could have simply used half the product of the two shorter sides.",
+    "kind": "why",
+    "q": "Why could Rohan find his triangle's area without Heron's formula?",
+    "options": [
+     "Its two shorter sides are base and height",
+     "Its longest side can act as the height",
+     "Its perimeter is a round number, 60 cm",
+     "Any one of its sides can be the height"
+    ],
+    "explain": "In a right-angled triangle the two shorter sides are base and height, so area = ½ × 15 × 20.",
+    "wrong": [
+     {
+      "misconception": "MAT-HERON-K12-M3",
+      "why": "thinks height can be along a slanting side"
+     },
+     {
+      "misconception": null,
+      "why": "picks a true detail that is not the reason"
+     },
+     {
+      "misconception": "MAT-HERON-K12-M2",
+      "why": "thinks height is always one of the sides"
+     }
+    ]
+   },
+   {
+    "evidence": "He knows the area of a rhombus is half the product of its diagonals, not just the product of the diagonals themselves.",
+    "kind": "what_if",
+    "q": "A rhombus has diagonals of 10 cm and 4 cm. What is its area?",
+    "options": [
+     "20 cm²",
+     "40 cm²",
+     "14 cm²",
+     "100 cm²"
+    ],
+    "explain": "Area of a rhombus is half the product of diagonals: ½ × 10 × 4 = 20 cm².",
+    "wrong": [
+     {
+      "misconception": "MAT-HERON-K11-M1",
+      "why": "multiplies but forgets the half"
+     },
+     {
+      "misconception": null,
+      "why": "adds the diagonals instead of multiplying"
+     },
+     {
+      "misconception": "MAT-HERON-K25-M19",
+      "why": "multiplies the two triangles' areas, 10 × 10"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 28.3
+}

@@ -1,0 +1,164 @@
+{
+ "source": "train-0370-GEN-BALANCEDDIET.json",
+ "job": {
+  "job": "train-0370-GEN-BALANCEDDIET",
+  "topic_id": "GEN-BALANCEDDIET",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a comparison of two related ideas",
+  "seed": 370
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 5257,
+  "promptTokenCount": 2
+ },
+ "passage": "A balanced diet is not a one-size-fits-all plan; it must be tailored to an individual's age, activity level, and specific physical needs. Many people mistakenly believe that eating only one type of healthy food is enough, but our bodies require a diverse range of nutrients to function properly. For instance, while potatoes are vegetables, they are primarily starchy energy sources and cannot replace the vital vitamins and minerals found in dark green leafy vegetables. Similarly, many people think that vitamins provide direct energy, but they are actually micronutrients that help our bodies process food, not fuel sources that can replace a full meal. Furthermore, dietary fibre, which the body cannot digest, is essential for keeping our digestive system healthy and should not be removed from our diet. Finally, while some believe that only oily foods cause weight gain, consuming excess carbohydrates like white rice or sweets also leads to fat storage. Choosing whole grains like millets or brown rice over refined options like maida provides more fibre and nutrients, proving that the quality of our food is just as important as the quantity. A truly balanced plate includes a variety of proteins, grains, and vegetables to ensure we get everything we need to grow and stay active.",
+ "menu_ids": [
+  "GEN-BALANCEDDIET-K13-M2",
+  "GEN-BALANCEDDIET-K14-M3",
+  "GEN-BALANCEDDIET-K20-M6",
+  "GEN-BALANCEDDIET-K21-M7",
+  "GEN-BALANCEDDIET-K22-M8",
+  "GEN-BALANCEDDIET-K25-M9",
+  "GEN-BALANCEDDIET-K26-M10",
+  "GEN-BALANCEDDIET-K16-M11",
+  "GEN-BALANCEDDIET-K24-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "For instance, while potatoes are vegetables, they are primarily starchy energy sources and cannot replace the vital vitamins and minerals found in dark green leafy vegetables.",
+    "kind": "why",
+    "q": "Why can potatoes not take the place of leafy greens in a meal?",
+    "options": [
+     "They are mainly starch, not vitamin sources",
+     "They give less energy than other foods",
+     "They are not counted as vegetables at all",
+     "They are too oily to be part of meals"
+    ],
+    "explain": "Potatoes are mainly starchy energy sources and lack the vitamins and minerals found in leafy greens.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "reverses the point: potatoes are a strong energy source"
+     },
+     {
+      "misconception": null,
+      "why": "misreads the passage, which says potatoes are vegetables"
+     },
+     {
+      "misconception": "GEN-BALANCEDDIET-K26-M10",
+      "why": "links oily food with being unhealthy and mixes up the reason"
+     }
+    ]
+   },
+   {
+    "evidence": "Similarly, many people think that vitamins provide direct energy, but they are actually micronutrients that help our bodies process food, not fuel sources that can replace a full meal.",
+    "kind": "what_if",
+    "q": "Sita skips lunch and takes a vitamin tablet instead. What will happen?",
+    "options": [
+     "She gets no real fuel for her body",
+     "She gets the same energy as from a meal",
+     "She gets all she needs, as vitamins are healthy",
+     "She gets fuel, but only for a short while"
+    ],
+    "explain": "Vitamins help the body process food but are not fuel, so they cannot replace a meal.",
+    "wrong": [
+     {
+      "misconception": "GEN-BALANCEDDIET-K20-M6",
+      "why": "thinks vitamins give energy like a meal"
+     },
+     {
+      "misconception": "GEN-BALANCEDDIET-K14-M3",
+      "why": "thinks one healthy item is enough"
+     },
+     {
+      "misconception": null,
+      "why": "half-accepts that vitamins give some energy"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, dietary fibre, which the body cannot digest, is essential for keeping our digestive system healthy and should not be removed from our diet.",
+    "kind": "why",
+    "q": "Why should we keep fibre in our food even though the body cannot digest it?",
+    "options": [
+     "It keeps our gut working in a healthy way",
+     "It gives the body slow, steady energy",
+     "It makes food cleaner and finer to eat",
+     "It is useless, but it does no harm"
+    ],
+    "explain": "Fibre cannot be digested but is essential for keeping the digestive system healthy.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks anything useful must give energy"
+     },
+     {
+      "misconception": "GEN-BALANCEDDIET-K25-M9",
+      "why": "thinks finer, cleaner food is better"
+     },
+     {
+      "misconception": "GEN-BALANCEDDIET-K21-M7",
+      "why": "thinks fibre is useless"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, while some believe that only oily foods cause weight gain, consuming excess carbohydrates like white rice or sweets also leads to fat storage.",
+    "kind": "what_if",
+    "q": "Dev avoids ghee but eats extra rice and sweets daily. What is likely to happen?",
+    "options": [
+     "He may put on body fat anyway",
+     "He will stay slim, as neither is oily",
+     "He will build muscle, not body fat",
+     "He will lose weight, as sweets burn fast"
+    ],
+    "explain": "Excess carbohydrates like rice and sweets also lead to fat storage, not only oily foods.",
+    "wrong": [
+     {
+      "misconception": "GEN-BALANCEDDIET-K26-M10",
+      "why": "thinks only oily food causes weight gain"
+     },
+     {
+      "misconception": null,
+      "why": "thinks extra food becomes muscle"
+     },
+     {
+      "misconception": null,
+      "why": "thinks sweets are quickly used up"
+     }
+    ]
+   },
+   {
+    "evidence": "Choosing whole grains like millets or brown rice over refined options like maida provides more fibre and nutrients, proving that the quality of our food is just as important as the quantity.",
+    "kind": "difference",
+    "q": "Two children eat equal amounts of roti, one from maida and one from millets. How do they differ?",
+    "options": [
+     "The second child gets more fibre and nutrients",
+     "The first child gets more, as maida is finer",
+     "Both get the same, since the amount is equal",
+     "The second child gets less, as millets are cheap"
+    ],
+    "explain": "Whole grains like millets give more fibre and nutrients than refined maida, so quality matters.",
+    "wrong": [
+     {
+      "misconception": "GEN-BALANCEDDIET-K25-M9",
+      "why": "thinks finer maida is healthier"
+     },
+     {
+      "misconception": null,
+      "why": "thinks only the quantity of food matters"
+     },
+     {
+      "misconception": "GEN-BALANCEDDIET-K24-M12",
+      "why": "thinks millets have less nutrition"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 43.4
+}

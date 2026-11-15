@@ -1,0 +1,169 @@
+{
+ "source": "train-0399-MAT-CIRCLEAREAS.json",
+ "job": {
+  "job": "train-0399-MAT-CIRCLEAREAS",
+  "topic_id": "MAT-CIRCLEAREAS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a short story where children solve a real problem",
+  "seed": 399
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 3583,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and Meera were tasked with designing a circular garden patch with a radius of 7 meters. They needed to calculate the area for planting marigolds and the perimeter for a decorative fence. Rohan quickly noted that the area of a circle is πr², using 22/7 as a convenient approximation for π. He calculated the area as 154 square meters. Meera reminded him that if they wanted to convert this area into square centimeters, they must multiply by 10,000, not just 100, because 1 meter equals 100 centimeters. Next, they looked at a semicircular stone path. Rohan suggested the perimeter was just half the circumference, but Meera corrected him, explaining that the straight diameter must also be added to the curved arc. Finally, they discussed a triangular flower bed cut from a circular sector. Meera warned that the area of a segment is not just the sector area plus the triangle, but the sector area minus the triangle area. They also checked a square fountain inscribed in the circle. Rohan realized the diagonal of the square, not the side, must equal the circle's diameter. By carefully applying these geometric principles, they ensured their garden design was mathematically perfect and ready for the upcoming school exhibition.",
+ "menu_ids": [
+  "MAT-CIRCLEAREAS-K11-M2",
+  "MAT-CIRCLEAREAS-K11-M3",
+  "MAT-CIRCLEAREAS-K12-M4",
+  "MAT-CIRCLEAREAS-K12-M5",
+  "MAT-CIRCLEAREAS-K13-M6",
+  "MAT-CIRCLEAREAS-K13-M7",
+  "MAT-CIRCLEAREAS-K14-M8",
+  "MAT-CIRCLEAREAS-K14-M9",
+  "MAT-CIRCLEAREAS-K15-M10",
+  "MAT-CIRCLEAREAS-K15-M11",
+  "MAT-CIRCLEAREAS-K16-M12",
+  "MAT-CIRCLEAREAS-K17-M13",
+  "MAT-CIRCLEAREAS-K18-M15",
+  "MAT-CIRCLEAREAS-K18-M16"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Meera reminded him that if they wanted to convert this area into square centimeters, they must multiply by 10,000, not just 100, because 1 meter equals 100 centimeters.",
+    "kind": "why",
+    "q": "Rohan multiplied 154 m² by 100 to get square centimeters. Why was this wrong?",
+    "options": [
+     "Area has two lengths, so 100 applies twice",
+     "Area is measured in cm, like perimeter",
+     "Changing to smaller units means dividing by 100",
+     "Meters and centimeters differ by 10,000 in length"
+    ],
+    "explain": "Area multiplies two lengths, so the factor 100 is used twice, giving 10,000.",
+    "wrong": [
+     {
+      "misconception": "MAT-CIRCLEAREAS-K15-M10",
+      "why": "thinks area can be written in cm like a length"
+     },
+     {
+      "misconception": "MAT-CIRCLEAREAS-K15-M11",
+      "why": "thinks unit change is just dividing by 100"
+     },
+     {
+      "misconception": null,
+      "why": "misreads 10,000 as the length ratio"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan suggested the perimeter was just half the circumference, but Meera corrected him, explaining that the straight diameter must also be added to the curved arc.",
+    "kind": "how",
+    "q": "A semicircular stone path has radius 7 m. How do we find its full boundary length?",
+    "options": [
+     "Add the curved arc and the straight edge",
+     "Take only the curved arc, which is πr",
+     "Take half the area of the full circle",
+     "Double the curved arc for both sides"
+    ],
+    "explain": "The boundary has a curved arc and a straight diameter, so both must be added.",
+    "wrong": [
+     {
+      "misconception": "MAT-CIRCLEAREAS-K16-M12",
+      "why": "thinks the perimeter is only half the circumference"
+     },
+     {
+      "misconception": "MAT-CIRCLEAREAS-K12-M5",
+      "why": "mixes up area with perimeter"
+     },
+     {
+      "misconception": null,
+      "why": "doubles the arc instead of adding the diameter"
+     }
+    ]
+   },
+   {
+    "evidence": "Meera warned that the area of a segment is not just the sector area plus the triangle, but the sector area minus the triangle area.",
+    "kind": "how",
+    "q": "A segment lies between a chord and its arc. How do we find its area?",
+    "options": [
+     "Subtract the triangle's area from the sector's area",
+     "Add the triangle's area to the sector's area",
+     "Subtract the sector's area from the triangle's area",
+     "Multiply the sector's area by the triangle's area"
+    ],
+    "explain": "A segment is the sector with the triangle cut away, so sector area minus triangle area.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "adds the two areas instead of subtracting"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the order of subtraction"
+     },
+     {
+      "misconception": null,
+      "why": "combines areas by multiplying"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan realized the diagonal of the square, not the side, must equal the circle's diameter.",
+    "kind": "which_explains",
+    "q": "A square has all four corners on a circle. Which of its lengths equals the diameter?",
+    "options": [
+     "The diagonal, joining opposite corners",
+     "The side, joining neighbouring corners",
+     "Half the diagonal, from centre to corner",
+     "The perimeter, running around the square"
+    ],
+    "explain": "The diagonal passes through the centre, so it equals the circle's diameter, not the side.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "picks the side, the most familiar length"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up diameter with radius"
+     },
+     {
+      "misconception": "MAT-CIRCLEAREAS-K11-M3",
+      "why": "confuses a distance across with the distance around"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan quickly noted that the area of a circle is πr², using 22/7 as a convenient approximation for π.",
+    "kind": "why",
+    "q": "Why did Rohan write 22/7 in place of π when finding the garden's area?",
+    "options": [
+     "It is a handy approximate value of π",
+     "It is the exact value of π",
+     "It must be used for every circle",
+     "It turns πr² into the circumference formula"
+    ],
+    "explain": "22/7 is only a convenient approximation of π, not its exact value.",
+    "wrong": [
+     {
+      "misconception": "MAT-CIRCLEAREAS-K13-M6",
+      "why": "thinks π is exactly 22/7"
+     },
+     {
+      "misconception": "MAT-CIRCLEAREAS-K13-M7",
+      "why": "thinks 22/7 suits every problem"
+     },
+     {
+      "misconception": "MAT-CIRCLEAREAS-K11-M2",
+      "why": "mixes up area and circumference formulas"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 29.7
+}

@@ -1,0 +1,141 @@
+{
+ "source": "train-0271-SCI-CHM-CARBON.json",
+ "job": {
+  "job": "train-0271-SCI-CHM-CARBON",
+  "topic_id": "SCI-CHM-CARBON",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a conversation between a teacher and two students",
+  "seed": 271
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1281,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today, let us clarify some common doubts about carbon compounds. Rohan, remember that carbon’s versatility comes from its ability to form stable covalent bonds, not just single ones; it can form double or triple bonds too. Priya: Sir, does that mean covalent bonds are weaker than ionic ones? Teacher: Not at all. Covalent bonds are strong because they involve shared electron pairs, not just a temporary association. Rohan: What about alcohols like ethanol? Since they have an -OH group, are they basic like sodium hydroxide? Teacher: That is a common mistake. Ethanol is neutral because the -OH group is covalently bonded to a carbon chain, not an ionizable hydroxide group. Priya: I see. And what about homologous series? Do all members have identical physical properties? Teacher: No, while they share similar chemical properties, their physical properties like boiling point change as the molecular mass increases. Finally, remember that soap molecules are not flat circles; they form three-dimensional spherical structures called micelles in water. The hydrophobic tail is actually water-repelling, which is why it attaches to oil, not water. This structure is essential for cleaning.",
+ "menu_ids": [
+  "SCI-CHM-CARBON-K3-M1",
+  "SCI-CHM-CARBON-K6-M2",
+  "SCI-CHM-CARBON-K10-M3",
+  "SCI-CHM-CARBON-K13-M4",
+  "SCI-CHM-CARBON-K13-M5",
+  "SCI-CHM-CARBON-K17-M6",
+  "SCI-CHM-CARBON-K23-M7",
+  "SCI-CHM-CARBON-K25-M8",
+  "SCI-CHM-CARBON-K19-M9",
+  "SCI-CHM-CARBON-K4-M10",
+  "SCI-CHM-CARBON-K7-M11",
+  "SCI-CHM-CARBON-K22-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Ethanol is neutral because the -OH group is covalently bonded to a carbon chain, not an ionizable hydroxide group.",
+    "kind": "why",
+    "q": "Why does ethanol not behave like sodium hydroxide in water?",
+    "options": [
+     "Its -OH stays joined to carbon",
+     "Its -OH is released as hydroxide",
+     "Its carbon chain makes it a base",
+     "Its -OH is weaker than in NaOH"
+    ],
+    "explain": "The -OH in ethanol is covalently bonded to the carbon chain, so it is not ionizable and ethanol stays neutral.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-CARBON-K13-M4",
+      "why": "thinks the -OH group always makes a solution basic"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the cause: thinks the carbon chain gives basic nature"
+     },
+     {
+      "misconception": "SCI-CHM-CARBON-K3-M1",
+      "why": "thinks covalent bonds are weaker than ionic ones"
+     }
+    ]
+   },
+   {
+    "evidence": "Covalent bonds are strong because they involve shared electron pairs, not just a temporary association.",
+    "kind": "which_explains",
+    "q": "Priya thinks sharing electrons is less permanent than giving them away. What corrects her?",
+    "options": [
+     "Shared electron pairs hold atoms firmly",
+     "Shared electrons are held by one atom only",
+     "Giving electrons makes bonds last longer",
+     "Sharing happens only for a short time"
+    ],
+    "explain": "Covalent bonds are strong because they involve shared electron pairs, not a temporary association.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-CARBON-K4-M10",
+      "why": "thinks shared electrons belong only to the atom that brought them"
+     },
+     {
+      "misconception": "SCI-CHM-CARBON-K3-M1",
+      "why": "repeats the belief that giving is more permanent than sharing"
+     },
+     {
+      "misconception": null,
+      "why": "turns 'temporary association' into a description of covalent bonds"
+     }
+    ]
+   },
+   {
+    "evidence": "No, while they share similar chemical properties, their physical properties like boiling point change as the molecular mass increases.",
+    "kind": "what_if",
+    "q": "Two members of a homologous series differ in molecular mass. How will their boiling points compare?",
+    "options": [
+     "They will differ, as mass changes boiling point",
+     "They will match, as chemistry is similar",
+     "They will match, as the group is the same",
+     "They will differ, as chemistry changes with mass"
+    ],
+    "explain": "Members share chemical properties, but physical properties like boiling point change as molecular mass increases.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-CARBON-K13-M5",
+      "why": "thinks members have identical physical properties"
+     },
+     {
+      "misconception": "SCI-CHM-CARBON-K13-M5",
+      "why": "thinks same functional group means same physical properties"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up which properties change with mass"
+     }
+    ]
+   },
+   {
+    "evidence": "The hydrophobic tail is actually water-repelling, which is why it attaches to oil, not water.",
+    "kind": "how",
+    "q": "How does a soap molecule help remove oil from a cloth?",
+    "options": [
+     "Its tail sticks to the oil",
+     "Its tail pulls in the water",
+     "Its tail dissolves in the water",
+     "Its tail forms a flat circle"
+    ],
+    "explain": "The hydrophobic tail repels water, so it attaches to oil and helps lift it away.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-CARBON-K23-M7",
+      "why": "thinks the hydrophobic tail attracts water"
+     },
+     {
+      "misconception": null,
+      "why": "confuses the tail with the water-loving head"
+     },
+     {
+      "misconception": "SCI-CHM-CARBON-K22-M12",
+      "why": "thinks micelles are flat circles"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 12.1
+}

@@ -1,0 +1,166 @@
+{
+ "source": "train-0301-SCI-PHY-WORKENERGY.json",
+ "job": {
+  "job": "train-0301-SCI-PHY-WORKENERGY",
+  "topic_id": "SCI-PHY-WORKENERGY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a cause-and-effect explanation",
+  "seed": 301
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 3991,
+  "promptTokenCount": 2
+ },
+ "passage": "In physics, work is only done when a force causes an object to move in the direction of the force. If you push a heavy wall and it does not move, you have done zero work, regardless of how tired you feel. Energy is the capacity to do work, and it is never created or destroyed, only transformed from one form to another. For instance, a battery does not create energy; it converts stored chemical energy into electrical energy. When a moving ball rolls across the floor and eventually stops, its kinetic energy is not destroyed; instead, it is transformed into heat and sound due to friction. Furthermore, the kinetic energy of an object depends on the square of its velocity, meaning that if a car doubles its speed, its kinetic energy actually quadruples. Potential energy is determined solely by an object's height relative to a reference point, not by the path taken to reach that height. Finally, power measures the rate at which work is performed, not the total amount of work done. A person who finishes a task faster has a higher power output, but they have not necessarily performed more work than someone who takes longer to complete the same task.",
+ "menu_ids": [
+  "SCI-PHY-WORKENERGY-K11-M1",
+  "SCI-PHY-WORKENERGY-K12-M2",
+  "SCI-PHY-WORKENERGY-K14-M3",
+  "SCI-PHY-WORKENERGY-K15-M4",
+  "SCI-PHY-WORKENERGY-K16-M5",
+  "SCI-PHY-WORKENERGY-K17-M6",
+  "SCI-PHY-WORKENERGY-K10-M7",
+  "SCI-PHY-WORKENERGY-K6-M8",
+  "SCI-PHY-WORKENERGY-K15-M9",
+  "SCI-PHY-WORKENERGY-K13-M10",
+  "SCI-PHY-WORKENERGY-K8-M11"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "If you push a heavy wall and it does not move, you have done zero work, regardless of how tired you feel.",
+    "kind": "what_if",
+    "q": "Meera pushes a heavy wall with all her strength, but it does not budge. How much work does she do?",
+    "options": [
+     "Zero, as there was no movement",
+     "A lot, as she became very tired",
+     "Some, as she used a large force",
+     "Negative, as the wall pushed back"
+    ],
+    "explain": "Work needs movement in the direction of the force. No movement means zero work, however tired you feel.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-WORKENERGY-K11-M1",
+      "why": "thinks tiredness or effort means work was done"
+     },
+     {
+      "misconception": null,
+      "why": "thinks applying a force alone counts as work"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the wall's push back makes work negative"
+     }
+    ]
+   },
+   {
+    "evidence": "For instance, a battery does not create energy; it converts stored chemical energy into electrical energy.",
+    "kind": "which_explains",
+    "q": "A battery runs a toy car for an hour. Which explains where the car's energy came from?",
+    "options": [
+     "The stored chemical energy changed into electrical energy",
+     "The battery made fresh energy out of nothing",
+     "The spinning wheels created extra energy for the car",
+     "The chemical energy was destroyed as the car moved"
+    ],
+    "explain": "A battery only converts stored chemical energy into electrical energy; it does not create new energy.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-WORKENERGY-K8-M11",
+      "why": "thinks batteries create energy"
+     },
+     {
+      "misconception": null,
+      "why": "thinks moving parts make new energy"
+     },
+     {
+      "misconception": "SCI-PHY-WORKENERGY-K16-M5",
+      "why": "thinks energy is destroyed when used"
+     }
+    ]
+   },
+   {
+    "evidence": "When a moving ball rolls across the floor and eventually stops, its kinetic energy is not destroyed; instead, it is transformed into heat and sound due to friction.",
+    "kind": "which_explains",
+    "q": "A rolling ball slows down and stops on the floor. What has happened to its energy?",
+    "options": [
+     "It has changed into heat and sound",
+     "It has been destroyed as the ball stopped",
+     "It has become potential energy in the ball",
+     "It has been used up, like fuel in a lamp"
+    ],
+    "explain": "Friction transforms the ball's kinetic energy into heat and sound; energy is never destroyed.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-WORKENERGY-K16-M5",
+      "why": "thinks energy is destroyed when motion stops"
+     },
+     {
+      "misconception": null,
+      "why": "confuses kinetic energy with potential energy"
+     },
+     {
+      "misconception": null,
+      "why": "thinks energy gets used up like fuel"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, the kinetic energy of an object depends on the square of its velocity, meaning that if a car doubles its speed, its kinetic energy actually quadruples.",
+    "kind": "what_if",
+    "q": "A car's speed rises from 20 km/h to 40 km/h. How does its kinetic energy change?",
+    "options": [
+     "It becomes four times as large",
+     "It becomes twice as large",
+     "It becomes three times as large",
+     "It becomes eight times as large"
+    ],
+    "explain": "Kinetic energy depends on the square of speed, so doubling the speed makes it four times larger.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-WORKENERGY-K14-M3",
+      "why": "thinks doubling speed only doubles kinetic energy"
+     },
+     {
+      "misconception": null,
+      "why": "adds the extra speed instead of squaring"
+     },
+     {
+      "misconception": null,
+      "why": "cubes the speed instead of squaring it"
+     }
+    ]
+   },
+   {
+    "evidence": "A person who finishes a task faster has a higher power output, but they have not necessarily performed more work than someone who takes longer to complete the same task.",
+    "kind": "difference",
+    "q": "Asha and Ben do the same task, and Asha finishes sooner. What can we say?",
+    "options": [
+     "Asha used more power but did equal work",
+     "Asha did more work, as she was faster",
+     "Asha did less work, as she spent less time",
+     "Asha used equal power, as the task was same"
+    ],
+    "explain": "Finishing faster means higher power, but the same task needs the same amount of work.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-WORKENERGY-K17-M6",
+      "why": "thinks the faster person does more work"
+     },
+     {
+      "misconception": null,
+      "why": "thinks less time means less work"
+     },
+     {
+      "misconception": null,
+      "why": "thinks power depends only on the task, not the time"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 32.5
+}

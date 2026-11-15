@@ -1,0 +1,139 @@
+{
+ "source": "train-0351-SOC-HIS-COMPANY.json",
+ "job": {
+  "job": "train-0351-SOC-HIS-COMPANY",
+  "topic_id": "SOC-HIS-COMPANY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a cause-and-effect explanation",
+  "seed": 351
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1361,
+  "promptTokenCount": 2
+ },
+ "passage": "When the East India Company first arrived in India, they were purely merchants seeking profit through trade, not conquerors aiming to rule the entire subcontinent. Their initial success in Bengal was not due to military superiority, but rather the betrayal of Mir Jafar, who helped the British defeat Sirajuddaulah at the Battle of Plassey. As the Company expanded, they introduced the Subsidiary Alliance system. Under this policy, Indian rulers were forced to maintain a British-controlled army and accept a British 'Resident' in their court. This Resident was not a guest, but a political agent who interfered in the internal affairs of the state to ensure Company interests were protected. Furthermore, the British used the Doctrine of Lapse to annex kingdoms. This policy stated that if an Indian ruler died without a direct male heir, their kingdom would automatically become part of British territory. This was specifically used to annex states like Awadh on the grounds of 'misgovernment' rather than just a lack of heirs. Through these strategic political maneuvers, the Company slowly transformed from a trading group into the supreme governing power in India, often using local political instability to justify their expansion.",
+ "menu_ids": [
+  "SOC-HIS-COMPANY-K9-M1",
+  "SOC-HIS-COMPANY-K10-M2",
+  "SOC-HIS-COMPANY-K13-M4",
+  "SOC-HIS-COMPANY-K6-M5",
+  "SOC-HIS-COMPANY-K7-M6",
+  "SOC-HIS-COMPANY-K14-M7",
+  "SOC-HIS-COMPANY-K15-M8",
+  "SOC-HIS-COMPANY-K11-M9",
+  "SOC-HIS-COMPANY-K4-M10",
+  "SOC-HIS-COMPANY-K8-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Their initial success in Bengal was not due to military superiority, but rather the betrayal of Mir Jafar, who helped the British defeat Sirajuddaulah at the Battle of Plassey.",
+    "kind": "why",
+    "q": "Why did the Company defeat Sirajuddaulah at Plassey?",
+    "options": [
+     "A traitor on his side helped the British",
+     "Its soldiers far outnumbered his soldiers",
+     "Its weapons were better than his weapons",
+     "Its ships blocked the rivers of Bengal"
+    ],
+    "explain": "Mir Jafar betrayed Sirajuddaulah and helped the British win; the victory was not due to military strength.",
+    "wrong": [
+     {
+      "misconception": "SOC-HIS-COMPANY-K10-M2",
+      "why": "thinks the British army was larger and stronger"
+     },
+     {
+      "misconception": "SOC-HIS-COMPANY-K10-M2",
+      "why": "thinks better weapons gave the British victory"
+     },
+     {
+      "misconception": null,
+      "why": "adds a plausible detail not in the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "This Resident was not a guest, but a political agent who interfered in the internal affairs of the state to ensure Company interests were protected.",
+    "kind": "difference",
+    "q": "A Resident lives in an Indian ruler's court. What is his real role?",
+    "options": [
+     "He guards British interests in the state",
+     "He gives friendly advice to the ruler",
+     "He leads the ruler's own army in war",
+     "He collects taxes for the ruler's court"
+    ],
+    "explain": "The Resident was a political agent who interfered in state affairs to protect the Company's interests.",
+    "wrong": [
+     {
+      "misconception": "SOC-HIS-COMPANY-K13-M4",
+      "why": "thinks the Resident was a helpful guest adviser"
+     },
+     {
+      "misconception": "SOC-HIS-COMPANY-K6-M5",
+      "why": "thinks the British and ruler shared armies"
+     },
+     {
+      "misconception": null,
+      "why": "confuses the Resident with a revenue officer"
+     }
+    ]
+   },
+   {
+    "evidence": "This policy stated that if an Indian ruler died without a direct male heir, their kingdom would automatically become part of British territory.",
+    "kind": "what_if",
+    "q": "A ruler under British influence dies leaving no son. What does the Doctrine of Lapse say?",
+    "options": [
+     "His kingdom passes into British hands",
+     "His kingdom passes to his nearest relative",
+     "His kingdom stays free if he paid tax",
+     "His kingdom is shared with the Resident"
+    ],
+    "explain": "Under the Doctrine of Lapse, a kingdom without a direct male heir automatically became British territory.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks relatives could inherit without a direct heir"
+     },
+     {
+      "misconception": "SOC-HIS-COMPANY-K7-M6",
+      "why": "thinks the British acted by their own wishes, not a rule"
+     },
+     {
+      "misconception": "SOC-HIS-COMPANY-K13-M4",
+      "why": "mixes up the Resident's role with the heir rule"
+     }
+    ]
+   },
+   {
+    "evidence": "This was specifically used to annex states like Awadh on the grounds of 'misgovernment' rather than just a lack of heirs.",
+    "kind": "why",
+    "q": "On what grounds was Awadh annexed by the Company?",
+    "options": [
+     "The Company claimed it was badly governed",
+     "The Nawab had died without a male heir",
+     "The Nawab had refused to trade with Britain",
+     "The Nawab had lost a battle at Buxar"
+    ],
+    "explain": "Awadh was annexed on the grounds of 'misgovernment', not simply because there was no heir.",
+    "wrong": [
+     {
+      "misconception": "SOC-HIS-COMPANY-K14-M7",
+      "why": "thinks Awadh fell for lack of a male heir"
+     },
+     {
+      "misconception": "SOC-HIS-COMPANY-K15-M8",
+      "why": "thinks refusing trade caused annexation, as with Tipu"
+     },
+     {
+      "misconception": "SOC-HIS-COMPANY-K11-M9",
+      "why": "mixes Awadh up with the Battle of Buxar"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 13.0
+}

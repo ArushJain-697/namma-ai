@@ -1,0 +1,141 @@
+{
+ "source": "train-0077-SCI-BIO-MICROBES.json",
+ "job": {
+  "job": "train-0077-SCI-BIO-MICROBES",
+  "topic_id": "SCI-BIO-MICROBES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a news-style report about a real-world situation",
+  "seed": 77
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3246,
+  "promptTokenCount": 2
+ },
+ "passage": "In a recent health awareness campaign, local doctors addressed common myths regarding infectious diseases. Dr. Sharma clarified that while antibiotics are powerful tools, they are specifically designed to kill bacteria and are completely ineffective against viruses, which cause illnesses like the common cold and flu. He also emphasized that vaccines are not cures; they are preventative measures given to healthy individuals to train the immune system before an infection occurs. Furthermore, the doctor explained that microorganisms are not all harmful. Many, like those found in curd or used in the nitrogen cycle, are essential for life. He noted that even in extreme conditions, such as boiling hot springs or icy glaciers, specialized microbes thrive. Regarding food safety, he warned that pasteurization makes milk safe by reducing harmful bacteria to a level that does not cause disease, but it does not sterilize the liquid completely. Finally, he reminded the public that houseflies and mosquitoes are merely carriers, or vectors, that transport pathogens from waste to food, rather than being the source of the disease themselves. Understanding these biological facts is crucial for maintaining community health and preventing the spread of infections in our daily lives.",
+ "menu_ids": [
+  "SCI-BIO-MICROBES-K1-M1",
+  "SCI-BIO-MICROBES-K4-M2",
+  "SCI-BIO-MICROBES-K12-M3",
+  "SCI-BIO-MICROBES-K13-M4",
+  "SCI-BIO-MICROBES-K16-M5",
+  "SCI-BIO-MICROBES-K22-M6",
+  "SCI-BIO-MICROBES-K3-M7",
+  "SCI-BIO-MICROBES-K19-M9",
+  "SCI-BIO-MICROBES-K23-M10",
+  "SCI-BIO-MICROBES-K6-M11",
+  "SCI-BIO-MICROBES-K12-M12",
+  "SCI-BIO-MICROBES-K21-M13"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Dr. Sharma clarified that while antibiotics are powerful tools, they are specifically designed to kill bacteria and are completely ineffective against viruses, which cause illnesses like the common cold and flu.",
+    "kind": "what_if",
+    "q": "Meena has the flu and asks for antibiotics. What should the doctor tell her?",
+    "options": [
+     "They kill bacteria, but flu comes from viruses",
+     "They will cure it, since flu is bacterial",
+     "They will cure it and strengthen her body",
+     "They work only if taken before falling ill"
+    ],
+    "explain": "Antibiotics kill only bacteria; flu is caused by viruses, so antibiotics cannot help.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-MICROBES-K12-M3",
+      "why": "thinks antibiotics treat flu, as if it were bacterial"
+     },
+     {
+      "misconception": "SCI-BIO-MICROBES-K12-M12",
+      "why": "thinks antibiotics build up the immune system"
+     },
+     {
+      "misconception": "SCI-BIO-MICROBES-K13-M4",
+      "why": "mixes up antibiotics with vaccines"
+     }
+    ]
+   },
+   {
+    "evidence": "He also emphasized that vaccines are not cures; they are preventative measures given to healthy individuals to train the immune system before an infection occurs.",
+    "kind": "why",
+    "q": "Why do doctors give vaccines to children who are not sick?",
+    "options": [
+     "To prepare their bodies before any infection",
+     "To cure a disease they already have hidden",
+     "To kill every microbe living in their bodies",
+     "To work like antibiotics against any germ"
+    ],
+    "explain": "Vaccines are not cures; they train a healthy person's immune system before infection happens.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-MICROBES-K13-M4",
+      "why": "thinks vaccines are a cure for existing disease"
+     },
+     {
+      "misconception": "SCI-BIO-MICROBES-K1-M1",
+      "why": "thinks all microbes are harmful and must be killed"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up vaccines with antibiotics from the nearby sentence"
+     }
+    ]
+   },
+   {
+    "evidence": "He noted that even in extreme conditions, such as boiling hot springs or icy glaciers, specialized microbes thrive.",
+    "kind": "what_if",
+    "q": "A scientist tests water from a boiling hot spring. What will the scientist likely find?",
+    "options": [
+     "Special microbes that live well in the heat",
+     "No microbes, since boiling heat kills them all",
+     "Only harmful germs that cause human disease",
+     "Microbes only after the water cools down"
+    ],
+    "explain": "Specialized microbes thrive even in extreme places like boiling hot springs and icy glaciers.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-MICROBES-K6-M11",
+      "why": "thinks microbes cannot survive boiling water"
+     },
+     {
+      "misconception": "SCI-BIO-MICROBES-K1-M1",
+      "why": "thinks all microbes are disease germs"
+     },
+     {
+      "misconception": null,
+      "why": "thinks microbes can only live in mild conditions"
+     }
+    ]
+   },
+   {
+    "evidence": "Regarding food safety, he warned that pasteurization makes milk safe by reducing harmful bacteria to a level that does not cause disease, but it does not sterilize the liquid completely.",
+    "kind": "which_explains",
+    "q": "Rahul thinks pasteurised milk is totally free of microbes. Why is Rahul wrong?",
+    "options": [
+     "Pasteurising only lowers germs to a safe level",
+     "Pasteurising kills useful microbes but leaves harmful ones",
+     "Pasteurising adds curd microbes to keep milk fresh",
+     "Pasteurising only removes dirt, not any microbes"
+    ],
+    "explain": "Pasteurisation reduces harmful bacteria to a safe level but does not sterilise milk completely.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "reverses which bacteria are reduced"
+     },
+     {
+      "misconception": null,
+      "why": "mixes in the curd example from a nearby sentence"
+     },
+     {
+      "misconception": null,
+      "why": "thinks pasteurising is just cleaning, like filtering"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 33.8
+}

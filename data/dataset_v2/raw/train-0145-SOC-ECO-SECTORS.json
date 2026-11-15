@@ -1,0 +1,166 @@
+{
+ "source": "train-0145-SOC-ECO-SECTORS.json",
+ "job": {
+  "job": "train-0145-SOC-ECO-SECTORS",
+  "topic_id": "SOC-ECO-SECTORS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a comparison of two related ideas",
+  "seed": 145
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4048,
+  "promptTokenCount": 2
+ },
+ "passage": "The Indian economy is divided into three main sectors based on the nature of economic activity. The primary sector involves the extraction of natural resources, which includes not only farming but also activities like fishing, forestry, and mining. When these natural products are changed into other forms through manufacturing, we enter the secondary sector. The tertiary sector provides essential services that support the other two, such as transport, banking, and communication. To measure the health of these sectors, we calculate the Gross Domestic Product (GDP), which is the total value of all final goods and services produced within a country during a particular year. It is important to note that intermediate goods are excluded to avoid double counting. Furthermore, the government implements various schemes to support workers. For instance, the Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA) provides a legal guarantee of one hundred days of wage employment in a year to those who are able to, and are in need of, work in rural areas. This scheme specifically targets rural households rather than urban populations. By understanding these sectors and policies, we can better evaluate how the economy grows and how the government works to ensure livelihood security for its citizens.",
+ "menu_ids": [
+  "SOC-ECO-SECTORS-K4-M1",
+  "SOC-ECO-SECTORS-K11-M2",
+  "SOC-ECO-SECTORS-K14-M4",
+  "SOC-ECO-SECTORS-K4-M5",
+  "SOC-ECO-SECTORS-K10-M6",
+  "SOC-ECO-SECTORS-K11-M7",
+  "SOC-ECO-SECTORS-K6-M8",
+  "SOC-ECO-SECTORS-K13-M9",
+  "SOC-ECO-SECTORS-K7-M10",
+  "SOC-ECO-SECTORS-K14-M11",
+  "SOC-ECO-SECTORS-K15-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "The primary sector involves the extraction of natural resources, which includes not only farming but also activities like fishing, forestry, and mining.",
+    "kind": "what_if",
+    "q": "Ravi earns his living by catching fish in a river. Which sector does he work in?",
+    "options": [
+     "Primary, as he takes natural resources",
+     "Secondary, as he uses a motor boat",
+     "Tertiary, as he sells his catch daily",
+     "None, as primary covers only farming"
+    ],
+    "explain": "Fishing takes natural resources directly, and the primary sector includes fishing, forestry and mining, not only farming.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-SECTORS-K4-M5",
+      "why": "thinks using a machine makes work secondary"
+     },
+     {
+      "misconception": null,
+      "why": "focuses on selling instead of the main activity"
+     },
+     {
+      "misconception": "SOC-ECO-SECTORS-K4-M1",
+      "why": "thinks the primary sector is only farming"
+     }
+    ]
+   },
+   {
+    "evidence": "The tertiary sector provides essential services that support the other two, such as transport, banking, and communication.",
+    "kind": "what_if",
+    "q": "A truck company carries cotton from farms to mills. Which sector is it in?",
+    "options": [
+     "Tertiary, as it provides a support service",
+     "Secondary, as it runs heavy machines",
+     "Primary, as it carries farm products",
+     "Secondary, as it helps factories make goods"
+    ],
+    "explain": "Transport is a service that supports the other two sectors, so it belongs to the tertiary sector.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-SECTORS-K4-M5",
+      "why": "thinks using machines makes it secondary"
+     },
+     {
+      "misconception": null,
+      "why": "judges by the goods carried, not the activity"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up helping manufacturing with doing manufacturing"
+     }
+    ]
+   },
+   {
+    "evidence": "To measure the health of these sectors, we calculate the Gross Domestic Product (GDP), which is the total value of all final goods and services produced within a country during a particular year.",
+    "kind": "what_if",
+    "q": "A country's banks and schools make no goods. Do their services count in its GDP?",
+    "options": [
+     "Yes, GDP counts both goods and services",
+     "No, GDP counts only goods produced",
+     "No, services add nothing of real value",
+     "Yes, but only services sold to other countries"
+    ],
+    "explain": "GDP is the value of all final goods and services produced within a country in a year.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-SECTORS-K11-M2",
+      "why": "thinks GDP is only the sum of goods"
+     },
+     {
+      "misconception": "SOC-ECO-SECTORS-K10-M6",
+      "why": "thinks the tertiary sector adds nothing to GDP"
+     },
+     {
+      "misconception": null,
+      "why": "misses that GDP counts output within the country"
+     }
+    ]
+   },
+   {
+    "evidence": "It is important to note that intermediate goods are excluded to avoid double counting.",
+    "kind": "why",
+    "q": "To find GDP, should wheat sold to a flour mill be added separately?",
+    "options": [
+     "No, its value is already in the flour",
+     "Yes, every stage's value must be added",
+     "Yes, GDP is the sum of all goods",
+     "No, farm goods are never part of GDP"
+    ],
+    "explain": "Wheat is an intermediate good; its value is already in the flour, so adding it would count twice.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-SECTORS-K11-M7",
+      "why": "thinks intermediate goods are added at each stage"
+     },
+     {
+      "misconception": "SOC-ECO-SECTORS-K11-M2",
+      "why": "thinks GDP adds up every good produced"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises the rule to all farm goods"
+     }
+    ]
+   },
+   {
+    "evidence": "This scheme specifically targets rural households rather than urban populations.",
+    "kind": "what_if",
+    "q": "Ramesh lives in a big city and needs work. Can he get 100 days' work under MGNREGA?",
+    "options": [
+     "No, the scheme is meant for village households",
+     "Yes, it gives work to everyone who needs it",
+     "No, he must first own some farm land",
+     "Yes, if he once worked in a factory"
+    ],
+    "explain": "MGNREGA targets rural households, not people living in cities, so Ramesh cannot use it.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-SECTORS-K14-M4",
+      "why": "thinks MGNREGA gives work to everyone, even in cities"
+     },
+     {
+      "misconception": "SOC-ECO-SECTORS-K14-M11",
+      "why": "thinks a job is given only to land owners"
+     },
+     {
+      "misconception": null,
+      "why": "invents a work-experience condition not in the passage"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 41.0
+}

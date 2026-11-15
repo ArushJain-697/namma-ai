@@ -1,0 +1,139 @@
+{
+ "source": "train-0162-SOC-GEO-VEGETATION.json",
+ "job": {
+  "job": "train-0162-SOC-GEO-VEGETATION",
+  "topic_id": "SOC-GEO-VEGETATION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a conversation between a teacher and two students",
+  "seed": 162
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3207,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today, let's discuss why India has such diverse forests. Rohan, why do you think some trees shed leaves while others stay green?\nRohan: I think deciduous trees die during the dry season and wait for rain to grow back, while evergreen trees simply never lose their leaves at all.\nTeacher: That is a common misunderstanding, Rohan. Actually, deciduous trees shed their leaves for about six to eight weeks in dry summer to conserve water, but they remain alive. Evergreen trees do shed leaves, but not all at once, so they appear green throughout the year.\nMeera: What about mangroves? I read they are found deep in the middle of the ocean.\nTeacher: Not exactly, Meera. Mangroves are coastal forests found in areas influenced by tides, often in deltas where rivers meet the sea, not in the deep ocean. Also, remember that vegetation depends on climate. Different forests require different amounts of rainfall; for instance, thorn forests survive in very low rainfall, while tropical rainforests need heavy precipitation. It is the variation in temperature and moisture that dictates where each forest type thrives across our country.",
+ "menu_ids": [
+  "SOC-GEO-VEGETATION-K12-M1",
+  "SOC-GEO-VEGETATION-K13-M2",
+  "SOC-GEO-VEGETATION-K11-M3",
+  "SOC-GEO-VEGETATION-K14-M4",
+  "SOC-GEO-VEGETATION-K6-M5",
+  "SOC-GEO-VEGETATION-K6-M6",
+  "SOC-GEO-VEGETATION-K7-M7",
+  "SOC-GEO-VEGETATION-K8-M9",
+  "SOC-GEO-VEGETATION-K9-M10",
+  "SOC-GEO-VEGETATION-K10-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Actually, deciduous trees shed their leaves for about six to eight weeks in dry summer to conserve water, but they remain alive.",
+    "kind": "why",
+    "q": "Why do deciduous trees lose their leaves for six to eight weeks?",
+    "options": [
+     "Because they must save water in dry months",
+     "Because they die and wait for the rain",
+     "Because the cold winter harms their leaves",
+     "Because heavy summer rain washes leaves off"
+    ],
+    "explain": "Deciduous trees shed leaves in dry summer to conserve water, and they stay alive.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-VEGETATION-K13-M2",
+      "why": "thinks deciduous trees die in the dry season"
+     },
+     {
+      "misconception": "SOC-GEO-VEGETATION-K7-M7",
+      "why": "thinks cold, not dryness, causes leaf fall"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the cause from dryness to too much rain"
+     }
+    ]
+   },
+   {
+    "evidence": "Evergreen trees do shed leaves, but not all at once, so they appear green throughout the year.",
+    "kind": "which_explains",
+    "q": "Why does an evergreen forest look green all through the year?",
+    "options": [
+     "Its trees shed leaves, but not all together",
+     "Its trees never shed even a single leaf",
+     "Its trees drop all leaves for eight weeks",
+     "Its trees grow new leaves after every rain"
+    ],
+    "explain": "Evergreen trees do shed leaves, but not all at once, so they stay green.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-VEGETATION-K12-M1",
+      "why": "thinks evergreen trees never shed leaves"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up evergreen with deciduous trees"
+     },
+     {
+      "misconception": "SOC-GEO-VEGETATION-K13-M2",
+      "why": "borrows the idea that trees regrow leaves with rain"
+     }
+    ]
+   },
+   {
+    "evidence": "Mangroves are coastal forests found in areas influenced by tides, often in deltas where rivers meet the sea, not in the deep ocean.",
+    "kind": "what_if",
+    "q": "Meera wants to see a mangrove forest. Where should she go?",
+    "options": [
+     "To a muddy delta where tides reach",
+     "To the middle of the deep ocean",
+     "To a dry plain with very little rain",
+     "To a hilltop far away from the coast"
+    ],
+    "explain": "Mangroves grow on coasts touched by tides, often in deltas, not in the deep ocean.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-VEGETATION-K14-M4",
+      "why": "thinks mangroves grow out in the ocean"
+     },
+     {
+      "misconception": null,
+      "why": "mixes mangroves up with thorn forests"
+     },
+     {
+      "misconception": null,
+      "why": "ignores that mangroves are coastal forests"
+     }
+    ]
+   },
+   {
+    "evidence": "Different forests require different amounts of rainfall; for instance, thorn forests survive in very low rainfall, while tropical rainforests need heavy precipitation.",
+    "kind": "what_if",
+    "q": "Region A gets very little rain and region B gets heavy rain. Which forests do they likely have?",
+    "options": [
+     "A has thorn forest, B has rainforest",
+     "Both would have the same forest type",
+     "A has rainforest, B has thorn forest",
+     "A has mangroves, B has thorn forest"
+    ],
+    "explain": "Thorn forests survive in very low rainfall, while tropical rainforests need heavy rain.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-VEGETATION-K11-M3",
+      "why": "thinks all forests need the same rain"
+     },
+     {
+      "misconception": null,
+      "why": "reverses which forest needs more rain"
+     },
+     {
+      "misconception": null,
+      "why": "picks another forest named nearby in the passage"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 36.9
+}

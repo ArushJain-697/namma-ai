@@ -1,0 +1,169 @@
+{
+ "source": "train-0008-GEN-FOODLABELS.json",
+ "job": {
+  "job": "train-0008-GEN-FOODLABELS",
+  "topic_id": "GEN-FOODLABELS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a description of a classroom activity or experiment and what it shows",
+  "seed": 8
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4240,
+  "promptTokenCount": 2
+ },
+ "passage": "Today in our science class, we examined various food packets to understand how to read labels correctly. We started by looking at a box of cookies that claimed 'No added sugar' on the front, but the ingredient list clearly showed 'maltose' and 'fruit juice concentrate', which are forms of sugar. We learned that the first ingredient listed is always the one present in the largest quantity by weight. Next, we compared two packets of snacks. One had a green dot, confirming it is vegetarian, while the other had no mark at all. Our teacher explained that a missing mark does not automatically mean a product is vegetarian; one must always check the full ingredient list. We also discussed the FSSAI logo, which is a regulatory mark indicating that the food meets safety standards, not necessarily that the product is 'healthy' or nutritious. Finally, we looked at a bottle of juice with a 'Best Before' date. We learned that 'Best Before' indicates the quality and freshness period, whereas an 'Expiry' date indicates the point after which food may become unsafe to consume. We concluded that reading the fine print is essential for making informed choices, as marketing claims on the front of the pack can often be misleading.",
+ "menu_ids": [
+  "GEN-FOODLABELS-K13-M1",
+  "GEN-FOODLABELS-K14-M3",
+  "GEN-FOODLABELS-K15-M4",
+  "GEN-FOODLABELS-K16-M6",
+  "GEN-FOODLABELS-K18-M9",
+  "GEN-FOODLABELS-K19-M10",
+  "GEN-FOODLABELS-K19-M11",
+  "GEN-FOODLABELS-K20-M12",
+  "GEN-FOODLABELS-K20-M13",
+  "GEN-FOODLABELS-K21-M14",
+  "GEN-FOODLABELS-K22-M15",
+  "GEN-FOODLABELS-K22-M16",
+  "GEN-FOODLABELS-K23-M17",
+  "GEN-FOODLABELS-K23-M18"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "We started by looking at a box of cookies that claimed 'No added sugar' on the front, but the ingredient list clearly showed 'maltose' and 'fruit juice concentrate', which are forms of sugar.",
+    "kind": "which_explains",
+    "q": "A cookie box says 'No added sugar', but its ingredients include maltose and fruit juice concentrate. What does this show?",
+    "options": [
+     "The cookies still contain sugar under other names",
+     "The cookies are sugar-free, since 'sugar' is not listed",
+     "The front claim is true, as packets are checked",
+     "Fruit juice is healthy, so it does not count as sugar"
+    ],
+    "explain": "Maltose and fruit juice concentrate are forms of sugar, so the cookies contain sugar despite the 'No added sugar' claim.",
+    "wrong": [
+     {
+      "misconception": "GEN-FOODLABELS-K15-M4",
+      "why": "thinks only the word 'sugar' means the food has sugar"
+     },
+     {
+      "misconception": null,
+      "why": "trusts the marketing claim on the front of the pack"
+     },
+     {
+      "misconception": null,
+      "why": "thinks sugar from fruit is not really sugar"
+     }
+    ]
+   },
+   {
+    "evidence": "We learned that the first ingredient listed is always the one present in the largest quantity by weight.",
+    "kind": "what_if",
+    "q": "A biscuit label lists: wheat flour, sugar, palm oil, salt. Which ingredient is present in the largest amount?",
+    "options": [
+     "Wheat flour, because it is listed first",
+     "Salt, because the last item is the largest",
+     "Sugar, because sweet biscuits are mostly sugar",
+     "All four, as labels list equal amounts"
+    ],
+    "explain": "The first ingredient listed is always the one present in the largest quantity by weight, so wheat flour is the most.",
+    "wrong": [
+     {
+      "misconception": "GEN-FOODLABELS-K13-M1",
+      "why": "thinks the order runs from smallest to largest"
+     },
+     {
+      "misconception": null,
+      "why": "guesses from taste instead of reading the list order"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the order of ingredients means nothing"
+     }
+    ]
+   },
+   {
+    "evidence": "Our teacher explained that a missing mark does not automatically mean a product is vegetarian; one must always check the full ingredient list.",
+    "kind": "what_if",
+    "q": "A snack packet has no green or brown dot on it. What should a vegetarian student do before eating it?",
+    "options": [
+     "Read the full ingredient list carefully",
+     "Eat it, since no mark means it is vegetarian",
+     "Eat it if it shows the FSSAI logo",
+     "Trust the claims on the front of the pack"
+    ],
+    "explain": "A missing mark does not mean a food is vegetarian, so one must always check the full ingredient list.",
+    "wrong": [
+     {
+      "misconception": "GEN-FOODLABELS-K23-M18",
+      "why": "thinks food without a mark is vegetarian"
+     },
+     {
+      "misconception": "GEN-FOODLABELS-K22-M15",
+      "why": "thinks the FSSAI logo approves the food in every way"
+     },
+     {
+      "misconception": null,
+      "why": "relies on front-of-pack claims, which can mislead"
+     }
+    ]
+   },
+   {
+    "evidence": "We also discussed the FSSAI logo, which is a regulatory mark indicating that the food meets safety standards, not necessarily that the product is 'healthy' or nutritious.",
+    "kind": "which_explains",
+    "q": "Meena picks a packet of chips with the FSSAI logo, saying the chips must be healthy. What does the logo actually show?",
+    "options": [
+     "The food meets safety standards",
+     "The food is healthy and nutritious",
+     "The food has no added chemicals",
+     "The food is surely vegetarian"
+    ],
+    "explain": "The FSSAI logo means the food meets safety standards; it does not mean the food is healthy or nutritious.",
+    "wrong": [
+     {
+      "misconception": "GEN-FOODLABELS-K22-M15",
+      "why": "thinks the FSSAI logo means the food is healthy"
+     },
+     {
+      "misconception": "GEN-FOODLABELS-K23-M17",
+      "why": "thinks a mark on the pack means no additives"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the FSSAI logo with the green dot"
+     }
+    ]
+   },
+   {
+    "evidence": "We learned that 'Best Before' indicates the quality and freshness period, whereas an 'Expiry' date indicates the point after which food may become unsafe to consume.",
+    "kind": "difference",
+    "q": "How is a 'Best Before' date different from an 'Expiry' date on a juice bottle?",
+    "options": [
+     "Best Before is about freshness; Expiry is about safety",
+     "Both dates mean the juice has become unsafe",
+     "Best Before is about safety; Expiry is about freshness",
+     "Best Before shows the day the juice was made"
+    ],
+    "explain": "'Best Before' tells you how long the juice stays fresh and good; after the 'Expiry' date it may be unsafe.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks the two dates mean the same thing"
+     },
+     {
+      "misconception": null,
+      "why": "swaps the meanings of the two dates"
+     },
+     {
+      "misconception": null,
+      "why": "confuses Best Before with the manufacturing date"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 42.9
+}

@@ -1,0 +1,166 @@
+{
+ "source": "train-0101-SCI-PHY-CIRCUIT.json",
+ "job": {
+  "job": "train-0101-SCI-PHY-CIRCUIT",
+  "topic_id": "SCI-PHY-CIRCUIT",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a short story with Indian characters in everyday life",
+  "seed": 101
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4998,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and Meera were helping their grandfather fix an old torch in their village home. Rohan noticed the torch had two cells inside. He tried to place them both with their metal caps facing the same direction, but Grandfather gently corrected him, explaining that the positive terminal of one cell must touch the negative terminal of the other for the circuit to work. Meera asked if the electricity gets used up inside the bulb, making the current weaker when it returns to the battery. Grandfather smiled and explained that current is a continuous flow; the bulb simply converts electrical energy into light and heat, but the same amount of current returns to the battery. He then showed them the bulb, pointing out that one wire connects to the base tip and another to the metal casing on the side. He warned them that a circuit is only complete when both these distinct points are connected to the battery. Finally, he tested a piece of dry wood and a plastic scale, noting that while some materials like metals are conductors, many non-metals are insulators, though some special materials can conduct under specific conditions. He reminded them that air is generally an insulator, preventing electricity from jumping across gaps.",
+ "menu_ids": [
+  "SCI-PHY-CIRCUIT-K10-M1",
+  "SCI-PHY-CIRCUIT-K10-M2",
+  "SCI-PHY-CIRCUIT-K7-M4",
+  "SCI-PHY-CIRCUIT-K16-M5",
+  "SCI-PHY-CIRCUIT-K11-M6",
+  "SCI-PHY-CIRCUIT-K19-M7",
+  "SCI-PHY-CIRCUIT-K6-M8",
+  "SCI-PHY-CIRCUIT-K16-M9",
+  "SCI-PHY-CIRCUIT-K4-M10",
+  "SCI-PHY-CIRCUIT-K17-M11",
+  "SCI-PHY-CIRCUIT-K10-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "He tried to place them both with their metal caps facing the same direction, but Grandfather gently corrected him, explaining that the positive terminal of one cell must touch the negative terminal of the other for the circuit to work.",
+    "kind": "what_if",
+    "q": "Rohan puts both cells in the torch with metal caps facing the same way. What happens?",
+    "options": [
+     "The bulb stays off; cells are joined wrongly",
+     "The bulb glows; cell direction does not matter",
+     "The bulb glows dimly; only one cell works",
+     "The bulb glows brighter; both caps push together"
+    ],
+    "explain": "The positive end of one cell must touch the negative end of the other, or the circuit fails.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-CIRCUIT-K19-M7",
+      "why": "thinks cells work whichever way they face"
+     },
+     {
+      "misconception": null,
+      "why": "thinks one cell still works on its own"
+     },
+     {
+      "misconception": null,
+      "why": "thinks same-facing cells add their push"
+     }
+    ]
+   },
+   {
+    "evidence": "Grandfather smiled and explained that current is a continuous flow; the bulb simply converts electrical energy into light and heat, but the same amount of current returns to the battery.",
+    "kind": "how",
+    "q": "How does the current returning to the battery compare with the current leaving it?",
+    "options": [
+     "It is exactly the same amount",
+     "It is less, as the bulb uses some",
+     "It is zero, as it stops at the bulb",
+     "It is more, as the bulb adds heat"
+    ],
+    "explain": "Current is a continuous flow; the bulb changes energy into light and heat, but no current is lost.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-CIRCUIT-K10-M2",
+      "why": "thinks the bulb uses up current"
+     },
+     {
+      "misconception": "SCI-PHY-CIRCUIT-K10-M1",
+      "why": "thinks current flows to the bulb and stops"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the idea of light and heat being made"
+     }
+    ]
+   },
+   {
+    "evidence": "He then showed them the bulb, pointing out that one wire connects to the base tip and another to the metal casing on the side.",
+    "kind": "how",
+    "q": "Meera's bulb has one wire on its base tip and one on its glass. What must she change?",
+    "options": [
+     "Move the glass wire to the side metal casing",
+     "Move both wires onto the base tip",
+     "Press the glass wire more firmly on the bulb",
+     "Add one more cell to fill it with electricity"
+    ],
+    "explain": "A bulb has two contact points: the base tip and the metal casing on the side.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-CIRCUIT-K7-M4",
+      "why": "thinks the bulb has only one terminal at the tip"
+     },
+     {
+      "misconception": "SCI-PHY-CIRCUIT-K10-M12",
+      "why": "thinks touching the bulb anywhere closes the circuit"
+     },
+     {
+      "misconception": "SCI-PHY-CIRCUIT-K4-M10",
+      "why": "thinks a battery just pours out stored electricity"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, he tested a piece of dry wood and a plastic scale, noting that while some materials like metals are conductors, many non-metals are insulators, though some special materials can conduct under specific conditions.",
+    "kind": "which_explains",
+    "q": "Meera says no non-metal can ever conduct. How would Grandfather correct her?",
+    "options": [
+     "Some special materials conduct under certain conditions",
+     "All non-metals conduct if they are dry",
+     "Metals and non-metals conduct equally well",
+     "Only air conducts, as it carries lightning"
+    ],
+    "explain": "Many non-metals are insulators, but some special materials can conduct under specific conditions.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "reverses the dry wood test result"
+     },
+     {
+      "misconception": null,
+      "why": "ignores the difference between conductors and insulators"
+     },
+     {
+      "misconception": "SCI-PHY-CIRCUIT-K16-M9",
+      "why": "thinks air conducts because of lightning"
+     }
+    ]
+   },
+   {
+    "evidence": "He reminded them that air is generally an insulator, preventing electricity from jumping across gaps.",
+    "kind": "why",
+    "q": "A wire in the torch breaks, leaving a tiny air gap. Why does the bulb go off?",
+    "options": [
+     "Air does not let current jump the gap",
+     "Air carries current but stores it in the gap",
+     "Air conducts, but only during lightning storms",
+     "Air pushes the current back into the battery"
+    ],
+    "explain": "Air is generally an insulator, so electricity cannot jump across the gap and the circuit breaks.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-CIRCUIT-K11-M6",
+      "why": "thinks an open gap stores electricity"
+     },
+     {
+      "misconception": "SCI-PHY-CIRCUIT-K16-M9",
+      "why": "thinks air is a conductor because of lightning"
+     },
+     {
+      "misconception": null,
+      "why": "imagines current bouncing back at a gap"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 51.1
+}

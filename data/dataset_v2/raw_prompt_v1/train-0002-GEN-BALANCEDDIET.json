@@ -1,0 +1,138 @@
+{
+ "source": "train-0002-GEN-BALANCEDDIET.json",
+ "job": {
+  "job": "train-0002-GEN-BALANCEDDIET",
+  "topic_id": "GEN-BALANCEDDIET",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 2
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3864,
+  "promptTokenCount": 2
+ },
+ "passage": "Many people believe that eating only one type of 'superfood' is enough to stay healthy, but this is a dangerous myth. A truly balanced diet requires a variety of food groups to provide all necessary nutrients. For instance, some think that roughage or fibre is useless because our bodies cannot digest it, but fibre is actually essential for smooth digestion and bowel health. Another common mistake is thinking that only oily snacks cause weight gain, while extra portions of rice or roti are harmless. In reality, the body converts any excess energy from carbohydrates into stored fat. Furthermore, many people mistakenly believe that white polished rice or maida are superior because they look cleaner and finer than whole grains. In truth, whole grains like millets and brown rice are far more nutritious as they retain the bran and germ. Finally, some assume that vegetarians cannot get enough protein without meat or eggs. This is incorrect, as pulses, legumes, and dairy are excellent plant-based protein sources that can easily meet our daily requirements. A balanced plate must include a mix of these diverse foods, tailored to your specific age and activity level, rather than following a one-size-fits-all approach.",
+ "menu_ids": [
+  "GEN-BALANCEDDIET-K13-M2",
+  "GEN-BALANCEDDIET-K14-M3",
+  "GEN-BALANCEDDIET-K20-M6",
+  "GEN-BALANCEDDIET-K21-M7",
+  "GEN-BALANCEDDIET-K22-M8",
+  "GEN-BALANCEDDIET-K25-M9",
+  "GEN-BALANCEDDIET-K26-M10",
+  "GEN-BALANCEDDIET-K16-M11",
+  "GEN-BALANCEDDIET-K24-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "For instance, some think that roughage or fibre is useless because our bodies cannot digest it, but fibre is actually essential for smooth digestion and bowel health.",
+    "kind": "what_if",
+    "q": "Meena peels all her fruit and eats only maida bread to avoid fibre. What will most likely happen?",
+    "options": [
+     "Her bowels will not work as smoothly",
+     "Nothing, since the body cannot use fibre anyway",
+     "She will stay healthier, as refined food is cleaner",
+     "She will lose energy, since fibre fuels the body"
+    ],
+    "explain": "Fibre cannot be digested, but it is essential for smooth digestion and bowel health, so avoiding it causes problems.",
+    "wrong": [
+     {
+      "misconception": "GEN-BALANCEDDIET-K21-M7",
+      "why": "thinks undigested fibre is useless"
+     },
+     {
+      "misconception": "GEN-BALANCEDDIET-K25-M9",
+      "why": "thinks refined, finer food is healthier"
+     },
+     {
+      "misconception": null,
+      "why": "confuses fibre with an energy-giving nutrient"
+     }
+    ]
+   },
+   {
+    "evidence": "In reality, the body converts any excess energy from carbohydrates into stored fat.",
+    "kind": "what_if",
+    "q": "Raju avoids oily snacks but eats four extra rotis every day. What will most likely happen?",
+    "options": [
+     "He will gain weight from the extra carbohydrates",
+     "He will not gain weight, as rotis have no oil",
+     "He will stay fit because roti is healthy food",
+     "He will lose weight by skipping oily snacks"
+    ],
+    "explain": "The body turns any extra energy from carbohydrates like roti into stored fat, so Raju will gain weight.",
+    "wrong": [
+     {
+      "misconception": "GEN-BALANCEDDIET-K26-M10",
+      "why": "thinks only oily food causes weight gain"
+     },
+     {
+      "misconception": "GEN-BALANCEDDIET-K14-M3",
+      "why": "thinks plenty of one healthy food is always fine"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises that skipping oil alone means weight loss"
+     }
+    ]
+   },
+   {
+    "evidence": "In truth, whole grains like millets and brown rice are far more nutritious as they retain the bran and germ.",
+    "kind": "which_explains",
+    "q": "A mother switches from maida to whole wheat atta and millets. Which explains why this is healthier?",
+    "options": [
+     "These grains keep their bran and germ",
+     "These grains look cleaner and finer than maida",
+     "Millets are cheaper, so families can eat more",
+     "These grains give energy, so no vegetables are needed"
+    ],
+    "explain": "Whole grains like millets are more nutritious because they keep the bran and germ, which maida loses.",
+    "wrong": [
+     {
+      "misconception": "GEN-BALANCEDDIET-K25-M9",
+      "why": "links looking clean and fine with being healthy"
+     },
+     {
+      "misconception": "GEN-BALANCEDDIET-K24-M12",
+      "why": "sees millets only as cheap grains, not nutritious ones"
+     },
+     {
+      "misconception": "GEN-BALANCEDDIET-K14-M3",
+      "why": "thinks one good food replaces other food groups"
+     }
+    ]
+   },
+   {
+    "evidence": "This is incorrect, as pulses, legumes, and dairy are excellent plant-based protein sources that can easily meet our daily requirements.",
+    "kind": "how",
+    "q": "Anita is a vegetarian who eats no eggs. How can she get enough protein each day?",
+    "options": [
+     "By eating dal, beans, milk and paneer",
+     "She cannot; protein comes only from meat or eggs",
+     "By taking a vitamin tablet with her meals",
+     "By eating plenty of potatoes and green leaves"
+    ],
+    "explain": "Pulses, legumes and dairy are excellent protein sources that can easily meet a vegetarian's daily needs.",
+    "wrong": [
+     {
+      "misconception": "GEN-BALANCEDDIET-K22-M8",
+      "why": "thinks vegetarians cannot get enough protein"
+     },
+     {
+      "misconception": "GEN-BALANCEDDIET-K20-M6",
+      "why": "thinks a vitamin tablet can replace food nutrients"
+     },
+     {
+      "misconception": "GEN-BALANCEDDIET-K13-M2",
+      "why": "thinks potatoes count like other healthy vegetables"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 40.6
+}

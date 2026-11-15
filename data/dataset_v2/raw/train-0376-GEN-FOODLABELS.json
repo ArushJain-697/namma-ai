@@ -1,0 +1,169 @@
+{
+ "source": "train-0376-GEN-FOODLABELS.json",
+ "job": {
+  "job": "train-0376-GEN-FOODLABELS",
+  "topic_id": "GEN-FOODLABELS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a step-by-step explanation of a process",
+  "seed": 376
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1551,
+  "promptTokenCount": 2
+ },
+ "passage": "When you pick up a packaged food item, the first thing to check is the ingredient list, which is always arranged by weight. The ingredient listed first is the one present in the largest quantity, not the smallest. Many people mistakenly think that if sugar is not the first item, the food is low in sugar, but manufacturers often use different names like corn syrup or dextrose to hide added sugars. Next, look for the FSSAI logo, which confirms that the manufacturer follows food safety standards, but remember that this logo does not mean the food is necessarily healthy or nutritious. You must also check the nutrition facts table carefully. Pay attention to the 'serving size' because the nutrient values listed are usually for one serving, not for the entire packet. If you eat the whole packet, you are consuming multiple servings. Finally, look for the vegetarian mark, which is a green dot inside a green square. If a product does not have this specific mark, you cannot assume it is vegetarian, as it might contain hidden animal-derived ingredients. Always read the label thoroughly to understand exactly what you are eating instead of relying on marketing claims like 'natural' or 'no added sugar' on the front of the package.",
+ "menu_ids": [
+  "GEN-FOODLABELS-K13-M1",
+  "GEN-FOODLABELS-K14-M3",
+  "GEN-FOODLABELS-K15-M4",
+  "GEN-FOODLABELS-K16-M6",
+  "GEN-FOODLABELS-K18-M9",
+  "GEN-FOODLABELS-K19-M10",
+  "GEN-FOODLABELS-K19-M11",
+  "GEN-FOODLABELS-K20-M12",
+  "GEN-FOODLABELS-K20-M13",
+  "GEN-FOODLABELS-K21-M14",
+  "GEN-FOODLABELS-K22-M15",
+  "GEN-FOODLABELS-K22-M16",
+  "GEN-FOODLABELS-K23-M17",
+  "GEN-FOODLABELS-K23-M18"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "The ingredient listed first is the one present in the largest quantity, not the smallest.",
+    "kind": "what_if",
+    "q": "A biscuit label lists flour first and salt last. Which is present in the larger amount?",
+    "options": [
+     "Flour, because it is listed first",
+     "Salt, because it is listed last",
+     "Both, since labels list equal amounts",
+     "Salt, because small items are listed first"
+    ],
+    "explain": "Ingredients are listed by weight, so the first one, flour, is present in the largest quantity.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "reverses the order of the list"
+     },
+     {
+      "misconception": null,
+      "why": "thinks labels give equal amounts"
+     },
+     {
+      "misconception": "GEN-FOODLABELS-K13-M1",
+      "why": "thinks the first ingredient is the smallest amount"
+     }
+    ]
+   },
+   {
+    "evidence": "Many people mistakenly think that if sugar is not the first item, the food is low in sugar, but manufacturers often use different names like corn syrup or dextrose to hide added sugars.",
+    "kind": "which_explains",
+    "q": "Sugar is not first on a label, yet the food is very sweet. Why?",
+    "options": [
+     "Sugar may be listed under other names",
+     "Sweetness comes only from the first item",
+     "Sugar is always listed last by law",
+     "Corn syrup has no sugar in it"
+    ],
+    "explain": "Makers may use names like corn syrup or dextrose, so sugar can hide further down the list.",
+    "wrong": [
+     {
+      "misconception": "GEN-FOODLABELS-K14-M3",
+      "why": "thinks sugar must be first if the food is sweet"
+     },
+     {
+      "misconception": null,
+      "why": "thinks sugar has a fixed place on the list"
+     },
+     {
+      "misconception": "GEN-FOODLABELS-K15-M4",
+      "why": "thinks only the word sugar means sugar"
+     }
+    ]
+   },
+   {
+    "evidence": "Next, look for the FSSAI logo, which confirms that the manufacturer follows food safety standards, but remember that this logo does not mean the food is necessarily healthy or nutritious.",
+    "kind": "what_if",
+    "q": "A packet of chips has the FSSAI logo. What can you conclude about it?",
+    "options": [
+     "Its maker follows food safety standards",
+     "It is a healthy and nutritious snack",
+     "It has no added sugar or salt",
+     "Its licence number matches all other foods"
+    ],
+    "explain": "The FSSAI logo shows safety standards are followed, but it does not mean the food is healthy.",
+    "wrong": [
+     {
+      "misconception": "GEN-FOODLABELS-K22-M15",
+      "why": "thinks the FSSAI logo means healthy"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the logo guarantees no sugar or salt"
+     },
+     {
+      "misconception": "GEN-FOODLABELS-K22-M16",
+      "why": "thinks the licence number is the same on all products"
+     }
+    ]
+   },
+   {
+    "evidence": "Pay attention to the 'serving size' because the nutrient values listed are usually for one serving, not for the entire packet.",
+    "kind": "what_if",
+    "q": "A packet holds three servings. Ria eats all of it. What does she get?",
+    "options": [
+     "Three times the nutrients listed per serving",
+     "Exactly the nutrients listed on the table",
+     "One third of the nutrients listed",
+     "Nutrients that are not shown on the label"
+    ],
+    "explain": "Table values are for one serving, so eating three servings gives three times those nutrients.",
+    "wrong": [
+     {
+      "misconception": "GEN-FOODLABELS-K18-M9",
+      "why": "thinks the whole packet gives the same as one serving"
+     },
+     {
+      "misconception": null,
+      "why": "divides instead of multiplying the servings"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the table does not cover the nutrients"
+     }
+    ]
+   },
+   {
+    "evidence": "If a product does not have this specific mark, you cannot assume it is vegetarian, as it might contain hidden animal-derived ingredients.",
+    "kind": "why",
+    "q": "Why should you not treat a food with no mark as vegetarian?",
+    "options": [
+     "It may contain hidden animal-derived items",
+     "The green dot is used only for sweets",
+     "Unmarked foods always contain animal products",
+     "The mark shows the food has no additives"
+    ],
+    "explain": "Without the green dot mark, the food might contain hidden animal-derived ingredients, so you cannot assume it is vegetarian.",
+    "wrong": [
+     {
+      "misconception": "GEN-FOODLABELS-K23-M18",
+      "why": "reads the mark as only for some foods"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises 'might' into 'always'"
+     },
+     {
+      "misconception": "GEN-FOODLABELS-K23-M17",
+      "why": "thinks the green dot means no additives"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 14.3
+}

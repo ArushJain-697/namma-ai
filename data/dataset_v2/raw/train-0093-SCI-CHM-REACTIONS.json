@@ -1,0 +1,140 @@
+{
+ "source": "train-0093-SCI-CHM-REACTIONS.json",
+ "job": {
+  "job": "train-0093-SCI-CHM-REACTIONS",
+  "topic_id": "SCI-CHM-REACTIONS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a news-style report about a real-world situation",
+  "seed": 93
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3441,
+  "promptTokenCount": 2
+ },
+ "passage": "In a local chemistry lab, students observed a fascinating reaction between zinc granules and copper sulfate solution. As the reaction progressed, the blue color of the solution faded, and a reddish-brown deposit appeared on the zinc. This is a displacement reaction where zinc, being more reactive, replaces copper. Interestingly, when students performed a separate experiment heating calcium carbonate, it broke down into calcium oxide and carbon dioxide gas. Unlike physical crushing, this chemical decomposition requires energy to break internal bonds. In another corner, a student tried to balance the equation for water formation by changing the formula of water to H2O2, but the teacher corrected them, explaining that subscripts define the substance itself and cannot be altered. Finally, the class discussed food preservation. To prevent chips from turning rancid, manufacturers flush packets with nitrogen gas. This displaces oxygen, preventing the oxidation of fats. Students learned that oxidation is not just about adding oxygen; it involves the loss of electrons, which can occur even in reactions without oxygen gas. By keeping the reaction environment controlled, the mass remains conserved, and the chemical identity of the substances is preserved throughout the process.",
+ "menu_ids": [
+  "SCI-CHM-REACTIONS-K3-M1",
+  "SCI-CHM-REACTIONS-K4-M2",
+  "SCI-CHM-REACTIONS-K6-M3",
+  "SCI-CHM-REACTIONS-K11-M4",
+  "SCI-CHM-REACTIONS-K13-M5",
+  "SCI-CHM-REACTIONS-K17-M6",
+  "SCI-CHM-REACTIONS-K21-M7",
+  "SCI-CHM-REACTIONS-K7-M9",
+  "SCI-CHM-REACTIONS-K15-M10",
+  "SCI-CHM-REACTIONS-K24-M11",
+  "SCI-CHM-REACTIONS-K18-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "This is a displacement reaction where zinc, being more reactive, replaces copper.",
+    "kind": "why",
+    "q": "Why can zinc take the place of copper in copper sulfate solution?",
+    "options": [
+     "Zinc is more reactive than copper",
+     "Copper is more reactive than zinc",
+     "Every metal is able to replace copper",
+     "Zinc dissolves because the solution is liquid"
+    ],
+    "explain": "Zinc is more reactive than copper, so it pushes copper out, leaving a reddish-brown deposit.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "reverses which metal is more reactive"
+     },
+     {
+      "misconception": "SCI-CHM-REACTIONS-K13-M5",
+      "why": "thinks any metal can displace any other metal"
+     },
+     {
+      "misconception": "SCI-CHM-REACTIONS-K4-M2",
+      "why": "thinks the solution is just a liquid that dissolves zinc"
+     }
+    ]
+   },
+   {
+    "evidence": "Unlike physical crushing, this chemical decomposition requires energy to break internal bonds.",
+    "kind": "difference",
+    "q": "How is heating calcium carbonate different from crushing it into powder?",
+    "options": [
+     "Heating breaks bonds to make new substances",
+     "Heating only breaks it into smaller pieces",
+     "Heating destroys mass as the gas escapes",
+     "Heating needs less energy than crushing does"
+    ],
+    "explain": "Heating breaks internal bonds, making calcium oxide and carbon dioxide; crushing only makes smaller pieces.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-REACTIONS-K11-M4",
+      "why": "thinks decomposition is just physical breaking"
+     },
+     {
+      "misconception": "SCI-CHM-REACTIONS-K6-M3",
+      "why": "thinks giving off gas lowers the total mass"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up which process needs energy"
+     }
+    ]
+   },
+   {
+    "evidence": "In another corner, a student tried to balance the equation for water formation by changing the formula of water to H2O2, but the teacher corrected them, explaining that subscripts define the substance itself and cannot be altered.",
+    "kind": "why",
+    "q": "Why was it wrong to balance the water equation by writing H2O2?",
+    "options": [
+     "Changing subscripts makes a different substance",
+     "Changing subscripts is allowed only for gases",
+     "Changing subscripts adds too many molecules",
+     "Changing subscripts must be done on both sides"
+    ],
+    "explain": "Subscripts define the substance itself, so H2O2 is no longer water.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-REACTIONS-K3-M1",
+      "why": "thinks subscripts can sometimes be changed"
+     },
+     {
+      "misconception": "SCI-CHM-REACTIONS-K7-M9",
+      "why": "thinks balancing means equal molecule counts"
+     },
+     {
+      "misconception": null,
+      "why": "thinks it is fine if done evenly"
+     }
+    ]
+   },
+   {
+    "evidence": "Students learned that oxidation is not just about adding oxygen; it involves the loss of electrons, which can occur even in reactions without oxygen gas.",
+    "kind": "how",
+    "q": "How can oxidation take place in a reaction with no oxygen gas?",
+    "options": [
+     "A substance loses electrons in the reaction",
+     "A substance gains electrons in the reaction",
+     "A substance still reacts with traces of air",
+     "A substance is broken down by bacteria"
+    ],
+    "explain": "Oxidation means losing electrons, which can happen even without oxygen gas.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "reverses losing and gaining electrons"
+     },
+     {
+      "misconception": "SCI-CHM-REACTIONS-K21-M7",
+      "why": "thinks oxidation always needs oxygen present"
+     },
+     {
+      "misconception": "SCI-CHM-REACTIONS-K24-M11",
+      "why": "mixes up oxidation with bacteria spoiling food"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 36.3
+}

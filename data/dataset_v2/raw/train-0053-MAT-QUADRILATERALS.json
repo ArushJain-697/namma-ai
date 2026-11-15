@@ -1,0 +1,143 @@
+{
+ "source": "train-0053-MAT-QUADRILATERALS.json",
+ "job": {
+  "job": "train-0053-MAT-QUADRILATERALS",
+  "topic_id": "MAT-QUADRILATERALS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a short story where children solve a real problem",
+  "seed": 53
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2199,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and Meera were helping their teacher, Ms. Sharma, decorate the school garden for the annual exhibition. They decided to build a wooden fence around a flower bed shaped like a convex polygon with five sides. Rohan measured the interior angles and found their sum was 540 degrees. He noted that even though one angle was reflex, it remained a valid polygon. Next, they looked at a triangular patch of land. Ms. Sharma explained the Mid-point Theorem: if a line segment connects the midpoints of two sides of a triangle, it is parallel to the third side and exactly half its length. Meera carefully marked the midpoints on two sides of the triangle and drew the segment. She confirmed it was indeed half the length of the base. Later, they discussed a rhombus-shaped tile. Rohan argued that since all its sides were equal, it must be a square. Ms. Sharma corrected him, explaining that a rhombus only becomes a square if its angles are also 90 degrees. Finally, they looked at a parallelogram. They measured two adjacent angles and found they added up to 180 degrees, confirming the property that adjacent angles in a parallelogram are supplementary.",
+ "menu_ids": [
+  "MAT-QUADRILATERALS-K7-M1",
+  "MAT-QUADRILATERALS-K8-M2",
+  "MAT-QUADRILATERALS-K10-M3",
+  "MAT-QUADRILATERALS-K10-M4",
+  "MAT-QUADRILATERALS-K11-M5",
+  "MAT-QUADRILATERALS-K11-M6",
+  "MAT-QUADRILATERALS-K12-M7",
+  "MAT-QUADRILATERALS-K13-M8",
+  "MAT-QUADRILATERALS-K17-M9",
+  "MAT-QUADRILATERALS-K15-M11",
+  "MAT-QUADRILATERALS-K16-M12",
+  "MAT-QUADRILATERALS-K14-M13",
+  "MAT-QUADRILATERALS-K21-M14",
+  "MAT-QUADRILATERALS-K22-M15"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Rohan measured the interior angles and found their sum was 540 degrees.",
+    "kind": "recall",
+    "q": "What did Rohan find when he added the interior angles of the five-sided flower bed?",
+    "options": [
+     "They added up to 540 degrees",
+     "They added up to 360 degrees",
+     "They added up to 720 degrees",
+     "They added up to 900 degrees"
+    ],
+    "explain": "Rohan measured the five angles and their sum was 540 degrees, not 360.",
+    "wrong": [
+     {
+      "misconception": "MAT-QUADRILATERALS-K10-M3",
+      "why": "thinks every polygon's angles add to 360 degrees"
+     },
+     {
+      "misconception": "MAT-QUADRILATERALS-K10-M4",
+      "why": "uses (n-1)×180 instead of (n-2)×180"
+     },
+     {
+      "misconception": null,
+      "why": "uses n×180 for five sides"
+     }
+    ]
+   },
+   {
+    "evidence": "Ms. Sharma explained the Mid-point Theorem: if a line segment connects the midpoints of two sides of a triangle, it is parallel to the third side and exactly half its length.",
+    "kind": "what_if",
+    "q": "A triangle's base is 10 cm. Meera joins the midpoints of the other two sides. What is this segment like?",
+    "options": [
+     "5 cm long and parallel to the base",
+     "10 cm long and parallel to the base",
+     "5 cm long and perpendicular to the base",
+     "20 cm long and parallel to the base"
+    ],
+    "explain": "The segment joining two midpoints is parallel to the third side and half its length: 5 cm.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "remembers parallel but forgets the halving"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up parallel with perpendicular"
+     },
+     {
+      "misconception": null,
+      "why": "doubles instead of halving"
+     }
+    ]
+   },
+   {
+    "evidence": "Ms. Sharma corrected him, explaining that a rhombus only becomes a square if its angles are also 90 degrees.",
+    "kind": "what_if",
+    "q": "A tile has four equal sides and angles of 60 and 120 degrees. What shape is it?",
+    "options": [
+     "A rhombus that is not a square",
+     "A square, since all its sides are equal",
+     "A regular polygon, since its sides are equal",
+     "A square that is simply drawn tilted"
+    ],
+    "explain": "Equal sides make a rhombus; it is a square only if every angle is 90 degrees.",
+    "wrong": [
+     {
+      "misconception": "MAT-QUADRILATERALS-K13-M8",
+      "why": "thinks equal sides alone make a square"
+     },
+     {
+      "misconception": "MAT-QUADRILATERALS-K8-M2",
+      "why": "thinks equal sides always make a regular polygon"
+     },
+     {
+      "misconception": null,
+      "why": "thinks a tilted rhombus is still a square"
+     }
+    ]
+   },
+   {
+    "evidence": "They measured two adjacent angles and found they added up to 180 degrees, confirming the property that adjacent angles in a parallelogram are supplementary.",
+    "kind": "what_if",
+    "q": "One angle of a parallelogram is 65 degrees. What is the angle next to it?",
+    "options": [
+     "115 degrees",
+     "65 degrees",
+     "295 degrees",
+     "25 degrees"
+    ],
+    "explain": "Adjacent angles of a parallelogram add up to 180 degrees, so 180 − 65 = 115.",
+    "wrong": [
+     {
+      "misconception": "MAT-QUADRILATERALS-K21-M14",
+      "why": "thinks all angles of a parallelogram are equal"
+     },
+     {
+      "misconception": "MAT-QUADRILATERALS-K22-M15",
+      "why": "thinks adjacent angles add up to 360 degrees"
+     },
+     {
+      "misconception": null,
+      "why": "subtracts from 90 instead of 180"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 22.8
+}

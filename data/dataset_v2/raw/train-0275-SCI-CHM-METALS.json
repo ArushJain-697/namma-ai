@@ -1,0 +1,141 @@
+{
+ "source": "train-0275-SCI-CHM-METALS.json",
+ "job": {
+  "job": "train-0275-SCI-CHM-METALS",
+  "topic_id": "SCI-CHM-METALS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 275
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1451,
+  "promptTokenCount": 2
+ },
+ "passage": "Many students believe that rusting is merely a layer of dirt or mud accumulating on iron, or perhaps just a simple physical change where the metal changes color. However, rusting is a complex chemical process involving the reaction of iron with oxygen and moisture to form a new substance, hydrated iron(III) oxide. This chemical change means the original iron is transformed, not just covered. Furthermore, corrosion is not limited to iron; many other metals, such as copper and silver, also undergo chemical reactions with atmospheric gases, leading to the formation of surface layers like green copper carbonate or black silver sulfide. While we often associate metals with extreme hardness, some, like sodium and potassium, are soft enough to be sliced with a knife. Additionally, while most metal oxides are basic, some, like aluminum oxide and zinc oxide, exhibit both acidic and basic behavior, known as amphoteric oxides. Finally, hydrogen is included in the reactivity series as a reference point for comparing how metals displace it from acids, but this placement does not make hydrogen a metal itself. Understanding these chemical realities helps us distinguish between simple physical appearances and the underlying transformations that define the behavior of elements.",
+ "menu_ids": [
+  "SCI-CHM-METALS-K5-M1",
+  "SCI-CHM-METALS-K8-M2",
+  "SCI-CHM-METALS-K14-M3",
+  "SCI-CHM-METALS-K11-M4",
+  "SCI-CHM-METALS-K19-M5",
+  "SCI-CHM-METALS-K16-M6",
+  "SCI-CHM-METALS-K19-M7",
+  "SCI-CHM-METALS-K9-M8",
+  "SCI-CHM-METALS-K17-M9",
+  "SCI-CHM-METALS-K14-M10",
+  "SCI-CHM-METALS-K19-M11",
+  "SCI-CHM-METALS-K12-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "However, rusting is a complex chemical process involving the reaction of iron with oxygen and moisture to form a new substance, hydrated iron(III) oxide.",
+    "kind": "which_explains",
+    "q": "Scrubbing a rusted nail removes the brown layer. Why is this not the same as cleaning off mud?",
+    "options": [
+     "The rust is a new substance made from the iron",
+     "The rust is mud that dried in the sun",
+     "The rust is only the iron changing its colour",
+     "The rust is a coat that stays on top"
+    ],
+    "explain": "Rusting is a chemical change: iron reacts with oxygen and moisture to form a new substance.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-METALS-K19-M5",
+      "why": "thinks rust is just dirt or mud sticking to iron"
+     },
+     {
+      "misconception": "SCI-CHM-METALS-K19-M11",
+      "why": "thinks rusting is only a colour change, a physical change"
+     },
+     {
+      "misconception": null,
+      "why": "thinks rust only covers the iron without changing it"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, corrosion is not limited to iron; many other metals, such as copper and silver, also undergo chemical reactions with atmospheric gases, leading to the formation of surface layers like green copper carbonate or black silver sulfide.",
+    "kind": "what_if",
+    "q": "An old silver spoon turns black in the air. What is the best explanation?",
+    "options": [
+     "Silver reacted with gases in the air",
+     "Silver can never corrode, only iron does",
+     "Silver was covered by a layer of dust",
+     "Silver reacted with acid to form hydrogen"
+    ],
+    "explain": "Silver also corrodes: it reacts with atmospheric gases and forms a black silver sulfide layer.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-METALS-K19-M7",
+      "why": "thinks only iron undergoes corrosion"
+     },
+     {
+      "misconception": "SCI-CHM-METALS-K19-M5",
+      "why": "thinks the dark layer is only dirt"
+     },
+     {
+      "misconception": "SCI-CHM-METALS-K14-M10",
+      "why": "thinks every metal reaction gives hydrogen gas"
+     }
+    ]
+   },
+   {
+    "evidence": "Additionally, while most metal oxides are basic, some, like aluminum oxide and zinc oxide, exhibit both acidic and basic behavior, known as amphoteric oxides.",
+    "kind": "what_if",
+    "q": "Zinc oxide is tested with an acid and then with a strong base. What happens?",
+    "options": [
+     "It reacts with both the acid and the base",
+     "It reacts with the acid but not the base",
+     "It reacts with the base but not the acid",
+     "It reacts with neither the acid nor the base"
+    ],
+    "explain": "Zinc oxide is amphoteric, so it shows both acidic and basic behaviour and reacts with both.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-METALS-K11-M4",
+      "why": "thinks all metal oxides are basic and react only with acids"
+     },
+     {
+      "misconception": "SCI-CHM-METALS-K12-M12",
+      "why": "thinks oxides behave like acidic non-metal oxides, reacting only with bases"
+     },
+     {
+      "misconception": null,
+      "why": "thinks a metal oxide can be unreactive"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, hydrogen is included in the reactivity series as a reference point for comparing how metals displace it from acids, but this placement does not make hydrogen a metal itself.",
+    "kind": "why",
+    "q": "Why does the reactivity series list hydrogen alongside the metals?",
+    "options": [
+     "It lets us compare how metals displace it",
+     "It shows that hydrogen is a kind of metal",
+     "It shows that hydrogen is the strongest metal",
+     "It lets us compare how heavy each metal is"
+    ],
+    "explain": "Hydrogen is only a reference point for comparing how metals displace it from acids.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-METALS-K17-M9",
+      "why": "thinks hydrogen is a metal because it is listed"
+     },
+     {
+      "misconception": "SCI-CHM-METALS-K16-M6",
+      "why": "thinks the 'stronger' metal wins displacement"
+     },
+     {
+      "misconception": "SCI-CHM-METALS-K16-M6",
+      "why": "thinks 'heavier' metals are more reactive"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 12.8
+}

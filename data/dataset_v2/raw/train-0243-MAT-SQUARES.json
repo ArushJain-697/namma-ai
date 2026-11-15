@@ -1,0 +1,143 @@
+{
+ "source": "train-0243-MAT-SQUARES.json",
+ "job": {
+  "job": "train-0243-MAT-SQUARES",
+  "topic_id": "MAT-SQUARES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a step-by-step worked example",
+  "seed": 243
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3566,
+  "promptTokenCount": 2
+ },
+ "passage": "Understanding exponents is crucial for mastering squares and cubes. A square of a number, like 7², means multiplying the base by itself: 7 × 7, which equals 49. It is not 7 × 2. Similarly, a cube like 2³ means 2 × 2 × 2, resulting in 8, not 2 × 3. When dealing with negative numbers, squaring a negative results in a positive value because a negative times a negative is positive; thus, (-5)² equals 25. However, cubing a negative number keeps the result negative, as (-3)³ equals -27. When finding roots, remember that the square root of 64 is 8, because 8 × 8 is 64, not 32. Furthermore, a number is a perfect cube only if its prime factors can be grouped into sets of three. For example, to check if 12 is a perfect square, we look at its factors: 2 × 2 × 3. Since the 3 is left alone, we must multiply by 3 to make it a perfect square, not by 12. Finally, note that not every number ending in a specific digit is a perfect square; for instance, 14 ends in 4 but is not a perfect square.",
+ "menu_ids": [
+  "MAT-SQUARES-K10-M1",
+  "MAT-SQUARES-K10-M2",
+  "MAT-SQUARES-K22-M3",
+  "MAT-SQUARES-K11-M4",
+  "MAT-SQUARES-K12-M5",
+  "MAT-SQUARES-K13-M6",
+  "MAT-SQUARES-K14-M7",
+  "MAT-SQUARES-K14-M8",
+  "MAT-SQUARES-K15-M9",
+  "MAT-SQUARES-K16-M10",
+  "MAT-SQUARES-K17-M11",
+  "MAT-SQUARES-K18-M12",
+  "MAT-SQUARES-K19-M13",
+  "MAT-SQUARES-K20-M14"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "When dealing with negative numbers, squaring a negative results in a positive value because a negative times a negative is positive; thus, (-5)² equals 25.",
+    "kind": "what_if",
+    "q": "Meena squares -6. What sign will her answer have, and why?",
+    "options": [
+     "Positive, since two negatives multiply to a positive",
+     "Negative, since the number being squared is negative",
+     "Negative, since squaring means -6 × 2",
+     "Negative, since only cubes can turn positive"
+    ],
+    "explain": "Squaring means -6 × -6, and a negative times a negative is positive, giving 36.",
+    "wrong": [
+     {
+      "misconception": "MAT-SQUARES-K14-M7",
+      "why": "thinks the square of a negative stays negative"
+     },
+     {
+      "misconception": "MAT-SQUARES-K10-M1",
+      "why": "thinks squaring means multiplying by 2"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the rules for squares and cubes"
+     }
+    ]
+   },
+   {
+    "evidence": "However, cubing a negative number keeps the result negative, as (-3)³ equals -27.",
+    "kind": "which_explains",
+    "q": "(-5)² is positive but (-3)³ is negative. Which explains this difference?",
+    "options": [
+     "Three negative factors leave one minus sign unpaired",
+     "Cubing means -3 × 3, which gives a negative",
+     "Cubing any number always gives a negative answer",
+     "The base 3 is odd, so it stays negative"
+    ],
+    "explain": "(-3) × (-3) × (-3): two negatives make a positive, and the third makes it negative again.",
+    "wrong": [
+     {
+      "misconception": "MAT-SQUARES-K22-M3",
+      "why": "thinks cubing means multiplying by 3"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises that all cubes are negative"
+     },
+     {
+      "misconception": null,
+      "why": "links the sign to the base, though 5 is odd too"
+     }
+    ]
+   },
+   {
+    "evidence": "When finding roots, remember that the square root of 64 is 8, because 8 × 8 is 64, not 32.",
+    "kind": "how",
+    "q": "Sohan says the square root of 64 is 32. How can he check his answer?",
+    "options": [
+     "Multiply 32 by itself and compare with 64",
+     "Divide 64 by 2 and compare with 32",
+     "Multiply 32 by 2 and compare with 64",
+     "Add 32 to itself and compare with 64"
+    ],
+    "explain": "A square root times itself must give the number; 8 × 8 = 64, so √64 is 8.",
+    "wrong": [
+     {
+      "misconception": "MAT-SQUARES-K19-M13",
+      "why": "thinks the square root is half the number"
+     },
+     {
+      "misconception": "MAT-SQUARES-K10-M1",
+      "why": "thinks squaring means multiplying by 2"
+     },
+     {
+      "misconception": null,
+      "why": "checks with doubling, so the half-idea seems right"
+     }
+    ]
+   },
+   {
+    "evidence": "Since the 3 is left alone, we must multiply by 3 to make it a perfect square, not by 12.",
+    "kind": "what_if",
+    "q": "18 = 2 × 3 × 3. What smallest number makes 18 a perfect square when multiplied?",
+    "options": [
+     "By 2, because that 2 has no partner",
+     "By 18, because a number times itself is square",
+     "By 3, because 3 is the largest prime factor",
+     "By 6, because 2 × 3 makes a square"
+    ],
+    "explain": "The 3s are paired but the 2 is alone, so multiply by 2 to pair it.",
+    "wrong": [
+     {
+      "misconception": "MAT-SQUARES-K18-M12",
+      "why": "multiplies by the number itself"
+     },
+     {
+      "misconception": null,
+      "why": "copies the 3 from the passage's example of 12"
+     },
+     {
+      "misconception": "MAT-SQUARES-K16-M10",
+      "why": "thinks 6 = 2 × 3 is a perfect square"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 39.5
+}

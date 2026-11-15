@@ -1,0 +1,164 @@
+{
+ "source": "train-0094-SCI-CHM-WATER.json",
+ "job": {
+  "job": "train-0094-SCI-CHM-WATER",
+  "topic_id": "SCI-CHM-WATER",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a diary entry or letter by a student",
+  "seed": 94
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3754,
+  "promptTokenCount": 2
+ },
+ "passage": "Dear Diary, today our class visited the local water treatment plant. I used to think that the water coming out of the taps there was perfectly pure, but the engineer explained that while it is safe for drinking, it still contains minerals and trace elements. We also learned that groundwater is not stored in giant underground rivers or empty caves; instead, it fills the tiny spaces between rocks and soil particles deep beneath our feet. During our walk, we saw how plants release water vapor into the atmosphere through their leaves, a process that helps keep the water cycle moving even on cool days. Our teacher reminded us that water scarcity is a complex issue caused by industrial demand, deforestation, and changing weather patterns, not just by people leaving their home taps running. Finally, we saw a rainwater harvesting system that directs water into deep pits to recharge the underground water table, which is constantly rising or falling depending on how much rain we get. It was fascinating to realize how much I misunderstood about our most precious resource. I now understand that every drop counts and that the earth’s water systems are far more dynamic than I ever imagined.",
+ "menu_ids": [
+  "SCI-CHM-WATER-K6-M1",
+  "SCI-CHM-WATER-K10-M2",
+  "SCI-CHM-WATER-K15-M4",
+  "SCI-CHM-WATER-K16-M5",
+  "SCI-CHM-WATER-K19-M7",
+  "SCI-CHM-WATER-K21-M8",
+  "SCI-CHM-WATER-K26-M10",
+  "SCI-CHM-WATER-K13-M11",
+  "SCI-CHM-WATER-K7-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "I used to think that the water coming out of the taps there was perfectly pure, but the engineer explained that while it is safe for drinking, it still contains minerals and trace elements.",
+    "kind": "what_if",
+    "q": "Meena fills a glass with tap water from the treatment plant. What is in her glass?",
+    "options": [
+     "Water that is safe but has minerals in it",
+     "Water that is perfectly pure with nothing else",
+     "Water that is unsafe until boiled at home",
+     "Water that has had every mineral removed"
+    ],
+    "explain": "Treated water is safe to drink but still contains minerals and trace elements.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-WATER-K26-M10",
+      "why": "thinks treated water is 100% pure"
+     },
+     {
+      "misconception": null,
+      "why": "thinks water with minerals cannot be safe"
+     },
+     {
+      "misconception": null,
+      "why": "confuses safe water with mineral-free water"
+     }
+    ]
+   },
+   {
+    "evidence": "We also learned that groundwater is not stored in giant underground rivers or empty caves; instead, it fills the tiny spaces between rocks and soil particles deep beneath our feet.",
+    "kind": "how",
+    "q": "A deep well is dug into the ground. Where does the water entering it come from?",
+    "options": [
+     "From small gaps between soil and rock grains",
+     "From a giant river flowing under the ground",
+     "From a large empty cave filled with water",
+     "From a pool whose level never rises or falls"
+    ],
+    "explain": "Groundwater fills tiny spaces between rocks and soil particles, not underground rivers or caves.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-WATER-K15-M4",
+      "why": "thinks groundwater flows in underground rivers"
+     },
+     {
+      "misconception": null,
+      "why": "thinks groundwater sits in empty caves"
+     },
+     {
+      "misconception": "SCI-CHM-WATER-K16-M5",
+      "why": "thinks the water table never moves"
+     }
+    ]
+   },
+   {
+    "evidence": "During our walk, we saw how plants release water vapor into the atmosphere through their leaves, a process that helps keep the water cycle moving even on cool days.",
+    "kind": "which_explains",
+    "q": "On a cool day, with nothing boiling anywhere, how does water vapour still enter the air?",
+    "options": [
+     "Leaves of plants give it off into the air",
+     "Water boiling somewhere nearby must be making it",
+     "Roots of plants pull it down from the air",
+     "Taps running at home let it escape upward"
+    ],
+    "explain": "Plants release water vapour through their leaves, keeping the water cycle moving even on cool days.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-WATER-K6-M1",
+      "why": "thinks vapour forms only from boiling"
+     },
+     {
+      "misconception": "SCI-CHM-WATER-K13-M11",
+      "why": "thinks plants only take in water"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby detail about home taps"
+     }
+    ]
+   },
+   {
+    "evidence": "Our teacher reminded us that water scarcity is a complex issue caused by industrial demand, deforestation, and changing weather patterns, not just by people leaving their home taps running.",
+    "kind": "which_explains",
+    "q": "Ravi's family never wastes water, yet their town still faces a shortage. What could cause this?",
+    "options": [
+     "Factory use, cutting forests and weather changes",
+     "Neighbours leaving their home taps running",
+     "Plants giving off too much water vapour",
+     "Rain pits taking water away from the town"
+    ],
+    "explain": "Scarcity comes from industry, deforestation and changing weather, not only from wasting water at home.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-WATER-K19-M7",
+      "why": "thinks scarcity comes only from home waste"
+     },
+     {
+      "misconception": null,
+      "why": "misreads the plant vapour detail as a cause"
+     },
+     {
+      "misconception": "SCI-CHM-WATER-K21-M8",
+      "why": "misunderstands what harvesting pits do"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, we saw a rainwater harvesting system that directs water into deep pits to recharge the underground water table, which is constantly rising or falling depending on how much rain we get.",
+    "kind": "what_if",
+    "q": "After a very dry year with little rain, what happens to the underground water table?",
+    "options": [
+     "It drops because less rain refills it",
+     "It stays at the same fixed level",
+     "It rises because pits keep it stored",
+     "It rises as plants release more vapour"
+    ],
+    "explain": "The water table rises or falls with rainfall, so little rain makes it fall.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-WATER-K16-M5",
+      "why": "thinks the water table never moves"
+     },
+     {
+      "misconception": "SCI-CHM-WATER-K21-M8",
+      "why": "thinks pits store water like a tank"
+     },
+     {
+      "misconception": null,
+      "why": "mixes in an unrelated detail from the passage"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 40.4
+}

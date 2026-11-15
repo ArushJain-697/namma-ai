@@ -1,0 +1,139 @@
+{
+ "source": "train-0231-MAT-MENSURATION6.json",
+ "job": {
+  "job": "train-0231-MAT-MENSURATION6",
+  "topic_id": "MAT-MENSURATION6",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a rule explained with two contrasting examples",
+  "seed": 231
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3246,
+  "promptTokenCount": 2
+ },
+ "passage": "In geometry, perimeter is the total distance around the edge of a shape, while area measures the space occupied inside it. A common mistake is thinking that shapes with equal perimeters must have the same area. Consider two rectangles: one measuring 6 cm by 2 cm and another measuring 4 cm by 4 cm. Both have a perimeter of 16 cm. However, the first has an area of 12 square cm, while the second has an area of 16 square cm. This proves that perimeter does not determine area. Another important concept is unit conversion. When converting area, remember that 1 meter equals 100 centimeters. Because area is two-dimensional, we square the conversion factor. Therefore, 1 square meter is equal to 10,000 square centimeters. Imagine a square rug that is 1 meter long and 1 meter wide. Its area is 1 square meter. If you measure the same rug in centimeters, it is 100 cm by 100 cm, which equals 10,000 square centimeters. Understanding these differences helps you avoid errors when solving problems about shapes. Always check your units carefully before calculating the final space covered by any figure.",
+ "menu_ids": [
+  "MAT-MENSURATION6-K7-M2",
+  "MAT-MENSURATION6-K15-M3",
+  "MAT-MENSURATION6-K7-M5",
+  "MAT-MENSURATION6-K6-M6",
+  "MAT-MENSURATION6-K8-M7",
+  "MAT-MENSURATION6-K8-M8",
+  "MAT-MENSURATION6-K9-M9",
+  "MAT-MENSURATION6-K10-M10",
+  "MAT-MENSURATION6-K15-M11",
+  "MAT-MENSURATION6-K14-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "This proves that perimeter does not determine area.",
+    "kind": "what_if",
+    "q": "Two gardens each have a fence 16 m long around them. What can you say about their areas?",
+    "options": [
+     "Their areas can still be different",
+     "Their areas must be exactly the same",
+     "Their areas must both be 16 square m",
+     "Their areas are each length plus width"
+    ],
+    "explain": "Rectangles 6 by 2 and 4 by 4 both have perimeter 16 cm but different areas.",
+    "wrong": [
+     {
+      "misconception": "MAT-MENSURATION6-K7-M2",
+      "why": "thinks equal perimeters mean equal areas"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the perimeter number is also the area number"
+     },
+     {
+      "misconception": "MAT-MENSURATION6-K7-M5",
+      "why": "thinks area is found by adding length and width"
+     }
+    ]
+   },
+   {
+    "evidence": "However, the first has an area of 12 square cm, while the second has an area of 16 square cm.",
+    "kind": "why",
+    "q": "The 4 cm by 4 cm rectangle has more area than the 6 cm by 2 cm one. Why?",
+    "options": [
+     "Its length times width gives a larger number",
+     "Its length plus width gives a larger number",
+     "Its total distance around gives a larger number",
+     "Its longest side gives a larger number"
+    ],
+    "explain": "Area is length times width: 4 × 4 = 16 square cm, but 6 × 2 = 12 square cm.",
+    "wrong": [
+     {
+      "misconception": "MAT-MENSURATION6-K7-M5",
+      "why": "thinks area is length plus width, though both sums are 8"
+     },
+     {
+      "misconception": "MAT-MENSURATION6-K7-M2",
+      "why": "thinks perimeter decides area, though both are 16 cm"
+     },
+     {
+      "misconception": null,
+      "why": "compares the longest sides, though 6 cm is longer than 4 cm"
+     }
+    ]
+   },
+   {
+    "evidence": "Because area is two-dimensional, we square the conversion factor.",
+    "kind": "why",
+    "q": "When changing square metres to square centimetres, why do we use 100 × 100 and not just 100?",
+    "options": [
+     "Because area is measured in two directions",
+     "Because 1 metre equals 10,000 centimetres",
+     "Because perimeter is measured around the edge",
+     "Because a square has four equal sides"
+    ],
+    "explain": "Area is two-dimensional, so the factor 100 is squared: 100 × 100 = 10,000.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "picks a nearby number and mixes up length and area units"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up perimeter and area"
+     },
+     {
+      "misconception": null,
+      "why": "thinks 'square' in square metre means a square shape"
+     }
+    ]
+   },
+   {
+    "evidence": "If you measure the same rug in centimeters, it is 100 cm by 100 cm, which equals 10,000 square centimeters.",
+    "kind": "what_if",
+    "q": "A square table top is 1 m long and 1 m wide. What is its area in square centimetres?",
+    "options": [
+     "10,000 square cm",
+     "100 square cm",
+     "200 square cm",
+     "400 square cm"
+    ],
+    "explain": "1 m = 100 cm, so the area is 100 × 100 = 10,000 square cm.",
+    "wrong": [
+     {
+      "misconception": "MAT-MENSURATION6-K15-M3",
+      "why": "thinks 1 square metre is 100 square centimetres"
+     },
+     {
+      "misconception": "MAT-MENSURATION6-K7-M5",
+      "why": "adds length and width: 100 + 100"
+     },
+     {
+      "misconception": null,
+      "why": "finds the perimeter in cm instead of the area"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 34.5
+}

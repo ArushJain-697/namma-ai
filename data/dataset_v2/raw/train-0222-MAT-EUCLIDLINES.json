@@ -1,0 +1,143 @@
+{
+ "source": "train-0222-MAT-EUCLIDLINES.json",
+ "job": {
+  "job": "train-0222-MAT-EUCLIDLINES",
+  "topic_id": "MAT-EUCLIDLINES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a rule explained with two contrasting examples",
+  "seed": 222
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2399,
+  "promptTokenCount": 2
+ },
+ "passage": "In geometry, understanding the properties of lines and angles requires precision. A line is defined as having no endpoints, extending infinitely in both directions, whereas a line segment is a distinct part of a line with two fixed endpoints. When two lines intersect, the vertically opposite angles formed are always equal, not supplementary. For example, if two lines cross and one angle is 70 degrees, the angle opposite to it is also 70 degrees, not 110 degrees. Furthermore, the sum of the interior angles of any triangle is always exactly 180 degrees, regardless of the triangle's size or whether it is acute, right, or obtuse. Consider a tiny triangle and a massive triangle drawn on a large field; both will have an angle sum of 180 degrees. Finally, for two lines to be considered parallel, they must never meet, even if extended infinitely. This property holds true regardless of their orientation; lines can be parallel whether they are horizontal, vertical, or tilted at an angle. If a transversal cuts two lines, they are only parallel if specific conditions, such as equal corresponding angles, are met. Visual appearance is never enough to confirm parallelism; geometric proof is required.",
+ "menu_ids": [
+  "MAT-EUCLIDLINES-K13-M1",
+  "MAT-EUCLIDLINES-K14-M3",
+  "MAT-EUCLIDLINES-K17-M4",
+  "MAT-EUCLIDLINES-K18-M5",
+  "MAT-EUCLIDLINES-K19-M6",
+  "MAT-EUCLIDLINES-K20-M7",
+  "MAT-EUCLIDLINES-K21-M9",
+  "MAT-EUCLIDLINES-K21-M10",
+  "MAT-EUCLIDLINES-K22-M11",
+  "MAT-EUCLIDLINES-K22-M12",
+  "MAT-EUCLIDLINES-K23-M13",
+  "MAT-EUCLIDLINES-K24-M14",
+  "MAT-EUCLIDLINES-K9-M16",
+  "MAT-EUCLIDLINES-K26-M17"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "When two lines intersect, the vertically opposite angles formed are always equal, not supplementary.",
+    "kind": "what_if",
+    "q": "Two lines cross and one angle is 40 degrees. What is the angle opposite to it?",
+    "options": [
+     "40 degrees",
+     "140 degrees",
+     "50 degrees",
+     "320 degrees"
+    ],
+    "explain": "Vertically opposite angles are always equal, so the opposite angle is also 40 degrees.",
+    "wrong": [
+     {
+      "misconception": "MAT-EUCLIDLINES-K22-M11",
+      "why": "thinks vertically opposite angles add up to 180 degrees"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the two angles add up to 90 degrees"
+     },
+     {
+      "misconception": null,
+      "why": "subtracts from a full turn of 360 degrees"
+     }
+    ]
+   },
+   {
+    "evidence": "Consider a tiny triangle and a massive triangle drawn on a large field; both will have an angle sum of 180 degrees.",
+    "kind": "what_if",
+    "q": "A very big triangle is marked out on a playground. What do its three angles add up to?",
+    "options": [
+     "Exactly 180 degrees, like a small one",
+     "More than 180 degrees, since it is bigger",
+     "Less than 180 degrees, since sides are long",
+     "Exactly 360 degrees, like a square"
+    ],
+    "explain": "A triangle's angles always add up to 180 degrees, whatever its size.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks bigger triangles have bigger angle sums"
+     },
+     {
+      "misconception": null,
+      "why": "thinks long sides make the angles smaller"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up a triangle with a quadrilateral"
+     }
+    ]
+   },
+   {
+    "evidence": "A line is defined as having no endpoints, extending infinitely in both directions, whereas a line segment is a distinct part of a line with two fixed endpoints.",
+    "kind": "difference",
+    "q": "How is a line different from a line segment?",
+    "options": [
+     "A line has no ends; a segment has two",
+     "A line has two ends; a segment has none",
+     "Both have two ends; a line is longer",
+     "A line has one end; a segment has two"
+    ],
+    "explain": "A line goes on forever in both directions, but a segment has two fixed endpoints.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "swaps the two definitions"
+     },
+     {
+      "misconception": "MAT-EUCLIDLINES-K17-M4",
+      "why": "thinks a line has two end points like a segment"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up a line with a ray"
+     }
+    ]
+   },
+   {
+    "evidence": "If a transversal cuts two lines, they are only parallel if specific conditions, such as equal corresponding angles, are met.",
+    "kind": "how",
+    "q": "Two lines look parallel in a drawing. How can Meena prove that they really are?",
+    "options": [
+     "By checking angles made by a transversal",
+     "By seeing that they look evenly spaced",
+     "By checking that both lines are horizontal",
+     "By checking that both have the same length"
+    ],
+    "explain": "Looks are never enough; lines are parallel only if conditions like equal corresponding angles hold.",
+    "wrong": [
+     {
+      "misconception": "MAT-EUCLIDLINES-K26-M17",
+      "why": "trusts how the lines look in the figure"
+     },
+     {
+      "misconception": "MAT-EUCLIDLINES-K9-M16",
+      "why": "thinks parallel lines must be horizontal"
+     },
+     {
+      "misconception": null,
+      "why": "confuses parallel lines with equal segments"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 25.2
+}

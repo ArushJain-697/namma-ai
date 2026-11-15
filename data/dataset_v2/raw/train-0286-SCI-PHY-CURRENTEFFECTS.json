@@ -1,0 +1,139 @@
+{
+ "source": "train-0286-SCI-PHY-CURRENTEFFECTS.json",
+ "job": {
+  "job": "train-0286-SCI-PHY-CURRENTEFFECTS",
+  "topic_id": "SCI-PHY-CURRENTEFFECTS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a question-and-answer (FAQ) style passage",
+  "seed": 286
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1398,
+  "promptTokenCount": 2
+ },
+ "passage": "Welcome to our Science FAQ on Electric Circuits! Many students ask how we represent components. In a circuit diagram, a battery consists of two or more cells connected together, whereas a single cell is represented by a longer, thinner line for the positive terminal and a shorter, thicker line for the negative terminal. When a circuit is open, there is a gap, meaning the current cannot flow at all, rather than just stopping at the switch. Regarding safety, an electric fuse is a device that protects circuits by melting and breaking the circuit when current exceeds a safe limit, rather than slowing down the flow. Furthermore, when current flows through a wire, it creates a magnetic field around it, even if the wire is not touching the compass needle. Finally, remember that an electromagnet is a temporary magnet that only acts as a magnet when current flows through its coil. Increasing the number of turns in the coil actually makes the electromagnet stronger, not weaker, because it increases the magnetic effect produced by the current. Understanding these basics helps us use electricity safely and effectively in our daily lives.",
+ "menu_ids": [
+  "SCI-PHY-CURRENTEFFECTS-K14-M1",
+  "SCI-PHY-CURRENTEFFECTS-K14-M2",
+  "SCI-PHY-CURRENTEFFECTS-K12-M3",
+  "SCI-PHY-CURRENTEFFECTS-K13-M4",
+  "SCI-PHY-CURRENTEFFECTS-K16-M6",
+  "SCI-PHY-CURRENTEFFECTS-K16-M7",
+  "SCI-PHY-CURRENTEFFECTS-K17-M8",
+  "SCI-PHY-CURRENTEFFECTS-K18-M9",
+  "SCI-PHY-CURRENTEFFECTS-K19-M11",
+  "SCI-PHY-CURRENTEFFECTS-K17-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "When a circuit is open, there is a gap, meaning the current cannot flow at all, rather than just stopping at the switch.",
+    "kind": "what_if",
+    "q": "A switch is turned off, leaving a gap in a circuit. What happens to the current?",
+    "options": [
+     "No current flows anywhere in the circuit",
+     "It flows up to the switch, then halts",
+     "It flows through the gap more slowly",
+     "It flows only in the part near the cell"
+    ],
+    "explain": "A gap in an open circuit stops the current everywhere; it does not travel part-way and stop.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-CURRENTEFFECTS-K14-M2",
+      "why": "thinks current reaches the switch and stops there"
+     },
+     {
+      "misconception": null,
+      "why": "thinks a gap only slows the current"
+     },
+     {
+      "misconception": "SCI-PHY-CURRENTEFFECTS-K14-M1",
+      "why": "thinks current is used up before the gap"
+     }
+    ]
+   },
+   {
+    "evidence": "Regarding safety, an electric fuse is a device that protects circuits by melting and breaking the circuit when current exceeds a safe limit, rather than slowing down the flow.",
+    "kind": "how",
+    "q": "How does a fuse protect a circuit when the current becomes too high?",
+    "options": [
+     "Its wire melts and opens the circuit",
+     "Its wire reduces the current gradually",
+     "Its wire grows thicker and carries more",
+     "Its wire stores the extra current safely"
+    ],
+    "explain": "A fuse melts when current is too high, which breaks the circuit; it does not slow the flow.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-CURRENTEFFECTS-K16-M6",
+      "why": "thinks a fuse slows down the current"
+     },
+     {
+      "misconception": "SCI-PHY-CURRENTEFFECTS-K16-M7",
+      "why": "thinks a thicker fuse wire is safer"
+     },
+     {
+      "misconception": "SCI-PHY-CURRENTEFFECTS-K14-M1",
+      "why": "thinks the fuse uses up the current"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, when current flows through a wire, it creates a magnetic field around it, even if the wire is not touching the compass needle.",
+    "kind": "which_explains",
+    "q": "A compass needle turns when placed near a live wire without touching it. Why?",
+    "options": [
+     "The current makes a magnetic field around the wire",
+     "The wire becomes a permanent magnet itself",
+     "The needle is pulled by static electricity",
+     "The compass needs to touch the wire to turn"
+    ],
+    "explain": "Current creates a magnetic field around the wire, so the needle turns without touching it.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-CURRENTEFFECTS-K18-M9",
+      "why": "thinks electricity makes a permanent magnet"
+     },
+     {
+      "misconception": "SCI-PHY-CURRENTEFFECTS-K17-M12",
+      "why": "mixes up electricity and magnetism as the same"
+     },
+     {
+      "misconception": "SCI-PHY-CURRENTEFFECTS-K17-M8",
+      "why": "thinks the wire must touch the compass"
+     }
+    ]
+   },
+   {
+    "evidence": "Increasing the number of turns in the coil actually makes the electromagnet stronger, not weaker, because it increases the magnetic effect produced by the current.",
+    "kind": "what_if",
+    "q": "Meena winds more turns of wire in her electromagnet's coil. What happens to its strength?",
+    "options": [
+     "It becomes stronger as the effect adds up",
+     "It becomes weaker as the wire is longer",
+     "It stays the same since current is fixed",
+     "It stays on even after the current stops"
+    ],
+    "explain": "More turns increase the magnetic effect of the current, so the electromagnet becomes stronger.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-CURRENTEFFECTS-K19-M11",
+      "why": "thinks longer wire means weaker magnet"
+     },
+     {
+      "misconception": null,
+      "why": "thinks coil turns do not affect strength"
+     },
+     {
+      "misconception": "SCI-PHY-CURRENTEFFECTS-K18-M9",
+      "why": "thinks an electromagnet is a permanent magnet"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 13.8
+}

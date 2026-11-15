@@ -1,0 +1,143 @@
+{
+ "source": "train-0201-GEN-OLYMPICS.json",
+ "job": {
+  "job": "train-0201-GEN-OLYMPICS",
+  "topic_id": "GEN-OLYMPICS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a short story with Indian characters in everyday life",
+  "seed": 201
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2454,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and Meera were excited as they watched a documentary about the Olympics. Rohan asked, 'Did India start winning medals only recently?' Meera shook her head, explaining that India's first Olympic medal was actually a team gold in hockey back in 1928. They then discussed the rings on the Olympic flag. Rohan wondered if each ring represented a founding country, but Meera clarified that the rings symbolize the union of five continents. The documentary shifted to the Paralympics, showing athletes with various physical impairments, not just those in wheelchairs. Meera noted that the Paralympics are distinct from the Special Olympics, which serve athletes with intellectual disabilities. Finally, they learned about anti-doping. An athlete once claimed they were innocent because they didn't know a supplement was banned, but the rules state that athletes are strictly responsible for everything in their system, regardless of intent. Even if a doctor prescribes a medicine, athletes must check if it is on the World Anti-Doping Agency's list, as global rules apply to everyone equally, not just individual countries. The Olympic spirit, they realized, is about participating with fairness rather than just winning at any cost.",
+ "menu_ids": [
+  "GEN-OLYMPICS-K8-M1",
+  "GEN-OLYMPICS-K9-M2",
+  "GEN-OLYMPICS-K10-M3",
+  "GEN-OLYMPICS-K10-M4",
+  "GEN-OLYMPICS-K11-M5",
+  "GEN-OLYMPICS-K13-M7",
+  "GEN-OLYMPICS-K15-M8",
+  "GEN-OLYMPICS-K16-M9",
+  "GEN-OLYMPICS-K17-M10",
+  "GEN-OLYMPICS-K17-M11",
+  "GEN-OLYMPICS-K18-M12",
+  "GEN-OLYMPICS-K18-M13",
+  "GEN-OLYMPICS-K20-M14",
+  "GEN-OLYMPICS-K21-M15"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Rohan wondered if each ring represented a founding country, but Meera clarified that the rings symbolize the union of five continents.",
+    "kind": "which_explains",
+    "q": "Rohan thinks each Olympic ring stands for a founding country. What did Meera tell him instead?",
+    "options": [
+     "The rings show five continents joined together",
+     "Each ring shows one country that began the Games",
+     "The rings show five Games held in Athens",
+     "The rings show five sports played at the Games"
+    ],
+    "explain": "Meera said the rings stand for the union of five continents, not founding countries.",
+    "wrong": [
+     {
+      "misconception": "GEN-OLYMPICS-K11-M5",
+      "why": "thinks each ring is a founding country"
+     },
+     {
+      "misconception": "GEN-OLYMPICS-K8-M1",
+      "why": "links the Olympics only to Athens"
+     },
+     {
+      "misconception": null,
+      "why": "guesses the rings stand for sports"
+     }
+    ]
+   },
+   {
+    "evidence": "Meera noted that the Paralympics are distinct from the Special Olympics, which serve athletes with intellectual disabilities.",
+    "kind": "difference",
+    "q": "How is the Special Olympics different from the Paralympics?",
+    "options": [
+     "It is for athletes with intellectual disabilities",
+     "It is the same event with another name",
+     "It is for athletes with physical impairments",
+     "It is only for athletes who use wheelchairs"
+    ],
+    "explain": "The Special Olympics serve athletes with intellectual disabilities; the Paralympics are a separate event.",
+    "wrong": [
+     {
+      "misconception": "GEN-OLYMPICS-K20-M14",
+      "why": "thinks the two events are the same"
+     },
+     {
+      "misconception": null,
+      "why": "swaps it with the Paralympics"
+     },
+     {
+      "misconception": null,
+      "why": "thinks disability sport means only wheelchairs"
+     }
+    ]
+   },
+   {
+    "evidence": "An athlete once claimed they were innocent because they didn't know a supplement was banned, but the rules state that athletes are strictly responsible for everything in their system, regardless of intent.",
+    "kind": "what_if",
+    "q": "An athlete takes a banned supplement without knowing it was banned. What do the rules say?",
+    "options": [
+     "She is still responsible, whatever she intended",
+     "She is innocent, since she did not know",
+     "She is excused if her coach gave it",
+     "She is judged only by her country's rules"
+    ],
+    "explain": "Athletes are strictly responsible for everything in their system, even if they did not mean it.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "believes the athlete's claim of not knowing"
+     },
+     {
+      "misconception": null,
+      "why": "thinks blame shifts to someone else"
+     },
+     {
+      "misconception": null,
+      "why": "thinks each country makes its own rules"
+     }
+    ]
+   },
+   {
+    "evidence": "Even if a doctor prescribes a medicine, athletes must check if it is on the World Anti-Doping Agency's list, as global rules apply to everyone equally, not just individual countries.",
+    "kind": "how",
+    "q": "A doctor gives an athlete a new medicine. What should the athlete do first?",
+    "options": [
+     "Check it against the world anti-doping list",
+     "Take it freely, since it was prescribed",
+     "Check only their own country's banned list",
+     "Ask the coach whether it will help win"
+    ],
+    "explain": "Even prescribed medicines must be checked on the World Anti-Doping Agency's list, which applies everywhere.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks a prescription makes any medicine allowed"
+     },
+     {
+      "misconception": null,
+      "why": "thinks only national rules apply"
+     },
+     {
+      "misconception": null,
+      "why": "thinks winning matters more than fairness"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 26.5
+}

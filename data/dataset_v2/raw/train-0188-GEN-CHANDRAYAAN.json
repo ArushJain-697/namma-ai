@@ -1,0 +1,140 @@
+{
+ "source": "train-0188-GEN-CHANDRAYAAN.json",
+ "job": {
+  "job": "train-0188-GEN-CHANDRAYAAN",
+  "topic_id": "GEN-CHANDRAYAAN",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a cause-and-effect explanation",
+  "seed": 188
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2814,
+  "promptTokenCount": 2
+ },
+ "passage": "India’s journey to the Moon began with Chandrayaan-1, which orbited the Moon to map its surface. It carried the Moon Impact Probe, which crashed into the surface to study lunar dust, but it was not a soft-landing mission. Later, Chandrayaan-2 was launched to explore the lunar south pole. While the Vikram lander unfortunately crashed during its descent, the Chandrayaan-2 orbiter remained in orbit and continues to send valuable data back to Earth today. The primary reason for the crash was the inability to reduce speed sufficiently, as the Moon lacks an atmosphere, making the use of parachutes impossible. Unlike Earth, where air resistance slows down falling objects, the Moon requires retro-rockets to control the descent. Chandrayaan-3 successfully achieved a soft landing near the south pole on 23 August 2023. Once landed, the Pragyan rover emerged to conduct experiments for one lunar day. Regarding water, Chandrayaan-1’s M3 instrument, provided by NASA, detected water molecules trapped in lunar soil. This is not liquid water in lakes or pools, but rather trace amounts of ice or hydrated minerals that cannot be consumed directly. Because the Moon has lower gravity, a person’s weight is significantly less there, even though their mass remains constant.",
+ "menu_ids": [
+  "GEN-CHANDRAYAAN-K6-M1",
+  "GEN-CHANDRAYAAN-K12-M2",
+  "GEN-CHANDRAYAAN-K8-M3",
+  "GEN-CHANDRAYAAN-K9-M4",
+  "GEN-CHANDRAYAAN-K10-M5",
+  "GEN-CHANDRAYAAN-K11-M6",
+  "GEN-CHANDRAYAAN-K14-M7",
+  "GEN-CHANDRAYAAN-K17-M9",
+  "GEN-CHANDRAYAAN-K18-M10",
+  "GEN-CHANDRAYAAN-K21-M11",
+  "GEN-CHANDRAYAAN-K24-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "The primary reason for the crash was the inability to reduce speed sufficiently, as the Moon lacks an atmosphere, making the use of parachutes impossible.",
+    "kind": "what_if",
+    "q": "An engineer tries to slow a Moon lander using parachutes. What will happen?",
+    "options": [
+     "It will not slow down, as there is no air",
+     "It will slow down gently, just like on Earth",
+     "It will slow down, since lower gravity helps it",
+     "It will slow down only near the south pole"
+    ],
+    "explain": "The Moon has no atmosphere, so parachutes cannot work. Landers need retro-rockets to slow down.",
+    "wrong": [
+     {
+      "misconception": "GEN-CHANDRAYAAN-K17-M9",
+      "why": "thinks parachutes work on the Moon as they do on Earth"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up lower gravity with having air to slow the fall"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby place name from the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "While the Vikram lander unfortunately crashed during its descent, the Chandrayaan-2 orbiter remained in orbit and continues to send valuable data back to Earth today.",
+    "kind": "what_if",
+    "q": "After Vikram crashed, what happened to the rest of Chandrayaan-2?",
+    "options": [
+     "Its orbiter kept circling and sending data home",
+     "Its orbiter also crashed, so everything was lost",
+     "Its Pragyan rover explored for one lunar day",
+     "Its impact probe landed softly and kept working"
+    ],
+    "explain": "Only Vikram crashed. The Chandrayaan-2 orbiter stayed in orbit and still sends data to Earth.",
+    "wrong": [
+     {
+      "misconception": "GEN-CHANDRAYAAN-K14-M7",
+      "why": "thinks the orbiter crashed too, so the whole mission failed"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up Chandrayaan-2 with Chandrayaan-3's rover"
+     },
+     {
+      "misconception": "GEN-CHANDRAYAAN-K9-M4",
+      "why": "thinks the impact probe soft-landed and kept working"
+     }
+    ]
+   },
+   {
+    "evidence": "This is not liquid water in lakes or pools, but rather trace amounts of ice or hydrated minerals that cannot be consumed directly.",
+    "kind": "what_if",
+    "q": "What would an astronaut most likely find where Chandrayaan-1 detected water?",
+    "options": [
+     "Tiny traces of ice locked in the soil",
+     "Large lakes of water below the surface",
+     "Pools of clean water ready to drink",
+     "Liquid water flowing near the south pole"
+    ],
+    "explain": "Chandrayaan-1 found only tiny amounts of ice or hydrated minerals, not lakes, and nobody can drink it directly.",
+    "wrong": [
+     {
+      "misconception": "GEN-CHANDRAYAAN-K6-M1",
+      "why": "thinks Chandrayaan-1 found lakes of water"
+     },
+     {
+      "misconception": "GEN-CHANDRAYAAN-K11-M6",
+      "why": "thinks the Moon's water is drinkable straight away"
+     },
+     {
+      "misconception": "GEN-CHANDRAYAAN-K12-M2",
+      "why": "thinks liquid water can stay on the Moon's surface"
+     }
+    ]
+   },
+   {
+    "evidence": "Because the Moon has lower gravity, a person’s weight is significantly less there, even though their mass remains constant.",
+    "kind": "what_if",
+    "q": "A boy has a mass of 60 kg on Earth. What changes when he stands on the Moon?",
+    "options": [
+     "His weight drops, but his mass stays 60 kg",
+     "Nothing changes, he still weighs the same",
+     "His mass drops, but his weight stays the same",
+     "His weight rises, since the Moon has no air"
+    ],
+    "explain": "The Moon's lower gravity makes his weight much less, but his mass stays 60 kg.",
+    "wrong": [
+     {
+      "misconception": "GEN-CHANDRAYAAN-K18-M10",
+      "why": "thinks weight stays the same because mass is the same"
+     },
+     {
+      "misconception": null,
+      "why": "swaps mass and weight"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the missing atmosphere with gravity"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 28.1
+}

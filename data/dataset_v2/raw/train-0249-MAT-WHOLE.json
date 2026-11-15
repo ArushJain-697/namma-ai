@@ -1,0 +1,138 @@
+{
+ "source": "train-0249-MAT-WHOLE.json",
+ "job": {
+  "job": "train-0249-MAT-WHOLE",
+  "topic_id": "MAT-WHOLE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a conversation between a teacher and two students",
+  "seed": 249
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1227,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today, let us discuss the properties of whole numbers. Rohan, if we subtract 3 from 7, what do we get? Rohan: That is 4, teacher. Teacher: Correct. Now, what if we subtract 7 from 3? Rohan: That would also be 4, because subtraction is just finding the difference. Teacher: Actually, that is a common mistake. Subtraction is not commutative; 7 minus 3 is 4, but 3 minus 7 is not a whole number. Priya: I see. Does that mean 0 acts like a special number for subtraction, just like it does for addition? Teacher: Not quite, Priya. Adding 0 to any number keeps it the same, so 0 is the identity element for addition. However, if you subtract 0 from a number, the result is the number itself, but subtracting a number from 0 does not give you that number back. Therefore, 0 is not the identity element for subtraction. Remember, natural numbers start from 1, while whole numbers include 0 and all natural numbers. When we place these on a number line, whole numbers extend infinitely to the right, starting from 0. Always check the order of your numbers carefully before performing operations.",
+ "menu_ids": [
+  "MAT-WHOLE-K12-M2",
+  "MAT-WHOLE-K13-M3",
+  "MAT-WHOLE-K4-M4",
+  "MAT-WHOLE-K9-M5",
+  "MAT-WHOLE-K10-M7",
+  "MAT-WHOLE-K11-M9",
+  "MAT-WHOLE-K7-M10",
+  "MAT-WHOLE-K8-M11",
+  "MAT-WHOLE-K7-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Subtraction is not commutative; 7 minus 3 is 4, but 3 minus 7 is not a whole number.",
+    "kind": "what_if",
+    "q": "Meena works out 5 minus 9 and says it is the same as 9 minus 5. What is wrong?",
+    "options": [
+     "Swapping the numbers changes the answer",
+     "Both give 4, so she is right",
+     "Only 9 minus 5 can be worked out",
+     "The answer is 4 only for small numbers"
+    ],
+    "explain": "Subtraction is not commutative: 7 minus 3 is 4, but 3 minus 7 is not a whole number.",
+    "wrong": [
+     {
+      "misconception": "MAT-WHOLE-K12-M2",
+      "why": "thinks a - b equals b - a"
+     },
+     {
+      "misconception": "MAT-WHOLE-K7-M10",
+      "why": "thinks subtraction of whole numbers always works"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the rule depends on the size of numbers"
+     }
+    ]
+   },
+   {
+    "evidence": "However, if you subtract 0 from a number, the result is the number itself, but subtracting a number from 0 does not give you that number back.",
+    "kind": "why",
+    "q": "Why does 0 fail to be the identity element for subtraction?",
+    "options": [
+     "Taking a number from 0 does not return that number",
+     "Taking 0 from a number does not return that number",
+     "Adding 0 to a number does not return that number",
+     "Taking 0 from 0 does not return zero"
+    ],
+    "explain": "An identity must work in both orders; 0 minus a number does not give that number back.",
+    "wrong": [
+     {
+      "misconception": "MAT-WHOLE-K13-M3",
+      "why": "reverses which order of subtraction fails"
+     },
+     {
+      "misconception": "MAT-WHOLE-K8-M11",
+      "why": "mixes up addition with subtraction"
+     },
+     {
+      "misconception": null,
+      "why": "picks a case that nobody could test wrongly"
+     }
+    ]
+   },
+   {
+    "evidence": "Remember, natural numbers start from 1, while whole numbers include 0 and all natural numbers.",
+    "kind": "difference",
+    "q": "How are whole numbers different from natural numbers?",
+    "options": [
+     "Whole numbers also include the number 0",
+     "Whole numbers stop at some large number",
+     "Whole numbers leave out the number 1",
+     "Whole numbers are the same set as natural numbers"
+    ],
+    "explain": "Natural numbers start from 1, while whole numbers include 0 and all the natural numbers.",
+    "wrong": [
+     {
+      "misconception": "MAT-WHOLE-K4-M4",
+      "why": "thinks the numbers stop at some big number"
+     },
+     {
+      "misconception": "MAT-WHOLE-K9-M5",
+      "why": "thinks counting starts from 0 so 1 is dropped"
+     },
+     {
+      "misconception": "MAT-WHOLE-K10-M7",
+      "why": "thinks the two sets are identical"
+     }
+    ]
+   },
+   {
+    "evidence": "When we place these on a number line, whole numbers extend infinitely to the right, starting from 0.",
+    "kind": "what_if",
+    "q": "Sam reaches the end of his drawn number line. What should he understand about whole numbers?",
+    "options": [
+     "They keep going on past the drawn end",
+     "They stop where the drawn line stops",
+     "They begin again from zero at the end",
+     "They go on only to the left of 0"
+    ],
+    "explain": "Whole numbers extend infinitely to the right from 0, so a drawn line shows only part of them.",
+    "wrong": [
+     {
+      "misconception": "MAT-WHOLE-K11-M9",
+      "why": "thinks the line's arrow shows an end"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the numbers repeat in a cycle"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the direction of the number line"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 13.5
+}

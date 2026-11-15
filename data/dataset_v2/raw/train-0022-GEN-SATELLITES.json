@@ -1,0 +1,169 @@
+{
+ "source": "train-0022-GEN-SATELLITES.json",
+ "job": {
+  "job": "train-0022-GEN-SATELLITES",
+  "topic_id": "GEN-SATELLITES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a clear textbook explanation",
+  "seed": 22
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3333,
+  "promptTokenCount": 2
+ },
+ "passage": "Satellites are remarkable tools that orbit our planet to help us in daily life. Unlike airplanes that rely on air to generate lift, rockets use powerful engines to eject fuel, allowing them to travel through the vacuum of space where there is no air to push against. Once a satellite reaches its orbit, it does not need its engines to keep moving; it stays in motion due to its high speed and Earth's gravity, which acts like a tether. Geostationary satellites are special because they orbit at a very high altitude of about 36,000 km, matching Earth's rotation to stay fixed above one specific location. This is very different from the International Space Station, which orbits much closer to Earth. Satellites do much more than just take photographs. They use advanced sensors to monitor crop health, track cyclone movements, and even detect flood-prone areas by analyzing light beyond what our eyes can see. Furthermore, your phone does not receive location data from a single satellite; it calculates your precise position by receiving signals from at least four different GPS satellites simultaneously. These signals travel at the speed of light, but because of the vast distances involved, there is a tiny, measurable delay before they reach your device.",
+ "menu_ids": [
+  "GEN-SATELLITES-K7-M1",
+  "GEN-SATELLITES-K8-M3",
+  "GEN-SATELLITES-K9-M4",
+  "GEN-SATELLITES-K12-M5",
+  "GEN-SATELLITES-K13-M6",
+  "GEN-SATELLITES-K13-M7",
+  "GEN-SATELLITES-K15-M9",
+  "GEN-SATELLITES-K16-M10",
+  "GEN-SATELLITES-K21-M11",
+  "GEN-SATELLITES-K22-M12",
+  "GEN-SATELLITES-K24-M13",
+  "GEN-SATELLITES-K23-M14",
+  "GEN-SATELLITES-K25-M15",
+  "GEN-SATELLITES-K27-M16"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Once a satellite reaches its orbit, it does not need its engines to keep moving; it stays in motion due to its high speed and Earth's gravity, which acts like a tether.",
+    "kind": "what_if",
+    "q": "A satellite switches off its engines after reaching orbit. What happens to it next?",
+    "options": [
+     "It keeps circling, held by speed and gravity",
+     "It falls back because its engines stopped",
+     "It floats still because space has no gravity",
+     "It drifts away since nothing holds it now"
+    ],
+    "explain": "In orbit, high speed and Earth's gravity keep a satellite moving; engines are not needed.",
+    "wrong": [
+     {
+      "misconception": "GEN-SATELLITES-K8-M3",
+      "why": "thinks engines must run all the time"
+     },
+     {
+      "misconception": "GEN-SATELLITES-K7-M1",
+      "why": "thinks there is no gravity in space"
+     },
+     {
+      "misconception": null,
+      "why": "ignores gravity acting like a tether"
+     }
+    ]
+   },
+   {
+    "evidence": "Geostationary satellites are special because they orbit at a very high altitude of about 36,000 km, matching Earth's rotation to stay fixed above one specific location.",
+    "kind": "why",
+    "q": "Why does a geostationary satellite always stay above the same city?",
+    "options": [
+     "It goes round as fast as Earth spins",
+     "It is not moving at all in space",
+     "It is held still there by Earth's gravity",
+     "It flies low, just above that city"
+    ],
+    "explain": "It matches Earth's rotation, so it keeps pace with the city below and stays above it.",
+    "wrong": [
+     {
+      "misconception": "GEN-SATELLITES-K13-M6",
+      "why": "thinks it is not moving at all"
+     },
+     {
+      "misconception": "GEN-SATELLITES-K13-M7",
+      "why": "thinks gravity pins it in one place"
+     },
+     {
+      "misconception": "GEN-SATELLITES-K12-M5",
+      "why": "thinks it orbits only a few hundred km up"
+     }
+    ]
+   },
+   {
+    "evidence": "They use advanced sensors to monitor crop health, track cyclone movements, and even detect flood-prone areas by analyzing light beyond what our eyes can see.",
+    "kind": "how",
+    "q": "How can a satellite check crop health that a normal photo cannot show?",
+    "options": [
+     "It reads light that our eyes cannot see",
+     "It changes the weather over the crops",
+     "It takes a clear photo in daylight",
+     "It gets reports from towers on the ground"
+    ],
+    "explain": "Satellite sensors study light beyond what our eyes see, showing crop health a photo misses.",
+    "wrong": [
+     {
+      "misconception": "GEN-SATELLITES-K24-M13",
+      "why": "thinks satellites control the weather"
+     },
+     {
+      "misconception": "GEN-SATELLITES-K23-M14",
+      "why": "thinks satellites only use normal cameras"
+     },
+     {
+      "misconception": "GEN-SATELLITES-K22-M12",
+      "why": "thinks information comes only from ground towers"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, your phone does not receive location data from a single satellite; it calculates your precise position by receiving signals from at least four different GPS satellites simultaneously.",
+    "kind": "how",
+    "q": "Meena's phone shows her exact spot on a map. How does the phone find it?",
+    "options": [
+     "It works it out from four satellites' signals",
+     "It gets her position from one satellite",
+     "It is tracked by a satellite that reports back",
+     "It asks the nearby mobile towers only"
+    ],
+    "explain": "The phone calculates its own position using signals from at least four GPS satellites together.",
+    "wrong": [
+     {
+      "misconception": "GEN-SATELLITES-K25-M15",
+      "why": "thinks one GPS satellite is enough"
+     },
+     {
+      "misconception": "GEN-SATELLITES-K27-M16",
+      "why": "thinks the satellite tracks the phone"
+     },
+     {
+      "misconception": "GEN-SATELLITES-K22-M12",
+      "why": "thinks location comes only from towers"
+     }
+    ]
+   },
+   {
+    "evidence": "These signals travel at the speed of light, but because of the vast distances involved, there is a tiny, measurable delay before they reach your device.",
+    "kind": "what_if",
+    "q": "A GPS signal travels from a satellite to your phone. When does it arrive?",
+    "options": [
+     "It arrives after a tiny, measurable delay",
+     "It arrives instantly, with no delay at all",
+     "It arrives late because it travels slowly",
+     "It arrives only after many minutes"
+    ],
+    "explain": "Signals move at light speed, but the huge distance causes a tiny, measurable delay.",
+    "wrong": [
+     {
+      "misconception": "GEN-SATELLITES-K21-M11",
+      "why": "thinks satellite signals arrive instantly"
+     },
+     {
+      "misconception": null,
+      "why": "blames slow speed instead of distance"
+     },
+     {
+      "misconception": null,
+      "why": "overestimates the delay, ignoring the word tiny"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 36.2
+}

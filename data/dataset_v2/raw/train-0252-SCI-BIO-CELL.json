@@ -1,0 +1,166 @@
+{
+ "source": "train-0252-SCI-BIO-CELL.json",
+ "job": {
+  "job": "train-0252-SCI-BIO-CELL",
+  "topic_id": "SCI-BIO-CELL",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a comparison of two related ideas",
+  "seed": 252
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1651,
+  "promptTokenCount": 2
+ },
+ "passage": "Cells are the fundamental building blocks of life, and their complexity is not determined by the size of the organism. An elephant is larger than a mouse not because its cells are bigger, but because it possesses a significantly higher number of cells. Every cell, whether in a tiny bacterium or a giant tree, contains genetic material to function. While eukaryotic cells store DNA within a membrane-bound nucleus, prokaryotic cells like bacteria keep their DNA in a specialized region called the nucleoid. Furthermore, energy production is a universal requirement for life. Both plant and animal cells contain mitochondria to generate energy through respiration, regardless of whether the plant cell also contains chloroplasts for photosynthesis. It is a common error to think that chloroplasts replace mitochondria in plants; in reality, plant cells rely on mitochondria to process the energy they create. Finally, the outer boundary of a cell is not a solid, static wall. The cell membrane is a dynamic, semi-permeable structure that actively regulates the movement of substances in and out of the cell, ensuring the internal environment remains stable. This membrane is distinct from the rigid cell wall found in plants, which provides structural support rather than acting as a simple, impermeable barrier.",
+ "menu_ids": [
+  "SCI-BIO-CELL-K13-M2",
+  "SCI-BIO-CELL-K14-M3",
+  "SCI-BIO-CELL-K16-M4",
+  "SCI-BIO-CELL-K17-M5",
+  "SCI-BIO-CELL-K19-M6",
+  "SCI-BIO-CELL-K20-M7",
+  "SCI-BIO-CELL-K18-M8",
+  "SCI-BIO-CELL-K11-M9",
+  "SCI-BIO-CELL-K15-M10",
+  "SCI-BIO-CELL-K12-M11",
+  "SCI-BIO-CELL-K16-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "An elephant is larger than a mouse not because its cells are bigger, but because it possesses a significantly higher number of cells.",
+    "kind": "why",
+    "q": "Why is an elephant's body much larger than a mouse's body?",
+    "options": [
+     "Its body is built from many more cells",
+     "Its body is built from much larger cells",
+     "Its cells grow bigger as the animal ages",
+     "Its cells are heavier because of more DNA"
+    ],
+    "explain": "An elephant is larger because it has far more cells, not because each cell is bigger.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CELL-K13-M2",
+      "why": "thinks bigger organisms have bigger cells"
+     },
+     {
+      "misconception": null,
+      "why": "thinks cells keep growing with the animal's age"
+     },
+     {
+      "misconception": null,
+      "why": "links body size to the amount of DNA"
+     }
+    ]
+   },
+   {
+    "evidence": "While eukaryotic cells store DNA within a membrane-bound nucleus, prokaryotic cells like bacteria keep their DNA in a specialized region called the nucleoid.",
+    "kind": "what_if",
+    "q": "A scientist studies a bacterium, which has no nucleus. What will she find about its DNA?",
+    "options": [
+     "It lies in a region called the nucleoid",
+     "It is missing, as there is no nucleus",
+     "It is kept inside a membrane-bound nucleus",
+     "It is found only inside the mitochondria"
+    ],
+    "explain": "Bacteria have no nucleus, but they still keep their DNA in a region called the nucleoid.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CELL-K20-M7",
+      "why": "thinks no nucleus means no DNA"
+     },
+     {
+      "misconception": "SCI-BIO-CELL-K16-M12",
+      "why": "thinks DNA can only be held in a nucleus"
+     },
+     {
+      "misconception": "SCI-BIO-CELL-K17-M5",
+      "why": "thinks mitochondria hold the genetic material"
+     }
+    ]
+   },
+   {
+    "evidence": "Both plant and animal cells contain mitochondria to generate energy through respiration, regardless of whether the plant cell also contains chloroplasts for photosynthesis.",
+    "kind": "which_explains",
+    "q": "A leaf cell has chloroplasts. How does it release usable energy from food?",
+    "options": [
+     "Its mitochondria release it by respiration",
+     "Its chloroplasts release it by respiration",
+     "Its nucleus releases it by photosynthesis",
+     "Its cell wall releases it by respiration"
+    ],
+    "explain": "Plant cells have mitochondria for respiration, even when they also have chloroplasts for photosynthesis.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CELL-K17-M5",
+      "why": "thinks chloroplasts replace mitochondria in plants"
+     },
+     {
+      "misconception": "SCI-BIO-CELL-K16-M4",
+      "why": "thinks the nucleus runs every cell job"
+     },
+     {
+      "misconception": "SCI-BIO-CELL-K15-M10",
+      "why": "mixes up the cell wall with other cell parts"
+     }
+    ]
+   },
+   {
+    "evidence": "The cell membrane is a dynamic, semi-permeable structure that actively regulates the movement of substances in and out of the cell, ensuring the internal environment remains stable.",
+    "kind": "how",
+    "q": "How does the cell membrane help keep the inside of a cell stable?",
+    "options": [
+     "It controls which substances enter and leave",
+     "It blocks every substance from entering",
+     "It lets all substances pass in freely",
+     "It makes energy for substances to move"
+    ],
+    "explain": "The membrane is semi-permeable and controls the movement of substances in and out, keeping the inside stable.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CELL-K14-M3",
+      "why": "thinks the membrane is a sealed solid skin"
+     },
+     {
+      "misconception": null,
+      "why": "thinks nothing controls what passes through"
+     },
+     {
+      "misconception": "SCI-BIO-CELL-K17-M5",
+      "why": "confuses the membrane with the energy-making mitochondria"
+     }
+    ]
+   },
+   {
+    "evidence": "This membrane is distinct from the rigid cell wall found in plants, which provides structural support rather than acting as a simple, impermeable barrier.",
+    "kind": "difference",
+    "q": "How is the cell wall of a plant different from its cell membrane?",
+    "options": [
+     "The wall gives support; the membrane controls entry",
+     "The wall controls entry; the membrane gives support",
+     "The wall and membrane do the same job",
+     "The wall is flexible; the membrane is rigid"
+    ],
+    "explain": "The rigid cell wall supports the plant cell, while the semi-permeable membrane regulates what enters and leaves.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "reverses the jobs of wall and membrane"
+     },
+     {
+      "misconception": "SCI-BIO-CELL-K15-M10",
+      "why": "thinks the wall and membrane are the same"
+     },
+     {
+      "misconception": null,
+      "why": "reverses which one is rigid"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 12.0
+}

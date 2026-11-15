@@ -1,0 +1,169 @@
+{
+ "source": "train-0230-MAT-LINEAREQ2.json",
+ "job": {
+  "job": "train-0230-MAT-LINEAREQ2",
+  "topic_id": "MAT-LINEAREQ2",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a short story where children solve a real problem",
+  "seed": 230
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3953,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and Meera were helping their teacher organize the school stationery cupboard. They found a box of pens and pencils. Meera noted that each pen costs 5 rupees more than a pencil. She wrote the relationship as p = q + 5, where p is the cost of a pen and q is the cost of a pencil. Rohan argued that if they had two equations, they could find the exact costs. They looked at a graph showing two lines representing different sets of prices. One line showed the cost of pens and pencils, while the other represented a bulk discount offer. The lines intersected at a single point, (15, 10), which meant a pen costs 15 rupees and a pencil costs 10 rupees. Rohan noticed that the lines extended infinitely in both directions, covering all possible values, including negative ones if they were dealing with abstract coordinates. He realized that a single linear equation has infinitely many solutions, but a pair of equations with different slopes has only one unique solution where they meet. He carefully checked that the point (15, 10) satisfied both equations, confirming it was the correct solution for the pair. They finished their work, happy to see that the intersection point provided the precise cost for both items.",
+ "menu_ids": [
+  "MAT-LINEAREQ2-K17-M1",
+  "MAT-LINEAREQ2-K18-M2",
+  "MAT-LINEAREQ2-K18-M3",
+  "MAT-LINEAREQ2-K19-M4",
+  "MAT-LINEAREQ2-K19-M5",
+  "MAT-LINEAREQ2-K7-M7",
+  "MAT-LINEAREQ2-K7-M8",
+  "MAT-LINEAREQ2-K23-M9",
+  "MAT-LINEAREQ2-K8-M10",
+  "MAT-LINEAREQ2-K9-M11",
+  "MAT-LINEAREQ2-K25-M13",
+  "MAT-LINEAREQ2-K10-M14",
+  "MAT-LINEAREQ2-K24-M15",
+  "MAT-LINEAREQ2-K26-M16"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "He realized that a single linear equation has infinitely many solutions, but a pair of equations with different slopes has only one unique solution where they meet.",
+    "kind": "what_if",
+    "q": "If Meera uses only p = q + 5, how many price pairs fit it?",
+    "options": [
+     "Infinitely many pairs fit this equation",
+     "Exactly one pair fits this equation",
+     "Only positive whole-number pairs fit it",
+     "No pair fits until a second equation"
+    ],
+    "explain": "A single linear equation has infinitely many solutions; only a pair of equations gives one unique solution.",
+    "wrong": [
+     {
+      "misconception": "MAT-LINEAREQ2-K19-M4",
+      "why": "thinks one linear equation has only one solution"
+     },
+     {
+      "misconception": "MAT-LINEAREQ2-K19-M5",
+      "why": "thinks only whole or positive pairs count"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up solutions of one equation with a pair's solution"
+     }
+    ]
+   },
+   {
+    "evidence": "He carefully checked that the point (15, 10) satisfied both equations, confirming it was the correct solution for the pair.",
+    "kind": "how",
+    "q": "Rohan checked the point (15, 10) carefully. What must a solution of a pair do?",
+    "options": [
+     "Satisfy each of the two equations",
+     "Satisfy at least one of the equations",
+     "Give the correct value of x only",
+     "Lie close to one of the lines"
+    ],
+    "explain": "Rohan confirmed (15, 10) was the pair's solution only after it satisfied both equations.",
+    "wrong": [
+     {
+      "misconception": "MAT-LINEAREQ2-K18-M2",
+      "why": "thinks fitting one equation is enough"
+     },
+     {
+      "misconception": "MAT-LINEAREQ2-K18-M3",
+      "why": "thinks a solution is just the x-value"
+     },
+     {
+      "misconception": "MAT-LINEAREQ2-K9-M11",
+      "why": "thinks a point near a line counts"
+     }
+    ]
+   },
+   {
+    "evidence": "The lines intersected at a single point, (15, 10), which meant a pen costs 15 rupees and a pencil costs 10 rupees.",
+    "kind": "which_explains",
+    "q": "The two lines meet at (15, 10). What prices does this point give?",
+    "options": [
+     "Pen 15 rupees, pencil 10 rupees",
+     "Pen 10 rupees, pencil 15 rupees",
+     "Pen 15 rupees, pencil price still unknown",
+     "Pen 20 rupees, pencil 15 rupees"
+    ],
+    "explain": "The first number is the pen's cost and the second is the pencil's: 15 and 10 rupees.",
+    "wrong": [
+     {
+      "misconception": "MAT-LINEAREQ2-K17-M1",
+      "why": "thinks the order in the pair does not matter"
+     },
+     {
+      "misconception": "MAT-LINEAREQ2-K18-M3",
+      "why": "thinks the solution is only the first number"
+     },
+     {
+      "misconception": null,
+      "why": "wrongly adds 5 again to the point's values"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan noticed that the lines extended infinitely in both directions, covering all possible values, including negative ones if they were dealing with abstract coordinates.",
+    "kind": "what_if",
+    "q": "Rohan plots only three points of an equation. What does its full graph show?",
+    "options": [
+     "A line going on endlessly both ways",
+     "Only the three dots that were plotted",
+     "A line ending at the last plotted point",
+     "A line covering only the positive values"
+    ],
+    "explain": "The graph of a linear equation is a line extending infinitely in both directions, even through negative values.",
+    "wrong": [
+     {
+      "misconception": "MAT-LINEAREQ2-K8-M10",
+      "why": "thinks the graph is just the plotted points"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the line stops where plotting stops"
+     },
+     {
+      "misconception": "MAT-LINEAREQ2-K19-M5",
+      "why": "thinks only positive values are solutions"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan argued that if they had two equations, they could find the exact costs.",
+    "kind": "why",
+    "q": "Why did Rohan want a second equation besides p = q + 5?",
+    "options": [
+     "Because one equation cannot fix exact prices",
+     "Because one equation has no solutions at all",
+     "Because one equation gives only the pen's price",
+     "Because two lines always meet at one point"
+    ],
+    "explain": "One equation has many possible price pairs; two equations together give the exact costs.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks a single equation has no solution"
+     },
+     {
+      "misconception": "MAT-LINEAREQ2-K18-M3",
+      "why": "thinks a solution is one number, not a pair"
+     },
+     {
+      "misconception": "MAT-LINEAREQ2-K10-M14",
+      "why": "thinks any two lines always meet at a point"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 38.3
+}

@@ -1,0 +1,169 @@
+{
+ "source": "train-0379-GEN-INJURIES.json",
+ "job": {
+  "job": "train-0379-GEN-INJURIES",
+  "topic_id": "GEN-INJURIES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a short story with Indian characters in everyday life",
+  "seed": 379
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1540,
+  "promptTokenCount": 2
+ },
+ "passage": "During the school football match, Rohan twisted his ankle while dribbling. His coach, Mr. Sharma, immediately stopped the game and told Rohan to sit down. Rohan wanted to keep playing, claiming he could walk it off, but Mr. Sharma insisted that playing through pain often worsens an injury. He explained that a sprain involves stretched ligaments, not just a simple muscle strain. To manage the swelling, Mr. Sharma applied an ice pack to the ankle rather than heat, as heat increases blood flow and inflammation. He wrapped the ankle with a bandage, but warned Rohan not to pull it too tight, as it needs to allow proper circulation. Rohan felt better after ten minutes and asked if he could return to the field. Mr. Sharma shook his head, noting that the absence of immediate pain does not mean the injury has fully healed. He also reminded the team that a concussion can occur even without losing consciousness, so any head bump requires a doctor's check. Finally, he advised Rohan to keep his ankle elevated above heart level to reduce throbbing. Rohan realized that recovery requires patience, proper first aid, and professional advice rather than just rushing back to the game.",
+ "menu_ids": [
+  "GEN-INJURIES-K8-M1",
+  "GEN-INJURIES-K9-M2",
+  "GEN-INJURIES-K10-M3",
+  "GEN-INJURIES-K11-M4",
+  "GEN-INJURIES-K12-M5",
+  "GEN-INJURIES-K14-M6",
+  "GEN-INJURIES-K15-M8",
+  "GEN-INJURIES-K16-M9",
+  "GEN-INJURIES-K17-M10",
+  "GEN-INJURIES-K18-M12",
+  "GEN-INJURIES-K21-M13",
+  "GEN-INJURIES-K22-M15",
+  "GEN-INJURIES-K25-M17",
+  "GEN-INJURIES-K25-M18"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Rohan wanted to keep playing, claiming he could walk it off, but Mr. Sharma insisted that playing through pain often worsens an injury.",
+    "kind": "why",
+    "q": "Why did Mr. Sharma refuse to let Rohan keep playing on the hurt ankle?",
+    "options": [
+     "Continuing could make the damage greater",
+     "Walking would tire the other leg",
+     "The pain would stop and heal it",
+     "Tough players must rest before a match"
+    ],
+    "explain": "Playing through pain often worsens an injury, so the coach made Rohan stop.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "picks an unrelated, plausible-sounding reason"
+     },
+     {
+      "misconception": "GEN-INJURIES-K25-M18",
+      "why": "thinks pain going away means healing"
+     },
+     {
+      "misconception": "GEN-INJURIES-K25-M17",
+      "why": "mixes up toughness with the right response to injury"
+     }
+    ]
+   },
+   {
+    "evidence": "He explained that a sprain involves stretched ligaments, not just a simple muscle strain.",
+    "kind": "difference",
+    "q": "Rohan twisted his ankle badly. Which injury does the coach say he has?",
+    "options": [
+     "Stretched ligaments at the joint",
+     "A torn muscle in the leg",
+     "A bone cracked inside the ankle",
+     "A strain of the thigh muscle"
+    ],
+    "explain": "A sprain means stretched ligaments at a joint, which is different from a muscle strain.",
+    "wrong": [
+     {
+      "misconception": "GEN-INJURIES-K8-M1",
+      "why": "thinks a sprain is a muscle injury"
+     },
+     {
+      "misconception": "GEN-INJURIES-K11-M4",
+      "why": "thinks a swollen joint must have a broken bone"
+     },
+     {
+      "misconception": "GEN-INJURIES-K9-M2",
+      "why": "mixes up strain and sprain"
+     }
+    ]
+   },
+   {
+    "evidence": "To manage the swelling, Mr. Sharma applied an ice pack to the ankle rather than heat, as heat increases blood flow and inflammation.",
+    "kind": "what_if",
+    "q": "What would most likely happen if heat were put on Rohan's fresh sprain?",
+    "options": [
+     "The swelling would grow worse",
+     "The swelling would go down faster",
+     "The ankle would heal in minutes",
+     "The swelling would stay the same"
+    ],
+    "explain": "Heat increases blood flow and inflammation, so a fresh sprain would swell more.",
+    "wrong": [
+     {
+      "misconception": "GEN-INJURIES-K15-M8",
+      "why": "thinks heat reduces swelling"
+     },
+     {
+      "misconception": "GEN-INJURIES-K25-M18",
+      "why": "thinks warmth quickly heals the injury"
+     },
+     {
+      "misconception": null,
+      "why": "thinks heat makes no difference"
+     }
+    ]
+   },
+   {
+    "evidence": "He wrapped the ankle with a bandage, but warned Rohan not to pull it too tight, as it needs to allow proper circulation.",
+    "kind": "which_explains",
+    "q": "Rohan says a very tight bandage will work best. Why is he wrong?",
+    "options": [
+     "Blood must still be able to flow",
+     "Tight bandages slip off during play",
+     "Bandages only work when worn loosely",
+     "Ice cannot reach through a tight wrap"
+    ],
+    "explain": "The bandage must allow proper circulation, so wrapping it too tight is harmful.",
+    "wrong": [
+     {
+      "misconception": "GEN-INJURIES-K16-M9",
+      "why": "believes a tighter bandage works better"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby detail that is not the reason"
+     },
+     {
+      "misconception": "GEN-INJURIES-K18-M12",
+      "why": "thinks the wrap only matters as part of RICE"
+     }
+    ]
+   },
+   {
+    "evidence": "He also reminded the team that a concussion can occur even without losing consciousness, so any head bump requires a doctor's check.",
+    "kind": "what_if",
+    "q": "Asha bumps her head in a game but stays awake. What should happen?",
+    "options": [
+     "A doctor should check her for concussion",
+     "She is safe because she stayed awake",
+     "She should walk it off and keep playing",
+     "She should wait for symptoms to show"
+    ],
+    "explain": "A concussion can happen without losing consciousness, so any head bump needs a doctor's check.",
+    "wrong": [
+     {
+      "misconception": "GEN-INJURIES-K21-M13",
+      "why": "thinks concussion needs unconsciousness"
+     },
+     {
+      "misconception": "GEN-INJURIES-K25-M17",
+      "why": "thinks you should play through it"
+     },
+     {
+      "misconception": "GEN-INJURIES-K22-M15",
+      "why": "thinks symptoms always show immediately"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 14.4
+}

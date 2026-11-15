@@ -1,0 +1,162 @@
+{
+ "source": "train-0123-SOC-CIV-INSTITUTIONS.json",
+ "job": {
+  "job": "train-0123-SOC-CIV-INSTITUTIONS",
+  "topic_id": "SOC-CIV-INSTITUTIONS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a short story with Indian characters in everyday life",
+  "seed": 123
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3930,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and his sister Meera were watching the news when a debate about a new education policy started. Meera asked, 'Does the Prime Minister decide everything alone?' Rohan shook his head, explaining that while the Prime Minister is the head of the government, the President is the formal head of the country. He pointed out that the political executive, like the Prime Minister and ministers, makes the major policy decisions, while the permanent executive, consisting of civil servants, assists them by providing information and implementing these decisions. Meera then wondered if the Rajya Sabha had the final say on money bills since it is the Upper House. Rohan clarified that in our parliamentary democracy, the Lok Sabha is more powerful because its members are directly elected by the people. If there is a disagreement between the two houses, the Lok Sabha's view usually prevails. Finally, they discussed the judiciary. Rohan emphasized that the Supreme Court remains independent of the legislature and executive, ensuring that laws follow the Constitution. The civil servants do not make the final policy choices; they only execute the plans decided by the elected representatives. This system ensures that the power remains with the people's representatives, keeping the government accountable to the citizens of India.",
+ "menu_ids": [
+  "SOC-CIV-INSTITUTIONS-K9-M1",
+  "SOC-CIV-INSTITUTIONS-K11-M2",
+  "SOC-CIV-INSTITUTIONS-K12-M3",
+  "SOC-CIV-INSTITUTIONS-K4-M6",
+  "SOC-CIV-INSTITUTIONS-K5-M7",
+  "SOC-CIV-INSTITUTIONS-K10-M8",
+  "SOC-CIV-INSTITUTIONS-K11-M10"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Rohan shook his head, explaining that while the Prime Minister is the head of the government, the President is the formal head of the country.",
+    "kind": "difference",
+    "q": "How are the roles of the Prime Minister and the President different?",
+    "options": [
+     "PM heads the government; President formally heads the country",
+     "PM heads both the government and the country",
+     "President heads the government; PM heads the country",
+     "Parliament heads the country; PM heads the government"
+    ],
+    "explain": "The Prime Minister is head of the government, but the President is the formal head of the country.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-INSTITUTIONS-K11-M2",
+      "why": "thinks the Prime Minister is head of the country"
+     },
+     {
+      "misconception": null,
+      "why": "swaps the two roles"
+     },
+     {
+      "misconception": null,
+      "why": "thinks Parliament is the head of the country"
+     }
+    ]
+   },
+   {
+    "evidence": "He pointed out that the political executive, like the Prime Minister and ministers, makes the major policy decisions, while the permanent executive, consisting of civil servants, assists them by providing information and implementing these decisions.",
+    "kind": "what_if",
+    "q": "A new education policy is being planned. What role do civil servants play?",
+    "options": [
+     "They give facts and carry out the plan",
+     "They choose the final policy for the country",
+     "They vote on the policy in the Rajya Sabha",
+     "They check if the policy follows the Constitution"
+    ],
+    "explain": "Civil servants are the permanent executive; they provide information and implement decisions made by ministers.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-INSTITUTIONS-K12-M3",
+      "why": "thinks civil servants make final policy decisions"
+     },
+     {
+      "misconception": null,
+      "why": "confuses civil servants with members of Parliament"
+     },
+     {
+      "misconception": null,
+      "why": "confuses civil servants with the judiciary"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan clarified that in our parliamentary democracy, the Lok Sabha is more powerful because its members are directly elected by the people.",
+    "kind": "why",
+    "q": "Why does the Lok Sabha have more power than the Rajya Sabha?",
+    "options": [
+     "Its members are voted in directly by citizens",
+     "Its members sit in the Upper House",
+     "Its members are appointed by the President",
+     "Its members pass laws without the President"
+    ],
+    "explain": "The Lok Sabha is more powerful because the people directly elect its members.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-INSTITUTIONS-K9-M1",
+      "why": "links power to being the Upper House"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the President picks members"
+     },
+     {
+      "misconception": "SOC-CIV-INSTITUTIONS-K5-M7",
+      "why": "thinks laws are made without the President"
+     }
+    ]
+   },
+   {
+    "evidence": "If there is a disagreement between the two houses, the Lok Sabha's view usually prevails.",
+    "kind": "what_if",
+    "q": "The Lok Sabha passes a money bill, but the Rajya Sabha disagrees. What happens next?",
+    "options": [
+     "The Lok Sabha's view wins in the end",
+     "The Rajya Sabha's view wins as Upper House",
+     "The Rajya Sabha rejects the bill completely",
+     "The civil servants settle the disagreement"
+    ],
+    "explain": "When the two Houses disagree, the Lok Sabha's view prevails, as its members are elected by the people.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-INSTITUTIONS-K9-M1",
+      "why": "thinks the Upper House is more powerful"
+     },
+     {
+      "misconception": "SOC-CIV-INSTITUTIONS-K10-M8",
+      "why": "thinks the Rajya Sabha can reject a money bill"
+     },
+     {
+      "misconception": "SOC-CIV-INSTITUTIONS-K12-M3",
+      "why": "thinks civil servants make final decisions"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan emphasized that the Supreme Court remains independent of the legislature and executive, ensuring that laws follow the Constitution.",
+    "kind": "which_explains",
+    "q": "A new law seems to go against the Constitution. Who can check it?",
+    "options": [
+     "The Supreme Court, as it is independent",
+     "The Prime Minister, as head of the country",
+     "The civil servants, as they make final policy",
+     "The Rajya Sabha, as it is the Upper House"
+    ],
+    "explain": "The Supreme Court is independent of the legislature and executive and makes sure laws follow the Constitution.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-INSTITUTIONS-K11-M2",
+      "why": "thinks the Prime Minister is head of the country"
+     },
+     {
+      "misconception": "SOC-CIV-INSTITUTIONS-K12-M3",
+      "why": "thinks civil servants make final decisions"
+     },
+     {
+      "misconception": "SOC-CIV-INSTITUTIONS-K9-M1",
+      "why": "thinks the Upper House has the final say"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 38.2
+}

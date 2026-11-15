@@ -1,0 +1,143 @@
+{
+ "source": "train-0385-GEN-OLYMPICS.json",
+ "job": {
+  "job": "train-0385-GEN-OLYMPICS",
+  "topic_id": "GEN-OLYMPICS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a question-and-answer (FAQ) style passage",
+  "seed": 385
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1308,
+  "promptTokenCount": 2
+ },
+ "passage": "The Olympic Games are a global celebration of sportsmanship, but many people have questions about their history and rules. A common query is whether the modern Olympics have been held continuously since ancient times; in reality, the modern Games were revived in 1896, and they have been interrupted by world wars. Regarding symbols, the five interlocking rings represent the union of the five inhabited continents, not individual founding countries. India’s journey in the Olympics is also a proud one. While many celebrate PV Sindhu’s incredible achievements, it is important to note that Karnam Malleswari was the first Indian woman to win an Olympic medal, securing bronze in weightlifting at the 2000 Sydney Games. Furthermore, the Olympic spirit emphasizes participation and fair play over simply winning at all costs. Fair play extends far beyond just avoiding banned substances; it includes respect for opponents, rules, and the integrity of the sport. Finally, athletes must be extremely cautious with medications. Even if a doctor prescribes a medicine, an athlete is responsible for checking if it contains any banned substances, as ignorance of the ingredients does not excuse a violation of anti-doping rules.",
+ "menu_ids": [
+  "GEN-OLYMPICS-K8-M1",
+  "GEN-OLYMPICS-K9-M2",
+  "GEN-OLYMPICS-K10-M3",
+  "GEN-OLYMPICS-K10-M4",
+  "GEN-OLYMPICS-K11-M5",
+  "GEN-OLYMPICS-K13-M7",
+  "GEN-OLYMPICS-K15-M8",
+  "GEN-OLYMPICS-K16-M9",
+  "GEN-OLYMPICS-K17-M10",
+  "GEN-OLYMPICS-K17-M11",
+  "GEN-OLYMPICS-K18-M12",
+  "GEN-OLYMPICS-K18-M13",
+  "GEN-OLYMPICS-K20-M14",
+  "GEN-OLYMPICS-K21-M15"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "A common query is whether the modern Olympics have been held continuously since ancient times; in reality, the modern Games were revived in 1896, and they have been interrupted by world wars.",
+    "kind": "why",
+    "q": "Why is it wrong to say the modern Olympics never stopped?",
+    "options": [
+     "World wars forced some Games to be cancelled",
+     "They were revived only after a long gap",
+     "Each Games is held in a new city",
+     "They are held in Athens every year"
+    ],
+    "explain": "The modern Games began again in 1896 and were interrupted by world wars, so they did not run unbroken.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "picks a true detail that does not answer the question"
+     },
+     {
+      "misconception": "GEN-OLYMPICS-K10-M3",
+      "why": "thinks the Games are held every year"
+     },
+     {
+      "misconception": "GEN-OLYMPICS-K8-M1",
+      "why": "thinks the Games are tied to Athens"
+     }
+    ]
+   },
+   {
+    "evidence": "Regarding symbols, the five interlocking rings represent the union of the five inhabited continents, not individual founding countries.",
+    "kind": "which_explains",
+    "q": "A student says each ring is one founding country. What is the correct idea?",
+    "options": [
+     "The rings join the five inhabited continents",
+     "The rings mark five winning countries of 1896",
+     "The rings stand for five Olympic sports",
+     "The rings show five early host cities"
+    ],
+    "explain": "The five interlocking rings stand for the union of five inhabited continents, not single founding countries.",
+    "wrong": [
+     {
+      "misconception": "GEN-OLYMPICS-K11-M5",
+      "why": "thinks each ring is a particular country"
+     },
+     {
+      "misconception": null,
+      "why": "thinks rings stand for sports"
+     },
+     {
+      "misconception": "GEN-OLYMPICS-K8-M1",
+      "why": "links the symbol to host cities"
+     }
+    ]
+   },
+   {
+    "evidence": "While many celebrate PV Sindhu’s incredible achievements, it is important to note that Karnam Malleswari was the first Indian woman to win an Olympic medal, securing bronze in weightlifting at the 2000 Sydney Games.",
+    "kind": "difference",
+    "q": "How does Karnam Malleswari's place in Olympic history differ from PV Sindhu's?",
+    "options": [
+     "She was the first Indian woman to win a medal",
+     "She was the first Indian woman to win gold",
+     "She won an Olympic medal in badminton",
+     "She won a medal at the 2008 Games"
+    ],
+    "explain": "Malleswari won bronze in weightlifting at Sydney 2000, making her the first Indian woman Olympic medallist.",
+    "wrong": [
+     {
+      "misconception": "GEN-OLYMPICS-K16-M9",
+      "why": "mixes up first medal with first gold"
+     },
+     {
+      "misconception": "GEN-OLYMPICS-K18-M12",
+      "why": "thinks Sindhu's sport and achievements are hers"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby year not in the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "Even if a doctor prescribes a medicine, an athlete is responsible for checking if it contains any banned substances, as ignorance of the ingredients does not excuse a violation of anti-doping rules.",
+    "kind": "what_if",
+    "q": "A doctor gives an athlete a cold medicine with a banned ingredient. Who is responsible?",
+    "options": [
+     "The athlete, who must check the ingredients",
+     "The doctor, who prescribed the medicine",
+     "Nobody, as the athlete did not know",
+     "The team, which let the athlete play"
+    ],
+    "explain": "An athlete must check medicines for banned substances; not knowing the ingredients is no excuse under anti-doping rules.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks a doctor's prescription shifts the blame"
+     },
+     {
+      "misconception": null,
+      "why": "thinks ignorance excuses a violation"
+     },
+     {
+      "misconception": null,
+      "why": "blames the team instead of the athlete"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 13.3
+}

@@ -1,0 +1,166 @@
+{
+ "source": "train-0076-SCI-BIO-LIFEPROCESSES.json",
+ "job": {
+  "job": "train-0076-SCI-BIO-LIFEPROCESSES",
+  "topic_id": "SCI-BIO-LIFEPROCESSES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a comparison of two related ideas",
+  "seed": 76
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3891,
+  "promptTokenCount": 2
+ },
+ "passage": "In the human body, the circulatory and excretory systems work together to maintain internal balance. Many students mistakenly believe the heart purifies blood, but its actual role is to act as a pump that circulates blood throughout the body. The lungs and kidneys are the true organs responsible for filtering and cleaning the blood. While the kidneys filter waste products from the blood, they do not simply act as a sieve that lets small molecules fall through; they selectively reabsorb essential nutrients like glucose back into the bloodstream. Furthermore, it is a common error to confuse excretion with egestion. Excretion is the removal of metabolic waste products produced inside cells, such as urea, whereas egestion is the process of getting rid of undigested food as feces. Another misconception is that arteries always carry oxygenated blood. In reality, the pulmonary artery carries deoxygenated blood from the heart to the lungs for oxygenation. Similarly, plants also perform complex tasks. While some assume plants only respire at night, they actually respire continuously, day and night, to release energy from stored food. Photosynthesis only occurs during the day when sunlight is available, but cellular respiration is a constant requirement for all living plant cells to survive and function properly.",
+ "menu_ids": [
+  "SCI-BIO-LIFEPROCESSES-K5-M1",
+  "SCI-BIO-LIFEPROCESSES-K13-M3",
+  "SCI-BIO-LIFEPROCESSES-K17-M4",
+  "SCI-BIO-LIFEPROCESSES-K11-M5",
+  "SCI-BIO-LIFEPROCESSES-K9-M6",
+  "SCI-BIO-LIFEPROCESSES-K19-M7",
+  "SCI-BIO-LIFEPROCESSES-K18-M8",
+  "SCI-BIO-LIFEPROCESSES-K15-M9",
+  "SCI-BIO-LIFEPROCESSES-K14-M10",
+  "SCI-BIO-LIFEPROCESSES-K7-M11",
+  "SCI-BIO-LIFEPROCESSES-K20-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Many students mistakenly believe the heart purifies blood, but its actual role is to act as a pump that circulates blood throughout the body.",
+    "kind": "which_explains",
+    "q": "Meena thinks blood gets cleaned inside the heart. What does the heart actually do?",
+    "options": [
+     "It pushes blood around the whole body",
+     "It removes waste and impurities from blood",
+     "It sieves small molecules out of blood",
+     "It produces energy from the air we breathe"
+    ],
+    "explain": "The heart does not purify blood; it works as a pump that sends blood around the body.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-LIFEPROCESSES-K9-M6",
+      "why": "thinks the heart purifies blood"
+     },
+     {
+      "misconception": "SCI-BIO-LIFEPROCESSES-K19-M7",
+      "why": "mixes up the heart's job with a sieve-like kidney"
+     },
+     {
+      "misconception": "SCI-BIO-LIFEPROCESSES-K15-M9",
+      "why": "thinks energy is made from breathing in air"
+     }
+    ]
+   },
+   {
+    "evidence": "While the kidneys filter waste products from the blood, they do not simply act as a sieve that lets small molecules fall through; they selectively reabsorb essential nutrients like glucose back into the bloodstream.",
+    "kind": "what_if",
+    "q": "Glucose gets filtered out in the kidneys. What happens to it next?",
+    "options": [
+     "It is taken back into the blood",
+     "It falls through and leaves in urine",
+     "It is passed out with all the liquid",
+     "It is sent to the heart for cleaning"
+    ],
+    "explain": "Kidneys are not simple sieves; they reabsorb useful nutrients like glucose back into the bloodstream.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-LIFEPROCESSES-K19-M7",
+      "why": "thinks the kidney is a sieve where small things fall through"
+     },
+     {
+      "misconception": "SCI-BIO-LIFEPROCESSES-K20-M12",
+      "why": "thinks all filtered liquid leaves the body"
+     },
+     {
+      "misconception": "SCI-BIO-LIFEPROCESSES-K9-M6",
+      "why": "thinks the heart purifies blood"
+     }
+    ]
+   },
+   {
+    "evidence": "Excretion is the removal of metabolic waste products produced inside cells, such as urea, whereas egestion is the process of getting rid of undigested food as feces.",
+    "kind": "difference",
+    "q": "Urea leaves the body in urine. Why is this called excretion, not egestion?",
+    "options": [
+     "Urea is made inside the body's cells",
+     "Urea is undigested food leaving the body",
+     "Urea is waste filtered out by the heart",
+     "Urea is waste breathed out by the lungs"
+    ],
+    "explain": "Excretion removes waste made inside cells, like urea; egestion removes undigested food as feces.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-LIFEPROCESSES-K11-M5",
+      "why": "thinks excretion means removing undigested food"
+     },
+     {
+      "misconception": "SCI-BIO-LIFEPROCESSES-K9-M6",
+      "why": "thinks the heart cleans the blood"
+     },
+     {
+      "misconception": null,
+      "why": "picks the lungs, a nearby organ named in the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "In reality, the pulmonary artery carries deoxygenated blood from the heart to the lungs for oxygenation.",
+    "kind": "which_example",
+    "q": "Sohan says every artery carries oxygen-rich blood. Which example proves him wrong?",
+    "options": [
+     "The artery taking blood from heart to lungs",
+     "The artery taking blood from heart to body",
+     "The vein bringing blood back to the heart",
+     "The kidney sending glucose back into blood"
+    ],
+    "explain": "The pulmonary artery carries deoxygenated blood from the heart to the lungs, so not all arteries carry oxygen.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-LIFEPROCESSES-K17-M4",
+      "why": "believes arteries always carry oxygenated blood"
+     },
+     {
+      "misconception": null,
+      "why": "picks a vein, which cannot disprove a claim about arteries"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby true detail that is not about arteries"
+     }
+    ]
+   },
+   {
+    "evidence": "While some assume plants only respire at night, they actually respire continuously, day and night, to release energy from stored food.",
+    "kind": "what_if",
+    "q": "It is noon on a sunny day. What is going on inside a green leaf's cells?",
+    "options": [
+     "Photosynthesis and respiration are both happening",
+     "Photosynthesis is happening, but respiration has stopped",
+     "Respiration is happening, but photosynthesis has stopped",
+     "Ready food from the soil is being stored"
+    ],
+    "explain": "Plants respire all the time, day and night, and photosynthesise whenever sunlight is available.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-LIFEPROCESSES-K13-M3",
+      "why": "thinks plants respire only at night"
+     },
+     {
+      "misconception": null,
+      "why": "reverses which process needs sunlight"
+     },
+     {
+      "misconception": "SCI-BIO-LIFEPROCESSES-K5-M1",
+      "why": "thinks plants get food from the soil"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 39.0
+}

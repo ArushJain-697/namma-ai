@@ -1,0 +1,166 @@
+{
+ "source": "train-0226-MAT-FRACTIONS.json",
+ "job": {
+  "job": "train-0226-MAT-FRACTIONS",
+  "topic_id": "MAT-FRACTIONS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a conversation between a teacher and two students",
+  "seed": 226
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 5930,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today we are exploring fractions. Remember, a fraction represents a part of a whole, and all parts must be equal in size. If you divide a rectangle into two unequal pieces, you cannot call one piece 1/2. Student A: I thought 1/5 was larger than 1/4 because five is bigger than four. Teacher: Actually, as the denominator increases, the size of each part gets smaller. Imagine sharing a cake; the more people you share with, the smaller your slice becomes. Student B: What about adding fractions like 1/4 and 1/4? Do we add the denominators to get 2/8? Teacher: No, that is a common mistake. When denominators are the same, we only add the numerators, so 1/4 plus 1/4 equals 2/4. Student A: Does multiplying a number by a fraction always make it bigger? Teacher: Not at all. Multiplying by a fraction less than one actually makes the product smaller than the original number. For example, half of ten is five, which is less than ten. Finally, remember that a mixed number like 2 1/3 is a sum, meaning two plus one-third, not two multiplied by one-third. Understanding these rules helps us avoid errors when comparing or calculating with fractions.",
+ "menu_ids": [
+  "MAT-FRACTIONS-K7-M1",
+  "MAT-FRACTIONS-K8-M2",
+  "MAT-FRACTIONS-K5-M3",
+  "MAT-FRACTIONS-K14-M4",
+  "MAT-FRACTIONS-K18-M6",
+  "MAT-FRACTIONS-K16-M7",
+  "MAT-FRACTIONS-K17-M8",
+  "MAT-FRACTIONS-K9-M9",
+  "MAT-FRACTIONS-K21-M10",
+  "MAT-FRACTIONS-K19-M11",
+  "MAT-FRACTIONS-K13-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "If you divide a rectangle into two unequal pieces, you cannot call one piece 1/2.",
+    "kind": "which_explains",
+    "q": "Meena cuts a chapati into one big and one small piece. What can she say about the small piece?",
+    "options": [
+     "It is not 1/2, as the pieces are unequal",
+     "It is 1/2, as there are two pieces",
+     "It is not 1/2, but the bigger piece is",
+     "It is 1/2, as both pieces make one whole"
+    ],
+    "explain": "A fraction needs equal parts, so unequal pieces cannot be called 1/2.",
+    "wrong": [
+     {
+      "misconception": "MAT-FRACTIONS-K7-M1",
+      "why": "thinks any two pieces are halves, even if unequal"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the larger of two pieces is the half"
+     },
+     {
+      "misconception": null,
+      "why": "thinks two parts that make a whole must be halves"
+     }
+    ]
+   },
+   {
+    "evidence": "Actually, as the denominator increases, the size of each part gets smaller.",
+    "kind": "what_if",
+    "q": "Neha gets 1/4 of a pizza and Sam gets 1/5 of the same pizza. Who gets more?",
+    "options": [
+     "Neha, as fourths are bigger than fifths",
+     "Sam, as 5 is bigger than 4",
+     "Both, as each fraction has 1 on top",
+     "Sam, as more parts means more pizza"
+    ],
+    "explain": "As the denominator grows, each part gets smaller, so 1/4 is more than 1/5.",
+    "wrong": [
+     {
+      "misconception": "MAT-FRACTIONS-K14-M4",
+      "why": "thinks a bigger denominator means a bigger fraction"
+     },
+     {
+      "misconception": null,
+      "why": "compares only the numerators"
+     },
+     {
+      "misconception": "MAT-FRACTIONS-K13-M12",
+      "why": "thinks bigger numbers in a fraction mean a bigger amount"
+     }
+    ]
+   },
+   {
+    "evidence": "When denominators are the same, we only add the numerators, so 1/4 plus 1/4 equals 2/4.",
+    "kind": "what_if",
+    "q": "Ravi eats 1/4 of a cake, then another 1/4. How much of the cake has he eaten?",
+    "options": [
+     "2/4 of the cake",
+     "2/8 of the cake",
+     "1/8 of the cake",
+     "1/16 of the cake"
+    ],
+    "explain": "The denominators are the same, so add only the numerators: 1/4 + 1/4 = 2/4.",
+    "wrong": [
+     {
+      "misconception": "MAT-FRACTIONS-K18-M6",
+      "why": "adds numerators and adds denominators"
+     },
+     {
+      "misconception": null,
+      "why": "adds the denominators but keeps one numerator"
+     },
+     {
+      "misconception": null,
+      "why": "multiplies the fractions instead of adding them"
+     }
+    ]
+   },
+   {
+    "evidence": "Multiplying by a fraction less than one actually makes the product smaller than the original number.",
+    "kind": "how",
+    "q": "Meera works out 1/2 × 12. What answer should she get?",
+    "options": [
+     "6, which is smaller than 12",
+     "24, which is bigger than 12",
+     "12 1/2, which is a bit more than 12",
+     "1/24, which is far smaller than 12"
+    ],
+    "explain": "Multiplying by a fraction less than one gives a smaller product; half of 12 is 6.",
+    "wrong": [
+     {
+      "misconception": "MAT-FRACTIONS-K16-M7",
+      "why": "thinks multiplying always makes a number bigger"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up multiplying by a half with adding a half"
+     },
+     {
+      "misconception": null,
+      "why": "multiplies the denominator by 12 instead of taking half"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, remember that a mixed number like 2 1/3 is a sum, meaning two plus one-third, not two multiplied by one-third.",
+    "kind": "which_example",
+    "q": "A recipe needs 2 1/3 cups of flour. How much flour is that?",
+    "options": [
+     "Two cups plus a third of a cup",
+     "Two cups times a third of a cup",
+     "Two cups split into three parts",
+     "Two cups plus one cup plus three cups"
+    ],
+    "explain": "A mixed number is a sum, so 2 1/3 means two plus one-third.",
+    "wrong": [
+     {
+      "misconception": "MAT-FRACTIONS-K9-M9",
+      "why": "thinks a mixed number means multiplying"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the 1/3 divides the two cups"
+     },
+     {
+      "misconception": "MAT-FRACTIONS-K5-M3",
+      "why": "reads the digits as separate whole numbers"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 56.2
+}

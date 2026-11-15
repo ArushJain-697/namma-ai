@@ -1,0 +1,139 @@
+{
+ "source": "train-0344-SOC-GEO-SOILS.json",
+ "job": {
+  "job": "train-0344-SOC-GEO-SOILS",
+  "topic_id": "SOC-GEO-SOILS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a news-style report about a real-world situation",
+  "seed": 344
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 3488,
+  "promptTokenCount": 2
+ },
+ "passage": "In a recent agricultural report, experts highlighted the diverse soil landscape of India. While many believe alluvial soil is restricted to the Northern Plains, it is also found in the narrow corridors of the eastern coastal plains, particularly in the deltas of the Mahanadi, Godavari, and Krishna rivers. Farmers in the Deccan Plateau are often surprised to learn that black soil, known for its moisture-retention capacity, does not derive its dark color from high humus content. Instead, its deep color is primarily due to the presence of titaniferous magnetite and iron-rich minerals formed from volcanic rocks. Furthermore, the report addressed the growing concern of soil degradation. While human actions like deforestation and overgrazing are major contributors, natural forces are equally responsible. Wind and water currents frequently strip away fertile topsoil, especially in arid regions, proving that erosion is not solely a human-induced phenomenon. To combat this, experts suggest that sustainable land management is essential for long-term food security. By understanding that soil characteristics are shaped by complex geological processes rather than just human intervention or organic accumulation, farmers can better implement conservation strategies like contour ploughing and terrace farming to protect their land from further loss.",
+ "menu_ids": [
+  "SOC-GEO-SOILS-K5-M1",
+  "SOC-GEO-SOILS-K6-M2",
+  "SOC-GEO-SOILS-K12-M3",
+  "SOC-GEO-SOILS-K4-M6",
+  "SOC-GEO-SOILS-K5-M7",
+  "SOC-GEO-SOILS-K6-M8",
+  "SOC-GEO-SOILS-K7-M9",
+  "SOC-GEO-SOILS-K7-M10",
+  "SOC-GEO-SOILS-K10-M11",
+  "SOC-GEO-SOILS-K12-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "While many believe alluvial soil is restricted to the Northern Plains, it is also found in the narrow corridors of the eastern coastal plains, particularly in the deltas of the Mahanadi, Godavari, and Krishna rivers.",
+    "kind": "what_if",
+    "q": "A farmer's field lies in the Godavari delta. Which soil is it most likely to have?",
+    "options": [
+     "Alluvial soil, as in the Northern Plains",
+     "Black soil, as on the Deccan Plateau",
+     "Laterite soil, as in heavy-rain hills",
+     "Arid soil, as in dry desert areas"
+    ],
+    "explain": "Alluvial soil is not limited to the north; it is also found in east-coast deltas like the Godavari.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "links all of south India to black soil"
+     },
+     {
+      "misconception": "SOC-GEO-SOILS-K7-M9",
+      "why": "thinks heavy rain regions always have laterite soil"
+     },
+     {
+      "misconception": "SOC-GEO-SOILS-K7-M10",
+      "why": "mixes up soil types of different regions"
+     }
+    ]
+   },
+   {
+    "evidence": "Instead, its deep color is primarily due to the presence of titaniferous magnetite and iron-rich minerals formed from volcanic rocks.",
+    "kind": "why",
+    "q": "Why is the black soil of the Deccan Plateau so dark in colour?",
+    "options": [
+     "Iron-rich minerals from volcanic rocks",
+     "Humus from large amounts of rotting plants",
+     "Moisture stored deep inside the soil",
+     "Silt left behind by yearly river floods"
+    ],
+    "explain": "Black soil gets its deep colour from iron-rich minerals formed from volcanic rocks, not from humus.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-SOILS-K6-M2",
+      "why": "thinks dark soil always means humus"
+     },
+     {
+      "misconception": "SOC-GEO-SOILS-K6-M8",
+      "why": "links black soil's colour to holding water"
+     },
+     {
+      "misconception": null,
+      "why": "mixes it up with river-deposited alluvial soil"
+     }
+    ]
+   },
+   {
+    "evidence": "Wind and water currents frequently strip away fertile topsoil, especially in arid regions, proving that erosion is not solely a human-induced phenomenon.",
+    "kind": "what_if",
+    "q": "Suppose nobody lives in a dry region. What would happen to its topsoil?",
+    "options": [
+     "It would still be stripped by wind and water",
+     "It would stay safe, as only people cause erosion",
+     "It would be lost only if animals grazed there",
+     "It would be rebuilt within a few years"
+    ],
+    "explain": "Wind and water strip topsoil on their own, so erosion is not caused only by humans.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-SOILS-K12-M3",
+      "why": "thinks erosion is only caused by humans"
+     },
+     {
+      "misconception": null,
+      "why": "thinks erosion always needs overgrazing"
+     },
+     {
+      "misconception": "SOC-GEO-SOILS-K4-M6",
+      "why": "thinks soil forms quickly in a few years"
+     }
+    ]
+   },
+   {
+    "evidence": "By understanding that soil characteristics are shaped by complex geological processes rather than just human intervention or organic accumulation, farmers can better implement conservation strategies like contour ploughing and terrace farming to protect their land from further loss.",
+    "kind": "recall",
+    "q": "Why do experts suggest contour ploughing and terrace farming to farmers?",
+    "options": [
+     "To protect farmland from losing more soil",
+     "To make black soil richer in humus",
+     "To speed up soil formation to a few years",
+     "To raise the water held by arid soil"
+    ],
+    "explain": "These conservation methods protect farmers' land from further soil loss.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-SOILS-K6-M2",
+      "why": "thinks soil quality depends on added humus"
+     },
+     {
+      "misconception": "SOC-GEO-SOILS-K4-M6",
+      "why": "thinks soil forms quickly"
+     },
+     {
+      "misconception": null,
+      "why": "picks a farming goal the passage never mentions"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 29.2
+}

@@ -1,0 +1,143 @@
+{
+ "source": "train-0038-MAT-EUCLIDLINES.json",
+ "job": {
+  "job": "train-0038-MAT-EUCLIDLINES",
+  "topic_id": "MAT-EUCLIDLINES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a step-by-step worked example",
+  "seed": 38
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3050,
+  "promptTokenCount": 2
+ },
+ "passage": "In geometry, we use axioms as self-evident truths that do not require proof, unlike theorems which must be logically derived. Consider two lines intersected by a transversal. If the interior angles on the same side of the transversal sum to less than 180 degrees, the lines will eventually meet on that side. This is a fundamental property of non-parallel lines. Now, look at a triangle with sides of any length. The sum of the three interior angles of any triangle is always exactly 180 degrees, regardless of the triangle's size or whether it contains an obtuse angle. Furthermore, when two straight lines intersect, the vertically opposite angles formed are always equal to each other, regardless of whether the lines are perpendicular or tilted. Finally, remember that complementary angles are simply two angles whose measures add up to 90 degrees; they do not need to be adjacent to each other to satisfy this definition. By applying these clear geometric rules, we can solve complex problems without relying on visual assumptions or misconceptions about how lines and angles behave in a plane.",
+ "menu_ids": [
+  "MAT-EUCLIDLINES-K13-M1",
+  "MAT-EUCLIDLINES-K14-M3",
+  "MAT-EUCLIDLINES-K17-M4",
+  "MAT-EUCLIDLINES-K18-M5",
+  "MAT-EUCLIDLINES-K19-M6",
+  "MAT-EUCLIDLINES-K20-M7",
+  "MAT-EUCLIDLINES-K21-M9",
+  "MAT-EUCLIDLINES-K21-M10",
+  "MAT-EUCLIDLINES-K22-M11",
+  "MAT-EUCLIDLINES-K22-M12",
+  "MAT-EUCLIDLINES-K23-M13",
+  "MAT-EUCLIDLINES-K24-M14",
+  "MAT-EUCLIDLINES-K9-M16",
+  "MAT-EUCLIDLINES-K26-M17"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "If the interior angles on the same side of the transversal sum to less than 180 degrees, the lines will eventually meet on that side.",
+    "kind": "what_if",
+    "q": "A transversal cuts two lines. The interior angles on one side add to 170 degrees. What happens?",
+    "options": [
+     "They will meet on that same side",
+     "They will meet on the opposite side",
+     "They will never meet, staying parallel",
+     "They will meet only if they look tilted"
+    ],
+    "explain": "Interior angles adding to less than 180 degrees mean the lines meet on that side.",
+    "wrong": [
+     {
+      "misconception": "MAT-EUCLIDLINES-K19-M6",
+      "why": "thinks lines meet where the angles add to more than 180"
+     },
+     {
+      "misconception": null,
+      "why": "thinks any two lines with a transversal are parallel"
+     },
+     {
+      "misconception": "MAT-EUCLIDLINES-K26-M17",
+      "why": "trusts how the figure looks instead of the angles"
+     }
+    ]
+   },
+   {
+    "evidence": "The sum of the three interior angles of any triangle is always exactly 180 degrees, regardless of the triangle's size or whether it contains an obtuse angle.",
+    "kind": "what_if",
+    "q": "A triangle has one angle of 120 degrees. What is the sum of its three angles?",
+    "options": [
+     "Exactly 180 degrees, like every triangle",
+     "More than 180 degrees, because one angle is big",
+     "Less than 180 degrees, if its sides are short",
+     "Exactly 360 degrees, like a full turn"
+    ],
+    "explain": "Every triangle's angles add up to exactly 180 degrees, even with an obtuse angle.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks an obtuse angle pushes the total above 180"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the triangle's size changes the angle sum"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the triangle sum with a full turn"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, when two straight lines intersect, the vertically opposite angles formed are always equal to each other, regardless of whether the lines are perpendicular or tilted.",
+    "kind": "what_if",
+    "q": "Two tilted lines cross each other, making one angle of 50 degrees. What is the vertically opposite angle?",
+    "options": [
+     "50 degrees",
+     "130 degrees",
+     "90 degrees",
+     "40 degrees"
+    ],
+    "explain": "Vertically opposite angles are always equal, even when the lines are tilted, so it is 50 degrees.",
+    "wrong": [
+     {
+      "misconception": "MAT-EUCLIDLINES-K22-M11",
+      "why": "thinks vertically opposite angles add up to 180"
+     },
+     {
+      "misconception": "MAT-EUCLIDLINES-K22-M12",
+      "why": "thinks the rule works only for perpendicular lines"
+     },
+     {
+      "misconception": null,
+      "why": "subtracts from 90, mixing it up with complementary angles"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, remember that complementary angles are simply two angles whose measures add up to 90 degrees; they do not need to be adjacent to each other to satisfy this definition.",
+    "kind": "which_example",
+    "q": "Which pair of angles is complementary?",
+    "options": [
+     "Angles of 35 and 55 degrees in separate figures",
+     "Angles of 35 and 145 degrees side by side",
+     "Angles of 35 and 35 degrees facing each other",
+     "Angles of 35 and 65 degrees sharing an arm"
+    ],
+    "explain": "Complementary angles add up to 90 degrees; 35 + 55 = 90, and they need not touch.",
+    "wrong": [
+     {
+      "misconception": "MAT-EUCLIDLINES-K21-M9",
+      "why": "thinks complementary angles add up to 180"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up complementary with vertically opposite angles"
+     },
+     {
+      "misconception": "MAT-EUCLIDLINES-K21-M10",
+      "why": "thinks angles touching each other makes them complementary"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 31.0
+}

@@ -1,0 +1,140 @@
+{
+ "source": "train-0312-SOC-CIV-PANCHAYAT.json",
+ "job": {
+  "job": "train-0312-SOC-CIV-PANCHAYAT",
+  "topic_id": "SOC-CIV-PANCHAYAT",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a passage rich in numbers, dates or measurements",
+  "seed": 312
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 3909,
+  "promptTokenCount": 2
+ },
+ "passage": "In the village of Rampur, the local governance structure is organized into three distinct levels. The foundation is the Gram Sabha, which includes every adult resident of the village who is 18 years or older, ensuring that all citizens have a voice in local affairs. The Gram Sabha elects the Gram Panchayat, which consists of a Sarpanch and several Ward members who serve for a five-year term. Decisions regarding village development, such as building a school or fixing a road, are made collectively by the Gram Sabha, not by the Sarpanch alone. Above the village level, the Panchayat Samiti coordinates activities at the block level. Finally, the Zila Parishad oversees the entire district, managing funds and development projects, but it does not possess the authority to create national laws. In urban areas, the system differs slightly; residents vote to elect their own Ward Councillors to represent their specific neighborhoods in the Municipal Corporation. These councillors are directly chosen by the local voters rather than being appointed by government officials. This democratic structure ensures that power is distributed across different levels, preventing any single individual from holding absolute control over village or city administration.",
+ "menu_ids": [
+  "SOC-CIV-PANCHAYAT-K8-M1",
+  "SOC-CIV-PANCHAYAT-K9-M2",
+  "SOC-CIV-PANCHAYAT-K11-M3",
+  "SOC-CIV-PANCHAYAT-K7-M4",
+  "SOC-CIV-PANCHAYAT-K6-M6",
+  "SOC-CIV-PANCHAYAT-K7-M7",
+  "SOC-CIV-PANCHAYAT-K8-M8",
+  "SOC-CIV-PANCHAYAT-K9-M9",
+  "SOC-CIV-PANCHAYAT-K10-M10",
+  "SOC-CIV-PANCHAYAT-K11-M11",
+  "SOC-CIV-PANCHAYAT-K12-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Decisions regarding village development, such as building a school or fixing a road, are made collectively by the Gram Sabha, not by the Sarpanch alone.",
+    "kind": "which_explains",
+    "q": "Villagers of Rampur want a new road. Who decides whether it is built?",
+    "options": [
+     "All the adult villagers, deciding together",
+     "The Sarpanch, deciding all by himself",
+     "The Ward members, deciding among themselves",
+     "The collector, who chose the Sarpanch"
+    ],
+    "explain": "Development decisions are made collectively by the Gram Sabha, not by the Sarpanch alone.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-PANCHAYAT-K9-M2",
+      "why": "thinks the Sarpanch decides everything alone"
+     },
+     {
+      "misconception": "SOC-CIV-PANCHAYAT-K8-M1",
+      "why": "thinks only elected members form the Gram Sabha"
+     },
+     {
+      "misconception": "SOC-CIV-PANCHAYAT-K9-M9",
+      "why": "thinks the collector appoints the Sarpanch"
+     }
+    ]
+   },
+   {
+    "evidence": "The foundation is the Gram Sabha, which includes every adult resident of the village who is 18 years or older, ensuring that all citizens have a voice in local affairs.",
+    "kind": "what_if",
+    "q": "Meena is 19 and rents a house in Rampur. What is her place in the Gram Sabha?",
+    "options": [
+     "She is a member, as she is an adult",
+     "She is not, because she owns no land",
+     "She is not, because only Ward members join",
+     "She is not, because members must be over 21"
+    ],
+    "explain": "The Gram Sabha includes every adult resident aged 18 or older, so Meena is a member.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-PANCHAYAT-K8-M8",
+      "why": "thinks only landowners can join the Gram Sabha"
+     },
+     {
+      "misconception": "SOC-CIV-PANCHAYAT-K8-M1",
+      "why": "thinks only elected members form the Gram Sabha"
+     },
+     {
+      "misconception": null,
+      "why": "picks a wrong age from nearby numbers"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, the Zila Parishad oversees the entire district, managing funds and development projects, but it does not possess the authority to create national laws.",
+    "kind": "which_example",
+    "q": "Which example shows the Zila Parishad doing its proper work?",
+    "options": [
+     "Managing funds for a bridge across the district",
+     "Making a law that applies across India",
+     "Repairing one broken lane in a single village",
+     "Choosing the Sarpanch for every village"
+    ],
+    "explain": "The Zila Parishad oversees the whole district and its funds and projects, but cannot create national laws.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-PANCHAYAT-K11-M3",
+      "why": "thinks the Zila Parishad makes national laws"
+     },
+     {
+      "misconception": "SOC-CIV-PANCHAYAT-K11-M11",
+      "why": "thinks it handles one village's small problems"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up who chooses the Sarpanch"
+     }
+    ]
+   },
+   {
+    "evidence": "These councillors are directly chosen by the local voters rather than being appointed by government officials.",
+    "kind": "how",
+    "q": "How does a person become a Ward Councillor in a city?",
+    "options": [
+     "Voters of that neighbourhood choose them by election",
+     "Government officials appoint them to the post",
+     "The Mayor picks them from among the residents",
+     "Voters of the whole city elect them for all wards"
+    ],
+    "explain": "Ward Councillors are chosen directly by local voters, not appointed by government officials.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-PANCHAYAT-K7-M4",
+      "why": "thinks councillors are appointed by the government"
+     },
+     {
+      "misconception": null,
+      "why": "invents a selector not in the passage"
+     },
+     {
+      "misconception": "SOC-CIV-PANCHAYAT-K7-M7",
+      "why": "thinks a councillor covers the whole city"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 33.4
+}

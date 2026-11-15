@@ -1,0 +1,167 @@
+{
+ "source": "train-0343-SOC-GEO-RESOURCES.json",
+ "job": {
+  "job": "train-0343-SOC-GEO-RESOURCES",
+  "topic_id": "SOC-GEO-RESOURCES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a news-style report about a real-world situation",
+  "seed": 343
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 4413,
+  "promptTokenCount": 2
+ },
+ "passage": "In the arid regions of Rajasthan, local communities are witnessing a shift in land productivity. While many assume that land degradation is solely the result of sudden natural disasters, the reality is that human activities like overgrazing and excessive irrigation are the primary drivers of soil exhaustion. These activities strip the land of its nutrients, turning fertile fields into barren patches. Interestingly, some villagers mistakenly believe that only living things or moving objects qualify as resources, ignoring that rocks and minerals are vital non-living resources essential for construction and industry. Furthermore, there is a common debate regarding the status of human-made infrastructure like canals. Some argue that these are not 'real' resources because they are man-made, yet these structures are critical for managing water, which is a renewable resource. However, even renewable resources require careful management. A dangerous misconception persists that because water is renewable, it will never run out regardless of how much we consume. This belief leads to reckless water usage, ignoring the fact that replenishment rates are often slower than our current consumption levels. Sustainable development requires us to recognize that all resources, whether natural or human-made, must be utilized with foresight to ensure they remain available for future generations.",
+ "menu_ids": [
+  "SOC-GEO-RESOURCES-K8-M1",
+  "SOC-GEO-RESOURCES-K9-M2",
+  "SOC-GEO-RESOURCES-K7-M3",
+  "SOC-GEO-RESOURCES-K10-M4",
+  "SOC-GEO-RESOURCES-K4-M5",
+  "SOC-GEO-RESOURCES-K5-M6",
+  "SOC-GEO-RESOURCES-K6-M7",
+  "SOC-GEO-RESOURCES-K7-M8",
+  "SOC-GEO-RESOURCES-K8-M9",
+  "SOC-GEO-RESOURCES-K9-M10",
+  "SOC-GEO-RESOURCES-K11-M11",
+  "SOC-GEO-RESOURCES-K12-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "While many assume that land degradation is solely the result of sudden natural disasters, the reality is that human activities like overgrazing and excessive irrigation are the primary drivers of soil exhaustion.",
+    "kind": "why",
+    "q": "A Rajasthan village has had no floods, yet its fields turn barren. What is the likely cause?",
+    "options": [
+     "Overgrazing and heavy watering stripped the soil",
+     "Floods from earlier years damaged the soil",
+     "Digging out rocks and minerals stripped the soil",
+     "Dry weather alone drained the soil of nutrients"
+    ],
+    "explain": "Human activities like overgrazing and excessive irrigation are the main drivers of soil exhaustion, not only disasters.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-RESOURCES-K7-M3",
+      "why": "thinks land degradation comes only from natural disasters"
+     },
+     {
+      "misconception": null,
+      "why": "blames an activity the passage does not name as a cause"
+     },
+     {
+      "misconception": null,
+      "why": "blames the dry climate instead of human activity"
+     }
+    ]
+   },
+   {
+    "evidence": "Interestingly, some villagers mistakenly believe that only living things or moving objects qualify as resources, ignoring that rocks and minerals are vital non-living resources essential for construction and industry.",
+    "kind": "why",
+    "q": "A villager says a stone is no resource because it neither moves nor lives. Why is that wrong?",
+    "options": [
+     "Non-living materials are resources if people can use them",
+     "Stones become resources only once they start moving",
+     "Only plants and animals can serve industry and building",
+     "Stones count only after they are shaped into products"
+    ],
+    "explain": "Rocks and minerals are non-living, yet they are vital resources for construction and industry.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-RESOURCES-K8-M1",
+      "why": "thinks only things that move or live are resources"
+     },
+     {
+      "misconception": null,
+      "why": "thinks industry can use only living things"
+     },
+     {
+      "misconception": null,
+      "why": "thinks a material is a resource only after processing"
+     }
+    ]
+   },
+   {
+    "evidence": "Some argue that these are not 'real' resources because they are man-made, yet these structures are critical for managing water, which is a renewable resource.",
+    "kind": "which_explains",
+    "q": "Why is a canal called a resource although people built it?",
+    "options": [
+     "It is useful for managing the water supply",
+     "It was first formed by nature, then changed",
+     "Man-made things are resources only in a lesser sense",
+     "It carries renewable water, so it is renewable too"
+    ],
+    "explain": "Canals are critical for managing water, so they count as real resources even though they are man-made.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks only natural things can be resources"
+     },
+     {
+      "misconception": "SOC-GEO-RESOURCES-K10-M4",
+      "why": "thinks human-made resources are not really resources"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the canal with the water it carries"
+     }
+    ]
+   },
+   {
+    "evidence": "This belief leads to reckless water usage, ignoring the fact that replenishment rates are often slower than our current consumption levels.",
+    "kind": "why",
+    "q": "Why can a renewable resource like water still run short?",
+    "options": [
+     "People may use it faster than it refills",
+     "Used water turns non-renewable once it is polluted",
+     "Water takes very long to form, so it ends",
+     "Canals made by people stop it from refilling"
+    ],
+    "explain": "Replenishment is often slower than our consumption, so even renewable water can run out.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-RESOURCES-K9-M10",
+      "why": "thinks used or polluted water cannot come back"
+     },
+     {
+      "misconception": "SOC-GEO-RESOURCES-K5-M6",
+      "why": "thinks slow formation makes a resource non-renewable"
+     },
+     {
+      "misconception": null,
+      "why": "blames human-made structures, not the rate of use"
+     }
+    ]
+   },
+   {
+    "evidence": "Sustainable development requires us to recognize that all resources, whether natural or human-made, must be utilized with foresight to ensure they remain available for future generations.",
+    "kind": "recall",
+    "q": "What does sustainable development ask us to do with resources?",
+    "options": [
+     "Use them wisely so later people can have them",
+     "Leave them untouched so nothing is ever used",
+     "Use only natural ones and avoid man-made ones",
+     "Use renewable ones freely since they never end"
+    ],
+    "explain": "All resources must be used with foresight so they stay available for future generations.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-RESOURCES-K12-M12",
+      "why": "thinks conservation means not using a resource at all"
+     },
+     {
+      "misconception": "SOC-GEO-RESOURCES-K10-M4",
+      "why": "thinks human-made resources do not really count"
+     },
+     {
+      "misconception": "SOC-GEO-RESOURCES-K9-M2",
+      "why": "thinks renewable resources never run out"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 36.8
+}

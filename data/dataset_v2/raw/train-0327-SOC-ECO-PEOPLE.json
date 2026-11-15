@@ -1,0 +1,138 @@
+{
+ "source": "train-0327-SOC-ECO-PEOPLE.json",
+ "job": {
+  "job": "train-0327-SOC-ECO-PEOPLE",
+  "topic_id": "SOC-ECO-PEOPLE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a news-style report about a real-world situation",
+  "seed": 327
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 2980,
+  "promptTokenCount": 2
+ },
+ "passage": "In the village of Rampur, the local government recently launched a skill-development initiative to boost the local economy. Farmers like Ravi have started using advanced irrigation, which is part of the primary sector, but they have also diversified into poultry and fishing to increase their income. Meanwhile, Ravi’s wife, Sunita, spends her mornings processing milk and weaving baskets for sale in the local market. This work is considered a market activity because it generates income for the household. Economists visiting the village noted that families investing in their children’s higher education are actually building human capital, which acts as a long-term asset rather than a simple financial burden. During the harvest season, the fields are crowded with family members working together, even though the same output could be achieved with fewer people. This situation, where the extra hands do not contribute to additional production, is a classic example of disguised unemployment. The government is now encouraging these extra workers to move into secondary sector manufacturing jobs to ensure their labor is productive and fully utilized.",
+ "menu_ids": [
+  "SOC-ECO-PEOPLE-K4-M1",
+  "SOC-ECO-PEOPLE-K8-M2",
+  "SOC-ECO-PEOPLE-K12-M3",
+  "SOC-ECO-PEOPLE-K13-M4",
+  "SOC-ECO-PEOPLE-K6-M8",
+  "SOC-ECO-PEOPLE-K13-M9",
+  "SOC-ECO-PEOPLE-K14-M10",
+  "SOC-ECO-PEOPLE-K9-M11",
+  "SOC-ECO-PEOPLE-K8-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "This work is considered a market activity because it generates income for the household.",
+    "kind": "why",
+    "q": "Why is Sunita's work with milk and baskets called a market activity?",
+    "options": [
+     "It brings money into the household",
+     "It is done only in a market place",
+     "The village government pays her for it",
+     "Her husband farms the same land"
+    ],
+    "explain": "A market activity is work that earns income, and Sunita's sales bring income to her household.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-PEOPLE-K13-M9",
+      "why": "thinks market activity must happen in a market place"
+     },
+     {
+      "misconception": null,
+      "why": "links the skill initiative to payment for her work"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby detail about Ravi that is not the reason"
+     }
+    ]
+   },
+   {
+    "evidence": "Economists visiting the village noted that families investing in their children’s higher education are actually building human capital, which acts as a long-term asset rather than a simple financial burden.",
+    "kind": "why",
+    "q": "Why do economists see spending on children's higher education as an investment?",
+    "options": [
+     "It builds skills that help for many years",
+     "It is money spent once and then gone",
+     "It earns interest like a bank deposit",
+     "It makes the family's farm grow bigger"
+    ],
+    "explain": "Education builds human capital, a long-term asset, so the spending is not just a financial burden.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-PEOPLE-K4-M1",
+      "why": "thinks education spending is only an expense"
+     },
+     {
+      "misconception": null,
+      "why": "confuses human capital with money in a bank"
+     },
+     {
+      "misconception": null,
+      "why": "confuses human capital with land and farm size"
+     }
+    ]
+   },
+   {
+    "evidence": "During the harvest season, the fields are crowded with family members working together, even though the same output could be achieved with fewer people.",
+    "kind": "what_if",
+    "q": "At harvest, some family members leave the field but output stays the same. What does this show?",
+    "options": [
+     "Their extra work added nothing to production",
+     "The whole family was earning nothing",
+     "They were hiding to avoid any work",
+     "Drought had cut the harvest that season"
+    ],
+    "explain": "The same output with fewer people means the extra hands added nothing, which is disguised unemployment.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-PEOPLE-K8-M12",
+      "why": "thinks everyone in the family earns nothing"
+     },
+     {
+      "misconception": "SOC-ECO-PEOPLE-K8-M2",
+      "why": "thinks disguised unemployment means hiding from work"
+     },
+     {
+      "misconception": "SOC-ECO-PEOPLE-K9-M11",
+      "why": "thinks unemployment in farming comes only from drought"
+     }
+    ]
+   },
+   {
+    "evidence": "The government is now encouraging these extra workers to move into secondary sector manufacturing jobs to ensure their labor is productive and fully utilized.",
+    "kind": "why",
+    "q": "Why does the government want the extra field workers to take manufacturing jobs?",
+    "options": [
+     "Their labour would then add to output",
+     "Only factory workers produce anything useful",
+     "Farming is not counted as real work",
+     "Fields must stay empty after the harvest"
+    ],
+    "explain": "Moving extra workers to manufacturing makes their labour productive, so it adds to output instead of going unused.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-PEOPLE-K6-M8",
+      "why": "thinks only goods-making work counts as production"
+     },
+     {
+      "misconception": "SOC-ECO-PEOPLE-K12-M3",
+      "why": "thinks the primary sector is not real economic work"
+     },
+     {
+      "misconception": null,
+      "why": "invents a reason about empty fields after harvest"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 27.8
+}

@@ -1,0 +1,140 @@
+{
+ "source": "train-0117-SCI-PHY-WORKENERGY.json",
+ "job": {
+  "job": "train-0117-SCI-PHY-WORKENERGY",
+  "topic_id": "SCI-PHY-WORKENERGY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a conversation between a teacher and two students",
+  "seed": 117
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3158,
+  "promptTokenCount": 2
+ },
+ "passage": "In the science lab, Mr. Sharma asked Rohan and Meera to discuss energy. Rohan pointed to a battery, saying, 'The battery creates energy to power this toy car.' Mr. Sharma corrected him, explaining that energy is never created or destroyed; it is only transformed from one form to another. Meera then asked about a coolie walking on a flat platform with a heavy suitcase. She thought he was doing work because he was tired. Mr. Sharma clarified that scientific work requires a displacement in the direction of the force. Since the coolie's force is upward and the displacement is horizontal, the work done on the suitcase is zero. Rohan then wondered if a car’s kinetic energy doubles when its speed doubles. Mr. Sharma explained that kinetic energy is proportional to the square of the velocity, so doubling the speed actually quadruples the energy. Finally, they discussed a ball rolling to a stop. Meera asked if the energy vanished. Mr. Sharma explained that the energy is not destroyed; it is converted into heat due to friction with the floor. Energy is a conserved quantity that simply changes its form, whether in a battery, a moving car, or a rolling ball.",
+ "menu_ids": [
+  "SCI-PHY-WORKENERGY-K11-M1",
+  "SCI-PHY-WORKENERGY-K12-M2",
+  "SCI-PHY-WORKENERGY-K14-M3",
+  "SCI-PHY-WORKENERGY-K15-M4",
+  "SCI-PHY-WORKENERGY-K16-M5",
+  "SCI-PHY-WORKENERGY-K17-M6",
+  "SCI-PHY-WORKENERGY-K10-M7",
+  "SCI-PHY-WORKENERGY-K6-M8",
+  "SCI-PHY-WORKENERGY-K15-M9",
+  "SCI-PHY-WORKENERGY-K13-M10",
+  "SCI-PHY-WORKENERGY-K8-M11"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Mr. Sharma corrected him, explaining that energy is never created or destroyed; it is only transformed from one form to another.",
+    "kind": "which_explains",
+    "q": "Rohan says the battery creates energy for the toy car. What does the battery really do?",
+    "options": [
+     "It changes stored energy into another form",
+     "It makes brand new energy from nothing",
+     "It stores energy made by the toy car",
+     "It uses energy until the energy is destroyed"
+    ],
+    "explain": "Energy is never created or destroyed; the battery only changes energy from one form to another.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-WORKENERGY-K8-M11",
+      "why": "thinks batteries create energy"
+     },
+     {
+      "misconception": null,
+      "why": "reverses cause and effect between battery and car"
+     },
+     {
+      "misconception": "SCI-PHY-WORKENERGY-K16-M5",
+      "why": "thinks energy gets destroyed when used"
+     }
+    ]
+   },
+   {
+    "evidence": "Since the coolie's force is upward and the displacement is horizontal, the work done on the suitcase is zero.",
+    "kind": "how",
+    "q": "How much work does the coolie do on the suitcase while walking on the flat platform?",
+    "options": [
+     "Zero, as his force is up, motion sideways",
+     "Large, as he becomes tired carrying it",
+     "Positive, as the suitcase moves along with him",
+     "Negative, as his force acts against the motion"
+    ],
+    "explain": "Work needs displacement along the force; his force is upward but movement is horizontal, so work is zero.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-WORKENERGY-K11-M1",
+      "why": "thinks feeling tired means work is done"
+     },
+     {
+      "misconception": "SCI-PHY-WORKENERGY-K12-M2",
+      "why": "thinks carrying a load sideways is work"
+     },
+     {
+      "misconception": null,
+      "why": "confuses a right-angle force with an opposing force"
+     }
+    ]
+   },
+   {
+    "evidence": "Mr. Sharma explained that kinetic energy is proportional to the square of the velocity, so doubling the speed actually quadruples the energy.",
+    "kind": "what_if",
+    "q": "A car speeds up from 20 km/h to 40 km/h. What happens to its kinetic energy?",
+    "options": [
+     "It becomes four times as large",
+     "It becomes two times as large",
+     "It becomes eight times as large",
+     "It becomes half as large"
+    ],
+    "explain": "Kinetic energy depends on the square of speed, so doubling speed makes it four times larger.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-WORKENERGY-K14-M3",
+      "why": "thinks kinetic energy doubles with speed"
+     },
+     {
+      "misconception": null,
+      "why": "cubes the speed instead of squaring it"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the relation between speed and energy"
+     }
+    ]
+   },
+   {
+    "evidence": "Mr. Sharma explained that the energy is not destroyed; it is converted into heat due to friction with the floor.",
+    "kind": "what_if",
+    "q": "A rolling ball slowly comes to a stop. Where does its moving energy go?",
+    "options": [
+     "It turns into heat because of friction",
+     "It is destroyed when the ball is still",
+     "It stays stored inside the still ball",
+     "It vanishes, as a ball is not alive"
+    ],
+    "explain": "The energy is not destroyed; friction with the floor converts it into heat.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-WORKENERGY-K16-M5",
+      "why": "thinks energy is destroyed when motion stops"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the energy stays hidden in the ball"
+     },
+     {
+      "misconception": "SCI-PHY-WORKENERGY-K6-M8",
+      "why": "thinks only living things or machines keep energy"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 35.9
+}

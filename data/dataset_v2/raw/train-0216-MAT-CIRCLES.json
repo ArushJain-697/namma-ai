@@ -1,0 +1,165 @@
+{
+ "source": "train-0216-MAT-CIRCLES.json",
+ "job": {
+  "job": "train-0216-MAT-CIRCLES",
+  "topic_id": "MAT-CIRCLES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a rule explained with two contrasting examples",
+  "seed": 216
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3305,
+  "promptTokenCount": 2
+ },
+ "passage": "In geometry, a circle is defined by its center and radius. A chord is a line segment with both endpoints on the circle. The diameter is the longest chord, passing through the center. If a line is drawn from the center perpendicular to a chord, it bisects that chord. For example, if a line from the center meets a 10 cm chord at a right angle, it splits it into two 5 cm segments. Conversely, a line from the center that merely touches a chord without being perpendicular does not necessarily bisect it. Regarding tangents, a tangent is a line that touches the circle at exactly one point. The radius at the point of contact is always perpendicular to the tangent. For instance, if a tangent touches at point P, the radius OP is perpendicular to the tangent. However, a line that crosses the circle at two points is a secant, not a tangent, and it is not perpendicular to the radius. Furthermore, from any single point outside the circle, exactly two tangents can be drawn, and these two tangents are always equal in length. This property holds regardless of the distance from the center, provided the point is external. Finally, for cyclic quadrilaterals, the sum of opposite angles is always 180 degrees, meaning they are supplementary, not necessarily equal.",
+ "menu_ids": [
+  "MAT-CIRCLES-K11-M1",
+  "MAT-CIRCLES-K12-M2",
+  "MAT-CIRCLES-K13-M3",
+  "MAT-CIRCLES-K16-M4",
+  "MAT-CIRCLES-K18-M5",
+  "MAT-CIRCLES-K17-M7",
+  "MAT-CIRCLES-K23-M9",
+  "MAT-CIRCLES-K25-M10",
+  "MAT-CIRCLES-K26-M11",
+  "MAT-CIRCLES-K20-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Conversely, a line from the center that merely touches a chord without being perpendicular does not necessarily bisect it.",
+    "kind": "what_if",
+    "q": "A line from the centre meets a chord at 60 degrees. What can we say about the two parts?",
+    "options": [
+     "They need not be equal in length",
+     "They are always equal in length",
+     "They are equal if the chord is long",
+     "They are equal if it meets near the middle"
+    ],
+    "explain": "A line from the centre bisects a chord only when perpendicular; at 60 degrees it may not.",
+    "wrong": [
+     {
+      "misconception": "MAT-CIRCLES-K13-M3",
+      "why": "thinks any line from the centre bisects a chord"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the chord's size changes the rule"
+     },
+     {
+      "misconception": "MAT-CIRCLES-K11-M1",
+      "why": "thinks being near the middle is enough"
+     }
+    ]
+   },
+   {
+    "evidence": "The diameter is the longest chord, passing through the center.",
+    "kind": "what_if",
+    "q": "Meena draws many chords in one circle. Which of them will be the longest?",
+    "options": [
+     "The one going through the centre",
+     "Any one passing close to the centre",
+     "The one drawn nearest the edge",
+     "Any one, since all chords are equal"
+    ],
+    "explain": "The diameter passes through the centre, and it is the longest chord of a circle.",
+    "wrong": [
+     {
+      "misconception": "MAT-CIRCLES-K11-M1",
+      "why": "thinks any chord near the middle is longest"
+     },
+     {
+      "misconception": null,
+      "why": "thinks chords near the edge stretch further"
+     },
+     {
+      "misconception": null,
+      "why": "confuses chords with radii, which are all equal"
+     }
+    ]
+   },
+   {
+    "evidence": "However, a line that crosses the circle at two points is a secant, not a tangent, and it is not perpendicular to the radius.",
+    "kind": "difference",
+    "q": "A line cuts a circle at points A and B. What is it, and how does it meet radius OA?",
+    "options": [
+     "A secant, not perpendicular to OA",
+     "A tangent, perpendicular to OA",
+     "A secant, perpendicular to OA",
+     "A tangent, not perpendicular to OA"
+    ],
+    "explain": "A line crossing at two points is a secant, and it is not perpendicular to the radius.",
+    "wrong": [
+     {
+      "misconception": "MAT-CIRCLES-K23-M9",
+      "why": "thinks any line touching or crossing is a perpendicular tangent"
+     },
+     {
+      "misconception": null,
+      "why": "names it correctly but applies the tangent rule to it"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the names tangent and secant"
+     }
+    ]
+   },
+   {
+    "evidence": "This property holds regardless of the distance from the center, provided the point is external.",
+    "kind": "what_if",
+    "q": "Point P is very far outside a circle. Tangents PA and PB are drawn. How do their lengths compare?",
+    "options": [
+     "They are always equal in length",
+     "They are equal only when P is close",
+     "They are unequal because P is far",
+     "They are equal only in large circles"
+    ],
+    "explain": "Two tangents from any outside point are equal, no matter how far the point is.",
+    "wrong": [
+     {
+      "misconception": "MAT-CIRCLES-K25-M10",
+      "why": "thinks equality depends on the point's distance"
+     },
+     {
+      "misconception": null,
+      "why": "thinks distance makes one tangent longer"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the circle's size changes the rule"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, for cyclic quadrilaterals, the sum of opposite angles is always 180 degrees, meaning they are supplementary, not necessarily equal.",
+    "kind": "what_if",
+    "q": "In cyclic quadrilateral ABCD, angle A is 75 degrees. What is angle C?",
+    "options": [
+     "105 degrees",
+     "75 degrees",
+     "90 degrees",
+     "285 degrees"
+    ],
+    "explain": "Opposite angles of a cyclic quadrilateral add to 180 degrees, so angle C is 105 degrees.",
+    "wrong": [
+     {
+      "misconception": "MAT-CIRCLES-K18-M5",
+      "why": "thinks opposite angles are equal"
+     },
+     {
+      "misconception": "MAT-CIRCLES-K16-M4",
+      "why": "mixes it up with the angle in a semicircle"
+     },
+     {
+      "misconception": null,
+      "why": "subtracts from 360 degrees instead of 180"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 32.8
+}

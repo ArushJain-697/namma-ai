@@ -1,0 +1,140 @@
+{
+ "source": "train-0075-SCI-BIO-HOWREPRO.json",
+ "job": {
+  "job": "train-0075-SCI-BIO-HOWREPRO",
+  "topic_id": "SCI-BIO-HOWREPRO",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a clear textbook explanation",
+  "seed": 75
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4210,
+  "promptTokenCount": 2
+ },
+ "passage": "Reproduction is the fundamental process by which living organisms create new individuals to ensure the survival of their species. During this process, DNA copying occurs within cells. This copying mechanism is not perfectly accurate; small variations inevitably arise, which are essential for evolution and adaptation to changing environments. In asexual reproduction, organisms like bacteria or amoeba undergo binary fission, where the parent cell divides completely into two new daughter cells, leaving no parent behind. Some organisms, such as Planaria, exhibit regeneration, where a lost body part grows back, but this is distinct from reproduction. True reproduction requires the creation of a new individual from a parent. In flowering plants, sexual reproduction involves complex steps. Pollination is merely the transfer of pollen grains from the stamen to the stigma. Fertilization, however, is a separate, subsequent event where the male gamete from the pollen tube fuses with the female egg inside the ovary to form a zygote. Unlike sexual reproduction, vegetative propagation produces new plants that are genetically identical clones of the parent, as they arise from vegetative parts like stems or roots without genetic mixing. Understanding these distinctions helps us appreciate how life persists across generations through diverse biological strategies.",
+ "menu_ids": [
+  "SCI-BIO-HOWREPRO-K3-M1",
+  "SCI-BIO-HOWREPRO-K4-M2",
+  "SCI-BIO-HOWREPRO-K7-M3",
+  "SCI-BIO-HOWREPRO-K11-M4",
+  "SCI-BIO-HOWREPRO-K10-M5",
+  "SCI-BIO-HOWREPRO-K13-M6",
+  "SCI-BIO-HOWREPRO-K19-M7",
+  "SCI-BIO-HOWREPRO-K20-M8",
+  "SCI-BIO-HOWREPRO-K17-M10",
+  "SCI-BIO-HOWREPRO-K14-M11",
+  "SCI-BIO-HOWREPRO-K4-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "In asexual reproduction, organisms like bacteria or amoeba undergo binary fission, where the parent cell divides completely into two new daughter cells, leaving no parent behind.",
+    "kind": "what_if",
+    "q": "An amoeba undergoes binary fission. How many amoebae are there just after it?",
+    "options": [
+     "Two, as the parent becomes both daughters",
+     "Three, as the parent stays beside both",
+     "One, as it only regrows a lost part",
+     "Many, as it breaks into small fragments"
+    ],
+    "explain": "In binary fission the parent divides completely into two daughter cells, so no parent is left.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-HOWREPRO-K7-M3",
+      "why": "thinks the parent still exists after fission"
+     },
+     {
+      "misconception": "SCI-BIO-HOWREPRO-K11-M4",
+      "why": "confuses regeneration with reproduction"
+     },
+     {
+      "misconception": "SCI-BIO-HOWREPRO-K10-M5",
+      "why": "thinks fission and fragmentation are the same"
+     }
+    ]
+   },
+   {
+    "evidence": "This copying mechanism is not perfectly accurate; small variations inevitably arise, which are essential for evolution and adaptation to changing environments.",
+    "kind": "which_explains",
+    "q": "Two bacteria come from the same parent, yet they are slightly different. Which explains this?",
+    "options": [
+     "Because copying their DNA has small mistakes",
+     "Because they want to suit their surroundings",
+     "Because their DNA mixed with another parent's",
+     "Because only one daughter received the DNA"
+    ],
+    "explain": "DNA copying is not perfectly accurate, so small variations always arise in the new cells.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-HOWREPRO-K4-M12",
+      "why": "thinks organisms vary because they want to adapt"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up asexual fission with sexual reproduction"
+     },
+     {
+      "misconception": null,
+      "why": "misreads how DNA is shared in division"
+     }
+    ]
+   },
+   {
+    "evidence": "Fertilization, however, is a separate, subsequent event where the male gamete from the pollen tube fuses with the female egg inside the ovary to form a zygote.",
+    "kind": "how",
+    "q": "Pollen has just landed on a stigma. What must still happen for a zygote to form?",
+    "options": [
+     "A male gamete must join the egg",
+     "The pollen grain must travel down to the egg",
+     "The petals must first attract an insect",
+     "The stigma must make the zygote by itself"
+    ],
+    "explain": "Pollination only brings pollen to the stigma; a zygote forms when the male gamete fuses with the egg.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-HOWREPRO-K20-M8",
+      "why": "thinks the pollen grain itself reaches the egg"
+     },
+     {
+      "misconception": "SCI-BIO-HOWREPRO-K17-M10",
+      "why": "thinks petals do the reproducing"
+     },
+     {
+      "misconception": "SCI-BIO-HOWREPRO-K19-M7",
+      "why": "thinks pollination and fertilization are the same"
+     }
+    ]
+   },
+   {
+    "evidence": "Unlike sexual reproduction, vegetative propagation produces new plants that are genetically identical clones of the parent, as they arise from vegetative parts like stems or roots without genetic mixing.",
+    "kind": "what_if",
+    "q": "A farmer grows new plants from stem pieces of one plant. How will they compare to it?",
+    "options": [
+     "They will carry the same genes as it",
+     "They will carry mixed genes, like seeds do",
+     "They will carry new genes to suit the soil",
+     "They will carry only half of its genes"
+    ],
+    "explain": "Plants from stems or roots form without genetic mixing, so they are identical clones of the parent.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-HOWREPRO-K13-M6",
+      "why": "thinks vegetative plants differ genetically from the parent"
+     },
+     {
+      "misconception": "SCI-BIO-HOWREPRO-K4-M12",
+      "why": "thinks plants change genes to adapt on purpose"
+     },
+     {
+      "misconception": null,
+      "why": "confuses a whole plant part with a gamete"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 43.8
+}

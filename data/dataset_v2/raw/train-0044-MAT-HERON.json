@@ -1,0 +1,169 @@
+{
+ "source": "train-0044-MAT-HERON.json",
+ "job": {
+  "job": "train-0044-MAT-HERON",
+  "topic_id": "MAT-HERON",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a market or shop situation that uses the idea",
+  "seed": 44
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4094,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan is helping his father manage a triangular plot of land near the local market to set up a vegetable stall. The plot has sides measuring 12 meters, 16 meters, and 20 meters. To calculate the area for planning the layout, Rohan first converts all measurements into meters, ensuring he does not mix units like centimeters with meters. He knows that the height of a triangle is not necessarily one of its sides, so he avoids assuming the slanting side is the altitude. Instead, he calculates the semi-perimeter by adding the three sides and dividing by two, which gives him 24 meters. He then uses Heron’s formula, taking the square root of the product of the semi-perimeter and the differences between the semi-perimeter and each side. Rohan realizes that a quadrilateral plot nearby with sides of 5, 6, 7, and 8 meters cannot be solved using Heron’s formula directly because the formula is specifically for triangles. He decides to split that quadrilateral into two triangles by drawing a diagonal. Finally, he remembers that the area of a triangle is always half the product of the base and height, but since he lacks the height, Heron’s formula is the perfect tool to find the area without needing to measure the altitude first.",
+ "menu_ids": [
+  "MAT-HERON-K11-M1",
+  "MAT-HERON-K12-M2",
+  "MAT-HERON-K12-M3",
+  "MAT-HERON-K14-M5",
+  "MAT-HERON-K15-M6",
+  "MAT-HERON-K16-M7",
+  "MAT-HERON-K17-M8",
+  "MAT-HERON-K19-M9",
+  "MAT-HERON-K18-M11",
+  "MAT-HERON-K20-M12",
+  "MAT-HERON-K21-M15",
+  "MAT-HERON-K22-M16",
+  "MAT-HERON-K23-M17",
+  "MAT-HERON-K25-M19"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "To calculate the area for planning the layout, Rohan first converts all measurements into meters, ensuring he does not mix units like centimeters with meters.",
+    "kind": "what_if",
+    "q": "One side of a plot is in centimetres, two are in metres. What should Rohan do before using Heron's formula?",
+    "options": [
+     "Write every side in metres first",
+     "Write every side just as it is given",
+     "Write only the longest side in metres",
+     "Write every side in metres after finding area"
+    ],
+    "explain": "Rohan converts all sides to metres before calculating, so units are never mixed in the formula.",
+    "wrong": [
+     {
+      "misconception": "MAT-HERON-K22-M16",
+      "why": "thinks m and cm can go into the formula as they are"
+     },
+     {
+      "misconception": null,
+      "why": "thinks only the biggest number needs changing"
+     },
+     {
+      "misconception": null,
+      "why": "thinks units can be fixed at the end"
+     }
+    ]
+   },
+   {
+    "evidence": "He knows that the height of a triangle is not necessarily one of its sides, so he avoids assuming the slanting side is the altitude.",
+    "kind": "why",
+    "q": "Meena takes a slanting side of a triangle as its height. Why is this a mistake?",
+    "options": [
+     "Height may not lie along any side",
+     "Height should be the base side instead",
+     "Height should be the longest side instead",
+     "Height is never needed for any triangle"
+    ],
+    "explain": "A triangle's height is not necessarily one of its sides, so a slanting side cannot be assumed as altitude.",
+    "wrong": [
+     {
+      "misconception": "MAT-HERON-K12-M2",
+      "why": "thinks the height is always one of the sides"
+     },
+     {
+      "misconception": "MAT-HERON-K12-M3",
+      "why": "thinks height can be measured along some slanting side"
+     },
+     {
+      "misconception": null,
+      "why": "misreads Heron's formula as meaning height never matters"
+     }
+    ]
+   },
+   {
+    "evidence": "Instead, he calculates the semi-perimeter by adding the three sides and dividing by two, which gives him 24 meters.",
+    "kind": "which_explains",
+    "q": "For the 12, 16 and 20 metre plot, what does the value 24 m stand for?",
+    "options": [
+     "Half of the plot's total boundary length",
+     "The plot's full total boundary length",
+     "Twice the plot's shortest side length",
+     "The plot's area in square metres"
+    ],
+    "explain": "24 m is the semi-perimeter: the three sides added (48 m) and divided by two.",
+    "wrong": [
+     {
+      "misconception": "MAT-HERON-K17-M8",
+      "why": "thinks s means the whole perimeter"
+     },
+     {
+      "misconception": null,
+      "why": "spots that 2 × 12 also gives 24"
+     },
+     {
+      "misconception": null,
+      "why": "confuses the semi-perimeter with the area"
+     }
+    ]
+   },
+   {
+    "evidence": "He then uses Heron’s formula, taking the square root of the product of the semi-perimeter and the differences between the semi-perimeter and each side.",
+    "kind": "how",
+    "q": "Rohan finds that s(s−a)(s−b)(s−c) equals 9216 for his plot. What is the plot's area?",
+    "options": [
+     "96 square metres",
+     "9216 square metres",
+     "4608 square metres",
+     "192 square metres"
+    ],
+    "explain": "Heron's formula takes the square root of the product, and the square root of 9216 is 96.",
+    "wrong": [
+     {
+      "misconception": "MAT-HERON-K20-M12",
+      "why": "forgets to take the square root"
+     },
+     {
+      "misconception": null,
+      "why": "halves the product instead of taking its root"
+     },
+     {
+      "misconception": "MAT-HERON-K11-M1",
+      "why": "multiplies 12 × 16 with no half"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan realizes that a quadrilateral plot nearby with sides of 5, 6, 7, and 8 meters cannot be solved using Heron’s formula directly because the formula is specifically for triangles.",
+    "kind": "why",
+    "q": "Why can't Rohan put the 5, 6, 7 and 8 metre plot straight into Heron's formula?",
+    "options": [
+     "The formula is meant for three-sided shapes",
+     "The plot's sides are too short for it",
+     "The plot's sides are not all equal",
+     "The formula is meant for right-angled shapes"
+    ],
+    "explain": "Heron's formula works only for triangles, so a four-sided plot must first be split into triangles.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks small lengths cannot be used"
+     },
+     {
+      "misconception": "MAT-HERON-K14-M5",
+      "why": "mixes it up with the equal-sides formula for equilateral triangles"
+     },
+     {
+      "misconception": "MAT-HERON-K16-M7",
+      "why": "wrongly links Heron's formula to right-angled triangles"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 43.3
+}

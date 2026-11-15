@@ -1,0 +1,143 @@
+{
+ "source": "train-0021-GEN-RENEWABLES.json",
+ "job": {
+  "job": "train-0021-GEN-RENEWABLES",
+  "topic_id": "GEN-RENEWABLES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a step-by-step explanation of a process",
+  "seed": 21
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3094,
+  "promptTokenCount": 2
+ },
+ "passage": "India is rapidly expanding its renewable energy capacity to meet its ambitious 500 GW non-fossil fuel target by 2030. This transition involves a mix of solar, wind, and other sources, rather than relying on a single technology. Solar panels generate electricity by converting sunlight directly into electrical energy using the photovoltaic effect, not by heating water to create steam. While solar panels are most efficient in bright sunlight, they continue to produce electricity even on cool or cloudy days, provided there is daylight. However, because solar energy is intermittent, it cannot generate power at night. To manage this, excess energy generated during the day can be fed into the national grid, which acts as a balancing system. Furthermore, while electric vehicles (EVs) are a cleaner alternative to petrol cars, their total environmental impact depends significantly on how the electricity used to charge them is produced. If the grid relies on coal, the EV's footprint remains linked to that source. Finally, renewable energy is not entirely impact-free; large-scale solar parks require careful land management to avoid damaging local ecosystems. By diversifying our energy sources and improving storage, India is building a resilient and sustainable power infrastructure for the future.",
+ "menu_ids": [
+  "GEN-RENEWABLES-K3-M1",
+  "GEN-RENEWABLES-K3-M2",
+  "GEN-RENEWABLES-K4-M3",
+  "GEN-RENEWABLES-K5-M4",
+  "GEN-RENEWABLES-K5-M5",
+  "GEN-RENEWABLES-K8-M7",
+  "GEN-RENEWABLES-K10-M9",
+  "GEN-RENEWABLES-K11-M10",
+  "GEN-RENEWABLES-K14-M12",
+  "GEN-RENEWABLES-K15-M13",
+  "GEN-RENEWABLES-K20-M14",
+  "GEN-RENEWABLES-K17-M15",
+  "GEN-RENEWABLES-K19-M16",
+  "GEN-RENEWABLES-K23-M17"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "While solar panels are most efficient in bright sunlight, they continue to produce electricity even on cool or cloudy days, provided there is daylight.",
+    "kind": "what_if",
+    "q": "On a cool, cloudy winter afternoon, what will a rooftop solar panel do?",
+    "options": [
+     "Make some electricity, though less than in sunshine",
+     "Make no electricity until the clouds clear away",
+     "Make no electricity because the air is cold",
+     "Make power only by heating water for steam"
+    ],
+    "explain": "Panels work best in bright sun but still make electricity on cool or cloudy days with daylight.",
+    "wrong": [
+     {
+      "misconception": "GEN-RENEWABLES-K23-M17",
+      "why": "thinks clouds stop solar panels completely"
+     },
+     {
+      "misconception": "GEN-RENEWABLES-K3-M2",
+      "why": "thinks panels need hot weather"
+     },
+     {
+      "misconception": "GEN-RENEWABLES-K3-M1",
+      "why": "thinks panels trap heat to make steam"
+     }
+    ]
+   },
+   {
+    "evidence": "To manage this, excess energy generated during the day can be fed into the national grid, which acts as a balancing system.",
+    "kind": "what_if",
+    "q": "A rooftop panel makes more electricity at noon than the house uses. What can happen to the extra?",
+    "options": [
+     "It is fed into the national grid",
+     "It is kept for that house only, never shared",
+     "It powers the same panel through the night",
+     "It is stored as heat to boil water later"
+    ],
+    "explain": "Extra daytime solar power can be fed into the national grid, which balances supply.",
+    "wrong": [
+     {
+      "misconception": "GEN-RENEWABLES-K5-M4",
+      "why": "thinks rooftop power can never go to the grid"
+     },
+     {
+      "misconception": "GEN-RENEWABLES-K5-M5",
+      "why": "thinks panels can give power at night"
+     },
+     {
+      "misconception": "GEN-RENEWABLES-K3-M1",
+      "why": "thinks solar works by heating water"
+     }
+    ]
+   },
+   {
+    "evidence": "If the grid relies on coal, the EV's footprint remains linked to that source.",
+    "kind": "what_if",
+    "q": "Meena charges her electric car from a grid run mostly on coal. How clean is her car?",
+    "options": [
+     "It is still linked to coal pollution",
+     "It is fully clean since it burns no petrol",
+     "It is clean because coal renews in a few years",
+     "It is clean as most power is renewable now"
+    ],
+    "explain": "An EV is only as clean as its charging power; coal-based charging keeps it linked to coal.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "over-generalises that every EV is fully clean"
+     },
+     {
+      "misconception": "GEN-RENEWABLES-K10-M9",
+      "why": "thinks coal is quickly renewed by nature"
+     },
+     {
+      "misconception": "GEN-RENEWABLES-K20-M14",
+      "why": "thinks India already runs mostly on renewables"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, renewable energy is not entirely impact-free; large-scale solar parks require careful land management to avoid damaging local ecosystems.",
+    "kind": "why",
+    "q": "Why does a large solar park still need careful planning of its land?",
+    "options": [
+     "Because it can harm local wildlife if unplanned",
+     "Because it is always built by cutting forests",
+     "Because panels need hot land to work well",
+     "Because panels heat the land to boil water"
+    ],
+    "explain": "Renewable energy is not impact-free; big solar parks can damage local ecosystems without careful land management.",
+    "wrong": [
+     {
+      "misconception": "GEN-RENEWABLES-K4-M3",
+      "why": "thinks solar parks only take forest land"
+     },
+     {
+      "misconception": "GEN-RENEWABLES-K3-M2",
+      "why": "thinks panels need heat to work"
+     },
+     {
+      "misconception": "GEN-RENEWABLES-K3-M1",
+      "why": "thinks solar works by heating water"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 34.4
+}

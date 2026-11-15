@@ -1,0 +1,166 @@
+{
+ "source": "train-0110-SCI-PHY-LIGHTSHADOW.json",
+ "job": {
+  "job": "train-0110-SCI-PHY-LIGHTSHADOW",
+  "topic_id": "SCI-PHY-LIGHTSHADOW",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a conversation between a teacher and two students",
+  "seed": 110
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3594,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today, let us discuss how light behaves. Rohan, is the Moon a luminous object like the Sun? Rohan: Yes, because it glows brightly at night. Teacher: Actually, the Moon is non-luminous; it only reflects sunlight. Light travels in a straight line, which is why we cannot see around corners. If you place a solid object in the path of light, a shadow forms on a screen. Priya: Does the shadow change size if I move the object closer to the light source? Teacher: Yes, the shadow size changes depending on the distance between the object and the screen. Also, remember that a shadow is simply an area where light is blocked; it is not a physical object. Some materials, like clear glass, are transparent and allow light to pass through, while others reflect light even if they are not shiny mirrors. For instance, a wooden table reflects light, which is how you see it, even if you cannot see your own face in it. Light does not bend around obstacles, and it certainly does not travel further at night. Shadows require a surface to be visible; without a screen, there is no shadow to see. Light always travels in a straight path, ensuring that shadows are formed only when an object obstructs that path.",
+ "menu_ids": [
+  "SCI-PHY-LIGHTSHADOW-K10-M2",
+  "SCI-PHY-LIGHTSHADOW-K12-M3",
+  "SCI-PHY-LIGHTSHADOW-K14-M4",
+  "SCI-PHY-LIGHTSHADOW-K15-M5",
+  "SCI-PHY-LIGHTSHADOW-K15-M6",
+  "SCI-PHY-LIGHTSHADOW-K17-M7",
+  "SCI-PHY-LIGHTSHADOW-K18-M8",
+  "SCI-PHY-LIGHTSHADOW-K16-M9",
+  "SCI-PHY-LIGHTSHADOW-K13-M10",
+  "SCI-PHY-LIGHTSHADOW-K18-M11",
+  "SCI-PHY-LIGHTSHADOW-K14-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Actually, the Moon is non-luminous; it only reflects sunlight.",
+    "kind": "why",
+    "q": "The Moon shines brightly at night. Why is it still not called a luminous object?",
+    "options": [
+     "It only sends back light from the Sun",
+     "It makes its own light only at night",
+     "Its light travels further in the dark",
+     "Its glow is weaker than the Sun's glow"
+    ],
+    "explain": "The Moon does not make light; it only reflects sunlight, so it is non-luminous.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-LIGHTSHADOW-K10-M2",
+      "why": "thinks glowing at night means it is luminous"
+     },
+     {
+      "misconception": "SCI-PHY-LIGHTSHADOW-K14-M12",
+      "why": "thinks light travels further at night"
+     },
+     {
+      "misconception": null,
+      "why": "thinks luminous depends on brightness, not making light"
+     }
+    ]
+   },
+   {
+    "evidence": "Light travels in a straight line, which is why we cannot see around corners.",
+    "kind": "which_explains",
+    "q": "Meena stands behind a wall. Why can't she see her friend around the corner?",
+    "options": [
+     "Light moves only along straight paths",
+     "Light bends round but becomes too weak",
+     "Light travels less far during the day",
+     "Light is stopped by the wall's solid shadow"
+    ],
+    "explain": "Light travels in a straight line, so it cannot go around the corner to her eyes.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-LIGHTSHADOW-K14-M4",
+      "why": "thinks light can bend around corners"
+     },
+     {
+      "misconception": "SCI-PHY-LIGHTSHADOW-K14-M12",
+      "why": "thinks light's reach changes with day and night"
+     },
+     {
+      "misconception": "SCI-PHY-LIGHTSHADOW-K15-M5",
+      "why": "thinks a shadow is a solid thing"
+     }
+    ]
+   },
+   {
+    "evidence": "Also, remember that a shadow is simply an area where light is blocked; it is not a physical object.",
+    "kind": "which_explains",
+    "q": "Amit says his shadow follows him like a dark copy. What is a shadow really?",
+    "options": [
+     "A place that light cannot reach",
+     "A dark copy made of thin matter",
+     "A reflection of the body, like a mirror",
+     "A dark shape that floats in the air"
+    ],
+    "explain": "A shadow is just an area where light is blocked; it is not a real object.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-LIGHTSHADOW-K15-M5",
+      "why": "thinks a shadow is a physical thing"
+     },
+     {
+      "misconception": "SCI-PHY-LIGHTSHADOW-K18-M11",
+      "why": "mixes up shadows with mirror images"
+     },
+     {
+      "misconception": "SCI-PHY-LIGHTSHADOW-K15-M6",
+      "why": "thinks shadows exist without a surface"
+     }
+    ]
+   },
+   {
+    "evidence": "For instance, a wooden table reflects light, which is how you see it, even if you cannot see your own face in it.",
+    "kind": "how",
+    "q": "You cannot see your face in a wooden table. How can you still see the table?",
+    "options": [
+     "It reflects some light to your eyes",
+     "It reflects only if polished like a mirror",
+     "It lets light pass through like glass",
+     "It gives out its own faint light"
+    ],
+    "explain": "A wooden table reflects light even though it is not shiny, and that is how we see it.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-LIGHTSHADOW-K18-M8",
+      "why": "thinks only mirrors and shiny things reflect"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the table with transparent glass"
+     },
+     {
+      "misconception": "SCI-PHY-LIGHTSHADOW-K10-M2",
+      "why": "thinks things we see must glow by themselves"
+     }
+    ]
+   },
+   {
+    "evidence": "Shadows require a surface to be visible; without a screen, there is no shadow to see.",
+    "kind": "what_if",
+    "q": "A torch lights a ball with nothing behind it. Where can its shadow be seen?",
+    "options": [
+     "Only on a screen placed behind it",
+     "In the air just behind the ball",
+     "On the ball itself, as a reflection",
+     "Around the ball, as light bends past it"
+    ],
+    "explain": "Shadows need a surface to be visible; without a screen there is no shadow to see.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-LIGHTSHADOW-K15-M6",
+      "why": "thinks shadows show without a surface"
+     },
+     {
+      "misconception": "SCI-PHY-LIGHTSHADOW-K15-M5",
+      "why": "thinks a shadow is a reflection"
+     },
+     {
+      "misconception": "SCI-PHY-LIGHTSHADOW-K14-M4",
+      "why": "thinks light bends around objects"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 36.4
+}

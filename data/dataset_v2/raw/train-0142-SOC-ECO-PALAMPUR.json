@@ -1,0 +1,166 @@
+{
+ "source": "train-0142-SOC-ECO-PALAMPUR.json",
+ "job": {
+  "job": "train-0142-SOC-ECO-PALAMPUR",
+  "topic_id": "SOC-ECO-PALAMPUR",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a clear textbook explanation",
+  "seed": 142
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4265,
+  "promptTokenCount": 2
+ },
+ "passage": "In the village of Palampur, farming is the primary occupation, but the amount of land available for cultivation is fixed. Since the 1960s, the Green Revolution introduced high-yielding variety seeds, modern irrigation, and chemical fertilizers to increase crop production on the same piece of land, rather than expanding the total area. Farmers must distinguish between different types of capital. Physical capital includes fixed capital, like tools and machinery that last for many years, and working capital, such as money and raw materials like seeds, which are consumed during the production process. While land and physical tools are essential, the productivity of a farm also depends on human capital, which refers to the knowledge, skills, and expertise of the workers rather than just the total headcount of laborers. To sustain the village economy, many families also engage in non-farm activities like small-scale manufacturing, transport, and shopkeeping. Relying solely on land expansion is not sustainable, as natural resources are finite and clearing forests for farming indefinitely would lead to ecological damage. Therefore, modern farming methods focus on intensive techniques to get more output from existing plots, ensuring that the village can support its growing population without exhausting its limited natural land resources.",
+ "menu_ids": [
+  "SOC-ECO-PALAMPUR-K8-M1",
+  "SOC-ECO-PALAMPUR-K10-M2",
+  "SOC-ECO-PALAMPUR-K7-M3",
+  "SOC-ECO-PALAMPUR-K11-M4",
+  "SOC-ECO-PALAMPUR-K4-M5",
+  "SOC-ECO-PALAMPUR-K8-M6",
+  "SOC-ECO-PALAMPUR-K10-M7",
+  "SOC-ECO-PALAMPUR-K5-M8",
+  "SOC-ECO-PALAMPUR-K6-M9",
+  "SOC-ECO-PALAMPUR-K7-M10",
+  "SOC-ECO-PALAMPUR-K11-M11"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Since the 1960s, the Green Revolution introduced high-yielding variety seeds, modern irrigation, and chemical fertilizers to increase crop production on the same piece of land, rather than expanding the total area.",
+    "kind": "recall",
+    "q": "What did the Green Revolution bring to help Palampur farmers grow more?",
+    "options": [
+     "New seeds together with irrigation and fertilizers",
+     "Extra fields taken from the nearby forests",
+     "New seeds that needed no water or fertilizer",
+     "More labourers to work on each field"
+    ],
+    "explain": "It brought high-yielding seeds, irrigation and fertilizers to grow more on the same land, not more land.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-PALAMPUR-K7-M3",
+      "why": "thinks the Green Revolution added land area"
+     },
+     {
+      "misconception": "SOC-ECO-PALAMPUR-K7-M10",
+      "why": "thinks the new seeds need no extra inputs"
+     },
+     {
+      "misconception": "SOC-ECO-PALAMPUR-K11-M4",
+      "why": "thinks more output just means more workers"
+     }
+    ]
+   },
+   {
+    "evidence": "Physical capital includes fixed capital, like tools and machinery that last for many years, and working capital, such as money and raw materials like seeds, which are consumed during the production process.",
+    "kind": "what_if",
+    "q": "A farmer buys seeds and a tractor. Which of these is working capital?",
+    "options": [
+     "The seeds, since they get used up",
+     "The tractor, since it is used daily",
+     "Neither, since capital means only money",
+     "Both, since both stay in the business"
+    ],
+    "explain": "Seeds are used up during production, so they are working capital; a tractor lasts years.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-PALAMPUR-K10-M7",
+      "why": "thinks daily-used machines are working capital"
+     },
+     {
+      "misconception": "SOC-ECO-PALAMPUR-K5-M8",
+      "why": "thinks capital means only money"
+     },
+     {
+      "misconception": "SOC-ECO-PALAMPUR-K10-M2",
+      "why": "thinks seed spending stays in the business"
+     }
+    ]
+   },
+   {
+    "evidence": "While land and physical tools are essential, the productivity of a farm also depends on human capital, which refers to the knowledge, skills, and expertise of the workers rather than just the total headcount of laborers.",
+    "kind": "which_example",
+    "q": "Farm A has twenty untrained workers. Farm B has eight expert workers. Which has more human capital?",
+    "options": [
+     "Farm B, because its workers know more",
+     "Farm A, because it has more workers",
+     "Neither, as only schooling builds it",
+     "Both equally, as land decides output"
+    ],
+    "explain": "Human capital means workers' knowledge, skills and expertise, not just how many workers there are.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-PALAMPUR-K11-M4",
+      "why": "thinks human capital is the headcount"
+     },
+     {
+      "misconception": "SOC-ECO-PALAMPUR-K11-M11",
+      "why": "thinks only school gives human capital"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up human capital with land"
+     }
+    ]
+   },
+   {
+    "evidence": "Relying solely on land expansion is not sustainable, as natural resources are finite and clearing forests for farming indefinitely would lead to ecological damage.",
+    "kind": "why",
+    "q": "Why can Palampur not keep clearing forests to get more farmland?",
+    "options": [
+     "Because nature is limited and would be harmed",
+     "Because the Green Revolution already added land",
+     "Because shops and transport need that forest land",
+     "Because seeds would be used up too quickly"
+    ],
+    "explain": "Natural resources are finite, and endless forest clearing would cause ecological damage.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-PALAMPUR-K7-M3",
+      "why": "thinks the Green Revolution expanded land"
+     },
+     {
+      "misconception": null,
+      "why": "grabs the nearby detail about non-farm work"
+     },
+     {
+      "misconception": null,
+      "why": "confuses 'finite' with seeds being consumed"
+     }
+    ]
+   },
+   {
+    "evidence": "Therefore, modern farming methods focus on intensive techniques to get more output from existing plots, ensuring that the village can support its growing population without exhausting its limited natural land resources.",
+    "kind": "how",
+    "q": "Palampur's population is growing but its land cannot increase. How can the village still feed everyone?",
+    "options": [
+     "Use methods that get more from each plot",
+     "Accept that farm output can never rise",
+     "Keep clearing forests to make new fields",
+     "Add more workers without improving their skills"
+    ],
+    "explain": "Intensive methods get more output from existing plots, so fixed land can feed more people.",
+    "wrong": [
+     {
+      "misconception": "SOC-ECO-PALAMPUR-K8-M6",
+      "why": "thinks fixed land means fixed output"
+     },
+     {
+      "misconception": "SOC-ECO-PALAMPUR-K8-M1",
+      "why": "thinks forests can be cleared endlessly"
+     },
+     {
+      "misconception": "SOC-ECO-PALAMPUR-K11-M4",
+      "why": "thinks more workers alone raises output"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 45.2
+}

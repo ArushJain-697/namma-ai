@@ -1,0 +1,143 @@
+{
+ "source": "train-0386-GEN-ONLINESAFETY.json",
+ "job": {
+  "job": "train-0386-GEN-ONLINESAFETY",
+  "topic_id": "GEN-ONLINESAFETY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a diary entry or letter by a student",
+  "seed": 386
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1194,
+  "promptTokenCount": 2
+ },
+ "passage": "Dear Diary, today I learned so much about staying safe online during our school workshop. I realized that using my pet’s name and birthday for my password is a huge mistake because such personal details are easy for others to guess. I also learned that using the same password for every account is dangerous; if one site gets hacked, all my accounts are at risk. My teacher emphasized that a bank will never call and ask for my OTP or PIN, even if they know my name or claim my account will be blocked. These callers are just scammers trying to steal money. Furthermore, I discovered that closing a browser tab does not automatically log me out of my accounts on a shared computer; I must manually click the sign-out button every time. Finally, we discussed cyberbullying. It is never okay to handle bullying alone or reply in anger. Instead, I should report it immediately, as online harassment is serious and can cause deep emotional harm, regardless of whether there is physical contact. I feel much more confident now about protecting my digital life and keeping my private information secure from those who wish to cause harm.",
+ "menu_ids": [
+  "GEN-ONLINESAFETY-K8-M1",
+  "GEN-ONLINESAFETY-K8-M2",
+  "GEN-ONLINESAFETY-K9-M3",
+  "GEN-ONLINESAFETY-K10-M4",
+  "GEN-ONLINESAFETY-K11-M5",
+  "GEN-ONLINESAFETY-K12-M6",
+  "GEN-ONLINESAFETY-K14-M7",
+  "GEN-ONLINESAFETY-K14-M8",
+  "GEN-ONLINESAFETY-K18-M9",
+  "GEN-ONLINESAFETY-K17-M10",
+  "GEN-ONLINESAFETY-K19-M12",
+  "GEN-ONLINESAFETY-K22-M14",
+  "GEN-ONLINESAFETY-K23-M15",
+  "GEN-ONLINESAFETY-K25-M16"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "I realized that using my pet’s name and birthday for my password is a huge mistake because such personal details are easy for others to guess.",
+    "kind": "why",
+    "q": "Why is a password made from a pet's name and birthday risky?",
+    "options": [
+     "Other people can easily guess such details",
+     "Pets' names are found in common word lists",
+     "Birthdays are checked by the website itself",
+     "Short passwords are always blocked by sites"
+    ],
+    "explain": "Personal details like a pet's name and birthday are easy for others to guess.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "picks a plausible technical-sounding reason not given in the passage"
+     },
+     {
+      "misconception": null,
+      "why": "invents a website rule that the passage never mentions"
+     },
+     {
+      "misconception": "GEN-ONLINESAFETY-K8-M1",
+      "why": "thinks the problem is only password length"
+     }
+    ]
+   },
+   {
+    "evidence": "I also learned that using the same password for every account is dangerous; if one site gets hacked, all my accounts are at risk.",
+    "kind": "what_if",
+    "q": "Meera uses one password everywhere. One small website gets hacked. What is the result?",
+    "options": [
+     "Her other accounts are also at risk",
+     "Only that one website account is at risk",
+     "Her accounts stay safe if it is strong",
+     "Her other accounts are locked for safety"
+    ],
+    "explain": "With one shared password, a hack on one site puts all the accounts at risk.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks a hack affects only the site that was attacked"
+     },
+     {
+      "misconception": "GEN-ONLINESAFETY-K10-M4",
+      "why": "thinks one strong password protects every account"
+     },
+     {
+      "misconception": null,
+      "why": "assumes accounts are automatically protected after a hack"
+     }
+    ]
+   },
+   {
+    "evidence": "My teacher emphasized that a bank will never call and ask for my OTP or PIN, even if they know my name or claim my account will be blocked.",
+    "kind": "which_explains",
+    "q": "A caller knows your name and says your account will be blocked. What does this show?",
+    "options": [
+     "The caller is a scammer, not the bank",
+     "The caller is real because he knows you",
+     "The caller is real if you share a PIN",
+     "The caller is a bank worker in a hurry"
+    ],
+    "explain": "A bank never asks for an OTP or PIN, even if the caller knows your name.",
+    "wrong": [
+     {
+      "misconception": "GEN-ONLINESAFETY-K14-M7",
+      "why": "thinks knowing the name proves the caller is genuine"
+     },
+     {
+      "misconception": "GEN-ONLINESAFETY-K18-M9",
+      "why": "thinks the PIN must be given to avoid blocking"
+     },
+     {
+      "misconception": null,
+      "why": "excuses the pressure as normal bank behaviour"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, I discovered that closing a browser tab does not automatically log me out of my accounts on a shared computer; I must manually click the sign-out button every time.",
+    "kind": "what_if",
+    "q": "Aman checks his email on a school computer and closes the tab. What may happen next?",
+    "options": [
+     "The next user may open his email",
+     "His email is signed out automatically",
+     "His email is safe once the tab closes",
+     "The computer will ask for his password"
+    ],
+    "explain": "Closing a tab does not log you out, so the next person may open your account.",
+    "wrong": [
+     {
+      "misconception": "GEN-ONLINESAFETY-K12-M6",
+      "why": "thinks closing the tab logs him out"
+     },
+     {
+      "misconception": null,
+      "why": "thinks closing the tab makes the account safe"
+     },
+     {
+      "misconception": null,
+      "why": "assumes the computer re-checks the password by itself"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 12.7
+}

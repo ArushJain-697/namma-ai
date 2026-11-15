@@ -1,0 +1,143 @@
+{
+ "source": "train-0011-GEN-INJURIES.json",
+ "job": {
+  "job": "train-0011-GEN-INJURIES",
+  "topic_id": "GEN-INJURIES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a conversation between a teacher and two students",
+  "seed": 11
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4039,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today, let's talk about sports safety. Rohan, if you twist your ankle, what is the first thing you do? Rohan: I use RICE, but I keep walking on it to prove I am tough. Teacher: That is dangerous! RICE helps, but it is not a cure-all. If you feel severe pain, you must stop playing immediately. Even if you can still walk, the injury could be serious. Priya: I thought a sprain was an injury to a muscle. Teacher: Actually, a sprain affects ligaments, while a strain affects muscles. Also, never apply heat to a fresh injury, as it increases swelling. Use ice instead. Rohan: What about concussions? If I don't faint, I am safe, right? Teacher: Not at all. A concussion is a brain injury that does not always cause fainting. Symptoms like dizziness or confusion might appear hours later, not just immediately. Priya: Should I stay in bed for days if I get hurt? Teacher: No, gentle movement is usually better than total bed rest once the initial pain settles. And remember, never wrap a bandage too tightly, as it cuts off circulation. Always listen to your body instead of trying to play through pain.",
+ "menu_ids": [
+  "GEN-INJURIES-K8-M1",
+  "GEN-INJURIES-K9-M2",
+  "GEN-INJURIES-K10-M3",
+  "GEN-INJURIES-K11-M4",
+  "GEN-INJURIES-K12-M5",
+  "GEN-INJURIES-K14-M6",
+  "GEN-INJURIES-K15-M8",
+  "GEN-INJURIES-K16-M9",
+  "GEN-INJURIES-K17-M10",
+  "GEN-INJURIES-K18-M12",
+  "GEN-INJURIES-K21-M13",
+  "GEN-INJURIES-K22-M15",
+  "GEN-INJURIES-K25-M17",
+  "GEN-INJURIES-K25-M18"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Even if you can still walk, the injury could be serious.",
+    "kind": "what_if",
+    "q": "Meena twists her ankle during a match but can still limp around. What should she understand about her ankle?",
+    "options": [
+     "Her ankle may still be badly hurt",
+     "Her ankle cannot be badly hurt if she walks",
+     "Her ankle will heal faster if she walks on it",
+     "Her ankle needs only RICE and nothing more"
+    ],
+    "explain": "The teacher says that even if you can still walk, the injury could be serious.",
+    "wrong": [
+     {
+      "misconception": "GEN-INJURIES-K10-M3",
+      "why": "thinks being able to walk means the injury is not serious"
+     },
+     {
+      "misconception": "GEN-INJURIES-K25-M17",
+      "why": "thinks walking it off, like Rohan, is good for the injury"
+     },
+     {
+      "misconception": "GEN-INJURIES-K18-M12",
+      "why": "thinks RICE alone is enough, though the teacher says it is not a cure-all"
+     }
+    ]
+   },
+   {
+    "evidence": "Actually, a sprain affects ligaments, while a strain affects muscles.",
+    "kind": "difference",
+    "q": "Priya hurts a ligament in her wrist. Aman hurts a muscle in his leg. Which names their injuries correctly?",
+    "options": [
+     "Priya has a sprain and Aman has a strain",
+     "Priya has a strain and Aman has a sprain",
+     "Both Priya and Aman have a strain",
+     "Both Priya and Aman have a sprain"
+    ],
+    "explain": "A sprain affects ligaments and a strain affects muscles, so Priya has a sprain and Aman has a strain.",
+    "wrong": [
+     {
+      "misconception": "GEN-INJURIES-K8-M1",
+      "why": "thinks a sprain is a muscle injury, so swaps the two names"
+     },
+     {
+      "misconception": "GEN-INJURIES-K9-M2",
+      "why": "thinks a strain is a ligament injury at a joint"
+     },
+     {
+      "misconception": null,
+      "why": "thinks 'sprain' is the name for any sports injury"
+     }
+    ]
+   },
+   {
+    "evidence": "Also, never apply heat to a fresh injury, as it increases swelling.",
+    "kind": "what_if",
+    "q": "Kabir puts a hot water bag on the knee he hurt a few minutes ago. What will most likely happen?",
+    "options": [
+     "The knee will swell up even more",
+     "The knee will lose its swelling faster",
+     "The knee will heal fully within a few minutes",
+     "The knee will be fine if the bandage is tight"
+    ],
+    "explain": "Heat on a fresh injury increases swelling, so the teacher says to use ice instead.",
+    "wrong": [
+     {
+      "misconception": "GEN-INJURIES-K15-M8",
+      "why": "thinks heat reduces swelling on a fresh injury"
+     },
+     {
+      "misconception": "GEN-INJURIES-K25-M18",
+      "why": "thinks the injury is healed once it feels better"
+     },
+     {
+      "misconception": "GEN-INJURIES-K16-M9",
+      "why": "thinks a tight bandage fixes everything"
+     }
+    ]
+   },
+   {
+    "evidence": "Symptoms like dizziness or confusion might appear hours later, not just immediately.",
+    "kind": "which_explains",
+    "q": "Arjun bumps his head at football but feels fine. That evening he feels dizzy. Which is the most likely explanation?",
+    "options": [
+     "His dizziness comes from the head bump, just showing late",
+     "His dizziness comes from tiredness, since he never fainted",
+     "His dizziness comes from hunger, since head signs appear at once",
+     "His dizziness comes from the heat, since his pain had faded"
+    ],
+    "explain": "Concussion signs like dizziness can appear hours after the hit, and fainting is not needed for a concussion.",
+    "wrong": [
+     {
+      "misconception": "GEN-INJURIES-K21-M13",
+      "why": "thinks there is no concussion unless the person faints"
+     },
+     {
+      "misconception": "GEN-INJURIES-K22-M15",
+      "why": "thinks concussion signs always show right after the hit"
+     },
+     {
+      "misconception": "GEN-INJURIES-K25-M18",
+      "why": "thinks the injury healed once the pain went away"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 40.1
+}

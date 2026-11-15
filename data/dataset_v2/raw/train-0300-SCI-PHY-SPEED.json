@@ -1,0 +1,139 @@
+{
+ "source": "train-0300-SCI-PHY-SPEED.json",
+ "job": {
+  "job": "train-0300-SCI-PHY-SPEED",
+  "topic_id": "SCI-PHY-SPEED",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a description of a classroom activity or experiment and what it shows",
+  "seed": 300
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 3068,
+  "promptTokenCount": 2
+ },
+ "passage": "In our science lab today, we investigated the motion of a simple pendulum. We attached a small metal bob to a long thread and set it swinging. To measure the time period, we defined one oscillation as the bob moving from its starting position to the extreme other side and back to the starting point. We discovered that changing the weight of the bob did not affect the time period at all. Furthermore, when we gently increased the distance of the swing, the time taken for one full oscillation remained exactly the same. We also recorded the motion of a toy car on a track. When the car moved at a steady pace, the distance-time graph showed a straight diagonal line. However, when we stopped the car, the graph showed a horizontal line, indicating the object was at rest. We also learned that to find the speed of any moving object, we must divide the total distance covered by the total time taken. It is important to ensure that units are consistent, such as using kilometers and hours together, before performing this calculation.",
+ "menu_ids": [
+  "SCI-PHY-SPEED-K3-M1",
+  "SCI-PHY-SPEED-K3-M2",
+  "SCI-PHY-SPEED-K5-M3",
+  "SCI-PHY-SPEED-K14-M4",
+  "SCI-PHY-SPEED-K14-M5",
+  "SCI-PHY-SPEED-K18-M6",
+  "SCI-PHY-SPEED-K19-M7",
+  "SCI-PHY-SPEED-K7-M8",
+  "SCI-PHY-SPEED-K13-M9",
+  "SCI-PHY-SPEED-K4-M11"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "We discovered that changing the weight of the bob did not affect the time period at all.",
+    "kind": "what_if",
+    "q": "Meena replaces the pendulum bob with a heavier one. What happens to the time period?",
+    "options": [
+     "It stays the same as before",
+     "It gets shorter as the bob swings faster",
+     "It gets longer as the bob is harder to move",
+     "It doubles when the weight is doubled"
+    ],
+    "explain": "Changing the weight of the bob did not affect the time period at all.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-SPEED-K14-M4",
+      "why": "thinks a heavier bob swings faster"
+     },
+     {
+      "misconception": null,
+      "why": "thinks more weight means more effort and more time"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises into a direct proportion"
+     }
+    ]
+   },
+   {
+    "evidence": "However, when we stopped the car, the graph showed a horizontal line, indicating the object was at rest.",
+    "kind": "which_explains",
+    "q": "On a car's distance-time graph, the line suddenly becomes flat. What is the car doing?",
+    "options": [
+     "It has stopped moving completely",
+     "It is moving at a steady speed",
+     "It is climbing higher up the track",
+     "It is moving back to the start"
+    ],
+    "explain": "A horizontal line on the graph shows the object is at rest, not moving.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-SPEED-K19-M7",
+      "why": "thinks a flat line means constant speed"
+     },
+     {
+      "misconception": "SCI-PHY-SPEED-K18-M6",
+      "why": "reads the graph line as height or upward motion"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the car reverses when the distance stops growing"
+     }
+    ]
+   },
+   {
+    "evidence": "It is important to ensure that units are consistent, such as using kilometers and hours together, before performing this calculation.",
+    "kind": "how",
+    "q": "A bus covers 120 km in 90 minutes. What must we do before dividing distance by time?",
+    "options": [
+     "Convert 90 minutes into hours first",
+     "Divide the time by the distance instead",
+     "Divide 120 by 90 without any change",
+     "Add the distance and the time together"
+    ],
+    "explain": "Units must be consistent, such as kilometers with hours, so minutes must be converted before dividing.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-SPEED-K5-M3",
+      "why": "thinks speed is time divided by distance"
+     },
+     {
+      "misconception": "SCI-PHY-SPEED-K4-M11",
+      "why": "thinks km and minutes can be divided directly"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the operation needed for speed"
+     }
+    ]
+   },
+   {
+    "evidence": "To measure the time period, we defined one oscillation as the bob moving from its starting position to the extreme other side and back to the starting point.",
+    "kind": "which_explains",
+    "q": "A bob swings from its release point to the opposite end. Is that one full oscillation?",
+    "options": [
+     "No, it must also swing back again",
+     "Yes, reaching the opposite end completes it",
+     "No, it must swing back and forth twice",
+     "Yes, if it pauses there for a moment"
+    ],
+    "explain": "One oscillation is a trip to the other side and back to the starting point.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-SPEED-K13-M9",
+      "why": "thinks one side to the other is one oscillation"
+     },
+     {
+      "misconception": null,
+      "why": "over-counts the swings needed for one oscillation"
+     },
+     {
+      "misconception": null,
+      "why": "thinks a pause marks the end of an oscillation"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 27.0
+}

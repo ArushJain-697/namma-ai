@@ -1,0 +1,142 @@
+{
+ "source": "train-0069-SCI-BIO-CONSERVATION.json",
+ "job": {
+  "job": "train-0069-SCI-BIO-CONSERVATION",
+  "topic_id": "SCI-BIO-CONSERVATION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a short story with Indian characters in everyday life",
+  "seed": 69
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3875,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and his grandfather, Dadu, walked through the outskirts of their village near the Satpura forest. Dadu pointed to a patch of dry, cracked land where trees had been cleared for a new factory. 'When we remove trees, the soil loses its moisture and nutrients, eventually turning into barren, desert-like land,' Dadu explained. Rohan asked if the factory would at least bring rain. Dadu shook his head, 'Trees are vital for the water cycle; they release water vapor through transpiration, which helps form clouds. Without them, rainfall decreases significantly.' They walked further to a protected area. Rohan wondered if it was like the city zoo. Dadu corrected him, 'No, this is a wildlife sanctuary. Unlike a zoo, animals here roam freely in their natural habitat, and it is not just for birds, but for all protected wildlife.' He then showed Rohan a small, rare plant. 'This is an endemic species, found only in this specific region of the Satpura range. If we moved it to a garden in Delhi, it would no longer be endemic, as it would be outside its natural home.' Rohan realized that conservation is about protecting the entire ecosystem, not just individual animals or plants.",
+ "menu_ids": [
+  "SCI-BIO-CONSERVATION-K8-M1",
+  "SCI-BIO-CONSERVATION-K9-M2",
+  "SCI-BIO-CONSERVATION-K13-M3",
+  "SCI-BIO-CONSERVATION-K20-M5",
+  "SCI-BIO-CONSERVATION-K22-M6",
+  "SCI-BIO-CONSERVATION-K6-M7",
+  "SCI-BIO-CONSERVATION-K14-M8",
+  "SCI-BIO-CONSERVATION-K21-M9",
+  "SCI-BIO-CONSERVATION-K10-M10",
+  "SCI-BIO-CONSERVATION-K13-M11",
+  "SCI-BIO-CONSERVATION-K19-M12",
+  "SCI-BIO-CONSERVATION-K8-M13",
+  "SCI-BIO-CONSERVATION-K22-M14"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "'When we remove trees, the soil loses its moisture and nutrients, eventually turning into barren, desert-like land,' Dadu explained.",
+    "kind": "why",
+    "q": "Why did the land cleared for the factory become dry and cracked?",
+    "options": [
+     "Its soil lost water and nutrients once trees went",
+     "Its soil turned into loose sand like a beach",
+     "Its soil got too much rain after clearing",
+     "Its soil was harmed by smoke from the factory"
+    ],
+    "explain": "Without trees, soil loses moisture and nutrients and slowly becomes barren, desert-like land.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CONSERVATION-K9-M2",
+      "why": "thinks desertification turns soil into beach sand"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the effect; the passage says rainfall decreases"
+     },
+     {
+      "misconception": null,
+      "why": "blames the nearby factory instead of tree removal"
+     }
+    ]
+   },
+   {
+    "evidence": "Without them, rainfall decreases significantly.",
+    "kind": "what_if",
+    "q": "If the factory replaces all the trees nearby, what will happen to rainfall?",
+    "options": [
+     "It falls, as less water vapour forms clouds",
+     "It stays the same, since rain comes from the sky",
+     "It rises, because the factory helps form clouds",
+     "It stays the same, since trees only absorb gases"
+    ],
+    "explain": "Trees release water vapour by transpiration, which forms clouds; without trees, rainfall drops.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CONSERVATION-K10-M10",
+      "why": "thinks trees have no effect on rain"
+     },
+     {
+      "misconception": null,
+      "why": "believes Rohan's idea that the factory brings rain"
+     },
+     {
+      "misconception": "SCI-BIO-CONSERVATION-K8-M1",
+      "why": "thinks plants only take in gases and release nothing"
+     }
+    ]
+   },
+   {
+    "evidence": "Unlike a zoo, animals here roam freely in their natural habitat, and it is not just for birds, but for all protected wildlife.",
+    "kind": "difference",
+    "q": "How is a deer's life in this sanctuary different from life in a city zoo?",
+    "options": [
+     "It wanders freely in its own wild home",
+     "It lives in an enclosure for visitors to see",
+     "It gets no care, as sanctuaries guard only birds",
+     "It lives on farms owned by nearby villagers"
+    ],
+    "explain": "In a sanctuary, animals roam freely in their natural habitat, and all wildlife is protected, not just birds.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CONSERVATION-K21-M9",
+      "why": "thinks protected areas are just zoos for visitors"
+     },
+     {
+      "misconception": "SCI-BIO-CONSERVATION-K19-M12",
+      "why": "thinks sanctuaries protect only birds"
+     },
+     {
+      "misconception": "SCI-BIO-CONSERVATION-K20-M5",
+      "why": "thinks people own and farm land inside protected areas"
+     }
+    ]
+   },
+   {
+    "evidence": "If we moved it to a garden in Delhi, it would no longer be endemic, as it would be outside its natural home.",
+    "kind": "what_if",
+    "q": "The rare Satpura plant is planted in a Delhi garden. What happens to it being endemic?",
+    "options": [
+     "It is lost, since Delhi is outside its native region",
+     "It shifts to Delhi, along with the plant",
+     "It stays, since endemic plants grow everywhere",
+     "It is lost, since the plant has become extinct"
+    ],
+    "explain": "An endemic plant belongs only to its natural region; outside the Satpura range, it is no longer endemic.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-CONSERVATION-K13-M11",
+      "why": "thinks the endemic label moves with the plant"
+     },
+     {
+      "misconception": "SCI-BIO-CONSERVATION-K13-M3",
+      "why": "thinks endemic means found everywhere"
+     },
+     {
+      "misconception": "SCI-BIO-CONSERVATION-K14-M8",
+      "why": "mixes up rare or endangered with extinct"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 37.4
+}

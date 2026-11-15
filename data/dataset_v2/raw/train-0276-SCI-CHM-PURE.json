@@ -1,0 +1,168 @@
+{
+ "source": "train-0276-SCI-CHM-PURE.json",
+ "job": {
+  "job": "train-0276-SCI-CHM-PURE",
+  "topic_id": "SCI-CHM-PURE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a passage rich in numbers, dates or measurements",
+  "seed": 276
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 5004,
+  "promptTokenCount": 2
+ },
+ "passage": "In our laboratory, we analyzed several substances to understand their nature. We first examined a sample of brass, an alloy containing 70% copper and 30% zinc. Although brass appears uniform, it is a mixture, not a compound, because its components retain their individual properties and can be separated. Next, we took 50 grams of salt and dissolved it in 200 grams of water to create a solution. When we heated this mixture to 100 degrees Celsius, the water evaporated, but the salt remained behind, proving that the solute does not disappear. We then observed a milk sample, which contains fat globules suspended in liquid. While it looks clear, a beam of light passing through it scatters, demonstrating the Tyndall effect caused by these particles, not the liquid itself. Finally, we attempted to separate water into hydrogen and oxygen using physical filtration, but it failed. This confirms that water is a compound, and its elements can only be separated through chemical processes, not physical ones. Unlike mixtures, which have variable boiling points, pure compounds like water have a fixed boiling point of 100 degrees Celsius at standard atmospheric pressure. These experiments highlight the fundamental differences between pure substances and various types of mixtures.",
+ "menu_ids": [
+  "SCI-CHM-PURE-K7-M2",
+  "SCI-CHM-PURE-K10-M3",
+  "SCI-CHM-PURE-K15-M4",
+  "SCI-CHM-PURE-K11-M5",
+  "SCI-CHM-PURE-K18-M7",
+  "SCI-CHM-PURE-K24-M8",
+  "SCI-CHM-PURE-K19-M9",
+  "SCI-CHM-PURE-K25-M10",
+  "SCI-CHM-PURE-K14-M11",
+  "SCI-CHM-PURE-K6-M12",
+  "SCI-CHM-PURE-K21-M13",
+  "SCI-CHM-PURE-K20-M14",
+  "SCI-CHM-PURE-K7-M15"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Although brass appears uniform, it is a mixture, not a compound, because its components retain their individual properties and can be separated.",
+    "kind": "why",
+    "q": "Brass looks the same throughout. Why is it still called a mixture?",
+    "options": [
+     "Copper and zinc still keep their own properties",
+     "Its metals cannot be removed by filtration",
+     "Its even look shows the metals joined chemically",
+     "Brass has new properties unlike copper or zinc"
+    ],
+    "explain": "Brass is a mixture because copper and zinc keep their own properties and can be separated.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-PURE-K7-M15",
+      "why": "thinks alloys are compounds because filtration cannot separate them"
+     },
+     {
+      "misconception": "SCI-CHM-PURE-K7-M2",
+      "why": "thinks a uniform look means a pure or chemically joined substance"
+     },
+     {
+      "misconception": "SCI-CHM-PURE-K24-M8",
+      "why": "thinks a compound-like product has new properties, so brass is not a mixture"
+     }
+    ]
+   },
+   {
+    "evidence": "When we heated this mixture to 100 degrees Celsius, the water evaporated, but the salt remained behind, proving that the solute does not disappear.",
+    "kind": "what_if",
+    "q": "A salt solution is heated until all the water boils off. What remains in the dish?",
+    "options": [
+     "Dry salt, left behind as the water leaves",
+     "Nothing, because the salt turns to gas too",
+     "A new compound made from salt and steam",
+     "Only a little salt, as some escapes with steam"
+    ],
+    "explain": "The water evaporates but the solute stays behind; salt does not disappear or turn to gas.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-PURE-K18-M7",
+      "why": "thinks the solute disappears or becomes gas when the solution evaporates"
+     },
+     {
+      "misconception": null,
+      "why": "thinks heating makes salt and steam react into something new"
+     },
+     {
+      "misconception": null,
+      "why": "thinks part of the salt is lost with the steam"
+     }
+    ]
+   },
+   {
+    "evidence": "While it looks clear, a beam of light passing through it scatters, demonstrating the Tyndall effect caused by these particles, not the liquid itself.",
+    "kind": "which_explains",
+    "q": "A beam of light scatters as it passes through milk. What causes this scattering?",
+    "options": [
+     "Tiny fat particles floating in the milk",
+     "The liquid itself reflecting the light",
+     "Clear milk being a pure substance",
+     "Heavy particles slowly settling at the bottom"
+    ],
+    "explain": "Light scatters because of the suspended fat particles, not because the liquid itself reflects it.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-PURE-K14-M11",
+      "why": "thinks the liquid itself reflects light"
+     },
+     {
+      "misconception": "SCI-CHM-PURE-K7-M2",
+      "why": "thinks a clear look means pure, so no particles are present"
+     },
+     {
+      "misconception": "SCI-CHM-PURE-K15-M4",
+      "why": "mixes up colloid stability with particles settling"
+     }
+    ]
+   },
+   {
+    "evidence": "This confirms that water is a compound, and its elements can only be separated through chemical processes, not physical ones.",
+    "kind": "why",
+    "q": "Why did physical filtration fail to separate hydrogen and oxygen from water?",
+    "options": [
+     "Water is a compound, so only chemical changes work",
+     "Water is a mixture whose parts blend too well",
+     "Water has the same properties as its elements",
+     "Water needs a finer filter paper to split"
+    ],
+    "explain": "Water is a compound, and its elements can be separated only by chemical processes, not physical ones.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-PURE-K25-M10",
+      "why": "thinks physical methods can split compounds if done well enough"
+     },
+     {
+      "misconception": "SCI-CHM-PURE-K24-M8",
+      "why": "thinks a compound has the same properties as its elements"
+     },
+     {
+      "misconception": null,
+      "why": "blames the tool, not the nature of water"
+     }
+    ]
+   },
+   {
+    "evidence": "Unlike mixtures, which have variable boiling points, pure compounds like water have a fixed boiling point of 100 degrees Celsius at standard atmospheric pressure.",
+    "kind": "what_if",
+    "q": "A liquid boils over a range of temperatures, not at one fixed value. What does this suggest?",
+    "options": [
+     "It is a mixture of several substances",
+     "It is a pure compound like water",
+     "It is pure, but heated too quickly",
+     "It is a compound whose elements are separating"
+    ],
+    "explain": "Mixtures have variable boiling points, while pure compounds like water boil at one fixed temperature.",
+    "wrong": [
+     {
+      "misconception": "SCI-CHM-PURE-K6-M12",
+      "why": "thinks mixtures and pure substances both boil at a fixed point"
+     },
+     {
+      "misconception": null,
+      "why": "blames the heating, not the nature of the liquid"
+     },
+     {
+      "misconception": "SCI-CHM-PURE-K25-M10",
+      "why": "confuses boiling with separating a compound into its elements"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 37.7
+}

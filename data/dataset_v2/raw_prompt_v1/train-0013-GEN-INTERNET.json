@@ -1,0 +1,169 @@
+{
+ "source": "train-0013-GEN-INTERNET.json",
+ "job": {
+  "job": "train-0013-GEN-INTERNET",
+  "topic_id": "GEN-INTERNET",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a step-by-step explanation of a process",
+  "seed": 13
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3447,
+  "promptTokenCount": 2
+ },
+ "passage": "When you send a photo to a friend, it does not travel as one single block. Instead, the data is broken into small pieces called packets that take different paths across a global network of interconnected cables and servers. These packets travel through physical infrastructure, including massive undersea fiber-optic cables that use pulses of light to transmit information across oceans, not electricity. Once the data reaches a destination, it is reassembled. Many people mistakenly think the internet is a single central computer, but it is actually a decentralized network of networks owned by many different organizations. When you store files in the cloud, you are simply saving them on physical servers located in large, secure data centers owned by companies, rather than in a magical space. Similarly, your home Wi-Fi is just a local wireless connection to your router, which then connects to your Internet Service Provider. Even if your Wi-Fi is working, the internet connection itself might be down if the provider's network has an issue. Finally, every device connected to the network, including your smart TV or CCTV, is assigned a unique IP address to ensure data reaches the correct destination, though this address identifies the network connection point, not your exact home address.",
+ "menu_ids": [
+  "GEN-INTERNET-K15-M1",
+  "GEN-INTERNET-K15-M2",
+  "GEN-INTERNET-K16-M3",
+  "GEN-INTERNET-K18-M4",
+  "GEN-INTERNET-K17-M5",
+  "GEN-INTERNET-K19-M6",
+  "GEN-INTERNET-K20-M7",
+  "GEN-INTERNET-K21-M8",
+  "GEN-INTERNET-K22-M9",
+  "GEN-INTERNET-K23-M10",
+  "GEN-INTERNET-K24-M11",
+  "GEN-INTERNET-K26-M13",
+  "GEN-INTERNET-K27-M14",
+  "GEN-INTERNET-K12-M15"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Instead, the data is broken into small pieces called packets that take different paths across a global network of interconnected cables and servers.",
+    "kind": "what_if",
+    "q": "Meera sends a holiday photo to her friend in Chennai. How does the photo travel?",
+    "options": [
+     "As small pieces that may take different paths",
+     "As one whole block along a single path",
+     "As pieces that all follow one fixed path",
+     "Through the air only, with no cables used"
+    ],
+    "explain": "The photo is broken into small packets that travel by different paths across cables and servers, then are joined again.",
+    "wrong": [
+     {
+      "misconception": "GEN-INTERNET-K23-M10",
+      "why": "thinks a photo travels as one single block"
+     },
+     {
+      "misconception": "GEN-INTERNET-K24-M11",
+      "why": "thinks all packets follow the same path in order"
+     },
+     {
+      "misconception": "GEN-INTERNET-K12-M15",
+      "why": "thinks the internet needs no wires anywhere"
+     }
+    ]
+   },
+   {
+    "evidence": "These packets travel through physical infrastructure, including massive undersea fiber-optic cables that use pulses of light to transmit information across oceans, not electricity.",
+    "kind": "how",
+    "q": "How does an email from India usually cross the ocean to reach America?",
+    "options": [
+     "As light pulses in cables under the sea",
+     "As electric current in copper wires under the sea",
+     "As radio waves through the air, with no wires",
+     "Straight to phones by satellite, with no cables"
+    ],
+    "explain": "Undersea fiber-optic cables carry information across oceans as pulses of light, not electricity.",
+    "wrong": [
+     {
+      "misconception": "GEN-INTERNET-K26-M13",
+      "why": "thinks undersea cables carry electricity in copper"
+     },
+     {
+      "misconception": "GEN-INTERNET-K12-M15",
+      "why": "thinks the whole path is through the air"
+     },
+     {
+      "misconception": "GEN-INTERNET-K27-M14",
+      "why": "thinks devices connect directly through satellites"
+     }
+    ]
+   },
+   {
+    "evidence": "Many people mistakenly think the internet is a single central computer, but it is actually a decentralized network of networks owned by many different organizations.",
+    "kind": "which_explains",
+    "q": "Riya says one company can switch the whole internet on and off. Which fact shows she is wrong?",
+    "options": [
+     "It is many networks owned by many groups",
+     "The government owns it, not any company",
+     "Only home routers can switch it off",
+     "It is one central computer that never stops"
+    ],
+    "explain": "The internet is a network of networks owned by many different organizations, so no single owner controls it.",
+    "wrong": [
+     {
+      "misconception": "GEN-INTERNET-K15-M1",
+      "why": "thinks one government owns and controls it"
+     },
+     {
+      "misconception": "GEN-INTERNET-K16-M3",
+      "why": "thinks the router makes the internet"
+     },
+     {
+      "misconception": "GEN-INTERNET-K15-M2",
+      "why": "thinks the internet is one giant computer"
+     }
+    ]
+   },
+   {
+    "evidence": "Even if your Wi-Fi is working, the internet connection itself might be down if the provider's network has an issue.",
+    "kind": "what_if",
+    "q": "Aman's phone shows full Wi-Fi bars, but no website opens. What is the most likely reason?",
+    "options": [
+     "His provider's network is having a problem",
+     "His phone is broken, because Wi-Fi means internet",
+     "His phone needs a satellite signal instead",
+     "The one central internet computer is full"
+    ],
+    "explain": "Wi-Fi only links the phone to the router; if the provider's network has an issue, the internet can be down.",
+    "wrong": [
+     {
+      "misconception": "GEN-INTERNET-K18-M4",
+      "why": "thinks Wi-Fi and the internet are the same"
+     },
+     {
+      "misconception": "GEN-INTERNET-K27-M14",
+      "why": "thinks phones connect through satellites"
+     },
+     {
+      "misconception": "GEN-INTERNET-K15-M2",
+      "why": "thinks the internet is one central computer"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, every device connected to the network, including your smart TV or CCTV, is assigned a unique IP address to ensure data reaches the correct destination, though this address identifies the network connection point, not your exact home address.",
+    "kind": "what_if",
+    "q": "Police find the IP address of a CCTV camera. What can this address tell them?",
+    "options": [
+     "Which network connection point the camera uses",
+     "The exact house where the camera's owner lives",
+     "Nothing, because cameras do not get IP addresses",
+     "The full name of the person who owns it"
+    ],
+    "explain": "Every connected device, even a CCTV, gets an IP address that shows its network connection point, not an exact home.",
+    "wrong": [
+     {
+      "misconception": "GEN-INTERNET-K21-M8",
+      "why": "thinks an IP address gives an exact home address"
+     },
+     {
+      "misconception": "GEN-INTERNET-K20-M7",
+      "why": "thinks only computers and phones have IP addresses"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises that the address identifies a person"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 36.5
+}

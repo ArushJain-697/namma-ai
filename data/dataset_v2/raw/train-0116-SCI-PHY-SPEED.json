@@ -1,0 +1,139 @@
+{
+ "source": "train-0116-SCI-PHY-SPEED.json",
+ "job": {
+  "job": "train-0116-SCI-PHY-SPEED",
+  "topic_id": "SCI-PHY-SPEED",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a short story with Indian characters in everyday life",
+  "seed": 116
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2893,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and his sister Meera were playing in their garden in Bengaluru. Rohan pushed his toy car across the flat patio, and it rolled at a steady pace in a straight line. Meera watched it and said, 'It is moving at a constant speed because it covers equal distances in equal intervals of time.' Later, they went to the park to watch a swing. Meera noticed that whether she pulled the swing back a little or a lot, the time taken for one complete back-and-forth movement remained the same. She explained, 'The time period of a pendulum does not depend on the amplitude of the swing.' Nearby, their father was jogging. He ran 2 kilometers in 20 minutes. Rohan calculated his father's speed by dividing the distance of 2 kilometers by the time of 1/3 of an hour, resulting in 6 kilometers per hour. He noted that even a slow-moving snail has a measurable speed. Finally, they looked at a distance-time graph in Rohan’s textbook. A horizontal line on the graph showed that the distance from the starting point did not change over time, meaning the object was at rest, not moving at all.",
+ "menu_ids": [
+  "SCI-PHY-SPEED-K3-M1",
+  "SCI-PHY-SPEED-K3-M2",
+  "SCI-PHY-SPEED-K5-M3",
+  "SCI-PHY-SPEED-K14-M4",
+  "SCI-PHY-SPEED-K14-M5",
+  "SCI-PHY-SPEED-K18-M6",
+  "SCI-PHY-SPEED-K19-M7",
+  "SCI-PHY-SPEED-K7-M8",
+  "SCI-PHY-SPEED-K13-M9",
+  "SCI-PHY-SPEED-K4-M11"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Meera watched it and said, 'It is moving at a constant speed because it covers equal distances in equal intervals of time.'",
+    "kind": "which_explains",
+    "q": "How did Meera know the toy car was moving at a constant speed?",
+    "options": [
+     "It covered the same distance in each equal time",
+     "It moved along a straight line on the patio",
+     "It travelled a long distance across the patio",
+     "It moved very fast across the flat patio"
+    ],
+    "explain": "Constant speed means equal distances are covered in equal intervals of time.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-SPEED-K7-M8",
+      "why": "thinks moving in a straight line means uniform motion"
+     },
+     {
+      "misconception": "SCI-PHY-SPEED-K3-M1",
+      "why": "thinks speed is the same as distance travelled"
+     },
+     {
+      "misconception": "SCI-PHY-SPEED-K3-M2",
+      "why": "thinks only fast objects have a speed"
+     }
+    ]
+   },
+   {
+    "evidence": "She explained, 'The time period of a pendulum does not depend on the amplitude of the swing.'",
+    "kind": "what_if",
+    "q": "Meera pulls the swing back much farther. What happens to the time for one full swing?",
+    "options": [
+     "It stays the same as with a small pull",
+     "It gets longer because the swing travels farther",
+     "It gets shorter because the push is stronger",
+     "It doubles because it moves twice as far"
+    ],
+    "explain": "The time period of a pendulum does not depend on how far it is pulled back.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-SPEED-K14-M5",
+      "why": "thinks a bigger amplitude increases the time period"
+     },
+     {
+      "misconception": null,
+      "why": "thinks a stronger pull makes the swing faster"
+     },
+     {
+      "misconception": null,
+      "why": "thinks time grows in proportion to swing distance"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan calculated his father's speed by dividing the distance of 2 kilometers by the time of 1/3 of an hour, resulting in 6 kilometers per hour.",
+    "kind": "how",
+    "q": "Father ran 2 km in 20 minutes. Which working gives his speed in kilometers per hour?",
+    "options": [
+     "2 km ÷ 1/3 hour = 6 km/h",
+     "1/3 hour ÷ 2 km = 1/6 km/h",
+     "2 km ÷ 20 minutes = 0.1 km/h",
+     "2 km × 1/3 hour = 2/3 km/h"
+    ],
+    "explain": "Speed is distance divided by time; 20 minutes is 1/3 hour, so 2 ÷ 1/3 = 6 km/h.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-SPEED-K5-M3",
+      "why": "divides time by distance"
+     },
+     {
+      "misconception": "SCI-PHY-SPEED-K4-M11",
+      "why": "divides kilometers by minutes without converting"
+     },
+     {
+      "misconception": null,
+      "why": "multiplies distance and time instead of dividing"
+     }
+    ]
+   },
+   {
+    "evidence": "A horizontal line on the graph showed that the distance from the starting point did not change over time, meaning the object was at rest, not moving at all.",
+    "kind": "what_if",
+    "q": "A bus's distance-time graph shows a flat horizontal line. What is the bus doing?",
+    "options": [
+     "It is standing still in one place",
+     "It is moving at a steady speed",
+     "It is moving along a flat road",
+     "It is moving very slowly, like a snail"
+    ],
+    "explain": "A horizontal line means distance does not change over time, so the bus is at rest.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-SPEED-K19-M7",
+      "why": "thinks a horizontal line means constant speed"
+     },
+     {
+      "misconception": "SCI-PHY-SPEED-K18-M6",
+      "why": "reads the graph's shape as the path's shape"
+     },
+     {
+      "misconception": null,
+      "why": "picks the slow snail mentioned nearby in the passage"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 30.3
+}

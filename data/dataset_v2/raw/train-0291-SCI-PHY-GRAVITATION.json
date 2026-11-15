@@ -1,0 +1,166 @@
+{
+ "source": "train-0291-SCI-PHY-GRAVITATION.json",
+ "job": {
+  "job": "train-0291-SCI-PHY-GRAVITATION",
+  "topic_id": "SCI-PHY-GRAVITATION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 291
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 5659,
+  "promptTokenCount": 2
+ },
+ "passage": "Many students believe that heavy objects fall faster than light ones, or that gravity is only a force between massive planets. However, the Universal Law of Gravitation states that every object in the universe attracts every other object with a force, regardless of their size. Even a small pen exerts a gravitational pull on a book nearby, though this force is too tiny to notice. When we drop objects in a vacuum, where air resistance is absent, a feather and a stone fall at exactly the same rate because acceleration due to gravity is independent of an object's mass. Furthermore, gravity does not simply vanish once you leave Earth's atmosphere; it continues to act on satellites and astronauts in space, keeping them in orbit. It is also a common mistake to think that mass and weight are identical. Mass is the constant amount of matter in a body, measured in kilograms, while weight is the force with which Earth pulls that body, measured in Newtons. Finally, remember that fluids exert pressure in all directions, not just downwards. Whether an object sinks or floats depends on the buoyant force relative to its weight, not just whether the object is heavy or light.",
+ "menu_ids": [
+  "SCI-PHY-GRAVITATION-K5-M1",
+  "SCI-PHY-GRAVITATION-K6-M2",
+  "SCI-PHY-GRAVITATION-K8-M3",
+  "SCI-PHY-GRAVITATION-K9-M4",
+  "SCI-PHY-GRAVITATION-K13-M6",
+  "SCI-PHY-GRAVITATION-K15-M7",
+  "SCI-PHY-GRAVITATION-K16-M8",
+  "SCI-PHY-GRAVITATION-K14-M9",
+  "SCI-PHY-GRAVITATION-K7-M10",
+  "SCI-PHY-GRAVITATION-K6-M11",
+  "SCI-PHY-GRAVITATION-K13-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "When we drop objects in a vacuum, where air resistance is absent, a feather and a stone fall at exactly the same rate because acceleration due to gravity is independent of an object's mass.",
+    "kind": "what_if",
+    "q": "A heavy ball and a light ball are dropped together in a vacuum. What happens?",
+    "options": [
+     "Both balls reach the ground together",
+     "The heavy ball reaches the ground first",
+     "The light ball reaches the ground first",
+     "Neither ball falls because there is no gravity"
+    ],
+    "explain": "In a vacuum, gravity gives every object the same acceleration, whatever its mass.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-GRAVITATION-K8-M3",
+      "why": "thinks heavier objects fall faster"
+     },
+     {
+      "misconception": null,
+      "why": "thinks air helps the lighter ball fall first"
+     },
+     {
+      "misconception": "SCI-PHY-GRAVITATION-K7-M10",
+      "why": "thinks there is no gravity in a vacuum"
+     }
+    ]
+   },
+   {
+    "evidence": "Even a small pen exerts a gravitational pull on a book nearby, though this force is too tiny to notice.",
+    "kind": "why",
+    "q": "Why do we never see a pen and a book pulling each other?",
+    "options": [
+     "Their pull on each other is too weak",
+     "Gravity acts only between planets and stars",
+     "Only the heavier object pulls the other",
+     "Air around them blocks the pull"
+    ],
+    "explain": "Every object pulls on others, but a pen's gravitational pull is too tiny to notice.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-GRAVITATION-K5-M1",
+      "why": "thinks gravity exists only between huge bodies"
+     },
+     {
+      "misconception": null,
+      "why": "thinks only the bigger object attracts"
+     },
+     {
+      "misconception": null,
+      "why": "thinks air stops gravity from acting"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, gravity does not simply vanish once you leave Earth's atmosphere; it continues to act on satellites and astronauts in space, keeping them in orbit.",
+    "kind": "which_explains",
+    "q": "What keeps a satellite circling Earth high above the air?",
+    "options": [
+     "Earth's gravity still pulls on it up there",
+     "Gravity ends above the air, so air holds it",
+     "Gravity acts only between planets, not satellites",
+     "It is light, so it floats instead of falling"
+    ],
+    "explain": "Gravity does not vanish above the atmosphere; it keeps satellites in orbit.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-GRAVITATION-K6-M2",
+      "why": "thinks gravity ends outside the atmosphere"
+     },
+     {
+      "misconception": "SCI-PHY-GRAVITATION-K5-M1",
+      "why": "thinks gravity works only between planets"
+     },
+     {
+      "misconception": "SCI-PHY-GRAVITATION-K16-M8",
+      "why": "thinks light objects always float"
+     }
+    ]
+   },
+   {
+    "evidence": "Mass is the constant amount of matter in a body, measured in kilograms, while weight is the force with which Earth pulls that body, measured in Newtons.",
+    "kind": "difference",
+    "q": "How is the mass of a body different from its weight?",
+    "options": [
+     "Mass is amount of matter; weight is a pull",
+     "Mass is a pull; weight is amount of matter",
+     "Mass is weight; both are measured in kilograms",
+     "Mass changes with place; weight stays fixed"
+    ],
+    "explain": "Mass is the constant amount of matter; weight is the force with which Earth pulls.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "swaps the meanings of mass and weight"
+     },
+     {
+      "misconception": "SCI-PHY-GRAVITATION-K9-M4",
+      "why": "thinks mass and weight are the same"
+     },
+     {
+      "misconception": null,
+      "why": "reverses which quantity stays constant"
+     }
+    ]
+   },
+   {
+    "evidence": "Whether an object sinks or floats depends on the buoyant force relative to its weight, not just whether the object is heavy or light.",
+    "kind": "which_explains",
+    "q": "A heavy log floats but a light pebble sinks. What decides this?",
+    "options": [
+     "Buoyant force compared with the object's weight",
+     "How heavy or light the object is",
+     "How much mass it loses when submerged",
+     "Water pressing only downwards on the object"
+    ],
+    "explain": "Sinking or floating depends on buoyant force relative to weight, not just heaviness.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-GRAVITATION-K16-M8",
+      "why": "thinks heavy objects sink and light ones float"
+     },
+     {
+      "misconception": "SCI-PHY-GRAVITATION-K14-M9",
+      "why": "thinks objects lose mass in water"
+     },
+     {
+      "misconception": "SCI-PHY-GRAVITATION-K13-M12",
+      "why": "thinks fluids push only downwards"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 45.6
+}

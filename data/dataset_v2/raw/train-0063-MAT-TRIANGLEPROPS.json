@@ -1,0 +1,169 @@
+{
+ "source": "train-0063-MAT-TRIANGLEPROPS.json",
+ "job": {
+  "job": "train-0063-MAT-TRIANGLEPROPS",
+  "topic_id": "MAT-TRIANGLEPROPS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a market or shop situation that uses the idea",
+  "seed": 63
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 5918,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan is helping his father build a triangular wooden frame for a shop display. They have three wooden strips measuring 3 cm, 4 cm, and 7 cm. Rohan tries to join them, but he realizes that the ends just touch in a straight line, failing to enclose any space. His father explains that for any triangle, the sum of the lengths of any two sides must be strictly greater than the third side. Next, they pick strips of 5 cm, 6 cm, and 7 cm. Rohan measures the interior angles and finds they sum to exactly 180 degrees, regardless of the triangle's size. He then draws a perpendicular line from the top vertex to the base to find the height, noting that this altitude is a unique segment that does not necessarily bisect the base. Finally, they consider a right-angled corner piece where the sides are 6 cm and 8 cm. Using the Pythagoras property, they calculate the hypotenuse as 10 cm, confirming that this specific relationship between sides only applies to right-angled triangles. Rohan learns that geometry is precise; a triangle cannot have two obtuse angles, as the total sum is fixed, and the hypotenuse is always the longest side, never just the sum of the other two sides.",
+ "menu_ids": [
+  "MAT-TRIANGLEPROPS-K8-M2",
+  "MAT-TRIANGLEPROPS-K9-M3",
+  "MAT-TRIANGLEPROPS-K9-M4",
+  "MAT-TRIANGLEPROPS-K12-M6",
+  "MAT-TRIANGLEPROPS-K12-M7",
+  "MAT-TRIANGLEPROPS-K12-M8",
+  "MAT-TRIANGLEPROPS-K13-M9",
+  "MAT-TRIANGLEPROPS-K15-M10",
+  "MAT-TRIANGLEPROPS-K16-M12",
+  "MAT-TRIANGLEPROPS-K19-M14",
+  "MAT-TRIANGLEPROPS-K19-M15",
+  "MAT-TRIANGLEPROPS-K21-M16",
+  "MAT-TRIANGLEPROPS-K24-M19",
+  "MAT-TRIANGLEPROPS-K24-M20"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "His father explains that for any triangle, the sum of the lengths of any two sides must be strictly greater than the third side.",
+    "kind": "what_if",
+    "q": "Meena joins strips of 4 cm, 4 cm and 8 cm. What will she get?",
+    "options": [
+     "A straight line, as 4 + 4 only equals 8",
+     "A straight line, as two strips are equal",
+     "A triangle, as 4 + 4 equals 8",
+     "A triangle, as any three strips will join"
+    ],
+    "explain": "Two sides must add to more than the third. Here 4 + 4 only equals 8, so they lie flat.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "gets the result right but gives a wrong reason"
+     },
+     {
+      "misconception": "MAT-TRIANGLEPROPS-K19-M14",
+      "why": "thinks an equal sum is enough"
+     },
+     {
+      "misconception": "MAT-TRIANGLEPROPS-K19-M15",
+      "why": "thinks any three lengths form a triangle"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan measures the interior angles and finds they sum to exactly 180 degrees, regardless of the triangle's size.",
+    "kind": "what_if",
+    "q": "Rohan draws a tiny triangle and a huge one. How do their angle sums compare?",
+    "options": [
+     "Both add up to exactly 180 degrees",
+     "The huge one adds up to more degrees",
+     "Both add up to 180 only if equilateral",
+     "Both add up to exactly 360 degrees"
+    ],
+    "explain": "Interior angles always add to 180 degrees, whatever the size of the triangle.",
+    "wrong": [
+     {
+      "misconception": "MAT-TRIANGLEPROPS-K12-M6",
+      "why": "thinks the angle sum grows with size"
+     },
+     {
+      "misconception": "MAT-TRIANGLEPROPS-K12-M7",
+      "why": "thinks 180 holds only for special triangles"
+     },
+     {
+      "misconception": null,
+      "why": "mixes it up with the angles of a quadrilateral"
+     }
+    ]
+   },
+   {
+    "evidence": "He then draws a perpendicular line from the top vertex to the base to find the height, noting that this altitude is a unique segment that does not necessarily bisect the base.",
+    "kind": "how",
+    "q": "Rohan draws the altitude from the top vertex to the base. How must it meet the base?",
+    "options": [
+     "At a right angle, not always at the middle",
+     "At the middle, cutting the base in half",
+     "At a corner, along one slanted side",
+     "At any angle, as long as it touches"
+    ],
+    "explain": "The altitude is perpendicular to the base, but it does not have to cut the base in half.",
+    "wrong": [
+     {
+      "misconception": "MAT-TRIANGLEPROPS-K9-M3",
+      "why": "thinks an altitude must bisect the base"
+     },
+     {
+      "misconception": "MAT-TRIANGLEPROPS-K9-M4",
+      "why": "thinks the slanted side is the altitude"
+     },
+     {
+      "misconception": null,
+      "why": "forgets the altitude must be perpendicular"
+     }
+    ]
+   },
+   {
+    "evidence": "Using the Pythagoras property, they calculate the hypotenuse as 10 cm, confirming that this specific relationship between sides only applies to right-angled triangles.",
+    "kind": "recall",
+    "q": "When can the Pythagoras property be used to find a side of a triangle?",
+    "options": [
+     "Only when the triangle has a right angle",
+     "For every triangle, whatever its shape",
+     "Only when the triangle is equilateral",
+     "Only when two sides are 6 and 8 cm"
+    ],
+    "explain": "The Pythagoras relationship between the sides works only for right-angled triangles.",
+    "wrong": [
+     {
+      "misconception": "MAT-TRIANGLEPROPS-K24-M20",
+      "why": "thinks Pythagoras works for every triangle"
+     },
+     {
+      "misconception": null,
+      "why": "thinks special rules need equal sides"
+     },
+     {
+      "misconception": null,
+      "why": "turns one example into the rule"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan learns that geometry is precise; a triangle cannot have two obtuse angles, as the total sum is fixed, and the hypotenuse is always the longest side, never just the sum of the other two sides.",
+    "kind": "what_if",
+    "q": "Kavi says his triangle has angles of 100 and 95 degrees. What is true about it?",
+    "options": [
+     "It cannot exist; 100 and 95 already pass 180",
+     "It can exist if the triangle is drawn huge",
+     "It can exist, as two obtuse angles are allowed",
+     "It cannot exist, as the sum must be 360"
+    ],
+    "explain": "The angle sum is fixed at 180, and 100 + 95 is already more than 180.",
+    "wrong": [
+     {
+      "misconception": "MAT-TRIANGLEPROPS-K12-M6",
+      "why": "thinks bigger triangles have bigger angle sums"
+     },
+     {
+      "misconception": "MAT-TRIANGLEPROPS-K12-M8",
+      "why": "thinks a triangle can have two obtuse angles"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the triangle and quadrilateral angle sums"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 57.9
+}

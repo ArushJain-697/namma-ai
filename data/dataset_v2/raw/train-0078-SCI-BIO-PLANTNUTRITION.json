@@ -1,0 +1,138 @@
+{
+ "source": "train-0078-SCI-BIO-PLANTNUTRITION.json",
+ "job": {
+  "job": "train-0078-SCI-BIO-PLANTNUTRITION",
+  "topic_id": "SCI-BIO-PLANTNUTRITION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a description of a classroom activity or experiment and what it shows",
+  "seed": 78
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3647,
+  "promptTokenCount": 2
+ },
+ "passage": "In our science lab today, we examined a pitcher plant and a piece of bread mold. We learned that while most plants use chlorophyll to make food, some have unique strategies. The pitcher plant is green and performs photosynthesis, but it grows in soil lacking nitrogen, so it traps insects to obtain this essential nutrient. We also looked at bread mold, which is a saprotroph, not a plant. It lacks chlorophyll and feeds by secreting digestive juices onto dead organic matter. Next, we studied a root nodule under the microscope. We saw tiny Rhizobium bacteria living inside. These bacteria are not pests; they perform a vital service by converting atmospheric nitrogen into a form the plant can actually absorb. Finally, we observed a leaf cross-section. We noticed that stomata are distributed on both the upper and lower surfaces, though they are more numerous below to reduce water loss. We also confirmed that plants respire by taking in oxygen and releasing carbon dioxide, just like us, even while they perform photosynthesis during the day. This shows that plants are complex organisms that interact with their environment in many ways beyond just absorbing water from the soil.",
+ "menu_ids": [
+  "SCI-BIO-PLANTNUTRITION-K5-M1",
+  "SCI-BIO-PLANTNUTRITION-K6-M2",
+  "SCI-BIO-PLANTNUTRITION-K7-M3",
+  "SCI-BIO-PLANTNUTRITION-K10-M4",
+  "SCI-BIO-PLANTNUTRITION-K11-M5",
+  "SCI-BIO-PLANTNUTRITION-K13-M7",
+  "SCI-BIO-PLANTNUTRITION-K9-M9",
+  "SCI-BIO-PLANTNUTRITION-K7-M10",
+  "SCI-BIO-PLANTNUTRITION-K14-M11"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "The pitcher plant is green and performs photosynthesis, but it grows in soil lacking nitrogen, so it traps insects to obtain this essential nutrient.",
+    "kind": "why",
+    "q": "The pitcher plant is green and makes its own food. Why does it still trap insects?",
+    "options": [
+     "Its soil has too little nitrogen",
+     "Its leaves cannot make any food",
+     "Its leaves have no chlorophyll at all",
+     "Its soil has no food for its roots"
+    ],
+    "explain": "The pitcher plant photosynthesises, but its soil lacks nitrogen, so it gets nitrogen from insects.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-PLANTNUTRITION-K10-M4",
+      "why": "thinks insect-eating plants cannot make food"
+     },
+     {
+      "misconception": "SCI-BIO-PLANTNUTRITION-K6-M2",
+      "why": "thinks a plant that traps insects has no working chlorophyll"
+     },
+     {
+      "misconception": "SCI-BIO-PLANTNUTRITION-K5-M1",
+      "why": "thinks plants get their food from the soil"
+     }
+    ]
+   },
+   {
+    "evidence": "It lacks chlorophyll and feeds by secreting digestive juices onto dead organic matter.",
+    "kind": "how",
+    "q": "Bread mold has no chlorophyll. How does it get its food?",
+    "options": [
+     "It digests dead matter with juices it releases",
+     "It makes food from sunlight like green plants",
+     "It takes in ready food through roots in soil",
+     "It traps small insects and digests them"
+    ],
+    "explain": "Bread mold pours digestive juices onto dead organic matter and feeds on it; it is not a plant.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-PLANTNUTRITION-K11-M5",
+      "why": "thinks fungi are plants"
+     },
+     {
+      "misconception": "SCI-BIO-PLANTNUTRITION-K5-M1",
+      "why": "thinks food is taken from soil by roots"
+     },
+     {
+      "misconception": null,
+      "why": "mixes bread mold up with the pitcher plant"
+     }
+    ]
+   },
+   {
+    "evidence": "These bacteria are not pests; they perform a vital service by converting atmospheric nitrogen into a form the plant can actually absorb.",
+    "kind": "what_if",
+    "q": "What would happen to a plant if all the Rhizobium in its root nodules died?",
+    "options": [
+     "It would get less nitrogen it can use",
+     "It would grow better, free of harmful pests",
+     "It would absorb nitrogen straight from the air",
+     "It would get less water from the soil"
+    ],
+    "explain": "Rhizobium changes air nitrogen into a form the plant can absorb, so losing it means less usable nitrogen.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-PLANTNUTRITION-K14-M11",
+      "why": "thinks Rhizobium are harmful pests"
+     },
+     {
+      "misconception": "SCI-BIO-PLANTNUTRITION-K13-M7",
+      "why": "thinks plants take nitrogen directly from the air"
+     },
+     {
+      "misconception": null,
+      "why": "picks the nearby detail about absorbing water"
+     }
+    ]
+   },
+   {
+    "evidence": "We also confirmed that plants respire by taking in oxygen and releasing carbon dioxide, just like us, even while they perform photosynthesis during the day.",
+    "kind": "what_if",
+    "q": "On a sunny afternoon, which gas exchange shows that a leaf is respiring?",
+    "options": [
+     "It takes in oxygen and gives out carbon dioxide",
+     "It takes in carbon dioxide and gives out oxygen",
+     "It takes in nothing, as respiration waits for night",
+     "It takes in nitrogen and gives out oxygen"
+    ],
+    "explain": "Plants respire like us, taking in oxygen and releasing carbon dioxide, even during daytime photosynthesis.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-PLANTNUTRITION-K7-M3",
+      "why": "thinks plants only take in carbon dioxide"
+     },
+     {
+      "misconception": null,
+      "why": "thinks plants respire only when photosynthesis stops"
+     },
+     {
+      "misconception": "SCI-BIO-PLANTNUTRITION-K13-M7",
+      "why": "thinks leaves take nitrogen from the air"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 33.8
+}

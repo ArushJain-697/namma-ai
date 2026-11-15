@@ -1,0 +1,166 @@
+{
+ "source": "train-0294-SCI-PHY-LIGHTSHADOW.json",
+ "job": {
+  "job": "train-0294-SCI-PHY-LIGHTSHADOW",
+  "topic_id": "SCI-PHY-LIGHTSHADOW",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a passage rich in numbers, dates or measurements",
+  "seed": 294
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1649,
+  "promptTokenCount": 2
+ },
+ "passage": "Light behaves in fascinating ways that define how we see the world. Light travels in a perfectly straight line, which is why it cannot bend around corners to reach the other side of a wall. When light hits an object, it may be blocked, forming a shadow, but a shadow requires a surface or screen behind the object to be visible. If you hold a bird in the air with no wall behind it, no shadow appears. Materials interact with light differently: opaque objects block all light, while translucent materials allow some light to pass through. Transparent objects, like clear glass, allow light to pass through so well that we often forget they reflect a small amount of light too. Furthermore, not everything that glows is a light source. The Moon, for example, is a non-luminous object because it does not produce its own light; it merely reflects sunlight. Mirrors are not the only things that reflect light; in fact, almost every object around us reflects some light, which is how our eyes detect them. Finally, a pinhole camera demonstrates light's straight-line path by creating an inverted image on the screen, proving that light rays cross over as they pass through the tiny opening.",
+ "menu_ids": [
+  "SCI-PHY-LIGHTSHADOW-K10-M2",
+  "SCI-PHY-LIGHTSHADOW-K12-M3",
+  "SCI-PHY-LIGHTSHADOW-K14-M4",
+  "SCI-PHY-LIGHTSHADOW-K15-M5",
+  "SCI-PHY-LIGHTSHADOW-K15-M6",
+  "SCI-PHY-LIGHTSHADOW-K17-M7",
+  "SCI-PHY-LIGHTSHADOW-K18-M8",
+  "SCI-PHY-LIGHTSHADOW-K16-M9",
+  "SCI-PHY-LIGHTSHADOW-K13-M10",
+  "SCI-PHY-LIGHTSHADOW-K18-M11",
+  "SCI-PHY-LIGHTSHADOW-K14-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Light travels in a perfectly straight line, which is why it cannot bend around corners to reach the other side of a wall.",
+    "kind": "what_if",
+    "q": "Meena stands behind a high wall, away from a lamp. Why is she not lit by it?",
+    "options": [
+     "Light moves straight and cannot turn the corner",
+     "Light bends, but too weakly to reach her",
+     "Light travels shorter distances during the day",
+     "Light is stopped by the lamp's own shadow"
+    ],
+    "explain": "Light travels in straight lines, so it cannot bend around the wall's edge to reach her.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-LIGHTSHADOW-K14-M4",
+      "why": "thinks light bends around corners but weakly"
+     },
+     {
+      "misconception": "SCI-PHY-LIGHTSHADOW-K14-M12",
+      "why": "thinks light range changes with the time of day"
+     },
+     {
+      "misconception": "SCI-PHY-LIGHTSHADOW-K15-M5",
+      "why": "thinks a shadow is a thing that blocks light"
+     }
+    ]
+   },
+   {
+    "evidence": "If you hold a bird in the air with no wall behind it, no shadow appears.",
+    "kind": "what_if",
+    "q": "Asha holds a toy bird in sunlight in an open field. What will she see?",
+    "options": [
+     "No shadow, as nothing is behind the bird",
+     "A shadow floating in the air near it",
+     "A shadow only if the bird is held low",
+     "A shadow the same size as the bird"
+    ],
+    "explain": "A shadow needs a wall or screen behind the object; in open air none appears.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-LIGHTSHADOW-K15-M6",
+      "why": "thinks shadows exist without any surface"
+     },
+     {
+      "misconception": null,
+      "why": "thinks height alone decides whether a shadow forms"
+     },
+     {
+      "misconception": "SCI-PHY-LIGHTSHADOW-K16-M9",
+      "why": "thinks a shadow always matches the object's size"
+     }
+    ]
+   },
+   {
+    "evidence": "The Moon, for example, is a non-luminous object because it does not produce its own light; it merely reflects sunlight.",
+    "kind": "why",
+    "q": "Why is the Moon called non-luminous even though it shines at night?",
+    "options": [
+     "It sends back light that comes from the Sun",
+     "It makes light, but only at night",
+     "It stores sunlight and releases it slowly",
+     "It glows because it is bright and far away"
+    ],
+    "explain": "The Moon makes no light of its own; it only reflects sunlight towards us.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-LIGHTSHADOW-K10-M2",
+      "why": "thinks the Moon makes its own light"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the Moon stores light like a battery"
+     },
+     {
+      "misconception": "SCI-PHY-LIGHTSHADOW-K10-M2",
+      "why": "thinks glowing brightly means a light source"
+     }
+    ]
+   },
+   {
+    "evidence": "Mirrors are not the only things that reflect light; in fact, almost every object around us reflects some light, which is how our eyes detect them.",
+    "kind": "which_explains",
+    "q": "Why can Tara see a wooden desk, which is not shiny like a mirror?",
+    "options": [
+     "The desk sends some light back to her eyes",
+     "The desk makes its own light to be seen",
+     "Only shiny things send light back to the eyes",
+     "The desk lets all light pass to her eyes"
+    ],
+    "explain": "Almost every object reflects some light, and our eyes detect that reflected light.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks all visible objects are light sources"
+     },
+     {
+      "misconception": "SCI-PHY-LIGHTSHADOW-K18-M8",
+      "why": "thinks only shiny things reflect light"
+     },
+     {
+      "misconception": "SCI-PHY-LIGHTSHADOW-K13-M10",
+      "why": "mixes up reflecting with letting light through"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, a pinhole camera demonstrates light's straight-line path by creating an inverted image on the screen, proving that light rays cross over as they pass through the tiny opening.",
+    "kind": "how",
+    "q": "In a pinhole camera, why does the image on the screen appear upside down?",
+    "options": [
+     "Light rays cross over at the tiny hole",
+     "Light rays go straight through unchanged",
+     "Light rays bend around the edge of the hole",
+     "Light rays are blocked by the screen"
+    ],
+    "explain": "Straight rays from the top and bottom cross at the tiny opening, so the image is inverted.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-LIGHTSHADOW-K17-M7",
+      "why": "thinks straight travel keeps the image upright"
+     },
+     {
+      "misconception": "SCI-PHY-LIGHTSHADOW-K14-M4",
+      "why": "thinks light bends around edges"
+     },
+     {
+      "misconception": null,
+      "why": "thinks blocking by the screen turns the image over"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 15.1
+}

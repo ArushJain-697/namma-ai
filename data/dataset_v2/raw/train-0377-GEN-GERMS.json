@@ -1,0 +1,169 @@
+{
+ "source": "train-0377-GEN-GERMS.json",
+ "job": {
+  "job": "train-0377-GEN-GERMS",
+  "topic_id": "GEN-GERMS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a news-style report about a real-world situation",
+  "seed": 377
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 4293,
+  "promptTokenCount": 2
+ },
+ "passage": "In a recent health awareness drive at a local community center, experts emphasized that invisible microbes, not just visible dirt, are the primary cause of illness. Many residents mistakenly believe that if hands look clean, they are free of pathogens, but germs are microscopic and thrive even on surfaces that appear spotless. Furthermore, the experts clarified that soap does not instantly kill all germs; instead, it works by lifting oils and pathogens off the skin so they can be rinsed away with water. To be effective, this process requires scrubbing for at least twenty seconds, as a quick five-second rinse is insufficient to remove stubborn microbes. Regarding water safety, the community learned that boiling water is the most reliable method to eliminate pathogens. Simply heating water until it starts to bubble is not enough; it must reach a rolling boil for several minutes to ensure all harmful organisms are destroyed. Finally, the health team addressed the misuse of medicines, stressing that antibiotics are designed specifically for bacterial infections and are completely ineffective against viral illnesses like the common cold or flu. Relying on antibiotics for viral symptoms only contributes to the global problem of drug resistance, making future infections harder to treat.",
+ "menu_ids": [
+  "GEN-GERMS-K13-M3",
+  "GEN-GERMS-K14-M4",
+  "GEN-GERMS-K15-M5",
+  "GEN-GERMS-K15-M6",
+  "GEN-GERMS-K16-M7",
+  "GEN-GERMS-K17-M8",
+  "GEN-GERMS-K17-M9",
+  "GEN-GERMS-K18-M10",
+  "GEN-GERMS-K19-M11",
+  "GEN-GERMS-K20-M12",
+  "GEN-GERMS-K21-M13",
+  "GEN-GERMS-K22-M14",
+  "GEN-GERMS-K22-M15",
+  "GEN-GERMS-K23-M16"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Many residents mistakenly believe that if hands look clean, they are free of pathogens, but germs are microscopic and thrive even on surfaces that appear spotless.",
+    "kind": "which_explains",
+    "q": "Sam's hands look spotless after play. Why could they still make him ill?",
+    "options": [
+     "Germs are too small to see by eye",
+     "Germs live only on dirty, smelly things",
+     "Germs spread only by a sick person's touch",
+     "Germs come from cold weather or getting wet"
+    ],
+    "explain": "Germs are microscopic, so they can stay on hands that look spotless.",
+    "wrong": [
+     {
+      "misconception": "GEN-GERMS-K14-M4",
+      "why": "thinks germs live only on dirty or smelly things"
+     },
+     {
+      "misconception": "GEN-GERMS-K15-M5",
+      "why": "thinks germs pass only by a sick person's touch"
+     },
+     {
+      "misconception": "GEN-GERMS-K15-M6",
+      "why": "thinks cold or wet weather brings germs"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, the experts clarified that soap does not instantly kill all germs; instead, it works by lifting oils and pathogens off the skin so they can be rinsed away with water.",
+    "kind": "how",
+    "q": "How does soap help remove germs from our hands?",
+    "options": [
+     "It lifts germs off skin so water rinses them",
+     "It kills all the germs the moment it touches",
+     "It adds little, as plain water cleans equally well",
+     "It seals germs under a coating on the skin"
+    ],
+    "explain": "Soap lifts germs and oils off the skin so they can be rinsed away, not killed instantly.",
+    "wrong": [
+     {
+      "misconception": "GEN-GERMS-K17-M8",
+      "why": "thinks soap kills all germs immediately"
+     },
+     {
+      "misconception": "GEN-GERMS-K18-M10",
+      "why": "thinks water alone is as good as soap"
+     },
+     {
+      "misconception": null,
+      "why": "invents a coating action not in the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "To be effective, this process requires scrubbing for at least twenty seconds, as a quick five-second rinse is insufficient to remove stubborn microbes.",
+    "kind": "what_if",
+    "q": "Meena rubs soap on her hands for a very short time. What is the likely result?",
+    "options": [
+     "Her hands still keep some stubborn microbes",
+     "Her hands are germ-free after a quick rub",
+     "Her hands are safe because they look clean",
+     "Her hands are cleaner than after long scrubbing"
+    ],
+    "explain": "A quick rinse is not enough; scrubbing for at least twenty seconds is needed to remove stubborn microbes.",
+    "wrong": [
+     {
+      "misconception": "GEN-GERMS-K19-M11",
+      "why": "thinks a quick soap rub is enough"
+     },
+     {
+      "misconception": "GEN-GERMS-K13-M3",
+      "why": "thinks hands that look clean have no germs"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the effect of scrubbing time"
+     }
+    ]
+   },
+   {
+    "evidence": "Simply heating water until it starts to bubble is not enough; it must reach a rolling boil for several minutes to ensure all harmful organisms are destroyed.",
+    "kind": "what_if",
+    "q": "A family heats water only until bubbles start, then stops. What is likely true of this water?",
+    "options": [
+     "Some harmful organisms may still survive in it",
+     "Every pathogen dies as soon as bubbles appear",
+     "Bubbles remove only the germs that are visible",
+     "Boiling never works; only filtering makes water safe"
+    ],
+    "explain": "Water must reach a rolling boil for several minutes; merely starting to bubble does not destroy all pathogens.",
+    "wrong": [
+     {
+      "misconception": "GEN-GERMS-K23-M16",
+      "why": "thinks a few seconds of heating makes water safe"
+     },
+     {
+      "misconception": null,
+      "why": "thinks bubbles only affect visible germs"
+     },
+     {
+      "misconception": null,
+      "why": "rejects boiling, against the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, the health team addressed the misuse of medicines, stressing that antibiotics are designed specifically for bacterial infections and are completely ineffective against viral illnesses like the common cold or flu.",
+    "kind": "why",
+    "q": "Why is it wrong to give antibiotics for a common cold?",
+    "options": [
+     "It cannot treat a virus and fuels resistance",
+     "It cures colds but spreads them to others",
+     "It helps only if the cold came from rain",
+     "It works only against flu, not against colds"
+    ],
+    "explain": "Antibiotics work on bacteria, not viruses like colds, and misuse adds to drug resistance.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "invents a harmful side effect not in the passage"
+     },
+     {
+      "misconception": "GEN-GERMS-K15-M6",
+      "why": "thinks colds come from getting wet"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up cold and flu, though both are viral"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 35.9
+}

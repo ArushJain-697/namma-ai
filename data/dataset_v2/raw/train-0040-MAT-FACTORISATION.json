@@ -1,0 +1,169 @@
+{
+ "source": "train-0040-MAT-FACTORISATION.json",
+ "job": {
+  "job": "train-0040-MAT-FACTORISATION",
+  "topic_id": "MAT-FACTORISATION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a market or shop situation that uses the idea",
+  "seed": 40
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4413,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan runs a small stationery shop where he sells notebooks in bundles. He recently received a shipment of 4x^2 - 16 notebooks. To organize his shelf, he decides to factorise this expression. He knows that 4x^2 - 16 is a difference of two squares, which follows the identity a^2 - b^2 = (a - b)(a + b). By taking out the common factor of 4, he gets 4(x^2 - 4), which then simplifies to 4(x - 2)(x + 2). A customer asks for 3x + 9 notebooks, and Rohan explains that he can factorise this as 3(x + 3). He emphasizes that when he takes out the common factor 3, the term 3x becomes x and the 9 becomes 3, because 3 divided by 3 leaves 1. Later, he helps a student with the expression x^2 - 6x + 9. He warns the student that this is a perfect square trinomial, (x - 3)^2, not (x - 3)(x + 3). Finally, he shows that if he has 2x + 4, he can write it as 2(x + 2). He checks his work by multiplying 2 by x and 2 by 2 to get back to 2x + 4, ensuring his factorisation is correct. He reminds everyone that every number has at least two factors: 1 and itself.",
+ "menu_ids": [
+  "MAT-FACTORISATION-K10-M1",
+  "MAT-FACTORISATION-K5-M2",
+  "MAT-FACTORISATION-K11-M3",
+  "MAT-FACTORISATION-K12-M4",
+  "MAT-FACTORISATION-K13-M5",
+  "MAT-FACTORISATION-K14-M7",
+  "MAT-FACTORISATION-K15-M8",
+  "MAT-FACTORISATION-K16-M9",
+  "MAT-FACTORISATION-K17-M10",
+  "MAT-FACTORISATION-K19-M12",
+  "MAT-FACTORISATION-K20-M13",
+  "MAT-FACTORISATION-K20-M14",
+  "MAT-FACTORISATION-K21-M16",
+  "MAT-FACTORISATION-K22-M18"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "By taking out the common factor of 4, he gets 4(x^2 - 4), which then simplifies to 4(x - 2)(x + 2).",
+    "kind": "how",
+    "q": "Rohan starts with 4x^2 - 16. Which form shows it completely factorised?",
+    "options": [
+     "4(x - 2)(x + 2)",
+     "4(x^2 - 4)",
+     "4(x - 2)^2",
+     "4(x - 4)(x + 4)"
+    ],
+    "explain": "x^2 - 4 still splits into (x - 2)(x + 2), so the full answer is 4(x - 2)(x + 2).",
+    "wrong": [
+     {
+      "misconception": "MAT-FACTORISATION-K11-M3",
+      "why": "thinks a bracket means it is fully factorised"
+     },
+     {
+      "misconception": "MAT-FACTORISATION-K20-M13",
+      "why": "thinks a^2 - b^2 is the same as (a - b)^2"
+     },
+     {
+      "misconception": null,
+      "why": "uses 4 instead of its square root 2"
+     }
+    ]
+   },
+   {
+    "evidence": "He warns the student that this is a perfect square trinomial, (x - 3)^2, not (x - 3)(x + 3).",
+    "kind": "what_if",
+    "q": "A student factorises x^2 - 6x + 9 as (x - 3)(x + 3). What should Rohan say?",
+    "options": [
+     "It is (x - 3)^2, a perfect square",
+     "It is (x - 3)(x + 3), a difference of squares",
+     "It is (x + 3)^2, since 9 is positive",
+     "It is (x - 9)^2, using the last term"
+    ],
+    "explain": "Rohan says x^2 - 6x + 9 is a perfect square trinomial, (x - 3)^2, not (x - 3)(x + 3).",
+    "wrong": [
+     {
+      "misconception": "MAT-FACTORISATION-K19-M12",
+      "why": "thinks any minus with squares gives (x - 3)(x + 3)"
+     },
+     {
+      "misconception": "MAT-FACTORISATION-K22-M18",
+      "why": "ignores the signs when finding the numbers"
+     },
+     {
+      "misconception": null,
+      "why": "uses the constant 9 without taking its root"
+     }
+    ]
+   },
+   {
+    "evidence": "He checks his work by multiplying 2 by x and 2 by 2 to get back to 2x + 4, ensuring his factorisation is correct.",
+    "kind": "what_if",
+    "q": "Meena factorises 5x + 10 as 5(x + 2). What would Rohan advise her to do next?",
+    "options": [
+     "She should multiply back to get 5x + 10",
+     "She should skip checking, as steps are enough",
+     "She should take 5 out again from x + 2",
+     "She should check only that 5 divides 10"
+    ],
+    "explain": "Like Rohan with 2(x + 2), multiplying back to the original expression shows the factorisation is correct.",
+    "wrong": [
+     {
+      "misconception": "MAT-FACTORISATION-K14-M7",
+      "why": "thinks following steps makes checking unnecessary"
+     },
+     {
+      "misconception": null,
+      "why": "thinks factors can be taken out again and again"
+     },
+     {
+      "misconception": "MAT-FACTORISATION-K13-M5",
+      "why": "thinks only the number parts matter"
+     }
+    ]
+   },
+   {
+    "evidence": "He reminds everyone that every number has at least two factors: 1 and itself.",
+    "kind": "what_if",
+    "q": "Priya says the only factor of 7 is 7. What has she missed?",
+    "options": [
+     "1 is also a factor of 7",
+     "0 is also a factor of 7",
+     "7 itself is not a factor of 7",
+     "14 is also a factor of 7"
+    ],
+    "explain": "Every number has at least two factors, 1 and itself, so 7 has factors 1 and 7.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks zero counts as a factor"
+     },
+     {
+      "misconception": "MAT-FACTORISATION-K10-M1",
+      "why": "thinks a number is not its own factor"
+     },
+     {
+      "misconception": null,
+      "why": "confuses factors with multiples"
+     }
+    ]
+   },
+   {
+    "evidence": "He knows that 4x^2 - 16 is a difference of two squares, which follows the identity a^2 - b^2 = (a - b)(a + b).",
+    "kind": "which_explains",
+    "q": "Why can Rohan use the identity (a - b)(a + b) for 4x^2 - 16?",
+    "options": [
+     "Its two terms are squares, one minus the other",
+     "It equals (2x - 4)^2, a perfect square",
+     "Any two squares fit, added or subtracted",
+     "Both of its terms have 4 as a factor"
+    ],
+    "explain": "The identity a^2 - b^2 = (a - b)(a + b) works because 4x^2 - 16 is a difference of two squares.",
+    "wrong": [
+     {
+      "misconception": "MAT-FACTORISATION-K20-M13",
+      "why": "thinks a^2 - b^2 is the same as (a - b)^2"
+     },
+     {
+      "misconception": "MAT-FACTORISATION-K20-M14",
+      "why": "thinks a sum of squares also factorises this way"
+     },
+     {
+      "misconception": null,
+      "why": "picks a true detail that is not the reason"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 43.8
+}

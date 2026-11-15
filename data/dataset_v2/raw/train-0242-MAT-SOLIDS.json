@@ -1,0 +1,169 @@
+{
+ "source": "train-0242-MAT-SOLIDS.json",
+ "job": {
+  "job": "train-0242-MAT-SOLIDS",
+  "topic_id": "MAT-SOLIDS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a rule explained with two contrasting examples",
+  "seed": 242
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3178,
+  "promptTokenCount": 2
+ },
+ "passage": "To understand 3D shapes, we must distinguish between their visible features and their actual properties. A polyhedron is a solid made of flat polygonal faces. For any convex polyhedron, Euler’s formula states that the number of faces (F) plus the number of vertices (V) minus the number of edges (E) always equals two, written as F + V - E = 2. Consider a cube: it has 6 faces, 8 vertices, and 12 edges. Applying the formula, 6 + 8 - 12 equals 2, which confirms the rule. In contrast, consider a cylinder. A cylinder is not a polyhedron because it has a curved surface. While it has two circular flat faces, it also possesses two curved edges where the flat surfaces meet the curved side. If you look at a cylinder from the top, you see a circle, but from the side, you see a rectangle. These different views are necessary to understand the full shape, as no single view reveals the entire object. Furthermore, a pyramid is named specifically by the shape of its base. A square pyramid has a square base and four triangular side faces, totaling five faces, not four. Understanding these rules helps us identify solids correctly by their geometric properties rather than just their appearance.",
+ "menu_ids": [
+  "MAT-SOLIDS-K13-M1",
+  "MAT-SOLIDS-K13-M2",
+  "MAT-SOLIDS-K14-M3",
+  "MAT-SOLIDS-K15-M4",
+  "MAT-SOLIDS-K16-M5",
+  "MAT-SOLIDS-K16-M6",
+  "MAT-SOLIDS-K17-M7",
+  "MAT-SOLIDS-K17-M8",
+  "MAT-SOLIDS-K18-M9",
+  "MAT-SOLIDS-K21-M10",
+  "MAT-SOLIDS-K20-M11",
+  "MAT-SOLIDS-K22-M12",
+  "MAT-SOLIDS-K19-M13",
+  "MAT-SOLIDS-K23-M14"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "For any convex polyhedron, Euler’s formula states that the number of faces (F) plus the number of vertices (V) minus the number of edges (E) always equals two, written as F + V - E = 2.",
+    "kind": "what_if",
+    "q": "A convex polyhedron has 5 faces and 6 vertices. How many edges must it have?",
+    "options": [
+     "9 edges",
+     "11 edges",
+     "13 edges",
+     "7 edges"
+    ],
+    "explain": "By Euler's formula, 5 + 6 - E = 2, so E must be 9.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "just adds faces and vertices"
+     },
+     {
+      "misconception": null,
+      "why": "adds 2 instead of subtracting it"
+     },
+     {
+      "misconception": null,
+      "why": "uses only faces plus 2 and forgets vertices"
+     }
+    ]
+   },
+   {
+    "evidence": "A cylinder is not a polyhedron because it has a curved surface.",
+    "kind": "why",
+    "q": "Why is a cylinder not counted as a polyhedron?",
+    "options": [
+     "It has a side that is not flat",
+     "It has no edges because it is round",
+     "It has circles instead of square faces",
+     "It has three faces, which is too few"
+    ],
+    "explain": "A polyhedron has only flat faces, but a cylinder has a curved side.",
+    "wrong": [
+     {
+      "misconception": "MAT-SOLIDS-K18-M9",
+      "why": "thinks round solids have no edges"
+     },
+     {
+      "misconception": null,
+      "why": "thinks polyhedron faces must be squares"
+     },
+     {
+      "misconception": "MAT-SOLIDS-K13-M1",
+      "why": "counts the curved surface as a face"
+     }
+    ]
+   },
+   {
+    "evidence": "While it has two circular flat faces, it also possesses two curved edges where the flat surfaces meet the curved side.",
+    "kind": "which_explains",
+    "q": "Meena says a cylinder has no edges since it is round. What is actually true?",
+    "options": [
+     "It has two curved edges at its rims",
+     "It has no edges, being completely round",
+     "It has two straight edges down its side",
+     "It has one edge around its middle"
+    ],
+    "explain": "A cylinder has two curved edges where its flat circles meet the curved side.",
+    "wrong": [
+     {
+      "misconception": "MAT-SOLIDS-K18-M9",
+      "why": "thinks a round solid has no edges"
+     },
+     {
+      "misconception": "MAT-SOLIDS-K14-M3",
+      "why": "thinks edges must be straight lines"
+     },
+     {
+      "misconception": null,
+      "why": "guesses an edge where none is described"
+     }
+    ]
+   },
+   {
+    "evidence": "These different views are necessary to understand the full shape, as no single view reveals the entire object.",
+    "kind": "what_if",
+    "q": "Asha sees only a circle when she looks at a solid from the top. What can she conclude?",
+    "options": [
+     "Its shape is unknown without other views",
+     "Its shape is just a flat circle",
+     "Its shape is a circle from every side",
+     "Its shape must be a sphere"
+    ],
+    "explain": "No single view shows the whole solid; a cylinder also looks like a circle from the top.",
+    "wrong": [
+     {
+      "misconception": "MAT-SOLIDS-K13-M2",
+      "why": "thinks only the visible part exists"
+     },
+     {
+      "misconception": "MAT-SOLIDS-K23-M14",
+      "why": "thinks all views of a solid look the same"
+     },
+     {
+      "misconception": null,
+      "why": "jumps to one shape from one view"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, a pyramid is named specifically by the shape of its base.",
+    "kind": "which_example",
+    "q": "A pyramid has a hexagon at the bottom and triangles on its sides. What is it called?",
+    "options": [
+     "A hexagonal pyramid",
+     "A triangular pyramid",
+     "A hexagonal prism",
+     "A six-faced pyramid"
+    ],
+    "explain": "A pyramid is named by its base, so a hexagon base makes it a hexagonal pyramid.",
+    "wrong": [
+     {
+      "misconception": "MAT-SOLIDS-K17-M8",
+      "why": "names the pyramid by its side faces"
+     },
+     {
+      "misconception": null,
+      "why": "picks a similar-sounding solid name"
+     },
+     {
+      "misconception": "MAT-SOLIDS-K17-M7",
+      "why": "counts faces from the base's sides only"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 33.8
+}

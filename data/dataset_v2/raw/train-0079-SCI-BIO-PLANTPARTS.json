@@ -1,0 +1,137 @@
+{
+ "source": "train-0079-SCI-BIO-PLANTPARTS.json",
+ "job": {
+  "job": "train-0079-SCI-BIO-PLANTPARTS",
+  "topic_id": "SCI-BIO-PLANTPARTS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a question-and-answer (FAQ) style passage",
+  "seed": 79
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3064,
+  "promptTokenCount": 2
+ },
+ "passage": "Plants are fascinating living organisms that rely on various structures to survive. Many students wonder if plants 'eat' sunlight, but in reality, plants use sunlight as an energy source to manufacture their own food through photosynthesis, not as a physical meal. Below the surface, roots perform vital tasks beyond just anchoring the plant; they actively absorb water and essential minerals from the soil to support growth. Not everything underground is a root, however; some plants have modified stems like potatoes that grow beneath the surface. When observing leaves, you might notice different patterns of veins. These patterns are actually linked to the root system, as plants with parallel venation typically have fibrous roots, while those with reticulate venation have a taproot. Furthermore, a flower is a complete structure that includes reproductive organs like stamens and pistils, even if you remove the colorful petals. Finally, plants release excess water through their leaves in a process called transpiration. This is not 'sweating' to cool down like humans do, but rather a necessary process to pull water and nutrients upward from the roots to the rest of the plant.",
+ "menu_ids": [
+  "SCI-BIO-PLANTPARTS-K5-M1",
+  "SCI-BIO-PLANTPARTS-K13-M4",
+  "SCI-BIO-PLANTPARTS-K9-M5",
+  "SCI-BIO-PLANTPARTS-K16-M7",
+  "SCI-BIO-PLANTPARTS-K12-M8",
+  "SCI-BIO-PLANTPARTS-K20-M9",
+  "SCI-BIO-PLANTPARTS-K14-M10",
+  "SCI-BIO-PLANTPARTS-K17-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "These patterns are actually linked to the root system, as plants with parallel venation typically have fibrous roots, while those with reticulate venation have a taproot.",
+    "kind": "what_if",
+    "q": "A grass leaf has parallel veins. Which roots does the grass plant most likely have?",
+    "options": [
+     "A bunch of thin fibrous roots",
+     "One main thick root going deep",
+     "Either kind of roots, as veins mean nothing",
+     "Thick potato-like stems instead of roots"
+    ],
+    "explain": "Leaves with parallel veins usually belong to plants with fibrous roots.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-PLANTPARTS-K16-M7",
+      "why": "thinks all plants have one thick main root"
+     },
+     {
+      "misconception": "SCI-BIO-PLANTPARTS-K12-M8",
+      "why": "thinks venation has no link to roots"
+     },
+     {
+      "misconception": "SCI-BIO-PLANTPARTS-K9-M5",
+      "why": "mixes up roots with underground stems"
+     }
+    ]
+   },
+   {
+    "evidence": "This is not 'sweating' to cool down like humans do, but rather a necessary process to pull water and nutrients upward from the roots to the rest of the plant.",
+    "kind": "why",
+    "q": "Why is it important for a plant to lose water through its leaves?",
+    "options": [
+     "It helps draw water up from the roots",
+     "It cools the plant like human sweat",
+     "It lets the plant eat sunlight faster",
+     "It gets rid of water the plant cannot use"
+    ],
+    "explain": "Transpiration pulls water and nutrients up from the roots; it is not sweating.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-PLANTPARTS-K13-M4",
+      "why": "thinks transpiration is sweating to stay cool"
+     },
+     {
+      "misconception": "SCI-BIO-PLANTPARTS-K14-M10",
+      "why": "thinks plants eat sunlight"
+     },
+     {
+      "misconception": null,
+      "why": "reads 'excess water' as useless waste only"
+     }
+    ]
+   },
+   {
+    "evidence": "Not everything underground is a root, however; some plants have modified stems like potatoes that grow beneath the surface.",
+    "kind": "which_example",
+    "q": "Meena digs up a potato from under the soil. Which part of the plant is it?",
+    "options": [
+     "A stem changed to grow below ground",
+     "A root, since it grows below ground",
+     "A main taproot that grew very thick",
+     "A root that only holds the plant firm"
+    ],
+    "explain": "A potato is a modified stem; not everything underground is a root.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-PLANTPARTS-K9-M5",
+      "why": "thinks anything underground is a root"
+     },
+     {
+      "misconception": "SCI-BIO-PLANTPARTS-K16-M7",
+      "why": "thinks every plant has one thick main root"
+     },
+     {
+      "misconception": "SCI-BIO-PLANTPARTS-K17-M12",
+      "why": "thinks roots only anchor the plant"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, a flower is a complete structure that includes reproductive organs like stamens and pistils, even if you remove the colorful petals.",
+    "kind": "what_if",
+    "q": "Sonu pulls all the petals off a flower. What is left on the stalk?",
+    "options": [
+     "Its stamens and pistils, still flower parts",
+     "Only stalk parts, not part of any flower",
+     "Tiny leaves that will grow new petals",
+     "Its stamens only, as pistils are petals"
+    ],
+    "explain": "A flower still has stamens and pistils even after the colourful petals are removed.",
+    "wrong": [
+     {
+      "misconception": "SCI-BIO-PLANTPARTS-K20-M9",
+      "why": "thinks only petals make up the flower"
+     },
+     {
+      "misconception": null,
+      "why": "guesses that the inner parts are new leaves"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up pistils with petals"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 31.3
+}

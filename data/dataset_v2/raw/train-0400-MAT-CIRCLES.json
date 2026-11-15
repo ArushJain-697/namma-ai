@@ -1,0 +1,139 @@
+{
+ "source": "train-0400-MAT-CIRCLES.json",
+ "job": {
+  "job": "train-0400-MAT-CIRCLES",
+  "topic_id": "MAT-CIRCLES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a rule explained with two contrasting examples",
+  "seed": 400
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1272,
+  "promptTokenCount": 2
+ },
+ "passage": "In geometry, understanding circle properties requires precision. First, consider a line drawn from the centre of a circle to a chord. This line only bisects the chord if it is perpendicular to it; a random line from the centre does not guarantee bisection. For example, if a line is drawn from the centre to a chord but is not perpendicular, the chord segments remain unequal. Second, consider tangents drawn from an external point. Two tangents drawn from any single point outside a circle are always equal in length, regardless of the circle's radius or the point's distance. For instance, if you draw two tangents from point P to a circle, they will be equal even if the circle is small or large. Third, remember that the angle in a semicircle is always 90 degrees, forming a right-angled triangle regardless of whether the triangle is isosceles or scalene. Finally, note that a cyclic quadrilateral must have its four vertices on the circle, and its opposite angles must sum to 180 degrees, not be equal to each other. A rectangle is a cyclic quadrilateral, but a random rhombus is not, as its vertices do not necessarily lie on a single circle.",
+ "menu_ids": [
+  "MAT-CIRCLES-K11-M1",
+  "MAT-CIRCLES-K12-M2",
+  "MAT-CIRCLES-K13-M3",
+  "MAT-CIRCLES-K16-M4",
+  "MAT-CIRCLES-K18-M5",
+  "MAT-CIRCLES-K17-M7",
+  "MAT-CIRCLES-K23-M9",
+  "MAT-CIRCLES-K25-M10",
+  "MAT-CIRCLES-K26-M11",
+  "MAT-CIRCLES-K20-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "This line only bisects the chord if it is perpendicular to it; a random line from the centre does not guarantee bisection.",
+    "kind": "what_if",
+    "q": "A line from a circle's centre meets a chord at a slant. What happens to the chord?",
+    "options": [
+     "Its two parts stay unequal",
+     "It is cut into two equal parts",
+     "It becomes the longest chord",
+     "It turns into a diameter"
+    ],
+    "explain": "Only a perpendicular line from the centre bisects the chord; a slanting one leaves the parts unequal.",
+    "wrong": [
+     {
+      "misconception": "MAT-CIRCLES-K13-M3",
+      "why": "thinks any line from the centre bisects the chord"
+     },
+     {
+      "misconception": "MAT-CIRCLES-K11-M1",
+      "why": "thinks a chord near the centre becomes the longest"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up a chord with a diameter"
+     }
+    ]
+   },
+   {
+    "evidence": "Two tangents drawn from any single point outside a circle are always equal in length, regardless of the circle's radius or the point's distance.",
+    "kind": "what_if",
+    "q": "Point P is far outside a very small circle. How do its two tangent lengths compare?",
+    "options": [
+     "They are equal in length",
+     "The nearer one is shorter",
+     "They are equal only if P is close",
+     "They are equal only for a large circle"
+    ],
+    "explain": "Two tangents from an outside point are always equal, whatever the circle's size or the point's distance.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks the two tangents can differ in length"
+     },
+     {
+      "misconception": "MAT-CIRCLES-K25-M10",
+      "why": "thinks equality needs a special distance for P"
+     },
+     {
+      "misconception": null,
+      "why": "thinks circle size changes the rule"
+     }
+    ]
+   },
+   {
+    "evidence": "Third, remember that the angle in a semicircle is always 90 degrees, forming a right-angled triangle regardless of whether the triangle is isosceles or scalene.",
+    "kind": "which_explains",
+    "q": "Why is angle ACB 90 degrees when AB is a diameter and C lies on the circle?",
+    "options": [
+     "Any angle in a semicircle is a right angle",
+     "ACB is 90 degrees only if AC equals BC",
+     "The angle at C depends on where C lies",
+     "ACB is half of the angle at the centre"
+    ],
+    "explain": "The angle in a semicircle is always 90 degrees, whether the triangle is isosceles or scalene.",
+    "wrong": [
+     {
+      "misconception": "MAT-CIRCLES-K16-M4",
+      "why": "thinks the rule needs an isosceles triangle"
+     },
+     {
+      "misconception": "MAT-CIRCLES-K17-M7",
+      "why": "thinks angles change with the point chosen"
+     },
+     {
+      "misconception": null,
+      "why": "mixes in the angle-at-the-centre idea"
+     }
+    ]
+   },
+   {
+    "evidence": "A rectangle is a cyclic quadrilateral, but a random rhombus is not, as its vertices do not necessarily lie on a single circle.",
+    "kind": "which_example",
+    "q": "Which shows that a four-sided figure does not always fit inside one circle?",
+    "options": [
+     "A random rhombus, with vertices not on one circle",
+     "A rectangle, with all four corners on a circle",
+     "A square, with four equal angles of 90 degrees",
+     "Any quadrilateral, since its angles add to 360"
+    ],
+    "explain": "A random rhombus need not have its vertices on one circle, unlike a rectangle.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "mixes up which shape is cyclic in the passage"
+     },
+     {
+      "misconception": "MAT-CIRCLES-K18-M5",
+      "why": "assumes equal angles guarantee a circle"
+     },
+     {
+      "misconception": "MAT-CIRCLES-K20-M12",
+      "why": "thinks any quadrilateral lies on one circle"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 13.3
+}

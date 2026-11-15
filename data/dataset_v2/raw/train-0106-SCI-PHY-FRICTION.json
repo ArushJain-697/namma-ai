@@ -1,0 +1,137 @@
+{
+ "source": "train-0106-SCI-PHY-FRICTION.json",
+ "job": {
+  "job": "train-0106-SCI-PHY-FRICTION",
+  "topic_id": "SCI-PHY-FRICTION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a comparison of two related ideas",
+  "seed": 106
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3255,
+  "promptTokenCount": 2
+ },
+ "passage": "Friction is a force that arises whenever two surfaces are in contact, even when they are stationary. It is caused by the interlocking of tiny irregularities on the surfaces. Even surfaces that appear perfectly smooth to the naked eye have microscopic bumps and grooves that create resistance. Friction does not require motion to exist; it acts on a stationary object to resist the start of movement. When an object moves, friction acts in a direction that opposes the relative motion between the surfaces. However, friction is not just about sliding; it also occurs when objects roll. Rolling friction is smaller than sliding friction, but it is never zero. Because friction is always present between surfaces, it generates heat whenever they rub against each other, regardless of the speed of movement. To manage this, we use lubricants like oil or grease. These substances do not melt the metal; instead, they fill the microscopic gaps between surfaces to create a thin layer that prevents direct contact. Similarly, vehicles are designed with a streamlined shape to reduce fluid friction, or drag, which is the resistance offered by air or water. This design is purely functional to minimize resistance, not for aesthetic appeal.",
+ "menu_ids": [
+  "SCI-PHY-FRICTION-K9-M1",
+  "SCI-PHY-FRICTION-K10-M2",
+  "SCI-PHY-FRICTION-K10-M3",
+  "SCI-PHY-FRICTION-K16-M7",
+  "SCI-PHY-FRICTION-K18-M9",
+  "SCI-PHY-FRICTION-K19-M10",
+  "SCI-PHY-FRICTION-K21-M11",
+  "SCI-PHY-FRICTION-K20-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Friction does not require motion to exist; it acts on a stationary object to resist the start of movement.",
+    "kind": "which_explains",
+    "q": "Meena pushes a heavy box, but it stays still. What is friction doing?",
+    "options": [
+     "It is stopping the box from starting to slide",
+     "It is not acting, as the box is still",
+     "It is not acting, as the floor looks smooth",
+     "It is helping Meena push the box forward"
+    ],
+    "explain": "Friction does not need motion. It acts on a still box to resist the start of movement.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-FRICTION-K10-M2",
+      "why": "thinks friction acts only on moving objects"
+     },
+     {
+      "misconception": "SCI-PHY-FRICTION-K9-M1",
+      "why": "thinks smooth-looking surfaces have no friction"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up which way friction acts"
+     }
+    ]
+   },
+   {
+    "evidence": "Even surfaces that appear perfectly smooth to the naked eye have microscopic bumps and grooves that create resistance.",
+    "kind": "what_if",
+    "q": "Two perfectly smooth-looking steel blocks are rubbed together. Will there be friction between them?",
+    "options": [
+     "There is still some, from tiny bumps",
+     "There is none, as they look smooth",
+     "There is some, but only when rubbed fast",
+     "There is none until they become hot"
+    ],
+    "explain": "Even smooth-looking surfaces have tiny bumps and grooves that resist motion, so friction is present.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-FRICTION-K9-M1",
+      "why": "thinks perfectly smooth surfaces have zero friction"
+     },
+     {
+      "misconception": "SCI-PHY-FRICTION-K21-M11",
+      "why": "thinks speed is needed for friction effects"
+     },
+     {
+      "misconception": null,
+      "why": "reverses cause and effect between heat and friction"
+     }
+    ]
+   },
+   {
+    "evidence": "Rolling friction is smaller than sliding friction, but it is never zero.",
+    "kind": "what_if",
+    "q": "A heavy box is put on rollers instead of being dragged. How does friction change?",
+    "options": [
+     "It becomes smaller, but not zero",
+     "It becomes zero, as nothing slides",
+     "It becomes larger, as rollers grip more",
+     "It stays the same, as the box weighs the same"
+    ],
+    "explain": "Rolling friction is smaller than sliding friction, but it is never zero.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-FRICTION-K16-M7",
+      "why": "thinks rolling friction is zero because nothing slides"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the comparison of rolling and sliding friction"
+     },
+     {
+      "misconception": null,
+      "why": "thinks only weight decides friction"
+     }
+    ]
+   },
+   {
+    "evidence": "These substances do not melt the metal; instead, they fill the microscopic gaps between surfaces to create a thin layer that prevents direct contact.",
+    "kind": "how",
+    "q": "How does oil reduce friction between two moving parts of a machine?",
+    "options": [
+     "It forms a thin film keeping the parts apart",
+     "It turns the surfaces into a liquid",
+     "It cools the parts so they rub slower",
+     "It fills the gaps so bumps grip harder"
+    ],
+    "explain": "Oil fills tiny gaps and makes a thin layer, so the surfaces do not touch directly.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-FRICTION-K19-M10",
+      "why": "thinks lubricants melt the surface into liquid"
+     },
+     {
+      "misconception": "SCI-PHY-FRICTION-K21-M11",
+      "why": "links friction and heat only to fast rubbing"
+     },
+     {
+      "misconception": null,
+      "why": "reuses passage words but reverses the effect"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 36.1
+}

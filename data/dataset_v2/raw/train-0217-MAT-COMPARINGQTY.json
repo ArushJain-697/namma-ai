@@ -1,0 +1,143 @@
+{
+ "source": "train-0217-MAT-COMPARINGQTY.json",
+ "job": {
+  "job": "train-0217-MAT-COMPARINGQTY",
+  "topic_id": "MAT-COMPARINGQTY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a step-by-step worked example",
+  "seed": 217
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4365,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan visited a shop to buy a new cricket bat marked at ₹2,000. The shopkeeper offered a 10% discount on the marked price. To find the discount amount, we calculate 10% of ₹2,000, which is ₹200. Thus, the selling price becomes ₹1,800. Rohan decided to sell his old bat for ₹500, which he had originally bought for ₹400. Since the selling price is higher than the cost price, he made a profit of ₹100. He calculated his profit percentage by dividing the profit by the cost price, resulting in 25%. Later, Rohan invested ₹1,000 in a bank at a simple interest rate of 10% per annum for 6 months. To calculate the interest, he converted 6 months into 0.5 years. Using the formula (Principal × Rate × Time) / 100, he found the interest to be ₹50. Finally, he considered a scheme offering two successive discounts of 10% and 20%. He correctly calculated that this is not a flat 30% discount, because the second discount is applied only to the already reduced price. By applying these methods, Rohan avoided common mistakes and managed his finances effectively.",
+ "menu_ids": [
+  "MAT-COMPARINGQTY-K7-M1",
+  "MAT-COMPARINGQTY-K8-M2",
+  "MAT-COMPARINGQTY-K8-M3",
+  "MAT-COMPARINGQTY-K9-M4",
+  "MAT-COMPARINGQTY-K9-M5",
+  "MAT-COMPARINGQTY-K10-M6",
+  "MAT-COMPARINGQTY-K10-M7",
+  "MAT-COMPARINGQTY-K11-M8",
+  "MAT-COMPARINGQTY-K11-M9",
+  "MAT-COMPARINGQTY-K12-M10",
+  "MAT-COMPARINGQTY-K12-M11",
+  "MAT-COMPARINGQTY-K15-M12",
+  "MAT-COMPARINGQTY-K15-M13",
+  "MAT-COMPARINGQTY-K16-M14"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "He calculated his profit percentage by dividing the profit by the cost price, resulting in 25%.",
+    "kind": "how",
+    "q": "Rohan sold his old bat for ₹500. How did he get 25% as his profit percent?",
+    "options": [
+     "He divided ₹100 by the ₹400 cost price",
+     "He divided ₹100 by the ₹500 selling price",
+     "He divided ₹500 by the ₹400 cost price",
+     "He divided ₹100 by the ₹2,000 marked price"
+    ],
+    "explain": "Profit percent uses the cost price: ₹100 ÷ ₹400 × 100 = 25%.",
+    "wrong": [
+     {
+      "misconception": "MAT-COMPARINGQTY-K15-M12",
+      "why": "thinks profit percent is found on the selling price"
+     },
+     {
+      "misconception": "MAT-COMPARINGQTY-K16-M14",
+      "why": "treats the selling price as the profit"
+     },
+     {
+      "misconception": null,
+      "why": "picks a nearby number from the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "He correctly calculated that this is not a flat 30% discount, because the second discount is applied only to the already reduced price.",
+    "kind": "why",
+    "q": "Why do successive discounts of 10% and 20% not make a flat 30% discount?",
+    "options": [
+     "The 20% is taken from the already lowered price",
+     "The 20% is taken from the original marked price",
+     "The 10% is taken from the price after 20%",
+     "The 20% is added back to the lowered price"
+    ],
+    "explain": "The second discount, 20%, applies only to the price already reduced by 10%.",
+    "wrong": [
+     {
+      "misconception": "MAT-COMPARINGQTY-K8-M2",
+      "why": "thinks both percents come from the same base"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the order of the two discounts"
+     },
+     {
+      "misconception": "MAT-COMPARINGQTY-K12-M10",
+      "why": "thinks percent changes cancel each other out"
+     }
+    ]
+   },
+   {
+    "evidence": "To find the discount amount, we calculate 10% of ₹2,000, which is ₹200.",
+    "kind": "what_if",
+    "q": "If the bat were marked ₹3,000 with the same 10% discount, what would the discount be?",
+    "options": [
+     "₹300",
+     "₹200",
+     "₹2,700",
+     "₹10"
+    ],
+    "explain": "The discount is 10% of the marked price, and 10% of ₹3,000 is ₹300.",
+    "wrong": [
+     {
+      "misconception": "MAT-COMPARINGQTY-K8-M2",
+      "why": "thinks 10% is always the same amount"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the discount with the selling price"
+     },
+     {
+      "misconception": "MAT-COMPARINGQTY-K7-M1",
+      "why": "thinks 10% means ₹10"
+     }
+    ]
+   },
+   {
+    "evidence": "To calculate the interest, he converted 6 months into 0.5 years.",
+    "kind": "which_explains",
+    "q": "Rohan put ₹1,000 in a bank at 10% per annum for 6 months. Why is his interest ₹50?",
+    "options": [
+     "The time is half a year, not one year",
+     "The rate drops to 5% for six months",
+     "The principal counts as ₹500, not ₹1,000",
+     "The bank keeps ₹50 back as a fee"
+    ],
+    "explain": "The rate is per year, so 6 months is 0.5 years: 1000 × 10 × 0.5 ÷ 100 = ₹50.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "halves the rate instead of the time"
+     },
+     {
+      "misconception": null,
+      "why": "halves the principal instead of the time"
+     },
+     {
+      "misconception": null,
+      "why": "guesses from everyday banking instead of using the formula"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 48.1
+}

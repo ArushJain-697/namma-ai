@@ -1,0 +1,513 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Sakshi Pitch Deck</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a vertical stack of 9:16 slides, one per screen, snapping. The deck borrows the device's own look:
+   a dark ink screen, one saffron accent, green/red only for right/wrong. Single dark world, chosen on purpose. */
+:root {
+  --ink: #0d0f13;          /* page behind the slides */
+  --slide: #14171d;        /* slide surface */
+  --raise: #1d2129;        /* raised panels */
+  --line: #2e333d;         /* hairlines */
+  --dim: #929aa7;          /* secondary text */
+  --body: #ced3db;         /* reading text */
+  --text: #eff1f4;         /* headings */
+  --saffron: #ffaa33;      /* the one accent */
+  --good: #50cd86;
+  --bad: #f3645c;
+  --display: "Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  background: var(--ink); color: var(--body); font-family: var(--sans);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0;
+}
+.deck { display: grid; justify-items: center; gap: 24px; padding-block: 24px; }
+.slide {
+  scroll-snap-align: center;
+  width: min(100%, 540px, calc((100vh - 48px) * 9 / 16));
+  aspect-ratio: 9 / 16; max-width: 100%;
+  background: var(--slide); border: 1px solid var(--line); border-radius: 14px;
+  container-type: inline-size; overflow: hidden; position: relative;
+  display: flex; flex-direction: column;
+  padding: 7cqw 7cqw 6cqw;
+}
+.slide > * { min-width: 0; }
+.top { display: flex; justify-content: space-between; align-items: center; font: 500 2.6cqw/1 var(--mono);
+  color: var(--dim); letter-spacing: .08em; text-transform: uppercase; border-bottom: 1px solid var(--line); padding-bottom: 3cqw; }
+.top b { color: var(--saffron); font-weight: 500; }
+.bottom { margin-top: auto; display: flex; justify-content: space-between; font: 400 2.4cqw/1 var(--mono); color: var(--dim);
+  border-top: 1px solid var(--line); padding-top: 3cqw; }
+.body { flex: 1; display: flex; flex-direction: column; gap: 4cqw; padding-top: 6cqw; min-height: 0; }
+.eyebrow { font: 500 2.8cqw/1.2 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--saffron); }
+h1, h2 { font-family: var(--display); color: var(--text); margin: 0; text-wrap: balance; letter-spacing: -0.02em; }
+h1 { font-size: 13cqw; line-height: .92; font-weight: 800; }
+h2 { font-size: 7.6cqw; line-height: 1.02; font-weight: 700; }
+p { margin: 0; font-size: 3.6cqw; line-height: 1.45; }
+.lead { font-size: 4.3cqw; line-height: 1.4; color: var(--body); }
+.small { font-size: 3cqw; color: var(--dim); line-height: 1.4; }
+em { font-style: normal; color: var(--saffron); }
+.num { font-variant-numeric: tabular-nums; }
+
+/* big figures */
+.figs { display: grid; grid-template-columns: 1fr 1fr; gap: 3cqw; }
+.fig { border-top: 1px solid var(--line); padding-top: 2.6cqw; display: flex; flex-direction: column; gap: 1.2cqw; }
+.fig b { font: 800 9.5cqw/1 var(--display); color: var(--text); font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+.fig b small { font-size: 4.6cqw; font-weight: 700; color: var(--dim); }
+.fig span { font-size: 3cqw; color: var(--dim); line-height: 1.35; }
+.fig.wide { grid-column: 1 / -1; }
+.fig.hot b { color: var(--saffron); }
+
+/* rows (label / value) */
+.rows { display: flex; flex-direction: column; }
+.row { display: grid; grid-template-columns: 1fr auto; gap: 3cqw; align-items: baseline; padding: 2.3cqw 0; border-top: 1px solid var(--line); }
+.row:last-child { border-bottom: 1px solid var(--line); }
+.row span { font-size: 3.3cqw; line-height: 1.35; }
+.row b { font: 500 3.5cqw/1.2 var(--mono); color: var(--text); text-align: right; font-variant-numeric: tabular-nums; }
+.row b.ok { color: var(--good); }
+
+/* steps that really are a sequence */
+.steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0; counter-reset: s; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 7cqw 1fr; gap: 2.5cqw; padding: 2.2cqw 0; border-top: 1px solid var(--line); }
+.steps li::before { content: counter(s); font: 500 3.2cqw/1.4 var(--mono); color: var(--saffron); }
+.steps b { color: var(--text); font-weight: 600; }
+.steps li p { font-size: 3.3cqw; }
+
+/* pipeline */
+.flow { display: flex; flex-direction: column; gap: 1.6cqw; }
+.node { background: var(--raise); border-radius: 2.2cqw; padding: 2.4cqw 3cqw; display: grid; grid-template-columns: 1fr auto; gap: 2cqw; align-items: center; }
+.node b { color: var(--text); font-size: 3.5cqw; font-weight: 600; }
+.node span { font: 400 2.6cqw/1.3 var(--mono); color: var(--dim); text-align: right; }
+.node.ai { box-shadow: inset 0 0 0 1px var(--saffron); }
+.node.ai b::after { content: " · model"; color: var(--saffron); font: 500 2.4cqw/1 var(--mono); }
+.arrow { text-align: center; color: var(--line); font-size: 3cqw; line-height: 1; }
+
+/* the device screen, drawn like the real one */
+.screen { background: #0d0f13; border: 1.4cqw solid #23272f; border-radius: 3cqw; aspect-ratio: 220 / 176; max-width: 100%;
+  display: flex; flex-direction: column; overflow: hidden; font-family: Arial, var(--sans); }
+.sb, .hb { display: flex; justify-content: space-between; align-items: center; padding: 0 3cqw; height: 9cqw; flex: none; }
+.sb { border-bottom: 1px solid #2e333d; color: #eff1f4; font-weight: 700; font-size: 3.3cqw; }
+.sb i { font-style: normal; color: #929aa7; font-weight: 400; font-size: 2.8cqw; }
+.hb { border-top: 1px solid #2e333d; margin-top: auto; font-size: 2.8cqw; color: #929aa7; }
+.hb b { color: #ffaa33; }
+.sc { padding: 2.4cqw 3cqw; display: flex; flex-direction: column; gap: 1.4cqw; }
+.sc .q { color: #eff1f4; font-weight: 700; font-size: 3.2cqw; line-height: 1.25; }
+.opt { display: grid; grid-template-columns: 4.4cqw 1fr; gap: 2cqw; align-items: start; font-size: 2.8cqw; color: #ced3db; padding: .8cqw 1.2cqw; border-radius: 1cqw; }
+.opt i { font-style: normal; border: 1px solid #2e333d; border-radius: .8cqw; text-align: center; font-size: 2.4cqw; line-height: 3.8cqw; color: #929aa7; }
+.opt.on { background: #242831; color: #eff1f4; }
+.opt.on i { background: #ffaa33; border-color: #ffaa33; color: #14100a; font-weight: 700; }
+
+/* belief card */
+.belief { background: var(--raise); border-radius: 3cqw; padding: 4cqw; display: flex; flex-direction: column; gap: 2cqw; }
+.belief .lab { font: 500 2.6cqw/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+.belief q { font: 700 5cqw/1.15 var(--display); color: var(--text); quotes: "\201C" "\201D"; }
+.belief .meter { height: 1.2cqw; background: var(--line); border-radius: 1cqw; overflow: hidden; }
+.belief .meter div { height: 100%; background: var(--saffron); }
+.vs { display: grid; grid-template-columns: 1fr 1fr; gap: 3cqw; }
+.vs > div { border-top: 2px solid var(--line); padding-top: 2.6cqw; display: flex; flex-direction: column; gap: 1.4cqw; }
+.vs > div.us { border-top-color: var(--saffron); }
+.vs b { font: 700 4.4cqw/1.1 var(--display); color: var(--text); }
+.vs p { font-size: 3.1cqw; }
+
+/* formula */
+.math { font: 400 3cqw/1.6 var(--mono); color: var(--text); background: var(--raise); border-radius: 2cqw; padding: 3cqw; overflow-x: auto; white-space: pre; }
+.math .c { color: var(--dim); }
+
+/* ladder (walk down / climb up) */
+.ladder { display: grid; grid-template-columns: 1fr 9cqw; gap: 1.6cqw 2.4cqw; align-items: center; }
+.rung { background: var(--raise); border-radius: 2cqw; padding: 2.4cqw 3cqw; font-size: 3.3cqw; color: var(--text); }
+.rung small { display: block; font: 400 2.6cqw/1.3 var(--mono); color: var(--dim); margin-top: .6cqw; }
+.rung.l1 { margin-left: 0; } .rung.l2 { margin-left: 6cqw; } .rung.l3 { margin-left: 12cqw; }
+.tag { font: 500 2.5cqw/1.2 var(--mono); text-align: center; padding: 1cqw 0; border-radius: 1cqw; }
+.tag.down { color: var(--bad); } .tag.up { color: var(--good); }
+
+svg text { font-family: var(--mono); }
+.chart { width: 100%; height: auto; display: block; }
+
+.bug { display: grid; grid-template-columns: 1fr; gap: .6cqw; padding: 2cqw 0; border-top: 1px solid var(--line); }
+.bug b { color: var(--text); font-size: 3.3cqw; font-weight: 600; }
+.bug span { font-size: 2.9cqw; color: var(--dim); line-height: 1.35; }
+.bug span em { font-family: var(--mono); }
+
+.title-hero { display: flex; flex-direction: column; gap: 5cqw; flex: 1; justify-content: center; }
+.title-hero h1 { font-size: 21cqw; }
+.title-hero .rule { width: 18cqw; height: 1.4cqw; background: var(--saffron); border-radius: 1cqw; }
+
+.nav { position: fixed; right: max(12px, env(safe-area-inset-right, 0px)); bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  display: flex; gap: 6px; align-items: center; font: 500 12px/1 var(--mono); color: var(--dim);
+  background: color-mix(in srgb, var(--slide) 90%, transparent); border: 1px solid var(--line); border-radius: 999px; padding: 6px 6px 6px 12px; }
+.nav button { all: unset; cursor: pointer; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; color: var(--text); background: var(--raise); font-size: 14px; }
+.nav button:focus-visible { outline: 2px solid var(--saffron); outline-offset: 2px; }
+.nav button:hover { background: var(--line); }
+</style>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" aria-label="Title">
+  <div class="top"><span>Namma AI · Problem 1</span><b>14 Nov 2026</b></div>
+  <div class="title-hero">
+    <div class="rule"></div>
+    <h1>Sakshi</h1>
+    <p class="lead">An offline tutor that tells a child <em>what they believe</em>, not just whether they were wrong.</p>
+    <p class="small">Runs GURU-0.6B, our quiz model fine-tuned from Qwen3-0.6B, with ExecuTorch on a Raspberry Pi 5. No internet.</p>
+  </div>
+  <div class="bottom"><span>AI for Inclusive Education</span><span>01</span></div>
+</section>
+
+<!-- 2 -->
+<section class="slide" aria-label="The child">
+  <div class="top"><span>The learner</span><b>Barrier</b></div>
+  <div class="body">
+    <div class="eyebrow">Class 6–10 · low-connectivity government schools</div>
+    <h2>She can read the words. Nobody can tell her if she understood them.</h2>
+    <p>A student studying a textbook page alone has no quick way to check her understanding, and nobody to correct her. Without internet there is no tutor, search or AI app, and the teacher has a whole class.</p>
+    <div class="figs">
+      <div class="fig hot"><b class="num">67.5%</b><span>of Class 8 rural government-school students can read a Class 2 text (ASER 2024)</span></div>
+      <div class="fig"><b class="num">45.8%</b><span>can do a 3-digit by 1-digit division (ASER 2024)</span></div>
+      <div class="fig wide"><b class="num">1 in 3</b><span>Indian schools has no internet (63.5% connected, UDISE+ 2024-25). The children who most need a check are the ones offline.</span></div>
+    </div>
+  </div>
+  <div class="bottom"><span>Reading the words is not understanding them</span><span>02</span></div>
+</section>
+
+<!-- 3 -->
+<section class="slide" aria-label="Score versus diagnosis">
+  <div class="top"><span>The idea</span><b>Score vs diagnosis</b></div>
+  <div class="body">
+    <h2>Everyone makes a quiz that gives a score. Sakshi gives a diagnosis.</h2>
+    <div class="vs">
+      <div><b>A score</b><p>“3 out of 5.” The teacher sees a number and moves on.</p></div>
+      <div class="us"><b>A diagnosis</b><p>Every wrong option is linked to a named belief from a graph of 4,080 student misconceptions.</p></div>
+    </div>
+    <div class="belief">
+      <span class="lab" style="color:var(--saffron)">Found in a real run · friction passage</span>
+      <q>Friction only acts on objects that are already moving.</q>
+      <div class="meter"><div style="width:96%"></div></div>
+      <p class="small">96% sure after the session. Two days later, Mentor Study checked again: still there at 91%, so it comes back sooner.</p>
+    </div>
+  </div>
+  <div class="bottom"><span>Name the belief, fix it, check it is gone</span><span>03</span></div>
+</section>
+
+<!-- 4 -->
+<section class="slide" aria-label="Deliverables">
+  <div class="top"><span>The brief</span><b>All five met</b></div>
+  <div class="body">
+    <h2>What the problem statement asks for</h2>
+    <div class="rows">
+      <div class="row"><span>Barrier, learner group and how the prototype helps</span><b class="ok">slide 2</b></div>
+      <div class="row"><span>Organiser passage, lightweight model, ExecuTorch, on the Pi</span><b class="ok">Pi 5 · 8 GB</b></div>
+      <div class="row"><span>Summary + at least 3 quiz questions</span><b class="ok">57.9 s</b></div>
+      <div class="row"><span>No cloud; report time, model, size, memory</span><b class="ok">run card</b></div>
+      <div class="row"><span>Impact, with one example from the passage</span><b>on the day</b></div>
+    </div>
+    <p class="small">Every answer shows the sentence from the passage that proves it. The run card prints model, time, file size and peak memory after every run.</p>
+  </div>
+  <div class="bottom"><span>Arm Cortex-A76 · XNNPACK · ExecuTorch 1.5.1</span><span>04</span></div>
+</section>
+
+<!-- 5 -->
+<section class="slide" aria-label="How it works">
+  <div class="top"><span>How it works</span><b>One passage</b></div>
+  <div class="body">
+    <h2>Code decides. The model writes.</h2>
+    <div class="flow">
+      <div class="node"><b>Photo of the page</b><span>camera + OCR on the Pi</span></div>
+      <div class="arrow">↓</div>
+      <div class="node ai"><b>Summary</b><span>plain Qwen3-0.6B</span></div>
+      <div class="arrow">↓</div>
+      <div class="node"><b>Pick the key sentence</b><span>code, not the model</span></div>
+      <div class="arrow">↓</div>
+      <div class="node ai"><b>Question + answer</b><span>GURU job Q</span></div>
+      <div class="arrow">↓</div>
+      <div class="node ai"><b>3 believable wrong answers</b><span>GURU job W</span></div>
+      <div class="arrow">↓</div>
+      <div class="node"><b>Checks + self-check</b><span>drop bad questions</span></div>
+      <div class="arrow">↓</div>
+      <div class="node"><b>Link each wrong answer to a belief</b><span>graph + 2 small models</span></div>
+      <div class="arrow">↓</div>
+      <div class="node"><b>Adaptive session, saved</b><span>Bayes · BKT · FSRS</span></div>
+    </div>
+  </div>
+  <div class="bottom"><span>Questions stream: the next is written while she answers</span><span>05</span></div>
+</section>
+
+<!-- 6 -->
+<section class="slide" aria-label="GURU">
+  <div class="top"><span>The model</span><b>GURU-0.6B</b></div>
+  <div class="body">
+    <div class="eyebrow">Grounded Understanding, Runs Unplugged</div>
+    <h2>Prompting was not enough. So we trained it.</h2>
+    <div class="rows">
+      <div class="row"><span>Plain model, best of 4 prompts: sensible questions</span><b>19%</b></div>
+      <div class="row"><span>Version 1, LoRA on 4,300 human-written questions</span><b>30%</b></div>
+      <div class="row"><span>Teacher data graded by a separate model: kept</span><b>1,039 / 2,773</b></div>
+      <div class="row"><span>Blind read, good questions: two-job vs single-call</span><b>8/12 vs 3/12</b></div>
+      <div class="row"><span>Answer is the longest option (a giveaway)</span><b>6% vs 15%</b></div>
+    </div>
+    <p><b style="color:var(--text)">Two jobs, one model.</b> The system prompt picks the job: write the question, or write the wrong answers. One combined model beat two specialists at both: held-out loss 1.217 vs 1.227 and 1.429 vs 1.439.</p>
+    <p class="small">LoRA rank 16, alpha 32, all linear layers, lr 5e-5, 1 epoch. 0 overlap with the 40 test passages.</p>
+  </div>
+  <div class="bottom"><span>Fine-tuned from Qwen3-0.6B (Apache 2.0)</span><span>06</span></div>
+</section>
+
+<!-- 7 -->
+<section class="slide" aria-label="Checks">
+  <div class="top"><span>Guardrails</span><b>What the AI never decides alone</b></div>
+  <div class="body">
+    <h2>A small model writes imperfect questions. The checks drop the worst.</h2>
+    <ol class="steps">
+      <li><p><b>Code picks the key sentence.</b> The model never chooses what to ask about.</p></li>
+      <li><p><b>Two separate calls.</b> Question and answer first, wrong answers second.</p></li>
+      <li><p><b>No giveaways.</b> Wrong options match the answer in length and opening; near-copies and “all of the above” are rejected.</p></li>
+      <li><p><b>Self-check.</b> A second model answers with shuffled options. If it disagrees, the question is dropped. Of 11 it dropped in one test, about 9 were truly bad.</p></li>
+      <li><p><b>Proof shown.</b> Every answer comes with the passage sentence that proves it.</p></li>
+    </ol>
+  </div>
+  <div class="bottom"><span>Fewer questions rather than a wrong one</span><span>07</span></div>
+</section>
+
+<!-- 8 -->
+<section class="slide" aria-label="Misconception graph">
+  <div class="top"><span>The knowledge</span><b>Built before the event</b></div>
+  <div class="body">
+    <h2>A map of how Class 6–10 students go wrong</h2>
+    <div class="figs">
+      <div class="fig hot"><b class="num">4,080</b><span>student misconceptions, each with why, the fix and a probe question</span></div>
+      <div class="fig"><b class="num">120</b><span>root beliefs: the deeper habits of thinking</span></div>
+      <div class="fig"><b class="num">5,585</b><span>concepts across 258 topics</span></div>
+      <div class="fig"><b class="num">6,052</b><span>prerequisite links, 2,949 across topics</span></div>
+    </div>
+    <div class="belief">
+      <span class="lab" style="color:var(--dim)">Root belief · 497 misconceptions grow from it</span>
+      <q>A rule that works in one case works everywhere.</q>
+    </div>
+    <p class="small">Right topic for 39/40 test passages. Off-syllabus passages caught 12/12 with 0 false alarms; they fall back to reading-skill mistakes.</p>
+  </div>
+  <div class="bottom"><span>Maths · science · social · reading skills</span><span>08</span></div>
+</section>
+
+<!-- 9 -->
+<section class="slide" aria-label="Linking">
+  <div class="top"><span>The link</span><b>Wrong answer → belief</b></div>
+  <div class="body">
+    <h2>Shortlist, rerank, or say nothing</h2>
+    <ol class="steps">
+      <li><p><b>Topic shortlist.</b> 4,000 beliefs down to about 16–50 for this passage.</p></li>
+      <li><p><b>Retrieve.</b> A small embedding model ranks them (bge-small, 128 MB, ExecuTorch).</p></li>
+      <li><p><b>Rerank.</b> A cross-encoder reads question and answer together (317 MB, ExecuTorch).</p></li>
+      <li><p><b>Abstain.</b> Below a confidence line the option stays a plain wrong answer, so we never invent a diagnosis.</p></li>
+    </ol>
+    <div class="figs">
+      <div class="fig hot"><b class="num">81%</b><span>right belief in the top 3</span></div>
+      <div class="fig"><b class="num">53%</b><span>right belief ranked first</span></div>
+    </div>
+    <p class="small">Measured on 3,647 labelled wrong-answer → misconception pairs. The reranker adds only 1 point; we report it as it is.</p>
+  </div>
+  <div class="bottom"><span>Standard two-stage search, scaled to a Pi</span><span>09</span></div>
+</section>
+
+<!-- 10 -->
+<section class="slide" aria-label="Bayes and BKT">
+  <div class="top"><span>The maths</span><b>1 of 2</b></div>
+  <div class="body">
+    <h2>Which belief? Has she learned it?</h2>
+    <p><b style="color:var(--text)">Bayes</b> over the concept's beliefs plus “no specific belief”, so one slip never labels a child. If she holds belief m she picks its option 70% of the time. The next question is the one with the most expected information.</p>
+    <div class="math"><span class="c">// next question</span>
+EIG(q) = H(P) − Σₒ P(o)·H(P(·|o))
+<span class="c">// found ≥ 75%   maybe ≥ 50%</span></div>
+    <p><b style="color:var(--text)">Knowledge tracing</b> separates learning from lucky guesses. Guess rate 0.25 for recall, 0.15 for a real-life question.</p>
+    <div class="math"><span class="c">// right            wrong</span>
+P(L|✓) = P(L)(1−s)/[P(L)(1−s)+(1−P(L))g]
+P(L|✗) = P(L)s/[P(L)s+(1−P(L))(1−g)]
+P(L) ← P(L) + (1−P(L))·0.2</div>
+    <div class="rows">
+      <div class="row"><span>Start → one wrong answer</span><b>0.30 → 0.24</b></div>
+      <div class="row"><span>One right real-life answer</span><b>0.24 → 0.72</b></div>
+    </div>
+  </div>
+  <div class="bottom"><span>Microseconds per update on the Pi CPU</span><span>10</span></div>
+</section>
+
+<!-- 11 -->
+<section class="slide" aria-label="Walk down climb up">
+  <div class="top"><span>The maths</span><b>2 of 2</b></div>
+  <div class="body">
+    <h2>Step down to the basics. Climb back only when she has it.</h2>
+    <div class="ladder">
+      <div class="rung l1">Independence of surface area<small>wrong → belief found, fix shown</small></div><div class="tag down">↓ down</div>
+      <div class="rung l2">Effect of nature of surfaces<small>prerequisite from the graph</small></div><div class="tag down">↓ down</div>
+      <div class="rung l3">Area of a rectangle<small>solid: P(learned) ≥ 0.6</small></div><div class="tag up">↑ up</div>
+    </div>
+    <p>On the way up, each level gets a real-life question. Climb only if right <em>and</em> P(learned) ≥ 0.6. Otherwise re-teach, one more try, then stop and save it as blocked for next time. 0.6 means ready to build on; classic mastery is 0.95.</p>
+    <svg class="chart" viewBox="0 0 320 132" role="img" aria-label="Predicted recall after a review: 100% on day 0, 66% on day 3, 55% on day 10">
+      <line x1="34" y1="12" x2="34" y2="104" stroke="var(--line)"/>
+      <line x1="34" y1="104" x2="310" y2="104" stroke="var(--line)"/>
+      <line x1="34" y1="12" x2="310" y2="12" stroke="var(--line)" stroke-dasharray="2 4"/>
+      <line x1="34" y1="58" x2="310" y2="58" stroke="var(--line)" stroke-dasharray="2 4"/>
+      <text x="28" y="16" fill="var(--dim)" font-size="9" text-anchor="end">100%</text>
+      <text x="28" y="62" fill="var(--dim)" font-size="9" text-anchor="end">50%</text>
+      <text x="28" y="108" fill="var(--dim)" font-size="9" text-anchor="end">0%</text>
+      <text x="34" y="122" fill="var(--dim)" font-size="9" text-anchor="middle">day 0</text>
+      <text x="116.8" y="122" fill="var(--dim)" font-size="9" text-anchor="middle">3</text>
+      <text x="310" y="122" fill="var(--dim)" font-size="9" text-anchor="middle">10</text>
+      <polyline points="34,12 116.8,43.3 310,53.4" fill="none" stroke="var(--saffron)" stroke-width="2"/>
+      <circle cx="34" cy="12" r="3.5" fill="var(--saffron)"/>
+      <circle cx="116.8" cy="43.3" r="3.5" fill="var(--saffron)"/>
+      <circle cx="310" cy="53.4" r="3.5" fill="var(--saffron)"/>
+      <text x="122" y="38" fill="var(--text)" font-size="10">66%</text>
+      <text x="304" y="47" fill="var(--text)" font-size="10" text-anchor="end">55%</text>
+    </svg>
+    <p class="small">FSRS-6 predicts forgetting: R(t,S) = (1 + F·t/S)^−w₂₀. Revise first where 1 − mastery × recall is highest: never learned, or probably forgotten.</p>
+  </div>
+  <div class="bottom"><span>Points from a real run, joined by straight lines</span><span>11</span></div>
+</section>
+
+<!-- 12 -->
+<section class="slide" aria-label="Review days">
+  <div class="top"><span>Later days</span><b>Mentor Study</b></div>
+  <div class="body">
+    <h2>She comes back. The belief gets checked again.</h2>
+    <ol class="steps">
+      <li><p><b>Forgetting counts.</b> Mastery today = saved mastery × chance she still remembers.</p></li>
+      <li><p><b>A new question</b> aimed at each belief she held. Not the same one, which would test memory of the question.</p></li>
+      <li><p><b>Still there:</b> the fix again, and it comes back sooner. <b>Gone:</b> follow the graph to a related belief with the same root, in another topic.</p></li>
+      <li><p><b>Finish blocked climbs,</b> then the ideas due today.</p></li>
+    </ol>
+    <div class="rows">
+      <div class="row"><span>Stubborn beliefs re-found on review days</span><b>90–94%</b></div>
+      <div class="row"><span>A belief from one lucky guess, next day</span><b>55% → 36%</b></div>
+      <div class="row"><span>Blocked concept climbs back up</span><b>day 7</b></div>
+    </div>
+    <p class="small">Checked over days 0, 1, 3 and 7 with two pretend students: one who learns from feedback, one who never does.</p>
+  </div>
+  <div class="bottom"><span>Is the deeper habit fixed, or only one example?</span><span>12</span></div>
+</section>
+
+<!-- 13 -->
+<section class="slide" aria-label="Arm efficiency">
+  <div class="top"><span>On Arm</span><b>Raspberry Pi 5 · measured</b></div>
+  <div class="body">
+    <h2>Small enough for a Pi. Fast enough for a child.</h2>
+    <div class="figs">
+      <div class="fig hot"><b class="num">57.9<small> s</small></b><span>summary + 3 questions, fully offline</span></div>
+      <div class="fig"><b class="num">469<small> MB</small></b><span>model file, 4-bit weights</span></div>
+      <div class="fig"><b class="num">122<small>/s</small></b><span>tokens read; 12.1/s written</span></div>
+      <div class="fig"><b class="num">3.2<small> GB</small></b><span>peak with everything loaded, of 8 GB</span></div>
+    </div>
+    <div class="rows">
+      <div class="row"><span>Stop each call when the answer is complete</span><b>147 → 86 s</b></div>
+      <div class="row"><span>Context sized to the job, same answers 8/8</span><b>2.49 → 1.67 GB</b></div>
+      <div class="row"><span>Second wrong-answer run was identical 38/38: removed</span><b>1.5× faster</b></div>
+      <div class="row"><span>On the device, per question while she answers</span><b>15.7 s</b></div>
+    </div>
+    <p class="small">The Pi reached 84 °C and throttled without a fan, so the box uses the active cooler.</p>
+  </div>
+  <div class="bottom"><span>ExecuTorch · XNNPACK · 8da4w</span><span>13</span></div>
+</section>
+
+<!-- 14 -->
+<section class="slide" aria-label="The device">
+  <div class="top"><span>The device</span><b>What she holds</b></div>
+  <div class="body">
+    <h2>A screen, three buttons and a camera</h2>
+    <div class="screen" aria-label="The device screen showing a question">
+      <div class="sb"><span>Use it</span><i>Q 3</i></div>
+      <div class="sc">
+        <div class="q">Why does a ball rolling on a level floor eventually stop if no one touches it?</div>
+        <div class="opt on"><i>A</i><span>Rolling friction exists because of slight deformations in the surfaces.</span></div>
+        <div class="opt"><i>B</i><span>Rolling friction is zero because the object is not sliding.</span></div>
+        <div class="opt"><i>C</i><span>Perfectly smooth surfaces have zero friction.</span></div>
+      </div>
+      <div class="hb"><span>‹ Stop</span><b>Answer</b><span>Next ›</span></div>
+    </div>
+    <div class="rows">
+      <div class="row"><span><b style="color:var(--text)">Study</b> · photo of a page, the saved page, or Mentor Study</span><b>3 ways</b></div>
+      <div class="row"><span><b style="color:var(--text)">Revision</b> · ideas with mastery bars, what is due today</span><b>FSRS</b></div>
+      <div class="row"><span><b style="color:var(--text)">Diagnostics</b> · where she is stuck, what to do next</span><b>3 pages</b></div>
+    </div>
+  </div>
+  <div class="bottom"><span>Raspberry Pi 5 · 220×176 screen · OCR on device</span><span>14</span></div>
+</section>
+
+<!-- 15 -->
+<section class="slide" aria-label="Bugs we caught">
+  <div class="top"><span>Proof we measured</span><b>Bugs we caught</b></div>
+  <div class="body">
+    <h2>Every number came from a run. Some runs were wrong.</h2>
+    <div>
+      <div class="bug"><b>The model never stopped writing</b><span>Every call hit 1,412 tokens. Stop on the finished answer: <em>147 → 86 s</em>, same output.</span></div>
+      <div class="bug"><b>GURU answered “A” when asked to check</b><span>The self-check kept 0 questions. Now the plain model checks.</span></div>
+      <div class="bug"><b>A graph rebuild silently dropped links</b><span><em>1,955 → 843</em>. Rebuilds now never write a worse file.</span></div>
+      <div class="bug"><b>The child saw a raw ID</b><span>“SCI-CHM-AIR-K19-M9”. Now the belief and its fix.</span></div>
+      <div class="bug"><b>One right answer “cleared” an 80%-sure belief</b><span>Caught by a test. Now one more question first.</span></div>
+      <div class="bug"><b>The screen vanished into the model’s output</b><span>Found by ruling out threads, CPU load and helpers. Separate output channel; results identical again.</span></div>
+    </div>
+    <p class="small">225 tests passing.</p>
+  </div>
+  <div class="bottom"><span>Measure, don’t guess</span><span>15</span></div>
+</section>
+
+<!-- 16 -->
+<section class="slide" aria-label="What we do not claim">
+  <div class="top"><span>Said first</span><b>Limits and next step</b></div>
+  <div class="body">
+    <h2>What we do not claim</h2>
+    <div class="rows">
+      <div class="row"><span>No students have used it yet, so no learning-gain claim</span><b>pilot</b></div>
+      <div class="row"><span>Misconceptions drafted by AI from research, not yet teacher-reviewed</span><b>review</b></div>
+      <div class="row"><span>About 40–55% of questions fully sound in a strict read</span><b>0.6B</b></div>
+      <div class="row"><span>Right belief first about half the time</span><b>53%</b></div>
+      <div class="row"><span>Bayes, BKT and FSRS settings are defaults, not fitted to children</span><b>fit</b></div>
+      <div class="row"><span>English only for now</span><b>EN</b></div>
+    </div>
+    <div class="belief">
+      <span class="lab" style="color:var(--saffron)">Next</span>
+      <q>One school. A teacher sees which belief each child holds.</q>
+      <p class="small">Then fit the engine’s settings to real answers from real children.</p>
+    </div>
+  </div>
+  <div class="bottom"><span>Sakshi · GURU-0.6B · offline on Arm</span><span>16</span></div>
+</section>
+
+</main>
+
+<nav class="nav" aria-label="Slides">
+  <span id="pos" class="num">1 / 16</span>
+  <button id="prev" aria-label="Previous slide">↑</button>
+  <button id="next" aria-label="Next slide">↓</button>
+</nav>
+
+<script>
+(() => {
+  const slides = [...document.querySelectorAll('.slide')];
+  const pos = document.getElementById('pos');
+  let cur = 0;
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting && e.intersectionRatio > 0.55) { cur = slides.indexOf(e.target); pos.textContent = `${cur + 1} / ${slides.length}`; } });
+  }, { threshold: [0.55] });
+  slides.forEach(s => io.observe(s));
+  const go = i => { cur = Math.max(0, Math.min(slides.length - 1, i)); slides[cur].scrollIntoView({ block: 'center' }); };
+  document.getElementById('prev').addEventListener('click', () => go(cur - 1));
+  document.getElementById('next').addEventListener('click', () => go(cur + 1));
+  addEventListener('keydown', e => {
+    if (['ArrowDown', 'ArrowRight', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+    if (['ArrowUp', 'ArrowLeft', 'PageUp'].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+    if (e.key === 'Home') go(0);
+    if (e.key === 'End') go(slides.length - 1);
+  });
+})();
+</script>
+
+</body></html>

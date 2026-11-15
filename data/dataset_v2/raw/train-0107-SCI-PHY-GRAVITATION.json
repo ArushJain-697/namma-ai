@@ -1,0 +1,140 @@
+{
+ "source": "train-0107-SCI-PHY-GRAVITATION.json",
+ "job": {
+  "job": "train-0107-SCI-PHY-GRAVITATION",
+  "topic_id": "SCI-PHY-GRAVITATION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a question-and-answer (FAQ) style passage",
+  "seed": 107
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3811,
+  "promptTokenCount": 2
+ },
+ "passage": "Physics can be confusing, so let's clear up some common doubts about gravity and fluids. First, gravity is a universal force of attraction between all objects with mass, whether they are tiny pebbles or massive planets. It does not stop at the edge of our atmosphere; it continues to pull objects together even in the emptiness of space. When we drop objects in a perfect vacuum, they fall at the exact same rate regardless of their mass, because gravity accelerates all objects equally. Furthermore, mass is the amount of matter in an object, while weight is the force exerted by gravity on that mass; they are distinct physical quantities. When you submerge an object in water, it may feel lighter due to the upward buoyant force, but its actual mass remains completely unchanged. Finally, pressure depends on the area over which a force is applied. A sharp nail exerts much higher pressure than a flat board under the same force because the nail concentrates that force onto a tiny surface area, making it easier to pierce materials.",
+ "menu_ids": [
+  "SCI-PHY-GRAVITATION-K5-M1",
+  "SCI-PHY-GRAVITATION-K6-M2",
+  "SCI-PHY-GRAVITATION-K8-M3",
+  "SCI-PHY-GRAVITATION-K9-M4",
+  "SCI-PHY-GRAVITATION-K13-M6",
+  "SCI-PHY-GRAVITATION-K15-M7",
+  "SCI-PHY-GRAVITATION-K16-M8",
+  "SCI-PHY-GRAVITATION-K14-M9",
+  "SCI-PHY-GRAVITATION-K7-M10",
+  "SCI-PHY-GRAVITATION-K6-M11",
+  "SCI-PHY-GRAVITATION-K13-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "When we drop objects in a perfect vacuum, they fall at the exact same rate regardless of their mass, because gravity accelerates all objects equally.",
+    "kind": "what_if",
+    "q": "A hammer and a feather are dropped together where there is no air. What happens?",
+    "options": [
+     "Both land at the same moment",
+     "The hammer lands first, being heavier",
+     "Both float, as there is no gravity there",
+     "The feather lands first, meeting no air"
+    ],
+    "explain": "In a vacuum, gravity speeds up all objects equally, so both fall at the same rate.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-GRAVITATION-K8-M3",
+      "why": "thinks heavier objects fall faster even without air"
+     },
+     {
+      "misconception": "SCI-PHY-GRAVITATION-K7-M10",
+      "why": "thinks there is no gravity in a vacuum"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises that removing air helps light things most"
+     }
+    ]
+   },
+   {
+    "evidence": "When you submerge an object in water, it may feel lighter due to the upward buoyant force, but its actual mass remains completely unchanged.",
+    "kind": "what_if",
+    "q": "A stone feels lighter when lifted under water. What happens to the amount of matter in it?",
+    "options": [
+     "It stays the same; water just pushes up",
+     "It becomes less while under water",
+     "It falls, because its weight has fallen",
+     "It grows, as the stone soaks up water"
+    ],
+    "explain": "Water gives an upward buoyant force, so the stone feels lighter, but its mass stays unchanged.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-GRAVITATION-K14-M9",
+      "why": "thinks objects lose mass under water"
+     },
+     {
+      "misconception": "SCI-PHY-GRAVITATION-K9-M4",
+      "why": "thinks mass and weight are the same"
+     },
+     {
+      "misconception": null,
+      "why": "guesses the stone gains matter from the water"
+     }
+    ]
+   },
+   {
+    "evidence": "A sharp nail exerts much higher pressure than a flat board under the same force because the nail concentrates that force onto a tiny surface area, making it easier to pierce materials.",
+    "kind": "which_explains",
+    "q": "Ravi pushes a sharp nail and a flat board with the same force. Which pierces wood more easily?",
+    "options": [
+     "The nail, since its force acts on a tiny area",
+     "The board, since its large area presses harder",
+     "The board, since a bigger object is heavier",
+     "The board, since only force matters, not area"
+    ],
+    "explain": "The nail puts the same force on a tiny area, so its pressure is much higher.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-GRAVITATION-K13-M6",
+      "why": "thinks a large flat board exerts more pressure"
+     },
+     {
+      "misconception": null,
+      "why": "thinks bigger and heavier means more pressure"
+     },
+     {
+      "misconception": null,
+      "why": "ignores that pressure depends on area"
+     }
+    ]
+   },
+   {
+    "evidence": "It does not stop at the edge of our atmosphere; it continues to pull objects together even in the emptiness of space.",
+    "kind": "what_if",
+    "q": "A spacecraft travels far beyond the air around Earth. What happens to Earth's pull on it?",
+    "options": [
+     "It keeps acting, even far out in space",
+     "It ends once the air is left behind",
+     "It vanishes, as a vacuum has no gravity",
+     "It acts only on planet-sized objects"
+    ],
+    "explain": "Gravity does not stop at the atmosphere; it keeps pulling objects even in empty space.",
+    "wrong": [
+     {
+      "misconception": "SCI-PHY-GRAVITATION-K6-M2",
+      "why": "thinks gravity ends when you leave the atmosphere"
+     },
+     {
+      "misconception": "SCI-PHY-GRAVITATION-K7-M10",
+      "why": "thinks there is no gravity in a vacuum"
+     },
+     {
+      "misconception": "SCI-PHY-GRAVITATION-K5-M1",
+      "why": "thinks gravity acts only between very large bodies"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 40.9
+}

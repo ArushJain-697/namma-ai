@@ -1,0 +1,143 @@
+{
+ "source": "train-0233-MAT-POLYNOMIALS.json",
+ "job": {
+  "job": "train-0233-MAT-POLYNOMIALS",
+  "topic_id": "MAT-POLYNOMIALS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a puzzle or game that uses the idea",
+  "seed": 233
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2992,
+  "promptTokenCount": 2
+ },
+ "passage": "In the Royal Math Kingdom, the King has declared that only expressions with whole number powers of variables are true polynomials. For example, x squared plus five is a polynomial, but expressions like one divided by x or the square root of x are forbidden because they have negative or fractional exponents. To find the zero of a polynomial like x plus four, you must solve for the value of x that makes the entire expression equal zero, which is negative four. The King also keeps a record of coefficients; in the expression x squared minus five x plus six, the coefficient of x is negative five, not five. When the royal guards divide a polynomial p(x) by x minus two, they use the Remainder Theorem, which states that the remainder is simply the value of p(2). Finally, the King reminds everyone that a quadratic polynomial's graph is a smooth curve called a parabola, which is never a straight line or a shape with a sharp corner. Every subject must remember these rules to keep the kingdom's calculations accurate and avoid common traps set by the Math Jester.",
+ "menu_ids": [
+  "MAT-POLYNOMIALS-K8-M1",
+  "MAT-POLYNOMIALS-K8-M2",
+  "MAT-POLYNOMIALS-K9-M3",
+  "MAT-POLYNOMIALS-K9-M5",
+  "MAT-POLYNOMIALS-K10-M6",
+  "MAT-POLYNOMIALS-K11-M8",
+  "MAT-POLYNOMIALS-K13-M11",
+  "MAT-POLYNOMIALS-K13-M12",
+  "MAT-POLYNOMIALS-K14-M13",
+  "MAT-POLYNOMIALS-K14-M14",
+  "MAT-POLYNOMIALS-K15-M15",
+  "MAT-POLYNOMIALS-K16-M16",
+  "MAT-POLYNOMIALS-K17-M17",
+  "MAT-POLYNOMIALS-K21-M18"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "For example, x squared plus five is a polynomial, but expressions like one divided by x or the square root of x are forbidden because they have negative or fractional exponents.",
+    "kind": "which_explains",
+    "q": "Meena says 1/x + 2 and √x + 3 are polynomials. What should the King say?",
+    "options": [
+     "Neither, since their powers of x are not whole",
+     "Both, since each has a variable and a number",
+     "Only √x + 3, since it has one variable",
+     "Only 1/x + 2, since its power is negative"
+    ],
+    "explain": "1/x has a negative power and √x a fractional power, so neither is a polynomial.",
+    "wrong": [
+     {
+      "misconception": "MAT-POLYNOMIALS-K8-M1",
+      "why": "thinks a variable plus a number makes a polynomial"
+     },
+     {
+      "misconception": "MAT-POLYNOMIALS-K8-M2",
+      "why": "thinks one variable is enough for a polynomial"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the rule about negative powers"
+     }
+    ]
+   },
+   {
+    "evidence": "To find the zero of a polynomial like x plus four, you must solve for the value of x that makes the entire expression equal zero, which is negative four.",
+    "kind": "what_if",
+    "q": "Using the King's method, what is the zero of the polynomial x + 7?",
+    "options": [
+     "-7, because x + 7 then equals 0",
+     "7, because it is the number in x + 7",
+     "0, because a zero means x is 0",
+     "7, because the graph cuts the y-axis there"
+    ],
+    "explain": "A zero makes the whole expression 0; -7 + 7 = 0, just as -4 works for x + 4.",
+    "wrong": [
+     {
+      "misconception": "MAT-POLYNOMIALS-K14-M14",
+      "why": "copies the constant term as the zero"
+     },
+     {
+      "misconception": "MAT-POLYNOMIALS-K14-M13",
+      "why": "thinks a zero means x itself is 0"
+     },
+     {
+      "misconception": "MAT-POLYNOMIALS-K16-M16",
+      "why": "confuses the zero with the y-intercept"
+     }
+    ]
+   },
+   {
+    "evidence": "The King also keeps a record of coefficients; in the expression x squared minus five x plus six, the coefficient of x is negative five, not five.",
+    "kind": "what_if",
+    "q": "In x² − 3x + 2, what is the coefficient of x?",
+    "options": [
+     "-3, since the minus sign belongs to it",
+     "3, since the sign is not part of it",
+     "2, since it is the number at the end",
+     "1, since x has no number written before it"
+    ],
+    "explain": "The sign goes with the term, so like -5 in x² − 5x + 6, here it is -3.",
+    "wrong": [
+     {
+      "misconception": "MAT-POLYNOMIALS-K10-M6",
+      "why": "drops the minus sign from the coefficient"
+     },
+     {
+      "misconception": null,
+      "why": "picks the constant term instead"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up x with the x² term"
+     }
+    ]
+   },
+   {
+    "evidence": "When the royal guards divide a polynomial p(x) by x minus two, they use the Remainder Theorem, which states that the remainder is simply the value of p(2).",
+    "kind": "how",
+    "q": "The guards divide p(x) = x² + 3 by x − 2. What remainder do they get?",
+    "options": [
+     "7, found by putting x = 2 in p(x)",
+     "-1, found by putting x = -2 in p(x)",
+     "2p, found by multiplying p by 2",
+     "3, found by putting x = 0 in p(x)"
+    ],
+    "explain": "The remainder is p(2) = 2² + 3 = 7.",
+    "wrong": [
+     {
+      "misconception": "MAT-POLYNOMIALS-K13-M11",
+      "why": "uses -2 from the divisor and squares the sign wrongly"
+     },
+     {
+      "misconception": "MAT-POLYNOMIALS-K13-M12",
+      "why": "thinks p(2) means p times 2"
+     },
+     {
+      "misconception": null,
+      "why": "takes the constant term as the remainder"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 29.2
+}

@@ -1,0 +1,165 @@
+{
+ "source": "train-0238-MAT-RATIO.json",
+ "job": {
+  "job": "train-0238-MAT-RATIO",
+  "topic_id": "MAT-RATIO",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a market or shop situation that uses the idea",
+  "seed": 238
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3529,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan visited the local stationery market to buy supplies for his school project. At the first shop, he noticed that a pack of 3 identical gel pens costs 15 rupees. He needed 5 pens for his group, so he calculated the price by finding the cost of one pen first. He divided 15 by 3 to find that one pen costs 5 rupees, and then multiplied by 5 to get 25 rupees. Next, he looked at two types of notebooks. The shopkeeper explained that the ratio of the number of blue notebooks to red notebooks is 2:3. This means for every 2 blue notebooks, there are 3 red ones. Rohan realized that the blue notebooks make up 2 parts out of the total 5 parts, which is 2/5 of the entire collection. Finally, Rohan compared the prices of two brands of glue sticks. Brand A and Brand B are sold in a ratio of 4:1. He noted that the order matters, as Brand A is much more expensive than Brand B. If he swapped the ratio to 1:4, it would imply that Brand B is the more expensive one, which is incorrect. Rohan carefully checked his math to ensure he had enough money for all his items.",
+ "menu_ids": [
+  "MAT-RATIO-K5-M1",
+  "MAT-RATIO-K14-M3",
+  "MAT-RATIO-K11-M4",
+  "MAT-RATIO-K8-M6",
+  "MAT-RATIO-K9-M7",
+  "MAT-RATIO-K10-M8",
+  "MAT-RATIO-K12-M10",
+  "MAT-RATIO-K13-M11",
+  "MAT-RATIO-K14-M12",
+  "MAT-RATIO-K15-M13"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "He divided 15 by 3 to find that one pen costs 5 rupees, and then multiplied by 5 to get 25 rupees.",
+    "kind": "what_if",
+    "q": "Using Rohan's method, what would 7 of the same gel pens cost?",
+    "options": [
+     "35 rupees",
+     "22 rupees",
+     "19 rupees",
+     "25 rupees"
+    ],
+    "explain": "One pen costs 15 ÷ 3 = 5 rupees, so 7 pens cost 5 × 7 = 35 rupees.",
+    "wrong": [
+     {
+      "misconception": "MAT-RATIO-K11-M4",
+      "why": "adds the number of pens to the price: 15 + 7"
+     },
+     {
+      "misconception": "MAT-RATIO-K10-M8",
+      "why": "adds the difference in pens (4) to 15"
+     },
+     {
+      "misconception": null,
+      "why": "copies the nearby answer for 5 pens"
+     }
+    ]
+   },
+   {
+    "evidence": "This means for every 2 blue notebooks, there are 3 red ones.",
+    "kind": "what_if",
+    "q": "The shop has 6 blue notebooks. How many red notebooks should it have?",
+    "options": [
+     "9 red notebooks",
+     "7 red notebooks",
+     "4 red notebooks",
+     "3 red notebooks"
+    ],
+    "explain": "Every 2 blue go with 3 red; 6 blue is three such groups, so 3 × 3 = 9 red.",
+    "wrong": [
+     {
+      "misconception": "MAT-RATIO-K8-M6",
+      "why": "keeps the same difference of 1 instead of scaling"
+     },
+     {
+      "misconception": "MAT-RATIO-K5-M1",
+      "why": "flips the ratio to 3:2"
+     },
+     {
+      "misconception": "MAT-RATIO-K14-M12",
+      "why": "thinks the ratio gives the actual count"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan realized that the blue notebooks make up 2 parts out of the total 5 parts, which is 2/5 of the entire collection.",
+    "kind": "what_if",
+    "q": "If the shop has 15 notebooks in this 2:3 ratio, how many are blue?",
+    "options": [
+     "6 blue notebooks",
+     "10 blue notebooks",
+     "2 blue notebooks",
+     "9 blue notebooks"
+    ],
+    "explain": "Blue is 2 parts out of 5, so 2/5 of 15 = 6 blue notebooks.",
+    "wrong": [
+     {
+      "misconception": "MAT-RATIO-K14-M3",
+      "why": "takes blue as 2/3 of the total"
+     },
+     {
+      "misconception": "MAT-RATIO-K14-M12",
+      "why": "thinks the ratio gives the actual number"
+     },
+     {
+      "misconception": "MAT-RATIO-K5-M1",
+      "why": "uses the red share, 3/5, by mistake"
+     }
+    ]
+   },
+   {
+    "evidence": "If he swapped the ratio to 1:4, it would imply that Brand B is the more expensive one, which is incorrect.",
+    "kind": "what_if",
+    "q": "What would writing the glue stick price ratio as 1:4 wrongly suggest?",
+    "options": [
+     "Brand B is pricier than Brand A",
+     "Brand A is still pricier than Brand B",
+     "Brand A costs only 3 rupees more",
+     "Brand B costs exactly 1 rupee"
+    ],
+    "explain": "Swapping the order to 1:4 makes it look like Brand B costs more, which is wrong.",
+    "wrong": [
+     {
+      "misconception": "MAT-RATIO-K5-M1",
+      "why": "thinks 4:1 and 1:4 mean the same"
+     },
+     {
+      "misconception": "MAT-RATIO-K9-M7",
+      "why": "reads a ratio as a difference between terms"
+     },
+     {
+      "misconception": "MAT-RATIO-K14-M12",
+      "why": "thinks ratio terms are actual amounts"
+     }
+    ]
+   },
+   {
+    "evidence": "He noted that the order matters, as Brand A is much more expensive than Brand B.",
+    "kind": "which_explains",
+    "q": "In the glue price ratio 4:1, what does the first number tell Rohan?",
+    "options": [
+     "Brand A is the costlier brand",
+     "Brand B is the costlier brand",
+     "Brand A costs exactly 4 rupees",
+     "Brand A costs 4/5 of Brand B"
+    ],
+    "explain": "The order matters: 4 comes first for Brand A because Brand A is much more expensive.",
+    "wrong": [
+     {
+      "misconception": "MAT-RATIO-K5-M1",
+      "why": "ignores the order of terms in a ratio"
+     },
+     {
+      "misconception": "MAT-RATIO-K14-M12",
+      "why": "takes a ratio term as the real price"
+     },
+     {
+      "misconception": "MAT-RATIO-K14-M3",
+      "why": "turns the ratio into a wrong fraction"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 35.6
+}

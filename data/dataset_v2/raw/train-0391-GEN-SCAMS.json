@@ -1,0 +1,169 @@
+{
+ "source": "train-0391-GEN-SCAMS.json",
+ "job": {
+  "job": "train-0391-GEN-SCAMS",
+  "topic_id": "GEN-SCAMS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 391
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 3205,
+  "promptTokenCount": 2
+ },
+ "passage": "Many people believe that if a caller knows their name or claims to be from a bank, they are trustworthy and must follow instructions immediately to avoid account closure. This is a dangerous myth. Banks will never ask you to share your OTP, PIN, or CVV over a phone call, even if they claim it is for a KYC update. If you receive a message asking you to click a link to update your KYC, do not click it, as legitimate banks do not operate this way. Furthermore, some scammers promise high monthly returns on investments and ask you to keep the deal secret from your family. They might even show you a fancy office or a certificate to look official. Remember, a high-return scheme that requires secrecy is almost always a fraud. If you ever lose money, do not wait or feel ashamed; report the incident immediately to the official cybercrime portal or your bank. Never trust a phone number provided by a stranger; always use the official contact details found on the back of your debit card or the bank's verified website. By staying alert and never sharing your secret banking codes, you can keep your money safe from those who try to trick you.",
+ "menu_ids": [
+  "GEN-SCAMS-K4-M3",
+  "GEN-SCAMS-K5-M4",
+  "GEN-SCAMS-K5-M5",
+  "GEN-SCAMS-K6-M6",
+  "GEN-SCAMS-K6-M7",
+  "GEN-SCAMS-K7-M8",
+  "GEN-SCAMS-K7-M9",
+  "GEN-SCAMS-K8-M10",
+  "GEN-SCAMS-K10-M11",
+  "GEN-SCAMS-K10-M12",
+  "GEN-SCAMS-K11-M14",
+  "GEN-SCAMS-K12-M15",
+  "GEN-SCAMS-K15-M16",
+  "GEN-SCAMS-K15-M17"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Banks will never ask you to share your OTP, PIN, or CVV over a phone call, even if they claim it is for a KYC update.",
+    "kind": "which_explains",
+    "q": "A caller who knows your name asks for your OTP. What does this most likely show?",
+    "options": [
+     "He is most likely a cheat",
+     "He is a real bank worker",
+     "He is genuine, as he knows you",
+     "He is warning you of account closure"
+    ],
+    "explain": "Banks never ask for OTPs on calls, so a caller asking for one is probably a scammer.",
+    "wrong": [
+     {
+      "misconception": "GEN-SCAMS-K15-M16",
+      "why": "thinks sharing an OTP with a bank employee is fine"
+     },
+     {
+      "misconception": "GEN-SCAMS-K5-M4",
+      "why": "thinks knowing your name proves the caller is genuine"
+     },
+     {
+      "misconception": "GEN-SCAMS-K5-M5",
+      "why": "believes the account will close immediately"
+     }
+    ]
+   },
+   {
+    "evidence": "If you receive a message asking you to click a link to update your KYC, do not click it, as legitimate banks do not operate this way.",
+    "kind": "what_if",
+    "q": "An SMS asks you to update KYC through a link. What is the safest step?",
+    "options": [
+     "Ignore it and contact the bank yourself",
+     "Reply to it to check if it is real",
+     "Open it fast before the account closes",
+     "Tap it, since a link alone is harmless"
+    ],
+    "explain": "Legitimate banks do not ask for KYC updates through links, so do not click; contact the bank directly.",
+    "wrong": [
+     {
+      "misconception": "GEN-SCAMS-K4-M3",
+      "why": "thinks replying just to check is harmless"
+     },
+     {
+      "misconception": "GEN-SCAMS-K5-M5",
+      "why": "fears the account closes within hours"
+     },
+     {
+      "misconception": "GEN-SCAMS-K6-M7",
+      "why": "thinks a link only harms if you enter details"
+     }
+    ]
+   },
+   {
+    "evidence": "Remember, a high-return scheme that requires secrecy is almost always a fraud.",
+    "kind": "which_explains",
+    "q": "A man promises big monthly profit and asks you to hide the deal from family. What does this hint?",
+    "options": [
+     "It hints at a trap to cheat you",
+     "It keeps your special chance safe",
+     "It shows he runs his business well",
+     "It is normal for high-return deals"
+    ],
+    "explain": "A high-return scheme that demands secrecy is almost always a fraud, so the secrecy is a warning sign.",
+    "wrong": [
+     {
+      "misconception": "GEN-SCAMS-K11-M14",
+      "why": "thinks secrecy only protects a special chance"
+     },
+     {
+      "misconception": "GEN-SCAMS-K10-M12",
+      "why": "thinks very high returns show business skill"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises that secrecy is normal in such deals"
+     }
+    ]
+   },
+   {
+    "evidence": "They might even show you a fancy office or a certificate to look official.",
+    "kind": "what_if",
+    "q": "A scheme shows you a fancy office and a certificate. What should you conclude?",
+    "options": [
+     "The papers and office prove nothing",
+     "The office proves the scheme is genuine",
+     "The certificate makes high returns guaranteed",
+     "The scheme is safe to share with friends"
+    ],
+    "explain": "Scammers use fancy offices and certificates to look official, so these do not prove a scheme is safe.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "trusts appearances as proof"
+     },
+     {
+      "misconception": "GEN-SCAMS-K10-M11",
+      "why": "thinks a written guarantee makes a scheme safe"
+     },
+     {
+      "misconception": "GEN-SCAMS-K7-M9",
+      "why": "thinks bringing friends in is safe because everyone gains"
+     }
+    ]
+   },
+   {
+    "evidence": "Never trust a phone number provided by a stranger; always use the official contact details found on the back of your debit card or the bank's verified website.",
+    "kind": "recall",
+    "q": "Where can you safely find your bank's real contact number?",
+    "options": [
+     "From your debit card or verified website",
+     "From a normal-looking 10-digit mobile number",
+     "From the caller who says he is from the bank",
+     "From the SMS that asks for your KYC"
+    ],
+    "explain": "Use the contact details on the back of your debit card or the bank's verified website.",
+    "wrong": [
+     {
+      "misconception": "GEN-SCAMS-K12-M15",
+      "why": "thinks a normal-looking mobile number is safe"
+     },
+     {
+      "misconception": "GEN-SCAMS-K5-M4",
+      "why": "trusts a caller who claims to be from the bank"
+     },
+     {
+      "misconception": "GEN-SCAMS-K5-M5",
+      "why": "trusts the KYC message and its instructions"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 27.6
+}

@@ -1,0 +1,166 @@
+{
+ "source": "train-0191-GEN-FIRSTAID.json",
+ "job": {
+  "job": "train-0191-GEN-FIRSTAID",
+  "topic_id": "GEN-FIRSTAID",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 191
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4135,
+  "promptTokenCount": 2
+ },
+ "passage": "Many people believe that when someone is bleeding, the best way to stop it is to tie a tight rope above the wound or scrub the area hard to remove dirt. These methods are dangerous and can cause further tissue damage. Instead, you should apply firm, direct pressure to the wound using a clean cloth. If the cloth soaks through with blood, do not remove it; simply place another clean cloth directly over the first one to avoid disturbing the clot. Similarly, for minor burns, many think applying ice or household items like toothpaste is helpful. In reality, you should only run cool, clean tap water over the burn for at least ten minutes. If someone faints, do not force them to drink water or splash it on their face, as they could choke. Instead, lay them flat on their back and elevate their legs to help blood flow to the brain. Finally, if you suspect a snake bite, never rely on herbal pastes or attempt to suck out the venom. These actions waste precious time. The only effective response is to keep the person calm, immobilize the affected limb, and transport them immediately to the nearest hospital for professional medical care.",
+ "menu_ids": [
+  "GEN-FIRSTAID-K6-M1",
+  "GEN-FIRSTAID-K6-M2",
+  "GEN-FIRSTAID-K7-M3",
+  "GEN-FIRSTAID-K7-M4",
+  "GEN-FIRSTAID-K8-M5",
+  "GEN-FIRSTAID-K9-M6",
+  "GEN-FIRSTAID-K14-M7",
+  "GEN-FIRSTAID-K17-M9",
+  "GEN-FIRSTAID-K16-M10",
+  "GEN-FIRSTAID-K24-M11",
+  "GEN-FIRSTAID-K20-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "If the cloth soaks through with blood, do not remove it; simply place another clean cloth directly over the first one to avoid disturbing the clot.",
+    "kind": "what_if",
+    "q": "Meena's cloth on a bleeding cut is soaked with blood. What should she do next?",
+    "options": [
+     "Put a fresh cloth on top of it",
+     "Take it off and use a new one",
+     "Tie a tight rope above the cut",
+     "Scrub the cut hard, then cover it"
+    ],
+    "explain": "Leave the soaked cloth on; add another over it so the clot is not disturbed.",
+    "wrong": [
+     {
+      "misconception": "GEN-FIRSTAID-K6-M2",
+      "why": "thinks a soaked cloth must be replaced"
+     },
+     {
+      "misconception": "GEN-FIRSTAID-K6-M1",
+      "why": "thinks a tight rope stops bleeding best"
+     },
+     {
+      "misconception": "GEN-FIRSTAID-K7-M4",
+      "why": "thinks a cut must be scrubbed clean"
+     }
+    ]
+   },
+   {
+    "evidence": "In reality, you should only run cool, clean tap water over the burn for at least ten minutes.",
+    "kind": "how",
+    "q": "Arun burns his finger on a hot pan. How should he treat it first?",
+    "options": [
+     "Hold it under cool running water for ten minutes",
+     "Press ice cubes on it for ten minutes",
+     "Spread toothpaste on it for ten minutes",
+     "Splash cold water on it for one minute"
+    ],
+    "explain": "A minor burn needs only cool, clean tap water running over it for at least ten minutes.",
+    "wrong": [
+     {
+      "misconception": "GEN-FIRSTAID-K9-M6",
+      "why": "thinks ice is best for burns"
+     },
+     {
+      "misconception": "GEN-FIRSTAID-K7-M3",
+      "why": "thinks household pastes heal wounds"
+     },
+     {
+      "misconception": null,
+      "why": "misses the ten-minute rule"
+     }
+    ]
+   },
+   {
+    "evidence": "Instead, lay them flat on their back and elevate their legs to help blood flow to the brain.",
+    "kind": "what_if",
+    "q": "Priya faints during assembly. How should her friends position her?",
+    "options": [
+     "Lying down with her legs raised up",
+     "Sitting up with her head held high",
+     "Standing while sipping a glass of water",
+     "Lying down with her head raised up"
+    ],
+    "explain": "Lay her flat with legs raised so blood can flow to her brain.",
+    "wrong": [
+     {
+      "misconception": "GEN-FIRSTAID-K16-M10",
+      "why": "thinks a faint person should stay upright"
+     },
+     {
+      "misconception": "GEN-FIRSTAID-K17-M9",
+      "why": "thinks a fainted person needs water at once"
+     },
+     {
+      "misconception": null,
+      "why": "swaps which part should be raised"
+     }
+    ]
+   },
+   {
+    "evidence": "If someone faints, do not force them to drink water or splash it on their face, as they could choke.",
+    "kind": "why",
+    "q": "Sunil wants to pour water into his fainted friend's mouth. What is the danger?",
+    "options": [
+     "His friend could choke on the water",
+     "His friend could faint again from the cold",
+     "His friend could still get too little water",
+     "His friend could lose blood flow to the legs"
+    ],
+    "explain": "A fainted person may choke if forced to drink or splashed with water.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "invents a reason not in the passage"
+     },
+     {
+      "misconception": "GEN-FIRSTAID-K17-M9",
+      "why": "believes water is what a fainted person needs"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the blood-flow idea about raising legs"
+     }
+    ]
+   },
+   {
+    "evidence": "The only effective response is to keep the person calm, immobilize the affected limb, and transport them immediately to the nearest hospital for professional medical care.",
+    "kind": "what_if",
+    "q": "A snake bites Raju on the leg. What should his friends do?",
+    "options": [
+     "Keep his leg still and rush him to hospital",
+     "Suck out the venom, then let him rest",
+     "Tie a rope tightly above the bite and wait",
+     "Make him run quickly to the nearest hospital"
+    ],
+    "explain": "Keep him calm, keep the limb still, and take him to hospital immediately.",
+    "wrong": [
+     {
+      "misconception": "GEN-FIRSTAID-K14-M7",
+      "why": "thinks sucking out venom is enough"
+     },
+     {
+      "misconception": "GEN-FIRSTAID-K6-M1",
+      "why": "thinks a tight rope is the best first aid"
+     },
+     {
+      "misconception": null,
+      "why": "remembers hospital but forgets keeping the limb still"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 45.8
+}

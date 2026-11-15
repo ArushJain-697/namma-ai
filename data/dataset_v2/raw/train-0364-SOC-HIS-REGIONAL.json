@@ -1,0 +1,165 @@
+{
+ "source": "train-0364-SOC-HIS-REGIONAL.json",
+ "job": {
+  "job": "train-0364-SOC-HIS-REGIONAL",
+  "topic_id": "SOC-HIS-REGIONAL",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a conversation between a teacher and two students",
+  "seed": 364
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1559,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today we are discussing the Chola Empire. Many students think the Chola king made every single decision in every village personally, but that is incorrect. The Chola administration was organized into groups of villages called Nadus, which functioned as larger units of governance. Within these, the Ur was a village council responsible for local administration, not a cabinet for the king. \n\nStudent A: I also read that Chola temples were just for worship. Is that true? \n\nTeacher: Not at all. Temples were the hub of social and economic life. They were centers of craft production, and the bronze statues made there included not just deities, but also devotees and kings. \n\nStudent B: What about irrigation? Did they just wait for rain? \n\nTeacher: Definitely not. The Cholas invested heavily in human-planned irrigation. They built massive embankments and canals to ensure water reached the fields, showing their advanced planning. \n\nStudent A: And why did kings raid temples? Was it just religious hatred? \n\nTeacher: No, it was about wealth. Kings raided temples because they were storehouses of immense riches, not because they wanted to stop people from praying. It was a strategic move to weaken rivals by seizing their treasury, which was often kept within the temple walls.",
+ "menu_ids": [
+  "SOC-HIS-REGIONAL-K3-M1",
+  "SOC-HIS-REGIONAL-K9-M3",
+  "SOC-HIS-REGIONAL-K11-M4",
+  "SOC-HIS-REGIONAL-K14-M5",
+  "SOC-HIS-REGIONAL-K17-M7",
+  "SOC-HIS-REGIONAL-K18-M8",
+  "SOC-HIS-REGIONAL-K20-M9",
+  "SOC-HIS-REGIONAL-K8-M10",
+  "SOC-HIS-REGIONAL-K14-M11",
+  "SOC-HIS-REGIONAL-K13-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Many students think the Chola king made every single decision in every village personally, but that is incorrect.",
+    "kind": "what_if",
+    "q": "A village has a water dispute. Who most likely settles it under Chola rule?",
+    "options": [
+     "The local village council",
+     "The Chola king in person",
+     "A council ruling the whole empire",
+     "A Mughal officer sent to the village"
+    ],
+    "explain": "The king did not decide everything personally; the Ur, a village council, handled local administration.",
+    "wrong": [
+     {
+      "misconception": "SOC-HIS-REGIONAL-K13-M12",
+      "why": "thinks the king decided everything personally"
+     },
+     {
+      "misconception": "SOC-HIS-REGIONAL-K14-M5",
+      "why": "thinks the Ur ruled the whole empire"
+     },
+     {
+      "misconception": "SOC-HIS-REGIONAL-K8-M10",
+      "why": "brings in the Mughals, who are not part of this passage"
+     }
+    ]
+   },
+   {
+    "evidence": "The Chola administration was organized into groups of villages called Nadus, which functioned as larger units of governance.",
+    "kind": "difference",
+    "q": "How was a Nadu different from an Ur in Chola administration?",
+    "options": [
+     "A Nadu was a group of many villages",
+     "A Nadu was a small part of a village",
+     "A Nadu was a council of the king",
+     "A Nadu was a village council itself"
+    ],
+    "explain": "A Nadu was a larger unit made of groups of villages, while the Ur was a single village's council.",
+    "wrong": [
+     {
+      "misconception": "SOC-HIS-REGIONAL-K14-M11",
+      "why": "thinks a Nadu was a small neighbourhood inside a village"
+     },
+     {
+      "misconception": "SOC-HIS-REGIONAL-K14-M5",
+      "why": "mixes up councils with the king's cabinet"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the unit with the Ur council"
+     }
+    ]
+   },
+   {
+    "evidence": "They were centers of craft production, and the bronze statues made there included not just deities, but also devotees and kings.",
+    "kind": "which_example",
+    "q": "Which example shows that Chola temples did more than hold prayers?",
+    "options": [
+     "Craftsmen made bronze statues in them",
+     "Kings prayed in them every morning",
+     "Devotees gathered in them for festivals",
+     "Priests kept holy books safe in them"
+    ],
+    "explain": "Temples were centres of craft production, where bronze statues were made, so they were not only for worship.",
+    "wrong": [
+     {
+      "misconception": "SOC-HIS-REGIONAL-K17-M7",
+      "why": "picks a worship activity, thinking temples were only religious"
+     },
+     {
+      "misconception": "SOC-HIS-REGIONAL-K17-M7",
+      "why": "picks a religious gathering, which is still worship"
+     },
+     {
+      "misconception": "SOC-HIS-REGIONAL-K18-M8",
+      "why": "thinks only religious items were stored there"
+     }
+    ]
+   },
+   {
+    "evidence": "The Cholas invested heavily in human-planned irrigation.",
+    "kind": "why",
+    "q": "Why did water reach Chola fields even when rain was scarce?",
+    "options": [
+     "People planned and built canals for it",
+     "Rivers flowed there on their own",
+     "The king prayed for rain in temples",
+     "Farmers moved their fields near rivers"
+    ],
+    "explain": "The Cholas built embankments and canals by careful planning, so water reached the fields through human effort.",
+    "wrong": [
+     {
+      "misconception": "SOC-HIS-REGIONAL-K20-M9",
+      "why": "thinks irrigation happened naturally without planning"
+     },
+     {
+      "misconception": "SOC-HIS-REGIONAL-K17-M7",
+      "why": "links everything to temple worship"
+     },
+     {
+      "misconception": null,
+      "why": "guesses a plausible reason not in the passage"
+     }
+    ]
+   },
+   {
+    "evidence": "Kings raided temples because they were storehouses of immense riches, not because they wanted to stop people from praying.",
+    "kind": "why",
+    "q": "Why would a king raid a rival's temple in the Chola period?",
+    "options": [
+     "To seize treasure and weaken the rival",
+     "To stop the rival's people from praying",
+     "To end a war between two faiths",
+     "To take back land that jagirs held"
+    ],
+    "explain": "Temples stored great wealth, so raiding them took the rival's treasury and weakened the rival.",
+    "wrong": [
+     {
+      "misconception": "SOC-HIS-REGIONAL-K11-M4",
+      "why": "thinks kings raided out of religious hatred"
+     },
+     {
+      "misconception": "SOC-HIS-REGIONAL-K9-M3",
+      "why": "thinks the conflict was a religious war"
+     },
+     {
+      "misconception": "SOC-HIS-REGIONAL-K3-M1",
+      "why": "thinks the raids were about land and independent rulers"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 14.8
+}

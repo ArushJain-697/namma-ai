@@ -1,0 +1,169 @@
+{
+ "source": "train-0203-GEN-PHONES.json",
+ "job": {
+  "job": "train-0203-GEN-PHONES",
+  "topic_id": "GEN-PHONES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a short story with Indian characters in everyday life",
+  "seed": 203
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3239,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan sat in his room, scrolling through his phone while his mother, Meena, walked in. She noticed his phone was warm and immediately asked him to put it down. Rohan laughed, saying, 'Don't worry, Ma, it's just working hard, not emitting dangerous radiation.' Meena smiled, explaining that phones use non-ionising radio waves to communicate, which are far too weak to damage human cells or make objects radioactive. She reminded him that the warmth is simply energy lost as heat during processing or charging, not a sign of harmful rays. Rohan then complained about his dry, tired eyes. Meena suggested the 20-20-20 rule, explaining that eye strain happens because we blink less while staring at screens, not because the screen shoots harmful rays into our eyes. She also pointed to his old phone on the desk, which had a slightly swollen back cover. 'That battery is a fire hazard,' she warned, 'even if it still turns on, you must stop using it immediately.' Rohan nodded, realizing that while phones are safe tools, they require responsible habits. He decided to take a break, knowing that frequent short rests are much better for his vision than one long break after hours of continuous use.",
+ "menu_ids": [
+  "GEN-PHONES-K13-M2",
+  "GEN-PHONES-K15-M4",
+  "GEN-PHONES-K16-M5",
+  "GEN-PHONES-K17-M6",
+  "GEN-PHONES-K17-M7",
+  "GEN-PHONES-K19-M9",
+  "GEN-PHONES-K20-M10",
+  "GEN-PHONES-K20-M11",
+  "GEN-PHONES-K20-M12",
+  "GEN-PHONES-K21-M13",
+  "GEN-PHONES-K21-M14",
+  "GEN-PHONES-K22-M15",
+  "GEN-PHONES-K23-M16",
+  "GEN-PHONES-K23-M17"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Meena smiled, explaining that phones use non-ionising radio waves to communicate, which are far too weak to damage human cells or make objects radioactive.",
+    "kind": "what_if",
+    "q": "Rohan leaves a glass of water beside his phone all night. What happens to the water?",
+    "options": [
+     "It stays safe, since the waves are too weak",
+     "It turns radioactive from the phone's radio waves",
+     "It becomes unsafe, as all radiation is dangerous",
+     "It soaks up radiation and passes it on"
+    ],
+    "explain": "Phone radio waves are non-ionising and far too weak to make objects radioactive.",
+    "wrong": [
+     {
+      "misconception": "GEN-PHONES-K21-M13",
+      "why": "thinks phones make food or water radioactive"
+     },
+     {
+      "misconception": "GEN-PHONES-K17-M6",
+      "why": "thinks all radiation is dangerous like nuclear radiation"
+     },
+     {
+      "misconception": "GEN-PHONES-K21-M14",
+      "why": "thinks radiation is carried and passed on afterwards"
+     }
+    ]
+   },
+   {
+    "evidence": "She reminded him that the warmth is simply energy lost as heat during processing or charging, not a sign of harmful rays.",
+    "kind": "which_explains",
+    "q": "Rohan's phone feels warm after a long game. Which is the best explanation?",
+    "options": [
+     "It is losing some energy as heat while working",
+     "It is giving out dangerous rays as it heats",
+     "It is sending strong waves to a satellite",
+     "It is damaging the cells in his hand"
+    ],
+    "explain": "Warmth is just energy lost as heat during processing or charging, not harmful rays.",
+    "wrong": [
+     {
+      "misconception": "GEN-PHONES-K22-M15",
+      "why": "thinks a warm phone gives out dangerous radiation"
+     },
+     {
+      "misconception": "GEN-PHONES-K15-M4",
+      "why": "thinks phones connect to a satellite for every call"
+     },
+     {
+      "misconception": "GEN-PHONES-K20-M10",
+      "why": "thinks phone radiation damages body cells"
+     }
+    ]
+   },
+   {
+    "evidence": "Meena suggested the 20-20-20 rule, explaining that eye strain happens because we blink less while staring at screens, not because the screen shoots harmful rays into our eyes.",
+    "kind": "why",
+    "q": "Why do Rohan's eyes feel dry and tired after a long time on his phone?",
+    "options": [
+     "He blinks less while staring at the screen",
+     "The screen shoots harmful rays into his eyes",
+     "The screen is slowly making his eyes blind",
+     "The warm phone heats and dries his eyes"
+    ],
+    "explain": "Eye strain happens because we blink less while staring at screens, not from harmful rays.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "believes the cause the passage rejects"
+     },
+     {
+      "misconception": "GEN-PHONES-K23-M16",
+      "why": "thinks screens cause permanent blindness"
+     },
+     {
+      "misconception": "GEN-PHONES-K22-M15",
+      "why": "links the phone's warmth to harm"
+     }
+    ]
+   },
+   {
+    "evidence": "'That battery is a fire hazard,' she warned, 'even if it still turns on, you must stop using it immediately.'",
+    "kind": "why",
+    "q": "Why did Meena tell Rohan to stop using his old phone with the swollen cover?",
+    "options": [
+     "Its swollen battery could catch fire",
+     "It gives out more radiation than new phones",
+     "It no longer turns on properly",
+     "Its radio waves could damage his DNA"
+    ],
+    "explain": "A swollen battery is a fire hazard, even if the phone still turns on.",
+    "wrong": [
+     {
+      "misconception": "GEN-PHONES-K17-M6",
+      "why": "thinks the danger of phones is always radiation"
+     },
+     {
+      "misconception": null,
+      "why": "misses that the passage says it still turns on"
+     },
+     {
+      "misconception": "GEN-PHONES-K20-M10",
+      "why": "thinks phone radiation damages DNA"
+     }
+    ]
+   },
+   {
+    "evidence": "He decided to take a break, knowing that frequent short rests are much better for his vision than one long break after hours of continuous use.",
+    "kind": "what_if",
+    "q": "Rohan must study on his phone for three hours. Which plan is best for his eyes?",
+    "options": [
+     "Take short rests often during the three hours",
+     "Take one long rest after all three hours",
+     "Take no rest, since phone waves cause no effect",
+     "Take rests only when the phone feels warm"
+    ],
+    "explain": "Frequent short rests are much better for vision than one long break after hours of use.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "reverses which kind of break is better"
+     },
+     {
+      "misconception": "GEN-PHONES-K19-M9",
+      "why": "thinks safe waves mean screens have no effect at all"
+     },
+     {
+      "misconception": "GEN-PHONES-K22-M15",
+      "why": "thinks warmth is the sign of harm"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 40.9
+}

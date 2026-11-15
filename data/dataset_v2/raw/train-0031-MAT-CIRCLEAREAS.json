@@ -1,0 +1,143 @@
+{
+ "source": "train-0031-MAT-CIRCLEAREAS.json",
+ "job": {
+  "job": "train-0031-MAT-CIRCLEAREAS",
+  "topic_id": "MAT-CIRCLEAREAS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a short story where children solve a real problem",
+  "seed": 31
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3495,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and Meera were helping their teacher decorate the school garden for the annual fair. They needed to cut a circular piece of cardboard with a radius of 14 cm to make a decorative wheel. Rohan suggested that if they doubled the radius to 28 cm, the area would simply double, but Meera corrected him, explaining that the area actually increases by a factor of four. Next, they calculated the perimeter of a semicircle-shaped flower bed with a radius of 7 cm. Meera reminded Rohan that the perimeter includes the diameter, so it is πr + 2r, not just half the circumference. While measuring the area of a sector for a path, they realized that the area must be expressed in square units, specifically square centimeters, because it represents a two-dimensional surface. Finally, they looked at a tractor wheel with a diameter of 70 cm. Rohan initially thought the distance covered in one rotation was equal to the diameter, but they checked their notes and confirmed that the distance covered is actually equal to the circumference, which is π times the diameter.",
+ "menu_ids": [
+  "MAT-CIRCLEAREAS-K11-M2",
+  "MAT-CIRCLEAREAS-K11-M3",
+  "MAT-CIRCLEAREAS-K12-M4",
+  "MAT-CIRCLEAREAS-K12-M5",
+  "MAT-CIRCLEAREAS-K13-M6",
+  "MAT-CIRCLEAREAS-K13-M7",
+  "MAT-CIRCLEAREAS-K14-M8",
+  "MAT-CIRCLEAREAS-K14-M9",
+  "MAT-CIRCLEAREAS-K15-M10",
+  "MAT-CIRCLEAREAS-K15-M11",
+  "MAT-CIRCLEAREAS-K16-M12",
+  "MAT-CIRCLEAREAS-K17-M13",
+  "MAT-CIRCLEAREAS-K18-M15",
+  "MAT-CIRCLEAREAS-K18-M16"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Rohan suggested that if they doubled the radius to 28 cm, the area would simply double, but Meera corrected him, explaining that the area actually increases by a factor of four.",
+    "kind": "what_if",
+    "q": "The cardboard wheel's radius changes from 14 cm to 28 cm. What happens to its area?",
+    "options": [
+     "It becomes four times as large",
+     "It becomes two times as large",
+     "It becomes eight times as large",
+     "It becomes sixteen times as large"
+    ],
+    "explain": "Doubling the radius makes the area four times bigger, not just double, as Meera explained.",
+    "wrong": [
+     {
+      "misconception": "MAT-CIRCLEAREAS-K14-M8",
+      "why": "thinks doubling the radius doubles the area"
+     },
+     {
+      "misconception": null,
+      "why": "cubes the factor, mixing area up with volume"
+     },
+     {
+      "misconception": null,
+      "why": "squares four instead of squaring two"
+     }
+    ]
+   },
+   {
+    "evidence": "Meera reminded Rohan that the perimeter includes the diameter, so it is πr + 2r, not just half the circumference.",
+    "kind": "what_if",
+    "q": "Rohan measures only the curved part of the 7 cm semicircle bed. What has he missed?",
+    "options": [
+     "The straight edge, which is 14 cm long",
+     "The radius, which is just 7 cm long",
+     "The other half, which is πr long",
+     "The inside area, which is about 154 cm²"
+    ],
+    "explain": "A semicircle's perimeter is πr + 2r, so the 14 cm diameter must be added.",
+    "wrong": [
+     {
+      "misconception": "MAT-CIRCLEAREAS-K16-M12",
+      "why": "adds only r, missing that the straight edge is 2r"
+     },
+     {
+      "misconception": null,
+      "why": "thinks perimeter needs the whole circle's edge"
+     },
+     {
+      "misconception": "MAT-CIRCLEAREAS-K15-M10",
+      "why": "mixes area into a length measurement"
+     }
+    ]
+   },
+   {
+    "evidence": "While measuring the area of a sector for a path, they realized that the area must be expressed in square units, specifically square centimeters, because it represents a two-dimensional surface.",
+    "kind": "why",
+    "q": "Why must the area of the path's sector be written in cm² and not cm?",
+    "options": [
+     "It measures a flat surface, not a line",
+     "It is curved, unlike a straight line",
+     "It is a piece of the circle's edge",
+     "It is small, so cm² is more exact"
+    ],
+    "explain": "Area covers a two-dimensional surface, so it is measured in square centimetres.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks curved shapes need square units"
+     },
+     {
+      "misconception": "MAT-CIRCLEAREAS-K17-M13",
+      "why": "treats sector area like an arc length"
+     },
+     {
+      "misconception": null,
+      "why": "thinks units depend on the size"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan initially thought the distance covered in one rotation was equal to the diameter, but they checked their notes and confirmed that the distance covered is actually equal to the circumference, which is π times the diameter.",
+    "kind": "what_if",
+    "q": "A tractor wheel of diameter 70 cm turns once. How far does the tractor move?",
+    "options": [
+     "220 cm, which is π times 70",
+     "70 cm, which is the wheel's diameter",
+     "3850 cm, which is π times 35²",
+     "35 cm, which is the wheel's radius"
+    ],
+    "explain": "One turn covers the circumference, π times the diameter: 22/7 × 70 = 220 cm.",
+    "wrong": [
+     {
+      "misconception": "MAT-CIRCLEAREAS-K11-M3",
+      "why": "thinks one turn covers the diameter"
+     },
+     {
+      "misconception": "MAT-CIRCLEAREAS-K11-M2",
+      "why": "uses πr² for circumference"
+     },
+     {
+      "misconception": null,
+      "why": "picks the radius, a nearby number"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 38.6
+}

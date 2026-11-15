@@ -1,0 +1,169 @@
+{
+ "source": "train-0024-GEN-TRAFFIC.json",
+ "job": {
+  "job": "train-0024-GEN-TRAFFIC",
+  "topic_id": "GEN-TRAFFIC",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a clear textbook explanation",
+  "seed": 24
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2860,
+  "promptTokenCount": 2
+ },
+ "passage": "Road safety is a shared responsibility that relies on understanding physics and strict adherence to traffic regulations. When approaching a traffic signal, a yellow light serves as a warning to slow down and prepare to stop, not an invitation to accelerate. Road signs are categorized by shape; for instance, circular signs indicate mandatory orders that must be followed, while triangular signs warn of hazards. Safety equipment is non-negotiable for all occupants. Every passenger in a vehicle, whether in the front or back seat, must wear a seatbelt, and children should always be secured in appropriate child restraints rather than sitting on an adult's lap. Similarly, on a two-wheeler, both the rider and the pillion passenger must wear a securely fastened helmet, regardless of the distance traveled. Physics dictates that speed is a critical factor in crash severity; doubling your speed increases the kinetic energy fourfold, making a collision significantly more dangerous than just twice as bad. Furthermore, driving under the influence of alcohol is never safe, as it impairs reaction times and judgment, regardless of how relaxed a driver feels. Finally, if you are walking on a road without a footpath, always walk facing the oncoming traffic so you can see vehicles approaching you. These rules exist to protect lives, not merely to facilitate law enforcement.",
+ "menu_ids": [
+  "GEN-TRAFFIC-K8-M1",
+  "GEN-TRAFFIC-K9-M2",
+  "GEN-TRAFFIC-K9-M3",
+  "GEN-TRAFFIC-K10-M4",
+  "GEN-TRAFFIC-K11-M5",
+  "GEN-TRAFFIC-K12-M6",
+  "GEN-TRAFFIC-K13-M7",
+  "GEN-TRAFFIC-K14-M8",
+  "GEN-TRAFFIC-K17-M9",
+  "GEN-TRAFFIC-K17-M10",
+  "GEN-TRAFFIC-K18-M11",
+  "GEN-TRAFFIC-K19-M12",
+  "GEN-TRAFFIC-K19-M13",
+  "GEN-TRAFFIC-K20-M14"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "When approaching a traffic signal, a yellow light serves as a warning to slow down and prepare to stop, not an invitation to accelerate.",
+    "kind": "what_if",
+    "q": "Meera is driving towards a signal when it turns yellow. What should she do?",
+    "options": [
+     "Slow down and get ready to stop",
+     "Speed up to cross before it turns red",
+     "Keep going at the same speed, like green",
+     "Keep going unless a policeman is watching"
+    ],
+    "explain": "A yellow light is a warning to slow down and prepare to stop, not to speed up.",
+    "wrong": [
+     {
+      "misconception": "GEN-TRAFFIC-K9-M2",
+      "why": "thinks yellow means hurry through before red"
+     },
+     {
+      "misconception": "GEN-TRAFFIC-K9-M3",
+      "why": "thinks amber means the same as green"
+     },
+     {
+      "misconception": "GEN-TRAFFIC-K11-M5",
+      "why": "thinks traffic rules are only advice"
+     }
+    ]
+   },
+   {
+    "evidence": "Road signs are categorized by shape; for instance, circular signs indicate mandatory orders that must be followed, while triangular signs warn of hazards.",
+    "kind": "how",
+    "q": "A driver sees a round road sign ahead. How should the driver treat it?",
+    "options": [
+     "As a rule that has to be obeyed",
+     "As a warning about a danger ahead",
+     "As helpful advice that can be ignored",
+     "As meaning only what its picture shows"
+    ],
+    "explain": "Circular signs give orders that must be followed; triangular signs are the ones that warn of hazards.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "mixes up circular signs with triangular warning signs"
+     },
+     {
+      "misconception": "GEN-TRAFFIC-K11-M5",
+      "why": "thinks signs are only advice"
+     },
+     {
+      "misconception": "GEN-TRAFFIC-K10-M4",
+      "why": "thinks the shape of a sign does not matter"
+     }
+    ]
+   },
+   {
+    "evidence": "Every passenger in a vehicle, whether in the front or back seat, must wear a seatbelt, and children should always be secured in appropriate child restraints rather than sitting on an adult's lap.",
+    "kind": "what_if",
+    "q": "Four friends ride in a car, two in front and two behind. Who must wear seatbelts?",
+    "options": [
+     "Everyone sitting in the front and back",
+     "Only the driver and the front passenger",
+     "Nobody, as long as the car goes slowly",
+     "Only the people sitting without an airbag"
+    ],
+    "explain": "Every passenger, in the front or back seat, must wear a seatbelt.",
+    "wrong": [
+     {
+      "misconception": "GEN-TRAFFIC-K20-M14",
+      "why": "thinks only front-seat passengers need belts"
+     },
+     {
+      "misconception": "GEN-TRAFFIC-K19-M12",
+      "why": "thinks belts are not needed at low speed"
+     },
+     {
+      "misconception": "GEN-TRAFFIC-K19-M13",
+      "why": "thinks an airbag replaces the seatbelt"
+     }
+    ]
+   },
+   {
+    "evidence": "Similarly, on a two-wheeler, both the rider and the pillion passenger must wear a securely fastened helmet, regardless of the distance traveled.",
+    "kind": "what_if",
+    "q": "Aman takes his sister on his scooter for a short ride to the market. Who needs a helmet?",
+    "options": [
+     "Both of them, with straps fastened tightly",
+     "Only Aman, since he is the rider",
+     "Neither of them, since the trip is short",
+     "Both of them, but straps can stay loose"
+    ],
+    "explain": "Rider and pillion must both wear securely fastened helmets, however short the trip.",
+    "wrong": [
+     {
+      "misconception": "GEN-TRAFFIC-K18-M11",
+      "why": "thinks only the rider needs a helmet"
+     },
+     {
+      "misconception": "GEN-TRAFFIC-K17-M10",
+      "why": "thinks helmets are only for long trips"
+     },
+     {
+      "misconception": "GEN-TRAFFIC-K17-M9",
+      "why": "thinks a loose helmet still protects"
+     }
+    ]
+   },
+   {
+    "evidence": "Physics dictates that speed is a critical factor in crash severity; doubling your speed increases the kinetic energy fourfold, making a collision significantly more dangerous than just twice as bad.",
+    "kind": "what_if",
+    "q": "A car speeds up from 30 km/h to 60 km/h. How does its energy in a crash change?",
+    "options": [
+     "It becomes four times as large",
+     "It becomes two times as large",
+     "It stays about the same as before",
+     "It becomes a little bit larger"
+    ],
+    "explain": "Doubling speed makes kinetic energy four times larger, so the crash is far worse than twice as bad.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks energy grows in step with speed"
+     },
+     {
+      "misconception": null,
+      "why": "thinks speed does not affect crash severity"
+     },
+     {
+      "misconception": null,
+      "why": "underestimates how much speed matters"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 31.1
+}

@@ -1,0 +1,169 @@
+{
+ "source": "train-0248-MAT-TRIGONOMETRY.json",
+ "job": {
+  "job": "train-0248-MAT-TRIGONOMETRY",
+  "topic_id": "MAT-TRIGONOMETRY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a clear textbook explanation with one worked example",
+  "seed": 248
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 4138,
+  "promptTokenCount": 2
+ },
+ "passage": "In a right-angled triangle, the trigonometric ratios are defined by the relationship between the sides relative to a specific angle. The hypotenuse is always the side opposite the right angle, regardless of how the triangle is oriented on the page. For an angle A, the sine ratio is the length of the side opposite to A divided by the hypotenuse, while the cosine ratio is the side adjacent to A divided by the hypotenuse. The tangent ratio is simply the opposite side divided by the adjacent side. It is important to note that because the hypotenuse is the longest side, the values of sine and cosine can never exceed one. Furthermore, the notation sin²A is a shorthand for (sin A)², which means you calculate the sine of angle A first and then square the resulting value. Consider a triangle where the side opposite to angle A is 3 cm, the adjacent side is 4 cm, and the hypotenuse is 5 cm. Here, sin A = 3/5 and cos A = 4/5. If we check the identity sin²A + cos²A = 1, we find (3/5)² + (4/5)² = 9/25 + 16/25 = 25/25, which equals 1. This identity holds true for any angle A, not just specific ones, because it is derived from the Pythagorean theorem.",
+ "menu_ids": [
+  "MAT-TRIGONOMETRY-K9-M2",
+  "MAT-TRIGONOMETRY-K10-M3",
+  "MAT-TRIGONOMETRY-K10-M4",
+  "MAT-TRIGONOMETRY-K11-M5",
+  "MAT-TRIGONOMETRY-K11-M6",
+  "MAT-TRIGONOMETRY-K12-M7",
+  "MAT-TRIGONOMETRY-K13-M9",
+  "MAT-TRIGONOMETRY-K14-M10",
+  "MAT-TRIGONOMETRY-K14-M11",
+  "MAT-TRIGONOMETRY-K15-M12",
+  "MAT-TRIGONOMETRY-K19-M13",
+  "MAT-TRIGONOMETRY-K16-M14",
+  "MAT-TRIGONOMETRY-K18-M15",
+  "MAT-TRIGONOMETRY-K20-M16"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "The hypotenuse is always the side opposite the right angle, regardless of how the triangle is oriented on the page.",
+    "kind": "what_if",
+    "q": "A right-angled triangle is drawn upside down. How do we find its hypotenuse?",
+    "options": [
+     "The side facing the 90° corner",
+     "The side resting at the bottom",
+     "The side that slants across the page",
+     "The shortest side next to the angle"
+    ],
+    "explain": "The hypotenuse always faces the right angle, however the triangle is turned on the page.",
+    "wrong": [
+     {
+      "misconception": "MAT-TRIGONOMETRY-K9-M2",
+      "why": "thinks the bottom side is the hypotenuse"
+     },
+     {
+      "misconception": "MAT-TRIGONOMETRY-K9-M2",
+      "why": "thinks the slanted side as drawn is the hypotenuse"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the hypotenuse with an adjacent side"
+     }
+    ]
+   },
+   {
+    "evidence": "For an angle A, the sine ratio is the length of the side opposite to A divided by the hypotenuse, while the cosine ratio is the side adjacent to A divided by the hypotenuse.",
+    "kind": "how",
+    "q": "In a right triangle, the side opposite A is 6, adjacent is 8, hypotenuse is 10. Find cos A.",
+    "options": [
+     "8/10",
+     "6/10",
+     "6/8",
+     "10/8"
+    ],
+    "explain": "Cosine is the adjacent side divided by the hypotenuse, so cos A = 8/10.",
+    "wrong": [
+     {
+      "misconception": "MAT-TRIGONOMETRY-K10-M3",
+      "why": "uses opposite/hypotenuse for cosine"
+     },
+     {
+      "misconception": null,
+      "why": "gives opposite/adjacent, which is tangent"
+     },
+     {
+      "misconception": null,
+      "why": "flips the ratio upside down"
+     }
+    ]
+   },
+   {
+    "evidence": "It is important to note that because the hypotenuse is the longest side, the values of sine and cosine can never exceed one.",
+    "kind": "why",
+    "q": "A student gets sin A = 5/3 in a right triangle. Why must this be wrong?",
+    "options": [
+     "The opposite side cannot be longer than the hypotenuse",
+     "The adjacent side should have been divided by the hypotenuse",
+     "Sine can only be a whole number like 1",
+     "The angle A must be smaller than 30 degrees"
+    ],
+    "explain": "Sine is a side divided by the longest side, the hypotenuse, so it cannot exceed one.",
+    "wrong": [
+     {
+      "misconception": "MAT-TRIGONOMETRY-K10-M3",
+      "why": "thinks sine uses the adjacent side"
+     },
+     {
+      "misconception": null,
+      "why": "thinks sine must be a whole number"
+     },
+     {
+      "misconception": null,
+      "why": "links the value to a small angle"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, the notation sin²A is a shorthand for (sin A)², which means you calculate the sine of angle A first and then square the resulting value.",
+    "kind": "what_if",
+    "q": "If sin A = 0.5, what is the value of sin²A?",
+    "options": [
+     "0.25",
+     "1",
+     "0.5",
+     "0.75"
+    ],
+    "explain": "sin²A means (sin A)², so square 0.5 to get 0.25.",
+    "wrong": [
+     {
+      "misconception": "MAT-TRIGONOMETRY-K19-M13",
+      "why": "thinks squaring or doubling the angle doubles the ratio"
+     },
+     {
+      "misconception": "MAT-TRIGONOMETRY-K12-M7",
+      "why": "treats sin as a factor and ignores the square"
+     },
+     {
+      "misconception": null,
+      "why": "subtracts the square from one"
+     }
+    ]
+   },
+   {
+    "evidence": "This identity holds true for any angle A, not just specific ones, because it is derived from the Pythagorean theorem.",
+    "kind": "why",
+    "q": "A student checks sin²A + cos²A = 1 for A = 50°. Why does it still hold?",
+    "options": [
+     "It follows from Pythagoras, true for every right triangle",
+     "It works only for angles like 30 and 60",
+     "It is true only for a 3, 4, 5 triangle",
+     "It holds because each ratio doubles with the angle"
+    ],
+    "explain": "The identity comes from the Pythagorean theorem, so it holds for any angle, not just special ones.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks identity needs standard angles"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises from the worked example"
+     },
+     {
+      "misconception": "MAT-TRIGONOMETRY-K19-M13",
+      "why": "thinks ratios double when the angle doubles"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 33.3
+}

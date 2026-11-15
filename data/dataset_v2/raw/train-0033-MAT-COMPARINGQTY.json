@@ -1,0 +1,169 @@
+{
+ "source": "train-0033-MAT-COMPARINGQTY.json",
+ "job": {
+  "job": "train-0033-MAT-COMPARINGQTY",
+  "topic_id": "MAT-COMPARINGQTY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a conversation between a teacher and two students",
+  "seed": 33
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4293,
+  "promptTokenCount": 2
+ },
+ "passage": "Teacher: Today, let’s discuss how percentages work in real life. Rohan, if a shopkeeper offers a 10% discount on a shirt marked at ₹500, how do we calculate the final price? Rohan: I think we just take 10% of the selling price, so it would be ₹50. Teacher: Actually, discount is always calculated on the marked price, not the selling price. Now, Priya, if an item’s price increases by 20% and then decreases by 20%, is the final price the same as the original? Priya: Yes, it returns to the original price because the percentages are equal. Teacher: That is a common mistake. The second 20% decrease applies to the new, higher price, so you lose more than you gained. Also, remember that percentages can represent values larger than 100%, such as a 150% increase in production. Finally, when calculating simple interest, always ensure the time is in years. If the rate is yearly, you cannot simply plug in months; you must convert them to years first. For instance, six months is 0.5 years. If you use months directly, your interest calculation will be completely wrong. Always be careful with your base values, as they determine the accuracy of your entire calculation.",
+ "menu_ids": [
+  "MAT-COMPARINGQTY-K7-M1",
+  "MAT-COMPARINGQTY-K8-M2",
+  "MAT-COMPARINGQTY-K8-M3",
+  "MAT-COMPARINGQTY-K9-M4",
+  "MAT-COMPARINGQTY-K9-M5",
+  "MAT-COMPARINGQTY-K10-M6",
+  "MAT-COMPARINGQTY-K10-M7",
+  "MAT-COMPARINGQTY-K11-M8",
+  "MAT-COMPARINGQTY-K11-M9",
+  "MAT-COMPARINGQTY-K12-M10",
+  "MAT-COMPARINGQTY-K12-M11",
+  "MAT-COMPARINGQTY-K15-M12",
+  "MAT-COMPARINGQTY-K15-M13",
+  "MAT-COMPARINGQTY-K16-M14"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Teacher: Actually, discount is always calculated on the marked price, not the selling price.",
+    "kind": "what_if",
+    "q": "A shirt is marked ₹500 with a 10% discount. What is the final price?",
+    "options": [
+     "₹450",
+     "₹490",
+     "₹50",
+     "₹550"
+    ],
+    "explain": "Discount is on the marked price: 10% of ₹500 is ₹50, so ₹500 − ₹50 = ₹450.",
+    "wrong": [
+     {
+      "misconception": "MAT-COMPARINGQTY-K7-M1",
+      "why": "thinks 10% means just ₹10 off"
+     },
+     {
+      "misconception": null,
+      "why": "gives the discount amount as the final price"
+     },
+     {
+      "misconception": null,
+      "why": "adds the discount instead of subtracting it"
+     }
+    ]
+   },
+   {
+    "evidence": "The second 20% decrease applies to the new, higher price, so you lose more than you gained.",
+    "kind": "what_if",
+    "q": "A ₹100 bag's price rises by 20%, then falls by 20%. What is its final price?",
+    "options": [
+     "₹96",
+     "₹100",
+     "₹104",
+     "₹80"
+    ],
+    "explain": "It rises to ₹120; 20% of ₹120 is ₹24, so the price falls to ₹96.",
+    "wrong": [
+     {
+      "misconception": "MAT-COMPARINGQTY-K12-M10",
+      "why": "thinks equal rise and fall cancel out"
+     },
+     {
+      "misconception": null,
+      "why": "reverses it, thinking you gain more than you lose"
+     },
+     {
+      "misconception": null,
+      "why": "applies only the 20% fall to ₹100"
+     }
+    ]
+   },
+   {
+    "evidence": "Also, remember that percentages can represent values larger than 100%, such as a 150% increase in production.",
+    "kind": "which_explains",
+    "q": "A factory reports a 150% increase in production. What does this tell us?",
+    "options": [
+     "Output grew by more than its old amount",
+     "It is an error, as percents stop at 100",
+     "Exactly 150 more items were made",
+     "Output grew to one and a half times"
+    ],
+    "explain": "Percentages can be above 100%; a 150% increase means output grew by more than its original amount.",
+    "wrong": [
+     {
+      "misconception": "MAT-COMPARINGQTY-K10-M7",
+      "why": "thinks a percent cannot exceed 100%"
+     },
+     {
+      "misconception": "MAT-COMPARINGQTY-K7-M1",
+      "why": "thinks 150% means 150 items"
+     },
+     {
+      "misconception": null,
+      "why": "confuses a 150% increase with becoming 150%"
+     }
+    ]
+   },
+   {
+    "evidence": "If the rate is yearly, you cannot simply plug in months; you must convert them to years first.",
+    "kind": "how",
+    "q": "Simple interest at a yearly rate is for six months. What time value goes in the formula?",
+    "options": [
+     "0.5, after turning months into years",
+     "6, the number of months as given",
+     "0.6, by putting a point before 6",
+     "50, since six months is half a year"
+    ],
+    "explain": "With a yearly rate, months must be changed to years first; six months is 0.5 years.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "plugs in months directly"
+     },
+     {
+      "misconception": "MAT-COMPARINGQTY-K9-M4",
+      "why": "thinks a decimal point in front converts it"
+     },
+     {
+      "misconception": "MAT-COMPARINGQTY-K9-M5",
+      "why": "mixes up one half with 50"
+     }
+    ]
+   },
+   {
+    "evidence": "If you use months directly, your interest calculation will be completely wrong.",
+    "kind": "what_if",
+    "q": "Ali puts 6 for six months into a yearly simple interest sum. What happens?",
+    "options": [
+     "His interest comes out far too large",
+     "His interest comes out far too small",
+     "His interest is right, but in months",
+     "His interest is right if the rate is low"
+    ],
+    "explain": "Using 6 instead of 0.5 years makes the interest twelve times too big, so it is wrong.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "reverses the effect of the bigger number"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the unit only changes the label"
+     },
+     {
+      "misconception": null,
+      "why": "thinks a small rate hides the mistake"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 45.2
+}

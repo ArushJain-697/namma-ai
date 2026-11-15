@@ -1,0 +1,143 @@
+{
+ "source": "train-0204-GEN-PLASTIC.json",
+ "job": {
+  "job": "train-0204-GEN-PLASTIC",
+  "topic_id": "GEN-PLASTIC",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a description of a classroom activity or experiment and what it shows",
+  "seed": 204
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3488,
+  "promptTokenCount": 2
+ },
+ "passage": "Our Class 10 science club recently conducted a study on plastic waste management. We examined why plastic persists in the environment, noting that unlike organic matter, synthetic polymers are not easily broken down by microorganisms. We tested the common belief that burning plastic is a safe disposal method. Our experiment showed that burning plastic releases toxic chemicals like dioxins, which are far more harmful than the smoke produced by burning wood. We also investigated the recycling symbol found on containers. We discovered that this triangle code identifies the type of resin, not whether a local facility can actually process it. Furthermore, we analyzed the source of ocean debris. While ships contribute, our data confirmed that most ocean plastic originates from land-based litter that travels through drains and rivers. Finally, we looked at microplastics. We found that these tiny particles are not just fragments of larger items; they are also intentionally manufactured as microbeads for cosmetics and industrial use. This experiment highlights that plastic is a complex, persistent material that requires careful disposal rather than simple burning or assuming all plastics are easily recyclable.",
+ "menu_ids": [
+  "GEN-PLASTIC-K7-M1",
+  "GEN-PLASTIC-K8-M2",
+  "GEN-PLASTIC-K10-M5",
+  "GEN-PLASTIC-K10-M6",
+  "GEN-PLASTIC-K13-M7",
+  "GEN-PLASTIC-K14-M8",
+  "GEN-PLASTIC-K15-M9",
+  "GEN-PLASTIC-K20-M10",
+  "GEN-PLASTIC-K16-M11",
+  "GEN-PLASTIC-K19-M12",
+  "GEN-PLASTIC-K22-M13",
+  "GEN-PLASTIC-K25-M14",
+  "GEN-PLASTIC-K26-M15",
+  "GEN-PLASTIC-K26-M16"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "We discovered that this triangle code identifies the type of resin, not whether a local facility can actually process it.",
+    "kind": "what_if",
+    "q": "Meena finds a triangle code on a plastic bottle. What does the code tell her?",
+    "options": [
+     "Which type of plastic the bottle is made from",
+     "That every town can recycle this bottle",
+     "That it can be recycled again and again",
+     "That the bottle will rot within a few years"
+    ],
+    "explain": "The triangle code only shows the type of resin, not whether local centres can recycle it.",
+    "wrong": [
+     {
+      "misconception": "GEN-PLASTIC-K25-M14",
+      "why": "thinks the symbol means recyclable everywhere"
+     },
+     {
+      "misconception": "GEN-PLASTIC-K26-M15",
+      "why": "thinks plastic can be recycled forever"
+     },
+     {
+      "misconception": "GEN-PLASTIC-K10-M6",
+      "why": "thinks plastic disappears in a few years like paper"
+     }
+    ]
+   },
+   {
+    "evidence": "While ships contribute, our data confirmed that most ocean plastic originates from land-based litter that travels through drains and rivers.",
+    "kind": "what_if",
+    "q": "If towns stopped litter from entering their drains, what would happen to ocean plastic?",
+    "options": [
+     "It would fall, as most comes from land",
+     "It would fall slightly, as ships cause most",
+     "It would stay the same, as rivers dissolve plastic",
+     "It would stay the same, as sea plastic rots"
+    ],
+    "explain": "Most ocean plastic is land litter carried by drains and rivers, so stopping it cuts ocean plastic.",
+    "wrong": [
+     {
+      "misconception": "GEN-PLASTIC-K22-M13",
+      "why": "thinks ships and fishermen cause most ocean plastic"
+     },
+     {
+      "misconception": "GEN-PLASTIC-K10-M5",
+      "why": "thinks plastic broken up in rivers has disappeared"
+     },
+     {
+      "misconception": "GEN-PLASTIC-K10-M6",
+      "why": "thinks plastic rots quickly in nature"
+     }
+    ]
+   },
+   {
+    "evidence": "Our experiment showed that burning plastic releases toxic chemicals like dioxins, which are far more harmful than the smoke produced by burning wood.",
+    "kind": "what_if",
+    "q": "Ravi burns a pile of plastic waste instead of dry wood. What is the result?",
+    "options": [
+     "The smoke is far more poisonous than wood smoke",
+     "The smoke is just as harmless as wood smoke",
+     "The plastic vanishes fully and causes no harm",
+     "The ash is natural, just like wood ash"
+    ],
+    "explain": "Burning plastic releases toxic dioxins, far more harmful than smoke from burning wood.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "believes the common idea that burning plastic is safe"
+     },
+     {
+      "misconception": "GEN-PLASTIC-K10-M5",
+      "why": "thinks plastic that is gone from sight has disappeared"
+     },
+     {
+      "misconception": "GEN-PLASTIC-K7-M1",
+      "why": "thinks plastic is a natural material like wood"
+     }
+    ]
+   },
+   {
+    "evidence": "We found that these tiny particles are not just fragments of larger items; they are also intentionally manufactured as microbeads for cosmetics and industrial use.",
+    "kind": "which_explains",
+    "q": "Microplastics are found in water where no big plastic items were thrown. Which explains this?",
+    "options": [
+     "Some are made tiny on purpose for cosmetics",
+     "They are tiny creatures that grow on their own",
+     "Big items must have broken up there unseen",
+     "Ships must have dropped them far out at sea"
+    ],
+    "explain": "Microplastics are not only broken bits; some are made on purpose as microbeads for cosmetics and industry.",
+    "wrong": [
+     {
+      "misconception": "GEN-PLASTIC-K15-M9",
+      "why": "thinks microplastics are living organisms"
+     },
+     {
+      "misconception": "GEN-PLASTIC-K16-M11",
+      "why": "thinks microplastics come only from big items breaking"
+     },
+     {
+      "misconception": "GEN-PLASTIC-K22-M13",
+      "why": "blames ships for plastic in water"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 37.6
+}

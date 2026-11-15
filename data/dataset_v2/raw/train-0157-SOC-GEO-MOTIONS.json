@@ -1,0 +1,141 @@
+{
+ "source": "train-0157-SOC-GEO-MOTIONS.json",
+ "job": {
+  "job": "train-0157-SOC-GEO-MOTIONS",
+  "topic_id": "SOC-GEO-MOTIONS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a passage rich in numbers, dates or measurements",
+  "seed": 157
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3956,
+  "promptTokenCount": 2
+ },
+ "passage": "The Earth is a fascinating planet that performs two distinct movements. First, it rotates on its axis, an imaginary line connecting the North and South Poles, completing one full spin in approximately 24 hours. This rotation creates the cycle of day and night as different parts of the Earth face the Sun. While the Earth spins, it also travels around the Sun in an elliptical orbit, a journey known as revolution. This trip takes about 365 and a quarter days to complete. Because we cannot count a quarter day every year, we add an extra day to our calendar every four years, creating a leap year. Interestingly, the Earth's distance from the Sun changes throughout the year, but this does not cause our seasons. Instead, seasons occur because the Earth is tilted at an angle of 23.5 degrees on its axis as it revolves. When the Northern Hemisphere tilts towards the Sun, it experiences summer, regardless of whether the Earth is at its closest or farthest point from the Sun. The Sun remains stationary at the center of our solar system, while the Earth moves around it, ensuring that light reaches different regions at different times of the year.",
+ "menu_ids": [
+  "SOC-GEO-MOTIONS-K5-M1",
+  "SOC-GEO-MOTIONS-K7-M2",
+  "SOC-GEO-MOTIONS-K11-M3",
+  "SOC-GEO-MOTIONS-K13-M4",
+  "SOC-GEO-MOTIONS-K9-M5",
+  "SOC-GEO-MOTIONS-K10-M6",
+  "SOC-GEO-MOTIONS-K5-M7",
+  "SOC-GEO-MOTIONS-K5-M8",
+  "SOC-GEO-MOTIONS-K4-M9",
+  "SOC-GEO-MOTIONS-K11-M10",
+  "SOC-GEO-MOTIONS-K8-M11",
+  "SOC-GEO-MOTIONS-K13-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "This rotation creates the cycle of day and night as different parts of the Earth face the Sun.",
+    "kind": "what_if",
+    "q": "When it is daytime in India, what is it like on the far side of the Earth?",
+    "options": [
+     "It is night, as that part faces away",
+     "It is day, as sunlight reaches everywhere at once",
+     "It is night, as the Moon covers the Sun",
+     "It is day, as the Sun circles to it"
+    ],
+    "explain": "As Earth rotates, only the part facing the Sun has day; the part facing away has night.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-MOTIONS-K5-M8",
+      "why": "thinks it is day everywhere when it is day in India"
+     },
+     {
+      "misconception": "SOC-GEO-MOTIONS-K5-M7",
+      "why": "thinks the Moon covering the Sun causes night"
+     },
+     {
+      "misconception": "SOC-GEO-MOTIONS-K5-M1",
+      "why": "thinks the Sun moves around the Earth"
+     }
+    ]
+   },
+   {
+    "evidence": "Because we cannot count a quarter day every year, we add an extra day to our calendar every four years, creating a leap year.",
+    "kind": "why",
+    "q": "Why does our calendar get one extra day every four years?",
+    "options": [
+     "Each orbit lasts a quarter day over 365 days",
+     "Each orbit lasts a third of a day extra",
+     "Each spin lasts a little more than 24 hours",
+     "Each year the Earth moves closer to the Sun"
+    ],
+    "explain": "Each revolution takes 365 and a quarter days, so four quarter days make one extra day.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-MOTIONS-K13-M4",
+      "why": "thinks a leap year comes every three years"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up rotation with revolution"
+     },
+     {
+      "misconception": null,
+      "why": "links the calendar to changing distance from the Sun"
+     }
+    ]
+   },
+   {
+    "evidence": "When the Northern Hemisphere tilts towards the Sun, it experiences summer, regardless of whether the Earth is at its closest or farthest point from the Sun.",
+    "kind": "what_if",
+    "q": "In July, the Northern Hemisphere faces the Sun more, though Earth is farthest away. What season is it in India?",
+    "options": [
+     "Summer, because the tilt matters, not distance",
+     "Winter, because the Sun is farthest away",
+     "Winter, because the Sun has moved away south",
+     "Spring, because the axis stands straight up"
+    ],
+    "explain": "The half tilted towards the Sun has summer, whether Earth is near or far from the Sun.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-MOTIONS-K7-M2",
+      "why": "thinks distance from the Sun causes seasons"
+     },
+     {
+      "misconception": "SOC-GEO-MOTIONS-K10-M6",
+      "why": "thinks the Sun itself moves to cause seasons"
+     },
+     {
+      "misconception": "SOC-GEO-MOTIONS-K11-M10",
+      "why": "thinks the Earth's axis is not tilted"
+     }
+    ]
+   },
+   {
+    "evidence": "The Sun remains stationary at the center of our solar system, while the Earth moves around it, ensuring that light reaches different regions at different times of the year.",
+    "kind": "which_explains",
+    "q": "We see the Sun cross our sky every day. Which explains this?",
+    "options": [
+     "The Earth spins while the Sun stays still",
+     "The Sun moves around the Earth each day",
+     "The Earth circles the Sun every 24 hours",
+     "The Sun travels across space beside the Earth"
+    ],
+    "explain": "The Sun stays still at the centre; Earth's movement makes the Sun seem to move.",
+    "wrong": [
+     {
+      "misconception": "SOC-GEO-MOTIONS-K5-M1",
+      "why": "thinks the Sun moves around the Earth daily"
+     },
+     {
+      "misconception": "SOC-GEO-MOTIONS-K4-M9",
+      "why": "thinks one revolution takes 24 hours"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the Sun moves along with the Earth"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 41.6
+}

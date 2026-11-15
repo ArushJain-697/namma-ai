@@ -1,0 +1,169 @@
+{
+ "source": "train-0199-GEN-MANGALYAAN.json",
+ "job": {
+  "job": "train-0199-GEN-MANGALYAAN",
+  "topic_id": "GEN-MANGALYAAN",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a question-and-answer (FAQ) style passage",
+  "seed": 199
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3704,
+  "promptTokenCount": 2
+ },
+ "passage": "India has made remarkable strides in space exploration with missions like Mangalyaan and Aditya-L1. Mangalyaan, or the Mars Orbiter Mission, was India's first successful mission to reach the Martian orbit, not the Moon. It was designed as an orbiter to study the Martian atmosphere and surface features from space, meaning it never landed on the surface or carried a rover. The mission was incredibly cost-effective because ISRO used innovative engineering and smart mission planning rather than compromising on component quality. To reach Mars, the spacecraft did not travel in a straight line; instead, it used Earth's gravity to perform complex manoeuvres, gradually increasing its speed to escape towards Mars. Aditya-L1 is another milestone, designed to study the Sun from a special location called the L1 point. Unlike Earth-based telescopes that are blocked by our atmosphere, Aditya-L1 stays in space to observe the Sun's UV and X-ray emissions, which are absorbed by Earth's atmosphere. The L1 point is not a place with zero gravity; it is a stable region where the gravitational forces of the Sun and Earth interact, allowing the spacecraft to maintain a halo orbit. Aditya-L1 will never land on the Sun, as it is a gaseous star, not a solid object, and the mission is designed to observe it from a safe, fixed distance.",
+ "menu_ids": [
+  "GEN-MANGALYAAN-K13-M1",
+  "GEN-MANGALYAAN-K14-M2",
+  "GEN-MANGALYAAN-K14-M3",
+  "GEN-MANGALYAAN-K15-M4",
+  "GEN-MANGALYAAN-K15-M5",
+  "GEN-MANGALYAAN-K16-M6",
+  "GEN-MANGALYAAN-K17-M7",
+  "GEN-MANGALYAAN-K18-M8",
+  "GEN-MANGALYAAN-K19-M9",
+  "GEN-MANGALYAAN-K19-M10",
+  "GEN-MANGALYAAN-K20-M11",
+  "GEN-MANGALYAAN-K21-M12",
+  "GEN-MANGALYAAN-K29-M13",
+  "GEN-MANGALYAAN-K22-M14"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "It was designed as an orbiter to study the Martian atmosphere and surface features from space, meaning it never landed on the surface or carried a rover.",
+    "kind": "which_example",
+    "q": "Which task could Mangalyaan actually do at Mars?",
+    "options": [
+     "Study the air of Mars from orbit",
+     "Drive a rover across the Martian ground",
+     "Land and dig into Martian rocks",
+     "Study the Moon's surface from up close"
+    ],
+    "explain": "Mangalyaan was an orbiter studying Mars from space; it never landed or carried a rover.",
+    "wrong": [
+     {
+      "misconception": "GEN-MANGALYAAN-K15-M4",
+      "why": "thinks Mangalyaan carried a rover"
+     },
+     {
+      "misconception": "GEN-MANGALYAAN-K14-M3",
+      "why": "thinks Mangalyaan landed on Mars"
+     },
+     {
+      "misconception": "GEN-MANGALYAAN-K14-M2",
+      "why": "thinks Mangalyaan was a Moon mission"
+     }
+    ]
+   },
+   {
+    "evidence": "The mission was incredibly cost-effective because ISRO used innovative engineering and smart mission planning rather than compromising on component quality.",
+    "kind": "why",
+    "q": "What made the Mangalyaan mission so cost-effective?",
+    "options": [
+     "Clever engineering and planning kept costs low",
+     "Cheap, low-quality parts kept costs low",
+     "Skipping all science work kept costs low",
+     "A straight flight path kept costs low"
+    ],
+    "explain": "ISRO saved money through innovative engineering and smart planning, not by using poor-quality parts.",
+    "wrong": [
+     {
+      "misconception": "GEN-MANGALYAAN-K17-M7",
+      "why": "thinks it was cheap because of poor parts"
+     },
+     {
+      "misconception": "GEN-MANGALYAAN-K15-M5",
+      "why": "thinks it only tested technology, no science"
+     },
+     {
+      "misconception": "GEN-MANGALYAAN-K18-M8",
+      "why": "thinks it flew straight to Mars"
+     }
+    ]
+   },
+   {
+    "evidence": "To reach Mars, the spacecraft did not travel in a straight line; instead, it used Earth's gravity to perform complex manoeuvres, gradually increasing its speed to escape towards Mars.",
+    "kind": "how",
+    "q": "How did Mangalyaan get onto its path towards Mars?",
+    "options": [
+     "It used Earth's pull to build speed slowly",
+     "It was fired in a straight line at Mars",
+     "It drifted until Mars pulled it in",
+     "It floated freely, since space has no gravity"
+    ],
+    "explain": "Mangalyaan used Earth's gravity in manoeuvres, slowly gaining speed before escaping towards Mars.",
+    "wrong": [
+     {
+      "misconception": "GEN-MANGALYAAN-K18-M8",
+      "why": "thinks spacecraft are aimed straight at Mars"
+     },
+     {
+      "misconception": "GEN-MANGALYAAN-K19-M9",
+      "why": "thinks Mars pulled it in on its own"
+     },
+     {
+      "misconception": "GEN-MANGALYAAN-K21-M12",
+      "why": "thinks there is no gravity in space"
+     }
+    ]
+   },
+   {
+    "evidence": "Unlike Earth-based telescopes that are blocked by our atmosphere, Aditya-L1 stays in space to observe the Sun's UV and X-ray emissions, which are absorbed by Earth's atmosphere.",
+    "kind": "why",
+    "q": "Why must Aditya-L1 study the Sun's X-rays from space instead of from Earth?",
+    "options": [
+     "Earth's air soaks up those rays first",
+     "Earth's telescopes are too far from the Sun",
+     "Earth's weather must be studied along with them",
+     "Earth's gravity bends the rays away from us"
+    ],
+    "explain": "Earth's atmosphere absorbs the Sun's UV and X-rays, so they must be observed from space.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks distance, not the atmosphere, is the problem"
+     },
+     {
+      "misconception": "GEN-MANGALYAAN-K22-M14",
+      "why": "thinks Aditya-L1 studies Earth's weather"
+     },
+     {
+      "misconception": null,
+      "why": "thinks gravity blocks the rays"
+     }
+    ]
+   },
+   {
+    "evidence": "The L1 point is not a place with zero gravity; it is a stable region where the gravitational forces of the Sun and Earth interact, allowing the spacecraft to maintain a halo orbit.",
+    "kind": "which_explains",
+    "q": "How does Aditya-L1 keep its halo orbit at the L1 point?",
+    "options": [
+     "It stays because the Sun's and Earth's pulls interact",
+     "It stays because there is no gravity at L1",
+     "It stays because it is beyond Earth's gravity",
+     "It stays because the Moon's gravity holds it"
+    ],
+    "explain": "L1 is not zero gravity; the Sun's and Earth's gravity work together there to make it stable.",
+    "wrong": [
+     {
+      "misconception": "GEN-MANGALYAAN-K21-M12",
+      "why": "thinks there is no gravity in space"
+     },
+     {
+      "misconception": "GEN-MANGALYAAN-K29-M13",
+      "why": "thinks satellites stay up beyond Earth's gravity"
+     },
+     {
+      "misconception": "GEN-MANGALYAAN-K22-M14",
+      "why": "thinks Aditya-L1 is linked to the Moon"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 37.9
+}

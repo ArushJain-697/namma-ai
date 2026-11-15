@@ -1,0 +1,169 @@
+{
+ "source": "train-0218-MAT-CONGRUENCE.json",
+ "job": {
+  "job": "train-0218-MAT-CONGRUENCE",
+  "topic_id": "MAT-CONGRUENCE",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a short story where children solve a real problem",
+  "seed": 218
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4109,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and Meera were tasked with building two identical wooden triangular frames for a school project. Rohan argued that if they cut two triangles with the same three angles, they would be perfectly congruent. Meera shook her head, explaining that while the angles might be the same, the triangles could differ in size, meaning they would only be similar, not congruent. To ensure congruence, they decided to use the SAS criterion. They carefully measured two sides and ensured the angle between them was identical in both frames. Rohan suggested they could pick any angle, but Meera corrected him, noting that the angle must be the included one to guarantee the same shape and size. They also identified a shared wooden beam that served as a common side for both triangles. Rohan initially thought this beam shouldn't count as a pair because it was only one piece of wood, but Meera clarified that a common side is equal to itself in both triangles. Finally, they labeled the vertices as ABC and PQR, ensuring the order of letters matched the corresponding parts exactly. They knew that if the order was swapped, the correspondence would be lost, and the congruence statement would be incorrect.",
+ "menu_ids": [
+  "MAT-CONGRUENCE-K10-M1",
+  "MAT-CONGRUENCE-K10-M2",
+  "MAT-CONGRUENCE-K11-M3",
+  "MAT-CONGRUENCE-K12-M4",
+  "MAT-CONGRUENCE-K13-M5",
+  "MAT-CONGRUENCE-K14-M6",
+  "MAT-CONGRUENCE-K15-M7",
+  "MAT-CONGRUENCE-K16-M8",
+  "MAT-CONGRUENCE-K17-M10",
+  "MAT-CONGRUENCE-K18-M11",
+  "MAT-CONGRUENCE-K19-M12",
+  "MAT-CONGRUENCE-K21-M14",
+  "MAT-CONGRUENCE-K22-M16",
+  "MAT-CONGRUENCE-K23-M17"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Meera shook her head, explaining that while the angles might be the same, the triangles could differ in size, meaning they would only be similar, not congruent.",
+    "kind": "what_if",
+    "q": "Two triangles have the same three angles but different sizes. How are they related?",
+    "options": [
+     "They are similar but not congruent",
+     "They are congruent by the AAA rule",
+     "They are congruent as their areas match",
+     "They are congruent since their shapes match"
+    ],
+    "explain": "Equal angles give the same shape, but sizes can differ, so the triangles are only similar.",
+    "wrong": [
+     {
+      "misconception": "MAT-CONGRUENCE-K19-M12",
+      "why": "thinks equal angles prove congruence by AAA"
+     },
+     {
+      "misconception": "MAT-CONGRUENCE-K10-M2",
+      "why": "thinks equal area means congruent"
+     },
+     {
+      "misconception": "MAT-CONGRUENCE-K10-M1",
+      "why": "thinks same shape is enough, whatever the size"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan suggested they could pick any angle, but Meera corrected him, noting that the angle must be the included one to guarantee the same shape and size.",
+    "kind": "how",
+    "q": "For the SAS rule, which angle must be equal in both frames?",
+    "options": [
+     "The angle between the two measured sides",
+     "Any one angle of the triangle",
+     "The angle opposite the longest side",
+     "A right angle at any corner"
+    ],
+    "explain": "SAS needs the included angle, the one between the two equal sides, to fix shape and size.",
+    "wrong": [
+     {
+      "misconception": "MAT-CONGRUENCE-K16-M8",
+      "why": "thinks any angle works in SAS"
+     },
+     {
+      "misconception": null,
+      "why": "picks the angle facing a side instead of between sides"
+     },
+     {
+      "misconception": "MAT-CONGRUENCE-K21-M14",
+      "why": "mixes SAS up with the RHS rule"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan initially thought this beam shouldn't count as a pair because it was only one piece of wood, but Meera clarified that a common side is equal to itself in both triangles.",
+    "kind": "why",
+    "q": "Why does the one shared beam count as a matching pair for both triangles?",
+    "options": [
+     "Because a shared side matches itself exactly",
+     "Because it is the longest side of both",
+     "Because both triangles have the same angles",
+     "Because both triangles have the same area"
+    ],
+    "explain": "A common side is equal to itself, so it counts as one pair of equal sides.",
+    "wrong": [
+     {
+      "misconception": "MAT-CONGRUENCE-K14-M6",
+      "why": "thinks matching depends on which side looks biggest"
+     },
+     {
+      "misconception": "MAT-CONGRUENCE-K12-M4",
+      "why": "thinks equal angles decide matching parts"
+     },
+     {
+      "misconception": "MAT-CONGRUENCE-K10-M2",
+      "why": "thinks equal area decides congruence"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, they labeled the vertices as ABC and PQR, ensuring the order of letters matched the corresponding parts exactly.",
+    "kind": "what_if",
+    "q": "Their statement says triangle ABC is congruent to triangle PQR. Which two sides must match?",
+    "options": [
+     "AB and PQ",
+     "AB and QR",
+     "BC and PR",
+     "AC and PQ"
+    ],
+    "explain": "The letter order matches A to P, B to Q, C to R, so AB matches PQ.",
+    "wrong": [
+     {
+      "misconception": "MAT-CONGRUENCE-K13-M5",
+      "why": "thinks vertices can be matched in any order"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the letter positions"
+     },
+     {
+      "misconception": null,
+      "why": "matches the first letter only, ignoring the second"
+     }
+    ]
+   },
+   {
+    "evidence": "They knew that if the order was swapped, the correspondence would be lost, and the congruence statement would be incorrect.",
+    "kind": "what_if",
+    "q": "They write triangle ABC congruent to triangle QPR by mistake. What happens to their statement?",
+    "options": [
+     "The statement is wrong as parts no longer match",
+     "The statement is still right in any order",
+     "The statement is right but parts are only similar",
+     "The statement is right if the criterion is named"
+    ],
+    "explain": "Swapping the letter order breaks the correspondence, so the congruence statement becomes incorrect.",
+    "wrong": [
+     {
+      "misconception": "MAT-CONGRUENCE-K13-M5",
+      "why": "thinks vertex order does not matter"
+     },
+     {
+      "misconception": "MAT-CONGRUENCE-K22-M16",
+      "why": "thinks corresponding parts are only similar"
+     },
+     {
+      "misconception": "MAT-CONGRUENCE-K23-M17",
+      "why": "thinks naming the criterion alone makes it correct"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 41.5
+}

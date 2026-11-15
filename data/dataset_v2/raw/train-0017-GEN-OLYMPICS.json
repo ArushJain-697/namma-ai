@@ -1,0 +1,169 @@
+{
+ "source": "train-0017-GEN-OLYMPICS.json",
+ "job": {
+  "job": "train-0017-GEN-OLYMPICS",
+  "topic_id": "GEN-OLYMPICS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a short story with Indian characters in everyday life",
+  "seed": 17
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3631,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and his sister Meera were watching a documentary about the Olympics. Meera asked, 'Do the Games happen every year?' Rohan shook his head, explaining that the modern Olympic Games occur every four years, unlike the ancient ones which were held in Olympia, not Athens. He pointed to the Olympic rings on the screen, clarifying that the five rings represent the union of the five inhabited continents, not specific founding countries. As the documentary discussed doping, Rohan noted that athletes are strictly responsible for what enters their bodies. Even if a doctor prescribes a medicine, an athlete must check if it is on the World Anti-Doping Agency's prohibited list; ignorance is no excuse. Meera then asked about the Paralympic Games. Rohan explained that they are a distinct event for athletes with physical impairments, separate from the Special Olympics. He reminded her that the Olympic spirit is not just about winning gold, but about participation and fair play. He mentioned that Abhinav Bindra remains a legend, as his 2008 victory was India’s first individual Olympic gold medal. They both agreed that the dedication required for these sports is immense, regardless of the specific event or the athlete's background, proving that the true value lies in the effort and the spirit of competition.",
+ "menu_ids": [
+  "GEN-OLYMPICS-K8-M1",
+  "GEN-OLYMPICS-K9-M2",
+  "GEN-OLYMPICS-K10-M3",
+  "GEN-OLYMPICS-K10-M4",
+  "GEN-OLYMPICS-K11-M5",
+  "GEN-OLYMPICS-K13-M7",
+  "GEN-OLYMPICS-K15-M8",
+  "GEN-OLYMPICS-K16-M9",
+  "GEN-OLYMPICS-K17-M10",
+  "GEN-OLYMPICS-K17-M11",
+  "GEN-OLYMPICS-K18-M12",
+  "GEN-OLYMPICS-K18-M13",
+  "GEN-OLYMPICS-K20-M14",
+  "GEN-OLYMPICS-K21-M15"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Rohan shook his head, explaining that the modern Olympic Games occur every four years, unlike the ancient ones which were held in Olympia, not Athens.",
+    "kind": "what_if",
+    "q": "Suppose the modern Olympic Games were held in 2016. Going by Rohan's explanation, when would the next Games be held?",
+    "options": [
+     "In 2020, after a gap of four years",
+     "In 2017, after a gap of one year",
+     "In 2018, after a gap of two years",
+     "In 2024, after a gap of eight years"
+    ],
+    "explain": "Rohan says the modern Olympic Games happen every four years, so the Games after 2016 come in 2020.",
+    "wrong": [
+     {
+      "misconception": "GEN-OLYMPICS-K10-M3",
+      "why": "thinks the Olympic Games are held every year"
+     },
+     {
+      "misconception": "GEN-OLYMPICS-K10-M4",
+      "why": "mixes up the gap between Summer and Winter Games"
+     },
+     {
+      "misconception": null,
+      "why": "doubles the four-year gap by mistake"
+     }
+    ]
+   },
+   {
+    "evidence": "He pointed to the Olympic rings on the screen, clarifying that the five rings represent the union of the five inhabited continents, not specific founding countries.",
+    "kind": "which_explains",
+    "q": "Why does the Olympic symbol have exactly five rings joined together?",
+    "options": [
+     "They stand for five continents where people live, united",
+     "They stand for five countries that founded the Games",
+     "They stand for five Games held in ancient Athens",
+     "They stand for five sports played at every Games"
+    ],
+    "explain": "The five rings show the five inhabited continents joined together, not particular founding countries.",
+    "wrong": [
+     {
+      "misconception": "GEN-OLYMPICS-K11-M5",
+      "why": "thinks each ring stands for a founding country"
+     },
+     {
+      "misconception": "GEN-OLYMPICS-K8-M1",
+      "why": "thinks the ancient Games were held in Athens"
+     },
+     {
+      "misconception": null,
+      "why": "guesses the rings stand for events or sports"
+     }
+    ]
+   },
+   {
+    "evidence": "Even if a doctor prescribes a medicine, an athlete must check if it is on the World Anti-Doping Agency's prohibited list; ignorance is no excuse.",
+    "kind": "what_if",
+    "q": "A doctor gives an athlete a medicine for a cold before a race. What should the athlete do?",
+    "options": [
+     "Check the banned list, since the athlete is responsible",
+     "Take it freely, since the doctor is responsible",
+     "Take it freely, since not knowing is an excuse",
+     "Check the banned list only for very strong medicines"
+    ],
+    "explain": "Athletes are responsible for everything they take. Even a doctor's medicine must be checked against the prohibited list, because not knowing is no excuse.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks the doctor's prescription moves the blame to the doctor"
+     },
+     {
+      "misconception": null,
+      "why": "reverses 'ignorance is no excuse'"
+     },
+     {
+      "misconception": null,
+      "why": "assumes the rule applies only to strong medicines"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan explained that they are a distinct event for athletes with physical impairments, separate from the Special Olympics.",
+    "kind": "difference",
+    "q": "Meera thinks the Paralympics and the Special Olympics are one event. What should Rohan tell her?",
+    "options": [
+     "They are two separate events, not the same one",
+     "They are one event known by two different names",
+     "They are one event held inside the main Olympics",
+     "They are two events, and both are open to everyone"
+    ],
+    "explain": "Rohan says the Paralympics are a distinct event for athletes with physical impairments, separate from the Special Olympics.",
+    "wrong": [
+     {
+      "misconception": "GEN-OLYMPICS-K20-M14",
+      "why": "thinks the Paralympics and Special Olympics are the same"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the Paralympics are just part of the Olympics"
+     },
+     {
+      "misconception": null,
+      "why": "misses that the Paralympics are for athletes with physical impairments"
+     }
+    ]
+   },
+   {
+    "evidence": "He mentioned that Abhinav Bindra remains a legend, as his 2008 victory was India’s first individual Olympic gold medal.",
+    "kind": "recall",
+    "q": "Why is Abhinav Bindra's 2008 win remembered as special in India's Olympic history?",
+    "options": [
+     "It was India's first gold won by one person alone",
+     "It was India's first Olympic gold of any kind",
+     "It was India's first Olympic medal of any kind",
+     "It was India's first gold won by a whole team"
+    ],
+    "explain": "Bindra's 2008 win was India's first individual Olympic gold, meaning the first gold won by one athlete rather than a team.",
+    "wrong": [
+     {
+      "misconception": "GEN-OLYMPICS-K16-M9",
+      "why": "thinks Bindra won India's first Olympic gold of any kind"
+     },
+     {
+      "misconception": "GEN-OLYMPICS-K13-M7",
+      "why": "confuses which medal came first for India"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up individual and team medals"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 37.9
+}

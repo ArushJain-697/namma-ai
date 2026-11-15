@@ -1,0 +1,143 @@
+{
+ "source": "train-0237-MAT-QUADRILATERALS.json",
+ "job": {
+  "job": "train-0237-MAT-QUADRILATERALS",
+  "topic_id": "MAT-QUADRILATERALS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a puzzle or game that uses the idea",
+  "seed": 237
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2805,
+  "promptTokenCount": 2
+ },
+ "passage": "In the Land of Shapes, architects build structures using strict geometric rules. A regular hexagon has six sides, and its interior angle sum is calculated by multiplying the number of triangles formed by diagonals, which is four, by 180 degrees. Unlike a simple triangle, a polygon with more sides always has a larger interior angle sum. Architects often use a rhombus for floor tiles, knowing its diagonals are not equal, though they do bisect each other at right angles. For window frames, they use a rectangle, which has equal diagonals that do not meet at 90 degrees. When designing a bridge, they place a support beam exactly halfway between two sides of a triangle; this segment is always half the length of the third side it is parallel to. Finally, they define a trapezium as a shape with exactly one pair of parallel sides, ensuring no confusion with parallelograms that possess two pairs. Every shape must follow these laws to remain stable in the Land of Shapes.",
+ "menu_ids": [
+  "MAT-QUADRILATERALS-K7-M1",
+  "MAT-QUADRILATERALS-K8-M2",
+  "MAT-QUADRILATERALS-K10-M3",
+  "MAT-QUADRILATERALS-K10-M4",
+  "MAT-QUADRILATERALS-K11-M5",
+  "MAT-QUADRILATERALS-K11-M6",
+  "MAT-QUADRILATERALS-K12-M7",
+  "MAT-QUADRILATERALS-K13-M8",
+  "MAT-QUADRILATERALS-K17-M9",
+  "MAT-QUADRILATERALS-K15-M11",
+  "MAT-QUADRILATERALS-K16-M12",
+  "MAT-QUADRILATERALS-K14-M13",
+  "MAT-QUADRILATERALS-K21-M14",
+  "MAT-QUADRILATERALS-K22-M15"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "A regular hexagon has six sides, and its interior angle sum is calculated by multiplying the number of triangles formed by diagonals, which is four, by 180 degrees.",
+    "kind": "how",
+    "q": "An architect finds the interior angle sum of a regular hexagon using diagonals. What is it?",
+    "options": [
+     "720 degrees, from four triangles",
+     "360 degrees, like every polygon",
+     "900 degrees, from five triangles",
+     "1080 degrees, from six triangles"
+    ],
+    "explain": "Diagonals split a hexagon into four triangles, and 4 × 180 = 720 degrees.",
+    "wrong": [
+     {
+      "misconception": "MAT-QUADRILATERALS-K10-M3",
+      "why": "thinks every polygon's angle sum is 360 degrees"
+     },
+     {
+      "misconception": "MAT-QUADRILATERALS-K10-M4",
+      "why": "uses (n-1) × 180 instead of (n-2) × 180"
+     },
+     {
+      "misconception": null,
+      "why": "counts one triangle per side, using n × 180"
+     }
+    ]
+   },
+   {
+    "evidence": "Unlike a simple triangle, a polygon with more sides always has a larger interior angle sum.",
+    "kind": "what_if",
+    "q": "Shape P has 5 sides and shape Q has 8 sides. Which has the larger interior angle sum?",
+    "options": [
+     "Q has the larger sum",
+     "P has the larger sum",
+     "Both sums are 360 degrees",
+     "Both sums are 180 degrees"
+    ],
+    "explain": "A polygon with more sides always has a larger interior angle sum, so the 8-sided Q wins.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks fewer sides means wider angles and a bigger sum"
+     },
+     {
+      "misconception": "MAT-QUADRILATERALS-K10-M3",
+      "why": "thinks every polygon's angle sum is 360 degrees"
+     },
+     {
+      "misconception": "MAT-QUADRILATERALS-K14-M13",
+      "why": "applies the triangle's 180 degrees to every shape"
+     }
+    ]
+   },
+   {
+    "evidence": "Architects often use a rhombus for floor tiles, knowing its diagonals are not equal, though they do bisect each other at right angles.",
+    "kind": "what_if",
+    "q": "A tiler measures the diagonals of a rhombus floor tile. What will she find?",
+    "options": [
+     "They are unequal but cross at right angles",
+     "They are equal and cross at right angles",
+     "They are equal but cross at other angles",
+     "They are unequal and do not halve each other"
+    ],
+    "explain": "A rhombus has unequal diagonals that still bisect each other at right angles.",
+    "wrong": [
+     {
+      "misconception": "MAT-QUADRILATERALS-K13-M8",
+      "why": "thinks a rhombus is the same as a square"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up the rhombus with the rectangle's diagonals"
+     },
+     {
+      "misconception": "MAT-QUADRILATERALS-K16-M12",
+      "why": "mixes up the rhombus with a kite"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, they define a trapezium as a shape with exactly one pair of parallel sides, ensuring no confusion with parallelograms that possess two pairs.",
+    "kind": "which_explains",
+    "q": "A four-sided shape has two pairs of parallel sides. Is it a trapezium in the Land of Shapes?",
+    "options": [
+     "No, a trapezium has exactly one parallel pair",
+     "Yes, a trapezium may have two parallel pairs",
+     "Yes, any four-sided shape counts as one",
+     "No, a trapezium has no parallel sides"
+    ],
+    "explain": "A trapezium has exactly one pair of parallel sides; two pairs make a parallelogram.",
+    "wrong": [
+     {
+      "misconception": "MAT-QUADRILATERALS-K15-M11",
+      "why": "thinks a trapezium can have two pairs of parallel sides"
+     },
+     {
+      "misconception": null,
+      "why": "over-generalises the name to every quadrilateral"
+     },
+     {
+      "misconception": null,
+      "why": "misreads 'no confusion with parallelograms' as having no parallel sides"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 30.6
+}

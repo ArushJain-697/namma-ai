@@ -1,0 +1,143 @@
+{
+ "source": "train-0235-MAT-PROPORTION.json",
+ "job": {
+  "job": "train-0235-MAT-PROPORTION",
+  "topic_id": "MAT-PROPORTION",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a short story where children solve a real problem",
+  "seed": 235
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3479,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and Meera were helping their school canteen manager, Mr. Sharma, calculate supplies for the annual sports day. Mr. Sharma explained that for every 5 students, they need exactly 2 liters of lemonade. Rohan noted that if they have 20 students, they would need 8 liters, because the ratio of students to lemonade must remain constant at 2.5 students per liter. Meera then looked at the construction work happening in the school playground. She observed that 4 workers were currently painting the boundary wall and it would take them 12 days to finish. She wondered if they could finish faster by hiring more people. Mr. Sharma explained that since the total amount of work is fixed, if they double the number of workers to 8, the time taken will be halved to 6 days. Meera realized that while the lemonade supply increases as students increase, the time taken for the wall decreases as workers increase. They carefully checked their calculations to ensure they were not just assuming relationships based on whether numbers were rising or falling, but were instead checking if the product of workers and days remained constant at 48.",
+ "menu_ids": [
+  "MAT-PROPORTION-K12-M1",
+  "MAT-PROPORTION-K12-M2",
+  "MAT-PROPORTION-K13-M3",
+  "MAT-PROPORTION-K14-M4",
+  "MAT-PROPORTION-K11-M5",
+  "MAT-PROPORTION-K15-M6",
+  "MAT-PROPORTION-K16-M7",
+  "MAT-PROPORTION-K17-M8",
+  "MAT-PROPORTION-K17-M9",
+  "MAT-PROPORTION-K18-M10",
+  "MAT-PROPORTION-K19-M11",
+  "MAT-PROPORTION-K20-M12",
+  "MAT-PROPORTION-K21-M13",
+  "MAT-PROPORTION-K22-M14"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Mr. Sharma explained that for every 5 students, they need exactly 2 liters of lemonade.",
+    "kind": "what_if",
+    "q": "If 15 students come to sports day, how much lemonade is needed?",
+    "options": [
+     "6 liters",
+     "5 liters",
+     "12 liters",
+     "3 liters"
+    ],
+    "explain": "15 students make 3 groups of 5, so they need 3 × 2 = 6 liters.",
+    "wrong": [
+     {
+      "misconception": "MAT-PROPORTION-K14-M4",
+      "why": "thinks 3 times the students means adding 3 liters"
+     },
+     {
+      "misconception": "MAT-PROPORTION-K13-M3",
+      "why": "keeps the difference of 3 between students and liters the same"
+     },
+     {
+      "misconception": "MAT-PROPORTION-K19-M11",
+      "why": "just divides 15 by 5 and stops there"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan noted that if they have 20 students, they would need 8 liters, because the ratio of students to lemonade must remain constant at 2.5 students per liter.",
+    "kind": "why",
+    "q": "Why is Rohan sure that 20 students need exactly 8 liters?",
+    "options": [
+     "The number of students per liter never changes",
+     "The number of liters rises when students rise",
+     "The gap between students and liters never changes",
+     "The liters add four when students become four times"
+    ],
+    "explain": "There are always 2.5 students per liter, so 20 students need 20 ÷ 2.5 = 8 liters.",
+    "wrong": [
+     {
+      "misconception": "MAT-PROPORTION-K11-M5",
+      "why": "thinks both rising is enough, without checking the ratio"
+     },
+     {
+      "misconception": "MAT-PROPORTION-K13-M3",
+      "why": "thinks the difference stays the same in direct proportion"
+     },
+     {
+      "misconception": "MAT-PROPORTION-K14-M4",
+      "why": "adds instead of multiplying when a quantity grows"
+     }
+    ]
+   },
+   {
+    "evidence": "Mr. Sharma explained that since the total amount of work is fixed, if they double the number of workers to 8, the time taken will be halved to 6 days.",
+    "kind": "why",
+    "q": "Why does doubling the painters from 4 to 8 cut the time to 6 days?",
+    "options": [
+     "The total work on the wall stays fixed",
+     "The workers plus days must stay the same",
+     "The workers divided by days stay the same",
+     "The days fall by two when workers double"
+    ],
+    "explain": "The total work is fixed, so twice the workers need half the time: 12 days becomes 6.",
+    "wrong": [
+     {
+      "misconception": "MAT-PROPORTION-K17-M8",
+      "why": "thinks the sum stays the same in inverse proportion"
+     },
+     {
+      "misconception": "MAT-PROPORTION-K17-M9",
+      "why": "thinks the ratio stays the same in inverse proportion"
+     },
+     {
+      "misconception": "MAT-PROPORTION-K18-M10",
+      "why": "thinks doubling one means subtracting 2 from the other"
+     }
+    ]
+   },
+   {
+    "evidence": "They carefully checked their calculations to ensure they were not just assuming relationships based on whether numbers were rising or falling, but were instead checking if the product of workers and days remained constant at 48.",
+    "kind": "what_if",
+    "q": "If only 6 workers paint the boundary wall, how many days will they take?",
+    "options": [
+     "8 days",
+     "10 days",
+     "18 days",
+     "2 days"
+    ],
+    "explain": "Workers times days always stays 48, so 6 workers take 48 ÷ 6 = 8 days.",
+    "wrong": [
+     {
+      "misconception": "MAT-PROPORTION-K17-M8",
+      "why": "keeps the sum 4 + 12 = 16 the same"
+     },
+     {
+      "misconception": "MAT-PROPORTION-K22-M14",
+      "why": "uses the direct proportion equation x1/y1 = x2/y2"
+     },
+     {
+      "misconception": "MAT-PROPORTION-K20-M12",
+      "why": "divides the given 12 days by the new 6 workers"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 36.5
+}

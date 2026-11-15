@@ -1,0 +1,140 @@
+{
+ "source": "train-0308-SOC-CIV-JUDICIARY.json",
+ "job": {
+  "job": "train-0308-SOC-CIV-JUDICIARY",
+  "topic_id": "SOC-CIV-JUDICIARY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 8,
+  "style": "a conversation between a teacher and two students",
+  "seed": 308
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1356,
+  "promptTokenCount": 2
+ },
+ "passage": "In class, Ms. Sharma explained the Indian judiciary. 'Think of the courts as a ladder,' she said. Rohan asked, 'Can the Supreme Court hear any village dispute directly?' Ms. Sharma shook her head, 'No, our system uses an appellate structure where cases move up through levels. You cannot bypass the lower courts.' Meera then asked about the difference between laws. 'If someone steals, is that a civil matter?' Ms. Sharma clarified, 'Theft is a criminal law matter involving police and state prosecution. Civil law deals with disputes like property or rent between individuals, not crimes.' Rohan wondered if the government controls judges. 'Can the Prime Minister remove a judge for a verdict they dislike?' Ms. Sharma replied, 'Absolutely not. Judges are independent and have security of tenure, meaning the executive branch cannot dismiss them just because they disagree with a ruling.' Finally, Meera asked about Public Interest Litigation. 'Is a PIL filed by the government to help the poor?' Ms. Sharma smiled, 'Actually, a PIL allows any individual or organization to approach the court on behalf of those whose rights are violated, not just the government.'",
+ "menu_ids": [
+  "SOC-CIV-JUDICIARY-K9-M1",
+  "SOC-CIV-JUDICIARY-K12-M2",
+  "SOC-CIV-JUDICIARY-K13-M3",
+  "SOC-CIV-JUDICIARY-K15-M4",
+  "SOC-CIV-JUDICIARY-K4-M5",
+  "SOC-CIV-JUDICIARY-K5-M6",
+  "SOC-CIV-JUDICIARY-K11-M7",
+  "SOC-CIV-JUDICIARY-K6-M8",
+  "SOC-CIV-JUDICIARY-K12-M9",
+  "SOC-CIV-JUDICIARY-K7-M10",
+  "SOC-CIV-JUDICIARY-K10-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Ms. Sharma clarified, 'Theft is a criminal law matter involving police and state prosecution. Civil law deals with disputes like property or rent between individuals, not crimes.'",
+    "kind": "which_example",
+    "q": "Two neighbours fight over who owns a boundary wall. Which kind of case is this?",
+    "options": [
+     "A civil case between two individuals",
+     "A criminal case run by the state",
+     "A criminal case decided by the police",
+     "A civil case filed by the government"
+    ],
+    "explain": "Civil law deals with property disputes between individuals; criminal law covers crimes like theft.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-JUDICIARY-K13-M3",
+      "why": "thinks every serious quarrel is a crime"
+     },
+     {
+      "misconception": "SOC-CIV-JUDICIARY-K7-M10",
+      "why": "thinks police decide who is guilty"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up who files civil cases"
+     }
+    ]
+   },
+   {
+    "evidence": "Judges are independent and have security of tenure, meaning the executive branch cannot dismiss them just because they disagree with a ruling.",
+    "kind": "what_if",
+    "q": "A judge gives a verdict that angers the Prime Minister. What can the Prime Minister do?",
+    "options": [
+     "Nothing, as judges cannot be dismissed for rulings",
+     "Remove the judge, as the executive is higher",
+     "Remove the judge if the Parliament agrees",
+     "Change the verdict, as the executive is stronger"
+    ],
+    "explain": "Judges have security of tenure, so the executive cannot dismiss them merely for disagreeing with a ruling.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-JUDICIARY-K12-M2",
+      "why": "thinks the PM can fire judges"
+     },
+     {
+      "misconception": null,
+      "why": "thinks Parliament's agreement lets a judge be fired"
+     },
+     {
+      "misconception": "SOC-CIV-JUDICIARY-K6-M8",
+      "why": "thinks the government can overrule judges"
+     }
+    ]
+   },
+   {
+    "evidence": "Ms. Sharma shook her head, 'No, our system uses an appellate structure where cases move up through levels. You cannot bypass the lower courts.'",
+    "kind": "why",
+    "q": "Why can a village dispute not be taken straight to the Supreme Court?",
+    "options": [
+     "Cases must climb through the lower courts first",
+     "Village matters are too small for any court",
+     "The Supreme Court hears only criminal cases",
+     "Only the government can send cases upward"
+    ],
+    "explain": "Courts form a ladder; cases move up through levels and the lower courts cannot be bypassed.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-JUDICIARY-K9-M1",
+      "why": "thinks the Supreme Court hears any case directly"
+     },
+     {
+      "misconception": "SOC-CIV-JUDICIARY-K13-M3",
+      "why": "mixes up civil and criminal law"
+     },
+     {
+      "misconception": "SOC-CIV-JUDICIARY-K12-M9",
+      "why": "thinks only the government can bring cases"
+     }
+    ]
+   },
+   {
+    "evidence": "Ms. Sharma smiled, 'Actually, a PIL allows any individual or organization to approach the court on behalf of those whose rights are violated, not just the government.'",
+    "kind": "which_example",
+    "q": "Which person is using a PIL?",
+    "options": [
+     "A teacher who goes to court for poor workers",
+     "An officer who files a case for the state",
+     "A judge who starts a case against a minister",
+     "A farmer who appeals his own land case"
+    ],
+    "explain": "A PIL lets any person or group go to court for those whose rights are violated.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-JUDICIARY-K15-M4",
+      "why": "thinks only the government files a PIL"
+     },
+     {
+      "misconception": "SOC-CIV-JUDICIARY-K12-M9",
+      "why": "thinks courts act only against ministers"
+     },
+     {
+      "misconception": "SOC-CIV-JUDICIARY-K11-M7",
+      "why": "confuses a PIL with an appeal"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 13.1
+}

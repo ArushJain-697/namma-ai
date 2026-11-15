@@ -1,0 +1,140 @@
+{
+ "source": "train-0007-GEN-FIRSTAID.json",
+ "job": {
+  "job": "train-0007-GEN-FIRSTAID",
+  "topic_id": "GEN-FIRSTAID",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a short story with Indian characters in everyday life",
+  "seed": 7
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3001,
+  "promptTokenCount": 2
+ },
+ "passage": "Rohan and his sister Meera were playing in the garden when Meera tripped and scraped her knee on a sharp stone. Rohan immediately grabbed a clean cloth and pressed it firmly against the bleeding cut to stop the blood flow. When the cloth soaked through, he kept it in place and added another layer on top instead of removing the first one. He knew that removing the cloth would disturb the clot. Meanwhile, their grandmother came outside and saw a small burn on Rohan’s arm from the kitchen stove. She told him to run cool tap water over the burn for ten minutes rather than using ice, which can damage the skin. Suddenly, their neighbor, Mrs. Sharma, felt dizzy and collapsed on the grass. Rohan remembered his school training and helped her lie flat on her back, elevating her legs slightly to help blood flow to her brain. He did not try to force water into her mouth while she was unconscious. He then asked his father to call 112, the single emergency number for all help, including ambulances and police. They stayed calm, ensuring Mrs. Sharma was safe until the medical team arrived to assist her properly.",
+ "menu_ids": [
+  "GEN-FIRSTAID-K6-M1",
+  "GEN-FIRSTAID-K6-M2",
+  "GEN-FIRSTAID-K7-M3",
+  "GEN-FIRSTAID-K7-M4",
+  "GEN-FIRSTAID-K8-M5",
+  "GEN-FIRSTAID-K9-M6",
+  "GEN-FIRSTAID-K14-M7",
+  "GEN-FIRSTAID-K17-M9",
+  "GEN-FIRSTAID-K16-M10",
+  "GEN-FIRSTAID-K24-M11",
+  "GEN-FIRSTAID-K20-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "When the cloth soaked through, he kept it in place and added another layer on top instead of removing the first one.",
+    "kind": "what_if",
+    "q": "The cloth pressed on Meera's knee is now soaked with blood. What should Rohan do next?",
+    "options": [
+     "Add another layer on top and keep pressing",
+     "Remove it and put on a fresh one",
+     "Tie a tight rope above the cut",
+     "Rub turmeric on the cut and leave it"
+    ],
+    "explain": "Rohan kept the soaked cloth in place and added another layer, because removing it would disturb the clot.",
+    "wrong": [
+     {
+      "misconception": "GEN-FIRSTAID-K6-M2",
+      "why": "thinks a soaked cloth should be swapped for a fresh one"
+     },
+     {
+      "misconception": "GEN-FIRSTAID-K6-M1",
+      "why": "thinks a tight rope is the best way to stop bleeding"
+     },
+     {
+      "misconception": "GEN-FIRSTAID-K7-M3",
+      "why": "thinks home remedies like turmeric heal cuts"
+     }
+    ]
+   },
+   {
+    "evidence": "She told him to run cool tap water over the burn for ten minutes rather than using ice, which can damage the skin.",
+    "kind": "what_if",
+    "q": "Priya touches a hot pan and gets a small burn on her finger. What is the best first step?",
+    "options": [
+     "Hold it under cool tap water for ten minutes",
+     "Press a cube of ice on it for ten minutes",
+     "Rub toothpaste on it to stop the pain",
+     "Scrub it hard with soap to clean it"
+    ],
+    "explain": "Grandmother said to run cool tap water over a burn for ten minutes, not use ice, which can damage skin.",
+    "wrong": [
+     {
+      "misconception": "GEN-FIRSTAID-K9-M6",
+      "why": "thinks ice is best for a burn"
+     },
+     {
+      "misconception": "GEN-FIRSTAID-K7-M3",
+      "why": "thinks toothpaste heals and soothes injuries"
+     },
+     {
+      "misconception": "GEN-FIRSTAID-K7-M4",
+      "why": "thinks injuries must be scrubbed hard to clean them"
+     }
+    ]
+   },
+   {
+    "evidence": "Rohan remembered his school training and helped her lie flat on her back, elevating her legs slightly to help blood flow to her brain.",
+    "kind": "why",
+    "q": "Why did Rohan raise Mrs. Sharma's legs slightly after she collapsed?",
+    "options": [
+     "To help more blood reach her brain",
+     "To keep her head higher than her body",
+     "To make it easier to give her water",
+     "To restart her heart like a button"
+    ],
+    "explain": "Lying flat with legs slightly raised helps blood flow to the brain of a person who has fainted.",
+    "wrong": [
+     {
+      "misconception": "GEN-FIRSTAID-K16-M10",
+      "why": "thinks a fainting person's head should be held high"
+     },
+     {
+      "misconception": "GEN-FIRSTAID-K17-M9",
+      "why": "thinks a fainted person should be given water right away"
+     },
+     {
+      "misconception": "GEN-FIRSTAID-K24-M11",
+      "why": "thinks first aid restarts the heart like a restart button"
+     }
+    ]
+   },
+   {
+    "evidence": "He then asked his father to call 112, the single emergency number for all help, including ambulances and police.",
+    "kind": "recall",
+    "q": "Mrs. Sharma needs medical help quickly. Which number should Rohan's father call?",
+    "options": [
+     "112, the one number for all emergencies",
+     "100 first, then 102 for an ambulance",
+     "No number; give her water and wait",
+     "The local healer, for a herbal cure"
+    ],
+    "explain": "112 is the single emergency number for all help, including ambulances and police, so one call is enough.",
+    "wrong": [
+     {
+      "misconception": "GEN-FIRSTAID-K20-M12",
+      "why": "thinks there are separate numbers and no single one"
+     },
+     {
+      "misconception": "GEN-FIRSTAID-K17-M9",
+      "why": "thinks giving water is enough for a fainted person"
+     },
+     {
+      "misconception": "GEN-FIRSTAID-K14-M7",
+      "why": "thinks a local healer's remedy is enough in an emergency"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 32.1
+}

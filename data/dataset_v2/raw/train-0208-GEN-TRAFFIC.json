@@ -1,0 +1,169 @@
+{
+ "source": "train-0208-GEN-TRAFFIC.json",
+ "job": {
+  "job": "train-0208-GEN-TRAFFIC",
+  "topic_id": "GEN-TRAFFIC",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a clear textbook explanation",
+  "seed": 208
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3871,
+  "promptTokenCount": 2
+ },
+ "passage": "Road safety is a shared responsibility that relies on strict adherence to traffic rules and the use of protective gear. Traffic signals are not mere suggestions; they are mandatory commands. For instance, an amber light serves as a warning to slow down and prepare to stop, not an invitation to speed up. Similarly, road signs are legal requirements, not optional advice. Whether you are a pedestrian or a driver, you must remain vigilant. At a zebra crossing, even though vehicles are legally required to yield, you must always check for oncoming traffic before stepping onto the road. When walking on roads without footpaths, always walk facing the oncoming traffic so you can see vehicles approaching. Regarding vehicle safety, seatbelts are essential at all speeds because they prevent you from being thrown during sudden stops or collisions. Airbags are designed to work in tandem with seatbelts, not replace them. Furthermore, helmets are mandatory for both the rider and the pillion passenger on a two-wheeler, regardless of the distance traveled. Finally, remember that driving requires a valid licence, which is only issued after meeting specific age and skill requirements. Distracted driving, such as using a phone even with hands-free devices, significantly impairs your reaction time and is strictly prohibited.",
+ "menu_ids": [
+  "GEN-TRAFFIC-K8-M1",
+  "GEN-TRAFFIC-K9-M2",
+  "GEN-TRAFFIC-K9-M3",
+  "GEN-TRAFFIC-K10-M4",
+  "GEN-TRAFFIC-K11-M5",
+  "GEN-TRAFFIC-K12-M6",
+  "GEN-TRAFFIC-K13-M7",
+  "GEN-TRAFFIC-K14-M8",
+  "GEN-TRAFFIC-K17-M9",
+  "GEN-TRAFFIC-K17-M10",
+  "GEN-TRAFFIC-K18-M11",
+  "GEN-TRAFFIC-K19-M12",
+  "GEN-TRAFFIC-K19-M13",
+  "GEN-TRAFFIC-K20-M14"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "For instance, an amber light serves as a warning to slow down and prepare to stop, not an invitation to speed up.",
+    "kind": "what_if",
+    "q": "A driver sees the signal ahead turn amber. What should the driver do?",
+    "options": [
+     "Slow down and get ready to stop",
+     "Speed up to cross before it turns red",
+     "Keep going, since it means the same as green",
+     "Ignore it, since signals are only advice"
+    ],
+    "explain": "Amber warns drivers to slow down and prepare to stop. It is not a signal to speed up.",
+    "wrong": [
+     {
+      "misconception": "GEN-TRAFFIC-K9-M2",
+      "why": "thinks yellow means hurry through before red"
+     },
+     {
+      "misconception": "GEN-TRAFFIC-K9-M3",
+      "why": "thinks amber means the same as green"
+     },
+     {
+      "misconception": "GEN-TRAFFIC-K11-M5",
+      "why": "thinks signals are suggestions, not commands"
+     }
+    ]
+   },
+   {
+    "evidence": "At a zebra crossing, even though vehicles are legally required to yield, you must always check for oncoming traffic before stepping onto the road.",
+    "kind": "what_if",
+    "q": "Meena reaches a zebra crossing. Drivers are required to yield there. What should she do first?",
+    "options": [
+     "Check for oncoming vehicles before stepping out",
+     "Step out at once, as cars must stop",
+     "Run across quickly without looking around",
+     "Cross without looking if the light is green"
+    ],
+    "explain": "Vehicles must yield, but you must still check for oncoming traffic before stepping onto the road.",
+    "wrong": [
+     {
+      "misconception": "GEN-TRAFFIC-K12-M6",
+      "why": "thinks pedestrians need not check because vehicles must stop"
+     },
+     {
+      "misconception": "GEN-TRAFFIC-K13-M7",
+      "why": "thinks running fast makes crossing safe"
+     },
+     {
+      "misconception": "GEN-TRAFFIC-K8-M1",
+      "why": "thinks a green light means no need to look"
+     }
+    ]
+   },
+   {
+    "evidence": "When walking on roads without footpaths, always walk facing the oncoming traffic so you can see vehicles approaching.",
+    "kind": "how",
+    "q": "A village road has no footpath. Which way should Ravi walk, and why?",
+    "options": [
+     "Towards the vehicles, so he sees them coming",
+     "With the vehicles, so they see him coming",
+     "In the middle, so drivers notice him",
+     "Anywhere, as long as he moves quickly"
+    ],
+    "explain": "Walk facing oncoming traffic on roads without footpaths, so you can see vehicles approaching.",
+    "wrong": [
+     {
+      "misconception": "GEN-TRAFFIC-K14-M8",
+      "why": "thinks pedestrians should walk with the traffic"
+     },
+     {
+      "misconception": null,
+      "why": "thinks being visible matters more than seeing vehicles"
+     },
+     {
+      "misconception": "GEN-TRAFFIC-K13-M7",
+      "why": "thinks moving fast keeps you safe anywhere"
+     }
+    ]
+   },
+   {
+    "evidence": "Regarding vehicle safety, seatbelts are essential at all speeds because they prevent you from being thrown during sudden stops or collisions.",
+    "kind": "what_if",
+    "q": "Dad is driving slowly through the colony. Must his daughter in the back stay buckled up?",
+    "options": [
+     "Yes, a sudden stop could still throw her",
+     "No, slow cars do not need belts",
+     "Yes, unless an airbag is fitted nearby",
+     "No, only front-seat passengers need belts"
+    ],
+    "explain": "Seatbelts are needed at all speeds because they stop you being thrown during sudden stops.",
+    "wrong": [
+     {
+      "misconception": "GEN-TRAFFIC-K19-M12",
+      "why": "thinks seatbelts are not needed at low speed"
+     },
+     {
+      "misconception": "GEN-TRAFFIC-K19-M13",
+      "why": "thinks airbags replace seatbelts"
+     },
+     {
+      "misconception": "GEN-TRAFFIC-K20-M14",
+      "why": "thinks only front-seat passengers need seatbelts"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, helmets are mandatory for both the rider and the pillion passenger on a two-wheeler, regardless of the distance traveled.",
+    "kind": "what_if",
+    "q": "Asha rides pillion on her brother's scooter to a nearby shop. Who must wear a helmet?",
+    "options": [
+     "Both of them, even for this trip",
+     "Only her brother, as he is riding",
+     "Neither, as the ride is very short",
+     "Neither, since such rules are just advice"
+    ],
+    "explain": "Helmets are mandatory for both rider and pillion passenger, however short the distance.",
+    "wrong": [
+     {
+      "misconception": "GEN-TRAFFIC-K18-M11",
+      "why": "thinks only the rider needs a helmet"
+     },
+     {
+      "misconception": "GEN-TRAFFIC-K17-M10",
+      "why": "thinks helmets are only for long trips"
+     },
+     {
+      "misconception": "GEN-TRAFFIC-K11-M5",
+      "why": "thinks traffic rules are optional advice"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 40.0
+}

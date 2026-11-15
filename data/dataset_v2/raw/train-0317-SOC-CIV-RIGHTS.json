@@ -1,0 +1,139 @@
+{
+ "source": "train-0317-SOC-CIV-RIGHTS.json",
+ "job": {
+  "job": "train-0317-SOC-CIV-RIGHTS",
+  "topic_id": "SOC-CIV-RIGHTS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 9,
+  "style": "a passage that starts from a common wrong idea and corrects it",
+  "seed": 317
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 1245,
+  "promptTokenCount": 2
+ },
+ "passage": "Many students believe that Fundamental Rights are absolute, meaning they can never be restricted under any circumstances. However, the Constitution of India does not grant unlimited freedom. While the Right to Equality ensures equal protection of laws, it does not mean everyone must be treated exactly the same regardless of their specific needs or circumstances. For instance, the state can provide special provisions for disadvantaged groups to ensure true equality. Similarly, the Right to Freedom of Speech and Expression is a vital pillar of our democracy, but it comes with reasonable restrictions. You cannot use this freedom to incite violence, spread hatred, or threaten the security of the nation. The government can impose limitations on these rights in the interest of public order, morality, or national integrity. Furthermore, if any of these rights are violated, the Right to Constitutional Remedies allows citizens to approach the courts for justice. This judicial protection ensures that rights are not just empty promises but enforceable guarantees. Ultimately, our rights are balanced against the needs of society to maintain harmony and order. Understanding that these rights have boundaries is essential for every responsible citizen living in a democratic country.",
+ "menu_ids": [
+  "SOC-CIV-RIGHTS-K4-M1",
+  "SOC-CIV-RIGHTS-K9-M2",
+  "SOC-CIV-RIGHTS-K10-M4",
+  "SOC-CIV-RIGHTS-K11-M6",
+  "SOC-CIV-RIGHTS-K2-M7",
+  "SOC-CIV-RIGHTS-K12-M8",
+  "SOC-CIV-RIGHTS-K7-M9",
+  "SOC-CIV-RIGHTS-K9-M10",
+  "SOC-CIV-RIGHTS-K10-M11",
+  "SOC-CIV-RIGHTS-K13-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Many students believe that Fundamental Rights are absolute, meaning they can never be restricted under any circumstances.",
+    "kind": "what_if",
+    "q": "A law limits a Fundamental Right to protect public order. Is the law against the Constitution?",
+    "options": [
+     "No, rights can have reasonable limits",
+     "Yes, rights can never be restricted",
+     "Yes, only courts can limit a right",
+     "No, but only during a national war"
+    ],
+    "explain": "The passage says rights are not absolute; the government can impose reasonable limits for public order.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-RIGHTS-K4-M1",
+      "why": "thinks rights are absolute and never restricted"
+     },
+     {
+      "misconception": "SOC-CIV-RIGHTS-K2-M7",
+      "why": "thinks only courts have power over rights"
+     },
+     {
+      "misconception": null,
+      "why": "over-narrows the limits to one situation"
+     }
+    ]
+   },
+   {
+    "evidence": "For instance, the state can provide special provisions for disadvantaged groups to ensure true equality.",
+    "kind": "which_explains",
+    "q": "A state gives extra help to disadvantaged groups. Why does this fit the Right to Equality?",
+    "options": [
+     "Equal rights may need different support for different needs",
+     "Equality means every person must have the same income",
+     "Equality means everyone is treated exactly alike always",
+     "Equal protection applies only to people who are advantaged"
+    ],
+    "explain": "True equality can need special provisions because people's needs and circumstances differ.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-RIGHTS-K9-M10",
+      "why": "thinks equality means same income and property"
+     },
+     {
+      "misconception": "SOC-CIV-RIGHTS-K9-M2",
+      "why": "thinks equality means identical treatment"
+     },
+     {
+      "misconception": null,
+      "why": "reverses who the provisions are meant for"
+     }
+    ]
+   },
+   {
+    "evidence": "You cannot use this freedom to incite violence, spread hatred, or threaten the security of the nation.",
+    "kind": "what_if",
+    "q": "A speaker urges a crowd to attack another group. Is this protected free speech?",
+    "options": [
+     "No, speech cannot be used to incite violence",
+     "Yes, freedom of speech allows saying anything",
+     "Yes, if the speaker lives in India",
+     "No, because only the courts may speak publicly"
+    ],
+    "explain": "Freedom of speech has reasonable limits; it cannot be used to incite violence or spread hatred.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-RIGHTS-K10-M4",
+      "why": "thinks free speech allows anything at all"
+     },
+     {
+      "misconception": "SOC-CIV-RIGHTS-K10-M11",
+      "why": "mixes freedom with rights tied to place of living"
+     },
+     {
+      "misconception": null,
+      "why": "invents a rule that does not exist"
+     }
+    ]
+   },
+   {
+    "evidence": "This judicial protection ensures that rights are not just empty promises but enforceable guarantees.",
+    "kind": "why",
+    "q": "Why does the Right to Constitutional Remedies matter for the other rights?",
+    "options": [
+     "It lets citizens enforce rights through the courts",
+     "It allows courts to punish citizens who misuse rights",
+     "It limits every right so society stays in order",
+     "It makes rights absolute during all situations"
+    ],
+    "explain": "Approaching courts turns rights from empty promises into guarantees that can be enforced.",
+    "wrong": [
+     {
+      "misconception": "SOC-CIV-RIGHTS-K11-M6",
+      "why": "thinks court remedies are punishments for citizens"
+     },
+     {
+      "misconception": null,
+      "why": "confuses remedies with the limits on rights"
+     },
+     {
+      "misconception": "SOC-CIV-RIGHTS-K4-M1",
+      "why": "thinks rights can never be restricted"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 13.0
+}

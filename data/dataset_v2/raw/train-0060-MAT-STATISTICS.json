@@ -1,0 +1,143 @@
+{
+ "source": "train-0060-MAT-STATISTICS.json",
+ "job": {
+  "job": "train-0060-MAT-STATISTICS",
+  "topic_id": "MAT-STATISTICS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a puzzle or game that uses the idea",
+  "seed": 60
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3135,
+  "promptTokenCount": 2
+ },
+ "passage": "In the village of Mathpur, the local council tracks the daily rainfall to help farmers. They collect data from the official government weather website, which is secondary data because the council did not measure it themselves. The rainfall is recorded in continuous intervals: 0-10mm, 10-20mm, and 20-30mm. If a day records exactly 20mm of rain, it is placed into the 20-30mm interval to ensure no overlap occurs. To find the representative value of the 10-20mm group, we calculate the class mark by finding the average of the limits, which is 15mm. When drawing a histogram for this data, the bars must touch each other because the data is continuous, unlike a bar graph which has gaps. The council also calculates the mean rainfall for the week. They multiply each class mark by its frequency, sum these products, and divide by the total number of observations. Finally, they identify the modal class by looking for the interval with the highest frequency, not just the largest class mark. This systematic approach ensures that the farmers get accurate information for their crops, even if the calculated mean is a decimal value that does not appear in the original daily records.",
+ "menu_ids": [
+  "MAT-STATISTICS-K6-M2",
+  "MAT-STATISTICS-K9-M4",
+  "MAT-STATISTICS-K9-M5",
+  "MAT-STATISTICS-K10-M6",
+  "MAT-STATISTICS-K11-M7",
+  "MAT-STATISTICS-K13-M8",
+  "MAT-STATISTICS-K15-M9",
+  "MAT-STATISTICS-K14-M10",
+  "MAT-STATISTICS-K17-M11",
+  "MAT-STATISTICS-K18-M12",
+  "MAT-STATISTICS-K21-M14",
+  "MAT-STATISTICS-K22-M15",
+  "MAT-STATISTICS-K19-M16",
+  "MAT-STATISTICS-K24-M17"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "If a day records exactly 20mm of rain, it is placed into the 20-30mm interval to ensure no overlap occurs.",
+    "kind": "what_if",
+    "q": "One day Mathpur gets exactly 20mm of rain. Where is this day recorded?",
+    "options": [
+     "In the 20-30mm interval only",
+     "In both the 10-20mm and 20-30mm intervals",
+     "In the 10-20mm interval only",
+     "In no interval, as it is a boundary"
+    ],
+    "explain": "A value of exactly 20mm goes into the 20-30mm interval, so classes never overlap.",
+    "wrong": [
+     {
+      "misconception": "MAT-STATISTICS-K9-M4",
+      "why": "thinks 20 belongs to both classes"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the upper limit belongs to the lower class"
+     },
+     {
+      "misconception": null,
+      "why": "thinks boundary values are left out"
+     }
+    ]
+   },
+   {
+    "evidence": "To find the representative value of the 10-20mm group, we calculate the class mark by finding the average of the limits, which is 15mm.",
+    "kind": "what_if",
+    "q": "Using the council's method, what is the class mark of the 20-30mm group?",
+    "options": [
+     "25mm, halfway between 20 and 30",
+     "20mm, the lower limit of the class",
+     "30mm, the upper limit of the class",
+     "10mm, the width of the class"
+    ],
+    "explain": "The class mark is the average of the limits: (20 + 30) ÷ 2 = 25mm.",
+    "wrong": [
+     {
+      "misconception": "MAT-STATISTICS-K10-M6",
+      "why": "thinks the class mark is the lower limit"
+     },
+     {
+      "misconception": null,
+      "why": "picks the other limit instead of averaging"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up class mark and class width"
+     }
+    ]
+   },
+   {
+    "evidence": "When drawing a histogram for this data, the bars must touch each other because the data is continuous, unlike a bar graph which has gaps.",
+    "kind": "which_explains",
+    "q": "Meena draws the rainfall histogram with gaps between the bars. What is her mistake?",
+    "options": [
+     "Bars should touch, since rainfall is continuous",
+     "No mistake, as it is just a bar graph",
+     "Frequency should go on the horizontal axis",
+     "Classes should be written as 0-9, 10-19"
+    ],
+    "explain": "Rainfall data is continuous, so histogram bars must touch; only bar graphs have gaps.",
+    "wrong": [
+     {
+      "misconception": "MAT-STATISTICS-K13-M8",
+      "why": "thinks a histogram is a bar graph with gaps"
+     },
+     {
+      "misconception": "MAT-STATISTICS-K14-M10",
+      "why": "swaps the axes of a histogram"
+     },
+     {
+      "misconception": "MAT-STATISTICS-K9-M5",
+      "why": "thinks gapped classes suit continuous data"
+     }
+    ]
+   },
+   {
+    "evidence": "They multiply each class mark by its frequency, sum these products, and divide by the total number of observations.",
+    "kind": "what_if",
+    "q": "For 7 days in 3 classes, the sum of class mark × frequency is 84. What is the mean?",
+    "options": [
+     "12mm, by dividing 84 by 7 days",
+     "28mm, by dividing 84 by 3 classes",
+     "15mm, by averaging the three class marks",
+     "84mm, by adding up all the products"
+    ],
+    "explain": "The sum of products is divided by the total observations, 7 days: 84 ÷ 7 = 12mm.",
+    "wrong": [
+     {
+      "misconception": "MAT-STATISTICS-K22-M15",
+      "why": "divides by the number of classes"
+     },
+     {
+      "misconception": "MAT-STATISTICS-K21-M14",
+      "why": "averages class marks and ignores frequency"
+     },
+     {
+      "misconception": null,
+      "why": "forgets the final division step"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 32.3
+}

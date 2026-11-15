@@ -1,0 +1,140 @@
+{
+ "source": "train-0042-MAT-FRACTIONS.json",
+ "job": {
+  "job": "train-0042-MAT-FRACTIONS",
+  "topic_id": "MAT-FRACTIONS",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 7,
+  "style": "a rule explained with two contrasting examples",
+  "seed": 42
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4966,
+  "promptTokenCount": 2
+ },
+ "passage": "In mathematics, a fraction represents a part of a single whole, and for it to be valid, the whole must be divided into equal parts. For example, if you cut a circular pizza into two unequal pieces, you cannot call one piece 1/2 because the parts are not identical. A fraction is written as a numerator over a denominator, where the denominator shows the total number of equal parts in one whole. When comparing fractions like 1/4 and 1/5, remember that the denominator tells us how many pieces the whole is split into; therefore, 1/4 is larger than 1/5 because the whole is divided into fewer, larger sections. Furthermore, a mixed number like 2 1/3 is actually a sum, representing 2 wholes plus 1/3, not a multiplication of 2 and 1/3. Finally, when adding fractions, you must find a common denominator rather than simply adding the numerators and denominators together. For instance, to add 1/4 and 1/4, you keep the denominator the same and add the numerators to get 2/4, which simplifies to 1/2. Adding denominators would incorrectly result in 2/8, which is a smaller value than the actual sum.",
+ "menu_ids": [
+  "MAT-FRACTIONS-K7-M1",
+  "MAT-FRACTIONS-K8-M2",
+  "MAT-FRACTIONS-K5-M3",
+  "MAT-FRACTIONS-K14-M4",
+  "MAT-FRACTIONS-K18-M6",
+  "MAT-FRACTIONS-K16-M7",
+  "MAT-FRACTIONS-K17-M8",
+  "MAT-FRACTIONS-K9-M9",
+  "MAT-FRACTIONS-K21-M10",
+  "MAT-FRACTIONS-K19-M11",
+  "MAT-FRACTIONS-K13-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "For example, if you cut a circular pizza into two unequal pieces, you cannot call one piece 1/2 because the parts are not identical.",
+    "kind": "what_if",
+    "q": "Meena cuts a roti into one big piece and one small piece. What are the pieces?",
+    "options": [
+     "Neither piece is 1/2; their sizes differ",
+     "Each piece is 1/2; there are two pieces",
+     "The big piece is 1/2; it is larger",
+     "The small piece is 1/4; it is smaller"
+    ],
+    "explain": "A fraction needs equal parts, so unequal pieces cannot be called 1/2.",
+    "wrong": [
+     {
+      "misconception": "MAT-FRACTIONS-K7-M1",
+      "why": "thinks any split into two parts makes halves"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the bigger share must be the half"
+     },
+     {
+      "misconception": null,
+      "why": "guesses a fraction from the look of a small piece"
+     }
+    ]
+   },
+   {
+    "evidence": "When comparing fractions like 1/4 and 1/5, remember that the denominator tells us how many pieces the whole is split into; therefore, 1/4 is larger than 1/5 because the whole is divided into fewer, larger sections.",
+    "kind": "what_if",
+    "q": "Ravi gets 1/5 of a cake and Sita gets 1/4 of the same cake. Who gets more?",
+    "options": [
+     "Sita, since her pieces are fewer and bigger",
+     "Ravi, since 5 is greater than 4",
+     "Both, since each gets just one piece",
+     "Ravi, since his fraction has larger numbers"
+    ],
+    "explain": "Cutting into 4 gives fewer, larger pieces than cutting into 5, so 1/4 is more.",
+    "wrong": [
+     {
+      "misconception": "MAT-FRACTIONS-K14-M4",
+      "why": "thinks a bigger denominator means a bigger fraction"
+     },
+     {
+      "misconception": null,
+      "why": "looks only at the numerator 1 and ignores piece size"
+     },
+     {
+      "misconception": "MAT-FRACTIONS-K13-M12",
+      "why": "thinks larger numbers always mean a bigger fraction"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, a mixed number like 2 1/3 is actually a sum, representing 2 wholes plus 1/3, not a multiplication of 2 and 1/3.",
+    "kind": "what_if",
+    "q": "Asha has 2 1/3 rotis in her tiffin. How much roti does she have?",
+    "options": [
+     "Two whole rotis and one third of a roti",
+     "Two times one third of a roti",
+     "Only two thirds of one roti",
+     "Three rotis, from adding the 2 and 1"
+    ],
+    "explain": "A mixed number is a sum: 2 1/3 means 2 wholes plus 1/3.",
+    "wrong": [
+     {
+      "misconception": "MAT-FRACTIONS-K9-M9",
+      "why": "thinks a mixed number means multiplying"
+     },
+     {
+      "misconception": null,
+      "why": "works out 2 times 1/3 and gets 2/3"
+     },
+     {
+      "misconception": "MAT-FRACTIONS-K5-M3",
+      "why": "treats the numbers as separate whole numbers"
+     }
+    ]
+   },
+   {
+    "evidence": "Adding denominators would incorrectly result in 2/8, which is a smaller value than the actual sum.",
+    "kind": "which_explains",
+    "q": "Karan adds 1/4 and 1/4 by adding tops and bottoms, getting 2/8. What is wrong?",
+    "options": [
+     "It is less than the true sum, 1/2",
+     "It is more than the true sum, 1/2",
+     "It is equal to the true sum, 1/2",
+     "It is less than the true sum, 1/4"
+    ],
+    "explain": "The real sum is 2/4, which is 1/2; 2/8 is a smaller value.",
+    "wrong": [
+     {
+      "misconception": "MAT-FRACTIONS-K13-M12",
+      "why": "thinks 2/8 is bigger because its numbers are larger"
+     },
+     {
+      "misconception": "MAT-FRACTIONS-K18-M6",
+      "why": "thinks adding tops and bottoms gives the right sum"
+     },
+     {
+      "misconception": null,
+      "why": "picks the number 1/4 from the question as the sum"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 54.7
+}

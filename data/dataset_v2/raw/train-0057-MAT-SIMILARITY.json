@@ -1,0 +1,169 @@
+{
+ "source": "train-0057-MAT-SIMILARITY.json",
+ "job": {
+  "job": "train-0057-MAT-SIMILARITY",
+  "topic_id": "MAT-SIMILARITY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a passage that shows a common wrong method and corrects it",
+  "seed": 57
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 3975,
+  "promptTokenCount": 2
+ },
+ "passage": "In geometry, students often make mistakes when identifying similar triangles. For instance, consider two triangles where two sides are proportional and one angle is equal. A common error is assuming that any angle works, but the SAS similarity criterion strictly requires the equal angle to be the included angle between the proportional sides. Another frequent misconception involves the ratio of areas. If two triangles are similar, the ratio of their areas is equal to the square of the ratio of their corresponding sides, not just the ratio itself. Students often incorrectly assume that doubling the side lengths of a triangle will only double its area, whereas the area actually increases by a factor of four. Furthermore, when applying the Basic Proportionality Theorem, students sometimes mistakenly believe that any line drawn inside a triangle that meets two sides creates parallel segments. However, the theorem only applies when the line is parallel to the third side, dividing the other two sides proportionally. Finally, remember that similarity is not about adding a fixed length to sides. Similar figures maintain a constant ratio between corresponding sides, meaning they are scaled versions of each other, not just shapes with added dimensions. By focusing on these specific rules, you can avoid common pitfalls in your geometry exams.",
+ "menu_ids": [
+  "MAT-SIMILARITY-K12-M1",
+  "MAT-SIMILARITY-K13-M2",
+  "MAT-SIMILARITY-K14-M3",
+  "MAT-SIMILARITY-K15-M4",
+  "MAT-SIMILARITY-K16-M5",
+  "MAT-SIMILARITY-K16-M6",
+  "MAT-SIMILARITY-K18-M8",
+  "MAT-SIMILARITY-K18-M9",
+  "MAT-SIMILARITY-K19-M10",
+  "MAT-SIMILARITY-K20-M11",
+  "MAT-SIMILARITY-K21-M12",
+  "MAT-SIMILARITY-K22-M13",
+  "MAT-SIMILARITY-K23-M14",
+  "MAT-SIMILARITY-K24-M16"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "A common error is assuming that any angle works, but the SAS similarity criterion strictly requires the equal angle to be the included angle between the proportional sides.",
+    "kind": "what_if",
+    "q": "In two triangles, AB/PQ = AC/PR. Which pair of equal angles makes them similar by SAS?",
+    "options": [
+     "Angle A equal to angle P",
+     "Angle B equal to angle Q",
+     "Angle C equal to angle R",
+     "Angle B equal to angle R"
+    ],
+    "explain": "SAS needs the equal angle between the proportional sides; angle A lies between AB and AC.",
+    "wrong": [
+     {
+      "misconception": "MAT-SIMILARITY-K24-M16",
+      "why": "thinks any equal angle works for SAS"
+     },
+     {
+      "misconception": null,
+      "why": "picks an angle that is not between the given sides"
+     },
+     {
+      "misconception": "MAT-SIMILARITY-K16-M5",
+      "why": "matches vertices in any order"
+     }
+    ]
+   },
+   {
+    "evidence": "If two triangles are similar, the ratio of their areas is equal to the square of the ratio of their corresponding sides, not just the ratio itself.",
+    "kind": "how",
+    "q": "Two similar triangles have corresponding sides in the ratio 2 : 3. What is the ratio of their areas?",
+    "options": [
+     "4 : 9",
+     "2 : 3",
+     "8 : 27",
+     "4 : 6"
+    ],
+    "explain": "Area ratio is the square of the side ratio: 2 squared is 4, 3 squared is 9.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "uses the side ratio itself for areas"
+     },
+     {
+      "misconception": null,
+      "why": "cubes the ratio, mixing area with volume"
+     },
+     {
+      "misconception": null,
+      "why": "doubles the ratio instead of squaring it"
+     }
+    ]
+   },
+   {
+    "evidence": "Students often incorrectly assume that doubling the side lengths of a triangle will only double its area, whereas the area actually increases by a factor of four.",
+    "kind": "what_if",
+    "q": "Meera doubles every side of a triangle. What happens to its area?",
+    "options": [
+     "Its area becomes four times as large",
+     "Its area becomes two times as large",
+     "Its area becomes eight times as large",
+     "Its area grows by one fixed added amount"
+    ],
+    "explain": "Doubling sides multiplies the area by 2 squared, so the area becomes four times larger.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "thinks area grows in the same ratio as sides"
+     },
+     {
+      "misconception": null,
+      "why": "cubes the scale factor like volume"
+     },
+     {
+      "misconception": "MAT-SIMILARITY-K15-M4",
+      "why": "thinks scaling means adding a fixed amount"
+     }
+    ]
+   },
+   {
+    "evidence": "However, the theorem only applies when the line is parallel to the third side, dividing the other two sides proportionally.",
+    "kind": "how",
+    "q": "In triangle ABC, line DE meets AB at D and AC at E. When is AD/DB = AE/EC?",
+    "options": [
+     "Only when DE is parallel to BC",
+     "Whenever DE meets both sides AB and AC",
+     "Only when DE equals half of BC",
+     "Only when DE is perpendicular to BC"
+    ],
+    "explain": "The Basic Proportionality Theorem applies only when the line is parallel to the third side, BC.",
+    "wrong": [
+     {
+      "misconception": "MAT-SIMILARITY-K19-M10",
+      "why": "thinks BPT works for any line meeting two sides"
+     },
+     {
+      "misconception": "MAT-SIMILARITY-K20-M11",
+      "why": "thinks the line must be half the third side"
+     },
+     {
+      "misconception": null,
+      "why": "confuses parallel with perpendicular"
+     }
+    ]
+   },
+   {
+    "evidence": "Similar figures maintain a constant ratio between corresponding sides, meaning they are scaled versions of each other, not just shapes with added dimensions.",
+    "kind": "which_example",
+    "q": "A triangle has sides 3, 4 and 5 cm. Which triangle is similar to it?",
+    "options": [
+     "Sides 6, 8 and 10 cm",
+     "Sides 5, 6 and 7 cm",
+     "Sides 6, 8 and 5 cm",
+     "Sides 9, 16 and 25 cm"
+    ],
+    "explain": "Similar triangles keep one constant side ratio; 6, 8, 10 is every side doubled.",
+    "wrong": [
+     {
+      "misconception": "MAT-SIMILARITY-K15-M4",
+      "why": "adds 2 cm to each side instead of scaling"
+     },
+     {
+      "misconception": "MAT-SIMILARITY-K23-M14",
+      "why": "thinks two proportional pairs are enough"
+     },
+     {
+      "misconception": null,
+      "why": "squares the sides instead of scaling them"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 40.4
+}

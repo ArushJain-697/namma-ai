@@ -1,0 +1,141 @@
+{
+ "source": "train-0196-GEN-INTEREST.json",
+ "job": {
+  "job": "train-0196-GEN-INTEREST",
+  "topic_id": "GEN-INTEREST",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a description of a classroom activity or experiment and what it shows",
+  "seed": 196
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 2920,
+  "promptTokenCount": 2
+ },
+ "passage": "Our Class 6 math club conducted a 'Loan Lab' to understand how borrowing works. We compared two bank offers for a Rs 10,000 loan. Bank A charges a simple interest rate of 10% per year, while Bank B uses compound interest at 10% per year. We calculated the interest for exactly one year. Surprisingly, both banks resulted in the same interest amount of Rs 1,000 for that first year. Next, we looked at loan tenures. We found that while a 5-year loan has a smaller monthly EMI than a 2-year loan, the total amount paid back over 5 years is much higher because interest accumulates for a longer time. We also learned that a flat interest rate is different from a reducing-balance rate. A flat rate applies to the original loan amount throughout, whereas a reducing-balance rate applies only to the remaining unpaid debt. Finally, we discussed credit cards. We learned that the interest-free period is only valid if you pay your entire bill in full by the due date. If you pay only a part of the bill, the bank charges interest on the remaining balance immediately.",
+ "menu_ids": [
+  "GEN-INTEREST-K7-M1",
+  "GEN-INTEREST-K8-M2",
+  "GEN-INTEREST-K5-M3",
+  "GEN-INTEREST-K10-M4",
+  "GEN-INTEREST-K11-M5",
+  "GEN-INTEREST-K13-M6",
+  "GEN-INTEREST-K12-M7",
+  "GEN-INTEREST-K15-M8",
+  "GEN-INTEREST-K20-M9",
+  "GEN-INTEREST-K22-M10",
+  "GEN-INTEREST-K23-M11",
+  "GEN-INTEREST-K28-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Surprisingly, both banks resulted in the same interest amount of Rs 1,000 for that first year.",
+    "kind": "what_if",
+    "q": "For the first year on Rs 10,000 at 10%, how does Bank B's interest compare with Bank A's?",
+    "options": [
+     "Bank B charges exactly what Bank A charges",
+     "Bank B charges more, as compounding is bigger",
+     "Bank B charges more, as its rate keeps rising",
+     "Bank B charges Rs 11,000 as its interest"
+    ],
+    "explain": "For the first year, simple and compound interest at 10% both gave Rs 1,000.",
+    "wrong": [
+     {
+      "misconception": "GEN-INTEREST-K10-M4",
+      "why": "thinks compound interest is always bigger, even in year one"
+     },
+     {
+      "misconception": "GEN-INTEREST-K5-M3",
+      "why": "thinks compound means the rate itself increases"
+     },
+     {
+      "misconception": "GEN-INTEREST-K8-M2",
+      "why": "confuses interest with the total paid back"
+     }
+    ]
+   },
+   {
+    "evidence": "We found that while a 5-year loan has a smaller monthly EMI than a 2-year loan, the total amount paid back over 5 years is much higher because interest accumulates for a longer time.",
+    "kind": "what_if",
+    "q": "Meena picks a 5-year loan instead of a 2-year loan. What happens to her total repayment?",
+    "options": [
+     "She pays more, as interest builds up longer",
+     "She pays less, as each EMI is smaller",
+     "She pays the same, as time does not matter",
+     "She pays the same, as EMIs just split the loan"
+    ],
+    "explain": "A longer loan has smaller EMIs, but interest piles up for more years, so the total is higher.",
+    "wrong": [
+     {
+      "misconception": "GEN-INTEREST-K20-M9",
+      "why": "thinks smaller EMIs mean a smaller total"
+     },
+     {
+      "misconception": "GEN-INTEREST-K7-M1",
+      "why": "thinks interest does not depend on time"
+     },
+     {
+      "misconception": "GEN-INTEREST-K15-M8",
+      "why": "thinks an EMI is only the loan divided by months"
+     }
+    ]
+   },
+   {
+    "evidence": "A flat rate applies to the original loan amount throughout, whereas a reducing-balance rate applies only to the remaining unpaid debt.",
+    "kind": "how",
+    "q": "Halfway through repaying a loan, what does a reducing-balance rate charge interest on?",
+    "options": [
+     "Only the part still left unpaid",
+     "The whole amount first borrowed",
+     "Only the part already paid back",
+     "The whole amount to be paid back"
+    ],
+    "explain": "A reducing-balance rate applies only to the debt still unpaid, not the original loan.",
+    "wrong": [
+     {
+      "misconception": "GEN-INTEREST-K22-M10",
+      "why": "thinks flat and reducing-balance rates work the same"
+     },
+     {
+      "misconception": null,
+      "why": "reverses which part of the loan counts"
+     },
+     {
+      "misconception": "GEN-INTEREST-K8-M2",
+      "why": "mixes up the interest base with the total repayment"
+     }
+    ]
+   },
+   {
+    "evidence": "If you pay only a part of the bill, the bank charges interest on the remaining balance immediately.",
+    "kind": "what_if",
+    "q": "Sam pays half his credit card bill by the due date. What happens to the other half?",
+    "options": [
+     "Interest is charged on it right away",
+     "It stays interest-free till the next bill",
+     "It costs nothing extra if the rate is low",
+     "Interest is charged on it after a year"
+    ],
+    "explain": "The interest-free period needs the full bill paid; the unpaid part gets interest immediately.",
+    "wrong": [
+     {
+      "misconception": "GEN-INTEREST-K28-M12",
+      "why": "thinks the interest-free period covers part payments"
+     },
+     {
+      "misconception": "GEN-INTEREST-K23-M11",
+      "why": "thinks a low rate means no other costs"
+     },
+     {
+      "misconception": null,
+      "why": "thinks interest waits until a full year passes"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 48.8
+}

@@ -1,0 +1,163 @@
+{
+ "source": "train-0397-MAT-ANGLESHAPES.json",
+ "job": {
+  "job": "train-0397-MAT-ANGLESHAPES",
+  "topic_id": "MAT-ANGLESHAPES",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 6,
+  "style": "a clear textbook explanation with one worked example",
+  "seed": 397
+ },
+ "teacher": "claude:claude-sonnet-5-5",
+ "usage": {
+  "candidatesTokenCount": 4556,
+  "promptTokenCount": 2
+ },
+ "passage": "Geometry helps us understand the shapes around us by measuring their properties. An angle is formed when two rays meet at a common point called the vertex. The size of an angle depends only on the amount of rotation between its arms, not on the length of the arms themselves. For instance, if you have a small angle and a large angle with very long arms, the angle size remains unchanged by the arm length. When measuring an angle with a protractor, you must place the centre of the protractor exactly on the vertex and align the baseline with one arm. A straight line is actually a special angle measuring exactly 180 degrees. Furthermore, triangles are classified by their sides; an isosceles triangle has at least two equal sides, regardless of how close the third side is in length. Finally, a square is a special type of rectangle because it possesses all the properties of a rectangle, such as having four right angles and opposite sides that are equal. Understanding these definitions prevents common errors in geometry. For example, if you see a triangle with sides of 5cm, 5cm, and 6cm, it is isosceles because two sides are equal, even though the third side is nearly the same length.",
+ "menu_ids": [
+  "MAT-ANGLESHAPES-K13-M3",
+  "MAT-ANGLESHAPES-K14-M4",
+  "MAT-ANGLESHAPES-K4-M5",
+  "MAT-ANGLESHAPES-K5-M6",
+  "MAT-ANGLESHAPES-K5-M7",
+  "MAT-ANGLESHAPES-K11-M8",
+  "MAT-ANGLESHAPES-K7-M10",
+  "MAT-ANGLESHAPES-K15-M12"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "The size of an angle depends only on the amount of rotation between its arms, not on the length of the arms themselves.",
+    "kind": "what_if",
+    "q": "Two angles open equally, but one has much longer arms. How do their sizes compare?",
+    "options": [
+     "Both angles are equal in size",
+     "The angle with longer arms is bigger",
+     "The angle with shorter arms is bigger",
+     "Their sizes cannot be compared at all"
+    ],
+    "explain": "Angle size depends only on the rotation between the arms, not on how long the arms are.",
+    "wrong": [
+     {
+      "misconception": "MAT-ANGLESHAPES-K5-M6",
+      "why": "thinks longer arms make a bigger angle"
+     },
+     {
+      "misconception": null,
+      "why": "reverses the arm-length idea"
+     },
+     {
+      "misconception": null,
+      "why": "thinks different arm lengths make angles incomparable"
+     }
+    ]
+   },
+   {
+    "evidence": "When measuring an angle with a protractor, you must place the centre of the protractor exactly on the vertex and align the baseline with one arm.",
+    "kind": "what_if",
+    "q": "Meena slides her protractor so its centre sits halfway along one arm. What follows?",
+    "options": [
+     "The reading would not show the true angle",
+     "The reading would still be right at any point",
+     "The angle itself would shrink with the shift",
+     "The reading would be right only for long arms"
+    ],
+    "explain": "The centre must sit exactly on the vertex; placing it elsewhere gives a wrong reading.",
+    "wrong": [
+     {
+      "misconception": "MAT-ANGLESHAPES-K4-M5",
+      "why": "thinks the centre can go anywhere on an arm"
+     },
+     {
+      "misconception": null,
+      "why": "thinks moving the tool changes the angle"
+     },
+     {
+      "misconception": "MAT-ANGLESHAPES-K5-M6",
+      "why": "links correct measuring to arm length"
+     }
+    ]
+   },
+   {
+    "evidence": "A straight line is actually a special angle measuring exactly 180 degrees.",
+    "kind": "which_explains",
+    "q": "A friend says a straight line cannot be an angle. What is the best reply?",
+    "options": [
+     "It is a special angle of 180 degrees",
+     "It is a right angle of 90 degrees",
+     "It is a reflex angle of 360 degrees",
+     "It is a line, so it has no angle"
+    ],
+    "explain": "A straight line is a special angle measuring exactly 180 degrees.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "mixes up straight angle with right angle"
+     },
+     {
+      "misconception": "MAT-ANGLESHAPES-K11-M8",
+      "why": "thinks any big-looking angle is reflex"
+     },
+     {
+      "misconception": "MAT-ANGLESHAPES-K5-M7",
+      "why": "thinks a straight line is not an angle"
+     }
+    ]
+   },
+   {
+    "evidence": "Furthermore, triangles are classified by their sides; an isosceles triangle has at least two equal sides, regardless of how close the third side is in length.",
+    "kind": "which_example",
+    "q": "A triangle has sides 7 cm, 7 cm and 8 cm. How should it be named?",
+    "options": [
+     "Isosceles, because two of its sides match",
+     "Not isosceles, because the third side is close",
+     "Equilateral, because all sides are nearly equal",
+     "Scalene, because one side is longer than the rest"
+    ],
+    "explain": "Two equal sides make a triangle isosceles, even if the third side is nearly the same.",
+    "wrong": [
+     {
+      "misconception": "MAT-ANGLESHAPES-K7-M10",
+      "why": "thinks a near-equal third side cancels isosceles"
+     },
+     {
+      "misconception": null,
+      "why": "rounds nearly equal sides up to equal"
+     },
+     {
+      "misconception": null,
+      "why": "looks only at the odd side out"
+     }
+    ]
+   },
+   {
+    "evidence": "Finally, a square is a special type of rectangle because it possesses all the properties of a rectangle, such as having four right angles and opposite sides that are equal.",
+    "kind": "why",
+    "q": "Sana says a square is not a rectangle. Why is she wrong?",
+    "options": [
+     "It has four right angles and equal opposite sides",
+     "It has four equal sides, so it is separate",
+     "It has four right angles but unequal sides",
+     "It is a rectangle only if turned upright"
+    ],
+    "explain": "A square has four right angles and equal opposite sides, so it has every rectangle property.",
+    "wrong": [
+     {
+      "misconception": "MAT-ANGLESHAPES-K14-M4",
+      "why": "thinks equal sides make a square a different shape"
+     },
+     {
+      "misconception": null,
+      "why": "describes a rectangle but not a square"
+     },
+     {
+      "misconception": "MAT-ANGLESHAPES-K13-M3",
+      "why": "thinks shape names depend on how it is turned"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 37.2
+}

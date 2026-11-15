@@ -1,0 +1,169 @@
+{
+ "source": "train-0064-MAT-TRIGONOMETRY.json",
+ "job": {
+  "job": "train-0064-MAT-TRIGONOMETRY",
+  "topic_id": "MAT-TRIGONOMETRY",
+  "split": "train",
+  "test_only_topic": false,
+  "grade": 10,
+  "style": "a clear textbook explanation with one worked example",
+  "seed": 64
+ },
+ "teacher": "claude:claude-opus-5-5",
+ "usage": {
+  "candidatesTokenCount": 4026,
+  "promptTokenCount": 2
+ },
+ "passage": "In a right-angled triangle, trigonometric ratios define the relationship between angles and side lengths. The sine of an angle A, written as sin A, is the ratio of the opposite side to the hypotenuse. Because the hypotenuse is always the longest side, the value of sin A can never exceed 1. It is important to remember that 'sin' is not a variable multiplied by A, but a function of the angle itself. For any angle A, the fundamental identity sin²A + cos²A = 1 holds true, regardless of the angle's size. When solving problems involving heights, such as finding the height of a tower, you must account for the observer's eye level; if the observer is standing, their height must be added to the calculated vertical distance. Consider a student looking at a tower 20 meters away at an angle of elevation of 45 degrees. If the student's eye level is 1.5 meters from the ground, the tower height is calculated by adding 1.5 meters to the product of 20 and tan 45 degrees. Since tan 45 is 1, the total height is 21.5 meters. Always treat trigonometric ratios as specific functions of the angle, not as simple algebraic products or linear relationships.",
+ "menu_ids": [
+  "MAT-TRIGONOMETRY-K9-M2",
+  "MAT-TRIGONOMETRY-K10-M3",
+  "MAT-TRIGONOMETRY-K10-M4",
+  "MAT-TRIGONOMETRY-K11-M5",
+  "MAT-TRIGONOMETRY-K11-M6",
+  "MAT-TRIGONOMETRY-K12-M7",
+  "MAT-TRIGONOMETRY-K13-M9",
+  "MAT-TRIGONOMETRY-K14-M10",
+  "MAT-TRIGONOMETRY-K14-M11",
+  "MAT-TRIGONOMETRY-K15-M12",
+  "MAT-TRIGONOMETRY-K19-M13",
+  "MAT-TRIGONOMETRY-K16-M14",
+  "MAT-TRIGONOMETRY-K18-M15",
+  "MAT-TRIGONOMETRY-K20-M16"
+ ],
+ "response": {
+  "items": [
+   {
+    "evidence": "Because the hypotenuse is always the longest side, the value of sin A can never exceed 1.",
+    "kind": "what_if",
+    "q": "Meena works out sin A = 5/3 for a right-angled triangle. What does this tell her?",
+    "options": [
+     "Her answer is wrong; sin A is never above 1",
+     "Her answer is fine; sin A can be any size",
+     "Her answer is fine; her triangle is just large",
+     "Her answer is wrong; sin A uses the adjacent side"
+    ],
+    "explain": "The hypotenuse is the longest side, so opposite/hypotenuse can never be more than 1.",
+    "wrong": [
+     {
+      "misconception": "MAT-TRIGONOMETRY-K14-M10",
+      "why": "thinks sin A can be greater than 1"
+     },
+     {
+      "misconception": "MAT-TRIGONOMETRY-K13-M9",
+      "why": "thinks a bigger triangle gives a bigger sin A"
+     },
+     {
+      "misconception": "MAT-TRIGONOMETRY-K10-M3",
+      "why": "swaps the sides used for sin and cos"
+     }
+    ]
+   },
+   {
+    "evidence": "It is important to remember that 'sin' is not a variable multiplied by A, but a function of the angle itself.",
+    "kind": "why",
+    "q": "Rahul simplifies (sin A)/A by cancelling A to get just 'sin'. Why is this wrong?",
+    "options": [
+     "Because sin A is not sin multiplied by A",
+     "Because A cancels only when A is 90 degrees",
+     "Because sin A should cancel to leave 1",
+     "Because sin A doubles whenever A doubles"
+    ],
+    "explain": "Sin is a function of the angle, not a number times A, so A cannot be cancelled.",
+    "wrong": [
+     {
+      "misconception": "MAT-TRIGONOMETRY-K12-M7",
+      "why": "treats sin A as a product that cancels in special cases"
+     },
+     {
+      "misconception": null,
+      "why": "still treats sin A as a product, cancelling all of it"
+     },
+     {
+      "misconception": "MAT-TRIGONOMETRY-K19-M13",
+      "why": "treats sin as a linear relationship with A"
+     }
+    ]
+   },
+   {
+    "evidence": "For any angle A, the fundamental identity sin²A + cos²A = 1 holds true, regardless of the angle's size.",
+    "kind": "what_if",
+    "q": "Priya finds sin²A + cos²A for A = 20 degrees and A = 70 degrees. What will she get?",
+    "options": [
+     "The total is 1 for both angles",
+     "The total is larger for 70 degrees",
+     "The total is 1 only for 45 degrees",
+     "The total depends on the triangle's size"
+    ],
+    "explain": "The identity sin²A + cos²A = 1 holds for every angle, whatever its size.",
+    "wrong": [
+     {
+      "misconception": "MAT-TRIGONOMETRY-K19-M13",
+      "why": "thinks a bigger angle makes the ratios grow"
+     },
+     {
+      "misconception": null,
+      "why": "thinks the identity works only for a special angle"
+     },
+     {
+      "misconception": "MAT-TRIGONOMETRY-K13-M9",
+      "why": "thinks triangle size changes the ratios"
+     }
+    ]
+   },
+   {
+    "evidence": "When solving problems involving heights, such as finding the height of a tower, you must account for the observer's eye level; if the observer is standing, their height must be added to the calculated vertical distance.",
+    "kind": "how",
+    "q": "A standing boy calculates that a tower's top is 30 m above his eyes. How does he get the tower's height?",
+    "options": [
+     "Add his eye height to the 30 m",
+     "Subtract his eye height from the 30 m",
+     "Divide the 30 m by his eye height",
+     "Multiply the 30 m by his eye height"
+    ],
+    "explain": "The 30 m starts at his eyes, so his eye height above the ground must be added.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "reverses the direction of the correction"
+     },
+     {
+      "misconception": null,
+      "why": "guesses an operation without seeing what the 30 m measures"
+     },
+     {
+      "misconception": null,
+      "why": "mixes up adding the height with taking a product"
+     }
+    ]
+   },
+   {
+    "evidence": "If the student's eye level is 1.5 meters from the ground, the tower height is calculated by adding 1.5 meters to the product of 20 and tan 45 degrees.",
+    "kind": "what_if",
+    "q": "The same student sees another tower 30 m away at a 45-degree angle of elevation. How tall is it?",
+    "options": [
+     "31.5 meters",
+     "30 meters",
+     "21.5 meters",
+     "28.5 meters"
+    ],
+    "explain": "Height = 30 × tan 45 + 1.5 = 30 × 1 + 1.5 = 31.5 meters.",
+    "wrong": [
+     {
+      "misconception": null,
+      "why": "forgets to add the eye level"
+     },
+     {
+      "misconception": null,
+      "why": "copies the nearby answer from the passage"
+     },
+     {
+      "misconception": null,
+      "why": "subtracts the eye level instead of adding it"
+     }
+    ]
+   }
+  ]
+ },
+ "seconds": 43.1
+}
