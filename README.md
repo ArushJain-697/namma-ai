@@ -10,6 +10,12 @@
 
 Powered by **GURU-0.6B**: **G**rounded **U**nderstanding, **R**uns **U**nplugged
 
+[Model release](https://github.com/ArushJain-697/namma-ai/releases/tag/guru-0.6b-v1) · [Design decisions](docs/JUDGE_BRIEF.md) · [Learning-engine maths](docs/RETENTION_MATH.md) · [MIT licence](LICENSE)
+
+<img src="docs/images/sakshi-device.jpg" alt="The Sakshi device: a Raspberry Pi 5 in a 3D-printed case with a small screen, three buttons and a USB camera" width="460">
+
+*The device: Raspberry Pi 5 in a 3D-printed case, 176×220 screen, three buttons, USB camera for photographing a page.*
+
 </div>
 
 ---
@@ -34,7 +40,7 @@ The system answers six questions, in order:
 5. Has she learned the idea, or did she guess? Knowledge tracing separates learning from lucky guesses.
 6. When will she forget it, and what should she revise first? Spaced repetition predicts forgetting per concept.
 
-**How we built it:** research before building, measure instead of guessing, and say the weak spots first. Every number in this README comes from a script run, and every design choice is recorded with its evidence in [`docs/JUDGE_BRIEF.md`](docs/JUDGE_BRIEF.md). One example of the research rule: we tested small fact-checking models on 10 questions with known wrong answer keys. They caught only 0-3 of 10, so that check was never shipped.
+**How we built it:** research before building, measure instead of guessing, and record the limits next to the results. Every number in this README comes from a script run, and every design choice is recorded with its evidence in [`docs/JUDGE_BRIEF.md`](docs/JUDGE_BRIEF.md). One example of the research rule: we tested small fact-checking models on 10 questions with known wrong answer keys. They caught only 0-3 of 10, so that check was never shipped.
 
 ## Features
 
@@ -216,8 +222,8 @@ with the same root belief in another topic, to test whether the deeper habit is 
 | Measurement | Value |
 |---|---|
 | Prefill / decode | **122 / 12.1 tokens/s** |
-| Summary + 3 questions (terminal run) | **57.9 s** = load 3.0 + summary 14.2 + quiz 40.7 |
-| On the device, per question (written while the child answers) | **15.7 s** |
+| Summary + 3 questions, one terminal run, start to finish | **57.9 s** = load 3.0 + summary 14.2 + quiz 40.7 |
+| On the device, average time to write each question (hidden: written while the child answers the previous one) | **15.7 s** |
 | Summary on the device (one sentence per third) | **9.2 s** |
 | Peak memory: GURU alone / + summary model / whole engine | **1.48 / 2.7 / 3.2 GB** |
 | Model file (4-bit) | **469 MB** |
@@ -318,11 +324,12 @@ tests/              pytest suite
 ```bash
 git clone https://github.com/ArushJain-697/namma-ai.git && cd namma-ai
 python -m venv .venv && .venv/bin/pip install executorch==1.5.1 torch numpy tokenizers fsrs pytest
+bash scripts/get_models.sh          # GURU, the summary model, the helper models and the index (checksum-verified)
 ```
 
-Models: download from the [GURU-0.6B v1 release](https://github.com/ArushJain-697/namma-ai/releases/tag/guru-0.6b-v1)
-(the ExecuTorch `.pte` for the Pi and every LoRA adapter we trained) into `models/`. On a Raspberry Pi, use the offline
-installer `pi/install.sh` and the checklist `pi/CHECKLIST.md`.
+`get_models.sh` downloads from the [GURU-0.6B v1 release](https://github.com/ArushJain-697/namma-ai/releases/tag/guru-0.6b-v1)
+and picks the fast or portable build for your CPU; `--8bit`, `--adapters` and `--all` fetch more. On a Raspberry Pi,
+use the offline installer `pi/install.sh`, the checklist `pi/CHECKLIST.md`, and the exact package list `pi/requirements-pi.txt`.
 
 ```bash
 python scripts/sakshi_app.py study passage.txt     # summary, streamed questions, adaptive session
@@ -370,6 +377,13 @@ python -m pytest -q tests/test_review.py                # climb gate, blocked co
 - [`docs/pitch/`](docs/pitch/): slide facts and the pitch deck
 - [`docs/history/`](docs/history/): the original design plan, red-team log and proposal
 - [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md): models, datasets and licences
+
+---
+
+## Licence
+
+The code is released under the [MIT licence](LICENSE). The trained model weights in the release were trained on SciQ
+(CC BY-NC 3.0) and RACE (research use), so they are for research and education, not commercial use.
 
 ---
 
