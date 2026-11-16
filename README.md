@@ -337,14 +337,6 @@ python -m pytest -q tests/test_review.py                # climb gate, blocked co
 
 ---
 
-## What we do not claim
-
-No students have used it yet, so there is no learning-gain claim; that needs a school pilot. The misconceptions were
-drafted by AI from research on student errors and are not yet teacher-reviewed. A 0.6B model writes imperfect
-questions (about 40-55% fully sound in a strict read); the checks drop the worst. The right belief is ranked first
-about half the time. Bayes, BKT and FSRS settings are standard defaults, not yet fitted to children. English only for now.
-
----
 
 ## Documentation
 
