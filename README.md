@@ -1,63 +1,364 @@
-# Sakshi: an offline tutor that diagnoses, not just scores
+<div align="center">
 
-**Winner, Namma AI Hackathon 2026** (Arm × IIIT Bangalore × NASSCOM), Problem Statement 1: AI for Inclusive Education.
+# SAKSHI
 
-A student studying a textbook page alone has no way to check whether she understood it. Quizzes give a score; Sakshi
-names the **belief behind a wrong answer**, teaches the fix, steps down to the idea underneath, climbs back up only
-when she has it, and brings the belief back on later days. It runs on a **Raspberry Pi 5 with the network off**.
+**An offline tutor that diagnoses, not just scores**
 
-- **GURU-0.6B**, our quiz model: Qwen3-0.6B fine-tuned with LoRA, run with **ExecuTorch** (4-bit, XNNPACK) on the Arm CPU.
-- **Misconception graph**: 4,080 student misconceptions, 5,585 concepts, 120 root beliefs, 258 Class 6-10 topics.
-- **Learning engine**: Bayesian diagnosis, Bayesian Knowledge Tracing, a prerequisite-graph walk, FSRS-6 revision.
-- **Measured on the Pi 5**: summary + 3 questions in 57.9 s; 15.7 s per question while the child answers; 3.2 GB peak.
+*Misconception-aware quizzes, knowledge tracing and spaced revision on a Raspberry Pi 5, with the network off*
 
-## How it works
+**Winner · Namma AI Hackathon 2026 (Arm × IIIT Bangalore × NASSCOM) · Problem Statement 1: AI for Inclusive Education**
 
-```
-passage (camera + OCR, or a saved page)
-  -> summary            plain Qwen3-0.6B, one own-words sentence per third of the passage
-  -> key sentence       picked by code, never by the model
-  -> question + answer  GURU job Q
-  -> 3 wrong answers    GURU job W
-  -> checks             no giveaways, no duplicates, a second model must agree on the answer
-  -> misconception      each wrong option linked to the graph: embedding shortlist -> NLI rerank -> abstain if unsure
-  -> session            Bayes picks the belief, BKT tracks learning, walk down / climb up, FSRS schedules revision
-```
+Powered by **GURU-0.6B**: **G**rounded **U**nderstanding, **R**uns **U**nplugged
 
-Questions stream: the next one is written while the child answers the current one.
+</div>
 
-## Run it
+---
 
-**Raspberry Pi 5 (the device):** offline install with `pi/install.sh`, check with `pi/test.sh`, then
-`~/start_sakshi.sh` (screen + three buttons). Put passages in `~/passages` with `pi/send_passages.sh`.
-Checklist: `pi/CHECKLIST.md`.
+## Overview
 
-**Any machine, one program:**
-```bash
-python scripts/sakshi_app.py study passage.txt      # summary, streamed questions, adaptive session
-python scripts/sakshi_app.py review                 # a later day: re-check misconceptions, follow the graph
-```
+A student studying a textbook page alone has no way to check whether she understood it, and nobody to correct her
+when she did not. Quizzes give her a score. A score says *that* she is wrong, never *why*. If she believes "friction
+only acts on objects that are already moving", that belief follows her into every chapter built on it.
 
-**Models:** download from the [GURU-0.6B v1 release](https://github.com/ArushJain-697/namma-ai/releases/tag/guru-0.6b-v1)
-(ExecuTorch `.pte` for the Pi, plus every LoRA adapter we trained).
+Sakshi turns a 150-300 word passage into a short summary and a **diagnostic quiz** where every wrong option is a real
+student misconception from a graph of **4,080**. When she picks one, Sakshi works out which belief she holds, teaches the
+fix, steps down to the idea underneath, climbs back up only when she has really learned it, and brings the belief back
+on later days until it is gone. Everything runs on a **Raspberry Pi 5 with ExecuTorch, with no internet**.
 
-**Tests:** `python -m pytest -q --ignore=tests/test_resident.py`
+The system answers six questions, in order:
 
-## Repository
+1. What does this passage say, in words a Class 6-10 student can follow?
+2. Which sentences are worth asking about? Code decides, never the model.
+3. What would a student who misunderstood this *believe*? Each wrong option is written to be believable, then linked to a named misconception.
+4. Which belief does she hold, and how sure are we? Bayes over her answers, with "no specific belief" always a hypothesis.
+5. Has she learned the idea, or did she guess? Knowledge tracing separates learning from lucky guesses.
+6. When will she forget it, and what should she revise first? Spaced repetition predicts forgetting per concept.
 
-| Path | What |
+## Features
+
+| Capability | Description |
 |---|---|
-| `pi/` | Device: install and test scripts, screen UI (`pi/ui/sakshi.py`), passage upload |
-| `scripts/sakshi_engine.py`, `sakshi_app.py`, `backup_quiz.py` | The engine behind the screen, the one-program app, the quiz pipeline |
-| `src/sakshi/` | Library: model backends, misconception linking, retention engine (`retention/`) |
-| `train/`, `scripts/make_*_dataset.py` | Fine-tuning and dataset building |
-| `data/` | Misconception graph, training datasets, test passages |
-| `results/` | Evaluation outputs behind the numbers we quote |
-| `docs/` | `JUDGE_BRIEF.md` (every decision with evidence), `RETENTION_MATH.md`, `SUBMISSION.md`, `pitch/`, `history/` |
-| `research_notes/` | Research behind the design choices |
+| GURU-0.6B quiz model | Qwen3-0.6B fine-tuned with LoRA in two jobs: write question + answer, write 3 believable wrong answers |
+| On-device inference | ExecuTorch 1.5.1, 4-bit weights / 8-bit activations, XNNPACK on the Arm Cortex-A76 CPU |
+| Misconception graph | 4,080 misconceptions, 5,585 concepts, 120 root beliefs, 6,052 prerequisite links, 258 Class 6-10 topics |
+| Wrong answer → belief | Embedding shortlist, NLI cross-encoder rerank, abstains when unsure; right belief in the top 3 81% of the time |
+| Bayesian diagnosis | Picks the next question by expected information gain; names a belief only at 75% confidence |
+| Knowledge tracing | BKT per concept; the climb back up needs a right answer *and* P(learned) ≥ 0.6 |
+| Prerequisite walk | Wrong answer → fix → step down to the idea underneath → climb back up with real-life questions |
+| Spaced revision | FSRS-6 per concept; review days re-check old beliefs and follow the graph to related ones |
+| Quality checks | Code picks the key sentence, giveaway and duplicate checks, a second model must agree on the answer |
+| Streaming quiz | The next question is written while the child answers the current one |
+| The device | 220×176 screen, 3 buttons, camera + on-device OCR, passages loaded from storage |
+
+---
+
+## Problem statement (Namma AI 2026 · Problem 1)
+
+| Requirement | What Sakshi delivers |
+|---|---|
+| One learning barrier and learner group | Class 6-10 students in low-connectivity government schools, studying alone; only **67.5%** of Class 8 rural government-school students can read a Class 2 text (ASER 2024) |
+| An organiser passage, lightweight model, ExecuTorch, Raspberry Pi | GURU-0.6B, **ExecuTorch 1.5.1** on a **Raspberry Pi 5 (8 GB)**, Arm CPU only |
+| Summary + at least 3 quiz questions | Summary and 3+ multiple-choice questions, each answer shown with the passage sentence that proves it: **57.9 s** end to end |
+| No cloud inference; report time, model, size, memory | Network off; a run card after every run: **469 MB** model, **3.2 GB** peak for the whole engine |
+| Impact explanation with an example from the passage | A named misconception with its fix, e.g. *"Friction only acts on objects that are already moving"* found at 96% |
+
+---
+
+## Why this is different: four claims
+
+1. **A score is not a diagnosis.** Every wrong option is linked to a named belief, so a wrong answer says *what* the child believes. The hackathon brief asked for a quiz; Sakshi returns the reason behind each mistake.
+2. **The model never decides alone.** Code picks the sentence to ask about, rules reject giveaways, a second model must agree on the answer, and every answer shows the sentence that proves it. Fewer questions rather than a wrong one.
+3. **One answer never labels a child.** Bayes keeps "no specific belief" as a hypothesis, so one slip is not a diagnosis; a belief is named only at 75%, and a right answer that is still inconclusive earns one more question before a belief is cleared.
+4. **Learning is checked across days, not in one sitting.** Mastery today = learned × still remembered. A belief that is gone is followed through the graph to a related belief with the same root, to test whether the deeper habit is fixed.
+
+---
+
+## Architecture
+
+### End-to-end pipeline
+
+```mermaid
+flowchart TD
+    A[Passage: camera + OCR, or a saved page] --> B[Summary<br/>one own-words sentence per third]
+    A --> C[Pick key sentences<br/>code, not the model]
+    C --> D[GURU job Q<br/>question + answer]
+    D --> E[GURU job W<br/>3 believable wrong answers]
+    E --> F{Checks<br/>giveaways · duplicates · self-check}
+    F -- fail --> C
+    F -- pass --> G[Link each wrong option<br/>embedding shortlist → NLI rerank → abstain]
+    G --> H[Adaptive session<br/>Bayes · BKT · prerequisite walk]
+    H --> I[(Saved learner)]
+    I --> J[FSRS-6 schedule<br/>Revision · Mentor Study · Diagnostics]
+```
+
+### The session: step down, climb back up
+
+```mermaid
+flowchart TD
+    Q[Ask about concept C] -->|right| OK[Done: FSRS Good or Easy]
+    Q -->|wrong| DX[Bayes: which belief?<br/>ask the most informative question]
+    DX --> FIX[Show the belief and its fix]
+    FIX --> DOWN[Step down to C's prerequisites]
+    DOWN --> SOLID{Prerequisites solid?}
+    SOLID -- no --> BLOCK[Stop. Save C as blocked<br/>first in the next revision]
+    SOLID -- yes --> UP[Real-life question on C]
+    UP --> GATE{Right and P learned ≥ 0.6?}
+    GATE -- yes --> HARD[Climb on: FSRS Hard]
+    GATE -- no --> RETRY[Re-teach, one more try, then stop]
+```
+
+### The device
+
+```mermaid
+flowchart LR
+    subgraph UI [UI process: screen app]
+        S[ILI9225 screen<br/>landscape 220×176] --- BT[3 GPIO buttons]
+        CAM[USB camera 1080p] --> OCR[RapidOCR<br/>PP-OCRv5 mobile]
+    end
+    subgraph EN [Engine process: ExecuTorch]
+        G[GURU-0.6B .pte] --- Q3[Qwen3-0.6B .pte<br/>summary + self-check]
+        EM[bge-small .pte] --- NLI[NLI cross-encoder .pte]
+        R[Bayes · BKT · FSRS · graph]
+    end
+    UI <-->|JSON lines| EN
+    EN --> ST[(learner.json)]
+```
+
+---
+
+## Tech Stack
+
+| Area | Technology |
+|---|---|
+| On-device inference | ExecuTorch 1.5.1, XNNPACK, `TextLLMRunner`, custom SDPA + KV cache |
+| Models | Qwen3-0.6B → GURU-0.6B (LoRA), bge-small-en-v1.5 embedder, nli-deberta-v3-xsmall cross-encoder |
+| Training | PyTorch, PEFT LoRA, answer-only loss, gradient checkpointing (CUDA or Apple MPS) |
+| Export | optimum-executorch: `8da4w`, group size 32, 8-bit embeddings, `max_seq_len 1024` |
+| Learning engine | Bayes with expected information gain, Bayesian Knowledge Tracing, py-fsrs 6.3.2 (FSRS-6) |
+| Device | Raspberry Pi 5 (8 GB), ILI9225 SPI screen, gpiozero, OpenCV, RapidOCR on ONNX Runtime |
+| Language and testing | Python 3.12-3.13, pytest |
+
+---
+
+## Deep Dive: The Layers
+
+### Layer 1: the quiz model (GURU-0.6B)
+
+One model, two jobs, chosen by the system prompt. **Job Q**: a 3-sentence window + the key sentence → question + answer.
+**Job W**: + question + answer → 3 wrong answers a student would believe. Splitting the work keeps each call short
+for a 0.6B model, and the combined model beat two specialists at both jobs (held-out loss 1.217 vs 1.227, 1.429 vs 1.439).
+
+### Layer 2: wrong answer → misconception
+
+For a wrong option *x*, candidates are the misconceptions of the passage's topics (about 4,000 → 16-50). Retrieve by
+cosine similarity of unit embeddings, rerank with an NLI cross-encoder, and abstain below a similarity line:
+
+$$\text{score}(m) = \cos(e_x, e_m) + 0.3\,P_{\text{entail}}(x \Rightarrow m), \qquad \text{link}(x) = \begin{cases} \arg\max_m \text{score}(m) & \cos \ge 0.76 \\ \text{none} & \text{otherwise} \end{cases}$$
+
+An unlinked option is a plain wrong answer, never evidence for a belief: a weak link cannot invent a diagnosis.
+
+### Layer 3: Bayesian diagnosis
+
+Hypotheses for a concept are its misconceptions plus **NONE**. If she holds belief *m* and it is on the question, she
+picks its option with probability 0.70, the correct one 0.15. Posterior and next question:
+
+$$P(h \mid o) = \frac{P(o \mid h)\,P(h)}{\sum_{h'} P(o \mid h')\,P(h')}, \qquad \text{EIG}(q) = H(P) - \sum_o P(o)\,H\big(P(\cdot \mid o)\big)$$
+
+"Detected" at ≥ 0.75, "possible" at ≥ 0.50.
+
+### Layer 4: Bayesian Knowledge Tracing
+
+With slip *s* = 0.10, guess *g* = 0.25 (recall) or 0.15 (real-life question) and learning rate *T* = 0.2:
+
+$$P(L \mid \checkmark) = \frac{P(L)(1-s)}{P(L)(1-s) + (1-P(L))\,g}, \qquad P(L \mid \times) = \frac{P(L)\,s}{P(L)\,s + (1-P(L))(1-g)}, \qquad P(L) \leftarrow P(L) + (1-P(L))\,T$$
+
+One wrong answer: 0.30 → 0.24. One right real-life answer: 0.24 → 0.72, which clears the climb gate of 0.6
+(classic mastery is 0.95; 0.6 means "ready to build on").
+
+### Layer 5: forgetting (FSRS-6)
+
+Per concept, stability *S* and difficulty *D*; recall after *t* days, with *F* chosen so that *R*(*S*, *S*) = 0.9:
+
+$$R(t, S) = \left(1 + F\,\frac{t}{S}\right)^{-w_{20}}, \qquad F = 0.9^{-1/w_{20}} - 1$$
+
+Knowledge tracing and memory join on review days, and revision is ordered by risk:
+
+$$P(L)_{\text{today}} = P(L)_{\text{saved}} \cdot R(t, S), \qquad \text{priority}(C) = 1 - P(L)_C \cdot R_C(t)$$
+
+### Layer 6: review days
+
+Each belief she held is re-checked with a **new** question (two hypotheses, holds / does not, same likelihoods). Still
+held → the fix again and an earlier review. Cleared → follow the graph to a belief it `causes`, else the nearest belief
+with the same root belief in another topic, to test whether the deeper habit is fixed.
+
+---
+
+## Benchmarks
+
+### On the Raspberry Pi 5 (8 GB, Cortex-A76, no network)
+
+| Measurement | Value |
+|---|---|
+| Prefill / decode | **122 / 12.1 tokens/s** |
+| Summary + 3 questions (terminal run) | **57.9 s** = load 3.0 + summary 14.2 + quiz 40.7 |
+| On the device, per question (written while the child answers) | **15.7 s** |
+| Summary on the device (one sentence per third) | **9.2 s** |
+| Peak memory: GURU alone / + summary model / whole engine | **1.48 / 2.7 / 3.2 GB** |
+| Model file (4-bit) | **469 MB** |
+
+### What we optimised, measured before and after
+
+| Change | Before | After |
+|---|---|---|
+| Stop each call when the answer is complete (the model never wrote its end token) | 147 s | **86 s**, identical output |
+| Context sized to the job: `max_seq_len` 2,048 → 1,024 | 2.49 GB | **1.67 GB**, same answers 8/8 |
+| Second wrong-answer run removed (identical in 38/38 calls) | 6.7 s/question | **4.6 s/question** (Mac) |
+| Summary: whole passage → one own-words sentence per third | 86 words, 44% copied | **44 words, 26% copied** |
+| Camera capture mode | 640×360 | **1920×1080** |
+
+### Question quality (40 frozen test passages, blind-graded)
+
+| Version | Result |
+|---|---|
+| Plain Qwen3-0.6B, best of 4 prompts | **19%** sensible, answer key right 73% |
+| Version 1: LoRA on SciQ + RACE (4,300 questions) | **30%** sensible, answer key right 82% |
+| Two-job GURU vs single-call | blind read **8/12** vs 3/12 good; answer is the longest option **6%** vs 15%; why/how questions **49%** vs 39% |
+
+### Quantization cost (held-out loss, Q job / W job)
+
+| Precision | Loss |
+|---|---|
+| bf16 | 1.217 / 1.429 |
+| 8-bit (`8da8w`, 720 MB) | 1.223 / 1.436 (near-lossless) |
+| **4-bit (`8da4w`, 469 MB, shipped)** | 1.345 / 1.564 |
+
+### Misconception linking (3,647 labelled wrong-option → misconception pairs)
+
+| Metric | Value |
+|---|---|
+| Right belief ranked first / in the top 3 | **53% / 81%** |
+| Precision answering only the most confident 75% / 25% | 57% / 64% |
+| Right topic for test passages | **39 / 40** |
+| Off-syllabus passages caught | **12 / 12**, 0 false alarms |
+
+### Learning engine, simulated over days 0, 1, 3 and 7
+
+| Behaviour | Result |
+|---|---|
+| A student who learns from feedback | Climbs all the way up on day 0 (P(learned) 0.73) |
+| Beliefs a student still holds, on review days | Re-detected at **90-94%** |
+| A belief that only looked held from one guess | 55% → **36%**, cleared next day |
+| A blocked concept | Climbs back up on day 7, once its base is solid |
+
+---
+
+## Positioning against prior work
+
+- **Diagnostic questions** follow the idea behind Eedi's diagnostic questions: every wrong option should reveal a specific misconception. Sakshi writes those questions for any passage with a 0.6B model, offline, across all subjects, instead of using a fixed hand-written bank.
+- **Adaptive, misconception-driven practice works:** an adaptive tutor raised maths scores by 0.37 SD in 4.5 months in a Delhi RCT (Muralidharan, Singh, Ganimian 2019), and refutation texts ("you might think X; actually Y") correct misconceptions with g ≈ 0.41 (Tippett 2010).
+- **Model explains, code decides** is credited to Toddle AI; plain-language summary prompts that keep numbers and names to LENTERA (both MIT, ideas only).
+
+---
+
+## The device
+
+Study (a photo of a page, a saved page, or Mentor Study) · Revision (mastery bars, what is due) · Diagnostics (where
+she is stuck, what to do next). Every screen reads the real engine and the saved learner. Load passages before an event:
+
+```bash
+pi/send_passages.sh --paste judge1        # the clipboard becomes ~/passages/judge1.txt on the Pi
+~/start_sakshi.sh                         # on the Pi: screen + buttons
+```
+
+---
+
+## Project Structure
+
+```
+pi/                 device: offline installer, tests, screen UI (pi/ui/sakshi.py), passage upload
+scripts/            sakshi_engine.py (engine behind the screen), sakshi_app.py (one-program app),
+                    backup_quiz.py (quiz pipeline), dataset builders, evaluation
+src/sakshi/         backends (ExecuTorch), misconception library and linking, retention/ (Bayes, BKT, FSRS, sessions)
+train/              LoRA fine-tuning and the export recipe
+data/               misconception graph, training datasets, frozen test passages
+results/            evaluation outputs behind every number above
+docs/               JUDGE_BRIEF (every decision with evidence), RETENTION_MATH, SUBMISSION, pitch/, history/
+research_notes/     research behind the design choices
+tests/              pytest suite
+```
+
+---
+
+## Installation
+
+```bash
+git clone https://github.com/ArushJain-697/namma-ai.git && cd namma-ai
+python -m venv .venv && .venv/bin/pip install executorch==1.5.1 torch numpy tokenizers fsrs pytest
+```
+
+Models: download from the [GURU-0.6B v1 release](https://github.com/ArushJain-697/namma-ai/releases/tag/guru-0.6b-v1)
+(the ExecuTorch `.pte` for the Pi and every LoRA adapter we trained) into `models/`. On a Raspberry Pi, use the offline
+installer `pi/install.sh` and the checklist `pi/CHECKLIST.md`.
+
+```bash
+python scripts/sakshi_app.py study passage.txt     # summary, streamed questions, adaptive session
+python scripts/sakshi_app.py review                # a later day: re-check misconceptions, follow the graph
+```
+
+---
+
+## Testing
+
+```bash
+python -m pytest -q --ignore=tests/test_resident.py     # 214 tests
+python -m pytest -q tests/test_retention.py             # Bayes, BKT, prerequisite walk, FSRS scheduling
+python -m pytest -q tests/test_review.py                # climb gate, blocked concepts, review days
+```
+
+`test_resident.py` needs Linux namespaces (`unshare`) and runs on the Pi.
+
+---
+
+## Glossary
+
+| Term | Meaning |
+|---|---|
+| Diagnostic question | A multiple-choice question whose wrong options each reveal a specific misconception |
+| Misconception | A wrong belief students commonly hold, with why they hold it and its fix |
+| Root belief | A deeper habit of thinking behind many misconceptions, e.g. "a rule that works in one case works everywhere" |
+| Two-job model | One fine-tuned model whose system prompt selects the job: write the question, or write the wrong answers |
+| EIG | Expected information gain: how much an answer is expected to shrink uncertainty about her belief |
+| BKT | Bayesian Knowledge Tracing: the probability she has learned a concept, separating learning from guesses and slips |
+| FSRS | Free Spaced Repetition Scheduler: predicts recall over time and schedules revision |
+| Climb gate | The rule that she moves back up the prerequisite graph only when right *and* P(learned) ≥ 0.6 |
+| Abstain | Leaving a wrong option unlinked when no misconception matches confidently |
+| 8da4w | 8-bit dynamic activations, 4-bit weights: the ExecuTorch quantization recipe used for GURU |
+| Self-check | A second model answers each question with shuffled options; disagreement drops the question |
+
+---
 
 ## What we do not claim
 
-No students have used it yet, so there is no learning-gain claim. The misconceptions were drafted by AI from research
-on student errors and are not yet teacher-reviewed. A 0.6B model writes imperfect questions; the checks drop the
-worst. English only for now. Details: `docs/JUDGE_BRIEF.md`.
+No students have used it yet, so there is no learning-gain claim; that needs a school pilot. The misconceptions were
+drafted by AI from research on student errors and are not yet teacher-reviewed. A 0.6B model writes imperfect
+questions (about 40-55% fully sound in a strict read); the checks drop the worst. The right belief is ranked first
+about half the time. Bayes, BKT and FSRS settings are standard defaults, not yet fitted to children. English only for now.
+
+---
+
+## Documentation
+
+- [`docs/JUDGE_BRIEF.md`](docs/JUDGE_BRIEF.md): every design decision, with the measurement behind it
+- [`docs/RETENTION_MATH.md`](docs/RETENTION_MATH.md): the learning engine's maths in full
+- [`docs/SUBMISSION.md`](docs/SUBMISSION.md): the five mandatory deliverables
+- [`docs/pitch/`](docs/pitch/): slide facts and the pitch deck
+- [`docs/history/`](docs/history/): the original design plan, red-team log and proposal
+- [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md): models, datasets and licences
+
+---
+
+<div align="center">
+
+**Sakshi · GURU-0.6B** · Namma AI Hackathon 2026 winner · offline on Arm
+
+</div>
