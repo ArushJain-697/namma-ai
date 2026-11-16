@@ -34,6 +34,8 @@ The system answers six questions, in order:
 5. Has she learned the idea, or did she guess? Knowledge tracing separates learning from lucky guesses.
 6. When will she forget it, and what should she revise first? Spaced repetition predicts forgetting per concept.
 
+**How we built it:** research before building, measure instead of guessing, and say the weak spots first. Every number in this README comes from a script run, and every design choice is recorded with its evidence in [`docs/JUDGE_BRIEF.md`](docs/JUDGE_BRIEF.md). One example of the research rule: we tested small fact-checking models on 10 questions with known wrong answer keys. They caught only 0-3 of 10, so that check was never shipped.
+
 ## Features
 
 | Capability | Description |
@@ -49,6 +51,8 @@ The system answers six questions, in order:
 | Quality checks | Code picks the key sentence, giveaway and duplicate checks, a second model must agree on the answer |
 | Streaming quiz | The next question is written while the child answers the current one |
 | The device | 220×176 screen, 3 buttons, camera + on-device OCR, passages loaded from storage |
+
+> **Decision:** Qwen3-0.6B, chosen by the time budget: about one minute for a summary and a quiz on the Pi. Qwen3-1.7B carries ~3x the weights, so ~3x slower writing, and was not clearly better on our data (held-out loss 1.273 vs 1.256). [Why →](docs/JUDGE_BRIEF.md#1-model-qwen3-06b-4-bit-executorch-xnnpack-on-the-arm-cpu)
 
 ---
 
@@ -68,6 +72,8 @@ The system answers six questions, in order:
 
 1. **A score is not a diagnosis.** Every wrong option is linked to a named belief, so a wrong answer says *what* the child believes. The hackathon brief asked for a quiz; Sakshi returns the reason behind each mistake.
 2. **The model never decides alone.** Code picks the sentence to ask about, rules reject giveaways, a second model must agree on the answer, and every answer shows the sentence that proves it. Fewer questions rather than a wrong one.
+
+> **Decision:** we tested our own pitch claim and dropped it. A bot that just picks the option sounding most like the passage scored 66% on our best prompt-only version (chance is 25%), so "our quiz beats word-spotting" was false for it. Measurement decides what we say. [Why →](docs/JUDGE_BRIEF.md#6-question-quality-the-hardest-problem-attacked-with-measurement)
 3. **One answer never labels a child.** Bayes keeps "no specific belief" as a hypothesis, so one slip is not a diagnosis; a belief is named only at 75%, and a right answer that is still inconclusive earns one more question before a belief is cleared.
 4. **Learning is checked across days, not in one sitting.** Mastery today = learned × still remembered. A belief that is gone is followed through the graph to a related belief with the same root, to test whether the deeper habit is fixed.
 
@@ -90,6 +96,8 @@ flowchart TD
     H --> I[(Saved learner)]
     I --> J[FSRS-6 schedule<br/>Revision · Mentor Study · Diagnostics]
 ```
+
+> **Decision:** one model call per question, never "all questions in one call": small models break long structured outputs. The model put the key in option A ~80% of the time, so code shuffles options; 3-option questions are kept because three options test as well as four (Rodriguez 2005, 80 years of research). [Why →](docs/JUDGE_BRIEF.md#4-time-budget-decided-from-token-counts)
 
 ### The session: step down, climb back up
 
@@ -157,6 +165,8 @@ $$\text{score}(m) = \cos(e_x, e_m) + 0.3\,P_{\text{entail}}(x \Rightarrow m), \q
 
 An unlinked option is a plain wrong answer, never evidence for a belief: a weak link cannot invent a diagnosis.
 
+> **Decision:** retrieve-and-rerank, the standard two-stage search design, scaled down to run offline on a Pi and measured on our own ~3,600 labelled pairs. The reranker adds only 1 point (46% to 47%); we kept it because it is cheap, and we report the small gain as it is. [Why →](docs/JUDGE_BRIEF.md#7-linking-each-wrong-option-to-a-misconception-retrieve-and-rerank-run-on-a-pi)
+
 ### Layer 3: Bayesian diagnosis
 
 Hypotheses for a concept are its misconceptions plus **NONE**. If she holds belief *m* and it is on the question, she
@@ -165,6 +175,8 @@ picks its option with probability 0.70, the correct one 0.15. Posterior and next
 $$P(h \mid o) = \frac{P(o \mid h)\,P(h)}{\sum_{h'} P(o \mid h')\,P(h')}, \qquad \text{EIG}(q) = H(P) - \sum_o P(o)\,H\big(P(\cdot \mid o)\big)$$
 
 "Detected" at ≥ 0.75, "possible" at ≥ 0.50.
+
+> **Decision:** "no specific belief" is always a hypothesis. Without it, any random wrong answer would look like proof of some misconception, and one slip would label a child. [Why →](docs/JUDGE_BRIEF.md#9-the-retention-engine-every-design-decision-and-why-14-nov)
 
 ### Layer 4: Bayesian Knowledge Tracing
 
@@ -175,6 +187,8 @@ $$P(L \mid \checkmark) = \frac{P(L)(1-s)}{P(L)(1-s) + (1-P(L))\,g}, \qquad P(L \
 One wrong answer: 0.30 → 0.24. One right real-life answer: 0.24 → 0.72, which clears the climb gate of 0.6
 (classic mastery is 0.95; 0.6 means "ready to build on").
 
+> **Decision:** BKT, not deep knowledge tracing. Deep models perform near chance (AUC ~0.5) for brand-new students and are too heavy for a Pi; BKT works from the first answer and costs microseconds per update. [Why →](docs/JUDGE_BRIEF.md#8-learner-model-chosen-for-zero-data-and-a-small-cpu)
+
 ### Layer 5: forgetting (FSRS-6)
 
 Per concept, stability *S* and difficulty *D*; recall after *t* days, with *F* chosen so that *R*(*S*, *S*) = 0.9:
@@ -184,6 +198,8 @@ $$R(t, S) = \left(1 + F\,\frac{t}{S}\right)^{-w_{20}}, \qquad F = 0.9^{-1/w_{20}
 Knowledge tracing and memory join on review days, and revision is ordered by risk:
 
 $$P(L)_{\text{today}} = P(L)_{\text{saved}} \cdot R(t, S), \qquad \text{priority}(C) = 1 - P(L)_C \cdot R_C(t)$$
+
+> **Decision:** FSRS with default settings, said openly: a 7-day-stable memory is still ~77% at day 30, so we never draw exaggerated forgetting curves. The settings are not yet fitted to children. [Why →](docs/JUDGE_BRIEF.md#8-learner-model-chosen-for-zero-data-and-a-small-cpu)
 
 ### Layer 6: review days
 
@@ -216,6 +232,8 @@ with the same root belief in another topic, to test whether the deeper habit is 
 | Summary: whole passage → one own-words sentence per third | 86 words, 44% copied | **44 words, 26% copied** |
 | Camera capture mode | 640×360 | **1920×1080** |
 
+> **Decision:** the context limit was sized to the job. Also measured and rejected: 4-bit embeddings (saved only 74 MB but changed all 8 test answers) and a larger quantization group (no change). [Why →](docs/JUDGE_BRIEF.md#3-memory-cut-by-a-third-with-zero-quality-change)
+
 ### Question quality (40 frozen test passages, blind-graded)
 
 | Version | Result |
@@ -223,6 +241,8 @@ with the same root belief in another topic, to test whether the deeper habit is 
 | Plain Qwen3-0.6B, best of 4 prompts | **19%** sensible, answer key right 73% |
 | Version 1: LoRA on SciQ + RACE (4,300 questions) | **30%** sensible, answer key right 82% |
 | Two-job GURU vs single-call | blind read **8/12** vs 3/12 good; answer is the longest option **6%** vs 15%; why/how questions **49%** vs 39% |
+
+> **Decision:** the teacher data was graded before training: 2,773 questions written for 401 syllabus passages, scored by a separate grader against our rubric, and only 1,039 kept (score 4-5 and every hard rule). Zero overlap with the 40 test passages, checked by 8-word runs. [Why →](docs/JUDGE_BRIEF.md#6-question-quality-the-hardest-problem-attacked-with-measurement)
 
 ### Quantization cost (held-out loss, Q job / W job)
 
@@ -232,6 +252,8 @@ with the same root belief in another topic, to test whether the deeper habit is 
 | 8-bit (`8da8w`, 720 MB) | 1.223 / 1.436 (near-lossless) |
 | **4-bit (`8da4w`, 469 MB, shipped)** | 1.345 / 1.564 |
 
+> **Decision:** two exports, picked automatically. The fast kernels need the Arm dot-product instructions; on an Arduino UNO Q (Cortex-A53) they crashed with "Illegal instruction", so the installer reads `/proc/cpuinfo` and picks the portable build. Rehearsed there fully offline: install in 4 min 10 s, network off. [Why →](docs/JUDGE_BRIEF.md#2-two-exports-chosen-automatically-by-the-cpu)
+
 ### Misconception linking (3,647 labelled wrong-option → misconception pairs)
 
 | Metric | Value |
@@ -240,6 +262,8 @@ with the same root belief in another topic, to test whether the deeper habit is 
 | Precision answering only the most confident 75% / 25% | 57% / 64% |
 | Right topic for test passages | **39 / 40** |
 | Off-syllabus passages caught | **12 / 12**, 0 false alarms |
+
+> **Decision:** we caught our own data bug. A graph re-link run during a usage limit silently dropped links (1,955 to 843) and erased root-belief names. Re-linking is now incremental and refuses to write a worse file. [Why →](docs/JUDGE_BRIEF.md#5-the-misconception-graph-built-before-the-event-used-offline)
 
 ### Learning engine, simulated over days 0, 1, 3 and 7
 
