@@ -410,10 +410,7 @@ The code is released under the [MIT licence](LICENSE). The trained model weights
 
 <img src="docs/images/team.jpg" alt="The Sakshi team at IIIT Bangalore after winning the Namma AI Hackathon 2026" width="720">
 
-*At IIIT Bangalore on 14 Nov 2026, the night we won the Namma AI Hackathon.*
+**Trishanu Mazumder · Vishnu Suhas Chinta · Arush Jain**
 
-**Arush Jain · Trishanu Mazumder · Vishnu Suhas Chinta**
-
-**Sakshi · GURU-0.6B** · Namma AI Hackathon 2026 winner · offline on Arm
 
 </div>
