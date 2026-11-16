@@ -2,7 +2,7 @@
 # Grow the misconception graph all day: propose new topics -> generate -> deepen -> assemble -> checks, forever.
 #   bash scripts/grow_graph.sh            (stop with Ctrl-C; log: results/grow_graph.log)
 # Safe to stop and restart at any point: every step skips finished work. Sonnet (Claude Code CLI) writes;
-# Gemini is the backup when Sonnet hits its usage limit. Runs on its own git branch: see TEAMMATE_TODO.md.
+# Gemini is the backup when Sonnet hits its usage limit. Runs on its own git branch.
 set -u
 cd "$(dirname "$0")/.."
 LOG=results/grow_graph.log

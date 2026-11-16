@@ -2,7 +2,7 @@
 
 *Rewritten 13 Nov 2026 for the current design (diagnostic quiz from the misconception graph). The 4 Nov version
 (fill-in-the-blank fallback, "witness" framing) is retired. Not yet rehearsed with a stopwatch or on a Pi 5. Pitch
-facts and Q&A: `docs/PITCH.md`.*
+facts and Q&A: `docs/pitch/SAKSHI_SLIDES_FACTS.md`.*
 
 ## Which quiz command on the day (decide at the venue, before judging)
 
@@ -34,13 +34,13 @@ run card (20 s).
 ## Say it before they ask
 - Name anything saved or prepared ("this is a saved run from 10 minutes ago").
 - The Pi numbers are from today; earlier numbers are from a Mac and an Arduino UNO Q.
-- Do NOT say the quiz beats word-spotting (not supported by our own test, see `docs/PITCH.md` section 3).
+- Do NOT say the quiz beats word-spotting (not supported by our own test, (not supported by our own test)).
 
 ## Failure runbook
 
 | What breaks | Do this | Say |
 |---|---|---|
-| "Illegal instruction" on load | `.kit_model` -> portable model (`pi-kit/CHECKLIST.md`) | "Older chip path; slower but same answers." |
+| "Illegal instruction" on load | `.kit_model` -> portable model (`pi/CHECKLIST.md`) | "Older chip path; slower but same answers." |
 | Model won't load at all | Show the saved run from rehearsal (`results/pi_run.json` + its printout) | "The model didn't load; this is a saved run from earlier today." |
 | Run slower than the slot | Start it before the talk; if still running, show the saved run and the live elapsed time | |
 | Fewer than 3 questions | Run the backup command on the same passage, or show the saved run | "The checks dropped questions rather than show bad ones." |

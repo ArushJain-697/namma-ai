@@ -1,3 +1,3 @@
-"""Sakshi: an offline, witness-checked study aid. See MASTER_BIBLE.md."""
+"""Sakshi: an offline diagnostic tutor. See README.md."""
 
 __version__ = "0.1.0"

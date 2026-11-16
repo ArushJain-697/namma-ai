@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""LoRA fine-tune of Qwen3-0.6B on an NVIDIA GPU (CUDA) or an Apple-silicon Mac (MPS), no trl needed. Same recipe as finetune_qwen3_lora.py
+"""LoRA fine-tune of Qwen3-0.6B on an NVIDIA GPU (CUDA) or an Apple-silicon Mac (MPS), no trl needed. Recipe:
 (LoRA on all linear layers, cosine lr 2e-4, loss on the answer only) and the SAME prompt text the device uses
 (sakshi.backends.base.chat_prompt, Qwen3 format with thinking off). Merges the adapter at the end so the result
 exports to ExecuTorch exactly like the base model.

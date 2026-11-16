@@ -9,7 +9,7 @@ exec > >(tee "$LOG") 2>&1
 VENV="$HOME/sakshi-venv"
 REPO="$HOME/namma-ai"
 ok()   { echo "  OK   $*"; }
-bad()  { echo "  FAIL $*"; echo; echo ">>> See CHECKLIST.md, section for this step. Log: $LOG"; exit 1; }
+bad()  { echo "  FAIL $*"; echo; echo ">>> See pi/CHECKLIST.md. Log: $LOG"; exit 1; }
 step() { echo; echo "== $*"; }
 
 step "1/7 What machine is this?"

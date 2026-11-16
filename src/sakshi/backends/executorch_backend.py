@@ -114,7 +114,7 @@ def _default_factory(model_path: str, tokenizer_path: str, data_path: str | None
     except Exception as e:  # missing torch, missing wheel, or built without the LLM runner
         raise ImportError(
             f"cannot import the ExecuTorch LLM runner ({type(e).__name__}: {e}). "
-            "It needs `pip install executorch==1.5.1 torch numpy tqdm typing_extensions`; see scripts/pi_setup.sh") from e
+            "It needs `pip install executorch==1.5.1 torch numpy tqdm typing_extensions`; see pi/install.sh") from e
     try:
         return TextLLMRunner(model_path, tokenizer_path, data_path)
     except RuntimeError as e:

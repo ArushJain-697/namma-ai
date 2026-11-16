@@ -2,7 +2,7 @@
 
 *Namma AI Hackathon (Arm + IIIT Bangalore + NASSCOM), Problem Statement 1: AI for Inclusive Education.
 Compiled 14 Nov 2026 from `docs/JUDGE_BRIEF.md` (main source), `docs/SUBMISSION.md`, `docs/RETENTION_MATH.md`,
-`docs/gpu_session/*`, `docs/MISCONCEPTION_MAPPING_PLAN.md`, `docs/PITCH.md` and the build sessions.
+`docs/gpu_session/*`, `docs/MISCONCEPTION_MAPPING_PLAN.md`, `docs/history/PITCH_pre_event.md` and the build sessions.
 Every number below came from a script run. Where a number is a Mac estimate, a GPU simulation or not yet measured on
 the Pi, it says so. Slide rule from the team: no competition or company names on slides (see the internal Q&A note
 at the end).*

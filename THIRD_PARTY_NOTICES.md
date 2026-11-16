@@ -1,25 +1,29 @@
-# Third-party notices and provenance
+# Third-party notices
 
-*As of 4 Nov 2026. Read each licence in full before shipping; this file records what we use and what we have and have not verified.*
+## Code
+All source under `src/`, `scripts/`, `pi/`, `train/`, `tests/` and `web/` was written for this project. No third-party
+source code is copied into it. Ideas credited: LENTERA (MIT) for plain-language summary prompts that keep numbers and
+names; Toddle AI (MIT) for code computing facts while the model only explains them; Eedi's diagnostic questions for
+the idea that every wrong option should reveal a misconception.
 
-## Code in this repository
-All source under `src/`, `scripts/`, `tests/` and `web/` was written for this project. **No third-party source code has been copied into it.**
-
-## Ideas we credit (no code or text copied)
-- **LENTERA** (MIT, Copyright 2025 Fengkie Junis): the idea of small, plain-language summarisation prompts that keep numbers and names. Our prompts are our own wording. If wording is ever copied closely, keep its MIT notice.
-- **Toddle AI** (MIT): the principle of code computing facts and the model only explaining them.
-- Prior work on knowledge conflict / context faithfulness (Xie et al. 2023, arXiv 2305.13300, and related), for the counterfactual-passage idea. **Read from search snippets only, not yet read in full.**
-
-## Runtime dependencies (installed by the user, not vendored)
-| Package | Used for | Licence |
+## Models
+| Model | Use | Licence |
 |---|---|---|
-| `executorch` 1.5.1 | the on-device runner | BSD-3 (per its package metadata; confirm in the wheel's LICENSE) |
-| `torch`, `numpy`, `tqdm`, `typing_extensions` | imported by the ExecuTorch runner | see each package's own licence file |
-| `pytest` (development only) | tests | MIT |
-| `qrcode` (optional, development only) | printing QR cards | see package |
+| Qwen3-0.6B (Qwen team) | base of GURU-0.6B; summary and self-check | Apache 2.0 |
+| BAAI/bge-small-en-v1.5 | misconception shortlist (embedding) | MIT |
+| cross-encoder/nli-deberta-v3-xsmall | misconception rerank (NLI) | Apache 2.0 |
+| RapidOCR, PP-OCRv5 mobile models | reading a photographed page | Apache 2.0 |
 
-## Model weights
-- **Llama 3.2 1B Instruct** (community SpinQuant `.pte`): governed by **Meta's Llama 3.2 Community Licence**, which is not MIT or BSD. **UNVERIFIED: we have not read Meta's licence page.** It likely requires a "Built with Llama" notice and has an acceptable-use policy. Do not redistribute the `.pte` from this repository; link to it. Build map ticket 8h.
+## Training data
+| Dataset | Licence | Note |
+|---|---|---|
+| SciQ (allenai/sciq) | CC BY-NC 3.0 | non-commercial |
+| RACE (middle school) | research use | non-commercial research |
+| Teacher dataset (`data/dataset_v2`) | ours | written by a large model for our passages, graded against our rubric |
 
-## Test and sample data
-`data/passages/rust_ordinary.txt` and everything under `data/counterfactual/` are original text written for this project. NCERT text is **not** used.
+Because of SciQ and RACE, the GURU-0.6B weights are for research and education, not commercial use.
+
+## Runtime libraries
+ExecuTorch 1.5.1 (BSD-3), PyTorch (BSD-3), py-fsrs (MIT), sentence-transformers (Apache 2.0), tokenizers (Apache 2.0),
+NumPy (BSD-3), Pillow (MIT-CMU), OpenCV (Apache 2.0), gpiozero (BSD-3), pytest (MIT). Check each package's own
+licence file before redistributing.

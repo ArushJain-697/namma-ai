@@ -11,7 +11,6 @@ import pytest
 from conftest import ROOT, sample_passage
 from sakshi.backends.stub import StubBackend
 from sakshi.pipeline import prepare
-from sakshi.qr import wifi_string
 from sakshi.serve import RoomCounts, WEB_DIR, build_quiz_payload, make_server
 
 # Only three numbers in the passage, so a number answer has too few wrong options and becomes a typed (short-answer) item.
@@ -80,20 +79,6 @@ def test_page_has_no_external_resources():
     assert not re.search(r"""(src|href)\s*=\s*["']?(https?:)?//""", html)
     assert "cdn" not in html.lower() and "googleapis" not in html and "<link" not in html
     assert "fetch(\"/quiz.json\"" in html and "innerHTML" not in html  # no HTML injection from quiz text
-
-
-def test_wifi_string_escapes_special_characters():
-    assert wifi_string("Sakshi", "pass1234") == "WIFI:T:WPA;S:Sakshi;P:pass1234;;"
-    assert wifi_string("a;b", 'p:"w,d\\') == r'WIFI:T:WPA;S:a\;b;P:p\:\"w\,d\\;;'  # ; : , " and backslash are escaped
-
-
-def test_qr_script_writes_two_svgs(tmp_path):
-    pytest.importorskip("qrcode")
-    import sys
-    r = subprocess.run([sys.executable, "scripts/make_qr_cards.py", "--ssid", "Sakshi", "--password", "pass1234", "--out", str(tmp_path)],
-                       cwd=ROOT, capture_output=True, text=True)
-    assert r.returncode == 0 and (tmp_path / "join_wifi.svg").read_text().startswith(("<?xml", "<svg")), r.stderr
-    assert "WIFI:T:WPA;S:Sakshi;P:pass1234;;" in r.stdout
 
 
 def have_browser():

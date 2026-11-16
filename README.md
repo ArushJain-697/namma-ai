@@ -1,46 +1,63 @@
-# Sakshi: an offline study aid that answers only from the passage
+# Sakshi: an offline tutor that diagnoses, not just scores
 
-*Namma AI Hackathon, Problem 1 (AI for Inclusive Education). Draft, 4 Nov 2026.*
+**Winner, Namma AI Hackathon 2026** (Arm × IIIT Bangalore × NASSCOM), Problem Statement 1: AI for Inclusive Education.
 
-A student gives Sakshi a 150-300 word passage and gets a short, simple summary and a self-check quiz. **The model never
-writes the answer key**: code picks each answer from the passage, so every answer shows the exact sentence that holds it
-(the "witness"). No witness, no question; no witness, no summary sentence. It is designed to run on a Raspberry Pi with no
-internet, through ExecuTorch.
+A student studying a textbook page alone has no way to check whether she understood it. Quizzes give a score; Sakshi
+names the **belief behind a wrong answer**, teaches the fix, steps down to the idea underneath, climbs back up only
+when she has it, and brings the belief back on later days. It runs on a **Raspberry Pi 5 with the network off**.
 
-## Honest status
-Everything here is tested **against a stub model** in a cloud container. **Nothing has run on a real model or a Raspberry
-Pi yet**, so no speed, memory or quality number exists. See `HANDOFF.md` for what is verified and `BUILD_MAP.md` for the
-tickets. The simple "does the answer appear in the passage?" check also catches our planted-fact test cases (our own tests
-say so); the design's value is that the key cannot be invented at all.
+- **GURU-0.6B**, our quiz model: Qwen3-0.6B fine-tuned with LoRA, run with **ExecuTorch** (4-bit, XNNPACK) on the Arm CPU.
+- **Misconception graph**: 4,080 student misconceptions, 5,585 concepts, 120 root beliefs, 258 Class 6-10 topics.
+- **Learning engine**: Bayesian diagnosis, Bayesian Knowledge Tracing, a prerequisite-graph walk, FSRS-6 revision.
+- **Measured on the Pi 5**: summary + 3 questions in 57.9 s; 15.7 s per question while the child answers; 3.2 GB peak.
 
-## Try it (no model needed)
-```bash
-python3 -m venv .venv && .venv/bin/pip install pytest
-PYTHON=.venv/bin/python bash scripts/selfcheck.sh      # tests + a stub demo
-PYTHONPATH=src python3 -m sakshi prepare data/passages/rust_ordinary.txt --out run.json
-PYTHONPATH=src python3 -m sakshi report run.json        # tiers, witnesses, reasons, run card
-PYTHONPATH=src python3 -m sakshi study run.json         # the student quiz
+## How it works
+
 ```
-On the Pi: `bash scripts/pi_setup.sh`, then `scripts/pi_smoke.py` (see `HANDOFF.md`).
+passage (camera + OCR, or a saved page)
+  -> summary            plain Qwen3-0.6B, one own-words sentence per third of the passage
+  -> key sentence       picked by code, never by the model
+  -> question + answer  GURU job Q
+  -> 3 wrong answers    GURU job W
+  -> checks             no giveaways, no duplicates, a second model must agree on the answer
+  -> misconception      each wrong option linked to the graph: embedding shortlist -> NLI rerank -> abstain if unsure
+  -> session            Bayes picks the belief, BKT tracks learning, walk down / climb up, FSRS schedules revision
+```
 
-## Commands
-| Command | What it does |
+Questions stream: the next one is written while the child answers the current one.
+
+## Run it
+
+**Raspberry Pi 5 (the device):** offline install with `pi/install.sh`, check with `pi/test.sh`, then
+`~/start_sakshi.sh` (screen + three buttons). Put passages in `~/passages` with `pi/send_passages.sh`.
+Checklist: `pi/CHECKLIST.md`.
+
+**Any machine, one program:**
+```bash
+python scripts/sakshi_app.py study passage.txt      # summary, streamed questions, adaptive session
+python scripts/sakshi_app.py review                 # a later day: re-check misconceptions, follow the graph
+```
+
+**Models:** download from the [GURU-0.6B v1 release](https://github.com/ArushJain-697/namma-ai/releases/tag/guru-0.6b-v1)
+(ExecuTorch `.pte` for the Pi, plus every LoRA adapter we trained).
+
+**Tests:** `python -m pytest -q --ignore=tests/test_resident.py`
+
+## Repository
+
+| Path | What |
 |---|---|
-| `sakshi check PASSAGE` | is the passage usable (150-300 words, 10% margin)? |
-| `sakshi prepare PASSAGE --out RUN [--backend stub\|executorch\|resident ...]` | summary, questions, tiers, run card |
-| `sakshi study RUN` | student quiz: questions first, the witness after every answer, then a second question from any missed sentence |
-| `sakshi report RUN` | for teachers and judges: tiers, witnesses, reasons for withheld items |
-| `sakshi edit RUN --list` / `--sentence N --text ...` | change one fact; only the questions that depend on it change |
-| `sakshi serve RUN` | serve the quiz to phones over the machine's own Wi-Fi (optional extra) |
-| `sakshi resident --socket PATH` / `probe` | hold the model in one process, optionally with no network at all |
-| `sakshi villain FILE` | show the saved baseline failure |
+| `pi/` | Device: install and test scripts, screen UI (`pi/ui/sakshi.py`), passage upload |
+| `scripts/sakshi_engine.py`, `sakshi_app.py`, `backup_quiz.py` | The engine behind the screen, the one-program app, the quiz pipeline |
+| `src/sakshi/` | Library: model backends, misconception linking, retention engine (`retention/`) |
+| `train/`, `scripts/make_*_dataset.py` | Fine-tuning and dataset building |
+| `data/` | Misconception graph, training datasets, test passages |
+| `results/` | Evaluation outputs behind the numbers we quote |
+| `docs/` | `JUDGE_BRIEF.md` (every decision with evidence), `RETENTION_MATH.md`, `SUBMISSION.md`, `pitch/`, `history/` |
+| `research_notes/` | Research behind the design choices |
 
-## Layout
-`src/sakshi/` core (standard library only) · `backends/` stub, ExecuTorch, factory · `web/index.html` phone page ·
-`scripts/` Pi setup, smoke test, benchmark, offline and isolation evidence, evaluation, rating sheets, demo ·
-`data/` passages and counterfactual cases · `tests/` · `docs/` demo script and requirement map ·
-`MASTER_BIBLE.md` (why), `BUILD_MAP.md` (what and when), `RED_TEAM_LOG.md`, `CHECKLIST.md`, `HANDOFF.md`.
+## What we do not claim
 
-## Not included
-No learning-gain claim, no Kannada, no chatbot, no accounts or student data (the optional room view counts missed
-sentence numbers anonymously, in memory only). Licence: not chosen yet. Third-party terms: `THIRD_PARTY_NOTICES.md`.
+No students have used it yet, so there is no learning-gain claim. The misconceptions were drafted by AI from research
+on student errors and are not yet teacher-reviewed. A 0.6B model writes imperfect questions; the checks drop the
+worst. English only for now. Details: `docs/JUDGE_BRIEF.md`.
