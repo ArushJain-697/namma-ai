@@ -55,7 +55,7 @@ The system answers six questions, in order:
 | Prerequisite walk | Wrong answer → fix → step down to the idea underneath → climb back up with real-life questions |
 | Spaced revision | FSRS-6 per concept; review days re-check old beliefs and follow the graph to related ones |
 | Quality checks | Code picks the key sentence, giveaway and duplicate checks, a second model must agree on the answer |
-| Streaming quiz | The next question is written while the child answers the current one |
+| Streaming quiz | Questions arrive one by one: the next is written while the child answers the current one, so she waits only for the first |
 | The device | 220×176 screen, 3 buttons, camera + on-device OCR, passages loaded from storage |
 
 > **Decision:** Qwen3-0.6B, chosen by the time budget: about one minute for a summary and a quiz on the Pi. Qwen3-1.7B carries ~3x the weights, so ~3x slower writing, and was not clearly better on our data (held-out loss 1.273 vs 1.256). [Why →](docs/JUDGE_BRIEF.md#1-model-qwen3-06b-4-bit-executorch-xnnpack-on-the-arm-cpu)
@@ -104,6 +104,23 @@ flowchart TD
 ```
 
 > **Decision:** one model call per question, never "all questions in one call": small models break long structured outputs. The model put the key in option A ~80% of the time, so code shuffles options; 3-option questions are kept because three options test as well as four (Rodriguez 2005, 80 years of research). [Why →](docs/JUDGE_BRIEF.md#4-time-budget-decided-from-token-counts)
+
+### Questions arrive one by one, not all at once
+
+The quiz is not generated in one go before the child can start. As soon as the first question passes the checks it
+appears on screen, and a background thread writes, checks and links the **next** question while she reads and
+answers the current one. Writing a question takes the Pi about 16 s; a child takes about 20-40 s to read and answer
+one, so after the first question the waiting disappears.
+
+| Child's wait before each question (Mac, pretend child taking 4 s per answer) | Q1 | Q2 | Q3 |
+|---|---|---|---|
+| Streaming (shipped) | 3.4 s | **0 s** | **0 s** |
+
+> **Decision:** stream instead of batch. The time to *write* each question stays the same (that is the number we
+> report for judging); what changes is the time the child spends *waiting*. Building it exposed a real bug: the
+> ExecuTorch runner captures the model's text by redirecting the process's output, so the child's screen vanished
+> into the capture and one question was lost. We proved it by ruling out threads, CPU load and the helper models,
+> then gave the screen its own output channel; streaming now produces exactly the same questions as batch. [Why →](docs/JUDGE_BRIEF.md#questions-stream-to-the-child-write-the-next-one-while-the-child-answers-14-nov)
 
 ### The session: step down, climb back up
 
