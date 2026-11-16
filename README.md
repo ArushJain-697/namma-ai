@@ -422,7 +422,7 @@ and RACE (research use only), so they can be used for research and education but
 
 <img src="docs/images/team.jpg" alt="The Sakshi team at IIIT Bangalore after winning the Namma AI Hackathon 2026" width="720">
 
-**Trishanu Mazumder · Vishnu Suhas Chinta · Arush Jain**
+**Trishanu Mazumdar · Vishnu Suhas Chinta · Arush Jain**
 
 
 </div>
