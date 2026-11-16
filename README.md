@@ -2,9 +2,9 @@
 
 # SAKSHI
 
-**An offline tutor that diagnoses, not just scores**
+**An offline tutor that finds the belief behind a wrong answer**
 
-*Misconception-aware quizzes, knowledge tracing and spaced revision on a Raspberry Pi 5, with the network off*
+*Quizzes, knowledge tracing and spaced revision on a Raspberry Pi 5, with the network off*
 
 **Winner · Namma AI Hackathon 2026 (Arm × IIIT Bangalore × NASSCOM) · Problem Statement 1: AI for Inclusive Education**
 
@@ -22,25 +22,30 @@ Powered by **GURU-0.6B**: **G**rounded **U**nderstanding, **R**uns **U**nplugged
 
 ## Overview
 
-A student studying a textbook page alone has no way to check whether she understood it, and nobody to correct her
-when she did not. Quizzes give her a score. A score says *that* she is wrong, never *why*. If she believes "friction
-only acts on objects that are already moving", that belief follows her into every chapter built on it.
+A student working through a textbook page on her own can't tell whether she understood it, and there's nobody to
+correct her if she didn't. A quiz gives her a score, which tells her she got something wrong but not why. If she
+believes that friction only acts on objects that are already moving, she takes that belief into every chapter that
+builds on it.
 
-Sakshi turns a 150-300 word passage into a short summary and a **diagnostic quiz** where every wrong option is a real
-student misconception from a graph of **4,080**. When she picks one, Sakshi works out which belief she holds, teaches the
-fix, steps down to the idea underneath, climbs back up only when she has really learned it, and brings the belief back
-on later days until it is gone. Everything runs on a **Raspberry Pi 5 with ExecuTorch, with no internet**.
+Sakshi takes a 150-300 word passage and gives back a short summary and a quiz in which each wrong option is a known
+student misconception, drawn from a graph of 4,080 of them. When she picks a wrong option, Sakshi works out which
+belief she probably holds, explains the fix, checks the simpler idea underneath, and only moves back up once she has
+learned it. On later days it asks about the belief again until it's gone. All of this runs on a Raspberry Pi 5 with
+ExecuTorch and no internet connection.
 
-The system answers six questions, in order:
+For each passage, Sakshi:
 
-1. What does this passage say, in words a Class 6-10 student can follow?
-2. Which sentences are worth asking about? Code decides, never the model.
-3. What would a student who misunderstood this *believe*? Each wrong option is written to be believable, then linked to a named misconception.
-4. Which belief does she hold, and how sure are we? Bayes over her answers, with "no specific belief" always a hypothesis.
-5. Has she learned the idea, or did she guess? Knowledge tracing separates learning from lucky guesses.
-6. When will she forget it, and what should she revise first? Spaced repetition predicts forgetting per concept.
+1. Writes a summary a Class 6-10 student can follow.
+2. Picks the sentences worth asking about. Code makes this choice, not the model.
+3. Writes a question and three wrong answers a confused student would find believable, then links each wrong answer to a named misconception.
+4. Estimates which belief she holds from her answers. "No specific belief" is always one of the possibilities, so a single slip doesn't label her.
+5. Tracks whether she has learned each idea or got lucky.
+6. Predicts when she'll forget each idea and decides what she should revise first.
 
-**How we built it:** research before building, measure instead of guessing, and record the limits next to the results. Every number in this README comes from a script run, and every design choice is recorded with its evidence in [`docs/JUDGE_BRIEF.md`](docs/JUDGE_BRIEF.md). One example of the research rule: we tested small fact-checking models on 10 questions with known wrong answer keys. They caught only 0-3 of 10, so that check was never shipped.
+Every number in this README comes from a script we ran, and each design choice is written up with its evidence in
+[`docs/JUDGE_BRIEF.md`](docs/JUDGE_BRIEF.md). We looked for published evidence before building each part, and we kept
+the results that went against us. For example, we tried small fact-checking models on 10 questions whose answer keys
+we knew were wrong. They caught at most 3 of the 10, so we left that check out.
 
 ## Features
 
@@ -58,7 +63,7 @@ The system answers six questions, in order:
 | Streaming quiz | Questions arrive one by one: the next is written while the child answers the current one, so she waits only for the first |
 | The device | 220×176 screen, 3 buttons, camera + on-device OCR, passages loaded from storage |
 
-> **Decision:** Qwen3-0.6B, chosen by the time budget: about one minute for a summary and a quiz on the Pi. Qwen3-1.7B carries ~3x the weights, so ~3x slower writing, and was not clearly better on our data (held-out loss 1.273 vs 1.256). [Why →](docs/JUDGE_BRIEF.md#1-model-qwen3-06b-4-bit-executorch-xnnpack-on-the-arm-cpu)
+> **Decision:** we picked Qwen3-0.6B to fit a budget of about one minute for a summary and a quiz on the Pi. Qwen3-1.7B has roughly three times the weights, so it writes about three times slower, and on our data it wasn't clearly better (held-out loss 1.273 vs 1.256). [Why →](docs/JUDGE_BRIEF.md#1-model-qwen3-06b-4-bit-executorch-xnnpack-on-the-arm-cpu)
 
 ---
 
@@ -74,14 +79,16 @@ The system answers six questions, in order:
 
 ---
 
-## Why this is different: four claims
+## What makes it different
 
-1. **A score is not a diagnosis.** Every wrong option is linked to a named belief, so a wrong answer says *what* the child believes. The hackathon brief asked for a quiz; Sakshi returns the reason behind each mistake.
-2. **The model never decides alone.** Code picks the sentence to ask about, rules reject giveaways, a second model must agree on the answer, and every answer shows the sentence that proves it. Fewer questions rather than a wrong one.
+1. **It explains wrong answers.** Each wrong option is linked to a named belief, so a wrong answer tells you what the child believes. The hackathon asked for a quiz; Sakshi also reports the reason behind each mistake.
+2. **The model doesn't decide alone.** Code picks the sentence to ask about, rules reject questions that give the answer away, a second model has to agree on the correct answer, and every answer comes with the sentence that proves it. A question that fails any of these is dropped.
+3. **One answer doesn't label a child.** "No specific belief" stays a possibility, a belief is only named at 75% confidence, and a right answer that is still inconclusive gets one more question before a belief is cleared.
+4. **Learning is checked over days.** Mastery today is the chance she learned the idea times the chance she still remembers it. When a belief is gone, Sakshi checks a related belief with the same root to see whether the underlying habit has changed.
 
-> **Decision:** we tested our own pitch claim and dropped it. A bot that just picks the option sounding most like the passage scored 66% on our best prompt-only version (chance is 25%), so "our quiz beats word-spotting" was false for it. Measurement decides what we say. [Why →](docs/JUDGE_BRIEF.md#6-question-quality-the-hardest-problem-attacked-with-measurement)
-3. **One answer never labels a child.** Bayes keeps "no specific belief" as a hypothesis, so one slip is not a diagnosis; a belief is named only at 75%, and a right answer that is still inconclusive earns one more question before a belief is cleared.
-4. **Learning is checked across days, not in one sitting.** Mastery today = learned × still remembered. A belief that is gone is followed through the graph to a related belief with the same root, to test whether the deeper habit is fixed.
+> **Decision:** we tested one of our own pitch claims and dropped it. A bot that picks whichever option sounds most like
+> the passage scored 66% on our best prompt-only version, against 25% by chance, so "our quiz beats word-spotting"
+> wasn't true for that version. [Why →](docs/JUDGE_BRIEF.md#6-question-quality-the-hardest-problem-attacked-with-measurement)
 
 ---
 
@@ -103,24 +110,23 @@ flowchart TD
     I --> J[FSRS-6 schedule<br/>Revision · Mentor Study · Diagnostics]
 ```
 
-> **Decision:** one model call per question, never "all questions in one call": small models break long structured outputs. The model put the key in option A ~80% of the time, so code shuffles options; 3-option questions are kept because three options test as well as four (Rodriguez 2005, 80 years of research). [Why →](docs/JUDGE_BRIEF.md#4-time-budget-decided-from-token-counts)
+> **Decision:** one model call per question rather than one call for the whole quiz, because small models break long structured outputs. The model put the correct answer in option A about 80% of the time, so code shuffles the options. Questions with three options are kept, since three options test as well as four (Rodriguez 2005, a review of 80 years of research). [Why →](docs/JUDGE_BRIEF.md#4-time-budget-decided-from-token-counts)
 
-### Questions arrive one by one, not all at once
+### Questions arrive one at a time
 
-The quiz is not generated in one go before the child can start. As soon as the first question passes the checks it
-appears on screen, and a background thread writes, checks and links the **next** question while she reads and
-answers the current one. Writing a question takes the Pi about 16 s; a child takes about 20-40 s to read and answer
-one, so after the first question the waiting disappears.
+The child doesn't wait for the whole quiz. The first question appears as soon as it passes the checks, and while she
+reads and answers it, a background thread writes, checks and links the next one. The Pi takes about 16 s to write a
+question and a child takes about 20-40 s to answer one, so after the first question she doesn't wait at all.
 
 | Child's wait before each question (Mac, pretend child taking 4 s per answer) | Q1 | Q2 | Q3 |
 |---|---|---|---|
-| Streaming (shipped) | 3.4 s | **0 s** | **0 s** |
+| Streaming (shipped) | 3.4 s | 0 s | 0 s |
 
-> **Decision:** stream instead of batch. The time to *write* each question stays the same (that is the number we
-> report for judging); what changes is the time the child spends *waiting*. Building it exposed a real bug: the
-> ExecuTorch runner captures the model's text by redirecting the process's output, so the child's screen vanished
-> into the capture and one question was lost. We proved it by ruling out threads, CPU load and the helper models,
-> then gave the screen its own output channel; streaming now produces exactly the same questions as batch. [Why →](docs/JUDGE_BRIEF.md#questions-stream-to-the-child-write-the-next-one-while-the-child-answers-14-nov)
+> **Decision:** stream the questions instead of writing them all first. Each question takes just as long to write
+> (that's the time we report for judging), but the child spends less time waiting. Building this turned up a bug: the
+> ExecuTorch runner collects the model's text by redirecting the program's output, so the child's screen was being
+> swallowed by that capture and one question went missing. We ruled out threads, CPU load and the helper models, then
+> gave the screen its own output channel. Streaming now produces the same questions as writing them in one batch. [Why →](docs/JUDGE_BRIEF.md#questions-stream-to-the-child-write-the-next-one-while-the-child-answers-14-nov)
 
 ### The session: step down, climb back up
 
@@ -175,31 +181,34 @@ flowchart LR
 
 ### Layer 1: the quiz model (GURU-0.6B)
 
-One model, two jobs, chosen by the system prompt. **Job Q**: a 3-sentence window + the key sentence → question + answer.
-**Job W**: + question + answer → 3 wrong answers a student would believe. Splitting the work keeps each call short
-for a 0.6B model, and the combined model beat two specialists at both jobs (held-out loss 1.217 vs 1.227, 1.429 vs 1.439).
+One model does two jobs, and the system prompt says which. Job Q gets a 3-sentence window and the key sentence and
+writes a question and its answer. Job W also gets that question and answer and writes three wrong answers a student
+would believe. Splitting the work keeps each call short enough for a 0.6B model, and the single combined model did
+better at both jobs than two separate specialists (held-out loss 1.217 vs 1.227, and 1.429 vs 1.439).
 
 ### Layer 2: wrong answer → misconception
 
-For a wrong option *x*, candidates are the misconceptions of the passage's topics (about 4,000 → 16-50). Retrieve by
-cosine similarity of unit embeddings, rerank with an NLI cross-encoder, and abstain below a similarity line:
+For a wrong option *x*, the candidates are the misconceptions in the passage's topics, which cuts about 4,000 down to
+16-50. They are ranked by embedding similarity, re-ranked with an NLI cross-encoder, and the option is left unlinked if
+nothing is similar enough:
 
 $$\text{score}(m) = \cos(e_x, e_m) + 0.3\,P_{\text{entail}}(x \Rightarrow m), \qquad \text{link}(x) = \begin{cases} \arg\max_m \text{score}(m) & \cos \ge 0.76 \\ \text{none} & \text{otherwise} \end{cases}$$
 
-An unlinked option is a plain wrong answer, never evidence for a belief: a weak link cannot invent a diagnosis.
+An unlinked option counts as a plain wrong answer and adds no evidence for any belief, so a weak match can't produce a diagnosis.
 
-> **Decision:** retrieve-and-rerank, the standard two-stage search design, scaled down to run offline on a Pi and measured on our own ~3,600 labelled pairs. The reranker adds only 1 point (46% to 47%); we kept it because it is cheap, and we report the small gain as it is. [Why →](docs/JUDGE_BRIEF.md#7-linking-each-wrong-option-to-a-misconception-retrieve-and-rerank-run-on-a-pi)
+> **Decision:** retrieve-and-rerank, the usual two-stage search design, made small enough to run offline on a Pi and measured on about 3,600 pairs we labelled ourselves. The re-ranker only adds 1 point (46% to 47%). It's cheap, so we kept it. [Why →](docs/JUDGE_BRIEF.md#7-linking-each-wrong-option-to-a-misconception-retrieve-and-rerank-run-on-a-pi)
 
 ### Layer 3: Bayesian diagnosis
 
-Hypotheses for a concept are its misconceptions plus **NONE**. If she holds belief *m* and it is on the question, she
-picks its option with probability 0.70, the correct one 0.15. Posterior and next question:
+The possibilities for a concept are its misconceptions plus NONE. If she holds belief *m* and it appears as an option,
+we assume she picks it with probability 0.70 and the correct answer with probability 0.15. The update and the choice of
+next question:
 
 $$P(h \mid o) = \frac{P(o \mid h)\,P(h)}{\sum_{h'} P(o \mid h')\,P(h')}, \qquad \text{EIG}(q) = H(P) - \sum_o P(o)\,H\big(P(\cdot \mid o)\big)$$
 
-"Detected" at ≥ 0.75, "possible" at ≥ 0.50.
+A belief is reported as found at 0.75 and as possible at 0.50.
 
-> **Decision:** "no specific belief" is always a hypothesis. Without it, any random wrong answer would look like proof of some misconception, and one slip would label a child. [Why →](docs/JUDGE_BRIEF.md#9-the-retention-engine-every-design-decision-and-why-14-nov)
+> **Decision:** "no specific belief" is always one of the possibilities. Without it, any random wrong answer would look like evidence for some misconception, and one slip would label a child. [Why →](docs/JUDGE_BRIEF.md#9-the-retention-engine-every-design-decision-and-why-14-nov)
 
 ### Layer 4: Bayesian Knowledge Tracing
 
@@ -207,28 +216,30 @@ With slip *s* = 0.10, guess *g* = 0.25 (recall) or 0.15 (real-life question) and
 
 $$P(L \mid \checkmark) = \frac{P(L)(1-s)}{P(L)(1-s) + (1-P(L))\,g}, \qquad P(L \mid \times) = \frac{P(L)\,s}{P(L)\,s + (1-P(L))(1-g)}, \qquad P(L) \leftarrow P(L) + (1-P(L))\,T$$
 
-One wrong answer: 0.30 → 0.24. One right real-life answer: 0.24 → 0.72, which clears the climb gate of 0.6
-(classic mastery is 0.95; 0.6 means "ready to build on").
+One wrong answer takes her from 0.30 to 0.24. One right answer to a real-life question takes her from 0.24 to 0.72,
+which is above the 0.6 she needs to move back up. We use 0.6 to mean "ready to build on"; the usual BKT bar for
+mastery is 0.95.
 
-> **Decision:** BKT, not deep knowledge tracing. Deep models perform near chance (AUC ~0.5) for brand-new students and are too heavy for a Pi; BKT works from the first answer and costs microseconds per update. [Why →](docs/JUDGE_BRIEF.md#8-learner-model-chosen-for-zero-data-and-a-small-cpu)
+> **Decision:** BKT instead of deep knowledge tracing. Deep models do about as well as chance (AUC around 0.5) for a brand-new student and are too heavy for a Pi. BKT works from the first answer, and each update takes microseconds. [Why →](docs/JUDGE_BRIEF.md#8-learner-model-chosen-for-zero-data-and-a-small-cpu)
 
 ### Layer 5: forgetting (FSRS-6)
 
-Per concept, stability *S* and difficulty *D*; recall after *t* days, with *F* chosen so that *R*(*S*, *S*) = 0.9:
+Each concept has a stability *S* and a difficulty *D*. The chance she still recalls it after *t* days, with *F* set so that *R*(*S*, *S*) = 0.9:
 
 $$R(t, S) = \left(1 + F\,\frac{t}{S}\right)^{-w_{20}}, \qquad F = 0.9^{-1/w_{20}} - 1$$
 
-Knowledge tracing and memory join on review days, and revision is ordered by risk:
+On review days the two are combined, and revision starts with the ideas most at risk:
 
 $$P(L)_{\text{today}} = P(L)_{\text{saved}} \cdot R(t, S), \qquad \text{priority}(C) = 1 - P(L)_C \cdot R_C(t)$$
 
-> **Decision:** FSRS with default settings, said openly: a 7-day-stable memory is still ~77% at day 30, so we never draw exaggerated forgetting curves. The settings are not yet fitted to children. [Why →](docs/JUDGE_BRIEF.md#8-learner-model-chosen-for-zero-data-and-a-small-cpu)
+> **Decision:** FSRS with its default settings, which aren't fitted to children yet. With those settings a memory that's stable for 7 days is still about 77% likely to be recalled at day 30, so we don't show steep forgetting curves. [Why →](docs/JUDGE_BRIEF.md#8-learner-model-chosen-for-zero-data-and-a-small-cpu)
 
 ### Layer 6: review days
 
-Each belief she held is re-checked with a **new** question (two hypotheses, holds / does not, same likelihoods). Still
-held → the fix again and an earlier review. Cleared → follow the graph to a belief it `causes`, else the nearest belief
-with the same root belief in another topic, to test whether the deeper habit is fixed.
+Each belief she held is checked again with a new question, using two possibilities (she still holds it, or she
+doesn't) and the same likelihoods. If she still holds it, she sees the fix again and the next review comes sooner. If
+it's gone, Sakshi asks about a related belief: one it `causes` if the graph has that link, otherwise the closest belief
+with the same root in another topic. That shows whether the underlying habit has changed.
 
 ---
 
@@ -255,7 +266,7 @@ with the same root belief in another topic, to test whether the deeper habit is 
 | Summary: whole passage → one own-words sentence per third | 86 words, 44% copied | **44 words, 26% copied** |
 | Camera capture mode | 640×360 | **1920×1080** |
 
-> **Decision:** the context limit was sized to the job. Also measured and rejected: 4-bit embeddings (saved only 74 MB but changed all 8 test answers) and a larger quantization group (no change). [Why →](docs/JUDGE_BRIEF.md#3-memory-cut-by-a-third-with-zero-quality-change)
+> **Decision:** the context limit matches what a quiz call needs. We also measured and rejected 4-bit embeddings, which saved only 74 MB and changed all 8 test answers, and a larger quantization group, which changed nothing. [Why →](docs/JUDGE_BRIEF.md#3-memory-cut-by-a-third-with-zero-quality-change)
 
 ### Question quality (40 frozen test passages, blind-graded)
 
@@ -265,7 +276,7 @@ with the same root belief in another topic, to test whether the deeper habit is 
 | Version 1: LoRA on SciQ + RACE (4,300 questions) | **30%** sensible, answer key right 82% |
 | Two-job GURU vs single-call | blind read **8/12** vs 3/12 good; answer is the longest option **6%** vs 15%; why/how questions **49%** vs 39% |
 
-> **Decision:** the teacher data was graded before training: 2,773 questions written for 401 syllabus passages, scored by a separate grader against our rubric, and only 1,039 kept (score 4-5 and every hard rule). Zero overlap with the 40 test passages, checked by 8-word runs. [Why →](docs/JUDGE_BRIEF.md#6-question-quality-the-hardest-problem-attacked-with-measurement)
+> **Decision:** the teacher data was graded before we trained on it. Of 2,773 questions written for 401 syllabus passages, a separate grader kept 1,039 that scored 4-5 and passed every hard rule. None of them overlap with the 40 test passages; we checked for shared 8-word runs. [Why →](docs/JUDGE_BRIEF.md#6-question-quality-the-hardest-problem-attacked-with-measurement)
 
 ### Quantization cost (held-out loss, Q job / W job)
 
@@ -275,7 +286,7 @@ with the same root belief in another topic, to test whether the deeper habit is 
 | 8-bit (`8da8w`, 720 MB) | 1.223 / 1.436 (near-lossless) |
 | **4-bit (`8da4w`, 469 MB, shipped)** | 1.345 / 1.564 |
 
-> **Decision:** two exports, picked automatically. The fast kernels need the Arm dot-product instructions; on an Arduino UNO Q (Cortex-A53) they crashed with "Illegal instruction", so the installer reads `/proc/cpuinfo` and picks the portable build. Rehearsed there fully offline: install in 4 min 10 s, network off. [Why →](docs/JUDGE_BRIEF.md#2-two-exports-chosen-automatically-by-the-cpu)
+> **Decision:** two builds of each model, chosen automatically. The fast kernels need the Arm dot-product instructions, and on an Arduino UNO Q (Cortex-A53) they crashed with "Illegal instruction". The installer now reads `/proc/cpuinfo` and picks the portable build when needed. We rehearsed on the UNO Q with the network off: the install took 4 min 10 s. [Why →](docs/JUDGE_BRIEF.md#2-two-exports-chosen-automatically-by-the-cpu)
 
 ### Misconception linking (3,647 labelled wrong-option → misconception pairs)
 
@@ -286,7 +297,7 @@ with the same root belief in another topic, to test whether the deeper habit is 
 | Right topic for test passages | **39 / 40** |
 | Off-syllabus passages caught | **12 / 12**, 0 false alarms |
 
-> **Decision:** we caught our own data bug. A graph re-link run during a usage limit silently dropped links (1,955 to 843) and erased root-belief names. Re-linking is now incremental and refuses to write a worse file. [Why →](docs/JUDGE_BRIEF.md#5-the-misconception-graph-built-before-the-event-used-offline)
+> **Decision:** we found a bug in our own data. A run that rebuilt the graph's links during a usage limit quietly dropped them from 1,955 to 843 and erased the root-belief names. Rebuilding is now incremental and won't save a worse file. [Why →](docs/JUDGE_BRIEF.md#5-the-misconception-graph-built-before-the-event-used-offline)
 
 ### Learning engine, simulated over days 0, 1, 3 and 7
 
@@ -301,16 +312,17 @@ with the same root belief in another topic, to test whether the deeper habit is 
 
 ## Positioning against prior work
 
-- **Diagnostic questions** follow the idea behind Eedi's diagnostic questions: every wrong option should reveal a specific misconception. Sakshi writes those questions for any passage with a 0.6B model, offline, across all subjects, instead of using a fixed hand-written bank.
-- **Adaptive, misconception-driven practice works:** an adaptive tutor raised maths scores by 0.37 SD in 4.5 months in a Delhi RCT (Muralidharan, Singh, Ganimian 2019), and refutation texts ("you might think X; actually Y") correct misconceptions with g ≈ 0.41 (Tippett 2010).
-- **Model explains, code decides** is credited to Toddle AI; plain-language summary prompts that keep numbers and names to LENTERA (both MIT, ideas only).
+- The idea that each wrong option should reveal a specific misconception comes from Eedi's diagnostic questions. Eedi uses a fixed bank of hand-written questions; Sakshi writes them for any passage, offline, with a 0.6B model.
+- There's good evidence for this kind of practice. An adaptive tutor raised maths scores by 0.37 SD in 4.5 months in a Delhi RCT (Muralidharan, Singh, Ganimian 2019), and refutation texts ("you might think X; actually Y") correct misconceptions with g ≈ 0.41 (Tippett 2010).
+- Letting code decide and the model only explain comes from Toddle AI, and summary prompts that keep numbers and names from LENTERA. Both are MIT-licensed, and we used the ideas, not their code.
 
 ---
 
 ## The device
 
-Study (a photo of a page, a saved page, or Mentor Study) · Revision (mastery bars, what is due) · Diagnostics (where
-she is stuck, what to do next). Every screen reads the real engine and the saved learner. Load passages before an event:
+The menu has three parts. Study takes a photo of a page, a saved page, or Mentor Study for old mistakes. Revision
+shows how well she knows each idea and what's due. Diagnostics shows where she's stuck and what to do next. Every
+screen reads from the engine and her saved progress. To load passages before an event:
 
 ```bash
 pi/send_passages.sh --paste judge1        # the clipboard becomes ~/passages/judge1.txt on the Pi
@@ -345,8 +357,9 @@ bash scripts/get_models.sh          # GURU, the summary model, the helper models
 ```
 
 `get_models.sh` downloads from the [GURU-0.6B v1 release](https://github.com/ArushJain-697/namma-ai/releases/tag/guru-0.6b-v1)
-and picks the fast or portable build for your CPU; `--8bit`, `--adapters` and `--all` fetch more. On a Raspberry Pi,
-use the offline installer `pi/install.sh`, the checklist `pi/CHECKLIST.md`, and the exact package list `pi/requirements-pi.txt`.
+and picks the fast or portable build for your CPU. Add `--8bit`, `--adapters` or `--all` for more. On a Raspberry Pi,
+use the offline installer `pi/install.sh` with the checklist in `pi/CHECKLIST.md`; the exact packages are listed in
+`pi/requirements-pi.txt`.
 
 ```bash
 python scripts/sakshi_app.py study passage.txt     # summary, streamed questions, adaptive session
@@ -385,7 +398,6 @@ python -m pytest -q tests/test_review.py                # climb gate, blocked co
 
 ---
 
-
 ## Documentation
 
 - [`docs/JUDGE_BRIEF.md`](docs/JUDGE_BRIEF.md): every design decision, with the measurement behind it
@@ -399,8 +411,8 @@ python -m pytest -q tests/test_review.py                # climb gate, blocked co
 
 ## Licence
 
-The code is released under the [MIT licence](LICENSE). The trained model weights in the release were trained on SciQ
-(CC BY-NC 3.0) and RACE (research use), so they are for research and education, not commercial use.
+The code is under the [MIT licence](LICENSE). The model weights in the release were trained on SciQ (CC BY-NC 3.0)
+and RACE (research use only), so they can be used for research and education but not commercially.
 
 ---
 
