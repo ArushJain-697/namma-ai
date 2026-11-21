@@ -8,6 +8,8 @@
 
 **Winner · Namma AI Hackathon 2026 (Arm × IIIT Bangalore × NASSCOM) · Problem Statement 1: AI for Inclusive Education**
 
+Felicitated at Bengaluru Tech Summit 2026 · ₹1,50,000 prize
+
 Powered by **GURU-0.6B**: **G**rounded **U**nderstanding, **R**uns **U**nplugged
 
 [Model release](https://github.com/ArushJain-697/namma-ai/releases/tag/guru-0.6b-v1) · [Design decisions](docs/JUDGE_BRIEF.md) · [Learning-engine maths](docs/RETENTION_MATH.md) · [MIT licence](LICENSE)
@@ -422,7 +424,7 @@ and RACE (research use only), so they can be used for research and education but
 
 <img src="docs/images/team.jpg" alt="The Sakshi team at IIIT Bangalore after winning the Namma AI Hackathon 2026" width="720">
 
-**Trishanu Mazumder · Vishnu Suhas Chinta · Arush Jain**
+**Trishanu Mazumdar · Vishnu Suhas Chinta · Arush Jain**
 
 
 </div>
