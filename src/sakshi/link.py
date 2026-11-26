@@ -32,7 +32,7 @@ LEGACY_ABSTAIN = 0.76  # the old linker's threshold (it was set on all labelled 
 NLI_W = 0.3
 RRF_K = 60
 UNLINKED = "unlinked"
-UNLINKED_NAME = "Not linked to a syllabus concept"
+UNLINKED_NAME = "Ideas from your page"  # shown to the child: a page question that matched no graph concept
 
 
 def option_text(q: str, opt: str) -> str:

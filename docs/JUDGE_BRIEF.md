@@ -460,3 +460,26 @@ alone. Seconds per photo were measured while other runs shared the CPU, so compa
   Capture kept the sharp frame (sharpness 587 vs 50-222), PP-OCRv6 small read it in 1.05 s, 213 words, 0% wrong,
   and the text went to the engine.
 - **Still to do:** real photos from the device camera, and Pi timings (`bash pi/setup_ocr.sh` prints them).
+
+## New Pi 5 set up from scratch and tested end to end (25 Nov 2026)
+- Fresh Pi 5 (8 GB, Debian 13, Python 3.13): code copied, engine venv (torch 2.14.1 CPU + ExecuTorch 1.5.1), models
+  from the GitHub release (checksums OK), screen-app venv (RapidOCR 3.10 / PP-OCRv6). **251 tests pass, 4 skipped.**
+- **Power:** the lab's 3 A supply (the Pi reports `max_current 3000`; a Pi 5 wants 5 A) crashed the board twice under
+  load, and the crashes corrupted files on the SD card ("Errno 74: Bad message", null bytes in a script); both venvs
+  were rebuilt. Without a fan the CPU reached 84.5 C and throttled (`0xe0008`). Use a 5 A supply and a fan.
+- **Engine on the Pi** (friction passage, 227 words): load 6.5 s, summary 9.6-10.5 s, 14.4-17.8 s per GURU question,
+  peak 3.17 GB: in line with the hackathon numbers.
+- **Screen app**, driven button by button with the real engine (57 screens saved): menu, Study -> Saved pages ->
+  summary -> 9-question adaptive session (rebuild / step down / step up) -> results -> Revision (4 questions) ->
+  Diagnostics, all without a crash.
+- **Bug found and fixed: too few questions on some passages.** GURU tried only the ~6 non-adjacent sentences the
+  picker allows, and the checks drop most tries (32 drops on 6 passages: self-check 14, too few or too similar wrong
+  answers 16, giveaways 5). Dandi March kept 0. Now, while fewer than 3 are kept, GURU also tries the remaining
+  sentences (same checks). GURU questions kept: friction 5, monsoon 3, acids 3, panchayat 2 -> 3, pitcher plant 2,
+  Dandi 0 -> 1 (and that one has a wrong key). GURU is clearly weaker on history than science. The engine log now
+  lists every dropped question with its reason.
+- **Fixed:** an internal label ("Not linked to a syllabus concept" / "unlinked") showed on screen; now "Ideas from
+  your page".
+- **Known content issues for the demo:** the summary can be wrong ("Rubbing palms reduces friction"); after a wrong
+  friction answer the graph steps down to "Area of Rectangle/Square" (a real prerequisite link, but it looks odd).
+  Demo with a passage checked beforehand (friction gives 5 good questions).

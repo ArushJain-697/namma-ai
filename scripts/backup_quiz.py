@@ -903,8 +903,19 @@ def parse_wrong(text: str) -> list[str]:
     return out
 
 
+def more_sentences(passage: str, tried: list[int]) -> list[int]:
+    """Every other sentence long enough to ask about (neighbours of tried ones included), best first. Used when the
+    picked sentences gave fewer than min_keep questions: on the Pi (25 Nov) the Dandi passage kept 0 of 6 and the
+    pitcher-plant passage 2 of 7, because the picker allows only ~6 non-adjacent sentences per passage."""
+    sents = split_sentences(passage)
+    return [i for _, _, i in sorted(((len(content(s)) + (4 if CAUSAL.search(s) else 0), -i, i)
+                                     for i, s in enumerate(sents) if 8 <= len(tokens(s)) <= 40 and i not in tried),
+                                    reverse=True)]
+
+
 def quiz_2job(mq: "Model", mw: "Model", passage: str, n: int = 4, seed: int | None = None, w_runs: int = 1,
-              self_check_on: bool = True, checker: "Model | None" = None, on_kept=None, should_stop=None) -> dict:
+              self_check_on: bool = True, checker: "Model | None" = None, on_kept=None, should_stop=None,
+              min_keep: int = 3) -> dict:
     """checker = the model that answers each question as a last check. GURU was trained to WRITE questions and
     answers "A" almost always when asked to answer one (measured 14 Nov), so pass the plain model here.
     w_runs = 1: decoding is greedy, so a second wrong-answer run returned the identical text in 38 of 38 calls
@@ -916,8 +927,12 @@ def quiz_2job(mq: "Model", mw: "Model", passage: str, n: int = 4, seed: int | No
     sents = split_sentences(passage)
     start_q, start_w = len(mq.calls), len(mw.calls)
     kept, rejected = [], []
-    for i in pick_sentences(passage):
+    first = pick_sentences(passage)
+    order = first + more_sentences(passage, first)   # the extra sentences are used only while kept < min_keep
+    for pos, i in enumerate(order):
         if len(kept) == n or (should_stop and should_stop()):
+            break
+        if pos >= len(first) and len(kept) >= min_keep:
             break
         user = user_turn(sents, i)
         raw = mq.run(Q_SYSTEM, user, 70, kind="question", prefix="Question:", stop=r"Answer:[^\n]*\S[^\n]*\n")

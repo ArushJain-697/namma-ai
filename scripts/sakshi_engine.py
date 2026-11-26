@@ -220,7 +220,8 @@ class Engine:
         return LearnerState.load(str(STATE))
 
     def name(self, cid):
-        return (self.lib.concepts.get(cid) or {}).get("name", cid)
+        from sakshi.link import UNLINKED, UNLINKED_NAME
+        return UNLINKED_NAME if cid == UNLINKED else (self.lib.concepts.get(cid) or {}).get("name", cid)
 
     # ---- status for the menu / Revision / Diagnostics screens --------------------------------------------
     def status(self):
@@ -299,6 +300,8 @@ class Engine:
             try:
                 out["r"] = self.bq.quiz_2job(self.m, self.m, passage, n=10, checker=self.sm, on_kept=on_kept, seed=1,
                                              should_stop=lambda: self._stale(job))
+                log(f"QUIZ kept {len(out['r']['kept'])}, dropped {len(out['r']['rejected'])}: " + "; ".join(
+                    f"[{x['reason']}] {x.get('q', '')[:70]}" for x in out["r"]["rejected"]))
             except Cancelled:
                 pass
             except Exception as e:  # noqa: BLE001
