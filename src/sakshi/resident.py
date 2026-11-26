@@ -28,7 +28,10 @@ def probe_network(timeout: float = 1.0) -> dict:
         with open("/proc/net/dev") as f:
             ifaces = [ln.split(":")[0].strip() for ln in f.read().splitlines()[2:] if ":" in ln]
     except OSError:
-        ifaces = None
+        try:  # no /proc (macOS): the kernel's interface list
+            ifaces = [name for _, name in socket.if_nameindex()]
+        except OSError:
+            ifaces = None
     net = network_status()
     tcp = "not attempted"
     try:

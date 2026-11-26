@@ -1,7 +1,8 @@
 """Review day: come back on a later day, re-check the beliefs the student held, and follow the misconception graph.
 
 Order of work (question budget permitting):
-  0. Forgetting: each concept's BKT mastery is discounted by FSRS recall since the last review,
+  0. Forgetting: each concept's BKT mastery is discounted by FSRS recall since the last review (once per elapsed
+       interval: a second review before the next FSRS review only discounts the extra days),
        P(L)_today = P(L)_saved x R(t, S)        (mastery the student has partly forgotten is not mastery today)
   1. Held beliefs (confirmed / suspected), most at-risk concept first. Ask a NEW question aimed at that belief and
      update P(holds) with Bayes (two hypotheses: holds it / does not; same likelihoods as bayes.py).
@@ -20,7 +21,7 @@ import json
 import os
 import random
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timezone
 
 import numpy as np
 
@@ -33,6 +34,11 @@ from .session import _Stop
 from .state import LearnerState, MisconceptionState
 
 MIS_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "..", "data", "misconceptions")
+
+
+def _aware(t: datetime) -> datetime:
+    """FSRS works in UTC-aware datetimes; treat a naive time as UTC."""
+    return t if t.tzinfo else t.replace(tzinfo=timezone.utc)
 
 
 class RelatedBeliefs:
@@ -81,7 +87,7 @@ def belief_question(lib, mid: str, asked: set[str], rng: random.Random) -> Quest
     """A question aimed at one belief that this student has not seen: its probe first, else a statement check."""
     from ..link import probe_question
     d = probe_question(lib, mid, rng, f"{mid}-probe")
-    if d and d["id"] not in asked:
+    if d and d["id"] not in asked and d.get("stem") not in asked:  # same stem asked under another id = a repeat
         return _q(d)
     m = lib.by_id[mid]
     pool = [x for x in lib.items if x["concept_id"] == m["concept_id"] and x["id"] != mid] or \
@@ -111,7 +117,7 @@ class ReviewConfig:
     bkt: bkt.BKTParams = bkt.BKTParams()
     bayes: BayesParams = BayesParams()
     max_questions: int = 10
-    climb_threshold: float = 0.6
+    climb_threshold: float = 0.7
     related_per_belief: int = 1
     desired_retention: float = 0.9
 
@@ -119,12 +125,13 @@ class ReviewConfig:
 class ReviewSession:
     def __init__(self, state: LearnerState, library, io: IO, now: datetime, config: ReviewConfig | None = None,
                  related: RelatedBeliefs | None = None, seed: int = 0):
-        self.state, self.lib, self.io, self.now = state, library, io, now
+        self.state, self.lib, self.io, self.now = state, library, io, _aware(now)
         self.cfg = config or ReviewConfig()
         self.rel = related or RelatedBeliefs(library)
         self.sched = make_scheduler(self.cfg.desired_retention)
         self.rng = random.Random(seed)
-        self.asked_ever = {a["q"] for a in state.attempts}
+        # ids AND stems already shown: a review probe can carry the same stem as a quiz question under a new id
+        self.asked_ever = {a["q"] for a in state.attempts} | {a["stem"] for a in state.attempts if a.get("stem")}
         self.asked: list[str] = []
         self.outcome: dict[str, str] = {}
         self.log: list[str] = []
@@ -143,11 +150,12 @@ class ReviewSession:
         ok = bool(opt and opt.correct)
         cs = self.state.concepts[q.concept]
         before = cs.p_mastery
-        cs.p_mastery = bkt.update(cs.p_mastery, ok, self.cfg.bkt, application=q.type == "application")
+        cs.p_mastery = bkt.update(cs.p_mastery, ok, self.cfg.bkt, application=q.type == "application",
+                                  n_options=len(q.options))
         cs.attempts += 1
         self.asked.append(q.id)
-        self.asked_ever.add(q.id)
-        self.state.attempts.append({"q": q.id, "concept": q.concept, "picked": picked, "correct": ok,
+        self.asked_ever.update((q.id, q.stem))
+        self.state.attempts.append({"q": q.id, "stem": q.stem, "concept": q.concept, "picked": picked, "correct": ok,
                                     "ts": self.now.isoformat(), "review": True})
         self.io.log(f"{q.concept} mastery {before:.2f} -> {cs.p_mastery:.2f}")
         right = next(o for o in q.options if o.correct)
@@ -157,15 +165,18 @@ class ReviewSession:
         return ok, (opt.misconception if opt else None) or ""
 
     def _holds_update(self, prior: float, q: Question, mid: str, picked_mis: str, ok: bool) -> float:
-        """Bayes with two hypotheses (holds `mid` / does not), the likelihoods of bayes.py."""
-        b, wrong = self.cfg.bayes, [o for o in q.options if not o.correct]
+        """Bayes with two hypotheses, likelihoods from bayes.py: holds `mid`, or does not (half "knows it",
+        half "guessing at random"). A right answer or another wrong option never raises P(holds)."""
+        b, n = self.cfg.bayes, len(q.options)
+        owned = [o for o in q.options if not o.correct and o.misconception == mid]
+        if not owned:
+            return prior
         if picked_mis == mid:
-            lh, ln = b.p_pick_own, (1 - b.p_correct_none) / len(wrong)
-        elif ok:
-            lh, ln = b.p_correct_holding, b.p_correct_none
+            lh = b.p_pick_own / len(owned)
+            ln = 0.5 * (b.p_slip / (n - 1)) + 0.5 / n
         else:
-            lh = (1 - b.p_pick_own - b.p_correct_holding) / max(1, len(wrong) - 1)
-            ln = (1 - b.p_correct_none) / len(wrong)
+            lh = (1 - b.p_pick_own) / max(1, n - len(owned))
+            ln = 0.5 * ((1 - b.p_slip) if ok else b.p_slip / (n - 1)) + 0.5 / n
         return prior * lh / (prior * lh + (1 - prior) * ln)
 
     def _budget(self) -> bool:
@@ -173,19 +184,27 @@ class ReviewSession:
 
     # ---- the steps ------------------------------------------------------------------------------------
     def _forget(self) -> None:
+        """Discount mastery by FSRS recall, ONCE per elapsed interval. A concept not reviewed in an earlier review
+        session keeps its FSRS card, so recall R(t) is still measured from the last real review; we store when decay
+        was last applied ("decayed_at", ignored by FSRS) and apply only R(now) / R(decayed_at)."""
         for cid, cs in self.state.concepts.items():
-            if cs.fsrs_card:
-                r = retrievability(self.sched, cs.fsrs_card, self.now)
-                new = max(0.05, cs.p_mastery * r)
-                self.io.log(f"{cid}: P(L) {cs.p_mastery:.2f} x recall {r:.2f} = {new:.2f}")
-                cs.p_mastery = new
+            if not cs.fsrs_card:
+                continue
+            r_now = retrievability(self.sched, cs.fsrs_card, self.now)
+            since = cs.fsrs_card.get("decayed_at")
+            r_then = retrievability(self.sched, cs.fsrs_card, _aware(datetime.fromisoformat(since))) if since else 1.0
+            if since and _aware(datetime.fromisoformat(since)) >= self.now:
+                continue  # already discounted up to (or past) today
+            factor = r_now / r_then if r_then > 0 else r_now
+            new = max(0.05, cs.p_mastery * min(1.0, factor))
+            self.io.log(f"{cid}: P(L) {cs.p_mastery:.2f} x recall {factor:.2f} = {new:.2f}")
+            cs.p_mastery = new
+            cs.fsrs_card["decayed_at"] = self.now.isoformat()
 
     def _priority(self, cid: str) -> float:
+        """Risk of not knowing it today. Mastery is already discounted by _forget, so no second recall factor."""
         cs = self.state.concepts.get(cid)
-        if not cs:
-            return 1.0
-        r = retrievability(self.sched, cs.fsrs_card, self.now) if cs.fsrs_card else 0.0
-        return 1 - cs.p_mastery * r
+        return 1.0 if not cs else 1 - cs.p_mastery
 
     def _recheck(self, mid: str, ms: MisconceptionState) -> None:
         q = belief_question(self.lib, mid, self.asked_ever, self.rng)
@@ -271,7 +290,8 @@ class ReviewSession:
             return None
         self.io.show(f"\nUsing \"{self.name(cid)}\":")
         ok, _ = self._ask(q)
-        solid = ok and self.state.concepts[cid].p_mastery >= self.cfg.climb_threshold
+        solid = ok and bkt.mastered(self.state.concepts[cid].p_mastery, self.state.attempts, cid,
+                                    self.cfg.climb_threshold, self.cfg.bkt)
         self.outcome[cid] = "good" if solid else "again"
         if not ok:
             self.io.taught(cid)
@@ -296,7 +316,7 @@ class ReviewSession:
                     if self._budget():
                         self._unblock(cid, prereqs)
                 tested = [c for c, cs in self.state.concepts.items() if cs.fsrs_card and c not in self.outcome]
-                due = [c for c in tested if datetime.fromisoformat(self.state.concepts[c].fsrs_card["due"]) <= self.now]
+                due = [c for c in tested if _aware(datetime.fromisoformat(self.state.concepts[c].fsrs_card["due"])) <= self.now]
                 if mode == "revision" and not due:
                     due = tested
                 for cid in sorted(due, key=lambda c: -self._priority(c)):

@@ -9,6 +9,9 @@ UI -> engine (stdin):
   {"cmd": "revision"}                     finish blocked climbs, then concepts that are due
   {"cmd": "answer", "key": "B"}           the child's answer to the current question
   {"cmd": "stop"}                         the child left: save and end the session
+  Session commands (study / mentor / revision) and stop may carry "job": <id>. Every event the engine sends while
+  that session runs carries the same "job", so the UI can drop events from a session it has already left, and a
+  stop names the session it is meant for (a late second Back never cancels the next session).
 engine -> UI (stdout): {"type": ...}
   ready, loading, stage {n}, summary {text}, waiting, question {...}, result {...},
   diagnosis / rebuild / walk_down / climb_stop / climb_up / again / recheck / still / cleared / related /
@@ -41,10 +44,13 @@ MIN_WORDS = 40
 # private copy of the original stdout (the pipe to the UI), which that capture never touches.
 _OUT = os.fdopen(os.dup(1), "w", buffering=1, encoding="utf-8")
 _LOCK = threading.Lock()
+_JOB: dict = {"id": None}   # the session the events now being sent belong to
 
 
 def emit(kind: str, **data) -> None:
     with _LOCK:
+        if _JOB["id"] is not None and "job" not in data:
+            data["job"] = _JOB["id"]
         _OUT.write(json.dumps({"type": kind, **data}, ensure_ascii=False) + "\n")
         _OUT.flush()
 
@@ -63,11 +69,25 @@ def peak_mb() -> int:
     return round(r / (2**20 if sys.platform == "darwin" else 2**10))
 
 
+class Cancelled(Exception):
+    """Raised inside a model call made for a session that was stopped or replaced: that thread must exit."""
+
+
+class Job:
+    """One session. `cancel` is set once and never cleared: a thread holding an old Job can never come back to life
+    (the old shared stop flag was cleared when the next session started, which revived the old writer)."""
+
+    def __init__(self, jid):
+        self.id = jid
+        self.cancel = threading.Event()
+
+
 class DeviceIO:
     """The session's IO: questions and events go to the UI; answers come back from it."""
 
-    def __init__(self, answers: queue.Queue):
+    def __init__(self, answers: queue.Queue, cancel: threading.Event | None = None):
         self.answers = answers
+        self.cancel = cancel or threading.Event()
         self.n = 0
         self.rng = random.Random()   # a fresh option order every time a question is shown
         self.to_screen: dict[str, str] = {}   # bank key -> letter shown on screen, for the current question
@@ -82,6 +102,8 @@ class DeviceIO:
         pass
 
     def show_question(self, q, number):
+        if self.cancel.is_set():  # the child left: answer() returns None at once, nothing more goes to the screen
+            return
         self.n += 1
         tag = ("From your page" if q.id.startswith("g") else
                "Use it" if q.type == "application" else "Basics")
@@ -95,8 +117,15 @@ class DeviceIO:
              labels=["ABCDEFG"[i] for i in range(len(order))])
 
     def answer(self, q):
-        a = self.answers.get()
-        return a  # None = the child left
+        """None = the child left. Sticky: once the session is cancelled every later call returns None at once.
+        (A single None on the queue was not enough: finish_stream asks again after a stop and then blocked on
+        answers.get() forever, so the engine never sent "done" and never read another command.)"""
+        while not self.cancel.is_set():
+            try:
+                return self.answers.get(timeout=0.2)
+            except queue.Empty:
+                continue
+        return None
 
     def event(self, kind, **data):
         if kind == "result":  # report letters as the child saw them
@@ -114,7 +143,10 @@ class Engine:
         self.models_ready = threading.Event()
         self.models_error = None
         self.answers: queue.Queue = queue.Queue()
-        self.stop = threading.Event()
+        self.job: Job | None = None
+        self._job_seq = 0
+        self.model_lock = threading.Lock()   # one model call at a time, whichever thread makes it
+        self._tls = threading.local()        # .job = the session the current thread works for
         self.last_card: dict = {}
         threading.Thread(target=self._load_models, daemon=True).start()
 
@@ -129,12 +161,59 @@ class Engine:
             self.quiz_dir, sum_dir = model_dirs(self.eight_bit)
             self.bq = bq
             self.m, self.sm = bq.Model(self.quiz_dir), bq.Model(sum_dir)
+            for model in {id(self.m): self.m, id(self.sm): self.sm}.values():
+                self._guard(model)
+            from sakshi.generate import strip_reasons
+            bq.strip_reasons = strip_reasons  # the old one cut real answer text at any " as " / " since "
             self.mp = Mapper(self.lib, PteEncoders())
             self.linker = Linker(self.mp)
             self.load_s = round(time.time() - t, 1)
         except Exception as e:  # noqa: BLE001
             self.models_error = f"{type(e).__name__}: {e}"
         self.models_ready.set()
+
+    # ---- jobs: cancel, serialize model calls -------------------------------------------------------------------
+    def _guard(self, model):
+        """Wrap model.run: one call at a time (model_lock), and a call made for a cancelled or replaced session
+        raises Cancelled instead of running (checked after the lock is taken, so a stale thread waiting for the
+        model never gets it)."""
+        orig = model.run
+
+        def run(*a, **k):
+            job = getattr(self._tls, "job", None)
+            with self.model_lock:
+                if job is not None and (job.cancel.is_set() or job is not self.job):
+                    raise Cancelled()
+                return orig(*a, **k)
+        model.run = run
+
+    def _stale(self, job) -> bool:
+        return job.cancel.is_set() or job is not self.job
+
+    def begin_job(self, jid=None) -> Job:
+        self._job_seq += 1
+        job = Job(jid if jid is not None else f"e{self._job_seq}")
+        self.job = job
+        self._tls.job = job
+        _JOB["id"] = job.id
+        return job
+
+    def cancel_job(self, jid=None) -> bool:
+        """Back: cancel the running session (only the one named, when a job id is given) and cut the in-flight
+        model call short so the engine is free again within a token or two."""
+        job = self.job
+        if job is None or job.cancel.is_set() or (jid is not None and jid != job.id):
+            return False
+        job.cancel.set()
+        if self.model_lock.locked():
+            for model in (getattr(self, "m", None), getattr(self, "sm", None)):
+                stop = getattr(getattr(model, "b", None), "cancel", None)
+                if stop:
+                    try:
+                        stop()
+                    except Exception:  # noqa: BLE001
+                        pass
+        return True
 
     def state(self):
         from sakshi.retention.state import LearnerState
@@ -166,7 +245,7 @@ class Engine:
 
     # ---- New Study ----------------------------------------------------------------------------------------
     def study(self, text: str):
-        from sakshi.generate import make_whole_summary
+        from sakshi.generate import summary_in_parts
         from sakshi.link import assemble_bank, link_question
         from sakshi.retention.bank import bank_from_dict
         from sakshi.retention.session import AdaptiveSession, SessionConfig, _Stop
@@ -180,9 +259,21 @@ class Engine:
         if self.models_error:
             emit("error", msg="The model could not be loaded: " + self.models_error)
             return
+        job = self.job or self.begin_job()
         t0 = time.time()
         emit("stage", n=2)
-        summ = self.bq.summary_in_parts(self.sm, passage)
+        try:
+            if hasattr(self.bq, "SUM_PART_SYSTEM"):
+                summ = summary_in_parts(self.sm.run, passage, self.bq.split_sentences, self.bq.SUM_PART_SYSTEM,
+                                        self.bq.SUM_PART_EXAMPLES)
+            else:
+                summ = self.bq.summary_in_parts(self.sm, passage)
+        except Cancelled:
+            summ = None
+        if summ is None or job.cancel.is_set():  # Back while the summary was being written
+            emit("done", mode="study", asked=0, right=0, found=[], stopped=True, next_review=None,
+                 card=self.last_card, error=None)
+            return
         summary = summ.get("text") or ""
         t_sum = round(time.time() - t0, 1)
         emit("summary", text=summary, seconds=t_sum)
@@ -191,21 +282,25 @@ class Engine:
 
         cand = self.linker.candidates(self.mp.topics(passage))
         inbox: queue.Queue = queue.Queue()
-        self.stop.clear()
         written: list[float] = []
         out: dict = {}
         t_quiz = time.time()
 
         def on_kept(rec):
+            if self._stale(job):  # never write into a session that is over
+                raise Cancelled()
             q = {"q": rec["q"], "options": rec["options"], "answer": rec["answer"], "evidence": rec["evidence"]}
             item, _ = link_question(self.linker, cand, q, len(written))
             written.append(round(time.time() - t_quiz, 1))
             inbox.put(item)
 
         def writer():
+            self._tls.job = job
             try:
                 out["r"] = self.bq.quiz_2job(self.m, self.m, passage, n=10, checker=self.sm, on_kept=on_kept, seed=1,
-                                             should_stop=self.stop.is_set)
+                                             should_stop=lambda: self._stale(job))
+            except Cancelled:
+                pass
             except Exception as e:  # noqa: BLE001
                 out["error"] = f"{type(e).__name__}: {e}"
             finally:
@@ -214,26 +309,33 @@ class Engine:
         th = threading.Thread(target=writer, daemon=True)
         th.start()
         st = self.state()
-        io = DeviceIO(self.answers)
+        io = DeviceIO(self.answers, job.cancel)
         title = "page " + now().strftime("%d %b %H:%M")
         sess = AdaptiveSession(bank_from_dict(assemble_bank(self.lib, [], passage, summary, title)), st, io,
                                SessionConfig(show_summary=False, max_questions=20), now=now())
         linked = []
+        told = False
         try:
             while True:
-                if inbox.empty():
+                if job.cancel.is_set():
+                    raise _Stop()
+                if inbox.empty() and not told:
                     emit("waiting")
-                item = inbox.get()
+                    told = True
+                try:
+                    item = inbox.get(timeout=0.2)  # never block on the writer: Back must be seen at once
+                except queue.Empty:
+                    continue
+                told = False
                 if item is None:
                     break
                 linked.append(item)
                 sess.extend(bank_from_dict(assemble_bank(self.lib, linked, passage, summary, title)))
                 sess.explore_question(item["id"])
-                if self.stop.is_set():
-                    raise _Stop()
         except _Stop:
             sess.stopped = True
-        self.stop.set()
+        job.cancel.set()   # ends the writer for good (and DeviceIO answers None from here on)
+        th.join(timeout=2)
         res = sess.finish_stream()
         st.save(str(STATE))
         r = out.get("r") or {"kept": [], "rejected": []}
@@ -256,7 +358,8 @@ class Engine:
             emit("done", mode=mode, asked=0, right=0, found=[], message="Study a page first.")
             return
         before = len(st.attempts)
-        r = ReviewSession(st, self.lib, DeviceIO(self.answers), now()).run(mode)
+        job = self.job or self.begin_job()
+        r = ReviewSession(st, self.lib, DeviceIO(self.answers, job.cancel), now()).run(mode)
         st.save(str(STATE))
         new = st.attempts[before:]
         found = [m.text for m in st.misconceptions.values()
@@ -293,8 +396,7 @@ class Engine:
                 if c.get("cmd") == "answer":
                     self.answers.put(c.get("key"))
                 elif c.get("cmd") == "stop":
-                    self.stop.set()
-                    self.answers.put(None)
+                    self.cancel_job(c.get("job"))
                 else:
                     jobs.put(c)
             jobs.put({"cmd": "quit"})
@@ -308,7 +410,8 @@ class Engine:
                 return
             while not self.answers.empty():  # a stale answer from a finished session must not leak into this one
                 self.answers.get_nowait()
-            self.stop.clear()
+            if cmd in ("study", "mentor", "revision"):
+                self.begin_job(c.get("job"))
             try:
                 if cmd == "status":
                     self.status()

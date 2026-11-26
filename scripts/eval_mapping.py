@@ -3,6 +3,14 @@
 
   .venv-ml/bin/python scripts/eval_mapping.py --fit          # learn fusion weights on TRAINING items -> index/weights.json
   .venv-ml/bin/python scripts/eval_mapping.py                # score every method on TEST items -> results/mapping/
+  .venv-ml/bin/python scripts/eval_mapping.py --links        # option -> misconception linker -> results/mapping_eval_v2.json
+
+--links: the GURU option linker (sakshi.link). Gold = the misconception a teacher tagged on each wrong option in
+data/dataset_v2/raw (3,647 pairs). Non-circular protocol: passages are split by a fixed seed into a TUNE half (used
+only to pick the abstain threshold) and a TEST half (reported). Nothing else is fitted (BM25, bge-small and RRF have
+no trained parameters here). The legacy linker's threshold 0.76 was set on all pairs, so its test numbers are
+optimistic. Recall@1/@5 over two candidate sets: the gold topic's misconceptions, and the device path's candidates
+(mapper.topics of the passage), plus an off-topic check (gate rate on passages from topics outside the syllabus).
 
 Gold labels: in the teacher-written dataset (data/dataset/raw/), each question names the 3 misconceptions its wrong
 options target, for one evidence sentence. A method is good if those 3 are near the top of its ranking.
@@ -111,13 +119,124 @@ def fit(mp: Mapper, items: list[dict]) -> dict:
     return w
 
 
+RAW_V2 = os.path.join(ROOT, "data", "dataset_v2", "raw")
+
+
+def load_pairs(lib: Library) -> list[dict]:
+    out = []
+    for f in sorted(os.listdir(RAW_V2)) if os.path.isdir(RAW_V2) else []:
+        d = json.load(open(os.path.join(RAW_V2, f), encoding="utf-8"))
+        for it in (d.get("response") or {}).get("items", []) or []:
+            opts = it.get("options", []) or []
+            for j, w in enumerate(it.get("wrong", []) or []):
+                mid = w.get("misconception") if isinstance(w, dict) else None
+                if mid in lib.by_id and j + 1 < len(opts) and lib.by_id[mid] in lib.items:
+                    out.append({"file": f, "passage": d["passage"], "topic": d["job"]["topic_id"], "q": it.get("q", ""),
+                                "opt": opts[j + 1], "gold": mid})
+    return out
+
+
+def eval_links(args) -> int:
+    import hashlib
+    from sakshi.link import LEGACY_ABSTAIN, Linker, option_text
+    lib = Library.load()
+    pairs = load_pairs(lib)
+    files = sorted({p["file"] for p in pairs})
+    random.Random(args.seed).shuffle(files)
+    tune_files = set(files[: len(files) // 2])
+    split = {"tune": [p for p in pairs if p["file"] in tune_files], "test": [p for p in pairs if p["file"] not in tune_files]}
+    try:
+        enc = TorchEncoders(nli_model=args.nli)
+        enc_note = f"embed {enc.embed_name}, nli {enc.nli_name}"
+    except Exception as e:  # noqa: BLE001  (models not downloadable offline: report it, BM25 still runs)
+        print(f"encoders unavailable ({type(e).__name__}: {e}); only BM25 is evaluated")
+        enc, enc_note = None, f"unavailable: {type(e).__name__}: {e}"
+    if enc is None:
+        class _Stub:  # BM25 needs no model; give it a 1-d zero embedding so Linker builds
+            embed_name = "none"
+            def embed(self, texts):
+                return np.ones((len(texts), 1), dtype=np.float32)
+        enc = _Stub()
+        methods = ["bm25"]
+    else:
+        methods = ["bm25", "dense", "rrf", "legacy"]
+    mp = Mapper(lib, enc)
+    lk = Linker(mp)
+    by_topic: dict[str, list[int]] = {}
+    for i, m in enumerate(mp.items):
+        by_topic.setdefault(m["topic_id"], []).append(i)
+    dev_cand, gated = {}, {}
+    for f in files:
+        p0 = next(p for p in pairs if p["file"] == f)
+        dev_cand[f] = lk.candidates(mp.topics(p0["passage"]))
+        gated[f] = lk.gated
+
+    def run(rows, method, cands):
+        out = []
+        for p in rows:
+            cand = by_topic.get(p["topic"], []) if cands == "topic" else dev_cand[p["file"]]
+            if not cand:
+                out.append((0, 0, 0.0))
+                continue
+            order, cos = lk.rank(option_text(p["q"], p["opt"]), cand, method)
+            ids = [mp.items[i]["id"] for i in order]
+            out.append((int(ids[0] == p["gold"]), int(p["gold"] in ids[:5]), cos[order[0]]))
+        return out
+
+    def pick_threshold(rows, target_cov=0.75):
+        conf = sorted((c for _, _, c in rows), reverse=True)
+        return conf[int(len(conf) * target_cov) - 1] if conf else 0.0
+
+    def abstain_stats(rows, t):
+        kept = [h for h, _, c in rows if c >= t]
+        return {"threshold": round(float(t), 3), "coverage": round(len(kept) / max(len(rows), 1), 3),
+                "precision@1_kept": round(sum(kept) / len(kept), 3) if kept else None}
+
+    t0 = time.perf_counter()
+    res = {"protocol": {"seed": args.seed, "split_by": "passage file", "tune_passages": len(tune_files),
+                        "test_passages": len(files) - len(tune_files), "tune_pairs": len(split["tune"]),
+                        "test_pairs": len(split["test"]), "rrf_k": 60, "encoders": enc_note,
+                        "query": "question + ' Wrong answer: ' + option",
+                        "abstain_rule": "fused winner's cosine >= threshold; threshold = 75% coverage on TUNE",
+                        "caveats": ["legacy threshold 0.76 was set on all 3,647 pairs (saw the test split)",
+                                    "teacher picked gold from a retrieval-built menu, so gold is biased toward "
+                                    "beliefs any retriever ranks high"]},
+           "methods": {}}
+    for method in methods:
+        r = {}
+        for cands in ("topic", "device"):
+            tune, test = run(split["tune"], method, cands), run(split["test"], method, cands)
+            n = max(len(test), 1)
+            row = {"recall@1": round(sum(h for h, _, _ in test) / n, 3), "recall@5": round(sum(h for _, h, _ in test) / n, 3)}
+            if method in ("rrf", "dense", "legacy"):
+                t = pick_threshold(tune)
+                row["abstain_tuned"] = abstain_stats(test, t)
+                if method == "legacy":
+                    row["abstain_shipped_0.76"] = abstain_stats(test, LEGACY_ABSTAIN)
+            r[cands] = row
+        res["methods"][method] = r
+        print(method, json.dumps(r), flush=True)
+    res["device_gate"] = {"passages_gated_off_syllabus": sum(gated.values()), "passages": len(files),
+                          "note": "all dataset_v2 passages are on-syllabus, so every gated one is a false alarm"}
+    res["seconds"] = round(time.perf_counter() - t0, 1)
+    out = os.path.join(ROOT, "results", "mapping_eval_v2.json")
+    os.makedirs(os.path.dirname(out), exist_ok=True)
+    json.dump(res, open(out, "w"), indent=2)
+    print("wrote", out)
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--fit", action="store_true")
+    ap.add_argument("--links", action="store_true", help="evaluate the option linker -> results/mapping_eval_v2.json")
+    ap.add_argument("--seed", type=int, default=13)
     ap.add_argument("--limit", type=int, default=600)
     ap.add_argument("--out", default=os.path.join(ROOT, "results", "mapping"))
-    ap.add_argument("--nli", default="cross-encoder/nli-deberta-v3-xsmall")
+    ap.add_argument("--nli", default="cross-encoder/nli-MiniLM2-L6-H768")
     args = ap.parse_args()
+    if args.links:
+        return eval_links(args)
     lib = Library.load()
     enc = TorchEncoders(nli_model=args.nli)
     if args.fit:

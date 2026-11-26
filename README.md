@@ -65,7 +65,7 @@ we knew were wrong. They caught at most 3 of the 10, so we left that check out.
 | Streaming quiz | Questions arrive one by one: the next is written while the child answers the current one, so she waits only for the first |
 | The device | 220×176 screen, 3 buttons, camera + on-device OCR, passages loaded from storage |
 
-> **Decision:** we picked Qwen3-0.6B to fit a budget of about one minute for a summary and a quiz on the Pi. Qwen3-1.7B has roughly three times the weights, so it writes about three times slower, and on our data it wasn't clearly better (held-out loss 1.273 vs 1.256). [Why →](docs/JUDGE_BRIEF.md#1-model-qwen3-06b-4-bit-executorch-xnnpack-on-the-arm-cpu)
+> **Decision:** we picked Qwen3-0.6B to fit a budget of about one minute for a summary and a quiz on the Pi. Qwen3-1.7B has roughly three times the weights, so it writes about three times slower, and on our data it wasn't clearly better (held-out loss 1.273 vs 1.256: a gap smaller than the 0.02–0.04 run-to-run seed noise, so not evidence either way; the 1.7B run also had an anomalous starting loss). [Why →](docs/JUDGE_BRIEF.md#1-model-qwen3-06b-4-bit-executorch-xnnpack-on-the-arm-cpu)
 
 ---
 
@@ -75,9 +75,9 @@ we knew were wrong. They caught at most 3 of the 10, so we left that check out.
 |---|---|
 | One learning barrier and learner group | Class 6-10 students in low-connectivity government schools, studying alone; only **67.5%** of Class 8 rural government-school students can read a Class 2 text (ASER 2024) |
 | An organiser passage, lightweight model, ExecuTorch, Raspberry Pi | GURU-0.6B, **ExecuTorch 1.5.1** on a **Raspberry Pi 5 (8 GB)**, Arm CPU only |
-| Summary + at least 3 quiz questions | Summary and 3+ multiple-choice questions, each answer shown with the passage sentence that proves it: **57.9 s** end to end |
+| Summary + at least 3 quiz questions | Summary and 3+ multiple-choice questions, each answer shown with the passage sentence that proves it: **~70 s** end to end with the shipped pipeline (an older pipeline measured 57.9 s in one run) |
 | No cloud inference; report time, model, size, memory | Network off; a run card after every run: **469 MB** model, **3.2 GB** peak for the whole engine |
-| Impact explanation with an example from the passage | A named misconception with its fix, e.g. *"Friction only acts on objects that are already moving"* found at 96% |
+| Impact explanation with an example from the passage | A named misconception with its fix, e.g. *"Friction only acts on objects that are already moving"* named once the child has picked it consistently (a scripted demo student, not a real child) |
 
 ---
 
@@ -170,7 +170,7 @@ flowchart LR
 | Area | Technology |
 |---|---|
 | On-device inference | ExecuTorch 1.5.1, XNNPACK, `TextLLMRunner`, custom SDPA + KV cache |
-| Models | Qwen3-0.6B → GURU-0.6B (LoRA), bge-small-en-v1.5 embedder, nli-deberta-v3-xsmall cross-encoder |
+| Models | Qwen3-0.6B → GURU-0.6B (LoRA), bge-small-en-v1.5 embedder, nli-MiniLM2-L6-H768 cross-encoder |
 | Training | PyTorch, PEFT LoRA, answer-only loss, gradient checkpointing (CUDA or Apple MPS) |
 | Export | optimum-executorch: `8da4w`, group size 32, 8-bit embeddings, `max_seq_len 1024` |
 | Learning engine | Bayes with expected information gain, Bayesian Knowledge Tracing, py-fsrs 6.3.2 (FSRS-6) |
@@ -186,7 +186,7 @@ flowchart LR
 One model does two jobs, and the system prompt says which. Job Q gets a 3-sentence window and the key sentence and
 writes a question and its answer. Job W also gets that question and answer and writes three wrong answers a student
 would believe. Splitting the work keeps each call short enough for a 0.6B model, and the single combined model did
-better at both jobs than two separate specialists (held-out loss 1.217 vs 1.227, and 1.429 vs 1.439).
+better at both jobs than two separate specialists (held-out loss 1.217 vs 1.227, and 1.429 vs 1.439; these gaps are within seed noise, so treat the two as tied).
 
 ### Layer 2: wrong answer → misconception
 
@@ -202,13 +202,14 @@ An unlinked option counts as a plain wrong answer and adds no evidence for any b
 
 ### Layer 3: Bayesian diagnosis
 
-The possibilities for a concept are its misconceptions plus NONE. If she holds belief *m* and it appears as an option,
-we assume she picks it with probability 0.70 and the correct answer with probability 0.15. The update and the choice of
+The possibilities for a concept are its misconceptions, NONE (knows it) and RANDOM (guessing: every option 1/n). If she
+holds belief *m* and it appears as an option, we assume she picks it with probability 0.50 and spreads the rest over the
+other options. A right answer or an untagged wrong answer never raises a misconception above RANDOM. The update and the choice of
 next question:
 
 $$P(h \mid o) = \frac{P(o \mid h)\,P(h)}{\sum_{h'} P(o \mid h')\,P(h')}, \qquad \text{EIG}(q) = H(P) - \sum_o P(o)\,H\big(P(\cdot \mid o)\big)$$
 
-A belief is reported as found at 0.75 and as possible at 0.50.
+A belief is named only when its probability is at least 0.80 **and** she picked it at least twice, more often than any other belief. Otherwise the quiz says "not sure yet". In simulation, a random guesser gets a belief falsely named on 3.8% of diagnosed concepts (it was 45.8%), and a child who always picks their belief's option gets it named 55% of the time on 3-question concepts (100% when there are more questions to ask). Banks need 5 or more questions per concept for this to work well.
 
 > **Decision:** "no specific belief" is always one of the possibilities. Without it, any random wrong answer would look like evidence for some misconception, and one slip would label a child. [Why →](docs/JUDGE_BRIEF.md#9-the-retention-engine-every-design-decision-and-why-14-nov)
 
@@ -252,7 +253,7 @@ with the same root in another topic. That shows whether the underlying habit has
 | Measurement | Value |
 |---|---|
 | Prefill / decode | **122 / 12.1 tokens/s** |
-| Summary + 3 questions, one terminal run, start to finish | **57.9 s** = load 3.0 + summary 14.2 + quiz 40.7 |
+| Summary + 3 questions, one terminal run, start to finish | **57.9 s** = load 3.0 + summary 14.2 + quiz 40.7 (single run, older pipeline; the shipped pipeline takes ~70 s and needs a repeated measurement) |
 | On the device, average time to write each question (hidden: written while the child answers the previous one) | **15.7 s** |
 | Summary on the device (one sentence per third) | **9.2 s** |
 | Peak memory: GURU alone / + summary model / whole engine | **1.48 / 2.7 / 3.2 GB** |
@@ -278,7 +279,7 @@ with the same root in another topic. That shows whether the underlying habit has
 | Version 1: LoRA on SciQ + RACE (4,300 questions) | **30%** sensible, answer key right 82% |
 | Two-job GURU vs single-call | blind read **8/12** vs 3/12 good; answer is the longest option **6%** vs 15%; why/how questions **49%** vs 39% |
 
-> **Decision:** the teacher data was graded before we trained on it. Of 2,773 questions written for 401 syllabus passages, a separate grader kept 1,039 that scored 4-5 and passed every hard rule. None of them overlap with the 40 test passages; we checked for shared 8-word runs. [Why →](docs/JUDGE_BRIEF.md#6-question-quality-the-hardest-problem-attacked-with-measurement)
+> **Decision:** the teacher data was graded before we trained on it. Of 1,794 questions actually graded (2,773 were written) for 401 syllabus passages, a separate grader kept 1,039 that scored 4-5 and passed every hard rule. None of them overlap with the 40 test passages; we checked for shared 8-word runs. [Why →](docs/JUDGE_BRIEF.md#6-question-quality-the-hardest-problem-attacked-with-measurement)
 
 ### Quantization cost (held-out loss, Q job / W job)
 
@@ -294,7 +295,7 @@ with the same root in another topic. That shows whether the underlying habit has
 
 | Metric | Value |
 |---|---|
-| Right belief ranked first / in the top 3 | **53% / 81%** |
+| Right belief ranked first / in the top 5, on a held-out half of passages (`results/mapping_eval_v2.json`) | **52% / 83%** on the device path (59% / 91% when the topic is known) |
 | Precision answering only the most confident 75% / 25% | 57% / 64% |
 | Right topic for test passages | **39 / 40** |
 | Off-syllabus passages caught | **12 / 12**, 0 false alarms |
@@ -305,8 +306,9 @@ with the same root in another topic. That shows whether the underlying habit has
 
 | Behaviour | Result |
 |---|---|
-| A student who learns from feedback | Climbs all the way up on day 0 (P(learned) 0.73) |
-| Beliefs a student still holds, on review days | Re-detected at **90-94%** |
+| Passing a concept | Needs P(learned) ≥ 0.70 **and** 2 right answers in the last 3 attempts; the guess rate is never below 1/n, so one lucky right answer can't pass it |
+| Forgetting | Applied once per elapsed interval (it used to compound on every review); first review after 1 day, second after 3 |
+| Review questions | No question is asked twice (19.9% of review questions used to repeat) |
 | A belief that only looked held from one guess | 55% → **36%**, cleared next day |
 | A blocked concept | Climbs back up on day 7, once its base is solid |
 
@@ -410,6 +412,18 @@ python -m pytest -q tests/test_review.py                # climb gate, blocked co
 - [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md): models, datasets and licences
 
 ---
+
+## Known limitations
+
+An internal audit (20 Nov 2026) found problems that the numbers above have been corrected for. What is still open:
+
+- **No real-student data.** Every diagnosis number comes from simulated students. The likelihoods (0.50 etc.) are set by hand and need a pilot to fit.
+- **The shipped 4-bit pipeline's quality is unmeasured.** Quality numbers come from bf16 or simulated quantization. The test passages were also used during development.
+- **Held-out losses are optimistic.** The validation set overlapped v1's (200 of 310 rows) and checkpoints were picked on it. Seed noise is about 0.02–0.04, so most model comparisons here are ties. `train/finetune_mac.py` now takes a separate `--test` set and a `--seed`.
+- **The demo bank has 3 questions per concept**, which is too few for the stricter diagnosis to name a belief in one session.
+- **The off-syllabus gate's catch rate is unmeasured** (no off-syllabus test set yet). It raised no false alarms on 401 syllabus passages.
+- **The EOS fix is tested against a fake runner only**, not yet on the Pi.
+- **Licensing:** RACE passage text is in `data/`; see `THIRD_PARTY_NOTICES.md` and `MODEL_CARD.md`.
 
 ## Licence
 

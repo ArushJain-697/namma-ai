@@ -19,7 +19,7 @@ from datetime import datetime, timezone
 
 from . import bkt
 from .bank import Bank, Question
-from .bayes import NONE, BayesParams, Diagnosis
+from .bayes import SPECIAL, BayesParams, Diagnosis
 from .fsrs_sched import days_until, make_scheduler, review
 from .graph import ConceptGraph
 from .io import IO
@@ -34,9 +34,13 @@ class SessionConfig:
     max_depth: int = 2          # how many levels down the walk may go
     max_questions: int = 12     # question budget for one session
     max_diagnostic: int = 2     # extra questions spent pinning down a misconception
-    climb_threshold: float = 0.6  # BKT P(learned) a concept needs before we climb back to what is built on it
+    climb_threshold: float = 0.7  # BKT P(learned) a concept needs before we climb back to what is built on it
     climb_retries: int = 1        # after a wrong application answer: re-teach, then this many more tries
     desired_retention: float = 0.9
+    # Off by default: 3 identical picks is the most a 3-question concept can show, and a random guesser repeats a
+    # wrong option twice more 1 time in 16 (simulated: believers named 55% -> 100%, guessers falsely 3.8% -> 6.4%
+    # per diagnosed concept).
+    settle_when_blocked: bool = False
     application_outcome: str = "easy"  # FSRS rating for a first-time correct application answer
     show_summary: bool = True
 
@@ -96,9 +100,10 @@ class AdaptiveSession:
 
         cs = self.state.concepts[q.concept]
         before = cs.p_mastery
-        cs.p_mastery = bkt.update(cs.p_mastery, correct, self.cfg.bkt, application=q.type == "application")
+        cs.p_mastery = bkt.update(cs.p_mastery, correct, self.cfg.bkt, application=q.type == "application",
+                                  n_options=len(q.options))
         cs.attempts += 1
-        self.state.attempts.append({"q": q.id, "concept": q.concept, "picked": picked, "correct": correct,
+        self.state.attempts.append({"q": q.id, "stem": q.stem, "concept": q.concept, "picked": picked, "correct": correct,
                                     "latency_ms": latency, "ts": self.now.isoformat()})
         self.io.log(f"{q.concept} mastery {before:.2f} -> {cs.p_mastery:.2f}")
 
@@ -136,25 +141,42 @@ class AdaptiveSession:
             self.io.event("again", concept=self.bank.concepts[cid].name)
             self._ask(q)
 
+    def _settle(self, cid: str) -> None:
+        """The climb is not happening, so the question kept back for it is free: if one belief already has repeated
+        picks but is not yet sure enough to name, spend that question to settle it (named or 'not sure yet')."""
+        d = self.diag.get(cid)
+        if not self.cfg.settle_when_blocked or d is None or d.confirmed():
+            return
+        h, _ = d.top()
+        if d.picks.get(h, 0) < d.params.min_picks:
+            return
+        q = self._pick(cid, "recall")
+        if q is None:
+            return
+        self.io.log(f"{cid}: climb stopped; spending the kept-back {q.id} to settle {h}")
+        self._ask(q)
+        if d.confirmed():
+            self._explain(cid)
+
     def _last_on(self, cid: str):
         return next((self.bank.questions[q] for q in reversed(self.asked)
                      if q in self.bank.questions and self.bank.questions[q].concept == cid), None)
 
     def _explain(self, cid: str) -> None:
         d = self.diag[cid]
-        m = d.confirmed() or d.suspected()
+        m = d.confirmed()  # named only when sure; otherwise abstain
         name = self.bank.concepts[cid].name
         if m:
             mis = self.bank.misconceptions[m]
-            label = "Misconception detected" if d.confirmed() else "Possible misconception"
-            self.io.event("diagnosis", concept=name, confirmed=bool(d.confirmed()), text=mis.text, fix=mis.fix,
+            label = "Misconception detected"
+            self.io.event("diagnosis", concept=name, confirmed=True, text=mis.text, fix=mis.fix,
                           sure=round(d.posterior[m], 2),
                           remember=(last.explanation if (last := self._last_on(cid)) else ""))
             self.io.show(f"\n>> {label}: \"{mis.text}\" ({d.posterior[m]:.0%} sure)")
             self.io.show(f"   Fix: {mis.fix or 'See the explanation.'}")
         else:
             self.io.event("rebuild", concept=name, remember=(last.explanation if (last := self._last_on(cid)) else ""))
-            self.io.show(f"\n>> No single misconception stands out for \"{name}\". Let's rebuild it from the basics.")
+            self.io.show(f"\n>> Not sure yet which idea is behind this for \"{name}\". Let's rebuild it from the basics.")
         last = next((self.bank.questions[q] for q in reversed(self.asked) if self.bank.questions[q].concept == cid), None)
         if last and last.explanation:
             self.io.show(f"   Remember: {last.explanation}")
@@ -209,6 +231,7 @@ class AdaptiveSession:
             self.io.log(f"climb STOPPED at {cid}: prerequisite(s) below threshold: {', '.join(shaky)}")
             self.outcome[cid] = "again"
             self.state.blocked[cid] = shaky
+            self._settle(cid)
             return False
         if prereqs:
             self.io.log(f"climb UP back to {cid}")
@@ -226,7 +249,7 @@ class AdaptiveSession:
             if check is None:
                 break
             ok = self._ask(check)
-            if ok and cs.p_mastery >= self.cfg.climb_threshold:
+            if ok and bkt.mastered(cs.p_mastery, self.state.attempts, cid, self.cfg.climb_threshold, self.cfg.bkt):
                 self.io.log(f"{cid}: P(L) {cs.p_mastery:.2f} >= {self.cfg.climb_threshold}: climb on")
                 self.outcome[cid] = "hard"
                 self.state.blocked.pop(cid, None)
@@ -288,14 +311,13 @@ class AdaptiveSession:
 
         detected, suspected = {}, {}
         for cid, d in self.diag.items():
+            named = d.confirmed()
             for h, p in d.posterior.items():
-                if h == NONE:
+                if h in SPECIAL:
                     continue
-                if p >= d.params.confirm:
+                if h == named:
                     status, detected[h] = "confirmed", p
-                elif p >= d.params.suspect:
-                    status, suspected[h] = "suspected", p
-                elif h in self.state.misconceptions:
+                elif h in self.state.misconceptions and p < d.params.suspect:
                     status = "cleared"  # held before, no longer likely
                 else:
                     continue

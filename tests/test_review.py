@@ -20,13 +20,13 @@ def q(qid, cid, typ, mis):
                        [{"key": k, "text": f"{qid} {k}", "correct": False, "misconception": m} for k, m in zip("BC", mis)]}
 
 
-def chain_bank(base_questions=True):
+def chain_bank(base_questions=True, per_concept=3):
     """top <- base (top builds on base)."""
-    qs = [q("t1", "top", "recall", ["tm1", "tm2"]), q("t2", "top", "application", ["tm1", "tm2"]),
-          q("t3", "top", "application", ["tm1", "tm2"])]
+    qs = [q("t1", "top", "recall", ["tm1", "tm2"])] + \
+         [q(f"t{i}", "top", "application", ["tm1", "tm2"]) for i in range(2, per_concept + 1)]
     if base_questions:
-        qs += [q("b1", "base", "recall", ["bm1", "bm2"]), q("b2", "base", "application", ["bm1", "bm2"]),
-               q("b3", "base", "application", ["bm1", "bm2"])]
+        qs += [q("b1", "base", "recall", ["bm1", "bm2"])] + \
+              [q(f"b{i}", "base", "application", ["bm1", "bm2"]) for i in range(2, per_concept + 1)]
     return bank_from_dict({"title": "t", "concepts": [
         {"id": "top", "name": "Top", "prereqs": ["base"], "misconceptions": [{"id": "tm1", "text": "x"}, {"id": "tm2", "text": "y"}]},
         {"id": "base", "name": "Base", "prereqs": [], "misconceptions": [{"id": "bm1", "text": "x"}, {"id": "bm2", "text": "y"}]}],
@@ -46,10 +46,18 @@ def test_climb_stops_when_base_is_shaky():
 
 
 def test_climb_continues_when_base_is_learned():
-    st = session(chain_bank(), ModelStudent(learns_after_feedback=True))
+    # enough questions left after the explanation for two right answers: the BKT gate can pass
+    st = session(chain_bank(per_concept=5), ModelStudent(learns_after_feedback=True))
     assert st.blocked == {}
     assert st.concepts["top"].last_outcome == "hard"
-    assert st.concepts["top"].p_mastery >= 0.6  # BKT gate passed
+    assert st.concepts["top"].p_mastery >= 0.7  # BKT gate passed
+
+
+def test_one_right_answer_after_teaching_does_not_pass_the_gate():
+    # only one question left after the diagnosis: one right answer is not mastery, so the climb waits
+    st = session(chain_bank(per_concept=3), ModelStudent(learns_after_feedback=True))
+    assert st.blocked == {"top": ["base"]}
+    assert st.concepts["base"].p_mastery < 0.7
 
 
 def test_untestable_prerequisite_does_not_block():
@@ -116,6 +124,42 @@ def test_forgetting_discounts_mastery(lib):
     st.concepts["c"].fsrs_card = review(make_scheduler(), None, "good", NOW)
     ReviewSession(st, lib, ModelStudent(), NOW + timedelta(days=30), config=None)._forget()
     assert st.concepts["c"].p_mastery < 0.9
+
+
+def test_forgetting_is_applied_once_per_elapsed_interval(lib):
+    from sakshi.retention.fsrs_sched import make_scheduler, retrievability, review
+    s = make_scheduler()
+    st = LearnerState()
+    st.ensure(["c"], 0.3)
+    st.concepts["c"].p_mastery = 0.9
+    st.concepts["c"].fsrs_card = review(s, None, "good", NOW)
+    for d in (1, 3, 7):  # review sessions that never touch "c": its FSRS card stays as it was
+        t = NOW + timedelta(days=d)
+        ReviewSession(st, lib, ModelStudent(), t)._forget()
+        assert abs(st.concepts["c"].p_mastery - 0.9 * retrievability(s, st.concepts["c"].fsrs_card, t)) < 1e-9
+    before = st.concepts["c"].p_mastery
+    ReviewSession(st, lib, ModelStudent(), NOW + timedelta(days=7))._forget()  # same day again: no change
+    assert st.concepts["c"].p_mastery == before
+
+
+def test_review_does_not_repeat_a_question_already_seen(lib):
+    from sakshi.retention.review import belief_question
+    import random
+    mid = a_probe_belief(lib)
+    first = belief_question(lib, mid, set(), random.Random(0))
+    assert first.id.endswith("-probe")
+    st = held_state(lib, mid)
+    st.attempts.append({"q": "Q7", "stem": first.stem, "concept": first.concept, "picked": "A", "correct": False})
+    r = ReviewSession(st, lib, ModelStudent(holds={mid}, learns_after_feedback=False), NOW + timedelta(days=1)).run()
+    assert first.id not in r["asked"]  # same stem under the quiz's id: the review picks another item
+
+
+def test_review_accepts_a_naive_datetime(lib):
+    mid = a_probe_belief(lib)
+    st = held_state(lib, mid)
+    from sakshi.retention.fsrs_sched import make_scheduler, review
+    st.concepts[lib.by_id[mid]["concept_id"]].fsrs_card = review(make_scheduler(), None, "good", NOW)
+    ReviewSession(st, lib, ModelStudent(), datetime(2026, 11, 20, 9)).run("revision")
 
 
 def test_streaming_session_grows_question_by_question():

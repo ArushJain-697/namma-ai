@@ -47,6 +47,10 @@ def main():
     ap.add_argument("--dtype", default="bfloat16", choices=["bfloat16", "float32"])
     ap.add_argument("--accum", type=int, default=1, help="gradient accumulation steps")
     ap.add_argument("--eval-every", type=int, default=100, help="held-out check every N steps; the best is kept")
+    ap.add_argument("--test", default=None,
+                    help="report-only set: scored ONCE on the chosen checkpoint, never used to pick it. "
+                         "Must not overlap --train/--val (checked).")
+    ap.add_argument("--seed", type=int, default=3407, help="run 3+ seeds before trusting a gap under ~0.04")
     ap.add_argument("--start-adapter", default=None,
                     help="LoRA adapter merged into --model BEFORE training (continue from an earlier fine-tune)")
     a = ap.parse_args()
@@ -57,8 +61,8 @@ def main():
 
     dev = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
     print("device:", dev, torch.cuda.get_device_name(0) if dev == "cuda" else "")
-    torch.manual_seed(3407)
-    random.seed(3407)
+    torch.manual_seed(a.seed)
+    random.seed(a.seed)
     tok = AutoTokenizer.from_pretrained(a.model)
     from peft import PeftModel
 
@@ -79,16 +83,28 @@ def main():
                                                              "gate_proj", "up_proj", "down_proj"]))
     model.print_trainable_parameters()
 
-    def encode(rows):
-        out = []
+    def encode(rows, name):
+        out, dropped = [], 0
         for p, c in rows:
             pi, ci = tok(p, add_special_tokens=False)["input_ids"], tok(c, add_special_tokens=False)["input_ids"]
-            ids = (pi + ci)[: a.max_len]
-            lab = ([-100] * len(pi) + ci)[: a.max_len]
-            out.append((ids, lab))
+            if len(pi) + len(ci) > a.max_len:  # truncating would cut <|im_end|> and teach "never stop"
+                dropped += 1
+                continue
+            out.append((pi + ci, [-100] * len(pi) + ci))
+        if dropped:
+            print(f"WARNING: dropped {dropped}/{len(rows)} {name} rows longer than --max-len {a.max_len}", flush=True)
         return out
 
-    train, val = encode(load(a.train)), encode(load(a.val))
+    raw_tr, raw_va = load(a.train), load(a.val)
+    raw_te = load(a.test) if a.test else []
+    seen = {p for p, _ in raw_tr}
+    for nm, rows in (("val", raw_va), ("test", raw_te)):
+        clash = sum(p in seen for p, _ in rows)
+        if clash:
+            raise SystemExit(f"{clash} {nm} prompts also appear in train; split by passage first")
+    if raw_te and {p for p, _ in raw_te} & {p for p, _ in raw_va}:
+        raise SystemExit("test overlaps val: the report set must not be the selection set")
+    train, val, test = encode(raw_tr, "train"), encode(raw_va, "val"), encode(raw_te, "test")
     print(f"{len(train)} train, {len(val)} val; longest {max(len(x[0]) for x in train)} tokens")
     print("loss tokens of example 0:", repr(tok.decode([t for t in train[0][1] if t != -100])))
 
@@ -117,17 +133,19 @@ def main():
         keep = tgt != -100
         return ce(inner.lm_head(h[keep]).float(), tgt[keep])
 
-    def val_loss():
+    def val_loss(data=None):
+        """Token-weighted mean (a mean of batch means over-weights short batches)."""
         model.eval()
         tot = n = 0
         with torch.no_grad():
-            for ids, lab, att in batches(val, False):
-                tot += answer_loss(ids, lab, att).item()
-                n += 1
+            for ids, lab, att in batches(val if data is None else data, False):
+                k = int((lab[:, 1:] != -100).sum())
+                tot += answer_loss(ids, lab, att).item() * k
+                n += k
         model.train()
-        return tot / n
+        return tot / max(n, 1)
 
-    steps_per_epoch = math.ceil(len(train) / a.batch)
+    steps_per_epoch = math.ceil(len(train) / (a.batch * a.accum))
     total = a.smoke or int(steps_per_epoch * a.epochs)
     opt = torch.optim.AdamW([p for p in model.parameters() if p.requires_grad], lr=a.lr, weight_decay=0.01)
     warm = max(1, int(0.05 * total))
@@ -137,10 +155,14 @@ def main():
     model.train()
     step, t0, best = 0, time.time(), 1e9
     os.makedirs(a.out, exist_ok=True)
+    micro = 0
     while step < total:
         for ids, lab, att in batches(train, True):
             loss = answer_loss(ids, lab, att)
-            loss.backward()
+            (loss / a.accum).backward()
+            micro += 1
+            if micro % a.accum:
+                continue
             torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
             opt.step()
             sched.step()
@@ -161,7 +183,12 @@ def main():
     if a.smoke:
         print("smoke test done")
         return
-    print(f"best val loss {best:.3f}; merging the best adapter")
+    print(f"best val loss {best:.3f} (seed {a.seed}); merging the best adapter")
+    if test:
+        from peft import set_peft_model_state_dict
+        from safetensors.torch import load_file
+        set_peft_model_state_dict(model, load_file(os.path.join(a.out, "adapter", "adapter_model.safetensors")))
+        print(f"report-set loss (never used for selection) {val_loss(test):.3f}", flush=True)
     base = load_start(torch.float32)
     merged = PeftModel.from_pretrained(base, os.path.join(a.out, "adapter")).merge_and_unload().to(torch.bfloat16)
     mdir = os.path.join(a.out, "merged")

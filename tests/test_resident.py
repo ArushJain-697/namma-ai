@@ -106,7 +106,10 @@ def test_probe_reports_this_machine_honestly():
 
 
 def can_unshare():
-    return subprocess.run(["unshare", "-n", "true"], capture_output=True).returncode == 0
+    try:
+        return subprocess.run(["unshare", "-n", "true"], capture_output=True).returncode == 0
+    except OSError:  # no unshare at all (macOS)
+        return False
 
 
 def start_resident(sock_path, isolated):

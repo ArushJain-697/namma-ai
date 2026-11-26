@@ -9,7 +9,8 @@ Stages (all offline, all small models):
        cos_mis   meaning similarity between the sentence and the wrong belief + its typical wrong answer
        kw        keyword overlap between the sentence and the misconception's cue words / concept
        topic     how strongly its topic matched the passage
-  4. Re-rank the top candidates with an NLI model: P(contradiction | sentence, belief). A misconception is a FALSE
+  4. Re-rank the top candidates with an NLI cross-encoder (cross-encoder/nli-MiniLM2-L6-H768, the one
+     scripts/export_helpers.py ships to the device): P(contradiction | sentence, belief). A misconception is a FALSE
      statement, so the sentence that proves it wrong is exactly the evidence that can diagnose it.
   5. Final score = weights . features; the weights are learned on our dataset (scripts/eval_mapping.py --fit).
 Encoders are pluggable: TorchEncoders (sentence-transformers, for the Mac and evaluation) or PteEncoders
@@ -36,7 +37,7 @@ DEFAULT_WEIGHTS = {"cos_fix": 3.0, "cos_mis": 1.5, "kw": 1.0, "topic": 1.0, "nli
 class TorchEncoders:
     """sentence-transformers models (Mac / evaluation)."""
 
-    def __init__(self, embed_model: str = "BAAI/bge-small-en-v1.5", nli_model: str | None = "cross-encoder/nli-deberta-v3-xsmall",
+    def __init__(self, embed_model: str = "BAAI/bge-small-en-v1.5", nli_model: str | None = "cross-encoder/nli-MiniLM2-L6-H768",
                  device: str | None = None):
         from sentence_transformers import CrossEncoder, SentenceTransformer
         self.embed_name, self.nli_name = embed_model, nli_model

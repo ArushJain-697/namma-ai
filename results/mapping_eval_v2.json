@@ -1,0 +1,106 @@
+{
+  "protocol": {
+    "seed": 13,
+    "split_by": "passage file",
+    "tune_passages": 200,
+    "test_passages": 201,
+    "tune_pairs": 1810,
+    "test_pairs": 1837,
+    "rrf_k": 60,
+    "encoders": "embed BAAI/bge-small-en-v1.5, nli cross-encoder/nli-MiniLM2-L6-H768",
+    "query": "question + ' Wrong answer: ' + option",
+    "abstain_rule": "fused winner's cosine >= threshold; threshold = 75% coverage on TUNE",
+    "caveats": [
+      "legacy threshold 0.76 was set on all 3,647 pairs (saw the test split)",
+      "teacher picked gold from a retrieval-built menu, so gold is biased toward beliefs any retriever ranks high"
+    ]
+  },
+  "methods": {
+    "bm25": {
+      "topic": {
+        "recall@1": 0.586,
+        "recall@5": 0.898
+      },
+      "device": {
+        "recall@1": 0.53,
+        "recall@5": 0.826
+      }
+    },
+    "dense": {
+      "topic": {
+        "recall@1": 0.543,
+        "recall@5": 0.899,
+        "abstain_tuned": {
+          "threshold": 0.761,
+          "coverage": 0.743,
+          "precision@1_kept": 0.582
+        }
+      },
+      "device": {
+        "recall@1": 0.479,
+        "recall@5": 0.826,
+        "abstain_tuned": {
+          "threshold": 0.764,
+          "coverage": 0.75,
+          "precision@1_kept": 0.511
+        }
+      }
+    },
+    "rrf": {
+      "topic": {
+        "recall@1": 0.574,
+        "recall@5": 0.923,
+        "abstain_tuned": {
+          "threshold": 0.754,
+          "coverage": 0.758,
+          "precision@1_kept": 0.605
+        }
+      },
+      "device": {
+        "recall@1": 0.518,
+        "recall@5": 0.856,
+        "abstain_tuned": {
+          "threshold": 0.756,
+          "coverage": 0.756,
+          "precision@1_kept": 0.556
+        }
+      }
+    },
+    "legacy": {
+      "topic": {
+        "recall@1": 0.587,
+        "recall@5": 0.907,
+        "abstain_tuned": {
+          "threshold": 0.752,
+          "coverage": 0.746,
+          "precision@1_kept": 0.626
+        },
+        "abstain_shipped_0.76": {
+          "threshold": 0.76,
+          "coverage": 0.699,
+          "precision@1_kept": 0.636
+        }
+      },
+      "device": {
+        "recall@1": 0.521,
+        "recall@5": 0.834,
+        "abstain_tuned": {
+          "threshold": 0.753,
+          "coverage": 0.752,
+          "precision@1_kept": 0.563
+        },
+        "abstain_shipped_0.76": {
+          "threshold": 0.76,
+          "coverage": 0.71,
+          "precision@1_kept": 0.572
+        }
+      }
+    }
+  },
+  "device_gate": {
+    "passages_gated_off_syllabus": 0,
+    "passages": 401,
+    "note": "all dataset_v2 passages are on-syllabus, so every gated one is a false alarm"
+  },
+  "seconds": 345.7
+}

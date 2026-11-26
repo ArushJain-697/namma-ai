@@ -9,7 +9,7 @@ pytest.importorskip("fsrs")
 from conftest import ROOT  # noqa: E402
 from sakshi.retention import bkt  # noqa: E402
 from sakshi.retention.bank import bank_from_dict, load_bank  # noqa: E402
-from sakshi.retention.bayes import NONE, Diagnosis  # noqa: E402
+from sakshi.retention.bayes import NONE, RANDOM, Diagnosis  # noqa: E402
 from sakshi.retention.fsrs_sched import make_scheduler, retrievability, review  # noqa: E402
 from sakshi.retention.graph import ConceptGraph  # noqa: E402
 from sakshi.retention.io import ModelStudent, ScriptedIO  # noqa: E402
@@ -83,9 +83,9 @@ def test_free_text_misconceptions_are_merged_by_similarity():
 # ---- BKT ----------------------------------------------------------------------------------------------
 
 def test_bkt_moves_the_right_way():
-    p = 0.3
+    p = 0.05
     assert bkt.update(p, True) > p
-    assert bkt.update(p, False) < p
+    assert bkt.update(0.3, False) < 0.3
     # an application question is harder to guess, so a right answer is stronger evidence
     assert bkt.update(p, True, application=True) > bkt.update(p, True)
     assert p < bkt.implicit_credit(p) < bkt.update(p, True)
@@ -95,16 +95,66 @@ def test_bkt_moves_the_right_way():
     assert 0.95 < q <= 1.0
 
 
+def test_bkt_guess_floor_is_one_over_the_options():
+    # a blind guess on a 3-option question is right 1 time in 3, so a right answer there proves less
+    assert bkt.update(0.05, True, application=True, n_options=3) < bkt.update(0.05, True, application=True, n_options=6)
+
+
+def test_bkt_one_right_answer_is_not_mastery():
+    p = 0.3
+    for _ in range(10):
+        p = bkt.update(p, False, n_options=4)
+    one = bkt.update(p, True, n_options=4)
+    assert one - p <= bkt.BKTParams().max_step + 1e-9 and one < 0.7  # was 0.23 -> 0.71 before the cap
+    assert bkt.update(0.3, True, n_options=4) < 0.7                  # from the prior too
+    two = bkt.update(bkt.update(0.3, True, n_options=4), True, n_options=4)
+    assert two >= 0.7
+    tries = [{"concept": "c", "correct": c} for c in (False, False, True)]
+    assert not bkt.mastered(0.99, tries, "c", 0.7)  # high P(L) alone is not enough: needs 2 right answers
+    assert bkt.mastered(0.8, tries + [{"concept": "c", "correct": True}], "c", 0.7)
+
+
 # ---- Bayes --------------------------------------------------------------------------------------------
 
-def test_bayes_confirms_after_two_consistent_picks(bank):
+def test_bayes_names_a_belief_only_after_repeated_consistent_picks(bank):
     d = Diagnosis("C4", bank.concepts["C4"].misconceptions)
+    assert RANDOM in d.posterior and NONE in d.posterior
     d.update(bank.questions["Q10"], "B")  # "just how leaves breathe" = C4M1
-    h, p = d.top()
-    assert h == "C4M1" and p < 0.75 and d.confirmed() is None and d.suspected() == "C4M1"
+    assert d.top()[0] == "C4M1" and d.confirmed() is None and d.suspected() is None  # one pick: not sure yet
     d.update(bank.questions["Q11"], "D")  # C4M1 again
-    assert d.confirmed() == "C4M1"
+    assert d.confirmed() is None and d.top()[1] < 0.8  # two picks could still be a guesser
+    d.update(bank.questions["Q12"], "A")  # C4M1 a third time
+    assert d.confirmed() == "C4M1" and d.posterior["C4M1"] >= 0.8
     assert abs(sum(d.posterior.values()) - 1) < 1e-9
+
+
+def test_bayes_random_guessers_are_rarely_named():
+    import random
+    from sakshi.retention.bank import Option, Question
+    rng, named, n = random.Random(0), 0, 4000
+    for _ in range(n):
+        d = Diagnosis("c", ["m1", "m2", "m3"])
+        for i in range(3):
+            tags = ["m1", "m2", "m3"]
+            rng.shuffle(tags)
+            q = Question(f"q{i}", "c", "recall", "s", [Option("A", "a", True)] + [Option(k, k, False, t) for k, t in zip("BCD", tags)])
+            d.update(q, rng.choice("ABCD"))
+        named += d.confirmed() is not None
+    # 3 blind picks landing on one belief's option every time: 3 x (1/4)^3 = 4.7% is the floor any rule that
+    # names a belief after 3 consistent picks must accept (inside a real session it measured 3.8% per diagnosis)
+    assert named / n < 0.06
+
+
+def test_bayes_untagged_or_correct_picks_never_raise_a_belief_against_guessing():
+    from sakshi.retention.bank import Option, Question
+    q = Question("q", "c", "recall", "s", [Option("A", "a", True), Option("B", "b", False, "m1"),
+                                           Option("C", "c", False, None), Option("D", "d", False, None)])
+    for pick in "ACD":
+        d = Diagnosis("c", ["m1", "m2"])
+        before = {h: d.posterior[h] / d.posterior[RANDOM] for h in ("m1", "m2")}
+        d.update(q, pick)
+        for h in ("m1", "m2"):
+            assert d.posterior[h] / d.posterior[RANDOM] <= before[h] + 1e-12
 
 
 def test_bayes_mixed_picks_do_not_confirm(bank):
@@ -154,17 +204,25 @@ def test_strong_student_is_quick_and_gets_good_ratings(bank):
     assert all(c.fsrs_card for c in state.concepts.values())
 
 
-def test_demo_path_detects_walks_down_and_climbs_back(bank):
+def test_demo_path_walks_down_and_does_not_overclaim(bank):
     io = ModelStudent(knows={"C1"}, holds={"C2M1", "C4M1"})
     res, state = run(bank, io)
-    assert "C4M1" in res.detected and "C2M1" in res.detected
-    # order: C4 first (most advanced), then down to C2 and C1, back up to C2, then C3, then back to C4
+    # 3 questions per concept: 2 picks of a belief is not enough to name it, and one right answer after the
+    # explanation is not mastery, so the climb waits for review day instead of claiming success
+    assert not res.detected and not res.suspected
     concepts = [bank.questions[q].concept for q in res.asked]
-    assert concepts[0] == "C4" and concepts[-1] == "C4"
-    assert concepts.index("C1") > concepts.index("C2")
-    assert res.outcomes == {"C1": "good", "C2": "hard", "C3": "hard", "C4": "hard"}
+    assert concepts[0] == "C4" and concepts.index("C1") > concepts.index("C2")
+    assert res.outcomes["C1"] == "good" and res.outcomes["C4"] == "again"
+    assert state.blocked == {"C4": ["C2", "C3"]}
+
+
+def test_stubborn_believer_is_named(bank):
+    io = ModelStudent(knows={"C1", "C2", "C3"}, holds={"C4M1"}, learns_after_feedback=False)
+    res, state = run(bank, io)
+    assert "C4M1" in res.detected
     text = "\n".join(io.lines)
-    assert 'Misconception detected: "Photosynthesis is just the way plants breathe"' in text
+    assert "Not sure yet which idea is behind this" in text  # abstains after 1-2 picks
+    assert 'Misconception detected: "Photosynthesis is just the way plants breathe"' in text  # named after the 3rd
     assert "Let's go back to the ideas this builds on" in text
     assert state.misconceptions["C4M1"].status.startswith("confirmed")
 
@@ -221,7 +279,13 @@ def test_second_session_builds_on_saved_state(bank):
 def test_fsrs_ratings_order_the_intervals():
     s = make_scheduler()
     due = {o: review(s, None, o, NOW)["due"] for o in ["again", "hard", "good", "easy"]}
-    assert due["again"] <= due["hard"] <= due["good"] < due["easy"]
+    assert due["again"] <= due["hard"] <= due["good"] <= due["easy"]
+    # children: 1st revision within a day, 2nd within 3 days, then FSRS decides
+    assert datetime.fromisoformat(due["easy"]) <= NOW + timedelta(days=1)
+    c2 = review(s, review(s, None, "easy", NOW), "easy", NOW + timedelta(days=1))
+    assert datetime.fromisoformat(c2["due"]) <= NOW + timedelta(days=4)
+    c3 = review(s, c2, "easy", NOW + timedelta(days=4))
+    assert datetime.fromisoformat(c3["due"]) > NOW + timedelta(days=7)
     card = review(s, None, "good", NOW)
     assert retrievability(s, card, NOW + timedelta(days=1)) > retrievability(s, card, NOW + timedelta(days=10))
     assert retrievability(s, None, NOW) == 0.0

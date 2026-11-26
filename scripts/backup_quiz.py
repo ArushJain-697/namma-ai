@@ -851,21 +851,8 @@ def _opening(s: str) -> str:
     return "num" if re.match(r"^[\d.,%-]+$", w) else w
 
 
-_REASON = re.compile(r"(?:,\s*|\s+)(?:because|since|as|so that|due to)\s+\S.*$", re.I)
-
-
-def strip_reasons(key: str, wrong: list[str]) -> tuple[str, list[str]]:
-    """GURU often writes the answer with its justification ("The rougher one, since it has more bumps"), which gives
-    the key away. Cut a trailing "because / since / as / due to ..." clause from every option, so all options keep
-    the same shape. Kept as written when an option starts with the reason ("Because ...", a why-question answer) or
-    when cutting would make two options the same (then the reason is what the question tests)."""
-    opts = [key] + list(wrong)
-    if any(re.match(r"\s*(because|since|due to)\b", o, re.I) for o in opts):
-        return key, wrong
-    cut = [_REASON.sub("", o).strip(" ,.") for o in opts]
-    if any(len(c.split()) < 1 for c in cut) or len({c.lower() for c in cut}) < len(opts):
-        return key, wrong
-    return cut[0], cut[1:]
+# One implementation, shared with the device engine (the old copy here cut real text at any " as " / " since ").
+from sakshi.generate import strip_reasons  # noqa: E402,F401
 
 
 SUM_PART_SYSTEM = ("You rewrite a part of a school passage as ONE short sentence for a Class 6-10 student, under 15 "
@@ -877,21 +864,10 @@ SUM_PART_EXAMPLES = (("Part: The heart has four chambers. The right side sends b
 
 
 def summary_in_parts(m: "Model", passage: str) -> dict:
-    """The summary: the passage cut into thirds at sentence ends, one short own-words sentence per third.
-    Measured 14 Nov on 7 passages against the old one-call summary (asked for 2-3 sentences): old 86 words on average,
-    44% of its words copied in 6+ word runs (87% on one passage) and it often covered only the start; this version
-    44 words, 26% copied, covers the whole passage by construction, ~10 s on the Pi instead of ~14 s."""
-    sents = split_sentences(passage)
-    k = max(1, round(len(sents) / 3))
-    parts = [" ".join(c) for c in (sents[:k], sents[k:2 * k], sents[2 * k:]) if c] if len(sents) >= 3 else [passage]
-    out = []
-    for part in parts:
-        t = m.run(SUM_PART_SYSTEM, f"Part: {part}\nWrite one sentence.", 40, examples=SUM_PART_EXAMPLES,
-                  kind="summary", stop=r"[.!?](\s|$)").strip()
-        t = re.split(r"(?<=[.!?])\s", t)[0].strip()
-        if t and t.lower() not in (o.lower() for o in out):
-            out.append(t)
-    return {"text": " ".join(out)}
+    """The summary: passage cut into thirds, one short own-words sentence per third. Delegates to
+    sakshi.generate.summary_in_parts, whose stop rule does not cut at decimals ("3.5") or abbreviations."""
+    from sakshi.generate import summary_in_parts as _sip
+    return _sip(m.run, passage, split_sentences, SUM_PART_SYSTEM, SUM_PART_EXAMPLES)
 
 
 def option_shape_ok(key: str, wrong: list[str], passage: str) -> str | None:

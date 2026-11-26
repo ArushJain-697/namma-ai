@@ -376,3 +376,32 @@ in a run. Full maths: `docs/RETENTION_MATH.md`.
   screen.
 - Camera + OCR: works on the device (frame captured, OCR ran); in our test the camera was not pointed at a page, so
   OCR found no words and the screen asked for a clearer photo. Still to try: a real textbook page.
+
+## Audit fixes (20 Nov 2026)
+
+Every decision below comes with the measurement that drove it. Measurement scripts are in each change's tests and in `scripts/eval_mapping.py --links`.
+
+- **Diagnosis now includes a RANDOM (guessing) possibility.** It names a belief only at ≥0.80 with at least 2 consistent picks; otherwise it abstains.
+  - Evidence: false naming for random guessers was 45.8% → **3.8%** of diagnosed concepts (85% → 11% per child).
+  - Cost: true beliefs on 3-question concepts are named 55% of the time (was 100%, but with 68% wrong-belief naming, now 6.5%).
+  - Earlier "90-94% re-detection" and "found at 96%" figures were circular (scripted students built from the same model) and are withdrawn.
+- **BKT gate.** The guess rate is never below 1/n options, and one answer can move mastery by at most 0.3. Passing now needs P(L) ≥ 0.70 plus 2 right answers in the last 3 attempts. Evidence: one right answer after being stuck moved mastery 0.23→0.62 and passed; now it goes to 0.53 and does not pass.
+- **Forgetting** is applied once per interval: day-7 P(L) is 0.727, matching the formula (it used to compound to 0.607). Review no longer repeats questions (19.9% used to repeat). FSRS first intervals are 1 then 3 days for children.
+- **Linking.** On a held-out split by passage (201 test passages, ~1.8k pairs), the old cosine+NLI linker and BM25 tie at recall@1 ≈0.59, and BM25+dense RRF has the best recall@5 (0.92).
+  - The old linker stays the default because its top-1 precision at 75% coverage is highest (0.626 vs 0.605), and top-1 feeds diagnosis.
+  - The audit's "BM25 65.6% vs 53%" did not reproduce.
+  - The "Standardization of Measurement" fallback is removed; unmatched options stay unlinked.
+  - An off-syllabus gate now runs on the device path.
+  - The shipped NLI model is nli-MiniLM2-L6-H768 (docs said DeBERTa).
+- **Runtime.**
+  - Back no longer hangs the engine.
+  - Each session has its own cancel token and the model runs under one lock, so stale writers can't overlap.
+  - The summary stop rule no longer cuts at "3.5".
+  - `strip_reasons` no longer deletes "as fuel" / "since 1947".
+  - Both EOS ids (151645, 151643) stop generation. This is tested on a fake runner only.
+- **Training script.** Val loss is token-weighted. Added a `--test` report set, never used for selection, that is checked not to overlap train or val. Added `--seed`. `--accum` now actually accumulates (it was ignored). Over-long rows are dropped instead of truncated, which used to cut `<|im_end|>`.
+- **Corrected numbers.**
+  - 2,773 → 1,794 actually graded.
+  - 57.9 s was one run of an older pipeline; the shipped pipeline is ~70 s.
+  - Held-out gaps of 0.001–0.017 are below seed noise (0.02–0.04). Only the 4-bit cost (~0.13) is real.
+- **Still open:** retraining on a clean split, measuring the shipped 4-bit pipeline, generating rationales offline for the linker, a fresh evaluation set with a judge panel, a real-student pilot, and RACE redistribution.

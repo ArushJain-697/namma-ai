@@ -231,3 +231,58 @@ def make_stem(backend: Backend, witness: str, answer: str, passage: str, other_s
 def build_cloze(sentence: str, term: str) -> str:
     """Code-only fill-in-the-blank. Its key is the blanked word, so it cannot be wrong against the passage."""
     return "Fill in the blank: " + blank_term(sentence, term)
+
+
+# ---- sentence ends and option clean-up for the device pipeline (scripts/sakshi_engine.py) ----------------------
+# A sentence ends at . ! or ? that is followed by whitespace (optionally after a closing quote or bracket). The old
+# rule `[.!?](\s|$)` also fired at the END of the text streamed so far, so "3." of "3.5 cm" stopped the model
+# mid-number; a decimal point, "e.g." / "i.e." and a single-letter initial ("J. C. Bose") are not sentence ends.
+_NOT_END = r"(?<!\be\.g)(?<!\bi\.e)(?<!\bvs)(?<!\betc)(?<!\bDr)(?<!\bMr)(?<!\bMrs)(?<!\bSt)(?<!\b[A-Z])"
+SENTENCE_STOP = _NOT_END + r"[.!?][\"')\]]?\s"
+_SENTENCE_END = re.compile(SENTENCE_STOP)
+
+
+def first_sentence(text: str) -> str:
+    """The text up to and including its first real sentence end (all of it if there is none)."""
+    text = text.strip()
+    m = _SENTENCE_END.search(text + " ")
+    return text[: m.end()].strip() if m else text
+
+
+def summary_in_parts(run, passage: str, split_sentences, system: str, examples=(), max_new: int = 40) -> dict:
+    """The passage cut into thirds at sentence ends, one short own-words sentence per third (see
+    backup_quiz.summary_in_parts). `run(system, user, max_new, examples=, kind=, stop=)` is a Model.run."""
+    sents = split_sentences(passage)
+    k = max(1, round(len(sents) / 3))
+    parts = [" ".join(c) for c in (sents[:k], sents[k:2 * k], sents[2 * k:]) if c] if len(sents) >= 3 else [passage]
+    out: list[str] = []
+    for part in parts:
+        t = first_sentence(run(system, f"Part: {part}\nWrite one sentence.", max_new, examples=examples,
+                               kind="summary", stop=SENTENCE_STOP))
+        if t and t.lower() not in (o.lower() for o in out):
+            out.append(t)
+    return {"text": " ".join(out)}
+
+
+# The reason clause: "because / due to ..." anywhere after the answer, or "since / as / so that ..." only after a
+# comma. A bare " as " or " since " is part of the answer itself ("as hard as steel", "since 1947", "as a gas").
+_REASON_CLAUSE = re.compile(r"(?:\s*,\s*|\s+)(?:because|due\s+to)\s+\S.*$|\s*,\s*(?:since|as|so\s+that)\s+\S.*$", re.I)
+
+
+def strip_reason(option: str) -> str:
+    """One option without its trailing reason clause; unchanged if there is none or too little would be left."""
+    cut = _REASON_CLAUSE.sub("", option).strip(" ,.")
+    return cut if len(cut.split()) >= 1 and len(cut) >= 2 else option.strip()
+
+
+def strip_reasons(key: str, wrong: list[str]) -> tuple[str, list[str]]:
+    """GURU often writes the answer with its justification ("The rougher one, since it has more bumps"), which gives
+    the key away. Cut only that trailing reason clause from every option. Kept as written when an option starts
+    with the reason ("Because ...", a why-question answer) or when cutting would make two options the same."""
+    opts = [key] + list(wrong)
+    if any(re.match(r"\s*(because|since|due to|as)\b", o, re.I) for o in opts):
+        return key, list(wrong)
+    cut = [strip_reason(o) for o in opts]
+    if len({c.lower() for c in cut}) < len(opts):
+        return key, list(wrong)
+    return cut[0], cut[1:]

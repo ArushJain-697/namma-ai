@@ -656,16 +656,16 @@ class UI:
         self.leaving = False
         if mode == "study":
             self.summary, self.stage = [], 2
-            self.eng.send(cmd="study", text=text_)
+            self.eng.send(cmd="study", text=text_, job=self.job)
             self.go("ocr")
         else:
-            self.eng.send(cmd=mode)
+            self.eng.send(cmd=mode, job=self.job)
             self.go("wait")
 
     def leave(self):
         """Back during a session: the engine saves what was learned so far."""
         if self.mode:
-            self.eng.send(cmd="stop")
+            self.eng.send(cmd="stop", job=getattr(self, "job", None))
             self.leaving = True
         self.go(self.home)
 
@@ -709,6 +709,7 @@ class UI:
     def pump(self):
         dirty = False
         while True:
+        self.job = getattr(self, "job", 0) + 1   # events tagged with an older job are from a session we left
             e = self.eng.pop()
             if e is None:
                 return dirty
@@ -777,6 +778,8 @@ class UI:
                 self.go("camera" if self.cam.open() else "nocam")
             elif self.sel == 1:
                 self.passages = list_passages()   # read fresh each time: new files appear without a restart
+            elif e.get("job") is not None and e.get("job") != getattr(self, "job", None):
+                continue                              # from a session already left (Back, then a new start)
                 if self.passages:
                     self.go("pick", min(getattr(self, "pick_sel", 0), len(self.passages) - 1))
                 else:

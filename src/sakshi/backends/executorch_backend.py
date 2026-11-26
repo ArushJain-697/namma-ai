@@ -33,6 +33,14 @@ from typing import Any, Callable
 from .base import CHAT_FORMATS, Backend, GenResult
 
 _STOP = re.compile(r"<\|(eot_id|end_of_text|eom_id|start_header_id|end_header_id|im_end|im_start|endoftext)\|>")
+# Qwen's two end tokens: <|im_end|> (151645, end of the assistant turn) and <|endoftext|> (151643, end of document).
+# The runner only stops at the EOS ids stored in the .pte metadata, and our exports carry just one of them, so the
+# model ran on past <|im_end|> into a second, made-up turn. GenerationConfig (1.5.1) has no eos-id field, so the
+# backend enforces both itself: the token callback stops the runner at either end token, and clean_output drops
+# everything after the first one in any case.
+QWEN_EOS_IDS = (151645, 151643)
+EOS_TEXT = {151645: "<|im_end|>", 151643: "<|endoftext|>"}
+_EOS_CUT = re.compile(r"<\|(im_end|endoftext|eot_id|end_of_text)\|>")
 _THINK = re.compile(r"<think>.*?(</think>|$)", re.S)
 _OBSERVER = re.compile(r"^PyTorchObserver .*$", re.M)  # the runner prints its stats as a line of JSON on stdout
 
@@ -104,6 +112,9 @@ def clean_output(text: str) -> str:
     """Drop stop tokens, any thinking block and the runner's stats line."""
     text = _OBSERVER.sub("", text)
     text = _THINK.sub("", text)
+    m = _EOS_CUT.search(text)
+    if m and text[: m.start()].strip():  # the answer ends at the first end token; later text is a made-up turn
+        text = text[: m.start()]
     return _STOP.sub("", text).strip()
 
 
@@ -132,7 +143,8 @@ class ExecuTorchBackend(Backend):
     def __init__(self, model_path: str, tokenizer_path: str, data_path: str | None = None, bos_in_prompt: bool = False,
                  num_bos: int = 0, hash_model: bool = False, label: str | None = None, chat_format: str = "auto",
                  runner_factory: Callable[[str, str, str | None], Any] | None = None,
-                 config_factory: Callable[..., Any] | None = None, capture: Callable[[Callable[[], None]], str] | None = None):
+                 config_factory: Callable[..., Any] | None = None, capture: Callable[[Callable[[], None]], str] | None = None,
+                 eos_ids: tuple[int, ...] | None = None):
         for what, path in (("model", model_path), ("tokenizer", tokenizer_path)):
             if not os.path.isfile(path):
                 raise FileNotFoundError(f"{what} file not found: {path}")
@@ -141,6 +153,10 @@ class ExecuTorchBackend(Backend):
         self.model_path, self.tokenizer_path, self.data_path = model_path, tokenizer_path, data_path
         self.bos_in_prompt, self.num_bos, self.label = bos_in_prompt, num_bos, label
         self.chat_format = detect_chat_format(tokenizer_path) if chat_format == "auto" else chat_format
+        if eos_ids is None:
+            eos_ids = QWEN_EOS_IDS if self.chat_format in ("qwen3", "chatml") else ()
+        self.eos_ids = tuple(eos_ids)
+        self.eos_texts = tuple(EOS_TEXT[i] for i in self.eos_ids if i in EOS_TEXT)
         self._config_factory = config_factory or _generation_config
         self._capture = capture or capture_stdout
         t0 = time.perf_counter()
@@ -159,7 +175,14 @@ class ExecuTorchBackend(Backend):
         return {"name": self.label or f"executorch:{os.path.basename(os.path.dirname(self.model_path)) or 'model'}",
                 "model_path": self.model_path, "tokenizer_path": self.tokenizer_path,
                 "model_bytes": os.path.getsize(self.model_path), "sha256": self.sha256, "load_s": self.load_s,
-                "chat_format": self.chat_format, "bos_in_prompt": self.bos_in_prompt, "num_bos": self.num_bos}
+                "chat_format": self.chat_format, "bos_in_prompt": self.bos_in_prompt, "num_bos": self.num_bos,
+                "eos_ids": list(self.eos_ids)}
+
+    def cancel(self) -> None:
+        """Stop the generation in progress (Back on the device). Safe to call from another thread."""
+        stop = getattr(self._runner, "stop", None)
+        if stop:
+            stop()
 
     def generate(self, prompt, max_new_tokens=64, temperature=0.0, seed=None, task=None, payload=None,
                  stop_regex: str | None = None) -> GenResult:
@@ -176,6 +199,8 @@ class ExecuTorchBackend(Backend):
                 "num_prompt_tokens", "num_generated_tokens")})
 
         t0 = time.perf_counter()
+        if stop_regex and self.eos_texts:  # stop at the regex OR at either end token
+            stop_regex = f"(?:{stop_regex})|" + "|".join(re.escape(t) for t in self.eos_texts)
         if stop_regex:
             # The fine-tuned model never writes its end-of-turn token, so it would write until max_new_tokens. Watch
             # the text as it is generated and stop the runner once the answer is complete (saves ~half the decode time
