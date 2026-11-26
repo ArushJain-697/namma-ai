@@ -12,7 +12,9 @@ the idea that every wrong option should reveal a misconception.
 | Qwen3-0.6B (Qwen team) | base of GURU-0.6B; summary and self-check | Apache 2.0 |
 | BAAI/bge-small-en-v1.5 | misconception shortlist (embedding) | MIT |
 | cross-encoder/nli-MiniLM2-L6-H768 | misconception rerank (NLI) | Apache 2.0 |
-| RapidOCR, PP-OCRv5 mobile models | reading a photographed page | Apache 2.0 |
+| RapidOCR, PaddleOCR PP-OCRv6 models (v5 mobile as fallback) | reading a photographed page | Apache 2.0 |
+| PaddleOCR-VL-1.5 (PaddlePaddle, official GGUF) | re-reading an unclear photo | Apache 2.0 |
+| llama.cpp (ggml-org) | runs PaddleOCR-VL on the CPU | MIT |
 
 ## Training data
 | Dataset | Licence | Note |

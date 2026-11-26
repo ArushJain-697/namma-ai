@@ -251,7 +251,7 @@ class Engine:
         from sakshi.retention.session import AdaptiveSession, SessionConfig, _Stop
         passage = " ".join(text.split())
         if len(passage.split()) < MIN_WORDS:
-            emit("error", msg=f"Only {len(passage.split())} words could be read. Try a clearer photo of the page.")
+            emit("error", msg=f"Only {len(passage.split())} words could be read. Move closer so the text fills the screen, and hold still.")
             return
         if not self.models_ready.is_set():
             emit("loading")

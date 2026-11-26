@@ -489,11 +489,13 @@ class Engine:
 
 
 # ==========================================================================
-# Camera + OCR (RapidOCR PP-OCRv5 mobile, runs on the Pi, models on disk)
+# Camera + OCR (RapidOCR PP-OCRv6, PaddleOCR-VL for unclear photos; runs on the Pi, models on disk)
 # ==========================================================================
 class Camera:
     def __init__(self):
+        import collections
         self.cap, self.frame, self.error = None, None, None
+        self.recent = collections.deque(maxlen=6)  # the last ~1 s of preview frames
 
     def open(self):
         if self.cap is not None:
@@ -509,6 +511,7 @@ class Camera:
             cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
             cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
             cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)  # the photo is the latest frame, not a stale buffered one
+            cap.set(cv2.CAP_PROP_AUTOFOCUS, 1)   # cameras that can focus should; ignored by fixed-focus ones
             self.cap, self.error = cap, None
             return True
         except Exception as e:  # noqa: BLE001
@@ -521,12 +524,25 @@ class Camera:
         ok, f = self.cap.read()
         if ok:
             self.frame = f
+            self.recent.append(f)
         return self.frame if ok else None
+
+    def best_recent(self):
+        """The sharpest of the last ~1 s of frames, not just the one on screen when the button went down (pressing
+        it shakes the device, and a hand-held page sways). Sharpness = variance of the Laplacian."""
+        import page_ocr
+        frames = list(self.recent) or ([self.frame] if self.frame is not None else [])
+        if not frames:
+            return None
+        best, val, vals = page_ocr.pick_sharpest(frames)
+        print(f"PHOTO sharpness {val:.0f} (best of {[round(v) for v in vals]})\r", flush=True)
+        return best.copy()
 
     def close(self):
         if self.cap is not None:
             self.cap.release()
         self.cap = None
+        self.recent.clear()
 
 
 def frame_to_area(frame, w, h):
@@ -540,27 +556,69 @@ def frame_to_area(frame, w, h):
     return Image.fromarray(rgb)
 
 
+# Line models, best first (scripts/ocr_bench.py: v6 small had the fewest word errors on our 72 photos, 21.9% vs
+# 23.7% for medium and 35.9% for v5 mobile, at half medium's time). SAKSHI_OCR picks one; an older RapidOCR without
+# PP-OCRv6 falls back to v5 mobile.
+OCR_MODELS = {"v6s": ("PPOCRV6", "SMALL"), "v6m": ("PPOCRV6", "MEDIUM"), "v5m": ("PPOCRV5", "MOBILE")}
+# When the line model's read looks weak (page_ocr.VL_MIN_WORDS / VL_MIN_CONF), PaddleOCR-VL can re-read the text
+# region (pi/ui/paddle_vl.py). OFF by default: its image encoder took 271 s for one page on an Apple M4 CPU (4
+# threads), so roughly half an hour on the Pi 5's CPU. SAKSHI_OCR_VL=auto turns it on for a board with a GPU / NPU.
+
+
 class OCR:
-    """Loaded in the background at start-up; reading a page takes a few seconds on the Pi."""
+    """Loaded in the background at start-up. The line model takes seconds; PaddleOCR-VL is slower and only runs on a
+    photo the line model is unsure about. Each read prints one 'OCR {...}' line for the run log."""
 
     def __init__(self):
-        self.engine, self.error = None, None
+        self.engine, self.error, self.name, self.vl = None, None, "", None
+        self.vl_mode = os.environ.get("SAKSHI_OCR_VL", "off")
+        self.phase = ""                 # what the reading screen says while this runs
         threading.Thread(target=self._load, daemon=True).start()
 
     def _load(self):
         try:
             from rapidocr import ModelType, OCRVersion, RapidOCR
-            self.engine = RapidOCR(params={"Det.ocr_version": OCRVersion.PPOCRV5, "Rec.ocr_version": OCRVersion.PPOCRV5,
-                                           "Det.model_type": ModelType.MOBILE, "Rec.model_type": ModelType.MOBILE})
+            want = os.environ.get("SAKSHI_OCR", "v6s")
+            for k in [want] + [k for k in OCR_MODELS if k != want]:
+                ver, typ = OCR_MODELS.get(k, (None, None))
+                if not hasattr(OCRVersion, ver or "") or not hasattr(ModelType, typ or ""):
+                    continue
+                try:
+                    self.engine = RapidOCR(params={
+                        "Det.ocr_version": getattr(OCRVersion, ver), "Rec.ocr_version": getattr(OCRVersion, ver),
+                        "Det.model_type": getattr(ModelType, typ), "Rec.model_type": getattr(ModelType, typ),
+                        "Global.log_level": "warning"})
+                    self.name = k
+                    break
+                except Exception as e:  # noqa: BLE001  (model file missing offline: try the next one)
+                    self.error = f"{k}: {e}"
+            if self.engine is not None:
+                self.error = None
+            print(f"OCR line model: {self.name or 'none'} {self.error or ''}\r", flush=True)
         except Exception as e:  # noqa: BLE001
             self.error = str(e)
+        if self.vl_mode != "off":
+            try:
+                import paddle_vl
+                vl = paddle_vl.VLServer()
+                if vl.available() and vl.start():
+                    self.vl = vl
+                print(f"OCR careful model (PaddleOCR-VL): {'ready' if self.vl else (vl.error or 'not installed')}\r",
+                      flush=True)
+            except Exception as e:  # noqa: BLE001
+                print(f"OCR careful model not available: {e}\r", flush=True)
 
     def read(self, frame):
+        import page_ocr
         while self.engine is None and self.error is None:
             time.sleep(0.1)
-        if self.engine is None:
-            raise RuntimeError("OCR not available: " + self.error)
-        return " ".join(self.engine(frame).txts or ())
+        if self.engine is None and self.vl is None:
+            raise RuntimeError("OCR not available: " + (self.error or "no model"))
+        self.phase = ""
+        text, info = page_ocr.read_page(self.engine, frame, self.vl, self.vl_mode,
+                                        on_phase=lambda p: setattr(self, "phase", p))
+        print("OCR " + json.dumps({"model": self.name, **info}) + "\r", flush=True)
+        return text
 
 
 # ==========================================================================
@@ -651,6 +709,7 @@ class UI:
     # ---- sessions
     def start(self, mode, home, text_=None):
         self.mode, self.home, self.queue = mode, home, []
+        self.job = getattr(self, "job", 0) + 1   # events tagged with an older job are from a session we left
         self.q = self.res = self.note = self.done = None
         self.right = self.asked = 0
         self.leaving = False
@@ -709,7 +768,6 @@ class UI:
     def pump(self):
         dirty = False
         while True:
-        self.job = getattr(self, "job", 0) + 1   # events tagged with an older job are from a session we left
             e = self.eng.pop()
             if e is None:
                 return dirty
@@ -720,6 +778,8 @@ class UI:
                 self.eng.send(cmd="status")
             elif t == "status":
                 self.st.update(e)
+            elif e.get("job") is not None and e.get("job") != getattr(self, "job", None):
+                continue                              # from a session already left (Back, then a new start)
             elif self.leaving:                       # the child left: drop the rest of that session
                 if t in ("done", "error"):
                     self.leaving, self.mode = False, None
@@ -778,8 +838,6 @@ class UI:
                 self.go("camera" if self.cam.open() else "nocam")
             elif self.sel == 1:
                 self.passages = list_passages()   # read fresh each time: new files appear without a restart
-            elif e.get("job") is not None and e.get("job") != getattr(self, "job", None):
-                continue                              # from a session already left (Back, then a new start)
                 if self.passages:
                     self.go("pick", min(getattr(self, "pick_sel", 0), len(self.passages) - 1))
                 else:
@@ -811,7 +869,7 @@ class UI:
             self.cam.close()
             self.go("study_home")
         elif k == "M" and self.cam.frame is not None:
-            self.photo = self.cam.frame.copy()
+            self.photo = self.cam.best_recent()
             self.go("captured")
 
     def on_captured(self, k):
@@ -986,7 +1044,9 @@ class UI:
             img.paste(frame_to_area(self.cam.frame, W, HB_Y - SB_H), (0, SB_H))
         d = ImageDraw.Draw(img)
         d.rectangle((0, HB_Y - 20, W, HB_Y - 1), fill=(10, 11, 14))
-        text(d, W // 2, HB_Y - 10, "Fit the whole page in the frame", F(10), BODY, "c")
+        # measured (scripts/ocr_bench.py): the passage filling the frame is read almost perfectly even when blurry;
+        # a whole page in a 1080p frame leaves letters ~6 px tall and most words are lost
+        text(d, W // 2, HB_Y - 10, "Move close: text fills the frame", F(10), BODY, "c")
         hint_bar(img, d, "Back", "Capture", "")
         return img
 
@@ -1026,7 +1086,9 @@ class UI:
     def draw_reading(self):
         img, d = canvas()
         status_bar(img, d, "New Study", "Working")
-        self._stages(img, d, 1, "Reading your page", "Runs on this device. No internet.")
+        careful = self.ocr.phase == "careful"
+        self._stages(img, d, 1, "Reading carefully" if careful else "Reading your page",
+                     "Photo is unclear, taking more time." if careful else "Runs on this device. No internet.")
         hint_bar(img, d, "", "", "")
         return img
 
@@ -1328,6 +1390,8 @@ def main():
                 disp.show(ui.render())
     finally:
         ui.cam.close()
+        if ui.ocr.vl is not None:
+            ui.ocr.vl.stop()
         if ui.eng.p:
             ui.eng.p.terminate()
         if old is not None:

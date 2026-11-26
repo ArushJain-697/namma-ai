@@ -405,3 +405,58 @@ Every decision below comes with the measurement that drove it. Measurement scrip
   - 57.9 s was one run of an older pipeline; the shipped pipeline is ~70 s.
   - Held-out gaps of 0.001–0.017 are below seed noise (0.02–0.04). Only the 4-bit cost (~0.13) is real.
 - **Still open:** retraining on a clean split, measuring the shipped 4-bit pipeline, generating rationales offline for the linker, a fresh evaluation set with a judge panel, a real-student pilot, and RACE redistribution.
+
+## Camera + OCR: what actually limits reading a photographed page (25 Nov 2026)
+
+The device read pages with RapidOCR running PaddleOCR's **PP-OCRv5 mobile** models on one camera frame, words
+joined with spaces. Before changing the model we checked what the published evidence says, then measured on our own
+passages (`scripts/ocr_bench.py`).
+
+**Evidence we started from (published, vendors' own benchmarks):**
+- PP-OCRv6 (PaddleOCR 3.7, June 2026; [docs](https://www.paddleocr.ai/latest/en/version3.x/algorithm/PP-OCRv6/PP-OCRv6.html),
+  [paper](https://arxiv.org/abs/2606.13108)): printed-English recognition 94.1 (medium, 34.5M params) / 93.3 (small,
+  7.7M) vs 86.0 for v5 mobile; detection on blurred text 94.1 / 92.6 vs 87.4. Apple M4 CPU, ONNX Runtime:
+  5.55 / 1.29 s per image vs 1.10 s for v5 mobile. In-house benchmark, no camera-photo category.
+- PaddleOCR-VL-1.5 (0.9B VLM, Apache-2.0; [paper](https://arxiv.org/abs/2601.21957)): 92.05 on
+  Real5-OmniDocBench, the same 1,355 pages physically re-captured by scanning, warping, screen photos, uneven light
+  and skew (skew 91.66 vs 37.98 for the PP-StructureV3 pipeline). llama.cpp support since March 2026. No CPU speed
+  published anywhere we could find.
+
+**Our test set:** 6 of the 40 frozen eval passages typeset as an 11 pt textbook page, then turned into 1920x1080
+webcam frames (tilt, uneven light, low contrast, lens blur, sensor noise, MJPG compression): 3 framings x 4 blur
+levels = 72 photos. Simulated, because the camera was not available; real photos still to test.
+
+**Results (word error rate %, lower is better; `scripts/ocr_bench.py table`, Apple M4, 4 CPU threads):**
+
+| Method | page sharp | page blur 1 | half blur 2 | half blur 3 | passage blur 3 | all 72 | s/photo |
+|---|---|---|---|---|---|---|---|
+| v5 mobile, as shipped | 29.4 | 89.7 | 6.5 | 94.5 | 2.4 | 35.9 | 0.7 |
+| v5 mobile, English-only recogniser | 93.2 | 90.5 | 27.2 | 76.2 | 0.0 | 42.0 | 1.2 |
+| v5 server | ~100 (glues every English word together: "Whenyoupushaheavybox...") | | | | | | ~11 |
+| **v6 small (shipped now)** | **1.6** | 50.3 | **0.4** | **10.6** | 0.2 | **21.9** | 2.0 |
+| v6 medium | 11.5 | 64.0 | 1.7 | 7.5 | 0.0 | 23.7 | 3.6 |
+| PaddleOCR-VL-1.5 (Mac GPU) | 1.6 | 5.4 | 0.0 | 0.5 | 0.0 | 5.3 | 8.2 |
+| v6 small, then PaddleOCR-VL only when unsure (Mac GPU) | 1.6 | 0.8 | 0.4 | 0.1 | 0.2 | 16.9* | 1.2 |
+
+\* The 16.9% is almost all whole-page photos with heavy blur, where the guard refuses to let the VLM guess and the
+device asks for a closer photo instead (counted as 100% wrong here). Everywhere else it matches or beats the VLM
+alone. Seconds per photo were measured while other runs shared the CPU, so compare them only roughly.
+
+**Decisions:**
+- **Framing beats the model.** A whole page in a 1080p frame leaves ~6 px letters; with the passage filling the frame
+  even v5 mobile reads very blurred text at 2.4%. The camera hint now says "Move close: text fills the frame".
+- **PP-OCRv6 small** replaces v5 mobile (fewest errors, 2 s/photo on the Mac; peak RAM ~2.0 GB vs ~1.5 GB, Mac
+  RSS). Capping detection at 1280 px saved 0.7 GB but raised errors (12.8% -> 22.9% on half/blur 3), so not done.
+  Medium drops letters on small text ("Some fods taste sour because ey conan acds").
+- **Sharpest of the last ~1 s of frames** on Capture (variance of the Laplacian), and lines are re-assembled in
+  reading order with hyphenated words re-joined.
+- **PaddleOCR-VL is not on the Pi.** It is the most robust (5.3% overall) but its image encoder took **271 s for one
+  cropped page on the M4 CPU** (2.7 tokens/s; ~8 s on the M4 GPU). The Pi 5 CPU is ~7x slower than the M4 in our
+  ExecuTorch runs, so ~30 min per page. Code is ready (`pi/ui/paddle_vl.py`, off by default) for a board with an
+  NPU/GPU. **Negative result kept:** on illegible photos (where v6 reads 0 words) the VLM writes fluent text that is
+  not on the page ("In 1990 ... Dilatton Goodwill", 5-84% words wrong), so it is only allowed when the line model
+  saw >= 10 words and was unsure (conf < 0.95); otherwise the device asks for a closer photo.
+- **Checked end to end on the Mac** with the real screen-app code (camera faked with a shaky burst of photos):
+  Capture kept the sharp frame (sharpness 587 vs 50-222), PP-OCRv6 small read it in 1.05 s, 213 words, 0% wrong,
+  and the text went to the engine.
+- **Still to do:** real photos from the device camera, and Pi timings (`bash pi/setup_ocr.sh` prints them).

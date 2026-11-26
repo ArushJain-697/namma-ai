@@ -152,7 +152,8 @@ flowchart TD
 flowchart LR
     subgraph UI [UI process: screen app]
         S[ILI9225 screen<br/>landscape 220×176] --- BT[3 GPIO buttons]
-        CAM[USB camera 1080p] --> OCR[RapidOCR<br/>PP-OCRv5 mobile]
+        CAM[USB camera 1080p<br/>sharpest of the last 1 s] --> OCR[PP-OCRv6 line model<br/>RapidOCR]
+        OCR -. unsure .-> VL[PaddleOCR-VL 0.9B<br/>llama.cpp]
     end
     subgraph EN [Engine process: ExecuTorch]
         G[GURU-0.6B .pte] --- Q3[Qwen3-0.6B .pte<br/>summary + self-check]
@@ -174,7 +175,7 @@ flowchart LR
 | Training | PyTorch, PEFT LoRA, answer-only loss, gradient checkpointing (CUDA or Apple MPS) |
 | Export | optimum-executorch: `8da4w`, group size 32, 8-bit embeddings, `max_seq_len 1024` |
 | Learning engine | Bayes with expected information gain, Bayesian Knowledge Tracing, py-fsrs 6.3.2 (FSRS-6) |
-| Device | Raspberry Pi 5 (8 GB), ILI9225 SPI screen, gpiozero, OpenCV, RapidOCR on ONNX Runtime |
+| Device | Raspberry Pi 5 (8 GB), ILI9225 SPI screen, gpiozero, OpenCV, RapidOCR (PP-OCRv6) on ONNX Runtime, PaddleOCR-VL-1.5 on llama.cpp |
 | Language and testing | Python 3.12-3.13, pytest |
 
 ---

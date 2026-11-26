@@ -55,3 +55,14 @@ run card (20 s).
 - [ ] Two stopwatch rehearsals; one backup recording of a clean full run.
 - [ ] Fan on; record the second run, not the first.
 - [ ] Graph viewer opens offline on the laptop.
+
+## Camera demo (added 25 Nov 2026, from `scripts/ocr_bench.py`; see JUDGE_BRIEF "Camera + OCR")
+- **Move close: the passage should fill the screen.** A whole page in frame leaves letters ~6 px tall and most words
+  are lost; a passage that fills the frame is read almost perfectly even when slightly blurred.
+- Good light, page flat, hold still for a second before pressing Capture (the device keeps the sharpest of the last
+  ~1 s of frames). If it says "Only N words could be read", move closer and retake.
+- Backup: Study -> Saved pages (the passage typed in advance with `pi/send_passages.sh`).
+- Talking point (true, with numbers): we tested the best sub-1B OCR models. PP-OCRv6 small cut word errors from
+  35.9% to 21.9% on 72 test photos and reads a page in ~1 s on a laptop CPU. The 0.9B PaddleOCR-VL reads even very
+  blurry pages (5.3%) but invents text on illegible ones and needs ~4.5 min per page on a laptop CPU alone, so it
+  waits for a board with an AI accelerator.
