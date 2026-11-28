@@ -2,7 +2,7 @@
 """
 Sakshi - 3-button study device UI for a 176x220 ILI9225 TFT (Raspberry Pi 5).
 
-  ~/venv/bin/python sakshi.py          the real screen and the three buttons (GPIO 17 / 27 / 22)
+  ~/venv/bin/python sakshi.py          the real screen and the three buttons (GPIO 5 / 6 / 13)
   ~/venv/bin/python sakshi.py --png    developer check without the screen: frames go to /tmp/sakshi.png
 
 Everything on screen comes from the real system: GURU-0.6B on ExecuTorch writes the summary and questions,
@@ -34,7 +34,7 @@ import time
 from PIL import Image, ImageDraw, ImageFont
 
 PW, PH = 176, 220            # the ILI9225 panel is physically portrait
-ROTATE = int(os.environ.get("SAKSHI_ROTATE", "90"))   # 90 or 270: landscape UI; 0: portrait. Flip 90<->270 if upside down
+ROTATE = int(os.environ.get("SAKSHI_ROTATE", "270"))   # 90 or 270: landscape UI; 0: portrait. Flip 90<->270 if upside down
 W, H = (PH, PW) if ROTATE in (90, 270) else (PW, PH)  # the canvas every screen is drawn on (220 x 176 landscape)
 SPI_HZ = 8_000_000          # lower to 4_000_000 if the picture is unstable
 
@@ -450,6 +450,20 @@ def list_passages():
 STAGES = ["Reading text", "Writing summary", "Building questions"]
 
 
+# Wake-up pipe: the main loop sleeps in select() until a button, an engine event or a finished OCR job calls
+# wake(), so input is handled at once and an idle device uses ~0 CPU (it used to poll every 0.12 s).
+WAKE_R, WAKE_W = os.pipe()
+os.set_blocking(WAKE_R, False)
+os.set_blocking(WAKE_W, False)
+
+
+def wake():
+    try:
+        os.write(WAKE_W, b"!")
+    except (BlockingIOError, OSError):
+        pass  # pipe already full: the loop is going to wake anyway
+
+
 class Engine:
     def __init__(self):
         import collections
@@ -471,10 +485,12 @@ class Engine:
         for line in self.p.stdout:
             try:
                 self.events.append(json.loads(line))
+                wake()
             except json.JSONDecodeError:
                 pass
         self.alive = False
         self.events.append({"type": "error", "msg": "The engine stopped. Restart the device."})
+        wake()
 
     def send(self, **cmd):
         if self.p and self.alive:
@@ -886,6 +902,7 @@ class UI:
                 except Exception as e:  # noqa: BLE001
                     job["error"] = str(e)
                 job["done"] = True
+                wake()
             threading.Thread(target=run, daemon=True).start()
             self.stage = 1
             self.go("reading")
@@ -1343,15 +1360,40 @@ def summary_cards(summary, max_lines=5):
 
 
 # ==========================================================================
-# Main loop: the three buttons (GPIO 17 / 27 / 22 = Left / Middle / Right),
+# Main loop: the three buttons (GPIO 5 / 6 / 13 = Left / Middle / Right),
 # and l / m / r typed in a terminal for testing over SSH
 # ==========================================================================
 def buttons(press_q):
+    """L / M / R on GPIO 5 / 6 / 13 (to ground, internal pull-up). libgpiod: the kernel debounces (50 ms) and queues
+    the edges; our thread sleeps in poll() with no timeout until one arrives (0 wake-ups when idle). gpiozero's lgpio
+    backend woke ~1,800 times a second to do the same job, so it is only the fallback."""
+    keys = {5: "L", 6: "M", 13: "R"}
+    try:
+        import gpiod
+        from datetime import timedelta
+        from gpiod.line import Bias, Direction, Edge
+        chip = next(p for p in sorted(os.listdir("/dev")) if p.startswith("gpiochip")
+                    and gpiod.Chip("/dev/" + p).get_info().label == "pinctrl-rp1")
+        req = gpiod.request_lines("/dev/" + chip, consumer="sakshi-buttons", config={tuple(keys): gpiod.LineSettings(
+            direction=Direction.INPUT, bias=Bias.PULL_UP, edge_detection=Edge.FALLING,
+            debounce_period=timedelta(milliseconds=50))})
+
+        def watch():
+            while True:
+                req.wait_edge_events(None)        # blocks until a button is pressed
+                for ev in req.read_edge_events():
+                    press_q.append(keys[ev.line_offset])
+                wake()
+        threading.Thread(target=watch, daemon=True).start()
+        print("buttons: libgpiod edge interrupts\r")
+        return [req]
+    except Exception as e:  # noqa: BLE001
+        print(f"buttons: libgpiod unavailable ({e}); trying gpiozero\r")
     try:
         from gpiozero import Button
-        bs = [Button(p, pull_up=True, bounce_time=0.05) for p in (17, 27, 22)]
-        for b, k in zip(bs, "LMR"):
-            b.when_pressed = (lambda k=k: press_q.append(k))
+        bs = [Button(p, pull_up=True, bounce_time=0.05) for p in keys]
+        for b, k in zip(bs, keys.values()):
+            b.when_pressed = (lambda k=k: (press_q.append(k), wake()))
         return bs
     except Exception as e:  # noqa: BLE001
         print(f"buttons not available ({e}); use l / m / r keys\r")
@@ -1366,6 +1408,7 @@ def main():
     keep = buttons(presses)  # noqa: F841  (keep the Button objects alive)
     disp.show(ui.render())
     fd = sys.stdin.fileno()
+    kb = True
     old = None
     if sys.stdin.isatty():
         import termios, tty
@@ -1373,9 +1416,21 @@ def main():
         tty.setcbreak(fd)
     try:
         while True:
-            ready, _, _ = select.select([fd], [], [], 0.12)
-            if ready:
+            # Under systemd stdin is /dev/null: select() says "ready" forever and read() returns b"", which spun this
+            # loop at 100% of a core and took it from the model. On EOF stop watching the keyboard (buttons still work).
+            # spinners / camera preview redraw at ~8 fps as before; every other screen sleeps until woken
+            # (1 s backstop keeps the 5 s status refresh on the menus)
+            timeout = 0.12 if ui.screen in ("camera", "ocr", "wait", "reading") else 1.0
+            ready, _, _ = select.select([WAKE_R] + ([fd] if kb else []), [], [], timeout)
+            if WAKE_R in ready:
+                try:
+                    os.read(WAKE_R, 4096)
+                except BlockingIOError:
+                    pass
+            if fd in ready and kb:
                 chunk = os.read(fd, 64)
+                if not chunk:
+                    kb = False
                 for ch in chunk.decode(errors="ignore").lower():
                     if ch == "q":
                         return
@@ -1385,7 +1440,7 @@ def main():
             while presses:
                 ui.press(presses.popleft())
                 dirty = True
-                print(f"-> {ui.screen}\r")
+                print(f"-> {ui.screen}\r", flush=True)
             if ui.tick() or dirty:
                 disp.show(ui.render())
     finally:
