@@ -227,11 +227,14 @@ class Engine:
     def status(self):
         from sakshi.retention.fsrs_sched import make_scheduler
         from sakshi.retention.ranker import revision_plan
+        from sakshi.retention.review import askable, todays_mastery
         st, t = self.state(), now()
         held = [{"text": m.text, "concept": self.name(m.concept), "sure": m.p_holds, "status": m.status}
                 for m in st.misconceptions.values() if m.status.startswith(("confirmed", "suspected", "still held"))]
-        tested = {c: s for c, s in st.concepts.items() if s.fsrs_card}
-        plan = revision_plan(st, {c: self.name(c) for c in st.concepts}, make_scheduler(), t) if tested else []
+        tested = {c for c, s in st.concepts.items() if s.fsrs_card and askable(self.lib, st, c)}
+        sched = make_scheduler()
+        plan = revision_plan(st, {c: self.name(c) for c in st.concepts}, sched, t) if tested else []
+        plan = [r for r in plan if r.concept in tested]
         due = sum(1 for r in plan if r.due and r.due <= t)
         wrong: dict[str, int] = {}
         for a in st.attempts:
@@ -239,7 +242,7 @@ class Engine:
                 wrong[self.name(a["concept"])] = wrong.get(self.name(a["concept"]), 0) + 1
         emit("status", solved=len(st.attempts), correct=sum(a["correct"] for a in st.attempts),
              held=held, due=due, blocked=[self.name(c) for c in st.blocked],
-             topics=[{"name": r.name, "mastery": round(r.mastery, 2), "recall": round(r.recall, 2),
+             topics=[{"name": r.name, "mastery": round(todays_mastery(sched, st.concepts[r.concept], t), 2), "recall": round(r.recall, 2),
                       "due": r.due.strftime("%a %d %b") if r.due else None} for r in plan[:6]],
              weak=sorted(wrong.items(), key=lambda kv: -kv[1])[:5], sessions=st.sessions,
              models_ready=self.models_ready.is_set() and not self.models_error, last_card=self.last_card)
@@ -373,7 +376,8 @@ class Engine:
              message="" if r["asked"] else ("Nothing waiting. Well done!" if mode == "mentor" else "Nothing to revise yet."))
 
     def _next_review(self, st):
-        dues = [s.fsrs_card["due"] for s in st.concepts.values() if s.fsrs_card]
+        from sakshi.retention.review import askable
+        dues = [s.fsrs_card["due"] for c, s in st.concepts.items() if s.fsrs_card and askable(self.lib, st, c)]
         return datetime.fromisoformat(min(dues)).strftime("%a %d %b") if dues else None
 
     def _done(self, mode, asked, right, detected, suspected, st, stopped=False, error=None):

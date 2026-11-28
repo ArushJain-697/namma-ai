@@ -14,7 +14,7 @@ Finally: one FSRS review per concept (its final outcome), saved state, and a rep
 from __future__ import annotations
 
 import time
-from dataclasses import dataclass, field
+from dataclasses import asdict, dataclass, field
 from datetime import datetime, timezone
 
 from . import bkt
@@ -95,6 +95,7 @@ class AdaptiveSession:
             raise _Stop()
         latency = int((time.monotonic() - t0) * 1000)
         self.asked.append(q.id)
+        self.state.saved[q.stem] = asdict(q)
         opt = q.option(picked)
         correct = bool(opt and opt.correct)
 

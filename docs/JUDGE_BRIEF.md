@@ -500,3 +500,33 @@ alone. Seconds per photo were measured while other runs shared the CPU, so compa
 Screen rotated 270 (was 90), buttons on GPIO 5/6/13 (was 17/27/22) read by libgpiod edge interrupts, and a fix for the
 screen app using a full CPU core under systemd. Reported idle figures and details: `pi/DEVICE_NOTES.md` (measured on
 the device, not re-measured here). `pi/ui/quiz_test.py` repeats the real quiz on saved passages and compares runs.
+
+## Repeat test on six new passages, 3 runs each (Pi, temperature 0.4, `pi/ui/quiz_test.py`)
+- No passage gave identical questions, keys or summaries across runs. 49 questions kept (of 54 asked for), 45
+  distinct wordings; the underlying facts still recur between runs (e.g. "amount of water stays the same" in all 3).
+- Read by one person (Claude) against the passages, not blind-graded: democracy 8/8 sound; electric circuit sound
+  with some odd wording; photosynthesis 4 of 7 wrong; sound waves 2 questions with a false premise ("Why can
+  astronauts hear each other on the Moon?"); water cycle and salt march several circular or weak.
+- Summaries can be wrong too: salt march run 2 says "India's government broke the monopoly on salt".
+- Wrong options were not printed by the script, so they are not judged here.
+- Speed: summary 8-11 s, 3 questions 28-69 s. CPU reached 85.1 C and the soft temperature limit
+  (clock down to 2146 MHz of 2400).
+
+## Revision check (on a copy of the Pi's saved learner; days simulated)
+- **Broken once questions are used up.** Saved learner (43 sessions): on days 1-30, 5 ideas due, 0 questions asked,
+  all still due. All 5 had no unseen stored question; a question is never repeated, so they can never clear.
+- With the question history cleared it works at first (asked 4, 4, 2, 2, then 0 on day 30).
+- Cause: most concepts have very few stored questions (0.73 beliefs per concept on average; 2,325 of 5,585 have none).
+- "Ideas from your page" (unlinked page questions) can never be revised but stays in the due list.
+- The Revision screen shows saved mastery; forgetting is applied only when a review is started.
+- Mentor Study had nothing to do: this learner holds no named belief after 43 sessions.
+
+### Revision fix (same day)
+- Unused questions first; when a concept has none left, the one seen longest ago returns with options reshuffled,
+  never within 12 hours. Every asked question (including GURU's page questions) is now saved with the learner.
+  Concepts with nothing to ask are no longer listed as due. The screen's mastery includes forgetting.
+- Replayed on a copy of the Pi learner over days 1-120: 4 due and 4 asked each time (was 5 due, 0 asked); the real
+  engine's Revision asked 4 questions. 267 tests pass on the Mac. Saved learner unchanged.
+- Page questions answered before this fix were not stored, so that old "unlinked" entry no longer appears.
+- Repeating a question is a deliberate trade-off; spaced retrieval has good support, repeated-vs-varied for children
+  was not settled by what we found.

@@ -177,3 +177,65 @@ def test_streaming_session_grows_question_by_question():
     assert sess.asked[:2] == ["b1", "t1"]
     sess.finish_stream()
     assert st.concepts["top"].fsrs_card and st.concepts["base"].fsrs_card
+
+
+def due_state(lib, cid):
+    from sakshi.retention.fsrs_sched import make_scheduler, review
+    st = LearnerState()
+    st.ensure([cid], 0.3)
+    st.concepts[cid].fsrs_card = review(make_scheduler(), None, "good", NOW)
+    return st
+
+
+def revise(st, lib, days):
+    return ReviewSession(st, lib, ModelStudent(), NOW + timedelta(days=days)).run("revision")
+
+
+def test_a_due_concept_is_still_asked_after_its_questions_are_used_up(lib):
+    cid = lib.by_id[a_probe_belief(lib)]["concept_id"]
+    st = due_state(lib, cid)
+    asked = [len(revise(st, lib, d)["asked"]) for d in (2, 6, 20, 60, 120, 240)]
+    assert all(n == 1 for n in asked), asked
+    stems = [a["stem"] for a in st.attempts]
+    assert len(set(stems)) < len(stems)  # it did have to bring one back
+    assert all(a != b for a, b in zip(stems, stems[1:])) or len(set(stems)) == 1
+
+
+def test_a_used_question_does_not_return_the_same_day(lib):
+    cid = lib.by_id[a_probe_belief(lib)]["concept_id"]
+    st = due_state(lib, cid)
+    for _ in range(8):
+        revise(st, lib, 2)
+    stems = [a["stem"] for a in st.attempts]
+    assert len(stems) == len(set(stems))
+
+
+def test_a_page_question_can_be_revised_and_survives_a_save(lib, tmp_path):
+    from dataclasses import asdict
+    from sakshi.retention.bank import Option, Question
+    from sakshi.retention.review import askable
+    st = due_state(lib, "unlinked")
+    assert not askable(lib, st, "unlinked")  # nothing saved: must not be listed as due
+    assert revise(st, lib, 2)["asked"] == []
+    q = Question("g0", "unlinked", "recall", "Why is the vote secret?",
+                 [Option("A", "to protect voters", True), Option("B", "to save time", False)])
+    st.saved[q.stem] = asdict(q)
+    st.save(str(tmp_path / "s.json"))
+    st = LearnerState.load(str(tmp_path / "s.json"))
+    assert askable(lib, st, "unlinked")
+    assert revise(st, lib, 3)["asked"] == ["g0"]
+
+
+def test_study_session_saves_what_it_asked():
+    st = LearnerState()
+    AdaptiveSession(chain_bank(), st, ModelStudent(), SessionConfig(show_summary=False), now=NOW).run()
+    assert st.saved and all(a["stem"] in st.saved for a in st.attempts)
+
+
+def test_shown_mastery_includes_forgetting_without_changing_the_state(lib):
+    from sakshi.retention.fsrs_sched import make_scheduler
+    from sakshi.retention.review import todays_mastery
+    st = due_state(lib, "c")
+    st.concepts["c"].p_mastery = 0.9
+    assert todays_mastery(make_scheduler(), st.concepts["c"], NOW + timedelta(days=30)) < 0.9
+    assert st.concepts["c"].p_mastery == 0.9

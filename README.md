@@ -309,7 +309,7 @@ with the same root in another topic. That shows whether the underlying habit has
 |---|---|
 | Passing a concept | Needs P(learned) ≥ 0.70 **and** 2 right answers in the last 3 attempts; the guess rate is never below 1/n, so one lucky right answer can't pass it |
 | Forgetting | Applied once per elapsed interval (it used to compound on every review); first review after 1 day, second after 3 |
-| Review questions | No question is asked twice (19.9% of review questions used to repeat) |
+| Review questions | Unused questions first; when a concept has none left, the one seen longest ago returns, never the same day |
 | A belief that only looked held from one guess | 55% → **36%**, cleared next day |
 | A blocked concept | Climbs back up on day 7, once its base is solid |
 

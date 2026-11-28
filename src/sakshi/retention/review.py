@@ -13,6 +13,9 @@ Order of work (question budget permitting):
   2. Blocked climbs from last time (a concept whose prerequisite was shaky): prerequisite first, then the concept,
      application questions, climbing only when BKT P(L) >= threshold.
   3. Other concepts FSRS says are due: one application question each.
+A question not seen before is always preferred. When a concept has none left (most have only one or two), the one
+seen longest ago comes back with its options reshuffled, never within REPEAT_AFTER of the last time. (Without
+this, due concepts could never be reviewed again: 5 due, 0 asked, on a learner after 43 sessions.)
 Then one FSRS review per concept touched, and the saved state.
 """
 from __future__ import annotations
@@ -20,8 +23,8 @@ from __future__ import annotations
 import json
 import os
 import random
-from dataclasses import dataclass
-from datetime import datetime, timezone
+from dataclasses import asdict, dataclass
+from datetime import datetime, timedelta, timezone
 
 import numpy as np
 
@@ -77,6 +80,9 @@ class RelatedBeliefs:
         return list(dict.fromkeys(out))[:n]
 
 
+REPEAT_AFTER = timedelta(hours=12)  # a used question is not shown again the same day
+
+
 def _q(d: dict) -> Question:
     return Question(d["id"], d["concept"], d["type"], d["stem"],
                     [Option(o["key"], o["text"], o["correct"], o["misconception"]) for o in d["options"]],
@@ -112,6 +118,40 @@ def concept_question(lib, cid: str, asked: set[str], rng: random.Random) -> Ques
     return None
 
 
+def stored_questions(lib, state: LearnerState, cid: str, rng: random.Random) -> list[Question]:
+    """Everything that can be asked about a concept: questions this student has had, then the library's."""
+    out = {stem: _q(d) for stem, d in state.saved.items() if d["concept"] == cid}
+    c = lib.concepts.get(cid) or {}
+    for mid in [x if isinstance(x, str) else x.get("id") for x in c.get("misconceptions", [])]:
+        if mid not in lib.by_id:
+            continue
+        first = belief_question(lib, mid, set(), rng)
+        second = belief_question(lib, mid, {first.id, first.stem}, rng) if first else None
+        for q in (first, second):
+            if q:
+                out.setdefault(q.stem, q)
+    return list(out.values())
+
+
+def askable(lib, state: LearnerState, cid: str) -> bool:
+    """False for a concept with nothing to ask (it must not be listed as due: it could never be cleared)."""
+    return bool(stored_questions(lib, state, cid, random.Random(0)))
+
+
+def todays_mastery(sched, cs, now: datetime) -> float:
+    """Saved mastery discounted by what has probably been forgotten since (does not change the state)."""
+    if not cs.fsrs_card:
+        return cs.p_mastery
+    now = _aware(now)
+    since = cs.fsrs_card.get("decayed_at")
+    if since and _aware(datetime.fromisoformat(since)) >= now:
+        return cs.p_mastery
+    r_now = retrievability(sched, cs.fsrs_card, now)
+    r_then = retrievability(sched, cs.fsrs_card, _aware(datetime.fromisoformat(since))) if since else 1.0
+    factor = r_now / r_then if r_then > 0 else r_now
+    return max(0.05, cs.p_mastery * min(1.0, factor))
+
+
 @dataclass
 class ReviewConfig:
     bkt: bkt.BKTParams = bkt.BKTParams()
@@ -139,6 +179,34 @@ class ReviewSession:
     def name(self, cid: str) -> str:
         return (self.lib.concepts.get(cid) or {}).get("name", cid)
 
+    # ---- bringing a used question back ----------------------------------------------------------------
+    def _again(self, questions: list[Question]) -> Question | None:
+        """The least recently seen of `questions`, options reshuffled; None if all were seen too recently."""
+        last: dict[str, tuple[int, datetime | None]] = {}
+        for i, a in enumerate(self.state.attempts):
+            ts = _aware(datetime.fromisoformat(a["ts"])) if a.get("ts") else None
+            if a.get("stem"):
+                last[a["stem"]] = (i, ts)
+        ready = [q for q in questions if q.id not in self.asked
+                 and (last.get(q.stem, (-1, None))[1] is None or self.now - last[q.stem][1] >= REPEAT_AFTER)]
+        if not ready:
+            return None
+        q = min(ready, key=lambda q: last.get(q.stem, (-1, None))[0])
+        opts = list(q.options)
+        self.rng.shuffle(opts)
+        return Question(q.id, q.concept, q.type, q.stem,
+                        [Option("ABCDEFG"[j], o.text, o.correct, o.misconception) for j, o in enumerate(opts)],
+                        q.explanation)
+
+    def _belief(self, mid: str) -> Question | None:
+        """A question on one belief: unseen if there is one, else the one seen longest ago."""
+        q = belief_question(self.lib, mid, self.asked_ever, self.rng)
+        if q:
+            return q
+        cid = self.lib.by_id[mid]["concept_id"]
+        return self._again([x for x in stored_questions(self.lib, self.state, cid, self.rng)
+                            if any(o.misconception == mid for o in x.options)])
+
     # ---- one question ---------------------------------------------------------------------------------
     def _ask(self, q: Question) -> tuple[bool, str]:
         self.state.ensure([q.concept], self.cfg.bkt.p_init)
@@ -155,6 +223,7 @@ class ReviewSession:
         cs.attempts += 1
         self.asked.append(q.id)
         self.asked_ever.update((q.id, q.stem))
+        self.state.saved[q.stem] = asdict(q)
         self.state.attempts.append({"q": q.id, "stem": q.stem, "concept": q.concept, "picked": picked, "correct": ok,
                                     "ts": self.now.isoformat(), "review": True})
         self.io.log(f"{q.concept} mastery {before:.2f} -> {cs.p_mastery:.2f}")
@@ -207,7 +276,7 @@ class ReviewSession:
         return 1.0 if not cs else 1 - cs.p_mastery
 
     def _recheck(self, mid: str, ms: MisconceptionState) -> None:
-        q = belief_question(self.lib, mid, self.asked_ever, self.rng)
+        q = self._belief(mid)
         if q is None:
             return
         self.io.show(f"\nLast time you seemed to think: \"{ms.text}\". Let's check.")
@@ -215,7 +284,7 @@ class ReviewSession:
         ok, picked = self._ask(q)
         p = self._holds_update(ms.p_holds, q, mid, picked, ok)
         if ok and p >= self.cfg.bayes.suspect and self._budget():  # right, but not yet convincing: one more check
-            q2 = belief_question(self.lib, mid, self.asked_ever, self.rng)
+            q2 = self._belief(mid)
             if q2 is not None:
                 self.io.show("Good. One more on the same idea.")
                 ok, picked = self._ask(q2)
@@ -285,7 +354,8 @@ class ReviewSession:
             return self.outcome[cid] != "again"
         if not self._budget():
             return False
-        q = concept_question(self.lib, cid, self.asked_ever, self.rng)
+        q = concept_question(self.lib, cid, self.asked_ever, self.rng) \
+            or self._again(stored_questions(self.lib, self.state, cid, self.rng))
         if q is None:
             return None
         self.io.show(f"\nUsing \"{self.name(cid)}\":")
@@ -315,7 +385,8 @@ class ReviewSession:
                 for cid, prereqs in list(self.state.blocked.items()):
                     if self._budget():
                         self._unblock(cid, prereqs)
-                tested = [c for c, cs in self.state.concepts.items() if cs.fsrs_card and c not in self.outcome]
+                tested = [c for c, cs in self.state.concepts.items()
+                          if cs.fsrs_card and c not in self.outcome and askable(self.lib, self.state, c)]
                 due = [c for c in tested if _aware(datetime.fromisoformat(self.state.concepts[c].fsrs_card["due"])) <= self.now]
                 if mode == "revision" and not due:
                     due = tested
