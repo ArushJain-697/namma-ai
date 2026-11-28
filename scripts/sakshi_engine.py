@@ -365,7 +365,19 @@ class Engine:
             return
         before = len(st.attempts)
         job = self.job or self.begin_job()
-        r = ReviewSession(st, self.lib, DeviceIO(self.answers, job.cancel), now()).run(mode)
+        io = DeviceIO(self.answers, job.cancel)
+        show_question, event = io.show_question, io.event
+
+        def saving_show(q, number):  # save as we go: switching the device off mid-way must not lose the answers
+            st.save(str(STATE))
+            show_question(q, number)
+
+        def saving_event(kind, **data):
+            if kind == "result":
+                st.save(str(STATE))
+            event(kind, **data)
+        io.show_question, io.event = saving_show, saving_event
+        r = ReviewSession(st, self.lib, io, now()).run(mode)
         st.save(str(STATE))
         new = st.attempts[before:]
         found = [m.text for m in st.misconceptions.values()

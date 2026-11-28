@@ -239,3 +239,31 @@ def test_shown_mastery_includes_forgetting_without_changing_the_state(lib):
     st.concepts["c"].p_mastery = 0.9
     assert todays_mastery(make_scheduler(), st.concepts["c"], NOW + timedelta(days=30)) < 0.9
     assert st.concepts["c"].p_mastery == 0.9
+
+
+def test_leaving_without_answering_gives_a_different_question_next_time(lib):
+    from sakshi.retention.fsrs_sched import make_scheduler, review
+    from sakshi.retention.io import IO
+
+    class LooksAndLeaves(IO):
+        stems: list = []
+
+        def show(self, text): pass
+        def log(self, text): pass
+        def taught(self, c): pass
+        def event(self, kind, **d): pass
+        def show_question(self, q, number): self.stems.append(q.stem)
+        def answer(self, q): return None
+
+    cids = list(dict.fromkeys(m["concept_id"] for m in lib.items if (m.get("probe") or {}).get("question")))[:3]
+    st = LearnerState()
+    st.ensure(cids, 0.3)
+    for c in cids:
+        st.concepts[c].fsrs_card = review(make_scheduler(), None, "good", NOW)
+    io = LooksAndLeaves()
+    for _ in range(6):
+        ReviewSession(st, lib, io, NOW + timedelta(days=2)).run("revision")
+    assert len(io.stems) == 6
+    assert all(a != b for a, b in zip(io.stems, io.stems[1:])), io.stems
+    assert len({st.saved[s]["concept"] for s in io.stems[:3]}) == 3  # a different idea each visit
+    assert not st.attempts  # looking is not answering

@@ -16,6 +16,8 @@ Order of work (question budget permitting):
 A question not seen before is always preferred. When a concept has none left (most have only one or two), the one
 seen longest ago comes back with its options reshuffled, never within REPEAT_AFTER of the last time. (Without
 this, due concepts could never be reviewed again: 5 due, 0 asked, on a learner after 43 sessions.)
+A question that was only looked at (the student pressed Back) counts as shown too: the next visit starts with a
+different idea and a different question, instead of the same one every time.
 Then one FSRS review per concept touched, and the saved state.
 """
 from __future__ import annotations
@@ -171,7 +173,8 @@ class ReviewSession:
         self.sched = make_scheduler(self.cfg.desired_retention)
         self.rng = random.Random(seed)
         # ids AND stems already shown: a review probe can carry the same stem as a quiz question under a new id
-        self.asked_ever = {a["q"] for a in state.attempts} | {a["stem"] for a in state.attempts if a.get("stem")}
+        self.asked_ever = ({a["q"] for a in state.attempts} | {a["stem"] for a in state.attempts if a.get("stem")}
+                           | set(state.shown))
         self.asked: list[str] = []
         self.outcome: dict[str, str] = {}
         self.log: list[str] = []
@@ -187,11 +190,12 @@ class ReviewSession:
             ts = _aware(datetime.fromisoformat(a["ts"])) if a.get("ts") else None
             if a.get("stem"):
                 last[a["stem"]] = (i, ts)
+        seen = {stem: i for i, stem in enumerate(self.state.shown)}  # oldest first
         ready = [q for q in questions if q.id not in self.asked
                  and (last.get(q.stem, (-1, None))[1] is None or self.now - last[q.stem][1] >= REPEAT_AFTER)]
         if not ready:
             return None
-        q = min(ready, key=lambda q: last.get(q.stem, (-1, None))[0])
+        q = min(ready, key=lambda q: (seen.get(q.stem, -1), last.get(q.stem, (-1, None))[0]))
         opts = list(q.options)
         self.rng.shuffle(opts)
         return Question(q.id, q.concept, q.type, q.stem,
@@ -210,6 +214,8 @@ class ReviewSession:
     # ---- one question ---------------------------------------------------------------------------------
     def _ask(self, q: Question) -> tuple[bool, str]:
         self.state.ensure([q.concept], self.cfg.bkt.p_init)
+        self.state.saved[q.stem] = asdict(q)
+        self.state.show(q.stem, self.now.isoformat())
         self.io.show_question(q, len(self.asked) + 1)
         picked = self.io.answer(q)
         if picked is None:
@@ -223,7 +229,6 @@ class ReviewSession:
         cs.attempts += 1
         self.asked.append(q.id)
         self.asked_ever.update((q.id, q.stem))
-        self.state.saved[q.stem] = asdict(q)
         self.state.attempts.append({"q": q.id, "stem": q.stem, "concept": q.concept, "picked": picked, "correct": ok,
                                     "ts": self.now.isoformat(), "review": True})
         self.io.log(f"{q.concept} mastery {before:.2f} -> {cs.p_mastery:.2f}")
@@ -252,6 +257,11 @@ class ReviewSession:
         return len(self.asked) < self.cfg.max_questions
 
     # ---- the steps ------------------------------------------------------------------------------------
+    def _last_visit(self, cid: str) -> int:
+        """Position of this concept's most recently shown question (-1: none), so a new visit starts elsewhere."""
+        return max((i for i, stem in enumerate(self.state.shown)
+                    if self.state.saved.get(stem, {}).get("concept") == cid), default=-1)
+
     def _forget(self) -> None:
         """Discount mastery by FSRS recall, ONCE per elapsed interval. A concept not reviewed in an earlier review
         session keeps its FSRS card, so recall R(t) is still measured from the last real review; we store when decay
@@ -390,7 +400,7 @@ class ReviewSession:
                 due = [c for c in tested if _aware(datetime.fromisoformat(self.state.concepts[c].fsrs_card["due"])) <= self.now]
                 if mode == "revision" and not due:
                     due = tested
-                for cid in sorted(due, key=lambda c: -self._priority(c)):
+                for cid in sorted(due, key=lambda c: (self._last_visit(c), -self._priority(c))):
                     if self._budget():
                         self._apply(cid)
         except _Stop:

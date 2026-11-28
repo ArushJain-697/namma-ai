@@ -530,3 +530,12 @@ the device, not re-measured here). `pi/ui/quiz_test.py` repeats the real quiz on
 - Page questions answered before this fix were not stored, so that old "unlinked" entry no longer appears.
 - Repeating a question is a deliberate trade-off; spaced retrieval has good support, repeated-vs-varied for children
   was not settled by what we found.
+
+### Revision showed the same question on every visit (fixed after the Revision fix)
+- Reproduced: open, press Back -> the same first question every time (nothing recorded; weakest idea always first).
+  A review was also saved only when it ended, so switching off mid-way lost the answers.
+- Now a question shown counts as seen even if unanswered, the next visit starts with another idea, and the engine
+  saves at every question and answer.
+- Pi, copy of the learner: three look-and-leave visits gave three different questions; an answer survived a hard
+  kill. 268 tests pass on the Mac.
+- Limit: the four ideas in this learner's list have only 10 stored questions between them, so they do come round.

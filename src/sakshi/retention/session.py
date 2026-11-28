@@ -88,6 +88,8 @@ class AdaptiveSession:
         return (preferred or qs or [None])[0]
 
     def _ask(self, q: Question) -> bool:
+        self.state.saved[q.stem] = asdict(q)
+        self.state.show(q.stem, self.now.isoformat())
         self.io.show_question(q, len(self.asked) + 1)
         t0 = time.monotonic()
         picked = self.io.answer(q)
@@ -95,7 +97,6 @@ class AdaptiveSession:
             raise _Stop()
         latency = int((time.monotonic() - t0) * 1000)
         self.asked.append(q.id)
-        self.state.saved[q.stem] = asdict(q)
         opt = q.option(picked)
         correct = bool(opt and opt.correct)
 
