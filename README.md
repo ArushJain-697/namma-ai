@@ -260,6 +260,20 @@ with the same root in another topic. That shows whether the underlying habit has
 | Peak memory: GURU alone / + summary model / whole engine | **1.48 / 2.7 / 3.2 GB** |
 | Model file (4-bit) | **469 MB** |
 
+### Thread scaling on the Pi 5 (GURU-0.6B, 171-token prompt, 128 new tokens, median of 3)
+
+| Threads | Prefill tokens/s | Decode tokens/s |
+|---|---|---|
+| 1 | 50.9 | 15.7 |
+| 2 | 92.3 | **17.8** |
+| 4 | **140.6** | 16.1 |
+
+Prefill scales with cores (2.8× on 4 threads); decode peaks at 2 threads. The base Qwen3-0.6B build gives the same
+speeds. Peak memory was 1.60 GB and the clock read 2.4 GHz after every run. The board's throttle flags showed an
+earlier soft temperature limit since boot, with none active during these runs. This is a shorter, single-prompt test,
+so its decode speed isn't comparable with the 12.1 tokens/s above. Script: `scripts/pi_thread_bench.py`,
+raw numbers: `results/pi_thread_bench.json`.
+
 ### What we optimised, measured before and after
 
 | Change | Before | After |
