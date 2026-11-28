@@ -483,3 +483,20 @@ alone. Seconds per photo were measured while other runs shared the CPU, so compa
 - **Known content issues for the demo:** the summary can be wrong ("Rubbing palms reduces friction"); after a wrong
   friction answer the graph steps down to "Area of Rectangle/Square" (a real prerequisite link, but it looks odd).
   Demo with a passage checked beforehand (friction gives 5 good questions).
+
+## Why the same passage gave the same questions (diagnosed 28 Nov 2026)
+- Cause in the repo code: the writer ran at temperature 0 (greedy), sentences are picked by a fixed score, and the
+  engine passed `seed=1`. Same input, same output, by construction.
+- Measured on the Pi, friction passage: temperature 0 -> two runs identical (6 kept, 3 distinct). The Pi's current
+  code (edited 27 Nov on the device, synced into git 28 Nov: temperature 0.4, jittered sentence pick, seed None) -> 8 kept, 8 distinct
+  wordings over 3 runs; 0.7 -> 9 of 9. The same few facts still recur (box stops, rough surface, rubbing palms), and
+  many wrong options are poor at every temperature. One passage, small sample.
+- ExecuTorch 1.5.1 seeds its sampler from the clock (`Sampler(vocab_size, temp)`), so temperature > 0 does vary
+  between runs.
+- "Basics" and "Use it" questions are not written by GURU: they are stored questions from the misconception graph,
+  so they repeat whatever the temperature.
+
+## Device changes synced from the Pi (27-28 Nov)
+Screen rotated 270 (was 90), buttons on GPIO 5/6/13 (was 17/27/22) read by libgpiod edge interrupts, and a fix for the
+screen app using a full CPU core under systemd. Reported idle figures and details: `pi/DEVICE_NOTES.md` (measured on
+the device, not re-measured here). `pi/ui/quiz_test.py` repeats the real quiz on saved passages and compares runs.

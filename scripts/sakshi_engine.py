@@ -298,7 +298,7 @@ class Engine:
         def writer():
             self._tls.job = job
             try:
-                out["r"] = self.bq.quiz_2job(self.m, self.m, passage, n=10, checker=self.sm, on_kept=on_kept, seed=1,
+                out["r"] = self.bq.quiz_2job(self.m, self.m, passage, n=10, checker=self.sm, on_kept=on_kept, seed=None,
                                              should_stop=lambda: self._stale(job))
                 log(f"QUIZ kept {len(out['r']['kept'])}, dropped {len(out['r']['rejected'])}: " + "; ".join(
                     f"[{x['reason']}] {x.get('q', '')[:70]}" for x in out["r"]["rejected"]))

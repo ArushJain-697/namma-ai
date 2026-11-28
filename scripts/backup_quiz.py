@@ -29,6 +29,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import random
 import re
 import sys
@@ -79,10 +80,13 @@ def content(s: str) -> set[str]:
     return {t.lower() for t in tokens(s) if len(t) >= 3 and t.lower() not in STOPWORDS}
 
 
-def pick_sentences(passage: str, k: int = 8) -> list[int]:
-    """Indexes of up to k key sentences: content-rich, causal words preferred, not adjacent, in passage order."""
+def pick_sentences(passage: str, k: int = 8, rng: random.Random | None = None) -> list[int]:
+    """Indexes of up to k key sentences: content-rich, causal words preferred, not adjacent, in passage order.
+    With rng, each sentence's score gets random jitter (+-3), so every run asks about a different mix of the good
+    sentences instead of always the same top ones."""
     sents = split_sentences(passage)
-    scored = sorted(((len(content(s)) + (4 if CAUSAL.search(s) else 0), -i, i) for i, s in enumerate(sents)
+    jit = (lambda: rng.uniform(-3, 3)) if rng else (lambda: 0)
+    scored = sorted(((len(content(s)) + (4 if CAUSAL.search(s) else 0) + jit(), -i, i) for i, s in enumerate(sents)
                      if 8 <= len(tokens(s)) <= 40), reverse=True)
     picked: list[int] = []
     for _, _, i in scored:
@@ -118,6 +122,8 @@ def parse(text: str) -> dict | None:
 def code_check(item: dict) -> str | None:
     """None if it passes, else the reason."""
     q, opts, key = item["q"], item["options"], item["options"][item["answer"]]
+    if any(re.fullmatch(r"\W*[A-Da-d]?\W*", o) for o in opts):
+        return "option is empty or just a letter"
     if BANNED.search(q) or any(BANNED.search(o) for o in opts):
         return "banned phrase (blank / all-none of the above)"
     if len({o.lower().strip(" .") for o in opts}) < len(opts) or len(opts) < 3:
@@ -144,14 +150,22 @@ class Model:
         self.b = ExecuTorchBackend(str(path / "model.pte"), str(path / "tokenizer.json"))
         self.chat = chat_prompt
         self.calls: list[dict] = []
+        # Sampling temperature for writing (questions, wrong answers, summary). It was 0.0 (greedy), so the same
+        # passage gave the same questions and answers every run. SAKSHI_TEMP=0 turns it off again.
+        self.temperature = float(os.environ.get("SAKSHI_TEMP", "0.4"))
 
     def run(self, system: str, user: str, max_new: int, examples=(), kind: str = "", prefix: str = "",
-            stop: str | None = None) -> str:
+            stop: str | None = None, temperature: float | None = None) -> str:
         """`prefix` is written for the model as the start of its answer, which it must continue (the
         incremental-completion trick from Generate-Then-Validate: steer the stem instead of hoping)."""
         kw = {"stop_regex": stop} if stop else {}
-        r = self.b.generate(self.chat("qwen3", system, user, examples=examples) + prefix, max_new_tokens=max_new, **kw)
-        self.calls.append({"kind": kind, "in": r.prompt_tokens, "out": r.new_tokens, "s": round(r.wall_s, 2)})
+        t = self.temperature if temperature is None else temperature
+        if kind == "summary":
+            t = min(t, 0.3)  # the summary must stay faithful: a little variety, not a lot
+        r = self.b.generate(self.chat("qwen3", system, user, examples=examples) + prefix, max_new_tokens=max_new,
+                            temperature=t, **kw)
+        self.calls.append({"kind": kind, "in": r.prompt_tokens, "out": r.new_tokens, "s": round(r.wall_s, 2),
+                           "temp": t})
         return prefix + r.text
 
 
@@ -160,7 +174,7 @@ def self_check(m: Model, ctx: str, item: dict, rng: random.Random) -> tuple[bool
     rng.shuffle(order)
     user = f"Text: {ctx}\nQuestion: {item['q']}\n" + "\n".join(f"{c}) {item['options'][j]}"
                                                               for c, j in zip("ABCD", order))
-    out = m.run(CHECK_SYSTEM, user, 4, kind="check")
+    out = m.run(CHECK_SYSTEM, user, 4, kind="check", temperature=0.0)
     got = re.match(r"\s*\(?([ABCD])", out)
     k = "ABCD".index(got.group(1)) if got else -1
     picked = order[k] if 0 <= k < len(order) else -1
@@ -903,12 +917,13 @@ def parse_wrong(text: str) -> list[str]:
     return out
 
 
-def more_sentences(passage: str, tried: list[int]) -> list[int]:
+def more_sentences(passage: str, tried: list[int], rng: random.Random | None = None) -> list[int]:
     """Every other sentence long enough to ask about (neighbours of tried ones included), best first. Used when the
     picked sentences gave fewer than min_keep questions: on the Pi (25 Nov) the Dandi passage kept 0 of 6 and the
     pitcher-plant passage 2 of 7, because the picker allows only ~6 non-adjacent sentences per passage."""
     sents = split_sentences(passage)
-    return [i for _, _, i in sorted(((len(content(s)) + (4 if CAUSAL.search(s) else 0), -i, i)
+    jit = (lambda: rng.uniform(-3, 3)) if rng else (lambda: 0)
+    return [i for _, _, i in sorted(((len(content(s)) + (4 if CAUSAL.search(s) else 0) + jit(), -i, i)
                                      for i, s in enumerate(sents) if 8 <= len(tokens(s)) <= 40 and i not in tried),
                                     reverse=True)]
 
@@ -927,8 +942,8 @@ def quiz_2job(mq: "Model", mw: "Model", passage: str, n: int = 4, seed: int | No
     sents = split_sentences(passage)
     start_q, start_w = len(mq.calls), len(mw.calls)
     kept, rejected = [], []
-    first = pick_sentences(passage)
-    order = first + more_sentences(passage, first)   # the extra sentences are used only while kept < min_keep
+    first = pick_sentences(passage, rng=rng)
+    order = first + more_sentences(passage, first, rng=rng)   # the extra sentences are used only while kept < min_keep
     for pos, i in enumerate(order):
         if len(kept) == n or (should_stop and should_stop()):
             break
